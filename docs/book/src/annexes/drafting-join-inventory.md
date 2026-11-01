@@ -436,3 +436,53 @@ Admission work is O((H+S+M) log(S+M+2)+1),with conservative peak S+2M new entrie
 retained index/association entries. Logical entries are not allocator bytes. No provider,registry,
 text or geometry body is scanned. Physical/copy/semantic effects,currentness,approved history,
 actual retirement/repair and publication remain required;this is explicit native identity intent.
+
+## Require complete intake,sewing,copy and authoring effects
+
+`RequiredJoinSourceIdentities::require_effects` borrows an explicit
+`JoinEffectSources::new(canonical_intakes,sewing,all_copy_effects,authoring_authority)` request.
+All four original source fields are mandatory with no Default. `RequiredJoinEffects` retains
+the actual whole identity/history,consumer,copy,field and exact-splice requirement contexts.
+
+```rust
+use sc_core::construction::*;
+fn effects<'a>(identities:&'a RequiredJoinSourceIdentities<'a>,sources:&'a JoinEffectSources)
+    ->RequiredJoinEffects<'a> { identities.require_effects(sources) }
+```
+
+Every `JoinEffectEvidenceKind` remains distinct and mandatory:
+
+- `CanonicalIntakes`:whole canonical Dart/Tuck/Pleat/Gather closing/intake provenance and
+  conservation. Joining cannot duplicate/rebase a source amount or silently withdraw its consumer.
+- `Sewing`:actual copy-addressed spans/directions,original full/Portion ease,all stops and neighbours.
+  Consumed copies do not automatically reassign sewing or marks,and declared ease is not copied twice.
+- `AllCopyEffects`:every retained,consumed,requested,companion and otherwise affected copy in its
+  actual frame. Each explicit A/B pair needs the original exact-splice conditions:actually zero
+  allocated ease,declared pose/parity,whole-bank coincidence and valid complete topology/error
+  evidence. The selected span cannot certify another pair. Unknown/unsupported/uncertified/resource/
+  cancel causes must remain actual causes,never invented geometry or proof of incompatibility.
+- `AuthoringAuthority`:actual global/canonical authoring authority and complete atomic history,
+  repair,publication,replay and undo. A requested source id supplies no permission or human approval.
+
+`JoinEffectSources::source(kind)` lends the actual original field. Zero/shared ids remain ordinary
+unresolved requests. Equal ids do not merge the four scopes with each other,with five earlier
+consumer scopes,or with the required identity-history source and explicit original-edge intents.
+Requiring all four RetainOriginal intents does not skip any effect requirement.
+
+`RequiredJoinEffects::identities()` lends the exact whole original requirement parent;`sources()`
+lends the whole original four-field request. `correspondence()` lends the actual complete physical
+A/B pairing;`splice()` lends the actual original placement,endpoint-pair and ease requirement.
+For two requested results6001/6000,both actual pairs remain in that authored order;no endpoint,
+ease,reflection or ownership evidence is substituted from one selected pair for the other.
+
+`requirements()` visits intake,sewing,all-copy,authoring scopes in that order and reverse;
+`requirement(kind)` returns the actual original scope/source view. Each `JoinEffectRequirement`
+lends its complete `context()`,distinct `kind()` and actual original `source()` field.
+All original Piece/copy actions,global-edge dispositions,history and repair requests,source frames,
+fold/construction omissions,additional content and companion requirements remain inspectable.
+
+Fixed association/four-item traversal has constant work/space,no allocation,new quota,registry,
+provider,text or geometry scan. These are complete explicit native effect-source obligations,
+not accepted effects or execution/publication readiness. Actual currentness,geometry,domain/envelope,
+history,repair,physical/conservation truth and atomic authority remain execution and independent
+verification work;the declaration grants no approval and changes no amount,pose,copy,holder or ledger.

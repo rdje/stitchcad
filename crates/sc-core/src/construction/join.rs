@@ -58,7 +58,11 @@ pub use fold_sources::{
 };
 mod companion_repairs;
 mod consumers;
+mod effects;
 mod source_identities;
+pub use effects::{
+    JoinEffectEvidenceKind, JoinEffectRequirement, JoinEffectSources, RequiredJoinEffects,
+};
 pub use source_identities::{
     JoinSourceIdentity, JoinSourceIdentityAssignment, JoinSourceIdentityError,
     JoinSourceIdentityIntent, JoinSourceIdentityLimits, JoinSourceIdentityManifest,

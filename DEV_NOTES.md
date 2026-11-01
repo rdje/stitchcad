@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — complete original global-edge identity requirements
+## _(2026-11-01 UTC)_ — complete native join effect-source obligations
 
-0809 admits every original S/raw M/checked S+2M before fields/allocation;one explicit global fate per distinct literal EdgeRef preserves every original occurrence/frame.
-Native identity4/prior consumer2 pass;S10/K4/M4/W18,first count/duplicate/unknown causes and retained candidate old refs coexist with unaccepted retirement/history requests.
-API4/inventory8/strict lint/fmt/book/rendered claims rc=0;984 three Git spans/body/public exact;archive1438/71,per-generation21/64 and50/64,rc=0.
-promotion: declined (existing global journal/held-key/native request contract). G1still6/18;canonical intake/sewing/all-copy/authoring effect sources next.
+0810 binds four mandatory canonical-intake/sewing/all-copy/authoring sources to actual complete identity/history/consumer/copy/splice parents.
+Native effect2/prior identity4 pass;all-retention/shared0 ids skip none;two real pairs and original pose/ease/endpoint requirements remain actual loans.
+API4/inventory9/strict lint/fmt/book/rendered claims rc=0;985 three Git spans/body/public exact;archive1439/72,per-generation21/64 and51/64,rc=0.
+promotion: declined (existing canonical evidence-request/effect boundary). G1still6/18;scoped source/output lineage requirements review next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

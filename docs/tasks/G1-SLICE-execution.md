@@ -822,20 +822,20 @@ retains every original goal,status,child relation and focused acceptance proof.
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage`
   Status: `in_progress`
   Goal:explicit output/source identities,retirement/reference repair and full observer/evidence requirements.
-### G1-SLICE.5f.1.c.join.outputs.lineage.edges
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.edges`
   Status: `done`
-  Goal:complete original global-edge disposition/history requirements;actual fields/frames retained,no live-state or effects inferred.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_source_identity_contract` through launcher:
-    4 pass;ten repeated original fields/four global identities need explicit fates;stored held refs do not decide global retirement,rc=0.
-  - [x] ADDRESSED: same target plus `cargo test -p sc-core --test join_consumer_contract`:
-    4/2 pass;whole S/M/checked S+2M before fields/allocation,complete unique literal coverage,actual first source/whole parent/history/repair loans,rc=0.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_source_identity_contract --test join_consumer_contract -- -D warnings`:
-    strict lint/API4/inventory8/fmt/book/rendered claims rc=0;984 three Git spans/body/public exact;archive1438/71,per-generation21/64 and50/64,rc=0.
-  Commit:STITCHCAD-G1-0809. promotion: declined (existing global journal/immutable held-reference and native requirement contract).
+  Goal:0809 complete global-edge identity requirements;[whole scope/proofs](../history/stitchcad-devnotes-part985.md).
+### G1-SLICE.5f.1.c.join.outputs.lineage.effects
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.effects`
-  Status: `pending`
-  Goal:explicit canonical intake,sewing/ease/stops,all-copy physical and atomic authoring/effect source requirements.
+  Status: `done`
+  Goal:four complete explicit canonical-intake/sewing/all-copy/authoring effect source obligations over actual whole original/final context.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_effect_contract` through launcher:
+    2 pass;every effect scope remains mandatory across all-retention/shared0 ids and complete2-pair context,rc=0;selected span cannot certify another pair.
+  - [x] ADDRESSED: same target plus `cargo test -p sc-core --test join_source_identity_contract`:
+    2/4 pass;actual source/context/history/five-consumer obligations,copy correspondence and original ease/endpoint/pose requirement loans preserved,rc=0.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_effect_contract --test join_source_identity_contract -- -D warnings`:
+    strict lint/API4/inventory9/fmt/book/rendered claims rc=0;985 three Git spans/body/public exact;archive1439/72,per-generation21/64 and51/64,rc=0.
+  Commit:STITCHCAD-G1-0810. promotion: declined (existing canonical native evidence-source and actual effect/geometry boundary).
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.review`
   Status: `pending`
   Goal:scoped native source/output identity/history/repair/effect review;actual global currentness,correspondence and G2/G3 execution remain separate.

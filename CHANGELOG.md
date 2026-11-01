@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0809 — complete original global-edge identity requirements
+## STITCHCAD-G1-0810 — complete native join effect-source obligations
 
-- Require one explicit retained/retirement intent per distinct original global EdgeRef under full S/M/checked S+2M;preserve all original fields/frames.
-- Retain actual raw rows,source/history/repair loans and first refusal;old stored refs alone neither prohibit mapped retirement nor authorize global effects.
-- Native identity4/prior consumer2/API4/inventory8/strict lint/fmt/book/rendered claims rc=0;984 three Git spans/body/public exact.
-- Archive1438/71,per-generation21/64 and50/64;G1still6/18. Effect sources,actual history/retirement/repair/geometry/atomic authority remain separate.
+- Require all four canonical-intake,sewing,all-copy and authoring sources after complete actual source identity/history and consumer contexts.
+- Preserve actual two-pair correspondence and original splice pose/ease/endpoints;no shared-id/all-retention skip or selected-span proof substitution.
+- Native effect2/prior identity4/API4/inventory9/strict lint/fmt/book/rendered claims rc=0;985 three Git spans/body/public exact.
+- Archive1439/72,per-generation21/64 and51/64;G1still6/18. Actual effects,geometry,currentness,repair/retirement and atomic authority remain separate.
 
 # Sealed archive — earlier slices
+
+[Whole0809 global source-identity requirements](docs/history/stitchcad-devnotes-part985.md) retain exact task,lesson and ledger bytes.
 
 [Whole0808 canonical cut/print preview](docs/history/stitchcad-devnotes-part984.md) retains exact task,lesson and ledger bytes.
 
