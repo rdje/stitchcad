@@ -104,3 +104,64 @@ provider,evidence,registry or geometry call. A changed candidate label,hole or m
 admissible resources while still contradicting its original or requested field. This stage certifies
 resource presence only;original preservation,joined-result semantics,companion/consumer repair,
 per-pair physical/currentness/identity and atomic effects remain separately required.
+
+## Request explicit companion-reference repair
+
+A retained separate pair member cannot keep naming a source Piece that disappears from the
+candidate inventory. Canonical `PieceInventory` requires reciprocal,opposite-handed,equal-quantity
+members. For example,old right member102 names left source100;the join requests new left result5000
+and retains102. The proposed102 must explicitly name5000 while keeping its right hand. Keeping
+its old100 link fails canonical reciprocity;neither a new name nor reflected copy can supply a mate.
+
+`JoinCompanionRepairManifest` retains the operation and ordered
+`JoinCompanionRepairRequest::new(piece,expected,companion,evidence_source)` records. The Piece id
+selects the actual retained original;`expected` guards its whole original Mirroring field. The new
+companion and evidence source are explicit authored fields. Zero/reused evidence ids are retained
+as requests,with no evidence kind,state,currentness,truth or consumer approval inferred.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+let request=JoinCompanionRepairRequest::new(EntityId::from_bits(102),
+    Mirroring::PairMember{handedness:Handedness::Right,companion:EntityId::from_bits(100)},
+    EntityId::from_bits(5000),EntityId::from_bits(7001));
+fn repairs<'a>(manifest:&'a JoinCompanionRepairManifest,fields:&'a BoundJoinInventoryFields<'a>)
+    ->Result<RequiredJoinCompanionRepairs<'a>,JoinCompanionRepairError<'a>> {
+    manifest.admit(fields,JoinCompanionRepairLimits::new(1,2))
+}
+```
+
+`JoinCompanionRepairLimits::new(M,W)` admits every raw request M and checked2M source-index/
+association entries before operation,fields or allocation. Earlier whole I/J/H/R/B/copy resources
+remain immutable and separate. For M1,W2 is exact:M0 refuses `Repairs`,W1 `Workspace`,before an
+incorrect operation or malformed first source guard.
+
+With quotas met,`Operation` precedes original rows. Each row checks `Duplicate`,`MissingSource`,
+`SourceField`,`NotPairMember`,`SourceNotRetained`,then `CompanionNotSource` and
+`CompanionNotConsumed`. The old mate must be an actual fully consumed A/B source. `ResultIdentity`
+requires the explicit new target to be the declared joined result. `ResultPairing` requires the
+**authored result population** to name this retained member with opposite hand. `CandidateField`
+requires the actual candidate member to preserve its original hand and name that same new result.
+Candidate reciprocity alone cannot replace authored result intent,or permit a changed original hand.
+Internal source/candidate invariant faults require diagnosis;they are not compatibility evidence.
+
+`JoinCompanionRepairError` retains actual whole `manifest()`,`fields()`,original `limits()` and
+first `refusal()`. Row causes lend `refused_request()`,the known actual `original_piece()`,and
+`candidate_piece()` if present. Whole resources/operation lend none;no accepted prefix or
+reconstructed source escapes refusal.
+
+`RequiredJoinCompanionRepairs` retains those whole parents and reports `repair_count()` and
+`workspace_entries()`. `repairs()` preserves original order and reverse;`repair(piece)` queries an
+actual requested original scope. Each `JoinCompanionRepair` lends its owner,raw request,actual
+original/candidate members,original fully consumed `retired_companion()`,original/candidate
+mirroring fields,and actual authored evidence id. The accessor names proposed reconciliation;
+no Piece is retired or reference reassigned by this binding.
+
+An explicit empty request list declares no mirroring exceptions. It can bind beside changed
+candidate fields,so the following original-field comparison must still reject every uncovered
+change. Even admitted requests remain visible consumer/evidence obligations;they do not accept
+source retirement,currentness or historical reference reassignment. Every other original field
+must remain exact except canonical quantity derived from retained copies.
+
+Work is O(M log(M+I+J+2)+1),with2M new entries. No provider,evidence,registry,geometry,physical
+mirroring,parity inference or atomic effect is supplied. Whole original preservation,joined-result
+fields,complete consumer repair,current identity and per-pair physical proof remain required.

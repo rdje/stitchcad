@@ -77,7 +77,9 @@ pub use join::{
     DeclaredJoinCopySources, DeclaredJoinCutContours, DeclaredJoinFoldSources,
     DeclaredJoinPieceIdentity, DeclaredJoinResultCopies, JoinAdditionalConstructionIntent,
     JoinBindingError, JoinBindingRefusal, JoinCandidatePlanError, JoinCandidatePlanLimits,
-    JoinCandidatePlanRefusal, JoinConstructionCoverageError, JoinConstructionCoverageLimits,
+    JoinCandidatePlanRefusal, JoinCompanionRepair, JoinCompanionRepairError,
+    JoinCompanionRepairLimits, JoinCompanionRepairManifest, JoinCompanionRepairRefusal,
+    JoinCompanionRepairRequest, JoinConstructionCoverageError, JoinConstructionCoverageLimits,
     JoinConstructionCoverageRefusal, JoinConstructionGroupError, JoinConstructionGroupLimits,
     JoinConstructionGroupManifest, JoinConstructionGroupOutput, JoinConstructionGroupRefusal,
     JoinConstructionManifest, JoinConstructionMappingGroup, JoinConstructionOutputGroup,
@@ -113,8 +115,8 @@ pub use join::{
     JoinResultCopyRefusal, JoinResultCopyRequest, JoinSourceOccurrence, JoinSourceOccurrenceField,
     JoinSourceOccurrenceLocation, JoinSourcePieceError, JoinSourcePieceLimits,
     JoinSourcePieceRefusal, JoinSpliceEnd, JoinSpliceEndpointPair, JoinSplicePlacement,
-    RequiredJoinConstructionTargets, RequiredJoinCopyCorrespondence, RequiredJoinCutConnectivity,
-    RequiredJoinExactSplice, RequiredJoinFold,
+    RequiredJoinCompanionRepairs, RequiredJoinConstructionTargets, RequiredJoinCopyCorrespondence,
+    RequiredJoinCutConnectivity, RequiredJoinExactSplice, RequiredJoinFold,
 };
 mod mirror;
 pub use mirror::{

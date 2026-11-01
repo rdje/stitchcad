@@ -115,3 +115,101 @@ pub fn with_bound_plan(run: impl FnOnce(BoundJoinCandidatePlan<'_>)) {
         run(bound);
     });
 }
+
+pub fn companion_inventory(
+    pairs: &RequiredJoinCopyCorrespondence<'_>,
+    keep_hand: bool,
+) -> PieceInventory {
+    let results = pairs.sources().results();
+    let mut joined = results
+        .source_piece(id(100))
+        .expect("actual original left source")
+        .definition()
+        .clone();
+    let ledger = ledger();
+    joined.id = id(5000);
+    joined.quantity = 1;
+    joined.mirroring = Mirroring::PairMember {
+        handedness: if keep_hand {
+            Handedness::Left
+        } else {
+            Handedness::Right
+        },
+        companion: id(102),
+    };
+    joined.cut_on_fold = false;
+    joined.fold_edges.clear();
+    joined.construction_lines.clear();
+    let contours = results
+        .folds()
+        .fold()
+        .construction()
+        .targets()
+        .coverage()
+        .groups()
+        .sources()
+        .uses()
+        .connectivity()
+        .contours();
+    joined.boundary = contours
+        .boundary()
+        .map(|u| DirectedEdge {
+            edge: u.logical_output(),
+            direction: *u.direction(),
+        })
+        .collect();
+    joined.holes = vec![];
+    let mut mate = results
+        .source_piece(id(102))
+        .expect("actual retained original right member")
+        .definition()
+        .clone();
+    mate.mirroring = Mirroring::PairMember {
+        handedness: if keep_hand {
+            Handedness::Right
+        } else {
+            Handedness::Left
+        },
+        companion: id(5000),
+    };
+    PieceInventory::new(vec![
+        Piece::new(joined, &ledger).expect("born candidate joined member"),
+        Piece::new(mate, &ledger).expect("born candidate reciprocal member"),
+    ])
+    .expect("complete reciprocal candidate inventory")
+}
+pub fn with_companion_fields(
+    mode: Mirroring,
+    keep_hand: bool,
+    run: impl FnOnce(BoundJoinInventoryFields<'_>),
+) {
+    pairing::with_companion_correspondence(mode, |pairs| {
+        let inventory = companion_inventory(&pairs, keep_hand);
+        let results = pairs.sources().results();
+        let plan = CutPlan::new(
+            vec![
+                *results
+                    .copy(id(6000))
+                    .expect("actual requested result")
+                    .definition(),
+                *results
+                    .source_copy(id(202))
+                    .expect("actual retained member copy")
+                    .definition(),
+            ],
+            inventory.pieces(),
+        )
+        .expect("complete canonical cut-once plan");
+        let plan = pairs
+            .bind_candidate_plan(
+                &inventory,
+                &plan,
+                JoinCandidatePlanLimits::new(3, 3, 1, 2, 2, 8),
+            )
+            .expect("actual exact requested candidate copy plan");
+        let fields = plan
+            .admit_piece_fields(JoinInventoryFieldLimits::new(3, 2, 0, 24, 114))
+            .expect("complete original/candidate resources");
+        run(fields);
+    });
+}

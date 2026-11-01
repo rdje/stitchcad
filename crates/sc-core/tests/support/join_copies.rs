@@ -90,3 +90,18 @@ pub fn with_paired_results(run: impl FnOnce(DeclaredJoinResultCopies<'_>)) {
         });
     });
 }
+
+pub fn with_companion_results(mode: Mirroring, run: impl FnOnce(DeclaredJoinResultCopies<'_>)) {
+    fold::with_companion_construction(mode, |construction| {
+        with_construction_folds(&construction, |folds| {
+            let raw = JoinResultCopyManifest::new(
+                id(1000),
+                vec![request(6000, CopyOrientation::Authored)],
+            );
+            let results = raw
+                .admit(&folds, JoinResultCopyLimits::new(3, 3, 1, 7))
+                .expect("explicit cut-once result/member request");
+            run(results);
+        });
+    });
+}

@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0801 — bounded join candidate inventory reference
+## STITCHCAD-G1-0802 — explicit retained companion requirements
 
-- Move whole7077B candidate-plan/field-resource suffix unchanged to a registered inventory companion;retain both old anchors.
-- Preserve all prior Rust examples and route order;Source8/inventory2/fmt/book/index118/rendered routes rc=0,Summary120L.
-- Prior original-field goal retained in976;explicit companion-reference repair and preservation now separately owned.
-- Archive1430/63,per-generation21/64 and42/64 rc=0;runtime behavior and G1still6/18 unchanged.
+- Bind ordered guarded companion retarget/evidence requests to actual retained original/candidate members and consumed A/B mates.
+- Require explicit result identity/opposite-hand reciprocity and preserved original hand under whole M/2M admission.
+- Native4/prior field4/API3/inventory3/strict lint/fmt/book rc=0;977 original spans/body/public bytes exact,archive1431/64.
+- Requests confer no evidence/consumer/retirement approval;uncovered original field changes remain next. G1still6/18 unchanged.
 
 # Sealed archive — earlier slices
+
+[Whole0801 bounded inventory reference](docs/history/stitchcad-devnotes-part977.md) retains exact task,lesson and ledger bytes.
 
 [Whole0800 field admission and prior original-field goal](docs/history/stitchcad-devnotes-part976.md) retain exact task,goal,lesson and ledger bytes.
 

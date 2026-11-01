@@ -49,3 +49,17 @@ pub fn with_correspondence(run: impl FnOnce(RequiredJoinCopyCorrespondence<'_>))
         run(pairs);
     });
 }
+
+pub fn with_companion_correspondence(
+    mode: sc_core::ontology::Mirroring,
+    run: impl FnOnce(RequiredJoinCopyCorrespondence<'_>),
+) {
+    copies::with_companion_results(mode, |results| {
+        let raw = JoinCopySourceManifest::new(id(1000), base(&results));
+        let sources = admit(&raw, &results);
+        let pairs = sources
+            .require_pairs(JoinCopyPairLimits::new(3, 1, 3))
+            .expect("selected sources consume one actual pair;mate copy retained");
+        run(pairs);
+    });
+}

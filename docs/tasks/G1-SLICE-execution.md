@@ -818,21 +818,20 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `in_progress`
   Goal:preserve remaining original fields except derived quantity and explicit guarded companion repairs;
   canonical reciprocal mates cannot silently keep retired source identities.
-### G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.tracking
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.tracking`
   Status: `done`
-  Goal:bound inventory references before original semantic/companion contract growth;future repairs explicit.
-  - [x] ROOT CAUSE: `git show 942c20ef:docs/book/src/annexes/drafting-join-sources.md`:
-    source523L/35213B leaves limited room for remaining inventory contracts,rc=0;canonical PairMember reciprocity reviewed.
-  - [x] ADDRESSED: `python3 -I -B -` Git comparison:whole7077B suffix/SHA00caa7c5 exact,
-    10 old Rust fences=source8+inventory2,all old headings/route order retained;INDEX_COVERAGE118,rc=0.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_source_examples` and
-    `construction::join_inventory_examples` through launcher:8/2 pass,rc=0;fmt/book/rendered anchors rc=0.
-    976 four Git spans/body/public bytes exact;archive1430/63 aggregate;generation1 21/64,generation2 42/64,rc=0.
-  Commit:STITCHCAD-G1-0801. promotion: declined (existing bounded book/current source-reference policy).
+  Goal:0801 bounded inventory reference;[whole scope/proofs](../history/stitchcad-devnotes-part977.md).
+### G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.companions
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.companions`
-  Status: `pending`
-  Goal:explicit guarded original companion retarget requirements for actual consumed-source/result replacement.
+  Status: `done`
+  Goal:explicit guarded retained companion requirements;no evidence/consumer/retirement authority.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_companion_repair_contract` through launcher:
+    4 pass including actual canonical reciprocal first cause;kept102 cannot silently retain consumed100 link,rc=0.
+  - [x] ADDRESSED: same native target plus `cargo test -p sc-core --test join_inventory_field_contract`:
+    4/4 pass,M/2M before fields,actual guarded parents/explicit opposite hand and immutable requests,rc=0.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_companion_repair_contract --test join_inventory_field_contract -- -D warnings`;
+    API3/inventory3/fmt/book/rendered claims rc=0;977 three Git spans/body/public exact;archive1431/64,per-generation21/64 and43/64,rc=0.
+  Commit:STITCHCAD-G1-0802. promotion: declined (existing explicit PairMember/reference-repair contract).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.fields`
   Status: `pending`
   Goal:actual original fields preserve identity/geometry/metadata except derived quantity and admitted companion repairs.

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — bounded join candidate inventory reference
+## _(2026-11-01 UTC)_ — explicit retained companion requirements
 
-0801 moves whole7077B inventory suffix unchanged to a registered companion;old headings remain forwarders and all examples persist.
-Source8/inventory2/fmt/book/INDEX_COVERAGE118/rendered routes rc=0;Summary120L/all prior routes retained.
-976 four original spans/body/public bytes exact;archive1430/63,per-generation21/64 and42/64,rc=0;runtime code unchanged.
-promotion: declined (existing bounded reference/consumer policy). G1still6/18;explicit companion repair requests next.
+0802 binds actual retained member/expected whole Mirroring/new result/evidence requests under complete M/checked2M. Actual old mate must be a fully consumed A/B source;requested result explicitly reciprocates opposite hand;candidate preserves hand.
+Native companion4/prior field4,API3/inventory3/strict lint/fmt/book rc=0;canonical relation cause follows actual authored Piece order.
+977 three Git spans/body/public bytes exact;archive1431/64,per-generation21/64 and43/64,rc=0;all prior chapter bytes retained.
+promotion: declined (existing explicit pair-member/reference repair contract). G1still6/18;uncovered changes/original fields next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

@@ -22,6 +22,7 @@ pub struct BankFixture {
     pub span: SpanFixture,
     pub extra_piece: bool,
     pub additional_source_pair: bool,
+    pub source_companion: bool,
     pub extra_occurrences: bool,
     pub bank_in_holes: bool,
     pub fold_on_other_boundary: bool,
@@ -39,6 +40,7 @@ impl BankFixture {
             span: SpanFixture::Declared,
             extra_piece: false,
             additional_source_pair: false,
+            source_companion: false,
             extra_occurrences: false,
             bank_in_holes: false,
             fold_on_other_boundary: false,
@@ -73,6 +75,13 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
         .enumerate()
         .map(|(index, piece)| {
             let mut d = piece.definition().clone();
+            if options.source_companion && index == 0 {
+                assert!(options.extra_piece && !options.additional_source_pair);
+                d.mirroring = Mirroring::PairMember {
+                    handedness: Handedness::Left,
+                    companion: id(102),
+                };
+            }
             if options.additional_source_pair {
                 d.quantity = 2;
                 d.mirroring = Mirroring::MirroredPairs;
@@ -170,7 +179,14 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
         let mut d = pieces.first().expect("source A").definition().clone();
         d.id = id(102);
         d.quantity = 1;
-        d.mirroring = Mirroring::Single;
+        d.mirroring = if options.source_companion {
+            Mirroring::PairMember {
+                handedness: Handedness::Right,
+                companion: id(100),
+            }
+        } else {
+            Mirroring::Single
+        };
         d.material = MaterialAssignment::Assigned(id(602));
         pieces.push(Piece::new(d, &f.ledger).expect("actual unrelated Piece"));
         definitions.push(CutCopyDefinition {
