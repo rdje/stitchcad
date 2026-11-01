@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0811 — native join lineage requirement checkpoint
+## STITCHCAD-G1-0812 — native two-Piece join declaration checkpoint
 
-- Reconcile scoped new identities,all original global-edge intents and ten mandatory source obligations with immutable held-reference/owner contracts.
-- Preserve actual original/final/copy/splice contexts;local field equality and requested IDs infer no actual liveness,issuance,retirement,repair or effects.
-- Rust unchanged/all9 fences exact;book/rendered checkpoint/canonical target rc=0;prior effect2/identity4/API4/inventory9 proof retained.
-- 986 three Git spans/body/public exact;archive1440/73,per-generation21/64 and52/64. G1still6/18;native join family review next.
+- Reconcile explicit exact-nondeforming two-Piece input/output declarations against v1 operation inventory and adopted native domain.
+- Update Join availability and native-only checkpoint;preserve actual geometry/history/currentness/physical/domain/atomic proof as separate obligations.
+- Rust unchanged/five references4/9/8/8/9 Rust fences exact;book/rendered4-cell row and native domain boundary rc=0;987 three Git spans/body/public exact.
+- Archive1441/74,per-generation21/64 and53/64;native c subtree0 non-done,aggregate typed review owned. G1still6/18 unchanged.
 
 # Sealed archive — earlier slices
+
+[Whole0811 native lineage checkpoint](docs/history/stitchcad-devnotes-part987.md) retains exact task,lesson and ledger bytes.
 
 [Whole0810 native effect-source requirements](docs/history/stitchcad-devnotes-part986.md) retain exact task,lesson and ledger bytes.
 

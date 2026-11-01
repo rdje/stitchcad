@@ -675,6 +675,10 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   .1 closes on implemented typed declarations/output contracts,not future G2/G3 geometric results;
   this grants no G1 running-spike waiver or geometry certificate.
   Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5f.1.review`
+  Status: `pending`
+  Goal:aggregate native v1 declaration/output-contract acceptance against complete operation inventory and committed family evidence.
+  Actual namespace/frame/order/geometry/physical/atomic/full integration remains .5f.2/.3/.4.geometry/.5g and G2/G3;no G1 spike waiver.
 - ID: `G1-SLICE.5f.1.a`
   Status: `done`
   Goal:completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part838md).
@@ -683,7 +687,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0676 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part839md).
 - ID: `G1-SLICE.5f.1.c`
-  Status: `active`
+  Status: `done`
   Goal:remaining typed line/arc/Bezier/offset/slash-spread/dart/notch/grainline/walk/true/mirror/join
   schemas from .a inventory;split implementation leaves before code. Parent .1 stays open until all.
 - ID: `G1-SLICE.5f.1.c.line`
@@ -771,7 +775,7 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   Status: `done`
   Goal:0690 source intent/binding;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part860md).
 - ID: `G1-SLICE.5f.1.c.join.outputs`
-  Status: `in_progress`
+  Status: `done`
   Goal:native explicit metadata/material/mark/multiplicity/copy reconciliation and identity/
   retirement/reference manifests;define permitted join/pose/refit domains before family closure.
   Partial/eased/oriented source semantics cannot disappear. Actual geometry stays G2/G3/.5f.4.
@@ -829,17 +833,9 @@ retains every original goal,status,child relation and focused acceptance proof.
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.effects`
   Status: `done`
   Goal:0810 complete effect-source requirements;[whole scope/proofs](../history/stitchcad-devnotes-part986.md).
-### G1-SLICE.5f.1.c.join.outputs.lineage.review
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.review`
   Status: `done`
-  Goal:scoped native identity/history/repair/effect requirement checkpoint;actual global currentness,correspondence and execution separate.
-  - [x] ROOT CAUSE: `python3 -I -B -` canonical scope/public-interface review:
-    five consumer/one history/four effect source obligations and all explicit global-edge intents remain distinct;held refs do not decide liveness,rc=0.
-  - [x] ADDRESSED: same review and `git diff --exit-code -- crates`:
-    actual whole source/output/consumer/copy/splice contexts and per-pair nondeforming obligations reconciled;Rust unchanged/all9 fences exact,rc=0.
-  - [x] NO REGRESSION: `scripts/run_make.sh book`:build/rendered lineage checkpoint/canonical target anchor rc=0;
-    986 three Git spans/body/public exact;archive1440/73,per-generation21/64 and52/64,rc=0;prior effect2/identity4/API4/inventory9 proof retained.
-  Commit:STITCHCAD-G1-0811. promotion: declined (existing global identity/journal/native requirement and actual execution boundary).
+  Goal:0811 native lineage requirement checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part987.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.identity`
   Status: `done`
   Goal:0780 scoped result Piece identity;[whole scope/proofs](../history/stitchcad-devnotes-part956.md).
@@ -918,10 +914,17 @@ retains every original goal,status,child relation and focused acceptance proof.
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold.sources`
   Status: `done`
   Goal:0794 complete original fold actions;[whole scope/proofs](../history/stitchcad-devnotes-part970.md).
+### G1-SLICE.5f.1.c.join.outputs.review
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
-  Status: `pending`
-  Goal:reconcile declared join variants against v1 requirements;actual geometry/G3/bus/full verification
-  remains .5f.4.geometry/.5g/G3.2;focused schema checkpoint grants no physical/domain approval.
+  Status: `done`
+  Goal:explicit native two-distinct-Piece/exact-nondeforming join declaration family checkpoint;no actual physical/domain approval.
+  - [x] ROOT CAUSE: `python3 -I -B -` canonical ontology3.2/operation-inventory/ADR0773 family review:
+    explicit input variant,metadata/copy/topology/identity/consumer/effect declarations cover native scope;actual G2/G3/bus proof remains owned,rc=0.
+  - [x] ADDRESSED: same Git/reference comparison and `git diff --exit-code -- crates`:
+    inventory availability/family checkpoint reconciled;five-page Rust fences4/9/8/8/9 byte-exact;Rust unchanged,rc=0.
+  - [x] NO REGRESSION: `scripts/run_make.sh book`:build/rendered exact-domain/native-only checkpoint and4-cell Join row rc=0;
+    987 three Git spans/body/public exact;archive1441/74,per-generation21/64 and53/64,rc=0;prior focused native/API proof retained,no broad rerun.
+  Commit:STITCHCAD-G1-0812. promotion: declined (existing explicit native domain/declaration and real execution boundary).
 - ID: `G1-SLICE.5f.1.book-search`
   Status: `pending`
   Goal:P2 D372 after typed v1 feature completion:resolve new large-index build warning;

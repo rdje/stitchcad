@@ -508,3 +508,30 @@ allocated ease,whole-bank coincidence,feasible pose,complete geometry or consume
 unsupported,uncertified,resource and cancel outcomes remain actual execution causes. This scoped
 declaration checkpoint grants no currentness,retirement,repair,domain/envelope approval or atomic
 publication readiness. Actual geometry/effects and full integration remain separately owned.
+
+## Native join declaration checkpoint
+
+The declared native two-distinct-Piece join family is complete at the G1 schema boundary.
+Original graph/span/physical-copy roles and complete inventories feed an explicit exact splice,
+independent metadata selections,canonical cut population,stable proposed roles and original source
+fields. Complete cut partitions,directions,ordered contours,connectivity,construction/fold source
+actions,copy correspondence and actual original/result field matching remain linked through their
+authentic parents. Printed cut indicators use the actual matched result. Global source-edge intents,
+five consumer/ownership/repair scopes,identity history and four effect scopes remain explicit requirements.
+
+The admitted variant removes exact coincident banks without stretch,gather,refit,snap,copy fork
+or epsilon. KeepOriginal and rigid alignment with explicit fixed side/moving authored parity stay
+distinct from physical-copy reflection. Same-Piece copy joins require another explicit variant;
+valid same-copy sewing in the ontology does not silently become this two-Piece geometric operation.
+Actually zero allocated ease,unique nondegenerate pose,whole-bank coincidence and valid complete
+topology require real proof for every affected pair. Unknown,unsupported,uncertified,resource and
+cancel outcomes retain their actual causes;no domain broadening or fallback geometry follows.
+
+Focused native checks establish declared shapes,whole resource admission,actual loans,first causes,
+complete scoped membership and outstanding obligations. They do not establish current global
+registries,achieved parameter/geometry correspondence,physical/material/profile truth,approved
+domain/envelope coverage,semantic repair,history issuance or authorized atomic publication.
+Ordered namespace/frame/dependency integration remains G1 .5f.2;selectors/budgets .5f.3;real coupled
+geometry/effect/replay integration .5f.4.geometry/.5g and G2/G3. G1's running-spike and G2 entry
+requirements remain unchanged. This closes the native declaration family without claiming release
+support or independent approval;the [operation inventory](drafting-operation-contracts.md) records that boundary.

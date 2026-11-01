@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — native join lineage requirement checkpoint
+## _(2026-11-01 UTC)_ — native two-Piece join declaration checkpoint
 
-0811 reconciles scoped output identities,complete global source-edge intents and five consumer/one history/four effect sources against journal/sewing contracts.
-Actual per-pair splice/ease/endpoints remain original;local equality/scoped IDs/held-ref presence imply no global issuance,liveness,repair or effects.
-Rust unchanged/all9 fences exact;book/rendered checkpoint/canonical target rc=0;986 three spans/body/public exact,archive1440/73,per-generation21/64 and52/64.
-promotion: declined (existing native requirement/actual execution boundary). Prior2/4/API4/inventory9 proof retained;G1still6/18;join family review next.
+0812 reconciles explicit two-distinct-Piece/exact-splice metadata,copy,topology,source/output identity and consumer/effect declarations with v1 inventory/ADR0773.
+Join availability now records native checkpoint;actual geometry/history/physical/domain/atomic approval remains unproved. Native c subtree0 non-done;aggregate review owned.
+Rust unchanged/five reference fences4/9/8/8/9 exact;book/rendered4-cell Join row/domain boundary rc=0;987 spans/public exact,archive1441/74,per-generation21/64 and53/64.
+promotion: declined (existing native declaration/actual execution boundary). G1still6/18;aggregate typed v1 acceptance next,not full geometry or G1 closure.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

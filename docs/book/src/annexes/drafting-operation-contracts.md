@@ -4,7 +4,7 @@
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
 > geometry. Primitive/slash-spread/mirror-copy inputs,amount proofs and semantic binding are available
 > here and in the native-edit companion. Offset/slash/mirror/walk native output requirements and the
-> truing native declaration checkpoint are available;join outputs and geometry execution remain owned.
+> truing/join native declaration checkpoints are available;geometry execution and full integration remain owned.
 > No geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
@@ -68,7 +68,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Walk seam | Named correspondence,explicit A/B anchor/profile pairs | Differential report plus deliberate mark edits | Native declaration checkpoint;effects pending |
 | True seam | Actual correspondence,ease,adjusted side/Piece and sourced fit budget | Attributed edge adjustment and remaining differential | Native declaration checkpoint;actual fit/maps/effects pending |
 | Mirror | Named Piece,explicit point/range axis and copy intent | Fresh copy identities and source mapping | Native manifest/copy/semantic requests;geometry pending |
-| Join pieces | Piece/seam/copy correspondence and explicit join intent | Output Piece/topology with semantic lineage | Native fields/identity/cut,construction/fold/copy bookkeeping;full outputs pending |
+| Join pieces | Piece/seam/copy correspondence and explicit join intent | Output Piece/topology with semantic lineage | Native declaration checkpoint;actual geometry/history/atomic effects pending |
 
 The last column is an availability boundary. Stable reference types,structural inventories or a
 named command are not substitutes for an implemented drafting record and its executor.
