@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0762 — complete guarded daily artifact cleanup
+## STITCHCAD-G1-0763 — bound execution tracking before truing contours
 
-- Fresh reviewed plan and OS-visible strict idle admission remove4 generated trees/154files/20669068B.
-- Immediate independent residue/tracked-byte proof precedes launcher regeneration;2243 skipped paths remain.
-- Stores and protected proof namespaces excluded;no stray deletions or runtime/guard changes.
-- Latest record/book updated;prior source scope937 exact;book rebuild/render pass0. Truing placement resumes.
+- Move the complete closed scalar Derived checkpoint byte-exact into the existing canonical sibling.
+- Preserve every original id/status/goal/proof route;full Derived integration stays owned.
+- Exact3210B/source digest and tree census10/13/20,zero failures;prior cleanup receipt938 retained.
+- Runtime/book unchanged;truing occurrence/fold replacement resumes within existing bounds.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -52,6 +52,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0762 cleanup task,lesson and ledger](docs/history/stitchcad-devnotes-part938.md) retain exact source bytes.
 
 [Whole0761 direction task,lesson and ledger](docs/history/stitchcad-devnotes-part937.md) retain exact source bytes.
 

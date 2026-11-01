@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — complete guarded daily artifact cleanup
+## _(2026-11-01 UTC)_ — bound execution tracking before truing contours
 
-0762 fresh plan/review selects only four regenerable trees,zero strays. OS-visible strict handoff0 precedes removal154files/20669068B. Immediate independent4-path absence/tracked-byte equality passes0 before any launcher;all2243 skipped paths still exist.
-Audit target/artifact_cleanup_audit/daily-20261101-native/ retains plan/review/result/independent-post. Retained scratch copy equals tracked931;stores/numerical/native/proof families outside selection. This is separation,not whole-store hashing. No runtime/guard change;book rebuild/render0 after residue proof.
-Prior0761 and cleanup record/book scope retained937 exact. Promotion: declined (routine guarded cleanup). G1still6/18;resume original truing occurrence/fold placement,then lineage/native variants. Actual geometry/currentness/fit/effects/authority/broad integration remain owned.
+0763 moves the complete closed scalar Derived checkpoint into the existing canonical sibling before the998-line execution tree grows. All original ids/status/goals/proof routes remain byte-exact;wider Derived integration stays owned in execution.
+Complete3210B matches dd2d1a77,sha256 edc3b7fc640b3e769e12ab6e6be071df94b1401d5e78b59eb4fdb3faa6a96958. Tree census10/13/20 with zero unowned/orphan/dead links passes0;prior cleanup receipt938 retained exactly.
+Runtime/book behavior unchanged;whole-Piece/source/fold contracts reviewed. Promotion: declined (existing canonical navigation). G1still6/18;resume bounded original occurrence/fold replacement with safe child slices.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

@@ -205,78 +205,8 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
 - ID: `G1-SLICE.5e.2.5.derived.3.3.2`
   Status: `done`
   Goal:0593;[proof](../history/window25.md#stitchcad-devnotes-part752md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.1`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.2`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.3`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.3.1`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.3.2`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.1`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.2`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.1`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.2`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.3`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.1`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.2`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.1`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.2`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.4`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5.1`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
-- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5.2`
-  Status: `done`
-  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+[Completed scalar Derived-source checkpoint](G1-SLICE-canonical.md#completed-scalar-derived-source-checkpoint)
+retains the complete closed .3.3.3 branch and all original proof links.
 - ID: `G1-SLICE.5e.2.5.derived.integration`
   Status: `pending`
   Goal:finish full Derived consumers after tangent .5d.3.2.2/geometry .5f.3 and load/replay .5e.4;
@@ -746,16 +676,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261101`
   Status: `done`
-  Goal:due daily cleanup with fresh frozen plan,independent preservation/reference review,
-  OS-visible idle admission,verified removal and immediate residue proof before regeneration.
-  Preserve all tracked inputs/stores/numerical/native/retained proof families;resume .piece.contours.placement.
-  - [x] ISSUE:daily cleanup due2026-11-01 14:26 UTC;last successful run2026-10-31 14:26 UTC.
-  - [x] ROOT CAUSE:python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan target/artifact_cleanup_audit/daily-20261101-native identifies4 known generated trees/0strays,2243 skipped;rc=0. Reader scratch copy matches tracked part931;stores/proof families outside selection.
-  - [x] FIX:reviewed frozen plan;python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py apply target/artifact_cleanup_audit/daily-20261101-native --idle-cua under OS-visible process access.
-  - [x] ADDRESSED:strict handoff OK0 before deletion;producer removes4 trees/154files/20669068B;rc=0. Immediate independent raw-Python census confirms4 paths absent/tracked bytes exact before launcher activation;rc=0.
-  - [x] NO REGRESSION:all2243 skipped paths still present;runtime/guards unchanged;book build/render pass;rc=0. Preservation scope is separation,not a whole-store byte hash;prior0761/cleanup scope937 exact.
-  - [x] LOCKSTEP:latest cleanup record/book/live pointer/journals aligned;promotion: declined (routine guarded cleanup).
-  Commit:STITCHCAD-G1-0762;proof target/artifact_cleanup_audit/daily-20261101-native/.
+  Goal:0762 guarded cleanup;[whole scope/proofs](../history/stitchcad-devnotes-part938.md).
 
 ## Drafting operation contracts
 
@@ -922,6 +843,13 @@ retain their complete task branch,original goals and proof links in the bounded 
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement`
   Status: `pending`
   Goal:complete original occurrence/fold replacement plan using explicit output directions and source order.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.tracking`
+  Status: `done`
+  Goal:before contour growth,move the complete closed scalar Derived checkpoint byte-exact into
+  the existing canonical sibling;retain all ids/status/goals/proof links and bound live execution.
+  Verification:complete3210B branch byte-exact against dd2d1a77;tree census10/13/20,
+  zero unowned/orphan/dead links;rc=0. Runtime/book unchanged;prior cleanup receipt938 retained.
+  Commit:STITCHCAD-G1-0763;promotion: declined (existing canonical navigation).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage`
   Status: `pending`
   Goal:explicit original whole-edge retention/retirement/reference-repair declarations for the

@@ -793,3 +793,78 @@ remain byte-exact;no checks were rerun or reclassified by this retention.
 
 [Complete original static-review checklist](../history/stitchcad-devnotes-part931.md#completed-static-review-checklist--preserved-from-b2c4d6e)
 retains its original scope and verification.
+
+## Completed scalar Derived-source checkpoint
+
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.1`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.2`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.3`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.3.1`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.3.2`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.1`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.2`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.1`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.2`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.3`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.1`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.2`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.1`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.2`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.4`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5.1`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5.2`
+  Status: `done`
+  Goal:0610;[proof](../history/window25.md#stitchcad-devnotes-part769md).
