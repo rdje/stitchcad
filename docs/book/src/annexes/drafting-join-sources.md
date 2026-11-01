@@ -476,3 +476,48 @@ Work is O((C+I+Q+J+D) log(C+I+Q+J+D+2)+1),with the peak above and I+J+D retained
 No labels,material reasons,contours,provider/evidence or geometry bodies are scanned. Whole deep
 field-resource admission,original field preservation and joined-result fields remain next. Per-pair
 physical/consumer proof,currentness,identity/retirement and atomic authority remain separate.
+
+## Admit whole original and candidate Piece fields
+
+`BoundJoinCandidatePlan::admit_piece_fields` admits resources for **both complete inventories**
+before later semantic comparisons. Original Pieces include fully consumed,unrelated and companion
+members. Candidate Pieces remain the exact objects in the supplied candidate plan context.
+
+```rust
+use sc_core::construction::*;
+fn fields<'a>(plan:&'a BoundJoinCandidatePlan<'a>)
+    ->Result<BoundJoinInventoryFields<'a>,JoinInventoryFieldError<'a>> {
+    plan.admit_piece_fields(JoinInventoryFieldLimits::new(3,2,0,24,114))
+}
+```
+
+`JoinInventoryFieldLimits::new(I,J,H,R,B)` first admits all original headers I and candidate
+headers J. Complete checked original+candidate hole count H is admitted before hole-child length
+scans. Complete checked R then counts boundary,hole,construction and **separate fold declarations**
+across every Piece. R is admitted before label/reason lengths;complete checked UTF-8 B is admitted
+before any later content or semantic field comparison. Fixed scalar fields are charged by headers.
+The implementation exhaustively names every Piece/label field and material variant so new owned
+data requires an accounting update. It allocates no workspace and scans no text content.
+
+For I3/J2/H0/R24/B114,I2 refuses `Sources`,J1 `Pieces`,R23 `Occurrences`,B113 `TextBytes`.
+A candidate with one added hole and a three-character `ééé` label has H1/R25/B116:the label is
+six UTF-8 bytes,not three. H0 refuses `Holes` before reading that child loop's length;R24 refuses
+Occurrences before text lengths;B115 refuses TextBytes. Overflow causes retain the relevant whole
+hole/occurrence/text arithmetic refusal. No partial inventory is admitted.
+
+Equal content is counted at each original/candidate occurrence. A fold edge repeated from a
+boundary is a separate charged field. Every label has name,size,fabric and colorway bytes;
+Unresolved material reasons count too. Assigned material has no reason bytes. Fully consumed
+originals and unrelated data cannot disappear from the resource envelope.
+
+`JoinInventoryFieldError` retains actual whole `plan()`,original `limits()` and first `refusal()`.
+`BoundJoinInventoryFields` retains those same whole parents and reports `hole_count()`,
+`occurrence_count()` and `text_bytes()`. `original_pieces()`/`candidate_pieces()` lend every actual
+Piece in its inventory's authored order and reverse. `BoundJoinCandidatePlan::original_inventory()`
+lends the actual complete source inventory used by this context.
+
+Work is O(I+J+H+1),with constant counters,no allocation,Unicode normalization,blank/content scan,
+provider,evidence,registry or geometry call. A changed candidate label,hole or material can have
+admissible resources while still contradicting its original or requested field. This stage certifies
+resource presence only;original preservation,joined-result semantics,companion/consumer repair,
+per-pair physical/currentness/identity and atomic effects remain separately required.

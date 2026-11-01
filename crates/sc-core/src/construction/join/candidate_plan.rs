@@ -480,6 +480,35 @@ impl<'a> BoundJoinCandidatePlan<'a> {
     pub const fn correspondence(&self) -> &'a RequiredJoinCopyCorrespondence<'a> {
         self.correspondence
     }
+    /// Actual complete original inventory,including fully consumed and unrelated members.
+    #[must_use]
+    pub fn original_inventory(&self) -> &'a PieceInventory {
+        self.correspondence
+            .sources()
+            .results()
+            .folds()
+            .fold()
+            .construction()
+            .targets()
+            .coverage()
+            .groups()
+            .sources()
+            .uses()
+            .connectivity()
+            .contours()
+            .directions()
+            .coverage()
+            .edges()
+            .identity()
+            .roles()
+            .banks()
+            .sources()
+            .population()
+            .metadata()
+            .splice()
+            .inventory()
+            .inventory()
+    }
     /// Actual complete supplied candidate Piece inventory.
     #[must_use]
     pub const fn inventory(&self) -> &'a PieceInventory {

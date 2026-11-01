@@ -808,31 +808,28 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `in_progress`
   Goal:reconcile actual result/source metadata and candidate full inventory/CutPlan with declared
   copy actions/population/identity,including remaining source copies and all unrelated members.
-### G1-SLICE.5f.1.c.join.outputs.copies.inventory.plan
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.plan`
   Status: `done`
-  Goal:complete canonical candidate CutPlan against the same actual supplied inventory,and exact
-  retained/new copy definitions;derive original retained counts before deep Piece-field matching.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_candidate_plan_contract --test join_copy_pair_contract`
-    through `scripts/local_environment.py`:candidate4/prior pairs4 pass,rc=0. Another inventory's
-    canonical plan cannot certify this actual inventory;hidden/reassigned copies must refuse.
-  - [x] ADDRESSED: final `cargo test -p sc-core --test join_candidate_plan_contract` through launcher:
-    candidate4 pass,rc=0;whole C/I/Q/J/D and peak max(J+3D,I+J+D) before fields/allocation;actual
-    canonical causes,exact copy-set/count/field loans,derived known-zero originals. Strict selected
-    clippy rc=0;draft large-error refusal fixed with canonical cause box only after validation drops.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join::candidate_plan` through launcher:
-    compiler3 pass,rc=0;`cargo test -p sc-core --doc construction::join_source_examples`:source9 pass,
-    rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered actual inventory/exact
-    copies/resource/deep-field boundary present;complete previous source prefix exact.974 three Git
-    spans/body/public bytes exact;`history_archive.py --root . verify`:1428 logical/61 working,rc=0.
-    Main9/topology8 unchanged;full geometry/integration remains .5f.4.geometry/.5g/pre-push.
-  Successful new storage I+J+D;one canonical diagnostic entry fits the same peak via closed I≥2.
-  No labels/material reasons/contours read;whole deep resources,original/result fields,per-pair
-  physical/consumer/currentness/identity/retirement and atomic effects remain required.
-  Commit:STITCHCAD-G1-0799. promotion: declined (existing copy/resource/identity/geometry boundary).
+  Goal:0799 actual canonical candidate plan;[whole scope/proofs](../history/stitchcad-devnotes-part975.md).
+### G1-SLICE.5f.1.c.join.outputs.copies.inventory.fields
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.fields`
-  Status: `pending`
-  Goal:whole original/candidate Piece headers,hole/field/text resources before any deep field comparison.
+  Status: `done`
+  Goal:whole original/candidate headers,hole groups,edge fields and UTF-8 label/reason bytes
+  admitted before later deep comparisons;all consumed/unrelated/companion originals remain charged.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_inventory_field_contract --test join_candidate_plan_contract`
+    through `scripts/local_environment.py`:fields4/prior plan4 pass,rc=0. Copy-plan validity cannot
+    bound whole Piece body comparisons;equal/repeated content and separate folds still count.
+  - [x] ADDRESSED: final `cargo test -p sc-core --test join_inventory_field_contract` through launcher:
+    fields4 pass,rc=0;I/J before H,H before child lengths,R before text lengths,B before content;
+    exhaustive Piece/label/material fields and actual whole-inventory loans. Strict selected clippy rc=0.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join::inventory_fields` through launcher:
+    compiler3 pass,rc=0;`cargo test -p sc-core --doc construction::join_source_examples`:source10 pass,
+    rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered whole/UTF-8/scope
+    boundary present;complete prior source prefix exact.975 three Git spans/body/public bytes exact;
+    `history_archive.py --root . verify`:1429 logical/62 working,rc=0. Main9/topology8 unchanged.
+  Work O(I+J+H+1),constant counters/no allocation/content scan. Resources prove no semantic
+  equality,source permission,geometry/currentness/consumer/identity/effects;full .5f.4.geometry/.5g remains.
+  Commit:STITCHCAD-G1-0800. promotion: declined (existing whole-resource/semantic boundary).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals`
   Status: `pending`
   Goal:retained original Pieces preserve every field except canonical quantity derived from actual retained copies.

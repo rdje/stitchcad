@@ -56,6 +56,11 @@ pub use fold_sources::{
     DeclaredJoinFoldSources, JoinFoldSourceAction, JoinFoldSourceAssignment, JoinFoldSourceError,
     JoinFoldSourceIntent, JoinFoldSourceLimits, JoinFoldSourceManifest, JoinFoldSourceRefusal,
 };
+mod inventory_fields;
+pub use inventory_fields::{
+    BoundJoinInventoryFields, JoinInventoryFieldError, JoinInventoryFieldLimits,
+    JoinInventoryFieldRefusal,
+};
 mod candidate_plan;
 pub use candidate_plan::{
     BoundJoinCandidatePlan, JoinCandidatePlanError, JoinCandidatePlanLimits,

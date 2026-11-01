@@ -100,3 +100,18 @@ pub fn baseline_plan(
 ) -> CutPlan {
     CutPlan::new(definitions(pairs), inventory.pieces()).expect("complete canonical candidate plan")
 }
+
+pub fn with_bound_plan(run: impl FnOnce(BoundJoinCandidatePlan<'_>)) {
+    pairing::with_correspondence(|pairs| {
+        let inventory = baseline_inventory(&pairs);
+        let plan = baseline_plan(&pairs, &inventory);
+        let bound = pairs
+            .bind_candidate_plan(
+                &inventory,
+                &plan,
+                JoinCandidatePlanLimits::new(5, 3, 2, 2, 3, 11),
+            )
+            .expect("actual canonical candidate plan");
+        run(bound);
+    });
+}

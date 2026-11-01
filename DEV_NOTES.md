@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — actual canonical candidate copy plan
+## _(2026-11-01 UTC)_ — whole original/candidate Piece-field resources
 
-0799 revalidates the candidate plan against actual supplied Pieces and exact retained/result definitions,with derived counts.
-Whole C/I/Q/J/D and max(J+3D,I+J+D) precede fields/allocation;deep Piece bodies remain uninspected and uncertified.
-Native4/prior pairs4/API3/source9/lint/fmt/book rc=0;974 original/body/public bytes exact;canonical diagnostic stays actual.
-promotion: declined (existing resource/copy/geometry boundary). G1still6/18;whole deep Piece-field resource admission next.
+0800 admits all original/candidate I/J,H,R and UTF-8 B before later comparison,including consumed/unrelated originals.
+Exhaustive fields force future accounting updates;equal text/separate folds count again,no content scan or allocation.
+Native4/prior plan4/API3/source10/lint/fmt/book rc=0;975 original/body/public bytes exact;resource presence is not equality.
+promotion: declined (existing resource/semantic boundary). G1still6/18;original field preservation/repair next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
