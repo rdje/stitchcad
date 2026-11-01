@@ -815,36 +815,37 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours`
   Status: `in_progress`
   Goal:bounded source fragments/output roles and complete proposed boundary/hole/construction/fold topology.
-### G1-SLICE.5f.1.c.join.outputs.contours.sources
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.sources`
   Status: `done`
-  Goal:bounded complete A/B held Piece hole/edge occurrence admission before field scans/known
-  namespace/output work;authentic original source fields and actual side/copy parents retained.
-  Move the growing join book reference into a bounded companion before more native source examples.
-  Plan:whole A+B H before hole-length scans,checked complete boundary/hole/construction/fold R
-  before edge scans;refuse direct current-operation source creators only after quotas. Constant
-  borrowed source views preserve original A/B/family order and reverse. No currentness/bank/geometry proof.
-  Focused native/parent/compiler/moved-book checks;retire whole0776 for bounded live continuity.
-  - [x] ROOT CAUSE (WHY + WHERE):whole A/B source fields need H/R admission before namespace/
-    output work. First compile rc101 E0373 outer iterator capture;move the borrowed self into
-    the returned closure. Final cargo test -p sc-core --test join_source_piece_contract gives
-    `3 passed; 0 failed`,rc=0;actual family pointers,quota/self-source order and stale-held boundary.
-  - [x] ADDRESSED (verified):STITCHCAD-G1-0777;whole H before hole lengths,whole R before field
-    scans;constant borrowed views and actual refused source field,original A/B/family order/reverse.
-    Native3/prior population2 and strict selected Clippy/lib/tests pass0;rc=0. Actual selected-bank
-    membership,currentness/global freshness,geometry and command authority remain separate.
-  - [x] NO REGRESSION:cargo test -p sc-core --doc construction::join::sources gives `4 passed;
-    0 failed`,rc=0;new join_examples6/editing_examples6/fmt/book pass0;rc=0. Book14337B block
-    copied exact;all114 prior chapter routes/order retained,new route makes115 chapters/116 source
-    Markdown files;SUMMARY120/index coverage pass0. Initial tool label115 prior chapters corrected
-    using parsed chapter counts;SUMMARY is a separate source file. ADR canonical book link follows.
-    952 three Git spans/body exact;archive1406/39 rc=0;D372 warning remains owned.
-    promotion: declined (existing bounded-source/canonical rules);next .contours.banks.
+  Goal:0777 full original H/R admission/book split;[whole scope/proofs](../history/stitchcad-devnotes-part953.md).
+### G1-SLICE.5f.1.c.join.outputs.contours.banks
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.banks`
-  Status: `pending`
+  Status: `done`
   Goal:bind each actual original positive selected range to its literal boundary/hole field
   under admitted whole sources,before outside/output topology and identity/copy work.
   NoExactCutBank is a scoped held-variant refusal,not global absence/current-alias invalidity.
+  Plan:reuse immutable whole H/R admission;bind A then B only on literal boundary/hole fields,
+  retain actual directed field,selected range/copy and source occurrence;no accepted bank prefix.
+  Constant cached associations/no allocation or field rewriting. Focused native/parent/compiler/book
+  checks;retire whole0777 and prior0388 ledger before live growth.
+  - [x] ROOT CAUSE (WHY + WHERE):whole original occurrences include construction/fold uses;
+    selected cut banks require actual literal boundary/hole fields. cargo test -p sc-core --test
+    join_cut_bank_contract reports `3 passed; 0 failed`,rc=0;construction-only matches refuse.
+  - [x] ADDRESSED (verified):STITCHCAD-G1-0778;A then B under original full H/R,constant two
+    cached associations,actual source occurrence/directed/range/Piece/copy borrows. Native banks3/
+    prior sources3 pass0;rc=0. All outer/hole combinations,whole/partial bounds,reflected B and
+    first missing A/B preserve actual fields;no accepted bank prefix or parameter rewrite.
+  - [x] NO REGRESSION:final strict selected Clippy/lib/tests and fmt rc=0;cargo test -p sc-core
+    --doc construction::join::banks gives `3 passed; 0 failed`,rc=0;join_examples gives
+    `7 passed; 0 failed`,rc=0;book build rc=0 (D372 owned). Real retired-source current validation
+    still refuses while old bank membership binds. 953 four Git spans/body exact;archive1407/40 rc=0.
+    Current aliases/ownership,whole outside/output topology,maps,geometry,retirement and authority
+    remain later owners. promotion: declined (existing held-source/canonical cut rules);next .contours.roles.
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.roles`
+  Status: `pending`
+  Goal:bind the complete actual EdgeOutputRoleCatalog to the original join operation under fresh
+  definition/active/key-byte limits and explicit local owner checks,before candidate/identity work.
+  Metadata binding alone declares no output count,shape,geometry or global namespace freshness.
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage`
   Status: `pending`
   Goal:explicit output/source identities,retirement/reference repair and full observer/evidence requirements.

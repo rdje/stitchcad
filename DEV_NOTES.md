@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — bounded original join source occurrences
+## _(2026-11-01 UTC)_ — literal original join cut banks
 
-0777 .join.outputs.contours.sources checks whole H/R before original A/B edge scans;views/errors borrow actual fields.
-Initial E0373 iterator capture fixed;native3/population2/API4/join6/editing6/lint/fmt/book0. Real stale-currentness control retained.
-Join book14337B copied exact;114 prior routes/order retained,115 chapters/116 source files,Summary120/index0;952 exact0776.
-Promotion:declined,existing bounded/canonical rules. Bank/currentness/identity/geometry/authority remain later;G1still6/18.
+0778 .join.outputs.contours.banks binds A/B to actual boundary/hole fields under original H/R admission.
+No construction substitute,accepted prefix,parameter expansion or reflection inference;original field/range/copy pointers stay authentic.
+Native3/source3/API3/join7/lint/fmt/book0;953 four exact Git spans/archive1407/40. Actual current retirement control still refuses.
+Promotion:declined,existing held/canonical rules. Outside/topology/identity/copies/geometry/authority remain;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

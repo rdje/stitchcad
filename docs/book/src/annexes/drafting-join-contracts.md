@@ -274,3 +274,41 @@ original indices,not persistent identities or current parameters. No sorting or 
 This source inventory proves no literal selected cut-bank membership,current-root/alias resolution,
 entire namespace freshness,coincidence or valid joined topology. A retired source can still lend
 its old held fields while actual current graph validation refuses;original references are not remapped.
+
+## Bind both literal held cut banks
+
+`BoundJoinSourcePieces::bind_cut_banks` binds A then B under the same immutable complete H/R
+admission. A bank must be an actual boundary or hole field on that role's original supplied Piece,
+with the same literal EdgeRef as its actual selected range. A construction match or separate fold
+declaration cannot substitute. Canonical Piece birth already excludes duplicate cut-edge identities
+across its cut loops;the native binding does not sort or choose among equal-looking fields.
+
+```rust
+use sc_core::construction::*;
+fn bind<'a>(sources:&'a BoundJoinSourcePieces<'a>)
+    ->Result<BoundJoinCutBanks<'a>,JoinCutBankError<'a>> {
+    sources.bind_cut_banks()
+}
+```
+
+`NoExactCutBank { side }` retains the first missing A/B role. The error lends actual `sources()`,
+the first `refusal()` and the original refused `source_range()` field. A found A bank does not
+escape a B refusal. This cause concerns the literal held variant;it does not prove an edge globally
+absent or invalidate a history alias. Actual current projection/ownership remains separately required.
+
+`BoundJoinCutBanks` retains actual complete `sources()`. `banks()` lends both authentic banks in
+canonical A/B order and reverse,independent of CutPlan order;`bank(side)` queries one canonical role.
+Each `JoinCutBank` retains whole `context()`,original `side()` and authentic source `occurrence()`.
+`directed()` lends the actual original boundary/hole field and unchanged Piece traversal.
+`range()` and `source_side()` lend the actual selected span fields;`piece()` and `copy()` lend the
+original owning Piece and selected physical copy. No separately supplied field or range is attached.
+
+For selected1/4–3/4,the directed contour still names its original whole edge,while `range()` keeps
+those exact partial bounds. Neither expands the selected interval nor removes0–1/4 or3/4–1.
+Outside-fragment attribution and complete proposed topology remain output requirements. A reflected
+copy or fixed B placement never reverses these held bounds or chooses a new contour direction.
+
+Binding takes O(H+R+1) work with two fixed cached associations,no allocation,string scan,provider
+call or geometry evaluation. Literal membership proves no currentness,geometric coincidence,
+interior parameter map,valid joined contour,retirement or authoring authority. Actual current graph
+validation can refuse a retired source while these immutable original bank fields remain lendable.

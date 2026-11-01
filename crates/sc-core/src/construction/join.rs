@@ -1,7 +1,9 @@
 //! Explicit two-Piece join source intent;association does not splice or publish a boundary.
 use crate::ontology::{EntityId, SeamSideId};
 use core::fmt;
+mod banks;
 mod binding;
+pub use banks::{BoundJoinCutBanks, JoinCutBank, JoinCutBankError, JoinCutBankRefusal};
 pub use binding::{BoundJoinPiecesAtSeam, BoundJoinSide, JoinBindingError, JoinBindingRefusal};
 mod inventory;
 pub use inventory::{
