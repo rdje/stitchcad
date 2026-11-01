@@ -347,3 +347,51 @@ Empty or wholly inactive catalogues can bind to the same actual operation. This 
 both source banks and the explicit positive result population remain required. It proves no empty
 joined result,no-op,source/output attribution,role history,global freshness,issued identity,
 geometric correspondence,valid topology or publication authority.
+
+## Declare a canonical result Piece identity
+
+`BoundJoinEdgeRoles::declare_piece_identity` borrows one explicit canonical result Piece-id field.
+It neither allocates nor derives that id from geometry,labels,source ids or statement positions.
+This is native declaration data;creation requests still rely on the trusted host to issue identities.
+
+```rust
+use sc_core::{construction::*,ontology::EntityId};
+fn declare<'a>(roles:&'a BoundJoinEdgeRoles<'a>,piece_id:&'a EntityId)
+    ->Result<DeclaredJoinPieceIdentity<'a>,JoinPieceIdentityError<'a>> {
+    roles.declare_piece_identity(piece_id,JoinPieceIdentityLimits::new(1))
+}
+```
+
+`JoinPieceIdentityLimits::new(S)` bounds every selected-span stop occurrence **plus** every
+original stop occurrence retained by a Portion ease source. Checked total and `Stops` quota
+precede candidate and stop-field inspection;`StopOverflow` retains a nonrepresentable sum.
+The original complete provided C/I inventory/plan and A/B H/R policies remain in force.
+
+With one selected stop and that same landmark retained in the original ease snapshot,S is2,
+not1. S1 refuses required2 even if the requested id also aliases the join operation. A retained
+tail can have no selected stops while its original source still contributes1;that occurrence
+cannot disappear merely because it lies outside the current selected portion.
+
+After resource admission,the listed local exclusions run in this order:actual join operation,
+every supplied inventory Piece,requested self-companion,original graph,selected span,retained
+ease-source span,every original physical copy,A/B edge-producing operations,input assigned
+Materials,selected result Material,selected stops,then retained-source stops. Inventory and plan
+indices retain original supplied order;source edges retain original A/B/family order.
+
+`Operation`,`InventoryPiece`,`SelfCompanion`,`Graph`,`Span`,`RetainedSpan`,`Copy`,
+`SourceOperation`,`SourceMaterial`,`ResultMaterial` and `Stop` preserve the actual first cause.
+`JoinIdentityStopOrigin` distinguishes selected and retained lists. Repeated stop references count
+in S even though the selected list wins when both lists contain the refused landmark.
+
+Errors lend actual `roles()`,original `piece_id()`,explicit `limits()` and first `refusal()`.
+`refused_source()` lends the actual original edge only for SourceOperation;`refused_stop()` lends
+the actual original stop only for Stop. Other causes return `None`;no replacement field is attached.
+`DeclaredJoinPieceIdentity` retains the same actual roles,id field and limits and reports the
+complete `stop_occurrences()` count. It grants no companion existence/reciprocity or publication proof.
+
+Work is O(C+I+H+R+S+1),with constant extra space,no allocation,text scan,registry/provider call
+or identity issuance. Formula/Profile source ids are not classified from equal external values.
+An unlisted id can pass these local checks,including explicit zero or a value equal to an unread
+external source reference;that supplies no global kind,existence,state or freshness certificate.
+Actual current/historical namespace,nonreuse,reference resolution and authoring authority remain
+mandatory host/program obligations before geometry execution or publication.

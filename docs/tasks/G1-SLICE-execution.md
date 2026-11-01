@@ -821,38 +821,36 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.banks`
   Status: `done`
   Goal:0778 literal A/B banks;[whole scope/proofs](../history/stitchcad-devnotes-part954.md).
-### G1-SLICE.5f.1.c.join.outputs.contours.roles
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.roles`
   Status: `done`
-  Goal:bind the complete actual EdgeOutputRoleCatalog to the original join operation under fresh
-  definition/active/key-byte limits and explicit local owner checks,before candidate/identity work.
-  Metadata binding alone declares no output count,shape,geometry or global namespace freshness.
-  Plan:reuse cached full D/A/key-byte counts before actual operation equality;constant borrowing,
-  no catalogue rescan/allocation. Same typed Edge catalogue contract as mirror/truing roles.
-  Focused native/parent/compiler/book checks. Retire whole0778 plus complete current Changelog/index
-  early (64804/65536B,732B headroom at source),not a claim that its ceiling was already reached.
-  - [x] ROOT CAUSE (WHY + WHERE):actual Edge catalogue owner must match this original join;
-    cached D/A/key-byte policy remains complete before association. Existing mirror/truing role
-    interfaces read;cargo test -p sc-core --test join_edge_role_binding_contract gives
-    `3 passed; 0 failed`,rc=0;actual parent/member pointers and original active order retained.
-  - [x] ADDRESSED (verified):STITCHCAD-G1-0779;constant full D/A/B quotas then operation equality,
-    typed Edge catalogue,whole error parents and policy;native roles3/prior banks3 pass0,rc=0.
-    Wrong-owner quota precedence,original definitions/members,empty/inactive presence covered;
-    no output attribution,geometry,role history/global freshness/issuance or authority follows.
-  - [x] NO REGRESSION:strict selected Clippy/lib/tests and fmt rc=0;cargo test -p sc-core --doc
-    construction::join::roles gives `4 passed; 0 failed`,rc=0;join_examples gives `8 passed;
-    0 failed`,rc=0;book build rc=0 (D372 owned). 954 three Git spans/body exact,including complete
-    64804B Changelog/index;public reader68259B exact;archive1408/41 rc=0. Early index retirement
-    preserves all older ledger/navigation bytes;source732B headroom recorded rather than cap breach.
-    promotion: declined (existing catalogue/containment contracts);next .lineage.identity.
+  Goal:0779 catalogue association/full Changelog retention;[whole scope/proofs](../history/stitchcad-devnotes-part955.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage`
-  Status: `pending`
+  Status: `in_progress`
   Goal:explicit output/source identities,retirement/reference repair and full observer/evidence requirements.
+### G1-SLICE.5f.1.c.join.outputs.lineage.identity
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.identity`
+  Status: `done`
+  Goal:canonical result Piece field under explicit enumerated known-owner/reference exclusions;
+  trusted issuance/global current/historical namespace,reference truth and authority remain host work.
+  Complete selected-plus-retained S precedes fields;reuse actual original C/I/H/R and borrow actual
+  refused edge/stop fields. Source Formula/Profile ids cannot establish kinds by value equality.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_piece_identity_contract --test join_edge_role_binding_contract`
+    through `scripts/local_environment.py`: identity4/prior roles3 pass0,quota-before-owner and retained
+    duplicate/outside-tail stop witnesses. Original fields/policies/parents remain pointer-identical.
+  - [x] ADDRESSED: same native command4+3 pass0; `cargo test -p sc-core --doc construction::join::identity`
+    through launcher:3 compiler guards pass0;selected strict clippy0. No allocation/registry/issuance.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:9 pass0;
+    `cargo fmt --all -- --check` and `scripts/run_make.sh book` pass0. Rendered identity/quota/source scope
+    present;955 three original Git spans/body/public bytes exact;`history_archive.py --root . verify`
+    reports1409 logical/42 working,rc0. Full integration/geometry stays .5f.4.geometry/.5g/pre-push.
+  Lost exec handle89162 recovered by inspecting HEAD/status/empty brief before repeating only focused
+  checks;the terminal repeat is the observed evidence. No commit was retried or active job inferred done.
+  Commit:STITCHCAD-G1-0780. promotion: declined (existing canonical identity/host authority boundary).
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.manifest`
   Status: `pending`
-  Goal:canonical result Piece-id declaration under bounded explicit known-owner exclusions;
-  preserve original source/catalogue/population and raw identity field. Trusted issuance,whole
-  current/historical namespace and atomic host authority remain required before publication.
+  Goal:bounded explicit Edge candidates with original A/B/source-range attribution and persistent
+  active-role association after actual result identity. Preserve original whole declarations/errors;
+  no implicit source-domain coverage,retirement,geometric map,empty result or global freshness proof.
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
   Status: `pending`
   Goal:reconcile declared join variants against v1 requirements;actual geometry/G3/bus/full verification

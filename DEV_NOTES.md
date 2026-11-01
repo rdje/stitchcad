@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — complete join Edge catalogue association
+## _(2026-11-01 UTC)_ — scoped joined Piece identity
 
-0779 .join.outputs.contours.roles checks cached whole D/A/key bytes before actual owner equality;all original parents remain borrowed.
-Native3/banks3/API4/join8/lint/fmt/book0;empty/inactive catalogue is presence only. Output/identity/geometry/authority stay later.
-954 three exact Git spans retain whole0778 and entire64804B old Changelog/index;reader68259B/archive1408/41 pass0.
-Early retirement with732B headroom,no limit change. Promotion:declined,existing catalogue/containment rules;G1still6/18.
+0780 declares the actual canonical result Piece field under original C/I/H/R plus complete stop S.
+Selected/retained duplicates count separately;quota precedes aliases,errors lend actual fields. Unlisted/equal
+external Profile values grant no global kind/currentness/issuance or authority proof. Native4/prior roles3/API3/join book9/strict lint/fmt/book pass0;955 three Git spans/public bytes exact.
+promotion: declined (existing canonical identity/host boundary). G1still6/18;candidate manifest next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

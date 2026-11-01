@@ -5,7 +5,12 @@ mod banks;
 mod binding;
 pub use banks::{BoundJoinCutBanks, JoinCutBank, JoinCutBankError, JoinCutBankRefusal};
 pub use binding::{BoundJoinPiecesAtSeam, BoundJoinSide, JoinBindingError, JoinBindingRefusal};
+mod identity;
 mod inventory;
+pub use identity::{
+    DeclaredJoinPieceIdentity, JoinIdentityStopOrigin, JoinPieceIdentityError,
+    JoinPieceIdentityLimits, JoinPieceIdentityRefusal,
+};
 pub use inventory::{
     BoundJoinCopyInventory, JoinCopyInventoryError, JoinCopyInventoryLimits,
     JoinCopyInventoryRefusal,
