@@ -22,6 +22,7 @@ pub struct BankFixture {
     pub span: SpanFixture,
     pub extra_piece: bool,
     pub additional_source_pair: bool,
+    pub additional_authored_copies: bool,
     pub source_companion: bool,
     pub extra_occurrences: bool,
     pub bank_in_holes: bool,
@@ -40,6 +41,7 @@ impl BankFixture {
             span: SpanFixture::Declared,
             extra_piece: false,
             additional_source_pair: false,
+            additional_authored_copies: false,
             source_companion: false,
             extra_occurrences: false,
             bank_in_holes: false,
@@ -76,15 +78,24 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
         .map(|(index, piece)| {
             let mut d = piece.definition().clone();
             if options.source_companion && index == 0 {
-                assert!(options.extra_piece && !options.additional_source_pair);
+                assert!(
+                    options.extra_piece
+                        && !options.additional_source_pair
+                        && !options.additional_authored_copies
+                );
                 d.mirroring = Mirroring::PairMember {
                     handedness: Handedness::Left,
                     companion: id(102),
                 };
             }
-            if options.additional_source_pair {
+            if options.additional_source_pair || options.additional_authored_copies {
+                assert!(!(options.additional_source_pair && options.additional_authored_copies));
                 d.quantity = 2;
-                d.mirroring = Mirroring::MirroredPairs;
+                d.mirroring = if options.additional_authored_copies {
+                    Mirroring::Single
+                } else {
+                    Mirroring::MirroredPairs
+                };
             }
             if options.extra_boundary_edges {
                 d.boundary.extend([
@@ -161,17 +172,22 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
         .iter()
         .map(|c| *c.definition())
         .collect::<Vec<_>>();
-    if options.additional_source_pair {
+    if options.additional_source_pair || options.additional_authored_copies {
+        let orientation = if options.additional_authored_copies {
+            CopyOrientation::Authored
+        } else {
+            CopyOrientation::Reflected
+        };
         definitions.extend([
             CutCopyDefinition {
                 id: id(203),
                 piece: id(100),
-                orientation: CopyOrientation::Reflected,
+                orientation,
             },
             CutCopyDefinition {
                 id: id(204),
                 piece: id(101),
-                orientation: CopyOrientation::Reflected,
+                orientation,
             },
         ]);
     }

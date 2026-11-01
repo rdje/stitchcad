@@ -105,3 +105,18 @@ pub fn with_companion_results(mode: Mirroring, run: impl FnOnce(DeclaredJoinResu
         });
     });
 }
+/// Two authored copies of each original source;only the selected pair is consumed later.
+pub fn with_partial_results(run: impl FnOnce(DeclaredJoinResultCopies<'_>)) {
+    fold::with_partial_construction(|construction| {
+        with_construction_folds(&construction, |folds| {
+            let raw = JoinResultCopyManifest::new(
+                id(1000),
+                vec![request(6000, CopyOrientation::Authored)],
+            );
+            let results = raw
+                .admit(&folds, JoinResultCopyLimits::new(5, 3, 1, 9))
+                .expect("one requested result;additional source copies remain explicit");
+            run(results);
+        });
+    });
+}

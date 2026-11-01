@@ -63,3 +63,22 @@ pub fn with_companion_correspondence(
         run(pairs);
     });
 }
+pub fn with_partial_correspondence(run: impl FnOnce(RequiredJoinCopyCorrespondence<'_>)) {
+    copies::with_partial_results(|results| {
+        let raw = JoinCopySourceManifest::new(
+            id(1000),
+            vec![
+                row(&results, 202, None),
+                row(&results, 200, Some(6000)),
+                row(&results, 201, Some(6000)),
+                row(&results, 203, None),
+                row(&results, 204, None),
+            ],
+        );
+        let sources = admit(&raw, &results);
+        let pairs = sources
+            .require_pairs(JoinCopyPairLimits::new(5, 1, 3))
+            .expect("selected pair consumed;two actual original source copies retained");
+        run(pairs);
+    });
+}

@@ -50,7 +50,7 @@ pub fn with_alternative_construction(
         shared,
         1,
         false,
-        false,
+        ExtraCopies::None,
         false,
         sc_core::ontology::Mirroring::Single,
         run,
@@ -66,7 +66,7 @@ pub fn with_copy_construction(
         false,
         quantity,
         unrelated,
-        false,
+        ExtraCopies::None,
         false,
         sc_core::ontology::Mirroring::Single,
         run,
@@ -77,7 +77,7 @@ pub fn with_paired_construction(run: impl FnOnce(RequiredJoinConstructionTargets
         false,
         2,
         true,
-        true,
+        ExtraCopies::Mirrored,
         false,
         sc_core::ontology::Mirroring::MirroredPairs,
         run,
@@ -87,13 +87,29 @@ pub fn with_companion_construction(
     mode: sc_core::ontology::Mirroring,
     run: impl FnOnce(RequiredJoinConstructionTargets<'_>),
 ) {
-    with_alternative_options(false, 1, true, false, true, mode, run);
+    with_alternative_options(false, 1, true, ExtraCopies::None, true, mode, run);
+}
+pub fn with_partial_construction(run: impl FnOnce(RequiredJoinConstructionTargets<'_>)) {
+    with_alternative_options(
+        false,
+        1,
+        true,
+        ExtraCopies::Authored,
+        false,
+        sc_core::ontology::Mirroring::Single,
+        run,
+    );
+}
+enum ExtraCopies {
+    None,
+    Mirrored,
+    Authored,
 }
 fn with_alternative_options(
     shared: bool,
     quantity: u32,
     unrelated: bool,
-    additional_pair: bool,
+    additional: ExtraCopies,
     companion: bool,
     mode: sc_core::ontology::Mirroring,
     run: impl FnOnce(RequiredJoinConstructionTargets<'_>),
@@ -107,7 +123,8 @@ fn with_alternative_options(
             shared_edge_fields: shared,
             result_quantity: quantity,
             extra_piece: unrelated,
-            additional_source_pair: additional_pair,
+            additional_source_pair: matches!(additional, ExtraCopies::Mirrored),
+            additional_authored_copies: matches!(additional, ExtraCopies::Authored),
             source_companion: companion,
             mirroring: mode,
             ..edges::BankFixture::basic()

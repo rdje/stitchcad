@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0802 — explicit retained companion requirements
+## STITCHCAD-G1-0803 — exact join original Piece preservation
 
-- Bind ordered guarded companion retarget/evidence requests to actual retained original/candidate members and consumed A/B mates.
-- Require explicit result identity/opposite-hand reciprocity and preserved original hand under whole M/2M admission.
-- Native4/prior field4/API3/inventory3/strict lint/fmt/book rc=0;977 original spans/body/public bytes exact,archive1431/64.
-- Requests confer no evidence/consumer/retirement approval;uncovered original field changes remain next. G1still6/18 unchanged.
+- Match all retained original fields exactly except derived copy quantity and admitted explicit companion requirements;require consumed absence.
+- Preserve authored order,whole actual parents and precise first field causes without allocation or evidence/geometry calls.
+- Native original4/prior companion4/API2/inventory4/strict lint/fmt/book/rendered claims rc=0;partial source quantity2-to1 covered.
+- 978 three Git spans/body/public exact;archive1432/65,per-generation21/64 and44/64. G1still6/18;result fields/consumers/geometry pending.
 
 # Sealed archive — earlier slices
+
+[Whole0802 explicit companion requirements](docs/history/stitchcad-devnotes-part978.md) retain exact task,lesson and ledger bytes.
 
 [Whole0801 bounded inventory reference](docs/history/stitchcad-devnotes-part977.md) retains exact task,lesson and ledger bytes.
 

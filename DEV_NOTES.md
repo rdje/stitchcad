@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — explicit retained companion requirements
+## _(2026-11-01 UTC)_ — exact join original Piece preservation
 
-0802 binds actual retained member/expected whole Mirroring/new result/evidence requests under complete M/checked2M. Actual old mate must be a fully consumed A/B source;requested result explicitly reciprocates opposite hand;candidate preserves hand.
-Native companion4/prior field4,API3/inventory3/strict lint/fmt/book rc=0;canonical relation cause follows actual authored Piece order.
-977 three Git spans/body/public bytes exact;archive1431/64,per-generation21/64 and43/64,rc=0;all prior chapter bytes retained.
-promotion: declined (existing explicit pair-member/reference repair contract). G1still6/18;uncovered changes/original fields next.
+0803 compares every actual original under closed whole resources;derived retained quantity and exact explicit companion fields are sole exceptions.
+Native original4/prior companion4 pass,including actual source quantity2-to1 and canonical changed contour/material/UTF-8/uncovered-mate refusals.
+API2/inventory4/strict lint/fmt/book/rendered claims rc=0;978 three Git spans/body/public exact;archive1432/65,per-generation21/64 and44/64,rc=0.
+promotion: declined (existing original-copy/explicit repair contract). G1still6/18;joined-result fields next,consumer/physical integration pending.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

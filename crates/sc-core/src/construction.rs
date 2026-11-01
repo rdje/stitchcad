@@ -107,7 +107,8 @@ pub use join::{
     JoinFoldSourceAction, JoinFoldSourceAssignment, JoinFoldSourceError, JoinFoldSourceIntent,
     JoinFoldSourceLimits, JoinFoldSourceManifest, JoinFoldSourceRefusal, JoinIdentityStopOrigin,
     JoinInputError, JoinInventoryFieldError, JoinInventoryFieldLimits, JoinInventoryFieldRefusal,
-    JoinMappedConstructionTarget, JoinMovingOrientation, JoinOutputEdge, JoinParameterDirection,
+    JoinMappedConstructionTarget, JoinMovingOrientation, JoinOriginalPiece, JoinOriginalPieceError,
+    JoinOriginalPieceField, JoinOriginalPieceRefusal, JoinOutputEdge, JoinParameterDirection,
     JoinPieceFieldIntent, JoinPieceIdentityError, JoinPieceIdentityLimits,
     JoinPieceIdentityRefusal, JoinPieceMetadataError, JoinPieceMetadataLimits,
     JoinPieceMetadataPolicy, JoinPieceMetadataRefusal, JoinPiecesAtSeam, JoinPlacedConstructionUse,
@@ -115,8 +116,9 @@ pub use join::{
     JoinResultCopyRefusal, JoinResultCopyRequest, JoinSourceOccurrence, JoinSourceOccurrenceField,
     JoinSourceOccurrenceLocation, JoinSourcePieceError, JoinSourcePieceLimits,
     JoinSourcePieceRefusal, JoinSpliceEnd, JoinSpliceEndpointPair, JoinSplicePlacement,
-    RequiredJoinCompanionRepairs, RequiredJoinConstructionTargets, RequiredJoinCopyCorrespondence,
-    RequiredJoinCutConnectivity, RequiredJoinExactSplice, RequiredJoinFold,
+    MatchedJoinOriginalPieces, RequiredJoinCompanionRepairs, RequiredJoinConstructionTargets,
+    RequiredJoinCopyCorrespondence, RequiredJoinCutConnectivity, RequiredJoinExactSplice,
+    RequiredJoinFold,
 };
 mod mirror;
 pub use mirror::{

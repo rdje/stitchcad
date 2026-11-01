@@ -1,8 +1,9 @@
 # Join candidate inventory contracts
 
 This reference follows the [original sources and copy policies](drafting-join-sources.md).
-It records native candidate-plan and whole-field resource contracts. Original/result semantic
-matching,explicit consumer repair and all physical/currentness/authority proofs remain separate.
+It records native candidate-plan and whole-field resources,explicit companion requirements and
+original-field matching. Joined-result matching,complete consumer repair,physical validity,currentness
+and authority proofs remain separate.
 
 ## Bind the complete candidate copy plan
 
@@ -165,3 +166,59 @@ must remain exact except canonical quantity derived from retained copies.
 Work is O(M log(M+I+J+2)+1),with2M new entries. No provider,evidence,registry,geometry,physical
 mirroring,parity inference or atomic effect is supplied. Whole original preservation,joined-result
 fields,complete consumer repair,current identity and per-pair physical proof remain required.
+
+## Preserve every remaining original Piece field
+
+`RequiredJoinCompanionRepairs::match_original_pieces` compares every actual original in its
+inventory's authored order,including unrelated Pieces and fully consumed sources. The closed
+candidate plan supplies a derived retained-copy count for each original. Count0 requires candidate
+absence;positive count requires the original identity in the candidate with that exact quantity.
+Fully consumed absence is structural bookkeeping;this comparison performs no retirement.
+
+```rust
+use sc_core::construction::*;
+fn originals<'a>(repairs:&'a RequiredJoinCompanionRepairs<'a>)
+    ->Result<MatchedJoinOriginalPieces<'a>,JoinOriginalPieceError<'a>> {
+    repairs.match_original_pieces()
+}
+```
+
+For each retained original,the comparator checks identity,ordered boundary,ordered hole groups,
+ordered construction fields,derived quantity,mirroring,fold flag,separate ordered fold edges,
+cutting face,material,layer and all four label fields. Repeated edges,group order,traversal direction,
+assigned material ids and unresolved reason strings remain exact. Labels compare name,size,fabric,
+colorway as exact UTF-8;there is no trimming,case folding or Unicode normalization. Exhaustive
+PieceDefinition/LabelText field patterns require a comparison update when owned fields are added.
+
+The only permitted differences are derived retained quantity and an already admitted explicit
+companion field. For example,source100 has two authored copies200/203;the selected200 is consumed
+and203 remains. Candidate100 must have quantity1 and preserve every other field. A candidate that
+renames203,reassigns it or changes its orientation already fails the preceding exact copy-plan gate.
+Changing100's contour,material,label,fold or hand is still refused here.
+
+In the separate-member example above,102 may replace companion100 with5000 only through the
+actual guarded repair requirement,while preserving its right hand and every other field. An empty
+repair list beside the same otherwise canonical candidate refuses `Field { piece:102,field:Mirroring }`.
+Admitted repair requests remain outstanding consumer/evidence obligations;this field match does
+not accept evidence0,approve historical reference reassignment or authorize source retirement.
+
+`JoinOriginalPieceRefusal::Field` retains the actual original id and first
+`JoinOriginalPieceField` in Piece-definition order;labels identify their `LabelField` in the order
+above. Boundary/Holes precede a changed label. CountInvariant/MembershipInvariant mean an internal
+closed-parent fault requiring diagnosis,not physical incompatibility. `JoinOriginalPieceError`
+lends the whole actual `repairs()` parent,first `refusal()`,actual `original_piece()` and known
+`candidate_piece()`;no reconstructed source or accepted prefix escapes a refusal.
+
+`MatchedJoinOriginalPieces` retains the whole repair parent and reports `original_piece_count()`,
+`retained_piece_count()` and `consumed_piece_count()`;these count Piece definitions,not physical
+copies. `originals()` lends authentic original scopes in authored order and reverse;`original(id)`
+queries actual original membership,new-result/unknown ids returning None. Each `JoinOriginalPiece`
+lends `context()`,`original()`,the actual `candidate()` if retained,and `companion_repair()` if
+explicitly requested. `retained_quantity()` is the matched canonical quantity,known0 for consumed
+originals. Original pre-join quantity and old companion fields remain available through `original()`.
+
+Whole immutable I/J/H/R/B and copy/repair resources were admitted before comparison. No additional
+allocation,quota,provider,evidence,registry or geometry call occurs. Work is
+O(I log(I+J+M+2)+H+R+B+1),with constant auxiliary storage;earlier owned contexts remain separate.
+This proves complete original field preservation in the supplied candidate only. Joined-result
+fields,full consumer repair,currentness,global identity and per-pair physical/atomic proof remain pending.
