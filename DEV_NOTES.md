@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind the original selected truing held source domain
+## _(2026-11-01 UTC)_ — bound execution tracking before truing coverage
 
-0754 binds every original candidate to the actual selected span-side held range under whole N quota,then exact creator/tag,lower and upper comparisons. Original candidate/source/domain fields stay borrowed unchanged. Bounded rational ordering supplies exact membership;no rescaling,ledger/geometry query or allocation.
-Both adjusted sides retain actual partial domains and original source/provider parents. Closed endpoint touches pass;edge then lower/upper failures follow original order,including a later index1 refusal with no prefix context. Empty/overlapping members prove no coverage,no-op,retirement or fitted output.
-Final native4+4/API4/truing book4,selected lint/fmt/build/map/render pass0. Parent kernels/tests/helpers/three fences,whole0753 spans929 and older31219B notes base exact0. Proof target/history-proof-0754-truing-source-domain/;source-domain membership grants no current ledger/Piece or geometry certificate.
-Promotion: declined (existing domain scope). User requested stop at this committed handoff checkpoint. Selected-domain coverage is next;refit-no-op/reference/variant policy,actual currentness/fit/geometry/all-copy/authority/atomic effects and full integration remain owed. G1still6/18/G0 unapproved.
+0755 moves the complete native walk branch byte-exact from execution into G1-SLICE-walk.md.
+The execution file had crossed its1000-line split threshold;all original ids/goals/status/proofs remain.
+Whole branch matches6a4ccac6;tree census10/13/20 with zero unowned/orphan/dead links passes0. README/claim/containment bodies match read-only sources.
+Rust and book behavior unchanged;truing output annex reviewed. Promotion: declined (existing navigation).
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

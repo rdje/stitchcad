@@ -13,13 +13,11 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0754 — bind the original selected truing held source domain
+## STITCHCAD-G1-0755 — retain completed native walk task branch
 
-- Whole N quota precedes exact original candidate edge/from/to membership in actual selected span range.
-- Preserve actual domain/candidate/source/role parents and original fields;no allocation or geometry query.
-- Both sides,closed endpoints and later invalid candidates checked;no prefix or coverage/no-op/fit inferred.
-- Native4+4/API4/book4,lint/fmt/build/map/render pass0;prior kernels/tests/helpers/fences and929 spans exact.
-- Stop at user-requested committed checkpoint;coverage next,actual fit/currentness/effects remain owed.
+- Move the completed branch byte-exact into a linked canonical sibling before coverage growth.
+- Tree census10/13/20,zero unowned/orphan/dead links;Rust and book content unchanged.
+- Reviewed external policy bodies match local adoptions;truing coverage remains next.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -53,6 +51,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0754 scope,lesson and ledger](docs/history/stitchcad-devnotes-part930.md) retain exact source bytes.
 
 | [part600](docs/history/stitchcad-devnotes-part600.md) | whole0447 retained input-resource scope/lesson/ledger | 49 lines, 4374 bytes, sha256:06dfd2f1… |
 | [part599](docs/history/stitchcad-devnotes-part599.md) | whole0446 held-topology resource scope/lesson/ledger | 45 lines, 4028 bytes, sha256:082deecf… |

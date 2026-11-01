@@ -843,59 +843,9 @@ retain their complete task branch,original goals and proof links in the bounded 
 - ID: `G1-SLICE.5f.1.c.stage-order`
   Status: `done`
   Goal:0685 D369 fixed;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part853md).
-- ID: `G1-SLICE.5f.1.c.walk.inputs`
-  Status: `done`
-  Goal:0687 completed input stages;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part857md).
-- ID: `G1-SLICE.5f.1.c.walk.inputs.examples`
-  Status: `done`
-  Goal:0686 D370/D371 fixed;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part856md).
-- ID: `G1-SLICE.5f.1.c.walk.outputs`
-  Status: `done`
-  Goal:native output-role/manifest and explicit semantic mark-sharing/coalescing/identity policy,
-  including physical copies sharing one pattern Piece. No2N-new-id assumption. Actual marks,
-  correspondence/differential/ease/profile truth and atomic edits stay G3/G4/bus/.5f.4.geometry.
-- ID: `G1-SLICE.5f.1.c.walk.outputs.copies`
-  Status: `done`
-  Goal:0740 actual side copy/pattern owners;[whole scope/proofs](../history/stitchcad-devnotes-part915.md).
-- ID: `G1-SLICE.5f.1.c.walk.outputs.roles`
-  Status: `done`
-  Goal:distinct bounded semantic-notch role metadata and actual walk operation binding.
-- ID: `G1-SLICE.5f.1.c.walk.outputs.roles.catalog`
-  Status: `done`
-  Goal:0741 typed notch metadata;[whole scope/proofs](../history/stitchcad-devnotes-part916.md).
-- ID: `G1-SLICE.5f.1.c.walk.outputs.roles.transition`
-  Status: `done`
-  Goal:0742 typed notch history;[whole scope/proofs](../history/stitchcad-devnotes-part917.md).
-- ID: `G1-SLICE.5f.1.c.walk.outputs.roles.binding`
-  Status: `done`
-  Goal:0743 actual walk/notch-role binding;[whole scope/proofs](../history/stitchcad-devnotes-part918.md).
-- ID: `G1-SLICE.5f.1.c.walk.outputs.manifest`
-  Status: `done`
-  Goal:complete original pair/side-to-output assignment and explicit semantic identities.
-- ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.assignments`
-  Status: `done`
-  Goal:0744 complete occurrence attribution;[whole scope/proofs](../history/stitchcad-devnotes-part919.md).
-- ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities`
-  Status: `done`
-  Goal:explicit proposed semantic Notch identities/retention and complete assigned-role association.
-- ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.existing`
-  Status: `done`
-  Goal:0745 supplied existing Notch objects;[whole scope/proofs](../history/stitchcad-devnotes-part920.md).
-- ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.known`
-  Status: `done`
-  Goal:0746 scoped known ids;[whole scope/proofs](../history/stitchcad-devnotes-part921.md).
-- ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.entries`
-  Status: `done`
-  Goal:0747 explicit identity choices;[whole scope/proofs](../history/stitchcad-devnotes-part922.md).
-- ID: `G1-SLICE.5f.1.c.walk.outputs.sharing`
-  Status: `done`
-  Goal:0748 explicit field/sharing proposals;[whole scope/proofs](../history/stitchcad-devnotes-part923.md).
-- ID: `G1-SLICE.5f.1.c.walk.outputs.requirements`
-  Status: `done`
-  Goal:0749 all ten required evidence requests;[whole scope/proofs](../history/stitchcad-devnotes-part924.md).
-- ID: `G1-SLICE.5f.1.c.walk.outputs.checkpoint`
-  Status: `done`
-  Goal:0750 native17-node checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part925.md).
+[Native walk declarations and focused checkpoint](G1-SLICE-walk.md#native-walk-declarations)
+retain their complete task branch,original goals and proof links in the bounded sibling.
+
 - ID: `G1-SLICE.5f.1.c.true.contracts`
   Status: `done`
   Goal:0688 contract recovery;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part858md).
@@ -920,20 +870,13 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0753 candidate attribution;[whole scope/proofs](../history/stitchcad-devnotes-part929.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.domain`
   Status: `done`
-  Goal:membership.
-  - [x] ISSUE:range-domain binding.
-  - [x] ROOT CAUSE (truing domain):Param/Range inspected;
-    N then exact edge/bounds;rc=0.
-  - [x] FIX:domain/parents.
-  - [x] ADDRESSED (truing domain):cargo test --test truing_source_domain_contract
-    --test truing_edge_manifest_contract:4+4 pass;rc=0;commands in receipt.
-  - [x] NO REGRESSION (truing domain):API4/book4,lint/fmt/build/map/render;
-    kernels/tests/fences/929 exact;rc=0.
-  - [x] LOCKSTEP:aligned;promotion: declined (existing domain scope).
-  Proof:target/history-proof-0754-truing-source-domain/;Commit:STITCHCAD-G1-0754.
+  Goal:0754 exact held-domain membership;[whole scope/proofs](../history/stitchcad-devnotes-part930.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.coverage`
   Status: `pending`
   Goal:selected-domain coverage.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.coverage.tracking`
+  Status: `done`
+  Goal:0755 exact walk split/receipt930;census0;promotion: declined (navigation).
 - ID: `G1-SLICE.5f.1.c.true.variants`
   Status: `pending`
   Goal:review v1 truing coverage against the envelope before family closure;constrained refit
