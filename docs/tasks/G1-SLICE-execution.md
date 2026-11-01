@@ -867,12 +867,13 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   Goal:explicit complete original A/B construction-field retention/omission/mapping reconciliation
   against proposed result uses,including repeated source fields,whole ranges,multiplicity,visible
   repair/evidence requirements. An explicit result-use list alone cannot justify source content loss.
+  Native mappings complete0792;consumer/repair obligations remain .metadata.marks before source closure.
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.actions`
   Status: `done`
   Goal:0788 complete source actions;[whole scope/proofs](../history/stitchcad-devnotes-part964.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps`
-  Status: `in_progress`
-  Goal:explicit retained whole-field output role/range/traversal groups against actual proposed
+  Status: `done`
+  Goal:native explicit retained whole-field output role/range/traversal groups against actual proposed
   construction occurrences;preserve repeated source/target multiplicity and full0..1 coverage.
   Additional result content needs explicit intent/evidence requirements;no implicit source discard,
   target duplication,source-frame substitution or provider truth. Bound all nested groups before fields.
@@ -883,35 +884,34 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   Status: `done`
   Goal:0790 whole retained source partitions;[whole scope/proofs](../history/stitchcad-devnotes-part966.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets`
-  Status: `in_progress`
+  Status: `done`
   Goal:map retained groups onto actual proposed construction-use occurrences with exact expected
   traversal and repeated source/target multiplicity. Additional target content needs explicit
   intent/evidence;omission requests require real source/consumer justification before effects.
-### G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets.assignments
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets.assignments`
   Status: `done`
-  Goal:explicit covered source-group references to distinct actual proposed occurrence selectors,
-  matching exact persistent output/traversal while retaining original repeated source multiplicity.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_construction_target_contract --test join_construction_coverage_contract`
-    through `scripts/local_environment.py`:targets4/prior coverage4 pass,rc=0. Source coverage alone
-    can sit beside empty targets;actual missing uses now refuse rather than erase retained fields.
-  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join::source_targets` through launcher:
-    compiler5 pass,rc=0;whole M/T/U/checked M+2T before fields/allocation;exact source/reference counts,
-    unique actual target occurrences,persistent tag/traversal. Raw row/ordinal/source/target loans and
-    interleaved authored lists preserved. Selected strict clippy rc=0;additional intent has no Default.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_topology_examples` through launcher:
-    topology7 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered actual
-    occurrence/leftover boundary present;main7/source5 fences unchanged.966 three original Git spans/
-    body/public bytes exact;`history_archive.py --root . verify`:1420 logical/53 working,rc=0.
-    Full geometry/integration remains .5f.4.geometry/.5g/pre-push,not this native declaration.
-  Work O(M log(M+G+2)+T log(T+2)+1),peak M+2T entries;successful retained storage2T.
-  Explicit SourceMappedOnly/AllowAdditional evidence request retained only;whole leftover use scan
-  remains next. No provider/evidence/geometry/currentness/omission proof or effect/identity issuance.
-  Commit:STITCHCAD-G1-0791. promotion: declined (existing explicit source/target geometry boundary).
+  Goal:0791 actual retained target occurrences;[whole scope/proofs](../history/stitchcad-devnotes-part967.md).
+### G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets.coverage
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets.coverage`
-  Status: `pending`
-  Goal:reconcile all actual proposed uses against complete retained mappings and explicit additional
-  content intent;retain actual remaining occurrences and evidence requests,without omission/provider truth.
+  Status: `done`
+  Goal:every actual proposed use reconciles against complete retained mappings and explicit
+  additional-content intent;original additional and source omission requests remain outstanding.
+  - [x] ROOT CAUSE: final `cargo test -p sc-core --test join_target_coverage_contract --test join_construction_target_contract`
+    through `scripts/local_environment.py`:coverage4/prior targets4 pass,rc=0. Same tag/traversal
+    extra occurrence still needs explicit ownership;all-Omit sources cannot license additional targets.
+  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join::target_coverage` through launcher:
+    compiler3 pass,rc=0;whole T/U before intent/fields,first original AdditionalUse and actual field
+    loan;AllowAdditional retains all repeated extras and actual evidence id field,including zero.
+    Strict selected clippy rc=0. Draft E0700 capture fixed by borrowing the immutable actual target parent.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_topology_examples` through launcher:
+    topology8 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered whole
+    resource/occurrence/omission boundary and new forwarding anchor present;main7/source5 unchanged.
+    967 three original Git spans/body/public bytes exact;`history_archive.py --root . verify`:
+    1421 logical/54 working,rc=0. Full geometry/integration remains .5f.4.geometry/.5g/pre-push.
+  Work O(U log(T+2)+1),constant count/no allocation. Explicit empty/all-Omit scopes retain all original
+  source requirements;no evidence truth,deletion permission,no-op/final Piece/currentness inferred.
+  Native retained construction mapping complete;marks/consumers .metadata.marks and actual maps/effects remain.
+  Commit:STITCHCAD-G1-0792. promotion: declined (existing explicit source/target geometry boundary).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold`
   Status: `pending`
   Goal:explicit original fold-field and result cut-on-fold requirements against actual outer cut uses;

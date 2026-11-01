@@ -423,10 +423,55 @@ actual proposed occurrence with original tag/traversal fields. No accepted prefi
 
 Additional intent is explicit `SourceMappedOnly` or `AllowAdditional{evidence_source}`. This stage
 retains that request only:even SourceMappedOnly can bind eight retained references beside nine
-proposed uses. The next whole-use reconciliation must reject the extra use or retain explicit
-additional-content requirements. An evidence id,including0,is no kind/state/currentness or approval
+proposed uses. The [whole-use reconciliation below](#reconcile-every-proposed-construction-occurrence) rejects
+the extra use or retains explicit additional-content requirements. An evidence id,including0,is no kind/state/currentness or approval
 certificate. Source Omit requests still need separate source/consumer justification.
 
 Work is O(M log(M+G+2)+T log(T+2)+1) for G covered source groups. No provider,evidence,registry or
 geometry is called. Complete leftover-use reconciliation,additional/omission justification,achieved
 maps,fold/copy semantics,currentness,retirement and atomic authority remain required separately.
+
+## Reconcile every proposed construction occurrence
+
+`DeclaredJoinConstructionTargets::require_target_coverage` scans every actual proposed
+construction occurrence against its distinct retained-reference assignment and the explicit
+additional-content intent. `JoinConstructionTargetCoverageLimits::new(T,U)` admits all actual
+mapped references T and all proposed occurrences U before reading intent or occurrence fields.
+Earlier complete source/action/group/target policies remain separate;this scan allocates no workspace.
+
+```rust
+use sc_core::construction::*;
+fn whole<'a>(targets:&'a DeclaredJoinConstructionTargets<'a>)
+    ->Result<RequiredJoinConstructionTargets<'a>,JoinConstructionTargetCoverageError<'a>> {
+    targets.require_target_coverage(JoinConstructionTargetCoverageLimits::new(8,10))
+}
+```
+
+For T8/U10,T7 refuses `Mappings` and U9 refuses `Uses` before any additional-content check.
+With quotas met,`SourceMappedOnly` refuses `AdditionalUse` at the first original proposed occurrence
+without a retained assignment. Repeating a mapped use's tag **and traversal** still leaves a distinct
+unassigned occurrence;geometry equality does not supply source ownership or implicit permission.
+The error retains actual whole `targets()`,original `limits()`,first `refusal()` and the actual
+`refused_use()` for AdditionalUse. Whole quota causes lend no occurrence,and no accepted prefix escapes.
+
+`AllowAdditional{evidence_source}` explicitly requests the extra content. The scan preserves every
+actual additional occurrence,including repeats,and the original evidence id field. An id of0 or an
+id reused by other requirements is retained as authored;it establishes no evidence kind,state,
+currentness,source truth or approval. Consumers must discharge those requirements before effects.
+
+`RequiredJoinConstructionTargets` lends whole `targets()`/`limits()` and reports complete
+`use_count()`, `mapped_count()`, `additional_count()`. `additional_uses()` lends actual original
+additional occurrences in proposed order and reverse. `additional_evidence_source()` lends the
+actual authored AllowAdditional id field,even if there are no extra occurrences;SourceMappedOnly
+returns None. None does not mean that source Omit requests or other consumer obligations disappeared.
+
+An explicit all-Omit source action set can have zero retained groups and mappings. An empty target
+list then has vacuous native coverage. A nonempty target list still needs AllowAdditional;it cannot
+inherit permission from source omission. Every original Omit request remains in the whole source
+parent and requires its own real source/consumer justification. Neither case certifies a no-op,
+valid final Piece,current design,physical copy plan or permitted deletion.
+
+Work is O(U log(T+2)+1),with constant count state and no new allocation,provider,evidence,registry
+or geometry call. This completes native construction source/target bookkeeping under explicit
+outstanding requests. Achieved maps,omission/additional justification,fold/copy semantics,mark and
+other consumers,currentness,geometry,retirement and atomic authority remain required separately.

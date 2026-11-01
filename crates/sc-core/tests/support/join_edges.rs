@@ -290,6 +290,14 @@ pub fn with_partitioned_sources(
     proposed: Vec<JoinConstructionUse>,
     run: impl FnOnce(DeclaredJoinConstructionSources<'_>),
 ) {
+    with_partitioned_source_actions(proposed, |_, _| JoinConstructionSourceIntent::Retain, run);
+}
+/// Actual split candidates/cut paths and explicit complete source intents,including Omit requests.
+pub fn with_partitioned_source_actions(
+    proposed: Vec<JoinConstructionUse>,
+    intent: impl Fn(SeamSideId, usize) -> JoinConstructionSourceIntent,
+    run: impl FnOnce(DeclaredJoinConstructionSources<'_>),
+) {
     with_candidate_coverage(
         BankFixture {
             span: SpanFixture::RetainedTail,
@@ -305,7 +313,7 @@ pub fn with_partitioned_sources(
                     let uses = raw
                         .admit(&path, JoinConstructionUseLimits::new(10, u, u))
                         .expect("explicit proposed occurrences");
-                    with_use_sources(&uses, |_, _| JoinConstructionSourceIntent::Retain, run);
+                    with_use_sources(&uses, intent, run);
                 });
             });
         },

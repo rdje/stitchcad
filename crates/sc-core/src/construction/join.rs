@@ -74,6 +74,11 @@ pub use source_targets::{
     JoinConstructionTargetManifest, JoinConstructionTargetRefusal, JoinMappedConstructionTarget,
 };
 mod sources;
+mod target_coverage;
+pub use target_coverage::{
+    JoinConstructionTargetCoverageError, JoinConstructionTargetCoverageLimits,
+    JoinConstructionTargetCoverageRefusal, RequiredJoinConstructionTargets,
+};
 mod splice;
 pub use metadata::{
     BoundJoinPieceMetadata, JoinPieceFieldIntent, JoinPieceMetadataError, JoinPieceMetadataLimits,

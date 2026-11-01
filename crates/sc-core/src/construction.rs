@@ -78,7 +78,9 @@ pub use join::{
     JoinConstructionManifest, JoinConstructionMappingGroup, JoinConstructionOutputGroup,
     JoinConstructionSourceAction, JoinConstructionSourceAssignment, JoinConstructionSourceError,
     JoinConstructionSourceIntent, JoinConstructionSourceLimits, JoinConstructionSourceManifest,
-    JoinConstructionSourceRefusal, JoinConstructionTargetAssignment, JoinConstructionTargetError,
+    JoinConstructionSourceRefusal, JoinConstructionTargetAssignment,
+    JoinConstructionTargetCoverageError, JoinConstructionTargetCoverageLimits,
+    JoinConstructionTargetCoverageRefusal, JoinConstructionTargetError,
     JoinConstructionTargetLimits, JoinConstructionTargetManifest, JoinConstructionTargetRefusal,
     JoinConstructionUse, JoinConstructionUseError, JoinConstructionUseLimits,
     JoinConstructionUseRefusal, JoinCopyInventoryError, JoinCopyInventoryLimits,
@@ -98,7 +100,7 @@ pub use join::{
     JoinPlacedConstructionUse, JoinPlacedCutUse, JoinSourceOccurrence, JoinSourceOccurrenceField,
     JoinSourceOccurrenceLocation, JoinSourcePieceError, JoinSourcePieceLimits,
     JoinSourcePieceRefusal, JoinSpliceEnd, JoinSpliceEndpointPair, JoinSplicePlacement,
-    RequiredJoinCutConnectivity, RequiredJoinExactSplice,
+    RequiredJoinConstructionTargets, RequiredJoinCutConnectivity, RequiredJoinExactSplice,
 };
 mod mirror;
 pub use mirror::{
