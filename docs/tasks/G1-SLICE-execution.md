@@ -876,31 +876,30 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   construction occurrences;preserve repeated source/target multiplicity and full0..1 coverage.
   Additional result content needs explicit intent/evidence requirements;no implicit source discard,
   target duplication,source-frame substitution or provider truth. Bound all nested groups before fields.
-### G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.groups
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.groups`
   Status: `done`
-  Goal:one explicit nonempty ordered actual output-reference group per Retain source action,
-  preserving original scopes and literal A/B/edge frame;whole intervals/target occurrences remain next.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_construction_group_contract --test join_construction_source_contract`
-    through `scripts/local_environment.py`:groups4/prior source4 pass,rc=0. Complete K/G/L/2G+L before
-    fields,Retain cardinality/unique sources,missing/omitted/empty/unknown/side/edge witnesses.
-  - [x] ADDRESSED: final `cargo test -p sc-core --test join_construction_group_contract` through launcher:
-    groups4 pass,rc=0;actual raw group/tag/source/direction/range pointers and separate repeated scopes
-    retained. `cargo test -p sc-core --doc construction::join::source_groups`:compiler6 pass,rc=0;
-    selected strict clippy rc=0. Required traversal is a requirement,not an authored target value.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_topology_examples` through launcher:
-    topology5 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered scoped
-    grouping versus ordered coverage/target boundary present.964 three Git spans/body/public bytes
-    exact;`history_archive.py --root . verify`:1418 logical/51 working,rc=0. Main7/source5 code fences
-    unchanged from0788;full geometry/integration remains .5f.4.geometry/.5g/pre-push.
-  Source actions K include Omit before intent scan. Exact unique Retain membership supplies groups
-  only;partial/repeated ranges still need whole0..1 coverage and proposed-use multiplicity checks.
-  Work O(K+G log(G+K+2)+L log(N+2)+1),2G+L new entries;no registry/provider/evidence/geometry call.
-  Commit:STITCHCAD-G1-0789. promotion: declined (existing explicit source-role/geometry boundary).
+  Goal:0789 retained construction groups;[whole scope/proofs](../history/stitchcad-devnotes-part965.md).
+### G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.coverage
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.coverage`
-  Status: `pending`
+  Status: `done`
   Goal:ordered exact full0..1 retained-field partitions in original field traversal,with complete
-  resource admission;reject gaps/overlaps/duplicates/empty content without sorting or rescaling.
+  resource admission;reject gaps/overlaps/repeated coverage without sorting or rescaling.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_construction_coverage_contract --test join_construction_group_contract`
+    through `scripts/local_environment.py`:coverage4/prior group4 pass,rc=0. Actual split source
+    ranges in both field directions expose the missing whole-field requirement;target uses stay empty.
+  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join::source_coverage` through launcher:
+    compiler3 pass,rc=0;whole G/L before direction/range reads,first original gap/overlap witnesses,
+    actual group/tag/source/range loans,final-gap None,all-Omit vacuous scope. Strict selected clippy
+    rc=0. Draft public-barrel omission caused E0432;completed construction export fixes it without allowances.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_topology_examples` through launcher:
+    topology6 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered exact
+    source coverage versus target boundary present;main7/source5 fences unchanged.965 three original
+    Git spans/body/public bytes exact;`history_archive.py --root . verify`:1419 logical/52 working,
+    rc=0. Full geometry/integration remains .5f.4.geometry/.5g/pre-push,not this native checkpoint.
+  Work O(G+L+1),constant cursor/no allocation. Positive ascending ranges walk0→1 for Original,
+  1→0 for Reversed source fields;output parameter requests never sort/rescale source intervals.
+  Actual target-use presence/traversal/multiplicity,omission justification/geometry remain required.
+  Commit:STITCHCAD-G1-0790. promotion: declined (existing explicit source/target geometry boundary).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets`
   Status: `pending`
   Goal:map retained groups onto actual proposed construction-use occurrences with exact expected

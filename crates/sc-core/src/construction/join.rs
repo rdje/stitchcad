@@ -56,6 +56,11 @@ pub use source_actions::{
     JoinConstructionSourceAssignment, JoinConstructionSourceError, JoinConstructionSourceIntent,
     JoinConstructionSourceLimits, JoinConstructionSourceManifest, JoinConstructionSourceRefusal,
 };
+mod source_coverage;
+pub use source_coverage::{
+    CoveredJoinConstructionGroups, JoinConstructionCoverageError, JoinConstructionCoverageLimits,
+    JoinConstructionCoverageRefusal,
+};
 mod source_groups;
 pub use source_groups::{
     DeclaredJoinConstructionGroups, JoinConstructionGroupError, JoinConstructionGroupLimits,

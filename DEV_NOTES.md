@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — retained joined construction groups
+## _(2026-11-01 UTC)_ — whole retained construction source fields
 
-0789 binds one ordered output-role group per actual Retain source,under whole K/G/L/2G+L policies.
-Actual source/frame/field loans and repeated scopes survive;required traversal is no authored target value.
-Native4/prior source4/API6/topology5/lint/fmt/book rc=0;964 original/body/public bytes exact.
-promotion: declined (existing source-role/geometry boundary). G1still6/18;ordered whole-field coverage next.
+0790 requires exact ordered0..1 partitions under whole G/L before direction/range reads;constant state/no allocation.
+Original/reversed fields retain actual first gap/overlap/group/reference loans;final gaps have no offending reference.
+Native4/prior group4/API3/topology6/lint/fmt/book rc=0;965 original/body/public bytes exact.
+promotion: declined (existing source/target geometry boundary). G1still6/18;actual target occurrence mapping next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

@@ -322,3 +322,48 @@ Work is O(K+G log(G+K+2)+L log(N+2)+1) for N actual candidates,with2G+L addition
 is no provider,registry,evidence or geometry call. Complete retained interval partitions,actual
 result-use traversal/multiplicity,additional-result intent,omission/consumer justification,fold/copy
 semantics,currentness,geometry,retirement and atomic authority remain separately required.
+
+## Require whole retained construction-field partitions
+
+`DeclaredJoinConstructionGroups::require_source_coverage` checks every Retain group's exact
+whole0..1 source interval in its **original explicit reference order**. Original source fields walk
+from0 to1;reversed source fields walk from1 to0. Each candidate's `EdgeRange` stays positive
+ascending in that original source frame. Output parameter-orientation requests determine the
+separate required target traversal;they do not reverse or rescale these source intervals.
+
+```rust
+use sc_core::construction::*;
+fn coverage<'a>(groups:&'a DeclaredJoinConstructionGroups<'a>)
+    ->Result<CoveredJoinConstructionGroups<'a>,JoinConstructionCoverageError<'a>> {
+    groups.require_source_coverage(JoinConstructionCoverageLimits::new(4,8))
+}
+```
+
+`JoinConstructionCoverageLimits::new(G,L)` admits all actual retained groups G and all original
+references L before source directions or interval fields are read. For G4/L8,G3 refuses `Groups`
+and L7 refuses `References`,even if the first group has invalid interval ordering. Earlier whole
+source/action/group policies remain in force;this scan allocates no additional workspace.
+
+For an Original source field,two references covering0..half and half..1 pass in that order.
+A Reversed source field requires half..1 followed by0..half. Swapping either list is refused;
+there is no automatic sort. A partial first interval produces `Gap` before that reference. Missing
+final coverage produces `Gap` with `index:None`. Missing bounds remain ascending regardless of
+field direction. A reference that starts behind the exact traversal cursor produces `Overlap`,
+including repeated whole or partial ranges. Each Retain scope is checked separately,even when
+multiple original fields explicitly reference the same source geometry.
+
+`JoinConstructionCoverageError` retains actual whole `groups()`,original `limits()` and first
+`refusal()`. Interval causes lend the actual `refused_group()`. `refused_output()` lends the
+actual next or overlapping original reference;final gaps and whole quota causes return None.
+Refusal returns no accepted prefix and never substitutes a copied source field or interval.
+
+`CoveredJoinConstructionGroups` retains actual whole `groups()` and `limits()`,with complete
+`group_count()`/`reference_count()`. Work is O(G+L+1),with constant cursor state and no provider,
+registry,geometry or evidence call. If every original action explicitly requests Omit,the empty
+Retain group scope has vacuous source coverage;those omission requests are still outstanding.
+
+Whole source-interval coverage does not establish actual result-use presence,traversal or
+multiplicity. For example,four retained whole-field groups can pass beside an empty proposed
+construction list;target mapping must still refuse that missing result content. Additional result
+intent,omission/consumer justification,achieved parameter maps,fold/copy semantics,currentness,
+geometry,retirement and atomic authority remain separate requirements.

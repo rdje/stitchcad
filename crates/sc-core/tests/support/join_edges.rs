@@ -62,6 +62,13 @@ pub fn with_cut_coverage(extra: bool, run: impl FnOnce(CoveredJoinCutSources<'_>
 }
 /// Actual complete cut partitions under explicitly selected original source variants.
 pub fn with_custom_cut_coverage(options: BankFixture, run: impl FnOnce(CoveredJoinCutSources<'_>)) {
+    with_candidate_coverage(options, false, run);
+}
+fn with_candidate_coverage(
+    options: BankFixture,
+    split: bool,
+    run: impl FnOnce(CoveredJoinCutSources<'_>),
+) {
     with_identity(options, |identity| {
         let banks = identity.roles().banks();
         let mut ranges = Vec::new();
@@ -86,7 +93,25 @@ pub fn with_custom_cut_coverage(options: BankFixture, run: impl FnOnce(CoveredJo
                     }
                 }
             } else {
-                ranges.push((field, EdgeRange::whole(*field.field().edge())));
+                let range = if split {
+                    match field.location() {
+                        JoinSourceOccurrenceLocation::Construction(index) => {
+                            let half = Param::new(Rational::new(1, 2).expect("exact half"))
+                                .expect("unit half");
+                            let (from, to) = if index == 0 {
+                                (Param::START, half)
+                            } else {
+                                (half, Param::END)
+                            };
+                            EdgeRange::new(*field.field().edge(), from, to)
+                                .expect("positive construction fragment")
+                        }
+                        _ => EdgeRange::whole(*field.field().edge()),
+                    }
+                } else {
+                    EdgeRange::whole(*field.field().edge())
+                };
+                ranges.push((field, range));
             }
         }
         let tags = [9, 2, 4, 5, 6, 8, 10, 11, 12, 13];
@@ -126,63 +151,74 @@ pub fn with_directions(extra: bool, run: impl FnOnce(AdmittedJoinDirections<'_>)
 }
 /// Actual complete source-relative directions under explicit original source variants.
 pub fn with_custom_directions(options: BankFixture, run: impl FnOnce(AdmittedJoinDirections<'_>)) {
-    with_custom_cut_coverage(options, |coverage| {
-        let n = coverage.edges().edge_count();
-        let raw = JoinDirectionManifest::new(
-            id(1000),
-            coverage
-                .edges()
-                .edges()
-                .enumerate()
-                .map(|(i, e)| {
-                    JoinDirectionAssignment::new(
-                        e.candidate().tag(),
-                        if i.is_multiple_of(2) {
-                            JoinParameterDirection::SameAsSource
-                        } else {
-                            JoinParameterDirection::ReverseSource
-                        },
-                    )
-                })
-                .collect(),
-        );
-        let directions = raw
-            .admit(&coverage, JoinDirectionLimits::new(n, n, 2 * n))
-            .expect("complete explicit original directions");
-        run(directions);
-    });
+    with_custom_cut_coverage(options, |coverage| with_coverage_directions(&coverage, run));
+}
+fn with_coverage_directions(
+    coverage: &CoveredJoinCutSources<'_>,
+    run: impl FnOnce(AdmittedJoinDirections<'_>),
+) {
+    let n = coverage.edges().edge_count();
+    let raw = JoinDirectionManifest::new(
+        id(1000),
+        coverage
+            .edges()
+            .edges()
+            .enumerate()
+            .map(|(i, e)| {
+                JoinDirectionAssignment::new(
+                    e.candidate().tag(),
+                    if i.is_multiple_of(2) {
+                        JoinParameterDirection::SameAsSource
+                    } else {
+                        JoinParameterDirection::ReverseSource
+                    },
+                )
+            })
+            .collect(),
+    );
+    let directions = raw
+        .admit(coverage, JoinDirectionLimits::new(n, n, 2 * n))
+        .expect("complete explicit original directions");
+    run(directions);
 }
 
 /// Actual complete cut-use/path parents for proposed noncut construction declarations.
 pub fn with_connectivity(extra: bool, run: impl FnOnce(RequiredJoinCutConnectivity<'_>)) {
     with_directions(extra, |directions| {
-        let make = |tag, direction| JoinCutContourUse::new(LocalTag::new(tag), direction);
-        let (boundary, holes) = if extra {
-            (
-                vec![make(9, Direction::Reversed), make(8, Direction::Original)],
-                vec![
-                    vec![make(10, Direction::Original)],
-                    vec![make(2, Direction::Reversed)],
-                ],
-            )
-        } else {
-            (
-                vec![make(9, Direction::Original), make(2, Direction::Reversed)],
-                vec![],
-            )
-        };
-        let h = holes.len();
-        let u = boundary.len() + holes.iter().map(Vec::len).sum::<usize>();
-        let raw = JoinCutContourManifest::new(id(1000), boundary, holes);
-        let n = directions.coverage().edges().edge_count();
-        let contours = raw
-            .admit(&directions, JoinCutContourLimits::new(n, h, u, 2 * u + h))
-            .expect("actual complete cut-use declarations");
-        let path = contours
-            .require_cut_connectivity(JoinCutConnectivityLimits::new(h, u))
-            .expect("required original cut-source path");
-        run(path);
+        with_direction_path(&directions, extra, run)
     });
+}
+fn with_direction_path(
+    directions: &AdmittedJoinDirections<'_>,
+    extra: bool,
+    run: impl FnOnce(RequiredJoinCutConnectivity<'_>),
+) {
+    let make = |tag, direction| JoinCutContourUse::new(LocalTag::new(tag), direction);
+    let (boundary, holes) = if extra {
+        (
+            vec![make(9, Direction::Reversed), make(8, Direction::Original)],
+            vec![
+                vec![make(10, Direction::Original)],
+                vec![make(2, Direction::Reversed)],
+            ],
+        )
+    } else {
+        (
+            vec![make(9, Direction::Original), make(2, Direction::Reversed)],
+            vec![],
+        )
+    };
+    let h = holes.len();
+    let u = boundary.len() + holes.iter().map(Vec::len).sum::<usize>();
+    let raw = JoinCutContourManifest::new(id(1000), boundary, holes);
+    let n = directions.coverage().edges().edge_count();
+    let contours = raw
+        .admit(directions, JoinCutContourLimits::new(n, h, u, 2 * u + h))
+        .expect("actual complete cut-use declarations");
+    let path = contours
+        .require_cut_connectivity(JoinCutConnectivityLimits::new(h, u))
+        .expect("required original cut-source path");
+    run(path);
 }
 
 /// Explicit empty proposed construction data,with complete actual source/cut-path parents.
@@ -203,42 +239,75 @@ pub fn with_source_actions(
     intent: impl Fn(SeamSideId, usize) -> JoinConstructionSourceIntent,
     run: impl FnOnce(DeclaredJoinConstructionSources<'_>),
 ) {
-    with_construction_uses(extra, |uses| {
-        let sources = uses
-            .connectivity()
-            .contours()
-            .directions()
-            .coverage()
-            .edges()
-            .identity()
-            .roles()
-            .banks()
-            .sources();
-        let mut assignments = Vec::new();
-        for side in [SeamSideId::A, SeamSideId::B] {
-            for (index, field) in sources
-                .piece(side)
-                .definition()
-                .construction_lines
-                .iter()
-                .enumerate()
-            {
-                assignments.push(JoinConstructionSourceAssignment::new(
-                    side,
-                    index,
-                    *field,
-                    intent(side, index),
-                ));
-            }
+    with_construction_uses(extra, |uses| with_use_sources(&uses, intent, run));
+}
+fn with_use_sources(
+    uses: &DeclaredJoinConstructionUses<'_>,
+    intent: impl Fn(SeamSideId, usize) -> JoinConstructionSourceIntent,
+    run: impl FnOnce(DeclaredJoinConstructionSources<'_>),
+) {
+    let sources = uses
+        .connectivity()
+        .contours()
+        .directions()
+        .coverage()
+        .edges()
+        .identity()
+        .roles()
+        .banks()
+        .sources();
+    let mut assignments = Vec::new();
+    for side in [SeamSideId::A, SeamSideId::B] {
+        for (index, field) in sources
+            .piece(side)
+            .definition()
+            .construction_lines
+            .iter()
+            .enumerate()
+        {
+            assignments.push(JoinConstructionSourceAssignment::new(
+                side,
+                index,
+                *field,
+                intent(side, index),
+            ));
         }
-        let m = assignments.len();
-        let raw = JoinConstructionSourceManifest::new(id(1000), assignments);
-        let actions = raw
-            .admit(
-                &uses,
-                JoinConstructionSourceLimits::new(sources.occurrence_count(), m, 2 * m),
-            )
-            .expect("complete explicit original source actions");
-        run(actions);
-    });
+    }
+    let m = assignments.len();
+    let raw = JoinConstructionSourceManifest::new(id(1000), assignments);
+    let actions = raw
+        .admit(
+            uses,
+            JoinConstructionSourceLimits::new(sources.occurrence_count(), m, 2 * m),
+        )
+        .expect("complete explicit original source actions");
+    run(actions);
+}
+
+/// Actual split source candidates/cut paths,explicit proposed uses,and complete Retain actions.
+/// Each construction0 candidate covers0..half;construction1 covers half..1 on both source Pieces.
+pub fn with_partitioned_sources(
+    proposed: Vec<JoinConstructionUse>,
+    run: impl FnOnce(DeclaredJoinConstructionSources<'_>),
+) {
+    with_candidate_coverage(
+        BankFixture {
+            span: SpanFixture::RetainedTail,
+            extra_occurrences: true,
+            ..BankFixture::basic()
+        },
+        true,
+        |coverage| {
+            with_coverage_directions(&coverage, |directions| {
+                with_direction_path(&directions, true, |path| {
+                    let u = proposed.len();
+                    let raw = JoinConstructionManifest::new(id(1000), proposed);
+                    let uses = raw
+                        .admit(&path, JoinConstructionUseLimits::new(10, u, u))
+                        .expect("explicit proposed occurrences");
+                    with_use_sources(&uses, |_, _| JoinConstructionSourceIntent::Retain, run);
+                });
+            });
+        },
+    );
 }
