@@ -301,3 +301,16 @@ all50 unchanged prior physical files stay byte-identical,including the sealed ge
 Latest public read941 matches3844 original bytes;the installer verifies complete logical/source
 retention and keeps original trees in protected target/history_window28_capture for recovery.
 Live links route55 destinations to window28 headings. Never rerun install/recovery after later edits.
+
+### Closed task goals and live navigation —0775
+
+Whole0774 continuity and the original completed walk/mirror/slash goals/proof links remain
+byte-exact in `docs/history/stitchcad-devnotes-part950.md`. All75 live node identities/statuses
+remain present. The existing seam-edit task sibling now also owns the29-node constrained-truing
+branch:all3767 source bytes move unchanged from execution. Its original scope/proof links remain
+retrievable through that canonical sibling. Exact source-span/body and node-graph checks verify
+this retention;the task-tree coverage census checks navigation. Native feature claims stay scoped.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part950.md
+```

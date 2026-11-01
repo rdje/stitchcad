@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0774 — select explicit joined metadata fields
+## STITCHCAD-G1-0775 — contain completed task goals before join copy work
 
-- Material/layer/label/face explicitly borrow A/B or authored policy fields;no implicit winner.
-- Whole selected UTF-8 quota precedes canonical label/reason checks;errors retain complete parents.
-- Native3/splice1/API4/book10/final lint/fmt/book pass0;949 prior source bytes retained.
-- Cut/fold/marks and actual compatibility/geometry/authority stay pending;G1still6/18.
+- Retain whole0774 and75 completed walk/mirror/slash goals/proof links byte-exact in950.
+- Keep all live IDs/statuses;move the29-node truing branch unchanged into existing seam-edit sibling.
+- Source/node/reader950/census10-13-20-zero/archive/book pass0;native crates unchanged.
+- G1still6/18;copy correspondence resumes with bounded live headroom.
 
 ## STITCHCAD-G1-0389 — close focused layer/Hem component acceptance
 
@@ -34,6 +34,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0774 continuity and completed walk/mirror/slash goals](docs/history/stitchcad-devnotes-part950.md) retain exact source bytes.
 
 [Whole0773 exact-splice task,lesson and ledger](docs/history/stitchcad-devnotes-part949.md) retain exact source bytes.
 
