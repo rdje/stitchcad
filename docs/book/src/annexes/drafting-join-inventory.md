@@ -325,3 +325,20 @@ quota,registry,consumer,provider,text or geometry scan. Earlier whole resources 
 Canonical intake/sewing/all-copy effects,global identity/lineage,actual repair truth,physical
 correspondence and atomic authoring authority remain separate explicit requirements and execution
 work. No source disappearance in one Piece authorizes global edge retirement or registration withdrawal.
+
+### Native consumer declaration checkpoint
+
+The native five-scope declaration review is complete. Whole-consumer/current-owner requests
+cover actual Design and copy-addressed sewing sources;source/result/visible-repair requests retain
+all holder ownership,explicit changes and mapped-or-visible obligations. This follows the canonical
+[held-reference contract](../spec/ontology.md#11-the-persistent-identity-contract)
+and [copy-addressed sewing contract](../spec/ontology.md#42-seamspan-and-sewinggraph).
+The native contour/construction/fold declaration checkpoint includes those outstanding requirements;
+it certifies neither a current consumer census nor discharged source loss,registration or semantic repair.
+
+Complete native field/copy/contour declarations therefore remain distinct from actual acceptance.
+Canonical cut/print indicators must use the matched result's canonical fields;lineage still needs
+explicit source retention/retirement and global identity/history requirements. Canonical intake,
+sewing/ease/stops,all-copy physical effects and atomic authoring authority remain explicit later work.
+Actual geometry,domain/envelope evidence and full integration remain G2/G3 and deferred verification;
+this declaration checkpoint grants no independent approval or release readiness.

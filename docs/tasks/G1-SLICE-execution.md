@@ -793,22 +793,23 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   no independent entered quantities or automatic face/parity/material inference.
   Dependencies:.join.outputs.copies and .join.outputs.contours before this cut/print binding.
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks`
-  Status: `in_progress`
+  Status: `done`
   Goal:explicit mark/grainline/seam/other consumer ownership and mapped-or-visible repair requirements.
-### G1-SLICE.5f.1.c.join.outputs.metadata.marks.sources
+  Native requirement checkpoint0807;actual consumer census/repair truth remains .lineage/.5f.4/.5g.
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.sources`
   Status: `done`
-  Goal:explicit complete native consumer-source requirements over actual matched inventory;no accepted semantic truth.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_consumer_contract` through launcher:
-    2 pass;complete field matching still requires five distinct semantic/owner/repair scopes even with equal0 source ids,rc=0.
-  - [x] ADDRESSED: same target plus `cargo test -p sc-core --test join_result_piece_contract`:
-    2/4 pass;actual whole inventory/source-field loans,canonical/reverse5-scope traversal and old companion/omission requests retained,rc=0.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_consumer_contract --test join_result_piece_contract -- -D warnings`:
-    strict lint/API4/inventory6/fmt/book/rendered claims rc=0;981 three Git spans/body/public exact;archive1435/68,per-generation21/64 and47/64,rc=0.
-  Commit:STITCHCAD-G1-0806. promotion: declined (existing canonical held-reference and native evidence-request boundary).
+  Goal:0806 complete native consumer-source requests;[whole scope/proofs](../history/stitchcad-devnotes-part982.md).
+### G1-SLICE.5f.1.c.join.outputs.metadata.marks.review
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.review`
-  Status: `pending`
-  Goal:focused native scope review against canonical held-reference/semantic ownership contracts;effect/lineage/physical proof remains separate.
+  Status: `done`
+  Goal:focused native consumer-scope checkpoint;actual census/repair/currentness/effect/lineage/physical proof remains separate.
+  - [x] ROOT CAUSE: `python3 -I -B -` canonical scope/source review:
+    five required kinds/direct original field loans preserve held-key/copy-owner/whole-observer requirements,rc=0;no provider verdict follows.
+  - [x] ADDRESSED: same review and `git diff --exit-code -- crates`:
+    native five-scope requirements/contour checkpoint reconciled against journal/sewing contracts;Rust unchanged,all6 Rust examples exact,rc=0.
+  - [x] NO REGRESSION: `scripts/run_make.sh book`:build/rendered native checkpoint/canonical links and actual target anchors rc=0;
+    982 three Git spans/body/public exact;archive1436/69,per-generation21/64 and48/64,rc=0;prior consumer2/result4/API4/inventory6 checks retained.
+  Commit:STITCHCAD-G1-0807. promotion: declined (existing canonical native declarations/actual evidence boundary).
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.tracking`
   Status: `done`
   Goal:0805 bounded consumer continuity;[whole scope/proofs](../history/stitchcad-devnotes-part981.md).
@@ -816,8 +817,9 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 retains every original goal,status,child relation and focused acceptance proof.
 
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours`
-  Status: `in_progress`
+  Status: `done`
   Goal:bounded source fragments/output roles and complete proposed boundary/hole/construction/fold topology.
+  Native declaration checkpoint0807;actual geometry/consumer repair/currentness/identity/effects remain separately owned.
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.sources`
   Status: `done`
   Goal:0777 full original H/R admission/book split;[whole scope/proofs](../history/stitchcad-devnotes-part953.md).
@@ -846,7 +848,7 @@ retains every original goal,status,child relation and focused acceptance proof.
   Status: `done`
   Goal:0784 reference/task room;[whole scope/proofs](../history/stitchcad-devnotes-part960.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology`
-  Status: `in_progress`
+  Status: `done`
   Goal:explicit complete proposed joined boundary/hole/construction/fold-use topology with actual
   direction/cut coverage parents,whole resources,all persistent output memberships and source-use
   reconciliation. No nonempty/closure/currentness/geometry/semantic certificate from metadata alone.
@@ -858,7 +860,7 @@ retains every original goal,status,child relation and focused acceptance proof.
   Status: `done`
   Goal:0786 required cut paths;[whole scope/proofs](../history/stitchcad-devnotes-part962.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut`
-  Status: `in_progress`
+  Status: `done`
   Goal:complete original construction/fold use reconciliation with explicit retained/removed/derived
   requirements after cut declarations;no silent source fields discarded by cut-only membership.
   Canonical cut/fold/print .metadata.cut and mark/consumer .metadata.marks remain distinct obligations.
@@ -866,7 +868,7 @@ retains every original goal,status,child relation and focused acceptance proof.
   Status: `done`
   Goal:0787 proposed construction uses;[whole scope/proofs](../history/stitchcad-devnotes-part963.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources`
-  Status: `in_progress`
+  Status: `done`
   Goal:explicit complete original A/B construction-field retention/omission/mapping reconciliation
   against proposed result uses,including repeated source fields,whole ranges,multiplicity,visible
   repair/evidence requirements. An explicit result-use list alone cannot justify source content loss.

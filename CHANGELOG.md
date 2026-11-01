@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0806 — explicit complete join consumer source requests
+## STITCHCAD-G1-0807 — native join consumer scope checkpoint
 
-- Require all five distinct semantic/owner/repair source requests on the actual complete matched inventory;no default,lookup,allocation or verdict.
-- Preserve actual source fields,old companion/omission requests and immutable holder boundaries;equal0 ids neither skip nor discharge scopes.
-- Native consumer2/prior result4/API4/inventory6/strict lint/fmt/book/rendered claims rc=0;981 three Git spans/body/public bytes exact.
-- Archive1435/68,per-generation21/64 and47/64;G1still6/18. Native scope review,actual consumer repair and effect/lineage/physical proof remain owned.
+- Reconcile all five consumer-source scopes with immutable held-reference and full copy-addressed sewing ownership contracts.
+- Close native consumer/contour/construction/fold requirement declarations;actual census/repair/effect/lineage/physical acceptance remains separate.
+- Rust unchanged/all6 Rust fences exact;book/rendered checkpoint/canonical links and target anchors rc=0;prior native2/4/API4/inventory6 proof retained.
+- 982 three Git spans/body/public exact;archive1436/69,per-generation21/64 and48/64. G1still6/18 unchanged;canonical cut/print binding next.
 
 # Sealed archive — earlier slices
+
+[Whole0806 consumer-source requirements](docs/history/stitchcad-devnotes-part982.md) retain exact task,lesson and ledger bytes.
 
 [Whole0805 bounded consumer continuity](docs/history/stitchcad-devnotes-part981.md) retains exact task,lesson and ledger bytes.
 
