@@ -381,6 +381,45 @@ and current graph/ledger validation. After source deletion the unchanged associa
 bind while current validation refuses. Original-frame references are not silently replaced with
 current fragments. The provided Piece records are not thereby certified as a current Design.
 
+### Admit the complete original join inventory
+
+Bind the source join with the actual `PieceInventory::pieces()` slice,then call
+`BoundJoinPiecesAtSeam::bind_copy_inventory` with that same inventory and explicit
+`JoinCopyInventoryLimits::new(C,I,W)`. C counts every original CutPlan copy;I counts every
+inventory member,including unrelated Pieces. Checked W=I+3C bounds temporary logical validation
+entries,not allocator bytes,prior input storage or geometry work.
+
+```rust
+use sc_core::{construction::*,ontology::PieceInventory};
+fn admit<'a>(source:&'a BoundJoinPiecesAtSeam<'a>,inventory:&'a PieceInventory,
+    limits:&'a JoinCopyInventoryLimits)
+    ->Result<BoundJoinCopyInventory<'a>,JoinCopyInventoryError<'a>> {
+    source.bind_copy_inventory(inventory,limits)
+}
+let limits=JoinCopyInventoryLimits::new(4,3,15);
+assert_eq!(limits.workspace_entries(),15);
+```
+
+Whole C,I,W quotas precede source association or canonical field scans/allocation. With C2/I2,
+C1 refuses `Copies`,I1 refuses `Pieces`,and W7 refuses required8 as `Workspace`. Equality permits
+the next check. `WorkspaceOverflow` retains a nonrepresentable complete I+3C bound.
+
+`SourceInventory` refuses a source bound from a different slice,including a separately cloned
+equal-content inventory. No source records are silently replaced or compared field by field.
+The actual immutable PieceInventory already supplies uniqueness/reciprocal companion checks.
+Canonical CutPlan validation then rechecks every original copy against those exact Pieces;
+`Inventory(CutPlanError)` retains its real identity,quantity or orientation cause. Companion
+consistency does not imply a matching copy population.
+
+For I3/C4,the exact logical workspace allowance is15. An unrelated Piece and its copy count;
+a reflected selected copy retains its orientation,and every other copy of either source remains
+available in original plan order. No copy is consumed,paired or assigned to a result here.
+Success lends actual `source()`, `inventory()` and `limits()` and the checked `workspace_bound()`.
+Errors retain those same whole parents and first cause. Both A/B views still borrow the original
+Piece/copy fields,span,ease and stops. Work is O((C+I)log(C+I+2));cached storage is constant.
+Earlier graph/source lookup resources,current Design membership,contour fields and provider bodies
+remain separate. This admission chooses no metadata,joined identity,placement,weld or refit.
+
 Output contracts must explicitly reconcile metadata,material/mark ownership,multiplicity and
 copy mappings,source retirement/reference lineage and the permitted join variant before family
 closure. Partial spans,declared ease and physical-copy orientation cannot be ignored. Sewing

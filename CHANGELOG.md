@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0771 — close scoped native truing declarations
+## STITCHCAD-G1-0772 — admit the complete original join inventory
 
-- Explicit constrained held-source outcome/whole-Piece/lineage/curve priority checkpoint;G1still6/18.
-- Shared-Piece composed1/0,strict selected lint/fmt/book0;12 source clauses/four interfaces retained.
-- Actual currentness/geometry/fit/history/effects/bus and garment/broad validation remain pending.
-- Whole0770 continuity/0421 ledger retained946;join output contracts next.
+- Whole C/I/I+3C precede exact source-slice identity and canonical CutPlan validation.
+- Actual A/B,unrelated/reflected copies and source metadata stay original;no clone substitution.
+- Native3/prior4/API3/book8/lint/fmt/book pass0;947 whole0771 retained;G1still6/18.
+- Output/placement/metadata/copy/lineage policy and actual geometry/execution remain owned.
 
 ## STITCHCAD-G1-0389 — close focused layer/Hem component acceptance
 
@@ -34,6 +34,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0771 scoped review,lesson and ledger](docs/history/stitchcad-devnotes-part947.md) retain exact source bytes.
 
 [Whole0770 curve task,lesson and0770/0421 ledgers](docs/history/stitchcad-devnotes-part946.md) retain exact source bytes.
 

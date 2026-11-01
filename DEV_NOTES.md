@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — scoped native truing checkpoint
+## _(2026-11-01 UTC)_ — complete held join inventory admission
 
-0771 .true.variants.review closes constrained exact-held declarations,not physical v1/G3 coverage.
-Composed shared-Piece1/0 retains both copies/stops/ease and whole contours;fixture receiver rc101 corrected.
-Strict selected lint/fmt/book0;12 clauses/11 unchanged sources/four interfaces rechecked. Actual fitting,
-projection/maps/history/providers/bus/garments remain later owners;946 exact0770. Promotion:existing ADR-0003.
+0772 .join.outputs.inventory requires the exact source PieceInventory slice,never an equal cloned substitute.
+Whole C/I/I+3C precede slice association/canonical CutPlan validation;actual A/B/copy/span metadata stay borrowed.
+Native3/prior4/API3/book8/lint/fmt/book0;947 four exact spans/24 closed-node goals/archive1401/34 pass0.
+No source fields reconciled,copies consumed or geometry/currentness/authority certified. Promotion:declined,existing doctrine.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

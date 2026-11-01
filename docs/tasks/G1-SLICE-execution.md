@@ -770,122 +770,138 @@ retain their complete task branch,original goals and proof links in the bounded 
 - ID: `G1-SLICE.5f.1.c.true.inputs`
   Status: `done`
   Goal:0689 input association;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part859md).
+[Completed truing output/variant goals and original proof links](../history/stitchcad-devnotes-part947.md)
+remain byte-exact in sealed history;the live node identities/statuses follow.
 - ID: `G1-SLICE.5f.1.c.true.outputs`
   Status: `done`
-  Goal:native refit output-role/reference/identity contract;preserved endpoints/stops,all-copy
-  observer obligations and unexplained differential attribution. Actual fit stays G3/.5f.4.
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.copies`
   Status: `done`
-  Goal:0751 actual copy/Piece binding;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part926md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.roles`
   Status: `done`
-  Goal:0752 actual edge-role binding;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part927md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest`
   Status: `done`
-  Goal:candidate/domain/coverage,outcome/lock/evidence and whole-Piece replacement declarations;
-  actual maps/fit/variant policy stay owned.
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.entries`
   Status: `done`
-  Goal:0753 candidate attribution;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part929md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.domain`
   Status: `done`
-  Goal:0754 exact held-domain membership;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part930md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.coverage`
   Status: `done`
-  Goal:0756 exact held-domain partition;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part932md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.policy`
   Status: `done`
-  Goal:0757 explicit outcome;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part933md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references`
   Status: `done`
-  Goal:bounded endpoint/stop/reference and all-copy observer/fit evidence requirements;
-  native source partitions never substitute for actual mappings or atomic execution.
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references.locks`
   Status: `done`
-  Goal:0758 actual lock requests;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part934md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references.evidence`
   Status: `done`
-  Goal:0759 complete evidence requests;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part935md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece`
   Status: `done`
-  Goal:0768 native whole-Piece reconciliation;[whole original P1 scope](../history/stitchcad-devnotes-part944.md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.roles`
   Status: `done`
-  Goal:0760 exact outside roles/book/D375;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part936md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours`
   Status: `done`
-  Goal:complete boundary/hole/construction/fold occurrence placement and traversal requirements;
-  retain unaffected source fields and reject incomplete replacement attribution.
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.directions`
   Status: `done`
-  Goal:0761 explicit complete directions;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part937md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement`
   Status: `done`
-  Goal:complete original occurrence/fold replacement plan using explicit output directions and source order.
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.source`
   Status: `done`
-  Goal:0764 exact held Piece occurrences;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part940md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.generate`
   Status: `done`
-  Goal:0765 complete contours;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part941md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.fold`
   Status: `done`
-  Goal:0766 explicit fold attribution;[whole scope/proofs](../history/stitchcad-devnotes-part942.md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.tracking`
   Status: `done`
-  Goal:0763 exact scalar checkpoint move;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part939md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage.tracking`
   Status: `done`
-  Goal:0767 exact early capture/D302 correction;[whole scope/proofs](../history/stitchcad-devnotes-part943.md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage`
   Status: `done`
-  Goal:0768 whole-edge identity requirements;[whole scope/proofs](../history/stitchcad-devnotes-part944.md).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.coverage.tracking`
   Status: `done`
-  Goal:0755 exact walk split/receipt930;census0;promotion: declined (navigation).
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.variants`
   Status: `done`
-  Goal:review v1 truing coverage against the envelope before family closure;constrained refit
-  association alone grants no complete coverage. Define deterministic curve/refit selection
-  and supported domains;endpoint/stop locks alone admit multiple curves. Explicit policies for
-  any added endpoint/copy variants;no guessed solver. Native output/real geometry owners stay separate.
+  Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.variants.contracts`
   Status: `done`
   Goal:0769 current sources/planned selection;[whole scope/proofs](../history/stitchcad-devnotes-part945.md).
 - ID: `G1-SLICE.5f.1.c.true.variants.selection`
   Status: `done`
   Goal:0770 ordered curve admission/ADR-0003;[whole scope/proofs](../history/stitchcad-devnotes-part946.md).
-### G1-SLICE.5f.1.c.true.variants.review
 - ID: `G1-SLICE.5f.1.c.true.variants.review`
   Status: `done`
-  Goal:reconcile native selection/variant/domain coverage against v1 clauses before family closure;
-  retain coupled-copy/ease/maps/unknown/error/geometry and actual garment validation owners.
-  - [x] ROOT CAUSE (WHY + WHERE):native declaration coverage needs scoped reconciliation.
-    Source trace command python3 -I -B under scripts/local_environment.py reports
-    `12 clauses/11 source files unchanged;four public interfaces retained;scoped native trace written;rc=0`;
-    target/history-proof-0771-truing-checkpoint/contracts.json retains the source hashes/clauses.
-    Composed test initially rc101 (fixture receiver);corrected closure. First commit hook refused
-    mislabeled evidence boxes;no commit occurred;this exact per-leaf checklist repairs that refusal.
-  - [x] ADDRESSED (verified):STITCHCAD-G1-0771;python3 -I -B scripts/local_environment.py --
-    cargo test -p sc-core --test truing_composed_contract: `test result: ok. 1 passed; 0 failed`,rc=0.
-    Strict selected Clippy, cargo fmt --all -- --check and scripts/run_make.sh book pass0.
-    D372 search warning remains owned;prior0770 curve4/lineage3/API7/book7 receipts remain scoped.
-  - [x] NO REGRESSION:scoped native checkpoint closes outputs/variants only. Independent Python
-    source-span/render check prints `946 four source intervals/body byte-exact;rendered checkpoint/coupled-copy/deferred-owner text present;library unchanged;rc=0`.
-    Both A/B,partial/whole,preserve/refit,all contour/fold/lineage policies and authored curve priority
-    have explicit contracts. Shared-Piece test retains two copies,stops,ease and untouched counterpart.
-    Actual source projection/visibility .5f.2/.5f.3,geometry replay .5f.4.geometry,garment G3.2 and
-    broad .5g verification remain pending. No fitting,provider acceptance or independent approval.
-    Whole0770 task/lesson/ledgers retained946 byte-exact;fresh lesson records scoped closure.
-    Promotion:existing ADR-0003 and original truing policy;no new decision. Next .c.join.outputs.
+  Goal:0771 scoped native checkpoint;[whole review/proofs](../history/stitchcad-devnotes-part947.md).
 - ID: `G1-SLICE.5f.1.c.join.inputs`
   Status: `done`
   Goal:0690 source intent/binding;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part860md).
 - ID: `G1-SLICE.5f.1.c.join.outputs`
-  Status: `pending`
+  Status: `in_progress`
   Goal:native explicit metadata/material/mark/multiplicity/copy reconciliation and identity/
   retirement/reference manifests;define permitted join/pose/refit domains before family closure.
   Partial/eased/oriented source semantics cannot disappear. Actual geometry stays G2/G3/.5f.4.
+### G1-SLICE.5f.1.c.join.outputs.inventory
+- ID: `G1-SLICE.5f.1.c.join.outputs.inventory`
+  Status: `done`
+  Goal:whole C/I/workspace admission against the same actual PieceInventory slice already bound
+  by the source join;reuse canonical companion proof and CutPlan validation before output policy.
+  Preserve original A/B pointers,plan order,ease/stops/orientations;no copied equal source accepted.
+  Focused inventory/parent/compiler/book checks;retire whole0771 for bounded live continuity.
+  - [x] ROOT CAUSE (WHY + WHERE):BoundJoinPiecesAtSeam preserves uniquely named A/B Pieces
+    but whole companion/copy population remains separate. Prior parent join_input_contract passes
+    `test result: ok. 4 passed; 0 failed`,rc=0;canonical CutPlan/PieceInventory interfaces inspected.
+  - [x] ADDRESSED (verified):python3 -I -B scripts/local_environment.py -- cargo test -p sc-core
+    --test join_copy_inventory_contract --test join_input_contract: `3 passed; 0 failed` and
+    `4 passed; 0 failed`,rc=0. Whole C/I/I+3C before exact source-slice identity/canonical plan;
+    actual both-side parents,unrelated/reflected copies,quota precedence,equal-clone refusal retained.
+  - [x] NO REGRESSION:strict selected Clippy/lib/tests and cargo fmt --all -- --check rc=0;
+    cargo test -p sc-core --doc construction::join::inventory gives `3 passed; 0 failed`,rc=0;
+    construction::editing_examples gives `8 passed; 0 failed`,rc=0. Book build rc=0;D372 remains.
+    First hook refused aggregate task size1500989>1500000;completed24-node goals retained947
+    byte-exact,live IDs/statuses unchanged. Four947 Git spans/body verified;archive1401/34 rc=0. No copy consumed,
+    metadata chosen,geometry solved,currentness/authority accepted or broad verification implied.
+    STITCHCAD-G1-0772;promotion: declined (existing source/inventory doctrine);next .outputs.domains.
+- ID: `G1-SLICE.5f.1.c.join.outputs.domains`
+  Status: `pending`
+  Goal:explicit permitted seam removal/placement/refit domain,with partial/eased/oriented sources
+  retained;no geometric weld or automatic semantic reconciliation inferred from correspondence.
+- ID: `G1-SLICE.5f.1.c.join.outputs.metadata`
+  Status: `pending`
+  Goal:explicit joined metadata/material/label/cut/fold/mark reconciliation from actual source fields.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies`
+  Status: `pending`
+  Goal:complete original-copy consumption/preservation/result correspondence and explicit multiplicity.
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours`
+  Status: `pending`
+  Goal:bounded source fragments/output roles and complete proposed boundary/hole/construction/fold topology.
+- ID: `G1-SLICE.5f.1.c.join.outputs.lineage`
+  Status: `pending`
+  Goal:explicit output/source identities,retirement/reference repair and full observer/evidence requirements.
+- ID: `G1-SLICE.5f.1.c.join.outputs.review`
+  Status: `pending`
+  Goal:reconcile declared join variants against v1 requirements;actual geometry/G3/bus/full verification
+  remains .5f.4.geometry/.5g/G3.2;focused schema checkpoint grants no physical/domain approval.
 - ID: `G1-SLICE.5f.1.book-search`
   Status: `pending`
   Goal:P2 D372 after typed v1 feature completion:resolve new large-index build warning;
