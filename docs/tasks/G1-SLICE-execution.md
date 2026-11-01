@@ -802,42 +802,45 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   Status: `done`
   Goal:0776 explicit cut population;[whole scope/proofs](../history/stitchcad-devnotes-part952.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence`
-  Status: `in_progress`
+  Status: `done`
   Goal:after bounded source/output/identity contexts,declare complete original-copy actions and
   explicit A/B-to-result correspondence;no silent pairing,discarded source quantities or new ids.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.results`
   Status: `done`
   Goal:0795 explicit result-copy requests;[whole scope/proofs](../history/stitchcad-devnotes-part971.md).
-### G1-SLICE.5f.1.c.join.outputs.copies.correspondence.actions
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.actions`
   Status: `done`
-  Goal:complete guarded original-copy RetainOriginal/JoinTo requests;only actual A/B sources
-  contribute to actual result requests,and unrelated copies remain exact before no-fork pairing.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_copy_source_contract --test join_result_copy_contract`
-    through `scripts/local_environment.py`:copy sources4/prior results4 pass,rc=0. Complete original
-    coverage must preserve unrelated copies and reject stale Piece/orientation expectations.
-  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join::copy_sources` through launcher:
-    compiler4 pass,rc=0;whole C/M/checked2M before fields,exact complete unique original membership,
-    whole definition guards,actual A/B ownership/result request membership. Actual raw/source/target
-    loans and original order retained;RetainOriginal implies no replacement. Strict selected clippy rc=0.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_source_examples` through launcher:
-    source7 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered complete
-    guard/unrelated preservation/selected-pair boundary present;whole previous source chapter prefix
-    exact. Main9/topology8 unchanged.971 three original Git spans/body/public bytes exact;
-    `history_archive.py --root . verify`:1425 logical/58 working,rc=0.
-    Full geometry/integration remains .5f.4.geometry/.5g/pre-push,not these source action requests.
-  Work O(M log(M+C+Q+2)+1),2M new entries. Complete selected-copy retention still needs next pairing
-  refusal;selected A/B same result,one A+B per result,no forks,canonical candidate inventory/copy
-  transforms/consumer/currentness/identity and atomic effects remain required.
-  Commit:STITCHCAD-G1-0796. promotion: declined (existing explicit copy/identity/geometry boundary).
+  Goal:0796 complete original-copy actions;[whole scope/proofs](../history/stitchcad-devnotes-part972.md).
+### G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs`
-  Status: `pending`
-  Goal:one explicit A+B source pair per result,actual selected A/B in the same result,and no
-  hidden pairing,missing source,forking or copy orientation/geometry inference.
+  Status: `done`
+  Goal:actual selected A/B JoinTo the same explicit result,and exactly one distinct A+B source pair
+  per requested result,without forks,inferred pairing,orientation or physical geometry approval.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_copy_pair_contract --test join_copy_source_contract`
+    through `scripts/local_environment.py`:pairs4/prior actions4 pass,rc=0. Complete selected retention
+    is not a join;missing/duplicate A/B contributors and crossed selected results must refuse.
+  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join::copy_pairs` through launcher:
+    compiler3 pass,rc=0;whole C/Q/checked3Q before selected fields/scans/allocation;actual first
+    selected/group causes and source/result loans;authored result order and real reflected originals
+    retained. Strict selected clippy rc=0. SourceInvariant/ResultInvariant are internal faults;none occurred.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_source_examples` through launcher:
+    source8 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered exact
+    pair/order/resource/per-pair boundary and refreshed overview present;all old source/overview Rust
+    fences exact. Main9/topology8 unchanged.972 three original Git spans/body/public bytes exact;
+    `history_archive.py --root . verify`:1426 logical/59 working,rc=0.
+    Full geometry/integration remains .5f.4.geometry/.5g/pre-push,not this native copy bookkeeping.
+  Work O(C log(C+Q+2)+Q log(Q+2)+1),peak3Q new entries,successful2Q. Native correspondence complete;
+  each actual pair retains required bank/pose/ease/stop/consumer checks in its own frames. Selected
+  span evidence cannot certify another pair;canonical inventory/currentness/geometry/authority remain.
+  Commit:STITCHCAD-G1-0797. promotion: declined (existing explicit copy/identity/geometry boundary).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory`
   Status: `pending`
   Goal:reconcile actual result/source metadata and candidate full inventory/CutPlan with declared
   copy actions/population/identity,including remaining source copies and all unrelated members.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking`
+  Status: `pending`
+  Goal:before inventory child growth,move the completed correspondence branch byte-exact to the
+  existing construction sibling;preserve all IDs/statuses/evidence and keep execution below1000L.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.tracking`
   Status: `done`
   Goal:0775 bounded continuity;[whole scope/proofs](../history/stitchcad-devnotes-part951.md).

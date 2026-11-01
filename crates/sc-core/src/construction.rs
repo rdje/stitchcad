@@ -85,7 +85,8 @@ pub use join::{
     JoinConstructionTargetLimits, JoinConstructionTargetManifest, JoinConstructionTargetRefusal,
     JoinConstructionUse, JoinConstructionUseError, JoinConstructionUseLimits,
     JoinConstructionUseRefusal, JoinCopyInventoryError, JoinCopyInventoryLimits,
-    JoinCopyInventoryRefusal, JoinCopySourceAction, JoinCopySourceAssignment, JoinCopySourceError,
+    JoinCopyInventoryRefusal, JoinCopyPair, JoinCopyPairError, JoinCopyPairLimits,
+    JoinCopyPairRefusal, JoinCopySourceAction, JoinCopySourceAssignment, JoinCopySourceError,
     JoinCopySourceIntent, JoinCopySourceLimits, JoinCopySourceManifest, JoinCopySourceRefusal,
     JoinCutBank, JoinCutBankError, JoinCutBankRefusal, JoinCutConnectivityError,
     JoinCutConnectivityLimits, JoinCutConnectivityRefusal, JoinCutContourError,
@@ -107,8 +108,8 @@ pub use join::{
     JoinResultCopyRefusal, JoinResultCopyRequest, JoinSourceOccurrence, JoinSourceOccurrenceField,
     JoinSourceOccurrenceLocation, JoinSourcePieceError, JoinSourcePieceLimits,
     JoinSourcePieceRefusal, JoinSpliceEnd, JoinSpliceEndpointPair, JoinSplicePlacement,
-    RequiredJoinConstructionTargets, RequiredJoinCutConnectivity, RequiredJoinExactSplice,
-    RequiredJoinFold,
+    RequiredJoinConstructionTargets, RequiredJoinCopyCorrespondence, RequiredJoinCutConnectivity,
+    RequiredJoinExactSplice, RequiredJoinFold,
 };
 mod mirror;
 pub use mirror::{

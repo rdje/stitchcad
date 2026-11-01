@@ -349,7 +349,7 @@ unrelated retained copy. `intent()` remains the original authored field;`result(
 requested result only for JoinTo. RetainOriginal never implies a replacement target.
 
 This stage can retain complete requests that preserve even the selected A/B copies. That is not
-an accepted no-op or an executed join:the next exact no-fork pairing check must require the actual
+an accepted no-op or an executed join:the [exact no-fork pairing check below](#require-exact-selected-ab-copy-pairing) requires the actual
 selected A/B to contribute to the same result and exactly one A+B source pair per result. Additional
 source copies cannot be implicitly paired,duplicated or silently discarded. All original id/Piece/
 orientation fields remain available for complete candidate inventory and consumer reconciliation.
@@ -358,3 +358,61 @@ Work is O(M log(M+C+Q+2)+1) for Q actual result requests,with2M new entries. No 
 registry,geometry,physical copy transform,currentness,identity issuance or atomic effect is supplied.
 Exact selected correspondence/pairing,canonical inventory/CutPlan,copy/consumer requirements,
 achieved geometry and authority remain separately required.
+
+## Require exact selected A+B copy pairing
+
+`DeclaredJoinCopySources::require_pairs` checks the actual selected physical-copy pair and every
+explicit result-copy request. `JoinCopyPairLimits::new(C,Q,W)` admits all original copies/actions C,
+all requested results Q and checked3Q peak workspace before selected fields,scans or allocation.
+Peak workspace counts a result index,staging slots and final associations;successful retained
+storage is2Q. Earlier immutable inventory/source/fold/construction policies remain separate.
+
+```rust
+use sc_core::construction::*;
+fn pairs<'a>(sources:&'a DeclaredJoinCopySources<'a>)
+    ->Result<RequiredJoinCopyCorrespondence<'a>,JoinCopyPairError<'a>> {
+    sources.require_pairs(JoinCopyPairLimits::new(5,2,6))
+}
+```
+
+For C5/Q2,W6 is exact:C4 refuses `Copies`,Q1 `Results`,W5 `Workspace`,before any selected-copy
+or group inspection. With quotas met,the original selected A action must JoinTo a result,then B
+must JoinTo a result (`SelectedRetained` otherwise,in A-before-B order). Their actual requested
+result identities must agree (`SelectedResultMismatch` otherwise). An accepted complete retention
+request is therefore not sufficient to accept this join or certify a no-op.
+
+Every original JoinTo action then contributes its actual A/B role to the explicitly named result.
+The first repeated role for one result refuses `DuplicateSide`,retaining original first/second
+source-row positions. Results are then checked in **original requested order**,A before B;
+`MissingSide` refuses a result without one actual contributor of each role. There is no inferred
+pairing by list position,sorted ids,geometry,orientation or quantity. Complete unique original-copy
+actions already prevent one physical copy from contributing twice;this check requires exactly one
+A and one B per result. Unrelated and retained copies stay on the whole original action parent.
+
+For example,explicitly assign selected A200 and B201 to result6000,and another actual A203/B204
+pair to result6001. Both pairs retain their actual original definitions and requested orientations.
+Requesting result6001 without both contributors refuses;assigning two A copies to result6000 also
+refuses. If selected B201 names result6001 while selected A200 names6000,the selected mismatch
+refuses before either group's later missing/duplicate cause.
+
+`JoinCopyPairError` retains actual whole `sources()`,original `limits()` and first `refusal()`.
+Selected-retention/mismatch causes lend actual `selected_source(side)` actions. `refused_source()`
+lends the actual selected retained or second duplicate source;missing contributors are never
+fabricated. Duplicate/missing-side causes lend the actual `refused_result()` request. Whole quota
+causes lend no selected/source/result fields. No accepted pairing prefix escapes refusal.
+`SourceInvariant`/`ResultInvariant` denote internal closed-parent faults requiring diagnosis;
+they are not physical incompatibility evidence. Neither occurred in the focused checks.
+
+`RequiredJoinCopyCorrespondence` retains those whole parents,`limits()` and peak
+`workspace_entries()`. `selected_result()` lends the actual request shared by original selected
+A/B copies. `pair_count()` reports all results;`consumed_copy_count()` reports the two unique original
+contributors per result. `pairs()` preserves requested order and reverse;`pair(id)` queries an actual
+explicit result. Each `JoinCopyPair` lends its owner,actual result request and guarded `source(side)`
+action,including original id/Piece/orientation and held operation context.
+
+Work is O(C log(C+Q+2)+Q log(Q+2)+1),with peak3Q new entries and constant count/selected state.
+No provider,evidence,registry,geometry,physical transform,currentness,source retirement,identity
+issuance or atomic effect is supplied. **Each physical pair** still needs actual bank,pose,ease,
+stop and consumer checks in its own copy frames;selected-span evidence cannot certify another
+pair. Complete candidate inventory/CutPlan/mirroring and all source/result metadata,geometry and
+authority requirements remain mandatory. This is native copy bookkeeping,not physical approval.

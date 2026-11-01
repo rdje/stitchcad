@@ -46,7 +46,7 @@ pub fn with_alternative_construction(
     shared: bool,
     run: impl FnOnce(RequiredJoinConstructionTargets<'_>),
 ) {
-    with_alternative_options(shared, 1, false, run);
+    with_alternative_options(shared, 1, false, false, run);
 }
 /// Actual complete source inventory plus an explicit result quantity request;no pairing inferred.
 pub fn with_copy_construction(
@@ -54,12 +54,16 @@ pub fn with_copy_construction(
     unrelated: bool,
     run: impl FnOnce(RequiredJoinConstructionTargets<'_>),
 ) {
-    with_alternative_options(false, quantity, unrelated, run);
+    with_alternative_options(false, quantity, unrelated, false, run);
+}
+pub fn with_paired_construction(run: impl FnOnce(RequiredJoinConstructionTargets<'_>)) {
+    with_alternative_options(false, 2, true, true, run);
 }
 fn with_alternative_options(
     shared: bool,
     quantity: u32,
     unrelated: bool,
+    additional_pair: bool,
     run: impl FnOnce(RequiredJoinConstructionTargets<'_>),
 ) {
     use sc_core::ontology::*;
@@ -71,6 +75,12 @@ fn with_alternative_options(
             shared_edge_fields: shared,
             result_quantity: quantity,
             extra_piece: unrelated,
+            additional_source_pair: additional_pair,
+            mirroring: if additional_pair {
+                Mirroring::MirroredPairs
+            } else {
+                Mirroring::Single
+            },
             ..edges::BankFixture::basic()
         },
         |directions| {

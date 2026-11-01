@@ -56,6 +56,11 @@ pub use fold_sources::{
     DeclaredJoinFoldSources, JoinFoldSourceAction, JoinFoldSourceAssignment, JoinFoldSourceError,
     JoinFoldSourceIntent, JoinFoldSourceLimits, JoinFoldSourceManifest, JoinFoldSourceRefusal,
 };
+mod copy_pairs;
+pub use copy_pairs::{
+    JoinCopyPair, JoinCopyPairError, JoinCopyPairLimits, JoinCopyPairRefusal,
+    RequiredJoinCopyCorrespondence,
+};
 mod copy_sources;
 mod metadata;
 mod population;

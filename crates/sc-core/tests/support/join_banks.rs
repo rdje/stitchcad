@@ -21,6 +21,7 @@ pub struct BankFixture {
     pub result_quantity: u32,
     pub span: SpanFixture,
     pub extra_piece: bool,
+    pub additional_source_pair: bool,
     pub extra_occurrences: bool,
     pub bank_in_holes: bool,
     pub fold_on_other_boundary: bool,
@@ -37,6 +38,7 @@ impl BankFixture {
             result_quantity: 1,
             span: SpanFixture::Declared,
             extra_piece: false,
+            additional_source_pair: false,
             extra_occurrences: false,
             bank_in_holes: false,
             fold_on_other_boundary: false,
@@ -71,6 +73,10 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
         .enumerate()
         .map(|(index, piece)| {
             let mut d = piece.definition().clone();
+            if options.additional_source_pair {
+                d.quantity = 2;
+                d.mirroring = Mirroring::MirroredPairs;
+            }
             if options.extra_boundary_edges {
                 d.boundary.extend([
                     DirectedEdge {
@@ -146,9 +152,25 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
         .iter()
         .map(|c| *c.definition())
         .collect::<Vec<_>>();
+    if options.additional_source_pair {
+        definitions.extend([
+            CutCopyDefinition {
+                id: id(203),
+                piece: id(100),
+                orientation: CopyOrientation::Reflected,
+            },
+            CutCopyDefinition {
+                id: id(204),
+                piece: id(101),
+                orientation: CopyOrientation::Reflected,
+            },
+        ]);
+    }
     if options.extra_piece {
         let mut d = pieces.first().expect("source A").definition().clone();
         d.id = id(102);
+        d.quantity = 1;
+        d.mirroring = Mirroring::Single;
         d.material = MaterialAssignment::Assigned(id(602));
         pieces.push(Piece::new(d, &f.ledger).expect("actual unrelated Piece"));
         definitions.push(CutCopyDefinition {

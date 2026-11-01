@@ -68,7 +68,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Walk seam | Named correspondence,explicit A/B anchor/profile pairs | Differential report plus deliberate mark edits | Native declaration checkpoint;effects pending |
 | True seam | Actual correspondence,ease,adjusted side/Piece and sourced fit budget | Attributed edge adjustment and remaining differential | Native declaration checkpoint;actual fit/maps/effects pending |
 | Mirror | Named Piece,explicit point/range axis and copy intent | Fresh copy identities and source mapping | Native manifest/copy/semantic requests;geometry pending |
-| Join pieces | Piece/seam/copy correspondence and explicit join intent | Output Piece/topology with semantic lineage | Native fields/identity/Edge attribution/cut partitions;full outputs pending |
+| Join pieces | Piece/seam/copy correspondence and explicit join intent | Output Piece/topology with semantic lineage | Native fields/identity/cut,construction/fold/copy bookkeeping;full outputs pending |
 
 The last column is an availability boundary. Stable reference types,structural inventories or a
 named command are not substitutes for an implemented drafting record and its executor.
