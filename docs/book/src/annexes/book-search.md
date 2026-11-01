@@ -68,3 +68,27 @@ and unexpected-warning refusals remain required. Search ranking and reader laten
 Until resolved,the historical level3/level1 capture above refuses its now-warning chapter candidate;
 that refusal is diagnostic evidence,not a successful migration or permission to ignore warnings.
 
+## Isolated renderer checkpoint
+
+0815 built the published mdBook0.5.4 package in target/cargo-home;Cargo resolved and compiled
+elasticlunr-rs3.1.0. No external executable,repository or dependency source was modified.
+The native field probe authors a tiny book with distinct title,body and breadcrumb words plus
+a repeated title word. The ambient renderer fails with body frequency2 and a body-only word in
+breadcrumbs;the local renderer passes with body frequency1 and the word absent from breadcrumbs.
+Both binaries report0.5.4,so a version string alone cannot establish corrected indexing.
+
+```bash
+python3 -I -B scripts/local_environment.py -- python3 -I -B docs/tasks/artifacts/book_publication/search_field_probe.py --output target/book_search_my_local_field_probe
+```
+
+Use a fresh capture path. The probe reserves it before writing all three fixture inputs and
+retains the native build log and result,including a failed observation. `--ambient` selects the
+read-only host renderer solely for a diagnostic baseline. The normal probe uses the explicit
+target/cargo-home/bin/mdbook path;symlink,foreign-volume and nested-repository inputs refuse.
+
+The isolated same-source118-chapter candidate has a7712945-byte payload and no renderer warnings.
+Stored document fields,chapter URLs,search/display options and per-chapter stored words/indexed
+term sets match the baseline exactly. Breadcrumb postings shrink to36944 bytes;field membership
+and frequencies intentionally change to the upstream-corrected values. This is tool-build evidence:
+normal build/publication activation and actual query verification remain the next owned steps.
+

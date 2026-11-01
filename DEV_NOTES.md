@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — upstream search field leakage measured
+## _(2026-11-01 UTC)_ — native renderer field fix built locally
 
-0814 D372:118 records,body5318916B/breadcrumbs5321651B versus10580B stored breadcrumb text;all72206 body pairs leak;build0 warns12993569B.
-Official b7efca70 fixes field frequencies;published3.1.0 follows mdBook0.5.4. Read-only census0;existing5 native search refusals0;989 Git/public exact0.
-Local same-version build,explicit activation and actual search verification separately owned;no source patch/corpus loss/suppression. Ranking/latency unmeasured.
-Promotion declined: existing D372 owner;warning remains open. G1still6/18;native13-family checkpoint accepted0813;archive1443/76,per-generation21/64 and55/64.
+0815 guarded published mdBook0.5.4 install compiled elasticlunr-rs3.1.0;host diagnostic red1/local green0 proves frequency2→1 and no breadcrumb leakage.
+Same-source118-chapter candidate7712945B builds warning-free;120 hashes match b0ad71d5;stored fields/URLs/options/chapter word+term sets exact0.
+Native probe keeps failed captures;escape/existing/override refusals preserve bytes0. Normal ambient build still warns13014554B;activation/query verification next.
+Promotion declined: existing D372/full-text contract;no upstream patch,external write or product code change. 990 Git/public exact0;archive1444/77,per-generation21/64 and56/64;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

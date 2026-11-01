@@ -3,16 +3,19 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0814 — trace the large search index to upstream field leakage
+## STITCHCAD-G1-0815 — build and probe the published renderer fix locally
 
-- Added read-only native field census:118 records;body5318916B/breadcrumbs5321651B;
-  all72206 body pairs also indexed as breadcrumbs despite10580B of breadcrumb text.
-- Verified upstream field-frequency fix and published3.1.0;owned local mdBook0.5.4 build,
-  explicit activation and actual search verification. D372 remains open;no warning suppression.
-- Native build0 warns12993569B;existing5 search refusals0;989 Git/body/public exact,
-  archive1443/76,per-generation21/64 and55/64. G1still6/18;native feature checkpoint unchanged.
+- Published mdBook0.5.4 compiled with elasticlunr-rs3.1.0 into the local Cargo store.
+  Native host red/local green demonstrates corrected frequency and body/breadcrumb isolation.
+- Same-source118-chapter candidate7712945B is warning-free;all stored fields,URLs,options,
+  chapter words/terms exact;120 input hashes match b0ad71d5. No source patch or external write.
+- Probe refuses parent escape,existing capture and search override;bytes unchanged. Normal
+  ambient build still warns13014554B;activation and actual query proof remain owned.
+- 990 Git/body/public exact;archive1444/77,per-generation21/64 and56/64. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0814 upstream field-leakage diagnosis](docs/history/stitchcad-devnotes-part990.md) retains exact task,lesson and ledger bytes.
 
 [Whole0813 native v1 declaration acceptance](docs/history/stitchcad-devnotes-part989.md) retains exact task,lesson and ledger bytes.
 
