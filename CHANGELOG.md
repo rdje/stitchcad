@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0768 — require whole-edge truing lineage
+## STITCHCAD-G1-0769 — recover deterministic truing policy
 
-- Explicit retain/retire checks whole output/use bounds and preservation policy,with authentic parent proofs.
-- Borrow actual whole Piece identity,history/visible-repair source fields,all outputs and unchanged uses.
-- No source retirement,geometric map,provider acceptance or global currentness certificate is manufactured.
-- Lineage3/prior4/API4/book6,strict selected lint/format and focused render pass0;whole0767/D302 scope943 exact.
+- Recheck12 current clauses/11 files and four native curve-source interfaces before implementation.
+- Plan ordered explicit alternatives and first certified-feasible complete assignments with bounded domain.
+- Exact distinct-curve/equal-speed and four-order examples pass;book render and retention pass0.
+- Native admission/fitting remain pending;whole0768/closed P1 scope944 exact;Rust/tools unchanged.
 
 ## STITCHCAD-G1-0421 — preserve task-sibling ownership and sealed proof bytes
 
@@ -44,6 +44,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0768 lineage task,lesson and ledger](docs/history/stitchcad-devnotes-part944.md) retain exact source bytes.
 
 [Whole0767 capture/D302 task,lesson and ledgers](docs/history/stitchcad-devnotes-part943.md) retain exact source bytes.
 

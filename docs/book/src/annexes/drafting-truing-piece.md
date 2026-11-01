@@ -340,3 +340,57 @@ Current liveness/nonreuse,whole-Design history,actual geometric maps,visible rep
 all-copy effects,authority and atomic publication retain their separate execution/evidence owners.
 These native whole-Piece declarations pass focused checks;the deterministic curve/refit selection
 and supported-domain review remains required before native truing family closure.
+
+## Planned deterministic curve selection
+
+The next native policy is **ordered declared curve alternatives**. This section specifies the
+planned declaration contract;its native admission and actual execution are not implemented yet.
+It extends the existing constrained endpoint/stop-preserving variant. Endpoint movement,isolated
+copy forks and a separately authored target length/ease are not inferred by this policy.
+
+Locks and a target differential do not uniquely select a curve. For example,quadratic controls
+`(0,0),(1,1/2),(2,0)` and `(0,0),(1,−1/2),(2,0)` produce distinct curves with the same endpoints
+and pointwise squared speed `5−4t+4t²`. Their arclengths are equal;an endpoint stop distinguishes
+neither. This is a selection example,not implementation or physical-fitting evidence.
+
+For each actual **selected-domain output role**,the declaration will supply a nonempty ordered
+list of explicit curve alternatives. Each alternative is one actual `DirectedRange` referring to
+a named curve supplied earlier in the recipe. The published native line,center-arc and quadratic/
+cubic Bézier declarations supply stable logical edge outputs. The canonical executor still has to
+validate their actual supported line/arc/cubic geometry,including exact quadratic promotion.
+NURBS remain deferred by the roadmap. No detached control-point cache becomes authoritative.
+
+The alternative's directed traversal declares which chosen-curve endpoint becomes output start.
+That chosen-curve frame is distinct from the output's requested orientation relative to the
+**old** source range,and from Piece traversal. Actual endpoint/interior correspondence must reconcile
+all frames. Curve references alone establish no geometry,currentness,prior-order or fit certificate.
+
+Outside prefix/suffix roles have no independent curve alternatives:their geometry remains required
+from the corresponding original source portions. `PreserveSource` has an exactly empty new-curve
+proposal and retains its original obligations. For `Refit`,every actual selected role requires one
+group;unknown/outside roles,duplicates and missing/empty groups cannot silently supply a curve.
+
+Selection will use the explicit **first feasible complete assignment** policy. Groups and choices
+retain authored order. With role9 choices20/21 and role11 choices30/31,the complete order is
+`(20,30),(20,31),(21,30),(21,31)`;the rightmost group varies fastest. Persistent ids are never sorted
+to establish priority. Feasibility is evaluated on the complete proposed Piece and all coupled
+copies/observers,including both span sides if the same Piece changes both. Choosing each group's
+first locally feasible curve is insufficient. The first complete assignment with all required
+certified predicates passing determines the requested result.
+
+An unavailable source,unsupported evaluator,uncertified result,resource failure or cancellation
+must retain its actual cause;it cannot be treated as a proved infeasible candidate to skip.
+Exhausting the declared alternatives can establish only that **this declared domain** contains
+no certified-feasible assignment,not impossibility over every curve. Candidate generation and
+complete envelope coverage remain G3 implementation/validation obligations.
+
+Native admission will bound complete selected outputs N,raw groups M,all choice occurrences K,
+the checked complete combination count P and index/association workspace. Whole bounds precede
+field inspection or allocation;no prefix acceptance or default choice. The combination bound
+counts declarations,not actual fit cost or memory bytes. Geometry execution needs its own full
+resource admission before evaluating any assignment.
+
+The next slice implements that native proposal/association only. The later coverage review remains
+open until supported-domain/variant obligations are reconciled. Actual curve generation,certified
+lengths/maps,feasibility,global currentness,repairs,effects,authority and atomic publication remain
+with the existing G1 ordered-program/geometry and G2/G3/bus owners. This plan narrows no v1 gate.

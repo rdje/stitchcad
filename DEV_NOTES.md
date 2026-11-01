@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — require whole-edge truing identity continuity
+## _(2026-11-01 UTC)_ — recover deterministic truing selection scope
 
-0768 binds explicit retain/retire under whole T/G quotas;preservation forbids retirement. Actual IdentityHistory/VisibleRepairs fields,whole original Piece identity,complete outputs and retained uses stay borrowed;no provider call,history edit or numeric map.
-Initial alias fixture fails earlier SelfSource,so authentic creator/complete-contour/outer-fold proofs replace a redundant draft scan. Lineage3/prior fold3/manifest guard1/API4/book6,strict selected Clippy/format and focused render pass0;draft nested-if lint fixed. Real global maps/fit/effects remain owned.
-Whole0767/D302 retained943 exact;reader1397/30,active9/64,aggregate30/192 pass0. Original source-book Rust fences unchanged;D372 build warning remains. Promotion: declined (existing parent/reference contracts). G1still6/18;next deterministic curve/refit/domain review.
+0769 rechecks12 normative clauses/11 files and four native curve-source interfaces. Reflected quadratic controls yield distinct interiors with identical endpoints/speed polynomial5−4t+4t²;locks alone underdetermine shape. Exact polynomial and four Cartesian-order examples pass0.
+Plan:ordered explicit alternatives per selected role;first certified-feasible complete assignment,with whole input/combination/workspace bounds. Actual-source/unknown/quota/cancel errors stop;declared-domain exhaustion proves no universal impossibility. Native admission and G2/G3 fitting remain pending.
+Book build/render/history1398/31 pass0;whole0768/closed P1 Piece goals retained944 exact. Rust/tools unchanged;D372 warning remains. Promotion: declined (planned scoped policy;implementation/review pending). G1still6/18;next bounded alternatives,then native coverage review.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

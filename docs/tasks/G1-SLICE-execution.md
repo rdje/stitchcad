@@ -808,12 +808,7 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0759 complete evidence requests;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part935md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece`
   Status: `done`
-  Goal:P1 before native family closure:explicit whole-Piece reconciliation for partial selected spans.
-  Reproduce:truing_source_domain_contract whole0–1 on selected1/4–3/4 refuses BeforeStart;
-  ontology/piece.rs DirectedEdge/PieceDefinition contours carry whole EdgeRefs,not EdgeRanges.
-  Impact:selected-source coverage cannot by itself replace the containing edge or preserve its
-  outside portions. Native declarations must cover outside roles,all occurrences/fold and lineage.
-  Actual geometry/current ledger application remains .5f.2/.5f.4.geometry;do not invent results.
+  Goal:0768 native whole-Piece reconciliation;[whole original P1 scope](../history/stitchcad-devnotes-part944.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.roles`
   Status: `done`
   Goal:0760 exact outside roles/book/D375;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part936md).
@@ -844,33 +839,41 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0767 exact early capture/D302 correction;[whole scope/proofs](../history/stitchcad-devnotes-part943.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage`
   Status: `done`
-  Goal:explicit whole held-edge retain/retire and mapped-or-visible reference requirements;
-  actual current history,global observers and numeric geometric maps retain their later owners.
-  - [x] ISSUE:complete Piece/fold declarations need explicit whole-edge identity disposition;
-    neither new candidates nor selected-source coverage may silently retire an original identity.
-  - [x] ROOT CAUSE:initial alias fixture refuses earlier SelfSource;manifest.rs creator guard
-    plus complete contour replacement/outer fold already exclude old result uses. Existing named
-    creator-alias contract passes1/0,rc=0;reuse these parents instead of an unreachable downstream scan.
-  - [x] FIX:require_lineage checks whole T/G before explicit disposition/outcome;preservation
-    refuses retirement. Retain actual IdentityHistory/VisibleRepairs fields,all outputs and unchanged uses.
-  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    truing_lineage_contract passes3/0;both sides/outcomes/all four fold cases,original evidence-field
-    pointers,complete/reverse attribution,resource precedence and minimal empty outputs;rc=0.
-  - [x] NO REGRESSION:prior fold3 and selected manifest guard1 pass0;rc=0. Strict selected
-    Clippy/format rc=0 after collapsing draft nested if;API4/book6/build/focused render rc=0.
-    Original selected-source Rust book fences byte-exact;D372 warning remains owned.
-  - [x] LOCKSTEP:whole0767/D302 scope retained943 exact;archive1397/30/active9,rc=0. Native
-    Piece/manifest declaration parents close;variant review and actual geometry/fit/authority stay owned.
-  Commit:STITCHCAD-G1-0768;promotion: declined (existing authentic-parent/reference contracts).
+  Goal:0768 whole-edge identity requirements;[whole scope/proofs](../history/stitchcad-devnotes-part944.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.coverage.tracking`
   Status: `done`
   Goal:0755 exact walk split/receipt930;census0;promotion: declined (navigation).
 - ID: `G1-SLICE.5f.1.c.true.variants`
-  Status: `pending`
+  Status: `in_progress`
   Goal:review v1 truing coverage against the envelope before family closure;constrained refit
   association alone grants no complete coverage. Define deterministic curve/refit selection
   and supported domains;endpoint/stop locks alone admit multiple curves. Explicit policies for
   any added endpoint/copy variants;no guessed solver. Native output/real geometry owners stay separate.
+- ID: `G1-SLICE.5f.1.c.true.variants.contracts`
+  Status: `done`
+  Goal:recover exact v1 requirements/interfaces and record planned deterministic policy before code.
+  - [x] ISSUE:endpoint/stop/length constraints do not select one curve;the native variant needs
+    explicit selection/domain semantics before closure. Actual geometry stays with existing owners.
+  - [x] ROOT CAUSE:current comparison against0688 source-and-render.json confirms12 clauses in
+    11 files;four native line/arc/Bezier/DirectedRange interfaces inspected;rc=0. Exact reflected
+    quadratic pair has equal speed polynomial5−4t+4t² and endpoints but distinct interiors;rc=0.
+  - [x] FIX:book records planned ordered declared alternatives,first certified-feasible complete
+    assignment,full N/M/K/P/workspace bounds and actual-source/resource/error/domain boundaries.
+  - [x] ADDRESSED:target/history-proof-0769-truing-policy/contracts.json retains current source
+    hashes/clauses,interfaces,exact polynomial and four ordered tuples;all assertions rc=0.
+  - [x] NO REGRESSION:book build/focused rendered policy/examples rc=0;archive1398/31 rc=0.
+    Rust/tool bytes unchanged;no new native admission,fit,execution or full-envelope proof claimed.
+  - [x] LOCKSTEP:whole0768 and original closed P1 Piece scope retained944 exact;book/live
+    pointer/frontier/journals aligned. D372 warning and G1/G2/G3/bus execution owners remain.
+  Commit:STITCHCAD-G1-0769;promotion: declined (planned scoped policy;implementation/review pending).
+- ID: `G1-SLICE.5f.1.c.true.variants.selection`
+  Status: `pending`
+  Goal:implement bounded ordered selected-role curve alternatives and complete-assignment priority
+  declarations from authentic lineage;no native fit/evaluator or inferred outside curves.
+- ID: `G1-SLICE.5f.1.c.true.variants.review`
+  Status: `pending`
+  Goal:reconcile native selection/variant/domain coverage against v1 clauses before family closure;
+  retain coupled-copy/ease/maps/unknown/error/geometry and actual garment validation owners.
 - ID: `G1-SLICE.5f.1.c.join.inputs`
   Status: `done`
   Goal:0690 source intent/binding;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part860md).
