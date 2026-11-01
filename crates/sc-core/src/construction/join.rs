@@ -57,12 +57,16 @@ pub use fold_sources::{
     JoinFoldSourceIntent, JoinFoldSourceLimits, JoinFoldSourceManifest, JoinFoldSourceRefusal,
 };
 mod companion_repairs;
+mod consumers;
 mod original_pieces;
 mod result_piece;
 pub use companion_repairs::{
     JoinCompanionRepair, JoinCompanionRepairError, JoinCompanionRepairLimits,
     JoinCompanionRepairManifest, JoinCompanionRepairRefusal, JoinCompanionRepairRequest,
     RequiredJoinCompanionRepairs,
+};
+pub use consumers::{
+    JoinConsumerEvidenceKind, JoinConsumerRequirement, JoinConsumerSources, RequiredJoinConsumers,
 };
 pub use original_pieces::{
     JoinOriginalPiece, JoinOriginalPieceError, JoinOriginalPieceField, JoinOriginalPieceRefusal,

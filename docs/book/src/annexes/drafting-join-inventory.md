@@ -277,3 +277,51 @@ with focused checks;full geometry-backed integration and broad verification rema
 
 Exact field reconciliation supplies a proposed inventory for explicit consumer/reference repair.
 Complete original observer ownership and mapped-or-visible repair requirements must precede effects.
+
+## Require explicit complete consumer-source obligations
+
+`MatchedJoinPieceInventory::require_consumers` binds five explicit source requests to the actual
+complete candidate/original/copy/repair context. This follows the native mirror/truing request
+convention;the returned `RequiredJoinConsumers` is an outstanding requirement association,not a
+consumer census,evidence verdict,reference repair or execution-readiness certificate.
+
+```rust
+use sc_core::{construction::*,ontology::EntityId};
+fn bind<'a>(inventory:&'a MatchedJoinPieceInventory<'a>,sources:&'a JoinConsumerSources)
+    ->RequiredJoinConsumers<'a> { inventory.require_consumers(sources) }
+let sources=JoinConsumerSources::new(EntityId::from_bits(7001),EntityId::from_bits(7002),
+    EntityId::from_bits(7003),EntityId::from_bits(7004),EntityId::from_bits(7005));
+```
+
+All five `JoinConsumerEvidenceKind` scopes are mandatory and remain distinct:
+
+- `WholeSourceConsumers`:complete current original/affected result marks,grainlines,sewing and
+  other structural/semantic/reference consumers,including shared edges,unselected/retained copies
+  and separately identified companions. Selected-span evidence cannot certify the rest.
+- `SourcePreservation`:every original holder,field and held key reconciles with explicit copy/
+  field dispositions. Construction/fold omissions,additional content,new fold axes and companion
+  changes require actual justification. Historical objects are not rewritten by this binding.
+- `CurrentOwnership`:actual current Design/revision,graph,plan,Piece/frame/copy/material and
+  semantic owner registries;matching numeric ids or an earlier successful query are insufficient.
+- `ResultSemantics`:complete result marks/grainlines/seams/other semantics have explicit owners
+  and mappings. Copy quantities,reflection,names and list positions create no semantic object ids.
+- `VisibleRepairs`:every held point/range and registration has explicit mapping,ambiguity,gap or
+  visible repair. An exact owner/edge/parameter registration repair does not update an immutable
+  Notch or other semantic holder still containing the old field;coordinated semantic repair remains.
+
+`JoinConsumerSources::new(whole,preservation,ownership,result,repairs)` requires every field
+without a Default. Zero/reused source ids remain ordinary unresolved requests. `source(kind)`
+lends the actual original field. Equal values neither merge obligations nor certify evidence kind,
+existence,state,currentness,truth,empty consumers or human approval.
+
+`RequiredJoinConsumers` lends actual `inventory()` and whole original `sources()`.
+`requirements()` visits all five scopes in the order above and reverse;`requirement(kind)` returns
+the actual scope/source-field view. Every `JoinConsumerRequirement` lends its whole `context()`,
+distinct `kind()` and original `source()`. Original field/copy actions,old held companion fields,
+construction/fold omissions and authored evidence requests remain available through those parents.
+
+Fixed borrowed association and five-item traversal take constant work/space with no allocation,
+quota,registry,consumer,provider,text or geometry scan. Earlier whole resources remain separate.
+Canonical intake/sewing/all-copy effects,global identity/lineage,actual repair truth,physical
+correspondence and atomic authoring authority remain separate explicit requirements and execution
+work. No source disappearance in one Piece authorizes global edge retirement or registration withdrawal.

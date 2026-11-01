@@ -793,20 +793,25 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   no independent entered quantities or automatic face/parity/material inference.
   Dependencies:.join.outputs.copies and .join.outputs.contours before this cut/print binding.
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks`
-  Status: `pending`
+  Status: `in_progress`
   Goal:explicit mark/grainline/seam/other consumer ownership and mapped-or-visible repair requirements.
-### G1-SLICE.5f.1.c.join.outputs.metadata.marks.tracking
+### G1-SLICE.5f.1.c.join.outputs.metadata.marks.sources
+- ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.sources`
+  Status: `done`
+  Goal:explicit complete native consumer-source requirements over actual matched inventory;no accepted semantic truth.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_consumer_contract` through launcher:
+    2 pass;complete field matching still requires five distinct semantic/owner/repair scopes even with equal0 source ids,rc=0.
+  - [x] ADDRESSED: same target plus `cargo test -p sc-core --test join_result_piece_contract`:
+    2/4 pass;actual whole inventory/source-field loans,canonical/reverse5-scope traversal and old companion/omission requests retained,rc=0.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_consumer_contract --test join_result_piece_contract -- -D warnings`:
+    strict lint/API4/inventory6/fmt/book/rendered claims rc=0;981 three Git spans/body/public exact;archive1435/68,per-generation21/64 and47/64,rc=0.
+  Commit:STITCHCAD-G1-0806. promotion: declined (existing canonical held-reference and native evidence-request boundary).
+- ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.review`
+  Status: `pending`
+  Goal:focused native scope review against canonical held-reference/semantic ownership contracts;effect/lineage/physical proof remains separate.
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.tracking`
   Status: `done`
-  Goal:bounded consumer continuity;complete closed copy/inventory branch moved unchanged to existing sibling.
-  - [x] ROOT CAUSE: `git show 618fe393:docs/tasks/G1-SLICE-execution.md | wc -l -c`:
-    gives998L/55970B,rc=0;consumer declaration children need room below the1000L health target.
-  - [x] ADDRESSED: `python3 -I -B -` Git interval proof:whole3468B/SHA54570aa8 branch,
-    12 done IDs/statuses/relations once,old64255B destination prefix exact,all5 Rust fences retained;Rust diff empty,rc=0.
-  - [x] NO REGRESSION: `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`:
-    10 lanes/13 trees/20 siblings/0 issues,rc=0;980 three Git spans/body/public exact;archive1434/67,per-generation21/64 and46/64,rc=0.
-    `scripts/run_make.sh book`:build/rendered consumer boundary rc=0;runtime/full feature verification unchanged.
-  Commit:STITCHCAD-G1-0805. promotion: declined (existing bounded canonical task sibling policy).
+  Goal:0805 bounded consumer continuity;[whole scope/proofs](../history/stitchcad-devnotes-part981.md).
 [Complete native copy/inventory reconciliation](G1-SLICE-constructions.md#complete-join-candidate-inventory)
 retains every original goal,status,child relation and focused acceptance proof.
 

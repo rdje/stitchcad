@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — bounded join consumer continuity
+## _(2026-11-01 UTC)_ — explicit complete join consumer source requests
 
-0805 moves whole3468B/12-node done copy/inventory branch unchanged to the existing construction sibling before consumer growth.
-Original source interval/statuses/relations and old64255B destination prefix exact;all5 inventory Rust examples retained;runtime diff empty.
-Tree10/13/20/0,archive1434/67,per-generation21/64 and46/64,book/rendered consumer boundary rc=0;980 three Git spans/body/public exact.
-promotion: declined (existing bounded canonical sibling policy). G1still6/18;complete native consumer/repair declarations next.
+0806 binds five mandatory whole-consumer/preservation/current-owner/result/visible-repair source fields to actual matched inventory parents.
+Native consumer2/prior result4 pass;equal0 ids preserve all5 distinct scopes/actual field loans and outstanding original companion/omission requests.
+API4/inventory6/strict lint/fmt/book/rendered claims rc=0;981 three Git spans/body/public exact;archive1435/68,per-generation21/64 and47/64,rc=0.
+promotion: declined (existing canonical held-reference/native evidence-request contract). G1still6/18;focused native consumer scope review next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
