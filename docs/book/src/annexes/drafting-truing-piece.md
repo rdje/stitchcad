@@ -118,3 +118,56 @@ active metadata remains present. Whole-Piece placement still needs original occu
 and composition with these explicit source-relative choices. Actual endpoint/stop positions,
 interior parameter maps,current source/history,geometry,fit,effects and atomic publication remain
 separate execution/evidence obligations.
+
+## Admit the exact held Piece occurrences
+
+`AdmittedTruingDirections::admit_exact_piece_source` binds the actual selected pattern Piece
+already held by the original copy inventory. `TruingPieceSourceLimits::new(T,H,R)` explicitly
+bounds every selected/outside output T,every original hole header H,and every original occurrence R.
+R includes boundary edges,all hole edges,construction lines and **separate fold declarations**.
+Unrelated fields count;repeated construction uses count separately. Physical copies do not multiply R.
+
+```rust
+use sc_core::construction::*;
+fn bind<'a>(directions:&'a AdmittedTruingDirections<'a>)
+    ->Result<BoundExactTruingPieceSource<'a>,TruingPieceSourceError<'a>> {
+    directions.admit_exact_piece_source(TruingPieceSourceLimits::new(3,2,8))
+}
+```
+
+The whole T quota precedes the whole H quota. Only then does a length-only scan of the H hole
+headers compute checked R;the whole R quota precedes any individual edge-field inspection.
+Admission uses O(H+R) work,constant additional space and no allocation or label/material string
+scan. Earlier parent resource obligations remain separate. The policy counts logical fields,
+not bytes,allocator capacity,global storage or geometry work.
+
+For a Piece with two boundary edges,two one-edge holes,three construction lines and one fold
+declaration,R is8. T3/H2/R7 refuses `Occurrences` with required8,even if only one boundary edge
+and two construction lines name the selected source. T2/H1/R7 refuses `Outputs` first;
+T3/H1/R7 refuses `Holes`. T3/H2/R8 admits those resource counts before checking literal membership.
+The fold declaration counts again because it is a distinct original field from its boundary use.
+
+At least one contour field must **literally** name the selected held `EdgeRef`.
+`NoExactOccurrence` means this exact-held variant cannot place a replacement in the supplied
+Piece. It does not prove global absence or current invalidity:aliases,history and correspondence
+still need current-source resolution and evidence. A structurally valid independently supplied
+Piece can share the expected Piece identity without carrying that literal edge. Empty new-output
+preservation still requires the actual original Piece and its literal source occurrence.
+
+`BoundExactTruingPieceSource` retains actual `directions()`,actual `piece()`,original `target()`
+and `limits()`. Its `occurrence_count()` includes every original field;`contour_matches()` and
+`fold_matches()` separately report literal selected-edge occurrences. `occurrences()` lends all
+boundary fields,then holes in authored order,then construction lines,then fold declarations;
+reverse traversal returns the exact reverse order. No field is filtered,deduplicated or retargeted.
+
+Each authentic `TruingPieceOccurrence` retains its whole `context()`,original `location()`,
+actual borrowed `field()` and literal `is_target()` result. `TruingPieceOccurrenceLocation`
+distinguishes boundary index,hole/index,construction index and fold index. The field is either
+`Directed(&DirectedEdge)`,including the original unchanged traversal direction,or `Fold(&EdgeRef)`.
+Its `edge()` lends the actual original field. This field enum alone is not a whole-context proof.
+Errors retain the complete original directions,selected Piece,policy and first quota/overflow or
+literal-membership cause;no partial occurrence admission escapes.
+
+This step supplies original placement inputs. Complete replacement contours,explicit fold choice,
+whole-edge lineage,currentness,mapped geometry,endpoint/stop fit,all-copy effects,authority and
+atomic publication remain required by their separate declaration/execution owners.

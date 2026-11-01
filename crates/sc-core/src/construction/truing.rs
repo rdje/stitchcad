@@ -29,6 +29,12 @@ pub use outcome::{
     RequiredTruingOutcome, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
 };
 mod binding;
+mod piece_source;
+pub use piece_source::{
+    BoundExactTruingPieceSource, TruingPieceOccurrence, TruingPieceOccurrenceField,
+    TruingPieceOccurrenceLocation, TruingPieceSourceError, TruingPieceSourceLimits,
+    TruingPieceSourceRefusal,
+};
 mod directions;
 pub use directions::{
     AdmittedTruingDirections, TruingDirectionAssignment, TruingDirectionError,

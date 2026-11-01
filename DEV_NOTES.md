@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — bound execution tracking before truing contours
+## _(2026-11-01 UTC)_ — bound exact held Piece occurrences
 
-0763 moves the complete closed scalar Derived checkpoint into the existing canonical sibling before the998-line execution tree grows. All original ids/status/goals/proof routes remain byte-exact;wider Derived integration stays owned in execution.
-Complete3210B matches dd2d1a77,sha256 edc3b7fc640b3e769e12ab6e6be071df94b1401d5e78b59eb4fdb3faa6a96958. Tree census10/13/20 with zero unowned/orphan/dead links passes0;prior cleanup receipt938 retained exactly.
-Runtime/book behavior unchanged;whole-Piece/source/fold contracts reviewed. Promotion: declined (existing canonical navigation). G1still6/18;resume bounded original occurrence/fold replacement with safe child slices.
+0764 adds complete T/H/checked R admission before literal boundary/hole/construction/fold scans. Constant extra space,no allocation or label scan;all original fields and directions remain borrowed in order/reverse. Missing literal source is no currentness/global-absence verdict.
+Source3/prior direction3/domain4/API4/book3,strict selected Clippy/format and focused book render pass0. Initial reused fixture ids and indexing lint corrected. Book build0 retains D372 warning;actual replacement/fold/lineage and all geometry/currentness/fit/authority remain owned.
+Prior0763 whole task/lesson/ledger retained939 exact;archive1393/61 passes0. Promotion: declined (existing original-source contract). G1still6/18;next complete bounded contour replacement.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

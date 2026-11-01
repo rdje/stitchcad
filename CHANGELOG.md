@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0763 — bound execution tracking before truing contours
+## STITCHCAD-G1-0764 — bind exact held Piece occurrences
 
-- Move the complete closed scalar Derived checkpoint byte-exact into the existing canonical sibling.
-- Preserve every original id/status/goal/proof route;full Derived integration stays owned.
-- Exact3210B/source digest and tree census10/13/20,zero failures;prior cleanup receipt938 retained.
-- Runtime/book unchanged;truing occurrence/fold replacement resumes within existing bounds.
+- Complete output/hole/occurrence quotas precede original field scans;no allocation or filtered counts.
+- Borrow every boundary/hole/construction/fold field in original/reverse order,including repeated uses.
+- Literal-source refusal keeps whole parents and makes no currentness/global-absence claim.
+- Source3/prior7/API4/book3,strict selected lint/format and focused render pass0;whole0763 scope939 exact.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -52,6 +52,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0763 tracking task,lesson and ledger](docs/history/stitchcad-devnotes-part939.md) retain exact source bytes.
 
 [Whole0762 cleanup task,lesson and ledger](docs/history/stitchcad-devnotes-part938.md) retain exact source bytes.
 

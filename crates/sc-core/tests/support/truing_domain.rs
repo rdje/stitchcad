@@ -16,7 +16,17 @@ pub fn with_domain(
     to: Param,
     run: impl FnOnce(BoundTruingEdgeRoles<'_>),
 ) {
-    let f = sources::fixture(false);
+    with_domain_inventory(side, from, to, |f| f.pieces.clone(), run);
+}
+pub fn with_domain_inventory(
+    side: SeamSideId,
+    from: Param,
+    to: Param,
+    supplied: impl FnOnce(&mut sources::Fixture) -> Vec<Piece>,
+    run: impl FnOnce(BoundTruingEdgeRoles<'_>),
+) {
+    let mut f = sources::fixture(false);
+    let pieces = supplied(&mut f);
     let inventory = PieceInventory::new(f.pieces.clone()).expect("whole actual inventory");
     let mut span = sources::first_span(&f.graph).definition().clone();
     let selected = match side {
@@ -80,6 +90,7 @@ pub fn with_domain(
             },
         )
         .expect("actual selected original source");
+    let inventory = PieceInventory::new(pieces).expect("actual separately supplied inventory");
     let copy_limits = TruingCopyInventoryLimits::new(2, 2, 8);
     let copies = source
         .bind_copy_inventory(&inventory, &copy_limits)
