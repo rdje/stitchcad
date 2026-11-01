@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0785 — explicit complete joined cut uses
+## STITCHCAD-G1-0786 — required original join cut paths
 
-- Whole N/H/U/2U+H admission;nonempty boundary/holes and unique actual cut membership with exact cut count.
-- Actual use/direction/source/group parents and authored order/traversal retained;noncut roles cannot substitute.
-- Native4/prior direction4/compiler6/join book8/lint/fmt/book rc=0;960 continuity exact.
-- G1still6/18;source-path/bank gluing,classification,noncut/copies/geometry/effects remain pending.
+- Whole H/U before port scans;original cyclic vertices/interior fragment endpoints and two actual splice links.
+- Authored orientation/source-role identity retained;first consecutive/closing adjacency lends actual use views.
+- Native4/prior cut use4/reachability unit1/compiler3/join book9/lint/fmt/book rc=0;961 continuity exact.
+- G1still6/18;construction/fold/consumer/copy reconciliation and actual geometry/authority remain pending.
 
 # Sealed archive — earlier slices
+
+[Whole0785 cut-use declarations](docs/history/stitchcad-devnotes-part961.md) retain exact task,lesson and ledger bytes.
 
 [Whole0784 reference/task preparation](docs/history/stitchcad-devnotes-part960.md) retains exact task,lesson and ledger bytes.
 

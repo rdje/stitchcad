@@ -119,7 +119,12 @@ impl<'a> RequiredJoinExactSplice<'a> {
     ) -> impl ExactSizeIterator<Item = JoinSpliceEndpointPair<'_>> + DoubleEndedIterator {
         [JoinSpliceEnd::AFrom, JoinSpliceEnd::ATo]
             .into_iter()
-            .map(|end| JoinSpliceEndpointPair { context: self, end })
+            .map(|end| self.endpoint_pair(end))
+    }
+    /// Authentic pair for one explicit A-held endpoint,without ordinal/default selection.
+    #[must_use]
+    pub const fn endpoint_pair(&self, end: JoinSpliceEnd) -> JoinSpliceEndpointPair<'_> {
+        JoinSpliceEndpointPair { context: self, end }
     }
 }
 /// Endpoint order in the original A-held frame,not physical left/right.

@@ -22,6 +22,9 @@ pub struct BankFixture {
     pub extra_piece: bool,
     pub extra_occurrences: bool,
     pub bank_in_holes: bool,
+    pub extra_boundary_edges: bool,
+    pub shared_edge_fields: bool,
+    pub seam_direction: SeamDirection,
 }
 impl BankFixture {
     pub fn basic() -> Self {
@@ -33,6 +36,9 @@ impl BankFixture {
             extra_piece: false,
             extra_occurrences: false,
             bank_in_holes: false,
+            extra_boundary_edges: false,
+            shared_edge_fields: false,
+            seam_direction: SeamDirection::Opposite,
         }
     }
 }
@@ -48,12 +54,31 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
     } else {
         vec![]
     };
+    let extra = if options.extra_boundary_edges {
+        f.ledger
+            .declare_edges(&mut DeterministicIdGenerator::from_start(3), 4)
+            .expect("actual additional boundary edges")
+    } else {
+        vec![]
+    };
     let mut pieces = f
         .pieces
         .iter()
         .enumerate()
         .map(|(index, piece)| {
             let mut d = piece.definition().clone();
+            if options.extra_boundary_edges {
+                d.boundary.extend([
+                    DirectedEdge {
+                        edge: *extra.get(index * 2).expect("first extra field"),
+                        direction: Direction::Reversed,
+                    },
+                    DirectedEdge {
+                        edge: *extra.get(index * 2 + 1).expect("second extra field"),
+                        direction: Direction::Original,
+                    },
+                ]);
+            }
             if options.extra_occurrences {
                 d.holes = vec![vec![DirectedEdge {
                     edge: *holes.get(index).expect("actual hole"),
@@ -89,6 +114,17 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
             Piece::new(d, &f.ledger).expect("actual original Piece")
         })
         .collect::<Vec<_>>();
+    if options.shared_edge_fields {
+        let fields = pieces.first().expect("actual A").definition().clone();
+        let mut b = pieces.get(1).expect("actual B").definition().clone();
+        b.boundary = fields.boundary;
+        b.holes = fields.holes;
+        b.construction_lines = fields.construction_lines;
+        b.cut_on_fold = fields.cut_on_fold;
+        b.fold_edges = fields.fold_edges;
+        *pieces.get_mut(1).expect("actual B slot") =
+            Piece::new(b, &f.ledger).expect("distinct Piece with byte-equal source fields");
+    }
     let mut definitions = f
         .plan
         .copies()
@@ -108,10 +144,15 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
     }
     let inventory = PieceInventory::new(pieces).expect("whole original inventory");
     let plan = CutPlan::new(definitions, inventory.pieces()).expect("complete actual plan");
+    let mut source_span = seams::first_span(&f.graph).definition().clone();
+    source_span.direction = options.seam_direction;
+    if options.shared_edge_fields {
+        source_span.b.range = EdgeRange::whole(source_span.a.range.edge());
+    }
     let original = SewingGraph::new(
         SewingGraphDefinition {
             id: id(300),
-            spans: vec![seams::first_span(&f.graph).definition().clone()],
+            spans: vec![source_span],
         },
         &plan,
         inventory.pieces(),
@@ -141,7 +182,11 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
                     },
                     EdgeAnchor {
                         edge: definition.b.range.edge(),
-                        param: opposite,
+                        param: if options.seam_direction == SeamDirection::Same {
+                            cut
+                        } else {
+                            opposite
+                        },
                     },
                 )
                 .expect("actual retained tail");
@@ -154,7 +199,11 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
                         },
                         EdgeAnchor {
                             edge: definition.b.range.edge(),
-                            param: cut,
+                            param: if options.seam_direction == SeamDirection::Same {
+                                opposite
+                            } else {
+                                cut
+                            },
                         },
                     )
                     .expect("actual retained middle");
@@ -212,12 +261,21 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
     let cut = metadata
         .bind_cut_population(&population)
         .expect("explicit cut population");
-    let sources = cut
-        .admit_source_pieces(if options.extra_occurrences {
-            JoinSourcePieceLimits::new(2, 10)
-        } else {
-            JoinSourcePieceLimits::new(0, 2)
+    let original = [SeamSideId::A, SeamSideId::B]
+        .map(|side| cut.metadata().splice().source().side(side).piece());
+    let h = original.iter().map(|p| p.definition().holes.len()).sum();
+    let r = original
+        .iter()
+        .map(|p| {
+            let d = p.definition();
+            d.boundary.len()
+                + d.holes.iter().map(Vec::len).sum::<usize>()
+                + d.construction_lines.len()
+                + d.fold_edges.len()
         })
+        .sum();
+    let sources = cut
+        .admit_source_pieces(JoinSourcePieceLimits::new(h, r))
         .expect("whole original H/R");
     let banks = sources
         .bind_cut_banks()

@@ -848,36 +848,33 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   direction/cut coverage parents,whole resources,all persistent output memberships and source-use
   reconciliation. No nonempty/closure/currentness/geometry/semantic certificate from metadata alone.
   Dependencies:.contours.tracking before book/task growth;split implementation before code if needed.
-### G1-SLICE.5f.1.c.join.outputs.contours.topology.loops
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.loops`
   Status: `done`
-  Goal:explicit complete cut-use declaration membership and original boundary/hole traversal/grouping;
-  not source connectivity,bank gluing,loop classification or a canonical/geometrically valid Piece.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_cut_contour_contract --test join_parameter_direction_contract`
-    through `scripts/local_environment.py`:cut use4/prior direction4 pass,rc=0. Full N10 versus cut4,
-    whole H/U/2U+H before fields,empty/count precedence,duplicate/unknown/noncut role witnesses.
-  - [x] ADDRESSED: same native4+4 pass,rc=0;actual use/direction/source/context/group pointers and
-    original order/traversal retained. `cargo test -p sc-core --doc construction::join::cut_contours`
-    through launcher:6 compiler guards pass,rc=0;selected strict clippy rc=0. Empty cut bookkeeping
-    refuses EmptyBoundary;unique actual cut membership plus U=C proves complete declared cut uses only.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:8 pass,rc=0;
-    `cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0;rendered declaration/nonempty/CCW
-    geometry boundary and canonical Piece link present.960 three Git spans/body/public reader exact;
-    `history_archive.py --root . verify`:1414 logical/47 working,rc=0. Full geometry/integration remains
-    .5f.4.geometry/.5g/pre-push;connectivity/noncut owners below remain open.
-  Work O(H+U log(U+N+2)),2U+H additional index/use/hole entries. No source scan,provider/registry
-  call,source/target traversal inference or identity issuance. Original sources and all noncut
-  candidates remain on complete immutable parents. .topology/.contours stay in progress.
-  Commit:STITCHCAD-G1-0785. promotion: declined (existing complete cut-use/geometry boundary).
+  Goal:0785 complete cut-use declarations;[whole scope/proofs](../history/stitchcad-devnotes-part961.md).
+### G1-SLICE.5f.1.c.join.outputs.contours.topology.connectivity
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.connectivity`
-  Status: `pending`
-  Goal:validate declared cut-loop source path/fragment ordering and bank-endpoint gluing requirements
-  against actual original loops and explicit seam/splice/parameter directions. No arbitrary reorder,
-  hidden winding/pose choice or coordinate-based source reassignment. G2 proves real loop geometry.
-  Plan:compose explicit output traversal with source-relative parameter requests;normalize source
-  edge endpoints against actual original cyclic cut-loop fields. Keep A/B/source-loop locations
-  distinct even when EdgeRefs compare equal. Actual seam endpoint pairs declare required gluing,
-  not achieved geometric coincidence or an interior affine map. Bound complete loops/uses before scans.
+  Status: `done`
+  Goal:required original source-loop/fragment adjacency and actual seam endpoint-pair gluing,
+  including loop closure,under authored parameter/traversal requests;not achieved geometry.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_cut_connectivity_contract --test join_cut_contour_contract`
+    through `scripts/local_environment.py`:connectivity4/prior cut use4 pass,rc=0. Same/Opposite,mixed
+    original/parameter/traversal direction,partial/interior fragments,unrelated holes and byte-equal
+    A/B Piece edge fields retain distinct original source-loop identities;wrong order/direction refuses.
+  - [x] ADDRESSED: same native4+4 pass,rc=0;whole H/U precedes all port reads. Original cyclic0/1
+    vertices and exact interior field/Param ports use actual two required splice links,not coordinates.
+    `cargo test -p sc-core --lib two_link_equivalence_matches_independent_reachability` through launcher:
+    independent reachability unit1 pass,rc=0;selected library/integration strict clippy rc=0.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join::connectivity` through launcher:
+    compiler3 pass,rc=0;`cargo test -p sc-core --doc construction::join_examples`:9 pass,rc=0;
+    `cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered source-role/gluing/invariant/
+    actual-geometry boundaries present.961 three Git spans/body/public bytes exact;
+    `history_archive.py --root . verify`:1415 logical/48 working,rc=0. Full geometry/integration remains
+    .5f.4.geometry/.5g/pre-push;noncut/copy/consumer/classification proofs remain explicitly owned.
+  Success/error retain actual cut-use/direction/source parents and original policy;Adjacency lends
+  actual first preceding/next views,quota causes neither. No native source/view invariant failed.
+  O(H+U+1),constant four bank ports/cursor,no heap index,source scan,registry/provider or geometry.
+  Complete original resources remain required;actual coincidence/CCW/simple/contained holes stay G2/G3.
+  Commit:STITCHCAD-G1-0786. promotion: declined (existing held-source/path versus geometry boundary).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut`
   Status: `pending`
   Goal:complete original construction/fold use reconciliation with explicit retained/removed/derived

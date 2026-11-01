@@ -9,6 +9,11 @@ mod coverage;
 pub use coverage::{
     CoveredJoinCutSources, JoinCutCoverageError, JoinCutCoverageLimits, JoinCutCoverageRefusal,
 };
+mod connectivity;
+pub use connectivity::{
+    JoinCutConnectivityError, JoinCutConnectivityLimits, JoinCutConnectivityRefusal,
+    RequiredJoinCutConnectivity,
+};
 mod cut_contours;
 pub use cut_contours::{
     DeclaredJoinCutContours, JoinCutContourError, JoinCutContourLimits, JoinCutContourManifest,

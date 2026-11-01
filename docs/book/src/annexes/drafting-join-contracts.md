@@ -436,3 +436,64 @@ The [canonical Piece invariants](../spec/ontology.md#41-piece) still require act
 CCW outer geometry and opposite-wound,strictly internal,mutually disjoint holes. Authored list
 membership/traversal supplies none of those geometric certificates. Actual G2/G3 validation and
 current source/history/authority checks remain required before accepting a canonical joined Piece.
+
+## Require original source-path and bank gluing
+
+`DeclaredJoinCutContours::require_cut_connectivity` checks each declared loop's requested source
+path against the actual original cut loops and the exact splice endpoint pairs. It yields
+`RequiredJoinCutConnectivity`,not a geometric correspondence or canonical joined Piece.
+
+```rust
+use sc_core::construction::*;
+fn require_path<'a>(contours:&'a DeclaredJoinCutContours<'a>)
+    ->Result<RequiredJoinCutConnectivity<'a>,JoinCutConnectivityError<'a>> {
+    contours.require_cut_connectivity(JoinCutConnectivityLimits::new(2,4))
+}
+```
+
+`JoinCutConnectivityLimits::new(H,U)` admits every proposed result hole group and every cut use
+before reading source ports or scanning loops. H1 refuses actual2 as `Holes`;U3 refuses actual4
+as `Uses`,even when the first requested adjacency is wrong. All earlier immutable input,original
+source,candidate,direction,coverage and cut-use resource policies remain required.
+
+Entry/exit source parameters compose the explicit output traversal with its source-relative
+parameter-direction request. SameAsSource+Original enters at source from and exits at to;
+ReverseSource+Original enters at to and exits at from. Reversing the authored traversal swaps
+those endpoints again. No output or source bounds are rewritten and no interior affine map follows.
+
+Source ports retain original A/B role,original boundary/hole loop and exact field/parameter.
+Within an original directed cyclic cut loop,0/1 endpoints normalize to the appropriate original
+vertex;the last field wraps to the first. Original reversed fields swap their own entry/exit.
+Interior fragment endpoints remain literal field/Param ports. Equal EdgeRefs on distinct A/B
+Pieces or unrelated loops cannot substitute for these actual source identities.
+
+`RequiredJoinExactSplice::endpoint_pair(AFrom/ATo)` lends the authentic pair for one explicitly
+named A-held endpoint. As with `endpoint_pairs()`,Same matches Afrom/Bfrom and Ato/Bto;Opposite
+matches Afrom/Bto and Ato/Bfrom. Those two required links,including transitivity when endpoints
+share an original vertex,define permitted bank gluing. Copy reflection and fixed/moving pose
+choices do not rewrite these held source-frame correspondences.
+
+The boundary is checked first,then holes in original declared order. Each consecutive exit/entry
+must be the same original source port or equivalent through the required bank links;the closing
+last-to-first pair is checked too. `Adjacency` reports the actual first original result-use pair.
+Reordering complete cut members,flipping one traversal or appending an unrelated hole to the
+boundary can therefore fail despite complete unique cut membership. No path is reordered or repaired.
+
+`JoinCutConnectivityError` retains actual `contours()`,original `limits()` and first `refusal()`.
+For Adjacency,`from_use()` and `to_use()` lend those actual preceding/next use views and their
+original declaration/direction/source parents. Quota causes lend neither use. Unexpected
+`BankSourceInvariant`,`UseSourceInvariant` or `DeclaredLoopInvariant` means an internal native
+parent/view invariant failed;it must be diagnosed,not labelled an unsupported garment or skipped.
+No such invariant failure occurred in the focused native checks.
+
+`RequiredJoinCutConnectivity` retains the same actual cut-use parent and policy.
+`connection_count()` counts all consecutive-plus-closing requirements,one per declared cut use.
+Work is O(H+U+1),with fixed four bank ports and a loop cursor;there is no new allocation,source
+contour scan,registry/provider call or geometric evaluation. Earlier storage remains separate.
+
+This is required symbolic source-path gluing under the authored orientation requests. Actual
+mapped endpoints may still fail to coincide,or a posed result may violate CCW/simple outer
+geometry,hole winding/classification/containment or exact nondeforming feasibility. Those remain
+real G2/G3 obligations,along with numeric correspondence,currentness,noncut/copy/consumer
+reconciliation,retirement and authorized atomic publication. A source-path declaration grants
+none of those certificates and supplies no substitute geometric result.
