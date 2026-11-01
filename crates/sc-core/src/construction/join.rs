@@ -67,6 +67,12 @@ pub use source_groups::{
     JoinConstructionGroupManifest, JoinConstructionGroupOutput, JoinConstructionGroupRefusal,
     JoinConstructionMappingGroup, JoinConstructionOutputGroup,
 };
+mod source_targets;
+pub use source_targets::{
+    DeclaredJoinConstructionTargets, JoinAdditionalConstructionIntent,
+    JoinConstructionTargetAssignment, JoinConstructionTargetError, JoinConstructionTargetLimits,
+    JoinConstructionTargetManifest, JoinConstructionTargetRefusal, JoinMappedConstructionTarget,
+};
 mod sources;
 mod splice;
 pub use metadata::{

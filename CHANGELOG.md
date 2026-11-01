@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0790 — whole retained construction source fields
+## STITCHCAD-G1-0791 — actual retained construction target occurrences
 
-- Complete G/L before fields;exact source0..1 partitions in original field traversal,without sorting/rescaling.
-- Actual first gap/overlap/group/reference loans retained;whole source coverage accepts no target/omission effects.
-- Native4/prior group4/compiler3/topology6/lint/fmt/book rc=0;965 continuity exact.
-- G1still6/18;actual target-use mapping,fold/copies/consumers and real geometry/effects remain pending.
+- Whole M/T/U/M+2T before fields;one distinct actual occurrence per retained reference with exact tag/traversal.
+- Actual raw/source/target loans and original interleaved lists retained;additional intent remains a request.
+- Native4/prior coverage4/compiler5/topology7/lint/fmt/book rc=0;966 continuity exact.
+- G1still6/18;whole leftover uses,fold/copies/consumers and real geometry/effects remain pending.
 
 # Sealed archive — earlier slices
+
+[Whole0790 source-field coverage](docs/history/stitchcad-devnotes-part966.md) retains exact task,lesson and ledger bytes.
 
 [Whole0789 retained construction groups](docs/history/stitchcad-devnotes-part965.md) retain exact task,lesson and ledger bytes.
 

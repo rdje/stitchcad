@@ -367,3 +367,66 @@ multiplicity. For example,four retained whole-field groups can pass beside an em
 construction list;target mapping must still refuse that missing result content. Additional result
 intent,omission/consumer justification,achieved parameter maps,fold/copy semantics,currentness,
 geometry,retirement and atomic authority remain separate requirements.
+
+## Assign retained references to actual construction occurrences
+
+`JoinConstructionTargetManifest` retains the operation,ordered
+`JoinConstructionTargetAssignment::new(side,source_index,uses)` rows,and an explicit
+`JoinAdditionalConstructionIntent`. Each row names an actual whole covered Retain group. Its
+ordered `uses` list contains one original proposed-construction occurrence ordinal per ordered
+source reference. These snapshot ordinals distinguish repeated uses;they are not persistent geometry
+identities. Persistent output identity still comes from each actual proposed use's tag.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn assignment(side:SeamSideId,index:usize,uses:Vec<usize>)->JoinConstructionTargetAssignment {
+    JoinConstructionTargetAssignment::new(side,index,uses)
+}
+fn targets<'a>(manifest:&'a JoinConstructionTargetManifest,coverage:&'a CoveredJoinConstructionGroups<'a>)
+    ->Result<DeclaredJoinConstructionTargets<'a>,JoinConstructionTargetError<'a>> {
+    manifest.admit(coverage,JoinConstructionTargetLimits::new(4,8,9,20))
+}
+```
+
+`JoinConstructionTargetLimits::new(M,T,U,W)` admits all raw assignment headers M before nested
+lengths,then checked complete selector count T,checked M+2T workspace,and all actual proposed uses U
+before fields or allocation. U includes every unmapped additional occurrence. Workspace counts
+logical transient source-index entries M,target-index entries T and associations T,not allocator
+bytes. Successful retained storage is2T;earlier immutable source coverage and use policies remain.
+For M4/T8/U9,W20 is exact:M3 refuses `Groups`,T7 `References`,U8 `Uses`,W19 `Workspace`,before
+an incorrect operation or malformed first source/target selector. Arithmetic refuses explicitly.
+
+With resources met,`Operation`,whole `Count` and whole `ReferenceCount` precede row fields.
+Each original row checks `DuplicateSource`, `MissingSource`, `GroupReferenceCount`;each ordered
+reference then checks `DuplicateUse`, `MissingUse`, `Output`, `Traversal`. Exact unique actual
+Retain membership covers all source groups. Every row must have exactly its group's reference
+count. Every selected ordinal must name an actual proposed occurrence with the source reference's
+persistent tag and `required_traversal()`. A catalogue role or a matching tag alone is insufficient.
+
+Every target occurrence can carry only one retained reference. Distinct original source fields
+that reuse geometry still require distinct actual result occurrences. Explicit assignments can name
+interleaved original result positions;raw rows,reference order and actual proposed lists remain
+unchanged. There is no inferred occurrence matching,sorting,deduplication or geometry substitution.
+An empty proposed list cannot carry nonempty retained groups;it refuses `MissingUse`.
+
+`JoinConstructionTargetError` retains actual whole `manifest()`,`coverage()`,original `limits()`
+and first `refusal()`. Row causes lend the original `refused_assignment()` and actual known
+`refused_source_group()`,if present. Reference causes lend the original `refused_use_index()` and
+actual `refused_source_output()`. Duplicate-use/tag/traversal causes lend the actual `refused_use()`;
+a missing target has no replacement occurrence loan. Whole resource/owner/count causes lend none.
+
+`DeclaredJoinConstructionTargets` retains those whole parents and reports `mapping_count()` and
+peak `workspace_entries()`. `mappings()` preserves original row/reference order and reverse;
+`mapping_for_use(index)` queries the actual assigned occurrence. Each `JoinMappedConstructionTarget`
+lends its actual owner,original indices/raw row/ordinal field,source group/source reference and
+actual proposed occurrence with original tag/traversal fields. No accepted prefix escapes refusal.
+
+Additional intent is explicit `SourceMappedOnly` or `AllowAdditional{evidence_source}`. This stage
+retains that request only:even SourceMappedOnly can bind eight retained references beside nine
+proposed uses. The next whole-use reconciliation must reject the extra use or retain explicit
+additional-content requirements. An evidence id,including0,is no kind/state/currentness or approval
+certificate. Source Omit requests still need separate source/consumer justification.
+
+Work is O(M log(M+G+2)+T log(T+2)+1) for G covered source groups. No provider,evidence,registry or
+geometry is called. Complete leftover-use reconciliation,additional/omission justification,achieved
+maps,fold/copy semantics,currentness,retirement and atomic authority remain required separately.
