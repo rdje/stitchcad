@@ -274,3 +274,6 @@ separate. Matching fold/construction fields does not approve omitted source data
 Complete consumer repair,current identity/global issuance,actual per-pair geometry/pose/ease,
 domain acceptance and atomic publication remain required. This is complete native field matching,
 with focused checks;full geometry-backed integration and broad verification remain separately owned.
+
+Exact field reconciliation supplies a proposed inventory for explicit consumer/reference repair.
+Complete original observer ownership and mapped-or-visible repair requirements must precede effects.

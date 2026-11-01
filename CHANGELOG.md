@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0804 — complete joined candidate field matching
+## STITCHCAD-G1-0805 — bounded join consumer continuity
 
-- Match every actual result field to explicit native identity,ordered topology/construction,fold,population and selected metadata without allocation.
-- Retain whole original proof,candidate inventory/copy plan and outstanding omission/companion/evidence requests;no physical or publication authority.
-- Native result4/prior original4/API2/inventory5/strict lint/fmt/book/rendered claims rc=0;canonical2-hole/8-construction/fold fixture covered.
-- 979 three Git spans/body/public exact;archive1433/66,per-generation21/64 and45/64. Native copy/inventory branch complete;G1still6/18 unchanged.
+- Move complete3468B/12-node done copy/inventory branch unchanged to the existing construction sibling;retain exact original goals/statuses/proofs.
+- Preserve old64255B destination prefix and all5 Rust examples;Rust unchanged,tree10/13/20/0,book/rendered consumer boundary rc=0.
+- 980 three Git spans/body/public bytes exact;archive1434/67,per-generation21/64 and46/64 rc=0;G1still6/18 unchanged.
+- Consumer/reference repair remains next;full feature/geometry/physical/currentness/atomic verification remains separately owned.
 
 # Sealed archive — earlier slices
+
+[Whole completed copy/inventory branch and0804 continuity](docs/history/stitchcad-devnotes-part980.md) retain exact source bytes.
 
 [Whole0803 exact original preservation](docs/history/stitchcad-devnotes-part979.md) retains exact task,lesson and ledger bytes.
 

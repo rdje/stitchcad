@@ -815,3 +815,65 @@ before final checks. No checker, cap, grammar or product Rust changed; no needed
     bytes exact;`history_archive.py --root . verify`:1427 logical/60 working,rc=0;book rc=0.
     Rendered remaining plan/field-resource/original/result boundaries present;source Rust fences unchanged.
     Full feature/integration checks remain .5f.4.geometry/.5g/pre-push;no Rust behavior changed here.
+
+## Complete join candidate inventory
+
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies`
+  Status: `done`
+  Goal:complete original-copy consumption/preservation/result correspondence and explicit multiplicity.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.population`
+  Status: `done`
+  Goal:0776 explicit cut population;[whole scope/proofs](../history/stitchcad-devnotes-part952.md).
+[Complete native copy-correspondence branch](G1-SLICE-constructions.md#join-physical-copy-correspondence)
+retains all original goals,statuses and focused acceptance evidence.
+
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory`
+  Status: `done`
+  Goal:reconcile actual result/source metadata and candidate full inventory/CutPlan with declared
+  copy actions/population/identity,including remaining source copies and all unrelated members.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.plan`
+  Status: `done`
+  Goal:0799 actual canonical candidate plan;[whole scope/proofs](../history/stitchcad-devnotes-part975.md).
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.fields`
+  Status: `done`
+  Goal:0800 whole inventory field resources;[whole scope/proofs](../history/stitchcad-devnotes-part976.md).
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals`
+  Status: `done`
+  Goal:preserve remaining original fields except derived quantity and explicit guarded companion repairs;
+  canonical reciprocal mates cannot silently keep retired source identities.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.tracking`
+  Status: `done`
+  Goal:0801 bounded inventory reference;[whole scope/proofs](../history/stitchcad-devnotes-part977.md).
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.companions`
+  Status: `done`
+  Goal:0802 explicit retained companion requirements;[whole scope/proofs](../history/stitchcad-devnotes-part978.md).
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.fields`
+  Status: `done`
+  Goal:0803 exact original preservation;[whole scope/proofs](../history/stitchcad-devnotes-part979.md).
+### G1-SLICE.5f.1.c.join.outputs.copies.inventory.result
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.result`
+  Status: `done`
+  Goal:complete actual joined-result field matching under original preservation;consumer/physical obligations separate.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_result_piece_contract` through launcher:
+    4 pass;canonical candidate copies/resources do not certify requested ordered holes/construction/fold or selected metadata,rc=0.
+  - [x] ADDRESSED: same target plus `cargo test -p sc-core --test join_original_piece_contract`:
+    4/4 pass;actual2-hole/8-construction/fold candidate and first field refusals;original companion/evidence requests retained,rc=0.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_result_piece_contract --test join_original_piece_contract -- -D warnings`:
+    strict lint/API2/inventory5/fmt/book/rendered claims rc=0;979 three Git spans/body/public exact;archive1433/66,per-generation21/64 and45/64,rc=0.
+  Commit:STITCHCAD-G1-0804. promotion: declined (existing exact native joined inventory/copy/metadata contract).
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking`
+  Status: `done`
+  Goal:0798 bounded inventory continuity;[whole scope/proofs](../history/stitchcad-devnotes-part974.md).
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.tracking`
+  Status: `done`
+  Goal:0775 bounded continuity;[whole scope/proofs](../history/stitchcad-devnotes-part951.md).
+
+### G1-SLICE.5f.1.c.join.outputs.metadata.marks.tracking — retention evidence
+
+  - [x] ROOT CAUSE: `git show 618fe393:docs/tasks/G1-SLICE-execution.md | wc -l -c`:
+    gives998L/55970B,rc=0;consumer declaration children need room below the1000L health target.
+  - [x] ADDRESSED: `python3 -I -B -` Git interval proof:whole3468B/SHA54570aa8 branch,
+    12 done IDs/statuses/relations once,old64255B destination prefix exact,all5 Rust fences retained;Rust diff empty,rc=0.
+  - [x] NO REGRESSION: `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`:
+    10 lanes/13 trees/20 siblings/0 issues,rc=0;980 three Git spans/body/public exact;archive1434/67,per-generation21/64 and46/64,rc=0.
+    `scripts/run_make.sh book`:build/rendered consumer boundary rc=0;runtime/full feature verification unchanged.
