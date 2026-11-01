@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0760 — bind explicit truing outside-fragment roles
+## STITCHCAD-G1-0761 — bind complete explicit truing parameter directions
 
-- Explicit prefix/suffix fields use actual source bounds/catalogue under complete N/D/A/B quotas.
-- Refit requires positive outside fragments;preservation requires absence;logical tuples remain unissued.
-- Native3+4/API5/book8+1,selected lint/fmt/build/render pass0;whole prior/closed ledger935 retained exactly.
-- Dedicated whole-Piece companion preserves existing fences;D375 topic omissions repaired with existing guard.
+- Dedicated source-relative directions bind every actual selected/outside output under full T/M/2M bounds.
+- Owner/cardinality/unique actual membership checks reject omitted,duplicate and unrelated active tags.
+- Retain original declaration order/fields/parents;no contour traversal,geometry or numeric map inferred.
+- Native3+3/API6/piece-book2,selected lint/fmt/build/render pass0;prior book/whole receipt936 exact.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -52,6 +52,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0760 outside-role task,lesson and ledger](docs/history/stitchcad-devnotes-part936.md) retain exact source bytes.
 
 [Whole0759 evidence task,lesson and ledger](docs/history/stitchcad-devnotes-part935.md) retain exact source bytes.
 

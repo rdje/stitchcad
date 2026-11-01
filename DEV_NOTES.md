@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — bind explicit truing outside-fragment roles
+## _(2026-11-01 UTC)_ — bind complete explicit truing parameter directions
 
-0760 binds explicit prefix/suffix fields under whole N/D/A/B limits to actual evidence/catalogue parents. Refit requires every positive outside portion;preservation requires both absent. Exact0/from and to/1 ranges,distinct active/unselected tags;no output orientation,placement,geometry or issuance inferred.
-Native3/prior-domain4/API5/book8+1,selected Clippy/fmt/build/render pass0. Whole-Piece companion preserves section bytes/eight prior Rust fences;SUMMARY stays120 lines. D375 existing INDEX_COVERAGE red12 predecessor/13 current missing→green0;canonical topic routes repaired.
-Whole0759/closed D373-D374 ledger retained935 exact0. Promotion: declined (scoped attribution/navigation). Explicit complete output parameter directions,contours/lineage then variant policy next;actual currentness/fit/geometry/effects/broad integration remain owned;G1still6/18.
+0761 binds original operation/ordered tag/source-relative direction records to every actual selected/outside output. Checked T and2M,whole T/M/W precede owner/cardinality and unique membership. Equal counts alone cannot hide duplicate/unknown outputs;an active catalogue tag need not be an output.
+Native3/prior-outside3/API6/piece-book2,selected Clippy/fmt/build/render pass0. Actual original fields/parents/order retained;dedicated direction is not Piece traversal,copy reflection,sewing direction or a numeric map. Prior book bytes/whole0760 receipt936 exact0.
+Promotion: declined (existing explicit source-frame scope). Original contour/fold placement,lineage and native variants next;actual maps,currentness/geometry/fit/effects/authority/broad integration remain owned;G1still6/18. D372 search warning remains owned.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

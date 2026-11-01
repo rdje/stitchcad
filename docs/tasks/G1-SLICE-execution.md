@@ -898,24 +898,22 @@ retain their complete task branch,original goals and proof links in the bounded 
   Actual geometry/current ledger application remains .5f.2/.5f.4.geometry;do not invent results.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.roles`
   Status: `done`
-  Goal:explicit sourced prefix/suffix roles outside the selected domain,with full quotas and
-  actual typed catalogue association;no default tags or caller-supplied replacement source frame.
-  - [x] ISSUE:partial selected coverage needs explicit outside identities;D375 topic links were omitted.
-  - [x] ROOT CAUSE:truing_source_domain_contract:4 pass,rc=0;whole0–1 is outside selected1/4–3/4. Existing book_publication INDEX_COVERAGE reproduces12 predecessor/13 current missing paths.
-  - [x] FIX:two explicit outside fields;N then actual D/A/B admission;exact source-derived ranges and distinct active roles. Dedicated whole-Piece companion preserves the outside section byte-exact.
-  - [x] ADDRESSED:cargo test -p sc-core --test truing_outside_role_contract:3 pass,rc=0;both sides/outcomes,four domains,quota and field refusals. Existing INDEX_COVERAGE red→green,13→0 missing,rc=0.
-  - [x] NO REGRESSION:prior domain4,API5/book8+1,selected Clippy/fmt/build/render pass;rc=0. Original eight Rust fences/0759 receipt935/closed D373-D374 bytes exact. Actual geometry/currentness/broad integration remain .5g/.5f.4.
-  - [x] LOCKSTEP:book/SUMMARY/topic/live/pointer/journals aligned;D375 fixed. Promotion: declined (scoped native attribution/navigation;existing source-frame policy).
-  Commit:STITCHCAD-G1-0760.
-  D375 P2 fixed here:canonical drafting chapter topic links restored during companion sync.
+  Goal:0760 exact outside roles/book/D375;[whole scope/proofs](../history/stitchcad-devnotes-part936.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours`
-  Status: `pending`
+  Status: `in_progress`
   Goal:complete boundary/hole/construction/fold occurrence placement and traversal requirements;
   retain unaffected source fields and reject incomplete replacement attribution.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.directions`
-  Status: `pending`
+  Status: `done`
   Goal:explicit complete selected/outside output parameter directions with dedicated source-relative
   choices,whole output/assignment/2M workspace quotas and exact original id coverage;no orientation default.
+  - [x] ISSUE:outside/source attribution alone chooses no output parameter orientation.
+  - [x] ROOT CAUSE:truing_outside_role_contract:3 pass,rc=0;actual metadata carries source roles/ranges,not source-relative output choices.
+  - [x] FIX:dedicated explicit direction type,complete T/M/2M preflight,owner/cardinality and unique actual-output membership.
+  - [x] ADDRESSED:cargo test -p sc-core --test truing_direction_contract:3 pass,rc=0;mixed order/directions,both sides,quota/owner/count/duplicate/unknown and active-nonoutput controls.
+  - [x] NO REGRESSION:prior outside3,direction API6/piece-book2,selected Clippy/fmt/build/render pass;rc=0. Prior book bytes/whole0760 receipt936 exact;actual maps/geometry/broad integration stay .5g/.5f.4.
+  - [x] LOCKSTEP:book/live/pointer/journals aligned;promotion: declined (existing explicit source-relative frame scope).
+  Commit:STITCHCAD-G1-0761.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement`
   Status: `pending`
   Goal:complete original occurrence/fold replacement plan using explicit output directions and source order.

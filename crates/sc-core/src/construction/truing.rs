@@ -29,6 +29,12 @@ pub use outcome::{
     RequiredTruingOutcome, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
 };
 mod binding;
+mod directions;
+pub use directions::{
+    AdmittedTruingDirections, TruingDirectionAssignment, TruingDirectionError,
+    TruingDirectionLimits, TruingDirectionManifest, TruingDirectionRefusal, TruingDirectionSource,
+    TruingDirectionalOutput, TruingParameterDirection,
+};
 mod outside;
 pub use outside::{
     AdmittedTruingOutsideRoles, TruingOutsideIntent, TruingOutsideOutput, TruingOutsidePart,

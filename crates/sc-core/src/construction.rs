@@ -216,11 +216,14 @@ pub use walk::{
 };
 mod truing;
 pub use truing::{
-    AdmittedTruingEdges, AdmittedTruingOutsideRoles, BoundConstrainedTruing,
-    BoundTruingCopyInventory, BoundTruingEdgeRoles, BoundTruingSourceDomain, ConstrainedSeamTruing,
-    CoveredTruingSourceDomain, RequiredTruingEvidence, RequiredTruingLocks, RequiredTruingOutcome,
-    TruingBindingError, TruingBindingRefusal, TruingContextSources, TruingCopyInventoryError,
-    TruingCopyInventoryLimits, TruingCopyInventoryRefusal, TruingEdgeCandidate, TruingEdgeManifest,
+    AdmittedTruingDirections, AdmittedTruingEdges, AdmittedTruingOutsideRoles,
+    BoundConstrainedTruing, BoundTruingCopyInventory, BoundTruingEdgeRoles,
+    BoundTruingSourceDomain, ConstrainedSeamTruing, CoveredTruingSourceDomain,
+    RequiredTruingEvidence, RequiredTruingLocks, RequiredTruingOutcome, TruingBindingError,
+    TruingBindingRefusal, TruingContextSources, TruingCopyInventoryError,
+    TruingCopyInventoryLimits, TruingCopyInventoryRefusal, TruingDirectionAssignment,
+    TruingDirectionError, TruingDirectionLimits, TruingDirectionManifest, TruingDirectionRefusal,
+    TruingDirectionSource, TruingDirectionalOutput, TruingEdgeCandidate, TruingEdgeManifest,
     TruingEdgeManifestError, TruingEdgeManifestLimits, TruingEdgeManifestRefusal,
     TruingEdgeRoleBindingError, TruingEdgeRoleBindingRefusal, TruingEffectSources, TruingEndpoint,
     TruingEndpointRequirement, TruingEvidenceKind, TruingEvidencePolicy, TruingEvidenceRequirement,
@@ -228,7 +231,8 @@ pub use truing::{
     TruingLockLimits, TruingLockRefusal, TruingOutcomeError, TruingOutcomeIntent,
     TruingOutcomeRefusal, TruingOutputEdge, TruingOutsideIntent, TruingOutsideOutput,
     TruingOutsidePart, TruingOutsideRoleError, TruingOutsideRoleLimits, TruingOutsideRoleRefusal,
-    TruingOutsideRoles, TruingSourceCoverageError, TruingSourceCoverageLimits,
-    TruingSourceCoverageRefusal, TruingSourceDomainEdge, TruingSourceDomainError,
-    TruingSourceDomainLimits, TruingSourceDomainRefusal, TruingStopRequirement,
+    TruingOutsideRoles, TruingParameterDirection, TruingSourceCoverageError,
+    TruingSourceCoverageLimits, TruingSourceCoverageRefusal, TruingSourceDomainEdge,
+    TruingSourceDomainError, TruingSourceDomainLimits, TruingSourceDomainRefusal,
+    TruingStopRequirement,
 };
