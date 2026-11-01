@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — explicit joined result fold intent
+## _(2026-11-01 UTC)_ — complete original joined fold actions
 
-0793 binds explicit desired NoFold/CutOnFold and correspondence request under whole original R/candidate N/cut C.
-Actual outer cut membership is mandatory;desired flag derives from intent,without accepting original fold loss or axis.
-Native4/prior coverage4/API5/main8/lint/fmt/book rc=0;968 original/body/public bytes exact.
-promotion: declined (existing source/geometry/effect boundary). G1still6/18;complete original fold actions next.
+0794 binds every guarded original fold field to explicit Retain/Omit under whole R/M/2M,with actual source loans.
+Outer membership is insufficient;Retain requires same A/B/edge frame. Omit evidence scopes stay distinct,not accepted.
+Native4/prior result4/API5/main9/lint/fmt/book rc=0;969 original/body/public bytes exact.
+promotion: declined (existing source/geometry/effect boundary). G1still6/18;complete copy correspondence next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

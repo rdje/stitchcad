@@ -51,6 +51,11 @@ pub use fold::{
     JoinFoldError, JoinFoldIntent, JoinFoldLimits, JoinFoldRefusal, JoinFoldRequirement,
     RequiredJoinFold,
 };
+mod fold_sources;
+pub use fold_sources::{
+    DeclaredJoinFoldSources, JoinFoldSourceAction, JoinFoldSourceAssignment, JoinFoldSourceError,
+    JoinFoldSourceIntent, JoinFoldSourceLimits, JoinFoldSourceManifest, JoinFoldSourceRefusal,
+};
 mod metadata;
 mod population;
 mod roles;

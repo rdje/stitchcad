@@ -422,10 +422,77 @@ must derive from complete copy/contour/fold reconciliation later.
 
 This stage binds desired result intent only. It can retain NoFold beside two original A/B fold
 fields,or CutOnFold beside sources without folds;neither grants permission to change their cutting
-state. Complete original fold retention/omission requests must be reconciled next,and real
+state. The [original fold retention/omission requests below](#reconcile-every-original-fold-declaration)
+must also be reconciled,and real
 correspondence/source/consumer justification is required before effects. A source subrange on an
 outer output does not establish a whole physical fold axis or original-state compatibility.
 
 Work is O(log(N+2)+log(C+2)+1),with constant additional state,no allocation,provider,evidence,
 registry or geometry call. Complete original fold actions,physical copy/mark/consumer requirements,
 currentness,achieved maps,geometry,retirement and atomic authority remain required separately.
+
+## Reconcile every original fold declaration
+
+`JoinFoldSourceManifest` retains the operation and complete ordered
+`JoinFoldSourceAssignment::new(side,index,expected,intent)` rows. Each selector names an actual
+original A/B fold declaration;`expected` guards its persistent EdgeRef,not a point or a replacement
+source. The ordinal is an original snapshot selector,not a geometry identity. Each row explicitly
+requests `JoinFoldSourceIntent::Retain` or `Omit { evidence_source }`;there is no default.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn action(side:SeamSideId,index:usize,edge:EdgeRef,intent:JoinFoldSourceIntent)->JoinFoldSourceAssignment {
+    JoinFoldSourceAssignment::new(side,index,edge,intent)
+}
+fn sources<'a>(manifest:&'a JoinFoldSourceManifest,fold:&'a RequiredJoinFold<'a>)
+    ->Result<DeclaredJoinFoldSources<'a>,JoinFoldSourceError<'a>> {
+    manifest.admit(fold,JoinFoldSourceLimits::new(10,2,4))
+}
+```
+
+`JoinFoldSourceLimits::new(R,M,W)` admits all original A/B source fields R before reading fold
+counts,and all raw action headers M before fields or allocation. Complete original A+B fold count
+and2M workspace arithmetic are checked;workspace counts source-index entries M and associations M,
+not bytes or earlier immutable source/result storage. For R10/M2,W4 is exact:R9 refuses `Sources`,
+M1 `Assignments`,W3 `Workspace`,before an incorrect operation or malformed original selector.
+
+With resources met,`Operation` precedes `Count`:M must equal the complete original fold population.
+Each original row then checks `DuplicateSource`, `MissingSource`, `SourceField`,followed by its
+intent's requirements. Unique actual original membership plus exact count covers every fold field,
+even if the original A/B Pieces contain byte-equal geometry. The expected-field guard cannot replace
+the actual original field loan. An original no-fold pair requires an explicit empty action list.
+
+Retain first requires an actual requested result fold (`ResultNoFold` otherwise),then exact
+original A/B attribution (`SourceSide`),then the exact original persistent fold edge (`SourceEdge`).
+An actual outer bank edge cannot replace another original fold edge on that same Piece. Equal old
+EdgeRefs across A/B Pieces cannot merge their source frames. A partial range attributed to an old
+fold can pass structural attribution;the named correspondence request must still justify whole
+physical fold/state/copy compatibility. Retain does not provide an achieved axis or geometric map.
+
+Omit retains an explicit independent evidence request for that original declaration. Zero or
+shared evidence ids remain authored fields;their scopes never merge and no evidence kind,state,
+currentness,source/consumer justification or deletion permission is inferred. NoFold with existing
+folds therefore needs complete Omit rows. A requested new result fold beside original no-fold
+sources retains the parent correspondence obligation;empty source coverage cannot approve that axis.
+
+`JoinFoldSourceError` retains actual complete `manifest()`,`fold()`,original `limits()` and first
+`refusal()`. Row causes lend the original `refused_assignment()` and actual `refused_source()`
+occurrence if that selector exists. Whole resource/operation/count causes lend no row/source fields.
+No accepted prefix,source substitute or inferred fold choice escapes refusal.
+
+`DeclaredJoinFoldSources` retains those whole parents and reports `source_count()` and
+`workspace_entries()`. `assignments()` preserves original order and reverse;`assignment(side,index)`
+queries an actual guarded original fold scope. Each `JoinFoldSourceAction` lends its actual owner,
+original row ordinal/raw assignment,actual original fold occurrence/Piece/copy and persistent
+`source_field()`. `intent()`/`evidence_source()` lend the original authored request fields.
+
+For example,select an actual A fold output,Retain the guarded A declaration,and explicitly Omit
+the guarded B declaration with its own evidence request. Alternatively,request NoFold and supply
+complete explicit Omit rows. These are native declarations of required reconciliation;neither
+accepts original state changes,evidence truth,physical copy effects or consumer repair.
+
+Work is O(M log(M+2)+1),with2M new entries and no provider,evidence,registry or geometry call.
+This completes native original/result fold bookkeeping. Canonical cut/print binding,physical copy
+correspondence,marks and other consumers,currentness,actual geometry,retirement and atomic
+authority remain separate requirements. Final printed fold state must derive from that complete
+canonical reconciliation,not a second authored flag.

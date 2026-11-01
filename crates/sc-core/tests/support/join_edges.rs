@@ -241,7 +241,7 @@ pub fn with_source_actions(
 ) {
     with_construction_uses(extra, |uses| with_use_sources(&uses, intent, run));
 }
-fn with_use_sources(
+pub fn with_use_sources(
     uses: &DeclaredJoinConstructionUses<'_>,
     intent: impl Fn(SeamSideId, usize) -> JoinConstructionSourceIntent,
     run: impl FnOnce(DeclaredJoinConstructionSources<'_>),

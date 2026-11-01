@@ -22,6 +22,7 @@ pub struct BankFixture {
     pub extra_piece: bool,
     pub extra_occurrences: bool,
     pub bank_in_holes: bool,
+    pub fold_on_other_boundary: bool,
     pub extra_boundary_edges: bool,
     pub shared_edge_fields: bool,
     pub seam_direction: SeamDirection,
@@ -36,6 +37,7 @@ impl BankFixture {
             extra_piece: false,
             extra_occurrences: false,
             bank_in_holes: false,
+            fold_on_other_boundary: false,
             extra_boundary_edges: false,
             shared_edge_fields: false,
             seam_direction: SeamDirection::Opposite,
@@ -97,6 +99,17 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
                 ];
                 d.cut_on_fold = true;
                 d.fold_edges = vec![edge];
+                if options.fold_on_other_boundary {
+                    assert!(!options.bank_in_holes);
+                    let outside = *d
+                        .holes
+                        .pop()
+                        .expect("actual extra loop")
+                        .first()
+                        .expect("actual extra field");
+                    d.boundary.push(outside);
+                    d.fold_edges = vec![outside.edge];
+                }
                 if options.bank_in_holes {
                     let outside = *d.holes.first().expect("hole").first().expect("hole field");
                     let bank = *d.boundary.first().expect("bank field");

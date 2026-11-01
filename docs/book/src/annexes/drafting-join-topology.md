@@ -477,4 +477,5 @@ outstanding requests. Achieved maps,omission/additional justification,fold/copy 
 other consumers,currentness,geometry,retirement and atomic authority remain required separately.
 
 Continue with [explicit result fold attribution](drafting-join-contracts.md#request-explicit-result-fold-attribution)
-against these same whole construction/cut/source parents;original fold actions remain separately required.
+against these same whole construction/cut/source parents,then
+[reconcile every original fold declaration](drafting-join-contracts.md#reconcile-every-original-fold-declaration).
