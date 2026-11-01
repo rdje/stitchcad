@@ -891,32 +891,41 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets.assignments`
   Status: `done`
   Goal:0791 actual retained target occurrences;[whole scope/proofs](../history/stitchcad-devnotes-part967.md).
-### G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets.coverage
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets.coverage`
   Status: `done`
-  Goal:every actual proposed use reconciles against complete retained mappings and explicit
-  additional-content intent;original additional and source omission requests remain outstanding.
-  - [x] ROOT CAUSE: final `cargo test -p sc-core --test join_target_coverage_contract --test join_construction_target_contract`
-    through `scripts/local_environment.py`:coverage4/prior targets4 pass,rc=0. Same tag/traversal
-    extra occurrence still needs explicit ownership;all-Omit sources cannot license additional targets.
-  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join::target_coverage` through launcher:
-    compiler3 pass,rc=0;whole T/U before intent/fields,first original AdditionalUse and actual field
-    loan;AllowAdditional retains all repeated extras and actual evidence id field,including zero.
-    Strict selected clippy rc=0. Draft E0700 capture fixed by borrowing the immutable actual target parent.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_topology_examples` through launcher:
-    topology8 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered whole
-    resource/occurrence/omission boundary and new forwarding anchor present;main7/source5 unchanged.
-    967 three original Git spans/body/public bytes exact;`history_archive.py --root . verify`:
-    1421 logical/54 working,rc=0. Full geometry/integration remains .5f.4.geometry/.5g/pre-push.
-  Work O(U log(T+2)+1),constant count/no allocation. Explicit empty/all-Omit scopes retain all original
-  source requirements;no evidence truth,deletion permission,no-op/final Piece/currentness inferred.
-  Native retained construction mapping complete;marks/consumers .metadata.marks and actual maps/effects remain.
-  Commit:STITCHCAD-G1-0792. promotion: declined (existing explicit source/target geometry boundary).
+  Goal:0792 whole proposed construction uses;[whole scope/proofs](../history/stitchcad-devnotes-part968.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold`
-  Status: `pending`
+  Status: `in_progress`
   Goal:explicit original fold-field and result cut-on-fold requirements against actual outer cut uses;
   no new fold indicator,source-role substitution or silent loss inferred from geometry/metadata.
   Canonical final cut/print .metadata.cut and all marks/consumers .metadata.marks remain owned.
+### G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold.result
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold.result`
+  Status: `done`
+  Goal:explicit desired result NoFold/CutOnFold tag and required correspondence source against
+  actual whole construction/cut/source parents;complete original fold actions remain next.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_fold_contract --test join_target_coverage_contract`
+    through `scripts/local_environment.py`:fold4/prior coverage4 pass,rc=0. Result cutting state must
+    be explicit and actual outer cut use is required;hole/noncut/catalogue identity cannot substitute.
+  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join::fold` through launcher:
+    compiler5 pass,rc=0;whole R/N/C before operation/fold/tag fields,actual raw request/tag/boundary
+    loans,desired flag derives solely from intent,logical edge tuple unissued. Strict selected clippy
+    rc=0;no independent boolean/default,evidence/provider/geometry call or original-fold loss permission.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:
+    main8 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered fold API/
+    resource/source boundary and topology forwarding link present;both complete previous chapter
+    prefixes exact. Source5/topology8 code fences unchanged.968 three original Git spans/body/public
+    bytes exact;`history_archive.py --root . verify`:1422 logical/55 working,rc=0.
+    Full geometry/integration remains .5f.4.geometry/.5g/pre-push,not this desired-state declaration.
+  Work O(log(N+2)+log(C+2)+1),constant additional state/no allocation. Even NoFold retains explicit
+  correspondence request. Original A/B fold actions,state compatibility,whole axis and consumers
+  must be justified separately;subrange attribution proves no whole physical fold.
+  Commit:STITCHCAD-G1-0793. promotion: declined (existing explicit source/geometry/effect boundary).
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold.sources`
+  Status: `pending`
+  Goal:complete guarded original A/B fold-field retention/omission requests against explicit result
+  fold;retain actual source and boundary loans,whole resources,visible evidence requirements.
+  No implicit old-fold loss,new fold axis,currentness or geometric correspondence accepted.
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
   Status: `pending`
   Goal:reconcile declared join variants against v1 requirements;actual geometry/G3/bus/full verification

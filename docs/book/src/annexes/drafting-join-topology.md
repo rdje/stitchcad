@@ -475,3 +475,6 @@ Work is O(U log(T+2)+1),with constant count state and no new allocation,provider
 or geometry call. This completes native construction source/target bookkeeping under explicit
 outstanding requests. Achieved maps,omission/additional justification,fold/copy semantics,mark and
 other consumers,currentness,geometry,retirement and atomic authority remain required separately.
+
+Continue with [explicit result fold attribution](drafting-join-contracts.md#request-explicit-result-fold-attribution)
+against these same whole construction/cut/source parents;original fold actions remain separately required.

@@ -93,6 +93,7 @@ pub use join::{
     JoinDirectionManifest, JoinDirectionRefusal, JoinDirectionalOutput, JoinEdgeCandidate,
     JoinEdgeManifest, JoinEdgeManifestError, JoinEdgeManifestLimits, JoinEdgeManifestRefusal,
     JoinEdgeRoleBindingError, JoinEdgeRoleBindingRefusal, JoinExactSpliceRequirement,
+    JoinFoldError, JoinFoldIntent, JoinFoldLimits, JoinFoldRefusal, JoinFoldRequirement,
     JoinIdentityStopOrigin, JoinInputError, JoinMappedConstructionTarget, JoinMovingOrientation,
     JoinOutputEdge, JoinParameterDirection, JoinPieceFieldIntent, JoinPieceIdentityError,
     JoinPieceIdentityLimits, JoinPieceIdentityRefusal, JoinPieceMetadataError,
@@ -101,6 +102,7 @@ pub use join::{
     JoinSourceOccurrenceLocation, JoinSourcePieceError, JoinSourcePieceLimits,
     JoinSourcePieceRefusal, JoinSpliceEnd, JoinSpliceEndpointPair, JoinSplicePlacement,
     RequiredJoinConstructionTargets, RequiredJoinCutConnectivity, RequiredJoinExactSplice,
+    RequiredJoinFold,
 };
 mod mirror;
 pub use mirror::{

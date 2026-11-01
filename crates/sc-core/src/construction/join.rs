@@ -46,6 +46,11 @@ pub use manifest::{
     AdmittedJoinEdges, JoinEdgeCandidate, JoinEdgeManifest, JoinEdgeManifestError,
     JoinEdgeManifestLimits, JoinEdgeManifestRefusal, JoinOutputEdge,
 };
+mod fold;
+pub use fold::{
+    JoinFoldError, JoinFoldIntent, JoinFoldLimits, JoinFoldRefusal, JoinFoldRequirement,
+    RequiredJoinFold,
+};
 mod metadata;
 mod population;
 mod roles;

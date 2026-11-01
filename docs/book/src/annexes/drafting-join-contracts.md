@@ -379,3 +379,53 @@ See the [result topology contract](drafting-join-topology.md#require-original-so
 ## Declare proposed result construction-line uses
 
 See the [result topology contract](drafting-join-topology.md#declare-proposed-result-construction-line-uses).
+
+## Request explicit result fold attribution
+
+After whole [construction source/target reconciliation](drafting-join-topology.md#reconcile-every-proposed-construction-occurrence),
+`RequiredJoinConstructionTargets::require_fold` binds a `JoinFoldRequirement` containing the
+operation,explicit `JoinFoldIntent` and required geometric correspondence evidence source.
+`NoFold` requests a result without a fold;`CutOnFold { tag }` requests exactly one actual outer
+cut output as its fold. Neither intent nor requirement has a default. Even NoFold retains an
+explicit correspondence request. An evidence id,including0,is no accepted evidence or authority.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+let request=JoinFoldRequirement::new(EntityId::from_bits(1000),
+    JoinFoldIntent::CutOnFold{tag:LocalTag::new(9)},EntityId::from_bits(7001));
+fn fold<'a>(construction:&'a RequiredJoinConstructionTargets<'a>,request:&'a JoinFoldRequirement)
+    ->Result<RequiredJoinFold<'a>,JoinFoldError<'a>> {
+    construction.require_fold(request,JoinFoldLimits::new(10,10,4))
+}
+```
+
+`JoinFoldLimits::new(R,N,C)` admits every original A/B source field R,every actual cut/noncut
+candidate N and every actual cut use C,including unrelated holes,before operation or fold/tag fields.
+R includes the original separate fold declarations;earlier complete source/construction/mapping
+resource policies remain. For R10/N10/C4,R9 refuses `Sources`,N9 `Outputs`,C3 `CutUses`,before
+an incorrect operation or unknown fold tag. With quotas met,`Operation` precedes tag checks.
+
+A CutOnFold tag must name an actual directional candidate (`Output` otherwise),then an actual
+outer cut use (`OutputNotBoundary` otherwise). A hole,construction-only use,fold-field-attributed
+noncut candidate or merely catalogued role cannot substitute. Neither geometry equality nor a
+candidate list position selects a fold. NoFold does not inspect or silently discard source folds.
+
+`JoinFoldError` retains actual whole `construction()`,raw `requirement()`,original `limits()` and
+first `refusal()`. Output-specific causes lend the actual original `refused_tag()` field;whole
+resource/operation causes return None. No replacement source,fold tag or accepted prefix is returned.
+
+`RequiredJoinFold` retains those whole parents and lends the actual selected outer `boundary()`
+use,or None for NoFold. `cut_on_fold()` derives the desired result flag from that explicit request;
+there is no second independently entered boolean. `edge()` reports the desired actual logical
+output tuple without issuing it. Printed cutting/fold indicators and the final canonical Piece
+must derive from complete copy/contour/fold reconciliation later.
+
+This stage binds desired result intent only. It can retain NoFold beside two original A/B fold
+fields,or CutOnFold beside sources without folds;neither grants permission to change their cutting
+state. Complete original fold retention/omission requests must be reconciled next,and real
+correspondence/source/consumer justification is required before effects. A source subrange on an
+outer output does not establish a whole physical fold axis or original-state compatibility.
+
+Work is O(log(N+2)+log(C+2)+1),with constant additional state,no allocation,provider,evidence,
+registry or geometry call. Complete original fold actions,physical copy/mark/consumer requirements,
+currentness,achieved maps,geometry,retirement and atomic authority remain required separately.

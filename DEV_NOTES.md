@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — whole proposed construction-use reconciliation
+## _(2026-11-01 UTC)_ — explicit joined result fold intent
 
-0792 scans all actual uses under whole T/U,requiring distinct retained mapping or explicit additional-content intent.
-Actual extras/evidence fields and all Omit requests survive;equal geometry/tag/traversal cannot infer ownership.
-Native4/prior targets4/API3/topology8/lint/fmt/book rc=0;967 original/body/public bytes exact.
-promotion: declined (existing source/target geometry boundary). G1still6/18;fold intent and consumers remain next.
+0793 binds explicit desired NoFold/CutOnFold and correspondence request under whole original R/candidate N/cut C.
+Actual outer cut membership is mandatory;desired flag derives from intent,without accepting original fold loss or axis.
+Native4/prior coverage4/API5/main8/lint/fmt/book rc=0;968 original/body/public bytes exact.
+promotion: declined (existing source/geometry/effect boundary). G1still6/18;complete original fold actions next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
