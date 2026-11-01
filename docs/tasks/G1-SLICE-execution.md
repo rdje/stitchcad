@@ -864,7 +864,8 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0752 actual edge-role binding;[whole scope/proofs](../history/stitchcad-devnotes-part927.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest`
   Status: `in_progress`
-  Goal:candidate/domain/coverage and refit/no-op policies;actual maps/fit/variant policy stay owned.
+  Goal:candidate/domain/coverage,outcome/lock/evidence and whole-Piece replacement declarations;
+  actual maps/fit/variant policy stay owned.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.entries`
   Status: `done`
   Goal:0753 candidate attribution;[whole scope/proofs](../history/stitchcad-devnotes-part929.md).
@@ -878,28 +879,47 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0757 explicit outcome;[whole scope/proofs](../history/stitchcad-devnotes-part933.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references`
-  Status: `in_progress`
+  Status: `done`
   Goal:bounded endpoint/stop/reference and all-copy observer/fit evidence requirements;
   native source partitions never substitute for actual mappings or atomic execution.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references.locks`
   Status: `done`
-  Goal:whole plan-copy/stop quotas before authentic selected endpoint/all span-stop/all-copy
-  lock requests bound to the actual explicit outcome. Preserve unfiltered original stop order/sides.
-  - [x] ISSUE:outcome intent alone carries no bounded authentic endpoint/stop/copy lock requests.
-  - [x] ROOT CAUSE:original span stops/copy owners remain in the real source,including A stops
-    under adjusted B;cargo test -p sc-core --test truing_lock_contract:3 pass,rc=0.
-  - [x] FIX:whole C then S before views;authentic original endpoint/stop/all-affected-copy requests.
-  - [x] ADDRESSED:truing_lock_contract:3 pass,rc=0;both outcomes/sides,unrelated copies,shared
-    counterpart,actual field borrows,original side attribution/order and quota equality/refusals.
-  - [x] NO REGRESSION:prior outcome3,lock API5/book7,selected Clippy/fmt/build/render pass;rc=0.
-    Initial unused-helper/manual-back-iteration test warnings fixed;strict final lint clean.
-    Whole0757 receipt933 read-back byte-exact;actual mapping/fit/broad integration remain .5g/.5f.4.
-  - [x] LOCKSTEP:book/live/pointer/journals aligned;promotion: declined (existing source-lock scope).
-  Commit:STITCHCAD-G1-0758.
+  Goal:0758 actual lock requests;[whole scope/proofs](../history/stitchcad-devnotes-part934.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references.evidence`
-  Status: `pending`
+  Status: `done`
   Goal:complete mandatory currentness/identity/refit/fit/ease/repair/all-copy/authority evidence
   requests over actual locks/outcome;no provider call,readiness,accepted mapping or fit verdict.
+  - [x] ISSUE:bounded source locks do not themselves request all remaining evidence scopes.
+  - [x] ROOT CAUSE:actual original locks/outcome expose source context,not accepted provider proofs;
+    cargo test -p sc-core --test truing_evidence_contract:2 pass,rc=0;eleven distinct literal scopes.
+  - [x] FIX:explicit context/fit/effect source groups;authentic complete mandatory request traversal.
+  - [x] ADDRESSED:truing_evidence_contract:2 pass,rc=0;both outcomes/sides,all original id fields,
+    borrowed owners,exact forward/reverse scopes and shared/zero providers without skipped obligations.
+  - [x] NO REGRESSION:prior lock3,evidence API4/book8,selected Clippy/fmt/build/render pass;rc=0.
+    Whole0758 receipt934 read-back byte-exact;current geometry/fit/authority/broad integration deferred .5g/.5f.4.
+  - [x] LOCKSTEP:book/live/pointer/journals aligned;whole-Piece continuation explicitly owned P1.
+    promotion: declined (scoped continuation,existing uncertainty and evidence-request boundaries).
+  Commit:STITCHCAD-G1-0759.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece`
+  Status: `pending`
+  Goal:P1 before native family closure:explicit whole-Piece reconciliation for partial selected spans.
+  Reproduce:truing_source_domain_contract whole0–1 on selected1/4–3/4 refuses BeforeStart;
+  ontology/piece.rs DirectedEdge/PieceDefinition contours carry whole EdgeRefs,not EdgeRanges.
+  Impact:selected-source coverage cannot by itself replace the containing edge or preserve its
+  outside portions. Native declarations must cover outside roles,all occurrences/fold and lineage.
+  Actual geometry/current ledger application remains .5f.2/.5f.4.geometry;do not invent results.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.roles`
+  Status: `pending`
+  Goal:explicit sourced prefix/suffix roles outside the selected domain,with full quotas and
+  actual typed catalogue association;no default tags or caller-supplied replacement source frame.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours`
+  Status: `pending`
+  Goal:complete boundary/hole/construction/fold occurrence placement and traversal requirements;
+  retain unaffected source fields and reject incomplete replacement attribution.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage`
+  Status: `pending`
+  Goal:explicit original whole-edge retention/retirement/reference-repair declarations for the
+  complete Piece proposal;actual current history and mapped geometry keep their existing owners.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.coverage.tracking`
   Status: `done`
   Goal:0755 exact walk split/receipt930;census0;promotion: declined (navigation).

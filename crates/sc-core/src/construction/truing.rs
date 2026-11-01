@@ -29,6 +29,11 @@ pub use outcome::{
     RequiredTruingOutcome, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
 };
 mod binding;
+mod evidence;
+pub use evidence::{
+    RequiredTruingEvidence, TruingContextSources, TruingEffectSources, TruingEvidenceKind,
+    TruingEvidencePolicy, TruingEvidenceRequirement, TruingFitSources,
+};
 mod locks;
 pub use binding::{BoundConstrainedTruing, TruingBindingError, TruingBindingRefusal};
 pub use locks::{

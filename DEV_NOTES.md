@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — bind original truing lock requirements
+## _(2026-11-01 UTC)_ — require complete original truing evidence scopes
 
-0758 admits whole retained-plan C then all span-stop S before authentic original endpoint,stop and affected-copy requests. Both explicit outcomes retain both endpoints/all stops;A stops keep A fields/copy/Piece when adjusted B. Shared-Piece counterparts remain affected.
-Native3/prior-outcome3/API5/book7,selected Clippy/fmt/build/render pass0. Initial test helper/back-iteration warnings resolved;strict lint clean. No positions,maps,currentness,observer census or fit accepted;D372 warning remains owned.
-Whole0757 task/lesson/ledger retained933 before growth. Promotion: declined (existing source-lock scope). Mandatory evidence requests next;actual curve/fit/variant/currentness/all-copy/authority/broad integration remain owned;G1still6/18.
+0759 retains eleven distinct context/fit/effect source requests on actual bounded locks/outcome. Both explicit modes and shared/zero providers skip none;actual original source fields stay borrowed. No provider,readiness,currentness,map,fit or authority accepted.
+Native2/prior-lock3/API4/book8,selected Clippy/fmt/build/render pass0;whole0758 receipt934 exact0. Partial selected1/4–3/4 rejects whole0–1 while Piece contours carry whole EdgeRefs:outside roles/contours/lineage now P1 .manifest.piece before native closure.
+Promotion: declined (scoped continuation,existing evidence boundaries). Complete Piece replacement and deterministic variant policy next;actual geometry/currentness/fit/effects/broad integration remain owned. D372 search warning remains owned;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

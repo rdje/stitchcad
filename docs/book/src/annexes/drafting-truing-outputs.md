@@ -341,3 +341,58 @@ both remain affected;selecting A cannot freeze B. This is a supplied-plan invent
 current Design or semantic/sewing observer census. No method moves an endpoint/stop,changes a copy,
 evaluates a curve,accepts a fit,repairs a held reference or grants atomic authoring authority.
 Mandatory evidence requests and actual geometry/execution retain their separate owners.
+
+## Require complete evidence scopes
+
+`RequiredTruingLocks::require_evidence(&TruingEvidencePolicy)` borrows the actual complete bounded
+locks,outcome,candidates,roles,copy/Piece inventory,span and quantitative fit source. It returns
+`RequiredTruingEvidence`. The policy requires three context,four fit and four effect source fields;
+there are no optional scopes or default policy.
+
+```rust
+use sc_core::{construction::*,ontology::EntityId};
+fn require<'a>(locks:&'a RequiredTruingLocks<'a>,policy:&'a TruingEvidencePolicy)
+    ->RequiredTruingEvidence<'a> {locks.require_evidence(policy)}
+let id=EntityId::from_bits(7000);
+let policy=TruingEvidencePolicy::new(TruingContextSources::new(id,id,id),
+    TruingFitSources::new(id,id,id,id),TruingEffectSources::new(id,id,id,id));
+assert_eq!(*policy.source(TruingEvidenceKind::LengthFit),id);
+```
+
+`requirements()` lends every distinct scope in the following order and supports reverse traversal:
+
+| Scope | Required evidence |
+| --- | --- |
+| `CurrentOwnership` | Complete current Design/revision,graph,plan,Pieces,ledger and semantic/source registries |
+| `IdentityHistory` | Global issuance/nonreuse,actual reservations and retained role/entity history |
+| `VisibleRepairs` | Every held reference,ambiguity choice,gap,retirement and visible semantic repair |
+| `DeterministicCurve` | Deterministic refit/curve selection and the actual supported domain |
+| `Outcome` | Achieved explicit preservation/refit over the complete Piece,including outside source portions |
+| `LengthFit` | Actual curve lengths and achieved fit under the original sourced T2/error budget |
+| `DifferentialAndEase` | Signed A-minus-B differential,original allocated ease and unexplained residuals |
+| `EndpointAndStopCorrespondence` | Both original selected endpoint positions and every original span-stop correspondence |
+| `Profiles` | Actual material/profile/source truth,requirement derivation and any explicitly approved loosening |
+| `AllCopyEffects` | Every physical copy,shared-Piece counterpart,semantic/sewing observer and actual effects |
+| `AuthoringAuthority` | Actual authority and complete atomic repair/publication/replay/history |
+
+Both explicit outcomes require all eleven scopes. Empty source-preserving candidates do not prove
+fit or preservation. Fewer affected copies/stops or one shared provider cannot remove a scope.
+For example,one source id used for all fields still yields eleven distinct requests. Zero ids are
+retained as ordinary unresolved requested identities;they supply no lookup,available provider or
+proof. The request does not authorize its own author or accept an arbitrary provider's claims.
+
+`locks()` and `policy()` lend the actual complete original parents. The policy's
+`context_sources()`, `fit_sources()` and `effect_sources()` lend its actual embedded field groups;
+`source(kind)` lends the original requested id field. Each authentic `TruingEvidenceRequirement`
+retains its whole `context()`,distinct `kind()` and actual `source()` field. Fixed borrowing and
+eleven-item traversal take constant work/space with no allocation,body scan,registry lookup or
+provider invocation. Actual providers keep their own complete input/resource and verification
+obligations. These requests establish no readiness,accepted map,fit,currentness or authoring verdict.
+
+A complete Piece replacement also needs an explicit declaration for portions outside a selected
+partial domain and every affected boundary,hole,construction and fold occurrence. For selected
+1/4–3/4,coverage of that interval alone cannot account for the remaining0–1/4 and3/4–1 portions.
+Piece contours carry whole edge references;selected-source candidates are not a complete Piece
+replacement. Native whole-Piece role/contour/lineage reconciliation remains a tracked continuation,
+before family closure. Actual current identity application,mapped geometry and atomic execution
+retain their existing G1/G2/G3/bus owners.
