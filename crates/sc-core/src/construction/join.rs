@@ -56,6 +56,12 @@ pub use source_actions::{
     JoinConstructionSourceAssignment, JoinConstructionSourceError, JoinConstructionSourceIntent,
     JoinConstructionSourceLimits, JoinConstructionSourceManifest, JoinConstructionSourceRefusal,
 };
+mod source_groups;
+pub use source_groups::{
+    DeclaredJoinConstructionGroups, JoinConstructionGroupError, JoinConstructionGroupLimits,
+    JoinConstructionGroupManifest, JoinConstructionGroupOutput, JoinConstructionGroupRefusal,
+    JoinConstructionMappingGroup, JoinConstructionOutputGroup,
+};
 mod sources;
 mod splice;
 pub use metadata::{

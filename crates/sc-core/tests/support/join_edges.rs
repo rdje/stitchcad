@@ -196,3 +196,49 @@ pub fn with_construction_uses(extra: bool, run: impl FnOnce(DeclaredJoinConstruc
         run(uses);
     });
 }
+
+/// Complete original field actions with an explicit per-snapshot-field intent factory.
+pub fn with_source_actions(
+    extra: bool,
+    intent: impl Fn(SeamSideId, usize) -> JoinConstructionSourceIntent,
+    run: impl FnOnce(DeclaredJoinConstructionSources<'_>),
+) {
+    with_construction_uses(extra, |uses| {
+        let sources = uses
+            .connectivity()
+            .contours()
+            .directions()
+            .coverage()
+            .edges()
+            .identity()
+            .roles()
+            .banks()
+            .sources();
+        let mut assignments = Vec::new();
+        for side in [SeamSideId::A, SeamSideId::B] {
+            for (index, field) in sources
+                .piece(side)
+                .definition()
+                .construction_lines
+                .iter()
+                .enumerate()
+            {
+                assignments.push(JoinConstructionSourceAssignment::new(
+                    side,
+                    index,
+                    *field,
+                    intent(side, index),
+                ));
+            }
+        }
+        let m = assignments.len();
+        let raw = JoinConstructionSourceManifest::new(id(1000), assignments);
+        let actions = raw
+            .admit(
+                &uses,
+                JoinConstructionSourceLimits::new(sources.occurrence_count(), m, 2 * m),
+            )
+            .expect("complete explicit original source actions");
+        run(actions);
+    });
+}

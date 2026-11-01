@@ -3,15 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0788 — explicit original joined construction actions
+## STITCHCAD-G1-0789 — retained joined construction groups
 
-- Whole R/M/2M;one explicit action per original construction occurrence with expected edge/traversal guards.
-- Actual source/request/parent loans retained;no omission evidence,target map,retirement or authority inferred.
-- Native4/prior construction4/compiler6/topology4/main7/lint/fmt/book/index/33 links rc=0;963 continuity exact.
-- Whole12686B topology/code moved intact with old routes/anchors;117 chapters/118 Markdown files,SUMMARY120L.
-- G1still6/18;whole-field target mappings,fold/copies/consumer semantics and real geometry/effects pending.
+- Whole K/G/L/2G+L before source/role fields;exact unique actual Retain groups with literal A/B/edge attribution.
+- Actual group/tag/source/output/range loans and original ordering retained;required traversal remains a requirement.
+- Native4/prior source4/compiler6/topology5/lint/fmt/book rc=0;964 continuity exact.
+- G1still6/18;whole-field partitions,target-use multiplicity,fold/copies/consumers and real geometry/effects pending.
 
 # Sealed archive — earlier slices
+
+[Whole0788 original construction actions](docs/history/stitchcad-devnotes-part964.md) retain exact task,lesson and ledger bytes.
 
 [Whole0787 construction-use declarations](docs/history/stitchcad-devnotes-part963.md) retain exact task,lesson and ledger bytes.
 

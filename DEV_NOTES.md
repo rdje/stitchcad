@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — explicit original joined construction actions
+## _(2026-11-01 UTC)_ — retained joined construction groups
 
-0788 requires one action per original field under R/M/2M,expected EdgeRef/traversal and unique source guards.
-Actual source/intent/evidence loans survive;Omit ids are requests,Retain still needs complete target mapping.
-Native4/prior construction4/API6/topology4/main7/lint/fmt/book/index/33 links rc=0;963 original bytes exact.
-promotion: declined (existing source/geometry boundary). Topology12686B moved exact;G1still6/18,maps next.
+0789 binds one ordered output-role group per actual Retain source,under whole K/G/L/2G+L policies.
+Actual source/frame/field loans and repeated scopes survive;required traversal is no authored target value.
+Native4/prior source4/API6/topology5/lint/fmt/book rc=0;964 original/body/public bytes exact.
+promotion: declined (existing source-role/geometry boundary). G1still6/18;ordered whole-field coverage next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

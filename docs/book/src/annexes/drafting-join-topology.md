@@ -252,3 +252,73 @@ justification/visible repairs remain mandatory mapping/evidence work. Fold/copy/
 currentness,real geometry,retirement and authorized atomic effects remain separate obligations.
 An action list can therefore bind beside an empty proposed construction list without certifying
 that Retain has been fulfilled or Omit justified. The join's source reconciliation remains open.
+
+## Group retained construction output references
+
+`JoinConstructionGroupManifest` retains an explicit operation and ordered
+`JoinConstructionMappingGroup::new(side,index,outputs)` records. Each selector names an actual
+Retain action in the guarded source-action parent;its original persistent edge/traversal expectation
+was already checked there. The snapshot selector is not an independent geometry identity.
+Every output reference is an explicit persistent LocalTag,not a candidate list position.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn retained(side:SeamSideId,index:usize,tags:Vec<LocalTag>)->JoinConstructionMappingGroup {
+    JoinConstructionMappingGroup::new(side,index,tags)
+}
+fn group<'a>(manifest:&'a JoinConstructionGroupManifest,sources:&'a DeclaredJoinConstructionSources<'a>)
+    ->Result<DeclaredJoinConstructionGroups<'a>,JoinConstructionGroupError<'a>> {
+    manifest.admit(sources,JoinConstructionGroupLimits::new(4,4,4,12))
+}
+```
+
+`JoinConstructionGroupLimits::new(K,G,L,W)` admits **all** source-action scopes K,including Omit,
+and every raw group header G before nested lengths. Complete checked tag-reference count L and
+checked2G+L index/group/output entries then precede fields or allocation. Earlier complete source,
+candidate,action and proposed-use resources remain separate;logical entries are not allocator bytes.
+`ReferenceOverflow`/`WorkspaceOverflow` retain nonrepresentable complete arithmetic. For K4/G4/L4,
+W12 is exact:K3 refuses `Sources`,G3 refuses `Groups`,L3 refuses `References`,W11 refuses `Workspace`
+before a wrong operation or malformed source/tag field.
+
+With quotas met,`Operation` precedes `Count`:G must equal the actual number of Retain actions.
+The complete source-action intents are scanned under K. Each original group then checks
+`DuplicateSource`, `MissingSource`, `OmittedSource`, `EmptyGroup`,then each tag's `UnknownOutput`,
+`SourceSide`, `SourceEdge`. Unique actual Retain membership plus exact count supplies one group
+per Retain scope. Omit cannot also supply a retained group. A bare catalogue role cannot replace
+membership in the actual directional candidate set.
+
+A candidate must use the same original A/B role and persistent source edge as its guarded field.
+Equal EdgeRefs on different A/B Pieces cannot substitute. Within the same actual source frame,
+a candidate attributed to a cut,construction or fold occurrence can name that same canonical edge;
+this associates source geometry only,without accepting any resulting fold or construction semantics.
+
+Original group/tag order remains intact. Distinct original repeated construction fields can
+explicitly reference the same role in separate groups;their source scopes remain separate. A partial
+range or repeated tag can still associate at this stage:ordered whole0..1 coverage and target-use
+presence/multiplicity are mandatory subsequent checks. Group association is not their certificate.
+If every source action is Omit,an explicit empty group list can cover the no-Retain scope while all
+original omission requests remain outstanding.
+
+`JoinConstructionGroupError` lends actual `manifest()`,actual guarded `sources()`,original `limits()`
+and first `refusal()`. Group-specific causes lend the original `refused_group()`;output-specific
+causes lend the actual original `refused_tag()`. `refused_source_action()` lends the actual known
+source action for a group cause,if present. `refused_output()` lends the actual directional candidate
+only for SourceSide/SourceEdge. Whole-resource/operation/count causes lend none of those fields.
+No accepted prefix,replacement source,role sorting or rescaling is returned after a later failure.
+
+`DeclaredJoinConstructionGroups` retains those whole parents and reports `group_count()`,
+`reference_count()` and `workspace_entries()`. `groups()`/`outputs()` preserve authored order and
+reverse;`group(side,index)` queries an actual Retain scope. `JoinConstructionOutputGroup` lends its
+actual original definition,source action and ordered member views. Each `JoinConstructionGroupOutput`
+lends its original group/reference indices,actual group/tag field,source action,directional output
+and actual positive ascending source range. Repeated references remain separate original fields.
+
+`required_traversal()` states which proposed construction traversal would preserve that original
+field's direction under the explicit output parameter-orientation request. Original+SameAsSource
+requires Original;Original+ReverseSource requires Reversed. An original reversed field swaps those
+requirements. This is a requirement,not an authored target value or achieved geometric map.
+
+Work is O(K+G log(G+K+2)+L log(N+2)+1) for N actual candidates,with2G+L additional entries. There
+is no provider,registry,evidence or geometry call. Complete retained interval partitions,actual
+result-use traversal/multiplicity,additional-result intent,omission/consumer justification,fold/copy
+semantics,currentness,geometry,retirement and atomic authority remain separately required.
