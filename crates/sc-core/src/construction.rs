@@ -9,6 +9,9 @@ mod editing_examples {}
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-join-contracts.md")]
 mod join_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-join-sources.md")]
+mod join_source_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-truing-outputs.md")]
 mod truing_output_examples {}
 #[cfg(doctest)]

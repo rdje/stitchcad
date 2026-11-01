@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — explicit join output parameter directions
+## _(2026-11-01 UTC)_ — room for joined contour declarations
 
-0783 requires one explicit source-relative direction for every candidate,including noncut fields.
-Whole N/M/2M precedes owner/count/fields;unique actual membership prevents active-but-absent roles.
-Native4/prior coverage4/API6/join book12/lint/fmt/book pass0;958 Git/body/public reader exact.
-promotion: declined (existing typed direction boundary). G1still6/18;reference/task room before topology.
+0784 moves14338B source/policy prose exactly;all12 code fences and prior routes/heading anchors remain.
+Closed construction15 goals sealed959;all IDs/statuses/children/later acceptance bytes exact.
+Source5/output7/fmt/book/index/29 rendered links/tree10-13-20-0/archive1413-46 pass0;native join unchanged.
+promotion: declined (existing bounded-reference/retention rules). G1still6/18;whole topology next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

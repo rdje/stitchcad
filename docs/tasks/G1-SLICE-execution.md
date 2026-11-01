@@ -836,34 +836,34 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.coverage`
   Status: `done`
   Goal:0782 complete surviving cut partitions;[whole scope/proofs](../history/stitchcad-devnotes-part958.md).
-### G1-SLICE.5f.1.c.join.outputs.contours.directions
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.directions`
   Status: `done`
-  Goal:complete explicit source-relative parameter directions on every actual candidate,including
-  noncut fields;no inference from Piece traversal,copy/sewing direction or moving-frame parity.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_parameter_direction_contract --test join_cut_coverage_contract`
-    through `scripts/local_environment.py`:direction4/prior coverage4 pass0;full N10 versus cut4,
-    quota-before-owner/count/fields,duplicates and active-but-absent output witnesses.
-  - [x] ADDRESSED: same native4+4 pass0;actual whole parents,assignment fields and authentic output
-    source pointers retained. `cargo test -p sc-core --doc construction::join::directions` through
-    launcher:6 compiler guards pass0;selected strict clippy0. No achieved map/traversal/pose proof.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:12 pass0;
-    `cargo fmt --all -- --check`/`scripts/run_make.sh book` pass0;rendered full candidate/quota/empty
-    scope present.958 three original Git spans/body/public reader exact;`history_archive.py --root .
-    verify`:1412 logical/45 working,rc0. Actual geometry/full integration stays .5f.4.geometry/.5g/pre-push.
-  Whole N/M/checked2M precedes fields/allocation;unique actual membership plus M=N,not count alone,
-  establishes complete requests. The typed directions reuse the canonical native truing boundary.
-  Rendered witness initially failed on an HTML line break;whitespace normalization passed0. A
-  premature authority command refused the in-progress owner(rc2) before staging;fresh completed-
-  owner authority is required after these exact task/book bytes. No refusal was treated as approval.
-  Commit:STITCHCAD-G1-0783. promotion: declined (existing explicit source-relative direction contract).
+  Goal:0783 complete parameter directions;[whole scope/proofs](../history/stitchcad-devnotes-part959.md).
+### G1-SLICE.5f.1.c.join.outputs.contours.tracking
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.tracking`
-  Status: `pending`
-  Goal:unblock whole-contour product work by partitioning join reference before predictable growth:
-  current575 lines/37882B versus700/40960 fixed bounds. Preserve all original prose/code/nav routes
-  and register the new companion. Reclaim closed task continuity before aggregate growth (current
-  collection remains below1500000B);seal whole originals,retain IDs/statuses and verify exact retrieval.
-  Native behavior stays unchanged;focused book/compiler/link/topic-index/task/archive checks only.
+  Status: `done`
+  Goal:reference/task room required before whole-contour growth;no native behavior change.
+  - [x] ROOT CAUSE:`git show HEAD:docs/book/src/annexes/drafting-join-contracts.md` census:575L/37882B versus700/40960;task aggregate1496855B
+    versus1500000 before activation. Exact Git source/interval/body/hash producer:959 four whole spans
+    and public reader identical,rc=0;15 closed construction nodes retain every ID/status/child relation.
+  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join_source_examples` and
+    `cargo test -p sc-core --doc construction::join_examples` through `scripts/local_environment.py`:
+    source5/output7 pass,rc=0. Whole14338B source/policy block and all12 original code fences/order exact;
+    old headings forward to new companion. Registered routes115→116,all prior routes/order retained.
+  - [x] NO REGRESSION: `cargo fmt --all -- --check`/`scripts/run_make.sh book` pass,rc=0;scoped rendered
+    checker preserves all old heading anchors and validates29 body links/fragments. INDEX_COVERAGE
+    passes;`run_tree_coverage_census.sh`:10 lanes/13 trees/20 siblings/0 issues,rc=0;
+    `history_archive.py --root . verify`:1413 logical/46 working,rc=0. Native join files byte-identical;
+    construction barrel adds only cfg(doctest) inclusion. Full feature/integration remains .5f.4/.5g/pre-push.
+  New reference232L/14707B/main369L/24346B;SUMMARY keeps120L by removing only optional title,not a route.
+  Book116 registered chapters/117 Markdown files;task parts stay34. All original later construction
+  acceptance bytes remain exact. Source witness:target/history-proof-0784-join-tracking/source.json.
+  Initial staged diff check refused the new companion's copied terminal blank(rc2),before commit.
+  Preserve the whole copied block and add a continuation link after it;rebuild/recheck new link and
+  refresh exact task/book authority before restaging. HEAD/status/brief inspected before retry.
+  Mandatory hook refused two fresh boxes because rc0/pass0 shorthand had no recognized command/result
+  signature. Exact observed invocations and rc=0 results added inside each bullet;no checker weakened.
+  Commit:STITCHCAD-G1-0784. promotion: declined (existing bounded reference/closed retention rules).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology`
   Status: `pending`
   Goal:explicit complete proposed joined boundary/hole/construction/fold-use topology with actual

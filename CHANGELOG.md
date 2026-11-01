@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0783 — explicit complete join parameter directions
+## STITCHCAD-G1-0784 — room for joined contour declarations
 
-- Whole N/M/checked2M before operation/count/original assignments;every actual candidate needs one direction.
-- Actual source/field parents retained;active-but-absent roles refused;no traversal,pose or interior map inferred.
-- Native4/prior coverage4/compiler6/join book12/lint/fmt/book pass0;958 continuity exact.
-- G1still6/18;bounded reference/task preparation then whole-contour declarations;geometry/effects pending.
+- Join source/policy companion preserves exact14338B block,12 examples,all previous routes and heading anchors.
+- Fifteen closed construction goals sealed whole959;IDs/statuses/children/later acceptance bytes retained.
+- Source5/output7/fmt/book/topic index/29 rendered links/tree census/archive1413-46 pass0;native join unchanged.
+- G1still6/18;whole output topology next. Summary120L;116 chapters/117 source Markdown files.
 
 # Sealed archive — earlier slices
+
+[Whole0783 continuity and closed construction goals](docs/history/stitchcad-devnotes-part959.md) retain exact source bytes.
 
 [Whole0782 cut-coverage task,lesson and ledger](docs/history/stitchcad-devnotes-part958.md) retain exact source bytes.
 
