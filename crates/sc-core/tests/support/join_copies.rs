@@ -1,6 +1,6 @@
 //! Actual complete original inventory/fold context and explicit result-copy request fixtures.
 #[path = "join_fold.rs"]
-mod fold;
+pub mod fold;
 pub use fold::id;
 use fold::with_copy_construction;
 use sc_core::{construction::*, ontology::*};

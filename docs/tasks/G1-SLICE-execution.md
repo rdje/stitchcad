@@ -796,7 +796,7 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   Status: `pending`
   Goal:explicit mark/grainline/seam/other consumer ownership and mapped-or-visible repair requirements.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies`
-  Status: `in_progress`
+  Status: `done`
   Goal:complete original-copy consumption/preservation/result correspondence and explicit multiplicity.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.population`
   Status: `done`
@@ -805,7 +805,7 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 retains all original goals,statuses and focused acceptance evidence.
 
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory`
-  Status: `in_progress`
+  Status: `done`
   Goal:reconcile actual result/source metadata and candidate full inventory/CutPlan with declared
   copy actions/population/identity,including remaining source copies and all unrelated members.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.plan`
@@ -824,20 +824,20 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.companions`
   Status: `done`
   Goal:0802 explicit retained companion requirements;[whole scope/proofs](../history/stitchcad-devnotes-part978.md).
-### G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.fields
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.fields`
   Status: `done`
-  Goal:complete original field preservation,derived retained quantity and exact explicit companion exceptions.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_original_piece_contract` through launcher:
-    4 pass;canonical plan/resources accept changed contours/material/UTF-8 and uncovered companion fields that exact comparison refuses,rc=0.
-  - [x] ADDRESSED: same native target and `cargo test -p sc-core --test join_companion_repair_contract`:
-    4/4 pass;actual whole source/candidate loans,partial source quantity2-to1,explicit repair evidence retained;no allocation,rc=0.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_original_piece_contract --test join_companion_repair_contract -- -D warnings`:
-    strict lint/API2/inventory4/fmt/book/rendered claims rc=0;978 three Git spans/body/public exact;archive1432/65,per-generation21/64 and44/64,rc=0.
-  Commit:STITCHCAD-G1-0803. promotion: declined (existing exact original-copy/explicit consumer-repair contract).
+  Goal:0803 exact original preservation;[whole scope/proofs](../history/stitchcad-devnotes-part979.md).
+### G1-SLICE.5f.1.c.join.outputs.copies.inventory.result
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.result`
-  Status: `pending`
-  Goal:actual joined Piece fields match declared identity/metadata/population/contours/construction/fold;geometry stays pending.
+  Status: `done`
+  Goal:complete actual joined-result field matching under original preservation;consumer/physical obligations separate.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_result_piece_contract` through launcher:
+    4 pass;canonical candidate copies/resources do not certify requested ordered holes/construction/fold or selected metadata,rc=0.
+  - [x] ADDRESSED: same target plus `cargo test -p sc-core --test join_original_piece_contract`:
+    4/4 pass;actual2-hole/8-construction/fold candidate and first field refusals;original companion/evidence requests retained,rc=0.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_result_piece_contract --test join_original_piece_contract -- -D warnings`:
+    strict lint/API2/inventory5/fmt/book/rendered claims rc=0;979 three Git spans/body/public exact;archive1433/66,per-generation21/64 and45/64,rc=0.
+  Commit:STITCHCAD-G1-0804. promotion: declined (existing exact native joined inventory/copy/metadata contract).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking`
   Status: `done`
   Goal:0798 bounded inventory continuity;[whole scope/proofs](../history/stitchcad-devnotes-part974.md).

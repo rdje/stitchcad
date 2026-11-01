@@ -108,7 +108,7 @@ impl fmt::Display for JoinOriginalPieceError<'_> {
 }
 impl std::error::Error for JoinOriginalPieceError<'_> {}
 
-fn first_label_field(original: &LabelText, candidate: &LabelText) -> Option<LabelField> {
+pub(super) fn first_label_field(original: &LabelText, candidate: &LabelText) -> Option<LabelField> {
     let LabelText {
         name,
         size,

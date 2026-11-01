@@ -58,6 +58,7 @@ pub use fold_sources::{
 };
 mod companion_repairs;
 mod original_pieces;
+mod result_piece;
 pub use companion_repairs::{
     JoinCompanionRepair, JoinCompanionRepairError, JoinCompanionRepairLimits,
     JoinCompanionRepairManifest, JoinCompanionRepairRefusal, JoinCompanionRepairRequest,
@@ -67,6 +68,7 @@ pub use original_pieces::{
     JoinOriginalPiece, JoinOriginalPieceError, JoinOriginalPieceField, JoinOriginalPieceRefusal,
     MatchedJoinOriginalPieces,
 };
+pub use result_piece::{JoinResultPieceError, JoinResultPieceField, MatchedJoinPieceInventory};
 mod inventory_fields;
 pub use inventory_fields::{
     BoundJoinInventoryFields, JoinInventoryFieldError, JoinInventoryFieldLimits,

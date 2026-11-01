@@ -2,7 +2,7 @@
 
 This reference follows the [original sources and copy policies](drafting-join-sources.md).
 It records native candidate-plan and whole-field resources,explicit companion requirements and
-original-field matching. Joined-result matching,complete consumer repair,physical validity,currentness
+complete original/result field matching. Complete consumer repair,physical validity,currentness
 and authority proofs remain separate.
 
 ## Bind the complete candidate copy plan
@@ -222,3 +222,55 @@ allocation,quota,provider,evidence,registry or geometry call occurs. Work is
 O(I log(I+J+M+2)+H+R+B+1),with constant auxiliary storage;earlier owned contexts remain separate.
 This proves complete original field preservation in the supplied candidate only. Joined-result
 fields,full consumer repair,currentness,global identity and per-pair physical/atomic proof remain pending.
+
+## Match every declared joined-result field
+
+`MatchedJoinOriginalPieces::match_result_piece` compares the actual supplied result Piece against
+the complete explicit native request. It requires the preceding exact copy plan,whole field-resource
+admission,guarded companion requirements and full original-field matching. The returned
+`MatchedJoinPieceInventory` reconciles all candidate copy definitions and Piece fields;it grants
+no physical/currentness/evidence or mutation authority.
+
+```rust
+use sc_core::construction::*;
+fn result<'a>(originals:&'a MatchedJoinOriginalPieces<'a>)
+    ->Result<MatchedJoinPieceInventory<'a>,JoinResultPieceError<'a>> {
+    originals.match_result_piece()
+}
+```
+
+Checks follow Piece-definition order:declared result identity,complete outer boundary,complete
+ordered hole groups,complete construction occurrences,canonical requested quantity and mirroring,
+explicit fold presence/exact fold edge,selected cutting face,material,layer and all four label fields.
+Boundary/hole/construction fields match exact logical output tuples and traversal directions;
+length/group boundaries and authored order remain significant. Equal geometry or the same set of
+edges cannot replace ordered equality. Repeated construction uses remain repeated actual fields.
+Exhaustive PieceDefinition and shared exhaustive LabelText patterns require future field updates.
+
+For example,a request with boundary9-Reversed/8-Original,two holes10-Original then2-Reversed,
+construction tags11/5/4/12/4/11/5/12 with their explicit directions,and fold9 must match exactly.
+Reversing the boundary,swapping hole groups or construction uses,selecting another outer fold edge,
+or replacing CutOnFold with NoFold refuses even when PieceInventory and CutPlan are canonical.
+The fold flag derives from the explicit intent;fold edges are exactly one selected tuple or empty
+for NoFold. Neither independent print prose nor an arbitrary boundary edge can replace that choice.
+
+Material,layer,label and cutting face match their independently selected A/B or authored values.
+Unresolved material reasons and label name/size/fabric/colorway are exact UTF-8 fields,with no
+trimming or normalization. Another nonblank reason,label,valid face or layer remains a mismatch.
+This equality supplies no material kind/state,physical face compatibility or label truth evidence.
+
+`JoinResultPieceError` retains actual whole `originals()`,first `field()` as
+`JoinResultPieceField`,and actual `candidate_piece()`. Label causes retain their `LabelField` in
+name/size/fabric/colorway order. No reconstructed expected Piece or accepted prefix escapes.
+`MatchedJoinPieceInventory` lends the same whole original proof through `originals()`,actual full
+copy/inventory context through `plan()`,and actual matched supplied result through `result()`.
+Original quantities,old companions,fold/construction omission requests,additional content and
+explicit companion/evidence requirements remain available through their authentic parents.
+
+Whole immutable I/J/H/R/B and all copy/proposal resources precede comparisons. Expected lengths
+are checked before ordered traversal. Work is O(H+R+B+1),constant auxiliary storage,no new quota,
+allocation,provider,evidence,registry or geometry call;earlier declaration bounds/storage remain
+separate. Matching fold/construction fields does not approve omitted source data or a new fold axis.
+Complete consumer repair,current identity/global issuance,actual per-pair geometry/pose/ease,
+domain acceptance and atomic publication remain required. This is complete native field matching,
+with focused checks;full geometry-backed integration and broad verification remain separately owned.

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — exact join original Piece preservation
+## _(2026-11-01 UTC)_ — complete joined candidate field matching
 
-0803 compares every actual original under closed whole resources;derived retained quantity and exact explicit companion fields are sole exceptions.
-Native original4/prior companion4 pass,including actual source quantity2-to1 and canonical changed contour/material/UTF-8/uncovered-mate refusals.
-API2/inventory4/strict lint/fmt/book/rendered claims rc=0;978 three Git spans/body/public exact;archive1432/65,per-generation21/64 and44/64,rc=0.
-promotion: declined (existing original-copy/explicit repair contract). G1still6/18;joined-result fields next,consumer/physical integration pending.
+0804 matches actual result identity/topology/construction/fold/population/independent metadata under complete original/copy/repair parents.
+Native result4/prior original4 pass,including2holes/8construction/fold and retained evidence0 requests;one shared fixture tree fixes strict duplicate-module lint without allowances.
+API2/inventory5/strict lint/fmt/book/rendered claims rc=0;979 three Git spans/body/public exact;archive1433/66,per-generation21/64 and45/64,rc=0.
+promotion: declined (existing exact native inventory contract). G1still6/18;complete consumer/repair declarations next;physical/full integration pending.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

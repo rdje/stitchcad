@@ -1,6 +1,6 @@
 //! Actual complete construction/cut/source parents with explicit original construction Omit requests.
 #[path = "join_edges.rs"]
-mod edges;
+pub mod edges;
 pub use edges::id;
 use sc_core::construction::*;
 pub fn with_construction(extra: bool, run: impl FnOnce(RequiredJoinConstructionTargets<'_>)) {
