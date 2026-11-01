@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — original join Edge attribution
+## _(2026-11-01 UTC)_ — complete surviving join cut sources
 
-0781 binds explicit persistent tags,A/B/family locations and held ranges to actual original fields.
-Whole N/2N precedes fields/allocation;repeat sources stay distinct,empty metadata grants no result.
-Actual candidate/role/occurrence pointers and traversals survive;no selected-bank survival is inferred. Native4/prior identity4/API5/join book10/lint/fmt/book pass0;956 Git/body/public reader exact.
-promotion: declined (existing source/role contract). G1still6/18;complete surviving cut coverage next.
+0782 requires whole/outside cut partitions,excludes consumed bank interiors and preserves unrelated fields.
+Whole N/R/N-index admission precedes scans;native4/prior manifest4/API3/join book11/lint/fmt/book pass0.
+957 Git/body/public bytes exact;stale overview truing/join availability corrected against actual native scope.
+promotion: declined (existing exact-splice/coverage boundary). G1still6/18;explicit parameter directions next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

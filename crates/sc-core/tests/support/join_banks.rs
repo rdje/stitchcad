@@ -11,6 +11,7 @@ pub enum SpanFixture {
     Declared,
     RetainedWhole,
     RetainedTail,
+    RetainedMiddle,
 }
 #[derive(Clone, Copy)]
 pub struct BankFixture {
@@ -20,6 +21,7 @@ pub struct BankFixture {
     pub span: SpanFixture,
     pub extra_piece: bool,
     pub extra_occurrences: bool,
+    pub bank_in_holes: bool,
 }
 impl BankFixture {
     pub fn basic() -> Self {
@@ -30,6 +32,7 @@ impl BankFixture {
             span: SpanFixture::Declared,
             extra_piece: false,
             extra_occurrences: false,
+            bank_in_holes: false,
         }
     }
 }
@@ -69,6 +72,13 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
                 ];
                 d.cut_on_fold = true;
                 d.fold_edges = vec![edge];
+                if options.bank_in_holes {
+                    let outside = *d.holes.first().expect("hole").first().expect("hole field");
+                    let bank = *d.boundary.first().expect("bank field");
+                    d.boundary = vec![outside];
+                    d.holes = vec![vec![bank]];
+                    d.fold_edges = vec![outside.edge];
+                }
             }
             if let Some(material) = options
                 .source_materials
@@ -116,21 +126,42 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
             definition.id = id(302);
             definition.ease = seams::first_span(&original).retain_ease_source().into();
         }
-        SpanFixture::RetainedTail => {
-            let half = Param::new(Rational::new(1, 2).expect("half")).expect("unit interval");
+        SpanFixture::RetainedTail | SpanFixture::RetainedMiddle => {
+            let middle = matches!(options.span, SpanFixture::RetainedMiddle);
+            let cut = Param::new(Rational::new(1, if middle { 4 } else { 2 }).expect("source cut"))
+                .expect("unit interval");
+            let opposite = Param::new(cut.as_rational().one_minus().expect("opposite cut"))
+                .expect("unit interval");
             let [_, tail] = seams::first_span(&original)
                 .retain_ease_source()
                 .split_at(
                     EdgeAnchor {
                         edge: definition.a.range.edge(),
-                        param: half,
+                        param: cut,
                     },
                     EdgeAnchor {
                         edge: definition.b.range.edge(),
-                        param: half,
+                        param: opposite,
                     },
                 )
                 .expect("actual retained tail");
+            let tail = if middle {
+                let [selected, _] = tail
+                    .split_at(
+                        EdgeAnchor {
+                            edge: definition.a.range.edge(),
+                            param: opposite,
+                        },
+                        EdgeAnchor {
+                            edge: definition.b.range.edge(),
+                            param: cut,
+                        },
+                    )
+                    .expect("actual retained middle");
+                selected
+            } else {
+                tail
+            };
             definition.id = id(302);
             definition.a = tail.side(SeamSideId::A);
             definition.b = tail.side(SeamSideId::B);

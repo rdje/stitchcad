@@ -1,44 +1,12 @@
 //! Explicit whole join Edge candidate attribution to actual original occurrence fields.
 #![allow(clippy::expect_used)]
 #[allow(dead_code)]
-#[path = "support/join_banks.rs"]
+#[path = "support/join_edges.rs"]
 mod common;
-use common::{id, with_custom_banks, BankFixture};
-use sc_core::{construction::*, name::MachineToken, ontology::*};
+use common::{id, with_identity, BankFixture};
+use sc_core::{construction::*, ontology::*};
 fn tag(n: u32) -> LocalTag {
     LocalTag::new(n)
-}
-fn with_identity(options: BankFixture, run: impl FnOnce(DeclaredJoinPieceIdentity<'_>)) {
-    with_custom_banks(options, |banks| {
-        let tags = [9, 2, 4, 5, 6, 8, 10, 11, 12, 13, 7];
-        let raw = EdgeOutputRoleCatalog::new(
-            id(1000),
-            tags.into_iter()
-                .map(|t| {
-                    EdgeOutputRoleDefinition::new(
-                        tag(t),
-                        MachineToken::new(format!("edge_{t}")).expect("canonical key"),
-                    )
-                })
-                .collect(),
-            tags.into_iter().filter(|t| *t != 7).map(tag).collect(),
-        );
-        let b = raw
-            .definitions()
-            .iter()
-            .map(|d| d.key().as_str().len())
-            .sum();
-        let limits = EdgeOutputRoleCatalogLimits::new(11, 10, b);
-        let catalog = raw.admit(limits).expect("whole actual catalogue");
-        let roles = banks
-            .bind_edge_roles(&catalog, limits)
-            .expect("actual owner");
-        let field = id(5000);
-        let identity = roles
-            .declare_piece_identity(&field, JoinPieceIdentityLimits::new(1))
-            .expect("actual local identity");
-        run(identity);
-    });
 }
 fn range(identity: &DeclaredJoinPieceIdentity<'_>, side: SeamSideId) -> EdgeRange {
     *identity.roles().banks().bank(side).range()

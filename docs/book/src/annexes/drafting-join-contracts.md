@@ -456,3 +456,67 @@ A candidate range can still include a selected bank that the exact splice intend
 This stage proves literal source attribution only. Complete surviving outside-bank coverage,
 consumed-bank exclusion,output/source parameter correspondence,whole topology,fold/consumer
 ownership,retirement,currentness,global reference truth and atomic effects remain required later.
+
+## Require complete surviving cut-source coverage
+
+Call `AdmittedJoinEdges::require_cut_coverage` to require the exact original boundary/hole domains
+that survive removal of both selected banks. This is a native requirement over held source ranges;
+it performs no geometric join and constructs no result Piece.
+
+```rust
+use sc_core::construction::*;
+fn cover<'a>(edges:&'a AdmittedJoinEdges<'a>)
+    ->Result<CoveredJoinCutSources<'a>,JoinCutCoverageError<'a>> {
+    edges.require_cut_coverage(JoinCutCoverageLimits::new(4,2,4))
+}
+```
+
+`JoinCutCoverageLimits::new(N,R,W)` admits every original candidate N,every original A+B occurrence
+R,and a conservative N-entry sorted index **before** field scans or allocation. R includes repeated
+construction and separate fold fields;W counts all N before filtering to cut candidates. Earlier
+complete C/I/H/R/S/catalogue/candidate policies and caller-owned storage remain separate obligations.
+These entries are not allocator bytes. N4/R2/W4 is exact for four outside candidates on two banks.
+N3 refuses `Candidates`;R1 refuses `SourceOccurrences`;W3 refuses `Workspace`,before bank fields.
+
+After quotas,cut candidates with positive intersection with their selected bank refuse
+`ConsumedBank` in original candidate order. Endpoint-only contact remains legal. For bank `[1/4,3/4]`,
+`[0,1/4]` and `[3/4,1]` survive;`[1/8,1/2]` cannot be declared as a surviving cut fragment.
+The same rules apply to an actual bank on a hole. No boundary/hole field is substituted by an
+otherwise equal construction or fold field.
+
+Remaining cut candidates are indexed by their original A/B/family/location,then ascending source
+from/to and original candidate index. These lookup positions are transient source locators;
+persistent output identities still use the actual operation and explicit tag.
+
+Every original cut field is then checked in A/B,boundary/hole order. Unrelated cut edges require
+exact `[0,1]` partitions. A selected bank requires exact prefix `[0,from]` then suffix `[to,1]`
+partitions,omitting zero-width portions. Missing positive intervals refuse `Gap` with actual side,
+location and exact missing bounds. A candidate starting before the already covered cursor refuses
+`Overlap` with its original index and covered upper bound. No gap or overlap is repaired or skipped.
+
+For a retained tail with A bank `[1/2,1]` and B bank `[0,1/2]`,A's required cut source is `[0,1/2]`
+and B's is `[1/2,1]`. Removing A's candidate refuses its first gap even when B is complete. Two A
+candidates `[0,1/2]` and `[1/4,1/2]` overlap;the extra persistent role does not authorize duplicate
+cut content. All unrelated original hole/boundary intervals remain required too.
+
+`JoinCutCoverageError` retains actual `edges()`,the explicit `limits()` and first `refusal()`.
+`refused_candidate()` lends the actual original field only for ConsumedBank/Overlap. Domain causes
+lend their actual `source_occurrence()`;whole quota causes return `None`. A later failure returns
+no accepted coverage prefix. Complete original declarations and policies remain available.
+
+`CoveredJoinCutSources` retains those actual parents. `cut_occurrence_count()` includes every
+original cut field,including wholly consumed banks;`cut_edge_count()` counts actual indexed cut
+candidates. `workspace_entries()` reports conservative whole N admission. `cut_edges()` iterates
+source-field/ascending-range order and reverse;`outputs(side,location)` lends that original cut
+field's authentic candidates. Missing/noncut locations give an empty iterator. Original authored
+candidate order remains on `edges()`,with every construction/fold declaration still present.
+
+Work is O(N log(N+2)+(H+R)log(N+2)),with N sorted-index entries and no registry/provider/geometry
+calls. Construction/fold fields are not cut partitions and cannot substitute for missing cut fields;
+their semantic reconciliation remains explicit later work.
+
+If both banks occupy their entire original edges,neither has an outside interval. An empty candidate
+manifest can satisfy that cut-domain bookkeeping while retaining two original cut occurrences and a
+positive result population. It proves no nonempty,closed,simple or otherwise valid result Piece.
+Whole output topology,traversal,parameter correspondence,fold/marks/consumer ownership,retirement,
+currentness,geometric coincidence and atomic publication remain required before actual execution.

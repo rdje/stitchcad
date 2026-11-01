@@ -830,30 +830,39 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.identity`
   Status: `done`
   Goal:0780 scoped result Piece identity;[whole scope/proofs](../history/stitchcad-devnotes-part956.md).
-### G1-SLICE.5f.1.c.join.outputs.contours.manifest
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.manifest`
   Status: `done`
-  Goal:explicit persistent Edge tags,A/B/original family locations and positive held ranges under
-  whole N/checked2N policies;actual active-role and literal original occurrence association only.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_edge_manifest_contract --test join_piece_identity_contract`
-    through `scripts/local_environment.py`:manifest4/prior identity4 pass0,complete N/2N before operation/
-    malformed fields,and first original duplicate/undefined/inactive/location/literal-edge causes.
-  - [x] ADDRESSED: same native4+4 pass0;all boundary/hole/construction/fold fields and repeated uses
-    lend actual original pointers/traversal. `cargo test -p sc-core --doc construction::join::manifest`
-    through launcher:5 compiler guards pass0;selected strict clippy0. Explicit empty metadata only.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:10 pass0;
-    `cargo fmt --all -- --check`/`scripts/run_make.sh book` pass0;rendered candidate/quota/deferred domain
-    scope present.956 three Git spans/body/public reader exact;`history_archive.py --root . verify`
-    reports1410 logical/43 working,rc0. Full integration/geometry stays .5f.4.geometry/.5g/pre-push.
-  Work O(N log(N+D+2)),2N association/index entries;no keys/contour scan,registry/provider/geometry.
-  Original complete C/I/H/R/S/catalogue policies remain. Source locations never become output IDs.
-  Commit:STITCHCAD-G1-0781. promotion: declined (existing persistent-role/source-attribution contract).
+  Goal:0781 original Edge attribution;[whole scope/proofs](../history/stitchcad-devnotes-part957.md).
+### G1-SLICE.5f.1.c.join.outputs.contours.coverage
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.coverage`
+  Status: `done`
+  Goal:exact whole/outside cut-source partitions excluding both selected banks;actual parent fields,
+  all unrelated boundary/hole intervals and explicit resource/failure precedence preserved.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_cut_coverage_contract --test join_edge_manifest_contract`
+    through `scripts/local_environment.py`:coverage4/prior manifest4 pass0;middle/tail/hole-bank,quota-
+    before-consumed,gap/overlap,unrelated cut fields and noncut non-substitution witnesses.
+  - [x] ADDRESSED: same native4+4 pass0;`cargo test -p sc-core --doc construction::join::coverage`
+    through launcher:3 compiler guards pass0;selected strict clippy0. Whole N/R/N-entry quotas precede
+    scans/allocation;positive bank intersection refuses before source-ordered exact partitions.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:11 pass0;
+    `cargo fmt --all -- --check`/`scripts/run_make.sh book` pass0.957 three Git spans/body/public reader
+    exact;`history_archive.py --root . verify`:1411 logical/44 working,rc0. Rendered coverage/empty-
+    result scope present. Full geometry/integration remains .5f.4.geometry/.5g/pre-push.
+  Draft checks exposed a shared-fixture tag helper lost during extraction(E0425),two unchecked-slice
+  lints and reverse-next test lint;direct LocalTag construction,bounded slice-iterator grouping and
+  next_back fixed them. Final focused checks above pass;no panic fallback/allowance was introduced.
+  Owned doc drift fixed:operation overview reported native truing coverage pending despite0771 and
+  join outputs/coverage pending despite these declarations. Canonical done truing leaves/native4
+  re-derived scope;corrected summary/rows retain actual fitting/effects/full-output pending. Book0,
+  rendered old wording absent/new boundaries present,all overview code fences byte-unchanged.
+  Cut-only coverage may be empty when whole banks are consumed;this is no valid/nonempty result.
+  Commit:STITCHCAD-G1-0782. promotion: declined (existing exact-splice/source coverage boundary).
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.directions`
   Status: `pending`
-  Goal:complete native exact surviving cut-source partitions under full resources:remove both selected
-  bank domains,preserve all outside intervals and unrelated original cut occurrences without gaps/
-  overlaps. Explicit Edge candidates retain original role/field/range attribution;full result contours,
-  construction/fold/consumer reconciliation,parameter correspondence and geometry remain later owners.
+  Goal:explicit complete per-output source-relative parameter direction after cut coverage,including
+  noncut candidates. Actual persistent membership/original fields and complete N/M/2M limits;no
+  inference from physical reflection,sewing direction,Piece traversal or moving-frame orientation.
+  Actual numeric interior maps and whole result contour topology remain later required work.
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
   Status: `pending`
   Goal:reconcile declared join variants against v1 requirements;actual geometry/G3/bus/full verification

@@ -5,6 +5,10 @@ mod banks;
 mod binding;
 pub use banks::{BoundJoinCutBanks, JoinCutBank, JoinCutBankError, JoinCutBankRefusal};
 pub use binding::{BoundJoinPiecesAtSeam, BoundJoinSide, JoinBindingError, JoinBindingRefusal};
+mod coverage;
+pub use coverage::{
+    CoveredJoinCutSources, JoinCutCoverageError, JoinCutCoverageLimits, JoinCutCoverageRefusal,
+};
 mod identity;
 mod inventory;
 pub use identity::{
