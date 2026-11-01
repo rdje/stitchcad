@@ -296,3 +296,48 @@ original explicit request/policy. `coverage()` lends the authentic partition for
 first resource,preservation or original partition cause. Original candidates,roles and source fields
 remain unchanged. These are required outcomes,not achieved no-op/refit,geometric map,deterministic
 curve selection,currentness,all-copy observer or atomic publication certificates.
+
+## Require original endpoint,stop and copy preservation
+
+`RequiredTruingOutcome::require_locks(TruingLockLimits::new(C,S))` produces authentic
+`RequiredTruingLocks` for either explicit outcome. C counts the **whole retained CutPlan**,including
+unrelated Pieces' copies. S counts **every original span stop**,on both sides. Whole C quota,then
+whole S quota precede any copy filtering or endpoint/stop inspection. Admission takes constant
+work/space and allocates nothing;earlier source/copy/role/candidate resources remain separate.
+
+```rust
+use sc_core::construction::*;
+fn require<'a>(outcome:&'a RequiredTruingOutcome<'a>)
+    ->Result<RequiredTruingLocks<'a>,TruingLockError<'a>> {
+    outcome.require_locks(TruingLockLimits::new(2,1))
+}
+let limits=TruingLockLimits::new(2,1);
+assert_eq!((limits.copies(),limits.stops()),(2,1));
+```
+
+For a two-copy plan and one stop,C1/S0 refuses `Copies { required:2, allowed:1 }`,even when only
+one copy belongs to the selected Piece. C2/S0 refuses `Stops`;C2/S1 admits. Zero new candidates
+and explicit source preservation do not remove either obligation. Errors keep the complete actual
+outcome and original limits/cause;no prefix lock context escapes.
+
+`outcome()`, `copies()`, `source()` and `limits()` lend the actual complete original parents and
+policy. `endpoints()` always requests both selected held range endpoints in From/To parameter
+order,independent of physical traversal direction. Each `TruingEndpointRequirement` retains the
+whole `context()`,explicit `endpoint()` and actual original `source_range()` field. `anchor()` is
+that original edge and exact lower/upper parameter;it is not an evaluated position,current resolved
+reference,new PointRef or a source/output correspondence. Both original geometric positions remain
+required locks even for partial domains such as1/4–3/4.
+
+`stops()` lends all original entries in authored order and reverse,without deduplication or
+selected-side filtering. Each `TruingStopRequirement` retains the whole `context()`,original
+`index()` and actual `stop()` field. Its `side()`, `copy()` and `piece()` follow that stop's **own**
+original A/B side. With adjusted side B,an original A-side landmark remains required and still
+borrows A's actual span field,physical copy and pattern Piece. Resolving its semantic landmark and
+proving its position/currentness remain later obligations. Traversing the requests takes O(S).
+
+`affected_copies()` scans at most C retained-plan entries without allocation and lends every copy
+of the selected pattern Piece in original plan order. When A200 and reflected B201 share Piece100,
+both remain affected;selecting A cannot freeze B. This is a supplied-plan inventory,not a complete
+current Design or semantic/sewing observer census. No method moves an endpoint/stop,changes a copy,
+evaluates a curve,accepts a fit,repairs a held reference or grants atomic authoring authority.
+Mandatory evidence requests and actual geometry/execution retain their separate owners.

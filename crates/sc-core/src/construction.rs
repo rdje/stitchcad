@@ -214,13 +214,14 @@ pub use walk::{
 mod truing;
 pub use truing::{
     AdmittedTruingEdges, BoundConstrainedTruing, BoundTruingCopyInventory, BoundTruingEdgeRoles,
-    BoundTruingSourceDomain, ConstrainedSeamTruing, CoveredTruingSourceDomain,
+    BoundTruingSourceDomain, ConstrainedSeamTruing, CoveredTruingSourceDomain, RequiredTruingLocks,
     RequiredTruingOutcome, TruingBindingError, TruingBindingRefusal, TruingCopyInventoryError,
     TruingCopyInventoryLimits, TruingCopyInventoryRefusal, TruingEdgeCandidate, TruingEdgeManifest,
     TruingEdgeManifestError, TruingEdgeManifestLimits, TruingEdgeManifestRefusal,
-    TruingEdgeRoleBindingError, TruingEdgeRoleBindingRefusal, TruingFitProvider, TruingInputError,
-    TruingInputRole, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
-    TruingOutputEdge, TruingSourceCoverageError, TruingSourceCoverageLimits,
+    TruingEdgeRoleBindingError, TruingEdgeRoleBindingRefusal, TruingEndpoint,
+    TruingEndpointRequirement, TruingFitProvider, TruingInputError, TruingInputRole,
+    TruingLockError, TruingLockLimits, TruingLockRefusal, TruingOutcomeError, TruingOutcomeIntent,
+    TruingOutcomeRefusal, TruingOutputEdge, TruingSourceCoverageError, TruingSourceCoverageLimits,
     TruingSourceCoverageRefusal, TruingSourceDomainEdge, TruingSourceDomainError,
-    TruingSourceDomainLimits, TruingSourceDomainRefusal,
+    TruingSourceDomainLimits, TruingSourceDomainRefusal, TruingStopRequirement,
 };

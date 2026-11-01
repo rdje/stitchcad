@@ -876,22 +876,30 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0756 exact held-domain partition;[whole scope/proofs](../history/stitchcad-devnotes-part932.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.policy`
   Status: `done`
-  Goal:explicit refit/unchanged intent bound to whole original source/candidate context;
-  no inference of no-op or retirement from empty membership,coverage or active role declarations.
-  - [x] ISSUE:whole-domain membership/coverage cannot select an outcome intent.
-  - [x] ROOT CAUSE: cargo test -p sc-core --test truing_source_coverage_contract:4 pass,rc=0;
-    positive-domain empty metadata refuses coverage;nonempty coverage carries no physical effect.
-  - [x] FIX:explicit PreserveSource/Refit;whole N before branches,N0 preservation or real partition.
-  - [x] ADDRESSED: cargo test -p sc-core --test truing_outcome_contract:3 pass,rc=0;
-    empty preserve/refit discrimination,whole quotas,original cause/parents and no mode fallback.
-  - [x] NO REGRESSION:prior partition4,API3/book6,selected Clippy/fmt/build/render pass;rc=0.
-    Whole0756 scope/lesson/ledger932 retained byte-exact;actual fit and broad integration deferred .5g/.5f.4.
-  - [x] LOCKSTEP:book/live/pointer/journals aligned;promotion: declined (existing explicit-outcome pattern).
-  Commit:STITCHCAD-G1-0757.
+  Goal:0757 explicit outcome;[whole scope/proofs](../history/stitchcad-devnotes-part933.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bounded endpoint/stop/reference and all-copy observer/fit evidence requirements;
   native source partitions never substitute for actual mappings or atomic execution.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references.locks`
+  Status: `done`
+  Goal:whole plan-copy/stop quotas before authentic selected endpoint/all span-stop/all-copy
+  lock requests bound to the actual explicit outcome. Preserve unfiltered original stop order/sides.
+  - [x] ISSUE:outcome intent alone carries no bounded authentic endpoint/stop/copy lock requests.
+  - [x] ROOT CAUSE:original span stops/copy owners remain in the real source,including A stops
+    under adjusted B;cargo test -p sc-core --test truing_lock_contract:3 pass,rc=0.
+  - [x] FIX:whole C then S before views;authentic original endpoint/stop/all-affected-copy requests.
+  - [x] ADDRESSED:truing_lock_contract:3 pass,rc=0;both outcomes/sides,unrelated copies,shared
+    counterpart,actual field borrows,original side attribution/order and quota equality/refusals.
+  - [x] NO REGRESSION:prior outcome3,lock API5/book7,selected Clippy/fmt/build/render pass;rc=0.
+    Initial unused-helper/manual-back-iteration test warnings fixed;strict final lint clean.
+    Whole0757 receipt933 read-back byte-exact;actual mapping/fit/broad integration remain .5g/.5f.4.
+  - [x] LOCKSTEP:book/live/pointer/journals aligned;promotion: declined (existing source-lock scope).
+  Commit:STITCHCAD-G1-0758.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references.evidence`
+  Status: `pending`
+  Goal:complete mandatory currentness/identity/refit/fit/ease/repair/all-copy/authority evidence
+  requests over actual locks/outcome;no provider call,readiness,accepted mapping or fit verdict.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.coverage.tracking`
   Status: `done`
   Goal:0755 exact walk split/receipt930;census0;promotion: declined (navigation).

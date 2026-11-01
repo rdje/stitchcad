@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — require explicit truing outcome intent
+## _(2026-11-01 UTC)_ — bind original truing lock requirements
 
-0757 requires explicit PreserveSource/Refit after whole N admission. Preservation requires zero new candidates;Refit retains actual complete partition and exact quota/gap/overlap cause. No fallback or achieved no-op/fit inferred.
-Native3/prior-partition4/API3/book6,selected Clippy/fmt/build/render pass0. Source/provider/copy/role parents remain actual;empty preservation keeps active roles and original fit obligation. D372 warning remains owned.
-Whole0756 scope/lesson/ledger retained932 before growth. Promotion: declined (existing explicit-outcome pattern). Endpoint/stop/reference/observer requests,variant policy and actual geometry/currentness/effects/broad integration remain owed;G1still6/18.
+0758 admits whole retained-plan C then all span-stop S before authentic original endpoint,stop and affected-copy requests. Both explicit outcomes retain both endpoints/all stops;A stops keep A fields/copy/Piece when adjusted B. Shared-Piece counterparts remain affected.
+Native3/prior-outcome3/API5/book7,selected Clippy/fmt/build/render pass0. Initial test helper/back-iteration warnings resolved;strict lint clean. No positions,maps,currentness,observer census or fit accepted;D372 warning remains owned.
+Whole0757 task/lesson/ledger retained933 before growth. Promotion: declined (existing source-lock scope). Mandatory evidence requests next;actual curve/fit/variant/currentness/all-copy/authority/broad integration remain owned;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

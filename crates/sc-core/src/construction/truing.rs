@@ -29,7 +29,12 @@ pub use outcome::{
     RequiredTruingOutcome, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
 };
 mod binding;
+mod locks;
 pub use binding::{BoundConstrainedTruing, TruingBindingError, TruingBindingRefusal};
+pub use locks::{
+    RequiredTruingLocks, TruingEndpoint, TruingEndpointRequirement, TruingLockError,
+    TruingLockLimits, TruingLockRefusal, TruingStopRequirement,
+};
 
 /// Required quantitative length-fit source;the actual tolerance remains borrowed and unchanged.
 /// Source-registry membership,derivation truth and fit/error-budget evidence remain separate.
