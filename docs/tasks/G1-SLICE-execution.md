@@ -887,21 +887,9 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0758 actual lock requests;[whole scope/proofs](../history/stitchcad-devnotes-part934.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references.evidence`
   Status: `done`
-  Goal:complete mandatory currentness/identity/refit/fit/ease/repair/all-copy/authority evidence
-  requests over actual locks/outcome;no provider call,readiness,accepted mapping or fit verdict.
-  - [x] ISSUE:bounded source locks do not themselves request all remaining evidence scopes.
-  - [x] ROOT CAUSE:actual original locks/outcome expose source context,not accepted provider proofs;
-    cargo test -p sc-core --test truing_evidence_contract:2 pass,rc=0;eleven distinct literal scopes.
-  - [x] FIX:explicit context/fit/effect source groups;authentic complete mandatory request traversal.
-  - [x] ADDRESSED:truing_evidence_contract:2 pass,rc=0;both outcomes/sides,all original id fields,
-    borrowed owners,exact forward/reverse scopes and shared/zero providers without skipped obligations.
-  - [x] NO REGRESSION:prior lock3,evidence API4/book8,selected Clippy/fmt/build/render pass;rc=0.
-    Whole0758 receipt934 read-back byte-exact;current geometry/fit/authority/broad integration deferred .5g/.5f.4.
-  - [x] LOCKSTEP:book/live/pointer/journals aligned;whole-Piece continuation explicitly owned P1.
-    promotion: declined (scoped continuation,existing uncertainty and evidence-request boundaries).
-  Commit:STITCHCAD-G1-0759.
+  Goal:0759 complete evidence requests;[whole scope/proofs](../history/stitchcad-devnotes-part935.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece`
-  Status: `pending`
+  Status: `in_progress`
   Goal:P1 before native family closure:explicit whole-Piece reconciliation for partial selected spans.
   Reproduce:truing_source_domain_contract whole0–1 on selected1/4–3/4 refuses BeforeStart;
   ontology/piece.rs DirectedEdge/PieceDefinition contours carry whole EdgeRefs,not EdgeRanges.
@@ -909,13 +897,28 @@ retain their complete task branch,original goals and proof links in the bounded 
   outside portions. Native declarations must cover outside roles,all occurrences/fold and lineage.
   Actual geometry/current ledger application remains .5f.2/.5f.4.geometry;do not invent results.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.roles`
-  Status: `pending`
+  Status: `done`
   Goal:explicit sourced prefix/suffix roles outside the selected domain,with full quotas and
   actual typed catalogue association;no default tags or caller-supplied replacement source frame.
+  - [x] ISSUE:partial selected coverage needs explicit outside identities;D375 topic links were omitted.
+  - [x] ROOT CAUSE:truing_source_domain_contract:4 pass,rc=0;whole0–1 is outside selected1/4–3/4. Existing book_publication INDEX_COVERAGE reproduces12 predecessor/13 current missing paths.
+  - [x] FIX:two explicit outside fields;N then actual D/A/B admission;exact source-derived ranges and distinct active roles. Dedicated whole-Piece companion preserves the outside section byte-exact.
+  - [x] ADDRESSED:cargo test -p sc-core --test truing_outside_role_contract:3 pass,rc=0;both sides/outcomes,four domains,quota and field refusals. Existing INDEX_COVERAGE red→green,13→0 missing,rc=0.
+  - [x] NO REGRESSION:prior domain4,API5/book8+1,selected Clippy/fmt/build/render pass;rc=0. Original eight Rust fences/0759 receipt935/closed D373-D374 bytes exact. Actual geometry/currentness/broad integration remain .5g/.5f.4.
+  - [x] LOCKSTEP:book/SUMMARY/topic/live/pointer/journals aligned;D375 fixed. Promotion: declined (scoped native attribution/navigation;existing source-frame policy).
+  Commit:STITCHCAD-G1-0760.
+  D375 P2 fixed here:canonical drafting chapter topic links restored during companion sync.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours`
   Status: `pending`
   Goal:complete boundary/hole/construction/fold occurrence placement and traversal requirements;
   retain unaffected source fields and reject incomplete replacement attribution.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.directions`
+  Status: `pending`
+  Goal:explicit complete selected/outside output parameter directions with dedicated source-relative
+  choices,whole output/assignment/2M workspace quotas and exact original id coverage;no orientation default.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement`
+  Status: `pending`
+  Goal:complete original occurrence/fold replacement plan using explicit output directions and source order.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage`
   Status: `pending`
   Goal:explicit original whole-edge retention/retirement/reference-repair declarations for the

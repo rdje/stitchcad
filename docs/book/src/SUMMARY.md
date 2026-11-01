@@ -1,7 +1,6 @@
 # Summary
 [Introduction](introduction.md)
 # Learning path
-
 - [From an idea to a pattern](learn/design-to-pattern.md)
 - [Measurements and fit](learn/measurements-and-fit.md)
 - [Pieces and assembly](learn/pieces-and-assembly.md)
@@ -97,6 +96,7 @@
   - [Walk output and shared-mark contracts](annexes/drafting-walk-outputs.md)
   - [Walk semantic identity and retention](annexes/drafting-walk-identities.md)
   - [Truing output and source contracts](annexes/drafting-truing-outputs.md)
+  - [Truing whole-Piece declarations](annexes/drafting-truing-piece.md)
   - [Mirror Piece-copy contracts](annexes/drafting-mirror-contracts.md)
   - [Mirror output attribution and contours](annexes/drafting-mirror-outputs.md)
   - [Mirror physical-copy contracts](annexes/drafting-mirror-copies.md)

@@ -29,6 +29,11 @@ pub use outcome::{
     RequiredTruingOutcome, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
 };
 mod binding;
+mod outside;
+pub use outside::{
+    AdmittedTruingOutsideRoles, TruingOutsideIntent, TruingOutsideOutput, TruingOutsidePart,
+    TruingOutsideRoleError, TruingOutsideRoleLimits, TruingOutsideRoleRefusal, TruingOutsideRoles,
+};
 mod evidence;
 pub use evidence::{
     RequiredTruingEvidence, TruingContextSources, TruingEffectSources, TruingEvidenceKind,

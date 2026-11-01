@@ -396,3 +396,5 @@ Piece contours carry whole edge references;selected-source candidates are not a 
 replacement. Native whole-Piece role/contour/lineage reconciliation remains a tracked continuation,
 before family closure. Actual current identity application,mapped geometry and atomic execution
 retain their existing G1/G2/G3/bus owners.
+
+Continue with the [whole-Piece declarations](drafting-truing-piece.md) for explicit outside-fragment roles.

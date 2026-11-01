@@ -8,6 +8,14 @@ pub fn q(n: i64, d: i64) -> Param {
     Param::new(Rational::new(n, d).expect("exact fraction")).expect("unit interval")
 }
 pub fn with_partial(side: SeamSideId, run: impl FnOnce(BoundTruingEdgeRoles<'_>)) {
+    with_domain(side, q(1, 4), q(3, 4), run);
+}
+pub fn with_domain(
+    side: SeamSideId,
+    from: Param,
+    to: Param,
+    run: impl FnOnce(BoundTruingEdgeRoles<'_>),
+) {
     let f = sources::fixture(false);
     let inventory = PieceInventory::new(f.pieces.clone()).expect("whole actual inventory");
     let mut span = sources::first_span(&f.graph).definition().clone();
@@ -15,15 +23,15 @@ pub fn with_partial(side: SeamSideId, run: impl FnOnce(BoundTruingEdgeRoles<'_>)
         SeamSideId::A => &mut span.a,
         SeamSideId::B => &mut span.b,
     };
-    selected.range = EdgeRange::new(selected.range.edge(), q(1, 4), q(3, 4))
-        .expect("actual positive partial domain");
+    selected.range =
+        EdgeRange::new(selected.range.edge(), from, to).expect("actual positive partial domain");
     let marks = if side == SeamSideId::A {
         vec![SewingLandmark::Turn(
             TurnPoint::new(
                 id(401),
                 EdgeAnchor {
                     edge: span.a.range.edge(),
-                    param: q(1, 4),
+                    param: from,
                 },
                 inventory.piece(id(100)).expect("actual A"),
                 &f.ledger,

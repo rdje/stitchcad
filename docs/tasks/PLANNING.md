@@ -1185,6 +1185,12 @@ Resolve index containment with actual search checks;no warning suppression/cap r
 
 ## D373/D374 — active journal documentation scope/storage drift
 
-P1/P2 fixed0696;owner G1-SLICE.5f.1.c.offset.outputs.tags.continuity.recovery. D373 active decision said no stored lengths/general G2 interval handoff;D374 Declared Rustdoc said contiguous tags after0694.
-Root:D373 a6d465f9 already stored merge Length evidence;affine primitive is not general normal correspondence. D37491ebe554 added sparse caller-order declarations without updating the enum comment. Impact:misleading planner/API guidance;runtime unaffected.
-Fix:stored-evidence/caller-order wording and geometry handoff scoped. Original source/history and three exact Rustdoc-only replacements/book/render/fmt pass;algorithms unchanged. No geometry/role-continuity certificate.
+Fixed0696;[whole original ledger/proofs](../history/stitchcad-devnotes-part935.md).
+
+## D375 — drafting chapters missing from the topic index
+
+P2 fixed0760;owner G1-SLICE.5f.1.c.true.outputs.manifest.piece.roles;whole-Piece navigation sync.
+Repro:book_publication.chapters/require INDEX_COVERAGE finds12 predecessor drafting paths missing;13 with the new companion.
+Root:SUMMARY registers these native chapters but topic-index.md lacks their targets despite its complete-coverage claim.
+Impact:topic navigation omits implemented native contracts;the existing publication guard rejects the index. No runtime defect.
+Fix:canonical SUMMARY titles/targets restore all13 routes;existing INDEX_COVERAGE guard red before/green after,rc=0.

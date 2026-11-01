@@ -9,6 +9,9 @@ mod editing_examples {}
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-truing-outputs.md")]
 mod truing_output_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-truing-piece.md")]
+mod truing_piece_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-walk-outputs.md")]
 mod walk_output_examples {}
 #[cfg(doctest)]
@@ -213,17 +216,19 @@ pub use walk::{
 };
 mod truing;
 pub use truing::{
-    AdmittedTruingEdges, BoundConstrainedTruing, BoundTruingCopyInventory, BoundTruingEdgeRoles,
-    BoundTruingSourceDomain, ConstrainedSeamTruing, CoveredTruingSourceDomain,
-    RequiredTruingEvidence, RequiredTruingLocks, RequiredTruingOutcome, TruingBindingError,
-    TruingBindingRefusal, TruingContextSources, TruingCopyInventoryError,
+    AdmittedTruingEdges, AdmittedTruingOutsideRoles, BoundConstrainedTruing,
+    BoundTruingCopyInventory, BoundTruingEdgeRoles, BoundTruingSourceDomain, ConstrainedSeamTruing,
+    CoveredTruingSourceDomain, RequiredTruingEvidence, RequiredTruingLocks, RequiredTruingOutcome,
+    TruingBindingError, TruingBindingRefusal, TruingContextSources, TruingCopyInventoryError,
     TruingCopyInventoryLimits, TruingCopyInventoryRefusal, TruingEdgeCandidate, TruingEdgeManifest,
     TruingEdgeManifestError, TruingEdgeManifestLimits, TruingEdgeManifestRefusal,
     TruingEdgeRoleBindingError, TruingEdgeRoleBindingRefusal, TruingEffectSources, TruingEndpoint,
     TruingEndpointRequirement, TruingEvidenceKind, TruingEvidencePolicy, TruingEvidenceRequirement,
     TruingFitProvider, TruingFitSources, TruingInputError, TruingInputRole, TruingLockError,
     TruingLockLimits, TruingLockRefusal, TruingOutcomeError, TruingOutcomeIntent,
-    TruingOutcomeRefusal, TruingOutputEdge, TruingSourceCoverageError, TruingSourceCoverageLimits,
+    TruingOutcomeRefusal, TruingOutputEdge, TruingOutsideIntent, TruingOutsideOutput,
+    TruingOutsidePart, TruingOutsideRoleError, TruingOutsideRoleLimits, TruingOutsideRoleRefusal,
+    TruingOutsideRoles, TruingSourceCoverageError, TruingSourceCoverageLimits,
     TruingSourceCoverageRefusal, TruingSourceDomainEdge, TruingSourceDomainError,
     TruingSourceDomainLimits, TruingSourceDomainRefusal, TruingStopRequirement,
 };

@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — require complete original truing evidence scopes
+## _(2026-11-01 UTC)_ — bind explicit truing outside-fragment roles
 
-0759 retains eleven distinct context/fit/effect source requests on actual bounded locks/outcome. Both explicit modes and shared/zero providers skip none;actual original source fields stay borrowed. No provider,readiness,currentness,map,fit or authority accepted.
-Native2/prior-lock3/API4/book8,selected Clippy/fmt/build/render pass0;whole0758 receipt934 exact0. Partial selected1/4–3/4 rejects whole0–1 while Piece contours carry whole EdgeRefs:outside roles/contours/lineage now P1 .manifest.piece before native closure.
-Promotion: declined (scoped continuation,existing evidence boundaries). Complete Piece replacement and deterministic variant policy next;actual geometry/currentness/fit/effects/broad integration remain owned. D372 search warning remains owned;G1still6/18.
+0760 binds explicit prefix/suffix fields under whole N/D/A/B limits to actual evidence/catalogue parents. Refit requires every positive outside portion;preservation requires both absent. Exact0/from and to/1 ranges,distinct active/unselected tags;no output orientation,placement,geometry or issuance inferred.
+Native3/prior-domain4/API5/book8+1,selected Clippy/fmt/build/render pass0. Whole-Piece companion preserves section bytes/eight prior Rust fences;SUMMARY stays120 lines. D375 existing INDEX_COVERAGE red12 predecessor/13 current missing→green0;canonical topic routes repaired.
+Whole0759/closed D373-D374 ledger retained935 exact0. Promotion: declined (scoped attribution/navigation). Explicit complete output parameter directions,contours/lineage then variant policy next;actual currentness/fit/geometry/effects/broad integration remain owned;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
