@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0769 — recover deterministic truing policy
+## STITCHCAD-G1-0770 — admit ordered truing curve alternatives
 
-- Recheck12 current clauses/11 files and four native curve-source interfaces before implementation.
-- Plan ordered explicit alternatives and first certified-feasible complete assignments with bounded domain.
-- Exact distinct-curve/equal-speed and four-order examples pass;book render and retention pass0.
-- Native admission/fitting remain pending;whole0768/closed P1 scope944 exact;Rust/tools unchanged.
+- Complete selected-role groups retain explicit priority and every original directed curve source/duplicate.
+- Bound N/M/K/full product/workspace before field scans/allocation;late-empty products avoid prefix overflow.
+- Actual refused geometry stays borrowed;curve4/prior3/API7/book7,strict lint/format and rendered contract pass0.
+- ADR-0003 records scoped priority/independence;whole0769 retained945. No native fit or chosen result.
 
 ## STITCHCAD-G1-0421 — preserve task-sibling ownership and sealed proof bytes
 
@@ -44,6 +44,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0769 source/policy task,lesson and ledger](docs/history/stitchcad-devnotes-part945.md) retain exact source bytes.
 
 [Whole0768 lineage task,lesson and ledger](docs/history/stitchcad-devnotes-part944.md) retain exact source bytes.
 

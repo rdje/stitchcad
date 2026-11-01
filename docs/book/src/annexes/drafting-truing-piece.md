@@ -341,19 +341,19 @@ all-copy effects,authority and atomic publication retain their separate executio
 These native whole-Piece declarations pass focused checks;the deterministic curve/refit selection
 and supported-domain review remains required before native truing family closure.
 
-## Planned deterministic curve selection
+## Declare deterministic curve alternatives
 
-The next native policy is **ordered declared curve alternatives**. This section specifies the
-planned declaration contract;its native admission and actual execution are not implemented yet.
+The native policy is **ordered declared curve alternatives**. Native admission validates complete
+local attribution and priority data;actual curve evaluation/selection remains G2/G3 work.
 It extends the existing constrained endpoint/stop-preserving variant. Endpoint movement,isolated
 copy forks and a separately authored target length/ease are not inferred by this policy.
 
 Locks and a target differential do not uniquely select a curve. For example,quadratic controls
 `(0,0),(1,1/2),(2,0)` and `(0,0),(1,−1/2),(2,0)` produce distinct curves with the same endpoints
-and pointwise squared speed `5−4t+4t²`. Their arclengths are equal;an endpoint stop distinguishes
+and squared speed `5−4t+4t²` in the Bézier parameter t. Their arclengths are equal;an endpoint stop distinguishes
 neither. This is a selection example,not implementation or physical-fitting evidence.
 
-For each actual **selected-domain output role**,the declaration will supply a nonempty ordered
+For each actual **selected-domain output role**,admission requires a nonempty ordered
 list of explicit curve alternatives. Each alternative is one actual `DirectedRange` referring to
 a named curve supplied earlier in the recipe. The published native line,center-arc and quadratic/
 cubic Bézier declarations supply stable logical edge outputs. The canonical executor still has to
@@ -370,7 +370,7 @@ from the corresponding original source portions. `PreserveSource` has an exactly
 proposal and retains its original obligations. For `Refit`,every actual selected role requires one
 group;unknown/outside roles,duplicates and missing/empty groups cannot silently supply a curve.
 
-Selection will use the explicit **first feasible complete assignment** policy. Groups and choices
+The declared policy is **first feasible complete assignment**. Groups and choices
 retain authored order. With role9 choices20/21 and role11 choices30/31,the complete order is
 `(20,30),(20,31),(21,30),(21,31)`;the rightmost group varies fastest. Persistent ids are never sorted
 to establish priority. Feasibility is evaluated on the complete proposed Piece and all coupled
@@ -384,13 +384,82 @@ Exhausting the declared alternatives can establish only that **this declared dom
 no certified-feasible assignment,not impossibility over every curve. Candidate generation and
 complete envelope coverage remain G3 implementation/validation obligations.
 
-Native admission will bound complete selected outputs N,raw groups M,all choice occurrences K,
-the checked complete combination count P and index/association workspace. Whole bounds precede
-field inspection or allocation;no prefix acceptance or default choice. The combination bound
-counts declarations,not actual fit cost or memory bytes. Geometry execution needs its own full
-resource admission before evaluating any assignment.
+`TruingCurveManifest` retains an explicit operation,required
+`TruingCurveSelectionPolicy::FirstFeasibleCompleteAssignment` and ordered
+`TruingCurveAlternatives` groups. Each group retains its actual selected `tag()` and complete
+`geometries()` list. Equal directed ranges remain distinct priority occurrences. There is no default
+policy,curve,direction or implicit alternative from an active metadata role.
 
-The next slice implements that native proposal/association only. The later coverage review remains
-open until supported-domain/variant obligations are reconciled. Actual curve generation,certified
-lengths/maps,feasibility,global currentness,repairs,effects,authority and atomic publication remain
-with the existing G1 ordered-program/geometry and G2/G3/bus owners. This plan narrows no v1 gate.
+```rust
+use sc_core::{construction::*,ontology::*};
+let geometry=|creator|DirectedRange {
+    range:EdgeRange::whole(EdgeRef::new(EntityId::from_bits(creator),LocalTag::FIRST)),
+    direction:Direction::Original,
+};
+let raw=TruingCurveManifest::new(EntityId::from_bits(1000),
+    TruingCurveSelectionPolicy::FirstFeasibleCompleteAssignment,vec![
+        TruingCurveAlternatives::new(LocalTag::new(9),vec![geometry(20),geometry(21)]),
+        TruingCurveAlternatives::new(LocalTag::new(11),vec![geometry(30),geometry(31)]),
+    ]);
+assert_eq!(raw.groups().len(),2);
+fn admit<'a>(raw:&'a TruingCurveManifest,lineage:&'a RequiredTruingLineage<'a>)
+    ->Result<AdmittedTruingCurveManifest<'a>,TruingCurveError<'a>> {
+    raw.admit(lineage,TruingCurveLimits::new(2,2,4,4,4))
+}
+```
+
+`TruingCurveLimits::new(N,M,K,P,W)` bounds every actual selected output N,every raw group M,
+every raw directed-choice occurrence K,the complete declared combination count P,and additional
+index/association workspace W. N excludes outside fragments. Whole N then M quotas precede
+any group-header scan. Checked K sum,P product and2M workspace precede whole K,P,W quotas;
+those precede operation equality,exact M=N cardinality,tag/choice inspection or allocation.
+Earlier parent/input storage bounds remain separate.
+
+For zero raw groups,P is0. Any empty group also makes the full product0,even if an earlier binary
+prefix would overflow;no spurious prefix overflow is reported. Otherwise a nonrepresentable full
+product refuses `CombinationOverflow`. P0 does not prove feasible preservation or a valid empty
+refit:outcome/cardinality and nonempty-group checks still apply. Choice/workspace arithmetic
+refuses `ChoiceCountOverflow`/`WorkspaceOverflow` when their complete populations cannot fit.
+
+With two selected roles and groups containing2 and3 choices,N2/M2/K5/P6/W4 is exact. N1
+refuses `SelectedOutputs`;M1 refuses `Groups`;K4 refuses `Choices`;P5 refuses `Combinations`;
+W3 refuses `Workspace`. Resource equality proceeds to `Operation` and exact `Count` checks.
+Counts include duplicate/unknown groups and repeated alternatives,before their fields are inspected.
+The combination bound counts declared assignments,not feasible results,actual fit cost or bytes.
+Geometry execution needs its own full resource admission before evaluating any assignment.
+
+After quotas/owner/cardinality,original groups are checked in priority order. A repeated selected
+role refuses `Duplicate`. An unknown or outside tag refuses `UnknownSelectedOutput`,even if that
+outside role is an actual active output. An actual selected role with no alternatives refuses
+`EmptyGroup`. A curve prerequisite from the same truing operation refuses `SelfSource`,retaining
+the original group/choice indices. Complete cardinality **plus** unique actual selected membership
+proves one group per selected output;equal counts alone are insufficient. No selected curve or
+accepted prefix escapes a failed admission.
+
+`PreserveSource` admits exactly no groups with N0/M0/K0/P0/W0 and the actual operation/policy.
+A supplied group refuses `Count`,rather than inventing a new output or geometry. An empty refit
+proposal also refuses `Count` when actual selected outputs exist. Neither case changes original
+identity,ease,locks,history or all-copy requirements.
+
+`AdmittedTruingCurveManifest` retains actual `manifest()`,actual `lineage()`,the original borrowed
+`policy()` and explicit `limits()`. It reports whole `choice_count()`, `combination_count()` and
+additional `workspace_entries()`. `groups()` lends original group order/reverse;`group(tag)` queries
+an actual selected group in O(log(M+2)) work. Outside/unassigned metadata roles return `None`.
+
+Each authentic `TruingCurveGroup` retains whole `context()`,original `index()`/`proposal()` and
+actual selected `output()` direction/source member. `alternatives()` lends every original choice
+in priority order and reverse. Each `TruingCurveAlternative` retains actual `group()`,original
+`index()` and original borrowed `geometry()`,including its distinct source bounds and traversal.
+No normalization,rescaling,deduplication or equal-looking replacement field is attached.
+
+Errors retain the whole original manifest,lineage,policy and first `refusal()`. For `SelfSource`,
+`refused_geometry()` lends the exact original directed field;for all other causes it returns `None`.
+The refusal keeps indices while the parent retains source data,so quota errors need no allocation.
+Admission costs O(M log(M+N+2)+K) work and at most2M additional logical index/association entries;
+these are not allocator bytes or a bound on prior storage or future fitting work.
+
+This implements native proposal/association only. Actual geometry lookup/currentness,prior recipe
+visibility and supported curve-kind checks remain ordered-program/geometry obligations.
+Candidate generation,certified lengths/maps,complete-assignment feasibility,visible repairs,effects,
+authority and atomic publication remain with existing G1/G2/G3/bus owners. The native coverage
+review is still open;this supplies no full-envelope or independent approval certificate.

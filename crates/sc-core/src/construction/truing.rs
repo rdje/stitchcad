@@ -29,6 +29,12 @@ pub use outcome::{
     RequiredTruingOutcome, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
 };
 mod binding;
+mod curves;
+pub use curves::{
+    AdmittedTruingCurveManifest, TruingCurveAlternative, TruingCurveAlternatives, TruingCurveError,
+    TruingCurveGroup, TruingCurveLimits, TruingCurveManifest, TruingCurveRefusal,
+    TruingCurveSelectionPolicy,
+};
 mod lineage;
 pub use lineage::{
     RequiredTruingLineage, TruingLineageError, TruingLineageLimits, TruingLineageRefusal,

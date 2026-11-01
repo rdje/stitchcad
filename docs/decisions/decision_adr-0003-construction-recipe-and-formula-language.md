@@ -7,7 +7,7 @@
 - **Owner / source:** leaf `G0-CONTRACT.9`, from roadmap §5 ADR-0003, §2.2, §3.1, §3.3, §4.2, §15.1
   and §15.3; the normative text is `docs/book/src/spec/formula-language.md` and its two parts
 
-answers: "what is the formula language?" · "why does a recipe round twice and not once per operator?" · "why can a formula not compare size labels?" · "which drafting system ships as the reference blocks?" · "why not Seamly2D's drafting?" · "what does a recipe's `assert` exist for?" · "what would reopen ADR-0003?"
+answers: "what is the formula language?" · "why does a recipe round twice and not once per operator?" · "why can a formula not compare size labels?" · "which drafting system ships as the reference blocks?" · "why not Seamly2D's drafting?" · "what does a recipe's `assert` exist for?" · "what would reopen ADR-0003?" · "how is a truing curve selected?"
 
 ## The decision
 
@@ -151,3 +151,32 @@ an inadmissible tolerance class. The reference records comparison (within or the
 name), requested tolerance_class and sorted contribution_sources. An equal numeric answer does not
 erase its derivation. Product typed context and arbitrary-input transcendental accuracy remain
 separate .5b–.5g obligations. D124 was pending when this ruling was made; its subsequent ruling is recorded above.
+
+## Native constrained truing priority —0770
+
+Author and applier:the same Codex engineer under the director's2026-11-01 PNT delegation;
+owner G1-SLICE.5f.1.c.true.variants.selection. This adopts native declaration semantics;
+execution/domain evidence remains **unapproved**,for the independent gate reviewer/domain seat.
+
+The recipe supplies ordered,nonempty curve alternatives for each selected output role. Each
+alternative retains an explicit DirectedRange of an earlier declared curve. Outside fragments
+retain their original geometry requirement;source preservation supplies no new-curve groups.
+The policy is first certified-feasible **complete assignment**,in authored Cartesian order,
+rightmost group fastest. Identity sorting does not establish priority. Source locks and length
+alone leave distinct equal-length curves;0769 records an exact reflected-quadratic witness.
+
+Whole N/M/K/combination/workspace bounds precede native field scans/allocation. Native admission
+only proves complete local attribution and priority data. Actual selection checks the complete
+proposed Piece,all coupled copies/observers,endpoint/stops and sourced fit/ease budgets.
+Unavailable/unsupported/uncertified/resource/cancel outcomes retain their causes;only a proved
+infeasible assignment can be skipped. Exhaustion is scoped to the declared alternatives.
+
+Consequences:tracked truing curve-admission tests and book examples verify bounds,completeness,
+original order and authentic source fields. G1-SLICE.5f.4.geometry/G3-GRADING.2 own actual
+candidate generation,certified feasibility/error propagation and envelope evidence;the native
+coverage review stays .true.variants.review. These checks grant no independent approval.
+The canonical contract is the truing whole-Piece book companion's curve-selection section.
+
+Reopen with a recorded recipe-policy/version decision if an actual supported garment requires
+a different selection rule or domain. Preserve authored priority/replay semantics and review
+all affected examples;no implicit optimizer,default curve or silent search-domain widening.

@@ -216,13 +216,15 @@ pub use walk::{
 };
 mod truing;
 pub use truing::{
-    AdmittedTruingDirections, AdmittedTruingEdges, AdmittedTruingOutsideRoles,
-    BoundConstrainedTruing, BoundExactTruingPieceSource, BoundTruingCopyInventory,
-    BoundTruingEdgeRoles, BoundTruingSourceDomain, ConstrainedSeamTruing,
+    AdmittedTruingCurveManifest, AdmittedTruingDirections, AdmittedTruingEdges,
+    AdmittedTruingOutsideRoles, BoundConstrainedTruing, BoundExactTruingPieceSource,
+    BoundTruingCopyInventory, BoundTruingEdgeRoles, BoundTruingSourceDomain, ConstrainedSeamTruing,
     CoveredTruingSourceDomain, RequiredTruingEvidence, RequiredTruingFold, RequiredTruingLineage,
     RequiredTruingLocks, RequiredTruingOutcome, TruingBindingError, TruingBindingRefusal,
     TruingContextSources, TruingContourError, TruingContourLimits, TruingContourRefusal,
     TruingCopyInventoryError, TruingCopyInventoryLimits, TruingCopyInventoryRefusal,
+    TruingCurveAlternative, TruingCurveAlternatives, TruingCurveError, TruingCurveGroup,
+    TruingCurveLimits, TruingCurveManifest, TruingCurveRefusal, TruingCurveSelectionPolicy,
     TruingDirectionAssignment, TruingDirectionError, TruingDirectionLimits,
     TruingDirectionManifest, TruingDirectionRefusal, TruingDirectionSource,
     TruingDirectionalOutput, TruingEdgeCandidate, TruingEdgeManifest, TruingEdgeManifestError,

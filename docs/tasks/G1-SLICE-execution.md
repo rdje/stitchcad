@@ -851,25 +851,26 @@ retain their complete task branch,original goals and proof links in the bounded 
   any added endpoint/copy variants;no guessed solver. Native output/real geometry owners stay separate.
 - ID: `G1-SLICE.5f.1.c.true.variants.contracts`
   Status: `done`
-  Goal:recover exact v1 requirements/interfaces and record planned deterministic policy before code.
-  - [x] ISSUE:endpoint/stop/length constraints do not select one curve;the native variant needs
-    explicit selection/domain semantics before closure. Actual geometry stays with existing owners.
-  - [x] ROOT CAUSE:current comparison against0688 source-and-render.json confirms12 clauses in
-    11 files;four native line/arc/Bezier/DirectedRange interfaces inspected;rc=0. Exact reflected
-    quadratic pair has equal speed polynomial5−4t+4t² and endpoints but distinct interiors;rc=0.
-  - [x] FIX:book records planned ordered declared alternatives,first certified-feasible complete
-    assignment,full N/M/K/P/workspace bounds and actual-source/resource/error/domain boundaries.
-  - [x] ADDRESSED:target/history-proof-0769-truing-policy/contracts.json retains current source
-    hashes/clauses,interfaces,exact polynomial and four ordered tuples;all assertions rc=0.
-  - [x] NO REGRESSION:book build/focused rendered policy/examples rc=0;archive1398/31 rc=0.
-    Rust/tool bytes unchanged;no new native admission,fit,execution or full-envelope proof claimed.
-  - [x] LOCKSTEP:whole0768 and original closed P1 Piece scope retained944 exact;book/live
-    pointer/frontier/journals aligned. D372 warning and G1/G2/G3/bus execution owners remain.
-  Commit:STITCHCAD-G1-0769;promotion: declined (planned scoped policy;implementation/review pending).
+  Goal:0769 current sources/planned selection;[whole scope/proofs](../history/stitchcad-devnotes-part945.md).
 - ID: `G1-SLICE.5f.1.c.true.variants.selection`
-  Status: `pending`
-  Goal:implement bounded ordered selected-role curve alternatives and complete-assignment priority
-  declarations from authentic lineage;no native fit/evaluator or inferred outside curves.
+  Status: `done`
+  Goal:bounded ordered selected-role curve alternatives from authentic lineage;explicit complete
+  assignment priority and real source fields,no native fitting/selection evaluation.
+  - [x] ISSUE:0769 contract needs typed complete curve groups and resource admission before
+    program geometry;outside curves/default choices or prefix search cannot be inferred.
+  - [x] ROOT CAUSE:curves.rs uses actual lineage selected population and original group headers;
+    cargo test -p sc-core --test truing_curve_contract passes4/0,rc=0. Initial large-error lint
+    exposes copied source payload;replace with original borrowed refused_geometry field,final Clippy rc=0.
+  - [x] FIX:whole N/M before headers;checked K/P/2M before quotas/owner/count/fields/allocation.
+    Exact unique nonempty selected groups,self-source guard,priority/reverse queries and authentic fields.
+  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    truing_curve_contract passes4/0;both sides/fold cases,duplicate choices,all quota/field errors,
+    actual full-product overflow/late-empty zero and explicit empty preservation;rc=0.
+  - [x] NO REGRESSION:prior lineage3 pass0;rc=0. Strict selected Clippy/format rc=0;API7/book7
+    pass0;book build/focused rendered bounds/source/error/execution boundary rc=0. D372 remains owned.
+  - [x] LOCKSTEP:whole0769 retained945 exact;archive1399/32/active11 rc=0. Promote scoped
+    policy/author-applier/independent-approval boundary in ADR-0003/index;coverage/actual execution stay open.
+  Commit:STITCHCAD-G1-0770;promotion: promoted to ADR-0003 curve-priority decision/answers.
 - ID: `G1-SLICE.5f.1.c.true.variants.review`
   Status: `pending`
   Goal:reconcile native selection/variant/domain coverage against v1 clauses before family closure;
@@ -935,3 +936,5 @@ retain their complete task branch,original goals and proof links in the bounded 
   fullness/topology,mirror copies,walk marks,truing/joins and original source/output maps in real replay/publication.
   This is later geometry-backed integration,not a prerequisite for G1 .5f.1 schema acceptance.
   No synthetic results,physical/domain proof or whole integration closure before those engines.
+  Truing must honor declared complete-curve priority and preserve unavailable/uncertified/resource
+  causes;actual candidate generation and feasibility inspect the full coupled Piece/ease/observer state.
