@@ -818,37 +818,41 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.sources`
   Status: `done`
   Goal:0777 full original H/R admission/book split;[whole scope/proofs](../history/stitchcad-devnotes-part953.md).
-### G1-SLICE.5f.1.c.join.outputs.contours.banks
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.banks`
   Status: `done`
-  Goal:bind each actual original positive selected range to its literal boundary/hole field
-  under admitted whole sources,before outside/output topology and identity/copy work.
-  NoExactCutBank is a scoped held-variant refusal,not global absence/current-alias invalidity.
-  Plan:reuse immutable whole H/R admission;bind A then B only on literal boundary/hole fields,
-  retain actual directed field,selected range/copy and source occurrence;no accepted bank prefix.
-  Constant cached associations/no allocation or field rewriting. Focused native/parent/compiler/book
-  checks;retire whole0777 and prior0388 ledger before live growth.
-  - [x] ROOT CAUSE (WHY + WHERE):whole original occurrences include construction/fold uses;
-    selected cut banks require actual literal boundary/hole fields. cargo test -p sc-core --test
-    join_cut_bank_contract reports `3 passed; 0 failed`,rc=0;construction-only matches refuse.
-  - [x] ADDRESSED (verified):STITCHCAD-G1-0778;A then B under original full H/R,constant two
-    cached associations,actual source occurrence/directed/range/Piece/copy borrows. Native banks3/
-    prior sources3 pass0;rc=0. All outer/hole combinations,whole/partial bounds,reflected B and
-    first missing A/B preserve actual fields;no accepted bank prefix or parameter rewrite.
-  - [x] NO REGRESSION:final strict selected Clippy/lib/tests and fmt rc=0;cargo test -p sc-core
-    --doc construction::join::banks gives `3 passed; 0 failed`,rc=0;join_examples gives
-    `7 passed; 0 failed`,rc=0;book build rc=0 (D372 owned). Real retired-source current validation
-    still refuses while old bank membership binds. 953 four Git spans/body exact;archive1407/40 rc=0.
-    Current aliases/ownership,whole outside/output topology,maps,geometry,retirement and authority
-    remain later owners. promotion: declined (existing held-source/canonical cut rules);next .contours.roles.
+  Goal:0778 literal A/B banks;[whole scope/proofs](../history/stitchcad-devnotes-part954.md).
+### G1-SLICE.5f.1.c.join.outputs.contours.roles
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.roles`
-  Status: `pending`
+  Status: `done`
   Goal:bind the complete actual EdgeOutputRoleCatalog to the original join operation under fresh
   definition/active/key-byte limits and explicit local owner checks,before candidate/identity work.
   Metadata binding alone declares no output count,shape,geometry or global namespace freshness.
+  Plan:reuse cached full D/A/key-byte counts before actual operation equality;constant borrowing,
+  no catalogue rescan/allocation. Same typed Edge catalogue contract as mirror/truing roles.
+  Focused native/parent/compiler/book checks. Retire whole0778 plus complete current Changelog/index
+  early (64804/65536B,732B headroom at source),not a claim that its ceiling was already reached.
+  - [x] ROOT CAUSE (WHY + WHERE):actual Edge catalogue owner must match this original join;
+    cached D/A/key-byte policy remains complete before association. Existing mirror/truing role
+    interfaces read;cargo test -p sc-core --test join_edge_role_binding_contract gives
+    `3 passed; 0 failed`,rc=0;actual parent/member pointers and original active order retained.
+  - [x] ADDRESSED (verified):STITCHCAD-G1-0779;constant full D/A/B quotas then operation equality,
+    typed Edge catalogue,whole error parents and policy;native roles3/prior banks3 pass0,rc=0.
+    Wrong-owner quota precedence,original definitions/members,empty/inactive presence covered;
+    no output attribution,geometry,role history/global freshness/issuance or authority follows.
+  - [x] NO REGRESSION:strict selected Clippy/lib/tests and fmt rc=0;cargo test -p sc-core --doc
+    construction::join::roles gives `4 passed; 0 failed`,rc=0;join_examples gives `8 passed;
+    0 failed`,rc=0;book build rc=0 (D372 owned). 954 three Git spans/body exact,including complete
+    64804B Changelog/index;public reader68259B exact;archive1408/41 rc=0. Early index retirement
+    preserves all older ledger/navigation bytes;source732B headroom recorded rather than cap breach.
+    promotion: declined (existing catalogue/containment contracts);next .lineage.identity.
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage`
   Status: `pending`
   Goal:explicit output/source identities,retirement/reference repair and full observer/evidence requirements.
+- ID: `G1-SLICE.5f.1.c.join.outputs.lineage.identity`
+  Status: `pending`
+  Goal:canonical result Piece-id declaration under bounded explicit known-owner exclusions;
+  preserve original source/catalogue/population and raw identity field. Trusted issuance,whole
+  current/historical namespace and atomic host authority remain required before publication.
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
   Status: `pending`
   Goal:reconcile declared join variants against v1 requirements;actual geometry/G3/bus/full verification

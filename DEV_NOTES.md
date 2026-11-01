@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — literal original join cut banks
+## _(2026-11-01 UTC)_ — complete join Edge catalogue association
 
-0778 .join.outputs.contours.banks binds A/B to actual boundary/hole fields under original H/R admission.
-No construction substitute,accepted prefix,parameter expansion or reflection inference;original field/range/copy pointers stay authentic.
-Native3/source3/API3/join7/lint/fmt/book0;953 four exact Git spans/archive1407/40. Actual current retirement control still refuses.
-Promotion:declined,existing held/canonical rules. Outside/topology/identity/copies/geometry/authority remain;G1still6/18.
+0779 .join.outputs.contours.roles checks cached whole D/A/key bytes before actual owner equality;all original parents remain borrowed.
+Native3/banks3/API4/join8/lint/fmt/book0;empty/inactive catalogue is presence only. Output/identity/geometry/authority stay later.
+954 three exact Git spans retain whole0778 and entire64804B old Changelog/index;reader68259B/archive1408/41 pass0.
+Early retirement with732B headroom,no limit change. Promotion:declined,existing catalogue/containment rules;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

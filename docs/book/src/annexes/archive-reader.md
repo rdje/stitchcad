@@ -314,3 +314,16 @@ this retention;the task-tree coverage census checks navigation. Native feature c
 ```bash
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part950.md
 ```
+
+### Bounded live changelog navigation —0779
+
+Record954 retains the **complete**64804-byte prior `CHANGELOG.md`,including every older ledger,
+identity and index route,plus whole0778 task/lesson continuity. This is early retirement:the source
+was below its65536-byte ceiling with732 bytes remaining. The live changelog now points to that
+complete sealed index;`list` continues to enumerate every logical record and `read` returns exact
+source bytes. No history limit,reader API or existing record changes. Exact original Git spans,
+body and public-reader readback verify retention for the committed shortened navigation.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md
+```

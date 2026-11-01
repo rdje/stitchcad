@@ -312,3 +312,38 @@ Binding takes O(H+R+1) work with two fixed cached associations,no allocation,str
 call or geometry evaluation. Literal membership proves no currentness,geometric coincidence,
 interior parameter map,valid joined contour,retirement or authoring authority. Actual current graph
 validation can refuse a retired source while these immutable original bank fields remain lendable.
+
+## Bind the actual complete Edge role catalogue
+
+`BoundJoinCutBanks::bind_edge_roles` binds a distinct admitted `AdmittedEdgeOutputRoleCatalog`
+to the original join operation. Construct the catalogue through the shared
+[Edge role contract](drafting-output-contracts.md);Point and semantic-Notch catalogues are different
+types. Machine keys do not classify geometry or assign roles to a particular bank by their spelling.
+
+```rust
+use sc_core::construction::*;
+fn bind<'a>(banks:&'a BoundJoinCutBanks<'a>,catalog:&'a AdmittedEdgeOutputRoleCatalog<'a>)
+    ->Result<BoundJoinEdgeRoles<'a>,JoinEdgeRoleBindingError<'a>> {
+    banks.bind_edge_roles(catalog,EdgeOutputRoleCatalogLimits::new(3,2,20))
+}
+```
+
+The explicit association limits bound **all** definitions D,active occurrences A and original
+machine-key bytes B,including inactive/unrelated definitions. Counts and B are cached by the actual
+original catalogue admission. Complete D,A,B quotas precede operation equality;this binding does
+not rescan keys,filter to requested outputs,sort declarations or allocate another index.
+
+For definitions `bank_a`,`bank_b`,`inactive`,D3/A2/B20 is exact. D2 refuses `Definitions` before
+A or key checks;A1 refuses `Active`;B19 refuses required20 as `KeyBytes`. With all quotas met,
+a catalogue owned by1001 refuses `Operation` for actual join1000. These are association limits;
+the earlier catalogue's owned storage/admission and complete source/context resources remain separate.
+
+`BoundJoinEdgeRoles` lends actual `banks()`,actual whole `catalog()` and original `limits()`.
+Catalogue membership views still lend their original definitions and active order;inactive
+definitions remain present. Errors retain those same whole parents,policy and first `refusal()`.
+Binding takes constant work/space without scans or allocation.
+
+Empty or wholly inactive catalogues can bind to the same actual operation. This is metadata only:
+both source banks and the explicit positive result population remain required. It proves no empty
+joined result,no-op,source/output attribution,role history,global freshness,issued identity,
+geometric correspondence,valid topology or publication authority.
