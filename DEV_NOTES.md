@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — room for joined contour declarations
+## _(2026-11-01 UTC)_ — explicit complete joined cut uses
 
-0784 moves14338B source/policy prose exactly;all12 code fences and prior routes/heading anchors remain.
-Closed construction15 goals sealed959;all IDs/statuses/children/later acceptance bytes exact.
-Source5/output7/fmt/book/index/29 rendered links/tree10-13-20-0/archive1413-46 pass0;native join unchanged.
-promotion: declined (existing bounded-reference/retention rules). G1still6/18;whole topology next.
+0785 retains authored boundary/hole lists and traversal;unique actual cut roles plus U=C proves membership.
+Whole N/H/U/2U+H precedes fields;native4/prior direction4/API6/join book8/lint/fmt/book rc=0.
+Empty cut bookkeeping refuses EmptyBoundary;960 source/body/public bytes exact. Connectivity/geometry pending.
+promotion: declined (existing cut-use/geometry boundary). G1still6/18;actual source-path gluing next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

@@ -367,3 +367,72 @@ persistent output tuples remain unchanged. No contour traversal is silently flip
 Explicit N0/M0/W0 metadata can admit when whole banks leave no outside cut interval. It still
 proves no nonempty joined Piece,no-op,achieved endpoint/interior correspondence,currentness,
 valid whole contour,geometric splice,semantic reconciliation,retirement or publication authority.
+
+## Declare complete result cut uses
+
+`JoinCutContourManifest` retains an explicit operation,ordered proposed outer-boundary uses and
+independently ordered proposed hole-use lists. `JoinCutContourUse::new(tag,direction)` requires a
+persistent output tag and explicit Piece traversal in that output's own parameter frame. It does
+not accept `JoinParameterDirection`:source-relative parameter orientation and result traversal
+remain separate authored fields. No list position becomes an output identity.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn cut_use(tag:LocalTag)->JoinCutContourUse {
+    JoinCutContourUse::new(tag,Direction::Reversed)
+}
+fn place<'a>(manifest:&'a JoinCutContourManifest,directions:&'a AdmittedJoinDirections<'a>)
+    ->Result<DeclaredJoinCutContours<'a>,JoinCutContourError<'a>> {
+    manifest.admit(directions,JoinCutContourLimits::new(10,2,4,10))
+}
+```
+
+`JoinCutContourLimits::new(N,H,U,W)` admits the complete actual output population N,including
+noncut candidates,and all proposed hole headers H before reading their child lengths. Checked
+complete boundary-plus-hole use count U and checked2U+H workspace then precede per-use fields or
+allocation. Earlier complete parent/candidate/direction/coverage policies and caller-owned input
+storage remain separate. Workspace counts U tag-index entries,U use associations and H hole
+associations;it does not measure allocator bytes. Arithmetic failures retain `UseCountOverflow`
+or `WorkspaceOverflow` rather than truncating a prefix.
+
+For N10,H2,U4,the required workspace is10. N9 refuses `Outputs`;H1 refuses `Holes`;U3 refuses
+`Uses`;W9 refuses `Workspace`,before a wrong operation or bad tag. With quotas met,`Operation`
+precedes `EmptyBoundary`,then the first `EmptyHole`,then exact cut-use `Count`. A whole-bank
+splice with no surviving cut candidates can satisfy empty cut coverage/directions,but its empty
+proposed boundary refuses `EmptyBoundary`;empty metadata cannot create a declared result boundary.
+
+Let C be the actual cut-candidate population. U must equal C,not the complete N when construction
+and fold candidates are present. Each original boundary use,then each original hole group/use,
+checks `DuplicateTag`, `UnknownOutput`,then `NonCutOutput`. A unique member of the complete
+actual cut set is required in every slot. Unique cut membership plus U=C supplies exactly one
+use per cut candidate;equal count alone cannot hide repeated roles or missing cut content.
+Construction/fold-attributed candidates cannot become cut uses merely because their source edge
+also occurs on a cut contour. They remain on the original complete direction/manifest parents
+for their separate explicit reconciliation.
+
+For cut outputs9,8,2,10,a proposal can retain boundary order9,8 and hole order[10],[2],with each
+traversal explicit. Its four use fields and two group headers remain the actual authored objects;
+no sorting of holes or source-driven traversal reversal is performed. Replacing the last use2
+with9 refuses the duplicate's original boundary/hole locations. Unknown99 refuses `UnknownOutput`;
+an actual construction/fold output refuses `NonCutOutput`. No accepted cut-use prefix escapes.
+
+`JoinCutContourError` lends actual `manifest()`,actual `directions()`,original `limits()` and first
+`refusal()`. `refused_use()` lends the original second duplicate,unknown or noncut field;resource,
+operation,empty/count causes return `None`. Whole raw lists and complete source parents survive.
+
+`DeclaredJoinCutContours` retains those same parents and reports `use_count()`,`hole_count()` and
+`workspace_entries()`. `uses()` follows original boundary then hole-group/field order and reverse;
+`boundary()` and `holes()` preserve the original grouping. `use_for(tag)` queries the unique
+explicit cut role. Each authentic `JoinPlacedCutUse` lends its whole context,original location,
+actual declared field,actual traversal field and authentic directional output/source attribution.
+Its `logical_output()` retains the actual operation/persistent-tag tuple without issuing an edge.
+Each `JoinCutHole` lends its actual original group,index,whole context and ordered use views.
+
+Work is O(H+U log(U+N+2)),with2U+H additional entries,no source scan,registry/provider call or
+geometric evaluation. This stage admits complete cut placement declarations only. Source-path
+adjacency,bank-endpoint gluing and loop classification remain separately owned connectivity work;
+construction/fold/consumer semantics,copy reconciliation,retirement and publication also remain.
+The [canonical Piece invariants](../spec/ontology.md#41-piece) still require actual closed/simple
+CCW outer geometry and opposite-wound,strictly internal,mutually disjoint holes. Authored list
+membership/traversal supplies none of those geometric certificates. Actual G2/G3 validation and
+current source/history/authority checks remain required before accepting a canonical joined Piece.

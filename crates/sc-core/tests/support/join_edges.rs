@@ -113,3 +113,32 @@ pub fn with_cut_coverage(extra: bool, run: impl FnOnce(CoveredJoinCutSources<'_>
         },
     );
 }
+
+/// Actual complete directions on every cut/noncut candidate under original cut coverage.
+pub fn with_directions(extra: bool, run: impl FnOnce(AdmittedJoinDirections<'_>)) {
+    with_cut_coverage(extra, |coverage| {
+        let n = coverage.edges().edge_count();
+        let raw = JoinDirectionManifest::new(
+            id(1000),
+            coverage
+                .edges()
+                .edges()
+                .enumerate()
+                .map(|(i, e)| {
+                    JoinDirectionAssignment::new(
+                        e.candidate().tag(),
+                        if i.is_multiple_of(2) {
+                            JoinParameterDirection::SameAsSource
+                        } else {
+                            JoinParameterDirection::ReverseSource
+                        },
+                    )
+                })
+                .collect(),
+        );
+        let directions = raw
+            .admit(&coverage, JoinDirectionLimits::new(n, n, 2 * n))
+            .expect("complete explicit original directions");
+        run(directions);
+    });
+}
