@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0812 — native two-Piece join declaration checkpoint
+## STITCHCAD-G1-0813 — aggregate native v1 declaration acceptance
 
-- Reconcile explicit exact-nondeforming two-Piece input/output declarations against v1 operation inventory and adopted native domain.
-- Update Join availability and native-only checkpoint;preserve actual geometry/history/currentness/physical/domain/atomic proof as separate obligations.
-- Rust unchanged/five references4/9/8/8/9 Rust fences exact;book/rendered4-cell row and native domain boundary rc=0;987 three Git spans/body/public exact.
-- Archive1441/74,per-generation21/64 and53/64;native c subtree0 non-done,aggregate typed review owned. G1still6/18 unchanged.
+- Accept13 native operation families/all a/b/c feature nodes under the explicit schema-versus-actual-execution boundary.
+- Compile the four maintained primitive overview examples as source doctests;remove stale pending-schema prose;runtime code unchanged.
+- Overview4/strict lib lint/fmt/book/rendered13 rows/4 cells rc=0;all38 Rust fences unchanged;988 three Git spans/body/public exact.
+- Archive1442/75,per-generation21/64 and54/64;G1still6/18. Post-feature P2 D372 search containment next;actual integration/geometry remains separately owned.
 
 # Sealed archive — earlier slices
+
+[Whole0812 native join family checkpoint](docs/history/stitchcad-devnotes-part988.md) retains exact task,lesson and ledger bytes.
 
 [Whole0811 native lineage checkpoint](docs/history/stitchcad-devnotes-part987.md) retains exact task,lesson and ledger bytes.
 

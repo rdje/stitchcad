@@ -674,11 +674,19 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Concrete geometry execution stays G2/G3; missing operation contracts are repaired first.
   .1 closes on implemented typed declarations/output contracts,not future G2/G3 geometric results;
   this grants no G1 running-spike waiver or geometry certificate.
-  Verification: `pending`; Commit: `pending`.
+  Verification:native13-family focused checkpoint0813 accepted;post-feature P2 D372 remains .book-search below.
+  Commit:STITCHCAD-G1-0813;actual program/frame/geometry/physical/full integration remains separately owned.
+### G1-SLICE.5f.1.review
 - ID: `G1-SLICE.5f.1.review`
-  Status: `pending`
-  Goal:aggregate native v1 declaration/output-contract acceptance against complete operation inventory and committed family evidence.
-  Actual namespace/frame/order/geometry/physical/atomic/full integration remains .5f.2/.3/.4.geometry/.5g and G2/G3;no G1 spike waiver.
+  Status: `done`
+  Goal:aggregate native v1 declaration/output-contract acceptance;actual namespace/frame/order/geometry/physical/atomic integration remains owned.
+  - [x] ROOT CAUSE: `python3 -I -B -` inventory/canonical task review:
+    13 distinct operation families,all native a/b/c family nodes done;four primitive overview examples require literal-source compilation,rc=0.
+  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::operation_examples` through launcher:
+    actual overview4 pass,rc=0;registered maintained text,removed stale pending-schema prose;Rust delta only3 cfg-doctest lines,all38 fences unchanged.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib -- -D warnings`/fmt/book through launcher:
+    lint/fmt/build/rendered13 rows/4 cells/native-frame-geometry boundaries rc=0;988 Git spans/body/public exact;archive1442/75,per-generation21/64 and54/64,rc=0.
+  Commit:STITCHCAD-G1-0813. promotion: declined (existing native schema acceptance and actual execution boundary).
 - ID: `G1-SLICE.5f.1.a`
   Status: `done`
   Goal:completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part838md).
@@ -914,17 +922,9 @@ retains every original goal,status,child relation and focused acceptance proof.
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold.sources`
   Status: `done`
   Goal:0794 complete original fold actions;[whole scope/proofs](../history/stitchcad-devnotes-part970.md).
-### G1-SLICE.5f.1.c.join.outputs.review
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
   Status: `done`
-  Goal:explicit native two-distinct-Piece/exact-nondeforming join declaration family checkpoint;no actual physical/domain approval.
-  - [x] ROOT CAUSE: `python3 -I -B -` canonical ontology3.2/operation-inventory/ADR0773 family review:
-    explicit input variant,metadata/copy/topology/identity/consumer/effect declarations cover native scope;actual G2/G3/bus proof remains owned,rc=0.
-  - [x] ADDRESSED: same Git/reference comparison and `git diff --exit-code -- crates`:
-    inventory availability/family checkpoint reconciled;five-page Rust fences4/9/8/8/9 byte-exact;Rust unchanged,rc=0.
-  - [x] NO REGRESSION: `scripts/run_make.sh book`:build/rendered exact-domain/native-only checkpoint and4-cell Join row rc=0;
-    987 three Git spans/body/public exact;archive1441/74,per-generation21/64 and53/64,rc=0;prior focused native/API proof retained,no broad rerun.
-  Commit:STITCHCAD-G1-0812. promotion: declined (existing explicit native domain/declaration and real execution boundary).
+  Goal:0812 native join declaration checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part988.md).
 - ID: `G1-SLICE.5f.1.book-search`
   Status: `pending`
   Goal:P2 D372 after typed v1 feature completion:resolve new large-index build warning;

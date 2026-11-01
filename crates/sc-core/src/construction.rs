@@ -3,6 +3,9 @@
 //! operation ordering, containing frames, current registries, geometry and publication stay owned.
 // Compile the actual maintained examples, so rendered prose cannot drift from public Rust APIs.
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-operation-contracts.md")]
+mod operation_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-edit-inputs.md")]
 mod editing_examples {}
 #[cfg(doctest)]

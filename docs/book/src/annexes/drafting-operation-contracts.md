@@ -1,6 +1,6 @@
 # Drafting operation contracts
 
-> **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
+> **Native typed declarations complete; execution remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
 > geometry. Primitive/slash-spread/mirror-copy inputs,amount proofs and semantic binding are available
 > here and in the native-edit companion. Offset/slash/mirror/walk native output requirements and the
@@ -47,8 +47,8 @@ is not permission to issue/reuse an identity. The bus owns fresh identity alloca
 preconditions,authorization,atomic publication,audit and undo. A failed later argument or operation
 publishes no accepted geometric prefix. A schema constructor alone grants none of that authority.
 
-All families below belong to G1-SLICE.5f.1. Typed point declarations are .1.b;remaining schemas are
-.1.c and receive smaller implementation leaves before code. Ordered dependency integration is
+All families below complete the native G1-SLICE.5f.1 declaration checkpoint. Typed point declarations
+are .1.b;the other schemas are .1.c,with committed family evidence. Ordered dependency integration is
 .5f.2;selector/parameter error budgets are .5f.3;combined operation replay is .5f.4. G2 owns concrete
 geometry and G3 owns the construction/physical behavior assigned to it by the feature matrix.
 
@@ -72,6 +72,21 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 
 The last column is an availability boundary. Stable reference types,structural inventories or a
 named command are not substitutes for an implemented drafting record and its executor.
+
+### Native v1 declaration checkpoint
+
+All 13 inventory families have typed native declarations and the output/reference requirements
+specified below and in their companion references. Supported declared variants,original argument
+documents/canonical targets,scoped identities and explicit semantic/effect obligations remain
+distinct from evaluated geometry. The actual four primitive examples in this overview are compiled
+as source doctests alongside the native editing/output companion examples.
+
+This checkpoint preserves the complete formula/geometry boundary:formulas create no entities
+and call no solver. Actual containing namespace/frame,current registries,prior/always-visible
+dependencies and ordered argument evaluation remain .5f.2/.3 work. Real geometry/physical results,
+numeric/parameter error evidence,coupled replay,atomic publication and platform verification
+remain .5f.4.geometry/.5g and G2/G3. Schema acceptance grants no running G1 spike waiver,G2 entry
+exception,domain/envelope approval or release readiness;focused native checks are not full verification.
 
 ## Points and primitive curves
 
@@ -223,7 +238,7 @@ normalized arenas and checked proofs enforce their actual borrowing lifetimes an
 
 These declarations/proofs do not allocate identities,bind geometry names,choose a drafting frame,
 execute selectors or publish through the command bus. Containing frame/current registry/order and
-operation-wide execution are .5f.2/.3 work. Remaining primitive/edit schemas finish .1 first.
+operation-wide execution are .5f.2/.3 work. The inventory above lists the other native families.
 Full geometry,physical behavior,storage and complete operation replay remain owned milestones.
 
 ## Native line declarations and dependency views
@@ -260,7 +275,7 @@ account for an edit's changed direction before any existing reference can be use
 A declaration can retain the same point in both fields. It does not thereby certify a nonzero
 line or accept a degenerate geometric edge. No coordinate,distance,frame,registry state,identity
 issuance or geometric result is computed. The containing program and actual geometry executor
-must validate those properties before acceptance. Remaining curve/edit schemas are still pending.
+must validate those properties before acceptance. Other native declarations retain that same boundary.
 
 ## Native center-based arc declaration and scalar proofs
 
@@ -371,8 +386,8 @@ contract;no fallback degree or polyline is silently chosen.
 
 Repeated/coincident controls can form declarative input without proving a nondegenerate geometric
 curve. No coordinates,length,continuity,frame,registry state,exact elevation,approximation budget,
-identity issuance or command publication is computed here. Remaining editing schemas and the
-whole operation graph/geometry integration remain owned work.
+identity issuance or command publication is computed here. Whole operation graph/geometry
+integration remains owned work.
 
 ## Native editing input reference
 

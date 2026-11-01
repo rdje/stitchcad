@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — native two-Piece join declaration checkpoint
+## _(2026-11-01 UTC)_ — aggregate native v1 declaration acceptance
 
-0812 reconciles explicit two-distinct-Piece/exact-splice metadata,copy,topology,source/output identity and consumer/effect declarations with v1 inventory/ADR0773.
-Join availability now records native checkpoint;actual geometry/history/physical/domain/atomic approval remains unproved. Native c subtree0 non-done;aggregate review owned.
-Rust unchanged/five reference fences4/9/8/8/9 exact;book/rendered4-cell Join row/domain boundary rc=0;987 spans/public exact,archive1441/74,per-generation21/64 and53/64.
-promotion: declined (existing native declaration/actual execution boundary). G1still6/18;aggregate typed v1 acceptance next,not full geometry or G1 closure.
+0813 accepts13 distinct native operation families with all a/b/c family nodes done;actual frame/order/registry/geometry/atomic integration remains separate.
+Four actual primitive overview examples now compile as source doctests and pass;stale pending-schema prose removed;runtime code unchanged,only3 cfg-doc lines added.
+Strict lib lint/fmt/book/rendered13 rows/4 cells/source-boundary rc=0;all38 fences exact;988 Git spans/body/public exact,archive1442/75,per-generation21/64 and54/64.
+promotion: declined (existing schema/actual execution boundary). G1still6/18;post-feature P2 D372 search containment next,not broad geometry or G1 closure.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
