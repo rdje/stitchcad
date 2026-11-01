@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0765 — declare complete truing contours
+## STITCHCAD-G1-0766 — require explicit truing fold attribution
 
-- Bound whole inputs,generated uses and additional workspace before scans/allocation.
-- Replace every literal source occurrence in exact source order,composing explicit directions with traversal.
-- Preserve unaffected fields,holes/order/repeated construction;explicit preservation keeps all contours.
-- Contour4/prior6/API4/book4,strict selected lint/format and focused render pass0;whole0764 scope940 exact.
+- Whole output/generated-use bounds precede original cutting state and actual outer/source checks.
+- Explicit no/original/derived fold retains original metadata and named geometric evidence request.
+- Structural subrange attribution supplies no whole-fold geometry,currentness or issuance certificate.
+- Fold3/prior4/API5/book5,strict selected lint/format and focused render pass0;whole0765 scope941 exact.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -52,6 +52,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0765 contour task,lesson and ledger](docs/history/stitchcad-devnotes-part941.md) retain exact source bytes.
 
 [Whole0764 Piece-source task,lesson and ledger](docs/history/stitchcad-devnotes-part940.md) retain exact source bytes.
 

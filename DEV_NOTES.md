@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — declare complete source-ordered truing contours
+## _(2026-11-01 UTC)_ — require explicit truing fold attribution
 
-0765 bounds T/H/R and checked G/T+G before scans/allocation;refit G=C−K+K×T,preservation G=C. Every literal source occurrence expands from complete selected/outside source order,composing both sequence and traversal with explicit parameter directions;all unaffected fields stay exact.
-Contour4/prior source3/direction3,strict selected Clippy/format/API4/book4 and focused rendered counts/reversal/API pass0. Both sides,boundary/hole/repeated construction,all endpoint domains and quota boundaries covered. Fold choice/lineage/currentness/geometry/fit/authority remain owned;logical tuples unissued.
-Whole0764 task/lesson/ledger retained940 exact;reader1394/62 pass0. Book build0 retains D372. Promotion: declined (existing whole-Piece contract). G1still6/18;next explicit fold reconciliation.
+0766 bounds whole T/G before original cutting-state/field and outer/provenance checks. Explicit no/original/derived intent and named correspondence source retain actual contours and original metadata;no allocation/provider call or inferred axis.
+Fold3/prior contour4/API5/book5,strict selected Clippy/format and focused render pass0. Both sides/outcomes,selected/outside fragments,retention,no-fold,independent outer/source and quota precedence covered. Whole-fold domain/geometry/currentness/fit/copy effects remain evidence obligations.
+Whole0765 scope retained941 exact;reader1395/63 pass0. Book build0 retains D372. Promotion: declined (existing source-fold contract). G1still6/18;contour/placement declaration parents close. Next bound retained history before lineage;native variants stay owned.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

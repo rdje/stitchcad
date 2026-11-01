@@ -29,6 +29,11 @@ pub use outcome::{
     RequiredTruingOutcome, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
 };
 mod binding;
+mod fold;
+pub use fold::{
+    RequiredTruingFold, TruingFoldError, TruingFoldIntent, TruingFoldLimits, TruingFoldRefusal,
+    TruingFoldRequirement,
+};
 mod contours;
 pub use contours::{
     TruingContourError, TruingContourLimits, TruingContourRefusal, TruingPieceContours,

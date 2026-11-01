@@ -225,5 +225,62 @@ Work is O(T log(T+2)+H+R+G),with at most W additional logical entries. Errors re
 original source,policy and first complete quota or checked-count cause;no partial plan escapes.
 All original inputs and non-contour Piece metadata remain unchanged and available through
 `source().piece()`. These logical edge tuples remain unissued. The result is a contour declaration;
-explicit fold reconciliation,lineage,current history,canonical Piece birth,geometry,fit,effects,
-authority and atomic publication remain separate requirements.
+fold reconciliation follows below. Lineage,current history,canonical Piece birth,geometry,fit,
+effects,authority and atomic publication remain separate requirements.
+
+## Reconcile the fold explicitly
+
+`TruingFoldRequirement::new(intent,correspondence)` retains an explicit `TruingFoldIntent` and
+required geometric fold-correspondence source identity. Neither has a default. The source name
+requests evidence;admission performs no provider call,lookup or evidence-body scan. It remains
+required even for explicit no-fold treatment. Earlier whole-source/effect evidence obligations remain.
+
+```rust
+use sc_core::{construction::*,ontology::{EntityId,LocalTag}};
+let request=TruingFoldRequirement::new(TruingFoldIntent::Derived{tag:LocalTag::new(9)},
+    EntityId::from_bits(7001));
+fn fold<'a>(contours:&'a TruingPieceContours<'a>,request:&'a TruingFoldRequirement)
+    ->Result<RequiredTruingFold<'a>,TruingFoldError<'a>> {
+    contours.require_fold(request,TruingFoldLimits::new(4,16))
+}
+```
+
+`require_fold` first checks complete T outputs and G generated contour uses under
+`TruingFoldLimits::new(T,G)`,including unrelated hole/construction uses. Quotas precede original
+fold-state/field and proposed boundary inspection. For T4/G16,T3 refuses `Outputs`;T4/G15
+refuses `Occurrences`,even if the supplied fold choice also contradicts the original state.
+
+The original Piece's `cut_on_fold` remains authoritative. `NoFold` requires an original Piece
+without a fold. `RetainOriginal` and `Derived { tag }` require an original cut-on-fold Piece and
+its actual fold field. This preservation request cannot silently remove or add the cutting state.
+All original non-contour metadata remains authoritative and unchanged through `source_piece()`:
+identity,quantity,mirroring,cutting side,material,layer and label are not independently reauthored.
+
+`RetainOriginal` requires an **unchanged** use of the exact original fold identity on the proposed
+outer boundary. A matching logical tuple from a derived use cannot substitute for retained provenance.
+When refitting replaces that original fold edge,retention refuses `FoldNotRetained`;the caller
+must explicitly attribute a derived fold. Preservation can retain the original fold with no new outputs.
+
+`Derived { tag }` first requires an actual selected/outside output,then an actual proposed outer
+use of that output,then attribution to the exact original fold `EdgeRef`. An unknown or merely
+catalogued tag refuses `Output`. An output used only in a hole or construction line refuses
+`OutputNotBoundary`. An outer output attributed to another original edge refuses
+`OutputNotFoldSource`. Original state mismatch refuses `FoldStatus` before any of those tag causes.
+
+For a partial refit of the original fold,prefix2,selected9/11 and suffix5 can each carry structural
+attribution to that held fold edge. Choosing one does **not** prove that its source subrange covers
+the whole original geometric fold or establishes the physical fold axis. Those actual domain/position
+and all-copy effects require the named correspondence evidence and existing execution obligations.
+No candidate is selected by list position,length or an inferred geometric axis.
+
+`RequiredTruingFold` retains actual `contours()`,original `requirement()` and `limits()`.
+`source_piece()` and `source_fold()` lend the original Piece and fold field. `output()` lends the
+authentic explicit derived direction/source member when applicable;it is `None` for original/no-fold
+treatment. `edge()` returns the requested original or new logical fold identity,or `None` for
+no fold. Every new logical identity remains unissued. Errors retain the whole original contour
+context,request,policy and first quota/state/attribution cause;no partial fold admission escapes.
+
+The check uses O(log(T+2)+G) work,constant additional space and no allocation or string scan.
+Earlier source/contour limits retain their scope. Whole-edge lineage,actual current history,
+canonical Piece birth,geometric fold correspondence,fit,copy effects,authority and atomic publication
+remain separate requirements. Structural outer membership alone supplies none of those proofs.
