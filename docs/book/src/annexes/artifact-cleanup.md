@@ -104,19 +104,18 @@ that every protected dependency or numerical-proof store was hashed. Candidate s
 those stores were outside the deletion set. Regenerated book/scratch output after the immediate
 residue census is expected and does not invalidate that census.
 
-The 2026-10-31 run used a fresh frozen plan and the unchanged strict guards. It removed four
-regenerable trees and824 logs:18579 files,622525303 bytes. The OS-visible idle check passed
-before removal. All824 logs/781356 bytes were copied and byte-verified first and verified again
-afterward in protected audit daily-20261031-native. No tracked Markdown/JSON referenced their
-exact selected paths;retained numerical,legacy-native and proof families remained outside the plan.
+The 2026-11-01 run (2026-11-01 14:33 UTC) used a fresh frozen plan and unchanged strict guards. It removed
+four reviewed regenerable trees:154 files,20669068 bytes,with no stray-file deletions. The trees
+were rendered book output,doctrine scratch,tool scratch and empty temporary output. The retained
+scratch reader copy matched tracked part931;doctrine staging snapshots and the tool cache were regenerable.
 
-The immediate independent census ran without activating the launcher:all828 selected paths were
-absent and tracked bytes exact. Before/after content and entry metadata cover57 numerical,
-legacy-native and retained-proof roots:136020 entries,14743246609 regular-file bytes,all unchanged.
-Package/dependency stores were excluded by separation,not wholly hashed. The2243 unsafe or
-ambiguous census entries remained,including linked incremental trees,nested repositories,links
-and special files. Book/scratch regeneration followed the immediate residue proof,so regenerated
-paths do not invalidate that recorded cleanup moment. Guards and runtime code were unchanged.
+OS-visible strict idle admission passed before removal. The immediate independent census ran
+without activating the launcher:all four selected paths were absent and tracked bytes matched
+the frozen source digest. All2243 unsafe/ambiguous skipped paths still existed. Dependency stores,
+numerical/legacy-native and retained-proof roots were outside selection;this is a separation
+proof,not a whole-store byte-hash claim. Audit plan/review/result/independent-post records are in
+protected daily-20261101-native. The prior published run's complete scope remains in retained part937.
+Book/scratch regeneration follows that immediate residue proof and does not invalidate its cleanup moment.
 
 ### Incomplete runtime observations
 

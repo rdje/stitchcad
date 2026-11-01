@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — bind complete explicit truing parameter directions
+## _(2026-11-01 UTC)_ — complete guarded daily artifact cleanup
 
-0761 binds original operation/ordered tag/source-relative direction records to every actual selected/outside output. Checked T and2M,whole T/M/W precede owner/cardinality and unique membership. Equal counts alone cannot hide duplicate/unknown outputs;an active catalogue tag need not be an output.
-Native3/prior-outside3/API6/piece-book2,selected Clippy/fmt/build/render pass0. Actual original fields/parents/order retained;dedicated direction is not Piece traversal,copy reflection,sewing direction or a numeric map. Prior book bytes/whole0760 receipt936 exact0.
-Promotion: declined (existing explicit source-frame scope). Original contour/fold placement,lineage and native variants next;actual maps,currentness/geometry/fit/effects/authority/broad integration remain owned;G1still6/18. D372 search warning remains owned.
+0762 fresh plan/review selects only four regenerable trees,zero strays. OS-visible strict handoff0 precedes removal154files/20669068B. Immediate independent4-path absence/tracked-byte equality passes0 before any launcher;all2243 skipped paths still exist.
+Audit target/artifact_cleanup_audit/daily-20261101-native/ retains plan/review/result/independent-post. Retained scratch copy equals tracked931;stores/numerical/native/proof families outside selection. This is separation,not whole-store hashing. No runtime/guard change;book rebuild/render0 after residue proof.
+Prior0761 and cleanup record/book scope retained937 exact. Promotion: declined (routine guarded cleanup). G1still6/18;resume original truing occurrence/fold placement,then lineage/native variants. Actual geometry/currentness/fit/effects/authority/broad integration remain owned.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

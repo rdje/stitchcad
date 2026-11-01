@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0761 — bind complete explicit truing parameter directions
+## STITCHCAD-G1-0762 — complete guarded daily artifact cleanup
 
-- Dedicated source-relative directions bind every actual selected/outside output under full T/M/2M bounds.
-- Owner/cardinality/unique actual membership checks reject omitted,duplicate and unrelated active tags.
-- Retain original declaration order/fields/parents;no contour traversal,geometry or numeric map inferred.
-- Native3+3/API6/piece-book2,selected lint/fmt/build/render pass0;prior book/whole receipt936 exact.
+- Fresh reviewed plan and OS-visible strict idle admission remove4 generated trees/154files/20669068B.
+- Immediate independent residue/tracked-byte proof precedes launcher regeneration;2243 skipped paths remain.
+- Stores and protected proof namespaces excluded;no stray deletions or runtime/guard changes.
+- Latest record/book updated;prior source scope937 exact;book rebuild/render pass0. Truing placement resumes.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -52,6 +52,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0761 direction task,lesson and ledger](docs/history/stitchcad-devnotes-part937.md) retain exact source bytes.
 
 [Whole0760 outside-role task,lesson and ledger](docs/history/stitchcad-devnotes-part936.md) retain exact source bytes.
 

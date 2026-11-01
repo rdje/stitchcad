@@ -744,6 +744,19 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0718 guarded cleanup;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part888md).
 
+- ID: `G1-SLICE.6.5.3.2.cleanup-20261101`
+  Status: `done`
+  Goal:due daily cleanup with fresh frozen plan,independent preservation/reference review,
+  OS-visible idle admission,verified removal and immediate residue proof before regeneration.
+  Preserve all tracked inputs/stores/numerical/native/retained proof families;resume .piece.contours.placement.
+  - [x] ISSUE:daily cleanup due2026-11-01 14:26 UTC;last successful run2026-10-31 14:26 UTC.
+  - [x] ROOT CAUSE:python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan target/artifact_cleanup_audit/daily-20261101-native identifies4 known generated trees/0strays,2243 skipped;rc=0. Reader scratch copy matches tracked part931;stores/proof families outside selection.
+  - [x] FIX:reviewed frozen plan;python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py apply target/artifact_cleanup_audit/daily-20261101-native --idle-cua under OS-visible process access.
+  - [x] ADDRESSED:strict handoff OK0 before deletion;producer removes4 trees/154files/20669068B;rc=0. Immediate independent raw-Python census confirms4 paths absent/tracked bytes exact before launcher activation;rc=0.
+  - [x] NO REGRESSION:all2243 skipped paths still present;runtime/guards unchanged;book build/render pass;rc=0. Preservation scope is separation,not a whole-store byte hash;prior0761/cleanup scope937 exact.
+  - [x] LOCKSTEP:latest cleanup record/book/live pointer/journals aligned;promotion: declined (routine guarded cleanup).
+  Commit:STITCHCAD-G1-0762;proof target/artifact_cleanup_audit/daily-20261101-native/.
+
 ## Drafting operation contracts
 
 - ID: `G1-SLICE.5f.1`
@@ -905,15 +918,7 @@ retain their complete task branch,original goals and proof links in the bounded 
   retain unaffected source fields and reject incomplete replacement attribution.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.directions`
   Status: `done`
-  Goal:explicit complete selected/outside output parameter directions with dedicated source-relative
-  choices,whole output/assignment/2M workspace quotas and exact original id coverage;no orientation default.
-  - [x] ISSUE:outside/source attribution alone chooses no output parameter orientation.
-  - [x] ROOT CAUSE:truing_outside_role_contract:3 pass,rc=0;actual metadata carries source roles/ranges,not source-relative output choices.
-  - [x] FIX:dedicated explicit direction type,complete T/M/2M preflight,owner/cardinality and unique actual-output membership.
-  - [x] ADDRESSED:cargo test -p sc-core --test truing_direction_contract:3 pass,rc=0;mixed order/directions,both sides,quota/owner/count/duplicate/unknown and active-nonoutput controls.
-  - [x] NO REGRESSION:prior outside3,direction API6/piece-book2,selected Clippy/fmt/build/render pass;rc=0. Prior book bytes/whole0760 receipt936 exact;actual maps/geometry/broad integration stay .5g/.5f.4.
-  - [x] LOCKSTEP:book/live/pointer/journals aligned;promotion: declined (existing explicit source-relative frame scope).
-  Commit:STITCHCAD-G1-0761.
+  Goal:0761 explicit complete directions;[whole scope/proofs](../history/stitchcad-devnotes-part937.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement`
   Status: `pending`
   Goal:complete original occurrence/fold replacement plan using explicit output directions and source order.

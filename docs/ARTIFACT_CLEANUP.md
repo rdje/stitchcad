@@ -32,13 +32,12 @@ Full guide:docs/book/src/annexes/artifact-cleanup.md. Probe controls never apply
 
 ## Latest cleanup
 
-- Run:2026-10-31 14:26 UTC;owner G1-SLICE.6.5.3.2.cleanup-20261031.apply.
-- Removed4 generated trees/824 selected logs:18579 files,622525303B;all828 paths then absent.
-- Evidence:target/artifact_cleanup_audit/daily-20261031-native/ plan/result/independent-post.json.
-  All824 logs/781356B were copied and byte-verified before removal and verified again afterward.
-- Preservation:57 numerical/legacy/retained-proof roots,136020 entries/14743246609 regular-file bytes,
-  all exact before/after. Package/dependency stores were excluded by separation,not wholly hashed.
-- Kept2243 unsafe/ambiguous entries,including linked native incremental trees,nested repositories,
-  links and special files. OS-visible strict idle check passed;no guard/policy changes.
-- Immediate residue/tracked-byte proof preceded launcher/book regeneration. Regenerated outputs
-  afterward are expected;the828-path absence describes the cleanup moment.
+- Run:2026-11-01 14:33 UTC;owner G1-SLICE.6.5.3.2.cleanup-20261101.
+- Removed4 reviewed generated trees:154 files,20669068B;all4 paths then absent;zero stray deletions.
+- Evidence:target/artifact_cleanup_audit/daily-20261101-native/ plan/review/result/independent-post.json.
+- OS-visible strict idle admission passed before removal;immediate independent residue/tracked-byte
+  proof passed before any launcher activation. The scratch reader copy matched tracked part931.
+- All2243 unsafe/ambiguous skipped entries still present. Stores,numerical/native and retained-proof
+  roots were outside selection by independent review;no whole-store byte-hash claim is made.
+- No cleanup/handoff guard changed. Book/scratch regeneration follows the immediate residue proof;
+  regenerated paths are expected. Prior record/book scope retained exactly in part937.
