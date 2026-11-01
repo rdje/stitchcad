@@ -782,16 +782,22 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   Status: `done`
   Goal:0773 explicit exact splice;[whole scope/proofs](../history/stitchcad-devnotes-part949.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata`
-  Status: `in_progress`
+  Status: `done`
   Goal:explicit joined metadata/material/label/cut/fold/mark reconciliation from actual source fields.
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.fields`
   Status: `done`
   Goal:0774 explicit field selection;[whole scope/proofs](../history/stitchcad-devnotes-part950.md).
+### G1-SLICE.5f.1.c.join.outputs.metadata.cut
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.cut`
-  Status: `pending`
-  Goal:canonical quantity/mirroring/fold and printed indicators derive from explicit copy/contour policy;
-  no independent entered quantities or automatic face/parity/material inference.
-  Dependencies:.join.outputs.copies and .join.outputs.contours before this cut/print binding.
+  Status: `done`
+  Goal:canonical joined cut/print fields borrow actual matched result;no independently entered quantity/hand/fold or parity inference.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_print_label_contract` through launcher:
+    1 pass across Single/fold,MirroredPairs total2 and explicit PairMember hand;unrelated copy count is not joined print quantity,rc=0.
+  - [x] ADDRESSED: same target plus `cargo test -p sc-core --test join_consumer_contract`:
+    1/2 pass;actual candidate LabelText loan,canonical quantity/mode/fold and all5 outstanding consumer/companion scopes retained,rc=0.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_print_label_contract --test join_consumer_contract -- -D warnings`:
+    strict lint/API4/inventory7/fmt/book/rendered claims rc=0;983 three Git spans/body/public exact;archive1437/70,per-generation21/64 and49/64,rc=0.
+  Commit:STITCHCAD-G1-0808. promotion: declined (existing canonical derived print/cut and native requirement boundary).
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks`
   Status: `done`
   Goal:explicit mark/grainline/seam/other consumer ownership and mapped-or-visible repair requirements.
@@ -799,17 +805,9 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.sources`
   Status: `done`
   Goal:0806 complete native consumer-source requests;[whole scope/proofs](../history/stitchcad-devnotes-part982.md).
-### G1-SLICE.5f.1.c.join.outputs.metadata.marks.review
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.review`
   Status: `done`
-  Goal:focused native consumer-scope checkpoint;actual census/repair/currentness/effect/lineage/physical proof remains separate.
-  - [x] ROOT CAUSE: `python3 -I -B -` canonical scope/source review:
-    five required kinds/direct original field loans preserve held-key/copy-owner/whole-observer requirements,rc=0;no provider verdict follows.
-  - [x] ADDRESSED: same review and `git diff --exit-code -- crates`:
-    native five-scope requirements/contour checkpoint reconciled against journal/sewing contracts;Rust unchanged,all6 Rust examples exact,rc=0.
-  - [x] NO REGRESSION: `scripts/run_make.sh book`:build/rendered native checkpoint/canonical links and actual target anchors rc=0;
-    982 three Git spans/body/public exact;archive1436/69,per-generation21/64 and48/64,rc=0;prior consumer2/result4/API4/inventory6 checks retained.
-  Commit:STITCHCAD-G1-0807. promotion: declined (existing canonical native declarations/actual evidence boundary).
+  Goal:0807 native consumer requirement checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part983.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.tracking`
   Status: `done`
   Goal:0805 bounded consumer continuity;[whole scope/proofs](../history/stitchcad-devnotes-part981.md).

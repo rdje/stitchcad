@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0807 — native join consumer scope checkpoint
+## STITCHCAD-G1-0808 — canonical joined cut and print preview
 
-- Reconcile all five consumer-source scopes with immutable held-reference and full copy-addressed sewing ownership contracts.
-- Close native consumer/contour/construction/fold requirement declarations;actual census/repair/effect/lineage/physical acceptance remains separate.
-- Rust unchanged/all6 Rust fences exact;book/rendered checkpoint/canonical links and target anchors rc=0;prior native2/4/API4/inventory6 proof retained.
-- 982 three Git spans/body/public exact;archive1436/69,per-generation21/64 and48/64. G1still6/18 unchanged;canonical cut/print binding next.
+- Borrow actual matched result LabelText and canonical quantity/mirroring/hand/companion/fold;accept no independent print fields or inferred parity.
+- Cover Single/fold,MirroredPairs total2 and separate PairMember;all consumer/companion/evidence obligations remain outstanding after preview.
+- Native print1/prior consumer2/API4/inventory7/strict lint/fmt/book/rendered claims rc=0;983 three Git spans/body/public bytes exact.
+- Archive1437/70,per-generation21/64 and49/64;native metadata/cut declaration complete,G1still6/18. Identity/history/lineage remains next.
 
 # Sealed archive — earlier slices
+
+[Whole0807 native consumer checkpoint](docs/history/stitchcad-devnotes-part983.md) retains exact task,lesson and ledger bytes.
 
 [Whole0806 consumer-source requirements](docs/history/stitchcad-devnotes-part982.md) retain exact task,lesson and ledger bytes.
 

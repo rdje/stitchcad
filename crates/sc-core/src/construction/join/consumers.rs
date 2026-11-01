@@ -1,6 +1,6 @@
 //! Explicit original/result semantic consumer evidence requests,not a consumer census or repair verdict.
 use super::MatchedJoinPieceInventory;
-use crate::ontology::EntityId;
+use crate::ontology::{EntityId, PrintedLabel};
 
 /// Distinct mandatory scopes;equal or zero source ids never merge or discharge obligations.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -118,6 +118,15 @@ impl<'a> RequiredJoinConsumers<'a> {
     #[must_use]
     pub const fn sources(&self) -> &'a JoinConsumerSources {
         self.sources
+    }
+    /// Borrow the actual matched result's canonical label/cut fields. Total quantity,explicit
+    /// mode/hand/companion and fold indicator derive from that exact Piece/copy/contour context;
+    /// no independent values,source inheritance or selected-copy parity are entered here.
+    /// Constant work/space,no allocation or content scan. This is a native intent preview,not
+    /// material/geometry/print-profile readiness,consumer repair acceptance or release authority.
+    #[must_use]
+    pub fn printed_label(&self) -> PrintedLabel<'a> {
+        self.inventory.result().printed_label()
     }
     /// All five mandatory scopes in canonical whole-consumer,preservation,current-owner,result,
     /// visible-repair order,and reverse. No id-based deduplication or inferred empty-consumer skip.

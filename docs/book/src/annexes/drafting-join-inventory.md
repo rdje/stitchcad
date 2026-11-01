@@ -342,3 +342,32 @@ explicit source retention/retirement and global identity/history requirements. C
 sewing/ease/stops,all-copy physical effects and atomic authoring authority remain explicit later work.
 Actual geometry,domain/envelope evidence and full integration remain G2/G3 and deferred verification;
 this declaration checkpoint grants no independent approval or release readiness.
+
+## Derive canonical joined cut and printed indicators
+
+`RequiredJoinConsumers::printed_label` borrows the actual matched result's canonical
+`PrintedLabel`. Its four text fields come from that exact supplied candidate Piece;quantity,
+mirroring/hand/companion and fold indicator derive from its matched copy/population/contour fields.
+The method accepts no independently entered print quantity,pair/fold flag or parity choice.
+
+```rust
+use sc_core::{construction::*,ontology::PrintedLabel};
+fn preview<'a>(required:&RequiredJoinConsumers<'a>)->PrintedLabel<'a> {
+    required.printed_label()
+}
+```
+
+For a joined Single Piece cut once on an explicitly selected fold,the preview reports quantity1,
+Single and CutOnFold. For a MirroredPairs result with two requested copies,it reports total2,
+including both hands;neither per-hand1,all four consumed source copies,nor a complete plan's
+unrelated retained copy becomes the joined quantity. A separate PairMember reports its explicitly
+declared hand and companion,not a hand inferred from a copy's reflection or its label name.
+
+The text reference is the actual result LabelText,not a reconstructed label or an original A/B
+label substituted by source identity. Old source fold flags do not override the explicit result
+NoFold request. All five consumer scopes and actual companion/fold/construction evidence requests
+remain outstanding after preview. This view certifies no label truth,material compatibility,
+geometry,physical fold axis,print-profile/calibration,release readiness or publication authority.
+
+Work/space are constant with no allocation,content scan,registry/provider/evidence or geometry
+call. Earlier complete immutable resource bounds and native field/copy matching remain required.

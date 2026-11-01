@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — native join consumer scope checkpoint
+## _(2026-11-01 UTC)_ — canonical joined cut and print preview
 
-0807 reconciles five distinct source obligations with canonical immutable held-reference and complete copy-addressed sewing ownership contracts.
-Native consumer/contour/construction/fold declaration checkpoint closes;actual consumer census,repair truth,identity/history/effects/geometry remain separate.
-Rust unchanged/all6 Rust fences exact;book/rendered checkpoint/canonical links+target anchors rc=0;982 three spans/public exact,archive1436/69,per-generation21/64 and48/64.
-promotion: declined (existing native declaration/evidence boundary). Prior2/4/API4/inventory6 proof retained;G1still6/18;canonical cut/print next.
+0808 RequiredJoinConsumers.printed_label borrows actual matched result text and canonical total/mode/hand/companion/fold fields without duplicate inputs.
+Native print1/prior consumer2 pass;Single/fold,MirroredPairs total2 and PairMember cases preserve actual text loans and outstanding evidence scopes.
+API4/inventory7/strict lint/fmt/book/rendered claims rc=0;983 three Git spans/body/public exact;archive1437/70,per-generation21/64 and49/64,rc=0.
+promotion: declined (existing canonical derived cut/print/native request contract). G1still6/18;explicit source identity/history/lineage next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
