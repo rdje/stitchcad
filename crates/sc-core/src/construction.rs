@@ -12,6 +12,9 @@ mod join_examples {}
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-join-sources.md")]
 mod join_source_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-join-inventory.md")]
+mod join_inventory_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-join-topology.md")]
 mod join_topology_examples {}
 #[cfg(doctest)]

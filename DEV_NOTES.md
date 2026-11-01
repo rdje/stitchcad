@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — whole original/candidate Piece-field resources
+## _(2026-11-01 UTC)_ — bounded join candidate inventory reference
 
-0800 admits all original/candidate I/J,H,R and UTF-8 B before later comparison,including consumed/unrelated originals.
-Exhaustive fields force future accounting updates;equal text/separate folds count again,no content scan or allocation.
-Native4/prior plan4/API3/source10/lint/fmt/book rc=0;975 original/body/public bytes exact;resource presence is not equality.
-promotion: declined (existing resource/semantic boundary). G1still6/18;original field preservation/repair next.
+0801 moves whole7077B inventory suffix unchanged to a registered companion;old headings remain forwarders and all examples persist.
+Source8/inventory2/fmt/book/INDEX_COVERAGE118/rendered routes rc=0;Summary120L/all prior routes retained.
+976 four original spans/body/public bytes exact;archive1430/63,per-generation21/64 and42/64,rc=0;runtime code unchanged.
+promotion: declined (existing bounded reference/consumer policy). G1still6/18;explicit companion repair requests next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

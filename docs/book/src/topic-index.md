@@ -137,6 +137,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Native Piece join contracts](annexes/drafting-join-contracts.md)
 - [Native join result topology](annexes/drafting-join-topology.md)
 - [Native join sources and policies](annexes/drafting-join-sources.md)
+- [Native join candidate inventory](annexes/drafting-join-inventory.md)
 - [Walk output and shared-mark contracts](annexes/drafting-walk-outputs.md)
 - [Walk semantic identity and retention](annexes/drafting-walk-identities.md)
 - [Truing output and source contracts](annexes/drafting-truing-outputs.md)

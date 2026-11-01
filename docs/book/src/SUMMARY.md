@@ -7,7 +7,6 @@
 - [Working with agents](learn/agents-and-workflows.md)
 - [Made-to-measure input charts](spec/mtm-input-charts.md)
 - [What you can use today](availability.md)
-# Glossary
 - [Glossary](spec/glossary.md)
   - [Measurements, ease and sizes](spec/glossary/measurements-and-fit.md)
   - [The recipe and the piece](spec/glossary/recipe-and-pieces.md)
@@ -94,6 +93,7 @@
   - [Native Piece join contracts](annexes/drafting-join-contracts.md)
   - [Native join result topology](annexes/drafting-join-topology.md)
   - [Native join sources and policies](annexes/drafting-join-sources.md)
+  - [Native join candidate inventory](annexes/drafting-join-inventory.md)
   - [Walk output and shared-mark contracts](annexes/drafting-walk-outputs.md)
   - [Walk semantic identity and retention](annexes/drafting-walk-identities.md)
   - [Truing output and source contracts](annexes/drafting-truing-outputs.md)

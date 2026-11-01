@@ -811,28 +811,31 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.plan`
   Status: `done`
   Goal:0799 actual canonical candidate plan;[whole scope/proofs](../history/stitchcad-devnotes-part975.md).
-### G1-SLICE.5f.1.c.join.outputs.copies.inventory.fields
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.fields`
   Status: `done`
-  Goal:whole original/candidate headers,hole groups,edge fields and UTF-8 label/reason bytes
-  admitted before later deep comparisons;all consumed/unrelated/companion originals remain charged.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_inventory_field_contract --test join_candidate_plan_contract`
-    through `scripts/local_environment.py`:fields4/prior plan4 pass,rc=0. Copy-plan validity cannot
-    bound whole Piece body comparisons;equal/repeated content and separate folds still count.
-  - [x] ADDRESSED: final `cargo test -p sc-core --test join_inventory_field_contract` through launcher:
-    fields4 pass,rc=0;I/J before H,H before child lengths,R before text lengths,B before content;
-    exhaustive Piece/label/material fields and actual whole-inventory loans. Strict selected clippy rc=0.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join::inventory_fields` through launcher:
-    compiler3 pass,rc=0;`cargo test -p sc-core --doc construction::join_source_examples`:source10 pass,
-    rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered whole/UTF-8/scope
-    boundary present;complete prior source prefix exact.975 three Git spans/body/public bytes exact;
-    `history_archive.py --root . verify`:1429 logical/62 working,rc=0. Main9/topology8 unchanged.
-  Work O(I+J+H+1),constant counters/no allocation/content scan. Resources prove no semantic
-  equality,source permission,geometry/currentness/consumer/identity/effects;full .5f.4.geometry/.5g remains.
-  Commit:STITCHCAD-G1-0800. promotion: declined (existing whole-resource/semantic boundary).
+  Goal:0800 whole inventory field resources;[whole scope/proofs](../history/stitchcad-devnotes-part976.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals`
+  Status: `in_progress`
+  Goal:preserve remaining original fields except derived quantity and explicit guarded companion repairs;
+  canonical reciprocal mates cannot silently keep retired source identities.
+### G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.tracking
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.tracking`
+  Status: `done`
+  Goal:bound inventory references before original semantic/companion contract growth;future repairs explicit.
+  - [x] ROOT CAUSE: `git show 942c20ef:docs/book/src/annexes/drafting-join-sources.md`:
+    source523L/35213B leaves limited room for remaining inventory contracts,rc=0;canonical PairMember reciprocity reviewed.
+  - [x] ADDRESSED: `python3 -I -B -` Git comparison:whole7077B suffix/SHA00caa7c5 exact,
+    10 old Rust fences=source8+inventory2,all old headings/route order retained;INDEX_COVERAGE118,rc=0.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_source_examples` and
+    `construction::join_inventory_examples` through launcher:8/2 pass,rc=0;fmt/book/rendered anchors rc=0.
+    976 four Git spans/body/public bytes exact;archive1430/63 aggregate;generation1 21/64,generation2 42/64,rc=0.
+  Commit:STITCHCAD-G1-0801. promotion: declined (existing bounded book/current source-reference policy).
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.companions`
   Status: `pending`
-  Goal:retained original Pieces preserve every field except canonical quantity derived from actual retained copies.
+  Goal:explicit guarded original companion retarget requirements for actual consumed-source/result replacement.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.fields`
+  Status: `pending`
+  Goal:actual original fields preserve identity/geometry/metadata except derived quantity and admitted companion repairs.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.result`
   Status: `pending`
   Goal:actual joined Piece fields match declared identity/metadata/population/contours/construction/fold;geometry stays pending.

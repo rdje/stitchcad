@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0800 — whole original/candidate Piece-field resources
+## STITCHCAD-G1-0801 — bounded join candidate inventory reference
 
-- Admit all original/candidate headers,hole groups,edge fields and UTF-8 text before deep field comparisons.
-- Consumed/unrelated originals,equal text and separate folds count;actual whole inventory loans,no allocation/content scan.
-- Native4/prior plan4/compiler3/source10/lint/fmt/book rc=0;975 continuity exact;resources imply no semantic approval.
-- G1still6/18;original/result fields,repair/currentness and per-pair geometry/effects remain pending.
+- Move whole7077B candidate-plan/field-resource suffix unchanged to a registered inventory companion;retain both old anchors.
+- Preserve all prior Rust examples and route order;Source8/inventory2/fmt/book/index118/rendered routes rc=0,Summary120L.
+- Prior original-field goal retained in976;explicit companion-reference repair and preservation now separately owned.
+- Archive1430/63,per-generation21/64 and42/64 rc=0;runtime behavior and G1still6/18 unchanged.
 
 # Sealed archive — earlier slices
+
+[Whole0800 field admission and prior original-field goal](docs/history/stitchcad-devnotes-part976.md) retain exact task,goal,lesson and ledger bytes.
 
 [Whole0799 candidate-plan binding](docs/history/stitchcad-devnotes-part975.md) retains exact task,lesson and ledger bytes.
 
