@@ -371,3 +371,68 @@ geometry,physical fold axis,print-profile/calibration,release readiness or publi
 
 Work/space are constant with no allocation,content scan,registry/provider/evidence or geometry
 call. Earlier complete immutable resource bounds and native field/copy matching remain required.
+
+## Request every original global-edge disposition
+
+`JoinSourceIdentityManifest` retains the operation,an explicit global identity-history source id,
+and ordered `JoinSourceIdentityAssignment::new(edge,intent)` rows. Each distinct literal global
+EdgeRef held by original A/B boundary,hole,construction or separate fold fields requires exactly
+one `JoinSourceIdentityIntent`:RetainOriginal or RetireOriginal. Neither has a Default. A selected
+bank subrange or a Piece-local omission never supplies the fate of an entire global source edge.
+
+```rust
+use sc_core::construction::*;
+fn identities<'a>(raw:&'a JoinSourceIdentityManifest,consumers:&'a RequiredJoinConsumers<'a>)
+    ->Result<RequiredJoinSourceIdentities<'a>,JoinSourceIdentityError<'a>> {
+    raw.admit(consumers,JoinSourceIdentityLimits::new(10,4,18))
+}
+```
+
+`JoinSourceIdentityLimits::new(S,M,W)` admits all original A/B occurrences S,all raw rows M and
+checked **S+2M** new logical entries before operation,fields or allocation. S includes every
+repeated construction and separate fold field. Earlier whole I/J/H/R/B/copy/proposal resources
+remain immutable and separate. With S10/M4,W18 is exact policy:S9 refuses Sources,M3 refuses
+Assignments,W17 refuses Workspace,before a wrong operation or bad first selector.
+
+After Operation,an index of all original fields determines distinct global identity count K.
+M must equal K (`Count`) before raw row fields. Each original row then checks Duplicate and
+MissingSource in authored order. Selectors must equal actual literal held source EdgeRefs;there
+is no current-journal alias lookup or guessed child role. One row per identity plus exact count
+covers the complete source set. Source indexes do not reorder the original raw proposal.
+
+For ten original A/B fields holding four global identities,K4 still needs four explicit rows.
+Repeated construction/fold uses remain separate authentic occurrences. Even when A/B fields hold
+the same EdgeRef,their Piece,selected-copy,span-side and field contexts remain distinct;one global
+disposition does not collapse those frames or certify per-copy physical correspondence.
+
+Both intents are **requirements**,including when a supplied candidate still holds the old EdgeRef.
+Stored references remain unchanged and may resolve through journal correspondence or yield visible
+repair. Their presence alone cannot reject a requested mapped retirement;their absence in one
+Piece cannot authorize it. An explicit retirement request beside retained Piece102's old source
+reference can bind,with history/repair evidence0 still unresolved and every candidate field unchanged.
+No ledger event,global liveness query,retirement,registration withdrawal or semantic repair occurs.
+
+The identity-history source requires actual global nonreuse/issuance,logical-role reservations,
+retained/consumed Piece/copy entity history and source/output correspondence. Zero/shared ids remain
+ordinary unaccepted requests. The visible-repair source is the actual mandatory consumer field,
+borrowed from VisibleRepairs rather than independently entered again. Actual global owners,
+history,geometry,consumer repair and atomic authority must discharge these obligations later.
+
+`JoinSourceIdentityError` retains whole `manifest()`,`consumers()`,original `limits()` and first
+`refusal()`. Row causes lend `refused_assignment()`;`first_source()` lends the actual first known
+original occurrence,or None for unknown/whole causes. This diagnostic scans admitted H/S in
+O(H+S+1),without allocating,reconstructing a source or returning an accepted prefix.
+
+`RequiredJoinSourceIdentities` lends those whole parents and actual `source_pieces()`,plus
+`workspace_entries()`,`source_edge_count()`,`retirement_count()` and `retention_count()`.
+Counts report requests,never live or retired entities. `history_source()` and `repair_source()`
+lend actual original source fields. `assignments()` preserves raw order/reverse;`assignment(edge)`
+queries literal original scope,unknown/new-output aliases returning None. Each `JoinSourceIdentity`
+lends `context()`,`index()`,`definition()`,`intent()`,actual `first_source()` and actual
+`source_edge()` field. `sources()` visits every matching original field/frame and reverse in
+O(H+S+1),constant space;the detached equal raw selector never replaces original field evidence.
+
+Admission work is O((H+S+M) log(S+M+2)+1),with conservative peak S+2M new entries and successful2M
+retained index/association entries. Logical entries are not allocator bytes. No provider,registry,
+text or geometry body is scanned. Physical/copy/semantic effects,currentness,approved history,
+actual retirement/repair and publication remain required;this is explicit native identity intent.

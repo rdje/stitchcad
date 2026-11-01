@@ -114,12 +114,15 @@ pub use join::{
     JoinPieceMetadataLimits, JoinPieceMetadataPolicy, JoinPieceMetadataRefusal, JoinPiecesAtSeam,
     JoinPlacedConstructionUse, JoinPlacedCutUse, JoinResultCopyError, JoinResultCopyLimits,
     JoinResultCopyManifest, JoinResultCopyRefusal, JoinResultCopyRequest, JoinResultPieceError,
-    JoinResultPieceField, JoinSourceOccurrence, JoinSourceOccurrenceField,
-    JoinSourceOccurrenceLocation, JoinSourcePieceError, JoinSourcePieceLimits,
-    JoinSourcePieceRefusal, JoinSpliceEnd, JoinSpliceEndpointPair, JoinSplicePlacement,
-    MatchedJoinOriginalPieces, MatchedJoinPieceInventory, RequiredJoinCompanionRepairs,
-    RequiredJoinConstructionTargets, RequiredJoinConsumers, RequiredJoinCopyCorrespondence,
-    RequiredJoinCutConnectivity, RequiredJoinExactSplice, RequiredJoinFold,
+    JoinResultPieceField, JoinSourceIdentity, JoinSourceIdentityAssignment,
+    JoinSourceIdentityError, JoinSourceIdentityIntent, JoinSourceIdentityLimits,
+    JoinSourceIdentityManifest, JoinSourceIdentityRefusal, JoinSourceOccurrence,
+    JoinSourceOccurrenceField, JoinSourceOccurrenceLocation, JoinSourcePieceError,
+    JoinSourcePieceLimits, JoinSourcePieceRefusal, JoinSpliceEnd, JoinSpliceEndpointPair,
+    JoinSplicePlacement, MatchedJoinOriginalPieces, MatchedJoinPieceInventory,
+    RequiredJoinCompanionRepairs, RequiredJoinConstructionTargets, RequiredJoinConsumers,
+    RequiredJoinCopyCorrespondence, RequiredJoinCutConnectivity, RequiredJoinExactSplice,
+    RequiredJoinFold, RequiredJoinSourceIdentities,
 };
 mod mirror;
 pub use mirror::{

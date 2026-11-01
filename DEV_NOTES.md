@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — canonical joined cut and print preview
+## _(2026-11-01 UTC)_ — complete original global-edge identity requirements
 
-0808 RequiredJoinConsumers.printed_label borrows actual matched result text and canonical total/mode/hand/companion/fold fields without duplicate inputs.
-Native print1/prior consumer2 pass;Single/fold,MirroredPairs total2 and PairMember cases preserve actual text loans and outstanding evidence scopes.
-API4/inventory7/strict lint/fmt/book/rendered claims rc=0;983 three Git spans/body/public exact;archive1437/70,per-generation21/64 and49/64,rc=0.
-promotion: declined (existing canonical derived cut/print/native request contract). G1still6/18;explicit source identity/history/lineage next.
+0809 admits every original S/raw M/checked S+2M before fields/allocation;one explicit global fate per distinct literal EdgeRef preserves every original occurrence/frame.
+Native identity4/prior consumer2 pass;S10/K4/M4/W18,first count/duplicate/unknown causes and retained candidate old refs coexist with unaccepted retirement/history requests.
+API4/inventory8/strict lint/fmt/book/rendered claims rc=0;984 three Git spans/body/public exact;archive1438/71,per-generation21/64 and50/64,rc=0.
+promotion: declined (existing global journal/held-key/native request contract). G1still6/18;canonical intake/sewing/all-copy/authoring effect sources next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

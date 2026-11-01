@@ -58,6 +58,12 @@ pub use fold_sources::{
 };
 mod companion_repairs;
 mod consumers;
+mod source_identities;
+pub use source_identities::{
+    JoinSourceIdentity, JoinSourceIdentityAssignment, JoinSourceIdentityError,
+    JoinSourceIdentityIntent, JoinSourceIdentityLimits, JoinSourceIdentityManifest,
+    JoinSourceIdentityRefusal, RequiredJoinSourceIdentities,
+};
 mod original_pieces;
 mod result_piece;
 pub use companion_repairs::{

@@ -787,17 +787,9 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.fields`
   Status: `done`
   Goal:0774 explicit field selection;[whole scope/proofs](../history/stitchcad-devnotes-part950.md).
-### G1-SLICE.5f.1.c.join.outputs.metadata.cut
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.cut`
   Status: `done`
-  Goal:canonical joined cut/print fields borrow actual matched result;no independently entered quantity/hand/fold or parity inference.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_print_label_contract` through launcher:
-    1 pass across Single/fold,MirroredPairs total2 and explicit PairMember hand;unrelated copy count is not joined print quantity,rc=0.
-  - [x] ADDRESSED: same target plus `cargo test -p sc-core --test join_consumer_contract`:
-    1/2 pass;actual candidate LabelText loan,canonical quantity/mode/fold and all5 outstanding consumer/companion scopes retained,rc=0.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_print_label_contract --test join_consumer_contract -- -D warnings`:
-    strict lint/API4/inventory7/fmt/book/rendered claims rc=0;983 three Git spans/body/public exact;archive1437/70,per-generation21/64 and49/64,rc=0.
-  Commit:STITCHCAD-G1-0808. promotion: declined (existing canonical derived print/cut and native requirement boundary).
+  Goal:0808 canonical joined cut/print preview;[whole scope/proofs](../history/stitchcad-devnotes-part984.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks`
   Status: `done`
   Goal:explicit mark/grainline/seam/other consumer ownership and mapped-or-visible repair requirements.
@@ -830,6 +822,23 @@ retains every original goal,status,child relation and focused acceptance proof.
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage`
   Status: `in_progress`
   Goal:explicit output/source identities,retirement/reference repair and full observer/evidence requirements.
+### G1-SLICE.5f.1.c.join.outputs.lineage.edges
+- ID: `G1-SLICE.5f.1.c.join.outputs.lineage.edges`
+  Status: `done`
+  Goal:complete original global-edge disposition/history requirements;actual fields/frames retained,no live-state or effects inferred.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_source_identity_contract` through launcher:
+    4 pass;ten repeated original fields/four global identities need explicit fates;stored held refs do not decide global retirement,rc=0.
+  - [x] ADDRESSED: same target plus `cargo test -p sc-core --test join_consumer_contract`:
+    4/2 pass;whole S/M/checked S+2M before fields/allocation,complete unique literal coverage,actual first source/whole parent/history/repair loans,rc=0.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_source_identity_contract --test join_consumer_contract -- -D warnings`:
+    strict lint/API4/inventory8/fmt/book/rendered claims rc=0;984 three Git spans/body/public exact;archive1438/71,per-generation21/64 and50/64,rc=0.
+  Commit:STITCHCAD-G1-0809. promotion: declined (existing global journal/immutable held-reference and native requirement contract).
+- ID: `G1-SLICE.5f.1.c.join.outputs.lineage.effects`
+  Status: `pending`
+  Goal:explicit canonical intake,sewing/ease/stops,all-copy physical and atomic authoring/effect source requirements.
+- ID: `G1-SLICE.5f.1.c.join.outputs.lineage.review`
+  Status: `pending`
+  Goal:scoped native source/output identity/history/repair/effect review;actual global currentness,correspondence and G2/G3 execution remain separate.
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.identity`
   Status: `done`
   Goal:0780 scoped result Piece identity;[whole scope/proofs](../history/stitchcad-devnotes-part956.md).
