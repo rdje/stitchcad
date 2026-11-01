@@ -1171,12 +1171,7 @@ Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];roo
 
 ## D302 — aggregate count mistaken for active archive pressure
 
-Done0490;owner G1-SLICE.6.5.3.2.retention. [Whole cause/reproduction/verified fix](../history/window23.md#stitchcad-devnotes-part659md).
-
-Recurrence0767 fixed;owner G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage.tracking.
-Repro:0766 pointer/commentary reads aggregate63 as near a64 boundary;backup census proves active42/64,22 slots free. Existing annex/diagnostic already distinguishes them.
-Root:pressure diagnostic skipped before classification;older governance prose also retained global v1/v2 wording. Safe early window28 packing changes no capacity.
-Fix:source/installed census42→7,aggregate63→28;existing pressure controls3 pass0. Correct pointer/rationale and governance to per-generation64/aggregate192;no code/cap change.
+Recurrence fixed0767;[whole original/recurrence ledger](../history/stitchcad-devnotes-part943.md).
 
 D303–D306:[whole closed ledger](../history/window27.md#stitchcad-devnotes-part865md).
 

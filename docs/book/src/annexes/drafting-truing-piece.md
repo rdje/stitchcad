@@ -284,3 +284,59 @@ The check uses O(log(T+2)+G) work,constant additional space and no allocation or
 Earlier source/contour limits retain their scope. Whole-edge lineage,actual current history,
 canonical Piece birth,geometric fold correspondence,fit,copy effects,authority and atomic publication
 remain separate requirements. Structural outer membership alone supplies none of those proofs.
+
+## Request whole-edge identity and reference continuity
+
+`RequiredTruingFold::require_lineage` retains an explicit `TruingSourceIdentityIntent` for the
+**entire original held edge**,including outside portions of a partial selected span.
+`RetainOriginal` requests that edge remain live. `RetireOriginal` requests its retirement with
+actual identity history and correspondence. Neither has a default;neither applies a journal edit.
+The original canonical pattern Piece identity remains required,with all its physical copies.
+
+```rust
+use sc_core::construction::*;
+fn lineage<'a>(fold:&'a RequiredTruingFold<'a>,intent:&'a TruingSourceIdentityIntent)
+    ->Result<RequiredTruingLineage<'a>,TruingLineageError<'a>> {
+    fold.require_lineage(intent,TruingLineageLimits::new(4,16))
+}
+```
+
+Whole T actual outputs and G generated contour uses are checked under
+`TruingLineageLimits::new(T,G)` before inspecting the requested disposition and outcome.
+For T4/G16,T3 refuses `Outputs`;T4/G15 refuses `Occurrences`. Unrelated uses count.
+Explicit `PreserveSource` requires `RetainOriginal`:after quotas,a retirement request refuses
+`PreserveSource`. Even preservation with no new outputs retains mandatory history and repair requests.
+
+For refitting,the authentic candidate admission already forbids an operation from supplying its
+own source edge. Complete contour generation replaces **every** literal original target use;
+derived output creators therefore differ from that original source creator. Fold admission
+requires actual proposed outer membership. Together these parent contracts already exclude a
+result contour or result fold that still names the retired source identity. Lineage admission
+reuses those actual guarantees and performs constant work with no field scan or allocation.
+
+Either requested disposition during `Refit` still requires actual whole-source/history/observer
+evidence. Retention does not silently move an old semantic reference onto a new output:if the
+old edge no longer belongs to the modified Piece,the reference still needs a justified mapping
+or visible repair. Retirement cannot be applied globally from one Piece proposal;other Pieces,
+copies and semantic/sewing consumers require the complete current-owner and all-copy checks.
+No request silently picks a fragment at a split endpoint or hides an unresolved reference.
+
+`RequiredTruingLineage` retains actual `fold()`,original `intent()` and `limits()`. `source_edge()`
+returns the original whole held identity;`piece_id()` lends the actual original canonical Piece id.
+`evidence()` retains the same complete mandatory policy. `history_source()` and `repair_source()`
+lend its **actual original** `IdentityHistory` and `VisibleRepairs` fields,including equal values
+in distinct scopes. There is no independently authored replacement provider or accepted evidence.
+
+`outputs()` lends every authentic selected/outside direction/source member in original declaration
+order and reverse. Their held source ranges and requested directions describe required
+correspondence;they supply no numeric,affine or achieved geometric parameter map.
+`retained_contours()` lends every unchanged original use in output order and reverse,including
+repeated uses. It costs O(G) traversal and allocates nothing;unrelated identities are not retired.
+The full original Piece metadata and explicit fold remain available through the actual parents.
+
+Errors retain the complete original fold/contour/source context,the actual intent field,policy
+and first quota or preservation contradiction. No identity is generated,retired,reused or published.
+Current liveness/nonreuse,whole-Design history,actual geometric maps,visible repair truth,fit,
+all-copy effects,authority and atomic publication retain their separate execution/evidence owners.
+These native whole-Piece declarations pass focused checks;the deterministic curve/refit selection
+and supported-domain review remains required before native truing family closure.

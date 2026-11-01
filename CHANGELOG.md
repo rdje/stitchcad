@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0767 — capture history and correct pressure scope
+## STITCHCAD-G1-0768 — require whole-edge truing lineage
 
-- Early window28 retains36 committed whole files;source proof36 exact and50 prior physical files unchanged.
-- D302 recurrence fixed:source active42/64,aggregate63/192;packing was not a mandatory boundary.
-- Correct governance/pointer and55 live routes;whole0766/D375 retained942 byte-exact.
-- Reader1396/29,active8/64,controls3/tree census/book render pass0;code/tools/caps unchanged.
+- Explicit retain/retire checks whole output/use bounds and preservation policy,with authentic parent proofs.
+- Borrow actual whole Piece identity,history/visible-repair source fields,all outputs and unchanged uses.
+- No source retirement,geometric map,provider acceptance or global currentness certificate is manufactured.
+- Lineage3/prior4/API4/book6,strict selected lint/format and focused render pass0;whole0767/D302 scope943 exact.
 
 ## STITCHCAD-G1-0421 — preserve task-sibling ownership and sealed proof bytes
 
@@ -44,6 +44,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0767 capture/D302 task,lesson and ledgers](docs/history/stitchcad-devnotes-part943.md) retain exact source bytes.
 
 [Whole0766 fold task,lesson,ledger,pointer and prior0422 ledger](docs/history/stitchcad-devnotes-part942.md) retain exact source bytes;0767 corrects the pointer's pressure classification.
 

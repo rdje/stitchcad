@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — capture history exactly and correct pressure scope
+## _(2026-11-01 UTC)_ — require whole-edge truing identity continuity
 
-0767 source-pinned early window28 captures36 committed906–941 fromcb1e7432;existing producer/installer verifies complete logical/source identity and preserves recovery originals. Source proof36 exact;independent50 unchanged physical files/36 raw absences/public9413844B exact;rc0.
-D302 recurs because aggregate63 was compared with per-generation64 before running the existing diagnostic. Backup census proves active42/64,22 slots free;packing was not mandatory. Correct governance/current pointer/rationale;controls3 and source/installed census pass0. No code/cap change.
-Whole0766/D375/0422 ledgers retained942 exact;reader1396/29,active8/64,aggregate29/192,55 live routes/tree census10/13/20/book render pass0. D372 build warning remains. Promotion: declined (existing pressure contract). G1still6/18;resume whole-edge lineage;recovery originals protected.
+0768 binds explicit retain/retire under whole T/G quotas;preservation forbids retirement. Actual IdentityHistory/VisibleRepairs fields,whole original Piece identity,complete outputs and retained uses stay borrowed;no provider call,history edit or numeric map.
+Initial alias fixture fails earlier SelfSource,so authentic creator/complete-contour/outer-fold proofs replace a redundant draft scan. Lineage3/prior fold3/manifest guard1/API4/book6,strict selected Clippy/format and focused render pass0;draft nested-if lint fixed. Real global maps/fit/effects remain owned.
+Whole0767/D302 retained943 exact;reader1397/30,active9/64,aggregate30/192 pass0. Original source-book Rust fences unchanged;D372 build warning remains. Promotion: declined (existing parent/reference contracts). G1still6/18;next deterministic curve/refit/domain review.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

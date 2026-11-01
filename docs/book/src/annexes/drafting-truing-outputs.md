@@ -393,8 +393,9 @@ A complete Piece replacement also needs an explicit declaration for portions out
 partial domain and every affected boundary,hole,construction and fold occurrence. For selected
 1/4–3/4,coverage of that interval alone cannot account for the remaining0–1/4 and3/4–1 portions.
 Piece contours carry whole edge references;selected-source candidates are not a complete Piece
-replacement. Native whole-Piece role/contour/lineage reconciliation remains a tracked continuation,
-before family closure. Actual current identity application,mapped geometry and atomic execution
-retain their existing G1/G2/G3/bus owners.
+replacement. The companion supplies native whole-Piece role/contour/fold/lineage declarations.
+Deterministic curve/refit selection and supported-domain review remain required before family
+closure. Actual current identity application,mapped geometry and atomic execution retain their
+existing G1/G2/G3/bus owners.
 
-Continue with the [whole-Piece declarations](drafting-truing-piece.md) for explicit outside-fragment roles.
+Continue with the [whole-Piece declarations](drafting-truing-piece.md) for complete original-source placement and identity requests.

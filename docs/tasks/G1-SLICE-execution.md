@@ -781,7 +781,7 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0752 actual edge-role binding;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part927md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest`
-  Status: `in_progress`
+  Status: `done`
   Goal:candidate/domain/coverage,outcome/lock/evidence and whole-Piece replacement declarations;
   actual maps/fit/variant policy stay owned.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.entries`
@@ -807,7 +807,7 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0759 complete evidence requests;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part935md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece`
-  Status: `in_progress`
+  Status: `done`
   Goal:P1 before native family closure:explicit whole-Piece reconciliation for partial selected spans.
   Reproduce:truing_source_domain_contract whole0–1 on selected1/4–3/4 refuses BeforeStart;
   ontology/piece.rs DirectedEdge/PieceDefinition contours carry whole EdgeRefs,not EdgeRanges.
@@ -841,24 +841,27 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0763 exact scalar checkpoint move;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part939md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage.tracking`
   Status: `done`
-  Goal:safe early source-pinned window28 capture;correct D302 recurrence and governance scope.
-  - [x] ISSUE:0766 pointer/commentary compares aggregate63 with per-generation64;older governance
-    repeats global wording. Source active42/64 has22 slots;packing was early,not mandatory.
-  - [x] ROOT CAUSE:generation_pressure.py plus independent backup/catalog census proves21/42
-    source versus21/7 installed;existing controls3 distinguish aggregate/active,rc=0. Diagnostic skipped before claim.
-  - [x] FIX:existing v2_migration.py append target/history_window28_capture --owner this leaf,
-    then v2_install.py install;terminal rc=0. Correct pointer/rationale/governance;route55 live links.
-  - [x] ADDRESSED:scripts/history_archive.py --root . prove-source window28:36 byte-identical
-    files/zero missing-extra;rc=0. Independent36 raw absences/50 unchanged files/public941 exact3844B;rc=0.
-  - [x] NO REGRESSION:verify-retention1396/29 rc=0;pressure active8/64,aggregate29/192;controls3
-    rc=0. Tree census10/13/20,zero failures;book build/focused D302 render rc=0. Code/tools unchanged.
-  - [x] LOCKSTEP:whole0766 task/lesson/ledger/pointer and D375/0422 ledgers retained942 exact;D302
-    recurrence fixed in PLANNING/book/live pointer. No cap/source-proof/power-loss/platform change.
-  Commit:STITCHCAD-G1-0767;promotion: declined (existing pressure diagnostic/contract).
+  Goal:0767 exact early capture/D302 correction;[whole scope/proofs](../history/stitchcad-devnotes-part943.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage`
-  Status: `pending`
-  Goal:explicit original whole-edge retention/retirement/reference-repair declarations for the
-  complete Piece proposal;actual current history and mapped geometry keep their existing owners.
+  Status: `done`
+  Goal:explicit whole held-edge retain/retire and mapped-or-visible reference requirements;
+  actual current history,global observers and numeric geometric maps retain their later owners.
+  - [x] ISSUE:complete Piece/fold declarations need explicit whole-edge identity disposition;
+    neither new candidates nor selected-source coverage may silently retire an original identity.
+  - [x] ROOT CAUSE:initial alias fixture refuses earlier SelfSource;manifest.rs creator guard
+    plus complete contour replacement/outer fold already exclude old result uses. Existing named
+    creator-alias contract passes1/0,rc=0;reuse these parents instead of an unreachable downstream scan.
+  - [x] FIX:require_lineage checks whole T/G before explicit disposition/outcome;preservation
+    refuses retirement. Retain actual IdentityHistory/VisibleRepairs fields,all outputs and unchanged uses.
+  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    truing_lineage_contract passes3/0;both sides/outcomes/all four fold cases,original evidence-field
+    pointers,complete/reverse attribution,resource precedence and minimal empty outputs;rc=0.
+  - [x] NO REGRESSION:prior fold3 and selected manifest guard1 pass0;rc=0. Strict selected
+    Clippy/format rc=0 after collapsing draft nested if;API4/book6/build/focused render rc=0.
+    Original selected-source Rust book fences byte-exact;D372 warning remains owned.
+  - [x] LOCKSTEP:whole0767/D302 scope retained943 exact;archive1397/30/active9,rc=0. Native
+    Piece/manifest declaration parents close;variant review and actual geometry/fit/authority stay owned.
+  Commit:STITCHCAD-G1-0768;promotion: declined (existing authentic-parent/reference contracts).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.coverage.tracking`
   Status: `done`
   Goal:0755 exact walk split/receipt930;census0;promotion: declined (navigation).

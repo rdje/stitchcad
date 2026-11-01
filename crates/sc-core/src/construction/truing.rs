@@ -29,6 +29,11 @@ pub use outcome::{
     RequiredTruingOutcome, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
 };
 mod binding;
+mod lineage;
+pub use lineage::{
+    RequiredTruingLineage, TruingLineageError, TruingLineageLimits, TruingLineageRefusal,
+    TruingSourceIdentityIntent,
+};
 mod fold;
 pub use fold::{
     RequiredTruingFold, TruingFoldError, TruingFoldIntent, TruingFoldLimits, TruingFoldRefusal,
