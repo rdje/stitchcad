@@ -1179,9 +1179,10 @@ D307–D369:[whole prior ledger](../history/window27.md#stitchcad-devnotes-part8
 
 ## D372 — large book-search index warning
 
-P2 pending;owner G1-SLICE.5f.1.book-search after typed v1 feature completion. Repro:local_environment.py -- mdbook build docs/book →rc0 plus new large-index warning,payload10015553B;JS10030347B.
-Root:full-text/chapter indexing grew across the builder's size warning at0691. Impact:build no longer warning-free;reader latency not measured. Existing heading-split-level1/full-text policy retained.
-Resolve index containment with actual search checks;no warning suppression/cap raise. Native output-contract work continues;no search failure or performance certificate claimed.
+P2 active;owner G1-SLICE.5f.1.book-search after native feature completion0813. First payload10015553B/JS10030347B;0814 native build rc0 warns12993569B across118 chapters.
+Root measured0814:body5318916B/breadcrumbs5321651B despite breadcrumb text10580B;all72206 body term/document pairs leak into breadcrumbs. Published upstream fix b7efca70/elasticlunr-rs3.1.0 isolates field frequencies.
+Impact:warning plus incorrect field membership;ranking/latency unmeasured. Owner .build builds published mdBook0.5.4 locally with fixed dependency;.activate selects verified tool;.verify checks actual full-text/chapter behavior.
+No source patch,chapter exclusion,warning suppression/cap raise or performance certificate. Existing heading-split-level1/full-text policy retained;native features accepted0813.
 
 ## D373/D374 — active journal documentation scope/storage drift
 

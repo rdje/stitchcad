@@ -676,17 +676,9 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   this grants no G1 running-spike waiver or geometry certificate.
   Verification:native13-family focused checkpoint0813 accepted;post-feature P2 D372 remains .book-search below.
   Commit:STITCHCAD-G1-0813;actual program/frame/geometry/physical/full integration remains separately owned.
-### G1-SLICE.5f.1.review
 - ID: `G1-SLICE.5f.1.review`
   Status: `done`
-  Goal:aggregate native v1 declaration/output-contract acceptance;actual namespace/frame/order/geometry/physical/atomic integration remains owned.
-  - [x] ROOT CAUSE: `python3 -I -B -` inventory/canonical task review:
-    13 distinct operation families,all native a/b/c family nodes done;four primitive overview examples require literal-source compilation,rc=0.
-  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::operation_examples` through launcher:
-    actual overview4 pass,rc=0;registered maintained text,removed stale pending-schema prose;Rust delta only3 cfg-doctest lines,all38 fences unchanged.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib -- -D warnings`/fmt/book through launcher:
-    lint/fmt/build/rendered13 rows/4 cells/native-frame-geometry boundaries rc=0;988 Git spans/body/public exact;archive1442/75,per-generation21/64 and54/64,rc=0.
-  Commit:STITCHCAD-G1-0813. promotion: declined (existing native schema acceptance and actual execution boundary).
+  Goal:0813 aggregate native declaration acceptance;[whole scope/proofs](../history/stitchcad-devnotes-part989.md).
 - ID: `G1-SLICE.5f.1.a`
   Status: `done`
   Goal:completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part838md).
@@ -926,9 +918,31 @@ retains every original goal,status,child relation and focused acceptance proof.
   Status: `done`
   Goal:0812 native join declaration checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part988.md).
 - ID: `G1-SLICE.5f.1.book-search`
-  Status: `pending`
+  Status: `in_progress`
   Goal:P2 D372 after typed v1 feature completion:resolve new large-index build warning;
   payload10015553B/JS10030347B. Preserve full-text/chapter search;no latency claim,cap raise or warning suppression.
+### G1-SLICE.5f.1.book-search.plan
+- ID: `G1-SLICE.5f.1.book-search.plan`
+  Status: `done`
+  Goal:P2 D372 measure current index/build/search contracts and choose bounded full-text/chapter-preserving containment without warning suppression/cap raise.
+  Scope:public mdBook API/output contracts,existing source/search policies and actual corpus;no unmeasured latency or performance claims.
+  - [x] ROOT CAUSE: `search_index_census.py` through launcher →118 documents,body5318916B/breadcrumbs5321651B;all72206 body pairs in breadcrumbs,rc=0.
+    Native `mdbook build docs/book` →rc=0 with12993569B warning;upstream API fix b7efca70 and published3.1.0 metadata confirmed by urllib,rc=0.
+  - [x] ADDRESSED: `python3 -I -B -` task/source review →published unchanged mdBook0.5.4 local build,explicit activation and native verification separately owned,rc=0.
+    Read-only census added;book/defect ledger record real field leakage and unresolved warning;no corpus/config/ambient-tool change.
+  - [x] NO REGRESSION: launcher/publication `search_controls` →5 actual refusals,original unchanged,rc=0;989 three Git spans/body/public exact;archive1443/76,per-generation21/64 and55/64,rc=0.
+  Commit:STITCHCAD-G1-0814. promotion: declined (D372 owns concrete upstream defect and bounded resolution;no new product decision).
+- ID: `G1-SLICE.5f.1.book-search.build`
+  Status: `pending`
+  Goal:build published mdBook0.5.4 in guarded project-local stores with published elasticlunr-rs3.1.0;record actual resolution and reproduce corrected field isolation through the public renderer.
+  Acceptance:no external repository/store writes,source patches,warning suppression or changed corpus;preserve ambient binary and baseline;own installation and focused native field probe.
+- ID: `G1-SLICE.5f.1.book-search.activate`
+  Status: `pending`
+  Goal:select the verified local renderer explicitly in normal build/publication/capture paths;guard tool/source paths and update installation/search docs and directly affected contracts.
+  Acceptance:all full-text/chapter coverage retained;unexpected renderer warnings still refuse;no implicit dependency on ambient executable resolution.
+- ID: `G1-SLICE.5f.1.book-search.verify`
+  Status: `pending`
+  Goal:after implementation verify actual full-text/chapter search and warning-free build against original corpus;preserve existing public behavior.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.

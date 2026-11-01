@@ -1,7 +1,7 @@
 # Full-text book search
 
 Search indexes every registered chapter's complete text and returns one result per matching
-chapter. The supported heading-split-level=1 setting keeps the browser index compact;results open
+chapter. The supported heading-split-level=1 setting groups results by chapter;results open
 the containing chapter. Use its section navigation for finer anchors. No chapter is excluded and
 no legitimate product prose is removed to meet a search-size warning. See the
 [mdBook search contract](https://rust-lang.github.io/mdBook/format/configuration/renderers.html#outputhtmlsearch).
@@ -50,4 +50,21 @@ search JavaScript. It supplies search-coverage evidence,not browser application 
 The focused capture watcher separately intercepts dispatch and checks five writes,six failure
 paths,the original/fixed ownership collision,thirteen path/input refusals and nine actual body
 faults. Those simulated children do not count as native renderer evidence.
+
+## Current index warning and upstream field isolation
+
+D372 remains open:the0813 corpus produces a12993569-byte JSON index with118 chapter records.
+The body index occupies5318916 bytes and the breadcrumb index5321651 bytes,although stored
+breadcrumb text totals10580 bytes. Every body term/document pair also occurs in breadcrumbs.
+Run the read-only `python3 -I -B docs/tasks/artifacts/book_publication/search_index_census.py`
+through the local producer profile to rederive the actual current sizes and coverage.
+
+The upstream [field-isolation fix](https://github.com/mattico/elasticlunr-rs/commit/b7efca70afbe7bbed0a428f8cfff2abff93270e3)
+moves token frequencies inside the field loop and adds independent field/frequency regressions.
+[Published3.1.0](https://crates.io/crates/elasticlunr-rs/3.1.0) follows that fix.
+The next owned steps build the published mdBook0.5.4 locally with that dependency,verify the actual
+renderer output,then select it explicitly. No upstream source is patched. Full text,chapter routes
+and unexpected-warning refusals remain required. Search ranking and reader latency are unmeasured.
+Until resolved,the historical level3/level1 capture above refuses its now-warning chapter candidate;
+that refusal is diagnostic evidence,not a successful migration or permission to ignore warnings.
 

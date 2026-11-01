@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — aggregate native v1 declaration acceptance
+## _(2026-11-01 UTC)_ — upstream search field leakage measured
 
-0813 accepts13 distinct native operation families with all a/b/c family nodes done;actual frame/order/registry/geometry/atomic integration remains separate.
-Four actual primitive overview examples now compile as source doctests and pass;stale pending-schema prose removed;runtime code unchanged,only3 cfg-doc lines added.
-Strict lib lint/fmt/book/rendered13 rows/4 cells/source-boundary rc=0;all38 fences exact;988 Git spans/body/public exact,archive1442/75,per-generation21/64 and54/64.
-promotion: declined (existing schema/actual execution boundary). G1still6/18;post-feature P2 D372 search containment next,not broad geometry or G1 closure.
+0814 D372:118 records,body5318916B/breadcrumbs5321651B versus10580B stored breadcrumb text;all72206 body pairs leak;build0 warns12993569B.
+Official b7efca70 fixes field frequencies;published3.1.0 follows mdBook0.5.4. Read-only census0;existing5 native search refusals0;989 Git/public exact0.
+Local same-version build,explicit activation and actual search verification separately owned;no source patch/corpus loss/suppression. Ranking/latency unmeasured.
+Promotion declined: existing D372 owner;warning remains open. G1still6/18;native13-family checkpoint accepted0813;archive1443/76,per-generation21/64 and55/64.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

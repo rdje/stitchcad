@@ -3,14 +3,18 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0813 — aggregate native v1 declaration acceptance
+## STITCHCAD-G1-0814 — trace the large search index to upstream field leakage
 
-- Accept13 native operation families/all a/b/c feature nodes under the explicit schema-versus-actual-execution boundary.
-- Compile the four maintained primitive overview examples as source doctests;remove stale pending-schema prose;runtime code unchanged.
-- Overview4/strict lib lint/fmt/book/rendered13 rows/4 cells rc=0;all38 Rust fences unchanged;988 three Git spans/body/public exact.
-- Archive1442/75,per-generation21/64 and54/64;G1still6/18. Post-feature P2 D372 search containment next;actual integration/geometry remains separately owned.
+- Added read-only native field census:118 records;body5318916B/breadcrumbs5321651B;
+  all72206 body pairs also indexed as breadcrumbs despite10580B of breadcrumb text.
+- Verified upstream field-frequency fix and published3.1.0;owned local mdBook0.5.4 build,
+  explicit activation and actual search verification. D372 remains open;no warning suppression.
+- Native build0 warns12993569B;existing5 search refusals0;989 Git/body/public exact,
+  archive1443/76,per-generation21/64 and55/64. G1still6/18;native feature checkpoint unchanged.
 
 # Sealed archive — earlier slices
+
+[Whole0813 native v1 declaration acceptance](docs/history/stitchcad-devnotes-part989.md) retains exact task,lesson and ledger bytes.
 
 [Whole0812 native join family checkpoint](docs/history/stitchcad-devnotes-part988.md) retains exact task,lesson and ledger bytes.
 
