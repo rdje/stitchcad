@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0795 — explicit joined result-copy requests
+## STITCHCAD-G1-0796 — complete original joined copy actions
 
-- Whole C/I/Q/C+I+Q before fields;explicit stable copies exactly match authored quantity and declared result Piece.
-- Actual id/Piece/orientation/unrelated-member loans and scoped local collisions retained;no issuance/pairing inferred.
-- Native4/prior fold4/compiler3/source6/lint/fmt/book rc=0;970 continuity exact.
-- G1still6/18;complete source-copy actions,no-fork pairing,canonical plan/consumers and actual geometry/effects pending.
+- Whole C/M/2M before fields;one guarded action per original copy,including exact unrelated-copy preservation.
+- Actual full source definition/A/B/target membership and raw/source/result loans;no source reassignment or hidden pairing.
+- Native4/prior results4/compiler4/source7/lint/fmt/book rc=0;971 continuity exact.
+- G1still6/18;selected A+B/no-fork pairing,canonical inventory/consumers and actual geometry/effects remain pending.
 
 # Sealed archive — earlier slices
+
+[Whole0795 result-copy requests](docs/history/stitchcad-devnotes-part971.md) retain exact task,lesson and ledger bytes.
 
 [Whole0794 original fold actions](docs/history/stitchcad-devnotes-part970.md) retain exact task,lesson and ledger bytes.
 

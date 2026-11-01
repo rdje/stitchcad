@@ -295,3 +295,66 @@ Work is O(C log(C+2)+I log(I+2)+Q log(Q+C+I+2)+1),with C+I+Q new index entries. 
 evidence,registry or geometry call occurs. Source actions,pairing,complete candidate inventory,
 orientation/mirroring,copy transforms,consumer repair,currentness,identity issuance and atomic
 authority remain separately required.
+
+## Declare every original physical-copy action
+
+`JoinCopySourceManifest` retains the operation and complete ordered
+`JoinCopySourceAssignment::new(expected,intent)` rows. `expected` is the original whole
+`CutCopyDefinition`:its persistent id selects the actual original copy,and Piece/orientation fields
+must remain exact. It is a guard,not a replacement copy. Every row explicitly requests
+`JoinCopySourceIntent::RetainOriginal` or `JoinTo { result_copy }`;there is no default.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn action(expected:CutCopyDefinition,intent:JoinCopySourceIntent)->JoinCopySourceAssignment {
+    JoinCopySourceAssignment::new(expected,intent)
+}
+fn sources<'a>(manifest:&'a JoinCopySourceManifest,results:&'a DeclaredJoinResultCopies<'a>)
+    ->Result<DeclaredJoinCopySources<'a>,JoinCopySourceError<'a>> {
+    manifest.admit(results,JoinCopySourceLimits::new(3,3,6))
+}
+```
+
+`JoinCopySourceLimits::new(C,M,W)` admits all actual original copies C,all raw action rows M and
+checked2M new source-index/association entries before fields or allocation. C includes unrelated
+and unselected copies. Earlier complete original/result inventory and construction/fold resources
+remain separate;logical entries are not allocator bytes. For C3/M3,W6 is exact:C2 refuses `Copies`,
+M2 `Assignments`,W5 `Workspace`,before an incorrect operation or malformed first expected field.
+
+With quotas met,`Operation` precedes `Count`:M must equal the complete actual original copy
+population. Each original row then checks `DuplicateCopy`, `MissingCopy`, `SourceField`,followed
+by intent-specific ownership and target requirements. Exact unique actual membership covers every
+original copy. Piece reassignment or a changed authored/reflected expectation refuses SourceField;
+matching geometry or a surviving copy id cannot replace the whole original guard.
+
+RetainOriginal preserves the exact actual original id/Piece/orientation fields. JoinTo first
+requires a copy of an actual source A/B Piece (`ForeignPiece` otherwise),then an actual explicit
+result-copy request (`UnknownResult` otherwise). An unrelated copy must be retained;it cannot
+silently become material for this two-Piece splice. A catalogue-like id or original source-copy id
+cannot replace an actual requested result. Copy orientation stays independent of edge traversal,
+parameter requests and physical placement;none is transformed or inferred here.
+
+`JoinCopySourceError` retains actual whole `manifest()`,`results()`,original `limits()` and first
+`refusal()`. Row causes lend the actual `refused_assignment()` and known actual `refused_copy()`,
+if that selector exists. UnknownResult additionally lends its actual authored `refused_result()`
+id field. Whole resource/operation/count causes lend none of these fields. No accepted prefix,
+replacement original copy or ignored suffix escapes refusal.
+
+`DeclaredJoinCopySources` retains those parents and reports `copy_count()` and
+`workspace_entries()`. `assignments()` preserves authored order and reverse;`assignment(id)`
+queries an actual original copy action by stable identity. Each `JoinCopySourceAction` lends its
+actual owner,original ordinal/raw assignment,actual canonical `source()` copy and
+`source_definition()` field. `side()` reports the actual original A/B Piece role,or None for an
+unrelated retained copy. `intent()` remains the original authored field;`result()` lends the actual
+requested result only for JoinTo. RetainOriginal never implies a replacement target.
+
+This stage can retain complete requests that preserve even the selected A/B copies. That is not
+an accepted no-op or an executed join:the next exact no-fork pairing check must require the actual
+selected A/B to contribute to the same result and exactly one A+B source pair per result. Additional
+source copies cannot be implicitly paired,duplicated or silently discarded. All original id/Piece/
+orientation fields remain available for complete candidate inventory and consumer reconciliation.
+
+Work is O(M log(M+C+Q+2)+1) for Q actual result requests,with2M new entries. No provider,evidence,
+registry,geometry,physical copy transform,currentness,identity issuance or atomic effect is supplied.
+Exact selected correspondence/pairing,canonical inventory/CutPlan,copy/consumer requirements,
+achieved geometry and authority remain separately required.

@@ -1,60 +1,10 @@
 //! Explicit stable result-copy request fields and whole original inventory,not final copies/pairs.
 #![allow(clippy::expect_used)]
 #[allow(dead_code)]
-#[path = "support/join_fold.rs"]
+#[path = "support/join_copies.rs"]
 mod common;
-use common::{id, with_copy_construction};
+use common::{id, request, with_folds};
 use sc_core::{construction::*, ontology::*};
-fn request(bits: u128, orientation: CopyOrientation) -> CutCopyDefinition {
-    CutCopyDefinition {
-        id: id(bits),
-        piece: id(5000),
-        orientation,
-    }
-}
-fn with_folds(quantity: u32, run: impl FnOnce(DeclaredJoinFoldSources<'_>)) {
-    with_copy_construction(quantity, true, |construction| {
-        let raw = JoinFoldRequirement::new(id(1000), JoinFoldIntent::NoFold, id(0));
-        let fold = construction
-            .require_fold(&raw, JoinFoldLimits::new(10, 10, 4))
-            .expect("explicit desired NoFold state");
-        let sources = fold
-            .construction()
-            .targets()
-            .coverage()
-            .groups()
-            .sources()
-            .uses()
-            .connectivity()
-            .contours()
-            .directions()
-            .coverage()
-            .edges()
-            .identity()
-            .roles()
-            .banks()
-            .sources();
-        let rows = sources
-            .occurrences()
-            .filter_map(|f| match f.location() {
-                JoinSourceOccurrenceLocation::Fold(index) => Some(JoinFoldSourceAssignment::new(
-                    f.side(),
-                    index,
-                    *f.field().edge(),
-                    JoinFoldSourceIntent::Omit {
-                        evidence_source: id(0),
-                    },
-                )),
-                _ => None,
-            })
-            .collect();
-        let raw = JoinFoldSourceManifest::new(id(1000), rows);
-        let declared = raw
-            .admit(&fold, JoinFoldSourceLimits::new(10, 2, 4))
-            .expect("complete original fold omission requests");
-        run(declared);
-    });
-}
 #[test]
 fn explicit_copies_preserve_raw_ids_piece_orientation_order_and_whole_actual_inventory() {
     with_folds(2, |folds| {

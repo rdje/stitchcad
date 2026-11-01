@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — explicit joined result-copy requests
+## _(2026-11-01 UTC)_ — complete original joined copy actions
 
-0795 binds explicit result id/Piece/orientation requests to canonical quantity under whole original C/I and Q/C+I+Q.
-Actual requests/unrelated inventory loans and scoped namespace exclusions survive;no ids,pairs or full plan inferred.
-Native4/prior fold4/API3/source6/lint/fmt/book rc=0;970 original/body/public bytes exact.
-promotion: declined (existing copy/identity/geometry boundary). G1still6/18;complete original-copy actions next.
+0796 binds every actual original copy to guarded RetainOriginal/JoinTo under whole C/M/2M,including unrelated copies.
+Whole id/Piece/orientation and A/B/target membership stay exact;actual raw/source/result loans survive without pairing.
+Native4/prior results4/API4/source7/lint/fmt/book rc=0;971 original/body/public bytes exact.
+promotion: declined (existing copy/identity/geometry boundary). G1still6/18;exact selected A+B no-fork pairing next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
