@@ -214,11 +214,12 @@ pub use walk::{
 mod truing;
 pub use truing::{
     AdmittedTruingEdges, BoundConstrainedTruing, BoundTruingCopyInventory, BoundTruingEdgeRoles,
-    BoundTruingSourceDomain, ConstrainedSeamTruing, CoveredTruingSourceDomain, TruingBindingError,
-    TruingBindingRefusal, TruingCopyInventoryError, TruingCopyInventoryLimits,
-    TruingCopyInventoryRefusal, TruingEdgeCandidate, TruingEdgeManifest, TruingEdgeManifestError,
-    TruingEdgeManifestLimits, TruingEdgeManifestRefusal, TruingEdgeRoleBindingError,
-    TruingEdgeRoleBindingRefusal, TruingFitProvider, TruingInputError, TruingInputRole,
+    BoundTruingSourceDomain, ConstrainedSeamTruing, CoveredTruingSourceDomain,
+    RequiredTruingOutcome, TruingBindingError, TruingBindingRefusal, TruingCopyInventoryError,
+    TruingCopyInventoryLimits, TruingCopyInventoryRefusal, TruingEdgeCandidate, TruingEdgeManifest,
+    TruingEdgeManifestError, TruingEdgeManifestLimits, TruingEdgeManifestRefusal,
+    TruingEdgeRoleBindingError, TruingEdgeRoleBindingRefusal, TruingFitProvider, TruingInputError,
+    TruingInputRole, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
     TruingOutputEdge, TruingSourceCoverageError, TruingSourceCoverageLimits,
     TruingSourceCoverageRefusal, TruingSourceDomainEdge, TruingSourceDomainError,
     TruingSourceDomainLimits, TruingSourceDomainRefusal,

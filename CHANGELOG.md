@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0756 — require exact selected truing source coverage
+## STITCHCAD-G1-0757 — require explicit truing outcome intent
 
-- Whole N/W quotas precede one exact source-order index;positive gaps/overlaps and empty proposals refuse.
-- Preserve actual selected domain,original candidates/parents/order;no geometric map or no-op inferred.
-- Native4+4/API3/book5,selected lint/fmt/build/render pass0;complete prior receipt931 byte-exact.
-- Outcome/reference/variant policy and actual currentness/fit/atomic integration remain owned.
+- Whole N precedes explicit zero-candidate PreserveSource or complete partition-backed Refit.
+- Keep actual whole source/role/copy/provider parents and original resource/gap/overlap causes.
+- Empty metadata never selects no-op/retirement;neither branch proves achieved geometry or fit.
+- Native3+4/API3/book6,selected lint/fmt/build/render pass0;whole prior receipt932 retained exactly.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -52,6 +52,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0756 source-partition task,lesson and ledger](docs/history/stitchcad-devnotes-part932.md) retain exact source bytes.
 
 [Complete assertion suffix and0755 lesson/ledger](docs/history/stitchcad-devnotes-part931.md) retain exact source bytes.
 

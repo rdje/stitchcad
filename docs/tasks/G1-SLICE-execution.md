@@ -873,25 +873,21 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0754 exact held-domain membership;[whole scope/proofs](../history/stitchcad-devnotes-part930.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.coverage`
   Status: `done`
-  Goal:exact selected held-domain partition under whole N/workspace limits before sorting.
-  Preserve original candidates/parents;source-order index refuses first gap/positive overlap,
-  including empty input. No epsilon,refit/no-op,currentness,endpoint/stop or geometry certificate.
-  Retain complete closed assertion receipts before aggregate/live-journal growth;no cap change.
-  - [x] ISSUE:membership permits empty,overlapping and gapped attributions.
-  - [x] ROOT CAUSE: cargo test -p sc-core --test truing_source_domain_contract:4 pass,rc=0;
-    its empty/repeated-middle cases show bind_source_domain only checks exact membership.
-  - [x] FIX:whole N/W before one in-place sorted borrowed index;first exact gap/overlap refusal.
-  - [x] ADDRESSED: cargo test -p sc-core --test truing_source_coverage_contract:4 pass,rc=0;
-    independent integer-cell oracle,sub-float exact gaps/overlaps,both sides/parents/order/quota checks.
-  - [x] NO REGRESSION:prior domain4,coverage API3/book5,selected Clippy/fmt pass;rc=0.
-    Book build/render pass0;D372 search warning stays owned. Broad integration .5g/.5f.4 deferred.
-    Complete original assertion suffix/0755 source spans and public reader931 byte-exact;rc=0.
-  - [x] LOCKSTEP:book/live/pointer/journals aligned;promotion: declined (existing held-domain scope).
-  Commit:STITCHCAD-G1-0756.
+  Goal:0756 exact held-domain partition;[whole scope/proofs](../history/stitchcad-devnotes-part932.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.policy`
-  Status: `pending`
+  Status: `done`
   Goal:explicit refit/unchanged intent bound to whole original source/candidate context;
   no inference of no-op or retirement from empty membership,coverage or active role declarations.
+  - [x] ISSUE:whole-domain membership/coverage cannot select an outcome intent.
+  - [x] ROOT CAUSE: cargo test -p sc-core --test truing_source_coverage_contract:4 pass,rc=0;
+    positive-domain empty metadata refuses coverage;nonempty coverage carries no physical effect.
+  - [x] FIX:explicit PreserveSource/Refit;whole N before branches,N0 preservation or real partition.
+  - [x] ADDRESSED: cargo test -p sc-core --test truing_outcome_contract:3 pass,rc=0;
+    empty preserve/refit discrimination,whole quotas,original cause/parents and no mode fallback.
+  - [x] NO REGRESSION:prior partition4,API3/book6,selected Clippy/fmt/build/render pass;rc=0.
+    Whole0756 scope/lesson/ledger932 retained byte-exact;actual fit and broad integration deferred .5g/.5f.4.
+  - [x] LOCKSTEP:book/live/pointer/journals aligned;promotion: declined (existing explicit-outcome pattern).
+  Commit:STITCHCAD-G1-0757.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references`
   Status: `pending`
   Goal:bounded endpoint/stop/reference and all-copy observer/fit evidence requirements;

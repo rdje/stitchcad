@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — require exact selected truing source coverage
+## _(2026-11-01 UTC)_ — require explicit truing outcome intent
 
-0756 adds whole N/W admission and an exact source-order partition index;original candidates/parents/order remain unchanged. First positive gap/overlap refuses;empty cannot imply coverage/no-op.
-New4/prior-domain4 pass0;independent integer-cell oracle and exact sub-float gaps/overlaps discriminate. API3/book5,selected Clippy/fmt/build/render pass0;D372 warning remains owned.
-Complete closed assertion suffix and0755 lesson/ledger retained931;original Git spans and public-reader bytes exact0. Promotion: declined (existing held-domain scope). Actual outcome/reference/fit/currentness/effects and broad integration remain owned;G1still6/18.
+0757 requires explicit PreserveSource/Refit after whole N admission. Preservation requires zero new candidates;Refit retains actual complete partition and exact quota/gap/overlap cause. No fallback or achieved no-op/fit inferred.
+Native3/prior-partition4/API3/book6,selected Clippy/fmt/build/render pass0. Source/provider/copy/role parents remain actual;empty preservation keeps active roles and original fit obligation. D372 warning remains owned.
+Whole0756 scope/lesson/ledger retained932 before growth. Promotion: declined (existing explicit-outcome pattern). Endpoint/stop/reference/observer requests,variant policy and actual geometry/currentness/effects/broad integration remain owed;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

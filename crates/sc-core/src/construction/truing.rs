@@ -24,6 +24,10 @@ pub use coverage::{
     CoveredTruingSourceDomain, TruingSourceCoverageError, TruingSourceCoverageLimits,
     TruingSourceCoverageRefusal,
 };
+mod outcome;
+pub use outcome::{
+    RequiredTruingOutcome, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
+};
 mod binding;
 pub use binding::{BoundConstrainedTruing, TruingBindingError, TruingBindingRefusal};
 

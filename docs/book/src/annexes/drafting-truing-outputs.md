@@ -255,3 +255,44 @@ traversal direction. It does not select a fitted curve,prove a refit/no-op,issue
 endpoint/stop positions,resolve current references or repair observers. Explicit outcome/reference/
 variant policy,actual fit and length evidence,current Design/history,all-copy effects,authoring
 authority and atomic publication remain separately required.
+
+## Require an explicit refit or source-preserving outcome
+
+`BoundTruingSourceDomain::require_outcome` takes an explicit `TruingOutcomeIntent` and
+`TruingSourceCoverageLimits`,returning `RequiredTruingOutcome`. Neither intent has a default.
+The operation retains its original constrained-truing input,including both endpoint/stop locks,
+span/ease,selected copy/pattern Piece and actual quantitative fit provider.
+
+```rust
+use sc_core::construction::*;
+fn require<'a>(source:&'a BoundTruingSourceDomain<'a>,intent:TruingOutcomeIntent,
+    limits:TruingSourceCoverageLimits)->Result<RequiredTruingOutcome<'a>,TruingOutcomeError<'a>> {
+    source.require_outcome(intent,limits)
+}
+let preserve=TruingOutcomeIntent::PreserveSource;
+assert_ne!(preserve,TruingOutcomeIntent::Refit);
+```
+
+`PreserveSource` explicitly requests the exact original Piece,copies,span,ease,stops,active roles
+and identity history. It requires zero candidate edges and creates no source-order index. Empty
+metadata alone never selects this mode. Existing active roles remain active;the request grants no
+retirement or new logical output identity. Actual source preservation,fit and observer evidence
+remain required even if the source is already thought to satisfy the seam constraint.
+
+`Refit` requires the authentic complete exact selected-source partition from `bind_source_coverage`.
+Its N/W quotas and first exact gap/overlap cause are retained. Empty candidates therefore refuse
+the whole positive-domain gap;there is no fallback to preservation. A one-candidate whole-domain
+partition can request refitting without proving that any physical change occurred.
+
+The whole candidate quota precedes either branch. For one candidate,N0 refuses `Candidates`
+before inspecting the requested intent. With N1,`PreserveSource` refuses `NewEdges { count:1 }`,
+even if that candidate covers the whole domain. Preservation allocates no index,so W0 is sufficient
+for its valid empty case. Refit with N1/W0 refuses the original `Coverage(Workspace)` cause.
+Preservation checks take constant work/space;refitting retains the partition's bounded index/work.
+
+`source_domain()`, `intent()` and `limits()` expose the actual complete membership parent and
+original explicit request/policy. `coverage()` lends the authentic partition for Refit and returns
+`None` only for explicit empty source preservation. Errors keep those same whole parents and the
+first resource,preservation or original partition cause. Original candidates,roles and source fields
+remain unchanged. These are required outcomes,not achieved no-op/refit,geometric map,deterministic
+curve selection,currentness,all-copy observer or atomic publication certificates.
