@@ -3,12 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — bound execution tracking before truing coverage
+## _(2026-11-01 UTC)_ — require exact selected truing source coverage
 
-0755 moves the complete native walk branch byte-exact from execution into G1-SLICE-walk.md.
-The execution file had crossed its1000-line split threshold;all original ids/goals/status/proofs remain.
-Whole branch matches6a4ccac6;tree census10/13/20 with zero unowned/orphan/dead links passes0. README/claim/containment bodies match read-only sources.
-Rust and book behavior unchanged;truing output annex reviewed. Promotion: declined (existing navigation).
+0756 adds whole N/W admission and an exact source-order partition index;original candidates/parents/order remain unchanged. First positive gap/overlap refuses;empty cannot imply coverage/no-op.
+New4/prior-domain4 pass0;independent integer-cell oracle and exact sub-float gaps/overlaps discriminate. API3/book5,selected Clippy/fmt/build/render pass0;D372 warning remains owned.
+Complete closed assertion suffix and0755 lesson/ledger retained931;original Git spans and public-reader bytes exact0. Promotion: declined (existing held-domain scope). Actual outcome/reference/fit/currentness/effects and broad integration remain owned;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

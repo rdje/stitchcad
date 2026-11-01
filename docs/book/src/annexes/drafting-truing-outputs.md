@@ -206,3 +206,52 @@ a fitted curve. Two equal middle3/8–5/8 candidates may both be members of1/4�
 and leaving gaps. N0 can likewise bind while the actual selected domain remains positive and roles
 remain active;that proves no empty result,no-op or retirement. Mandatory coverage/refit-no-op,
 reference/variant,currentness,geometry/all-copy and atomic execution obligations remain separate.
+
+## Require an exact selected-source partition
+
+`BoundTruingSourceDomain::bind_source_coverage` requires the original candidates to partition the
+actual selected held domain exactly once. It returns `CoveredTruingSourceDomain` under explicit
+`TruingSourceCoverageLimits::new(N,W)`. Membership is a prerequisite;the caller cannot supply a
+different domain or bypass the original candidate/source parents.
+
+```rust
+use sc_core::construction::*;
+fn cover<'a>(source:&'a BoundTruingSourceDomain<'a>)
+    ->Result<CoveredTruingSourceDomain<'a>,TruingSourceCoverageError<'a>> {
+    source.bind_source_coverage(TruingSourceCoverageLimits::new(2,2))
+}
+let limits=TruingSourceCoverageLimits::new(2,2);
+assert_eq!((limits.candidates(),limits.workspace_entries()),(2,2));
+```
+
+Whole N quota,then whole W quota precede source inspection and index allocation. W counts one
+additional entry per original candidate,including every repeated source. Earlier candidate/role
+storage and allocation bytes remain separate. With two candidates,N1 refuses `Candidates` before
+W0 or any discontinuity. N2/W1 refuses `Workspace`;N2/W2 admits the complete index.
+
+The borrowed index sorts by exact source `from`,then `to`,then original candidate index. An exact
+forward scan from the selected lower bound refuses the first positive `Gap` or `Overlap`. A gap
+carries its exact from/to parameters and next original candidate index;`None` identifies a trailing
+or whole-domain gap. An overlap carries both original indices and its exact intersection bounds.
+Endpoint touches pass. Equal ranges are ordered by original index and refuse positive duplication.
+No accepted prefix escapes. Work is O(N log N),with one N-entry index sorted in place;there is no
+ledger/geometry query,parameter arithmetic,rescaling,rounding or epsilon.
+
+For actual domain1/4–3/4,candidates declared as role9:1/2–3/4 and role2:1/4–1/2 pass.
+`source_order()` lends original indices `[1,0]`,while `source_domain().edges()` retains `[0,1]`.
+A1/4–3/8 then5/8–3/4 proposal refuses the exact3/8–5/8 gap. A1/4–5/8 then1/2–3/4
+proposal refuses overlap1/2–5/8. An empty proposal refuses the whole positive selected domain;
+empty membership never becomes complete coverage or a no-op. Even a positive discontinuity smaller
+than floating-point resolution remains distinct under canonical exact rational ordering.
+
+`source_domain()`, `domain()` and `limits()` preserve the actual complete membership context,
+original selected range field and explicit policy. `workspace_entries()` reports the complete
+additional index population. `source_order()` supports exact length and reverse iteration;members
+retain their original membership context,candidate fields and active roles. Errors retain that
+same whole actual membership and policy. Neither success nor refusal changes original fields/order.
+
+This is a nonoverlapping partition of **held source parameters**,not a geometric output map or
+traversal direction. It does not select a fitted curve,prove a refit/no-op,issue identities,preserve
+endpoint/stop positions,resolve current references or repair observers. Explicit outcome/reference/
+variant policy,actual fit and length evidence,current Design/history,all-copy effects,authoring
+authority and atomic publication remain separately required.

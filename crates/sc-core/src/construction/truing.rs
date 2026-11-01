@@ -19,6 +19,11 @@ pub use domain::{
     BoundTruingSourceDomain, TruingSourceDomainEdge, TruingSourceDomainError,
     TruingSourceDomainLimits, TruingSourceDomainRefusal,
 };
+mod coverage;
+pub use coverage::{
+    CoveredTruingSourceDomain, TruingSourceCoverageError, TruingSourceCoverageLimits,
+    TruingSourceCoverageRefusal,
+};
 mod binding;
 pub use binding::{BoundConstrainedTruing, TruingBindingError, TruingBindingRefusal};
 
