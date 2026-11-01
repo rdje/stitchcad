@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — native renderer field fix built locally
+## _(2026-11-01 UTC)_ — guarded published renderer setup
 
-0815 guarded published mdBook0.5.4 install compiled elasticlunr-rs3.1.0;host diagnostic red1/local green0 proves frequency2→1 and no breadcrumb leakage.
-Same-source118-chapter candidate7712945B builds warning-free;120 hashes match b0ad71d5;stored fields/URLs/options/chapter word+term sets exact0.
-Native probe keeps failed captures;escape/existing/override refusals preserve bytes0. Normal ambient build still warns13014554B;activation/query verification next.
-Promotion declined: existing D372/full-text contract;no upstream patch,external write or product code change. 990 Git/public exact0;archive1444/77,per-generation21/64 and56/64;G1still6/18.
+0816 book_tool.py plans local install metadata/binary inputs before Cargo/version dispatch;every same-version install still receives native field proof0.
+Four path refusals/two exact argv-status controls pass0 with simulated children;actual idempotent install/version/native probe0. Normal routing follows separately.
+D376:source census red2 caught four omitted new-tool entries,including0814/0815;all classified with D156 residuals,complete369-entry census0;runner watcher wired.
+Promotion declined: existing local/public tool policy;no full locality signoff. 991 Git/public exact0;archive1445/78,per-generation21/64 and57/64;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

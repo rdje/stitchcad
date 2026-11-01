@@ -92,3 +92,27 @@ term sets match the baseline exactly. Breadcrumb postings shrink to36944 bytes;f
 and frequencies intentionally change to the upstream-corrected values. This is tool-build evidence:
 normal build/publication activation and actual query verification remain the next owned steps.
 
+## Guarded local setup
+
+```bash
+python3 -I -B scripts/book_tool.py install
+python3 -I -B scripts/book_tool.py version
+```
+
+Setup uses Cargo's published install API with version0.5.4 and the explicit target/cargo-home root.
+It resolves compatible dependencies without the older bundled lockfile,then checks the installed
+version and runs the native field probe in a fresh target/book_search_install_checks capture.
+An existing same-version binary must pass that probe too. If it retains the older dependency,
+`python3 -I -B scripts/book_tool.py install --force` rebuilds only the project-local executable.
+Every tool/metadata destination is planned before installation;aliased or hard-linked metadata
+and unsafe tool paths refuse before Cargo dispatch. Missing tools refuse before version dispatch.
+The selector API returns the guarded explicit executable;normal build/publication/capture routing
+is the following activation slice. Host executables and shared caches receive no writes.
+
+The environment probe suite watches four pre-dispatch path refusals and two exact argument/status
+controls in book_tool_contract.py. Its fake children provide path/dispatch evidence;the native
+post-install probe supplies field-isolation evidence. These are distinct checks.
+All four new search/tool sources are registered in producer_entries.tsv. D376 repaired the
+missing rows that made the complete source census refuse;the passing census remains inspection
+inventory evidence and grants no runtime/locality signoff. Broader D156 integration is still owned.
+

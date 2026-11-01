@@ -3,17 +3,19 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0815 — build and probe the published renderer fix locally
+## STITCHCAD-G1-0816 — guard local renderer setup and repair its source inventory
 
-- Published mdBook0.5.4 compiled with elasticlunr-rs3.1.0 into the local Cargo store.
-  Native host red/local green demonstrates corrected frequency and body/breadcrumb isolation.
-- Same-source118-chapter candidate7712945B is warning-free;all stored fields,URLs,options,
-  chapter words/terms exact;120 input hashes match b0ad71d5. No source patch or external write.
-- Probe refuses parent escape,existing capture and search override;bytes unchanged. Normal
-  ambient build still warns13014554B;activation and actual query proof remain owned.
-- 990 Git/body/public exact;archive1444/77,per-generation21/64 and56/64. G1still6/18.
+- Added explicit local renderer selector/install entrypoint;Cargo and metadata paths are
+  guarded before dispatch. Same-version installations must pass the actual native field probe.
+- Actual idempotent setup/version/probe0;four path refusals/two exact dispatch controls0;
+  standing environment suite watches the focused contract. Normal routing remains next.
+- D376 fixed:four omitted producer entries registered;complete369-entry source census0,
+  with broader D156 integration still pending. No runtime/locality signoff inferred.
+- 991 Git/body/public exact;archive1445/78,per-generation21/64 and57/64. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0815 native renderer checkpoint](docs/history/stitchcad-devnotes-part991.md) retains exact task,lesson and ledger bytes.
 
 [Whole0814 upstream field-leakage diagnosis](docs/history/stitchcad-devnotes-part990.md) retains exact task,lesson and ledger bytes.
 

@@ -1191,3 +1191,9 @@ Fixed0696;[whole original ledger/proofs](../history/window28.md#stitchcad-devnot
 ## D375 — drafting chapters missing from the topic index
 
 Fixed0760;[whole cause/reproduction/fix](../history/stitchcad-devnotes-part942.md).
+
+## D376 — search-tool source inventory drift
+
+Fixed0816;owner G1-SLICE.5f.1.book-search.activate.tool. Repro:producer_census.py rc2 names four absent search/tool entries,including0814/0815 diagnostics.
+Root:new source files lacked producer_entries.tsv rows. Impact:complete source census refuses;no locality/runtime proof can be inferred. Added all four with honest effect categories and existing D156 audit residuals.
+Verification:producer_census.py exact source/entry population rc0;native installer/probe plus focused4 path/2 dispatch controls rc0. Broader D156 integration remains owned;no waiver or full locality signoff.

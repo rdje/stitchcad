@@ -924,21 +924,24 @@ retains every original goal,status,child relation and focused acceptance proof.
 - ID: `G1-SLICE.5f.1.book-search.plan`
   Status: `done`
   Goal:0814 upstream field leakage census and bounded remedy;[whole scope/proofs](../history/stitchcad-devnotes-part990.md).
-### G1-SLICE.5f.1.book-search.build
 - ID: `G1-SLICE.5f.1.book-search.build`
   Status: `done`
-  Goal:build published mdBook0.5.4 in guarded project-local stores with published elasticlunr-rs3.1.0;record actual resolution and reproduce corrected field isolation through the public renderer.
-  Acceptance:no external repository/store writes,source patches,warning suppression or changed corpus;preserve ambient binary and baseline;own installation and focused native field probe.
-  - [x] ROOT CAUSE: launcher `search_field_probe.py --ambient --output target/book_search_0815_ambient_fields` →native red1,body frequency2/breadcrumb body-word leakage;both tools0.5.4,expected refusal checked rc=0.
-  - [x] ADDRESSED: guarded launcher `cargo install mdbook --version 0.5.4 --root target/cargo-home` →compiled elasticlunr-rs3.1.0,rc=0;local `search_field_probe.py` →frequency1/no leakage,rc=0.
-    Native same-source comparison →118 records,7712945B,no warnings;all URLs/stored fields/options/chapter word+term sets exact;120 input hashes match b0ad71d5,rc=0.
-  - [x] NO REGRESSION: `python3 -I -B -` probe refusal controls →escape/existing capture/search override refused,bytes unchanged,rc=0;normal ambient build still warns13014554B,rc=0.
-    990 three Git spans/body/public exact;archive1444/77,per-generation21/64 and56/64,rc=0;activation/query verification remain separately owned.
-  Commit:STITCHCAD-G1-0815. promotion: declined (published upstream defect remedy;existing D372 and full-text/chapter contract).
+  Goal:0815 published local renderer/native field correction;[whole scope/proofs](../history/stitchcad-devnotes-part991.md).
 - ID: `G1-SLICE.5f.1.book-search.activate`
-  Status: `pending`
+  Status: `in_progress`
   Goal:select the verified local renderer explicitly in normal build/publication/capture paths;guard tool/source paths and update installation/search docs and directly affected contracts.
   Acceptance:all full-text/chapter coverage retained;unexpected renderer warnings still refuse;no implicit dependency on ambient executable resolution.
+### G1-SLICE.5f.1.book-search.activate.tool
+- ID: `G1-SLICE.5f.1.book-search.activate.tool`
+  Status: `done`
+  Goal:guarded local renderer selector/install and native post-install probe;fix D376 source-manifest omissions;normal build/publication routing follows separately.
+  - [x] ROOT CAUSE: launcher `producer_census.py` →expected rc=2 for four absent entries;launcher `python3 -I -B -` Git/original-manifest versus native-inventory assertion →exact original four omissions/current membership,rc=0;D376 owned here.
+  - [x] ADDRESSED: launcher `scripts/book_tool.py install`/`version` →existing local0.5.4 still receives native frequency1/no-leakage probe,rc=0;all four missing manifest rows registered with D156 residuals.
+  - [x] NO REGRESSION: launcher `book_tool_contract.py` →4 path refusals/2 argv-status controls,rc=0;`producer_census.py` →369 entries,rc=0;runner shell syntax/rendered setup/991 Git-public/archive1445/78,per-generation21/64 and57/64,rc=0.
+  Commit:STITCHCAD-G1-0816. promotion: declined (existing local producer/public tool contract;D376 repaired in scope).
+- ID: `G1-SLICE.5f.1.book-search.activate.publication`
+  Status: `pending`
+  Goal:select verified renderer in normal Make/publication/capture paths;update directly affected contracts/setup docs without weakening full-text or warning checks.
 - ID: `G1-SLICE.5f.1.book-search.verify`
   Status: `pending`
   Goal:after implementation verify actual full-text/chapter search and warning-free build against original corpus;preserve existing public behavior.
