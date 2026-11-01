@@ -3,14 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0798 — bounded copy-inventory continuity
+## STITCHCAD-G1-0799 — actual canonical candidate copy plan
 
-- Move whole2685B/four-node completed correspondence branch unchanged to existing construction sibling.
-- Preserve every original goal/status/proof and old destination prefix;own plan,field resources,original/result phases.
-- Tree10/13/20/0,archive1427/60,book/render proof rc=0;973 exact;Rust diff empty and G1still6/18.
-- Canonical candidate inventory and all physical/consumer/identity/effect requirements remain pending.
+- Whole original/result/candidate quotas and peak workspace before canonical validation against the actual candidate Pieces.
+- Exact retained/new copy definitions,actual cause/object loans and derived zero/nonzero original counts;no deep field approval.
+- Native4/prior pairs4/compiler3/source9/lint/fmt/book rc=0;974 continuity exact;compact canonical errors preserve admission order.
+- G1still6/18;whole field resources,original/result matching,per-pair consumers and geometry/effects remain pending.
 
 # Sealed archive — earlier slices
+
+[Whole0798 inventory continuity](docs/history/stitchcad-devnotes-part974.md) retains exact task,lesson and ledger bytes.
 
 [Whole0797 correspondence branch and continuity](docs/history/stitchcad-devnotes-part973.md) retain exact goals,checks,lesson and ledger bytes.
 

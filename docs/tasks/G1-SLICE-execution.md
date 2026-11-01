@@ -808,9 +808,28 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `in_progress`
   Goal:reconcile actual result/source metadata and candidate full inventory/CutPlan with declared
   copy actions/population/identity,including remaining source copies and all unrelated members.
+### G1-SLICE.5f.1.c.join.outputs.copies.inventory.plan
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.plan`
-  Status: `pending`
-  Goal:complete canonical candidate CutPlan against the same actual inventory,and exact retained/new copy definitions.
+  Status: `done`
+  Goal:complete canonical candidate CutPlan against the same actual supplied inventory,and exact
+  retained/new copy definitions;derive original retained counts before deep Piece-field matching.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_candidate_plan_contract --test join_copy_pair_contract`
+    through `scripts/local_environment.py`:candidate4/prior pairs4 pass,rc=0. Another inventory's
+    canonical plan cannot certify this actual inventory;hidden/reassigned copies must refuse.
+  - [x] ADDRESSED: final `cargo test -p sc-core --test join_candidate_plan_contract` through launcher:
+    candidate4 pass,rc=0;whole C/I/Q/J/D and peak max(J+3D,I+J+D) before fields/allocation;actual
+    canonical causes,exact copy-set/count/field loans,derived known-zero originals. Strict selected
+    clippy rc=0;draft large-error refusal fixed with canonical cause box only after validation drops.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join::candidate_plan` through launcher:
+    compiler3 pass,rc=0;`cargo test -p sc-core --doc construction::join_source_examples`:source9 pass,
+    rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered actual inventory/exact
+    copies/resource/deep-field boundary present;complete previous source prefix exact.974 three Git
+    spans/body/public bytes exact;`history_archive.py --root . verify`:1428 logical/61 working,rc=0.
+    Main9/topology8 unchanged;full geometry/integration remains .5f.4.geometry/.5g/pre-push.
+  Successful new storage I+J+D;one canonical diagnostic entry fits the same peak via closed I≥2.
+  No labels/material reasons/contours read;whole deep resources,original/result fields,per-pair
+  physical/consumer/currentness/identity/retirement and atomic effects remain required.
+  Commit:STITCHCAD-G1-0799. promotion: declined (existing copy/resource/identity/geometry boundary).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.fields`
   Status: `pending`
   Goal:whole original/candidate Piece headers,hole/field/text resources before any deep field comparison.
@@ -820,22 +839,9 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.result`
   Status: `pending`
   Goal:actual joined Piece fields match declared identity/metadata/population/contours/construction/fold;geometry stays pending.
-### G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking`
   Status: `done`
-  Goal:product-blocking continuity before inventory growth;move whole completed correspondence
-  branch unchanged to the existing construction sibling,and own four next inventory phases.
-  - [x] ROOT CAUSE: `git show c1350f401980dadad96577b25e7126d1e6003280:docs/tasks/G1-SLICE-execution.md | wc -l -c`
-    gives998L/56241B,rc=0;four needed inventory child nodes need12 more lines,beyond the1000L target.
-  - [x] ADDRESSED: `python3 -I -B -` Git interval comparison:whole2685B branch/SHA99478684 exact,
-    four done IDs/statuses/relations once across canonical siblings,complete old construction prefix
-    exact,rc=0. Source receipt:target/history-proof-0798-copy-tracking/source.json;Rust diff empty.
-  - [x] NO REGRESSION: `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`:
-    10 lanes/13 trees/20 siblings/0 unowned/orphan/dead links,rc=0.973 three Git spans/body/public
-    bytes exact;`history_archive.py --root . verify`:1427 logical/60 working,rc=0;book rc=0.
-    Rendered remaining plan/field-resource/original/result boundaries present;source Rust fences unchanged.
-    Full feature/integration checks remain .5f.4.geometry/.5g/pre-push;no Rust behavior changed here.
-  Commit:STITCHCAD-G1-0798. promotion: declined (existing bounded canonical task sibling policy).
+  Goal:0798 bounded inventory continuity;[whole scope/proofs](../history/stitchcad-devnotes-part974.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.tracking`
   Status: `done`
   Goal:0775 bounded continuity;[whole scope/proofs](../history/stitchcad-devnotes-part951.md).

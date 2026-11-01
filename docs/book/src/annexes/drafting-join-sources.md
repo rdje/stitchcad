@@ -420,3 +420,59 @@ authority requirements remain mandatory. This is native copy bookkeeping,not phy
 The next native inventory checks remain separate:the complete candidate CutPlan,whole Piece-field
 resource admission,original field preservation,and joined-result fields. None is established by
 copy correspondence alone;physical correspondence and consumer justification remain further obligations.
+
+## Bind the complete candidate copy plan
+
+`RequiredJoinCopyCorrespondence::bind_candidate_plan` borrows the actual supplied candidate
+`PieceInventory` and `CutPlan`,revalidates the complete plan against those same Pieces,and requires
+exactly the retained-original and explicitly requested-result copy definitions. A plan born against
+another inventory is not a certificate for this inventory. Returned views borrow the supplied
+objects;canonical revalidation uses a temporary plan that is discarded.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn candidate<'a>(pairs:&'a RequiredJoinCopyCorrespondence<'a>,inventory:&'a PieceInventory,plan:&'a CutPlan)
+    ->Result<BoundJoinCandidatePlan<'a>,JoinCandidatePlanError<'a>> {
+    pairs.bind_candidate_plan(inventory,plan,JoinCandidatePlanLimits::new(5,3,2,2,3,11))
+}
+```
+
+`JoinCandidatePlanLimits::new(C,I,Q,J,D,W)` admits all original copies C,original Pieces I,
+requested results Q,candidate Pieces J and candidate copies D before fields or allocation.
+Checked workspace is **max(J+3D,I+J+D)**:canonical validation temporaries are dropped before the
+persistent original-count/candidate-Piece/candidate-copy indexes are allocated. Logical entries
+are not allocator bytes;earlier immutable context/storage remains separate. For C5/I3/Q2/J2/D3,
+W11 is exact:C4/I2/Q1/J1/D2 refuse their respective whole quotas,and W10 refuses `Workspace`,
+even if candidate mirroring or quantity contradicts the supplied plan.
+On canonical refusal,the actual diagnostic is boxed after validation temporaries are released;
+its one entry fits the same admitted peak because the closed distinct-Piece source inventory has I≥2.
+
+With resources met,`Canonical` retains the actual `CutPlanError` from complete revalidation,
+including wrong quantity,reflection or identity. Complete original actions then derive every
+original Piece's retained-copy count,including **known zero** for fully consumed sources. Candidate
+D must equal retained copies plus Q (`Count` otherwise). Original RetainOriginal copies are checked
+in authored source-action order (`MissingRetained`,`RetainedField`),then explicit results in
+requested order (`MissingResult`,`ResultField`). Id/Piece/orientation definitions must match exactly.
+Unique canonical membership plus exact count excludes hidden,consumed or substituted copies.
+
+For example,two source pairs produce requested results6000/6001 while unrelated copy202 remains.
+The complete candidate has those three copies;original Pieces100/101 have derived retained count0,
+and Piece102 has count1. A renamed202,202 reassigned to another Piece,an omitted result,or swapped
+result orientations refuses even if that candidate plan is otherwise structurally valid.
+
+`JoinCandidatePlanError` lends whole `correspondence()`,`inventory()`,`plan()`,original `limits()`
+and first `refusal()`. `canonical_cause()` retains the actual canonical cause. Missing/changed
+retained cases lend `refused_source()`;missing/changed results lend `refused_result()`. Field
+mismatches additionally lend the actual `candidate_copy()`;missing/whole causes fabricate none.
+Internal SourceInvariant/ResultInvariant causes require diagnosis,not physical classification.
+
+`BoundJoinCandidatePlan` retains those whole parents and reports `piece_count()`,`copy_count()`,
+`retained_copy_count()` and peak `workspace_entries()`. `original_retained_count(id)` returns a
+derived count,including zero,for an actual original Piece;unknown ids return None. `piece(id)` and
+`copy(id)` lend actual candidate objects;`joined_piece()` lends the actual declared-result Piece.
+These views certify copy-plan structure and exact copy definitions,**not deep Piece-field matching**.
+
+Work is O((C+I+Q+J+D) log(C+I+Q+J+D+2)+1),with the peak above and I+J+D retained entries.
+No labels,material reasons,contours,provider/evidence or geometry bodies are scanned. Whole deep
+field-resource admission,original field preservation and joined-result fields remain next. Per-pair
+physical/consumer proof,currentness,identity/retirement and atomic authority remain separate.

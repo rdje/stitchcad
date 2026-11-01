@@ -1,45 +1,11 @@
 //! Exact selected A+B/result groups,original ordering and no source-copy forks;physical truth pending.
 #![allow(clippy::expect_used)]
 #[allow(dead_code)]
-#[path = "support/join_copies.rs"]
+#[path = "support/join_pairing.rs"]
 mod common;
-use common::{id, with_paired_results, with_results};
+use common::copies::{with_paired_results, with_results};
+use common::{admit, base, id, row};
 use sc_core::{construction::*, ontology::*};
-fn row(
-    results: &DeclaredJoinResultCopies<'_>,
-    source: u128,
-    target: Option<u128>,
-) -> JoinCopySourceAssignment {
-    let intent = target.map_or(JoinCopySourceIntent::RetainOriginal, |t| {
-        JoinCopySourceIntent::JoinTo { result_copy: id(t) }
-    });
-    JoinCopySourceAssignment::new(
-        *results
-            .source_copy(id(source))
-            .expect("actual original copy")
-            .definition(),
-        intent,
-    )
-}
-fn base(results: &DeclaredJoinResultCopies<'_>) -> Vec<JoinCopySourceAssignment> {
-    let mut r = vec![
-        row(results, 202, None),
-        row(results, 200, Some(6000)),
-        row(results, 201, Some(6000)),
-    ];
-    if results.source_copy(id(203)).is_some() {
-        r.extend([row(results, 203, Some(6001)), row(results, 204, Some(6001))]);
-    }
-    r
-}
-fn admit<'a>(
-    raw: &'a JoinCopySourceManifest,
-    results: &'a DeclaredJoinResultCopies<'a>,
-) -> DeclaredJoinCopySources<'a> {
-    let c = results.source_copy_count();
-    raw.admit(results, JoinCopySourceLimits::new(c, c, 2 * c))
-        .expect("complete guarded actual original actions")
-}
 #[test]
 fn exact_selected_and_additional_pairs_preserve_actual_source_result_fields_and_requested_order() {
     with_results(|results| check_complete(&results));

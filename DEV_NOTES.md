@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — bounded copy-inventory continuity
+## _(2026-11-01 UTC)_ — actual canonical candidate copy plan
 
-0798 moves complete2685B/four-node correspondence branch unchanged from execution998L to the existing construction sibling.
-Whole source interval/old destination prefix/IDs/statuses/relations exact;four upcoming inventory phases now owned.
-Tree10/13/20/0,archive1427/60,book/render proof rc=0;973 original/body/public bytes exact;Rust diff empty.
-promotion: declined (existing bounded canonical sibling policy). G1still6/18;canonical candidate-copy plan next.
+0799 revalidates the candidate plan against actual supplied Pieces and exact retained/result definitions,with derived counts.
+Whole C/I/Q/J/D and max(J+3D,I+J+D) precede fields/allocation;deep Piece bodies remain uninspected and uncertified.
+Native4/prior pairs4/API3/source9/lint/fmt/book rc=0;974 original/body/public bytes exact;canonical diagnostic stays actual.
+promotion: declined (existing resource/copy/geometry boundary). G1still6/18;whole deep Piece-field resource admission next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

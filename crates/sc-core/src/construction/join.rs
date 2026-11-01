@@ -56,6 +56,11 @@ pub use fold_sources::{
     DeclaredJoinFoldSources, JoinFoldSourceAction, JoinFoldSourceAssignment, JoinFoldSourceError,
     JoinFoldSourceIntent, JoinFoldSourceLimits, JoinFoldSourceManifest, JoinFoldSourceRefusal,
 };
+mod candidate_plan;
+pub use candidate_plan::{
+    BoundJoinCandidatePlan, JoinCandidatePlanError, JoinCandidatePlanLimits,
+    JoinCandidatePlanRefusal,
+};
 mod copy_pairs;
 pub use copy_pairs::{
     JoinCopyPair, JoinCopyPairError, JoinCopyPairLimits, JoinCopyPairRefusal,
