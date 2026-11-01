@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0776 — declare one explicit joined cut population
+## STITCHCAD-G1-0777 — admit every original A/B join source occurrence
 
-- Required total quantity/mirroring borrows actual metadata;zero then odd-pair causes retain raw values.
-- No inherited total,copy allocation,rounding or doubling;actual copy/companion/fold/print proofs remain.
-- Native2/metadata3/API3/book11/lint/fmt/book pass0;951 whole0775/prior0389 retained.
-- G1still6/18;bounded original source occurrences precede identity/output/copy matching.
+- Whole H/R precede field scans;authentic family order/reverse,fold/repeated uses and refused-source borrows.
+- Native3/population2/API4/join6/editing6/lint/fmt/book pass0;current validation still refuses retired sources.
+- Join book14337B moved exact;prior114 routes/order retained;new chapter/index registered within Summary120.
+- 952 whole0776 retained;bank/currentness/geometry/authority remain pending;G1still6/18.
 
 ## STITCHCAD-G1-0388 — borrow actual layer offset-operation intent
 
@@ -28,6 +28,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0776 cut-population task,lesson and ledger](docs/history/stitchcad-devnotes-part952.md) retain exact source bytes.
 
 [Whole0775 continuity and complete0389 ledger](docs/history/stitchcad-devnotes-part951.md) retain exact source bytes.
 

@@ -798,26 +798,9 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies`
   Status: `in_progress`
   Goal:complete original-copy consumption/preservation/result correspondence and explicit multiplicity.
-### G1-SLICE.5f.1.c.join.outputs.copies.population
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.population`
   Status: `done`
-  Goal:one explicit canonical result quantity/mirroring declaration bound to actual selected
-  metadata;reuse zero/even-pair rules,retain raw intent and original causes without allocation.
-  Source consumption/result-copy membership,companion identity/fold/printed binding remain separate.
-  Focused native/parent/compiler/book checks;retain whole0775 and prior0389 ledger for headroom.
-  - [x] ROOT CAUSE (WHY + WHERE):canonical Piece cut quantity is positive;MirroredPairs total
-    must be even. No source-side quantity supplies the joined result by default. cargo test -p
-    sc-core --test join_population_contract reports `2 passed; 0 failed`,rc=0;canonical cut rules read.
-  - [x] ADDRESSED (verified):STITCHCAD-G1-0776;one explicit raw result quantity/mirroring pair,
-    actual metadata/policy field borrows and whole original causes. Native2/prior metadata3 pass0;
-    rc=0. Both separate hands,even mirrored totals,zero/odd precedence and u32::MAX retain original
-    values;no copies allocated,counts doubled or source quantities changed.
-  - [x] NO REGRESSION:strict selected Clippy/lib/tests and cargo fmt --all -- --check rc=0;
-    cargo test -p sc-core --doc construction::join::population gives `3 passed; 0 failed`,rc=0;
-    construction::editing_examples gives `11 passed; 0 failed`,rc=0;book build rc=0 (D372 owned).
-    951 four original Git spans/body exact;archive1405/38 rc=0. Actual source/result copy actions,
-    companion identity/full inventory,fold/print binding,geometry and authority remain pending.
-    promotion: declined (existing canonical population rules);next .contours.sources before identity/copy matching.
+  Goal:0776 explicit cut population;[whole scope/proofs](../history/stitchcad-devnotes-part952.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence`
   Status: `pending`
   Goal:after bounded source/output/identity contexts,declare complete original-copy actions and
@@ -830,13 +813,38 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   Status: `done`
   Goal:0775 bounded continuity;[whole scope/proofs](../history/stitchcad-devnotes-part951.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bounded source fragments/output roles and complete proposed boundary/hole/construction/fold topology.
+### G1-SLICE.5f.1.c.join.outputs.contours.sources
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.sources`
-  Status: `pending`
+  Status: `done`
   Goal:bounded complete A/B held Piece hole/edge occurrence admission before field scans/known
   namespace/output work;authentic original source fields and actual side/copy parents retained.
   Move the growing join book reference into a bounded companion before more native source examples.
+  Plan:whole A+B H before hole-length scans,checked complete boundary/hole/construction/fold R
+  before edge scans;refuse direct current-operation source creators only after quotas. Constant
+  borrowed source views preserve original A/B/family order and reverse. No currentness/bank/geometry proof.
+  Focused native/parent/compiler/moved-book checks;retire whole0776 for bounded live continuity.
+  - [x] ROOT CAUSE (WHY + WHERE):whole A/B source fields need H/R admission before namespace/
+    output work. First compile rc101 E0373 outer iterator capture;move the borrowed self into
+    the returned closure. Final cargo test -p sc-core --test join_source_piece_contract gives
+    `3 passed; 0 failed`,rc=0;actual family pointers,quota/self-source order and stale-held boundary.
+  - [x] ADDRESSED (verified):STITCHCAD-G1-0777;whole H before hole lengths,whole R before field
+    scans;constant borrowed views and actual refused source field,original A/B/family order/reverse.
+    Native3/prior population2 and strict selected Clippy/lib/tests pass0;rc=0. Actual selected-bank
+    membership,currentness/global freshness,geometry and command authority remain separate.
+  - [x] NO REGRESSION:cargo test -p sc-core --doc construction::join::sources gives `4 passed;
+    0 failed`,rc=0;new join_examples6/editing_examples6/fmt/book pass0;rc=0. Book14337B block
+    copied exact;all114 prior chapter routes/order retained,new route makes115 chapters/116 source
+    Markdown files;SUMMARY120/index coverage pass0. Initial tool label115 prior chapters corrected
+    using parsed chapter counts;SUMMARY is a separate source file. ADR canonical book link follows.
+    952 three Git spans/body exact;archive1406/39 rc=0;D372 warning remains owned.
+    promotion: declined (existing bounded-source/canonical rules);next .contours.banks.
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.banks`
+  Status: `pending`
+  Goal:bind each actual original positive selected range to its literal boundary/hole field
+  under admitted whole sources,before outside/output topology and identity/copy work.
+  NoExactCutBank is a scoped held-variant refusal,not global absence/current-alias invalidity.
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage`
   Status: `pending`
   Goal:explicit output/source identities,retirement/reference repair and full observer/evidence requirements.

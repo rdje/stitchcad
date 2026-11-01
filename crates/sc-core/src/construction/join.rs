@@ -10,6 +10,7 @@ pub use inventory::{
 };
 mod metadata;
 mod population;
+mod sources;
 mod splice;
 pub use metadata::{
     BoundJoinPieceMetadata, JoinPieceFieldIntent, JoinPieceMetadataError, JoinPieceMetadataLimits,
@@ -17,6 +18,11 @@ pub use metadata::{
 };
 pub use population::{
     BoundJoinCutPopulation, JoinCutPopulation, JoinCutPopulationError, JoinCutPopulationRefusal,
+};
+pub use sources::{
+    BoundJoinSourcePieces, JoinSourceOccurrence, JoinSourceOccurrenceField,
+    JoinSourceOccurrenceLocation, JoinSourcePieceError, JoinSourcePieceLimits,
+    JoinSourcePieceRefusal,
 };
 pub use splice::{
     JoinExactSpliceRequirement, JoinMovingOrientation, JoinSpliceEnd, JoinSpliceEndpointPair,

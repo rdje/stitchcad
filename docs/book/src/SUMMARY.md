@@ -20,7 +20,6 @@
   - [Commands and agent authority](spec/glossary/commands-and-authority.md)
   - [Localization](spec/glossary/localization.md)
 # Annexes — detailed contracts
-
 - [Specification and reference](spec/index.md)
   - [Units and tolerances](spec/units-and-tolerances.md)
   - [Garment ontology](spec/ontology.md)
@@ -93,6 +92,7 @@
   - [Execute scalar construction recipes](annexes/formula-recipe-execution.md)
   - [Drafting operation contracts](annexes/drafting-operation-contracts.md)
   - [Native editing operation inputs](annexes/drafting-edit-inputs.md)
+  - [Native Piece join contracts](annexes/drafting-join-contracts.md)
   - [Walk output and shared-mark contracts](annexes/drafting-walk-outputs.md)
   - [Walk semantic identity and retention](annexes/drafting-walk-identities.md)
   - [Truing output and source contracts](annexes/drafting-truing-outputs.md)

@@ -147,7 +147,8 @@ Output metadata/copy/contour/identity/repair obligations remain separate joined-
 
 Reopen with a recorded recipe-policy/version change if an actual supported garment needs another
 join domain. Preserve original ease/copy/held-frame semantics and explicit placement choices;
-never broaden an exact splice silently. The book's native join section is the canonical API contract.
+never broaden an exact splice silently. The canonical API contract is the
+[native join reference](../book/src/annexes/drafting-join-contracts.md).
 
 ## Native constrained truing priority —0770
 

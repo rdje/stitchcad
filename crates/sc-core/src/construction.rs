@@ -6,6 +6,9 @@
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-edit-inputs.md")]
 mod editing_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-join-contracts.md")]
+mod join_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-truing-outputs.md")]
 mod truing_output_examples {}
 #[cfg(doctest)]
@@ -58,11 +61,13 @@ pub use line::{LineConstruction, LineConstructionError, LineEndpoint, LinePointD
 mod join;
 pub use join::{
     BoundJoinCopyInventory, BoundJoinCutPopulation, BoundJoinPieceMetadata, BoundJoinPiecesAtSeam,
-    BoundJoinSide, JoinBindingError, JoinBindingRefusal, JoinCopyInventoryError,
-    JoinCopyInventoryLimits, JoinCopyInventoryRefusal, JoinCutPopulation, JoinCutPopulationError,
-    JoinCutPopulationRefusal, JoinExactSpliceRequirement, JoinInputError, JoinMovingOrientation,
-    JoinPieceFieldIntent, JoinPieceMetadataError, JoinPieceMetadataLimits, JoinPieceMetadataPolicy,
-    JoinPieceMetadataRefusal, JoinPiecesAtSeam, JoinSpliceEnd, JoinSpliceEndpointPair,
+    BoundJoinSide, BoundJoinSourcePieces, JoinBindingError, JoinBindingRefusal,
+    JoinCopyInventoryError, JoinCopyInventoryLimits, JoinCopyInventoryRefusal, JoinCutPopulation,
+    JoinCutPopulationError, JoinCutPopulationRefusal, JoinExactSpliceRequirement, JoinInputError,
+    JoinMovingOrientation, JoinPieceFieldIntent, JoinPieceMetadataError, JoinPieceMetadataLimits,
+    JoinPieceMetadataPolicy, JoinPieceMetadataRefusal, JoinPiecesAtSeam, JoinSourceOccurrence,
+    JoinSourceOccurrenceField, JoinSourceOccurrenceLocation, JoinSourcePieceError,
+    JoinSourcePieceLimits, JoinSourcePieceRefusal, JoinSpliceEnd, JoinSpliceEndpointPair,
     JoinSplicePlacement, RequiredJoinExactSplice,
 };
 mod mirror;

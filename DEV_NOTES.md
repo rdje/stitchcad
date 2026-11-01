@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — single explicit joined cut population
+## _(2026-11-01 UTC)_ — bounded original join source occurrences
 
-0776 .join.outputs.copies.population binds explicit total quantity/mirroring to actual selected metadata.
-Canonical zero/even-pair rules retain raw causes;no copied source totals,new copies,rounding or doubled quantities.
-Native2/metadata3/API3/book11/lint/fmt/book0;951 four exact spans/archive1405/38 pass0. Actual copy/fold/identity proofs remain.
-Promotion:declined,existing canonical rules. G1still6/18;next bounded A/B source occurrences before namespace/copy matching.
+0777 .join.outputs.contours.sources checks whole H/R before original A/B edge scans;views/errors borrow actual fields.
+Initial E0373 iterator capture fixed;native3/population2/API4/join6/editing6/lint/fmt/book0. Real stale-currentness control retained.
+Join book14337B copied exact;114 prior routes/order retained,115 chapters/116 source files,Summary120/index0;952 exact0776.
+Promotion:declined,existing bounded/canonical rules. Bank/currentness/identity/geometry/authority remain later;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
