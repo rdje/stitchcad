@@ -864,34 +864,40 @@ remain byte-exact in sealed history;the live node identities/statuses follow.
 - ID: `G1-SLICE.5f.1.c.join.outputs.inventory`
   Status: `done`
   Goal:0772 same-source inventory;[whole scope/proofs](../history/stitchcad-devnotes-part948.md).
-### G1-SLICE.5f.1.c.join.outputs.domains
 - ID: `G1-SLICE.5f.1.c.join.outputs.domains`
   Status: `done`
-  Goal:explicit permitted seam removal/placement/refit domain,with partial/eased/oriented sources
-  retained;no geometric weld or automatic semantic reconciliation inferred from correspondence.
-  Plan:explicit exact nondeforming splice;keep placement or request rigid alignment with fixed
-  side/authored-frame parity. Preserve actual Same/Opposite endpoint pairs/ease without resolving
-  geometry;zero allocated ease/exact coincidence/unique alignment remain actual proof obligations.
-  Record delegated policy and narrow domain;retire closed0772/ADR discussion before live growth.
-  - [x] ROOT CAUSE (WHY + WHERE):canonical SeamDirection separates held endpoints from copy
-    reflection;joining correspondence alone supplies no placement/deformation policy. Selected native
-    command cargo test -p sc-core --test join_splice_contract reports `1 passed; 0 failed`,rc=0;
-    partial retained Portion/Profile source stays unresolved rather than becoming zero-ease proof.
-  - [x] ADDRESSED (verified):STITCHCAD-G1-0773;explicit exact splice with KeepOriginal or named
-    fixed A/B plus authored moving Preserve/Reflect. Authentic whole inventory/request/ease and
-    two original Same/Opposite endpoint pairs. Native1/prior inventory3 pass0;rc=0. No default,
-    transform,interior map,provider call,deformation,source remap or geometry acceptance is supplied.
-  - [x] NO REGRESSION:strict selected Clippy/lib/tests and cargo fmt --all -- --check rc=0;
-    cargo test -p sc-core --doc construction::join::splice gives `6 passed; 0 failed`,rc=0;
-    construction::editing_examples gives `9 passed; 0 failed`,rc=0;book build rc=0 (D372 owned).
-    948 four original Git spans/body byte-exact;archive1402/35 rc=0. Actual zero ease,unique
-    alignment/full coincidence/topology/copy effects/authority and physical integration stay G1/G2/G3.
-    Promotion:promoted to ADR-0003/index with author/applier,independent unapproved evidence and reversal.
-    First hook refused live-status maxline326>320;row shortened before commit.
-    Next .join.outputs.metadata;no full v1/physical/domain approval implied.
+  Goal:0773 explicit exact splice;[whole scope/proofs](../history/stitchcad-devnotes-part949.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata`
-  Status: `pending`
+  Status: `in_progress`
   Goal:explicit joined metadata/material/label/cut/fold/mark reconciliation from actual source fields.
+### G1-SLICE.5f.1.c.join.outputs.metadata.fields
+- ID: `G1-SLICE.5f.1.c.join.outputs.metadata.fields`
+  Status: `done`
+  Goal:explicit source A/B or authored material/layer/label/face choices with original provenance;
+  whole selected UTF-8 quota before canonical blank-field scans. Cut/fold/marks remain separate.
+  Focused native/parent/compiler/book checks;retire whole0773 before bounded live growth.
+  - [x] ROOT CAUSE (WHY + WHERE):two source Pieces provide no automatic metadata winner;
+    canonical Piece label/reason checks already exist. cargo test -p sc-core --test
+    join_metadata_contract reports `3 passed; 0 failed`,rc=0;original A/B/authored pointers checked.
+  - [x] ADDRESSED (verified):STITCHCAD-G1-0774;four explicit A/B/Authored choices,whole selected
+    UTF-8 sum/quota before canonical label/reason scans;constant borrowing/no new allocation.
+    Native3 and prior splice1 pass0;rc=0. Exact32/15/21 byte cases,mixed origins,all four blank
+    label fields and unresolved Unicode-whitespace reason preserve complete original error parents.
+  - [x] NO REGRESSION:initial strict lint rc101 on four test panic branches;changed to existing
+    allowed expect-based fixture extraction. Final selected Clippy/lib/tests and fmt rc=0;
+    cargo test -p sc-core --doc construction::join::metadata gives `4 passed; 0 failed`,rc=0;
+    construction::editing_examples gives `10 passed; 0 failed`,rc=0;book build rc=0 (D372 owned).
+    949 three original Git spans/body exact;archive1403/36 rc=0. Cut/fold/marks,registry/profile/
+    face compatibility,physical geometry and authority remain later owners;no Piece or print view born.
+    promotion: declined (existing canonical Piece/native selection rules);next .join.outputs.copies.
+- ID: `G1-SLICE.5f.1.c.join.outputs.metadata.cut`
+  Status: `pending`
+  Goal:canonical quantity/mirroring/fold and printed indicators derive from explicit copy/contour policy;
+  no independent entered quantities or automatic face/parity/material inference.
+  Dependencies:.join.outputs.copies and .join.outputs.contours before this cut/print binding.
+- ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks`
+  Status: `pending`
+  Goal:explicit mark/grainline/seam/other consumer ownership and mapped-or-visible repair requirements.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies`
   Status: `pending`
   Goal:complete original-copy consumption/preservation/result correspondence and explicit multiplicity.

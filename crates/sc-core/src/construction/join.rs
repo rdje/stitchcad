@@ -8,7 +8,12 @@ pub use inventory::{
     BoundJoinCopyInventory, JoinCopyInventoryError, JoinCopyInventoryLimits,
     JoinCopyInventoryRefusal,
 };
+mod metadata;
 mod splice;
+pub use metadata::{
+    BoundJoinPieceMetadata, JoinPieceFieldIntent, JoinPieceMetadataError, JoinPieceMetadataLimits,
+    JoinPieceMetadataPolicy, JoinPieceMetadataRefusal,
+};
 pub use splice::{
     JoinExactSpliceRequirement, JoinMovingOrientation, JoinSpliceEnd, JoinSpliceEndpointPair,
     JoinSplicePlacement, RequiredJoinExactSplice,

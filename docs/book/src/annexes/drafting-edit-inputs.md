@@ -472,7 +472,58 @@ Focused native checks cover these declared choices and authentic partial/eased/r
 views. Actual fitting/deformation,geometry,currentness,observer/authority truth and publication
 remain separate;no full-envelope or independent approval follows.
 
-Remaining output contracts must explicitly reconcile metadata,material/mark ownership,multiplicity and
+### Select joined metadata from actual A/B or authored fields
+
+`JoinPieceMetadataPolicy` requires four independent `JoinPieceFieldIntent<T>` choices:material,
+assembly layer,label text and cutting face. Each is `FromSide(A/B)` or `Authored(value)`. No side
+wins automatically;source id order,fixed placement and physical-copy reflection select no field.
+All four choices are explicit even when A and B happen to carry equal values.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+let policy=JoinPieceMetadataPolicy::new(
+    JoinPieceFieldIntent::FromSide(SeamSideId::A),
+    JoinPieceFieldIntent::Authored(2),
+    JoinPieceFieldIntent::Authored(LabelText {
+        name:"joined front".into(),size:"M".into(),fabric:"cotton".into(),colorway:"blue".into(),
+    }),
+    JoinPieceFieldIntent::FromSide(SeamSideId::B),
+);
+fn bind<'a>(splice:&'a RequiredJoinExactSplice<'a>,policy:&'a JoinPieceMetadataPolicy,
+    limits:&'a JoinPieceMetadataLimits)->Result<BoundJoinPieceMetadata<'a>,JoinPieceMetadataError<'a>> {
+    splice.bind_metadata(policy,limits)
+}
+assert!(matches!(policy.material(),JoinPieceFieldIntent::FromSide(SeamSideId::A)));
+```
+
+`bind_metadata` selects original borrowed fields without cloning,normalizing or comparing their
+contents. `FromSide` lends the actual original Piece field;`Authored` lends the actual field in
+the original policy. Material assignment retains its exact assigned id or unresolved reason.
+The four policy getters retain those origin choices separately from the selected values.
+
+`JoinPieceMetadataLimits::new(B)` bounds the complete selected result's UTF-8 bytes:all four
+label strings plus its unresolved material reason,if any. Cached String lengths are summed with
+checked addition before any blank-field scan. `TextOverflow` retains a nonrepresentable full sum;
+`TextBytes { required,allowed }` precedes field completeness. Previously owned policy/source
+storage and unselected text have separate obligations;this check neither scans nor bounds them.
+
+Label `front/M/cotton/blue` contributes16 bytes. With selected unresolved reason `source A pending`,
+the total is32;allowance31 refuses required32. A selected assigned material contributes no reason
+bytes. `合片/M/linen/蓝` contributes15 UTF-8 bytes,not a character count;reason `new β` adds6 for21.
+
+After whole B admission,the existing canonical Piece rules check label name,size,fabric,colorway
+in that order,then require a nonblank unresolved-material explanation. Unicode whitespace still
+counts as blank. `IncompleteLabel(LabelField)` and `UnexplainedMaterial` retain the original
+whole splice,policy and limits;no accepted field prefix escapes.
+
+`BoundJoinPieceMetadata` lends actual `splice()`, `policy()`, `limits()`,selected `material()`,
+`layer_index()`, `label()` and `cutting_side()`,plus complete `text_bytes()`. Binding takes O(B+1)
+work and constant space,with no allocation,registry lookup,provider call or geometry work.
+These are locally complete fields. Assigned material existence/kind,state/profile compatibility,
+size truth,face/parity compatibility,cut/fold/mark reconciliation and authority remain separate.
+No Piece,physical copy or printed quantity/hand/fold indicator is created here.
+
+Remaining output contracts must explicitly reconcile cut/fold/mark ownership,multiplicity and
 copy mappings,source retirement/reference lineage and the permitted join variant before family
 closure. Partial spans,declared ease and physical-copy orientation cannot be ignored. Sewing
 correspondence alone does not establish congruent boundaries,a valid placement or a simple

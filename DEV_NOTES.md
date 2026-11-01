@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — explicit exact nondeforming join domain
+## _(2026-11-01 UTC)_ — explicit joined metadata field selection
 
-0773 .join.outputs.domains requires zero allocated ease/exact whole-bank coincidence and explicit placement intent.
-KeepOriginal or fixed A/B with moving authored parity;actual reflected copies/partial Portion/held pairs stay original.
-Native1/inventory3/API6/book9/lint/fmt/book0;948 four exact spans/archive1402/35. Actual geometry/providers remain later.
-Promotion:ADR-0003/index records delegated author/applier,unapproved independent evidence and reversal;no physical closure.
+0774 .join.outputs.metadata.fields borrows A/B/Authored material/layer/label/face without an implicit winner.
+Whole selected UTF-8 precedes canonical blank scans;unselected/prior storage separate. Native3/splice1/API4/book10
+and final strict lint/fmt/book0;initial four test panic lints corrected. 949 exact0773/archive1403/36 pass0.
+Cut/print/marks/compatibility/geometry/authority remain owned. Promotion:declined,existing canonical/native rules.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

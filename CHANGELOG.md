@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0773 — require explicit exact nondeforming join intent
+## STITCHCAD-G1-0774 — select explicit joined metadata fields
 
-- Keep original placement or name fixed side/moving authored parity;no inferred stretch/refit/snap.
-- Authentic Same/Opposite held endpoint pairs and actual ease/Portion/reflected copies remain original.
-- Native1/inventory3/API6/book9/lint/fmt/book pass0;948 prior source bytes retained.
-- ADR-0003 records scoped policy;actual zero ease/coincidence/topology/authority remain pending;G1still6/18.
+- Material/layer/label/face explicitly borrow A/B or authored policy fields;no implicit winner.
+- Whole selected UTF-8 quota precedes canonical label/reason checks;errors retain complete parents.
+- Native3/splice1/API4/book10/final lint/fmt/book pass0;949 prior source bytes retained.
+- Cut/fold/marks and actual compatibility/geometry/authority stay pending;G1still6/18.
 
 ## STITCHCAD-G1-0389 — close focused layer/Hem component acceptance
 
@@ -34,6 +34,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0773 exact-splice task,lesson and ledger](docs/history/stitchcad-devnotes-part949.md) retain exact source bytes.
 
 [Whole0772 inventory task,lesson,ledger and closed ADR discussions](docs/history/stitchcad-devnotes-part948.md) retain exact source bytes.
 
