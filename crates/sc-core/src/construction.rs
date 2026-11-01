@@ -60,21 +60,23 @@ mod line;
 pub use line::{LineConstruction, LineConstructionError, LineEndpoint, LinePointDependency};
 mod join;
 pub use join::{
-    AdmittedJoinEdges, BoundJoinCopyInventory, BoundJoinCutBanks, BoundJoinCutPopulation,
-    BoundJoinEdgeRoles, BoundJoinPieceMetadata, BoundJoinPiecesAtSeam, BoundJoinSide,
-    BoundJoinSourcePieces, CoveredJoinCutSources, DeclaredJoinPieceIdentity, JoinBindingError,
-    JoinBindingRefusal, JoinCopyInventoryError, JoinCopyInventoryLimits, JoinCopyInventoryRefusal,
-    JoinCutBank, JoinCutBankError, JoinCutBankRefusal, JoinCutCoverageError, JoinCutCoverageLimits,
-    JoinCutCoverageRefusal, JoinCutPopulation, JoinCutPopulationError, JoinCutPopulationRefusal,
+    AdmittedJoinDirections, AdmittedJoinEdges, BoundJoinCopyInventory, BoundJoinCutBanks,
+    BoundJoinCutPopulation, BoundJoinEdgeRoles, BoundJoinPieceMetadata, BoundJoinPiecesAtSeam,
+    BoundJoinSide, BoundJoinSourcePieces, CoveredJoinCutSources, DeclaredJoinPieceIdentity,
+    JoinBindingError, JoinBindingRefusal, JoinCopyInventoryError, JoinCopyInventoryLimits,
+    JoinCopyInventoryRefusal, JoinCutBank, JoinCutBankError, JoinCutBankRefusal,
+    JoinCutCoverageError, JoinCutCoverageLimits, JoinCutCoverageRefusal, JoinCutPopulation,
+    JoinCutPopulationError, JoinCutPopulationRefusal, JoinDirectionAssignment, JoinDirectionError,
+    JoinDirectionLimits, JoinDirectionManifest, JoinDirectionRefusal, JoinDirectionalOutput,
     JoinEdgeCandidate, JoinEdgeManifest, JoinEdgeManifestError, JoinEdgeManifestLimits,
     JoinEdgeManifestRefusal, JoinEdgeRoleBindingError, JoinEdgeRoleBindingRefusal,
     JoinExactSpliceRequirement, JoinIdentityStopOrigin, JoinInputError, JoinMovingOrientation,
-    JoinOutputEdge, JoinPieceFieldIntent, JoinPieceIdentityError, JoinPieceIdentityLimits,
-    JoinPieceIdentityRefusal, JoinPieceMetadataError, JoinPieceMetadataLimits,
-    JoinPieceMetadataPolicy, JoinPieceMetadataRefusal, JoinPiecesAtSeam, JoinSourceOccurrence,
-    JoinSourceOccurrenceField, JoinSourceOccurrenceLocation, JoinSourcePieceError,
-    JoinSourcePieceLimits, JoinSourcePieceRefusal, JoinSpliceEnd, JoinSpliceEndpointPair,
-    JoinSplicePlacement, RequiredJoinExactSplice,
+    JoinOutputEdge, JoinParameterDirection, JoinPieceFieldIntent, JoinPieceIdentityError,
+    JoinPieceIdentityLimits, JoinPieceIdentityRefusal, JoinPieceMetadataError,
+    JoinPieceMetadataLimits, JoinPieceMetadataPolicy, JoinPieceMetadataRefusal, JoinPiecesAtSeam,
+    JoinSourceOccurrence, JoinSourceOccurrenceField, JoinSourceOccurrenceLocation,
+    JoinSourcePieceError, JoinSourcePieceLimits, JoinSourcePieceRefusal, JoinSpliceEnd,
+    JoinSpliceEndpointPair, JoinSplicePlacement, RequiredJoinExactSplice,
 };
 mod mirror;
 pub use mirror::{

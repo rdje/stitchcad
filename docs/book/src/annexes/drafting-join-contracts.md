@@ -520,3 +520,56 @@ manifest can satisfy that cut-domain bookkeeping while retaining two original cu
 positive result population. It proves no nonempty,closed,simple or otherwise valid result Piece.
 Whole output topology,traversal,parameter correspondence,fold/marks/consumer ownership,retirement,
 currentness,geometric coincidence and atomic publication remain required before actual execution.
+
+## Declare every output's parameter direction
+
+`JoinParameterDirection` requires `SameAsSource` or `ReverseSource` explicitly. This request names
+whether the output's start/end correspond to the attributed ascending source range's from/to or
+to/from. It is separate from original Piece traversal,physical-copy reflection,sewing direction
+and moving-frame orientation. No direction default or numeric interior map is supplied.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn assignment(tag:LocalTag)->JoinDirectionAssignment {
+    JoinDirectionAssignment::new(tag,JoinParameterDirection::ReverseSource)
+}
+fn direct<'a>(manifest:&'a JoinDirectionManifest,coverage:&'a CoveredJoinCutSources<'a>)
+    ->Result<AdmittedJoinDirections<'a>,JoinDirectionError<'a>> {
+    manifest.admit(coverage,JoinDirectionLimits::new(2,2,4))
+}
+```
+
+`JoinDirectionManifest::new(operation,assignments)` preserves original operation,order,tags and
+orientation fields. `JoinDirectionLimits::new(N,M,W)` admits the complete actual candidate output
+population N,all raw assignments M and checked2M index/association entries before operation,count,
+field scans or allocation. `WorkspaceOverflow` preserves a nonrepresentable complete2M count.
+Earlier candidate/coverage/C/I/H/R/S/catalogue resources and caller-owned storage remain separate;
+logical entries do not measure allocator bytes. Work is O(M log(M+N+2)),with2M new logical entries.
+
+With actual outputs9 and2,N2/M2/W4 is exact. N1 refuses `Outputs`;M1 refuses `Assignments`;W3
+refuses `Workspace`,before a wrong manifest operation or bad tag. With quotas met,`Operation`
+precedes `Count`;one or three assignments refuse expected2 before their fields are inspected.
+Equal count alone cannot establish completeness:original assignments then refuse `Duplicate`
+or `UnknownOutput`. Unique membership in the actual N candidates plus M=N supplies one per output.
+Tag13 remains unknown here when active in the catalogue but absent from the actual candidate
+manifest;inactive7 and undefined99 cannot substitute either. A failure returns no accepted prefix.
+
+N includes every construction/fold candidate on the original manifest,not just the cut-coverage
+index. For four cut candidates and six noncut candidates,N is10;four assignments refuse expected10.
+All ten can be explicitly directed even when a source field is undirected Fold or has reversed
+Piece traversal. The original source field and requested parameter direction remain independent.
+
+`JoinDirectionError` retains actual `manifest()`,actual `coverage()`,explicit `limits()` and first
+`refusal()`. `refused_assignment()` lends the actual original field only for Duplicate/UnknownOutput;
+the second original duplicate wins for Duplicate. Resource/operation/count causes return `None`.
+`AdmittedJoinDirections` retains the same whole parents and reports `workspace_entries()`.
+`assignments()` lends original authored order and reverse;`assignment(tag)` uses explicit tag lookup.
+
+Each authentic `JoinDirectionalOutput` lends its whole `context()`,original `index()` and actual
+`assignment()`. `source()` is the actual candidate/role/occurrence attribution from that complete
+parent;`parameter_direction()` is the original explicit request. Ascending source bounds and
+persistent output tuples remain unchanged. No contour traversal is silently flipped or inferred.
+
+Explicit N0/M0/W0 metadata can admit when whole banks leave no outside cut interval. It still
+proves no nonempty joined Piece,no-op,achieved endpoint/interior correspondence,currentness,
+valid whole contour,geometric splice,semantic reconciliation,retirement or publication authority.

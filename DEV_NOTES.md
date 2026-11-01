@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — complete surviving join cut sources
+## _(2026-11-01 UTC)_ — explicit join output parameter directions
 
-0782 requires whole/outside cut partitions,excludes consumed bank interiors and preserves unrelated fields.
-Whole N/R/N-index admission precedes scans;native4/prior manifest4/API3/join book11/lint/fmt/book pass0.
-957 Git/body/public bytes exact;stale overview truing/join availability corrected against actual native scope.
-promotion: declined (existing exact-splice/coverage boundary). G1still6/18;explicit parameter directions next.
+0783 requires one explicit source-relative direction for every candidate,including noncut fields.
+Whole N/M/2M precedes owner/count/fields;unique actual membership prevents active-but-absent roles.
+Native4/prior coverage4/API6/join book12/lint/fmt/book pass0;958 Git/body/public reader exact.
+promotion: declined (existing typed direction boundary). G1still6/18;reference/task room before topology.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

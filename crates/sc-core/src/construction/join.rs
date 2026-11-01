@@ -9,6 +9,11 @@ mod coverage;
 pub use coverage::{
     CoveredJoinCutSources, JoinCutCoverageError, JoinCutCoverageLimits, JoinCutCoverageRefusal,
 };
+mod directions;
+pub use directions::{
+    AdmittedJoinDirections, JoinDirectionAssignment, JoinDirectionError, JoinDirectionLimits,
+    JoinDirectionManifest, JoinDirectionRefusal, JoinDirectionalOutput, JoinParameterDirection,
+};
 mod identity;
 mod inventory;
 pub use identity::{

@@ -833,36 +833,43 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.manifest`
   Status: `done`
   Goal:0781 original Edge attribution;[whole scope/proofs](../history/stitchcad-devnotes-part957.md).
-### G1-SLICE.5f.1.c.join.outputs.contours.coverage
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.coverage`
   Status: `done`
-  Goal:exact whole/outside cut-source partitions excluding both selected banks;actual parent fields,
-  all unrelated boundary/hole intervals and explicit resource/failure precedence preserved.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_cut_coverage_contract --test join_edge_manifest_contract`
-    through `scripts/local_environment.py`:coverage4/prior manifest4 pass0;middle/tail/hole-bank,quota-
-    before-consumed,gap/overlap,unrelated cut fields and noncut non-substitution witnesses.
-  - [x] ADDRESSED: same native4+4 pass0;`cargo test -p sc-core --doc construction::join::coverage`
-    through launcher:3 compiler guards pass0;selected strict clippy0. Whole N/R/N-entry quotas precede
-    scans/allocation;positive bank intersection refuses before source-ordered exact partitions.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:11 pass0;
-    `cargo fmt --all -- --check`/`scripts/run_make.sh book` pass0.957 three Git spans/body/public reader
-    exact;`history_archive.py --root . verify`:1411 logical/44 working,rc0. Rendered coverage/empty-
-    result scope present. Full geometry/integration remains .5f.4.geometry/.5g/pre-push.
-  Draft checks exposed a shared-fixture tag helper lost during extraction(E0425),two unchecked-slice
-  lints and reverse-next test lint;direct LocalTag construction,bounded slice-iterator grouping and
-  next_back fixed them. Final focused checks above pass;no panic fallback/allowance was introduced.
-  Owned doc drift fixed:operation overview reported native truing coverage pending despite0771 and
-  join outputs/coverage pending despite these declarations. Canonical done truing leaves/native4
-  re-derived scope;corrected summary/rows retain actual fitting/effects/full-output pending. Book0,
-  rendered old wording absent/new boundaries present,all overview code fences byte-unchanged.
-  Cut-only coverage may be empty when whole banks are consumed;this is no valid/nonempty result.
-  Commit:STITCHCAD-G1-0782. promotion: declined (existing exact-splice/source coverage boundary).
+  Goal:0782 complete surviving cut partitions;[whole scope/proofs](../history/stitchcad-devnotes-part958.md).
+### G1-SLICE.5f.1.c.join.outputs.contours.directions
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.directions`
+  Status: `done`
+  Goal:complete explicit source-relative parameter directions on every actual candidate,including
+  noncut fields;no inference from Piece traversal,copy/sewing direction or moving-frame parity.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_parameter_direction_contract --test join_cut_coverage_contract`
+    through `scripts/local_environment.py`:direction4/prior coverage4 pass0;full N10 versus cut4,
+    quota-before-owner/count/fields,duplicates and active-but-absent output witnesses.
+  - [x] ADDRESSED: same native4+4 pass0;actual whole parents,assignment fields and authentic output
+    source pointers retained. `cargo test -p sc-core --doc construction::join::directions` through
+    launcher:6 compiler guards pass0;selected strict clippy0. No achieved map/traversal/pose proof.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:12 pass0;
+    `cargo fmt --all -- --check`/`scripts/run_make.sh book` pass0;rendered full candidate/quota/empty
+    scope present.958 three original Git spans/body/public reader exact;`history_archive.py --root .
+    verify`:1412 logical/45 working,rc0. Actual geometry/full integration stays .5f.4.geometry/.5g/pre-push.
+  Whole N/M/checked2M precedes fields/allocation;unique actual membership plus M=N,not count alone,
+  establishes complete requests. The typed directions reuse the canonical native truing boundary.
+  Rendered witness initially failed on an HTML line break;whitespace normalization passed0. A
+  premature authority command refused the in-progress owner(rc2) before staging;fresh completed-
+  owner authority is required after these exact task/book bytes. No refusal was treated as approval.
+  Commit:STITCHCAD-G1-0783. promotion: declined (existing explicit source-relative direction contract).
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.tracking`
   Status: `pending`
-  Goal:explicit complete per-output source-relative parameter direction after cut coverage,including
-  noncut candidates. Actual persistent membership/original fields and complete N/M/2M limits;no
-  inference from physical reflection,sewing direction,Piece traversal or moving-frame orientation.
-  Actual numeric interior maps and whole result contour topology remain later required work.
+  Goal:unblock whole-contour product work by partitioning join reference before predictable growth:
+  current575 lines/37882B versus700/40960 fixed bounds. Preserve all original prose/code/nav routes
+  and register the new companion. Reclaim closed task continuity before aggregate growth (current
+  collection remains below1500000B);seal whole originals,retain IDs/statuses and verify exact retrieval.
+  Native behavior stays unchanged;focused book/compiler/link/topic-index/task/archive checks only.
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology`
+  Status: `pending`
+  Goal:explicit complete proposed joined boundary/hole/construction/fold-use topology with actual
+  direction/cut coverage parents,whole resources,all persistent output memberships and source-use
+  reconciliation. No nonempty/closure/currentness/geometry/semantic certificate from metadata alone.
+  Dependencies:.contours.tracking before book/task growth;split implementation before code if needed.
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
   Status: `pending`
   Goal:reconcile declared join variants against v1 requirements;actual geometry/G3/bus/full verification
