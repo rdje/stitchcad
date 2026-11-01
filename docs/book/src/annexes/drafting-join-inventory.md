@@ -486,3 +486,25 @@ provider,text or geometry scan. These are complete explicit native effect-source
 not accepted effects or execution/publication readiness. Actual currentness,geometry,domain/envelope,
 history,repair,physical/conservation truth and atomic authority remain execution and independent
 verification work;the declaration grants no approval and changes no amount,pose,copy,holder or ledger.
+
+### Native lineage requirement checkpoint
+
+The native lineage review is complete for the declared source/output identity,history,repair
+and effect requirements. New Piece/copy/edge-role identities remain explicit scoped requests;
+local collision checks and candidate field equality do not issue identities or prove global nonreuse.
+The mandatory identity-history source must establish actual reservations,issuance,retained/consumed
+entity history and correspondence in the real current Design.
+
+Every distinct original global EdgeRef has one explicit disposition while all original fields
+and A/B frames remain available. The [held-reference contract](../spec/ontology.md#11-the-persistent-identity-contract)
+still governs resolution:stored-reference presence/absence is distinct from global edge liveness,
+and registration repair is distinct from replacing a semantic holder. Native requests change none
+of those objects. Five consumer-source scopes,one identity-history source and four effect-source
+scopes remain outstanding together with all explicit edge intents,omissions and companion requests.
+
+Every actual copy pair retains its own physical/splice obligations. Exact source definitions,
+original full/Portion ease and endpoint correspondence are inspectable;they do not prove zero
+allocated ease,whole-bank coincidence,feasible pose,complete geometry or consumer truth. Unknown,
+unsupported,uncertified,resource and cancel outcomes remain actual execution causes. This scoped
+declaration checkpoint grants no currentness,retirement,repair,domain/envelope approval or atomic
+publication readiness. Actual geometry/effects and full integration remain separately owned.

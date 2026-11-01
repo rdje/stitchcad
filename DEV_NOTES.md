@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — complete native join effect-source obligations
+## _(2026-11-01 UTC)_ — native join lineage requirement checkpoint
 
-0810 binds four mandatory canonical-intake/sewing/all-copy/authoring sources to actual complete identity/history/consumer/copy/splice parents.
-Native effect2/prior identity4 pass;all-retention/shared0 ids skip none;two real pairs and original pose/ease/endpoint requirements remain actual loans.
-API4/inventory9/strict lint/fmt/book/rendered claims rc=0;985 three Git spans/body/public exact;archive1439/72,per-generation21/64 and51/64,rc=0.
-promotion: declined (existing canonical evidence-request/effect boundary). G1still6/18;scoped source/output lineage requirements review next.
+0811 reconciles scoped output identities,complete global source-edge intents and five consumer/one history/four effect sources against journal/sewing contracts.
+Actual per-pair splice/ease/endpoints remain original;local equality/scoped IDs/held-ref presence imply no global issuance,liveness,repair or effects.
+Rust unchanged/all9 fences exact;book/rendered checkpoint/canonical target rc=0;986 three spans/body/public exact,archive1440/73,per-generation21/64 and52/64.
+promotion: declined (existing native requirement/actual execution boundary). Prior2/4/API4/inventory9 proof retained;G1still6/18;join family review next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
