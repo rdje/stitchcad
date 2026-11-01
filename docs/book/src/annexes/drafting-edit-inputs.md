@@ -523,7 +523,39 @@ These are locally complete fields. Assigned material existence/kind,state/profil
 size truth,face/parity compatibility,cut/fold/mark reconciliation and authority remain separate.
 No Piece,physical copy or printed quantity/hand/fold indicator is created here.
 
-Remaining output contracts must explicitly reconcile cut/fold/mark ownership,multiplicity and
+### Declare one canonical result cut population
+
+`JoinCutPopulation::new(quantity,mirroring)` requires the result's total physical-cut quantity
+and canonical `Mirroring` explicitly. It inherits neither source's quantity. Raw construction
+retains even invalid values so a contextual refusal can show the complete original declaration.
+
+```rust
+use sc_core::{construction::*,ontology::Mirroring};
+let population=JoinCutPopulation::new(4,Mirroring::MirroredPairs);
+assert_eq!(*population.quantity(),4);
+fn bind<'a>(metadata:&'a BoundJoinPieceMetadata<'a>,population:&'a JoinCutPopulation)
+    ->Result<BoundJoinCutPopulation<'a>,JoinCutPopulationError<'a>> {
+    metadata.bind_cut_population(population)
+}
+```
+
+`bind_cut_population` refuses `ZeroQuantity` first,then
+`UnpairedQuantity { quantity }` for an odd MirroredPairs total. Four means four cuts including
+both hands,not four pairs;three is retained and refused rather than rounded or doubled. A separate
+`PairMember` retains its actual hand and companion id;identity/reciprocity checks still follow.
+
+Success lends actual `metadata()`,the whole original `population()` and original borrowed
+`quantity()`/`mirroring()` fields. Errors retain that same complete metadata/source/splice context,
+original population and first `refusal()`. No default population,second quantity or print view is
+introduced. The later printed quantity/hand/fold indicators must derive from the same canonical
+cut and contour declarations.
+
+Binding performs constant work/space with no allocation,scan,identity issuance or source mutation.
+Even a locally valid large total declares intent;it allocates no copies and proves no source
+consumption,result membership,orientation,full CutPlan or material/geometry compatibility.
+Complete copy actions,companion binding,fold/print reconciliation and authority remain required.
+
+Remaining output contracts must explicitly reconcile fold/mark ownership,copy correspondence and
 copy mappings,source retirement/reference lineage and the permitted join variant before family
 closure. Partial spans,declared ease and physical-copy orientation cannot be ignored. Sewing
 correspondence alone does not establish congruent boundaries,a valid placement or a simple

@@ -9,10 +9,14 @@ pub use inventory::{
     JoinCopyInventoryRefusal,
 };
 mod metadata;
+mod population;
 mod splice;
 pub use metadata::{
     BoundJoinPieceMetadata, JoinPieceFieldIntent, JoinPieceMetadataError, JoinPieceMetadataLimits,
     JoinPieceMetadataPolicy, JoinPieceMetadataRefusal,
+};
+pub use population::{
+    BoundJoinCutPopulation, JoinCutPopulation, JoinCutPopulationError, JoinCutPopulationRefusal,
 };
 pub use splice::{
     JoinExactSpliceRequirement, JoinMovingOrientation, JoinSpliceEnd, JoinSpliceEndpointPair,

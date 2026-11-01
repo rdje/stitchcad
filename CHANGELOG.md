@@ -13,18 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0775 — contain completed task goals before join copy work
+## STITCHCAD-G1-0776 — declare one explicit joined cut population
 
-- Retain whole0774 and75 completed walk/mirror/slash goals/proof links byte-exact in950.
-- Keep all live IDs/statuses;move the29-node truing branch unchanged into existing seam-edit sibling.
-- Source/node/reader950/census10-13-20-zero/archive/book pass0;native crates unchanged.
-- G1still6/18;copy correspondence resumes with bounded live headroom.
-
-## STITCHCAD-G1-0389 — close focused layer/Hem component acceptance
-
-- Layer inventory4, Hem inventory5 and actual Hem/layer declaration8 checks pass0;17 total.
-- Book clarifies component scope; complete Design/global/physical/integration proof remains pending.
-- No Rust/backing changes. Archive headroom2641B: retention decision precedes further unsafe growth.
+- Required total quantity/mirroring borrows actual metadata;zero then odd-pair causes retain raw values.
+- No inherited total,copy allocation,rounding or doubling;actual copy/companion/fold/print proofs remain.
+- Native2/metadata3/API3/book11/lint/fmt/book pass0;951 whole0775/prior0389 retained.
+- G1still6/18;bounded original source occurrences precede identity/output/copy matching.
 
 ## STITCHCAD-G1-0388 — borrow actual layer offset-operation intent
 
@@ -34,6 +28,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0775 continuity and complete0389 ledger](docs/history/stitchcad-devnotes-part951.md) retain exact source bytes.
 
 [Whole0774 continuity and completed walk/mirror/slash goals](docs/history/stitchcad-devnotes-part950.md) retain exact source bytes.
 

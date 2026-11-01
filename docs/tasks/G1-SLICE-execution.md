@@ -798,30 +798,45 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies`
   Status: `in_progress`
   Goal:complete original-copy consumption/preservation/result correspondence and explicit multiplicity.
-### G1-SLICE.5f.1.c.join.outputs.copies.tracking
+### G1-SLICE.5f.1.c.join.outputs.copies.population
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.population`
+  Status: `done`
+  Goal:one explicit canonical result quantity/mirroring declaration bound to actual selected
+  metadata;reuse zero/even-pair rules,retain raw intent and original causes without allocation.
+  Source consumption/result-copy membership,companion identity/fold/printed binding remain separate.
+  Focused native/parent/compiler/book checks;retain whole0775 and prior0389 ledger for headroom.
+  - [x] ROOT CAUSE (WHY + WHERE):canonical Piece cut quantity is positive;MirroredPairs total
+    must be even. No source-side quantity supplies the joined result by default. cargo test -p
+    sc-core --test join_population_contract reports `2 passed; 0 failed`,rc=0;canonical cut rules read.
+  - [x] ADDRESSED (verified):STITCHCAD-G1-0776;one explicit raw result quantity/mirroring pair,
+    actual metadata/policy field borrows and whole original causes. Native2/prior metadata3 pass0;
+    rc=0. Both separate hands,even mirrored totals,zero/odd precedence and u32::MAX retain original
+    values;no copies allocated,counts doubled or source quantities changed.
+  - [x] NO REGRESSION:strict selected Clippy/lib/tests and cargo fmt --all -- --check rc=0;
+    cargo test -p sc-core --doc construction::join::population gives `3 passed; 0 failed`,rc=0;
+    construction::editing_examples gives `11 passed; 0 failed`,rc=0;book build rc=0 (D372 owned).
+    951 four original Git spans/body exact;archive1405/38 rc=0. Actual source/result copy actions,
+    companion identity/full inventory,fold/print binding,geometry and authority remain pending.
+    promotion: declined (existing canonical population rules);next .contours.sources before identity/copy matching.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence`
+  Status: `pending`
+  Goal:after bounded source/output/identity contexts,declare complete original-copy actions and
+  explicit A/B-to-result correspondence;no silent pairing,discarded source quantities or new ids.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory`
+  Status: `pending`
+  Goal:reconcile actual result/source metadata and candidate full inventory/CutPlan with declared
+  copy actions/population/identity,including remaining source copies and all unrelated members.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.tracking`
   Status: `done`
-  Goal:restore bounded task headroom before copy declarations;retain whole0774 and completed
-  walk/mirror/slash goals byte-exact,keep all live IDs/statuses,and move closed truing branch
-  unchanged into existing seam-edit sibling. No native behavior,policy or gate changes.
-  - [x] ROOT CAUSE (WHY + WHERE):after0774 task collection34 parts/1499518 bytes leaves482B;
-    execution968 lines approaches split threshold1000. Python source census/rewrite gives
-    `task collection 34 parts/ 1491088 bytes;execution 871 lines;rc=0` before fresh receipt.
-  - [x] ADDRESSED (verified):STITCHCAD-G1-0775;950 six original Git source intervals/body exact;
-    75 completed walk/mirror/slash node IDs/statuses unchanged. Truing29 nodes/3767 source bytes
-    copied exact to existing walk sibling;original index/navigation and source proof links retained.
-    Public scripts/history_archive.py read950 equals21641 original bytes;rc=0.
-  - [x] NO REGRESSION:python source/node/library comparison rc=0;canonical census command
-    python3 -I -B scripts/local_environment.py -- bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh
-    gives `10 lanes / 13 trees / 20 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)`,rc=0.
-    Archive1404/37 and scripts/run_make.sh book rc=0;D372 remains owned. Native crates unchanged;
-    prior0774 native3/splice1/API4/book10 remain scoped receipts,no fresh geometry/physical claim.
-    First hook refused missing mirror/slash local evidence boxes;restore same-owner proof
-    references. Remove extra EOF blank lines;git diff --check passes rc=0.
-    promotion: declined (existing containment/navigation policy);next .join.outputs.copies.
+  Goal:0775 bounded continuity;[whole scope/proofs](../history/stitchcad-devnotes-part951.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours`
   Status: `pending`
   Goal:bounded source fragments/output roles and complete proposed boundary/hole/construction/fold topology.
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.sources`
+  Status: `pending`
+  Goal:bounded complete A/B held Piece hole/edge occurrence admission before field scans/known
+  namespace/output work;authentic original source fields and actual side/copy parents retained.
+  Move the growing join book reference into a bounded companion before more native source examples.
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage`
   Status: `pending`
   Goal:explicit output/source identities,retirement/reference repair and full observer/evidence requirements.

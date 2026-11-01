@@ -57,9 +57,10 @@ mod line;
 pub use line::{LineConstruction, LineConstructionError, LineEndpoint, LinePointDependency};
 mod join;
 pub use join::{
-    BoundJoinCopyInventory, BoundJoinPieceMetadata, BoundJoinPiecesAtSeam, BoundJoinSide,
-    JoinBindingError, JoinBindingRefusal, JoinCopyInventoryError, JoinCopyInventoryLimits,
-    JoinCopyInventoryRefusal, JoinExactSpliceRequirement, JoinInputError, JoinMovingOrientation,
+    BoundJoinCopyInventory, BoundJoinCutPopulation, BoundJoinPieceMetadata, BoundJoinPiecesAtSeam,
+    BoundJoinSide, JoinBindingError, JoinBindingRefusal, JoinCopyInventoryError,
+    JoinCopyInventoryLimits, JoinCopyInventoryRefusal, JoinCutPopulation, JoinCutPopulationError,
+    JoinCutPopulationRefusal, JoinExactSpliceRequirement, JoinInputError, JoinMovingOrientation,
     JoinPieceFieldIntent, JoinPieceMetadataError, JoinPieceMetadataLimits, JoinPieceMetadataPolicy,
     JoinPieceMetadataRefusal, JoinPiecesAtSeam, JoinSpliceEnd, JoinSpliceEndpointPair,
     JoinSplicePlacement, RequiredJoinExactSplice,

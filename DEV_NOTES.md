@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — bounded live task continuity for join copies
+## _(2026-11-01 UTC)_ — single explicit joined cut population
 
-0775 .join.outputs.copies.tracking seals whole0774/75 completed goals in950;six exact Git spans and reader21641B pass0.
-All75 live node IDs/statuses remain;truing29 nodes/3767B move byte-exact to existing seam-edit sibling.
-Census10/13/20/zero,library unchanged/archive1404/37/book0. Prior native0774 receipts retain scope;no new geometry proof.
-Promotion:declined,existing containment/navigation policy;next explicit copy correspondence. G1still6/18.
+0776 .join.outputs.copies.population binds explicit total quantity/mirroring to actual selected metadata.
+Canonical zero/even-pair rules retain raw causes;no copied source totals,new copies,rounding or doubled quantities.
+Native2/metadata3/API3/book11/lint/fmt/book0;951 four exact spans/archive1405/38 pass0. Actual copy/fold/identity proofs remain.
+Promotion:declined,existing canonical rules. G1still6/18;next bounded A/B source occurrences before namespace/copy matching.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
