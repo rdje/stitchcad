@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — exact selected A+B copy correspondence
+## _(2026-11-01 UTC)_ — bounded copy-inventory continuity
 
-0797 requires selected A/B in the same result and exactly one actual A+B source per explicit result,under C/Q/3Q.
-Actual loans,authored order and reflected original fields survive;selected-span evidence cannot certify another pair.
-Native4/prior actions4/API3/source8/lint/fmt/book rc=0;972 original/body/public bytes exact.
-promotion: declined (existing copy/identity/geometry boundary). G1still6/18;bound tracking then canonical inventory.
+0798 moves complete2685B/four-node correspondence branch unchanged from execution998L to the existing construction sibling.
+Whole source interval/old destination prefix/IDs/statuses/relations exact;four upcoming inventory phases now owned.
+Tree10/13/20/0,archive1427/60,book/render proof rc=0;973 original/body/public bytes exact;Rust diff empty.
+promotion: declined (existing bounded canonical sibling policy). G1still6/18;canonical candidate-copy plan next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

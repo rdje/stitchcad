@@ -1,15 +1,15 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0797;derive HEAD/ahead from Git;push cadence400.
-- Active/next:G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking in docs/tasks/G1-SLICE-execution.md.
-- Next:blocking containment before inventory growth;move complete done correspondence branch to existing constructions sibling.
-- Exact pairs native4/prior actions4/API3/source8/lint/fmt/book rc=0;native correspondence parent done.
-- Whole C/Q/checked3Q before fields;selected A/B same result,one distinct actual A+B pair per result;authored order.
-- Actual source/result/selected loans and reflected originals;peak3Q/new,retained2Q. No invariant faults observed.
-- Each pair still requires own bank/pose/ease/stop/consumer proof;selected-span evidence cannot certify another pair.
-- Canonical candidate inventory/CutPlan/mirroring/source/result fields/current identity/effects remain separately required.
-- Whole0796 retained972;three original Git spans/body/public reader exact;archive1426/59.
-- Source418L/27835B8fences;main9/topology8 unchanged;overview native availability aligned;117 chapters/118 Markdown files.
+- Latest unit:STITCHCAD-G1-0798;derive HEAD/ahead from Git;push cadence400.
+- Active/next:G1-SLICE.5f.1.c.join.outputs.copies.inventory.plan in docs/tasks/G1-SLICE-execution.md.
+- Next:complete canonical candidate CutPlan against same actual inventory,and exact retained/new copy definitions.
+- Done native correspondence branch now canonical in docs/tasks/G1-SLICE-constructions.md#join-physical-copy-correspondence.
+- Whole2685B/SHA99478684/four done IDs/statuses/relations exact;old destination prefix exact;Rust diff empty.
+- Source receipt:target/history-proof-0798-copy-tracking/source.json;973 retains whole original branch/lesson/ledger.
+- Tree10/13/20/0,archive1427/60,book/render rc=0;four inventory children plan/fields/originals/result pending.
+- Native selected pairs require actual A/B same result,one distinct A+B per result;each pair physical proof still required.
+- Source422L/28135B8fences;main9/topology8 unchanged;117 chapters/118 Markdown files.
+- Canonical plan then whole Piece-field resources,original preservation and joined fields;none follows from pairing alone.
 - Fold/construction/copy bookkeeping done;consumer/repair .metadata.marks and real geometry/effects remain;G1still6/18.
 - Protected target/history_window28_capture retains recovery originals;never rerun install/recovery after edits.
 - Cleanup2026-11-01 14:33 UTC complete;docs/ARTIFACT_CLEANUP.md;reader part938 receipt.

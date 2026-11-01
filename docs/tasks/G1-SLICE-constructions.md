@@ -767,3 +767,51 @@ before final checks. No checker, cap, grammar or product Rust changed; no needed
 - [x] NO REGRESSION:`run_tree_coverage_census.sh`:10 lanes/13 trees/20 siblings/0 issues,rc=0;
   `history_archive.py --root . verify`:1413 logical/46 working,rc=0;source5/output7 doctests and book0.
   Full feature/integration verification remains G1-SLICE.5f.4/.5g/pre-push,not run for this retention.
+
+## Join physical-copy correspondence
+
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence`
+  Status: `done`
+  Goal:after bounded source/output/identity contexts,declare complete original-copy actions and
+  explicit A/B-to-result correspondence;no silent pairing,discarded source quantities or new ids.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.results`
+  Status: `done`
+  Goal:0795 explicit result-copy requests;[whole scope/proofs](../history/stitchcad-devnotes-part971.md).
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.actions`
+  Status: `done`
+  Goal:0796 complete original-copy actions;[whole scope/proofs](../history/stitchcad-devnotes-part972.md).
+### G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs`
+  Status: `done`
+  Goal:actual selected A/B JoinTo the same explicit result,and exactly one distinct A+B source pair
+  per requested result,without forks,inferred pairing,orientation or physical geometry approval.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_copy_pair_contract --test join_copy_source_contract`
+    through `scripts/local_environment.py`:pairs4/prior actions4 pass,rc=0. Complete selected retention
+    is not a join;missing/duplicate A/B contributors and crossed selected results must refuse.
+  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join::copy_pairs` through launcher:
+    compiler3 pass,rc=0;whole C/Q/checked3Q before selected fields/scans/allocation;actual first
+    selected/group causes and source/result loans;authored result order and real reflected originals
+    retained. Strict selected clippy rc=0. SourceInvariant/ResultInvariant are internal faults;none occurred.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_source_examples` through launcher:
+    source8 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered exact
+    pair/order/resource/per-pair boundary and refreshed overview present;all old source/overview Rust
+    fences exact. Main9/topology8 unchanged.972 three original Git spans/body/public bytes exact;
+    `history_archive.py --root . verify`:1426 logical/59 working,rc=0.
+    Full geometry/integration remains .5f.4.geometry/.5g/pre-push,not this native copy bookkeeping.
+  Work O(C log(C+Q+2)+Q log(Q+2)+1),peak3Q new entries,successful2Q. Native correspondence complete;
+  each actual pair retains required bank/pose/ease/stop/consumer checks in its own frames. Selected
+  span evidence cannot certify another pair;canonical inventory/currentness/geometry/authority remain.
+  Commit:STITCHCAD-G1-0797. promotion: declined (existing explicit copy/identity/geometry boundary).
+
+### G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking — retention evidence
+
+  - [x] ROOT CAUSE: `git show c1350f401980dadad96577b25e7126d1e6003280:docs/tasks/G1-SLICE-execution.md | wc -l -c`
+    gives998L/56241B,rc=0;four needed inventory child nodes need12 more lines,beyond the1000L target.
+  - [x] ADDRESSED: `python3 -I -B -` Git interval comparison:whole2685B branch/SHA99478684 exact,
+    four done IDs/statuses/relations once across canonical siblings,complete old construction prefix
+    exact,rc=0. Source receipt:target/history-proof-0798-copy-tracking/source.json;Rust diff empty.
+  - [x] NO REGRESSION: `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`:
+    10 lanes/13 trees/20 siblings/0 unowned/orphan/dead links,rc=0.973 three Git spans/body/public
+    bytes exact;`history_archive.py --root . verify`:1427 logical/60 working,rc=0;book rc=0.
+    Rendered remaining plan/field-resource/original/result boundaries present;source Rust fences unchanged.
+    Full feature/integration checks remain .5f.4.geometry/.5g/pre-push;no Rust behavior changed here.

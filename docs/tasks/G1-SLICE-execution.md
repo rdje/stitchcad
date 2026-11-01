@@ -801,46 +801,41 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.population`
   Status: `done`
   Goal:0776 explicit cut population;[whole scope/proofs](../history/stitchcad-devnotes-part952.md).
-- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence`
-  Status: `done`
-  Goal:after bounded source/output/identity contexts,declare complete original-copy actions and
-  explicit A/B-to-result correspondence;no silent pairing,discarded source quantities or new ids.
-- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.results`
-  Status: `done`
-  Goal:0795 explicit result-copy requests;[whole scope/proofs](../history/stitchcad-devnotes-part971.md).
-- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.actions`
-  Status: `done`
-  Goal:0796 complete original-copy actions;[whole scope/proofs](../history/stitchcad-devnotes-part972.md).
-### G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs
-- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs`
-  Status: `done`
-  Goal:actual selected A/B JoinTo the same explicit result,and exactly one distinct A+B source pair
-  per requested result,without forks,inferred pairing,orientation or physical geometry approval.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_copy_pair_contract --test join_copy_source_contract`
-    through `scripts/local_environment.py`:pairs4/prior actions4 pass,rc=0. Complete selected retention
-    is not a join;missing/duplicate A/B contributors and crossed selected results must refuse.
-  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join::copy_pairs` through launcher:
-    compiler3 pass,rc=0;whole C/Q/checked3Q before selected fields/scans/allocation;actual first
-    selected/group causes and source/result loans;authored result order and real reflected originals
-    retained. Strict selected clippy rc=0. SourceInvariant/ResultInvariant are internal faults;none occurred.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_source_examples` through launcher:
-    source8 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered exact
-    pair/order/resource/per-pair boundary and refreshed overview present;all old source/overview Rust
-    fences exact. Main9/topology8 unchanged.972 three original Git spans/body/public bytes exact;
-    `history_archive.py --root . verify`:1426 logical/59 working,rc=0.
-    Full geometry/integration remains .5f.4.geometry/.5g/pre-push,not this native copy bookkeeping.
-  Work O(C log(C+Q+2)+Q log(Q+2)+1),peak3Q new entries,successful2Q. Native correspondence complete;
-  each actual pair retains required bank/pose/ease/stop/consumer checks in its own frames. Selected
-  span evidence cannot certify another pair;canonical inventory/currentness/geometry/authority remain.
-  Commit:STITCHCAD-G1-0797. promotion: declined (existing explicit copy/identity/geometry boundary).
+[Complete native copy-correspondence branch](G1-SLICE-constructions.md#join-physical-copy-correspondence)
+retains all original goals,statuses and focused acceptance evidence.
+
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory`
-  Status: `pending`
+  Status: `in_progress`
   Goal:reconcile actual result/source metadata and candidate full inventory/CutPlan with declared
   copy actions/population/identity,including remaining source copies and all unrelated members.
-- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking`
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.plan`
   Status: `pending`
-  Goal:before inventory child growth,move the completed correspondence branch byte-exact to the
-  existing construction sibling;preserve all IDs/statuses/evidence and keep execution below1000L.
+  Goal:complete canonical candidate CutPlan against the same actual inventory,and exact retained/new copy definitions.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.fields`
+  Status: `pending`
+  Goal:whole original/candidate Piece headers,hole/field/text resources before any deep field comparison.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals`
+  Status: `pending`
+  Goal:retained original Pieces preserve every field except canonical quantity derived from actual retained copies.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.result`
+  Status: `pending`
+  Goal:actual joined Piece fields match declared identity/metadata/population/contours/construction/fold;geometry stays pending.
+### G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking`
+  Status: `done`
+  Goal:product-blocking continuity before inventory growth;move whole completed correspondence
+  branch unchanged to the existing construction sibling,and own four next inventory phases.
+  - [x] ROOT CAUSE: `git show c1350f401980dadad96577b25e7126d1e6003280:docs/tasks/G1-SLICE-execution.md | wc -l -c`
+    gives998L/56241B,rc=0;four needed inventory child nodes need12 more lines,beyond the1000L target.
+  - [x] ADDRESSED: `python3 -I -B -` Git interval comparison:whole2685B branch/SHA99478684 exact,
+    four done IDs/statuses/relations once across canonical siblings,complete old construction prefix
+    exact,rc=0. Source receipt:target/history-proof-0798-copy-tracking/source.json;Rust diff empty.
+  - [x] NO REGRESSION: `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`:
+    10 lanes/13 trees/20 siblings/0 unowned/orphan/dead links,rc=0.973 three Git spans/body/public
+    bytes exact;`history_archive.py --root . verify`:1427 logical/60 working,rc=0;book rc=0.
+    Rendered remaining plan/field-resource/original/result boundaries present;source Rust fences unchanged.
+    Full feature/integration checks remain .5f.4.geometry/.5g/pre-push;no Rust behavior changed here.
+  Commit:STITCHCAD-G1-0798. promotion: declined (existing bounded canonical task sibling policy).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.tracking`
   Status: `done`
   Goal:0775 bounded continuity;[whole scope/proofs](../history/stitchcad-devnotes-part951.md).

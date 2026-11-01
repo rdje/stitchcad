@@ -416,3 +416,7 @@ issuance or atomic effect is supplied. **Each physical pair** still needs actual
 stop and consumer checks in its own copy frames;selected-span evidence cannot certify another
 pair. Complete candidate inventory/CutPlan/mirroring and all source/result metadata,geometry and
 authority requirements remain mandatory. This is native copy bookkeeping,not physical approval.
+
+The next native inventory checks remain separate:the complete candidate CutPlan,whole Piece-field
+resource admission,original field preservation,and joined-result fields. None is established by
+copy correspondence alone;physical correspondence and consumer justification remain further obligations.
