@@ -290,3 +290,14 @@ Whole historical Tuck/Pleat0015 protocol907 remains a new exact record,keeping l
 within the task collection bound. With both new drafts retained,active working files are8 and
 aggregate29. No limit,policy,source-proof or platform guarantee changes. This retains the existing
 process-interruption protocol;no new power-loss claim. Never rerun install/recovery after later edits.
+
+The0767 **early** append captures36 complete records906–941 fromcb1e7432 into window28.
+Source generations had21/42 working files,aggregate63/192;active headroom was22,so this was
+not a mandatory64-file boundary. D302's recurring aggregate/per-generation classification and
+the older governance wording are corrected;the existing pressure diagnostic/control already
+distinguishes them. Installed counts become21/7,aggregate28;continuity record942 then makes
+active8/64 and aggregate29/192. No capacity or tool changes. Source proof matches all36 files;
+all50 unchanged prior physical files stay byte-identical,including the sealed generation.
+Latest public read941 matches3844 original bytes;the installer verifies complete logical/source
+retention and keeps original trees in protected target/history_window28_capture for recovery.
+Live links route55 destinations to window28 headings. Never rerun install/recovery after later edits.

@@ -3,11 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — require explicit truing fold attribution
+## _(2026-11-01 UTC)_ — capture history exactly and correct pressure scope
 
-0766 bounds whole T/G before original cutting-state/field and outer/provenance checks. Explicit no/original/derived intent and named correspondence source retain actual contours and original metadata;no allocation/provider call or inferred axis.
-Fold3/prior contour4/API5/book5,strict selected Clippy/format and focused render pass0. Both sides/outcomes,selected/outside fragments,retention,no-fold,independent outer/source and quota precedence covered. Whole-fold domain/geometry/currentness/fit/copy effects remain evidence obligations.
-Whole0765 scope retained941 exact;reader1395/63 pass0. Book build0 retains D372. Promotion: declined (existing source-fold contract). G1still6/18;contour/placement declaration parents close. Next bound retained history before lineage;native variants stay owned.
+0767 source-pinned early window28 captures36 committed906–941 fromcb1e7432;existing producer/installer verifies complete logical/source identity and preserves recovery originals. Source proof36 exact;independent50 unchanged physical files/36 raw absences/public9413844B exact;rc0.
+D302 recurs because aggregate63 was compared with per-generation64 before running the existing diagnostic. Backup census proves active42/64,22 slots free;packing was not mandatory. Correct governance/current pointer/rationale;controls3 and source/installed census pass0. No code/cap change.
+Whole0766/D375/0422 ledgers retained942 exact;reader1396/29,active8/64,aggregate29/192,55 live routes/tree census10/13/20/book render pass0. D372 build warning remains. Promotion: declined (existing pressure contract). G1still6/18;resume whole-edge lineage;recovery originals protected.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

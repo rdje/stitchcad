@@ -315,10 +315,14 @@ An unknown logical path is refused rather than replaced by another record.
 
 `ARCHIVE-RETENTION` runs in hooks and CI. It checks exact membership, catalog headings, all full-file
 digests, closed manifest schemas and finite decompression, then measures resident and decoded history
-independently. The original logical per-record bounds (2000 lines, 160000 bytes, maxline 400) and
-combined history bounds (60000 lines, 4000000 bytes) still apply. Working Markdown has at most 64
-files. Packing does not expand aggregate capacity; retained payloads and controls consume resident
-storage too. Committed windows are immutable; corrections use new records.
+independently. Logical per-record bounds remain2000 lines,160000 bytes and maxline400. Version3
+applies60000 decoded lines,4000000 decoded/resident bytes and64 working Markdown files **per
+generation**;its working-file aggregate limit is192. Earlier v1/v2 retain their original single-group
+bounds. The public working-file readout is aggregate:63 can mean sealed21 plus active42,leaving22
+active slots. Check `generation_pressure.py` before classifying pressure;the
+[archive reader contract](annexes/archive-reader.md#bounded-generations-version3) defines every bound.
+Packing changes no capacity;payloads/controls consume resident storage too. Committed windows
+are immutable;corrections use new records.
 
 The first transition reconstructs all 64 source files exactly before retiring their working copies.
 `bash scripts/history_archive.sh prove-source window1` independently compares every member to its
@@ -421,7 +425,7 @@ The [build and command reference](build-and-checks.md) documents guarded default
 explicit toolchain setup and the launcher that prepares storage before Make starts. Primary
 entry points are verified under G1-SLICE.5b.4c.h2.a; the standalone producer audit remains open.
 
-### Current retention windows
+### Historical flat-v2 transition
 
 The source55ed18e migration uses four flat-v2 windows17–20. They retain all947 preexisting
 logical records and33 exact original v1 control/payload files. All16 legacy catalogs remain physical
@@ -436,6 +440,6 @@ bash scripts/history_archive.sh read-backing .doctrine/history_archive/windows.j
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part494.md
 ```
 
-The public reader accepts both schemas. The migration passed focused byte/source, native-tar,
+The public reader retains these earlier schemas alongside version3. The migration passed focused byte/source,native-tar,
 materialization and v2 refusal checks. Native reader/client proof and retained-v1 fixture capture pass.
 Full integration/CI and the optional deep fixture campaign remain deferred.

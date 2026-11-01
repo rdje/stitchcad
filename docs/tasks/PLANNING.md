@@ -1173,6 +1173,11 @@ Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];roo
 
 Done0490;owner G1-SLICE.6.5.3.2.retention. [Whole cause/reproduction/verified fix](../history/window23.md#stitchcad-devnotes-part659md).
 
+Recurrence0767 fixed;owner G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage.tracking.
+Repro:0766 pointer/commentary reads aggregate63 as near a64 boundary;backup census proves active42/64,22 slots free. Existing annex/diagnostic already distinguishes them.
+Root:pressure diagnostic skipped before classification;older governance prose also retained global v1/v2 wording. Safe early window28 packing changes no capacity.
+Fix:source/installed census42→7,aggregate63→28;existing pressure controls3 pass0. Correct pointer/rationale and governance to per-generation64/aggregate192;no code/cap change.
+
 D303–D306:[whole closed ledger](../history/window27.md#stitchcad-devnotes-part865md).
 
 D307–D369:[whole prior ledger](../history/window27.md#stitchcad-devnotes-part854md). D334/D223/D156 remain owned.
@@ -1185,12 +1190,8 @@ Resolve index containment with actual search checks;no warning suppression/cap r
 
 ## D373/D374 — active journal documentation scope/storage drift
 
-Fixed0696;[whole original ledger/proofs](../history/stitchcad-devnotes-part935.md).
+Fixed0696;[whole original ledger/proofs](../history/window28.md#stitchcad-devnotes-part935md).
 
 ## D375 — drafting chapters missing from the topic index
 
-P2 fixed0760;owner G1-SLICE.5f.1.c.true.outputs.manifest.piece.roles;whole-Piece navigation sync.
-Repro:book_publication.chapters/require INDEX_COVERAGE finds12 predecessor drafting paths missing;13 with the new companion.
-Root:SUMMARY registers these native chapters but topic-index.md lacks their targets despite its complete-coverage claim.
-Impact:topic navigation omits implemented native contracts;the existing publication guard rejects the index. No runtime defect.
-Fix:canonical SUMMARY titles/targets restore all13 routes;existing INDEX_COVERAGE guard red before/green after,rc=0.
+Fixed0760;[whole cause/reproduction/fix](../history/stitchcad-devnotes-part942.md).

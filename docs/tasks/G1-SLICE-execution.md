@@ -236,7 +236,7 @@ retains the complete closed .3.3.3 branch and all original proof links.
   Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part413md).
 - ID: `G1-SLICE.5e.3.5`
   Status: `done`
-  Goal:whole retained scope/proofs in [record928](../history/stitchcad-devnotes-part928.md).
+  Goal:whole retained scope/proofs in [record928](../history/window28.md#stitchcad-devnotes-part928md).
 - ID: `G1-SLICE.5e.4`
   Status: `active`
   Goal: atomic replay and dependency validation, including corrupted persisted cycle evidence.
@@ -290,13 +290,13 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0486;[proof](../history/window23.md#stitchcad-devnotes-part641md).
 - ID: `G1-SLICE.6.5.3.2.3`
   Status: `done`
-  Goal:completed native component;[whole scope/proofs](../history/stitchcad-devnotes-part939.md).
+  Goal:completed native component;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part939md).
 - ID: `G1-SLICE.6.5.3.2.3.1`
   Status: `done`
   Goal:0487;[proof](../history/window23.md#stitchcad-devnotes-part642md).
 - ID: `G1-SLICE.6.5.3.2.3.2`
   Status: `done`
-  Goal:completed native component;[whole scope/proofs](../history/stitchcad-devnotes-part939.md).
+  Goal:completed native component;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part939md).
 - ID: `G1-SLICE.6.5.3.2.3.2.1`
   Status: `done`
   Goal:0488;[proof](../history/window23.md#stitchcad-devnotes-part643md).
@@ -308,7 +308,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0490;[proof](../history/window23.md#stitchcad-devnotes-part645md).
 - ID: `G1-SLICE.6.5.3.2.3.2.3`
   Status: `done`
-  Goal:completed native component;[whole scope/proofs](../history/stitchcad-devnotes-part939.md).
+  Goal:completed native component;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part939md).
 - ID: `G1-SLICE.6.5.3.2.3.2.3.1`
   Status: `done`
   Goal:0491;[proof](../history/window23.md#stitchcad-devnotes-part646md).
@@ -332,13 +332,13 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0495;[proof](../history/window23.md#stitchcad-devnotes-part651md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4`
   Status: `done`
-  Goal:completed native component;[whole scope/proofs](../history/stitchcad-devnotes-part939.md).
+  Goal:completed native component;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part939md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.1`
   Status: `done`
   Goal:0497;[proof](../history/window23.md#stitchcad-devnotes-part653md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2`
   Status: `done`
-  Goal:completed native component;[whole scope/proofs](../history/stitchcad-devnotes-part939.md).
+  Goal:completed native component;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part939md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2.1`
   Status: `done`
   Goal:0498;[proof](../history/window23.md#stitchcad-devnotes-part654md).
@@ -353,7 +353,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0501;[proof](../history/window23.md#stitchcad-devnotes-part657md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3`
   Status: `done`
-  Goal:completed native component;[whole scope/proofs](../history/stitchcad-devnotes-part939.md).
+  Goal:completed native component;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part939md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.1`
   Status: `done`
   Goal:0502;[proof](../history/window23.md#stitchcad-devnotes-part660md).
@@ -660,7 +660,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261101`
   Status: `done`
-  Goal:0762 guarded cleanup;[whole scope/proofs](../history/stitchcad-devnotes-part938.md).
+  Goal:0762 guarded cleanup;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part938md).
 
 ## Drafting operation contracts
 
@@ -776,36 +776,36 @@ retain their complete task branch,original goals and proof links in the bounded 
   observer obligations and unexplained differential attribution. Actual fit stays G3/.5f.4.
 - ID: `G1-SLICE.5f.1.c.true.outputs.copies`
   Status: `done`
-  Goal:0751 actual copy/Piece binding;[whole scope/proofs](../history/stitchcad-devnotes-part926.md).
+  Goal:0751 actual copy/Piece binding;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part926md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.roles`
   Status: `done`
-  Goal:0752 actual edge-role binding;[whole scope/proofs](../history/stitchcad-devnotes-part927.md).
+  Goal:0752 actual edge-role binding;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part927md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest`
   Status: `in_progress`
   Goal:candidate/domain/coverage,outcome/lock/evidence and whole-Piece replacement declarations;
   actual maps/fit/variant policy stay owned.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.entries`
   Status: `done`
-  Goal:0753 candidate attribution;[whole scope/proofs](../history/stitchcad-devnotes-part929.md).
+  Goal:0753 candidate attribution;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part929md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.domain`
   Status: `done`
-  Goal:0754 exact held-domain membership;[whole scope/proofs](../history/stitchcad-devnotes-part930.md).
+  Goal:0754 exact held-domain membership;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part930md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.coverage`
   Status: `done`
-  Goal:0756 exact held-domain partition;[whole scope/proofs](../history/stitchcad-devnotes-part932.md).
+  Goal:0756 exact held-domain partition;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part932md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.policy`
   Status: `done`
-  Goal:0757 explicit outcome;[whole scope/proofs](../history/stitchcad-devnotes-part933.md).
+  Goal:0757 explicit outcome;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part933md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references`
   Status: `done`
   Goal:bounded endpoint/stop/reference and all-copy observer/fit evidence requirements;
   native source partitions never substitute for actual mappings or atomic execution.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references.locks`
   Status: `done`
-  Goal:0758 actual lock requests;[whole scope/proofs](../history/stitchcad-devnotes-part934.md).
+  Goal:0758 actual lock requests;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part934md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.references.evidence`
   Status: `done`
-  Goal:0759 complete evidence requests;[whole scope/proofs](../history/stitchcad-devnotes-part935.md).
+  Goal:0759 complete evidence requests;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part935md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece`
   Status: `in_progress`
   Goal:P1 before native family closure:explicit whole-Piece reconciliation for partial selected spans.
@@ -816,50 +816,45 @@ retain their complete task branch,original goals and proof links in the bounded 
   Actual geometry/current ledger application remains .5f.2/.5f.4.geometry;do not invent results.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.roles`
   Status: `done`
-  Goal:0760 exact outside roles/book/D375;[whole scope/proofs](../history/stitchcad-devnotes-part936.md).
+  Goal:0760 exact outside roles/book/D375;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part936md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours`
   Status: `done`
   Goal:complete boundary/hole/construction/fold occurrence placement and traversal requirements;
   retain unaffected source fields and reject incomplete replacement attribution.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.directions`
   Status: `done`
-  Goal:0761 explicit complete directions;[whole scope/proofs](../history/stitchcad-devnotes-part937.md).
+  Goal:0761 explicit complete directions;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part937md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement`
   Status: `done`
   Goal:complete original occurrence/fold replacement plan using explicit output directions and source order.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.source`
   Status: `done`
-  Goal:0764 exact held Piece occurrences;[whole scope/proofs](../history/stitchcad-devnotes-part940.md).
+  Goal:0764 exact held Piece occurrences;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part940md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.generate`
   Status: `done`
-  Goal:0765 complete contours;[whole scope/proofs](../history/stitchcad-devnotes-part941.md).
+  Goal:0765 complete contours;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part941md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.fold`
   Status: `done`
-  Goal:explicit no/original/derived fold attribution preserves original cutting state and requires
-  actual complete outer placement plus a named geometric correspondence source;no inferred axis.
-  - [x] ISSUE:complete contour declaration deliberately supplies no fold choice;ontology Piece
-    permits exactly one declared outer fold when cutting on fold. Native whole-Piece closure needs it.
-  - [x] ROOT CAUSE:sed ontology/piece.rs and slash_spread/metadata.rs confirms authoritative
-    cutting state,separate original fold and independent outer/provenance requirements;rc=0.
-  - [x] FIX:require_fold checks complete T/G before state/field/outer/provenance;retains exact
-    request/evidence source,whole contours and original metadata without allocation/provider calls.
-  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    truing_fold_contract passes3/0;both sides/outcomes,derived outside/selected,retention,no-fold,
-    exact original fields,independent outer/provenance and whole-count precedence;rc=0.
-  - [x] NO REGRESSION:cargo test -p sc-core --test truing_contour_contract passes4/0;rc=0.
-    Strict selected Clippy/format rc=0;fold API5/book5 pass0;book build/focused render rc=0.
-    Actual whole-fold geometry/currentness/fit/copy effects remain separate;D372 remains owned.
-  - [x] LOCKSTEP:book/live pointer/frontier/journals aligned;whole0765 scope retained941 exact;
-    archive1395/63 rc=0. Contour/placement declaration parents close;lineage/variants remain owned.
-  Commit:STITCHCAD-G1-0766;promotion: declined (existing source-fold preservation contract).
+  Goal:0766 explicit fold attribution;[whole scope/proofs](../history/stitchcad-devnotes-part942.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.tracking`
   Status: `done`
-  Goal:0763 exact scalar checkpoint move;[whole scope/proofs](../history/stitchcad-devnotes-part939.md).
+  Goal:0763 exact scalar checkpoint move;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part939md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage.tracking`
-  Status: `pending`
-  Goal:before lineage journal growth,append committed raw history with the existing bounded
-  source-pinned author/installer;prove exact retrieval/source identity,retain all old bytes and
-  repair live direct navigation. No archive tool/cap change;restore working-count headroom.
+  Status: `done`
+  Goal:safe early source-pinned window28 capture;correct D302 recurrence and governance scope.
+  - [x] ISSUE:0766 pointer/commentary compares aggregate63 with per-generation64;older governance
+    repeats global wording. Source active42/64 has22 slots;packing was early,not mandatory.
+  - [x] ROOT CAUSE:generation_pressure.py plus independent backup/catalog census proves21/42
+    source versus21/7 installed;existing controls3 distinguish aggregate/active,rc=0. Diagnostic skipped before claim.
+  - [x] FIX:existing v2_migration.py append target/history_window28_capture --owner this leaf,
+    then v2_install.py install;terminal rc=0. Correct pointer/rationale/governance;route55 live links.
+  - [x] ADDRESSED:scripts/history_archive.py --root . prove-source window28:36 byte-identical
+    files/zero missing-extra;rc=0. Independent36 raw absences/50 unchanged files/public941 exact3844B;rc=0.
+  - [x] NO REGRESSION:verify-retention1396/29 rc=0;pressure active8/64,aggregate29/192;controls3
+    rc=0. Tree census10/13/20,zero failures;book build/focused D302 render rc=0. Code/tools unchanged.
+  - [x] LOCKSTEP:whole0766 task/lesson/ledger/pointer and D375/0422 ledgers retained942 exact;D302
+    recurrence fixed in PLANNING/book/live pointer. No cap/source-proof/power-loss/platform change.
+  Commit:STITCHCAD-G1-0767;promotion: declined (existing pressure diagnostic/contract).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.lineage`
   Status: `pending`
   Goal:explicit original whole-edge retention/retirement/reference-repair declarations for the

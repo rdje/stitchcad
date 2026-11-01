@@ -782,7 +782,7 @@ Current frontier remains in [G1-SLICE](G1-SLICE.md#current-frontier).
 
 - ID: `G1-SLICE.5e.3a`
   Status: `done`
-  Goal:0079 assertion repair;[complete original node/proofs](../history/stitchcad-devnotes-part931.md).
+  Goal:0079 assertion repair;[complete original node/proofs](../history/window28.md#stitchcad-devnotes-part931md).
 
 ## Completed assertion receipts — preserved from b2c4d6e
 

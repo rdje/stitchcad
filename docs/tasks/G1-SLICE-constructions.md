@@ -32,7 +32,7 @@ Historical verification/commit/changelog tables stay in [the evidence sibling](G
 
 - ID: `G1-SLICE.3c.4a.2a`
   Status: `done`
-  Goal:0015 Tuck/Pleat;[whole goals/acceptance/proofs](../history/stitchcad-devnotes-part907.md).
+  Goal:0015 Tuck/Pleat;[whole goals/acceptance/proofs](../history/window28.md#stitchcad-devnotes-part907md).
 
 - ID: `G1-SLICE.3c.4a.2b`
   Status: `done`
@@ -306,7 +306,7 @@ Historical verification/commit/changelog tables stay in [the evidence sibling](G
 
 ### `G1-SLICE.3c.4b.1` — completed served-layer protocol
 
-Whole0017 [goals/acceptance/proofs](../history/stitchcad-devnotes-part914.md) retained exactly.
+Whole0017 [goals/acceptance/proofs](../history/window28.md#stitchcad-devnotes-part914md) retained exactly.
 
 ### `G1-SLICE.3c.4a.2b` — gathers bind physical span sides and borrow canonical ease
 

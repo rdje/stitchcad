@@ -13,20 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0766 — require explicit truing fold attribution
+## STITCHCAD-G1-0767 — capture history and correct pressure scope
 
-- Whole output/generated-use bounds precede original cutting state and actual outer/source checks.
-- Explicit no/original/derived fold retains original metadata and named geometric evidence request.
-- Structural subrange attribution supplies no whole-fold geometry,currentness or issuance certificate.
-- Fold3/prior4/API5/book5,strict selected lint/format and focused render pass0;whole0765 scope941 exact.
-
-## STITCHCAD-G1-0422 — preview actual private Material assignments
-
-- Fresh inspect authority and exact Design/revision binding precede private candidate preparation.
-- Complete current sources/registry and explicit envelope guards retain their original error chains.
-- Exact assignment diff follows request order, omits no-ops and preserves unresolved reason text.
-- Native bus10/privacy2/selected lint/fmt; original Pieces/revision unchanged after success/refusal.
-- No publication, new identities, geometry/physical/release certificate; broader bus proof remains owned.
+- Early window28 retains36 committed whole files;source proof36 exact and50 prior physical files unchanged.
+- D302 recurrence fixed:source active42/64,aggregate63/192;packing was not a mandatory boundary.
+- Correct governance/pointer and55 live routes;whole0766/D375 retained942 byte-exact.
+- Reader1396/29,active8/64,controls3/tree census/book render pass0;code/tools/caps unchanged.
 
 ## STITCHCAD-G1-0421 — preserve task-sibling ownership and sealed proof bytes
 
@@ -53,29 +45,31 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
-[Whole0765 contour task,lesson and ledger](docs/history/stitchcad-devnotes-part941.md) retain exact source bytes.
+[Whole0766 fold task,lesson,ledger,pointer and prior0422 ledger](docs/history/stitchcad-devnotes-part942.md) retain exact source bytes;0767 corrects the pointer's pressure classification.
 
-[Whole0764 Piece-source task,lesson and ledger](docs/history/stitchcad-devnotes-part940.md) retain exact source bytes.
+[Whole0765 contour task,lesson and ledger](docs/history/window28.md#stitchcad-devnotes-part941md) retain exact source bytes.
 
-[Whole0763 tracking task,lesson and ledger](docs/history/stitchcad-devnotes-part939.md) retain exact source bytes.
+[Whole0764 Piece-source task,lesson and ledger](docs/history/window28.md#stitchcad-devnotes-part940md) retain exact source bytes.
 
-[Whole0762 cleanup task,lesson and ledger](docs/history/stitchcad-devnotes-part938.md) retain exact source bytes.
+[Whole0763 tracking task,lesson and ledger](docs/history/window28.md#stitchcad-devnotes-part939md) retain exact source bytes.
 
-[Whole0761 direction task,lesson and ledger](docs/history/stitchcad-devnotes-part937.md) retain exact source bytes.
+[Whole0762 cleanup task,lesson and ledger](docs/history/window28.md#stitchcad-devnotes-part938md) retain exact source bytes.
 
-[Whole0760 outside-role task,lesson and ledger](docs/history/stitchcad-devnotes-part936.md) retain exact source bytes.
+[Whole0761 direction task,lesson and ledger](docs/history/window28.md#stitchcad-devnotes-part937md) retain exact source bytes.
 
-[Whole0759 evidence task,lesson and ledger](docs/history/stitchcad-devnotes-part935.md) retain exact source bytes.
+[Whole0760 outside-role task,lesson and ledger](docs/history/window28.md#stitchcad-devnotes-part936md) retain exact source bytes.
 
-[Whole0758 lock task,lesson and ledger](docs/history/stitchcad-devnotes-part934.md) retain exact source bytes.
+[Whole0759 evidence task,lesson and ledger](docs/history/window28.md#stitchcad-devnotes-part935md) retain exact source bytes.
 
-[Whole0757 outcome task,lesson and ledger](docs/history/stitchcad-devnotes-part933.md) retain exact source bytes.
+[Whole0758 lock task,lesson and ledger](docs/history/window28.md#stitchcad-devnotes-part934md) retain exact source bytes.
 
-[Whole0756 source-partition task,lesson and ledger](docs/history/stitchcad-devnotes-part932.md) retain exact source bytes.
+[Whole0757 outcome task,lesson and ledger](docs/history/window28.md#stitchcad-devnotes-part933md) retain exact source bytes.
 
-[Complete assertion suffix and0755 lesson/ledger](docs/history/stitchcad-devnotes-part931.md) retain exact source bytes.
+[Whole0756 source-partition task,lesson and ledger](docs/history/window28.md#stitchcad-devnotes-part932md) retain exact source bytes.
 
-[Whole0754 scope,lesson and ledger](docs/history/stitchcad-devnotes-part930.md) retain exact source bytes.
+[Complete assertion suffix and0755 lesson/ledger](docs/history/window28.md#stitchcad-devnotes-part931md) retain exact source bytes.
+
+[Whole0754 scope,lesson and ledger](docs/history/window28.md#stitchcad-devnotes-part930md) retain exact source bytes.
 
 | [part600](docs/history/stitchcad-devnotes-part600.md) | whole0447 retained input-resource scope/lesson/ledger | 49 lines, 4374 bytes, sha256:06dfd2f1… |
 | [part599](docs/history/stitchcad-devnotes-part599.md) | whole0446 held-topology resource scope/lesson/ledger | 45 lines, 4028 bytes, sha256:082deecf… |

@@ -85,31 +85,31 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   retain existing copy identities,separate newly issued copies,no ordinal-derived or reused identity.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.source`
   Status: `done`
-  Goal:0733 source copies;[whole scope/proofs](../history/stitchcad-devnotes-part906.md).
+  Goal:0733 source copies;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part906md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.plan`
   Status: `done`
   Goal:explicit result-copy retention/retirement/issuance proposals under actual canonical result cut policy.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.plan.identities`
   Status: `done`
-  Goal:0734 copy identities/retention;[whole scope/proofs](../history/stitchcad-devnotes-part908.md).
+  Goal:0734 copy identities/retention;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part908md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.plan.entries`
   Status: `done`
-  Goal:0735 result-copy intents;[whole scope/proofs](../history/stitchcad-devnotes-part909.md).
+  Goal:0735 result-copy intents;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part909md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.companion`
   Status: `done`
   Goal:actual complete companion/CutPlan association;no ordinal pairing or transfer of source neighbours.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.companion.inventory`
   Status: `done`
-  Goal:0736 actual inventory;[whole scope/proofs](../history/stitchcad-devnotes-part910.md).
+  Goal:0736 actual inventory;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part910md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.companion.plan`
   Status: `done`
-  Goal:0737 actual complete CutPlan;[whole scope/proofs](../history/stitchcad-devnotes-part911.md).
+  Goal:0737 actual complete CutPlan;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part911md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.semantics`
   Status: `done`
-  Goal:0738 semantic requirements;[whole scope/proofs](../history/stitchcad-devnotes-part912.md).
+  Goal:0738 semantic requirements;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part912md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.checkpoint`
   Status: `done`
-  Goal:0739 native checkpoint80+80;[whole scope/proofs](../history/stitchcad-devnotes-part913.md).
+  Goal:0739 native checkpoint80+80;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part913md).
   - [x] ISSUE:retain live checkpoint acceptance after whole protocol retirement to913.
   - [x] ROOT CAUSE (mirror retention):original913 Git intervals retained;
     Python check_source_spans:3 exact;rc=0.
