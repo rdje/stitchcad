@@ -395,3 +395,64 @@ An unlisted id can pass these local checks,including explicit zero or a value eq
 external source reference;that supplies no global kind,existence,state or freshness certificate.
 Actual current/historical namespace,nonreuse,reference resolution and authoring authority remain
 mandatory host/program obligations before geometry execution or publication.
+
+## Attribute explicit Edge candidates to original source fields
+
+`JoinEdgeCandidate::new(tag,side,location,range)` retains four explicit fields:the persistent Edge
+role tag,the original A/B role,the exact boundary/hole/construction/fold location,and a positive
+ascending held `EdgeRange`. The location identifies an original field in this supplied snapshot;
+it is neither an output identity nor a claim about current topology. No location,range or traversal
+is inferred by sorting ids,copy order,coordinate coincidence or the seam's Opposite direction.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn candidate(tag:LocalTag,side:SeamSideId,source:EdgeRange)->JoinEdgeCandidate {
+    JoinEdgeCandidate::new(tag,side,JoinSourceOccurrenceLocation::Boundary(0),source)
+}
+fn attribute<'a>(manifest:&'a JoinEdgeManifest,identity:&'a DeclaredJoinPieceIdentity<'a>)
+    ->Result<AdmittedJoinEdges<'a>,JoinEdgeManifestError<'a>> {
+    manifest.admit(identity,JoinEdgeManifestLimits::new(3,6))
+}
+```
+
+`JoinEdgeManifest::new(operation,candidates)` retains the original complete order and all invalid
+unadmitted fields. `admit` checks the complete N and checked2N index/association entries before
+inspecting any candidate or allocating those structures. These entry limits do not bound caller
+storage,allocator bytes or earlier C/I/H/R/S/catalogue admission;those policies remain required.
+For N3,W6 is exact:N2 refuses `Candidates`,W5 refuses `Workspace`,and both precede a wrong operation
+or bad tag/location. `WorkspaceOverflow` preserves nonrepresentable complete arithmetic.
+
+After quota admission,the operation must match the actual join. Each candidate then checks its
+original tag for `DuplicateTag`, `UndefinedRole`, `InactiveRole`,then its actual source field for
+`MissingOccurrence`,then literal range-edge equality for `SourceEdge`. A later bad candidate
+returns the whole original proposal and first cause;no accepted prefix is returned. Repeated
+source edges/ranges with distinct active output roles remain separate declarations.
+
+`BoundJoinSourcePieces::occurrence(side,location)` performs constant bounded field lookup under
+its existing immutable H/R admission. Boundary,hole and construction locations lend actual
+`DirectedEdge` fields with their original direction;Fold lends the actual undirected `EdgeRef`.
+Absent groups/indices return `None`. Candidate admission uses this same actual source context;
+requesting B's range at A's field cannot silently reparent or substitute the source.
+
+`JoinEdgeManifestError` lends actual `manifest()`,actual `identity()`,the explicit `limits()` and
+first `refusal()`. `refused_candidate()` lends the original refused field for candidate causes,
+including the second field for duplicate tags;whole-resource/operation causes return `None`.
+`refused_occurrence()` lends the actual original mismatched field only for `SourceEdge`;other
+causes return `None`. It performs no replacement,normalization or source-history projection.
+
+`AdmittedJoinEdges` retains those whole parents and reports `edge_count()` and
+`workspace_entries()`. `edges()` iterates original candidate order and reverse;`edge(tag)` uses
+only the explicit persistent tag. A `JoinOutputEdge` lends its authentic owner,original index,
+actual candidate,actual admitted role,actual occurrence and original range. Its `logical_output()`
+is the declared tuple `(actual join operation,explicit tag)`,without issuing or publishing an edge.
+Unused active roles remain in the catalogue and are not implicitly retired.
+
+Work is O(N log(N+D+2)) for D admitted definitions,with2N index/association entries. There is no
+key scan,source-contour scan,registry/provider call or geometric evaluation at this stage.
+An explicit empty proposal can admit N0/W0;both banks and the positive result population still
+remain on its original parents. This supplies no empty joined Piece or no-op certificate.
+
+A candidate range can still include a selected bank that the exact splice intends to remove.
+This stage proves literal source attribution only. Complete surviving outside-bank coverage,
+consumed-bank exclusion,output/source parameter correspondence,whole topology,fold/consumer
+ownership,retirement,currentness,global reference truth and atomic effects remain required later.

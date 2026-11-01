@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — scoped joined Piece identity
+## _(2026-11-01 UTC)_ — original join Edge attribution
 
-0780 declares the actual canonical result Piece field under original C/I/H/R plus complete stop S.
-Selected/retained duplicates count separately;quota precedes aliases,errors lend actual fields. Unlisted/equal
-external Profile values grant no global kind/currentness/issuance or authority proof. Native4/prior roles3/API3/join book9/strict lint/fmt/book pass0;955 three Git spans/public bytes exact.
-promotion: declined (existing canonical identity/host boundary). G1still6/18;candidate manifest next.
+0781 binds explicit persistent tags,A/B/family locations and held ranges to actual original fields.
+Whole N/2N precedes fields/allocation;repeat sources stay distinct,empty metadata grants no result.
+Actual candidate/role/occurrence pointers and traversals survive;no selected-bank survival is inferred. Native4/prior identity4/API5/join book10/lint/fmt/book pass0;956 Git/body/public reader exact.
+promotion: declined (existing source/role contract). G1still6/18;complete surviving cut coverage next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

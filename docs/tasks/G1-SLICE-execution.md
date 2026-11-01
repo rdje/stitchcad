@@ -827,30 +827,33 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage`
   Status: `in_progress`
   Goal:explicit output/source identities,retirement/reference repair and full observer/evidence requirements.
-### G1-SLICE.5f.1.c.join.outputs.lineage.identity
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.identity`
   Status: `done`
-  Goal:canonical result Piece field under explicit enumerated known-owner/reference exclusions;
-  trusted issuance/global current/historical namespace,reference truth and authority remain host work.
-  Complete selected-plus-retained S precedes fields;reuse actual original C/I/H/R and borrow actual
-  refused edge/stop fields. Source Formula/Profile ids cannot establish kinds by value equality.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_piece_identity_contract --test join_edge_role_binding_contract`
-    through `scripts/local_environment.py`: identity4/prior roles3 pass0,quota-before-owner and retained
-    duplicate/outside-tail stop witnesses. Original fields/policies/parents remain pointer-identical.
-  - [x] ADDRESSED: same native command4+3 pass0; `cargo test -p sc-core --doc construction::join::identity`
-    through launcher:3 compiler guards pass0;selected strict clippy0. No allocation/registry/issuance.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:9 pass0;
-    `cargo fmt --all -- --check` and `scripts/run_make.sh book` pass0. Rendered identity/quota/source scope
-    present;955 three original Git spans/body/public bytes exact;`history_archive.py --root . verify`
-    reports1409 logical/42 working,rc0. Full integration/geometry stays .5f.4.geometry/.5g/pre-push.
-  Lost exec handle89162 recovered by inspecting HEAD/status/empty brief before repeating only focused
-  checks;the terminal repeat is the observed evidence. No commit was retried or active job inferred done.
-  Commit:STITCHCAD-G1-0780. promotion: declined (existing canonical identity/host authority boundary).
+  Goal:0780 scoped result Piece identity;[whole scope/proofs](../history/stitchcad-devnotes-part956.md).
+### G1-SLICE.5f.1.c.join.outputs.contours.manifest
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.manifest`
+  Status: `done`
+  Goal:explicit persistent Edge tags,A/B/original family locations and positive held ranges under
+  whole N/checked2N policies;actual active-role and literal original occurrence association only.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_edge_manifest_contract --test join_piece_identity_contract`
+    through `scripts/local_environment.py`:manifest4/prior identity4 pass0,complete N/2N before operation/
+    malformed fields,and first original duplicate/undefined/inactive/location/literal-edge causes.
+  - [x] ADDRESSED: same native4+4 pass0;all boundary/hole/construction/fold fields and repeated uses
+    lend actual original pointers/traversal. `cargo test -p sc-core --doc construction::join::manifest`
+    through launcher:5 compiler guards pass0;selected strict clippy0. Explicit empty metadata only.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:10 pass0;
+    `cargo fmt --all -- --check`/`scripts/run_make.sh book` pass0;rendered candidate/quota/deferred domain
+    scope present.956 three Git spans/body/public reader exact;`history_archive.py --root . verify`
+    reports1410 logical/43 working,rc0. Full integration/geometry stays .5f.4.geometry/.5g/pre-push.
+  Work O(N log(N+D+2)),2N association/index entries;no keys/contour scan,registry/provider/geometry.
+  Original complete C/I/H/R/S/catalogue policies remain. Source locations never become output IDs.
+  Commit:STITCHCAD-G1-0781. promotion: declined (existing persistent-role/source-attribution contract).
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.coverage`
   Status: `pending`
-  Goal:bounded explicit Edge candidates with original A/B/source-range attribution and persistent
-  active-role association after actual result identity. Preserve original whole declarations/errors;
-  no implicit source-domain coverage,retirement,geometric map,empty result or global freshness proof.
+  Goal:complete native exact surviving cut-source partitions under full resources:remove both selected
+  bank domains,preserve all outside intervals and unrelated original cut occurrences without gaps/
+  overlaps. Explicit Edge candidates retain original role/field/range attribution;full result contours,
+  construction/fold/consumer reconciliation,parameter correspondence and geometry remain later owners.
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
   Status: `pending`
   Goal:reconcile declared join variants against v1 requirements;actual geometry/G3/bus/full verification

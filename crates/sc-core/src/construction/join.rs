@@ -15,6 +15,11 @@ pub use inventory::{
     BoundJoinCopyInventory, JoinCopyInventoryError, JoinCopyInventoryLimits,
     JoinCopyInventoryRefusal,
 };
+mod manifest;
+pub use manifest::{
+    AdmittedJoinEdges, JoinEdgeCandidate, JoinEdgeManifest, JoinEdgeManifestError,
+    JoinEdgeManifestLimits, JoinEdgeManifestRefusal, JoinOutputEdge,
+};
 mod metadata;
 mod population;
 mod roles;

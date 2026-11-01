@@ -293,6 +293,31 @@ impl<'a> BoundJoinSourcePieces<'a> {
     pub fn piece(&self, side: SeamSideId) -> &'a Piece {
         original(self.population, side)
     }
+    /// Actual original occurrence at an explicit A/B/family location,or None if absent.
+    /// Constant bounded field lookup under this immutable complete H/R admission;no scan,
+    /// history projection,normalization or persistent identity is inferred from the location.
+    #[must_use]
+    pub fn occurrence(
+        &self,
+        side: SeamSideId,
+        location: JoinSourceOccurrenceLocation,
+    ) -> Option<JoinSourceOccurrence<'_>> {
+        use JoinSourceOccurrenceField as F;
+        use JoinSourceOccurrenceLocation as L;
+        let d = self.piece(side).definition();
+        let field = match location {
+            L::Boundary(index) => F::Directed(d.boundary.get(index)?),
+            L::Hole { hole, index } => F::Directed(d.holes.get(hole)?.get(index)?),
+            L::Construction(index) => F::Directed(d.construction_lines.get(index)?),
+            L::Fold(index) => F::Fold(d.fold_edges.get(index)?),
+        };
+        Some(JoinSourceOccurrence {
+            context: self,
+            side,
+            location,
+            field,
+        })
+    }
     /// Every original occurrence in A/B,then boundary/hole/construction/fold order,and reverse.
     /// Full traversal O(H+R+1),constant extra space;no deduplication or current-source mapping.
     pub fn occurrences(&self) -> impl DoubleEndedIterator<Item = JoinSourceOccurrence<'_>> {

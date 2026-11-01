@@ -19,6 +19,7 @@ pub struct BankFixture {
     pub mirroring: Mirroring,
     pub span: SpanFixture,
     pub extra_piece: bool,
+    pub extra_occurrences: bool,
 }
 impl BankFixture {
     pub fn basic() -> Self {
@@ -28,6 +29,7 @@ impl BankFixture {
             mirroring: Mirroring::Single,
             span: SpanFixture::Declared,
             extra_piece: false,
+            extra_occurrences: false,
         }
     }
 }
@@ -35,13 +37,39 @@ pub fn with_banks(run: impl FnOnce(BoundJoinCutBanks<'_>)) {
     with_custom_banks(BankFixture::basic(), run);
 }
 pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBanks<'_>)) {
-    let f = seams::fixture(false);
+    let mut f = seams::fixture(false);
+    let holes = if options.extra_occurrences {
+        f.ledger
+            .declare_edges(&mut DeterministicIdGenerator::from_start(2), 2)
+            .expect("actual additional hole edges")
+    } else {
+        vec![]
+    };
     let mut pieces = f
         .pieces
         .iter()
         .enumerate()
         .map(|(index, piece)| {
             let mut d = piece.definition().clone();
+            if options.extra_occurrences {
+                d.holes = vec![vec![DirectedEdge {
+                    edge: *holes.get(index).expect("actual hole"),
+                    direction: Direction::Reversed,
+                }]];
+                let edge = d.boundary.first().expect("original bank").edge;
+                d.construction_lines = vec![
+                    DirectedEdge {
+                        edge,
+                        direction: Direction::Original,
+                    },
+                    DirectedEdge {
+                        edge,
+                        direction: Direction::Reversed,
+                    },
+                ];
+                d.cut_on_fold = true;
+                d.fold_edges = vec![edge];
+            }
             if let Some(material) = options
                 .source_materials
                 .and_then(|ids| ids.get(index).copied())
@@ -154,7 +182,11 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
         .bind_cut_population(&population)
         .expect("explicit cut population");
     let sources = cut
-        .admit_source_pieces(JoinSourcePieceLimits::new(0, 2))
+        .admit_source_pieces(if options.extra_occurrences {
+            JoinSourcePieceLimits::new(2, 10)
+        } else {
+            JoinSourcePieceLimits::new(0, 2)
+        })
         .expect("whole original H/R");
     let banks = sources
         .bind_cut_banks()
