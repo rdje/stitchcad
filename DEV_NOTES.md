@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — complete original joined fold actions
+## _(2026-11-01 UTC)_ — explicit joined result-copy requests
 
-0794 binds every guarded original fold field to explicit Retain/Omit under whole R/M/2M,with actual source loans.
-Outer membership is insufficient;Retain requires same A/B/edge frame. Omit evidence scopes stay distinct,not accepted.
-Native4/prior result4/API5/main9/lint/fmt/book rc=0;969 original/body/public bytes exact.
-promotion: declined (existing source/geometry/effect boundary). G1still6/18;complete copy correspondence next.
+0795 binds explicit result id/Piece/orientation requests to canonical quantity under whole original C/I and Q/C+I+Q.
+Actual requests/unrelated inventory loans and scoped namespace exclusions survive;no ids,pairs or full plan inferred.
+Native4/prior fold4/API3/source6/lint/fmt/book rc=0;970 original/body/public bytes exact.
+promotion: declined (existing copy/identity/geometry boundary). G1still6/18;complete original-copy actions next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

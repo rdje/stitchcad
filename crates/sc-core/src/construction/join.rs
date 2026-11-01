@@ -58,6 +58,11 @@ pub use fold_sources::{
 };
 mod metadata;
 mod population;
+mod result_copies;
+pub use result_copies::{
+    DeclaredJoinResultCopies, JoinResultCopyError, JoinResultCopyLimits, JoinResultCopyManifest,
+    JoinResultCopyRefusal, JoinResultCopyRequest,
+};
 mod roles;
 pub use roles::{BoundJoinEdgeRoles, JoinEdgeRoleBindingError, JoinEdgeRoleBindingRefusal};
 mod source_actions;

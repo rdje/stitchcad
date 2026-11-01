@@ -18,6 +18,7 @@ pub struct BankFixture {
     pub source_materials: Option<[EntityId; 2]>,
     pub result_material: Option<EntityId>,
     pub mirroring: Mirroring,
+    pub result_quantity: u32,
     pub span: SpanFixture,
     pub extra_piece: bool,
     pub extra_occurrences: bool,
@@ -33,6 +34,7 @@ impl BankFixture {
             source_materials: None,
             result_material: None,
             mirroring: Mirroring::Single,
+            result_quantity: 1,
             span: SpanFixture::Declared,
             extra_piece: false,
             extra_occurrences: false,
@@ -270,7 +272,7 @@ pub fn with_custom_banks(options: BankFixture, run: impl FnOnce(BoundJoinCutBank
     let metadata = splice
         .bind_metadata(&policy, &text_limits)
         .expect("complete selected fields");
-    let population = JoinCutPopulation::new(1, options.mirroring);
+    let population = JoinCutPopulation::new(options.result_quantity, options.mirroring);
     let cut = metadata
         .bind_cut_population(&population)
         .expect("explicit cut population");

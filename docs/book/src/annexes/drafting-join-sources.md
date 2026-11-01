@@ -230,3 +230,68 @@ Output roles,source candidates and their native admission/query contracts are in
 [output reference](drafting-output-contracts.md).
 
 Continue with [complete original source occurrences](drafting-join-contracts.md#admit-every-original-ab-source-occurrence).
+
+## Declare explicit result physical-copy requests
+
+After [complete original fold actions](drafting-join-contracts.md#reconcile-every-original-fold-declaration),
+`JoinResultCopyManifest` retains the operation and ordered explicit `CutCopyDefinition` requests.
+Every request supplies its stable physical-copy id,declared result Piece id and authored/reflected
+orientation. No copy id comes from an ordinal,quantity expansion,source id reuse or a validator.
+These are requests,not born current CutCopies or a complete result CutPlan.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn requested(operation:EntityId,copy:EntityId,piece:EntityId,orientation:CopyOrientation)->JoinResultCopyManifest {
+    JoinResultCopyManifest::new(operation,vec![CutCopyDefinition{id:copy,piece,orientation}])
+}
+fn copies<'a>(manifest:&'a JoinResultCopyManifest,folds:&'a DeclaredJoinFoldSources<'a>)
+    ->Result<DeclaredJoinResultCopies<'a>,JoinResultCopyError<'a>> {
+    manifest.admit(folds,JoinResultCopyLimits::new(3,3,1,7))
+}
+```
+
+`JoinResultCopyLimits::new(C,I,Q,W)` admits every original physical copy C,every original Piece I
+and every raw result request Q before fields or allocation. C/I include unrelated,companion and
+unselected source members. Checked C+I+Q bounds the complete original-copy,original-Piece and
+result-id indexes;logical entries are not allocator bytes. Earlier immutable input/inventory,
+identity,population,construction and fold policies remain separate.
+For C3/I3/Q1,W7 is exact:C2 refuses `Copies`,I2 `Pieces`,Q0 `Results`,W6 `Workspace`,before an
+incorrect operation,quantity mismatch or invalid first copy field.
+
+With quotas met,`Operation` precedes canonical quantity representability and `Count`. Q must
+exactly match the one authored result quantity already bound through `JoinCutPopulation`.
+An empty list cannot imply that quantity's copies;an extra request is not silently discarded.
+Each original request then checks `Piece`, `Duplicate`, `OperationIdentity`, `ResultPieceIdentity`,
+`OriginalPieceIdentity`, `OriginalCopyIdentity`. Every request must explicitly name the declared
+result Piece. Result-copy ids are unique and locally distinct from the actual operation,result
+Piece,and all original Piece/copy ids,including unrelated members and copies proposed for consumption.
+
+Those exclusions cover the actual supplied Piece/copy namespaces only. They do not prove global
+Design namespace/kind,current/historical freshness,reserved identities or issuance. The declared
+result Piece is itself an unissued request. Actual current identity workflow and complete staged
+birth/reference/retirement checks remain mandatory before effects;no validator allocates ids.
+
+`JoinResultCopyError` retains whole `manifest()`,actual complete `folds()`,original `limits()` and
+first `refusal()`. Request-specific causes lend the actual `refused_copy()` field. Original namespace
+collisions additionally lend the actual `original_piece()` or `original_copy()` inventory member,
+without reconstructing equal content. Whole resource/operation/count causes lend no request/member.
+No accepted prefix,implicit orientation or replacement copy escapes refusal.
+
+`DeclaredJoinResultCopies` retains those whole parents and reports `source_copy_count()`,
+`source_piece_count()`, `copy_count()` and `workspace_entries()`. `source_copy(id)`/`source_piece(id)`
+lend actual complete original inventory members by stable identity. `copies()` preserves original
+request order and reverse;`copy(id)` queries an actual explicit result request. Each
+`JoinResultCopyRequest` lends actual owner,original ordinal and `definition()`;
+`id()`, `piece_id()` and `orientation()` retain the original stable identity/Piece/orientation fields.
+A request view is not a born CutCopy or a transformed physical placement.
+
+This stage checks quantity and scoped identity bookkeeping. It retains a reflected request even
+beside an authored Single population;the full canonical candidate CutPlan must still reject that
+orientation mismatch. Two result requests beside only one available A/B source pair likewise do
+not establish a permitted splice:complete original actions and exact no-fork A+B pairing must
+follow. No source copy is consumed,paired,reassigned or duplicated here.
+
+Work is O(C log(C+2)+I log(I+2)+Q log(Q+C+I+2)+1),with C+I+Q new index entries. No provider,
+evidence,registry or geometry call occurs. Source actions,pairing,complete candidate inventory,
+orientation/mirroring,copy transforms,consumer repair,currentness,identity issuance and atomic
+authority remain separately required.

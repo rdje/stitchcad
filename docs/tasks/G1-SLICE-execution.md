@@ -802,9 +802,39 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   Status: `done`
   Goal:0776 explicit cut population;[whole scope/proofs](../history/stitchcad-devnotes-part952.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence`
-  Status: `pending`
+  Status: `in_progress`
   Goal:after bounded source/output/identity contexts,declare complete original-copy actions and
   explicit A/B-to-result correspondence;no silent pairing,discarded source quantities or new ids.
+### G1-SLICE.5f.1.c.join.outputs.copies.correspondence.results
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.results`
+  Status: `done`
+  Goal:explicit result-copy ids/declared Piece/orientation and exact canonical requested quantity;
+  actual complete original inventory/resources and scoped namespace only,no issuance/pair/full-plan proof.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_result_copy_contract --test join_fold_source_contract`
+    through `scripts/local_environment.py`:result copies4/prior fold4 pass,rc=0. Quantity cannot
+    imply ids;unrelated original Pieces/copies must count before requested-copy fields are inspected.
+  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join::result_copies` through launcher:
+    compiler3 pass,rc=0;whole C/I/Q/checked C+I+Q,exact authored quantity,declared Piece,duplicate/
+    operation/result Piece/original namespace guards;actual request/orientation/unrelated-member
+    pointer loans and authored ordering retained. Selected strict clippy rc=0;no persistent ids allocated.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_source_examples` through launcher:
+    source6 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered inventory/
+    request/local namespace/no-fork/full-plan boundary present;complete previous source chapter prefix
+    exact. Main9/topology8 unchanged.970 three original Git spans/body/public bytes exact;
+    `history_archive.py --root . verify`:1424 logical/57 working,rc=0.
+    Full geometry/integration remains .5f.4.geometry/.5g/pre-push,not this requested-copy header.
+  Work O(C log(C+2)+I log(I+2)+Q log(Q+C+I+2)+1),C+I+Q new index entries. Requested orientations
+  remain authored;full canonical inventory/CutPlan,source actions,exact no-fork pairing,current/
+  historical global namespace/kind/freshness/issuance,copy transforms and atomic effects remain required.
+  Commit:STITCHCAD-G1-0795. promotion: declined (existing explicit copy/identity/geometry boundary).
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.actions`
+  Status: `pending`
+  Goal:complete guarded original-copy Retain/JoinTo requests;only actual A/B sources may join,
+  preserving unrelated copies and distinct source scopes before exact no-fork pairing.
+- ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs`
+  Status: `pending`
+  Goal:one explicit A+B source pair per result,actual selected A/B in the same result,and no
+  hidden pairing,missing source,forking or copy orientation/geometry inference.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory`
   Status: `pending`
   Goal:reconcile actual result/source metadata and candidate full inventory/CutPlan with declared
@@ -902,28 +932,9 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold.result`
   Status: `done`
   Goal:0793 explicit desired result fold;[whole scope/proofs](../history/stitchcad-devnotes-part969.md).
-### G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold.sources
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold.sources`
   Status: `done`
-  Goal:complete guarded original A/B fold-field Retain/Omit requests against explicit desired fold;
-  retain actual source/boundary parents and distinct evidence requirements,without physical truth.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_fold_source_contract --test join_fold_contract`
-    through `scripts/local_environment.py`:source fold4/prior result4 pass,rc=0. Actual outer membership
-    cannot replace source fold identity;equal A/B EdgeRefs remain distinct original source scopes.
-  - [x] ADDRESSED: final `cargo test -p sc-core --test join_fold_source_contract` through launcher:
-    source fold4 pass,rc=0;whole R/M/checked2M before fields,exact complete unique original fold actions,
-    guarded fields,actual original Piece-field pointer loans,NoFold/side/edge causes. `cargo test -p
-    sc-core --doc construction::join::fold_sources`:compiler5 pass,rc=0;selected strict clippy rc=0.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:
-    main9 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered whole-fold/
-    source/evidence boundary and forwarding anchors present;all old main/topology Rust fences and
-    headings exact. Topology8/source5 fences unchanged.969 three original Git spans/body/public bytes
-    exact;`history_archive.py --root . verify`:1423 logical/56 working,rc=0.
-    Full geometry/integration remains .5f.4.geometry/.5g/pre-push,not this native bookkeeping.
-  Work O(M log(M+2)+1),2M new entries. Omit ids0/shared remain actual independent request fields;
-  complete empty original fold scope retains desired result/correspondence requirements. No source
-  state change,whole physical axis,copy/consumer/deletion authority or evidence truth is accepted.
-  Commit:STITCHCAD-G1-0794. promotion: declined (existing explicit source/geometry/effect boundary).
+  Goal:0794 complete original fold actions;[whole scope/proofs](../history/stitchcad-devnotes-part970.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
   Status: `pending`
   Goal:reconcile declared join variants against v1 requirements;actual geometry/G3/bus/full verification
