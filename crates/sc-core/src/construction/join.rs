@@ -8,6 +8,11 @@ pub use inventory::{
     BoundJoinCopyInventory, JoinCopyInventoryError, JoinCopyInventoryLimits,
     JoinCopyInventoryRefusal,
 };
+mod splice;
+pub use splice::{
+    JoinExactSpliceRequirement, JoinMovingOrientation, JoinSpliceEnd, JoinSpliceEndpointPair,
+    JoinSplicePlacement, RequiredJoinExactSplice,
+};
 
 /// Original local source refusal;global names/currentness and complete dependency checks are separate.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

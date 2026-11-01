@@ -59,7 +59,8 @@ mod join;
 pub use join::{
     BoundJoinCopyInventory, BoundJoinPiecesAtSeam, BoundJoinSide, JoinBindingError,
     JoinBindingRefusal, JoinCopyInventoryError, JoinCopyInventoryLimits, JoinCopyInventoryRefusal,
-    JoinInputError, JoinPiecesAtSeam,
+    JoinExactSpliceRequirement, JoinInputError, JoinMovingOrientation, JoinPiecesAtSeam,
+    JoinSpliceEnd, JoinSpliceEndpointPair, JoinSplicePlacement, RequiredJoinExactSplice,
 };
 mod mirror;
 pub use mirror::{

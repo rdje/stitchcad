@@ -861,31 +861,34 @@ remain byte-exact in sealed history;the live node identities/statuses follow.
   Goal:native explicit metadata/material/mark/multiplicity/copy reconciliation and identity/
   retirement/reference manifests;define permitted join/pose/refit domains before family closure.
   Partial/eased/oriented source semantics cannot disappear. Actual geometry stays G2/G3/.5f.4.
-### G1-SLICE.5f.1.c.join.outputs.inventory
 - ID: `G1-SLICE.5f.1.c.join.outputs.inventory`
   Status: `done`
-  Goal:whole C/I/workspace admission against the same actual PieceInventory slice already bound
-  by the source join;reuse canonical companion proof and CutPlan validation before output policy.
-  Preserve original A/B pointers,plan order,ease/stops/orientations;no copied equal source accepted.
-  Focused inventory/parent/compiler/book checks;retire whole0771 for bounded live continuity.
-  - [x] ROOT CAUSE (WHY + WHERE):BoundJoinPiecesAtSeam preserves uniquely named A/B Pieces
-    but whole companion/copy population remains separate. Prior parent join_input_contract passes
-    `test result: ok. 4 passed; 0 failed`,rc=0;canonical CutPlan/PieceInventory interfaces inspected.
-  - [x] ADDRESSED (verified):python3 -I -B scripts/local_environment.py -- cargo test -p sc-core
-    --test join_copy_inventory_contract --test join_input_contract: `3 passed; 0 failed` and
-    `4 passed; 0 failed`,rc=0. Whole C/I/I+3C before exact source-slice identity/canonical plan;
-    actual both-side parents,unrelated/reflected copies,quota precedence,equal-clone refusal retained.
-  - [x] NO REGRESSION:strict selected Clippy/lib/tests and cargo fmt --all -- --check rc=0;
-    cargo test -p sc-core --doc construction::join::inventory gives `3 passed; 0 failed`,rc=0;
-    construction::editing_examples gives `8 passed; 0 failed`,rc=0. Book build rc=0;D372 remains.
-    First hook refused aggregate task size1500989>1500000;completed24-node goals retained947
-    byte-exact,live IDs/statuses unchanged. Four947 Git spans/body verified;archive1401/34 rc=0. No copy consumed,
-    metadata chosen,geometry solved,currentness/authority accepted or broad verification implied.
-    STITCHCAD-G1-0772;promotion: declined (existing source/inventory doctrine);next .outputs.domains.
+  Goal:0772 same-source inventory;[whole scope/proofs](../history/stitchcad-devnotes-part948.md).
+### G1-SLICE.5f.1.c.join.outputs.domains
 - ID: `G1-SLICE.5f.1.c.join.outputs.domains`
-  Status: `pending`
+  Status: `done`
   Goal:explicit permitted seam removal/placement/refit domain,with partial/eased/oriented sources
   retained;no geometric weld or automatic semantic reconciliation inferred from correspondence.
+  Plan:explicit exact nondeforming splice;keep placement or request rigid alignment with fixed
+  side/authored-frame parity. Preserve actual Same/Opposite endpoint pairs/ease without resolving
+  geometry;zero allocated ease/exact coincidence/unique alignment remain actual proof obligations.
+  Record delegated policy and narrow domain;retire closed0772/ADR discussion before live growth.
+  - [x] ROOT CAUSE (WHY + WHERE):canonical SeamDirection separates held endpoints from copy
+    reflection;joining correspondence alone supplies no placement/deformation policy. Selected native
+    command cargo test -p sc-core --test join_splice_contract reports `1 passed; 0 failed`,rc=0;
+    partial retained Portion/Profile source stays unresolved rather than becoming zero-ease proof.
+  - [x] ADDRESSED (verified):STITCHCAD-G1-0773;explicit exact splice with KeepOriginal or named
+    fixed A/B plus authored moving Preserve/Reflect. Authentic whole inventory/request/ease and
+    two original Same/Opposite endpoint pairs. Native1/prior inventory3 pass0;rc=0. No default,
+    transform,interior map,provider call,deformation,source remap or geometry acceptance is supplied.
+  - [x] NO REGRESSION:strict selected Clippy/lib/tests and cargo fmt --all -- --check rc=0;
+    cargo test -p sc-core --doc construction::join::splice gives `6 passed; 0 failed`,rc=0;
+    construction::editing_examples gives `9 passed; 0 failed`,rc=0;book build rc=0 (D372 owned).
+    948 four original Git spans/body byte-exact;archive1402/35 rc=0. Actual zero ease,unique
+    alignment/full coincidence/topology/copy effects/authority and physical integration stay G1/G2/G3.
+    Promotion:promoted to ADR-0003/index with author/applier,independent unapproved evidence and reversal.
+    First hook refused live-status maxline326>320;row shortened before commit.
+    Next .join.outputs.metadata;no full v1/physical/domain approval implied.
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata`
   Status: `pending`
   Goal:explicit joined metadata/material/label/cut/fold/mark reconciliation from actual source fields.

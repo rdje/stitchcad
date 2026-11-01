@@ -420,11 +420,63 @@ Piece/copy fields,span,ease and stops. Work is O((C+I)log(C+I+2));cached storage
 Earlier graph/source lookup resources,current Design membership,contour fields and provider bodies
 remain separate. This admission chooses no metadata,joined identity,placement,weld or refit.
 
-Output contracts must explicitly reconcile metadata,material/mark ownership,multiplicity and
+### Require an explicit exact nondeforming splice
+
+`JoinExactSpliceRequirement` declares one join domain:remove both selected coincident seam banks
+without stretching,gathering,refitting,snapping or forking a copy. This is an explicit requirement,
+not an assertion that a SewingGraph correspondence can already form one flat Piece.
+
+The actual allocated ease must resolve to zero. A retained Portion consumes its actual allocation,
+not the full parent's amount;symbolic Profile/formula metadata supplies no zero-ease proof. A
+resolved nonzero amount contradicts this domain. Unavailable/unsupported/uncertified/resource/
+cancellation causes must survive;they are not proof of geometric incompatibility or permission
+to discard ease. Other deformation policies require separately declared variants.
+
+`JoinSplicePlacement::KeepOriginal` requires both original resolved placements to meet without
+moving either Piece. `RigidAlign { fixed,orientation }` names A/B as the fixed authored Piece
+and requests a unique nondegenerate rigid alignment of the other from both actual endpoint pairs.
+`JoinMovingOrientation::Preserve` or `Reflect` explicitly selects the moving authored transform's
+parity. Physical-copy reflection,Piece traversal and seam correspondence remain independent.
+Execution must reconcile the actual copy transforms;the native policy guesses none of them.
+
+```rust
+use sc_core::{construction::*,ontology::SeamSideId};
+let request=JoinExactSpliceRequirement::new(JoinSplicePlacement::RigidAlign {
+    fixed:SeamSideId::B,orientation:JoinMovingOrientation::Preserve,
+});
+fn require<'a>(inventory:&'a BoundJoinCopyInventory<'a>,request:&'a JoinExactSpliceRequirement)
+    ->RequiredJoinExactSplice<'a> {
+    inventory.require_exact_splice(request)
+}
+assert!(matches!(request.placement(),JoinSplicePlacement::RigidAlign { fixed:SeamSideId::B,.. }));
+```
+
+`require_exact_splice` binds the complete original inventory and actual request in constant work/
+space without scanning,allocating,evaluating or invoking a provider. Success here means required
+intent only. `RequiredJoinExactSplice` lends actual `inventory()`, `requirement()`, `source()` and
+original `ease()`. Neither placement nor parity has a default.
+
+`endpoint_pairs()` lends exactly two authentic pairs in ascending A-held parameter order and
+reverse. Each pair retains its whole `context()`, `end()` (`AFrom`/`ATo`) and actual borrowed
+`source_side(A/B)`. `anchor(A/B)` copies the original bounded held anchor:Same pairs A.from with
+B.from and A.to with B.to;Opposite pairs A.from with B.to and A.to with B.from. Fixed B or a
+reflected selected copy never rewrites these held parameters.
+
+For A0–1/3 and B2/5–1 with Opposite correspondence,the pairs are `(A0,B1)` then `(A1/3,B2/5)`.
+They declare no rescaled/affine interior map,current alias or physical position. Actual geometry
+must prove entire-bank coincidence and valid complete topology,including all remaining outside
+fragments and holes. Endpoint alignment alone is insufficient. Ambiguous or degenerate rigid
+alignment must retain its actual refusal;no extra anchor or arbitrary pose is selected.
+
+Focused native checks cover these declared choices and authentic partial/eased/reflected source
+views. Actual fitting/deformation,geometry,currentness,observer/authority truth and publication
+remain separate;no full-envelope or independent approval follows.
+
+Remaining output contracts must explicitly reconcile metadata,material/mark ownership,multiplicity and
 copy mappings,source retirement/reference lineage and the permitted join variant before family
 closure. Partial spans,declared ease and physical-copy orientation cannot be ignored. Sewing
 correspondence alone does not establish congruent boundaries,a valid placement or a simple
-joined Piece;no pose,weld,stretch or refit is inferred here. Those geometric/semantic choices,
+joined Piece. The explicit exact-splice policy above supplies intent;actual geometry/semantic checks,
 all observers and actual G2/G3/bus/undo/results remain separately owned execution work.
 
 Output roles,source candidates and their native admission/query contracts are in the

@@ -7,7 +7,7 @@
 - **Owner / source:** leaf `G0-CONTRACT.9`, from roadmap §5 ADR-0003, §2.2, §3.1, §3.3, §4.2, §15.1
   and §15.3; the normative text is `docs/book/src/spec/formula-language.md` and its two parts
 
-answers: "what is the formula language?" · "why does a recipe round twice and not once per operator?" · "why can a formula not compare size labels?" · "which drafting system ships as the reference blocks?" · "why not Seamly2D's drafting?" · "what does a recipe's `assert` exist for?" · "what would reopen ADR-0003?" · "how is a truing curve selected?"
+answers: "what is the formula language?" · "why does a recipe round twice and not once per operator?" · "why can a formula not compare size labels?" · "which drafting system ships as the reference blocks?" · "why not Seamly2D's drafting?" · "what does a recipe's `assert` exist for?" · "what would reopen ADR-0003?" · "how is a truing curve selected?" · "what does an exact native join require?"
 
 ## The decision
 
@@ -114,43 +114,40 @@ performance budget the product needs, in which case the fix is a representation 
 same value semantics and never a change of the rounding points; (3) a real recipe needs a construct
 [formula exclusions §6](../book/src/spec/formula-language.md#6-exclusions) excludes, which arrives as a v2 candidate with a worked example over a garment, or not at all.
 
-## D124 diagnostic recognition proposal — resolved 2026-10-03 (UTC)
+## Closed diagnostic-policy discussions
 
-Reviewed2026-10-02 at G1-SLICE.5b.1c.1. Contract6 assigns formula_unsupported to loops and
-function/macro definitions, but v1 defines no source forms for them. Actual reference returns
-formula_unbound_name for loop(width), repeat(2,width) and while(width>0 um); fn helper(width)=width
-and macro helper(width)=width return formula_parse. A declared loop identifier remains valid.
-This is a diagnostic-contract gap, not permission to add executable loops or functions.
+[Whole D124/D131/D121 discussions](../history/stitchcad-devnotes-part948.md) retain their
+source byte-exact. Current formula diagnostics and indexed D131 binding-source decision remain normative.
 
-Recommended: retain the three reserved grammar keywords. Unknown calls stay formula_unbound_name;
-malformed loop/definition syntax stays formula_parse. Recognized non-square exponents retain
-formula_unsupported, and envelope calls retain their envelope tokens. Clarify the exclusions table
-to separate unsupported capabilities from diagnostic recognition by the closed grammar.
+## Native exact nondeforming join domain —0773
 
-Alternative: define an explicit closed set of recognizable excluded forms that raise
-formula_unsupported. That requires exact source spellings and keyword/call-role rules, including
-whether a previously valid parameter named loop, repeat, fn or macro remains valid. No such list
-is inferred from these illustrative examples. Neither choice enables any excluded capability.
-Director ruling2026-10-03: keep the current grammar, adopting the recommendation above.
-G1-SLICE.5b.1c.2 implements the clarification and independently verifies diagnostic recognition,
-ordinary identifier preservation and precedence before closing the full static reference review.
-Product namespace/type/graph implementation remains .5b.2–.4; no executable excluded capability
-or new reserved word is introduced.
+Author and applier:the same Codex engineer under the director's2026-11-01 PNT delegation;
+owner G1-SLICE.5f.1.c.join.outputs.domains. This declares one explicit native join domain.
+Actual execution/envelope/domain evidence remains **unapproved**,for the independent reviewer/domain seat.
 
-## D131 delegated binding-source decision — 2026-10-03 (UTC)
+An exact splice removes the two selected coincident banks without stretching,gathering,refitting,
+snapping or forking a copy. Actual allocated ease must resolve to zero;retain the original
+declaration or Portion rather than authoring another amount. Nonzero resolved ease contradicts
+this domain. Unknown/unsupported/uncertified/resource/cancel causes remain actual causes,not
+proof of incompatibility. A different deformation policy requires a separately declared variant.
 
-Reserved-name and repeated-recipe formula_rebinding cases retain truthful sources/locations.
-The delegated decision, executable evidence, approval boundary and reversal are in
-[the binding-source record](decision_rebinding.md); canonical contract5.2.1 defines the schema.
+Placement is explicit:keep both original resolved placements,or keep named side A/B fixed and
+require unique nondegenerate rigid alignment of the other. The moving authored Piece's parity
+is explicitly Preserve or Reflect;selected-copy reflection never supplies it by inference.
+Alignment uses both actual Same/Opposite endpoint pairs in their original held frames. Actual
+geometry must reconcile physical-copy transforms and prove entire-bank coincidence and valid
+complete joined topology. Endpoints alone prove neither congruence nor a numeric interior map.
+Ambiguous/degenerate alignment requires an actual refusal;no additional anchor or pose is guessed.
 
-## D121 tolerance-class diagnostic ruling — 2026-10-02 (UTC)
+Consequences:tracked native splice tests/compiler guards and book examples check explicit choices,
+authentic parents/endpoints,partial Portion ease and reflected copies. Native requirement binding
+performs no geometry,allocation or provider call. .join.outputs.review checks this declared domain;
+G1 .5f.2/.5f.3/.5f.4.geometry,G2/G3 and .5g retain actual context,geometry,garment and integration proofs.
+Output metadata/copy/contour/identity/repair obligations remain separate joined-Piece declarations.
 
-The director selected formula_domain for a T1 comparison whose operands carry an approximation
-contribution. Contract4.2 already requires T2 or looser; the diagnostic table now explicitly covers
-an inadmissible tolerance class. The reference records comparison (within or the actual assertion
-name), requested tolerance_class and sorted contribution_sources. An equal numeric answer does not
-erase its derivation. Product typed context and arbitrary-input transcendental accuracy remain
-separate .5b–.5g obligations. D124 was pending when this ruling was made; its subsequent ruling is recorded above.
+Reopen with a recorded recipe-policy/version change if an actual supported garment needs another
+join domain. Preserve original ease/copy/held-frame semantics and explicit placement choices;
+never broaden an exact splice silently. The book's native join section is the canonical API contract.
 
 ## Native constrained truing priority —0770
 

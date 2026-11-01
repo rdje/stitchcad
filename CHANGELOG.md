@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0772 — admit the complete original join inventory
+## STITCHCAD-G1-0773 — require explicit exact nondeforming join intent
 
-- Whole C/I/I+3C precede exact source-slice identity and canonical CutPlan validation.
-- Actual A/B,unrelated/reflected copies and source metadata stay original;no clone substitution.
-- Native3/prior4/API3/book8/lint/fmt/book pass0;947 whole0771 retained;G1still6/18.
-- Output/placement/metadata/copy/lineage policy and actual geometry/execution remain owned.
+- Keep original placement or name fixed side/moving authored parity;no inferred stretch/refit/snap.
+- Authentic Same/Opposite held endpoint pairs and actual ease/Portion/reflected copies remain original.
+- Native1/inventory3/API6/book9/lint/fmt/book pass0;948 prior source bytes retained.
+- ADR-0003 records scoped policy;actual zero ease/coincidence/topology/authority remain pending;G1still6/18.
 
 ## STITCHCAD-G1-0389 — close focused layer/Hem component acceptance
 
@@ -34,6 +34,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0772 inventory task,lesson,ledger and closed ADR discussions](docs/history/stitchcad-devnotes-part948.md) retain exact source bytes.
 
 [Whole0771 scoped review,lesson and ledger](docs/history/stitchcad-devnotes-part947.md) retain exact source bytes.
 
