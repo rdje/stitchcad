@@ -330,11 +330,12 @@ fn bind_refit<'a>(edit:&'a ConstrainedSeamTruing,graph:&'a SewingGraph,plan:&'a 
 
 These helpers retain actual error owners in the caller;they do not copy a span/ease or invent a
 budget value. [Actual complete copy/Piece association](drafting-truing-outputs.md) now binds both
-original sides and preserves shared-Piece coupling. Native output-role/reference mappings and broader v1 variant coverage have
-separate task owners. Endpoint-moving or copy-forking variants require explicit semantics before
-they can be accepted. Endpoint/stop locks specify permissions,not a unique fitted curve;
-deterministic curve/refit selection and its supported domains must be defined before accepting
-complete v1 truing schemas. No solver is inferred by this association API.
+original sides and preserves shared-Piece coupling. The companion's
+[native declaration checkpoint](drafting-truing-piece.md#native-declaration-checkpoint-and-remaining-execution)
+now covers held-source outputs,whole-Piece reconciliation and deterministic curve priority.
+Endpoint-moving or copy-forking variants require explicit semantics before they can be accepted.
+Endpoint/stop locks specify permissions;the explicit ordered curve policy defines selection intent.
+No solver or complete v1 physical coverage follows from these association APIs.
 Actual constrained fitting,all observers,atomic bus/undo and real result
 verification remain G3/full `.5f.4` work;this contract closes none of those gates.
 

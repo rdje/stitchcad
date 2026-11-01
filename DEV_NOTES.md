@@ -3,11 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — admit ordered truing curve alternatives
+## _(2026-11-01 UTC)_ — scoped native truing checkpoint
 
-0770 binds complete unique nonempty selected-role groups with explicit first-feasible-complete priority. N/M precede header scans;checked K/P/2M precede field/owner/count checks and allocation. Empty full products avoid spurious prefix overflow;raw order/duplicates/source frames stay exact.
-Curve4/prior lineage3/API7/book7,strict selected Clippy/format and focused render pass0. Initial large copied error payload replaced by authentic refused_geometry borrow;final lint0. No candidate evaluation/selection occurs. Whole0769 retained945;archive1399/32,active11/64 passes0;D372 remains owned.
-Promotion: ADR-0003 gains curve-priority answers/decision/index,discloses same author/applier and unapproved independent evidence. G1still6/18;next native coverage review. Actual candidate generation,certified coupled feasibility/error propagation/maps/effects/authority remain owned.
+0771 .true.variants.review closes constrained exact-held declarations,not physical v1/G3 coverage.
+Composed shared-Piece1/0 retains both copies/stops/ease and whole contours;fixture receiver rc101 corrected.
+Strict selected lint/fmt/book0;12 clauses/11 unchanged sources/four interfaces rechecked. Actual fitting,
+projection/maps/history/providers/bus/garments remain later owners;946 exact0770. Promotion:existing ADR-0003.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

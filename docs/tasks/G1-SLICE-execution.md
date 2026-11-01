@@ -771,7 +771,7 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0689 input association;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part859md).
 - ID: `G1-SLICE.5f.1.c.true.outputs`
-  Status: `in_progress`
+  Status: `done`
   Goal:native refit output-role/reference/identity contract;preserved endpoints/stops,all-copy
   observer obligations and unexplained differential attribution. Actual fit stays G3/.5f.4.
 - ID: `G1-SLICE.5f.1.c.true.outputs.copies`
@@ -844,7 +844,7 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0755 exact walk split/receipt930;census0;promotion: declined (navigation).
 - ID: `G1-SLICE.5f.1.c.true.variants`
-  Status: `in_progress`
+  Status: `done`
   Goal:review v1 truing coverage against the envelope before family closure;constrained refit
   association alone grants no complete coverage. Define deterministic curve/refit selection
   and supported domains;endpoint/stop locks alone admit multiple curves. Explicit policies for
@@ -854,27 +854,30 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0769 current sources/planned selection;[whole scope/proofs](../history/stitchcad-devnotes-part945.md).
 - ID: `G1-SLICE.5f.1.c.true.variants.selection`
   Status: `done`
-  Goal:bounded ordered selected-role curve alternatives from authentic lineage;explicit complete
-  assignment priority and real source fields,no native fitting/selection evaluation.
-  - [x] ISSUE:0769 contract needs typed complete curve groups and resource admission before
-    program geometry;outside curves/default choices or prefix search cannot be inferred.
-  - [x] ROOT CAUSE:curves.rs uses actual lineage selected population and original group headers;
-    cargo test -p sc-core --test truing_curve_contract passes4/0,rc=0. Initial large-error lint
-    exposes copied source payload;replace with original borrowed refused_geometry field,final Clippy rc=0.
-  - [x] FIX:whole N/M before headers;checked K/P/2M before quotas/owner/count/fields/allocation.
-    Exact unique nonempty selected groups,self-source guard,priority/reverse queries and authentic fields.
-  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    truing_curve_contract passes4/0;both sides/fold cases,duplicate choices,all quota/field errors,
-    actual full-product overflow/late-empty zero and explicit empty preservation;rc=0.
-  - [x] NO REGRESSION:prior lineage3 pass0;rc=0. Strict selected Clippy/format rc=0;API7/book7
-    pass0;book build/focused rendered bounds/source/error/execution boundary rc=0. D372 remains owned.
-  - [x] LOCKSTEP:whole0769 retained945 exact;archive1399/32/active11 rc=0. Promote scoped
-    policy/author-applier/independent-approval boundary in ADR-0003/index;coverage/actual execution stay open.
-  Commit:STITCHCAD-G1-0770;promotion: promoted to ADR-0003 curve-priority decision/answers.
+  Goal:0770 ordered curve admission/ADR-0003;[whole scope/proofs](../history/stitchcad-devnotes-part946.md).
+### G1-SLICE.5f.1.c.true.variants.review
 - ID: `G1-SLICE.5f.1.c.true.variants.review`
-  Status: `pending`
+  Status: `done`
   Goal:reconcile native selection/variant/domain coverage against v1 clauses before family closure;
   retain coupled-copy/ease/maps/unknown/error/geometry and actual garment validation owners.
+  - [x] ROOT CAUSE (WHY + WHERE):native declaration coverage needs scoped reconciliation.
+    Source trace command python3 -I -B under scripts/local_environment.py reports
+    `12 clauses/11 source files unchanged;four public interfaces retained;scoped native trace written;rc=0`;
+    target/history-proof-0771-truing-checkpoint/contracts.json retains the source hashes/clauses.
+    Composed test initially rc101 (fixture receiver);corrected closure. First commit hook refused
+    mislabeled evidence boxes;no commit occurred;this exact per-leaf checklist repairs that refusal.
+  - [x] ADDRESSED (verified):STITCHCAD-G1-0771;python3 -I -B scripts/local_environment.py --
+    cargo test -p sc-core --test truing_composed_contract: `test result: ok. 1 passed; 0 failed`,rc=0.
+    Strict selected Clippy, cargo fmt --all -- --check and scripts/run_make.sh book pass0.
+    D372 search warning remains owned;prior0770 curve4/lineage3/API7/book7 receipts remain scoped.
+  - [x] NO REGRESSION:scoped native checkpoint closes outputs/variants only. Independent Python
+    source-span/render check prints `946 four source intervals/body byte-exact;rendered checkpoint/coupled-copy/deferred-owner text present;library unchanged;rc=0`.
+    Both A/B,partial/whole,preserve/refit,all contour/fold/lineage policies and authored curve priority
+    have explicit contracts. Shared-Piece test retains two copies,stops,ease and untouched counterpart.
+    Actual source projection/visibility .5f.2/.5f.3,geometry replay .5f.4.geometry,garment G3.2 and
+    broad .5g verification remain pending. No fitting,provider acceptance or independent approval.
+    Whole0770 task/lesson/ledgers retained946 byte-exact;fresh lesson records scoped closure.
+    Promotion:existing ADR-0003 and original truing policy;no new decision. Next .c.join.outputs.
 - ID: `G1-SLICE.5f.1.c.join.inputs`
   Status: `done`
   Goal:0690 source intent/binding;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part860md).

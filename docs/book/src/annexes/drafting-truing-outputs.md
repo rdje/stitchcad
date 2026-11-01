@@ -394,8 +394,8 @@ partial domain and every affected boundary,hole,construction and fold occurrence
 1/4–3/4,coverage of that interval alone cannot account for the remaining0–1/4 and3/4–1 portions.
 Piece contours carry whole edge references;selected-source candidates are not a complete Piece
 replacement. The companion supplies native whole-Piece role/contour/fold/lineage declarations.
-Deterministic curve/refit selection and supported-domain review remain required before family
-closure. Actual current identity application,mapped geometry and atomic execution retain their
+The companion's native checkpoint declares deterministic curve priority and the supported held-source
+domain. Actual current identity application,mapped geometry and atomic execution retain their
 existing G1/G2/G3/bus owners.
 
 Continue with the [whole-Piece declarations](drafting-truing-piece.md) for complete original-source placement and identity requests.

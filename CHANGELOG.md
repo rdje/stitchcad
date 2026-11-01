@@ -13,22 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0770 — admit ordered truing curve alternatives
+## STITCHCAD-G1-0771 — close scoped native truing declarations
 
-- Complete selected-role groups retain explicit priority and every original directed curve source/duplicate.
-- Bound N/M/K/full product/workspace before field scans/allocation;late-empty products avoid prefix overflow.
-- Actual refused geometry stays borrowed;curve4/prior3/API7/book7,strict lint/format and rendered contract pass0.
-- ADR-0003 records scoped priority/independence;whole0769 retained945. No native fit or chosen result.
-
-## STITCHCAD-G1-0421 — preserve task-sibling ownership and sealed proof bytes
-
-- Fresh linked-sibling owners work; prior completed sibling owners cannot be reused through root.
-- Bound complete family discovery/frozen authoring inputs; preserve native task graph and raw bytes.
-- All98 completed garment/input nodes/proof pointers remain live in an exact canonical sibling.
-- Old controls fail as expected; reader23/author8/focused source controls pass; whole0420 proof570 retained.
-- D282 raw archive storage/scoped blank EOF; newline5 preserves strict ordinary checks, no record edit.
-- Retire whole completed journal572, redirect21 current anchors; native map returns8185B without cap/code changes.
-- No runtime/physical/release claim; actual AssignMaterial candidate remains .6.5.2.b.
+- Explicit constrained held-source outcome/whole-Piece/lineage/curve priority checkpoint;G1still6/18.
+- Shared-Piece composed1/0,strict selected lint/fmt/book0;12 source clauses/four interfaces retained.
+- Actual currentness/geometry/fit/history/effects/bus and garment/broad validation remain pending.
+- Whole0770 continuity/0421 ledger retained946;join output contracts next.
 
 ## STITCHCAD-G1-0389 — close focused layer/Hem component acceptance
 
@@ -44,6 +34,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0770 curve task,lesson and0770/0421 ledgers](docs/history/stitchcad-devnotes-part946.md) retain exact source bytes.
 
 [Whole0769 source/policy task,lesson and ledger](docs/history/stitchcad-devnotes-part945.md) retain exact source bytes.
 

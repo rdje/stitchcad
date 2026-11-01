@@ -57,7 +57,7 @@ same whole proposal/evidence/policy and first quota or fixed-field cause. Origin
 These attributions do not choose output parameter orientation,whole-Piece placement/traversal,
 source retirement or geometric correspondence. Those need explicit declarations and proof;an
 original contour direction is distinct from physical-copy reflection and sewing correspondence.
-Whole-Piece orientation/contour/lineage declarations remain required before native family closure.
+The following orientation/contour/lineage declarations complete this native held-source proposal.
 Actual untouched outside geometry,current source resolution,identity issuance,fit,effects and
 atomic publication retain their separate execution/evidence owners.
 
@@ -461,5 +461,34 @@ these are not allocator bytes or a bound on prior storage or future fitting work
 This implements native proposal/association only. Actual geometry lookup/currentness,prior recipe
 visibility and supported curve-kind checks remain ordered-program/geometry obligations.
 Candidate generation,certified lengths/maps,complete-assignment feasibility,visible repairs,effects,
-authority and atomic publication remain with existing G1/G2/G3/bus owners. The native coverage
-review is still open;this supplies no full-envelope or independent approval certificate.
+authority and atomic publication remain with existing G1/G2/G3/bus owners.
+
+## Native declaration checkpoint and remaining execution
+
+The native checkpoint covers the explicit constrained,endpoint/stop-preserving variant on the
+original held source frame. Either A or B may be adjusted. `PreserveSource` retains the original
+Piece and identities with no new outputs or curve groups. `Refit` requires an exact selected-domain
+partition,all positive outside fragments,explicit parameter directions,complete contour/fold
+attribution,whole-edge identity intent and ordered curve alternatives. It neither moves endpoints
+automatically nor forks a physical copy. No other truing variant is inferred.
+
+For one mirrored-pair Piece with original boundary `[a,b]`,a selected whole `a` split into roles9
+and11 declares `[role9,role11,b]`. Both physical copies remain affected in original CutPlan order;
+the reflected B copy is still associated with that same Piece. The composed native check retains
+the original span,stops and ease through curve admission. It proves no fitted length or independent
+counterpart:the unchanged `b` field can still participate in constraints on the changed Piece.
+
+| Requirement | Native declaration | Remaining execution owner |
+| --- | --- | --- |
+| Original span,side,Piece,copy,ease and T2 source | Actual borrowed associations | G1 ordered context/currentness and G3 fit |
+| Endpoint/stop preservation and every supplied-plan copy | Explicit locks and full original copy population | G3 coupled constraints/observer truth |
+| Selected/outside coverage,contours,fold and lineage | Exact held attribution and whole-Piece proposal | G2 geometry/maps and G1 history/visible repairs |
+| Deterministic curve choice | Ordered complete alternatives and explicit priority | G3 generation,certified feasibility and declared-domain exhaustion |
+| Profiles,effects and editing authority | Eleven original evidence-source requirements | Actual providers and atomic bus/undo |
+
+Exact-Piece admission requires a literal occurrence of the old held edge. `NoExactOccurrence`
+refuses this variant;it does not prove the edge globally absent or invalidate a history alias.
+Current-source projection and prior-recipe visibility remain G1 `.5f.2`/`.5f.3` work. Geometry-backed
+replay/publication remains `.5f.4.geometry`;G3 `.2` owns real walk/true garment validation,and
+G1 `.5g` owns broad integration. Focused declaration checks pass;those deferred checks have not
+passed by implication. This checkpoint grants no full-envelope or independent approval.
