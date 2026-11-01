@@ -12,6 +12,9 @@ mod join_examples {}
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-join-sources.md")]
 mod join_source_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-join-topology.md")]
+mod join_topology_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-truing-outputs.md")]
 mod truing_output_examples {}
 #[cfg(doctest)]
@@ -65,24 +68,27 @@ mod join;
 pub use join::{
     AdmittedJoinDirections, AdmittedJoinEdges, BoundJoinCopyInventory, BoundJoinCutBanks,
     BoundJoinCutPopulation, BoundJoinEdgeRoles, BoundJoinPieceMetadata, BoundJoinPiecesAtSeam,
-    BoundJoinSide, BoundJoinSourcePieces, CoveredJoinCutSources, DeclaredJoinConstructionUses,
-    DeclaredJoinCutContours, DeclaredJoinPieceIdentity, JoinBindingError, JoinBindingRefusal,
-    JoinConstructionManifest, JoinConstructionUse, JoinConstructionUseError,
-    JoinConstructionUseLimits, JoinConstructionUseRefusal, JoinCopyInventoryError,
-    JoinCopyInventoryLimits, JoinCopyInventoryRefusal, JoinCutBank, JoinCutBankError,
-    JoinCutBankRefusal, JoinCutConnectivityError, JoinCutConnectivityLimits,
-    JoinCutConnectivityRefusal, JoinCutContourError, JoinCutContourLimits, JoinCutContourManifest,
-    JoinCutContourRefusal, JoinCutContourUse, JoinCutContourUseLocation, JoinCutCoverageError,
-    JoinCutCoverageLimits, JoinCutCoverageRefusal, JoinCutHole, JoinCutPopulation,
-    JoinCutPopulationError, JoinCutPopulationRefusal, JoinDirectionAssignment, JoinDirectionError,
-    JoinDirectionLimits, JoinDirectionManifest, JoinDirectionRefusal, JoinDirectionalOutput,
-    JoinEdgeCandidate, JoinEdgeManifest, JoinEdgeManifestError, JoinEdgeManifestLimits,
-    JoinEdgeManifestRefusal, JoinEdgeRoleBindingError, JoinEdgeRoleBindingRefusal,
-    JoinExactSpliceRequirement, JoinIdentityStopOrigin, JoinInputError, JoinMovingOrientation,
-    JoinOutputEdge, JoinParameterDirection, JoinPieceFieldIntent, JoinPieceIdentityError,
-    JoinPieceIdentityLimits, JoinPieceIdentityRefusal, JoinPieceMetadataError,
-    JoinPieceMetadataLimits, JoinPieceMetadataPolicy, JoinPieceMetadataRefusal, JoinPiecesAtSeam,
-    JoinPlacedConstructionUse, JoinPlacedCutUse, JoinSourceOccurrence, JoinSourceOccurrenceField,
+    BoundJoinSide, BoundJoinSourcePieces, CoveredJoinCutSources, DeclaredJoinConstructionSources,
+    DeclaredJoinConstructionUses, DeclaredJoinCutContours, DeclaredJoinPieceIdentity,
+    JoinBindingError, JoinBindingRefusal, JoinConstructionManifest, JoinConstructionSourceAction,
+    JoinConstructionSourceAssignment, JoinConstructionSourceError, JoinConstructionSourceIntent,
+    JoinConstructionSourceLimits, JoinConstructionSourceManifest, JoinConstructionSourceRefusal,
+    JoinConstructionUse, JoinConstructionUseError, JoinConstructionUseLimits,
+    JoinConstructionUseRefusal, JoinCopyInventoryError, JoinCopyInventoryLimits,
+    JoinCopyInventoryRefusal, JoinCutBank, JoinCutBankError, JoinCutBankRefusal,
+    JoinCutConnectivityError, JoinCutConnectivityLimits, JoinCutConnectivityRefusal,
+    JoinCutContourError, JoinCutContourLimits, JoinCutContourManifest, JoinCutContourRefusal,
+    JoinCutContourUse, JoinCutContourUseLocation, JoinCutCoverageError, JoinCutCoverageLimits,
+    JoinCutCoverageRefusal, JoinCutHole, JoinCutPopulation, JoinCutPopulationError,
+    JoinCutPopulationRefusal, JoinDirectionAssignment, JoinDirectionError, JoinDirectionLimits,
+    JoinDirectionManifest, JoinDirectionRefusal, JoinDirectionalOutput, JoinEdgeCandidate,
+    JoinEdgeManifest, JoinEdgeManifestError, JoinEdgeManifestLimits, JoinEdgeManifestRefusal,
+    JoinEdgeRoleBindingError, JoinEdgeRoleBindingRefusal, JoinExactSpliceRequirement,
+    JoinIdentityStopOrigin, JoinInputError, JoinMovingOrientation, JoinOutputEdge,
+    JoinParameterDirection, JoinPieceFieldIntent, JoinPieceIdentityError, JoinPieceIdentityLimits,
+    JoinPieceIdentityRefusal, JoinPieceMetadataError, JoinPieceMetadataLimits,
+    JoinPieceMetadataPolicy, JoinPieceMetadataRefusal, JoinPiecesAtSeam, JoinPlacedConstructionUse,
+    JoinPlacedCutUse, JoinSourceOccurrence, JoinSourceOccurrenceField,
     JoinSourceOccurrenceLocation, JoinSourcePieceError, JoinSourcePieceLimits,
     JoinSourcePieceRefusal, JoinSpliceEnd, JoinSpliceEndpointPair, JoinSplicePlacement,
     RequiredJoinCutConnectivity, RequiredJoinExactSplice,

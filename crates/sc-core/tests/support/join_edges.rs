@@ -184,3 +184,15 @@ pub fn with_connectivity(extra: bool, run: impl FnOnce(RequiredJoinCutConnectivi
         run(path);
     });
 }
+
+/// Explicit empty proposed construction data,with complete actual source/cut-path parents.
+pub fn with_construction_uses(extra: bool, run: impl FnOnce(DeclaredJoinConstructionUses<'_>)) {
+    with_connectivity(extra, |path| {
+        let raw = JoinConstructionManifest::new(id(1000), vec![]);
+        let n = path.contours().directions().coverage().edges().edge_count();
+        let uses = raw
+            .admit(&path, JoinConstructionUseLimits::new(n, 0, 0))
+            .expect("explicit proposed construction data");
+        run(uses);
+    });
+}

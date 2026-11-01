@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — proposed joined construction occurrences
+## _(2026-11-01 UTC)_ — explicit original joined construction actions
 
-0787 preserves ordered/repeated cut/noncut output uses and explicit traversal under whole N/U/U policy.
-Actual source/direction/field parents remain;empty proposals authorize no original source omission/no-op.
-Native4/prior connectivity4/API5/join book10/lint/fmt/book rc=0;962 original/body/public bytes exact.
-promotion: declined (existing construction/geometry boundary). G1still6/18;complete original field actions next.
+0788 requires one action per original field under R/M/2M,expected EdgeRef/traversal and unique source guards.
+Actual source/intent/evidence loans survive;Omit ids are requests,Retain still needs complete target mapping.
+Native4/prior construction4/API6/topology4/main7/lint/fmt/book/index/33 links rc=0;963 original bytes exact.
+promotion: declined (existing source/geometry boundary). Topology12686B moved exact;G1still6/18,maps next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

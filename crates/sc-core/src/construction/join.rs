@@ -50,6 +50,12 @@ mod metadata;
 mod population;
 mod roles;
 pub use roles::{BoundJoinEdgeRoles, JoinEdgeRoleBindingError, JoinEdgeRoleBindingRefusal};
+mod source_actions;
+pub use source_actions::{
+    DeclaredJoinConstructionSources, JoinConstructionSourceAction,
+    JoinConstructionSourceAssignment, JoinConstructionSourceError, JoinConstructionSourceIntent,
+    JoinConstructionSourceLimits, JoinConstructionSourceManifest, JoinConstructionSourceRefusal,
+};
 mod sources;
 mod splice;
 pub use metadata::{

@@ -1,0 +1,254 @@
+# Native join result topology
+
+This companion continues [source attribution and coverage](drafting-join-contracts.md).
+Its native declarations retain actual inputs;geometry and authorized effects remain separate.
+
+## Declare complete result cut uses
+
+`JoinCutContourManifest` retains an explicit operation,ordered proposed outer-boundary uses and
+independently ordered proposed hole-use lists. `JoinCutContourUse::new(tag,direction)` requires a
+persistent output tag and explicit Piece traversal in that output's own parameter frame. It does
+not accept `JoinParameterDirection`:source-relative parameter orientation and result traversal
+remain separate authored fields. No list position becomes an output identity.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn cut_use(tag:LocalTag)->JoinCutContourUse {
+    JoinCutContourUse::new(tag,Direction::Reversed)
+}
+fn place<'a>(manifest:&'a JoinCutContourManifest,directions:&'a AdmittedJoinDirections<'a>)
+    ->Result<DeclaredJoinCutContours<'a>,JoinCutContourError<'a>> {
+    manifest.admit(directions,JoinCutContourLimits::new(10,2,4,10))
+}
+```
+
+`JoinCutContourLimits::new(N,H,U,W)` admits the complete actual output population N,including
+noncut candidates,and all proposed hole headers H before reading their child lengths. Checked
+complete boundary-plus-hole use count U and checked2U+H workspace then precede per-use fields or
+allocation. Earlier complete parent/candidate/direction/coverage policies and caller-owned input
+storage remain separate. Workspace counts U tag-index entries,U use associations and H hole
+associations;it does not measure allocator bytes. Arithmetic failures retain `UseCountOverflow`
+or `WorkspaceOverflow` rather than truncating a prefix.
+
+For N10,H2,U4,the required workspace is10. N9 refuses `Outputs`;H1 refuses `Holes`;U3 refuses
+`Uses`;W9 refuses `Workspace`,before a wrong operation or bad tag. With quotas met,`Operation`
+precedes `EmptyBoundary`,then the first `EmptyHole`,then exact cut-use `Count`. A whole-bank
+splice with no surviving cut candidates can satisfy empty cut coverage/directions,but its empty
+proposed boundary refuses `EmptyBoundary`;empty metadata cannot create a declared result boundary.
+
+Let C be the actual cut-candidate population. U must equal C,not the complete N when construction
+and fold candidates are present. Each original boundary use,then each original hole group/use,
+checks `DuplicateTag`, `UnknownOutput`,then `NonCutOutput`. A unique member of the complete
+actual cut set is required in every slot. Unique cut membership plus U=C supplies exactly one
+use per cut candidate;equal count alone cannot hide repeated roles or missing cut content.
+Construction/fold-attributed candidates cannot become cut uses merely because their source edge
+also occurs on a cut contour. They remain on the original complete direction/manifest parents
+for their separate explicit reconciliation.
+
+For cut outputs9,8,2,10,a proposal can retain boundary order9,8 and hole order[10],[2],with each
+traversal explicit. Its four use fields and two group headers remain the actual authored objects;
+no sorting of holes or source-driven traversal reversal is performed. Replacing the last use2
+with9 refuses the duplicate's original boundary/hole locations. Unknown99 refuses `UnknownOutput`;
+an actual construction/fold output refuses `NonCutOutput`. No accepted cut-use prefix escapes.
+
+`JoinCutContourError` lends actual `manifest()`,actual `directions()`,original `limits()` and first
+`refusal()`. `refused_use()` lends the original second duplicate,unknown or noncut field;resource,
+operation,empty/count causes return `None`. Whole raw lists and complete source parents survive.
+
+`DeclaredJoinCutContours` retains those same parents and reports `use_count()`,`hole_count()` and
+`workspace_entries()`. `uses()` follows original boundary then hole-group/field order and reverse;
+`boundary()` and `holes()` preserve the original grouping. `use_for(tag)` queries the unique
+explicit cut role. Each authentic `JoinPlacedCutUse` lends its whole context,original location,
+actual declared field,actual traversal field and authentic directional output/source attribution.
+Its `logical_output()` retains the actual operation/persistent-tag tuple without issuing an edge.
+Each `JoinCutHole` lends its actual original group,index,whole context and ordered use views.
+
+Work is O(H+U log(U+N+2)),with2U+H additional entries,no source scan,registry/provider call or
+geometric evaluation. This stage admits complete cut placement declarations only. Source-path
+adjacency,bank-endpoint gluing and loop classification remain separately owned connectivity work;
+construction/fold/consumer semantics,copy reconciliation,retirement and publication also remain.
+The [canonical Piece invariants](../spec/ontology.md#41-piece) still require actual closed/simple
+CCW outer geometry and opposite-wound,strictly internal,mutually disjoint holes. Authored list
+membership/traversal supplies none of those geometric certificates. Actual G2/G3 validation and
+current source/history/authority checks remain required before accepting a canonical joined Piece.
+
+## Require original source-path and bank gluing
+
+`DeclaredJoinCutContours::require_cut_connectivity` checks each declared loop's requested source
+path against the actual original cut loops and the exact splice endpoint pairs. It yields
+`RequiredJoinCutConnectivity`,not a geometric correspondence or canonical joined Piece.
+
+```rust
+use sc_core::construction::*;
+fn require_path<'a>(contours:&'a DeclaredJoinCutContours<'a>)
+    ->Result<RequiredJoinCutConnectivity<'a>,JoinCutConnectivityError<'a>> {
+    contours.require_cut_connectivity(JoinCutConnectivityLimits::new(2,4))
+}
+```
+
+`JoinCutConnectivityLimits::new(H,U)` admits every proposed result hole group and every cut use
+before reading source ports or scanning loops. H1 refuses actual2 as `Holes`;U3 refuses actual4
+as `Uses`,even when the first requested adjacency is wrong. All earlier immutable input,original
+source,candidate,direction,coverage and cut-use resource policies remain required.
+
+Entry/exit source parameters compose the explicit output traversal with its source-relative
+parameter-direction request. SameAsSource+Original enters at source from and exits at to;
+ReverseSource+Original enters at to and exits at from. Reversing the authored traversal swaps
+those endpoints again. No output or source bounds are rewritten and no interior affine map follows.
+
+Source ports retain original A/B role,original boundary/hole loop and exact field/parameter.
+Within an original directed cyclic cut loop,0/1 endpoints normalize to the appropriate original
+vertex;the last field wraps to the first. Original reversed fields swap their own entry/exit.
+Interior fragment endpoints remain literal field/Param ports. Equal EdgeRefs on distinct A/B
+Pieces or unrelated loops cannot substitute for these actual source identities.
+
+`RequiredJoinExactSplice::endpoint_pair(AFrom/ATo)` lends the authentic pair for one explicitly
+named A-held endpoint. As with `endpoint_pairs()`,Same matches Afrom/Bfrom and Ato/Bto;Opposite
+matches Afrom/Bto and Ato/Bfrom. Those two required links,including transitivity when endpoints
+share an original vertex,define permitted bank gluing. Copy reflection and fixed/moving pose
+choices do not rewrite these held source-frame correspondences.
+
+The boundary is checked first,then holes in original declared order. Each consecutive exit/entry
+must be the same original source port or equivalent through the required bank links;the closing
+last-to-first pair is checked too. `Adjacency` reports the actual first original result-use pair.
+Reordering complete cut members,flipping one traversal or appending an unrelated hole to the
+boundary can therefore fail despite complete unique cut membership. No path is reordered or repaired.
+
+`JoinCutConnectivityError` retains actual `contours()`,original `limits()` and first `refusal()`.
+For Adjacency,`from_use()` and `to_use()` lend those actual preceding/next use views and their
+original declaration/direction/source parents. Quota causes lend neither use. Unexpected
+`BankSourceInvariant`,`UseSourceInvariant` or `DeclaredLoopInvariant` means an internal native
+parent/view invariant failed;it must be diagnosed,not labelled an unsupported garment or skipped.
+No such invariant failure occurred in the focused native checks.
+
+`RequiredJoinCutConnectivity` retains the same actual cut-use parent and policy.
+`connection_count()` counts all consecutive-plus-closing requirements,one per declared cut use.
+Work is O(H+U+1),with fixed four bank ports and a loop cursor;there is no new allocation,source
+contour scan,registry/provider call or geometric evaluation. Earlier storage remains separate.
+
+This is required symbolic source-path gluing under the authored orientation requests. Actual
+mapped endpoints may still fail to coincide,or a posed result may violate CCW/simple outer
+geometry,hole winding/classification/containment or exact nondeforming feasibility. Those remain
+real G2/G3 obligations,along with numeric correspondence,currentness,noncut/copy/consumer
+reconciliation,retirement and authorized atomic publication. A source-path declaration grants
+none of those certificates and supplies no substitute geometric result.
+
+## Declare proposed result construction-line uses
+
+`JoinConstructionManifest` retains an explicit operation and ordered proposed construction uses.
+Each `JoinConstructionUse::new(tag,direction)` requires an actual output role and explicit traversal
+in that output's parameter frame. It does not accept source-relative `JoinParameterDirection`.
+Construction geometry can reuse cut or noncut outputs and repeat roles,as the canonical Piece's
+construction list permits. Each repeated occurrence remains a separate original authored field.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn line(tag:LocalTag)->JoinConstructionUse {
+    JoinConstructionUse::new(tag,Direction::Original)
+}
+fn declare_lines<'a>(manifest:&'a JoinConstructionManifest,path:&'a RequiredJoinCutConnectivity<'a>)
+    ->Result<DeclaredJoinConstructionUses<'a>,JoinConstructionUseError<'a>> {
+    manifest.admit(path,JoinConstructionUseLimits::new(10,4,4))
+}
+```
+
+`JoinConstructionUseLimits::new(N,U,W)` admits every actual candidate output N,every proposed
+construction occurrence U and U additional associations before operation,fields or allocation.
+Repeated roles still count separately. Earlier complete input/source/candidate/direction/cut-use/
+path resources and caller-owned storage remain separate;these entries are not allocator bytes.
+For N10/U4,W4 is exact:N9 refuses `Outputs`,U3 refuses `Uses`,W3 refuses `Workspace`,all before a
+wrong operation or unknown tag. With quotas met,`Operation` precedes the first `UnknownOutput`.
+An active catalogue role absent from the actual candidate/direction context remains unknown.
+
+For authored uses4-Original,9-Reversed,4-Reversed,6-Original,the four fields remain in that exact
+order. Role4 is not deduplicated and its two traversal fields remain separate. A cut role such
+as9 or fold-attributed role such as6 can be proposed as construction geometry without becoming
+a new cut contour or fold indicator. Original source-field retention/omission/mapping and result
+semantic meaning still require their separately owned complete reconciliation.
+
+`JoinConstructionUseError` lends actual `manifest()`,actual required cut `connectivity()`,original
+`limits()` and first `refusal()`. `refused_use()` lends the actual original first UnknownOutput
+field;whole-resource/operation causes return `None`. A later failure returns no accepted prefix.
+
+`DeclaredJoinConstructionUses` retains those same whole parents and reports `use_count()` and
+`workspace_entries()`. `uses()` traverses original order and reverse. `uses_for(tag)` scans all U
+associations and lends every matching occurrence in original order or reverse;it allocates no
+extra index and does not merge repetitions. Each authentic `JoinPlacedConstructionUse` lends
+its whole context,original index,actual declared/traversal fields and original directional
+output/candidate/source attribution. `logical_output()` remains the declared operation/tag tuple,
+without minting or publishing an edge. Admission work is O(U log(N+2)+1),with U new associations
+and no source/key scan,registry/provider call or geometric evaluation.
+
+An explicit empty proposal can admit U0/W0 while retaining all original construction/fold fields
+on its immutable parents. This records proposed data only;it authorizes no source omission,
+semantic source loss,empty construction result or no-op. Complete original-field reconciliation,
+fold/consumer/copy requirements,currentness,geometry,retirement and atomic authoring authority
+remain mandatory later stages. This declaration alone cannot close the join's noncut obligations.
+
+## Declare every original construction-field action
+
+`JoinConstructionSourceManifest` retains an operation and ordered explicit actions for every
+original A/B construction occurrence. `JoinConstructionSourceAssignment::new` names its A/B role,
+snapshot field index,expected `DirectedEdge` and explicit `JoinConstructionSourceIntent`.
+The expected persistent EdgeRef **and traversal** must match the actual original field. Snapshot
+positions locate fields on these immutable parents;they are never standalone persistent geometry
+identities and cannot silently substitute a moved/changed field.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn omit(side:SeamSideId,index:usize,expected:DirectedEdge,evidence:EntityId)
+    ->JoinConstructionSourceAssignment {
+    JoinConstructionSourceAssignment::new(side,index,expected,
+        JoinConstructionSourceIntent::Omit{evidence_source:evidence})
+}
+fn declare_actions<'a>(manifest:&'a JoinConstructionSourceManifest,uses:&'a DeclaredJoinConstructionUses<'a>)
+    ->Result<DeclaredJoinConstructionSources<'a>,JoinConstructionSourceError<'a>> {
+    manifest.admit(uses,JoinConstructionSourceLimits::new(10,4,8))
+}
+```
+
+`Retain` explicitly requires later complete target mapping for that source occurrence.
+`Omit { evidence_source }` preserves an explicit request for omission/consumer-repair evidence.
+It neither accepts that evidence nor authorizes deletion,source retirement or result publication.
+Zero/shared requested ids are ordinary authored requests,not defaults,registry kind/state/existence
+facts or accepted approval. Equal requested sources never merge the separate original field scopes.
+
+`JoinConstructionSourceLimits::new(R,M,W)` admits the complete cached original A+B occurrence
+count R,including cut/fold fields,then checked original construction count K,all raw assignments M
+and checked2M source-index/association entries before source fields or allocation. Earlier complete
+parent policies and caller-owned input storage remain required;entries do not measure allocator bytes.
+`SourceCountOverflow` and `WorkspaceOverflow` retain nonrepresentable complete arithmetic.
+For R10,K4,M4,W8 is exact:R9 refuses `SourceOccurrences`;M3 refuses `Assignments`;W7 refuses
+`Workspace`,before a wrong operation or invalid source locator.
+
+After quotas,`Operation` precedes exact `Count` M=K. Original rows then check `DuplicateSource`,
+`MissingSource`,then expected edge/traversal `SourceField`. Unique actual construction membership
+plus M=K declares every original occurrence,including repeated edges with distinct direction/slots;
+equal count alone cannot hide a repeated source or omitted field. Original authored row order remains.
+A source index that exists with a different edge or direction refuses rather than rebinding.
+
+For original A0,A1,B0,B1,rows B1-Omit,A0-Retain,B0-Omit,A1-Retain can retain their authored order.
+The two omission fields can explicitly request the same id,including0;both still require separate
+actual scope/consumer justification. Three or five rows refuse expected4 before their bad fields.
+An empty action list is complete only when actual K is0;it refuses expected4 for four originals.
+
+`JoinConstructionSourceError` lends actual `manifest()`,actual proposed `uses()`,original `limits()`
+and first `refusal()`. `refused_assignment()` lends the actual first refused raw row,including the
+second duplicate;resource/operation/count causes return `None`. `refused_source_field()` lends
+the actual original mismatched field only for SourceField,never a copied expected replacement.
+A later failure returns no accepted action prefix.
+
+`DeclaredJoinConstructionSources` retains those whole parents,complete `source_count()` and
+`workspace_entries()`. `assignments()` lends original order and reverse;`assignment(side,index)`
+queries the unique actual source slot. Each authentic `JoinConstructionSourceAction` lends its
+whole context,original assignment index,actual raw assignment,actual `source_field()`,original
+Piece/physical copy,and original intent/evidence-source field. No source fields or requests are copied
+into replacement owners. Work is O(M log(M+2)+1),with2M new index/association entries and no source/key
+scan,registry/provider/evidence call or geometric evaluation.
+
+This stage proves complete explicit source-action requests only. Retained output groups,whole
+source-range coverage,original/result multiplicity,additional target content and actual omission
+justification/visible repairs remain mandatory mapping/evidence work. Fold/copy/consumer semantics,
+currentness,real geometry,retirement and authorized atomic effects remain separate obligations.
+An action list can therefore bind beside an empty proposed construction list without certifying
+that Retain has been fulfilled or Omit justified. The join's source reconciliation remains open.

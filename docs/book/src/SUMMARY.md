@@ -92,6 +92,7 @@
   - [Drafting operation contracts](annexes/drafting-operation-contracts.md)
   - [Native editing operation inputs](annexes/drafting-edit-inputs.md)
   - [Native Piece join contracts](annexes/drafting-join-contracts.md)
+  - [Native join result topology](annexes/drafting-join-topology.md)
   - [Native join sources and policies](annexes/drafting-join-sources.md)
   - [Walk output and shared-mark contracts](annexes/drafting-walk-outputs.md)
   - [Walk semantic identity and retention](annexes/drafting-walk-identities.md)
@@ -116,5 +117,4 @@
 - [Publication checks](annexes/publication-checks.md)
 - [Build and check the project](build-and-checks.md)
 - [Checks during feature delivery](annexes/checking-policy.md)
-# Index
 - [Topic index](topic-index.md)
