@@ -928,20 +928,21 @@ retains every original goal,status,child relation and focused acceptance proof.
   Status: `done`
   Goal:0815 published local renderer/native field correction;[whole scope/proofs](../history/stitchcad-devnotes-part991.md).
 - ID: `G1-SLICE.5f.1.book-search.activate`
-  Status: `in_progress`
+  Status: `done`
   Goal:select the verified local renderer explicitly in normal build/publication/capture paths;guard tool/source paths and update installation/search docs and directly affected contracts.
   Acceptance:all full-text/chapter coverage retained;unexpected renderer warnings still refuse;no implicit dependency on ambient executable resolution.
-### G1-SLICE.5f.1.book-search.activate.tool
 - ID: `G1-SLICE.5f.1.book-search.activate.tool`
   Status: `done`
-  Goal:guarded local renderer selector/install and native post-install probe;fix D376 source-manifest omissions;normal build/publication routing follows separately.
-  - [x] ROOT CAUSE: launcher `producer_census.py` →expected rc=2 for four absent entries;launcher `python3 -I -B -` Git/original-manifest versus native-inventory assertion →exact original four omissions/current membership,rc=0;D376 owned here.
-  - [x] ADDRESSED: launcher `scripts/book_tool.py install`/`version` →existing local0.5.4 still receives native frequency1/no-leakage probe,rc=0;all four missing manifest rows registered with D156 residuals.
-  - [x] NO REGRESSION: launcher `book_tool_contract.py` →4 path refusals/2 argv-status controls,rc=0;`producer_census.py` →369 entries,rc=0;runner shell syntax/rendered setup/991 Git-public/archive1445/78,per-generation21/64 and57/64,rc=0.
-  Commit:STITCHCAD-G1-0816. promotion: declined (existing local producer/public tool contract;D376 repaired in scope).
+  Goal:0816 guarded local tool setup and D376 repair;[whole scope/proofs](../history/stitchcad-devnotes-part992.md).
+### G1-SLICE.5f.1.book-search.activate.publication
 - ID: `G1-SLICE.5f.1.book-search.activate.publication`
-  Status: `pending`
-  Goal:select verified renderer in normal Make/publication/capture paths;update directly affected contracts/setup docs without weakening full-text or warning checks.
+  Status: `done`
+  Goal:route Make/publication/capture through local renderer;fix D377 glossary/index navigation checker drift;update directly affected contracts/setup docs without weakening text/route/warning checks.
+  - [x] ROOT CAUSE: `rg mdbook` found ambient Make/publication/capture dispatch;`git log -1 -p -S` traces missing index/glossary headings to0788 cd7466d9/0801 bd33add9,rc=0;D377 owned here.
+  - [x] ADDRESSED: `scripts/run_make.sh book` and native capture/migration →warning-free local renderer,1093→118 records/118 chapters,85068 word/72522 term pairs exact,123 inputs fixed,payload7729123B,rc=0.
+  - [x] NO REGRESSION: launcher `python_publication_builder_contract.py`/`python_search_capture_contract.py` →19/9 body reds,13 refusals;Make/tool4-2/nav2-8/AST3/search5/native warning-repair/publication118-374-1805-3385 pass,rc=0.
+    992 four Git spans/body/public exact;archive1446/79,per-generation21/64 and58/64,rc=0;actual queries remain .verify,not latency or runtime approval.
+  Commit:STITCHCAD-G1-0817. promotion: declined (existing public renderer/learning-glossary-index policy;D377 repaired without new scope).
 - ID: `G1-SLICE.5f.1.book-search.verify`
   Status: `pending`
   Goal:after implementation verify actual full-text/chapter search and warning-free build against original corpus;preserve existing public behavior.

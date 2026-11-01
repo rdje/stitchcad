@@ -87,7 +87,8 @@ def capture(label, script=None, *, result='success'):
         PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(folder,), output_files=(folder / 'old.txt', file))
         (folder / 'old.txt').write_text('old directory output')
         file.write_text('old file output')
-    inputs = {root / 'docs/book/book.toml', root / 'docs/book/src/SUMMARY.md', root / 'docs/book/src/intro.md'}
+    inputs = {root / 'docs/book/book.toml', root / 'docs/book/src/SUMMARY.md', root / 'docs/book/src/intro.md',
+              ROOT / 'scripts/book_tool.py', PROFILE_SOURCE, ROOT / 'target/cargo-home/bin/mdbook'}
     frozen = {path: path.read_bytes() for path in (*CORE, *inputs)}
     before = snapshot(html)
     originals = subprocess.run, shutil.rmtree, shutil.copytree, Path.mkdir
@@ -122,13 +123,13 @@ def capture(label, script=None, *, result='success'):
         return real_profile['environment_for'](selected_root, variables, create=create)
 
     def child(argv, **kwargs):
-        if argv[:1] != ['mdbook']:
+        if argv[:1] != [str(ROOT / 'target/cargo-home/bin/mdbook')]:
             environment = kwargs['env']
             assert not set(git_values) & set(environment), 'publication index query inherited unrelated Git authority'
             assert environment['GIT_CONFIG_NOSYSTEM'] == '1' and environment['GIT_CONFIG_GLOBAL'] == os.devnull
             assert environment['GIT_OPTIONAL_LOCKS'] == '0' and environment['GIT_LITERAL_PATHSPECS'] == '1'
             return originals[0](argv, **kwargs)
-        assert argv == ['mdbook', 'build', 'docs/book'] and kwargs['cwd'] == root
+        assert argv == [str(ROOT / 'target/cargo-home/bin/mdbook'), 'build', 'docs/book'] and kwargs['cwd'] == root
         assert inputs <= declared_inputs and activated, 'publication builder unprepared dispatch'
         environment = kwargs['env']
         assert not set(git_values) & set(environment), 'publication renderer inherited unrelated Git authority'
@@ -504,7 +505,7 @@ def omission_controls():
         raise AssertionError('publication main map source guard omission escaped')
     reds += 1
     faults = (
-        ('inputs', 'sources=(*CORE, config, *files)', 'sources=(*CORE, config)',
+        ('inputs', 'sources=(*CORE, config, *files, *tool_inputs)', 'sources=(*CORE, config, *tool_inputs)',
          'publication builder inputs omitted before activation'),
         ('stage-files', 'sources=(*CORE, *generated_files), output_files=generated_files',
          'sources=(*CORE, *generated_files), output_files=()', 'publication generated file plan omitted'),

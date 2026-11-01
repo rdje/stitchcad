@@ -52,12 +52,17 @@ def install(*, force=False):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action', choices=('install', 'version'))
+    parser.add_argument('action', choices=('install', 'version', 'build'))
     parser.add_argument('--force', action='store_true', help='rebuild an existing local install')
     args = parser.parse_args()
     PROFILE['require'](not args.force or args.action == 'install', '--force requires install')
     if args.action == 'install':
         install(force=args.force)
+    elif args.action == 'build':
+        PROFILE['plan_producer'](ROOT, sources=(Path(__file__).absolute(), PROFILE_SOURCE, PUBLICATION))
+        publication = runpy.run_path(str(PUBLICATION))
+        publication['build'](ROOT)
+        print('mdBook: published docs/book/book with the guarded local renderer')
     else:
         executable = renderer()
         PROFILE['enter_producer'](ROOT, sources=renderer_inputs())

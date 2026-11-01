@@ -253,6 +253,18 @@ def temporary_root(*, prefix, dir, fixture_root=None):
             raise PublicationError("FIXTURE_AUTHORITY: " + str(error)) from None
 
 
+def renderer():
+    """Bind every producer to the same guarded local executable and its complete selector inputs."""
+    source = ROOT / "scripts/book_tool.py"
+    PROFILE["plan_producer"](ROOT, sources=(*CORE, source))
+    tool = runpy.run_path(str(source))
+    try:
+        return tool["renderer"](), tool["renderer_inputs"]()
+    except (ValueError, OSError) as error:
+        # The separately loaded selector has its own Refusal class (a ValueError).
+        raise PublicationError("BOOK_AUTHORITY: " + str(error)) from None
+
+
 def build_inputs(root):
     """Close the supported renderer input/configuration surface without activating stores."""
     root = Path(root).absolute()
@@ -260,6 +272,7 @@ def build_inputs(root):
     PROFILE["workspace"](root)
     config = root / "docs/book/book.toml"
     PROFILE["plan_producer"](ROOT, sources=(*CORE, config))
+    _, tool_inputs = renderer()
     # The current public configuration has metadata and one built-in HTML renderer. New path or
     # command options need their own input/delegation plan before this boundary can accept them.
     section, seen = None, set()
@@ -295,14 +308,14 @@ def build_inputs(root):
     theme = root / "docs/book/theme"
     require(not theme.exists() and not theme.is_symlink(), "BOOK_AUTHORITY", "unplanned theme inputs")
     folders, files = source_tree(root / SOURCE)
-    PROFILE["plan_producer"](ROOT, sources=(*CORE, config, *files))
+    PROFILE["plan_producer"](ROOT, sources=(*CORE, config, *files, *tool_inputs))
     for file in files:
         if file.suffix == ".md":
             require("{{#" not in file.read_text(), "BOOK_AUTHORITY", "unplanned preprocessor input")
     for chapter in chapters((root / SOURCE / "SUMMARY.md").read_text()):
         PROFILE["producer_path"](ROOT, root / SOURCE / chapter)
         require(root / SOURCE / chapter in files, "BOOK_AUTHORITY", "unplanned or missing summary chapter")
-    return folders, (config, *files)
+    return folders, (config, *files, *tool_inputs)
 
 
 def publication_environment(*, create=False):
@@ -351,7 +364,8 @@ def build(root):
             publication_plan(root)
             environment = dict(publication_environment(create=True), MDBOOK_LOG="warn", RUST_LOG="warn",
                                MDBOOK_BUILD__BUILD_DIR=json.dumps(str(stage)), MDBOOK_BUILD__CREATE_MISSING="false")
-            result = subprocess.run(["mdbook", "build", "docs/book"], cwd=root, env=environment,
+            executable, _ = renderer()
+            result = subprocess.run([executable, "build", "docs/book"], cwd=root, env=environment,
                                     capture_output=True, text=True)
             diagnostic = result.stdout + result.stderr
             require(result.returncode == 0, "BOOK_BUILD", diagnostic.strip())
@@ -524,6 +538,19 @@ def search_controls(root):
     return len(cases)
 
 
+def navigation_parts(summary, registered):
+    """Keep glossary/index routes ordered even when their optional part headings are absent."""
+    for part in ("# Learning path", "# Annexes"):
+        require(part in summary, "PUBLICATION_PART", part)
+    require(len(registered) > 8 and registered[8] == "spec/glossary.md", "GLOSSARY_ORDER",
+            "glossary must follow the complete learning path")
+    require(summary.index("](spec/glossary.md)") < summary.index("# Annexes"), "GLOSSARY_ORDER",
+            "glossary must precede annexes")
+    require(registered[-1] == "topic-index.md", "INDEX_ORDER", "topic index must be the final chapter")
+    require(summary.index("# Annexes") < summary.index("](topic-index.md)"), "INDEX_ORDER",
+            "topic index must follow annexes")
+
+
 def check(root):
     source = (root / SOURCE).resolve()
     output = (root / HTML).resolve()
@@ -535,10 +562,9 @@ def check(root):
     require(set(registered) == population, "CHAPTER_COVERAGE",
             f"unregistered {sorted(population - set(registered))}; missing {sorted(set(registered) - population)}")
     require(registered[1:8] == LEARNING, "LEARNING_ORDER", "progressive chapters must precede references")
-    for part in ("# Learning path", "# Glossary", "# Annexes", "# Index"):
-        require(part in summary, "PUBLICATION_PART", part)
+    navigation_parts(summary, registered)
     annex_start = summary.index("# Annexes")
-    index_start = summary.index("# Index")
+    index_start = summary.index("](topic-index.md)")
     for chapter in registered:
         if chapter.startswith("spec/") and chapter not in ("spec/glossary.md", "spec/mtm-input-charts.md") \
                 and not chapter.startswith("spec/glossary/"):

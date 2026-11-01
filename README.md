@@ -52,12 +52,13 @@ Crates appear as their stage starts; nothing below exists before its gate.
 
 ## Quick start
 
-Requires the Rustup launcher, `mdbook` for the book, and Python 3.9+ (standard library only).
+Requires the Rustup launcher and Python 3.9+ (standard library only); book setup installs mdBook locally.
 The stable channel is declared in `rust-toolchain.toml`.
 
 ```bash
 python3 -I -B scripts/local_environment.py -- git config core.hooksPath .githooks
 scripts/run_make.sh toolchain  # local channel/components, once per clone
+python3 -I -B scripts/book_tool.py install  # published local mdBook and native field check
 scripts/run_make.sh check      # fmt --check + strict Clippy + native tests
 scripts/run_make.sh wasm       # compile the three browser foundation crates
 scripts/run_make.sh gate       # doctrine enforcer

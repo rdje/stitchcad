@@ -224,6 +224,12 @@ with p.open('a') as f:
         path = binary / name
         path.write_text(capture)
         path.chmod(0o755)
+    # Trap only the prepared inner book entry; outer Python still executes the real store profile.
+    python = binary / 'python3'
+    python.write_text('#!' + sys.executable + '\nimport os,sys\n'
+                      "if sys.argv[1:] != ['-I','-B','scripts/book_tool.py','build']:\n"
+                      '    os.execv(sys.executable,[sys.executable,*sys.argv[1:]])\n' + capture.split('\n', 1)[1])
+    python.chmod(0o755)
     environment = dict(os.environ)
     for name in (*EXPECTED, 'RUSTUP_TOOLCHAIN', 'RUSTUP_AUTO_INSTALL'):
         environment.pop(name, None)
@@ -265,9 +271,9 @@ with p.open('a') as f:
     rows = [json.loads(line) for line in output.read_text().splitlines()]
     assert [row['args'] for row in rows] == [
         ['build', '--target', 'wasm32-unknown-unknown', '-p', 'sc-units', '-p', 'sc-core', '-p', 'sc-measure'],
-        ['build', 'docs/book']], 'D156 WASM/book argument identity'
+        ['-I', '-B', 'scripts/book_tool.py', 'build']], 'D156 WASM/book argument identity'
     assert all(row['stores'] == wanted and row['toolchain'] == '1.99.0' for row in rows), 'D156 named toolchain preserved'
-    print('local environment: actual Make WASM/book commands and named toolchain preserved')
+    print('local environment: actual Make WASM/guarded book entry and named toolchain preserved;renderer not executed')
 
 
 def cli_controls():

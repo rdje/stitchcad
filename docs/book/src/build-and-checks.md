@@ -29,6 +29,7 @@ or child executes. This profile neither migrates nor deletes a shared cache.
 
 ```bash
 scripts/run_make.sh toolchain
+python3 -I -B scripts/book_tool.py install
 scripts/run_make.sh check
 TMPDIR=target/alternate-scratch scripts/run_make.sh probes
 RUSTUP_TOOLCHAIN=1.99.0 scripts/run_make.sh toolchain
@@ -37,7 +38,7 @@ python3 -I -B scripts/local_environment.py --inspect
 python3 -I -B scripts/local_environment.py -- cargo test -p sc-units
 ```
 
-The first setup command installs the channel selected by `rust-toolchain.toml`; a named override
+The toolchain setup command installs the channel selected by `rust-toolchain.toml`; a named override
 selects that channel instead. Setup requests the minimal profile, rustfmt, Clippy and the WASM target
 with `--no-self-update`. The existing host launcher is a read-only platform dependency. Implicit
 installation is disabled, so a missing local toolchain requires the explicit setup command.
@@ -80,8 +81,8 @@ read-only by default; their explicit live mode plans sources, child stores and t
 
 ## Commands
 
-Each target below is accepted by scripts/run_make.sh. Rustup, Python and mdBook are required
-read-only host executables; toolchains/packages and project outputs use the guarded local stores.
+Use scripts/run_make.sh;Python/Rustup are read-only host tools.
+[mdBook setup](annexes/book-search.md#guarded-local-setup).
 
 | Target | Behavior |
 | --- | --- |
@@ -90,7 +91,7 @@ read-only host executables; toolchains/packages and project outputs use the guar
 | `clippy` | All targets/features; warnings are errors |
 | `test` | All native workspace tests, including documentation tests |
 | `wasm` | Build sc-units, sc-core and sc-measure for wasm32-unknown-unknown |
-| `book` | Build the mdBook under docs/book/book/ |
+| `book` | Guarded local mdBook build; warnings refuse; output docs/book/book/ |
 | `probes` | Run every diagnostic probe suite; report any failure |
 | `gate` | Run the doctrine registry, including project checks |
 | `toolchain` | Install the selected channel/components locally without self-update |

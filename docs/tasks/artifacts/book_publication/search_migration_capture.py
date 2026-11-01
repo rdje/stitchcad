@@ -1,7 +1,7 @@
 """Capture fresh same-source native search renderings under an explicit repository-local target.
 
-Diagnostic only: the normal publisher still refuses every renderer warning. This capture retains
-the actual default warning and warning-free chapter candidate, without changing public output.
+Diagnostic only: the normal publisher still refuses every renderer warning. The section baseline
+may be warning-free after the upstream field fix; the chapter candidate must remain warning-free.
 """
 from pathlib import Path
 import argparse
@@ -43,7 +43,8 @@ def main():
     PROFILE['enter_producer'](ROOT, directories=directories, output_files=outputs, sources=sources)
     hashes = {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest() for path in inputs}
     (work / 'source-sha256.json').write_text(json.dumps(hashes, sort_keys=True, indent=2) + '\n')
-    version = subprocess.run(['mdbook', '--version'], cwd=ROOT, capture_output=True, text=True)
+    executable, _ = BOOK['renderer']()
+    version = subprocess.run([executable, '--version'], cwd=ROOT, capture_output=True, text=True)
     assert version.returncode == 0, version.stderr
     (work / 'tool-version.txt').write_text(version.stdout)
     measurements = {}
@@ -52,7 +53,7 @@ def main():
         env = dict(os.environ, MDBOOK_LOG='warn', RUST_LOG='warn',
                    MDBOOK_BUILD__CREATE_MISSING='false',
                    MDBOOK_OUTPUT__HTML__SEARCH__HEADING_SPLIT_LEVEL=str(level))
-        result = subprocess.run(['mdbook', 'build', 'docs/book', '--dest-dir', str(destination)],
+        result = subprocess.run([executable, 'build', 'docs/book', '--dest-dir', str(destination)],
                                 cwd=ROOT, env=env, capture_output=True, text=True)
         diagnostic = result.stdout + result.stderr
         (work / ('level%d.log' % level)).write_text(diagnostic)
@@ -62,7 +63,7 @@ def main():
         if level == 1:
             assert not warnings, (level, warnings)
         else:
-            assert warnings and all('search index is very large' in warning for warning in warnings), (level, warnings)
+            assert all('search index is very large' in warning for warning in warnings), (level, warnings)
         _, files = BOOK['source_tree'](destination)
         PROFILE['plan_producer'](ROOT, sources=(Path(__file__), PUBLICATION_SOURCE, *inputs, *files))
         data = BOOK['search_data'](destination)

@@ -25,7 +25,7 @@ search additions and all earlier checker/copier/mutation behavior.
 
 ## Capture a fresh comparison
 
-The diagnostic capture renders the same complete source twice:the section-level warning baseline
+The diagnostic capture renders the same complete source twice:the section-level baseline
 and the supported chapter-level candidate. It records source hashes,the actual mdBook version,
 both logs and document/JSON/script sizes. It neither replaces the public book nor edits its sources.
 Choose an unused directory under target;the following example refuses if its capture already exists.
@@ -39,21 +39,22 @@ The writer validates all original inputs and five metadata/log destinations befo
 the capture directory exclusively. A competing creator causes refusal before any metadata is
 overwritten. Existing captures are immutable inputs;select a fresh name rather than rerunning one.
 Nested paths,symlinks,foreign volumes and Git boundaries retain the shared producer guards.
-Both renderer children use prepared local stores and disable source creation. The baseline must
-emit only the expected large-index warning;the chapter candidate must emit none. A failed child,
+Both renderer children use the guarded local tool,prepare local stores and disable source creation.
+The baseline may be warning-free or emit only the expected large-index warning;the chapter candidate
+must emit none. A failed child,
 unexpected warning or changed source cannot publish successful measurements;its partial capture
 remains distinct for diagnosis.
 
 The read-only comparison requires the exact current complete source hashes,all registered
 chapters and equal stored chapter words and actual indexed terms. It reads data without executing
 search JavaScript. It supplies search-coverage evidence,not browser application or release approval.
-The focused capture watcher separately intercepts dispatch and checks five writes,six failure
+The focused capture watcher separately checks warning/warning-free section baselines,five writes,five failure
 paths,the original/fixed ownership collision,thirteen path/input refusals and nine actual body
 faults. Those simulated children do not count as native renderer evidence.
 
-## Current index warning and upstream field isolation
+## Upstream field-isolation diagnosis
 
-D372 remains open:the0813 corpus produces a12993569-byte JSON index with118 chapter records.
+The0814 D372 diagnosis measured the0813 corpus:a12993569-byte JSON index with118 chapter records.
 The body index occupies5318916 bytes and the breadcrumb index5321651 bytes,although stored
 breadcrumb text totals10580 bytes. Every body term/document pair also occurs in breadcrumbs.
 Run the read-only `python3 -I -B docs/tasks/artifacts/book_publication/search_index_census.py`
@@ -62,11 +63,11 @@ through the local producer profile to rederive the actual current sizes and cove
 The upstream [field-isolation fix](https://github.com/mattico/elasticlunr-rs/commit/b7efca70afbe7bbed0a428f8cfff2abff93270e3)
 moves token frequencies inside the field loop and adds independent field/frequency regressions.
 [Published3.1.0](https://crates.io/crates/elasticlunr-rs/3.1.0) follows that fix.
-The next owned steps build the published mdBook0.5.4 locally with that dependency,verify the actual
-renderer output,then select it explicitly. No upstream source is patched. Full text,chapter routes
+0815 built published mdBook0.5.4 locally with that dependency;0817 selects it explicitly for Make,
+publication and diagnostic capture. No upstream source is patched. Full text,chapter routes
 and unexpected-warning refusals remain required. Search ranking and reader latency are unmeasured.
-Until resolved,the historical level3/level1 capture above refuses its now-warning chapter candidate;
-that refusal is diagnostic evidence,not a successful migration or permission to ignore warnings.
+The old ambient renderer remains a diagnostic baseline;normal builds never select it. Actual query
+verification remains separately owned after activation. No warning is hidden or reclassified.
 
 ## Isolated renderer checkpoint
 
@@ -89,8 +90,8 @@ target/cargo-home/bin/mdbook path;symlink,foreign-volume and nested-repository i
 The isolated same-source118-chapter candidate has a7712945-byte payload and no renderer warnings.
 Stored document fields,chapter URLs,search/display options and per-chapter stored words/indexed
 term sets match the baseline exactly. Breadcrumb postings shrink to36944 bytes;field membership
-and frequencies intentionally change to the upstream-corrected values. This is tool-build evidence:
-normal build/publication activation and actual query verification remain the next owned steps.
+and frequencies intentionally change to the upstream-corrected values. This is tool-build evidence;
+actual query verification remains separately owned after0817 activation.
 
 ## Guarded local setup
 
@@ -106,8 +107,10 @@ An existing same-version binary must pass that probe too. If it retains the olde
 `python3 -I -B scripts/book_tool.py install --force` rebuilds only the project-local executable.
 Every tool/metadata destination is planned before installation;aliased or hard-linked metadata
 and unsafe tool paths refuse before Cargo dispatch. Missing tools refuse before version dispatch.
-The selector API returns the guarded explicit executable;normal build/publication/capture routing
-is the following activation slice. Host executables and shared caches receive no writes.
+The selector API returns the guarded explicit executable used by Make,publication and capture.
+Selector/profile/binary hashes join complete build inputs;missing or unsafe tools refuse before
+output preparation. `make book` publishes through the existing private renderer/warning boundary.
+Host executables and shared caches receive no writes.
 
 The environment probe suite watches four pre-dispatch path refusals and two exact argument/status
 controls in book_tool_contract.py. Its fake children provide path/dispatch evidence;the native

@@ -6,8 +6,9 @@ Build the book and check navigation, current API/status and copied-fixture refus
 python3 -I -B docs/tasks/artifacts/book_publication/book_publication.py
 ```
 
-Output stays at `docs/book/book/`; this entry owns guarded rendering. Shell/platform audit remains
-`G1-SLICE.5b.4c.h2.b.s`, D156 other producers. Raw Make and `docs/book/book.toml` interfaces remain.
+Output stays at `docs/book/book/`; this entry and `make book` use guarded rendering. Install the
+published local tool with `python3 -I -B scripts/book_tool.py install` first. Shell/platform audit
+remains `G1-SLICE.5b.4c.h2.b.s`, D156 other producers;the book.toml interface remains.
 
 ## Before the renderer starts
 
@@ -36,7 +37,9 @@ cross-volume entries, nested Git markers and hard-linked output files refuse. A 
 index query refuses tracked data in that tree, including when the caller supplies another Git
 directory/index through environment variables. Child Git context is bound to this checkout;
 system/global Git configuration is excluded and optional index locks are disabled. The parent
-environment keeps its caller values. Git and mdBook are read-only host executable dependencies.
+environment keeps its caller values. Git is a read-only host dependency;the renderer is the explicit
+project-local target/cargo-home/bin/mdbook. The selector,profile and binary are validated and hashed
+with the complete build inputs before producing;missing or unsafe tool inputs refuse.
 
 ## Private rendering and public replacement
 
@@ -45,7 +48,7 @@ The child receives prepared repository-local Cargo, Rustup, build and scratch st
 store choices and unrelated variables survive. It runs the existing argument vector and book root:
 
 ```text
-mdbook build docs/book
+target/cargo-home/bin/mdbook build docs/book
 ```
 
 Only the child's configuration redirects output to the private root and disables creation of
@@ -64,6 +67,13 @@ are validated before replacement. Source snapshots cover directory topology as w
 This is renderer validation. The subsequent publication check verifies chapter/index coverage,
 learning order, source/rendered links and anchors, and the scoped status map. Numerical, sewing,
 runtime and approval correctness remain with their canonical contracts and later gates.
+
+D377 reconciles the checker with the registered glossary/topic-index routes after their optional
+standalone headings retired in0788/0801. The glossary must follow the seven learning chapters and
+precede annexes;the topic index must be the final chapter after annexes. Specification routes stay
+inside that annex boundary. All chapter/link/index coverage checks and the120-line SUMMARY limit
+remain. Focused controls accept current/historical headings and reject eight missing/misplaced
+route/part cases;historical AST checks preserve all other checker behavior exactly.
 
 Fixtures validate complete copied populations before creation and teardown before recursive deletion,
 also on exceptions. Mutations declare writable files first. Pure `check`/`rows`/`formula_scope` calls

@@ -423,6 +423,23 @@ def original_body_controls(script=None):
     remove_exact(function(current, 'main'), final_print, 'publication approved search count changed')
     function(current, 'main').body.append(function(old, 'main').body[-1])
 
+    # D377 preserves actual glossary/index routes after their standalone headings retired in0788/0801.
+    # Normalize only the exact navigation call and index boundary; remaining checker AST stays exact.
+    current_check = function(current, 'check')
+    navigation_call = ast.parse('navigation_parts(summary, registered)').body[0]
+    positions = [index for index, node in enumerate(current_check.body) if dump(node) == dump(navigation_call)]
+    assert len(positions) == 1, 'publication glossary navigation call changed'
+    old_parts = [node for node in function(old, 'check').body if isinstance(node, ast.For) and
+                 isinstance(node.target, ast.Name) and node.target.id == 'part']
+    assert len(old_parts) == 1
+    current_check.body[positions[0]] = old_parts[0]
+    index_assignment = ast.parse('index_start = summary.index("](topic-index.md)")').body[0]
+    positions = [index for index, node in enumerate(current_check.body) if dump(node) == dump(index_assignment)]
+    old_index = [node for node in function(old, 'check').body if isinstance(node, ast.Assign) and
+                 any(isinstance(target, ast.Name) and target.id == 'index_start' for target in node.targets)]
+    assert len(positions) == len(old_index) == 1, 'publication topic-index boundary changed'
+    current_check.body[positions[0]] = old_index[0]
+
     copied = function(current, 'fixture')
     loops = [node for node in copied.body if isinstance(node, ast.For) and
              dump(node.iter) == dump(ast.parse('[*(root / HTML).rglob("*.html"), *(root / HTML).glob("searchindex-*.js")]', mode='eval').body)]
@@ -459,7 +476,7 @@ def original_body_controls(script=None):
     assert len(original_prints) == len(positions) == 1, 'publication named result summary changed'
     main.body[positions[0]] = original_prints[0]
     added = {'load_profile', 'source_tree', 'fixture_plan', 'fixture_effect', 'mutation_plan', 'mutation_target',
-             'temporary_root', 'build_inputs', 'publication_environment', 'publication_plan', 'build', 'main_inputs'}
+             'temporary_root', 'renderer', 'navigation_parts', 'build_inputs', 'publication_environment', 'publication_plan', 'build', 'main_inputs'}
 
     class Project(ast.NodeTransformer):
         def visit_FunctionDef(self, node):
@@ -505,6 +522,32 @@ def original_body_controls(script=None):
 
     assert ast.dump(Project().visit(current), include_attributes=False) == ast.dump(Project().visit(old), include_attributes=False), 'publication original whole AST changed'
     print('publication original AST: exact approved search/named-result additions and copied baseline/complete rendered iterator; remaining original pure/copier/mutation/main semantics exact through declared guards/owned temporary context')
+
+
+def navigation_controls():
+    ns = module()
+    summary = (ROOT / 'docs/book/src/SUMMARY.md').read_text()
+    entry = '- [Glossary](spec/glossary.md)\n'
+    index = '- [Topic index](topic-index.md)\n'
+    assert summary.count(entry) == summary.count(index) == 1 and '# Glossary' not in summary and '# Index' not in summary
+    for text in (summary, summary.replace(entry, '# Glossary\n' + entry, 1).replace(index, '# Index\n' + index, 1)):
+        ns['navigation_parts'](text, ns['chapters'](text))
+    cases = [(summary.replace(entry, '', 1), 'GLOSSARY_ORDER'),
+             (summary.replace(entry, '', 1) + entry, 'GLOSSARY_ORDER'),
+             (summary.replace('# Annexes — detailed contracts\n', '', 1).replace(entry, '# Annexes\n' + entry, 1), 'GLOSSARY_ORDER'),
+             (summary.replace(index, '', 1), 'INDEX_ORDER'),
+             (summary.replace(index, '', 1).replace('- [Build and check the project]', index + '- [Build and check the project]', 1), 'INDEX_ORDER'),
+             (summary.replace('# Annexes — detailed contracts\n', '', 1) + '# Annexes\n', 'INDEX_ORDER')]
+    cases += [(summary.replace(part, 'retired part', 1), 'PUBLICATION_PART')
+              for part in ('# Learning path', '# Annexes')]
+    for text, code in cases:
+        try:
+            ns['navigation_parts'](text, ns['chapters'](text))
+        except ns['PublicationError'] as error:
+            assert str(error).startswith(code + ':')
+        else:
+            raise AssertionError('publication accepted broken glossary/part navigation')
+    print('publication navigation:2 current/historical positives;8 missing/misplaced route/part refusals;source unchanged;rc=0')
 
 
 def preservation_controls():
@@ -725,6 +768,7 @@ if __name__ == '__main__':
         omission_controls(root)
         physical_controls()
         borrowed_controls(root)
+        navigation_controls()
         original_body_controls()
         preservation_controls()
         continuity_controls()

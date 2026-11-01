@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — guarded published renderer setup
+## _(2026-11-01 UTC)_ — local renderer selected in normal publication
 
-0816 book_tool.py plans local install metadata/binary inputs before Cargo/version dispatch;every same-version install still receives native field proof0.
-Four path refusals/two exact argv-status controls pass0 with simulated children;actual idempotent install/version/native probe0. Normal routing follows separately.
-D376:source census red2 caught four omitted new-tool entries,including0814/0815;all classified with D156 residuals,complete369-entry census0;runner watcher wired.
-Promotion declined: existing local/public tool policy;no full locality signoff. 991 Git/public exact0;archive1445/78,per-generation21/64 and57/64;G1still6/18.
+0817 Make/publication/capture bind local tool/selector/profile hashes before output;native1093→118 records/118 chapters keep85068 words/72522 terms exact0.
+Both indexes warning-free;chapter payload7729123B,123 inputs unchanged. Native malformed generic refuses/preserves old bytes;quoted repair0;query proof remains .verify.
+D377 traced headings retired0788/0801;actual glossary/index routes now guarded with2 positives/8 refusals and exact remaining AST0;publication118/374/1805/3385 passes0.
+Promotion declined: existing renderer/navigation policy;focused builder19/capture9 reds,tool4/2/Make/search5 pass0;992 Git/public exact0,archive1446/79,per-generation21/64 and58/64;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

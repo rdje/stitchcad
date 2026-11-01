@@ -17,7 +17,8 @@ PROFILE = runpy.run_path(str(PROFILE_SOURCE))
 CORE = (Path(__file__), ENTRY, PUBLICATION, PROFILE_SOURCE)
 WORK = ROOT / 'target/search-capture-controls' / str(os.getpid())
 PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(WORK,))
-INPUTS = (ROOT / 'docs/book/book.toml', *sorted(path for path in (ROOT / 'docs/book/src').rglob('*') if path.is_file()))
+INPUTS = (ROOT / 'docs/book/book.toml', *sorted(path for path in (ROOT / 'docs/book/src').rglob('*') if path.is_file()),
+          ROOT / 'scripts/book_tool.py', PROFILE_SOURCE, ROOT / 'target/cargo-home/bin/mdbook')
 PROFILE['plan_producer'](ROOT, sources=(*CORE, *INPUTS))
 FROZEN = {path: path.read_bytes() for path in (*CORE, *INPUTS)}
 
@@ -95,11 +96,11 @@ def capture(label, script=None, *, outcome='success'):
         assert environment['SEARCH_CAPTURE_CALLER'] == 'retained'
         children.append(command)
         if len(children) == 1:
-            assert command == ['mdbook', '--version']
+            assert command == [str(ROOT / 'target/cargo-home/bin/mdbook'), '--version']
             return subprocess.CompletedProcess(command, 1 if outcome == 'version-failure' else 0, 'mdbook controlled\n', '')
         level = (3, 1)[len(children) - 2]
         destination = work / ('level%d' % level)
-        assert command == ['mdbook', 'build', 'docs/book', '--dest-dir', str(destination)]
+        assert command == [str(ROOT / 'target/cargo-home/bin/mdbook'), 'build', 'docs/book', '--dest-dir', str(destination)]
         assert environment['MDBOOK_LOG'] == environment['RUST_LOG'] == 'warn'
         assert environment['MDBOOK_OUTPUT__HTML__SEARCH__HEADING_SPLIT_LEVEL'] == str(level)
         assert environment.get('MDBOOK_BUILD__CREATE_MISSING') == 'false', 'search capture source creation enabled'
@@ -114,7 +115,7 @@ def capture(label, script=None, *, outcome='success'):
             warning = ' WARN unrelated warning\n'
         if outcome == 'candidate-warning' and level == 1:
             warning = ' WARN search index is very large\n'
-        if outcome == 'missing-warning' and level == 3:
+        if outcome == 'warning-free-section' and level == 3:
             warning = ''
         return subprocess.CompletedProcess(command, 1 if outcome == 'build-failure' else 0, '', warning)
 
@@ -126,7 +127,7 @@ def capture(label, script=None, *, outcome='success'):
             try:
                 ns['main']()
             except AssertionError as error:
-                if outcome == 'success':
+                if outcome in ('success', 'warning-free-section'):
                     raise
                 if outcome == 'source-change':
                     assert error.args == ('native source bytes changed',), error
@@ -140,8 +141,8 @@ def capture(label, script=None, *, outcome='success'):
                     else:
                         assert isinstance(detail[1], list)
             else:
-                assert outcome == 'success', 'search capture accepted controlled ' + outcome
-        if outcome == 'success':
+                assert outcome in ('success', 'warning-free-section'), 'search capture accepted controlled ' + outcome
+        if outcome in ('success', 'warning-free-section'):
             assert len(children) == 3 and writes == [work / name for name in (
                 'source-sha256.json', 'tool-version.txt', 'level3.log', 'level1.log', 'measurements.json')]
             assert created == [work], 'search capture exclusive reservation omitted'
@@ -339,7 +340,8 @@ def faults():
 
 def main():
     capture('complete')
-    for outcome in ('version-failure', 'build-failure', 'unexpected-warning', 'candidate-warning', 'missing-warning', 'source-change'):
+    capture('warning-free-section', outcome='warning-free-section')
+    for outcome in ('version-failure', 'build-failure', 'unexpected-warning', 'candidate-warning', 'source-change'):
         capture(outcome, outcome=outcome)
     git_environment = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
     git_environment.update(GIT_OPTIONAL_LOCKS='0', GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull)
@@ -349,7 +351,7 @@ def main():
     collision(ENTRY.read_text(), 'fixed-collision')
     rejected, inputs, mutations = refusals(), input_refusals(), faults()
     assert all(path.read_bytes() == data for path, data in FROZEN.items())
-    print('search capture controls: complete intercepted dispatch/5 writes;6 failure paths;original/fixed collision;'
+    print('search capture controls: warning/warning-free section baselines/5 writes;5 failure paths;original/fixed collision;'
           f'{rejected} physical/CLI and{inputs} input refusals;{mutations} actual body faults;'
           'original inputs/caller environment exact;native evidence separate;rc=0')
 
