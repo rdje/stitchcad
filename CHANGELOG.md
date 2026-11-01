@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0764 — bind exact held Piece occurrences
+## STITCHCAD-G1-0765 — declare complete truing contours
 
-- Complete output/hole/occurrence quotas precede original field scans;no allocation or filtered counts.
-- Borrow every boundary/hole/construction/fold field in original/reverse order,including repeated uses.
-- Literal-source refusal keeps whole parents and makes no currentness/global-absence claim.
-- Source3/prior7/API4/book3,strict selected lint/format and focused render pass0;whole0763 scope939 exact.
+- Bound whole inputs,generated uses and additional workspace before scans/allocation.
+- Replace every literal source occurrence in exact source order,composing explicit directions with traversal.
+- Preserve unaffected fields,holes/order/repeated construction;explicit preservation keeps all contours.
+- Contour4/prior6/API4/book4,strict selected lint/format and focused render pass0;whole0764 scope940 exact.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -52,6 +52,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+[Whole0764 Piece-source task,lesson and ledger](docs/history/stitchcad-devnotes-part940.md) retain exact source bytes.
 
 [Whole0763 tracking task,lesson and ledger](docs/history/stitchcad-devnotes-part939.md) retain exact source bytes.
 

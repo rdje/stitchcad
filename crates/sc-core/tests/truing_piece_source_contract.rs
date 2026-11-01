@@ -1,15 +1,12 @@
 //! Exact held Piece fields and complete quotas;no source-resolution or geometry certificate.
 #![allow(clippy::expect_used)]
-#[path = "support/truing_outside.rs"]
-mod common;
+#[path = "support/truing_piece.rs"]
+mod fixture;
 use common::{
-    domain::{
-        q,
-        roles::copies::{id, sources},
-        with_domain_inventory,
-    },
+    domain::{q, roles::copies::id, with_domain_inventory},
     with_bound_outside, with_outside,
 };
+use fixture::{common, rich};
 use sc_core::{construction::*, ontology::*};
 
 fn outside(intent: TruingOutcomeIntent) -> TruingOutsideRoles {
@@ -41,52 +38,6 @@ fn directions(outside: &AdmittedTruingOutsideRoles<'_>) -> TruingDirectionManife
             .collect(),
     )
 }
-fn rich(f: &mut sources::Fixture, side: SeamSideId, exact: bool) -> Vec<Piece> {
-    let mut ids = DeterministicIdGenerator::from_start(10);
-    let [outer, hole_a, hole_b, replacement]: [EdgeRef; 4] = f
-        .ledger
-        .declare_edges(&mut ids, 4)
-        .expect("new actual source edges")
-        .try_into()
-        .expect("four exact source edges");
-    let original = match side {
-        SeamSideId::A => sources::first_span(&f.graph).definition().a.range.edge(),
-        SeamSideId::B => sources::first_span(&f.graph).definition().b.range.edge(),
-    };
-    let target = if exact { original } else { replacement };
-    let directed = |edge, direction| DirectedEdge { edge, direction };
-    f.pieces
-        .iter()
-        .map(|p| {
-            if p.id()
-                != if side == SeamSideId::A {
-                    id(100)
-                } else {
-                    id(101)
-                }
-            {
-                return p.clone();
-            }
-            let mut d = p.definition().clone();
-            d.boundary = vec![
-                directed(outer, Direction::Original),
-                directed(target, Direction::Reversed),
-            ];
-            d.holes = vec![
-                vec![directed(hole_a, Direction::Reversed)],
-                vec![directed(hole_b, Direction::Original)],
-            ];
-            d.construction_lines = vec![
-                directed(target, Direction::Original),
-                directed(outer, Direction::Reversed),
-                directed(target, Direction::Reversed),
-            ];
-            d.cut_on_fold = true;
-            d.fold_edges = vec![target];
-            Piece::new(d, &f.ledger).expect("structural rich independently supplied Piece")
-        })
-        .collect()
-}
 #[test]
 fn every_original_field_and_repeated_use_remains_borrowed_in_forward_and_reverse_order() {
     use TruingPieceOccurrenceLocation as L;
@@ -99,7 +50,7 @@ fn every_original_field_and_repeated_use_remains_borrowed_in_forward_and_reverse
                 side,
                 q(1, 4),
                 q(3, 4),
-                |f| rich(f, side, true),
+                |f| rich(f, side, true, false),
                 |roles| {
                     with_bound_outside(roles, intent, outside(intent), |outside| {
                         let raw = directions(&outside);
@@ -216,7 +167,7 @@ fn complete_unrelated_populations_precede_literal_membership_and_errors_retain_w
             SeamSideId::B,
             q(1, 4),
             q(3, 4),
-            |f| rich(f, SeamSideId::B, exact),
+            |f| rich(f, SeamSideId::B, exact, false),
             |roles| {
                 with_bound_outside(
                     roles,

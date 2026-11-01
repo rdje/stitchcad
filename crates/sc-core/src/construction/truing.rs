@@ -29,6 +29,11 @@ pub use outcome::{
     RequiredTruingOutcome, TruingOutcomeError, TruingOutcomeIntent, TruingOutcomeRefusal,
 };
 mod binding;
+mod contours;
+pub use contours::{
+    TruingContourError, TruingContourLimits, TruingContourRefusal, TruingPieceContours,
+    TruingPlacedContourEdge,
+};
 mod piece_source;
 pub use piece_source::{
     BoundExactTruingPieceSource, TruingPieceOccurrence, TruingPieceOccurrenceField,

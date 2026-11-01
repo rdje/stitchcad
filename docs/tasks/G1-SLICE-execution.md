@@ -829,29 +829,26 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:complete original occurrence/fold replacement plan using explicit output directions and source order.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.source`
   Status: `done`
-  Goal:bounded exact-held Piece occurrence admission from authentic output directions;whole T/H/R
-  bounds precede field scans;retain actual fields/order without current-resolution or geometry claims.
-  - [x] ISSUE:ontology Piece contours are whole DirectedEdges;existing directions give output
-    attribution but no bounded original boundary/hole/construction/fold occurrence owner.
-  - [x] ROOT CAUSE:sed/rg ontology/piece.rs constructor and truing/directions.rs shows separate
-    fold_edges,whole held fields and complete output parents;cargo test --test truing_piece_source_contract passes3/0 after implementation.
-  - [x] FIX:admit_exact_piece_source checks T/H/checked R before field scans,lends actual whole
-    Piece and every original field/order;NoExactOccurrence is a scoped literal refusal only.
-  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    truing_piece_source_contract passes3/0;both sides/outcomes,rich holes/repeats/fold,whole quotas,
-    exact original borrows/reverse and different same-id held source;rc=0.
-  - [x] NO REGRESSION:cargo test -p sc-core --test truing_direction_contract --test truing_source_domain_contract passes7/0;rc=0. Strict selected Clippy/format rc=0;
-    piece_source API compile-fail4 and whole-Piece book3 pass0;book build/render pass0.
-    Initial fixture generator reuse and test indexing lint fixed;final checks0. D372 remains owned.
-    Commit hook catches evidence-token/live-summary/aggregate bounds;condensed six closed parent
-    narratives byte-exact into939,retaining every live id/status and complete prior scope.
-  - [x] LOCKSTEP:book/live frontier/pointer/journals aligned;prior0763 whole scope retained939
-    exact;archive verify1393/61 passes0. Actual currentness/geometry/fit/broad integration deferred.
-  Commit:STITCHCAD-G1-0764;promotion: declined (existing original-source contract).
+  Goal:0764 exact held Piece occurrences;[whole scope/proofs](../history/stitchcad-devnotes-part940.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.generate`
-  Status: `pending`
-  Goal:bounded complete contour replacement from exact source-order partition and explicit
-  parameter orientations;preserve unaffected fields/order and compose original traversal.
+  Status: `done`
+  Goal:bounded complete contour replacement with exact source ordering/explicit directions;
+  preserve unaffected fields/order and compose every original traversal/repeated use.
+  - [x] ISSUE:exact Piece source admission supplies actual fields but no replacement plan;
+    partial selected domains need all outside/selected fragments in each containing whole-edge use.
+  - [x] ROOT CAUSE:sed truing/piece_source.rs and directions.rs shows actual occurrence/output
+    parents;cargo test -p sc-core --test truing_contour_contract passes4/0,rc=0 after new plan.
+  - [x] FIX:declare_contours bounds whole T/H/R and checked G/T+G before scans/allocation;
+    complete exact source ordering composes original traversal;preservation keeps actual fields.
+  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    truing_contour_contract passes4/0;both sides,boundary/hole/repeats,mixed directions,all four
+    domain endpoint cases,full quota precedence and original attribution;rc=0.
+  - [x] NO REGRESSION:cargo test -p sc-core --test truing_piece_source_contract --test
+    truing_direction_contract passes6/0;rc=0. Strict selected Clippy/format rc=0;contour API4/book4
+    pass0;book build/focused rendered counts/reversal/API rc=0. D372 remains owned.
+  - [x] LOCKSTEP:book/live pointer/frontier/journals aligned;prior0764 whole scope retained940
+    exact;archive1394/62 rc=0. Fold/lineage and actual geometry/currentness/fit/effects remain owned.
+  Commit:STITCHCAD-G1-0765;promotion: declined (existing whole-Piece contour contract).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.piece.contours.placement.fold`
   Status: `pending`
   Goal:explicit original/derived/no-fold attribution consistent with source cutting state and

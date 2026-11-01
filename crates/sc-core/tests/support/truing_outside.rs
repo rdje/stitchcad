@@ -31,9 +31,24 @@ pub fn with_bound_outside(
     raw: TruingOutsideRoles,
     run: impl FnOnce(AdmittedTruingOutsideRoles<'_>),
 ) {
+    with_partitioned_outside(original, intent, raw, None, run);
+}
+pub fn with_partitioned_outside(
+    original: BoundTruingEdgeRoles<'_>,
+    intent: TruingOutcomeIntent,
+    raw: TruingOutsideRoles,
+    split: Option<Param>,
+    run: impl FnOnce(AdmittedTruingOutsideRoles<'_>),
+) {
+    let mut definitions = vec![(9, "refit"), (2, "prefix"), (5, "suffix"), (7, "inactive")];
+    let mut active = vec![LocalTag::new(5), LocalTag::new(9), LocalTag::new(2)];
+    if split.is_some() {
+        definitions.push((11, "refit_second"));
+        active.push(LocalTag::new(11));
+    }
     let catalogue = EdgeOutputRoleCatalog::new(
         id(1000),
-        [(9, "refit"), (2, "prefix"), (5, "suffix"), (7, "inactive")]
+        definitions
             .into_iter()
             .map(|(tag, key)| {
                 EdgeOutputRoleDefinition::new(
@@ -42,9 +57,13 @@ pub fn with_bound_outside(
                 )
             })
             .collect(),
-        vec![LocalTag::new(5), LocalTag::new(9), LocalTag::new(2)],
+        active,
     );
-    let cat_limits = EdgeOutputRoleCatalogLimits::new(4, 3, 25);
+    let cat_limits = if split.is_some() {
+        EdgeOutputRoleCatalogLimits::new(5, 4, 37)
+    } else {
+        EdgeOutputRoleCatalogLimits::new(4, 3, 25)
+    };
     let catalog = catalogue
         .admit(cat_limits)
         .expect("complete original metadata");
@@ -53,10 +72,23 @@ pub fn with_bound_outside(
         .bind_edge_roles(&catalog, cat_limits)
         .expect("actual original parents");
     let candidates = if intent == TruingOutcomeIntent::Refit {
-        vec![TruingEdgeCandidate::new(
-            LocalTag::new(9),
-            roles.copies().source().source_side().range,
-        )]
+        let range = roles.copies().source().source_side().range;
+        if let Some(split) = split {
+            vec![
+                TruingEdgeCandidate::new(
+                    LocalTag::new(11),
+                    EdgeRange::new(range.edge(), split, range.to())
+                        .expect("second original interval"),
+                ),
+                TruingEdgeCandidate::new(
+                    LocalTag::new(9),
+                    EdgeRange::new(range.edge(), range.from(), split)
+                        .expect("first original interval"),
+                ),
+            ]
+        } else {
+            vec![TruingEdgeCandidate::new(LocalTag::new(9), range)]
+        }
     } else {
         vec![]
     };

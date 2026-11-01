@@ -168,6 +168,62 @@ Its `edge()` lends the actual original field. This field enum alone is not a who
 Errors retain the complete original directions,selected Piece,policy and first quota/overflow or
 literal-membership cause;no partial occurrence admission escapes.
 
-This step supplies original placement inputs. Complete replacement contours,explicit fold choice,
-whole-edge lineage,currentness,mapped geometry,endpoint/stop fit,all-copy effects,authority and
-atomic publication remain required by their separate declaration/execution owners.
+This step supplies original placement inputs. The following contour declaration uses them;
+explicit fold choice,whole-edge lineage,currentness,mapped geometry,endpoint/stop fit,all-copy
+effects,authority and atomic publication retain their separate declaration/execution owners.
+
+## Declare complete replacement contours
+
+`BoundExactTruingPieceSource::declare_contours` declares every boundary,hole and construction
+use. The caller supplies `TruingContourLimits::new(T,H,R,G,W)`,with no defaults or truncation.
+T counts every selected/outside output,H every original hole header,and R every original contour
+and separate fold field. Let C be original contour uses and K literal selected-edge contour uses.
+For `Refit`,G is C−K+K×T. For `PreserveSource`,G is C. W is checked T+G additional logical entries:
+one temporary source-order index and the complete generated association collection.
+
+```rust
+use sc_core::construction::*;
+fn contours<'a>(source:&'a BoundExactTruingPieceSource<'a>)
+    ->Result<TruingPieceContours<'a>,TruingContourError<'a>> {
+    source.declare_contours(TruingContourLimits::new(4,2,8,16,20))
+}
+```
+
+Whole T,H and R quotas precede checked G/W arithmetic. Whole G then W quotas precede all
+individual field scans,sorting or allocation. For C7,K3,T4,the complete generated count is16
+and additional workspace20. G15 refuses `GeneratedOccurrences`;G16/W19 refuses `Workspace`.
+R includes a separate fold field even though G contains only contour uses. Bounds count logical
+entries,not bytes,allocator capacity,earlier parent storage or geometry work.
+
+For refitting,the actual complete selected/outside outputs are sorted by their attributed
+ascending source bounds. Earlier coverage and outside admission already require their complete
+whole-edge partition. Raw declaration order and tag order never choose placement. Each literal
+source use is replaced by that complete sequence. Every unaffected use remains exact,in place.
+Boundary order,hole order and construction order are preserved;no closing-edge duplication is added.
+
+Suppose source-order roles are prefix2,selected9,selected11,suffix5,with requested parameter
+directions reverse,same,reverse,same. An original forward use becomes
+`2 reversed,9 original,11 reversed,5 original`. An original reversed use becomes
+`5 reversed,11 original,9 reversed,2 original`:both sequence and traversal compose with the
+original use. Repeated construction uses each receive the complete sequence. A source in a hole
+replaces that hole's occurrence;unrelated outer/hole fields remain exact. Whole-domain refits have
+no outside roles;domains touching one endpoint include only the positive opposite outside portion.
+
+For preservation,T is0 and every original directed contour field remains unchanged,including
+its original direction and repeated uses. A seven-use source therefore has G7/W7. No new-output
+direction,identity,fold axis or no-op certificate is inferred from that empty output collection.
+
+`TruingPieceContours` retains actual `source()` and `directions()`,original `limits()`,checked
+`workspace_bound()`,complete `occurrence_count()` and original `hole_count()`. `occurrences()`
+lends all generated boundary,hole and construction uses in order and reverse. Each authentic
+`TruingPlacedContourEdge` retains its whole `context()`,global `index()`,generated `location()`,
+actual original `original()` field and complete `directed()` declaration. `output()` is the actual
+explicit direction/source member for a derived use,or `None` for an unchanged original use.
+No standalone tag or independently authored parent can substitute for this attribution.
+
+Work is O(T log(T+2)+H+R+G),with at most W additional logical entries. Errors retain the whole
+original source,policy and first complete quota or checked-count cause;no partial plan escapes.
+All original inputs and non-contour Piece metadata remain unchanged and available through
+`source().piece()`. These logical edge tuples remain unissued. The result is a contour declaration;
+explicit fold reconciliation,lineage,current history,canonical Piece birth,geometry,fit,effects,
+authority and atomic publication remain separate requirements.
