@@ -14,6 +14,12 @@ pub use connectivity::{
     JoinCutConnectivityError, JoinCutConnectivityLimits, JoinCutConnectivityRefusal,
     RequiredJoinCutConnectivity,
 };
+mod construction_uses;
+pub use construction_uses::{
+    DeclaredJoinConstructionUses, JoinConstructionManifest, JoinConstructionUse,
+    JoinConstructionUseError, JoinConstructionUseLimits, JoinConstructionUseRefusal,
+    JoinPlacedConstructionUse,
+};
 mod cut_contours;
 pub use cut_contours::{
     DeclaredJoinCutContours, JoinCutContourError, JoinCutContourLimits, JoinCutContourManifest,

@@ -152,3 +152,35 @@ pub fn with_custom_directions(options: BankFixture, run: impl FnOnce(AdmittedJoi
         run(directions);
     });
 }
+
+/// Actual complete cut-use/path parents for proposed noncut construction declarations.
+pub fn with_connectivity(extra: bool, run: impl FnOnce(RequiredJoinCutConnectivity<'_>)) {
+    with_directions(extra, |directions| {
+        let make = |tag, direction| JoinCutContourUse::new(LocalTag::new(tag), direction);
+        let (boundary, holes) = if extra {
+            (
+                vec![make(9, Direction::Reversed), make(8, Direction::Original)],
+                vec![
+                    vec![make(10, Direction::Original)],
+                    vec![make(2, Direction::Reversed)],
+                ],
+            )
+        } else {
+            (
+                vec![make(9, Direction::Original), make(2, Direction::Reversed)],
+                vec![],
+            )
+        };
+        let h = holes.len();
+        let u = boundary.len() + holes.iter().map(Vec::len).sum::<usize>();
+        let raw = JoinCutContourManifest::new(id(1000), boundary, holes);
+        let n = directions.coverage().edges().edge_count();
+        let contours = raw
+            .admit(&directions, JoinCutContourLimits::new(n, h, u, 2 * u + h))
+            .expect("actual complete cut-use declarations");
+        let path = contours
+            .require_cut_connectivity(JoinCutConnectivityLimits::new(h, u))
+            .expect("required original cut-source path");
+        run(path);
+    });
+}

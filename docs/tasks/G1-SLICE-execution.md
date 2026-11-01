@@ -851,35 +851,59 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.loops`
   Status: `done`
   Goal:0785 complete cut-use declarations;[whole scope/proofs](../history/stitchcad-devnotes-part961.md).
-### G1-SLICE.5f.1.c.join.outputs.contours.topology.connectivity
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.connectivity`
   Status: `done`
-  Goal:required original source-loop/fragment adjacency and actual seam endpoint-pair gluing,
-  including loop closure,under authored parameter/traversal requests;not achieved geometry.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_cut_connectivity_contract --test join_cut_contour_contract`
-    through `scripts/local_environment.py`:connectivity4/prior cut use4 pass,rc=0. Same/Opposite,mixed
-    original/parameter/traversal direction,partial/interior fragments,unrelated holes and byte-equal
-    A/B Piece edge fields retain distinct original source-loop identities;wrong order/direction refuses.
-  - [x] ADDRESSED: same native4+4 pass,rc=0;whole H/U precedes all port reads. Original cyclic0/1
-    vertices and exact interior field/Param ports use actual two required splice links,not coordinates.
-    `cargo test -p sc-core --lib two_link_equivalence_matches_independent_reachability` through launcher:
-    independent reachability unit1 pass,rc=0;selected library/integration strict clippy rc=0.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join::connectivity` through launcher:
-    compiler3 pass,rc=0;`cargo test -p sc-core --doc construction::join_examples`:9 pass,rc=0;
-    `cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered source-role/gluing/invariant/
-    actual-geometry boundaries present.961 three Git spans/body/public bytes exact;
-    `history_archive.py --root . verify`:1415 logical/48 working,rc=0. Full geometry/integration remains
-    .5f.4.geometry/.5g/pre-push;noncut/copy/consumer/classification proofs remain explicitly owned.
-  Success/error retain actual cut-use/direction/source parents and original policy;Adjacency lends
-  actual first preceding/next views,quota causes neither. No native source/view invariant failed.
-  O(H+U+1),constant four bank ports/cursor,no heap index,source scan,registry/provider or geometry.
-  Complete original resources remain required;actual coincidence/CCW/simple/contained holes stay G2/G3.
-  Commit:STITCHCAD-G1-0786. promotion: declined (existing held-source/path versus geometry boundary).
+  Goal:0786 required cut paths;[whole scope/proofs](../history/stitchcad-devnotes-part962.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut`
-  Status: `pending`
+  Status: `in_progress`
   Goal:complete original construction/fold use reconciliation with explicit retained/removed/derived
   requirements after cut declarations;no silent source fields discarded by cut-only membership.
   Canonical cut/fold/print .metadata.cut and mark/consumer .metadata.marks remain distinct obligations.
+### G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.uses
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.uses`
+  Status: `done`
+  Goal:explicit ordered proposed construction occurrences,including repeated cut/noncut roles;
+  complete original-source/fold/consumer reconciliation remains separately mandatory below.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_construction_use_contract --test join_cut_connectivity_contract`
+    through `scripts/local_environment.py`:construction4/prior connectivity4 pass,rc=0. Complete N/U/U
+    before owner/unknown fields;repetition,cut/noncut reuse,active-but-absent and explicit empty cases.
+  - [x] ADDRESSED: same native4+4 pass,rc=0;actual original occurrence/traversal/direction/source and
+    whole parent pointers retained. `cargo test -p sc-core --doc construction::join::construction_uses`
+    through launcher:compiler5 pass,rc=0;selected strict clippy rc=0. Filtered repeated-tag views scan
+    all U without another index and retain both orders. Raw input storage remains separate.
+  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_examples` through launcher:
+    book10 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered repeated/
+    empty proposal versus source reconciliation boundaries present.962 three Git spans/body/public
+    bytes exact;`history_archive.py --root . verify`:1416 logical/49 working,rc=0. Full geometry/
+    integration remains .5f.4.geometry/.5g/pre-push;source actions/fold/copies/consumers stay open.
+  Initial strict lint exposed implied Iterator supertrait on the DoubleEndedIterator view;remove
+  the redundant bound,then final native/lint/compiler/book checks above pass. No lint allowance.
+  O(U log(N+2)+1),U new associations;no source/key scan,registry/provider/geometry or issuance.
+  This declares proposed result data,not accepted source omission/no-op or complete noncut semantics.
+  Commit:STITCHCAD-G1-0787. promotion: declined (existing explicit construction/geometry boundary).
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources`
+  Status: `pending`
+  Goal:explicit complete original A/B construction-field retention/omission/mapping reconciliation
+  against proposed result uses,including repeated source fields,whole ranges,multiplicity,visible
+  repair/evidence requirements. An explicit result-use list alone cannot justify source content loss.
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.actions`
+  Status: `pending`
+  Goal:complete explicit retention/omission intent for every original A/B construction occurrence,
+  including repeats. Bind raw snapshot locations to expected DirectedEdge fields,never indices alone;
+  exact cardinality plus unique actual source membership,full resource admission and original loans.
+  Omission carries an explicit evidence-source request,not accepted evidence or deletion authority.
+  Own needed topology-reference partition before new exposition;preserve all prior bytes/code/routes.
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps`
+  Status: `pending`
+  Goal:explicit retained whole-field output role/range/traversal groups against actual proposed
+  construction occurrences;preserve repeated source/target multiplicity and full0..1 coverage.
+  Additional result content needs explicit intent/evidence requirements;no implicit source discard,
+  target duplication,source-frame substitution or provider truth. Bound all nested groups before fields.
+- ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold`
+  Status: `pending`
+  Goal:explicit original fold-field and result cut-on-fold requirements against actual outer cut uses;
+  no new fold indicator,source-role substitution or silent loss inferred from geometry/metadata.
+  Canonical final cut/print .metadata.cut and all marks/consumers .metadata.marks remain owned.
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
   Status: `pending`
   Goal:reconcile declared join variants against v1 requirements;actual geometry/G3/bus/full verification

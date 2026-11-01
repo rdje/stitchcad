@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — required original join cut paths
+## _(2026-11-01 UTC)_ — proposed joined construction occurrences
 
-0786 composes authored orientations into exact original source ports and required seam endpoint links.
-A/B and loop identity survive equal EdgeRefs;H/U precedes scans,no heap/provider/geometry or numeric map.
-Native4/prior cut use4/oracle unit1/API3/join book9/lint/fmt/book rc=0;961 original/body/public bytes exact.
-promotion: declined (existing held-source/geometry boundary). G1still6/18;construction/fold reconciliation next.
+0787 preserves ordered/repeated cut/noncut output uses and explicit traversal under whole N/U/U policy.
+Actual source/direction/field parents remain;empty proposals authorize no original source omission/no-op.
+Native4/prior connectivity4/API5/join book10/lint/fmt/book rc=0;962 original/body/public bytes exact.
+promotion: declined (existing construction/geometry boundary). G1still6/18;complete original field actions next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

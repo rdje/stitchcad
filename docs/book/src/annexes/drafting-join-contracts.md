@@ -497,3 +497,55 @@ geometry,hole winding/classification/containment or exact nondeforming feasibili
 real G2/G3 obligations,along with numeric correspondence,currentness,noncut/copy/consumer
 reconciliation,retirement and authorized atomic publication. A source-path declaration grants
 none of those certificates and supplies no substitute geometric result.
+
+## Declare proposed result construction-line uses
+
+`JoinConstructionManifest` retains an explicit operation and ordered proposed construction uses.
+Each `JoinConstructionUse::new(tag,direction)` requires an actual output role and explicit traversal
+in that output's parameter frame. It does not accept source-relative `JoinParameterDirection`.
+Construction geometry can reuse cut or noncut outputs and repeat roles,as the canonical Piece's
+construction list permits. Each repeated occurrence remains a separate original authored field.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn line(tag:LocalTag)->JoinConstructionUse {
+    JoinConstructionUse::new(tag,Direction::Original)
+}
+fn declare_lines<'a>(manifest:&'a JoinConstructionManifest,path:&'a RequiredJoinCutConnectivity<'a>)
+    ->Result<DeclaredJoinConstructionUses<'a>,JoinConstructionUseError<'a>> {
+    manifest.admit(path,JoinConstructionUseLimits::new(10,4,4))
+}
+```
+
+`JoinConstructionUseLimits::new(N,U,W)` admits every actual candidate output N,every proposed
+construction occurrence U and U additional associations before operation,fields or allocation.
+Repeated roles still count separately. Earlier complete input/source/candidate/direction/cut-use/
+path resources and caller-owned storage remain separate;these entries are not allocator bytes.
+For N10/U4,W4 is exact:N9 refuses `Outputs`,U3 refuses `Uses`,W3 refuses `Workspace`,all before a
+wrong operation or unknown tag. With quotas met,`Operation` precedes the first `UnknownOutput`.
+An active catalogue role absent from the actual candidate/direction context remains unknown.
+
+For authored uses4-Original,9-Reversed,4-Reversed,6-Original,the four fields remain in that exact
+order. Role4 is not deduplicated and its two traversal fields remain separate. A cut role such
+as9 or fold-attributed role such as6 can be proposed as construction geometry without becoming
+a new cut contour or fold indicator. Original source-field retention/omission/mapping and result
+semantic meaning still require their separately owned complete reconciliation.
+
+`JoinConstructionUseError` lends actual `manifest()`,actual required cut `connectivity()`,original
+`limits()` and first `refusal()`. `refused_use()` lends the actual original first UnknownOutput
+field;whole-resource/operation causes return `None`. A later failure returns no accepted prefix.
+
+`DeclaredJoinConstructionUses` retains those same whole parents and reports `use_count()` and
+`workspace_entries()`. `uses()` traverses original order and reverse. `uses_for(tag)` scans all U
+associations and lends every matching occurrence in original order or reverse;it allocates no
+extra index and does not merge repetitions. Each authentic `JoinPlacedConstructionUse` lends
+its whole context,original index,actual declared/traversal fields and original directional
+output/candidate/source attribution. `logical_output()` remains the declared operation/tag tuple,
+without minting or publishing an edge. Admission work is O(U log(N+2)+1),with U new associations
+and no source/key scan,registry/provider call or geometric evaluation.
+
+An explicit empty proposal can admit U0/W0 while retaining all original construction/fold fields
+on its immutable parents. This records proposed data only;it authorizes no source omission,
+semantic source loss,empty construction result or no-op. Complete original-field reconciliation,
+fold/consumer/copy requirements,currentness,geometry,retirement and atomic authoring authority
+remain mandatory later stages. This declaration alone cannot close the join's noncut obligations.
