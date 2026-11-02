@@ -273,3 +273,54 @@ priorities,empty scope and both source/order proofs surviving map consumption. P
 private-field guards also pass. This implements the Root source bridge;canonical dependency/cycle
 composition,mixed canonical joins,geometry/current frame/provenance,semantic dependencies and
 combined allocator/lifetime verification remain owned by the next dependency stages.
+
+
+## Select exact mixed dependency owners
+
+`CheckedDraftingProgramSources::dependency_inputs(order,acyclic_graph)` now joins the actual
+source,mixed-order and native acyclic proof objects before mixed canonical work. Build the graph
+with the existing `sources.proof().prepare_dependencies(explicit_dependency_limits)` and
+`dependencies.admit_acyclic(explicit_cycle_limits)` factories. Their complete source/edge/scratch
+bounds and original cycle/allocator causes remain unchanged;the new join duplicates no graph.
+
+The join checks two exact identities,in this order:
+
+1. `order.inputs()` must be this source wrapper's actual `BoundDraftingProgramInitials` object.
+2. `acyclic_graph.dependencies().checked()` must be this wrapper's exact native `proof()` object.
+
+Two independent initial admissions can contain the same actual programme/names/snapshot and
+still be different selected proof owners. Two source checks can use the same initial associations,
+normalization object and policy and still produce different native proof objects. A graph from the
+second source check cannot substitute for the first. Equal Root IDs/revisions,text,corpus or empty
+graph shapes supply no owner identity. Source-graph mismatch is examined only after order-input
+identity succeeds.
+
+```rust
+use sc_core::{construction::{CheckedDraftingProgramSources,CheckedDraftingProgramOrder,
+    DraftingInitialInputProvider},design::DesignMetadataHost,recipe::FormulaAcyclicSourceDependencies};
+fn selected_sources<'j,'i,'r,'b,'n,'p,'a,H:DesignMetadataHost,S:DraftingInitialInputProvider<H> + ?Sized>(
+    sources:&'j CheckedDraftingProgramSources<'j,'i,'r,'b,'n,'p,'a,H,S>,
+    order:&'j CheckedDraftingProgramOrder<'j,'i,'r,'b,'n,'p,'a,H,S>,
+    graph:&'j FormulaAcyclicSourceDependencies<'j>)->Result<usize,String> {
+    let inputs=sources.dependency_inputs(order,graph).map_err(|error|error.to_string())?;
+    Ok(inputs.sources().proof().sources().len())
+}
+```
+
+`DraftingProgramDependencyInputs` privately retains all three original proof references. Its
+`sources()`,`order()` and `graph()` getters preserve the actual normalized/input owners and every
+original source/order/dependency/cycle policy. The join allocates and queries nothing,reads no
+values and supplies no new work allowance. It cannot outlive those selected proofs. Empty source
+and acyclic scopes still require the actual selected owner objects.
+
+A refusal keeps every supplied object in `DraftingProgramDependencyOwnerError`,including a foreign
+order or graph. `issue()` reports OrderInputs or SourceGraph;the three getters expose the actual
+provided witnesses. Default diagnostics omit authored names and source payloads. No accepted
+source/order/graph prefix is returned and no fallback owner is chosen.
+
+Focused checks discriminate independently recomputed source proofs and initial associations over
+the same actual data,plus equal-looking foreign Roots. They preserve exact provided pointers,
+original policies and first-mismatch precedence without callbacks. Public lifetime/private-field
+checks pass. This establishes selected provenance;streaming original mixed dependency occurrences,
+complete additional bounds/canonical joins,geometry/semantic bindings and whole feature verification
+remain later owned stages. The acyclic source relation alone is no whole operation graph or execution.

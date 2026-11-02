@@ -137,11 +137,75 @@ fn root_sources_keep_actual_extra_metadata_consumers_and_original_causes_after_m
                 .dependencies()
                 .iter()
                 .any(|dependency| std::ptr::eq(dependency.declaration().name(), count_name)));
+            // A recomputed proof over identical actual inputs/corpus is still a different owner.
+            let repeated_sources = namespace
+                .check_root_sources(policy)
+                .map_err(|e| e.to_string())?;
+            let dp = sc_core::recipe::FormulaSourceDependencyLimits::new(2, 0, 3);
+            let cp = sc_core::recipe::FormulaSourceCycleLimits::new(2, 4);
+            let dependencies = sources
+                .proof()
+                .prepare_dependencies(dp)
+                .map_err(|e| e.to_string())?;
+            let graph = dependencies.admit_acyclic(cp).map_err(|e| e.to_string())?;
+            let repeated_dependencies = repeated_sources
+                .proof()
+                .prepare_dependencies(dp)
+                .map_err(|e| e.to_string())?;
+            let repeated_graph = repeated_dependencies
+                .admit_acyclic(cp)
+                .map_err(|e| e.to_string())?;
             // Source proof owns no map borrow:move the namespace and retain both original proofs.
             let op = DraftingProgramOrderLimits::new(1, 3, 9);
             let order = namespace.check_order(&op).map_err(|e| e.to_string())?;
             assert!(std::ptr::eq(order.inputs(), sources.inputs()));
             assert_eq!(order.steps().len(), 1);
+            let joined = sources
+                .dependency_inputs(&order, &graph)
+                .map_err(|e| e.to_string())?;
+            assert!(
+                std::ptr::eq(joined.sources(), &sources)
+                    && std::ptr::eq(joined.order(), &order)
+                    && std::ptr::eq(joined.graph(), &graph)
+            );
+            assert_eq!(joined.graph().dependencies().limits(), dp);
+            assert_eq!(joined.graph().limits(), cp);
+            let error = sources
+                .dependency_inputs(&order, &repeated_graph)
+                .expect_err("different native proof over same data");
+            assert_eq!(
+                error.issue(),
+                DraftingProgramDependencyOwnerIssue::SourceGraph
+            );
+            assert!(std::ptr::eq(error.graph(), &repeated_graph));
+            assert!(std::ptr::eq(
+                repeated_sources.normalized(),
+                sources.normalized()
+            ));
+            assert!(std::ptr::eq(repeated_sources.inputs(), sources.inputs()));
+            // Independent initial binding is rejected even over the same actual name/program owner.
+            let other_initial = roles.bind_initial_sources().map_err(|e| e.to_string())?;
+            let other_namespace = other_initial
+                .bind_initial_namespace()
+                .map_err(|e| e.to_string())?;
+            let other_order = other_namespace
+                .check_order(&op)
+                .map_err(|e| e.to_string())?;
+            provider.calls.set(0);
+            provider.base.trace.set(0);
+            let error = sources
+                .dependency_inputs(&other_order, &repeated_graph)
+                .expect_err("first original association mismatch");
+            assert_eq!(
+                error.issue(),
+                DraftingProgramDependencyOwnerIssue::OrderInputs
+            );
+            assert!(
+                std::ptr::eq(error.sources(), &sources)
+                    && std::ptr::eq(error.order(), &other_order)
+                    && std::ptr::eq(error.graph(), &repeated_graph)
+            );
+            assert!(!format!("{joined:?} {error:?}").contains("private"));
             assert_eq!(sources.proof().sources().len(), 2);
             assert!(matches!(
                 root.inputs()
@@ -312,5 +376,104 @@ fn empty_root_sources_accept_zero_native_limits_and_keep_actual_root_after_map_c
     assert_eq!(sources.proof().retained_records(), 0);
     assert_eq!(provider.calls.get(), 0);
     assert_eq!(provider.base.trace.get(), 0);
+    Ok(())
+}
+
+#[test]
+fn dependency_owners_refuse_equal_looking_foreign_root_and_keep_all_actual_provided_proofs(
+) -> TestResult {
+    let root_a = super::root()?;
+    let root_b = super::root()?;
+    assert_eq!(root_a.id(), root_b.id());
+    assert_eq!(root_a.revision(), root_b.revision());
+    let provider_a = Provider::new(&root_a, &root_b, Fault::None)?;
+    let provider_b = Provider::new(&root_b, &root_a, Fault::None)?;
+    let ca = scope(&root_a)?
+        .bind_drafting_context(&provider_a, limits(10000, 10000, 10000)?)
+        .map_err(|e| e.to_string())?;
+    let cb = scope(&root_b)?
+        .bind_drafting_context(&provider_b, limits(10000, 10000, 10000)?)
+        .map_err(|e| e.to_string())?;
+    let raw_a = DraftingProgramInputs::new(ca, vec![DraftingProgramStep::Scalar { ordinal: 1 }]);
+    let raw_b = DraftingProgramInputs::new(cb, vec![DraftingProgramStep::Scalar { ordinal: 1 }]);
+    let pp = DraftingProgramLimits::new(limits(10000, 10000, 10000)?, 10, 100, 1000);
+    let pa = raw_a
+        .admit(&pp)
+        .map_err(|e| e.to_string())?
+        .normalized()
+        .map_err(|e| e.to_string())?;
+    let pb = raw_b
+        .admit(&pp)
+        .map_err(|e| e.to_string())?
+        .normalized()
+        .map_err(|e| e.to_string())?;
+    let na = DraftingProgramNameInputs::new(&pa, vec![], vec![]);
+    let nb = DraftingProgramNameInputs::new(&pb, vec![], vec![]);
+    let np = DraftingProgramNameLimits::new(limits(10000, 10000, 10000)?, 16, 32);
+    let wa = na.admit_name_work(&np).map_err(|e| e.to_string())?;
+    let wb = nb.admit_name_work(&np).map_err(|e| e.to_string())?;
+    let posa = wa.bind_output_positions().map_err(|e| e.to_string())?;
+    let posb = wb.bind_output_positions().map_err(|e| e.to_string())?;
+    let ra = posa.bind_role_sources().map_err(|e| e.to_string())?;
+    let rb = posb.bind_role_sources().map_err(|e| e.to_string())?;
+    let ia = ra.bind_initial_sources().map_err(|e| e.to_string())?;
+    let ib = rb.bind_initial_sources().map_err(|e| e.to_string())?;
+    let nsa = ia.bind_initial_namespace().map_err(|e| e.to_string())?;
+    let nsb = ib.bind_initial_namespace().map_err(|e| e.to_string())?;
+    let sp = FormulaSourceCheckLimits::new(0, 0, 0, 0);
+    let sa = nsa.check_root_sources(sp).map_err(|e| e.to_string())?;
+    let sb = nsb.check_root_sources(sp).map_err(|e| e.to_string())?;
+    let dp = sc_core::recipe::FormulaSourceDependencyLimits::new(0, 0, 1);
+    let cp = sc_core::recipe::FormulaSourceCycleLimits::new(0, 0);
+    let da = sa
+        .proof()
+        .prepare_dependencies(dp)
+        .map_err(|e| e.to_string())?;
+    let db = sb
+        .proof()
+        .prepare_dependencies(dp)
+        .map_err(|e| e.to_string())?;
+    let ga = da.admit_acyclic(cp).map_err(|e| e.to_string())?;
+    let gb = db.admit_acyclic(cp).map_err(|e| e.to_string())?;
+    let op = DraftingProgramOrderLimits::new(1, 3, 9);
+    let oa = nsa.check_order(&op).map_err(|e| e.to_string())?;
+    let ob = nsb.check_order(&op).map_err(|e| e.to_string())?;
+    provider_a.calls.set(0);
+    provider_a.base.trace.set(0);
+    provider_b.calls.set(0);
+    provider_b.base.trace.set(0);
+    let valid = sa.dependency_inputs(&oa, &ga).map_err(|e| e.to_string())?;
+    assert!(
+        std::ptr::eq(valid.sources(), &sa)
+            && std::ptr::eq(valid.order(), &oa)
+            && std::ptr::eq(valid.graph(), &ga)
+    );
+    let error = sa
+        .dependency_inputs(&ob, &gb)
+        .expect_err("equal ids/revision/text do not join actual owners");
+    assert_eq!(
+        error.issue(),
+        DraftingProgramDependencyOwnerIssue::OrderInputs
+    );
+    assert!(
+        std::ptr::eq(error.sources(), &sa)
+            && std::ptr::eq(error.order(), &ob)
+            && std::ptr::eq(error.graph(), &gb)
+    );
+    let error = sa
+        .dependency_inputs(&oa, &gb)
+        .expect_err("foreign graph after matching order");
+    assert_eq!(
+        error.issue(),
+        DraftingProgramDependencyOwnerIssue::SourceGraph
+    );
+    assert!(std::ptr::eq(
+        error.graph().dependencies().checked(),
+        sb.proof()
+    ));
+    assert_eq!(provider_a.calls.get(), 0);
+    assert_eq!(provider_a.base.trace.get(), 0);
+    assert_eq!(provider_b.calls.get(), 0);
+    assert_eq!(provider_b.base.trace.get(), 0);
     Ok(())
 }

@@ -949,17 +949,26 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0852 sourced complete dependency stages;[whole scope/proofs](../history/stitchcad-devnotes-part1028.md).
 - ID: `G1-SLICE.5f.2.dependencies.sources`
   Status: `done`
-  Goal:actual complete Root source proof under private initial map,retaining source/initial owners and original native causes.
-  - [x] ROOT CAUSE: 0853 `cargo test -p sc-core --test drafting_context_binding_contract program_sources`:focused3 pass;
-    actual Profile/Material loans,Derived kind/unused-source refusals,all four quotas,empty source scope and proof after map consumption,no callbacks,rc=0.
-  - [x] ADDRESSED: 0853 selected library/target strict clippy,fmt and `cargo test -p sc-core --doc construction::program::name_inputs::namespace::sources`:
-    docs3 pass,including generic source/order composition;original native allocator stays inline,rc=0.
-  - [x] NO REGRESSION: 0853 book/publication118/374/1817/3430,42 prior Rust fences unchanged/new complete native fence exact,rc=0;
-    1028 three Git/body/public spans/archive1482/59,generations21/64 and38/64,rc=0.
-  Commit:STITCHCAD-G1-0853. Promotion declined:existing actual-owner/bounded-source/no-map-clone doctrine. Canonical dependency/cycle and geometry/semantic composition plus coupled .verify remain pending.
+  Goal:0853 actual mixed Root source proof bridge;[whole scope/proofs](../history/stitchcad-devnotes-part1029.md).
 - ID: `G1-SLICE.5f.2.dependencies.canonical`
-  Status: `pending`
+  Status: `in_progress`
   Goal:all original mixed canonical/Derived dependencies and actual source graph,kind/state/domain and cycle obligations before values,no id-only targets.
+- ID: `G1-SLICE.5f.2.dependencies.canonical.owners`
+  Status: `done`
+  Goal:exact selected initial/source/order/acyclic owner join before canonical work;all original provided proofs retained.
+  - [x] ROOT CAUSE: 0854 `cargo test -p sc-core --test drafting_context_binding_contract root_sources_keep_actual`:focused1 pass;
+    recomputed source/native graph and independent initial association over same actual data refuse,original policies/pointers retained,rc=0.
+  - [x] ADDRESSED: 0854 `cargo test -p sc-core --test drafting_context_binding_contract dependency_owners`:focused1 pass;
+    equal-looking foreign Roots/empty graphs refuse,OrderInputs before SourceGraph,all provided objects preserved,no callbacks,rc=0.
+  - [x] NO REGRESSION: 0854 library check,selected strict clippy/fmt/Rustdoc owners3,book/publication118/374/1817/3431,
+    43 prior/new exact fences,1029 three Git/body/public spans/archive1483/60,generations21/64 and39/64,rc=0.
+  Commit:STITCHCAD-G1-0854. Promotion declined:existing exact selected-owner/no-prefix doctrine. Mixed occurrence views/bounded canonical joins,geometry/semantics and coupled verification pending.
+- ID: `G1-SLICE.5f.2.dependencies.canonical.occurrences`
+  Status: `pending`
+  Goal:allocation-free original mixed dependency occurrences with actual statement/native roles/spans,assertion tolerance headers and all repeated/untaken uses;no fabricated ordinal/node or source grant.
+- ID: `G1-SLICE.5f.2.dependencies.canonical.bind`
+  Status: `pending`
+  Goal:complete explicit mixed dependency/canonical-record bounds before reservation and actual Root joins/Derived source relations;retain original causes/full result,no values or accepted prefix.
 - ID: `G1-SLICE.5f.2.dependencies.geometry`
   Status: `pending`
   Goal:all actual native/selector geometry references under original frame/snapshot and strict earlier creators;unlabelled planned roles need authentic manifests,never live-future lookup or synthetic names.

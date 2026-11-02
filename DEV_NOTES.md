@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — actual mixed Root source proof bridge
+## _(2026-11-02 UTC)_ — exact mixed dependency proof owners
 
-0853 checks actual programme Root sources through the existing complete source factory against its private initial map,including bound extra Profile/Material names. Native source/node/target/record quotas,canonical joins and Derived consumer kinds stay authoritative;no callback/value or metadata refactory.
-CheckedDraftingProgramSources pins actual BoundInitials/Design normalization/native proof;the map allocation is not borrowed. Original error/allocator stays inline,explicit cause retains source/consumer witnesses. Both source and mixed proofs remain usable after consuming the map;no clone/accepted prefix.
-Focused sources3,selected strict lint/fmt/Rustdoc3 pass0:actual opaque/Unknown loans,Derived/unused-body causes,quota2/4/1/10 precedence,empty0 and generic map-consuming composition. Fixture closure/TargetKind compiler errors corrected. Book/publication118-374-1817-3430,42 prior/new exact fences pass0.
-1028 three Git/body/public spans exact0;archive1482-59/generations21-64 and38-64. Checked-recipes17945B/declarations39829B. Promotion declined:existing actual-owner/bounded-source/no-map-clone doctrine. G1still6/18;canonical dependency/cycle next,geometry/semantic and allocator/coupled verification pending.
+0854 joins selected CheckedDraftingProgramSources/Order and native acyclic relation before canonical work. Order must reference the exact BoundInitials object;graph.dependencies().checked() must reference the exact selected native source proof. Recomputed proofs over same corpus/input cannot substitute.
+Join/error borrow all actual provided objects,including foreign order/graph;no graph/index/metadata allocation or callback. OrderInputs precedes SourceGraph;getters preserve actual owners and original source/order/dependency/cycle policies. This is provenance,not mixed canonical/geometry/semantic acceptance.
+Library check,rich owner1/foreign-root1,selected strict lint/fmt/Rustdoc3 pass0. Same-data independent initial/source proofs and equal-looking Root/empty graphs discriminate;original pointers/causes/policies retained. Book/publication118-374-1817-3431,43 prior/new exact fences pass0.
+1029 three Git/body/public spans exact0;archive1483-60/generations21-64 and39-64. Checked-recipes21288B. Promotion declined:existing exact-selected-owner/no-prefix doctrine. G1still6/18;allocation-free mixed occurrence views next,then bounded canonical binding/geometry/semantics and allocator/coupled .verify.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

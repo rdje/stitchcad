@@ -2,6 +2,11 @@
 use super::{DraftingContext, DraftingContextSource, DraftingOperationInput};
 use crate::{design::DesignMetadataHost, recipe::FormulaRecipeDocument};
 use core::fmt;
+mod dependencies;
+pub use dependencies::{
+    DraftingProgramDependencyInputs, DraftingProgramDependencyOwnerError,
+    DraftingProgramDependencyOwnerIssue,
+};
 mod admission;
 mod limits;
 mod name_inputs;
