@@ -2,12 +2,124 @@
 use super::{limits, root_with_recipe, scope, Source, TestResult};
 use sc_core::{
     construction::*,
+    design::{
+        DesignResourceCount, DesignResourceLimitError, DesignResourceLocation, DesignResourceMeter,
+    },
     name::MachineToken,
-    ontology::{EntityId, LocalTag, PointRef},
+    ontology::{DirectedRange, Direction, EdgeRange, EdgeRef, EntityId, LocalTag, PointRef},
     recipe::FormulaExpressionDocument as Doc,
 };
 fn id(n: u128) -> EntityId {
     EntityId::from_bits(n)
+}
+
+#[test]
+fn published_offset_aliases_use_existing_edge_name_accounting_and_position_candidates() -> TestResult
+{
+    let root = super::root()?;
+    let source = Source::new(&root);
+    let context = scope(&root)?
+        .bind_drafting_context(&source, limits(1000, 10000, 1000)?)
+        .map_err(|e| e.to_string())?;
+    let offset = OffsetConstruction::new(
+        id(400),
+        DirectedRange {
+            range: EdgeRange::whole(EdgeRef::new(id(401), LocalTag::FIRST)),
+            direction: Direction::Original,
+        },
+        OffsetSide::Left,
+        id(402),
+    )?;
+    let inputs = DraftingProgramInputs::new(
+        context,
+        vec![DraftingProgramStep::Drafting(
+            DraftingOperationInput::OffsetEdge(&offset),
+        )],
+    );
+    let raw_policy = DraftingProgramLimits::new(limits(1000, 10000, 1000)?, 0, 0, 1);
+    let program = inputs
+        .admit(&raw_policy)
+        .map_err(|e| e.to_string())?
+        .normalized()
+        .map_err(|e| e.to_string())?;
+    let tag = LocalTag::new(7);
+    let raw = OffsetRoleCatalog::new(
+        id(400),
+        vec![OffsetRoleDefinition::new(
+            tag,
+            MachineToken::new("local_offset")?,
+        )],
+        vec![tag],
+    );
+    let catalog = raw
+        .admit(OffsetRoleCatalogLimits::new(1, 1, 12))
+        .map_err(|e| e.to_string())?;
+    // Direct public type assignment/enum construction:these published names are intentional aliases.
+    let role: ActiveOffsetRole<'_> = catalog.active_role(tag).ok_or("actual Offset API role")?;
+    let original_catalog: &AdmittedEdgeOutputRoleCatalog<'_> = role.catalog();
+    let named_source = DraftingGeometryNameSource::EdgeRole(role);
+    assert_eq!(
+        named_source.reference(),
+        DraftingGeometryReference::Edge(EdgeRef::new(id(400), tag))
+    );
+    let names = DraftingProgramNameInputs::new(
+        &program,
+        vec![],
+        vec![DraftingOutputName::new(
+            1,
+            MachineToken::new("offset_fragment")?,
+            named_source,
+        )],
+    );
+    source.trace.set(0);
+    let mut extra = DesignResourceMeter::new(limits(6, 27, 1)?);
+    names.charge_extra_resources(&mut extra)?;
+    let demand = extra.finish()?;
+    // Output vector1 + raw definition1/active1 + retained by-tag1/active1/association1 =6.
+    assert_eq!(
+        (
+            demand.collection_entries(),
+            demand.text_bytes(),
+            demand.counter_bits()
+        ),
+        (6, 27, 0)
+    );
+    assert_eq!(source.trace.get(), 0);
+    let mut short = DesignResourceMeter::new(limits(5, 27, 1)?);
+    let error = names
+        .charge_extra_resources(&mut short)
+        .expect_err("shared actual retained catalogue vector");
+    assert!(
+        matches!(error,DesignResourceLimitError::Count { unit:DesignResourceCount::CollectionEntries,consumed:5,requested:1,
+        location:DesignResourceLocation { owner:Some(owner),field:"drafting.names.edge_roles.active_roles",index:Some(0),..},.. } if owner==id(400))
+    );
+    assert_eq!(short.finish(), Err(error));
+    let policy = DraftingProgramNameLimits::new(limits(1000, 10000, 1000)?, 9, 10);
+    let work = names.admit_name_work(&policy).map_err(|e| e.to_string())?;
+    let raw_entries =
+        context.scope().demand().collection_entries() + context.demand().collection_entries();
+    assert_eq!(work.demand().collection_entries(), raw_entries + 1 + 1 + 6); // Mixed input and actual normalized slot.
+    assert_eq!(
+        work.demand().text_bytes(),
+        context.scope().demand().text_bytes() + context.demand().text_bytes() + 27
+    );
+    source.trace.set(0);
+    let positions = work.bind_output_positions().map_err(|e| e.to_string())?;
+    let view = positions.outputs().next().ok_or("Offset position")?;
+    assert_eq!(view.step().position(), 1);
+    assert!(view.requires_role_binding());
+    let DraftingGeometryNameSource::EdgeRole(actual) = view.output().source() else {
+        return Err("shared actual role source".into());
+    };
+    assert!(std::ptr::eq(actual.catalog(), original_catalog));
+    let DraftingProgramStepKind::Drafting(actual) = view.step().kind() else {
+        return Err("genuine native Offset step".into());
+    };
+    assert!(
+        matches!(actual.input(),DraftingOperationInput::OffsetEdge(p) if std::ptr::eq(p,&offset))
+    );
+    assert_eq!(source.trace.get(), 0);
+    Ok(())
 }
 fn point(n: u128) -> PointRef {
     PointRef::new(id(n), LocalTag::FIRST)

@@ -569,3 +569,28 @@ A failure retains complete original `work()`,the first bad `output_index()`,actu
 `output()` and typed `refusal()`. No valid prefix is returned. Position association leaves variable
 role proofs,actual initial sources,collisions,earlier-only visibility and whole dependency/kind
 checking to their owned stages;it grants no namespace or executable program approval.
+
+### Offset role compatibility
+
+The published `ActiveOffsetRole`,`OffsetRoleCatalog` and admitted catalogue names are intentional
+aliases of the shared edge-output metadata types. `DraftingGeometryNameSource::EdgeRole` already
+retains an active role obtained through the Offset API,directly,with the same actual catalogue,
+definition,tag and operation. No additional raw source variant or type conversion is required.
+
+```rust
+use sc_core::construction::{ActiveOffsetRole, DraftingGeometryNameSource};
+fn offset_name_source<'a>(role:ActiveOffsetRole<'a>)->DraftingGeometryNameSource<'a> {
+    DraftingGeometryNameSource::EdgeRole(role)
+}
+```
+
+One output name with a one-definition/one-active catalogue costs six additional held entries:
+output vector1,raw definition1/active1 and retained by-tag1/active-index1/association1. The name
+`offset_fragment` and key `local_offset` add27 text bytes. A five-entry budget refuses the original
+shared `drafting.names.edge_roles.active_roles` vector at output index0,with the actual operation.
+Complete work and position association keep the genuine Offset input and mark the role as an
+unresolved candidate. Actual Offset candidate/lineage/source/mapping proof is still required.
+
+Point and notch catalogues retain their existing distinct domains. Offset lineage proof extends
+the shared Edge metadata contract;matching an Offset creator remains metadata and supplies no
+geometric approval.

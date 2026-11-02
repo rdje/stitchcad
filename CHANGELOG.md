@@ -3,18 +3,18 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0842 — bind genuine output-name positions
+## STITCHCAD-G1-0843 — verify published Offset role aliases
 
-- Added complete original-position association,actual fixed-schema owner checks and zero-copy
-  genuine step/name views;variable-role candidates remain marked for later actual family proofs.
-- Focused position1/strict lint/fmt/docs3 pass0;original first refusals,equal-id foreign owner,
-  zero/max/scalar requests,reverse/nth/fused views and zero callbacks covered. Loan escape rustc1/keep0 confirmed.
-- Book/publication118/374/1812/3415;16 prior fences/new example exact.1017 four whole spans retain
-  prior0841/0797 proof;archive1471/48,generations21/64 and27/64. G1still6/18;role/source binding next.
+- Corrected the mistaken separate-Offset-type plan against intentional public shared Edge aliases;
+  existing raw source/accounting/position path already covers authentic Offset API role loans.
+- Focused alias1/strict lint/fmt/source docs2 pass0;extra6 entries/27 bytes,original shared-field
+  refusal,complete work9/10 and actual Offset position candidate verified without geometry calls.
+- Book/publication118/374/1812/3416;17 prior fences/new example exact.1018 three whole spans retained;
+  archive1472/49,generations21/64 and28/64. G1still6/18;actual family output-view/source binding next.
 
 # Sealed archive — earlier slices
 
-[Whole0841 bounded name work and0797 paired-copy proof](docs/history/stitchcad-devnotes-part1017.md) retains exact source bytes.
+[Whole0842 genuine output positions](docs/history/stitchcad-devnotes-part1018.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

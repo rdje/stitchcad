@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — genuine output-name positions
+## _(2026-11-02 UTC)_ — published Offset aliases verified
 
-0842 consumes complete bounded work before original output-order scans. Four fixed source families require actual schema owner identity;typed role catalogues retain matching-creator candidates only,explicitly marked for actual family proof parents/manifests next. No callbacks,values,namespace or index allocation.
-Focused position1/strict lint/fmt/docs3 pass0;all fixed/candidate variants,zero/max/missing/scalar/wrong family/equal-id foreign owner/role creator first refusals,original mixed/output indexes and bidirectional/nth/fused loans covered. Initial indexing lint corrected;example tail iterator borrow fixed with local count.
-Book/pure publication118-374-1812-3415/16 old fences/context/new example and1017 four Git/body/public spans exact0;whole0797 proof retained. Archive1471-48/generations21-64 and27-64;loan escape rustc1/keep0 confirms boundary0.
-Promotion declined: existing actual-owner/genuine-position/no-prefix doctrine. G1still6/18;variable role family/Offset domain and actual initial source admission remain owned next,whole semantic/allocator verification deferred.
+0843 closes Issue0843-OFFSET-ALIASES:prior plan misclassified intentional Offset aliases as another role type before reading construction.rs exports. ActiveOffsetRole/OffsetRoleCatalog already share Edge metadata;live plan corrected and no redundant source variant added. Actual lineage proof remains required.
+Focused Offset alias1/strict lint/fmt/source docs2 pass0;direct public alias enters EdgeRole,actual catalogue/step retained,extra6 entries/27 text bytes and shared first refusal verified. Complete work9/10 counts and unresolved position candidate preserve actual Offset input,no values or geometry callbacks.
+Book/pure publication118-374-1812-3416/17 old fences/new native-book example exact0;1018 three Git/body/public spans retained,archive1472-49/generations21-64 and28-64. First fixture direction typo corrected against public Original/Reversed contract before final checks.
+Promotion declined: existing verify-public-contract/actual-owner doctrine;published aliases and current book are canonical. G1still6/18;authentic family output-view/context binding next,then actual initial sources and whole feature verification.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

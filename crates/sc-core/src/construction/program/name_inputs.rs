@@ -27,6 +27,14 @@ pub use work::{
 /// Fixed schemas use their own published output method. Variable roles retain authentic typed
 /// active catalogue membership and its actual definition/tag;local keys are not global names.
 /// This is metadata,not program association,canonical issuance,frame,currentness or live geometry.
+/// Offset role names are intentional aliases of shared edge metadata;the original active loan
+/// enters EdgeRole directly. Offset lineage/source proof remains a later separate obligation.
+/// ```
+/// use sc_core::construction::{ActiveOffsetRole, DraftingGeometryNameSource};
+/// fn offset_name_source<'a>(role:ActiveOffsetRole<'a>)->DraftingGeometryNameSource<'a> {
+///     DraftingGeometryNameSource::EdgeRole(role)
+/// }
+/// ```
 /// ```compile_fail
 /// fn escape(source:sc_core::construction::DraftingGeometryNameSource<'_>)
 ///     ->sc_core::construction::DraftingGeometryNameSource<'static> {source}
