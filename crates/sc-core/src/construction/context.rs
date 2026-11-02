@@ -14,6 +14,11 @@ pub use geometry::{
 };
 mod record;
 pub use record::DraftingSourceRecord;
+mod planned;
+pub use planned::{
+    DraftingPlannedOutput, DraftingPlannedOutputProvider, DraftingPlannedOutputSource,
+    DraftingPlannedOutputSourceResult,
+};
 
 /// Exact requested geometric output kind and persistent reference, without a live lookup.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]

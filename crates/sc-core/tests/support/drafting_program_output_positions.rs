@@ -119,6 +119,11 @@ fn published_offset_aliases_use_existing_edge_name_accounting_and_position_candi
         matches!(actual.input(),DraftingOperationInput::OffsetEdge(p) if std::ptr::eq(p,&offset))
     );
     assert_eq!(source.trace.get(), 0);
+    assert!(matches!(
+        source.planned_output(view),
+        Err(super::SourceError::Missing)
+    ));
+    assert_eq!(source.trace.get(), 8);
     Ok(())
 }
 fn point(n: u128) -> PointRef {

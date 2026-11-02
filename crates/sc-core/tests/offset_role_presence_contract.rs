@@ -111,6 +111,63 @@ fn authentic_pairs_keep_candidate_order_and_actual_membership_fields() {
     assert!(catalog.active_role(LocalTag::new(99)).is_none());
 }
 #[test]
+fn planned_output_source_keeps_actual_family_parent_and_opaque_context_records() {
+    let fixture = sources::fixture();
+    let allowance = fixture.allowance();
+    let input = fixture.input();
+    let bound = input
+        .bind_allowance(&allowance)
+        .expect("original bound input");
+    let manifest = manifest(&input, None);
+    let admitted = manifest
+        .admit(&bound, OffsetCandidateLimits::new(1))
+        .expect("complete candidate");
+    let raw = raw(10, &[9]);
+    let catalog = catalog(&raw);
+    let presence = admitted
+        .bind_active_roles(&catalog, OffsetRolePresenceLimits::new(1, 4, 1))
+        .expect("actual active candidate");
+    let field = presence.outputs().next().expect("original actual field");
+    let output = DraftingPlannedOutput::Offset(field);
+    assert!(
+        matches!(output.input(),DraftingOperationInput::OffsetEdge(p) if std::ptr::eq(p,&input))
+    );
+    assert!(
+        matches!(output.name_source(),DraftingGeometryNameSource::EdgeRole(role)
+        if std::ptr::eq(role.catalog(), &catalog)
+        && std::ptr::eq(role.definition(), field.role().definition())
+        && std::ptr::eq(role.tag(), field.role().tag()))
+    );
+    assert_eq!(
+        output.reference(),
+        DraftingGeometryReference::Edge(field.logical_output())
+    );
+    struct Frame {
+        secret: String,
+    }
+    struct Snapshot {
+        records: Vec<u8>,
+    }
+    let frame = DraftingSourceRecord::new(Frame {
+        secret: "private authored frame".into(),
+    });
+    let snapshot = DraftingSourceRecord::new(Snapshot {
+        records: vec![1, 2, 3],
+    });
+    let source = DraftingPlannedOutputSource {
+        output,
+        frame: &frame,
+        snapshot: &snapshot,
+    };
+    let copied = source;
+    assert!(source.frame.is_same_record(copied.frame));
+    assert!(copied.snapshot.is_same_record(&snapshot));
+    assert_eq!(copied.frame.data().secret, "private authored frame");
+    assert_eq!(copied.snapshot.data().records.as_slice(), [1, 2, 3]);
+    assert!(!format!("{source:?}").contains("private authored frame"));
+    assert!(!format!("{output:?}").contains("main"));
+}
+#[test]
 fn resource_then_owner_then_original_candidate_causes_keep_complete_actual_inputs() {
     use OffsetRolePresenceRefusal as R;
     let fixture = sources::fixture();

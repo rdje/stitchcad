@@ -63,7 +63,8 @@ pub use context::{
     DraftingContext, DraftingContextError, DraftingContextSource, DraftingGeometryBinding,
     DraftingGeometryBindingIssue, DraftingGeometryError, DraftingGeometryMismatch,
     DraftingGeometryReference, DraftingGeometrySource, DraftingGeometrySourceResult,
-    DraftingSourceRecord,
+    DraftingPlannedOutput, DraftingPlannedOutputProvider, DraftingPlannedOutputSource,
+    DraftingPlannedOutputSourceResult, DraftingSourceRecord,
 };
 mod operation_input;
 pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};

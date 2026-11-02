@@ -937,19 +937,26 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:bind variable-role candidates through actual published family proof parents/manifests;Offset uses intentional shared Edge aliases with its own lineage proof obligations,no operation-id-only source truth.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles.offset`
   Status: `done`
-  Goal:correct false separate-Offset-type plan using published shared Edge aliases;verify authentic Offset API roles flow through existing raw names/full accounting/position candidates,then require actual lineage proof.
-  Issue0843-OFFSET-ALIASES:closed P1 role-design blocker. Public construction.rs reexports ActiveOffsetRole/OffsetRoleCatalog as shared Edge types;prior distinct-domain plan was unverified and would invent a redundant variant. Correct live plans and verify the direct public alias path;owned/fix now here.
-  - [x] ROOT CAUSE: 0843 `construction.rs` public reexport census plus launcher
-    `cargo test -p sc-core --test drafting_context_binding_contract published_offset_aliases`:focused1 pass;direct ActiveOffsetRole enters existing EdgeRole with actual catalogue,rc=0.
-  - [x] ADDRESSED: 0843 same target verifies shared6 entries/27 bytes,first role-index refusal and full9/10 work,
-    actual original Offset step remains unresolved candidate;prior false live-plan type split removed,Issue0843-OFFSET-ALIASES closed,rc=0.
-  - [x] NO REGRESSION: 0843 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    `cargo test -p sc-core --doc construction::program::name_inputs::DraftingGeometryNameSource` two guards/examples pass,rc=0;
-    book/publication118/374/1812/3416/17 old fences/new example and1018 Git/body/public spans exact,archive1472/49,generations21/64 and28/64,rc=0.
-  Commit:STITCHCAD-G1-0843. promotion:declined (existing verify-public-contract/actual-owner doctrine);published aliases/current book canonical,authentic family output/context proof binding next,whole verification deferred.
+  Goal:0843 Offset/shared Edge aliases and Issue0843 closure;[whole scope/proofs](../history/stitchcad-devnotes-part1019.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles.bind`
-  Status: `pending`
+  Status: `in_progress`
   Goal:actual published variable-role proof parents under original Root/context,exact schema/catalogue membership and first typed causes before namespace visibility,no fabricated bound family or matching-id-only source grant.
+- ID: `G1-SLICE.5f.2.namespace.admit.association.roles.bind.sources`
+  Status: `done`
+  Goal:authentic six planned-output view variants and readonly source facet returning original frame/snapshot records;derive actual input/catalogue/role from public proof parents,no reconstructed binding or live geometry claim.
+  - [x] ROOT CAUSE: 0844 launcher `cargo test -p sc-core --test offset_role_presence_contract planned_output_source`:
+    focused1 pass;authentic parent/input/catalogue/definition/tag retained,opaque actual context records copy loans only,rc=0.
+  - [x] ADDRESSED: 0844 launcher `cargo test -p sc-core --test drafting_context_binding_contract published_offset_aliases`:
+    focused1 pass;genuine request preserves original typed missing-source cause without geometry fallback;
+    planned-source docs4 pass and independent catalogue-only rustc1/authentic-field control0 confirm boundary,rc=0.
+  - [x] NO REGRESSION: 0844 launcher `cargo clippy -p sc-core --lib --test offset_role_presence_contract --test drafting_context_binding_contract -- -D warnings`,fmt,
+    book/pure publication118/374/1812/3417,18 old fences/new complete native-book positive fence exact,rc=0;
+    1019 Git/body/public spans include full alias correction;archive1473/50,generations21/64 and29/64,rc=0.
+  Commit:STITCHCAD-G1-0844. promotion:declined (existing authentic-parent/actual-source doctrine);raw facet grants no bound output,complete actual source/context binding next,full verification deferred.
+  Check corrections:explicit test panic replaced with pattern assertion;first diagnostic selected a closing Rustdoc fence,so compare the complete book-encoded positive fence instead. Native/book example bytes already matched;fresh comparison above passes.
+- ID: `G1-SLICE.5f.2.namespace.admit.association.roles.bind.check`
+  Status: `pending`
+  Goal:complete bounded role-source binding with actual input/catalogue/context record checks,original provider/allocation causes and no accepted prefix;fixed names need no planned lookup.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial`
   Status: `pending`
   Goal:bind actual extra initial sources to the original Root canonical/source/context records,refuse planned creators as initial geometry before values;retain exact original sources and causes,no metadata-id-only truth.

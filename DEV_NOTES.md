@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — published Offset aliases verified
+## _(2026-11-02 UTC)_ — authentic planned family source views
 
-0843 closes Issue0843-OFFSET-ALIASES:prior plan misclassified intentional Offset aliases as another role type before reading construction.rs exports. ActiveOffsetRole/OffsetRoleCatalog already share Edge metadata;live plan corrected and no redundant source variant added. Actual lineage proof remains required.
-Focused Offset alias1/strict lint/fmt/source docs2 pass0;direct public alias enters EdgeRole,actual catalogue/step retained,extra6 entries/27 text bytes and shared first refusal verified. Complete work9/10 counts and unresolved position candidate preserve actual Offset input,no values or geometry callbacks.
-Book/pure publication118-374-1812-3416/17 old fences/new native-book example exact0;1018 three Git/body/public spans retained,archive1472-49/generations21-64 and28-64. First fixture direction typo corrected against public Original/Reversed contract before final checks.
-Promotion declined: existing verify-public-contract/actual-owner doctrine;published aliases and current book are canonical. G1still6/18;authentic family output-view/context binding next,then actual initial sources and whole feature verification.
+0844 adds six actual output-field variants across five native families;public parent getters retain original creating input,catalogue/definition/tag and logical output. Raw source responses borrow actual frame/snapshot records;readonly provider facet receives genuine position views and preserves original typed causes.
+Focused authentic Offset1/provider alias1,strict selected lint/fmt/planned docs4 pass0;opaque non-Clone/Debug records copy only loans,original schema/catalogue/tag pointers survive and missing source has no geometry fallback. Independent compiler catalogue1/authentic-field0 confirms factory boundary.
+Book/pure publication118-374-1812-3417/18 old fences/new complete positive fence exact0;1019 three Git/body/public spans include full alias correction,archive1473-50/generations21-64 and29-64. Test panic replaced with pattern assertion;diagnostic fence selection fixed without changing native/book bytes.
+Promotion declined: existing authentic-parent/actual-source/no-prefix doctrine. G1still6/18;complete bounded source/input/catalogue/frame/snapshot binding next,actual initial source and full semantic/allocator verification remain pending.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

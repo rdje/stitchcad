@@ -22,7 +22,8 @@ use sc_core::{
     command::DesignRevision,
     construction::{
         DraftingContextError, DraftingContextSource, DraftingGeometryReference,
-        DraftingGeometrySourceResult, DraftingSourceRecord,
+        DraftingGeometrySourceResult, DraftingOutputPosition, DraftingPlannedOutputProvider,
+        DraftingPlannedOutputSourceResult, DraftingSourceRecord,
     },
     design::*,
     ontology::{CutPlan, EntityId, IdentityLedger, MaterialInventory, PieceInventory},
@@ -433,4 +434,18 @@ fn external_provider_charges_actual_revision_magnitude_without_copying_or_format
     );
     assert_eq!(meter.finish(), Err(expected));
     Ok(())
+}
+
+impl<H: DesignMetadataHost> DraftingPlannedOutputProvider<H> for Source<'_, H> {
+    fn planned_output<'v, 'n, 'i>(
+        &'v self,
+        request: DraftingOutputPosition<'v, 'n, 'i>,
+    ) -> DraftingPlannedOutputSourceResult<'v, Self::Frame, Self::Snapshot, Self::Error> {
+        self.observed(8);
+        if request.requires_role_binding() {
+            Err(SourceError::Missing)
+        } else {
+            Err(SourceError::Rejected)
+        }
+    }
 }

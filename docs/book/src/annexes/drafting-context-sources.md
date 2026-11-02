@@ -370,3 +370,48 @@ allocator-fault verification remains separate and pending.
 The [mixed drafting name reference](formula-name-scopes.md#mixed-drafting-names-and-admission)
 covers actual initial/output sources,complete cumulative held-content producers and prospective
 name-work admission. Source/position association and ordered namespace integration follow there.
+
+## Authentic planned-output sources
+
+`DraftingPlannedOutput` retains authentic field views from the existing published family factories:
+Offset active candidates,Slash/spread edges,Truing edges,Mirror edges and points,and Join edges.
+These are six view variants across five native families. Each retains its complete original
+manifest/source/copy/identity parents and actual active role. A raw catalogue cannot manufacture
+one of these family fields. Planned logical outputs remain unissued and absent from live geometry.
+
+`input()` follows the actual public parent chain to its original creating schema;it copies no input
+and reconstructs no binding from IDs. `name_source()` returns the exact typed active catalogue,
+definition and tag loan. Offset retains the intentional shared Edge aliases;Mirror points retain
+the distinct point domain. `reference()` uses the actual field's logical output,without issuance,
+values,geometry or a fallback reference. Debug formatting exposes the family only.
+
+`DraftingPlannedOutputSource` is a raw response containing that authentic field and the provider's
+original `DraftingSourceRecord` frame and snapshot loans. Copying it copies only views and loans;
+provider payloads need neither Clone nor Debug and stay out of diagnostics. Public construction
+proves no containing Root,input,catalogue,frame,snapshot or accepted-program association.
+
+```rust
+use sc_core::construction::{ActiveOffsetCandidate, DraftingPlannedOutput,
+    DraftingPlannedOutputSource, DraftingSourceRecord};
+fn raw_planned_source<'a,F:?Sized,S:?Sized>(field:ActiveOffsetCandidate<'a>,
+    frame:&'a DraftingSourceRecord<F>,snapshot:&'a DraftingSourceRecord<S>)
+    ->DraftingPlannedOutputSource<'a,F,S> {
+    let source=DraftingPlannedOutputSource {output:DraftingPlannedOutput::Offset(field),frame,snapshot};
+    let copied=source;
+    assert!(copied.frame.is_same_record(frame));
+    copied
+}
+```
+
+`DraftingPlannedOutputProvider` extends the actual immutable context source with `planned_output()`.
+Its request is a genuine original output-position view from complete bounded work. Core will call
+only for unresolved role candidates;fixed-schema names need no planned lookup. The provider returns
+its actual pre-existing family-factory field and original context records,or original typed cause.
+All held parent inventories,retained indexes and duplicated snapshots belong in the inherited
+exhaustive content walk. Queries allocate/clone nothing,read no values and perform no existing-
+geometry lookup to make a future output live. Missing or wrong-family sources remain refusals.
+
+The provider shares the context port's immutable honest/exhaustive integration obligation. Core's
+next owned binding stage must still compare actual input owner,catalogue/definition/tag and original
+frame/snapshot record identity. This raw facet supplies no bound output,namespace prefix,currentness,
+physical feasibility or whole-program approval. Original causes remain typed throughout.
