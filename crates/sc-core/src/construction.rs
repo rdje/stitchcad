@@ -72,7 +72,8 @@ pub use program::{
     AdmittedDraftingProgramInputs, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
     DraftingProgramInputs, DraftingProgramLimits, DraftingProgramNormalizationError,
     DraftingProgramNormalizationRefusal, DraftingProgramShape, DraftingProgramStep,
-    NormalizedDraftingOperation, NormalizedDraftingProgram,
+    DraftingProgramStepKind, DraftingProgramStepView, NormalizedDraftingOperation,
+    NormalizedDraftingProgram,
 };
 mod bezier;
 pub use arc::{

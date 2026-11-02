@@ -216,7 +216,7 @@ remove it. Existing source/argument conservative record bounds remain authoritat
 before child factories;they certify no allocator-byte, parser-scratch, CPU or runtime allowance.
 
 Recipe counts,exhaustive native fields,raw mixed steps and complete input admission are implemented;
-normalization is also available;combined borrowed step views remain owned work. Existing document factories retain
+normalization and combined borrowed step views are also available. Existing document factories retain
 their original typed/allocation causes;failure returns no normalized program prefix. Normalized
 views must borrow actual owners and keep source ordinals separate from combined positions.
 
@@ -304,7 +304,7 @@ positions are `None`,and native positions hold a `NormalizedDraftingOperation`. 
 variants own all actual argument arenas;slash/spread retains its actual whole declaration and normalized
 opening. `Other` retains original families with no scalar argument documents. For `[scalar1,point,scalar2]`,
 the slots are `[None,Some(Point(...)),None]`;scalar2 stays in the original whole recipe with its original
-ordinal2 and whole-source span. Combined borrowed step views are the next stage.
+ordinal2 and whole-source span. Combined borrowed step views are now available.
 
 ```rust
 use sc_core::{construction::{AdmittedDraftingProgramInputs, DraftingContextSource,
@@ -325,3 +325,42 @@ Normalization resolves no name,kind,source dependency,current geometry or value.
 unknown call,untaken division by zero or wrong point-argument kind can still be represented as normalized
 syntax. These require the later complete static and value stages. An empty program retains its actual
 Root/context with empty source,recipe and native arenas;it acquires no synthesized statement or default.
+
+### Borrowed combined steps
+
+`NormalizedDraftingProgram::steps()` now returns an allocation-free,exact-sized,bidirectional fused
+iterator over actual normalized owners in original mixed order. A private `DraftingProgramStepView`
+retains its genuine one-based `position()` and borrowed `kind()`. `DraftingProgramStepKind::Scalar`
+contains the original scalar `ordinal` and a reference to the actual `FormulaNormalizedStatement`
+in the complete recipe arena. `Drafting` borrows the actual `NormalizedDraftingOperation`,whose
+argument arenas and original declaration remain accessible without copying or reparsing.
+
+For `[scalar1,point,scalar2]`,scalar2 still has ordinal2 at position3. Calling `nth(2)` directly,
+skipping earlier steps,reversing,or interleaving front/back traversal returns that same actual
+statement. Each scalar uses direct original-ordinal lookup;there is no mutable scalar cursor that
+could lag skipped requests. Statement spans still address the original whole recipe,including
+original line offsets and assertion operands. No normalized statement is reconstructed from a source
+substring or canonical text. The view cannot outlive its normalized arena,and its private position
+cannot be rewritten by callers. Debug output reports position/ordinal/family without formula text.
+
+For example,this helper selects a zero-based mixed index and returns both distinct one-based
+positions plus the actual borrowed statement. A native step returns None:
+
+```rust
+use sc_core::{construction::{DraftingContextSource, DraftingProgramStepKind,
+    NormalizedDraftingProgram}, design::DesignMetadataHost, recipe::FormulaNormalizedStatement};
+fn original_scalar<'n,'p,'a,H:DesignMetadataHost,S:DraftingContextSource<H> + ?Sized>(
+    program:&'n NormalizedDraftingProgram<'p,'a,H,S>,mixed_index:usize)
+    -> Option<(usize,usize,&'n FormulaNormalizedStatement<'a>)> {
+    let step=program.steps().nth(mixed_index)?;
+    match step.kind() {
+        DraftingProgramStepKind::Scalar {ordinal,statement} => Some((step.position(),ordinal,statement)),
+        DraftingProgramStepKind::Drafting(_) => None,
+    }
+}
+```
+
+The complete original program source/admission/normalization/view pipeline is implemented with
+focused checks. Names,whole kind/dependency/current-output checks,values and geometry remain later
+stages;these loans create no accepted executable prefix or release approval. Coupled feature and
+allocator-fault verification remains separate and pending.

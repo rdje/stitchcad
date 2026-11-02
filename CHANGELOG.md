@@ -3,18 +3,19 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0833 — normalize complete original mixed-program sources
+## STITCHCAD-G1-0834 — borrow actual normalized mixed steps
 
-- Added complete source/whole-recipe/native arena owner after admitted global bounds;
-  original factory and allocation causes survive,with no normalized prefix or provider/value query.
-- Native15/private guards5/book examples6/strict selected lint/fmt pass0;
-  publication118/374/1809/3401 and eleven previous Rust examples retained exactly.
-- 1008 three Git/body/public spans exact;archive1462/39,per-generation21/64 and18/64.
-  G1still6/18;combined borrowed views,whole static checking and feature verification remain pending.
+- Added private genuine mixed positions and actual scalar/native arena loans;direct ordinal lookup
+  supports exact-sized,bidirectional fused iteration without allocation or scalar-cursor drift.
+- Native16/private guards7/book examples7/strict selected lint/fmt pass0;
+  publication118/374/1809/3402 and twelve prior Rust examples retained exactly.
+- 1009 three Git/body/public spans exact;archive1463/40,per-generation21/64 and19/64.
+  Source/admission/normalization/view implementation complete with focused checks;G1still6/18.
+  Namespace,whole semantic checking and coupled feature/allocator verification remain pending.
 
 # Sealed archive — earlier slices
 
-[Whole0832 complete mixed input admission](docs/history/stitchcad-devnotes-part1008.md) retains exact source bytes.
+[Whole0833 complete original normalization](docs/history/stitchcad-devnotes-part1009.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

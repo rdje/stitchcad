@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — complete original child normalization
+## _(2026-11-02 UTC)_ — original mixed step arena loans
 
-0833 reserves the complete mixed slots,then runs original Root source/whole-recipe/native factories under explicit admitted global ceilings. Private complete owner holds actual arenas,original input/policy handle and aligned scalar/native slots;no self-reference,substring source or accepted prefix.
-Native15/private guards5/context book examples6/strict selected lint/fmt pass0. Unused bodies,separate repeated arenas,original arc/opening/Walk,whole assertion spans,empty drafts and wrong kind/unknown call remain syntax without value/provider lookup. Original allocation causes stay inline,semantic causes typed.
-Publication118-374-1809-3401/eleven prior Rust fences and1008 three Git/body/public spans exact0;archive1462-39/per-generation21-64 and18-64. Allocation-fault/coupled feature verification remains explicitly .5f.2.verify after the complete set.
-Promotion declined: existing original-factory/actual-owner/no-prefix contract. G1still6/18;combined borrowed step views next,whole semantic/feature verification still pending.
+0834 exposes private mixed-position views borrowing actual whole-recipe statements/native arena owners. Scalar ordinal lookup is direct;exact-sized/bidirectional/fused iteration uses no allocation,reparse,self-reference,substring source or mutable scalar cursor.
+Native16/private lifetime guards7/context book examples7/strict selected lint/fmt pass0. nth/skip/reverse/interleaved traversal preserves actual pointers,ordinal2 at mixed3,whole assertion offset and private debug output;no provider/value query.
+Publication118-374-1809-3402/twelve original Rust fences and1009 three Git/body/public spans exact0;archive1463-40/per-generation21-64 and19-64. Original source/admission/normalization/view parent complete with focused checks.
+Promotion declined: existing actual-owner/whole-source/order contract. G1still6/18;namespace next,whole semantic/allocator-fault/feature verification remains deferred.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

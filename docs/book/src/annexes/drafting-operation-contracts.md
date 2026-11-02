@@ -202,9 +202,8 @@ resource accounting and the remaining existing-output/program integration.
 
 The [context and mixed-program companion](drafting-context-sources.md#mixed-program-sources-and-admission)
 now documents `DraftingProgramInputs`,its original scalar/drafting steps and complete actual
-held-content/population/order admission and complete original child normalization. Combined borrowed
-normalized views and whole
-name/kind/dependency checking remain separately owned work.
+held-content/population/order admission,complete original child normalization and combined borrowed
+step views. Whole name/kind/dependency checking remains separately owned work.
 
 ## Points and primitive curves
 
