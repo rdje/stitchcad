@@ -5,7 +5,8 @@ use core::fmt;
 mod dependencies;
 pub use dependencies::{
     DraftingProgramDependencyInputs, DraftingProgramDependencyOwnerError,
-    DraftingProgramDependencyOwnerIssue,
+    DraftingProgramDependencyOwnerIssue, DraftingProgramDependencyRole,
+    DraftingProgramNameDependency,
 };
 mod admission;
 mod limits;

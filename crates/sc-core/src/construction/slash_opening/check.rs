@@ -96,6 +96,14 @@ pub struct CheckedSlashSpreadOpening<'a> {
     expression: FormulaCheckedExpression<'a, 'a, 'a>,
 }
 impl<'a> CheckedSlashSpreadOpening<'a> {
+    pub(crate) fn dependency_expressions(&self) -> [&FormulaCheckedExpression<'a, 'a, 'a>; 1] {
+        let Self {
+            normalized,
+            expression,
+        } = self;
+        crate::design::fixed_value(normalized);
+        [expression]
+    }
     /// Actual normalized owner,explicit mode and original document.
     #[must_use]
     pub const fn normalized(&self) -> &'a NormalizedSlashSpreadOpening<'a> {

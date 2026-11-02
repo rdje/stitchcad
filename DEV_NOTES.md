@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — exact mixed dependency proof owners
+## _(2026-11-02 UTC)_ — original mixed dependency occurrence stream
 
-0854 joins selected CheckedDraftingProgramSources/Order and native acyclic relation before canonical work. Order must reference the exact BoundInitials object;graph.dependencies().checked() must reference the exact selected native source proof. Recomputed proofs over same corpus/input cannot substitute.
-Join/error borrow all actual provided objects,including foreign order/graph;no graph/index/metadata allocation or callback. OrderInputs precedes SourceGraph;getters preserve actual owners and original source/order/dependency/cycle policies. This is provenance,not mixed canonical/geometry/semantic acceptance.
-Library check,rich owner1/foreign-root1,selected strict lint/fmt/Rustdoc3 pass0. Same-data independent initial/source proofs and equal-looking Root/empty graphs discriminate;original pointers/causes/policies retained. Book/publication118-374-1817-3431,43 prior/new exact fences pass0.
-1029 three Git/body/public spans exact0;archive1483-60/generations21-64 and39-64. Checked-recipes21288B. Promotion declined:existing exact-selected-owner/no-prefix doctrine. G1still6/18;allocation-free mixed occurrence views next,then bounded canonical binding/geometry/semantics and allocator/coupled .verify.
+0855 streams original whole mixed name uses without an edge-vector allocation. Per-statement adapter reuses the existing scalar producer,including real assertion tolerance headers before operands. Native private field views expose Point X/Y,Arc Radius/Start/Sweep and Slash opening;Other contributes none.
+Consumer-pinned views retain actual step,role,source span,scalar ordinal and supplier declaration. Repeated/untaken uses remain distinct;copied views only copy loans/metadata. The fused iterator exposes no mutable source/index or whole canonical/geometry grant. No parser/source/value/provider work occurs.
+Focused occurrence1/order2,selected strict lint/fmt/Rustdoc3 pass0:13-role/use fixture verifies original bytes/consumers,repeated Point/branches,nth/end and assertion order. Redundant Iterator supertrait lint corrected. Book/publication118-374-1817-3432,44 prior/new exact fences pass0.
+1030 three Git/body/public spans exact0;archive1484-61/generations21-64 and40-64. Checked-recipes24761B. Promotion declined:existing actual-source/role/span/no-copy doctrine. G1still6/18;additional canonical bounds/binding next,then geometry/semantics and allocator/coupled .verify.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

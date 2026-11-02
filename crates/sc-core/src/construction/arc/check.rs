@@ -101,6 +101,22 @@ pub struct CheckedCenterArcConstruction<'a> {
     sweep_angle: FormulaCheckedExpression<'a, 'a, 'a>,
 }
 impl<'a> CheckedCenterArcConstruction<'a> {
+    pub(crate) fn dependency_expressions(
+        &self,
+    ) -> [(CenterArcArgument, &FormulaCheckedExpression<'a, 'a, 'a>); 3] {
+        let Self {
+            normalized,
+            radius,
+            start_angle,
+            sweep_angle,
+        } = self;
+        crate::design::fixed_value(normalized);
+        [
+            (CenterArcArgument::Radius, radius),
+            (CenterArcArgument::StartAngle, start_angle),
+            (CenterArcArgument::SweepAngle, sweep_angle),
+        ]
+    }
     /// Actual normalized arc,admitted policy and original declaration/center/documents.
     #[must_use]
     pub const fn normalized(&self) -> &'a NormalizedCenterArcConstruction<'a> {

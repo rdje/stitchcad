@@ -218,7 +218,7 @@ impl fmt::Debug for FormulaCheckedRecipe<'_> {
     }
 }
 
-fn statement_dependencies<'g, 'a>(
+pub(super) fn statement_dependencies<'g, 'a>(
     proof: &'g FormulaCheckedStatement<'a>,
 ) -> impl Iterator<Item = FormulaRecipeNameDependency<'a>> + 'g {
     use FormulaRecipeDependencyRole as R;

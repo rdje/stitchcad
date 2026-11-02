@@ -206,6 +206,14 @@ impl<'a> FormulaCheckedStatement<'a> {
     pub const fn kind(&self) -> &FormulaCheckedStatementKind<'a> {
         &self.kind
     }
+    /// Original dependency occurrences for this actual statement,including the assertion's real
+    /// tolerance header before left/right operands. Reuses the whole-recipe producer without
+    /// allocation,cloning or invented nodes/spans. This local proof grants no whole recipe.
+    pub fn dependencies(
+        &self,
+    ) -> impl Iterator<Item = super::FormulaRecipeNameDependency<'a>> + '_ {
+        super::checked_recipe::statement_dependencies(self)
+    }
     /// Explicit owned identity from this same normalized owner, without evaluation.
     #[must_use]
     pub fn canonical_statement(&self) -> FormulaCanonicalStatement {

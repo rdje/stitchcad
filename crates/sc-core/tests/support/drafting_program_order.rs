@@ -137,6 +137,21 @@ fn mixed_order_keeps_all_original_proofs_and_refuses_self_future_headers_and_lat
                     [1, 2, 3, 4, 5, 6, 7]
                 );
                 assert_eq!(proof.shape().step_count(), 7);
+                let uses: Vec<_> = proof.dependencies().collect();
+                assert_eq!(
+                    uses.iter()
+                        .map(|u| u.declaration().name())
+                        .collect::<Vec<_>>(),
+                    ["width", "anchor", "second", "eps_geo", "second", "width"]
+                );
+                assert_eq!(
+                    uses.iter().map(|u| u.position()).collect::<Vec<_>>(),
+                    [2, 3, 5, 7, 7, 7]
+                );
+                assert_eq!(
+                    uses.iter().map(|u| u.statement_index()).collect::<Vec<_>>(),
+                    [None, Some(2), None, Some(3), Some(3), Some(3)]
+                );
                 assert!(!format!("{proof:?}").contains("anchor"));
                 for step in proof.steps() {
                     match step.kind() {
@@ -372,6 +387,8 @@ fn empty_mixed_order_accepts_zero_checker_work_and_no_callback() -> TestResult {
     source.trace.set(0);
     let proof = namespace.check_order(&policy).map_err(|e| e.to_string())?;
     assert!(proof.steps().is_empty());
+    let mut uses = proof.dependencies();
+    assert!(uses.next().is_none() && uses.next().is_none());
     assert_eq!(proof.shape().retained_record_bound(), 0);
     assert_eq!(source.trace.get(), 0);
     Ok(())

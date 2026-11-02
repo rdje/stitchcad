@@ -324,3 +324,52 @@ original policies and first-mismatch precedence without callbacks. Public lifeti
 checks pass. This establishes selected provenance;streaming original mixed dependency occurrences,
 complete additional bounds/canonical joins,geometry/semantic bindings and whole feature verification
 remain later owned stages. The acyclic source relation alone is no whole operation graph or execution.
+
+
+## Stream original mixed dependency occurrences
+
+`CheckedDraftingProgramOrder::dependencies()` now streams every original checked scalar/native
+name use in mixed order. It allocates no whole edge vector and reads no values or source provider.
+The fused iterator visits repeated names and untaken conditional branches separately. Native steps
+without scalar arguments contribute no occurrence;their geometry/semantic dependencies remain
+separate. Empty programmes and programmes containing only literals retain an empty stream.
+
+`FormulaCheckedStatement::dependencies()` exposes the existing whole-recipe statement producer.
+The mixed stream reuses it,so a let emits its RHS uses and an assertion emits its real tolerance
+header first,then left/right operand uses. The tolerance keeps its actual annotation span and fixed
+reserved declaration;it is not an invented expression node. A standalone current-statement proof
+still grants only its local checked scope,while the mixed owner supplies the complete ordered proof.
+
+Native argument order follows actual checked fields:Point X then Y;center-arc Radius,StartAngle,
+SweepAngle;slash/spread opening. Private exhaustive proof-field views guard those operands,so an
+added checked argument cannot silently disappear. Each name use comes from the original operand
+proof's dependency slice. No normalized source is reparsed,cloned,extracted or renumbered.
+
+```rust
+use sc_core::{construction::{CheckedDraftingProgramOrder,DraftingInitialInputProvider},design::DesignMetadataHost};
+fn name_uses<H:DesignMetadataHost,S:DraftingInitialInputProvider<H> + ?Sized>(
+    order:&CheckedDraftingProgramOrder<'_, '_, '_, '_, '_, '_, '_,H,S>)->usize {
+    order.dependencies().count()
+}
+```
+
+`DraftingProgramNameDependency` is a private consumer-pinned view. `step()` returns the actual
+`DraftingProgramOrderStep`;`position()` is its genuine mixed position. `statement_index()` returns
+the genuine scalar ordinal or None for a native argument. `role()` distinguishes Scalar's existing
+Binding/AssertionTolerance/Left/Right roles,Point coordinate,Arc argument and SlashSpread opening.
+`span()` and `declaration()` preserve the original source location and supplier metadata. Copying a
+view copies only loans/metadata;it cannot outlive the actual complete consumer proof. Default Debug
+shows position,ordinal,role and span while omitting authored names and source payloads.
+
+For the earlier seven-step example,the six name uses are `width,anchor,second,eps_geo,second,width`
+at mixed positions `2,3,5,7,7,7`. Their scalar ordinals are `None,2,None,3,3,3`:the assertion header
+has scalar ordinal3,not its mixed position7. A dedicated repeated-Point fixture emits13 uses across
+both conditional branches,X/Y,all three Arc fields,Slash opening,the repeated Point and the three
+assertion roles. Its borrowed spans select the original name bytes in each native document or the
+whole Root recipe. No field is deduplicated or assigned a synthetic ordinal.
+
+Focused checks cover all argument roles,header/operand order,repeated/untaken uses,original spans,
+actual consumer pointer identity,nth traversal and repeated end reads. Existing mixed-order checks
+and private-field/lifetime examples pass. These views establish original dependency occurrences;
+complete additional bounds,actual canonical joins,geometry/semantic source binding and coupled
+verification remain the next owned stages. Supplier metadata alone does not grant source validity.

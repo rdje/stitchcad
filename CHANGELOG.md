@@ -3,16 +3,15 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0854 — exact mixed dependency owners (2026-11-02 UTC)
+## STITCHCAD-G1-0855 — original mixed dependency occurrences (2026-11-02 UTC)
 
-Join exact selected initial/source/order/acyclic owners before canonical work. Reject recomputed same-data proofs and equal-looking foreign Roots;preserve all original provided witnesses and policies with deterministic first mismatch. The join allocates/queries nothing.
+Stream actual mixed dependency occurrences without allocating a whole edge vector. Reuse scalar statement/header production and exhaustive native proof fields;retain actual roles,spans,consumer pointers,ordinals and all repeated/untaken uses through a fused readonly iterator.
 
-Focused rich1/foreign1,library check,strict lint/fmt/Rustdoc3,book/publication118-374-1817-3431 and43 prior/new exact fences pass0. Archive1029 three Git/body/public spans exact;1483 logical/60 working. G1still6/18;mixed occurrence/binding,geometry/semantics and coupled verification
-remain.
+Focused occurrence1/order2,strict lint/fmt/Rustdoc3,book/publication118-374-1817-3432 and44 prior/new exact fences pass0. Archive1030 three Git/body/public spans exact;1484 logical/61 working. G1still6/18;additional canonical bounds/binding,geometry/semantics and coupled checks remain.
 
 # Sealed archive — earlier slices
 
-[Whole0853 actual Root source proof bridge](docs/history/stitchcad-devnotes-part1029.md) retains exact source bytes.
+[Whole0854 exact dependency proof owners](docs/history/stitchcad-devnotes-part1030.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

@@ -97,6 +97,13 @@ pub struct CheckedPointConstruction<'a> {
     y: FormulaCheckedExpression<'a, 'a, 'a>,
 }
 impl<'a> CheckedPointConstruction<'a> {
+    pub(crate) fn dependency_expressions(
+        &self,
+    ) -> [(PointCoordinate, &FormulaCheckedExpression<'a, 'a, 'a>); 2] {
+        let Self { normalized, x, y } = self;
+        crate::design::fixed_value(normalized);
+        [(PointCoordinate::X, x), (PointCoordinate::Y, y)]
+    }
     /// Actual declaration owner,admitted policy and both original normalized arenas.
     #[must_use]
     pub const fn normalized(&self) -> &'a NormalizedPointConstruction<'a> {
