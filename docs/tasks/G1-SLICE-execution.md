@@ -678,7 +678,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Commit:STITCHCAD-G1-0813(native)/0818(search);actual program/frame/geometry/physical/full integration remains separately owned.
 - ID: `G1-SLICE.5f.1.review`
   Status: `done`
-  Goal:0813 aggregate native declaration acceptance;[whole scope/proofs](../history/stitchcad-devnotes-part989.md).
+  Goal:0813 aggregate native declaration acceptance;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part989md).
 - ID: `G1-SLICE.5f.1.a`
   Status: `done`
   Goal:completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part838md).
@@ -781,32 +781,32 @@ retain the complete closed task branch byte-exact in the existing seam-edit sibl
   Partial/eased/oriented source semantics cannot disappear. Actual geometry stays G2/G3/.5f.4.
 - ID: `G1-SLICE.5f.1.c.join.outputs.inventory`
   Status: `done`
-  Goal:0772 same-source inventory;[whole scope/proofs](../history/stitchcad-devnotes-part948.md).
+  Goal:0772 same-source inventory;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part948md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.domains`
   Status: `done`
-  Goal:0773 explicit exact splice;[whole scope/proofs](../history/stitchcad-devnotes-part949.md).
+  Goal:0773 explicit exact splice;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part949md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata`
   Status: `done`
   Goal:explicit joined metadata/material/label/cut/fold/mark reconciliation from actual source fields.
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.fields`
   Status: `done`
-  Goal:0774 explicit field selection;[whole scope/proofs](../history/stitchcad-devnotes-part950.md).
+  Goal:0774 explicit field selection;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part950md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.cut`
   Status: `done`
-  Goal:0808 canonical joined cut/print preview;[whole scope/proofs](../history/stitchcad-devnotes-part984.md).
+  Goal:0808 canonical joined cut/print preview;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part984md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks`
   Status: `done`
   Goal:explicit mark/grainline/seam/other consumer ownership and mapped-or-visible repair requirements.
   Native requirement checkpoint0807;actual consumer census/repair truth remains .lineage/.5f.4/.5g.
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.sources`
   Status: `done`
-  Goal:0806 complete native consumer-source requests;[whole scope/proofs](../history/stitchcad-devnotes-part982.md).
+  Goal:0806 complete native consumer-source requests;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part982md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.review`
   Status: `done`
-  Goal:0807 native consumer requirement checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part983.md).
+  Goal:0807 native consumer requirement checkpoint;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part983md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.metadata.marks.tracking`
   Status: `done`
-  Goal:0805 bounded consumer continuity;[whole scope/proofs](../history/stitchcad-devnotes-part981.md).
+  Goal:0805 bounded consumer continuity;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part981md).
 [Complete native copy/inventory reconciliation](G1-SLICE-constructions.md#complete-join-candidate-inventory)
 retains every original goal,status,child relation and focused acceptance proof.
 
@@ -816,41 +816,41 @@ retains every original goal,status,child relation and focused acceptance proof.
   Native declaration checkpoint0807;actual geometry/consumer repair/currentness/identity/effects remain separately owned.
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.sources`
   Status: `done`
-  Goal:0777 full original H/R admission/book split;[whole scope/proofs](../history/stitchcad-devnotes-part953.md).
+  Goal:0777 full original H/R admission/book split;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part953md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.banks`
   Status: `done`
-  Goal:0778 literal A/B banks;[whole scope/proofs](../history/stitchcad-devnotes-part954.md).
+  Goal:0778 literal A/B banks;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part954md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.roles`
   Status: `done`
-  Goal:0779 catalogue association/full Changelog retention;[whole scope/proofs](../history/stitchcad-devnotes-part955.md).
+  Goal:0779 catalogue association/full Changelog retention;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part955md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage`
   Status: `done`
   Goal:explicit output/source identities,retirement/reference repair and full observer/evidence requirements.
   Native requirement checkpoint0811;actual issuance/liveness/history/retirement/repair and effects remain G2/G3/.5f.4/.5g.
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.edges`
   Status: `done`
-  Goal:0809 complete global-edge identity requirements;[whole scope/proofs](../history/stitchcad-devnotes-part985.md).
+  Goal:0809 complete global-edge identity requirements;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part985md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.effects`
   Status: `done`
-  Goal:0810 complete effect-source requirements;[whole scope/proofs](../history/stitchcad-devnotes-part986.md).
+  Goal:0810 complete effect-source requirements;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part986md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.review`
   Status: `done`
-  Goal:0811 native lineage requirement checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part987.md).
+  Goal:0811 native lineage requirement checkpoint;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part987md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.lineage.identity`
   Status: `done`
-  Goal:0780 scoped result Piece identity;[whole scope/proofs](../history/stitchcad-devnotes-part956.md).
+  Goal:0780 scoped result Piece identity;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part956md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.manifest`
   Status: `done`
-  Goal:0781 original Edge attribution;[whole scope/proofs](../history/stitchcad-devnotes-part957.md).
+  Goal:0781 original Edge attribution;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part957md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.coverage`
   Status: `done`
-  Goal:0782 complete surviving cut partitions;[whole scope/proofs](../history/stitchcad-devnotes-part958.md).
+  Goal:0782 complete surviving cut partitions;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part958md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.directions`
   Status: `done`
-  Goal:0783 complete parameter directions;[whole scope/proofs](../history/stitchcad-devnotes-part959.md).
+  Goal:0783 complete parameter directions;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part959md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.tracking`
   Status: `done`
-  Goal:0784 reference/task room;[whole scope/proofs](../history/stitchcad-devnotes-part960.md).
+  Goal:0784 reference/task room;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part960md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology`
   Status: `done`
   Goal:explicit complete proposed joined boundary/hole/construction/fold-use topology with actual
@@ -859,10 +859,10 @@ retains every original goal,status,child relation and focused acceptance proof.
   Dependencies:.contours.tracking before book/task growth;split implementation before code if needed.
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.loops`
   Status: `done`
-  Goal:0785 complete cut-use declarations;[whole scope/proofs](../history/stitchcad-devnotes-part961.md).
+  Goal:0785 complete cut-use declarations;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part961md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.connectivity`
   Status: `done`
-  Goal:0786 required cut paths;[whole scope/proofs](../history/stitchcad-devnotes-part962.md).
+  Goal:0786 required cut paths;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part962md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut`
   Status: `done`
   Goal:complete original construction/fold use reconciliation with explicit retained/removed/derived
@@ -870,7 +870,7 @@ retains every original goal,status,child relation and focused acceptance proof.
   Canonical cut/fold/print .metadata.cut and mark/consumer .metadata.marks remain distinct obligations.
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.uses`
   Status: `done`
-  Goal:0787 proposed construction uses;[whole scope/proofs](../history/stitchcad-devnotes-part963.md).
+  Goal:0787 proposed construction uses;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part963md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources`
   Status: `done`
   Goal:explicit complete original A/B construction-field retention/omission/mapping reconciliation
@@ -879,7 +879,7 @@ retains every original goal,status,child relation and focused acceptance proof.
   Native mappings complete0792;consumer/repair obligations remain .metadata.marks before source closure.
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.actions`
   Status: `done`
-  Goal:0788 complete source actions;[whole scope/proofs](../history/stitchcad-devnotes-part964.md).
+  Goal:0788 complete source actions;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part964md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps`
   Status: `done`
   Goal:native explicit retained whole-field output role/range/traversal groups against actual proposed
@@ -888,10 +888,10 @@ retains every original goal,status,child relation and focused acceptance proof.
   target duplication,source-frame substitution or provider truth. Bound all nested groups before fields.
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.groups`
   Status: `done`
-  Goal:0789 retained construction groups;[whole scope/proofs](../history/stitchcad-devnotes-part965.md).
+  Goal:0789 retained construction groups;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part965md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.coverage`
   Status: `done`
-  Goal:0790 whole retained source partitions;[whole scope/proofs](../history/stitchcad-devnotes-part966.md).
+  Goal:0790 whole retained source partitions;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part966md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets`
   Status: `done`
   Goal:map retained groups onto actual proposed construction-use occurrences with exact expected
@@ -899,10 +899,10 @@ retains every original goal,status,child relation and focused acceptance proof.
   intent/evidence;omission requests require real source/consumer justification before effects.
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets.assignments`
   Status: `done`
-  Goal:0791 actual retained target occurrences;[whole scope/proofs](../history/stitchcad-devnotes-part967.md).
+  Goal:0791 actual retained target occurrences;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part967md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.sources.maps.targets.coverage`
   Status: `done`
-  Goal:0792 whole proposed construction uses;[whole scope/proofs](../history/stitchcad-devnotes-part968.md).
+  Goal:0792 whole proposed construction uses;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part968md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold`
   Status: `done`
   Goal:explicit original fold-field and result cut-on-fold requirements against actual outer cut uses;
@@ -910,13 +910,13 @@ retains every original goal,status,child relation and focused acceptance proof.
   Canonical final cut/print .metadata.cut and all marks/consumers .metadata.marks remain owned.
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold.result`
   Status: `done`
-  Goal:0793 explicit desired result fold;[whole scope/proofs](../history/stitchcad-devnotes-part969.md).
+  Goal:0793 explicit desired result fold;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part969md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.contours.topology.noncut.fold.sources`
   Status: `done`
-  Goal:0794 complete original fold actions;[whole scope/proofs](../history/stitchcad-devnotes-part970.md).
+  Goal:0794 complete original fold actions;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part970md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
   Status: `done`
-  Goal:0812 native join declaration checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part988.md).
+  Goal:0812 native join declaration checkpoint;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part988md).
 Closed search checkpoint:[whole seven-node subtree](G1-SLICE-constructions.md#native-declaration-search-checkpoint).
 
 - ID: `G1-SLICE.5f.2`
@@ -929,10 +929,10 @@ Closed search checkpoint:[whole seven-node subtree](G1-SLICE-constructions.md#na
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5f.2.tracking`
   Status: `done`
-  Goal:0819 bounded ordered-integration tracking;[whole scope/proofs](../history/stitchcad-devnotes-part995.md).
+  Goal:0819 bounded ordered-integration tracking;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part995md).
 - ID: `G1-SLICE.5f.2.plan`
   Status: `done`
-  Goal:0820 sourced ordered integration plan;[whole scope/proofs](../history/stitchcad-devnotes-part996.md);implementation lives in [construction sibling](G1-SLICE-constructions.md#ordered-drafting-integration).
+  Goal:0820 sourced ordered integration plan;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part996md);implementation lives in [construction sibling](G1-SLICE-constructions.md#ordered-drafting-integration).
   0821 retirement evidence,owned by `.5f.2.inputs` in the construction sibling:
   - [x] ROOT CAUSE: `git show 05ad20f7:docs/tasks/G1-SLICE-execution.md`:
     whole0820 plan/proof occupies1244B;retiring it removes this file's last three acceptance boxes,rc=0.

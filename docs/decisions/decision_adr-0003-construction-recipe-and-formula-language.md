@@ -39,7 +39,7 @@ The normative text is the chapter; this is the reasoning, so a later session doe
 | the canonical form is an S-expression and is the formula's identity | JSON, or the surface spelling | JSON reintroduces a float-formatting question the units chapter closes; two spellings of one formula must not be two formulas |
 | an envelope refusal raises the envelope's token, not a formula token | a formula token for everything | two token sets competing for one refusal is how a diagnostic registry drifts |
 
-[Whole original chapter-partition rationale](../history/stitchcad-devnotes-part997.md) retains
+[Whole original chapter-partition rationale](../history/window29.md#stitchcad-devnotes-part997md) retains
 the historical sizes and two-way census policy;the normative chapters remain canonical.
 
 **The margin the census enforces.** `max_expression_nodes` = 256 must exceed the largest expression
@@ -111,7 +111,7 @@ same value semantics and never a change of the rounding points; (3) a real recip
 
 ## Closed diagnostic-policy discussions
 
-[Whole D124/D131/D121 discussions](../history/stitchcad-devnotes-part948.md) retain their
+[Whole D124/D131/D121 discussions](../history/window29.md#stitchcad-devnotes-part948md) retain their
 source byte-exact. Current formula diagnostics and indexed D131 binding-source decision remain normative.
 
 ## Native exact nondeforming join domain —0773

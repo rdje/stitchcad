@@ -5,7 +5,7 @@ The truing branch moves here byte-exact under .join.outputs.copies.tracking.
 
 ## Native walk declarations
 
-[Whole completed goals and original proof links](../history/stitchcad-devnotes-part950.md)
+[Whole completed goals and original proof links](../history/window29.md#stitchcad-devnotes-part950md)
 remain byte-exact;all original node identities/statuses follow.
 - ID: `G1-SLICE.5f.1.c.walk.inputs`
   Status: `done`
@@ -76,7 +76,7 @@ Owned by `.piece.lineage.tracking` in [truing below](#native-constrained-truing-
 - ID: `G1-SLICE.5f.1.c.true.inputs`
   Status: `done`
   Goal:0689 input association;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part859md).
-[Completed truing output/variant goals and original proof links](../history/stitchcad-devnotes-part947.md)
+[Completed truing output/variant goals and original proof links](../history/window29.md#stitchcad-devnotes-part947md)
 remain byte-exact in sealed history;the live node identities/statuses follow.
 - ID: `G1-SLICE.5f.1.c.true.outputs`
   Status: `done`
@@ -152,10 +152,10 @@ remain byte-exact in sealed history;the live node identities/statuses follow.
   Goal:0771 scope/proofs in947 above.
 - ID: `G1-SLICE.5f.1.c.true.variants.contracts`
   Status: `done`
-  Goal:0769 current sources/planned selection;[whole scope/proofs](../history/stitchcad-devnotes-part945.md).
+  Goal:0769 current sources/planned selection;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part945md).
 - ID: `G1-SLICE.5f.1.c.true.variants.selection`
   Status: `done`
-  Goal:0770 ordered curve admission/ADR-0003;[whole scope/proofs](../history/stitchcad-devnotes-part946.md).
+  Goal:0770 ordered curve admission/ADR-0003;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part946md).
 - ID: `G1-SLICE.5f.1.c.true.variants.review`
   Status: `done`
-  Goal:0771 scoped native checkpoint;[whole review/proofs](../history/stitchcad-devnotes-part947.md).
+  Goal:0771 scoped native checkpoint;[whole review/proofs](../history/window29.md#stitchcad-devnotes-part947md).

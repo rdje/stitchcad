@@ -6,7 +6,7 @@ Historical verification/commit/changelog tables stay in [the evidence sibling](G
 
 ## Completed construction child contracts
 
-Whole closed goals/acceptance/proofs remain byte-exact in [part959](../history/stitchcad-devnotes-part959.md).
+Whole closed goals/acceptance/proofs remain byte-exact in [part959](../history/window29.md#stitchcad-devnotes-part959md).
 
 - ID: `G1-SLICE.3c.4a`
   Status: `done`
@@ -776,10 +776,10 @@ before final checks. No checker, cap, grammar or product Rust changed; no needed
   explicit A/B-to-result correspondence;no silent pairing,discarded source quantities or new ids.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.results`
   Status: `done`
-  Goal:0795 explicit result-copy requests;[whole scope/proofs](../history/stitchcad-devnotes-part971.md).
+  Goal:0795 explicit result-copy requests;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part971md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.actions`
   Status: `done`
-  Goal:0796 complete original-copy actions;[whole scope/proofs](../history/stitchcad-devnotes-part972.md).
+  Goal:0796 complete original-copy actions;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part972md).
 ### G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs`
   Status: `done`
@@ -823,7 +823,7 @@ before final checks. No checker, cap, grammar or product Rust changed; no needed
   Goal:complete original-copy consumption/preservation/result correspondence and explicit multiplicity.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.population`
   Status: `done`
-  Goal:0776 explicit cut population;[whole scope/proofs](../history/stitchcad-devnotes-part952.md).
+  Goal:0776 explicit cut population;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part952md).
 [Complete native copy-correspondence branch](G1-SLICE-constructions.md#join-physical-copy-correspondence)
 retains all original goals,statuses and focused acceptance evidence.
 
@@ -833,50 +833,34 @@ retains all original goals,statuses and focused acceptance evidence.
   copy actions/population/identity,including remaining source copies and all unrelated members.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.plan`
   Status: `done`
-  Goal:0799 actual canonical candidate plan;[whole scope/proofs](../history/stitchcad-devnotes-part975.md).
+  Goal:0799 actual canonical candidate plan;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part975md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.fields`
   Status: `done`
-  Goal:0800 whole inventory field resources;[whole scope/proofs](../history/stitchcad-devnotes-part976.md).
+  Goal:0800 whole inventory field resources;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part976md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals`
   Status: `done`
   Goal:preserve remaining original fields except derived quantity and explicit guarded companion repairs;
   canonical reciprocal mates cannot silently keep retired source identities.
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.tracking`
   Status: `done`
-  Goal:0801 bounded inventory reference;[whole scope/proofs](../history/stitchcad-devnotes-part977.md).
+  Goal:0801 bounded inventory reference;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part977md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.companions`
   Status: `done`
-  Goal:0802 explicit retained companion requirements;[whole scope/proofs](../history/stitchcad-devnotes-part978.md).
+  Goal:0802 explicit retained companion requirements;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part978md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.originals.fields`
   Status: `done`
-  Goal:0803 exact original preservation;[whole scope/proofs](../history/stitchcad-devnotes-part979.md).
-### G1-SLICE.5f.1.c.join.outputs.copies.inventory.result
+  Goal:0803 exact original preservation;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part979md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.result`
   Status: `done`
-  Goal:complete actual joined-result field matching under original preservation;consumer/physical obligations separate.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_result_piece_contract` through launcher:
-    4 pass;canonical candidate copies/resources do not certify requested ordered holes/construction/fold or selected metadata,rc=0.
-  - [x] ADDRESSED: same target plus `cargo test -p sc-core --test join_original_piece_contract`:
-    4/4 pass;actual2-hole/8-construction/fold candidate and first field refusals;original companion/evidence requests retained,rc=0.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --test join_result_piece_contract --test join_original_piece_contract -- -D warnings`:
-    strict lint/API2/inventory5/fmt/book/rendered claims rc=0;979 three Git spans/body/public exact;archive1433/66,per-generation21/64 and45/64,rc=0.
-  Commit:STITCHCAD-G1-0804. promotion: declined (existing exact native joined inventory/copy/metadata contract).
+  Goal:0804 actual joined-result fields;[whole scope/proofs](../history/stitchcad-devnotes-part999.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking`
   Status: `done`
-  Goal:0798 bounded inventory continuity;[whole scope/proofs](../history/stitchcad-devnotes-part974.md).
+  Goal:0798 bounded inventory continuity;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part974md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.tracking`
   Status: `done`
-  Goal:0775 bounded continuity;[whole scope/proofs](../history/stitchcad-devnotes-part951.md).
+  Goal:0775 bounded continuity;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part951md).
 
-### G1-SLICE.5f.1.c.join.outputs.metadata.marks.tracking — retention evidence
-
-  - [x] ROOT CAUSE: `git show 618fe393:docs/tasks/G1-SLICE-execution.md | wc -l -c`:
-    gives998L/55970B,rc=0;consumer declaration children need room below the1000L health target.
-  - [x] ADDRESSED: `python3 -I -B -` Git interval proof:whole3468B/SHA54570aa8 branch,
-    12 done IDs/statuses/relations once,old64255B destination prefix exact,all5 Rust fences retained;Rust diff empty,rc=0.
-  - [x] NO REGRESSION: `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`:
-    10 lanes/13 trees/20 siblings/0 issues,rc=0;980 three Git spans/body/public exact;archive1434/67,per-generation21/64 and46/64,rc=0.
-    `scripts/run_make.sh book`:build/rendered consumer boundary rc=0;runtime/full feature verification unchanged.
+[Whole0805 retention evidence](../history/stitchcad-devnotes-part999.md) remains byte-exact.
 
 ## Native declaration search checkpoint
 
@@ -886,49 +870,51 @@ retains all original goals,statuses and focused acceptance evidence.
   payload10015553B/JS10030347B. Preserve full-text/chapter search;no latency claim,cap raise or warning suppression.
 - ID: `G1-SLICE.5f.1.book-search.plan`
   Status: `done`
-  Goal:0814 upstream field leakage census and bounded remedy;[whole scope/proofs](../history/stitchcad-devnotes-part990.md).
+  Goal:0814 upstream field leakage census and bounded remedy;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part990md).
 - ID: `G1-SLICE.5f.1.book-search.build`
   Status: `done`
-  Goal:0815 published local renderer/native field correction;[whole scope/proofs](../history/stitchcad-devnotes-part991.md).
+  Goal:0815 published local renderer/native field correction;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part991md).
 - ID: `G1-SLICE.5f.1.book-search.activate`
   Status: `done`
   Goal:select the verified local renderer explicitly in normal build/publication/capture paths;guard tool/source paths and update installation/search docs and directly affected contracts.
   Acceptance:all full-text/chapter coverage retained;unexpected renderer warnings still refuse;no implicit dependency on ambient executable resolution.
 - ID: `G1-SLICE.5f.1.book-search.activate.tool`
   Status: `done`
-  Goal:0816 guarded local tool setup and D376 repair;[whole scope/proofs](../history/stitchcad-devnotes-part992.md).
+  Goal:0816 guarded local tool setup and D376 repair;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part992md).
 - ID: `G1-SLICE.5f.1.book-search.activate.publication`
   Status: `done`
-  Goal:0817 local renderer/publication activation and D377 repair;[whole scope/proofs](../history/stitchcad-devnotes-part993.md).
+  Goal:0817 local renderer/publication activation and D377 repair;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part993md).
 - ID: `G1-SLICE.5f.1.book-search.verify`
   Status: `done`
-  Goal:0818 actual native search/query checkpoint and D372 closure;[whole scope/proofs](../history/stitchcad-devnotes-part994.md).
+  Goal:0818 actual native search/query checkpoint and D372 closure;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part994md).
 
 ## Ordered drafting integration
 
 - ID: `G1-SLICE.5f.2.inputs`
   Status: `done`
-  Goal:0821 borrowed13-family raw input view;[whole scope/proofs](../history/stitchcad-devnotes-part997.md).
+  Goal:0821 borrowed13-family raw input view;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part997md).
 - ID: `G1-SLICE.5f.2.context.contract`
   Status: `done`
-  Goal:0822 actual owner/frame/current snapshot contract;[whole scope/proofs](../history/stitchcad-devnotes-part998.md).
+  Goal:0822 actual owner/frame/current snapshot contract;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part998md).
 - ID: `G1-SLICE.5f.2.context`
   Status: `in_progress`
   Goal:implement explicit immutable source port and bounded actual-root binding from .context.contract;retain actual frame/current typed output provenance and original causes,no fabricated geometry or planned-output liveness.
-### G1-SLICE.5f.2.context.source
 - ID: `G1-SLICE.5f.2.context.source`
   Status: `done`
-  Goal:explicit immutable actual-root/frame/snapshot resource/currentness and typed raw geometry source port;raw borrowed records confer no accepted context or geometry proof.
-  - [x] ROOT CAUSE: launcher `cargo clippy -p sc-core --lib -- -D warnings`:
-    nested source response triggered type_complexity;named DraftingGeometrySourceResult keeps the original typed cause/source without a lint allowance;final lint pass,rc=0.
-  - [x] ADDRESSED: launcher `cargo test -p sc-core --doc construction::context`:
-    raw unsized/non-Clone/non-Debug source example and two lifetime/frame-replacement compile-fail guards pass3,rc=0;port alone constructs no accepted context.
-  - [x] NO REGRESSION: `scripts/run_make.sh book`,publication `check(ROOT)` and fmt:
-    warning-free118/374/1806/3389,five old Rust fences exact,rc=0;998 three Git/body/public spans/archive1452/85,per-generation21/64 and64/64,rc=0.
-  Commit:STITCHCAD-G1-0823. promotion:declined (existing immutable raw source/context contract);.archive next before bounded binding;coupled feature verification remains .verify.
+  Goal:0823 immutable drafting source port;[whole scope/proofs](../history/stitchcad-devnotes-part999.md).
+### G1-SLICE.5f.2.context.archive
 - ID: `G1-SLICE.5f.2.context.archive`
-  Status: `pending`
+  Status: `done`
   Goal:pack sealed raw history into the next bounded retrieval window before another record would exceed active generation64 working files;verify all original public bytes and source seals.
+  - [x] ROOT CAUSE: `python3 -I -B docs/tasks/artifacts/history_archive/generation_pressure.py`:
+    active generation64/64 with57 raw/7 windows,aggregate85/192;next record requires packing,rc=0.
+  - [x] ADDRESSED: wrapper `v2_migration.py append target/history_window29_capture --owner G1-SLICE.5f.2.context.archive`,then
+    `v2_install.py install target/history_window29_capture`:57 original full files/all1452 logical records/33 prior backings exact;live public57 reads equal Git,rc=0.
+  - [x] NO REGRESSION: `scripts/history_archive.py --root . verify-retention`:
+    999 five Git/body/public spans exact;1453 logical/30 working,per-generation21/64 and9/64,rc=0;
+    110 live links/8 files/0 stale,all task IDs/Rust/book exact;book/publication118/374/1806/3389,rc=0.
+  Commit:STITCHCAD-G1-0824. promotion:declined (existing bounded archive transaction/whole-byte retention contract).
+  Receipt:target/history_window29_capture/live_receipt.json;original trees retained;never rerun installer/recovery after later archive edits.
 - ID: `G1-SLICE.5f.2.context.bind`
   Status: `pending`
   Goal:bounded actual scalar-scope/root/revision/source binding,charge complete context before queries and preserve original typed first refusals;no program or geometry values.

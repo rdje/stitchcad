@@ -1171,7 +1171,7 @@ Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];roo
 
 ## D302 — aggregate count mistaken for active archive pressure
 
-Recurrence fixed0767;[whole original/recurrence ledger](../history/stitchcad-devnotes-part943.md).
+Recurrence fixed0767;[whole original/recurrence ledger](../history/window29.md#stitchcad-devnotes-part943md).
 
 D303–D306:[whole closed ledger](../history/window27.md#stitchcad-devnotes-part865md).
 
@@ -1179,16 +1179,16 @@ D307–D369:[whole prior ledger](../history/window27.md#stitchcad-devnotes-part8
 
 ## D372 — large book-search index warning
 
-Fixed0818;[whole cause/prior checkpoints](../history/stitchcad-devnotes-part993.md),[whole closure/proofs](../history/stitchcad-devnotes-part994.md).
+Fixed0818;[whole cause/prior checkpoints](../history/window29.md#stitchcad-devnotes-part993md),[whole closure/proofs](../history/window29.md#stitchcad-devnotes-part994md).
 
 ## D373/D374 — active journal documentation scope/storage drift
 Fixed0696;[whole original ledger/proofs](../history/window28.md#stitchcad-devnotes-part935md).
 
 ## D375 — drafting chapters missing from the topic index
-Fixed0760;[whole cause/reproduction/fix](../history/stitchcad-devnotes-part942.md).
+Fixed0760;[whole cause/reproduction/fix](../history/window29.md#stitchcad-devnotes-part942md).
 
 ## D376 — search-tool source inventory drift
-Fixed0816;[whole cause/reproduction/proofs](../history/stitchcad-devnotes-part992.md).
+Fixed0816;[whole cause/reproduction/proofs](../history/window29.md#stitchcad-devnotes-part992md).
 
 ## D377 — publication glossary/index navigation contract drift
-Fixed0817;[whole cause/reproduction/proofs](../history/stitchcad-devnotes-part993.md).
+Fixed0817;[whole cause/reproduction/proofs](../history/window29.md#stitchcad-devnotes-part993md).

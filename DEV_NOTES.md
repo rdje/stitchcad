@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — immutable drafting source port
+## _(2026-11-02 UTC)_ — bounded sealed-history packing
 
-0823 declares actual-root/revision/frame/snapshot,exhaustive resource/current-source and typed existing-geometry ports;raw records retain all actual borrows without accepted context.
-Named raw Result avoids nested signature lint complexity;unsized/non-Clone/non-Debug source example and lifetime/frame replacement guards pass3;strict lib lint/fmt pass0.
-Book/publication118-374-1806-3389/five old Rust fences/998 three whole Git/body/public spans exact0;archive1452/85,per-generation21/64 and64/64;packing owned next.
-Promotion declined: existing immutable context/source contract. Bounded binding/lookup/program integration and whole feature verification remain pending;G1still6/18.
+0824 packs57 committed whole files into window29 with source-pinned journaled installer;all1452 logical originals/33 earlier backings and57 live public reads equal Git0.
+110 live Markdown pointers/8 files rebase to catalog anchors;all original task IDs/Rust/book bytes exact. 999 preserves whole0823 and prior0804/0805 proofs in five Git/body/public spans0.
+Final retention1453 logical/30 working,per-generation21/64 and9/64,headroom55;book/publication118-374-1806-3389 pass0. Protected window28/29 recovery originals retained.
+Promotion declined: existing bounded transaction/whole-source retention contract. Bounded actual context binding next;whole feature verification pending,G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

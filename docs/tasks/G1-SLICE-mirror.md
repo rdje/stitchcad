@@ -5,7 +5,7 @@ Original mirror goals/proof links remain byte-exact in950;all live IDs/statuses 
 
 ## Native mirror Piece-copy declarations
 
-[Whole completed goals and original proof links](../history/stitchcad-devnotes-part950.md)
+[Whole completed goals and original proof links](../history/window29.md#stitchcad-devnotes-part950md)
 remain byte-exact;all original node identities/statuses follow.
 - ID: `G1-SLICE.5f.1.c.mirror.inputs`
   Status: `done`
