@@ -3,17 +3,18 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0828 — plan actual mixed-program source owner
+## STITCHCAD-G1-0829 — cache exact scalar recipe shape
 
-- Inventoried source metadata,13 native families,6 owned argument documents and Walk's pair vector.
-  Added six bounded implementation owners,starting with factory-derived scalar recipe counts.
-- Whole admission covers Root/context/native content and all3 normalization cohorts;actual scalar
-  ordinals remain separate from mixed positions. Name/manifest bindings stay explicit later inputs.
-- Rust/eight Rust fences unchanged;book/publication118/374/1808/3395/source census pass0.
-  1003 four Git/body/public spans exact;archive1457/34,per-generation21/64 and13/64.
-  G1still6/18;program API/factories remain planned,whole integration verification pending.
+- Added immutable factory-derived FormulaRecipeShape counts for all statements,operands and nodes.
+  Getter reparses/evaluates nothing;source/canonical identity,literal rules and buffer charges stay intact.
+- Shape4/document7/doctests4/strict selected lint/fmt/book/publication118/374/1808/3396 pass0;
+  ten prior recipe Rust fences/overview fences preserved and new book example equals native doctest.
+- 1004 three Git/body/public spans exact;archive1458/35,per-generation21/64 and14/64.
+  G1still6/18;native fields next,whole mixed owner/integration verification still pending.
 
 # Sealed archive — earlier slices
+
+[Whole0828 sourced mixed-program plan](docs/history/stitchcad-devnotes-part1004.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

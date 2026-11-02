@@ -148,7 +148,7 @@ Whole logical admission and static checks precede values,and a later refusal exp
 program prefix. Pocket kind/domain/state and Buttonhole's canonical button-size dependency remain
 part of the complete graph;no separately authored hole length or approximation is introduced.
 
-Input composition and bounded actual context binding are implemented. Typed existing-output lookup,
+Input composition, bounded actual context and typed existing-output binding are implemented. The
 ordered owner,names,complete dependencies and whole checking remain separately owned work. Coupled
 verification follows that complete set. The raw input view alone grants no context or program acceptance.
 
@@ -172,8 +172,8 @@ For example, these are illustrative positions, not a new text grammar:
 | 2 | Original borrowed drafting declaration and all its argument documents |
 | 3 | Scalar statement 2, still source ordinal 2 with its original whole-recipe spans |
 
-First, scalar recipe documents need factory-derived statement, expression and node counts. Existing
-expression documents already cache their actual complete node count. Counting must preserve both
+Scalar recipe documents now expose factory-derived statement, expression and node counts through
+`shape()`; expression documents retain their complete cached node count. These metadata preserve both
 assertion operands, all conditional branches and unused source bodies, with no value reads, caller
 annotations or parsing merely to discover a required population. Existing grammar/literal limits
 and scalar canonical identity stay unchanged;that identity is not a mixed-program serializer/hash.

@@ -98,7 +98,7 @@ mod canonical_recipe;
 pub use canonical_recipe::{FormulaCanonicalRecipe, FormulaCanonicalStatement};
 
 mod document;
-pub use document::{FormulaRecipeDocument, FormulaRecipeDocumentError};
+pub use document::{FormulaRecipeDocument, FormulaRecipeDocumentError, FormulaRecipeShape};
 
 mod expression_document;
 pub use expression_document::{FormulaExpressionDocument, FormulaExpressionDocumentError};

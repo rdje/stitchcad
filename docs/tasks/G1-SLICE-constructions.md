@@ -893,21 +893,22 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.program`
   Status: `in_progress`
   Goal:whole ordered scalar/drafting owner and complete logical limits;retain actual scalar recipe ordinals separately from genuine combined-program positions and original operation/document owners.
-### G1-SLICE.5f.2.program.plan
 - ID: `G1-SLICE.5f.2.program.plan`
   Status: `done`
-  Goal:choose exact whole mixed scalar/drafting owner and logical limits from actual source APIs;preserve original scalar ordinals,combined positions,complete source content and actual root/frame bindings before implementation.
-  - [x] ROOT CAUSE: `python3 -I -B -` actual source/API census:
-    recipe/expression documents hold2/3 fields;only expressions cache nodes;native13 schemas contain Point2/Arc3/Slash1 argument docs and Walk1 Copy-pair vector;fixed recipe/expression bounds4096/256,rc=0.
-  - [x] ADDRESSED: same census verifies seven plan/implementation owners and actual Root-only scalar source strategy,
-    rc=0;cache recipe counts first,then exhaustive fields/raw steps/whole admission/all3 normalization cohorts/borrowed views;names/manifests stay explicit later inputs,no fabricated mixed identity.
-  - [x] NO REGRESSION: `scripts/run_make.sh book`,publication `check(ROOT)` and Git source comparison:
-    warning-free118/374/1808/3395/eight Rust fences/all original task IDs/dart anchor retained,Rust unchanged,rc=0;
-    1003 four Git/body/public spans/archive1457/34,per-generation21/64 and13/64,rc=0.
-  Commit:STITCHCAD-G1-0828. promotion:declined (existing source/order/complete-admission contract);first implementation .program.recipe,whole feature verification .5f.2.verify.
+  Goal:0828 sourced six-stage programme plan;[whole scope/proofs](../history/stitchcad-devnotes-part1004.md).
+### G1-SLICE.5f.2.program.recipe
 - ID: `G1-SLICE.5f.2.program.recipe`
-  Status: `pending`
+  Status: `done`
   Goal:immutable factory-derived scalar recipe statement/expression/node counts for complete preflight;preserve source/canonical identity,all assertion operands and existing parser/literal bounds,no caller counts or reparsing just to measure.
+  Also corrected overview availability drift:lookup implemented0827 was still listed pending;available context/recipe metadata now distinct from the planned mixed owner.
+  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test formula_recipe_shape_contract --test formula_recipe_document_contract`:
+    factory shape4/existing document7 pass;two statements/three operands/fourteen nodes include untaken division and unknown call without evaluation,rc=0.
+  - [x] ADDRESSED: same targets retain source/canonical aliases,empty counts,unchanged two-buffer charges and4096-statement/8192-operand boundary;
+    `cargo test -p sc-core --doc recipe::document`:private metadata/source loan guards and exact copied book example pass4,rc=0.
+  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test formula_recipe_shape_contract -- -D warnings`,fmt,
+    book/publication118/374/1808/3396/ten prior recipe fences and all overview fences exact,rc=0;
+    1004 three Git/body/public spans/archive1458/35,per-generation21/64 and14/64,rc=0.
+  Commit:STITCHCAD-G1-0829. promotion:declined (existing immutable factory metadata/resource contract);mixed owner/factories/whole feature verification remain pending.
 - ID: `G1-SLICE.5f.2.program.fields`
   Status: `pending`
   Goal:exhaustive13-family actual held-field accounting,Point2/Arc3/Slash1 owned argument documents and Walk's original Copy pair vector;preserve original/canonical buffers and owner/role locations,no values or metadata defaults.

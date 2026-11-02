@@ -212,7 +212,7 @@ have equal canonical identities while differently authored documents remain dist
 normalized() reuses the actual parser/converter to return source-borrowed arenas with original spans;
 it stores no self-reference and generates no spans from canonical bytes. Views cannot outlive the
 document. Repeated calls preserve state; typed syntax/literal refusals propagate without fallback.
-Private fields require a new validated replacement. Debug exposes byte counts, not customer text.
+Private fields require a new validated replacement. Debug exposes byte/shape counts,not customer text.
 
 ```rust
 use sc_core::recipe::FormulaRecipeDocument;
@@ -230,6 +230,31 @@ Duplicate/unbound names and incompatible kinds remain inspectable until static c
 | --- | --- |
 | `FormulaRecipeDocument` | Immutable original text and typed syntax identity |
 | `FormulaRecipeDocumentError` | Original Syntax or Literal refusal with nested source context |
+
+## Factory-derived recipe shape
+
+`document.shape()` now returns immutable `FormulaRecipeShape` metadata from the same successful
+converter that created the original document. `statement_count()` includes all statements and
+assertions; `expression_count()` counts one operand per binding and two per assertion; `node_count()`
+includes every call argument and conditional branch. Reading these counts reparses and evaluates
+nothing, allocates no arena and reads no source value. The existing language limits still apply.
+
+```rust
+use sc_core::recipe::FormulaRecipeDocument;
+let document = FormulaRecipeDocument::new(
+    "let width:length=if(1==2,1 mm,2 mm)\nassert closure:eps_geo=width==2 mm".into(),
+)?;
+let shape = document.shape();
+assert_eq!((shape.statement_count(), shape.expression_count(), shape.node_count()), (2, 3, 8));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Empty/whitespace-only recipes have zero counts. Repeated names, unknown names, wrong declared kinds
+and untaken operator failures remain inspectable input here; shape grants no namespace, kind, value,
+program or resource approval. Private factory construction prevents caller-supplied counts. Clone
+retains original text, identity and counts; Debug reports counts without customer text. The cache is
+fixed Copy metadata, so logical resource accounting still charges the two actual held source and
+canonical buffers. No aggregate language cap, scalar canonical identity or literal rule changes.
 
 ## Owned original expression document
 
