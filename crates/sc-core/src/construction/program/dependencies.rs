@@ -6,6 +6,10 @@ pub use canonical::{
     DraftingProgramCanonicalLimits, DraftingProgramCanonicalOccurrence,
     DraftingProgramCanonicalRefusal, DraftingProgramCanonicalShape, DraftingProgramDerivedBinding,
 };
+mod formula_geometry;
+pub use formula_geometry::{
+    DraftingProgramFormulaGeometryConsumer, DraftingProgramFormulaGeometryUse,
+};
 mod occurrences;
 mod owners;
 pub use occurrences::{DraftingProgramDependencyRole, DraftingProgramNameDependency};

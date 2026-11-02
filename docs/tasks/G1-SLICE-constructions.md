@@ -440,24 +440,7 @@ Retention: complete predecessor payload preserved by .5b.2b.
 
 - ID: `G1-SLICE.5b.2a`
   Status: `done`
-  Work unit: `STITCHCAD-G1-0083`; clean predecessor d7a421e, handoff0/no jobs/user changes.
-  Goal: closed product kind/origin/reserved-name/context vocabulary before sourced declarations.
-  Read: roadmap ADR-0003/§11 G1, contract2/3/3.1/5/6, grammar1.1/5/6/7.1, ontology3/5,
-  static obligation map, MachineToken/statement annotations and public input/reference interfaces.
-  Protocol: eight kinds/six bindable kinds, nine origins/eight reserved names/four context classes;
-  explicit enum metadata only, no values, state, numeric availability or context resolution.
-  Reuse five symbolic FormulaToleranceName variants; preserve MachineToken's closed keywords.
-  Public exhaustive populations/token lookup and exact conversions must agree bidirectionally
-  with independently authored normative rows, including absent-context kind/origin information.
-  Negative lookup preserves exact spelling: no trim/case repair or excluded-form reservations.
-  Independent public Rust contracts and loaded-book population controls; actual compiled mapping/
-  population/role faults must fail assertions with exact source restoration. Focused syntax/name,
-  strict make check, WASM, reference/language/publication and staged doctrine checks before commit.
-  Own D129 stale public review-owner prose repair and completed-task/oldest ledger/lesson retention
-  within existing parts/ceilings. No sourced declaration, namespace, type checker or runtime claim.
-  Acceptance: complete closed metadata contract, honest public status/examples and falsified controls.
-  Verification:5 public contracts/10 actual compiled body reds/exact restoration; strict native596/
-  49groups, WASM3, reference/language16/publication9 terminal0. Commit: `STITCHCAD-G1-0083`.
+  Goal:0083 closed metadata protocol;[whole scope/proofs](../history/stitchcad-devnotes-part1032.md).
 
 Retention: complete predecessor payload preserved by .5b.2b.
 
@@ -961,17 +944,32 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0855 original mixed dependency stream;[whole scope/proofs](../history/stitchcad-devnotes-part1031.md).
 - ID: `G1-SLICE.5f.2.dependencies.canonical.bind`
   Status: `done`
-  Goal:complete explicit mixed dependency/canonical-record bounds before reservation and actual Root joins/Derived source relations;retain original causes/full result,no values or accepted prefix.
-  - [x] ROOT CAUSE: 0856 `cargo test -p sc-core --test drafting_context_binding_contract initial_binding::program_sources`:5 pass,rc=0;original13 uses/10 canonical/D+C23,all owners/roles/spans,Unknown and both Derived families.
-  - [x] ADDRESSED: 0856 same native command rc=0;complete checked arithmetic/occurrence then record quotas before full reservation/native joins;12/0 and13/22 refuse,no prefix;empty0/0;actual selected native source pointers,no callbacks/values.
-  - [x] NO REGRESSION: 0856 selected strict clippy/fmt and `cargo test -p sc-core --doc construction::program::dependencies::canonical`:4 pass,rc=0;128-byte semantic error compacted without boxing allocator cause;private/lifetime/default guards.
-  - [x] BOOK: 0856 guarded build/pure publication118/374/1817/3433,45 prior positive fences unchanged/new whole native fence exact,rc=0;canonical acceptance scoped,geometry/semantics/coupled verification remain separate.
-  - [x] CONTINUITY: 0856 archive1031 three whole0855 Git/body/public spans exact;retention1485/62,generation1 21/64,generation2 41/64,headroom23,rc=0;no history recovery rerun.
-  - [x] BASELINE: 0856 lib check/focused5/strict/fmt/Rustdoc4/build/publication all rc=0;README/LIVE reviewed,G1still6/18 In Progress;whole .5f.2.verify deferred until geometry/semantics/composition implemented.
-  - [x] PROMOTION: 0856 existing native canonical/source/acyclic contracts reused;book owns new factory scope,no new cross-cutting decision;focused checks rc=0. Next geometry dependency stage;whole programme acceptance remains pending.
+  Goal:0856 bounded complete canonical bindings;[whole scope/proofs](../history/stitchcad-devnotes-part1032.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry`
-  Status: `pending`
+  Status: `in_progress`
   Goal:all actual native/selector geometry references under original frame/snapshot and strict earlier creators;unlabelled planned roles need authentic manifests,never live-future lookup or synthetic names.
+- ID: `G1-SLICE.5f.2.dependencies.geometry.formulas`
+  Status: `done`
+  Goal:allocation-free original Point/Edge formula occurrences from every Root source then complete mixed canonical slots;actual consumer/local index/span/declaration/reference,all repeats/branches,no geometry acceptance.
+  - [x] ROOT CAUSE: 0857 `cargo test -p sc-core --test drafting_context_binding_contract initial_binding::formula_geometry`:1 pass/two rich-empty cases,rc=0;6 unused Root-source plus7 mixed geometry uses retain original consumers/indices.
+  - [x] ADDRESSED: 0857 same native command rc=0;source/mixed actual proof/slot pointers,all Point/Edge references/name loans/spans,nongeometry index gaps,both branches/nth/fused end/empty;zero provider/value calls,no geometry acceptance.
+  - [x] NO REGRESSION: 0857 selected strict clippy/fmt and `cargo test -p sc-core --doc construction::program::dependencies::formula_geometry`:3 pass,rc=0;public example and private-field/lifetime guards,opaque default diagnostics.
+  - [x] BOOK: 0857 guarded build/pure publication118/374/1817/3434,46 prior Rust fences unchanged/new whole native fence exact,rc=0;native extraction/requests/bounds/bind and coupled verification explicitly separate.
+  - [x] CONTINUITY: 0857 archive1032 whole0856 task/lesson/ledger plus closed0083 protocol:4 Git/body/full public spans exact;retention1486/63,generation1 21/64,generation2 42/64,headroom22,rc=0.
+  - [x] BASELINE: 0857 lib check/focused1/strict/fmt/Rustdoc3/build/publication all rc=0;README/LIVE reviewed,G1still6/18 In Progress;feature .5f.2.verify deferred until implementation complete.
+  - [x] PROMOTION: 0857 existing original-occurrence/native-source/no-value principles reused;book owns formula-use API scope,no new cross-cutting decision;focused checks rc=0. Native geometry fields are next.
+- ID: `G1-SLICE.5f.2.dependencies.geometry.native`
+  Status: `pending`
+  Goal:complete original geometry reference fields/selectors across all13 actual native families,private schema guards,genuine mixed consumer and original role/index;no synthesized refs or semantic source substitution.
+- ID: `G1-SLICE.5f.2.dependencies.geometry.requests`
+  Status: `pending`
+  Goal:genuine earlier creating-step/reference request and authentic planned-family port,including unnamed outputs;classify all creators,refuse ambiguous/self/future before live lookup;no global name manufacture.
+- ID: `G1-SLICE.5f.2.dependencies.geometry.bounds`
+  Status: `pending`
+  Goal:complete original geometry occurrence/association/content work and checked arithmetic before reservations,queries or child source work;actual owners/selected explicit policies,no capacity/CPU/runtime grant.
+- ID: `G1-SLICE.5f.2.dependencies.geometry.bind`
+  Status: `pending`
+  Goal:complete original existing or strictly earlier fixed/authentic variable geometry suppliers under actual context/frame/snapshot;retain original causes/full result,no prefix or whole programme acceptance.
 - ID: `G1-SLICE.5f.2.dependencies.semantic`
   Status: `pending`
   Goal:actual Root-bound garment/native semantic sources,including Pocket opening kind/domain/state/component recipe and Buttonhole canonical button/derivation;no empty substitute or authored hole length.

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — bounded mixed canonical bindings
+## _(2026-11-02 UTC)_ — original formula geometry consumers
 
-0856 actual mixed stream13/canonical10/D+C23;complete arithmetic and quotas precede full reservation/native joins,no prefix or callbacks/values. Original consumer/role/span/ordinal retained.
-Unknown and both Derived families retain actual Root records;native Derived iterator joins exact selected checked source. Strict lint caught128-byte error;boxed semantic pair preserves cause,allocator remains inline.
-Final focused source5/strict selected lint/fmt/Rustdoc4/build/publication118/374/1817/3433 pass0;45 prior positive fences unchanged/new whole native fence exact. Whole geometry/semantic/composition verification stays deferred.
-1031 whole0855 Git/body/public3 exact0;1485/62,generation1 21/64,generation2 41/64,headroom23. Promotion declined:reuse existing native contracts;book owns factory scope. G1still6/18;geometry dependencies next.
+0857 canonical owner streams selected Root-source proofs then actual mixed occurrence slots;private Use retains original consumer/index/span/declaration/reference. Filtered names keep index gaps;all unused sources/branches/repeats participate.
+Focused rich/empty1 confirms6 Root+7 mixed geometry uses,actual source/slot and name pointers,all references/spans/nth/fused end and zero callbacks. No allocation,supplier acceptance,currentness/frame or native field coverage granted.
+Final focused1/strict selected lint/fmt/Rustdoc3/build/publication118/374/1817/3434 pass0;46 prior positive fences unchanged/new whole native fence exact. Full geometry/semantic/composition verification remains deferred.
+1032 whole0856 task/lesson/ledger plus0083 protocol:4 Git/body/public spans exact0;1486/63,generation1 21/64,generation2 42/64,headroom22. Promotion declined:existing occurrence/source principles;book owns API. G1still6/18;native fields next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

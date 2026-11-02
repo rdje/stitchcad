@@ -3,16 +3,17 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0856 — complete bounded mixed canonical bindings
+## STITCHCAD-G1-0857 — original formula geometry dependency views
 
-Bind every original mixed Input/LengthInput occurrence to the actual Root,including Unknown and both Derived representation families. Count complete D,C,D+C before occurrence/record quotas and full reservation;retain original consumers and exact selected native source proofs. Noncanonical
-metadata grants no geometry acceptance;no values or accepted prefix.
+Stream original Point/Edge formula uses from every selected Root source then complete mixed canonical slots. Retain actual consumers,original dependency indices,spans,declarations and references through unused bodies,repeated branches and filtered names. No allocation,callbacks,values or
+geometry supplier acceptance.
 
-Final focused source5,strict selected lint/fmt,Rustdoc4,guarded book/publication118/374/1817/3433 pass0;45 prior positive fences unchanged/new native fence exact. Archive1031 whole0855 source/body/public3 exact0. G1 remains6/18 In Progress;geometry/semantics/whole verification pending.
+Focused rich/empty1,strict selected lint/fmt,Rustdoc3,guarded book/publication118/374/1817/3434 pass0;46 prior Rust fences unchanged/new native fence exact. Archive1032 four whole source/body/public spans exact0. G1still6/18 In Progress;native fields/requests/bounds/bind and full
+verification pending.
 
 # Sealed archive — earlier slices
 
-[Whole0855 original mixed dependency stream](docs/history/stitchcad-devnotes-part1031.md) retains exact source bytes.
+[Whole0856 canonical bindings and closed0083 metadata protocol](docs/history/stitchcad-devnotes-part1032.md) retain exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

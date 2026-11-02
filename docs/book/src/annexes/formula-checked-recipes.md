@@ -444,3 +444,50 @@ native failure is not fabricated through a dishonest provider in the focused pos
 This completes mixed canonical binding with focused checks. Geometry/semantic associations,whole
 programme composition and the separately tracked coupled verification remain outstanding. It
 provides no geometry execution,authored value,physical result or whole-programme acceptance.
+
+
+## Original geometry uses in formulas
+
+`BoundDraftingProgramCanonicalInputs::formula_geometry_dependencies()` streams every original
+Point/Edge declaration used in checked formulas. It visits all selected Root-source proofs in
+original source order,including unused bodies,then the complete mixed canonical occurrence
+vector in original order. Every repeated name and untaken branch participates. This is an
+allocation-free borrowed view;no source is extracted,reparsed,cloned or queried for values.
+
+Each private `DraftingProgramFormulaGeometryUse` retains `consumer()`,`index()`,`span()`,
+`declaration()` and `reference()`. The reference is the original declaration's PointRef or EdgeRef;
+it is no supplier/currentness/frame certificate. The two inspectable consumer variants are:
+
+- `Source { source_index,source }`:the original zero-based source-proof vector position and
+  actual `FormulaCheckedSource` object. `index()` is that source's original dependency index.
+- `Mixed(slot)`:the actual `DraftingProgramCanonicalOccurrence` slot in the complete retained
+  vector. Its original mixed consumer,role and scalar ordinal remain on `slot.occurrence()`.
+  `index()` is the original complete mixed dependency index,including nongeometry slots.
+
+Filtering arithmetic inputs,prior recipe bindings and reserved names does not renumber later
+uses. In `if(size_count==1,x(private_point),x(private_point))`,the two Point uses retain indices1
+and2 because the original reserved `size_count` occupies index0. Source-local indices and mixed
+stream indices stay in their own actual consumer domains;no combined statement number is made.
+
+```rust
+use sc_core::{construction::*,design::DesignMetadataHost};
+fn geometry_formula_uses<H:DesignMetadataHost,S:DraftingInitialInputProvider<H> + ?Sized>(
+    inputs:&BoundDraftingProgramCanonicalInputs<'_, '_, '_, '_, '_, '_, '_, '_,H,S>) -> usize {
+    inputs.formula_geometry_dependencies().count()
+}
+```
+
+A focused fixture has three unused Root sources,including both branches of the conditional above,
+and a mixed programme with a prior scalar,a Point,an Arc and an assertion. The stream keeps six
+Root-source geometry uses followed by seven mixed ones. Those seven retain complete mixed indices
+`0,1,3,4,8,9,10`;the intervening reserved/prior-scalar/header dependencies remain in their original
+canonical slots. Uses of planned `anchor` and `boundary` keep the actual earlier fixed Point/Arc
+references,while existing `private_point`/`private_edge` keep their original persistent references.
+Tests compare actual source/slot pointers,original metadata-name loans and exact name bytes at
+borrowed spans,and cover nth traversal,repeated end reads,empty cohorts and zero provider calls.
+Default formatting omits source text and metadata names;explicit getters preserve original data.
+
+The stream is fused and grants no native reference-field coverage,geometry supplier acceptance,
+new resource allowance,currentness,physical values or whole-programme acceptance. Native field
+extraction,earlier-creator requests,complete geometry bounds and binding remain separate owned
+leaves;combined verification stays deferred until the agreed integration feature is implemented.

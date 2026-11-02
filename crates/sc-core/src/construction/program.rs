@@ -10,7 +10,8 @@ pub use dependencies::{
     DraftingProgramCanonicalRefusal, DraftingProgramCanonicalShape,
     DraftingProgramDependencyInputs, DraftingProgramDependencyOwnerError,
     DraftingProgramDependencyOwnerIssue, DraftingProgramDependencyRole,
-    DraftingProgramDerivedBinding, DraftingProgramNameDependency,
+    DraftingProgramDerivedBinding, DraftingProgramFormulaGeometryConsumer,
+    DraftingProgramFormulaGeometryUse, DraftingProgramNameDependency,
 };
 mod admission;
 mod limits;

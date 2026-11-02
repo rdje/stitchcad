@@ -1,4 +1,6 @@
 //! Whole initial-source loans,actual owner mismatches and planned creators before live lookup.
+#[path = "drafting_formula_geometry.rs"]
+mod formula_geometry;
 #[path = "drafting_program_sources.rs"]
 mod program_sources;
 use super::{
