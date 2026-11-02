@@ -77,34 +77,7 @@ Whole closed goals/acceptance/proofs remain byte-exact in [part959](../history/w
 
 ### `G1-SLICE.3c.4a.1` — semantic dart intent with visible closure obligations
 
-- [x] **REPRODUCE / ISSUE** — ontology §4.3 and the reference skirt require semantic darts;
-  `0c65d75` has no construction object. Intake declaration, geometric apex/legs and the executed
-  closing operation must remain distinguishable so G1 cannot silently certify conservation.
-- [x] **ROOT CAUSE (WHY + WHERE)** — a valid endpoint or declared intake is insufficient physical
-  evidence. `cargo test -p sc-core --test dart_contract
-  foreign_middle_of_merged_direction_is_refused_despite_owned_endpoints_after_reversal` → `1 passed`,
-  `rc=0`: complete ledger coverage/live owned ends conceal a foreign middle, refused before/after
-  reversal. `interior_apex_owned_legs_intake_origin_and_operation_identity_are_immutable_content`
-  → `1 passed`, `rc=0`: an internal apex is valid structural intent with visible conservation deferral.
-- [x] **FIX** — immutable Dart with intake origin, interior edge-anchored apex, two directed legs,
-  explicit directed closing/folding reference and required closing-operation identity. Validate
-  nonnegative authored intake, distinct held leg intervals, apex scope and all positive interval
-  ownership/coverage/unique endpoints. Preserve raw topology evidence and operation/parameter
-  registry obligations; expose G2 geometry and G2/G3 executed-conservation deferrals.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test dart_contract` → `9 passed`, `rc=0`;
-  intake/symbolic values, opposite duplicate legs, each field's unknown/foreign scope, internal apex,
-  split choice, foreign-middle merge/reversal, directed deletion evidence and immutable replacement
-  discriminate. Disable ownership refusal → merged-middle test fails, `rc=101`; restored strict
-  `make check` passes. The privacy doctest is green; queries never rewrite the original definition.
-- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green, `rc=0`;
-  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
-  feature/glossary → `0 failure(s)`; tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`;
-  ledger probes → `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
-  Existing marks/allowance/sewing contracts remain green and numerical goldens do not change.
-- [x] **LOCKSTEP** — construction family decomposed into owned semantic children before code;
-  structural/geometric decision extended, Rust/subsystem status, bounded construction book companion
-  + SUMMARY/ontology index and feature coverage, frontier/evidence/logs, TASK_TREE/MEMORY/LIVE_STATUS,
-  CHANGELOG and promoted DEV_NOTES. Three of four object families remain done; next `.3c.4a.2`.
+[Whole original dart acceptance](../history/stitchcad-devnotes-part1003.md) remains byte-exact.
 
 ### `G1-SLICE.3c.4a.2a` — distinct tuck/pleat intent with shared structural checks
 
@@ -914,20 +887,42 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.context.geometry.sources`
   Status: `done`
   Goal:0826 original source records and D379 repair;[whole scope/proofs](../history/stitchcad-devnotes-part1002.md).
-### G1-SLICE.5f.2.context.geometry.check
 - ID: `G1-SLICE.5f.2.context.geometry.check`
   Status: `done`
-  Goal:exact requested point/edge reference and actual frame/snapshot source binding with original raw response/cause;no values,planned-output materialization or partial accepted program.
-  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
-    8 pass;raw provider replies can mismatch original reference/frame/snapshot,including equal-looking copied records;first actual field must refuse before any output binding,rc=0.
-  - [x] ADDRESSED: same target plus `cargo test -p sc-core --doc construction::context`:
-    point/edge source loans,all-field refusal priority and original provider causes pass8;private binding/source lifetime and actual companion examples pass11,rc=0.
-  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    book/publication118/374/1808/3394/seven old Rust fences exact,rc=0;1002 four Git/body/public spans/archive1456/33,per-generation21/64 and12/64,rc=0.
-  Commit:STITCHCAD-G1-0827. promotion:declined (existing exact original-source/provider boundary);context branch implemented with focused checks,whole integration verification stays .5f.2.verify.
+  Goal:0827 exact existing-output bindings;[whole scope/proofs](../history/stitchcad-devnotes-part1003.md).
 - ID: `G1-SLICE.5f.2.program`
-  Status: `pending`
+  Status: `in_progress`
   Goal:whole ordered scalar/drafting owner and complete logical limits;retain actual scalar recipe ordinals separately from genuine combined-program positions and original operation/document owners.
+### G1-SLICE.5f.2.program.plan
+- ID: `G1-SLICE.5f.2.program.plan`
+  Status: `done`
+  Goal:choose exact whole mixed scalar/drafting owner and logical limits from actual source APIs;preserve original scalar ordinals,combined positions,complete source content and actual root/frame bindings before implementation.
+  - [x] ROOT CAUSE: `python3 -I -B -` actual source/API census:
+    recipe/expression documents hold2/3 fields;only expressions cache nodes;native13 schemas contain Point2/Arc3/Slash1 argument docs and Walk1 Copy-pair vector;fixed recipe/expression bounds4096/256,rc=0.
+  - [x] ADDRESSED: same census verifies seven plan/implementation owners and actual Root-only scalar source strategy,
+    rc=0;cache recipe counts first,then exhaustive fields/raw steps/whole admission/all3 normalization cohorts/borrowed views;names/manifests stay explicit later inputs,no fabricated mixed identity.
+  - [x] NO REGRESSION: `scripts/run_make.sh book`,publication `check(ROOT)` and Git source comparison:
+    warning-free118/374/1808/3395/eight Rust fences/all original task IDs/dart anchor retained,Rust unchanged,rc=0;
+    1003 four Git/body/public spans/archive1457/34,per-generation21/64 and13/64,rc=0.
+  Commit:STITCHCAD-G1-0828. promotion:declined (existing source/order/complete-admission contract);first implementation .program.recipe,whole feature verification .5f.2.verify.
+- ID: `G1-SLICE.5f.2.program.recipe`
+  Status: `pending`
+  Goal:immutable factory-derived scalar recipe statement/expression/node counts for complete preflight;preserve source/canonical identity,all assertion operands and existing parser/literal bounds,no caller counts or reparsing just to measure.
+- ID: `G1-SLICE.5f.2.program.fields`
+  Status: `pending`
+  Goal:exhaustive13-family actual held-field accounting,Point2/Arc3/Slash1 owned argument documents and Walk's original Copy pair vector;preserve original/canonical buffers and owner/role locations,no values or metadata defaults.
+- ID: `G1-SLICE.5f.2.program.steps`
+  Status: `pending`
+  Goal:raw source owner pins actual context/Root recipe and explicit mixed scalar-ordinal/drafting order;retain actual operation/document owners,no program/canonical identity or namespace acceptance.
+- ID: `G1-SLICE.5f.2.program.admit`
+  Status: `pending`
+  Goal:complete actual Root/context/native input content and all3 normalization cohorts before children;checked whole populations,then exact scalar coverage/order with genuine original ordinal versus combined position,no accepted prefix.
+- ID: `G1-SLICE.5f.2.program.normalize`
+  Status: `pending`
+  Goal:normalize all Root formula-source bodies,whole scalar recipe and actual native arguments through existing factories after complete admission;preserve original child/allocator causes,no partial owner or geometry queries.
+- ID: `G1-SLICE.5f.2.program.views`
+  Status: `pending`
+  Goal:borrow actual normalized source/statement/argument owners with distinct original scalar ordinals and combined positions;avoid self-reference or extracted/fabricated spans;whole names/dependencies/kinds/values remain later.
 - ID: `G1-SLICE.5f.2.namespace`
   Status: `pending`
   Goal:actual initial/always-visible and earlier-only names;check collisions and future geometry before values,using existing complete kind proofs without treating a metadata cursor as program acceptance.

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — exact existing-output source binding
+## _(2026-11-02 UTC)_ — sourced mixed-program implementation plan
 
-0827 adds private point/edge bindings after exact requested reference,original frame record and original snapshot record checks;no payload copy,geometry values,planned output,repair or identity issuance.
-Mismatch retains original context/request/full raw response and first field;provider cause keeps its actual type/source chain. Native8/context-plus-companion11/strict selected lint/fmt pass0.
-Book/publication118-374-1808-3394/seven old Rust fences/1002 four Git/body/public spans exact0;archive1456/33,per-generation21/64 and12/64. Context branch focused implementation done.
-Promotion declined: existing exact source/provider contract. Whole mixed program/names/dependencies/check/verification pending;G1still6/18 and geometry/physical execution remains later gates.
+0828 confirms recipe documents lack factory counts while expression documents cache nodes;13 native schemas have6 owned argument docs and Walk1 Copy-pair vector. First add exact recipe metadata without changing grammar/literals/identity.
+Six recipe/field/step/admission/normalization/view owners preserve actual Root/context,scalar ordinals versus mixed positions,and all3 source cohorts including unused/untaken/repeated content;names/manifests remain explicit later bindings.
+Source census2-3-13-6-1/bounds4096-256,Rust unchanged/eight Rust fences/book/publication118-374-1808-3395 pass0;1003 four whole Git/body/public spans/archive1457-34/per-generation21-64 and13-64 exact0.
+Promotion declined: existing complete source/order/admission contract. G1still6/18;new owner/factories planned,focused implementation starts with recipe counts and whole feature verification remains deferred.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

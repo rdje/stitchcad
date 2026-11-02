@@ -155,6 +155,49 @@ verification follows that complete set. The raw input view alone grants no conte
 The [drafting context companion](drafting-context-sources.md) specifies actual source binding,
 resource accounting and the remaining existing-output/program integration.
 
+## Whole mixed source owner — planned
+
+The mixed scalar/drafting source owner and its admission/normalization factories are **planned**.
+They will pin the actual containing context, its original Root recipe document and every authored
+raw drafting input. A scalar entry requests its original one-based recipe ordinal;that is a
+different field from its combined program position. Every original scalar statement, including each
+assertion, must occur exactly once in its original relative order. No topological reordering,
+statement extraction or implicit scalar source is introduced.
+
+For example, these are illustrative positions, not a new text grammar:
+
+| Combined position | Actual original source |
+| --- | --- |
+| 1 | Scalar statement 1 in the Root recipe |
+| 2 | Original borrowed drafting declaration and all its argument documents |
+| 3 | Scalar statement 2, still source ordinal 2 with its original whole-recipe spans |
+
+First, scalar recipe documents need factory-derived statement, expression and node counts. Existing
+expression documents already cache their actual complete node count. Counting must preserve both
+assertion operands, all conditional branches and unused source bodies, with no value reads, caller
+annotations or parsing merely to discover a required population. Existing grammar/literal limits
+and scalar canonical identity stay unchanged;that identity is not a mixed-program serializer/hash.
+
+Complete input admission must walk actual Root/context/native fields, including both original and
+canonical buffers, retained copies/caches, unbounded counters, the mixed order and Walk's original pair
+vector. Point declarations own two argument documents, center arcs own three, and slash/spread owns
+one. Other raw families retain their original fixed references and symbolic intents. Complete normalization preflight includes three cohorts:
+all separately identified Root formula-source bodies, all scalar recipe operands, and all native
+argument documents. Repeated/unused/untaken content counts;identity/address deduplication cannot
+remove it. Existing source/argument conservative record bounds remain authoritative and compose
+before child factories;they certify no allocator-byte, parser-scratch, CPU or runtime allowance.
+
+Implementation owners separately cover recipe counts, exhaustive native fields, raw mixed steps,
+whole admission, complete normalization and borrowed views. Existing document factories must retain
+their original typed/allocation causes;failure returns no normalized program prefix. Normalized
+views must borrow actual owners and keep source ordinals separate from combined positions.
+
+Actual name/output-manifest and canonical semantic bindings remain explicitly supplied at the
+namespace/dependency stages, with their own complete held-content admission. The raw source owner
+invents no output name, role, frame, manifest or identity. Whole name/kind/order/dependency checking
+and coupled verification follow the complete integration set;normalization grants no program,
+geometry, physical or release approval.
+
 ## Points and primitive curves
 
 A point declaration retains the two actual expression documents for x and y,its creating operation

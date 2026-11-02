@@ -3,17 +3,19 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0827 — bind exact existing geometry sources
+## STITCHCAD-G1-0828 — plan actual mixed-program source owner
 
-- Added private borrowed point/edge source bindings with exact reference/frame/snapshot checks.
-  Original provider errors and complete mismatched source witnesses survive in first-field order.
-- Native8/context-plus-companion11/strict selected lint/fmt/book/publication118/374/1808/3394 pass0;
-  seven prior Rust fences and1002 four Git/body/public spans exact;archive1456/33,
-  per-generation21/64 and12/64. No geometry values,planned outputs,repair or identities produced.
-- Context branch implemented with focused checks;whole mixed program/integration verification
-  remains pending. G1still6/18;ordered owner next.
+- Inventoried source metadata,13 native families,6 owned argument documents and Walk's pair vector.
+  Added six bounded implementation owners,starting with factory-derived scalar recipe counts.
+- Whole admission covers Root/context/native content and all3 normalization cohorts;actual scalar
+  ordinals remain separate from mixed positions. Name/manifest bindings stay explicit later inputs.
+- Rust/eight Rust fences unchanged;book/publication118/374/1808/3395/source census pass0.
+  1003 four Git/body/public spans exact;archive1457/34,per-generation21/64 and13/64.
+  G1still6/18;program API/factories remain planned,whole integration verification pending.
 
 # Sealed archive — earlier slices
+
+[Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 
 [Whole0826 source records and D379 repair](docs/history/stitchcad-devnotes-part1002.md) retain exact source bytes.
 
