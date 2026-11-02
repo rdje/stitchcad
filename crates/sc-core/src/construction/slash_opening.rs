@@ -36,6 +36,12 @@ pub struct SlashSpreadOpening {
     document: FormulaExpressionDocument,
 }
 impl SlashSpreadOpening {
+    pub(crate) fn resource_document(&self) -> &FormulaExpressionDocument {
+        let Self { mode, document } = self;
+        super::operation_input::resources::fixed(mode);
+        document
+    }
+
     /// Retain a deliberately authored rotation amount; no kind/value or angle normalization yet.
     #[must_use]
     pub const fn rotation(angle: FormulaExpressionDocument) -> Self {

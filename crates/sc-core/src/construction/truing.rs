@@ -133,6 +133,23 @@ pub struct ConstrainedSeamTruing {
     fit_tolerance: EntityId,
 }
 impl ConstrainedSeamTruing {
+    // Exhaustive owner view: new fields must be classified before resource accounting compiles.
+    pub(crate) fn resource_fields(&self) {
+        use super::operation_input::resources::fixed;
+        let Self {
+            operation,
+            span,
+            adjusted_side,
+            piece,
+            fit_tolerance,
+        } = self;
+        fixed(operation);
+        fixed(span);
+        fixed(adjusted_side);
+        fixed(piece);
+        fixed(fit_tolerance);
+    }
+
     /// Retain all original sources and explicit adjusted side without evaluating them.
     /// # Errors
     /// Refuses first self-span,then self-Piece,then self-tolerance. Equal external identities

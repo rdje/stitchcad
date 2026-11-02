@@ -137,6 +137,19 @@ pub struct MirrorPieceCopy {
     axis: MirrorAxis,
 }
 impl MirrorPieceCopy {
+    // Exhaustive owner view: new fields must be classified before resource accounting compiles.
+    pub(crate) fn resource_fields(&self) {
+        use super::operation_input::resources::fixed;
+        let Self {
+            operation,
+            source_piece,
+            axis,
+        } = self;
+        fixed(operation);
+        fixed(source_piece);
+        fixed(axis);
+    }
+
     /// Retain the actual source and explicit axis mode,excluding definite local self-supply.
     /// Repeated points and a range's authored traversal remain unchanged;this grants no valid axis.
     /// ```

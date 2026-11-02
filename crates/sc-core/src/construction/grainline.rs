@@ -64,6 +64,17 @@ pub struct GrainlinePlacement {
     grainline: EntityId,
 }
 impl GrainlinePlacement {
+    // Exhaustive owner view: new fields must be classified before resource accounting compiles.
+    pub(crate) fn resource_fields(&self) {
+        use super::operation_input::resources::fixed;
+        let Self {
+            operation,
+            grainline,
+        } = self;
+        fixed(operation);
+        fixed(grainline);
+    }
+
     /// Retain the original target identity; source association follows through bind_grainline.
     /// ```
     /// use sc_core::{construction::GrainlinePlacement,ontology::EntityId};

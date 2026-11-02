@@ -118,6 +118,17 @@ pub struct BezierConstruction {
     controls: BezierControlPoints,
 }
 impl BezierConstruction {
+    // Exhaustive owner view: new fields must be classified before resource accounting compiles.
+    pub(crate) fn resource_fields(&self) {
+        use super::operation_input::resources::fixed;
+        let Self {
+            operation,
+            controls,
+        } = self;
+        fixed(operation);
+        fixed(controls);
+    }
+
     /// Retain the explicit original control layout and reject definite local self-supply.
     /// Controls are never sorted,deduplicated,degree-elevated or inferred from coincident geometry.
     /// ```

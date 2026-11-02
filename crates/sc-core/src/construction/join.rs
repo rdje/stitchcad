@@ -203,6 +203,21 @@ pub struct JoinPiecesAtSeam {
     b: EntityId,
 }
 impl JoinPiecesAtSeam {
+    // Exhaustive owner view: new fields must be classified before resource accounting compiles.
+    pub(crate) fn resource_fields(&self) {
+        use super::operation_input::resources::fixed;
+        let Self {
+            operation,
+            span,
+            a,
+            b,
+        } = self;
+        fixed(operation);
+        fixed(span);
+        fixed(a);
+        fixed(b);
+    }
+
     /// Retain explicit source roles;neither ordering nor traversal is inferred from sorted ids.
     /// # Errors
     /// Self-span,then self-Piece A/B,then repeated Piece. Same-Piece copy/seam joins require a

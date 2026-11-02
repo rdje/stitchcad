@@ -63,6 +63,19 @@ pub struct LineConstruction {
     end: PointRef,
 }
 impl LineConstruction {
+    // Exhaustive owner view: new fields must be classified before resource accounting compiles.
+    pub(crate) fn resource_fields(&self) {
+        use super::operation_input::resources::fixed;
+        let Self {
+            operation,
+            start,
+            end,
+        } = self;
+        fixed(operation);
+        fixed(start);
+        fixed(end);
+    }
+
     /// Retain ordered endpoint references, checking a definite local self-dependency first.
     /// Numeric/ULID order says nothing about operation order. Actual containing-program checks
     /// must validate both suppliers and the output manifest before any geometry or publication.

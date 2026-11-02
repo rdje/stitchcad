@@ -103,6 +103,21 @@ pub struct OffsetConstruction {
     allowance: EntityId,
 }
 impl OffsetConstruction {
+    // Exhaustive owner view: new fields must be classified before resource accounting compiles.
+    pub(crate) fn resource_fields(&self) {
+        use super::operation_input::resources::fixed;
+        let Self {
+            operation,
+            source,
+            side,
+            allowance,
+        } = self;
+        fixed(operation);
+        fixed(source);
+        fixed(side);
+        fixed(allowance);
+    }
+
     /// Retain exact original intent; numeric identity ordering is not recipe ordering.
     /// # Errors
     /// Refuses a same-operation source first, then a same-identity allowance dependency.

@@ -219,6 +219,19 @@ impl fmt::Debug for WalkSeamEdit {
     }
 }
 impl WalkSeamEdit {
+    // Original collection only; the caller precharges its complete length before any traversal.
+    pub(crate) fn resource_pairs(&self) -> &[WalkBalancePair] {
+        use super::operation_input::resources::fixed;
+        let Self {
+            operation,
+            span,
+            pairs,
+        } = self;
+        fixed(operation);
+        fixed(span);
+        pairs
+    }
+
     /// Own exact authored inputs without evaluating or accepting them. Earlier Vec allocation and
     /// source/profile authoring are separate from the subsequent explicit admission allowance.
     #[must_use]

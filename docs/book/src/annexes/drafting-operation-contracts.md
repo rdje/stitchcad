@@ -139,6 +139,47 @@ or outlived by it. Debug output contains only the family,with no authored formul
 An array of views is caller-supplied order;it certifies neither order nor operation-id uniqueness.
 The explicit closing identity still needs matching to the actual canonical dart later.
 
+### Actual held input charges
+
+`DraftingOperationInput::charge_resources(&mut dyn DesignResourceSink)` adds the actual held
+native input to an explicit cumulative logical-content meter. It copies no documents and performs
+no parse, normalization, formula evaluation or target lookup. For example, the point above can be
+charged before resolving `waist`;division by zero or an unresolved name is not evaluated here:
+
+```rust
+use core::num::{NonZeroU64, NonZeroUsize};
+use sc_core::{construction::{DraftingOperationInput, PointConstruction},
+    design::{DesignResourceLimits, DesignResourceMeter}, ontology::EntityId,
+    recipe::FormulaExpressionDocument};
+# fn main() -> Result<(), Box<dyn std::error::Error>> {
+let point = PointConstruction::new(EntityId::from_bits(10),
+    FormulaExpressionDocument::new("waist/4".into())?,
+    FormulaExpressionDocument::new("1 mm/0".into())?);
+// Explicit example allowances, not product defaults or geometry/runtime admission.
+let mut meter = DesignResourceMeter::new(DesignResourceLimits::new(
+    NonZeroUsize::MIN, NonZeroUsize::new(1024).ok_or("positive text allowance")?, NonZeroU64::MIN));
+DraftingOperationInput::ConstructPoint(&point).charge_resources(&mut meter)?;
+let demand = meter.finish()?;
+assert!(demand.text_bytes() > 0);
+assert_eq!((demand.collection_entries(), demand.counter_bits()), (0, 0));
+# Ok(())
+# }
+```
+
+Point charges x then y;center arc charges radius,start angle then sweep;slash/spread charges its
+actual rotation or separation opening. Every document charges original source before canonical
+syntax, including equal or repeated documents. Cached node counts and fixed references own no
+dynamic data. Walk charges its original pair-vector length,including repetitions;its fixed Copy
+pairs need no nested text/value lookup. Empty or locally invalid requests can be charged without
+being accepted as edits. Other families retain fixed symbolic targets and references.
+
+The first refusal retains `CommandState`,the original operation identity and a static field token,
+such as `drafting.arc.sweep_angle.canonical` or `drafting.walk.pairs`. Its index is `None`:this
+single-input walk invents no recipe or containing-program position. Earlier latched failures survive
+fixed-only and empty inputs too. Exhaustive private owner views and Copy guards require new dynamic
+fields to gain accounting. Charges cover held native inputs only;the containing Root/context,
+mixed-order vector and complete normalization populations still need whole-program admission.
+
 The containing program must preserve actual scalar-source ordinals separately from combined
 program positions. It must receive its actual Cartesian drafting frame and current output registry,
 then expose initial/always-visible names and only earlier scalar/geometry outputs at each step.
@@ -148,7 +189,8 @@ Whole logical admission and static checks precede values,and a later refusal exp
 program prefix. Pocket kind/domain/state and Buttonhole's canonical button-size dependency remain
 part of the complete graph;no separately authored hole length or approximation is introduced.
 
-Input composition, bounded actual context and typed existing-output binding are implemented. The
+Input composition and held-field charging, bounded actual context and typed existing-output binding
+are implemented. The
 ordered owner,names,complete dependencies and whole checking remain separately owned work. Coupled
 verification follows that complete set. The raw input view alone grants no context or program acceptance.
 

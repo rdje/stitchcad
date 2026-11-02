@@ -77,6 +77,21 @@ pub struct CenterArcConstruction {
     sweep_angle: FormulaExpressionDocument,
 }
 impl CenterArcConstruction {
+    // Exhaustive actual fields; dynamic documents stay borrowed from this original owner.
+    pub(crate) fn resource_documents(&self) -> [&FormulaExpressionDocument; 3] {
+        use super::operation_input::resources::fixed;
+        let Self {
+            operation,
+            center,
+            radius,
+            start_angle,
+            sweep_angle,
+        } = self;
+        fixed(operation);
+        fixed(center);
+        [radius, start_angle, sweep_angle]
+    }
+
     /// Retain original center and syntax/input-validated documents; reject definite self-supply.
     /// Scalar kinds are checked in the later actual normalized owner, not inferred from text.
     /// # Errors

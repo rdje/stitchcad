@@ -45,6 +45,14 @@ pub struct PointConstruction {
     y: FormulaExpressionDocument,
 }
 impl PointConstruction {
+    // Exhaustive actual fields; dynamic documents stay borrowed from this original owner.
+    pub(crate) fn resource_documents(&self) -> [&FormulaExpressionDocument; 2] {
+        use super::operation_input::resources::fixed;
+        let Self { operation, x, y } = self;
+        fixed(operation);
+        [x, y]
+    }
+
     /// Retain two already syntax/input-validated documents, without kind checking or values.
     #[must_use]
     pub const fn new(

@@ -1,7 +1,12 @@
 //! Raw source composition,not frame/currentness or accepted-program evidence.
+use core::num::{NonZeroU64, NonZeroUsize};
 use sc_core::{
     command::{AddNotch, CloseDart},
     construction::*,
+    design::{
+        DesignResourceCount, DesignResourceLimitError, DesignResourceLimits,
+        DesignResourceLocation, DesignResourceMeter, DesignResourceScope, DesignResourceSink,
+    },
     ontology::*,
     recipe::{FormulaExpressionDocument as Doc, FormulaExpressionDocumentError},
 };
@@ -125,6 +130,24 @@ fn mixed_family_views_keep_each_actual_source_and_history_identity() -> Result<(
         };
         assert!(same_source);
     }
+    let mut meter = meter(usize::MAX, usize::MAX)?;
+    for input in inputs {
+        input.charge_resources(&mut meter)?;
+    }
+    let demand = meter.finish()?;
+    let expected_bytes: usize = [
+        p.coordinate(PointCoordinate::X),
+        p.coordinate(PointCoordinate::Y),
+        arc.argument(CenterArcArgument::Radius),
+        arc.argument(CenterArcArgument::StartAngle),
+        arc.argument(CenterArcArgument::SweepAngle),
+        slash.opening().document(),
+    ]
+    .into_iter()
+    .map(|document| document.source().len() + document.canonical().as_str().len())
+    .sum();
+    assert_eq!(demand.text_bytes(), expected_bytes);
+    assert_eq!((demand.collection_entries(), demand.counter_bits()), (0, 0));
     assert_eq!(
         inputs
             .map(|input| input.family())
@@ -203,5 +226,194 @@ fn cubic_layout_and_repeated_sources_remain_in_the_original_declaration(
     assert_eq!(actual.degree(), BezierDegree::Cubic);
     assert_eq!(actual.dependencies().count(), 4);
     assert_eq!(input.operation(), id(10));
+    Ok(())
+}
+
+fn meter(entries: usize, bytes: usize) -> Result<DesignResourceMeter, Box<dyn Error>> {
+    Ok(DesignResourceMeter::new(DesignResourceLimits::new(
+        NonZeroUsize::new(entries).ok_or("positive test entry bound")?,
+        NonZeroUsize::new(bytes).ok_or("positive test text bound")?,
+        NonZeroU64::MIN,
+    )))
+}
+
+fn location(operation: u128, field: &'static str) -> DesignResourceLocation {
+    DesignResourceLocation {
+        scope: DesignResourceScope::CommandState,
+        owner: Some(id(operation)),
+        field,
+        index: None,
+    }
+}
+
+#[test]
+fn each_original_and_canonical_argument_buffer_keeps_its_first_exact_refusal(
+) -> Result<(), Box<dyn Error>> {
+    let p = PointConstruction::new(
+        id(100),
+        doc("private_customer_length/0")?,
+        doc("private_customer_length/0")?,
+    );
+    let arc = CenterArcConstruction::new(
+        id(101),
+        point(900),
+        doc("5 mm")?,
+        doc("0 deg")?,
+        doc("90 deg")?,
+    )?;
+    let slash = SlashSpreadConstruction::separation(
+        id(102),
+        id(800),
+        range(),
+        SlashSpreadSide::Left,
+        range(),
+        doc("missing_name(1 mm)/0")?,
+    )?;
+    let inputs = [
+        DraftingOperationInput::ConstructPoint(&p),
+        DraftingOperationInput::DrawArc(&arc),
+        DraftingOperationInput::SlashSpread(&slash),
+    ];
+    let documents = [
+        (
+            100,
+            "drafting.point.x.source",
+            "drafting.point.x.canonical",
+            p.coordinate(PointCoordinate::X),
+        ),
+        (
+            100,
+            "drafting.point.y.source",
+            "drafting.point.y.canonical",
+            p.coordinate(PointCoordinate::Y),
+        ),
+        (
+            101,
+            "drafting.arc.radius.source",
+            "drafting.arc.radius.canonical",
+            arc.argument(CenterArcArgument::Radius),
+        ),
+        (
+            101,
+            "drafting.arc.start_angle.source",
+            "drafting.arc.start_angle.canonical",
+            arc.argument(CenterArcArgument::StartAngle),
+        ),
+        (
+            101,
+            "drafting.arc.sweep_angle.source",
+            "drafting.arc.sweep_angle.canonical",
+            arc.argument(CenterArcArgument::SweepAngle),
+        ),
+        (
+            102,
+            "drafting.slash_spread.opening.source",
+            "drafting.slash_spread.opening.canonical",
+            slash.opening().document(),
+        ),
+    ];
+    let before = (p.clone(), arc.clone(), slash.clone());
+    let mut consumed = 0;
+    for (operation, source_field, canonical_field, document) in documents {
+        for (field, text) in [
+            (source_field, document.source()),
+            (canonical_field, document.canonical().as_str()),
+        ] {
+            let maximum = consumed + text.len() - 1;
+            let expected = DesignResourceLimitError::Count {
+                unit: DesignResourceCount::TextBytes,
+                maximum,
+                consumed,
+                requested: text.len(),
+                location: location(operation, field),
+            };
+            let mut limited = meter(usize::MAX, maximum)?;
+            let result = inputs
+                .iter()
+                .try_for_each(|input| input.charge_resources(&mut limited));
+            assert_eq!(result, Err(expected));
+            assert_eq!(limited.finish(), Err(expected));
+            assert!(!expected.to_string().contains("private_customer_length"));
+            consumed += text.len();
+        }
+    }
+    let mut exact = meter(1, consumed)?;
+    for input in inputs {
+        input.charge_resources(&mut exact)?;
+    }
+    let demand = exact.finish()?;
+    assert_eq!(demand.text_bytes(), consumed);
+    assert_eq!((demand.collection_entries(), demand.counter_bits()), (0, 0));
+    assert_eq!((p, arc, slash), before);
+    Ok(())
+}
+
+#[test]
+fn walk_charges_all_original_repeated_pairs_without_resolving_invalid_targets(
+) -> Result<(), Box<dyn Error>> {
+    let mark = WalkBalanceNotch::new(
+        EdgeAnchor {
+            edge: range().range.edge(),
+            param: Param::END,
+        },
+        bindings(),
+    );
+    let pair = WalkBalancePair::new(mark, mark);
+    // The span deliberately names this operation: resource accounting does not admit the edit.
+    let walk = WalkSeamEdit::new(id(200), id(200), vec![pair; 3]);
+    let before = walk.clone();
+    let input = DraftingOperationInput::WalkSeam(&walk);
+    let mut limited = meter(2, 1)?;
+    let expected = DesignResourceLimitError::Count {
+        unit: DesignResourceCount::CollectionEntries,
+        maximum: 2,
+        consumed: 0,
+        requested: 3,
+        location: location(200, "drafting.walk.pairs"),
+    };
+    assert_eq!(input.charge_resources(&mut limited), Err(expected));
+    assert_eq!(limited.finish(), Err(expected));
+    let mut exact = meter(3, 1)?;
+    input.charge_resources(&mut exact)?;
+    let demand = exact.finish()?;
+    assert_eq!(
+        (
+            demand.collection_entries(),
+            demand.text_bytes(),
+            demand.counter_bits()
+        ),
+        (3, 0, 0)
+    );
+    assert_eq!(walk, before);
+    assert_eq!(
+        walk.admit(WalkEditLimits::new(3))
+            .expect_err("resource charge is not edit admission")
+            .refusal(),
+        WalkEditAdmissionRefusal::SelfSpan
+    );
+    Ok(())
+}
+
+#[test]
+fn fixed_only_and_empty_inputs_preserve_an_earlier_latched_refusal() -> Result<(), Box<dyn Error>> {
+    let dart = CloseDart::new(id(500));
+    let empty = WalkSeamEdit::new(id(502), id(502), Vec::new());
+    let line = LineConstruction::new(id(503), point(900), point(901))?;
+    let inputs = [
+        DraftingOperationInput::CloseDart {
+            operation: id(501),
+            request: &dart,
+        },
+        DraftingOperationInput::WalkSeam(&empty),
+        DraftingOperationInput::DrawLine(&line),
+    ];
+    for input in inputs {
+        let mut limited = meter(1, 1)?;
+        let first = limited
+            .charge_text("private", location(999, "earlier.source"))
+            .expect_err("first text refusal");
+        assert_eq!(input.charge_resources(&mut limited), Err(first));
+        assert_eq!(limited.finish(), Err(first));
+    }
     Ok(())
 }

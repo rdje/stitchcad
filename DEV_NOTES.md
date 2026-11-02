@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — factory-derived scalar recipe shape
+## _(2026-11-02 UTC)_ — exhaustive native drafting input charges
 
-0829 caches statement/expression/node counts from the same successful converter;both assertion operands/all branches count,no getter reparse/value read or caller metadata. Fixed Copy cache keeps exhaustive owner/resource handling and two-buffer charges.
-Shape4/document7/private-source-and-book doctests4/strict selected lint/fmt pass0;empty/alias/original refusal behavior and4096-statement/8192-operand boundary preserved without new grammar/aggregate cap.
-Book/publication118-374-1808-3396/ten prior recipe Rust fences/overview fences and1004 three Git/body/public spans exact0;archive1458/35,per-generation21/64 and14/64. Stale lookup availability prose corrected.
-Promotion declined: existing immutable source/metadata/resource contract. G1still6/18;exhaustive native fields next,mixed-program factories and whole verification pending.
+0830 adds restricted cumulative charging for13 original native input families:Point2/Arc3/Slash1 documents,source before canonical,and Walk's original pair vector. Exact private owner views/Copy guards keep future fields accountable without reparse,value/target reads or caller totals.
+Native7 covers all13 families/twelve buffer refusals,exact totals,repeated/invalid Walk input and latched fixed/empty refusal;strict selected lint/fmt pass0. Test meter helper now propagates invalid test bounds after lint rejected expect();no policy bypass.
+Book/publication118-374-1808-3397/five old Rust fences exact0;1005 three Git/body/public spans/archive1459-36/per-generation21-64 and15-64 exact0. Whole-program admission and feature verification stay pending.
+Promotion declined: existing exhaustive held-content and first-failure sink contract. G1still6/18;raw mixed source/steps next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

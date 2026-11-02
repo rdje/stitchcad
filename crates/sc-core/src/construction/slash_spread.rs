@@ -134,6 +134,31 @@ pub struct SlashSpreadConstruction {
     motion: Motion,
 }
 impl SlashSpreadConstruction {
+    pub(crate) fn resource_opening(&self) -> &SlashSpreadOpening {
+        use super::operation_input::resources::fixed;
+        let Self {
+            operation,
+            piece,
+            cut,
+            moving_side,
+            motion,
+        } = self;
+        fixed(operation);
+        fixed(piece);
+        fixed(cut);
+        fixed(moving_side);
+        match motion {
+            Motion::Rotation { pivot, opening } => {
+                fixed(pivot);
+                opening
+            }
+            Motion::Separation { direction, opening } => {
+                fixed(direction);
+                opening
+            }
+        }
+    }
+
     /// Retain explicit rotation sources and construct the actual Rotation Angle amount component.
     /// The geometry executor must validate pivot incidence and the unique supported moving bank.
     /// # Errors
