@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — original mixed dependency occurrence stream
+## _(2026-11-02 UTC)_ — bounded mixed canonical bindings
 
-0855 streams original whole mixed name uses without an edge-vector allocation. Per-statement adapter reuses the existing scalar producer,including real assertion tolerance headers before operands. Native private field views expose Point X/Y,Arc Radius/Start/Sweep and Slash opening;Other contributes none.
-Consumer-pinned views retain actual step,role,source span,scalar ordinal and supplier declaration. Repeated/untaken uses remain distinct;copied views only copy loans/metadata. The fused iterator exposes no mutable source/index or whole canonical/geometry grant. No parser/source/value/provider work occurs.
-Focused occurrence1/order2,selected strict lint/fmt/Rustdoc3 pass0:13-role/use fixture verifies original bytes/consumers,repeated Point/branches,nth/end and assertion order. Redundant Iterator supertrait lint corrected. Book/publication118-374-1817-3432,44 prior/new exact fences pass0.
-1030 three Git/body/public spans exact0;archive1484-61/generations21-64 and40-64. Checked-recipes24761B. Promotion declined:existing actual-source/role/span/no-copy doctrine. G1still6/18;additional canonical bounds/binding next,then geometry/semantics and allocator/coupled .verify.
+0856 actual mixed stream13/canonical10/D+C23;complete arithmetic and quotas precede full reservation/native joins,no prefix or callbacks/values. Original consumer/role/span/ordinal retained.
+Unknown and both Derived families retain actual Root records;native Derived iterator joins exact selected checked source. Strict lint caught128-byte error;boxed semantic pair preserves cause,allocator remains inline.
+Final focused source5/strict selected lint/fmt/Rustdoc4/build/publication118/374/1817/3433 pass0;45 prior positive fences unchanged/new whole native fence exact. Whole geometry/semantic/composition verification stays deferred.
+1031 whole0855 Git/body/public3 exact0;1485/62,generation1 21/64,generation2 41/64,headroom23. Promotion declined:reuse existing native contracts;book owns factory scope. G1still6/18;geometry dependencies next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

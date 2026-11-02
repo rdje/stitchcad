@@ -270,9 +270,9 @@ native source allowances and still retains its actual containing Root,even with 
 
 Focused native checks cover actual extra-name loans,consumer kind,unused source error,all four quota
 priorities,empty scope and both source/order proofs surviving map consumption. Public lifetime and
-private-field guards also pass. This implements the Root source bridge;canonical dependency/cycle
-composition,mixed canonical joins,geometry/current frame/provenance,semantic dependencies and
-combined allocator/lifetime verification remain owned by the next dependency stages.
+private-field guards also pass. This implements the Root source bridge. The following sections compose the selected acyclic graph
+and bounded mixed canonical joins. Geometry/current frame/provenance,semantic dependencies and
+combined allocator/lifetime verification remain separate owned stages.
 
 
 ## Select exact mixed dependency owners
@@ -370,6 +370,77 @@ whole Root recipe. No field is deduplicated or assigned a synthetic ordinal.
 
 Focused checks cover all argument roles,header/operand order,repeated/untaken uses,original spans,
 actual consumer pointer identity,nth traversal and repeated end reads. Existing mixed-order checks
-and private-field/lifetime examples pass. These views establish original dependency occurrences;
-complete additional bounds,actual canonical joins,geometry/semantic source binding and coupled
-verification remain the next owned stages. Supplier metadata alone does not grant source validity.
+and private-field/lifetime examples pass. These views establish original dependency occurrences. The bounded canonical stage below joins
+actual scalar inputs;geometry/semantic source binding and coupled verification remain separate.
+Supplier metadata alone does not grant source validity.
+
+
+## Bind the complete mixed canonical dependency stream
+
+`DraftingProgramDependencyInputs::bind_canonical_inputs(&limits)` now binds every original
+Input/LengthInput occurrence to the actual Root canonical inventory. It accepts only the already
+selected source/order/acyclic owners. It cannot accept a caller namespace,canonical inventory,
+source id or independently rebuilt proof as a substitute.
+
+Choose both `DraftingProgramCanonicalLimits::new(occurrences,retained_records)` allowances
+explicitly. There is no default. Let D be every original mixed dependency occurrence and C be
+those whose actual declaration source is Input or LengthInput. Assertion tolerance headers,
+prior recipe bindings,reserved names and Point/Edge metadata all contribute to D;repeated names
+and both conditional branches remain separate. The additional logical record bound is D+C:
+D result slots and C canonical associations,including their optional borrowed Derived relation.
+These allowances cover no content/name/order/source/graph buffers already admitted by earlier
+policies,and grant no allocator bytes,capacity,scratch,CPU or runtime budget.
+
+The factory completes checked arithmetic for D,C and D+C first. It then checks occurrences,
+then retained records,before reserving the full D-slot result vector and attempting any native
+canonical join. No source/provider callback or authored numeric read occurs. The first refusal
+returns the original complete inputs and selected policy,never a successful binding prefix.
+
+Each canonical occurrence reuses `FormulaCanonicalInput::resolve` against the actual Root inputs.
+Its existing family,identity,kind and dedicated Length-owner checks remain authoritative. Unknown
+is retained as Unknown;it needs observation when a later value boundary actually reads it. Derived
+matching reuses the native `FormulaSourceInputs::derived_inputs()` iterator and actual declaration
+pointer,then retains that original `FormulaDerivedInput` and the exact `FormulaCheckedSource` in
+the selected complete source proof. The source pointer is the original Derived state's source
+owner,not an independently selected equal id. Its checked target kind and native acyclic graph
+remain the existing proofs. A shared Derived target used twice retains two original consumer
+occurrences,each borrowing the same actual supplier proof.
+
+`BoundDraftingProgramCanonicalInputs` privately owns the complete result vector. `inputs()` and
+`limits()` retain the original selected objects;`shape()` exposes actual D,C,D+C populations.
+`occurrences()` preserves original stream order. Each slot's `occurrence()` keeps its actual
+consumer,role,span,scalar ordinal and declaration. `canonical()` returns the native inventory join
+and optional `derived()` relation,or None for Recipe/Reserved/Point/Edge metadata. None grants no
+geometry/currentness certificate;those original declarations remain available to their later stage.
+
+```rust
+use sc_core::{construction::*,design::DesignMetadataHost};
+fn canonical_counts<H:DesignMetadataHost,S:DraftingInitialInputProvider<H>>(
+    inputs:&DraftingProgramDependencyInputs<'_, '_, '_, '_, '_, '_, '_,H,S>,
+    limits:&DraftingProgramCanonicalLimits) -> Result<(usize,usize),String> {
+    let bound=inputs.bind_canonical_inputs(limits).map_err(|e|e.to_string())?;
+    assert!(std::ptr::eq(bound.inputs(),inputs));
+    assert!(std::ptr::eq(bound.limits(),limits));
+    Ok((bound.occurrences().len(),bound.shape().canonical_count()))
+}
+```
+
+The focused mixed example has four genuine positions:scalar `width=private_length+derived_length`,
+a Point using both Unknown inputs and Derived Length,scalar Count with both `derived_count`
+branches,and an assertion with an `eps_geo` header. It yields D=13,C=10,D+C=23. Limits `(12,0)`
+refuse the complete 13 occurrences before the record quota;`(13,22)` refuses the complete 23
+records;`(13,23)` retains all uses. Tests verify actual canonical declarations and selected source
+pointers for both Derived representation families,unchanged Unknown states and zero provider calls.
+An empty actual dependency stream accepts `(0,0)`,even when the recipe contains a literal binding.
+
+`DraftingProgramCanonicalError` preserves the selected complete inputs and policy. `refusal()`
+retains the first population/quota refusal or original allocator cause inline. A native canonical
+failure boxes only its semantic diagnostic pair:`DraftingProgramCanonicalJoinFailure` retains
+its original stream index,actual occurrence and original typed native cause. Default formatting
+omits authored names,payloads and values;explicit getters preserve original diagnostics. Existing
+private source/order proofs already certify their original canonical owners,so this defensive
+native failure is not fabricated through a dishonest provider in the focused positive fixture.
+
+This completes mixed canonical binding with focused checks. Geometry/semantic associations,whole
+programme composition and the separately tracked coupled verification remain outstanding. It
+provides no geometry execution,authored value,physical result or whole-programme acceptance.

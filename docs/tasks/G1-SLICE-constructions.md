@@ -951,24 +951,24 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0853 actual mixed Root source proof bridge;[whole scope/proofs](../history/stitchcad-devnotes-part1029.md).
 - ID: `G1-SLICE.5f.2.dependencies.canonical`
-  Status: `in_progress`
+  Status: `done`
   Goal:all original mixed canonical/Derived dependencies and actual source graph,kind/state/domain and cycle obligations before values,no id-only targets.
 - ID: `G1-SLICE.5f.2.dependencies.canonical.owners`
   Status: `done`
   Goal:0854 exact dependency proof owners;[whole scope/proofs](../history/stitchcad-devnotes-part1030.md).
 - ID: `G1-SLICE.5f.2.dependencies.canonical.occurrences`
   Status: `done`
-  Goal:allocation-free genuine mixed dependency occurrences,original scalar/native roles/spans/consumers and all repeated/untaken uses.
-  - [x] ROOT CAUSE: 0855 `cargo test -p sc-core --test drafting_context_binding_contract dependency_occurrences`:focused1 pass;
-    13 uses,all native roles/repeated branches/Point,actual spans/consumer pointers,scalar header order/nth/fused end,no callbacks,rc=0.
-  - [x] ADDRESSED: 0855 `cargo test -p sc-core --test drafting_context_binding_contract program_order`:focused2 pass;
-    original positions/ordinals,Binding/header/left/right roles and empty stream retained;reuse statement helper/exhaustive native field views,rc=0.
-  - [x] NO REGRESSION: 0855 selected strict clippy/fmt/Rustdoc occurrences3,book/publication118/374/1817/3432,
-    44 prior/new exact fences,1030 three Git/body/public spans/archive1484/61,generations21/64 and40/64,rc=0.
-  Commit:STITCHCAD-G1-0855. Promotion declined:existing actual-source/role/span/no-copy doctrine. Additional canonical bounds/binding,geometry/semantics and coupled verification pending.
+  Goal:0855 original mixed dependency stream;[whole scope/proofs](../history/stitchcad-devnotes-part1031.md).
 - ID: `G1-SLICE.5f.2.dependencies.canonical.bind`
-  Status: `pending`
+  Status: `done`
   Goal:complete explicit mixed dependency/canonical-record bounds before reservation and actual Root joins/Derived source relations;retain original causes/full result,no values or accepted prefix.
+  - [x] ROOT CAUSE: 0856 `cargo test -p sc-core --test drafting_context_binding_contract initial_binding::program_sources`:5 pass,rc=0;original13 uses/10 canonical/D+C23,all owners/roles/spans,Unknown and both Derived families.
+  - [x] ADDRESSED: 0856 same native command rc=0;complete checked arithmetic/occurrence then record quotas before full reservation/native joins;12/0 and13/22 refuse,no prefix;empty0/0;actual selected native source pointers,no callbacks/values.
+  - [x] NO REGRESSION: 0856 selected strict clippy/fmt and `cargo test -p sc-core --doc construction::program::dependencies::canonical`:4 pass,rc=0;128-byte semantic error compacted without boxing allocator cause;private/lifetime/default guards.
+  - [x] BOOK: 0856 guarded build/pure publication118/374/1817/3433,45 prior positive fences unchanged/new whole native fence exact,rc=0;canonical acceptance scoped,geometry/semantics/coupled verification remain separate.
+  - [x] CONTINUITY: 0856 archive1031 three whole0855 Git/body/public spans exact;retention1485/62,generation1 21/64,generation2 41/64,headroom23,rc=0;no history recovery rerun.
+  - [x] BASELINE: 0856 lib check/focused5/strict/fmt/Rustdoc4/build/publication all rc=0;README/LIVE reviewed,G1still6/18 In Progress;whole .5f.2.verify deferred until geometry/semantics/composition implemented.
+  - [x] PROMOTION: 0856 existing native canonical/source/acyclic contracts reused;book owns new factory scope,no new cross-cutting decision;focused checks rc=0. Next geometry dependency stage;whole programme acceptance remains pending.
 - ID: `G1-SLICE.5f.2.dependencies.geometry`
   Status: `pending`
   Goal:all actual native/selector geometry references under original frame/snapshot and strict earlier creators;unlabelled planned roles need authentic manifests,never live-future lookup or synthetic names.

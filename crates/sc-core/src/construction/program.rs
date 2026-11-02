@@ -4,9 +4,13 @@ use crate::{design::DesignMetadataHost, recipe::FormulaRecipeDocument};
 use core::fmt;
 mod dependencies;
 pub use dependencies::{
+    BoundDraftingProgramCanonicalInputs, DraftingProgramCanonicalBinding,
+    DraftingProgramCanonicalError, DraftingProgramCanonicalJoinFailure,
+    DraftingProgramCanonicalLimits, DraftingProgramCanonicalOccurrence,
+    DraftingProgramCanonicalRefusal, DraftingProgramCanonicalShape,
     DraftingProgramDependencyInputs, DraftingProgramDependencyOwnerError,
     DraftingProgramDependencyOwnerIssue, DraftingProgramDependencyRole,
-    DraftingProgramNameDependency,
+    DraftingProgramDerivedBinding, DraftingProgramNameDependency,
 };
 mod admission;
 mod limits;

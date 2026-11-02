@@ -2,7 +2,10 @@
 use super::{limits, root_with_host, scope, EmptyHost, Fault, Provider, TestResult};
 use sc_core::{
     construction::*,
-    design::{DesignInputs, DesignSourceReferences},
+    design::{
+        DesignInputs, DesignParameterDefinition, DesignParameterTarget, DesignSourceReferences,
+    },
+    name::MachineToken,
     ontology::EntityId,
     recipe::{
         FormulaExpressionDocument, FormulaSource, FormulaSourceCheckLimits,
@@ -14,14 +17,29 @@ fn id(n: u128) -> EntityId {
     EntityId::from_bits(n)
 }
 fn root(mode: usize) -> TestResult<DesignInputs<EmptyHost>> {
+    root_recipe(mode, "let untouched:length=1 mm/0", vec![])
+}
+fn root_recipe(
+    mode: usize,
+    recipe: &str,
+    parameters: Vec<DesignParameterDefinition>,
+) -> TestResult<DesignInputs<EmptyHost>> {
+    let mut lengths = vec![LengthDeclaration::new(LengthDeclarationDefinition {
+        id: id(101),
+        source: id(201),
+        state: LengthState::Unknown {
+            observation: id(301),
+        },
+    })?];
+    if mode == 3 {
+        lengths.push(LengthDeclaration::new(LengthDeclarationDefinition {
+            id: id(104),
+            source: id(204),
+            state: LengthState::Derived { formula: id(9004) },
+        })?);
+    }
     let canonical = CanonicalInputs::new(
-        vec![LengthDeclaration::new(LengthDeclarationDefinition {
-            id: id(101),
-            source: id(201),
-            state: LengthState::Unknown {
-                observation: id(301),
-            },
-        })?],
+        lengths,
         vec![
             ScalarInputDeclaration::new(ScalarInputDeclarationDefinition {
                 id: id(102),
@@ -66,11 +84,11 @@ fn root(mode: usize) -> TestResult<DesignInputs<EmptyHost>> {
     })
     .collect::<TestResult<Vec<_>>>()?;
     root_with_host(
-        "let untouched:length=1 mm/0",
+        recipe,
         sources,
         EmptyHost,
         canonical,
-        vec![],
+        parameters,
         DesignSourceReferences {
             measurement_table: None,
             ease_set: None,
@@ -338,6 +356,243 @@ fn root_source_quota_order_uses_complete_existing_populations() -> TestResult {
 }
 
 #[test]
+fn canonical_bindings_bound_all_original_uses_and_keep_unknown_and_both_derived_families(
+) -> TestResult {
+    use sc_core::recipe::{
+        FormulaCanonicalInputAdapter as A, FormulaSourceCycleLimits, FormulaSourceDependencyLimits,
+    };
+    let text = concat!(
+        "let width:length=private_length+derived_length\n",
+        "let copies:count=if(private_count==0,derived_count,derived_count)\n",
+        "assert closure:eps_geo=width==private_length",
+    );
+    let root = root_recipe(
+        3,
+        text,
+        vec![
+            DesignParameterDefinition {
+                id: id(61),
+                token: MachineToken::new("derived_count")?,
+                target: DesignParameterTarget::Scalar {
+                    declaration: id(103),
+                    kind: ScalarInputKind::Count,
+                },
+            },
+            DesignParameterDefinition {
+                id: id(62),
+                token: MachineToken::new("derived_length")?,
+                target: DesignParameterTarget::Length(id(104)),
+            },
+        ],
+    )?;
+    let other = super::root()?;
+    let provider = Provider::new(&root, &other, Fault::None)?;
+    let context = scope(&root)?
+        .bind_drafting_context(&provider, limits(10000, 10000, 10000)?)
+        .map_err(|e| e.to_string())?;
+    let point = PointConstruction::new(
+        id(1000),
+        FormulaExpressionDocument::new(
+            "if(private_count==private_count,private_length,derived_length)".into(),
+        )?,
+        FormulaExpressionDocument::new("width".into())?,
+    );
+    let raw = DraftingProgramInputs::new(
+        context,
+        vec![
+            DraftingProgramStep::Scalar { ordinal: 1 },
+            DraftingProgramStep::Drafting(DraftingOperationInput::ConstructPoint(&point)),
+            DraftingProgramStep::Scalar { ordinal: 2 },
+            DraftingProgramStep::Scalar { ordinal: 3 },
+        ],
+    );
+    let pp = DraftingProgramLimits::new(limits(10000, 10000, 10000)?, 100, 1000, 10000);
+    let program = raw
+        .admit(&pp)
+        .map_err(|e| e.to_string())?
+        .normalized()
+        .map_err(|e| e.to_string())?;
+    let names = DraftingProgramNameInputs::new(
+        &program,
+        vec![provider.initial(0)?, provider.initial(1)?],
+        vec![],
+    );
+    let np = DraftingProgramNameLimits::new(limits(10000, 10000, 10000)?, 64, 128);
+    let work = names.admit_name_work(&np).map_err(|e| e.to_string())?;
+    let positions = work.bind_output_positions().map_err(|e| e.to_string())?;
+    let roles = positions.bind_role_sources().map_err(|e| e.to_string())?;
+    let initial = roles.bind_initial_sources().map_err(|e| e.to_string())?;
+    let namespace = initial
+        .bind_initial_namespace()
+        .map_err(|e| e.to_string())?;
+    let sources = namespace
+        .check_root_sources(FormulaSourceCheckLimits::new(2, 100, 2, 1000))
+        .map_err(|e| e.to_string())?;
+    let dependencies = sources
+        .proof()
+        .prepare_dependencies(FormulaSourceDependencyLimits::new(2, 0, 3))
+        .map_err(|e| e.to_string())?;
+    let graph = dependencies
+        .admit_acyclic(FormulaSourceCycleLimits::new(2, 4))
+        .map_err(|e| e.to_string())?;
+    let op = DraftingProgramOrderLimits::new(100, 1000, 10000);
+    let order = namespace.check_order(&op).map_err(|e| e.to_string())?;
+    let inputs = sources
+        .dependency_inputs(&order, &graph)
+        .map_err(|e| e.to_string())?;
+    provider.calls.set(0);
+    provider.base.trace.set(0);
+    for (index, policy) in [
+        DraftingProgramCanonicalLimits::new(12, 0),
+        DraftingProgramCanonicalLimits::new(13, 22),
+    ]
+    .into_iter()
+    .enumerate()
+    {
+        let error = inputs
+            .bind_canonical_inputs(&policy)
+            .expect_err("whole quota before any join, no prefix");
+        assert!(std::ptr::eq(error.inputs(), &inputs) && std::ptr::eq(error.limits(), &policy));
+        assert!(matches!(
+            (index, error.refusal()),
+            (
+                0,
+                DraftingProgramCanonicalRefusal::Occurrences {
+                    allowed: 12,
+                    required: 13
+                }
+            ) | (
+                1,
+                DraftingProgramCanonicalRefusal::RetainedRecords {
+                    allowed: 22,
+                    required: 23
+                }
+            )
+        ));
+        assert!(!format!("{error:?} {error}").contains("private"));
+    }
+    let policy = DraftingProgramCanonicalLimits::new(13, 23);
+    let bound = inputs
+        .bind_canonical_inputs(&policy)
+        .map_err(|e| e.to_string())?;
+    assert!(std::ptr::eq(bound.inputs(), &inputs) && std::ptr::eq(bound.limits(), &policy));
+    assert_eq!(
+        (
+            bound.shape().occurrence_count(),
+            bound.shape().canonical_count(),
+            bound.shape().retained_record_bound()
+        ),
+        (13, 10, 23)
+    );
+    assert_eq!(
+        bound
+            .occurrences()
+            .iter()
+            .map(|binding| binding.occurrence().declaration().name())
+            .collect::<Vec<_>>(),
+        [
+            "private_length",
+            "derived_length",
+            "private_count",
+            "private_count",
+            "private_length",
+            "derived_length",
+            "width",
+            "private_count",
+            "derived_count",
+            "derived_count",
+            "eps_geo",
+            "width",
+            "private_length",
+        ]
+    );
+    let original: Vec<_> = order.dependencies().collect();
+    for (binding, original) in bound.occurrences().iter().zip(&original) {
+        let actual = binding.occurrence();
+        assert!(
+            std::ptr::eq(actual.step(), original.step())
+                && std::ptr::eq(actual.declaration().name(), original.declaration().name())
+        );
+        assert_eq!(
+            (actual.role(), actual.span(), actual.statement_index()),
+            (original.role(), original.span(), original.statement_index())
+        );
+        if let Some(canonical) = binding.canonical() {
+            assert!(std::ptr::eq(canonical.input().inputs(), root.inputs()));
+            let (id, is_derived) = match canonical.input().adapter() {
+                A::Length(adapter) => {
+                    let record = adapter.canonical_declaration();
+                    assert!(std::ptr::eq(
+                        record,
+                        root.inputs().length(record.id()).ok_or("actual length")?
+                    ));
+                    assert!(matches!(
+                        record.state(),
+                        LengthState::Unknown { .. } | LengthState::Derived { .. }
+                    ));
+                    (
+                        record.id(),
+                        matches!(record.state(), LengthState::Derived { .. }),
+                    )
+                }
+                A::Scalar(adapter) => {
+                    let record = adapter.canonical_declaration();
+                    assert!(std::ptr::eq(
+                        record,
+                        root.inputs().scalar(record.id()).ok_or("actual scalar")?
+                    ));
+                    assert!(matches!(
+                        record.state(),
+                        ScalarInputState::Unknown { .. } | ScalarInputState::Derived { .. }
+                    ));
+                    (
+                        record.id(),
+                        matches!(record.state(), ScalarInputState::Derived { .. }),
+                    )
+                }
+            };
+            assert_eq!(canonical.derived().is_some(), is_derived);
+            if let Some(derived) = canonical.derived() {
+                let native = derived.input();
+                if let Some(record) = native.length() {
+                    assert!(std::ptr::eq(
+                        record,
+                        root.inputs().length(id).ok_or("Derived length")?
+                    ));
+                }
+                if let Some(record) = native.scalar() {
+                    assert!(std::ptr::eq(
+                        record,
+                        root.inputs().scalar(id).ok_or("Derived scalar")?
+                    ));
+                }
+                assert!(std::ptr::eq(
+                    derived.source(),
+                    sources
+                        .proof()
+                        .source(native.source().id())
+                        .ok_or("selected proof")?
+                ));
+                assert!(std::ptr::eq(
+                    derived.source().normalized().source(),
+                    native.source()
+                ));
+            }
+        } else {
+            assert!(matches!(
+                actual.declaration().source(),
+                sc_core::recipe::FormulaDeclarationSource::Recipe { .. }
+                    | sc_core::recipe::FormulaDeclarationSource::Reserved(_)
+            ));
+        }
+        assert!(!format!("{binding:?}").contains("private"));
+    }
+    assert!(!format!("{bound:?}").contains("private"));
+    assert_eq!((provider.calls.get(), provider.base.trace.get()), (0, 0));
+    Ok(())
+}
+
+#[test]
 fn empty_root_sources_accept_zero_native_limits_and_keep_actual_root_after_map_consumption(
 ) -> TestResult {
     let root = super::root()?;
@@ -374,6 +629,30 @@ fn empty_root_sources_accept_zero_native_limits_and_keep_actual_root_after_map_c
     assert!(sources.proof().sources().is_empty());
     assert_eq!(sources.proof().target_count(), 0);
     assert_eq!(sources.proof().retained_records(), 0);
+    let dependencies = sources
+        .proof()
+        .prepare_dependencies(sc_core::recipe::FormulaSourceDependencyLimits::new(0, 0, 1))
+        .map_err(|e| e.to_string())?;
+    let graph = dependencies
+        .admit_acyclic(sc_core::recipe::FormulaSourceCycleLimits::new(0, 0))
+        .map_err(|e| e.to_string())?;
+    let inputs = sources
+        .dependency_inputs(&order, &graph)
+        .map_err(|e| e.to_string())?;
+    let policy = DraftingProgramCanonicalLimits::new(0, 0);
+    let bound = inputs
+        .bind_canonical_inputs(&policy)
+        .map_err(|e| e.to_string())?;
+    assert!(std::ptr::eq(bound.inputs(), &inputs) && std::ptr::eq(bound.limits(), &policy));
+    assert!(bound.occurrences().is_empty());
+    assert_eq!(
+        (
+            bound.shape().occurrence_count(),
+            bound.shape().canonical_count(),
+            bound.shape().retained_record_bound()
+        ),
+        (0, 0, 0)
+    );
     assert_eq!(provider.calls.get(), 0);
     assert_eq!(provider.base.trace.get(), 0);
     Ok(())
