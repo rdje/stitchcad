@@ -1,19 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0818;derive HEAD/ahead from Git;push cadence400.
-- Active/next:G1-SLICE.5f.2 in docs/tasks/G1-SLICE-execution.md;next bound ordered operation/frame/dependency integration before code.
-- D372 fixed0818;native13-family .5f.1 parent now done. Actual containing frame/current registries/prior and always-visible names/order remain .5f.2;no geometry proof.
-- Generated search engine14 real queries/118 landings/4 result faults pass on current and captured chapter indexes;case/prefix/Bézier/body/title/empty/no-match included.
-- New search_query_contract.py uses read-only host Node22.8+ (actual26.8.1),stdin assets/core modules,no npm/browser/cache;Node options/cache/coverage poison removed without creating paths.
-- Actual section-profile snapshot refuses chapter data contract. Query scores intentionally follow fixed fields;no browser UI,ranking-quality or latency claim.
-- Final native capture target/book_search_0818_native/:123 inputs;level3 1094 records9587436B/level1 118 records7736437B,both warning-free.
-- Migration118 chapters/85167 chapter-word/72600 indexed-term pairs exact. Actual publication118/374/1806/3387 passes;producer census370 passes (inspection only,D156 remains owned).
-- Make/publication/capture use guarded local target/cargo-home/bin/mdbook;selector/profile/binary hashes bound before effects;normal warning refusals retained.
-- Setup:python3 -I -B scripts/book_tool.py install;optional --force;every same-version install still receives native field proof. Published mdBook0.5.4 resolved elasticlunr-rs3.1.0.
-- Original field-fix source/binary receipt target/book_search_0815_tool/ (120 hashes b0ad71d5);native warning-preservation/repair receipt target/book_search_0817_warning/result.json.
-- D376 fixed0816,D377 fixed0817;whole prior records in992/993. SUMMARY120-line ceiling unchanged;build guide40958B/40960B,route setup detail to canonical search chapter.
-- Native v1 checkpoint0813 accepted13 families;selectors/budgets .5f.3;real geometry/physical .5f.4.geometry/.5g/G2/G3;storage/app/provider/full integration still pending.
-- Archive993 five Git spans/body/public exact;1447 logical/80 working;generation1 21/64,generation2 59/64;active headroom5,aggregate never versus64.
-- G1still6/18;G0human closure unapproved;no G1 waiver,G2 exception,currentness/domain approval or release readiness.
-- Cleanup2026-11-01 14:33 UTC;clock2026-11-02 00:06 UTC;next due2026-11-02 14:33 UTC. Protected target/history_window28_capture never reinstall after edits.
-- In flight:none at commit;PNT continues;ordered operation integration next.
+- Latest unit:STITCHCAD-G1-0819;derive HEAD/ahead from Git;push cadence400.
+- Active/next:G1-SLICE.5f.2.plan in docs/tasks/G1-SLICE-execution.md;parent .5f.2 in_progress,plan pending.
+- Next:read actual FormulaRecipe/FormulaNameCursor/FormulaNamespace/checked-expression proof lifetimes and all native operation input/dependency types;bound ordered program/context/namespace integration before Rust edits.
+- Relevant contracts:ROADMAP ADR-0003/6.1;ontology3.1/3.2;drafting-operation-contracts shared boundary/13-family checkpoint/actual frame/current registry/prior names requirements.
+- Existing cursor stages one actual normalized scalar recipe;it grants no expression/whole acceptance and cannot stand in for a combined drafting program. Point/edge declarations retain refs,not order/registry/frame proof.
+- Native .5f.1 done (13-family0813 plus D3720818). Its7-node search subtree1592B now lives in G1-SLICE-constructions.md#native-declaration-search-checkpoint;all IDs/statuses/proof links preserved.
+- Move receipt target/history-proof-0819-search-tracking/source.json;original construction68574B prefix exact;all original execution IDs live once;book119 maintained Markdown/runtime bytes unchanged.
+- Whole0818 task/lesson/ledger/D372 closure retained in994. Latest book control has zero book delta and fresh canonical ownership;no feature/runtime change.
+- D372 fixed;generated engine14 real queries/118 landings/4 result faults pass;Node26.8.1/read-only host22.8+ prerequisite;options/cache/coverage poison removed;no UI/ranking-quality/latency claim.
+- Native capture target/book_search_0818_native/:123 inputs;1094 records9587436B→118 records7736437B,both warning-free;85167 chapter-word/72600 term pairs exact.
+- Make/publication/capture use guarded local target/cargo-home/bin/mdbook;setup scripts/book_tool.py install/--force;every same-version install gets native field proof;published0.5.4/fixed elasticlunr3.1.0.
+- D376 fixed0816,D377 fixed0817;370 source entries inspected,no D156 runtime/locality signoff. Broader source/geometry/app/provider/storage/release integration remains owned.
+- Selectors/budgets .5f.3;real geometry/physical .5f.4.geometry/.5g/G2/G3;no ambient frame,invented currentness or accepted geometric prefix.
+- Archive994 four Git spans/body/public exact;1448 logical/81 working;generation1 21/64,generation2 60/64;active headroom4,aggregate never versus64.
+- Book build guide40958B/40960B;route setup detail to search chapter. SUMMARY120-line ceiling unchanged. No new task sibling/map row.
+- G1still6/18;G0human closure unapproved;no G1 waiver,G2 exception,domain approval or release readiness.
+- Cleanup2026-11-01 14:33 UTC;next due2026-11-02 14:33 UTC. Protected target/history_window28_capture never reinstall after edits.
+- In flight:none at commit;PNT continues with actual ordered-integration planning.

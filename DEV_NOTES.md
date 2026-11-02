@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — actual native book search checkpoint
+## _(2026-11-02 UTC)_ — bounded ordered-integration frontier
 
-0818 D372 closes:generated elasticlunr engine14 queries/118 landings/4 data refusals pass0,current/captured chapter indexes;case/prefix/Bézier/empty/no-match covered.
-Node26.8.1 is a documented read-only host dependency;stdin only,cache/options sanitized,poisoned flags create no cache/coverage paths0;section profile refuses0.
-Final native1094→118 migration85167 words/72600 terms exact0;both builds warning-free,chapter7736437B;publication118/374/1806/3387/source census370 pass0.
-Promotion declined: existing public-runtime/search policy;native13-family parent closes with D372,actual ordered/frame integration .5f.2 next. 993 five Git/public exact0,archive1447/80,per-generation21/64 and59/64;G1still6/18.
+0819 execution999 lines blocked further tracked growth;whole closed7-node search branch1592B moves to existing construction sibling after whole0818 proof retirement.
+Git/receipt proves all original execution IDs remain once,7 statuses done and original68574B destination prefix exact0;no new task part,map row or raised ceiling.
+All119 maintained book Markdown/runtime bytes unchanged0;tree10/13/20/0 and994 four Git/public spans pass0;archive1448/81,per-generation21/64 and60/64.
+Promotion declined: existing whole-record task containment. Ordered .5f.2.plan now owns actual namespace/frame/registry/dependency contract review before code;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

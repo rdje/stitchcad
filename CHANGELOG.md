@@ -3,18 +3,18 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0818 — verify real book search queries and close D372
+## STITCHCAD-G1-0819 — bound the ordered-integration tracker
 
-- Generated engine/index passes14 real queries across118 chapter landings plus four
-  result-refusal controls. Case,prefix,accented term,body/title and empty/no-match cases pass.
-- Documented read-only Node22.8+ prerequisite;stdin assets,no packages/cache/browser profile;
-  actual poisoned options/cache/coverage remain absent. Section indexes refuse chapter profile.
-- Native full-text migration1094→118 retains85167 word/72600 term pairs;both builds warning-free,
-  chapter payload7736437B. Publication118/374/1806/3387/source census370 pass0;runner watches queries.
-- 993 five Git/public spans exact;archive1447/80,per-generation21/64 and59/64. D372/native declaration
-  parent closed;actual ordered/frame/dependency integration next. G1still6/18;no UI/latency/ranking approval.
+- Moved the whole closed seven-node search subtree1592B into the existing completed-constructions
+  sibling after whole0818 proof retirement. Every original ID remains unique;all seven statuses done.
+- Original68574B destination prefix and all119 maintained book Markdown/runtime bytes unchanged.
+  No new task file,map row or raised limit;ordered integration contract review is the next leaf.
+- Tree coverage10/13/20/0 and994 four Git/public spans pass0;archive1448/81,per-generation21/64 and60/64.
+  G1still6/18;D372/native declaration checkpoint remains complete;actual frame/ordered integration pending.
 
 # Sealed archive — earlier slices
+
+[Whole0818 query checkpoint and D372 closure](docs/history/stitchcad-devnotes-part994.md) retain exact source bytes.
 
 [Whole0817 renderer activation and D377 record](docs/history/stitchcad-devnotes-part993.md) retain exact source bytes.
 

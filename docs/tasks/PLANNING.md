@@ -1179,8 +1179,7 @@ D307–D369:[whole prior ledger](../history/window27.md#stitchcad-devnotes-part8
 
 ## D372 — large book-search index warning
 
-Fixed0818;owner G1-SLICE.5f.1.book-search.verify;[whole cause/prior checkpoints](../history/stitchcad-devnotes-part993.md).
-Published local0.5.4/fixed3.1.0 keeps full text/chapter coverage and warning refusals;native14 queries/118 landings/4 result faults plus exact1094→118 migration85167 words/72600 terms pass0. Browser UI/ranking quality/latency remain unclaimed;no cap raise,excluded chapter or upstream patch.
+Fixed0818;[whole cause/prior checkpoints](../history/stitchcad-devnotes-part993.md),[whole closure/proofs](../history/stitchcad-devnotes-part994.md).
 
 ## D373/D374 — active journal documentation scope/storage drift
 Fixed0696;[whole original ledger/proofs](../history/window28.md#stitchcad-devnotes-part935md).

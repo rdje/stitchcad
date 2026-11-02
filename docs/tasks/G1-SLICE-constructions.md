@@ -877,3 +877,29 @@ retains all original goals,statuses and focused acceptance evidence.
   - [x] NO REGRESSION: `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`:
     10 lanes/13 trees/20 siblings/0 issues,rc=0;980 three Git spans/body/public exact;archive1434/67,per-generation21/64 and46/64,rc=0.
     `scripts/run_make.sh book`:build/rendered consumer boundary rc=0;runtime/full feature verification unchanged.
+
+## Native declaration search checkpoint
+
+- ID: `G1-SLICE.5f.1.book-search`
+  Status: `done`
+  Goal:P2 D372 after typed v1 feature completion:resolve new large-index build warning;
+  payload10015553B/JS10030347B. Preserve full-text/chapter search;no latency claim,cap raise or warning suppression.
+- ID: `G1-SLICE.5f.1.book-search.plan`
+  Status: `done`
+  Goal:0814 upstream field leakage census and bounded remedy;[whole scope/proofs](../history/stitchcad-devnotes-part990.md).
+- ID: `G1-SLICE.5f.1.book-search.build`
+  Status: `done`
+  Goal:0815 published local renderer/native field correction;[whole scope/proofs](../history/stitchcad-devnotes-part991.md).
+- ID: `G1-SLICE.5f.1.book-search.activate`
+  Status: `done`
+  Goal:select the verified local renderer explicitly in normal build/publication/capture paths;guard tool/source paths and update installation/search docs and directly affected contracts.
+  Acceptance:all full-text/chapter coverage retained;unexpected renderer warnings still refuse;no implicit dependency on ambient executable resolution.
+- ID: `G1-SLICE.5f.1.book-search.activate.tool`
+  Status: `done`
+  Goal:0816 guarded local tool setup and D376 repair;[whole scope/proofs](../history/stitchcad-devnotes-part992.md).
+- ID: `G1-SLICE.5f.1.book-search.activate.publication`
+  Status: `done`
+  Goal:0817 local renderer/publication activation and D377 repair;[whole scope/proofs](../history/stitchcad-devnotes-part993.md).
+- ID: `G1-SLICE.5f.1.book-search.verify`
+  Status: `done`
+  Goal:0818 actual native search/query checkpoint and D372 closure;[whole scope/proofs](../history/stitchcad-devnotes-part994.md).

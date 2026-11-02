@@ -917,43 +917,27 @@ retains every original goal,status,child relation and focused acceptance proof.
 - ID: `G1-SLICE.5f.1.c.join.outputs.review`
   Status: `done`
   Goal:0812 native join declaration checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part988.md).
-- ID: `G1-SLICE.5f.1.book-search`
-  Status: `done`
-  Goal:P2 D372 after typed v1 feature completion:resolve new large-index build warning;
-  payload10015553B/JS10030347B. Preserve full-text/chapter search;no latency claim,cap raise or warning suppression.
-- ID: `G1-SLICE.5f.1.book-search.plan`
-  Status: `done`
-  Goal:0814 upstream field leakage census and bounded remedy;[whole scope/proofs](../history/stitchcad-devnotes-part990.md).
-- ID: `G1-SLICE.5f.1.book-search.build`
-  Status: `done`
-  Goal:0815 published local renderer/native field correction;[whole scope/proofs](../history/stitchcad-devnotes-part991.md).
-- ID: `G1-SLICE.5f.1.book-search.activate`
-  Status: `done`
-  Goal:select the verified local renderer explicitly in normal build/publication/capture paths;guard tool/source paths and update installation/search docs and directly affected contracts.
-  Acceptance:all full-text/chapter coverage retained;unexpected renderer warnings still refuse;no implicit dependency on ambient executable resolution.
-- ID: `G1-SLICE.5f.1.book-search.activate.tool`
-  Status: `done`
-  Goal:0816 guarded local tool setup and D376 repair;[whole scope/proofs](../history/stitchcad-devnotes-part992.md).
-- ID: `G1-SLICE.5f.1.book-search.activate.publication`
-  Status: `done`
-  Goal:0817 local renderer/publication activation and D377 repair;[whole scope/proofs](../history/stitchcad-devnotes-part993.md).
-### G1-SLICE.5f.1.book-search.verify
-- ID: `G1-SLICE.5f.1.book-search.verify`
-  Status: `done`
-  Goal:after implementation verify actual full-text/chapter search and warning-free build against original corpus;preserve existing public behavior.
-  - [x] ROOT CAUSE: `rg search_data` scoped publication reader validates data without JS;`node --version` →v26.8.1,rc=0;actual query/landing proof is the remaining declared D372 boundary.
-  - [x] ADDRESSED: launcher `search_query_contract.py` →14 native cases/118 landings/4 data refusals,current/captured chapters pass,rc=0;poisoned Node options/cache/coverage removed and section profile refused,rc=0.
-    Native capture/migration →1094→118 documents,85167 chapter-word/72600 term pairs exact;both warning-free,chapter payload7736437B,rc=0;no UI/ranking/latency approval.
-  - [x] NO REGRESSION: `check(ROOT)` →118/374/1806/3387,source census370,runner syntax and five search-data refusals pass,rc=0;993 five Git spans/public/archive retained,1447/80,per-generation21/64 and59/64,rc=0.
-  Commit:STITCHCAD-G1-0818. promotion: declined (existing full-text/chapter and public-runtime verification policy;D372 closed).
+Closed search checkpoint:[whole seven-node subtree](G1-SLICE-constructions.md#native-declaration-search-checkpoint).
+
 - ID: `G1-SLICE.5f.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.
   Acceptance: every argument sees only prior/always-visible names, output provenance/identity,
   Pocket logical opening kind/domain/state and component dependencies, Buttonhole dependency on
   canonical button-size declaration. No separately authored hole length or approximation.
   Retain the actual containing drafting frame and current output registries;schema/kind proofs grant neither.
   Verification: `pending`; Commit: `pending`.
+### G1-SLICE.5f.2.tracking
+- ID: `G1-SLICE.5f.2.tracking`
+  Status: `done`
+  Goal:move whole closed search subtree to the existing completed-constructions sibling before ordered integration grows the999-line execution tracker;preserve every node/status/proof and book byte.
+  - [x] ROOT CAUSE: `wc -l -c docs/tasks/G1-SLICE*.md` →execution999 lines,construction879/68574B;existing linked sibling has room before new ordered work,rc=0.
+  - [x] ADDRESSED: `python3 -I -B -` Git/receipt comparison →whole7 done nodes1592B exact after0818 proof retirement;all original execution IDs live once and68574B destination prefix unchanged,rc=0.
+  - [x] NO REGRESSION: `run_tree_coverage_census.sh` →10 lanes/13 trees/20 siblings/0 unowned-orphan-dead;119 book Markdown/runtime bytes unchanged;994 four Git/public spans and archive1448/81,per-generation21/64 and60/64,rc=0.
+  Commit:STITCHCAD-G1-0819. promotion: declined (existing whole-record task containment;no new product contract).
+- ID: `G1-SLICE.5f.2.plan`
+  Status: `pending`
+  Goal:inventory actual recipe/operation/frame/namespace/dependency contracts and choose bounded ordered integration slices;no fake geometry/currentness or ambient frame.
 - ID: `G1-SLICE.5f.3`
   Status: `pending`
   Goal: operation execution/geometry-selector bridge through published typed contracts.
