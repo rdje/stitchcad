@@ -4,10 +4,15 @@ use crate::{design::DesignMetadataHost, recipe::FormulaRecipeDocument};
 use core::fmt;
 mod admission;
 mod limits;
+mod normalized;
 pub use admission::{
     AdmittedDraftingProgramInputs, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
 };
 pub use limits::{DraftingProgramLimits, DraftingProgramShape};
+pub use normalized::{
+    DraftingProgramNormalizationError, DraftingProgramNormalizationRefusal,
+    NormalizedDraftingOperation, NormalizedDraftingProgram,
+};
 
 /// One explicit original request in a mixed scalar/drafting sequence, without order acceptance.
 #[derive(Clone, Copy, Debug)]

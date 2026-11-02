@@ -70,7 +70,9 @@ pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};
 mod program;
 pub use program::{
     AdmittedDraftingProgramInputs, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
-    DraftingProgramInputs, DraftingProgramLimits, DraftingProgramShape, DraftingProgramStep,
+    DraftingProgramInputs, DraftingProgramLimits, DraftingProgramNormalizationError,
+    DraftingProgramNormalizationRefusal, DraftingProgramShape, DraftingProgramStep,
+    NormalizedDraftingOperation, NormalizedDraftingProgram,
 };
 mod bezier;
 pub use arc::{

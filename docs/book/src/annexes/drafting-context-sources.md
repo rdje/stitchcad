@@ -172,7 +172,7 @@ The owner has private fields and cannot outlive its actual context or native dec
 from its mixed position;`Drafting` retains the actual `DraftingOperationInput`. Zero, missing,
 repeated, out-of-order or out-of-range requests and empty sequences survive raw construction.
 `admit(&DraftingProgramLimits)` now requires every original scalar statement,including each
-assertion,exactly once in original relative order. Complete normalization remains **planned**.
+assertion,exactly once in original relative order. `normalized()` now derives complete child arenas.
 No topological reordering,statement extraction or implicit scalar source is introduced.
 
 For example,this function retains actual inputs without accepting scalar coverage or reading values:
@@ -216,7 +216,7 @@ remove it. Existing source/argument conservative record bounds remain authoritat
 before child factories;they certify no allocator-byte, parser-scratch, CPU or runtime allowance.
 
 Recipe counts,exhaustive native fields,raw mixed steps and complete input admission are implemented;
-normalization and borrowed normalized views remain owned work. Existing document factories must retain
+normalization is also available;combined borrowed step views remain owned work. Existing document factories retain
 their original typed/allocation causes;failure returns no normalized program prefix. Normalized
 views must borrow actual owners and keep source ordinals separate from combined positions.
 
@@ -277,5 +277,51 @@ original-order cause;resource causes keep their typed error chain. A small diagn
 uncommon semantic/content errors;no child normalization/allocation cause is replaced by it.
 Admitted inputs are not normalized arenas or a whole namespace/kind/dependency/current-output
 proof. No additional currentness or geometry callback runs during this admission;the held context
-continues to rely on its honest immutable source contract. Normalization and complete static checking
-follow,then coupled feature verification.
+continues to rely on its honest immutable source contract. Complete static checking follows normalized
+arenas and combined borrowed views,then coupled feature verification.
+
+### Complete original child normalization
+
+`AdmittedDraftingProgramInputs::normalized()` now derives every original child arena after complete
+admission. The admitted handle copies only original input/policy borrows and fixed demand/shape;
+providers and model data need neither Clone nor Debug. The factory first fallibly reserves the whole
+mixed-slot vector,then calls the existing complete Root source factory,whole original recipe factory,
+and native point/arc/opening factories in mixed order. It returns one private `NormalizedDraftingProgram`
+only after every child succeeds. No partial owner,substring parsing,reconstructed span or self-reference
+is introduced. All unused sources and repeated native occurrences are normalized too.
+
+Child ceilings come from the explicit admitted whole expression/node/record policy. They do not grant
+each child a separate aggregate allowance:actual complete demand was already bounded across all three
+cohorts. Existing language/literal rules and original child factories stay authoritative. Source and
+outer-vector allocation errors remain inline;other errors retain their original typed recipe/argument
+cause and genuine mixed position. Error accessors retain the complete original input owner and policy;
+no newly allocated wrapper replaces a failed allocation cause. Allocation fault verification remains
+part of the separately owned coupled feature verification.
+
+`sources()` exposes the actual complete Design-backed source owner;`recipe()` exposes the actual whole
+Design-backed scalar recipe owner. `operations()` borrows a complete position-aligned slice:scalar
+positions are `None`,and native positions hold a `NormalizedDraftingOperation`. Point and center-arc
+variants own all actual argument arenas;slash/spread retains its actual whole declaration and normalized
+opening. `Other` retains original families with no scalar argument documents. For `[scalar1,point,scalar2]`,
+the slots are `[None,Some(Point(...)),None]`;scalar2 stays in the original whole recipe with its original
+ordinal2 and whole-source span. Combined borrowed step views are the next stage.
+
+```rust
+use sc_core::{construction::{AdmittedDraftingProgramInputs, DraftingContextSource,
+    DraftingProgramNormalizationError, NormalizedDraftingProgram}, design::DesignMetadataHost};
+fn normalize<'p,'a,H:DesignMetadataHost,S:DraftingContextSource<H> + ?Sized>(
+    admitted:AdmittedDraftingProgramInputs<'p,'a,H,S>)
+    -> Result<NormalizedDraftingProgram<'p,'a,H,S>,DraftingProgramNormalizationError<'p,'a,H,S>> {
+    let program=admitted.normalized()?;
+    assert!(std::ptr::eq(program.admitted().inputs(),admitted.inputs()));
+    assert_eq!(program.operations().len(),admitted.shape().step_count());
+    let _sources=program.sources(); // All actual Root bodies, including unused ones.
+    let _recipe=program.recipe(); // Whole scalar recipe, including every assertion.
+    Ok(program)
+}
+```
+
+Normalization resolves no name,kind,source dependency,current geometry or value. An unresolved name,
+unknown call,untaken division by zero or wrong point-argument kind can still be represented as normalized
+syntax. These require the later complete static and value stages. An empty program retains its actual
+Root/context with empty source,recipe and native arenas;it acquires no synthesized statement or default.

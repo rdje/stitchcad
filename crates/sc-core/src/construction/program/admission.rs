@@ -137,6 +137,17 @@ pub struct AdmittedDraftingProgramInputs<
     demand: DesignResourceDemand,
     shape: DraftingProgramShape,
 }
+impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> Copy
+    for AdmittedDraftingProgramInputs<'_, '_, H, S>
+{
+}
+impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> Clone
+    for AdmittedDraftingProgramInputs<'_, '_, H, S>
+{
+    fn clone(&self) -> Self {
+        *self
+    }
+}
 impl<'p, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
     AdmittedDraftingProgramInputs<'p, 'a, H, S>
 {

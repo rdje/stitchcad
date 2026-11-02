@@ -905,22 +905,22 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.program.steps`
   Status: `done`
   Goal:0831 actual mixed source owner;[whole scope/proofs](../history/stitchcad-devnotes-part1007.md).
-### G1-SLICE.5f.2.program.admit
 - ID: `G1-SLICE.5f.2.program.admit`
   Status: `done`
-  Goal:complete actual Root/context/native input content and all3 normalization cohorts before children;checked whole populations,then exact scalar coverage/order with genuine original ordinal versus combined position,no accepted prefix.
-  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
-    native14 pass;all3 cohorts including unused/untaken/repeated/both assertion operands require13 expressions/31 nodes/84 conservative records;fresh cumulative actual fields,rc=0.
-  - [x] ADDRESSED: same target proves original first Root/context/vector/latching refusal before zero quotas/bad order,
-    then complete quota priority and scalar missing/reordered/zero/repeated/out-of-range/extra requests with genuine mixed positions;empty normalization permitted,rc=0.
-  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    `cargo test -p sc-core --doc construction::program` private/default guards4 and `--doc construction::context_examples` examples5 pass,rc=0;
-    book/publication118/374/1809/3400/ten prior Rust fences/whole original context prefix exact,rc=0;
-    1007 three Git/body/public spans/archive1461/38,per-generation21/64 and17/64,rc=0.
-  Commit:STITCHCAD-G1-0832. promotion:declined (existing complete-admission/actual-owner contract);child normalization next,whole semantic/feature verification pending.
+  Goal:0832 complete actual mixed content/population/order admission;[whole scope/proofs](../history/stitchcad-devnotes-part1008.md).
+### G1-SLICE.5f.2.program.normalize
 - ID: `G1-SLICE.5f.2.program.normalize`
-  Status: `pending`
+  Status: `done`
   Goal:normalize all Root formula-source bodies,whole scalar recipe and actual native arguments through existing factories after complete admission;preserve original child/allocator causes,no partial owner or geometry queries.
+  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
+    native15 pass;all unused source bodies/whole scalar recipe and native arguments normalize through actual factories,original repeated point arenas remain separate,rc=0.
+  - [x] ADDRESSED: same target retains actual source/arc/opening/Walk owners,whole assertion spans,empty arenas,
+    wrong kind/unknown calls with zero provider/value query;`cargo test -p sc-core --doc construction::program`:five private/default guards pass,rc=0.
+  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
+    `cargo test -p sc-core --doc construction::context_examples`:six actual examples pass,rc=0;
+    book/publication118/374/1809/3401/eleven prior Rust fences exact,rc=0;
+    1008 three Git/body/public spans/archive1462/39,per-generation21/64 and18/64,rc=0.
+  Commit:STITCHCAD-G1-0833. promotion:declined (existing original-factory/actual-owner/no-prefix contract);combined borrowed views next,allocator-fault/whole feature verification remains .5f.2.verify.
 - ID: `G1-SLICE.5f.2.program.views`
   Status: `pending`
   Goal:borrow actual normalized source/statement/argument owners with distinct original scalar ordinals and combined positions;avoid self-reference or extracted/fabricated spans;whole names/dependencies/kinds/values remain later.
@@ -935,4 +935,4 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.
 - ID: `G1-SLICE.5f.2.verify`
   Status: `pending`
-  Goal:after the agreed integration set,verify coupled source/order/frame/currentness/argument/semantic/resource refusals and public proof lifetimes;actual geometry/selector execution stays .5f.3/.4.geometry/G2/G3.
+  Goal:after the agreed integration set,verify coupled source/order/frame/currentness/argument/semantic/resource and allocator refusals,original causes and public proof lifetimes;actual geometry/selector execution stays .5f.3/.4.geometry/G2/G3.

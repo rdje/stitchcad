@@ -151,6 +151,60 @@ fn whole_admission_counts_all_three_cohorts_repeats_and_actual_retained_fields()
     );
     assert_eq!(source.trace.get(), 2); // Fresh charge only; no semantic/currentness/geometry callback.
     assert!(!format!("{admitted:?}").contains("private_width"));
+    source.trace.set(0);
+    let normalized = admitted.normalized().map_err(|e| e.to_string())?;
+    assert!(std::ptr::eq(normalized.admitted().inputs(), &inputs));
+    assert!(std::ptr::eq(normalized.admitted().limits(), &policy));
+    assert!(std::ptr::eq(normalized.sources().scope().root(), &root));
+    assert!(std::ptr::eq(normalized.recipe().scope().root(), &root));
+    let [first_source, second_source] = normalized.sources().normalized().sources() else {
+        return Err("complete original unused source owners".into());
+    };
+    assert_eq!(
+        (first_source.source().id(), second_source.source().id()),
+        (id(81), id(82))
+    );
+    assert_eq!(normalized.sources().normalized().node_count(), 11);
+    assert_eq!(
+        &second_source.expression().canonical_form(),
+        second_source.source().expression().canonical()
+    );
+    let [_, assertion] = normalized.recipe().normalized().statements() else {
+        return Err("whole original recipe and assertion".into());
+    };
+    let span = assertion.span();
+    assert_eq!(
+        inputs.recipe().source().get(span.start()..span.end()),
+        Some("assert closure:eps_geo=width==2 mm")
+    );
+    use sc_core::construction::NormalizedDraftingOperation as N;
+    let [None, Some(N::Point(first)), Some(N::CenterArc(actual_arc)), Some(N::SlashSpread {
+        input: actual_slash,
+        opening,
+    }), Some(N::Point(repeated)), Some(N::Other(Input::WalkSeam(actual_walk))), None] =
+        normalized.operations()
+    else {
+        return Err("complete original mixed-position-aligned native arenas".into());
+    };
+    assert!(std::ptr::eq(first.point(), &point) && std::ptr::eq(repeated.point(), &point));
+    assert!(!std::ptr::eq(
+        first.coordinate(PointCoordinate::X),
+        repeated.coordinate(PointCoordinate::X)
+    ));
+    assert_eq!(
+        &first.coordinate(PointCoordinate::X).canonical_form(),
+        point.coordinate(PointCoordinate::X).canonical()
+    );
+    assert!(std::ptr::eq(actual_arc.arc(), &arc));
+    assert!(std::ptr::eq(*actual_slash, &slash));
+    assert!(std::ptr::eq(opening.opening(), slash.opening()));
+    assert!(std::ptr::eq(*actual_walk, &walk));
+    assert_eq!(
+        &opening.expression().canonical_form(),
+        slash.opening().document().canonical()
+    );
+    assert_eq!(source.trace.get(), 0);
+    assert!(!format!("{normalized:?}").contains("private_width"));
     for (expressions, nodes, records, expected) in [
         (
             12,
@@ -390,5 +444,44 @@ fn empty_program_admits_zero_normalization_but_keeps_complete_context_content() 
         (0, 0, 0, 0)
     );
     assert!(admitted.demand().collection_entries() >= context.demand().collection_entries());
+    source.trace.set(0);
+    let normalized = admitted.normalized().map_err(|e| e.to_string())?;
+    assert!(normalized.operations().is_empty());
+    assert!(normalized.sources().normalized().sources().is_empty());
+    assert!(normalized.recipe().normalized().statements().is_empty());
+    assert!(std::ptr::eq(
+        normalized.admitted().inputs().recipe(),
+        root.recipe()
+    ));
+    assert_eq!(source.trace.get(), 0);
+    Ok(())
+}
+
+#[test]
+fn normalization_keeps_wrong_static_kind_and_unknown_call_without_accepting_point() -> TestResult {
+    let root = root_with_recipe("")?;
+    let source = Source::new(&root);
+    let context = scope(&root)?
+        .bind_drafting_context(&source, all()?)
+        .map_err(|e| e.to_string())?;
+    let point = PointConstruction::new(id(100), doc("1 deg")?, doc("missing(1)")?);
+    let inputs = Inputs::new(context, vec![Step::Drafting(Input::ConstructPoint(&point))]);
+    let policy = Limits::new(all()?, 2, 3, 9);
+    let admitted = inputs.admit(&policy).map_err(|e| e.to_string())?;
+    source.trace.set(0);
+    let program = admitted.normalized().map_err(|e| e.to_string())?;
+    let [Some(sc_core::construction::NormalizedDraftingOperation::Point(actual))] =
+        program.operations()
+    else {
+        return Err("actual complete normalized point arguments".into());
+    };
+    assert!(std::ptr::eq(actual.point(), &point));
+    assert_eq!(actual.coordinate(PointCoordinate::X).node_count(), 1);
+    assert_eq!(
+        &actual.coordinate(PointCoordinate::X).canonical_form(),
+        point.coordinate(PointCoordinate::X).canonical()
+    );
+    assert_eq!(actual.coordinate(PointCoordinate::Y).node_count(), 2);
+    assert_eq!(source.trace.get(), 0);
     Ok(())
 }

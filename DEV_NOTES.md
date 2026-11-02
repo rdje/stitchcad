@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — complete mixed input admission
+## _(2026-11-02 UTC)_ — complete original child normalization
 
-0832 freshly charges Root/context/mixed Vec/native fields,then all3 cached normalization cohorts,then original scalar coverage/order. Shape records conservatively bound steps+statements+expressions+2*nodes;duplicates/unused/untaken content count,no child factory or value/provider query.
-Native14/private-default guards4/compiled context examples5/strict selected lint/fmt pass0. Cohort13-31-84,cumulative/latching refusal,zero quotas before bad order,mixed positions and empty normalization checked. Semantic diagnostics boxed after strict128B error lint;typed resource cause retained.
-Book reference moved into existing context companion to retain part bounds;ten original Rust fences/whole original context prefix exact. Publication118-374-1809-3400 and1007 three Git/body/public spans/archive1461-38/per-generation21-64 and17-64 pass0.
-Promotion declined: existing actual-owner/complete-admission/resource doctrine. G1still6/18;complete child normalization next,whole semantic/feature verification remains deferred.
+0833 reserves the complete mixed slots,then runs original Root source/whole-recipe/native factories under explicit admitted global ceilings. Private complete owner holds actual arenas,original input/policy handle and aligned scalar/native slots;no self-reference,substring source or accepted prefix.
+Native15/private guards5/context book examples6/strict selected lint/fmt pass0. Unused bodies,separate repeated arenas,original arc/opening/Walk,whole assertion spans,empty drafts and wrong kind/unknown call remain syntax without value/provider lookup. Original allocation causes stay inline,semantic causes typed.
+Publication118-374-1809-3401/eleven prior Rust fences and1008 three Git/body/public spans exact0;archive1462-39/per-generation21-64 and18-64. Allocation-fault/coupled feature verification remains explicitly .5f.2.verify after the complete set.
+Promotion declined: existing original-factory/actual-owner/no-prefix contract. G1still6/18;combined borrowed step views next,whole semantic/feature verification still pending.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
