@@ -8,6 +8,11 @@ use crate::{
     recipe::{FormulaInitialDeclaration, FormulaNameScope, FormulaNamespace},
 };
 use core::fmt;
+mod work;
+pub use work::{
+    AdmittedDraftingProgramOrderWork, DraftingProgramOrderLimits, DraftingProgramOrderShape,
+    DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal,
+};
 
 /// Original current-input,host or namespace cause,with complete prior initial associations.
 pub struct DraftingProgramInitialNamespaceError<

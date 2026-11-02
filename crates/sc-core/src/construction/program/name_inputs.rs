@@ -13,7 +13,11 @@ use crate::{
 use core::fmt;
 mod initial;
 mod namespace;
-pub use namespace::{DraftingProgramInitialNamespace, DraftingProgramInitialNamespaceError};
+pub use namespace::{
+    AdmittedDraftingProgramOrderWork, DraftingProgramInitialNamespace,
+    DraftingProgramInitialNamespaceError, DraftingProgramOrderLimits, DraftingProgramOrderShape,
+    DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal,
+};
 mod positions;
 mod roles;
 pub use initial::{

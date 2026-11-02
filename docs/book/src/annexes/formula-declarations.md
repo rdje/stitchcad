@@ -402,3 +402,52 @@ ambiguous-name sources. Debug omits authored names. The held drafting provider i
 for currentness or geometry during map construction. The metadata scope proves no whole programme
 kinds,canonical dependencies,argument execution,geometry values or release readiness. Logical name
 bounds are separate from allocator bytes/capacity and CPU work;coupled verification remains owned.
+
+
+## Bound complete mixed-order checker work
+
+`DraftingProgramInitialNamespace::admit_order_work(explicit_policy)` now counts every actual mixed
+scalar operand and native argument before any child kind checker or proof-vector reservation.
+`DraftingProgramOrderLimits` requires separate expression,node and retained-record allowances;
+there is no Default. Earlier normalized syntax and the private initial map supply no checker grant.
+Their original held-content,namespace,output and initial-binding policies remain required separately.
+
+The producer traverses genuine original mixed slots. A scalar let contributes its actual RHS;
+an assertion contributes both original operands. Point contributes two actual normalized arenas,
+center-arc three,and slash/spread its opening arena. Other native inputs retain their slot with no
+scalar expression. Every branch,call argument and repeated native occurrence counts. Arena
+`node_count()` reads the actual retained node-vector length;normalization estimates and caller
+hints do not replace these fields. Separately identified Root formula-source bodies retain their
+own later source-checking policy and are outside this mixed scalar/native cohort.
+
+For complete steps M,scalar statements S,expressions E and semantic nodes N,the conservative
+additional retained-checker bound is **M + S + E + 2N**:outer step slots,statement/expression proof
+owners,node certificates and at most one retained name dependency per node. Inline owners can be
+counted conservatively twice. This is a logical successful-proof envelope,not checker scratch,
+allocator bytes/capacity,CPU or a runtime policy. Complete checked arithmetic precedes quotas;
+expression allowance is checked before nodes,then retained records.
+
+The mixed fixture has seven slots,two scalar statements,three scalar operands/eight scalar nodes
+and eight native argument occurrences/twelve native nodes,including the repeated Point. It needs
+11 expressions,20 nodes and **7 + 2 + 11 + 40 =60** additional records. Allowances10 expressions,
+19 nodes or59 records refuse the actual complete requirement in that order,even though a later
+Point name would fail static checking. No child checker or drafting callback runs here. Existing
+Root source bodies remain separately owned. An empty programme accepts0/0/0 checker work while
+its initial namespace still required the earlier reserved-name allowance.
+
+```rust
+use sc_core::{construction::{DraftingProgramInitialNamespace,DraftingInitialInputProvider,
+    DraftingProgramOrderLimits,DraftingProgramOrderShape},design::DesignMetadataHost};
+fn order_shape<H:DesignMetadataHost,S:DraftingInitialInputProvider<H> + ?Sized>(
+    names:&DraftingProgramInitialNamespace<'_, '_, '_, '_, '_, '_, '_,H,S>,
+    policy:DraftingProgramOrderLimits)->Result<DraftingProgramOrderShape,String> {
+    names.admit_order_work(&policy).map(|work|work.shape()).map_err(|error|error.to_string())
+}
+```
+
+`AdmittedDraftingProgramOrderWork` privately pins the original initial namespace,selected policy
+and complete shape. `inputs()`,`limits()` and `shape()` expose those originals without allocating,
+advancing metadata or checking a kind. `DraftingProgramOrderWorkError` retains that same owner/
+policy and PopulationOverflow,Expressions,Nodes or RetainedRecords with actual required counts.
+Diagnostics omit names. Whole earlier-only checking,proof reservation,dependencies,allocator fault
+checks and coupled verification remain separate owned stages;this is no accepted programme prefix.

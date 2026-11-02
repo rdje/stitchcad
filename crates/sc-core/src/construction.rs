@@ -71,7 +71,8 @@ mod operation_input;
 pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};
 mod program;
 pub use program::{
-    AdmittedDraftingProgramInputs, AdmittedDraftingProgramNameWork, BoundDraftingProgramInitials,
+    AdmittedDraftingProgramInputs, AdmittedDraftingProgramNameWork,
+    AdmittedDraftingProgramOrderWork, BoundDraftingProgramInitials,
     BoundDraftingProgramOutputRoles, DraftingGeometryNameSource, DraftingInitialBinding,
     DraftingInitialBindingIssue, DraftingInitialError, DraftingInitialRefusal, DraftingOutputName,
     DraftingOutputPosition, DraftingOutputPositionError, DraftingOutputPositionRefusal,
@@ -81,9 +82,10 @@ pub use program::{
     DraftingProgramLimits, DraftingProgramNameInputs, DraftingProgramNameLimits,
     DraftingProgramNameShape, DraftingProgramNameWorkError, DraftingProgramNameWorkRefusal,
     DraftingProgramNormalizationError, DraftingProgramNormalizationRefusal,
-    DraftingProgramOutputPositions, DraftingProgramShape, DraftingProgramStep,
-    DraftingProgramStepKind, DraftingProgramStepView, NormalizedDraftingOperation,
-    NormalizedDraftingProgram,
+    DraftingProgramOrderLimits, DraftingProgramOrderShape, DraftingProgramOrderWorkError,
+    DraftingProgramOrderWorkRefusal, DraftingProgramOutputPositions, DraftingProgramShape,
+    DraftingProgramStep, DraftingProgramStepKind, DraftingProgramStepView,
+    NormalizedDraftingOperation, NormalizedDraftingProgram,
 };
 mod bezier;
 pub use arc::{

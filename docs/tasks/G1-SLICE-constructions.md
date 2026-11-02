@@ -760,16 +760,7 @@ before final checks. No checker, cap, grammar or product Rust changed; no needed
 
 ### G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking — retention evidence
 
-  - [x] ROOT CAUSE: `git show c1350f401980dadad96577b25e7126d1e6003280:docs/tasks/G1-SLICE-execution.md | wc -l -c`
-    gives998L/56241B,rc=0;four needed inventory child nodes need12 more lines,beyond the1000L target.
-  - [x] ADDRESSED: `python3 -I -B -` Git interval comparison:whole2685B branch/SHA99478684 exact,
-    four done IDs/statuses/relations once across canonical siblings,complete old construction prefix
-    exact,rc=0. Source receipt:target/history-proof-0798-copy-tracking/source.json;Rust diff empty.
-  - [x] NO REGRESSION: `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`:
-    10 lanes/13 trees/20 siblings/0 unowned/orphan/dead links,rc=0.973 three Git spans/body/public
-    bytes exact;`history_archive.py --root . verify`:1427 logical/60 working,rc=0;book rc=0.
-    Rendered remaining plan/field-resource/original/result boundaries present;source Rust fences unchanged.
-    Full feature/integration checks remain .5f.4.geometry/.5g/pre-push;no Rust behavior changed here.
+[Whole0798 retention proof](../history/stitchcad-devnotes-part1025.md) remains byte-exact.
 
 ## Complete join candidate inventory
 
@@ -964,15 +955,21 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:actual Root and explicit always-visible names plus only earlier scalar/native declarations in mixed order;check reserved/cross-origin/repeated headers and self/future names without values or metadata-prefix acceptance.
 - ID: `G1-SLICE.5f.2.namespace.order.initial`
   Status: `done`
-  Goal:actual Root-derived private initial map;original sources/first causes,no values.
-  - [x] ROOT CAUSE: 0849 `cargo test -p sc-core --test drafting_context_binding_contract initial_namespace`:namespace2 pass;actual loans/collisions/typed host cause,no scalar/output names,rc=0.
-  - [x] ADDRESSED: 0849 `cargo test -p sc-core --test drafting_context_binding_contract program_name_work`:work3 pass;bounds before row items,Root current/readonly scope,payload privacy,rc=0.
-  - [x] NO REGRESSION: 0849 selected library/target strict clippy,fmt and `cargo test -p sc-core --doc construction::program::name_inputs::namespace` docs3;
-    book/publication118/374/1815/3424,35 old/new exact fences,1024 Git/body/public spans/archive1478/55,generations21/64 and34/64,rc=0.
-  Commit:STITCHCAD-G1-0849. Promotion declined:existing actual-Root/no-prefix doctrine. Mixed visibility/dependencies and allocator/coupled verification pending.
+  Goal:0849 actual private initial namespace;[whole scope/proofs](../history/stitchcad-devnotes-part1025.md).
 - ID: `G1-SLICE.5f.2.namespace.order.mixed`
-  Status: `pending`
+  Status: `in_progress`
   Goal:earlier-only genuine mixed positions and scalar ordinals;check original headers/operands before exposing each actual output,no self/future name or whole acceptance from metadata alone.
+- ID: `G1-SLICE.5f.2.namespace.order.mixed.bounds`
+  Status: `done`
+  Goal:explicit complete actual mixed operand/node/prospective proof bounds before child checking.
+  - [x] ROOT CAUSE: 0850 `cargo test -p sc-core --test drafting_context_binding_contract whole_admission_counts`:focused1 pass;actual E11/N20/records60,three one-short quotas/first precedence,no callbacks,rc=0.
+  - [x] ADDRESSED: 0850 `cargo test -p sc-core --test drafting_context_binding_contract empty_program_admits_zero`:focused1 pass;zero additional checker work,original initial namespace/policy retained,rc=0.
+  - [x] NO REGRESSION: 0850 selected strict clippy/fmt and `cargo test -p sc-core --doc construction::program::name_inputs::namespace::work` docs3 pass,rc=0;
+    book/publication118/374/1815/3425,36 prior/new exact fences,1025 four Git/body/public spans/archive1479/56,generations21/64 and35/64,rc=0.
+  Commit:STITCHCAD-G1-0850. Promotion declined:existing complete-bound/no-default doctrine. Whole mixed checking,Root source dependencies and allocator/coupled verification pending.
+- ID: `G1-SLICE.5f.2.namespace.order.mixed.check`
+  Status: `pending`
+  Goal:whole bounded earlier-only scalar/native kind/header checking,original ordinals/outputs/causes and complete retained proofs;no metadata-only programme acceptance.
 - ID: `G1-SLICE.5f.2.dependencies`
   Status: `pending`
   Goal:all original formula/geometry/semantic dependencies,source frame/current registry/output provenance;canonical Pocket kind/domain/state and Buttonhole button-size dependency,no separately authored hole length or approximation.

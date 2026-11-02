@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — actual bounded mixed initial namespace
+## _(2026-11-02 UTC)_ — complete mixed-order checker work
 
-0849 borrows complete initial associations,validates actual current Root inputs,then streams parameters/selected host rows/bound extras through existing reserved/collision rules. The nonallocating row facet replaces declaration-vector construction;original source pairs/typed host causes survive,no prefix.
-The private namespace owner exposes readonly visible_names and original inputs only. Scalar lets/planned outputs stay absent. Final review removed arbitrary host Debug/Display forwarding;explicit cause inspection preserves the original payload. No new drafting currentness/geometry query or value read occurs.
-Focused namespace2 and affected work3,strict library/target lint/fmt/Rustdoc3 pass0. Fixture Tolerance origin/borrowed-error conversion corrected. Actual Root/extra source loans,collisions,first host error and payload privacy checked;book/publication118-374-1815-3424,35 old/new exact Rust fences pass0.
-1024 three Git/body/public spans exact0;archive1478-55/generations21-64 and34-64. Declaration chapter25688B/context38073B;existing chapters/examples preserved. Promotion declined:existing actual-Root/no-prefix doctrine. G1still6/18;mixed order next,dependencies/allocator/coupled .verify remain pending.
+0850 adds explicit expression/node/retained-proof limits before any mixed child checker or outer proof reservation. Actual normalized scalar operands and Point/Arc/Slash arguments count all branches/repeated occurrences;other native slots still count. Reuse exhaustive actual arena producers,no cached hints.
+Additional proof records conservatively cover steps+statements+expressions+2*nodes;prior held-content/name/output/initial policies remain separate. Root formula-source checking and checker scratch/allocator bytes/CPU/runtime are outside this envelope. Private work/error retain actual initial map and explicit policy.
+Focused rich1/empty1,strict selected lint/fmt/Rustdoc3 pass0:actual11 expressions/20 nodes/60 records,three one-short quotas/first precedence and empty0/0/0,no callbacks or kinds. Book/publication118-374-1815-3425,36 old/new exact Rust fences pass0;declaration chapter29197B.
+1025 four whole Git/body/public spans exact0,including0798 retention proof;archive1479-56/generations21-64 and35-64. Both task aggregate lines/bytes measured. Promotion declined:existing complete-bound/no-default doctrine. G1still6/18;mixed checking next,Root dependencies/allocator/coupled verification pending.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

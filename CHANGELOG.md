@@ -3,14 +3,14 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0849 — actual bounded initial namespace (2026-11-02 UTC)
+## STITCHCAD-G1-0850 — complete mixed-order checker bounds (2026-11-02 UTC)
 
-Build a private initial map from actual Root parameters,selected borrowed host rows and complete bound extras after full bounds/current validation. Reuse original collision/typed host causes;readonly scope excludes scalar lets and planned outputs. Default diagnostics omit payloads;explicit causes remain original.
-Focused namespace2/affected work3,strict lint/fmt/Rustdoc3,book/publication118-374-1815-3424 and35 prior/new exact fences pass0. Archive1024 Git/body/public bytes exact;1478 logical/55 working. G1still6/18;mixed visibility,dependencies and coupled verification remain.
+Explicit additional expression/node/retained-proof allowances count actual mixed scalar/native arenas before child checking. Repeated native occurrences/all branches count;complete checked arithmetic precedes quotas. Original private namespace/policy survive;no kind,metadata advance or programme grant.
+Focused rich1/empty1,strict lint/fmt/Rustdoc3,book/publication118-374-1815-3425 and36 prior/new exact fences pass0. Actual11/20/60 with three one-short refusals;empty0/0/0. Archive1025 four Git/body/public spans exact;1479 logical/56 working. G1still6/18;whole mixed checking/dependencies/coupled proof remain.
 
 # Sealed archive — earlier slices
 
-[Whole0848 complete initial associations](docs/history/stitchcad-devnotes-part1024.md) retains exact source bytes.
+[Whole0849 actual initial namespace and0798 retention](docs/history/stitchcad-devnotes-part1025.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

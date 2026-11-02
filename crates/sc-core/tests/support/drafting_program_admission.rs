@@ -290,6 +290,73 @@ fn whole_admission_counts_all_three_cohorts_repeats_and_actual_retained_fields()
         assert!(std::ptr::eq(failure.inputs(), &inputs));
         assert!(std::ptr::eq(failure.limits(), &insufficient));
     }
+    // Order checking uses actual scalar/native arenas,not normalization's source cohort/bound84.
+    use sc_core::construction::{
+        DraftingProgramNameInputs, DraftingProgramNameLimits,
+        DraftingProgramOrderLimits as OrderLimits, DraftingProgramOrderWorkRefusal as OrderRefusal,
+    };
+    let names = DraftingProgramNameInputs::new(&normalized, vec![], vec![]);
+    let name_policy = DraftingProgramNameLimits::new(all()?, 64, 128);
+    let work = names
+        .admit_name_work(&name_policy)
+        .map_err(|e| e.to_string())?;
+    let positions = work.bind_output_positions().map_err(|e| e.to_string())?;
+    let roles = positions.bind_role_sources().map_err(|e| e.to_string())?;
+    let initial = roles.bind_initial_sources().map_err(|e| e.to_string())?;
+    let namespace = initial
+        .bind_initial_namespace()
+        .map_err(|e| e.to_string())?;
+    let policy = OrderLimits::new(11, 20, 60);
+    source.trace.set(0);
+    let work = namespace
+        .admit_order_work(&policy)
+        .map_err(|e| e.to_string())?;
+    assert!(std::ptr::eq(work.inputs(), &namespace) && std::ptr::eq(work.limits(), &policy));
+    let shape = work.shape();
+    // Scalar operands3/nodes8 + native occurrences8/nodes12. Repeated Point counted twice.
+    // Outer7 + statement2 + expression11 + certificate20 + dependency20 =60.
+    assert_eq!(
+        (
+            shape.step_count(),
+            shape.statement_count(),
+            shape.expression_count(),
+            shape.node_count(),
+            shape.retained_record_bound()
+        ),
+        (7, 2, 11, 20, 60)
+    );
+    assert_eq!(source.trace.get(), 0);
+    assert!(!format!("{work:?}").contains("private_width"));
+    for (policy, expected) in [
+        (
+            OrderLimits::new(10, 0, 0),
+            OrderRefusal::Expressions {
+                allowed: 10,
+                required: 11,
+            },
+        ),
+        (
+            OrderLimits::new(11, 19, 0),
+            OrderRefusal::Nodes {
+                allowed: 19,
+                required: 20,
+            },
+        ),
+        (
+            OrderLimits::new(11, 20, 59),
+            OrderRefusal::RetainedRecords {
+                allowed: 59,
+                required: 60,
+            },
+        ),
+    ] {
+        let error = namespace
+            .admit_order_work(&policy)
+            .expect_err("complete actual order-work population before child checking");
+        assert!(std::ptr::eq(error.inputs(), &namespace) && std::ptr::eq(error.limits(), &policy));
+        assert_eq!(error.refusal(), expected);
+        assert_eq!(source.trace.get(), 0);
+    }
     Ok(())
 }
 
@@ -521,6 +588,37 @@ fn empty_program_admits_zero_normalization_but_keeps_complete_context_content() 
     source.trace.set(0);
     assert_eq!(normalized.charge_resources(&mut meter), Err(first));
     assert_eq!(meter.finish(), Err(first));
+    assert_eq!(source.trace.get(), 0);
+    use sc_core::construction::{
+        DraftingProgramNameInputs, DraftingProgramNameLimits, DraftingProgramOrderLimits,
+    };
+    let names = DraftingProgramNameInputs::new(&normalized, vec![], vec![]);
+    let name_policy = DraftingProgramNameLimits::new(all()?, 8, 8);
+    let work = names
+        .admit_name_work(&name_policy)
+        .map_err(|e| e.to_string())?;
+    let positions = work.bind_output_positions().map_err(|e| e.to_string())?;
+    let roles = positions.bind_role_sources().map_err(|e| e.to_string())?;
+    let initial = roles.bind_initial_sources().map_err(|e| e.to_string())?;
+    let namespace = initial
+        .bind_initial_namespace()
+        .map_err(|e| e.to_string())?;
+    let policy = DraftingProgramOrderLimits::new(0, 0, 0);
+    source.trace.set(0);
+    let shape = namespace
+        .admit_order_work(&policy)
+        .map_err(|e| e.to_string())?
+        .shape();
+    assert_eq!(
+        (
+            shape.step_count(),
+            shape.statement_count(),
+            shape.expression_count(),
+            shape.node_count(),
+            shape.retained_record_bound()
+        ),
+        (0, 0, 0, 0, 0)
+    );
     assert_eq!(source.trace.get(), 0);
     Ok(())
 }
