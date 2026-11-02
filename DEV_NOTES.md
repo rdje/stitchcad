@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — actual containing context contract
+## _(2026-11-02 UTC)_ — immutable drafting source port
 
-0822 specifies exact Design/program/revision,authored Cartesian frame and typed current snapshot sources;scalar proofs/topology edge membership supply no substitute approval.
-Earlier declared output manifests prove static availability only;actual ordered execution must create geometry. Foreign owners,retired/wrong-kind/frame refusals retain original sources.
-Native owner census6/7/3,eight integration owners,five Rust fences/runtime exact,book/publication118-374-1806-3389/tree10-13-20-0 pass0;context implementation next.
-Promotion:existing indexed ADR-0003 gains the answer and book route. 997 four whole Git/body/public spans exact0;archive1451/84,per-generation21/64 and63/64;G1still6/18.
+0823 declares actual-root/revision/frame/snapshot,exhaustive resource/current-source and typed existing-geometry ports;raw records retain all actual borrows without accepted context.
+Named raw Result avoids nested signature lint complexity;unsized/non-Clone/non-Debug source example and lifetime/frame replacement guards pass3;strict lib lint/fmt pass0.
+Book/publication118-374-1806-3389/five old Rust fences/998 three whole Git/body/public spans exact0;archive1452/85,per-generation21/64 and64/64;packing owned next.
+Promotion declined: existing immutable context/source contract. Bounded binding/lookup/program integration and whole feature verification remain pending;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

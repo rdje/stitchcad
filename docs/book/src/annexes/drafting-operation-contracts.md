@@ -161,7 +161,19 @@ The frame source retains its authored coordinate-system definition;the checker s
 origin,axis orientation,unit scale,transform or fallback frame. An edge's rational parameter frame
 and a physical copy's orientation remain their own sources.
 
-This contract is specified;the context port and binding factory are **not yet implemented**.
+`DraftingContextSource<H>` now declares the immutable source port;the actual-root context binding
+factory is **not yet implemented**. Supplying an implementation grants no accepted context.
+The port borrows `root()`,`snapshot_revision()`,`frame()` and `snapshot()` from the actual source.
+Its `charge_resources` uses the existing restricted first-failure-latching resource sink;
+`validate_current` retains the provider's original typed error. Its `geometry` request carries an
+explicit `DraftingGeometryReference::Point(PointRef)` or `Edge(EdgeRef)` and returns raw
+`DraftingGeometrySource` fields:the record's actual typed reference,frame,snapshot and geometry.
+These borrowed source types can be unsized and need neither Clone nor Debug. Copying the raw view
+retains all loans;its debug representation shows the reference without source payloads. No default
+frame,registry or identity is supplied. The raw response still needs exact reference/frame/snapshot
+binding checks,owned by the context implementation. Canonical semantic-target resolution remains
+part of complete dependency integration;the geometry port alone does not cover it.
+
 Existing `DesignFormulaScope` pins actual scalar/input owners. It supplies no Cartesian frame or
 geometry approval. `IdentityLedger` retains topology/current-edge and point-journal contracts;
 its edge membership is not a replacement for a complete typed geometry/frame registry.

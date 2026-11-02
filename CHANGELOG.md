@@ -3,16 +3,18 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0822 — specify actual containing context sources
+## STITCHCAD-G1-0823 — declare immutable drafting source port
 
-- Bound the implementation contract to exact Design/program/revision,explicit Cartesian frame,
-  current typed snapshot and complete logical demand. Earlier declared outputs remain distinct
-  from actual existing geometry. Added the context implementation owner before the mixed program.
-- Book and indexed ADR agree;native owner census6/7/3,eight owners,five Rust fences/runtime exact,
-  warning-free book/publication118/374/1806/3389/tree10-13-20-0 pass0. No runtime change or context acceptance.
-- 997 four whole Git/body/public spans exact;archive1451/84,per-generation21/64 and63/64;G1still6/18.
+- Added DraftingContextSource with actual Design/revision/frame/snapshot borrows,complete resource
+  and current-source callbacks,and typed existing geometry requests/raw responses with original causes.
+- Source records can be unsized and need no Clone/Debug;private payload stays out of view Debug.
+  Three positive/lifetime doctests,strict lib lint/fmt/book/publication118/374/1806/3389 pass0.
+- Five prior book Rust fences and998 three Git/body/public spans exact;archive1452/85,
+  per-generation21/64 and64/64. G1still6/18;pack before next record,then bounded context binding.
 
 # Sealed archive — earlier slices
+
+[Whole0822 actual context contract](docs/history/stitchcad-devnotes-part998.md) retains exact source bytes.
 
 [Whole0821 borrowed native inputs](docs/history/stitchcad-devnotes-part997.md) retains exact source bytes.
 

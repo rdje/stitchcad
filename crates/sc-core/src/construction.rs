@@ -55,6 +55,11 @@ mod slash_output_examples {}
 mod slash_piece_examples {}
 mod arc;
 mod arguments;
+mod context;
+pub use context::{
+    DraftingContextSource, DraftingGeometryReference, DraftingGeometrySource,
+    DraftingGeometrySourceResult,
+};
 mod operation_input;
 pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};
 mod bezier;

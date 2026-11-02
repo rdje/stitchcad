@@ -909,20 +909,32 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.inputs`
   Status: `done`
   Goal:0821 borrowed13-family raw input view;[whole scope/proofs](../history/stitchcad-devnotes-part997.md).
-### G1-SLICE.5f.2.context.contract
 - ID: `G1-SLICE.5f.2.context.contract`
   Status: `done`
-  Goal:bind explicit containing frame and actual current geometry/output registry ports to the containing Design/source;distinguish Cartesian frames from edge-parameter/copy frames before context implementation.
-  - [x] ROOT CAUSE: `python3 -I -B -` targeted native owner/source census:
-    DesignStructureDefinition6 and DesignInputsDefinition7 fields,actual formula root/ledger edge/metadata ports3 verified,rc=0;none of those views grants a complete Cartesian geometry snapshot.
-  - [x] ADDRESSED: same census checks eight ordered owners and five original Rust fences/runtime exact,
-    rc=0;book specifies actual owner/revision/frame/snapshot,complete bounds and existing versus earlier declared output provenance;dedicated .context implementation before .program.
-  - [x] NO REGRESSION: `scripts/run_make.sh book` and publication `check(ROOT)`:
-    warning-free118/374/1806/3389,tree10/13/20/0,rc=0;997 four Git/body/public spans/archive1451/84,per-generation21/64 and63/64,rc=0.
-  Commit:STITCHCAD-G1-0822. promotion:existing indexed ADR-0003 gains actual-context answer and canonical book route;implementation/whole verification pending.
+  Goal:0822 actual owner/frame/current snapshot contract;[whole scope/proofs](../history/stitchcad-devnotes-part998.md).
 - ID: `G1-SLICE.5f.2.context`
-  Status: `pending`
+  Status: `in_progress`
   Goal:implement explicit immutable source port and bounded actual-root binding from .context.contract;retain actual frame/current typed output provenance and original causes,no fabricated geometry or planned-output liveness.
+### G1-SLICE.5f.2.context.source
+- ID: `G1-SLICE.5f.2.context.source`
+  Status: `done`
+  Goal:explicit immutable actual-root/frame/snapshot resource/currentness and typed raw geometry source port;raw borrowed records confer no accepted context or geometry proof.
+  - [x] ROOT CAUSE: launcher `cargo clippy -p sc-core --lib -- -D warnings`:
+    nested source response triggered type_complexity;named DraftingGeometrySourceResult keeps the original typed cause/source without a lint allowance;final lint pass,rc=0.
+  - [x] ADDRESSED: launcher `cargo test -p sc-core --doc construction::context`:
+    raw unsized/non-Clone/non-Debug source example and two lifetime/frame-replacement compile-fail guards pass3,rc=0;port alone constructs no accepted context.
+  - [x] NO REGRESSION: `scripts/run_make.sh book`,publication `check(ROOT)` and fmt:
+    warning-free118/374/1806/3389,five old Rust fences exact,rc=0;998 three Git/body/public spans/archive1452/85,per-generation21/64 and64/64,rc=0.
+  Commit:STITCHCAD-G1-0823. promotion:declined (existing immutable raw source/context contract);.archive next before bounded binding;coupled feature verification remains .verify.
+- ID: `G1-SLICE.5f.2.context.archive`
+  Status: `pending`
+  Goal:pack sealed raw history into the next bounded retrieval window before another record would exceed active generation64 working files;verify all original public bytes and source seals.
+- ID: `G1-SLICE.5f.2.context.bind`
+  Status: `pending`
+  Goal:bounded actual scalar-scope/root/revision/source binding,charge complete context before queries and preserve original typed first refusals;no program or geometry values.
+- ID: `G1-SLICE.5f.2.context.geometry`
+  Status: `pending`
+  Goal:resolve exact typed existing geometry request under bound context;check returned reference/frame/snapshot against actual sources,retain original witness and cause,no value query or planned-output liveness.
 - ID: `G1-SLICE.5f.2.program`
   Status: `pending`
   Goal:whole ordered scalar/drafting owner and complete logical limits;retain actual scalar recipe ordinals separately from genuine combined-program positions and original operation/document owners.
