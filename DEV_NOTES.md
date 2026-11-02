@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — raw actual name and output sources
+## _(2026-11-02 UTC)_ — exhaustive additional name fields
 
-0837 owns original initial/output vectors beside the actual normalized program loan. Six source variants retain Point/Line/Arc/Bezier schemas or typed active point/edge catalogue roles;global names stay explicit and independent of local keys,requested positions remain unvalidated data.
-Native18/strict selected lint/fmt/name-input docs3 pass0;all six actual references/vectors/initial records/role pointers retained,zero callbacks,empty/zero/repeated/max positions preserved. New book/native example exact after diagnostic excluded an earlier compile-fail closing fence;seven prior Rust fences exact0.
-Book/publication118-374-1810-3406 and1012 three Git/body/public spans exact0;archive1466-43/per-generation21-64 and22-64. Raw inputs grant no content/association/namespace/source-truth acceptance;original scope Cargo race evidence sealed whole.
-Promotion declined: existing actual-source/explicit-name/no-prefix contract. G1still6/18;complete held-content/work/association admission next,whole semantic verification deferred.
+0838 charge_extra_resources composes original initial names/Length evidence,global output tokens,fixed source documents and whole typed role catalogues. Exact private owner patterns/Copy guards cover raw definitions/active vectors and retained tag/active/association indexes;peak work totals are not held data.
+Native19/strict selected lint/fmt/name-input docs4 pass0. All six sources/exact field refusals,Known evidence/inactive keys/repeated catalogues,empty latched failure and19-entry/66-byte complete example pass;no callbacks,value availability or source queries.
+Book/publication118-374-1810-3407/eight old Rust fences/new book-native component example and1013 three Git/body/public spans exact0;archive1467-44/per-generation21-64 and23-64. Whole normalized program/content/work/association admission remains pending.
+Promotion declined: existing exhaustive-field/restricted-sink/actual-owner contract. G1still6/18;actual normalized program fields next,complete semantic/allocator verification deferred.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

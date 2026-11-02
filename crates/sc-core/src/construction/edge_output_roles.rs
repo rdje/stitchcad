@@ -5,7 +5,9 @@ use crate::{
 };
 use core::fmt;
 use std::collections::BTreeMap;
+mod resources;
 mod transition;
+pub(super) use resources::OutputRoleResourceKind;
 pub use transition::{
     AdmittedEdgeOutputRoleTransition, EdgeOutputRoleTransitionError,
     EdgeOutputRoleTransitionLimits, EdgeOutputRoleTransitionRefusal,

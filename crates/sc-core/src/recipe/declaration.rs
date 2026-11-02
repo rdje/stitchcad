@@ -177,6 +177,12 @@ pub struct FormulaDeclaration<'a> {
     source: FormulaDeclarationSource<'a>,
 }
 impl<'a> FormulaDeclaration<'a> {
+    // Exhaustive original metadata fields; dynamic canonical Length snapshots compose separately.
+    pub(crate) const fn resource_parts(self) -> (&'a str, FormulaDeclarationSource<'a>) {
+        let Self { name, source } = self;
+        (name, source)
+    }
+
     pub(super) fn from_scalar_input_view(input: super::FormulaScalarInput<'a>) -> Self {
         Self {
             name: input.name(),

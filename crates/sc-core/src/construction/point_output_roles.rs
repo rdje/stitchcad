@@ -148,6 +148,22 @@ pub struct AdmittedPointOutputRoleCatalog<'a> {
     inner: AdmittedEdgeOutputRoleCatalog<'a>,
 }
 impl<'a> AdmittedPointOutputRoleCatalog<'a> {
+    pub(crate) fn charge_retained_resources(
+        &self,
+        index: usize,
+        sink: &mut dyn crate::design::DesignResourceSink,
+    ) -> Result<(), crate::design::DesignResourceLimitError> {
+        let Self { catalog, inner } = self;
+        let PointOutputRoleCatalog { inner: raw } = *catalog;
+        // Private admission keeps both wrapper loans on this exact actual raw inner catalogue.
+        debug_assert!(core::ptr::eq(raw, inner.catalog()));
+        inner.charge_retained_resources(
+            super::edge_output_roles::OutputRoleResourceKind::Point,
+            index,
+            sink,
+        )
+    }
+
     /// Actual complete original point catalogue and both authored field orders.
     #[must_use]
     pub const fn catalog(&self) -> &'a PointOutputRoleCatalog {

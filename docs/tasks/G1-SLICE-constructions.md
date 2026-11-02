@@ -923,21 +923,33 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.namespace.scope`
   Status: `done`
   Goal:0836 borrowed visible-name/checker adapters;[whole scope/proofs and closed race](../history/stitchcad-devnotes-part1012.md).
-### G1-SLICE.5f.2.namespace.inputs
 - ID: `G1-SLICE.5f.2.namespace.inputs`
   Status: `done`
-  Goal:explicit actual extra initial sources and original per-step output names;fixed schema outputs or typed active point/edge role catalogues,original names/manifests/positions,no inferred output tag/name or live geometry.
-  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
-    native18 pass;two new cases retain all six actual fixed-schema/typed active-role sources,global names independent of local keys,original program/vectors/initial fields/role pointers,rc=0.
-  - [x] ADDRESSED: same target preserves empty/zero/repeated/max/mismatched raw requests and zero callbacks;
-    `cargo test -p sc-core --doc construction::program::name_inputs`:two private/lifetime guards and exact copied book example pass3,rc=0.
-  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    book/publication118/374/1810/3406/seven old Rust fences/new book-native example exact,rc=0;
-    1012 three Git/body/public spans/archive1466/43,per-generation21/64 and22/64,rc=0.
-  Commit:STITCHCAD-G1-0837. promotion:declined (existing actual-source/explicit-name/no-prefix contract);complete content/work/association admission next,no raw namespace or source-truth approval.
+  Goal:0837 raw actual name/output sources;[whole scope/proofs](../history/stitchcad-devnotes-part1013.md).
 - ID: `G1-SLICE.5f.2.namespace.admit`
-  Status: `pending`
+  Status: `in_progress`
   Goal:fresh complete program/name/source/catalogue held-content and prospective name-work bounds before namespace callbacks;preserve original owner/role locations and first refusal,then exact actual program associations,no accepted prefix.
+### G1-SLICE.5f.2.namespace.admit.fields
+- ID: `G1-SLICE.5f.2.namespace.admit.fields`
+  Status: `done`
+  Goal:exhaustive extra-name/initial canonical snapshot/fixed-source fields and whole typed role catalogues,including retained indexes;actual buffers/collections/locations,component sink only,no source lookup or admission.
+  - [x] ROOT CAUSE: 0838 launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
+    native19 pass;all six source fields/canonical evidence/inactive role keys/actual raw and retained indexes count,including repeated catalogue use;complete example19 entries/66 text bytes,rc=0.
+  - [x] ADDRESSED: 0838 same target preserves original canonical/operation/field/index refusals and empty latched failure,
+    with zero callbacks;`cargo test -p sc-core --doc construction::program::name_inputs` four guards/examples pass,rc=0.
+  - [x] NO REGRESSION: 0838 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
+    book/publication118/374/1810/3407/eight prior Rust fences/new native-book example exact,rc=0;
+    1013 three Git/body/public spans/archive1467/44,per-generation21/64 and23/64,rc=0.
+  Commit:STITCHCAD-G1-0838. promotion:declined (existing exhaustive-field/restricted-sink contract);normalized program fields next,complete name admission/semantic verification pending.
+- ID: `G1-SLICE.5f.2.namespace.admit.program`
+  Status: `pending`
+  Goal:compose actual Root/context/raw program plus complete normalized source/recipe/native slots,nodes and call-argument vectors;exhaustive owner fields/fixed literal guards,no conservative counts substituted for actual held data.
+- ID: `G1-SLICE.5f.2.namespace.admit.bounds`
+  Status: `pending`
+  Goal:fresh cumulative full content and explicit conservative prospective name-work bounds before namespace factories;actual complete original fields,first typed refusal and checked arithmetic,no caller totals or accepted prefix.
+- ID: `G1-SLICE.5f.2.namespace.admit.association`
+  Status: `pending`
+  Goal:after complete bounds,bind exact original program positions/fixed schemas/typed role metadata and actual initial sources;reject mismatches/future initial geometry before values,retain full owners and original first cause in private admission.
 - ID: `G1-SLICE.5f.2.namespace.order`
   Status: `pending`
   Goal:actual Root and explicit always-visible names plus only earlier scalar/native declarations in mixed order;check reserved/cross-origin/repeated headers and self/future names without values or metadata-prefix acceptance.

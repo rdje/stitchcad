@@ -439,3 +439,41 @@ Constructors clone neither vectors nor documents,create no namespace,perform no 
 and expose no accepted name/program prefix. Default Debug shows counts/positions/source families,
 without authored names or formulas. Complete fresh held-content/name-work admission and ordered
 visibility remain the next implementation stages.
+
+### Additional held-field charges
+
+`DraftingProgramNameInputs::charge_extra_resources(sink)` now charges its complete additional input
+component. The initial vector precedes original name text and actual canonical Length evidence
+vectors;fixed declaration/source identifiers carry no extra dynamic content. The output vector
+precedes each explicit global token and its original source. Fixed schemas reuse their existing
+complete held-field producers,including both buffers of every Point/Arc argument document.
+
+A typed active-role source charges its whole actual catalogue,including inactive definitions and
+keys,original active list,retained tag index,active index and active associations. Complete collection
+lengths are charged before nested keys;prior peak admission-work counts do not substitute for actual
+held fields. For two definitions and one active role,the actual raw2+1 and retained2+1+1 populations
+are seven entries. Reusing that catalogue twice counts both logical source occurrences;no address or
+identity deduplication removes input. Point/edge domains retain distinct static field paths.
+
+For example,one initial Length name with two evidence entries,then two output names using that same
+catalogue,requires `1 + 2 + 2 + 7 + 7 = 19` entries. All inactive and repeated key text counts too.
+Resource locations preserve actual metadata/canonical/operation owners and collection-specific
+original indexes. Empty components preserve an earlier latched refusal. The walk clones/formats
+nothing,looks up no source,reads no numeric availability and grants no whole-name/program acceptance.
+
+```rust
+use sc_core::{construction::{DraftingContextSource, DraftingProgramNameInputs},
+    design::{DesignMetadataHost, DesignResourceDemand, DesignResourceLimitError,
+    DesignResourceLimits, DesignResourceMeter}};
+fn extra_demand<H:DesignMetadataHost,S:DraftingContextSource<H> + ?Sized>(
+    names:&DraftingProgramNameInputs<'_, '_, '_,H,S>,policy:DesignResourceLimits)
+    -> Result<DesignResourceDemand,DesignResourceLimitError> {
+    let mut meter=DesignResourceMeter::new(policy);
+    names.charge_extra_resources(&mut meter)?;
+    meter.finish()
+}
+```
+
+This demand covers additional inputs;the actual containing Root/context/raw program and retained
+normalized arenas compose separately. Fresh complete composition,prospective name-work bounds and
+creating-step associations remain owned admission stages before namespace construction/checking.
