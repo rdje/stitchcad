@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — complete mixed-order checker work
+## _(2026-11-02 UTC)_ — complete mixed kind and name order
 
-0850 adds explicit expression/node/retained-proof limits before any mixed child checker or outer proof reservation. Actual normalized scalar operands and Point/Arc/Slash arguments count all branches/repeated occurrences;other native slots still count. Reuse exhaustive actual arena producers,no cached hints.
-Additional proof records conservatively cover steps+statements+expressions+2*nodes;prior held-content/name/output/initial policies remain separate. Root formula-source checking and checker scratch/allocator bytes/CPU/runtime are outside this envelope. Private work/error retain actual initial map and explicit policy.
-Focused rich1/empty1,strict selected lint/fmt/Rustdoc3 pass0:actual11 expressions/20 nodes/60 records,three one-short quotas/first precedence and empty0/0/0,no callbacks or kinds. Book/publication118-374-1815-3425,36 old/new exact Rust fences pass0;declaration chapter29197B.
-1025 four whole Git/body/public spans exact0,including0798 retention proof;archive1479-56/generations21-64 and35-64. Both task aggregate lines/bytes measured. Promotion declined:existing complete-bound/no-default doctrine. G1still6/18;mixed checking next,Root dependencies/allocator/coupled verification pending.
+0851 consumes the actual private initial map,admits complete checker work and reserves all mixed proof slots first. Scalar headers/operands retain genuine ordinals;native headers reuse existing collision checks without insertion,including same-step original pairs. Point/Arc/Slash arguments use prior names only.
+After complete argument success,actual outputs become visible by mixed position despite unsorted name vectors. Complete original statement/native proofs remain;final cursor map is dropped without clone/extraction. Original indexed header/typed child causes survive errors,no local accepted prefix or value callback.
+Library check,mixed1/empty1 (14 scenarios),strict selected lint/fmt/Rustdoc3 pass0;unused fixture import removed. Self/future names,scalar/native/reserved/duplicate headers and late Point/Arc/Slash/assertion kinds retain actual owners/causes. Book/publication118-374-1815-3426,37 old/new exact fences pass0.
+1026 three whole Git/body/public spans exact0;archive1480-57/generations21-64 and36-64. Declaration chapter34259B. Promotion declined:existing actual-source/earlier-only/no-prefix doctrine. G1still6/18;namespace implemented with focused checks,Root/canonical/geometry/semantic dependencies and coupled .verify pending.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

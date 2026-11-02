@@ -8,7 +8,12 @@ use crate::{
     recipe::{FormulaInitialDeclaration, FormulaNameScope, FormulaNamespace},
 };
 use core::fmt;
+mod check;
 mod work;
+pub use check::{
+    CheckedDraftingProgramOrder, DraftingProgramOrderError, DraftingProgramOrderProofKind,
+    DraftingProgramOrderRefusal, DraftingProgramOrderStep,
+};
 pub use work::{
     AdmittedDraftingProgramOrderWork, DraftingProgramOrderLimits, DraftingProgramOrderShape,
     DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal,

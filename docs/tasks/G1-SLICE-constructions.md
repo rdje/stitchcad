@@ -888,7 +888,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0834 original mixed step arena loans;[whole scope/proofs](../history/stitchcad-devnotes-part1010.md).
 - ID: `G1-SLICE.5f.2.namespace`
-  Status: `in_progress`
+  Status: `done`
   Goal:actual initial/always-visible and earlier-only names;check collisions and future geometry before values,using existing complete kind proofs without treating a metadata cursor as program acceptance.
 - ID: `G1-SLICE.5f.2.namespace.plan`
   Status: `done`
@@ -951,25 +951,25 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0848 complete initial associations;[whole scope/proofs](../history/stitchcad-devnotes-part1024.md).
 - ID: `G1-SLICE.5f.2.namespace.order`
-  Status: `in_progress`
+  Status: `done`
   Goal:actual Root and explicit always-visible names plus only earlier scalar/native declarations in mixed order;check reserved/cross-origin/repeated headers and self/future names without values or metadata-prefix acceptance.
 - ID: `G1-SLICE.5f.2.namespace.order.initial`
   Status: `done`
   Goal:0849 actual private initial namespace;[whole scope/proofs](../history/stitchcad-devnotes-part1025.md).
 - ID: `G1-SLICE.5f.2.namespace.order.mixed`
-  Status: `in_progress`
+  Status: `done`
   Goal:earlier-only genuine mixed positions and scalar ordinals;check original headers/operands before exposing each actual output,no self/future name or whole acceptance from metadata alone.
 - ID: `G1-SLICE.5f.2.namespace.order.mixed.bounds`
   Status: `done`
-  Goal:explicit complete actual mixed operand/node/prospective proof bounds before child checking.
-  - [x] ROOT CAUSE: 0850 `cargo test -p sc-core --test drafting_context_binding_contract whole_admission_counts`:focused1 pass;actual E11/N20/records60,three one-short quotas/first precedence,no callbacks,rc=0.
-  - [x] ADDRESSED: 0850 `cargo test -p sc-core --test drafting_context_binding_contract empty_program_admits_zero`:focused1 pass;zero additional checker work,original initial namespace/policy retained,rc=0.
-  - [x] NO REGRESSION: 0850 selected strict clippy/fmt and `cargo test -p sc-core --doc construction::program::name_inputs::namespace::work` docs3 pass,rc=0;
-    book/publication118/374/1815/3425,36 prior/new exact fences,1025 four Git/body/public spans/archive1479/56,generations21/64 and35/64,rc=0.
-  Commit:STITCHCAD-G1-0850. Promotion declined:existing complete-bound/no-default doctrine. Whole mixed checking,Root source dependencies and allocator/coupled verification pending.
+  Goal:0850 complete actual order-checker work;[whole scope/proofs](../history/stitchcad-devnotes-part1026.md).
 - ID: `G1-SLICE.5f.2.namespace.order.mixed.check`
-  Status: `pending`
-  Goal:whole bounded earlier-only scalar/native kind/header checking,original ordinals/outputs/causes and complete retained proofs;no metadata-only programme acceptance.
+  Status: `done`
+  Goal:complete bounded mixed name/header and scalar/native argument-kind order;no whole dependency/value grant.
+  - [x] ROOT CAUSE: 0851 `cargo test -p sc-core --test drafting_context_binding_contract program_order`:mixed1/empty1 pass;14 order/kind/header/work cases,original ordinals/positions/proofs and no callbacks,rc=0.
+  - [x] ADDRESSED: 0851 selected library check,strict clippy/fmt pass;consume actual private map,reserve all proof slots,preflight headers before arguments,insert outputs afterward,no final map clone/prefix,rc=0.
+  - [x] NO REGRESSION: 0851 `cargo test -p sc-core --doc construction::program::name_inputs::namespace::check`:docs3 pass;
+    book/publication118/374/1815/3426,37 prior/new exact fences,1026 three Git/body/public spans/archive1480/57,generations21/64 and36/64,rc=0.
+  Commit:STITCHCAD-G1-0851. Promotion declined:existing actual-source/earlier-only/no-prefix doctrine. Namespace implementation focused complete;Root sources/canonical/geometry/semantic dependencies and coupled .verify pending.
 - ID: `G1-SLICE.5f.2.dependencies`
   Status: `pending`
   Goal:all original formula/geometry/semantic dependencies,source frame/current registry/output provenance;canonical Pocket kind/domain/state and Buttonhole button-size dependency,no separately authored hole length or approximation.

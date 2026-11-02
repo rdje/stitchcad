@@ -449,5 +449,76 @@ fn order_shape<H:DesignMetadataHost,S:DraftingInitialInputProvider<H> + ?Sized>(
 and complete shape. `inputs()`,`limits()` and `shape()` expose those originals without allocating,
 advancing metadata or checking a kind. `DraftingProgramOrderWorkError` retains that same owner/
 policy and PopulationOverflow,Expressions,Nodes or RetainedRecords with actual required counts.
-Diagnostics omit names. Whole earlier-only checking,proof reservation,dependencies,allocator fault
-checks and coupled verification remain separate owned stages;this is no accepted programme prefix.
+Diagnostics omit names. The complete mixed checker below performs proof reservation and earlier-only
+checking under this envelope. Dependencies,allocator faults and coupled verification retain their
+separate owners;bounded work alone grants no accepted programme prefix.
+
+
+## Check complete mixed name and kind order
+
+`DraftingProgramInitialNamespace::check_order(explicit_order_limits)` consumes the actual private
+initial map. It invokes the same complete order-work admission above,then reserves the entire
+mixed proof vector before checking a header or child expression. The original TryReserveError
+stays inline on allocation refusal. No metadata cursor,successful local proof prefix or cloned
+final namespace escapes any failure.
+
+The cursor traverses the programme's original mixed slots. A scalar slot must match the same
+actual normalized statement and genuine recipe ordinal;native slots never advance that scalar
+ordinal. Existing current-statement checking validates headers and every original operand before
+recording let metadata. An assertion checks both operands and their complete comparison kind;
+its label adds no name. Original source spans,statement pointers and argument arenas stay intact.
+
+For a native slot,the controller preflights all actual named outputs against visible declarations
+using the existing namespace collision rules **without insertion**. Earlier same-step output names
+are also compared in original output-vector order;equal names retain their exact two geometry
+sources. Reserved,prior-scalar,prior-geometry and same-step clashes refuse before child arguments.
+The actual Point/Arc/Slash checker then checks every original scalar argument against initial and
+strictly earlier declarations. Native inputs without scalar documents retain their actual input.
+Only after complete argument success are that slot's actual bound outputs inserted. Self and
+future outputs remain absent from arguments,even when the raw output-name vector lists them first.
+
+For example,the focused programme follows this order:
+
+1. `let width:length=1 mm` adds only `width`.
+2. Point `anchor` checks `width` and `1 mm/0`,then adds `anchor`. Static checking performs no division.
+3. `let second:length=x(anchor)` resolves the actual earlier point and adds `second`.
+4. Center-arc `future_edge` checks Radius Length and Start/Sweep Angle,then adds its actual edge name.
+5. Slash separation checks the earlier `second` Length;no named output was supplied for this slot.
+6. Walk retains its actual no-scalar-document input;spatial/semantic dependencies remain separate.
+7. `assert closure:eps_geo=second==width` checks both operands and declares no name.
+
+The original output vector can list `[future_edge at4,anchor at2]`;visibility still follows actual
+mixed positions. `x(anchor)` in step1 or in Point's own arguments refuses the original unbound name.
+A later wrong assertion kind remains a static refusal at mixed position7/scalar ordinal3,even when
+Point's earlier argument contains runtime division by zero. A scalar header clashing with prior
+`anchor` retains Geometry then the actual Recipe declaration,with genuine scalar ordinal2
+alongside mixed position3. Same-step duplicate names retain their original output indexes and owners.
+
+```rust
+use sc_core::{construction::{DraftingProgramInitialNamespace,DraftingInitialInputProvider,
+    DraftingProgramOrderLimits},design::DesignMetadataHost};
+fn checked_steps<H:DesignMetadataHost,S:DraftingInitialInputProvider<H> + ?Sized>(
+    names:DraftingProgramInitialNamespace<'_, '_, '_, '_, '_, '_, '_,H,S>,
+    policy:DraftingProgramOrderLimits)->Result<usize,String> {
+    names.check_order(&policy).map(|proof|proof.steps().len()).map_err(|error|error.to_string())
+}
+```
+
+`CheckedDraftingProgramOrder` privately retains the original bound initial/output associations,
+selected policy,complete shape and every original-order `DraftingProgramOrderStep`. Each step has
+a genuine mixed `position()` and immutable Scalar,Point,CenterArc,SlashSpread or Other `kind()`.
+Scalar components retain their original ordinal/statement and both assertion proofs;native
+components retain actual normalized schema owners and complete argument proofs. These proofs
+borrow original declarations/arenas,so the final cursor allocation is dropped. Individual enum
+components cannot manufacture the private complete owner. The empty programme accepts zero
+additional checker work and returns an empty complete vector without callbacks.
+
+`DraftingProgramOrderError` retains original associations/policy and the first Work,Allocation,
+Header,Scalar,Point,CenterArc or SlashSpread refusal. Headers include genuine mixed position and
+original output index,or None for scalar headers. Child errors preserve their existing actual
+statement/argument role,node,span,name/kind and source witnesses. Diagnostics omit authored source.
+
+This proves complete mixed name/header and scalar/native argument-kind order. Separately identified
+Root formula-source bodies,actual canonical/current geometry/frame and semantic dependencies,
+Pocket/Buttonhole obligations,allocator fault tests and coupled verification remain owned later.
+No geometry/numeric provider is called here,and no values or executable whole programme follow.

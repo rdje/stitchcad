@@ -13,16 +13,17 @@ pub use admission::{
 pub use limits::{DraftingProgramLimits, DraftingProgramShape};
 pub use name_inputs::{
     AdmittedDraftingProgramNameWork, AdmittedDraftingProgramOrderWork,
-    BoundDraftingProgramInitials, BoundDraftingProgramOutputRoles, DraftingGeometryNameSource,
-    DraftingInitialBinding, DraftingInitialBindingIssue, DraftingInitialError,
-    DraftingInitialRefusal, DraftingOutputName, DraftingOutputPosition,
+    BoundDraftingProgramInitials, BoundDraftingProgramOutputRoles, CheckedDraftingProgramOrder,
+    DraftingGeometryNameSource, DraftingInitialBinding, DraftingInitialBindingIssue,
+    DraftingInitialError, DraftingInitialRefusal, DraftingOutputName, DraftingOutputPosition,
     DraftingOutputPositionError, DraftingOutputPositionRefusal, DraftingOutputRoleBindingIssue,
     DraftingOutputRoleError, DraftingOutputRoleMismatch, DraftingOutputRoleRefusal,
     DraftingProgramInitialNamespace, DraftingProgramInitialNamespaceError,
     DraftingProgramNameInputs, DraftingProgramNameLimits, DraftingProgramNameShape,
-    DraftingProgramNameWorkError, DraftingProgramNameWorkRefusal, DraftingProgramOrderLimits,
-    DraftingProgramOrderShape, DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal,
-    DraftingProgramOutputPositions,
+    DraftingProgramNameWorkError, DraftingProgramNameWorkRefusal, DraftingProgramOrderError,
+    DraftingProgramOrderLimits, DraftingProgramOrderProofKind, DraftingProgramOrderRefusal,
+    DraftingProgramOrderShape, DraftingProgramOrderStep, DraftingProgramOrderWorkError,
+    DraftingProgramOrderWorkRefusal, DraftingProgramOutputPositions,
 };
 pub use normalized::{
     DraftingProgramNormalizationError, DraftingProgramNormalizationRefusal,

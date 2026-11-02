@@ -1,5 +1,8 @@
 //! Borrowed metadata/checking capability,not a cloneable namespace or whole-program certificate.
-use super::{FormulaDeclaration, FormulaDeclarationSource, FormulaNamespace, FormulaUnboundName};
+use super::{
+    FormulaDeclaration, FormulaDeclarationSource, FormulaNamespace, FormulaNamespaceError,
+    FormulaUnboundName,
+};
 use crate::{
     name::MachineToken,
     recipe::{FormulaCheckedExpression, FormulaExpressionCheckError, FormulaNormalizedExpression},
@@ -82,6 +85,13 @@ pub struct FormulaNameScope<'n, 'a> {
     namespace: &'n FormulaNamespace<'a>,
 }
 impl<'n, 'a> FormulaNameScope<'n, 'a> {
+    // The mixed controller preflights authentic output headers without making self names visible.
+    pub(crate) fn check_geometry(
+        self,
+        declaration: FormulaGeometryDeclaration<'a>,
+    ) -> Result<(), FormulaNamespaceError<'a>> {
+        self.namespace.check_declaration(declaration.declaration())
+    }
     pub(super) const fn new(namespace: &'n FormulaNamespace<'a>) -> Self {
         Self { namespace }
     }

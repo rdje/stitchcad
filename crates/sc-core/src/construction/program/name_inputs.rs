@@ -14,9 +14,10 @@ use core::fmt;
 mod initial;
 mod namespace;
 pub use namespace::{
-    AdmittedDraftingProgramOrderWork, DraftingProgramInitialNamespace,
-    DraftingProgramInitialNamespaceError, DraftingProgramOrderLimits, DraftingProgramOrderShape,
-    DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal,
+    AdmittedDraftingProgramOrderWork, CheckedDraftingProgramOrder, DraftingProgramInitialNamespace,
+    DraftingProgramInitialNamespaceError, DraftingProgramOrderError, DraftingProgramOrderLimits,
+    DraftingProgramOrderProofKind, DraftingProgramOrderRefusal, DraftingProgramOrderShape,
+    DraftingProgramOrderStep, DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal,
 };
 mod positions;
 mod roles;
