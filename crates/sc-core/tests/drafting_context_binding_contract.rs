@@ -1,6 +1,8 @@
 //! Actual source-owner binding and resource-before-query ordering, without geometry execution.
 #[path = "support/drafting_geometry.rs"]
 mod geometry;
+#[path = "support/drafting_initial_binding.rs"]
+mod initial_binding;
 #[path = "support/drafting_output_role_binding.rs"]
 mod output_role_binding;
 #[path = "support/drafting_program.rs"]

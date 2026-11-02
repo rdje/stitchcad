@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — actual extra-initial source loans
+## _(2026-11-02 UTC)_ — complete original initial associations
 
-0847 adds DraftingInitialInputProvider and raw DraftingInitialInputSource retaining existing FormulaCanonicalInput plus original metadata/snapshot SourceRecords. Opaque payloads need no Clone/Debug;scalar metadata invents no frame. Providers retain original causes and account all held source fields.
-The canonical join preserves actual inventory/kind/dedicated Length owner without values;raw response construction proves no containing Root,metadata or snapshot association. Initial geometry remains on the existing port;all programme creators must be refused before lookup in the next complete binding stage.
-Native canonical1/name-work2,strict library/two-target lint,fmt and initial Rustdoc2 pass0. Actual Unknown records/opaque loans/privacy and original Missing cause/trace9 checked. Book/pure publication118-374-1813-3420,25 old fences unchanged/new complete native fence exact0.
-1022 three whole Git/body/public spans exact0;archive1476-53,generations21-64 and32-64. Design chapter held at40890B;new source section in context chapter34600B. Promotion declined:existing immutable-source/canonical-join doctrine. G1still6/18;whole initial binding next,allocator/coupled proof deferred.
+0848 borrows complete roles,reserves all initial slots,joins actual Root inventory before metadata,then checks returned inventory/name/header/snapshot. Opaque metadata stays under the honest port. Geometry scans all native creators before live lookup;original order/loans survive,no prefix/values.
+Focused initial3,strict selected lint/fmt/Rustdoc3 pass0;complete/repeated/empty,actual owner/header/snapshot faults and original causes checked. Lint128B diagnostic fixed by boxing canonical semantic cause;allocator stays inline. Actual bound-owner rustc escape1/keep0 matched expected lifetime cause.
+Book/publication118-374-1813-3421,26 old Rust fences unchanged/new full native fence exact0;1023 three Git/body/public spans exact,archive1477-54/generations21-64 and33-64. Context37968B;design/name chapters unchanged. Admission implemented with focused checks;no coupled verification claim.
+Promotion declined:existing actual-source/no-prefix doctrine. G1still6/18;Root-derived initial namespace/earlier-only mixed visibility next. Whole dependencies,allocator faults and coupled verification remain .5f.2.dependencies/.check/.verify;geometry execution stays later.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

@@ -909,7 +909,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0837 raw actual name/output sources;[whole scope/proofs](../history/stitchcad-devnotes-part1013.md).
 - ID: `G1-SLICE.5f.2.namespace.admit`
-  Status: `in_progress`
+  Status: `done`
   Goal:fresh complete program/name/source/catalogue held-content and prospective name-work bounds before namespace callbacks;preserve original owner/role locations and first refusal,then exact actual program associations,no accepted prefix.
 - ID: `G1-SLICE.5f.2.namespace.admit.fields`
   Status: `done`
@@ -927,7 +927,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0841 actual complete name-work bounds;[whole scope/proofs](../history/stitchcad-devnotes-part1017.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association`
-  Status: `in_progress`
+  Status: `done`
   Goal:after complete bounds,bind exact original program positions/fixed schemas/typed role metadata and actual initial sources;reject mismatches/future initial geometry before values,retain full owners and original first cause in private admission.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.positions`
   Status: `done`
@@ -948,25 +948,25 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0845 complete actual role sources;[whole scope/proofs](../history/stitchcad-devnotes-part1021.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial`
-  Status: `in_progress`
+  Status: `done`
   Goal:bind actual extra initial sources to the original Root canonical/source/context records,refuse planned creators as initial geometry before values;retain exact original sources and causes,no metadata-id-only truth.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial.bounds`
   Status: `done`
   Goal:0846 complete initial-binding record bounds;[whole scope/proofs](../history/stitchcad-devnotes-part1022.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial.sources`
   Status: `done`
-  Goal:readonly actual metadata source-record/snapshot facet using existing FormulaCanonicalInput joins,no copied registry/values or declaration-id-only source grant.
-  - [x] ROOT CAUSE: 0847 launcher `cargo test -p sc-core --test formula_canonical_input_contract initial_source_view`:
-    focused1 pass;actual dedicated Length/general scalar,original inventory/name/opaque records,Unknown unchanged,Copy/privacy,rc=0.
-  - [x] ADDRESSED: 0847 launcher `cargo test -p sc-core --test drafting_context_binding_contract program_name_work`:
-    focused2 pass;actual host canonical join reaches readonly facet,original typed Missing/trace9 retained,no geometry fallback,rc=0.
-  - [x] NO REGRESSION: 0847 launcher selected library/two-target strict clippy,fmt and `cargo test -p sc-core --doc construction::context::initial`:
-    docs2 pass;book/pure publication118/374/1813/3420,25 prior Rust fences unchanged/new complete native fence exact,rc=0;
-    1022 three Git/body/public spans/archive1476/53,generations21/64 and32/64,rc=0.
-  Commit:STITCHCAD-G1-0847. Promotion declined:existing source-record/canonical-join doctrine;raw sources grant no association/namespace,whole initial binding and allocator/coupled verification pending.
+  Goal:0847 actual initial metadata source loans;[whole scope/proofs](../history/stitchcad-devnotes-part1023.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial.check`
-  Status: `pending`
-  Goal:whole bounded canonical/metadata/existing geometry bindings;reject all programme creators as initial before lookup,retain original records/causes,no accepted prefix or all-future initial names.
+  Status: `done`
+  Goal:whole bounded original initial associations;no values,accepted prefix or all-future geometry.
+  - [x] ROOT CAUSE: 0848 launcher `cargo test -p sc-core --test drafting_context_binding_contract initial_binding`:
+    focused3 pass;complete/repeated/empty loans,Unknown and actual owner/header/snapshot mismatches,original causes/first index,rc=0.
+  - [x] ADDRESSED: 0848 same target rejects point/edge programme creators before live lookup despite snapshot presence;
+    strict library/selected-target clippy and fmt pass after compacting128B canonical diagnostic;allocator cause stays inline,rc=0.
+  - [x] NO REGRESSION: 0848 launcher `cargo test -p sc-core --doc construction::program::name_inputs::initial` docs3,
+    direct actual-owner rustc escape1/keep0,book/publication118/374/1813/3421,26 old/new exact fences,rc=0;
+    1023 Git/body/public spans/archive1477/54,generations21/64 and33/64,rc=0.
+  Commit:STITCHCAD-G1-0848. Promotion declined:existing actual-owner/no-prefix doctrine. Admission implementation done with focused checks;namespace order/dependencies and allocator/coupled .verify pending.
 - ID: `G1-SLICE.5f.2.namespace.order`
   Status: `pending`
   Goal:actual Root and explicit always-visible names plus only earlier scalar/native declarations in mixed order;check reserved/cross-origin/repeated headers and self/future names without values or metadata-prefix acceptance.

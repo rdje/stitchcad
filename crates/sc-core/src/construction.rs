@@ -71,8 +71,9 @@ mod operation_input;
 pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};
 mod program;
 pub use program::{
-    AdmittedDraftingProgramInputs, AdmittedDraftingProgramNameWork,
-    BoundDraftingProgramOutputRoles, DraftingGeometryNameSource, DraftingOutputName,
+    AdmittedDraftingProgramInputs, AdmittedDraftingProgramNameWork, BoundDraftingProgramInitials,
+    BoundDraftingProgramOutputRoles, DraftingGeometryNameSource, DraftingInitialBinding,
+    DraftingInitialBindingIssue, DraftingInitialError, DraftingInitialRefusal, DraftingOutputName,
     DraftingOutputPosition, DraftingOutputPositionError, DraftingOutputPositionRefusal,
     DraftingOutputRoleBindingIssue, DraftingOutputRoleError, DraftingOutputRoleMismatch,
     DraftingOutputRoleRefusal, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,

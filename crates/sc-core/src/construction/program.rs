@@ -12,12 +12,13 @@ pub use admission::{
 };
 pub use limits::{DraftingProgramLimits, DraftingProgramShape};
 pub use name_inputs::{
-    AdmittedDraftingProgramNameWork, BoundDraftingProgramOutputRoles, DraftingGeometryNameSource,
-    DraftingOutputName, DraftingOutputPosition, DraftingOutputPositionError,
-    DraftingOutputPositionRefusal, DraftingOutputRoleBindingIssue, DraftingOutputRoleError,
-    DraftingOutputRoleMismatch, DraftingOutputRoleRefusal, DraftingProgramNameInputs,
-    DraftingProgramNameLimits, DraftingProgramNameShape, DraftingProgramNameWorkError,
-    DraftingProgramNameWorkRefusal, DraftingProgramOutputPositions,
+    AdmittedDraftingProgramNameWork, BoundDraftingProgramInitials, BoundDraftingProgramOutputRoles,
+    DraftingGeometryNameSource, DraftingInitialBinding, DraftingInitialBindingIssue,
+    DraftingInitialError, DraftingInitialRefusal, DraftingOutputName, DraftingOutputPosition,
+    DraftingOutputPositionError, DraftingOutputPositionRefusal, DraftingOutputRoleBindingIssue,
+    DraftingOutputRoleError, DraftingOutputRoleMismatch, DraftingOutputRoleRefusal,
+    DraftingProgramNameInputs, DraftingProgramNameLimits, DraftingProgramNameShape,
+    DraftingProgramNameWorkError, DraftingProgramNameWorkRefusal, DraftingProgramOutputPositions,
 };
 pub use normalized::{
     DraftingProgramNormalizationError, DraftingProgramNormalizationRefusal,

@@ -463,8 +463,8 @@ indexes/key bytes. The explicit index identifies its original containing source 
 not a resource total. Global output-name text and other parent/cache collections compose separately.
 The name-input producer uses that same component,keeping original field order and first refusal.
 
-This binds planned role metadata to its actual input and containing context. Actual initial sources,
-reserved/cross-origin collisions,earlier-only name visibility,whole kinds and canonical/geometry/
+This binds planned role metadata to its actual input and containing context. The complete initial-source stage below follows.
+Reserved/cross-origin collisions,earlier-only name visibility,whole kinds and canonical/geometry/
 semantic dependencies remain separate owned stages before values and whole-program acceptance.
 
 ## Raw extra-initial metadata sources
@@ -502,8 +502,60 @@ the context port;this is no security boundary against fabricated metadata.
 
 The canonical join proves membership in its supplied inventory,not its containing Design or actual
 metadata ownership. Public raw-source construction also proves no containing Root/snapshot/name
-association. The next complete binding stage must compare the actual Root inventory,original
-metadata declaration and source/snapshot records. Existing initial Point/Edge inputs use the
+association. The complete binding stage below compares the actual Root inventory,original
+metadata declaration and snapshot record,retaining the provider's metadata source loan. Existing initial Point/Edge inputs use the
 existing-geometry port separately;every programme creator must be rejected as initial geometry
 before a live lookup. Namespace collisions,ordered visibility,values and whole acceptance remain
 later owned stages. No raw response becomes an accepted prefix.
+
+
+## Bind every extra-initial source
+
+`BoundDraftingProgramOutputRoles::bind_initial_sources()` borrows the complete role proof and
+reserves one result slot per original extra-initial occurrence before any initial-source query.
+The earlier retained-work bound already includes these slots. Repeated declarations retain
+separate slots;the empty vector performs no query. No values or namespace factory runs.
+
+For a scalar/Length occurrence,the existing canonical join first resolves the original declaration
+against this context's actual Root inventory. Original missing-family,scalar-kind or equal-ID
+foreign Length-owner causes survive before the metadata callback. Unknown/Derived records stay
+unread. The response then binds in this order:
+
+1. Actual canonical inventory owner,not equal record IDs in a different inventory.
+2. Original borrowed name field,not an equal-spelling replacement token.
+3. Source family,origin,metadata ID,canonical target/kind and actual dedicated Length owner.
+4. Original containing snapshot SourceRecord identity.
+
+The complete response retains the provider's original opaque metadata record. Its obligation to
+expose that actual declaration under that snapshot remains the honest immutable port contract;
+core cannot inspect arbitrary opaque metadata payloads. There is no copied metadata registry or
+source truth inferred from reported IDs alone.
+
+For each Point/Edge occurrence,the binder scans **every** original native operation's creator ID
+before that occurrence's live lookup,including operations without a named output. A matching
+creator refuses with the original initial index,creator and genuine mixed position,even if that
+reference is already present in the supplied snapshot. This prevents all-future initial geometry.
+Other references reuse `DraftingContext::bind_existing_geometry()` and retain its exact reference,
+frame,snapshot and opaque output loans or its original provider/mismatch cause.
+
+```rust
+use sc_core::{construction::{BoundDraftingProgramOutputRoles,DraftingInitialInputProvider},
+    design::DesignMetadataHost};
+fn bind_initials<H:DesignMetadataHost,S:DraftingInitialInputProvider<H> + ?Sized>(
+    roles:&BoundDraftingProgramOutputRoles<'_, '_, '_, '_, '_,H,S>)->Result<usize,String> {
+    let bound=roles.bind_initial_sources().map_err(|error|error.to_string())?;
+    Ok(bound.sources().len())
+}
+```
+
+`BoundDraftingProgramInitials` privately retains the prior roles and complete original-order
+`DraftingInitialBinding` vector. For `[Length,Count,Length,Point,Edge]`,the three metadata loans and
+two existing-geometry loans retain that order. `roles()` reaches the exact positions,bounded work,
+actual input and selected policy;`sources()` only borrows the complete result. The inspectable
+binding enum alone cannot manufacture this private complete owner.
+
+Any failure discards the successful local prefix. `DraftingInitialError` keeps original roles and
+Allocation,Canonical,Source,Mismatch,PlannedCreator or Geometry causes with original indexes and
+witnesses. Allocation keeps its TryReserveError inline;boxes compact semantic diagnostics only.
+Debug omits authored names and opaque payloads. Reserved/cross-origin/repeated-name collisions,
+earlier-only mixed visibility,whole kind/dependency checking and values remain later stages.

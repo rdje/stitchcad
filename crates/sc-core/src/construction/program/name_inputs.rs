@@ -11,8 +11,13 @@ use crate::{
     recipe::{FormulaDeclaration, FormulaInitialDeclaration},
 };
 use core::fmt;
+mod initial;
 mod positions;
 mod roles;
+pub use initial::{
+    BoundDraftingProgramInitials, DraftingInitialBinding, DraftingInitialBindingIssue,
+    DraftingInitialError, DraftingInitialRefusal,
+};
 pub use roles::{
     BoundDraftingProgramOutputRoles, DraftingOutputRoleBindingIssue, DraftingOutputRoleError,
     DraftingOutputRoleMismatch, DraftingOutputRoleRefusal,
