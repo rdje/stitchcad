@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — borrowed native drafting inputs
+## _(2026-11-02 UTC)_ — actual containing context contract
 
-0821 adds a closed13-family raw input view and family tag;11 native operation IDs remain original,semantic intents retain explicit separate history IDs.
-Actual payload borrows preserve documents,ordered/repeated controls and targets;Debug reveals only family. No value read,frame/currentness or program acceptance.
-Focused input4/source-loan compile-fail2/book examples5/strict selected lint/fmt/build/publication118-374-1806-3388 pass0;four old Rust fences unchanged.
-996 whole Git/body/public exact0;archive1450/83,per-generation21/64 and62/64. G1still6/18;coupled verification deferred. Promotion declined: existing raw source/identity contract;explicit Cartesian frame/current source ports next.
+0822 specifies exact Design/program/revision,authored Cartesian frame and typed current snapshot sources;scalar proofs/topology edge membership supply no substitute approval.
+Earlier declared output manifests prove static availability only;actual ordered execution must create geometry. Foreign owners,retired/wrong-kind/frame refusals retain original sources.
+Native owner census6/7/3,eight integration owners,five Rust fences/runtime exact,book/publication118-374-1806-3389/tree10-13-20-0 pass0;context implementation next.
+Promotion:existing indexed ADR-0003 gains the answer and book route. 997 four whole Git/body/public spans exact0;archive1451/84,per-generation21/64 and63/64;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

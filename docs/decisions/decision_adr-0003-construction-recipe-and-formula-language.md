@@ -7,7 +7,7 @@
 - **Owner / source:** leaf `G0-CONTRACT.9`, from roadmap §5 ADR-0003, §2.2, §3.1, §3.3, §4.2, §15.1
   and §15.3; the normative text is `docs/book/src/spec/formula-language.md` and its two parts
 
-answers: "what is the formula language?" · "why does a recipe round twice and not once per operator?" · "why can a formula not compare size labels?" · "which drafting system ships as the reference blocks?" · "why not Seamly2D's drafting?" · "what does a recipe's `assert` exist for?" · "what would reopen ADR-0003?" · "how is a truing curve selected?" · "what does an exact native join require?"
+answers: "what is the formula language?" · "why does a recipe round twice and not once per operator?" · "why can a formula not compare size labels?" · "which drafting system ships as the reference blocks?" · "why not Seamly2D's drafting?" · "what does a recipe's `assert` exist for?" · "what would reopen ADR-0003?" · "how is a truing curve selected?" · "what does an exact native join require?" · "what binds an ordered program to its actual frame and geometry snapshot?"
 
 ## The decision
 
@@ -39,13 +39,8 @@ The normative text is the chapter; this is the reasoning, so a later session doe
 | the canonical form is an S-expression and is the formula's identity | JSON, or the surface spelling | JSON reintroduces a float-formatting question the units chapter closes; two spellings of one formula must not be two formulas |
 | an envelope refusal raises the envelope's token, not a formula token | a formula token for everything | two token sets competing for one refusal is how a diagnostic registry drifts |
 
-The chapter is partitioned into a contract, a grammar part and an examples part because one file
-landed at 599 lines / 37 317 B against a `book_collection` per-part health of 400 / 24 576 and a
-ceiling of 700 / 40 960 — 87 % of the ceiling on the day it was born, with every table normative and
-nothing to trim. The partition is the containment doctrine's own remedy for a `partitioned_canonical`
-surface, and the glossary set the precedent. The three parts are 308 / 241 / 92 lines and
-20 593 / 12 452 / 7 116 B, each inside health, and the contract's §7 parts table is censused in both
-directions so a fourth file cannot appear unlisted.
+[Whole original chapter-partition rationale](../history/stitchcad-devnotes-part997.md) retains
+the historical sizes and two-way census policy;the normative chapters remain canonical.
 
 **The margin the census enforces.** `max_expression_nodes` = 256 must exceed the largest expression
 the book's examples carry by **20×** (measured: 7 nodes). The margin is declared here rather than in
@@ -178,3 +173,11 @@ The canonical contract is the truing whole-Piece book companion's curve-selectio
 Reopen with a recorded recipe-policy/version decision if an actual supported garment requires
 a different selection rule or domain. Preserve authored priority/replay semantics and review
 all affected examples;no implicit optimizer,default curve or silent search-domain widening.
+
+## Actual containing context —0822
+
+Owner:G1-SLICE.5f.2.context.contract. The
+[containing context contract](../book/src/annexes/drafting-operation-contracts.md#containing-context-contract--implementation-pending)
+requires actual Design/program/revision,authored Cartesian frame and typed current snapshot sources.
+Earlier declared outputs confer static availability,not live geometry. The .context owner implements
+bounded immutable source binding before .program;whole verification remains .verify,geometry G2/G3.

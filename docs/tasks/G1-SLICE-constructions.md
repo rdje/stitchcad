@@ -906,22 +906,23 @@ retains all original goals,statuses and focused acceptance evidence.
 
 ## Ordered drafting integration
 
-### G1-SLICE.5f.2.inputs
 - ID: `G1-SLICE.5f.2.inputs`
   Status: `done`
-  Goal:borrowed closed13-family input sum;retain11 embedded operation IDs and explicit authored operation IDs beside CloseDart/AddNotch target intents;no context/proof/default or identity issuance.
-  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test drafting_operation_input_contract`:
-    initial fixture used nonexistent EdgeRange::Full;corrected to public EdgeRange::whole;4 tests pass,rc=0.
-    First commit correctly refused missing in-file retirement receipts in execution sibling;fresh exact-source/archive receipts restored before retry.
-  - [x] ADDRESSED: same target plus `cargo test -p sc-core --doc construction::operation_input`:
-    all13 actual source loans/history IDs,semantic target distinction,privacy/repeated controls pass4;source lifetime/replacement compile-fail2 pass,rc=0.
-  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test drafting_operation_input_contract -- -D warnings`,
-    fmt and `cargo test -p sc-core --doc construction::operation_examples`:lint/5 book examples pass,rc=0;
-    book/publication118/374/1806/3388/four old fences exact;996 three Git/public spans/archive1450/83,per-generation21/64 and62/64,rc=0.
-  Commit:STITCHCAD-G1-0821. promotion: declined (existing raw source/identity boundary);whole integration verification remains .5f.2.verify.
+  Goal:0821 borrowed13-family raw input view;[whole scope/proofs](../history/stitchcad-devnotes-part997.md).
+### G1-SLICE.5f.2.context.contract
 - ID: `G1-SLICE.5f.2.context.contract`
-  Status: `pending`
+  Status: `done`
   Goal:bind explicit containing frame and actual current geometry/output registry ports to the containing Design/source;distinguish Cartesian frames from edge-parameter/copy frames before context implementation.
+  - [x] ROOT CAUSE: `python3 -I -B -` targeted native owner/source census:
+    DesignStructureDefinition6 and DesignInputsDefinition7 fields,actual formula root/ledger edge/metadata ports3 verified,rc=0;none of those views grants a complete Cartesian geometry snapshot.
+  - [x] ADDRESSED: same census checks eight ordered owners and five original Rust fences/runtime exact,
+    rc=0;book specifies actual owner/revision/frame/snapshot,complete bounds and existing versus earlier declared output provenance;dedicated .context implementation before .program.
+  - [x] NO REGRESSION: `scripts/run_make.sh book` and publication `check(ROOT)`:
+    warning-free118/374/1806/3389,tree10/13/20/0,rc=0;997 four Git/body/public spans/archive1451/84,per-generation21/64 and63/64,rc=0.
+  Commit:STITCHCAD-G1-0822. promotion:existing indexed ADR-0003 gains actual-context answer and canonical book route;implementation/whole verification pending.
+- ID: `G1-SLICE.5f.2.context`
+  Status: `pending`
+  Goal:implement explicit immutable source port and bounded actual-root binding from .context.contract;retain actual frame/current typed output provenance and original causes,no fabricated geometry or planned-output liveness.
 - ID: `G1-SLICE.5f.2.program`
   Status: `pending`
   Goal:whole ordered scalar/drafting owner and complete logical limits;retain actual scalar recipe ordinals separately from genuine combined-program positions and original operation/document owners.
