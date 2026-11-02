@@ -906,9 +906,19 @@ retains all original goals,statuses and focused acceptance evidence.
 
 ## Ordered drafting integration
 
+### G1-SLICE.5f.2.inputs
 - ID: `G1-SLICE.5f.2.inputs`
-  Status: `pending`
+  Status: `done`
   Goal:borrowed closed13-family input sum;retain11 embedded operation IDs and explicit authored operation IDs beside CloseDart/AddNotch target intents;no context/proof/default or identity issuance.
+  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test drafting_operation_input_contract`:
+    initial fixture used nonexistent EdgeRange::Full;corrected to public EdgeRange::whole;4 tests pass,rc=0.
+    First commit correctly refused missing in-file retirement receipts in execution sibling;fresh exact-source/archive receipts restored before retry.
+  - [x] ADDRESSED: same target plus `cargo test -p sc-core --doc construction::operation_input`:
+    all13 actual source loans/history IDs,semantic target distinction,privacy/repeated controls pass4;source lifetime/replacement compile-fail2 pass,rc=0.
+  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test drafting_operation_input_contract -- -D warnings`,
+    fmt and `cargo test -p sc-core --doc construction::operation_examples`:lint/5 book examples pass,rc=0;
+    book/publication118/374/1806/3388/four old fences exact;996 three Git/public spans/archive1450/83,per-generation21/64 and62/64,rc=0.
+  Commit:STITCHCAD-G1-0821. promotion: declined (existing raw source/identity boundary);whole integration verification remains .5f.2.verify.
 - ID: `G1-SLICE.5f.2.context.contract`
   Status: `pending`
   Goal:bind explicit containing frame and actual current geometry/output registry ports to the containing Design/source;distinguish Cartesian frames from edge-parameter/copy frames before context implementation.

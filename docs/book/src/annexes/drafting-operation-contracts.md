@@ -88,15 +88,56 @@ numeric/parameter error evidence,coupled replay,atomic publication and platform 
 remain .5f.4.geometry/.5g and G2/G3. Schema acceptance grants no running G1 spike waiver,G2 entry
 exception,domain/envelope approval or release readiness;focused native checks are not full verification.
 
-## Ordered program integration — planned
+## Borrowed inputs and planned ordered integration
 
-The next G1-SLICE.5f.2 slice composes the existing13 input families as a borrowed
-`DraftingOperationInput`;this shared view is planned,not an available program checker.
+`sc_core::construction::DraftingOperationInput` borrows any of the13 existing native input
+families. Its `family()` returns a closed `DraftingOperationFamily` tag;its `operation()`
+retains the actual authored history identity. These are raw input views without program acceptance.
 Eleven native schemas already carry their creating operation id. `CloseDart` and `AddNotch`
 are target intents,so their containing authored record must retain an explicit operation identity
 beside the original request. A dart id or owning Piece id cannot stand in for that operation id.
 Binding CloseDart must still check the actual canonical dart's held closing operation;AddNotch's
 fresh semantic notch identity remains allocated by the command bus. The view issues no identities.
+
+
+For example,the point declaration and dart request remain the actual borrowed sources. The
+history operation for closing is explicitly different from the dart target. Reading these views
+requires neither a geometry registry nor formula values:
+
+```rust
+use sc_core::{
+    command::CloseDart,
+    construction::{DraftingOperationFamily, DraftingOperationInput, PointConstruction},
+    ontology::EntityId,
+    recipe::FormulaExpressionDocument,
+};
+# fn main() -> Result<(), Box<dyn std::error::Error>> {
+let id = EntityId::from_bits;
+let point = PointConstruction::new(
+    id(10),
+    FormulaExpressionDocument::new("waist/4".into())?,
+    FormulaExpressionDocument::new("0 mm".into())?,
+);
+let close = CloseDart::new(id(20));
+let inputs = [
+    DraftingOperationInput::ConstructPoint(&point),
+    DraftingOperationInput::CloseDart { operation: id(30), request: &close },
+];
+assert_eq!(inputs[0].family(), DraftingOperationFamily::ConstructPoint);
+assert_eq!(inputs[0].operation(), id(10));
+assert_eq!(inputs[1].operation(), id(30));
+assert_eq!(close.dart(), id(20));
+if let DraftingOperationInput::ConstructPoint(original) = inputs[0] {
+    assert!(std::ptr::eq(original, &point));
+}
+# Ok(())
+# }
+```
+
+Copying a view retains its source borrow;the source cannot be replaced while the view is used
+or outlived by it. Debug output contains only the family,with no authored formula or target payload.
+An array of views is caller-supplied order;it certifies neither order nor operation-id uniqueness.
+The explicit closing identity still needs matching to the actual canonical dart later.
 
 The containing program must preserve actual scalar-source ordinals separately from combined
 program positions. It must receive its actual Cartesian drafting frame and current output registry,
@@ -107,8 +148,8 @@ Whole logical admission and static checks precede values,and a later refusal exp
 program prefix. Pocket kind/domain/state and Buttonhole's canonical button-size dependency remain
 part of the complete graph;no separately authored hole length or approximation is introduced.
 
-Input composition,context contract,ordered owner,names,complete dependencies and whole checking
-have separate implementation owners. Coupled verification follows that complete set. The input
+Input composition is implemented. Context contract,ordered owner,names,complete dependencies and
+whole checking remain separately owned implementation work. Coupled verification follows that complete set. The input
 view alone grants no frame,namespace,ordering,resource,geometry or runtime acceptance.
 
 ## Points and primitive curves

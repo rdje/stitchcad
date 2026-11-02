@@ -3,17 +3,18 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0820 — bind ordered integration to actual native contracts
+## STITCHCAD-G1-0821 — retain actual native drafting inputs
 
-- Inventoried11 operation-owning schemas and two target-only command intents;selected the
-  borrowed13-family input view first,with explicit operation identities beside semantic requests.
-- Seven bounded owners cover input/context/program/name/dependency/whole checking and deferred
-  coupled verification. Book distinguishes this plan from available APIs and geometry acceptance.
-- Existing point-check doctests3/book/publication118/374/1806/3388/tree10-13-20-0 pass0;
-  runtime code/four primitive fences unchanged. 995 three Git/public spans exact;archive1449/82,
-  per-generation21/64 and61/64. G1still6/18;actual input implementation next.
+- Added borrowed DraftingOperationInput and closed family descriptor for all13 native families.
+  CloseDart/AddNotch retain explicit authored history IDs beside original semantic target requests.
+- Four source/identity/privacy tests,two compile-fail borrow guards,five actual book examples,
+  strict selected lint/fmt/book/publication118/374/1806/3388 pass0;four original Rust fences exact.
+- 996 three Git/body/public spans exact;archive1450/83,per-generation21/64 and62/64.
+  G1still6/18;whole program/context/geometry acceptance remains separate and unverified.
 
 # Sealed archive — earlier slices
+
+[Whole0820 sourced integration plan](docs/history/stitchcad-devnotes-part996.md) retains exact source bytes.
 
 [Whole0819 ordered-integration continuity](docs/history/stitchcad-devnotes-part995.md) retains exact source bytes.
 

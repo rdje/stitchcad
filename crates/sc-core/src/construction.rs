@@ -55,6 +55,8 @@ mod slash_output_examples {}
 mod slash_piece_examples {}
 mod arc;
 mod arguments;
+mod operation_input;
+pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};
 mod bezier;
 pub use arc::{
     CenterArcArgument, CenterArcCheckError, CenterArcCheckRefusal, CenterArcConstruction,

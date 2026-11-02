@@ -930,15 +930,16 @@ Closed search checkpoint:[whole seven-node subtree](G1-SLICE-constructions.md#na
 - ID: `G1-SLICE.5f.2.tracking`
   Status: `done`
   Goal:0819 bounded ordered-integration tracking;[whole scope/proofs](../history/stitchcad-devnotes-part995.md).
-### G1-SLICE.5f.2.plan
 - ID: `G1-SLICE.5f.2.plan`
   Status: `done`
-  Goal:inventory actual recipe/operation/frame/namespace/dependency contracts and choose bounded ordered integration slices;no fake geometry/currentness or ambient frame.
-  Planned implementation:[ordered drafting integration](G1-SLICE-constructions.md#ordered-drafting-integration);context contract precedes program admission,verification follows the complete set.
-  - [x] ROOT CAUSE: `python3 -I -B -` native API inventory →11 operation-owning schemas/2 target-only intents/13 families;actual formula proofs retain document/declaration handles,not a namespace-map borrow,rc=0.
-  - [x] ADDRESSED: seven bounded input/context/program/name/dependency/check/verification owners in construction sibling;first borrowed input sum chosen,book explicitly planned and original4 Rust fences exact,rc=0.
-  - [x] NO REGRESSION: launcher `cargo test -p sc-core --doc construction::point::check` →3 pass;book/build/publication118/374/1806/3388/tree10-13-20-0,995 three Git/public spans/archive1449/82,per-generation21/64 and61/64,rc=0.
-  Commit:STITCHCAD-G1-0820. promotion: declined (existing typed-operation/ordered source contract;implementation choices remain within owned stages).
+  Goal:0820 sourced ordered integration plan;[whole scope/proofs](../history/stitchcad-devnotes-part996.md);implementation lives in [construction sibling](G1-SLICE-constructions.md#ordered-drafting-integration).
+  0821 retirement evidence,owned by `.5f.2.inputs` in the construction sibling:
+  - [x] ROOT CAUSE: `git show 05ad20f7:docs/tasks/G1-SLICE-execution.md`:
+    whole0820 plan/proof occupies1244B;retiring it removes this file's last three acceptance boxes,rc=0.
+  - [x] ADDRESSED: `python3 -I -B -` Git interval/body/public proof:
+    all3 original spans in996 exact;current source retirement keeps these fresh in-file receipts,rc=0.
+  - [x] NO REGRESSION: `python3 -I -B scripts/history_archive.py --root . verify`:
+    archive1450/83;generation_pressure.py gives21/64 and62/64,rc=0;no task ownership lost.
 - ID: `G1-SLICE.5f.3`
   Status: `pending`
   Goal: operation execution/geometry-selector bridge through published typed contracts.

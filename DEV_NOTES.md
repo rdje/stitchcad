@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — sourced ordered-integration plan
+## _(2026-11-02 UTC)_ — borrowed native drafting inputs
 
-0820 inventories11 native schemas with operation IDs and2 target-only command intents;first shared13-family borrowed input retains distinct authored operation/target roles.
-Actual expression proofs retain normalized/declaration handles rather than borrowing the temporary namespace map;existing point-check3 doctests pass0 with no runtime change.
-Seven input/context/program/name/dependency/check/verify owners preserve actual scalar/program ordinals,frame/current registry and Pocket/Buttonhole dependencies;book clearly planned0.
-Promotion declined: existing typed/ordered contract. Four Rust fences unchanged;publication118/374/1806/3388/tree10-13-20-0/995 Git-public pass0;archive1449/82,per-generation21/64 and61/64;G1still6/18.
+0821 adds a closed13-family raw input view and family tag;11 native operation IDs remain original,semantic intents retain explicit separate history IDs.
+Actual payload borrows preserve documents,ordered/repeated controls and targets;Debug reveals only family. No value read,frame/currentness or program acceptance.
+Focused input4/source-loan compile-fail2/book examples5/strict selected lint/fmt/build/publication118-374-1806-3388 pass0;four old Rust fences unchanged.
+996 whole Git/body/public exact0;archive1450/83,per-generation21/64 and62/64. G1still6/18;coupled verification deferred. Promotion declined: existing raw source/identity contract;explicit Cartesian frame/current source ports next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
