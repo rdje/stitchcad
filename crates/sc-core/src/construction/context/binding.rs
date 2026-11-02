@@ -1,5 +1,5 @@
 //! Bounded actual-owner context binding; no accepted program or geometry values.
-use super::DraftingContextSource;
+use super::{DraftingContextSource, DraftingSourceRecord};
 use crate::{
     command::DesignRevision,
     design::{
@@ -101,8 +101,8 @@ impl<H: DesignMetadataHost, E: std::error::Error + 'static> std::error::Error
 pub struct DraftingContext<'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> {
     scope: DesignFormulaScope<'a, H>,
     source: &'a S,
-    frame: &'a S::Frame,
-    snapshot: &'a S::Snapshot,
+    frame: &'a DraftingSourceRecord<S::Frame>,
+    snapshot: &'a DraftingSourceRecord<S::Snapshot>,
     limits: DesignResourceLimits,
     demand: DesignResourceDemand,
 }
@@ -141,12 +141,12 @@ impl<'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> DraftingCo
     }
     /// Actual explicitly selected authored Cartesian frame source.
     #[must_use]
-    pub const fn frame(self) -> &'a S::Frame {
+    pub const fn frame(self) -> &'a DraftingSourceRecord<S::Frame> {
         self.frame
     }
     /// Actual immutable current snapshot under the source-port contract.
     #[must_use]
-    pub const fn snapshot(self) -> &'a S::Snapshot {
+    pub const fn snapshot(self) -> &'a DraftingSourceRecord<S::Snapshot> {
         self.snapshot
     }
     /// Explicit context-content allowance, separate from the original Design scope's allowance.

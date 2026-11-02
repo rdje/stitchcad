@@ -190,7 +190,7 @@ The existing environment probe suite invokes --all exactly once:body,physical an
 together,including actual watch argv/reflow and five omission/duplicate/dispatch controls. Native28
 still run separately through legacy_refusals.py in the archive suite with real CLI/Git children.
 Companion simulated children prove authority/lifecycle boundaries;they do not replace that replay
-or pending producer-group/locality audits. Broad gates follow the [checking policy](checking-policy.md).
+or pending producer-group/locality audits. Broad gates follow the [checking policy](publication-checks.md#checks).
 Capture-pinned v1 traps substitute logical bytes only for deliberate raw-read faults, retaining the
 original missing-public-read assertion. Legacy catalogs/non-changelog rows stay valid.
 

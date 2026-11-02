@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — bounded actual drafting context
+## _(2026-11-02 UTC)_ — original drafting source records
 
-0825 binds actual scalar-scope owner,complete context content,revision and original immutable frame/snapshot;foreign twins and swallowed budget errors refuse before source queries.
-D378 fixed with public borrowed revision charging:external native fixture passes5 with exact129-bit/128-bit refusal,original causes and no geometry calls;strict selected lint/fmt pass0.
-Context/source lifetime guards5 and actual book examples6/build/publication118-374-1806-3389 pass0;five old Rust fences and1000 three Git/body/public spans exact;archive1454/31,per-generation21/64 and10/64.
-Promotion declined: existing raw source/resource/currentness contract. Actual existing-output lookup/program integration/whole feature verification remain;G1still6/18.
+0826 fixes D379:native zero-sized positions alias;move-only nonzero DraftingSourceRecord retains distinct actual frame/snapshot records even for empty/unsized payloads,is_same_record uses record storage.
+Source3/binding5/context-plus-companion9/overview5/strict selected lint/fmt pass0;typed lookup remains pending. No payload disclosure,Clone/Default,global identity issuance or geometry values added.
+Whole context moves to companion;full focused-check policy body joins publication checks. Six old Rust fences/body proofs/SUMMARY120/119 files/book/publication118-374-1808-3393/native queries14-118-4 pass0.
+Promotion declined: existing actual-source/containment contract. 1001 four whole Git/body/public spans exact0;archive1455/32,per-generation21/64 and11/64;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

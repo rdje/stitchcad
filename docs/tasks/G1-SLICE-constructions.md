@@ -905,22 +905,28 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.context.archive`
   Status: `done`
   Goal:0824 sealed window29 packing;[whole scope/proofs](../history/stitchcad-devnotes-part1000.md).
-### G1-SLICE.5f.2.context.bind
 - ID: `G1-SLICE.5f.2.context.bind`
   Status: `done`
-  Goal:bounded actual scalar-scope/root/revision/source binding,charge complete context before queries and preserve original typed first refusals;no program or geometry values.
-  Fixed P2 D378:external source ports lacked exact public revision charging;borrowed helper now retains actual counter magnitude/location without formatting or supplied totals.
-  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
-    external-provider helper and actual non-Clone Design/frame/snapshot fixture compile/pass5;129-bit revision/128-bit refusal proves D378 repaired,rc=0.
-  - [x] ADDRESSED: same target proves exact owner before accounting,complete bounds/latched first failure before revision/currentness/geometry,
-    original revision/source witnesses and private source loans;`cargo test -p sc-core --doc construction::context` passes5,rc=0.
-  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    `cargo test -p sc-core --doc construction::operation_examples`:strict lint/6 book examples pass,rc=0;
-    book/publication118/374/1806/3389/five old fences exact;1000 three Git/public spans/archive1454/31,per-generation21/64 and10/64,rc=0.
-  Commit:STITCHCAD-G1-0825. promotion:declined (existing source/resource/currentness contract);geometry lookup and whole-program/feature verification remain owned.
+  Goal:0825 bounded actual context and D378 fix;[whole scope/proofs](../history/stitchcad-devnotes-part1001.md).
 - ID: `G1-SLICE.5f.2.context.geometry`
-  Status: `pending`
+  Status: `in_progress`
   Goal:resolve exact typed existing geometry request under bound context;check returned reference/frame/snapshot against actual sources,retain original witness and cause,no value query or planned-output liveness.
+### G1-SLICE.5f.2.context.geometry.sources
+- ID: `G1-SLICE.5f.2.context.geometry.sources`
+  Status: `done`
+  Goal:preserve unambiguous actual frame/snapshot source identity even for zero-sized/empty opaque payloads before typed lookup;keep original source borrows and bounded book context companion.
+  Fixed P2 D379 native zero-sized payload alias;overview now reflects implemented bounded context binding,with remaining typed lookup explicit.
+  - [x] ROOT CAUSE: launcher `rustc --edition=2021 target/drafting_source_identity_probe.rs -o target/drafting_source_identity_probe`,then native binary:
+    distinct zero-sized positions share an address,size0,rc=0;actual original record identity needs nonzero owned storage before lookup.
+  - [x] ADDRESSED: launcher `cargo test -p sc-core --test drafting_source_record_contract --test drafting_context_binding_contract`:
+    source3/binding5 pass,rc=0;record/data borrows and is_same_record preserve zero/empty/non-Clone/private sources;initial adapted fixture import corrected before pass.
+  - [x] NO REGRESSION: strict selected lib/test lint/fmt and `cargo test -p sc-core --doc construction::context`:
+    9 source/companion examples/borrow guards plus5 overview examples pass,rc=0;whole old context/policy body and six old Rust fences exact;
+    book/publication118/374/1808/3393/native queries14/118/4/SUMMARY120/119 files,rc=0;1001 four Git/public spans/archive1455/32,per-generation21/64 and11/64,rc=0.
+  Commit:STITCHCAD-G1-0826. promotion:declined (existing actual immutable source binding/containment contract);typed geometry lookup next,whole feature verification pending.
+- ID: `G1-SLICE.5f.2.context.geometry.check`
+  Status: `pending`
+  Goal:exact requested point/edge reference and actual frame/snapshot source binding with original raw response/cause;no values,planned-output materialization or partial accepted program.
 - ID: `G1-SLICE.5f.2.program`
   Status: `pending`
   Goal:whole ordered scalar/drafting owner and complete logical limits;retain actual scalar recipe ordinals separately from genuine combined-program positions and original operation/document owners.

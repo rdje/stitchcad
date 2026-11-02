@@ -2,7 +2,7 @@
 
 New task lines: 400 UTF-8 bytes max.
 
-[Focused checks](annexes/checking-policy.md).
+[Checks](annexes/publication-checks.md#checks).
 
 Book changes require a completed owning leaf and exact maintained-reference authority before
 staging. Consume the authority producer's terminal result before starting the commit workflow.

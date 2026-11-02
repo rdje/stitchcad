@@ -124,7 +124,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Artifact cleanup](annexes/artifact-cleanup.md)
 - [Ledger pointer fixtures](annexes/ledger-fixtures.md)
 - [Historical archive reader](annexes/archive-reader.md)
-- [Checks during feature delivery](annexes/checking-policy.md)
+- [Checks during feature delivery](annexes/publication-checks.md#checks)
 - [Canonical formula rational values](annexes/formula-rationals.md)
 - [Publication checks and renderer authority](annexes/publication-checks.md)
 
@@ -133,6 +133,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Observed native and browser numerical execution](annexes/formula-irrational-platform.md)
 
 - [Drafting operation contracts](annexes/drafting-operation-contracts.md)
+- [Drafting context sources](annexes/drafting-context-sources.md)
 - [Native editing operation inputs](annexes/drafting-edit-inputs.md)
 - [Native Piece join contracts](annexes/drafting-join-contracts.md)
 - [Native join result topology](annexes/drafting-join-topology.md)

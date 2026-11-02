@@ -116,7 +116,7 @@ make wasm
 make book
 ```
 
-Per-feature checks follow the [focused-check policy](annexes/checking-policy.md).
+Per-feature checks follow the [focused-check policy](annexes/publication-checks.md#checks).
 These broader commands verify their documented scope. Full gate status and the next task are recorded in the
 repository's LIVE_STATUS.md and MEMORY.md. Feature changes update the book in the same commit.
 For an introduction, begin with [the learning path](learn/design-to-pattern.md); for a specific

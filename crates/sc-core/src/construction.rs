@@ -6,6 +6,9 @@
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-operation-contracts.md")]
 mod operation_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-context-sources.md")]
+mod context_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-edit-inputs.md")]
 mod editing_examples {}
 #[cfg(doctest)]
@@ -58,7 +61,7 @@ mod arguments;
 mod context;
 pub use context::{
     DraftingContext, DraftingContextError, DraftingContextSource, DraftingGeometryReference,
-    DraftingGeometrySource, DraftingGeometrySourceResult,
+    DraftingGeometrySource, DraftingGeometrySourceResult, DraftingSourceRecord,
 };
 mod operation_input;
 pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};

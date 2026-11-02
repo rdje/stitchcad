@@ -8,7 +8,7 @@ use sc_core::{
     command::DesignRevision,
     construction::{
         DraftingContextError, DraftingContextSource, DraftingGeometryReference,
-        DraftingGeometrySourceResult,
+        DraftingGeometrySourceResult, DraftingSourceRecord,
     },
     design::*,
     ontology::{CutPlan, EntityId, IdentityLedger, MaterialInventory, PieceInventory},
@@ -127,8 +127,8 @@ struct Snapshot {
 struct Source<'a> {
     root: &'a DesignInputs<EmptyHost>,
     revision: DesignRevision,
-    frame: Frame,
-    snapshot: Snapshot,
+    frame: DraftingSourceRecord<Frame>,
+    snapshot: DraftingSourceRecord<Snapshot>,
     cache: Vec<u8>,
     trace: Cell<u64>,
     ignore_refusal: bool,
@@ -139,14 +139,14 @@ impl<'a> Source<'a> {
         Self {
             root,
             revision: DesignRevision::from_counter(7),
-            frame: Frame {
+            frame: DraftingSourceRecord::new(Frame {
                 label: "private Cartesian frame é".into(),
                 origin: [0, 0],
                 axes: [[1, 0], [0, 1]],
-            },
-            snapshot: Snapshot {
+            }),
+            snapshot: DraftingSourceRecord::new(Snapshot {
                 label: "private empty snapshot".into(),
-            },
+            }),
             cache: vec![1, 2, 3],
             trace: Cell::new(0),
             ignore_refusal: false,
@@ -178,11 +178,11 @@ impl DraftingContextSource<EmptyHost> for Source<'_> {
         self.observed(3);
         &self.revision
     }
-    fn frame(&self) -> &Frame {
+    fn frame(&self) -> &DraftingSourceRecord<Frame> {
         self.observed(5);
         &self.frame
     }
-    fn snapshot(&self) -> &Snapshot {
+    fn snapshot(&self) -> &DraftingSourceRecord<Snapshot> {
         self.observed(6);
         &self.snapshot
     }
@@ -195,13 +195,19 @@ impl DraftingContextSource<EmptyHost> for Source<'_> {
         if self.ignore_refusal {
             // Deliberately broken return discipline must not clear the sink's first refusal.
             let _ = first;
-            let _ = sink.charge_text(&self.frame.label, self.location("drafting.frame.label"));
+            let _ = sink.charge_text(
+                &self.frame.data().label,
+                self.location("drafting.frame.label"),
+            );
             return Ok(());
         }
         first?;
-        sink.charge_text(&self.frame.label, self.location("drafting.frame.label"))?;
         sink.charge_text(
-            &self.snapshot.label,
+            &self.frame.data().label,
+            self.location("drafting.frame.label"),
+        )?;
+        sink.charge_text(
+            &self.snapshot.data().label,
             self.location("drafting.snapshot.label"),
         )?;
         charge_design_revision_resources(
@@ -232,7 +238,11 @@ fn bound_context_holds_actual_non_clone_sources_and_never_queries_geometry() -> 
     let root = root()?;
     let scope = scope(&root)?;
     let source = Source::new(&root);
-    let policy = limits(3, source.frame.label.len() + source.snapshot.label.len(), 3)?;
+    let policy = limits(
+        3,
+        source.frame.data().label.len() + source.snapshot.data().label.len(),
+        3,
+    )?;
     let context = scope
         .bind_drafting_context(&source, policy)
         .map_err(|e| e.to_string())?;
@@ -242,13 +252,13 @@ fn bound_context_holds_actual_non_clone_sources_and_never_queries_geometry() -> 
     assert!(std::ptr::eq(copied.frame(), &source.frame));
     assert!(std::ptr::eq(copied.snapshot(), &source.snapshot));
     assert_eq!(source.trace.get(), 123456);
-    assert_eq!(copied.frame().origin, [0, 0]);
-    assert_eq!(copied.frame().axes, [[1, 0], [0, 1]]);
+    assert_eq!(copied.frame().data().origin, [0, 0]);
+    assert_eq!(copied.frame().data().axes, [[1, 0], [0, 1]]);
     assert_eq!(copied.limits(), policy);
     assert_eq!(copied.demand().collection_entries(), 3);
     assert_eq!(
         copied.demand().text_bytes(),
-        source.frame.label.len() + source.snapshot.label.len()
+        source.frame.data().label.len() + source.snapshot.data().label.len()
     );
     assert_eq!(copied.demand().counter_bits(), 3);
     assert!(!format!("{copied:?}").contains("private"));

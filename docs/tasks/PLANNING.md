@@ -1187,12 +1187,8 @@ Fixed0696;[whole original ledger/proofs](../history/window28.md#stitchcad-devnot
 ## D375 — drafting chapters missing from the topic index
 Fixed0760;[whole cause/reproduction/fix](../history/window29.md#stitchcad-devnotes-part942md).
 
-## D376 — search-tool source inventory drift
-Fixed0816;[whole cause/reproduction/proofs](../history/window29.md#stitchcad-devnotes-part992md).
+D376/D377 fixed0816/0817;D378 fixed0825;[whole causes/proofs](../history/stitchcad-devnotes-part1001.md).
 
-## D377 — publication glossary/index navigation contract drift
-Fixed0817;[whole cause/reproduction/proofs](../history/window29.md#stitchcad-devnotes-part993md).
-
-## D378 — external drafting revision accounting
-Fixed0825,owner G1-SLICE.5f.2.context.bind. Reproduce:the new external source port must charge snapshot counters,but DesignRevision.resource_bits was crate-private;format/copy/supplied totals violate the accounting contract.
-Public charge_design_revision_resources now borrows actual magnitude/location. External-provider native checks pass5,including0/1/129-bit charges and exact128-bit refusal;source docs/book example6/strict lint pass0. No counter serialization or revision authority added.
+## D379 — opaque source payload address ambiguity
+Fixed0826,owner G1-SLICE.5f.2.context.geometry.sources. Native target/drafting_source_identity_probe proves distinct zero-sized positions share one payload address;opaque payload pointers alone cannot establish distinct original source records.
+Move-only DraftingSourceRecord supplies nonzero owned record storage and actual borrows,is_same_record ignores unsized metadata. Native source3/binding5/context9/overview5/strict lint pass0;typed lookup remains pending. No incorrect geometry binding was issued.

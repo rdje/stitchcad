@@ -7,6 +7,8 @@ use crate::{
 use core::fmt;
 mod binding;
 pub use binding::{DraftingContext, DraftingContextError};
+mod record;
+pub use record::DraftingSourceRecord;
 
 /// Exact requested geometric output kind and persistent reference, without a live lookup.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
@@ -27,16 +29,16 @@ pub enum DraftingGeometryReference {
 /// Provider records need neither `Copy` nor `Debug`; their private payload stays out of this view's
 /// debug output. This example constructs only raw fixture data, not a geometry snapshot:
 /// ```
-/// use sc_core::{construction::{DraftingGeometryReference, DraftingGeometrySource},
+/// use sc_core::{construction::{DraftingGeometryReference, DraftingGeometrySource, DraftingSourceRecord},
 ///     ontology::{EntityId, LocalTag, PointRef}};
 /// struct Snapshot;
-/// let frame: &str = "private authored frame definition";
+/// let frame = DraftingSourceRecord::new("private authored frame definition");
 /// let geometry: &[u8] = &[41, 42, 43];
-/// let snapshot = Snapshot;
+/// let snapshot = DraftingSourceRecord::new(Snapshot);
 /// let source = DraftingGeometrySource {
 ///     reference: DraftingGeometryReference::Point(
 ///         PointRef::new(EntityId::from_bits(10), LocalTag::new(2))),
-///     frame, snapshot: &snapshot, geometry,
+///     frame: &frame, snapshot: &snapshot, geometry,
 /// };
 /// let copied = source;
 /// assert!(std::ptr::eq(copied.geometry, geometry));
@@ -51,23 +53,23 @@ pub enum DraftingGeometryReference {
 ///     -> DraftingGeometrySource<'static, (), (), String> { source }
 /// ```
 /// A held source also prevents replacing its actual frame before the view's last use:
-/// ```compile_fail
-/// use sc_core::construction::{DraftingGeometryReference, DraftingGeometrySource};
-/// fn replace(frame: &mut String, reference: DraftingGeometryReference) {
+/// ```compile_fail,E0506
+/// use sc_core::construction::{DraftingGeometryReference, DraftingGeometrySource, DraftingSourceRecord};
+/// fn replace(frame: &mut DraftingSourceRecord<String>, reference: DraftingGeometryReference) {
 ///     let source = DraftingGeometrySource {
-///         reference, frame: &*frame, snapshot: &(), geometry: &(),
+///         reference, frame: &*frame, snapshot: &DraftingSourceRecord::new(()), geometry: &(),
 ///     };
-///     *frame = String::new();
-///     let _ = source.frame.len();
+///     *frame = DraftingSourceRecord::new(String::new());
+///     let _ = source.frame.data().len();
 /// }
 /// ```
 pub struct DraftingGeometrySource<'a, F: ?Sized, S: ?Sized, G: ?Sized> {
     /// Actual record's typed persistent output reference; not a replacement for the request.
     pub reference: DraftingGeometryReference,
     /// Actual authored Cartesian frame source of this record, not an edge parameter frame.
-    pub frame: &'a F,
+    pub frame: &'a DraftingSourceRecord<F>,
     /// Actual immutable snapshot containing this original record.
-    pub snapshot: &'a S,
+    pub snapshot: &'a DraftingSourceRecord<S>,
     /// Actual geometry source record; its data is neither cloned nor evaluated by this carrier.
     pub geometry: &'a G,
 }
@@ -103,9 +105,9 @@ pub type DraftingGeometrySourceResult<'a, F, S, G, E> =
 /// Earlier declared program outputs stay outside this existing-geometry lookup until execution
 /// creates them. Canonical semantic-target resolution remains a separate dependency obligation.
 pub trait DraftingContextSource<H: DesignMetadataHost> {
-    /// Actual authored Cartesian coordinate-system source, preserving its complete definition.
+    /// Actual authored Cartesian definition, held in its original owned source record.
     type Frame: ?Sized;
-    /// Actual complete immutable geometry snapshot, tied to this Design and represented revision.
+    /// Actual complete immutable snapshot payload, held in its original owned source record.
     type Snapshot: ?Sized;
     /// Original geometry record type, retaining creator/kind/frame provenance and actual data.
     type Geometry: ?Sized;
@@ -119,10 +121,10 @@ pub trait DraftingContextSource<H: DesignMetadataHost> {
     fn snapshot_revision(&self) -> &DesignRevision;
 
     /// Actual explicitly selected Cartesian frame source; choose no fallback or ambient frame.
-    fn frame(&self) -> &Self::Frame;
+    fn frame(&self) -> &DraftingSourceRecord<Self::Frame>;
 
     /// Actual complete immutable snapshot, not a caller-supplied liveness/certification flag.
-    fn snapshot(&self) -> &Self::Snapshot;
+    fn snapshot(&self) -> &DraftingSourceRecord<Self::Snapshot>;
 
     /// Charge all held context content before validation or geometry queries.
     ///

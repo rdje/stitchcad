@@ -89,6 +89,7 @@
   - [Joining the checked formula runtime](annexes/formula-execution-plan.md)
   - [Execute scalar construction recipes](annexes/formula-recipe-execution.md)
   - [Drafting operation contracts](annexes/drafting-operation-contracts.md)
+  - [Drafting context sources](annexes/drafting-context-sources.md)
   - [Native editing operation inputs](annexes/drafting-edit-inputs.md)
   - [Native Piece join contracts](annexes/drafting-join-contracts.md)
   - [Native join result topology](annexes/drafting-join-topology.md)
@@ -116,5 +117,4 @@
 - [Historical archive reader](annexes/archive-reader.md)
 - [Publication checks](annexes/publication-checks.md)
 - [Build and check the project](build-and-checks.md)
-- [Checks during feature delivery](annexes/checking-policy.md)
 - [Topic index](topic-index.md)
