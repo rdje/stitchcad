@@ -12,6 +12,8 @@ use crate::{
 };
 use core::fmt;
 mod initial;
+mod namespace;
+pub use namespace::{DraftingProgramInitialNamespace, DraftingProgramInitialNamespaceError};
 mod positions;
 mod roles;
 pub use initial::{

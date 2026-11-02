@@ -77,12 +77,13 @@ pub use program::{
     DraftingOutputPosition, DraftingOutputPositionError, DraftingOutputPositionRefusal,
     DraftingOutputRoleBindingIssue, DraftingOutputRoleError, DraftingOutputRoleMismatch,
     DraftingOutputRoleRefusal, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
-    DraftingProgramInputs, DraftingProgramLimits, DraftingProgramNameInputs,
-    DraftingProgramNameLimits, DraftingProgramNameShape, DraftingProgramNameWorkError,
-    DraftingProgramNameWorkRefusal, DraftingProgramNormalizationError,
-    DraftingProgramNormalizationRefusal, DraftingProgramOutputPositions, DraftingProgramShape,
-    DraftingProgramStep, DraftingProgramStepKind, DraftingProgramStepView,
-    NormalizedDraftingOperation, NormalizedDraftingProgram,
+    DraftingProgramInitialNamespace, DraftingProgramInitialNamespaceError, DraftingProgramInputs,
+    DraftingProgramLimits, DraftingProgramNameInputs, DraftingProgramNameLimits,
+    DraftingProgramNameShape, DraftingProgramNameWorkError, DraftingProgramNameWorkRefusal,
+    DraftingProgramNormalizationError, DraftingProgramNormalizationRefusal,
+    DraftingProgramOutputPositions, DraftingProgramShape, DraftingProgramStep,
+    DraftingProgramStepKind, DraftingProgramStepView, NormalizedDraftingOperation,
+    NormalizedDraftingProgram,
 };
 mod bezier;
 pub use arc::{

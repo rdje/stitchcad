@@ -557,5 +557,6 @@ binding enum alone cannot manufacture this private complete owner.
 Any failure discards the successful local prefix. `DraftingInitialError` keeps original roles and
 Allocation,Canonical,Source,Mismatch,PlannedCreator or Geometry causes with original indexes and
 witnesses. Allocation keeps its TryReserveError inline;boxes compact semantic diagnostics only.
-Debug omits authored names and opaque payloads. Reserved/cross-origin/repeated-name collisions,
-earlier-only mixed visibility,whole kind/dependency checking and values remain later stages.
+Debug omits authored names and opaque payloads. The [bounded actual initial namespace](formula-declarations.md#actual-mixed-program-initial-namespace)
+checks reserved/cross-origin/repeated names next. Earlier-only mixed visibility,whole kind/dependency
+checking and values remain later stages.

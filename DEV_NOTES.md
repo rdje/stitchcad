@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — complete original initial associations
+## _(2026-11-02 UTC)_ — actual bounded mixed initial namespace
 
-0848 borrows complete roles,reserves all initial slots,joins actual Root inventory before metadata,then checks returned inventory/name/header/snapshot. Opaque metadata stays under the honest port. Geometry scans all native creators before live lookup;original order/loans survive,no prefix/values.
-Focused initial3,strict selected lint/fmt/Rustdoc3 pass0;complete/repeated/empty,actual owner/header/snapshot faults and original causes checked. Lint128B diagnostic fixed by boxing canonical semantic cause;allocator stays inline. Actual bound-owner rustc escape1/keep0 matched expected lifetime cause.
-Book/publication118-374-1813-3421,26 old Rust fences unchanged/new full native fence exact0;1023 three Git/body/public spans exact,archive1477-54/generations21-64 and33-64. Context37968B;design/name chapters unchanged. Admission implemented with focused checks;no coupled verification claim.
-Promotion declined:existing actual-source/no-prefix doctrine. G1still6/18;Root-derived initial namespace/earlier-only mixed visibility next. Whole dependencies,allocator faults and coupled verification remain .5f.2.dependencies/.check/.verify;geometry execution stays later.
+0849 borrows complete initial associations,validates actual current Root inputs,then streams parameters/selected host rows/bound extras through existing reserved/collision rules. The nonallocating row facet replaces declaration-vector construction;original source pairs/typed host causes survive,no prefix.
+The private namespace owner exposes readonly visible_names and original inputs only. Scalar lets/planned outputs stay absent. Final review removed arbitrary host Debug/Display forwarding;explicit cause inspection preserves the original payload. No new drafting currentness/geometry query or value read occurs.
+Focused namespace2 and affected work3,strict library/target lint/fmt/Rustdoc3 pass0. Fixture Tolerance origin/borrowed-error conversion corrected. Actual Root/extra source loans,collisions,first host error and payload privacy checked;book/publication118-374-1815-3424,35 old/new exact Rust fences pass0.
+1024 three Git/body/public spans exact0;archive1478-55/generations21-64 and34-64. Declaration chapter25688B/context38073B;existing chapters/examples preserved. Promotion declined:existing actual-Root/no-prefix doctrine. G1still6/18;mixed order next,dependencies/allocator/coupled .verify remain pending.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

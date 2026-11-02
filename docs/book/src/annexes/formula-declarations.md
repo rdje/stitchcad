@@ -352,3 +352,53 @@ General Input metadata can now be matched to a supplied actual canonical scalar 
 the [general authored-read adapter](formula-runtime-validation.md#general-scalar-authored-reads).
 It validates source/identity/kind and preserves state; static metadata construction still fetches no
 value or registry proof. The canonical ScalarInputKind also converts explicitly to FormulaBindingKind.
+
+
+## Actual mixed-program initial namespace
+
+After [complete initial association](drafting-context-sources.md#bind-every-extra-initial-source),
+`BoundDraftingProgramInitials::bind_initial_namespace()` derives a private initial name map from
+that exact programme's containing Root. Complete held-content and prospective name bounds have
+already passed. The existing complete Root current-input check runs first,preserving its original
+parameter,canonical,Material,source and reference causes. It computes no value or readiness.
+
+The factory inserts all eight existing reserved declarations,then actual Root parameters,selected
+host measurement/Ease rows,and original bound extra initials. Parameters borrow their actual
+metadata tokens and canonical targets. Selected rows come from `DesignFormulaDeclarationSource`'s
+allocation-free iterator,not the older allocating declaration-vector factory. The immutable host
+contract retains actual selected table rows followed by Ease rows,including original fallible
+items;no new source registry or totals are accepted. Extra inputs keep their prior source bindings.
+
+Each insertion reuses `FormulaNamespace::with_initial()` and its original collision rules. There
+is no shadowing,repair,deduplication or successful returned prefix. A parameter/measurement clash
+retains Parameter then Measurement declarations;two host rows or repeated extras retain their two
+original occurrences. A reserved spelling retains fixed reserved metadata and the actual attempted
+source. The first refusal follows parameter,selected-row,extra order;later rows are not consumed
+after an earlier failure. Current-input validation precedes this streaming construction.
+
+```rust
+use sc_core::{construction::{BoundDraftingProgramInitials,DraftingInitialInputProvider},
+    design::DesignFormulaDeclarationSource,name::MachineToken,recipe::FormulaKind};
+fn initial_kind<H:DesignFormulaDeclarationSource,S:DraftingInitialInputProvider<H> + ?Sized>(
+    inputs:&BoundDraftingProgramInitials<'_, '_, '_, '_, '_, '_,H,S>,name:&MachineToken)
+    ->Result<FormulaKind,String> {
+    let names=inputs.bind_initial_namespace().map_err(|error|error.to_string())?;
+    names.visible_names().resolve(name).map(|declaration|declaration.kind())
+        .map_err(|error|error.to_string())
+}
+```
+
+`DraftingProgramInitialNamespace` owns the private map and borrows the complete original initial
+associations. `inputs()` reaches those exact roles,positions,bounded work,input and selected policy.
+`visible_names()` returns only a readonly scope borrowing the map allocation. Actual Unknown
+Length/Count metadata remains available by kind while its value stays unread. A bound existing
+point can be visible initially;the programme's own scalar lets and named native outputs are absent.
+For example,`let later:length=parameter` leaves `later` unbound in this initial scope,even when
+`parameter` is available. Earlier-only mixed visibility follows in a separate stage.
+
+`DraftingProgramInitialNamespaceError` retains complete original associations and the existing
+`DesignFormulaError`:original current-input/host cause,invalid initial declaration,or reserved/
+ambiguous-name sources. Debug omits authored names. The held drafting provider is not queried again
+for currentness or geometry during map construction. The metadata scope proves no whole programme
+kinds,canonical dependencies,argument execution,geometry values or release readiness. Logical name
+bounds are separate from allocator bytes/capacity and CPU work;coupled verification remains owned.

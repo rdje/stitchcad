@@ -3,14 +3,14 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0848 — complete initial associations (2026-11-02 UTC)
+## STITCHCAD-G1-0849 — actual bounded initial namespace (2026-11-02 UTC)
 
-Bind all original extra scalar/Length metadata to actual Root inventory/header/snapshot,retaining opaque source loans. Bind existing geometry only after rejecting every native programme creator;preserve original indexed causes and discard any local prefix. Reserve the complete vector before callbacks.
-Focused initial3,strict lint/fmt/Rustdoc3,actual owner lifetime escape1/keep0,book/publication118-374-1813-3421 and26 prior/new exact fences pass0. Archive1023 Git/body/public bytes exact;1477 logical/54 working. G1still6/18;admission implemented,ordered namespace/dependencies and coupled verification remain.
+Build a private initial map from actual Root parameters,selected borrowed host rows and complete bound extras after full bounds/current validation. Reuse original collision/typed host causes;readonly scope excludes scalar lets and planned outputs. Default diagnostics omit payloads;explicit causes remain original.
+Focused namespace2/affected work3,strict lint/fmt/Rustdoc3,book/publication118-374-1815-3424 and35 prior/new exact fences pass0. Archive1024 Git/body/public bytes exact;1478 logical/55 working. G1still6/18;mixed visibility,dependencies and coupled verification remain.
 
 # Sealed archive — earlier slices
 
-[Whole0847 actual initial metadata sources](docs/history/stitchcad-devnotes-part1023.md) retains exact source bytes.
+[Whole0848 complete initial associations](docs/history/stitchcad-devnotes-part1024.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

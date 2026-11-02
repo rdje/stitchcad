@@ -606,3 +606,120 @@ fn initial_binding_keeps_canonical_and_geometry_causes_and_rejects_all_program_c
     }
     Ok(())
 }
+
+#[test]
+fn initial_namespace_keeps_bound_extras_and_refuses_repeated_or_reserved_names_without_a_prefix(
+) -> TestResult {
+    use sc_core::recipe::{FormulaKind, FormulaNamespaceError};
+    let root = crate::initial_binding::root()?;
+    let other = crate::initial_binding::root()?;
+    let provider = Provider::new(&root, &other, Fault::None)?;
+    let context = scope(&root)?
+        .bind_drafting_context(&provider, limits(10000, 10000, 10000)?)
+        .map_err(|e| e.to_string())?;
+    let p = PointConstruction::new(
+        id(500),
+        FormulaExpressionDocument::new("1 mm".into())?,
+        FormulaExpressionDocument::new("1 mm".into())?,
+    );
+    let raw = DraftingProgramInputs::new(
+        context,
+        vec![
+            DraftingProgramStep::Scalar { ordinal: 1 },
+            DraftingProgramStep::Drafting(DraftingOperationInput::ConstructPoint(&p)),
+        ],
+    );
+    let pp = DraftingProgramLimits::new(limits(10000, 10000, 10000)?, 100, 1000, 10000);
+    let program = raw
+        .admit(&pp)
+        .map_err(|e| e.to_string())?
+        .normalized()
+        .map_err(|e| e.to_string())?;
+    let reserved = MachineToken::new("eps_geo")?;
+    let geometry_name = MachineToken::new("existing_point")?;
+    for mode in 0..3 {
+        let mut extras = vec![provider.initial(0)?, provider.initial(1)?];
+        extras.push(match mode {
+            0 => initial_geometry(&geometry_name, DraftingGeometryReference::Point(point(80)))?,
+            1 => provider.initial(0)?,
+            _ => initial_geometry(&reserved, DraftingGeometryReference::Point(point(80)))?,
+        });
+        let names = DraftingProgramNameInputs::new(
+            &program,
+            extras,
+            vec![DraftingOutputName::new(
+                2,
+                MachineToken::new("future_output")?,
+                DraftingGeometryNameSource::Point(&p),
+            )],
+        );
+        let policy = DraftingProgramNameLimits::new(limits(10000, 10000, 10000)?, 64, 128);
+        let work = names.admit_name_work(&policy).map_err(|e| e.to_string())?;
+        let positions = work.bind_output_positions().map_err(|e| e.to_string())?;
+        let roles = positions.bind_role_sources().map_err(|e| e.to_string())?;
+        let initial = roles.bind_initial_sources().map_err(|e| e.to_string())?;
+        provider.calls.set(0);
+        match initial.bind_initial_namespace() {
+            Ok(namespace) => {
+                assert_eq!(mode, 0);
+                assert!(std::ptr::eq(namespace.inputs(), &initial));
+                for (index, record) in provider.metadata.iter().enumerate() {
+                    let actual = namespace
+                        .visible_names()
+                        .resolve(&record.data().name)
+                        .map_err(|error| error.to_string())?;
+                    assert!(std::ptr::eq(actual.name(), record.data().name.as_str()));
+                    assert_eq!(
+                        actual.kind(),
+                        if index == 0 {
+                            FormulaKind::Length
+                        } else {
+                            FormulaKind::Count
+                        }
+                    );
+                }
+                assert_eq!(
+                    namespace
+                        .visible_names()
+                        .resolve(&geometry_name)
+                        .map_err(|error| error.to_string())?
+                        .kind(),
+                    FormulaKind::Point
+                );
+                assert!(namespace
+                    .visible_names()
+                    .resolve(&MachineToken::new("untouched")?)
+                    .is_err());
+                assert!(namespace
+                    .visible_names()
+                    .resolve(&MachineToken::new("future_output")?)
+                    .is_err());
+            }
+            Err(error) => {
+                assert!(std::ptr::eq(error.inputs(), &initial));
+                assert!(!format!("{error:?}").contains("private"));
+                match error.cause() {
+                    DesignFormulaError::Namespace(FormulaNamespaceError::AmbiguousName {
+                        sources,
+                    }) => {
+                        assert_eq!(mode, 1);
+                        let [first, second] = **sources;
+                        assert!(std::ptr::eq(first.name(), second.name()));
+                    }
+                    DesignFormulaError::Namespace(FormulaNamespaceError::ReservedBinding {
+                        attempted,
+                        ..
+                    }) => {
+                        assert_eq!(mode, 2);
+                        assert!(std::ptr::eq(attempted.name(), reserved.as_str()));
+                    }
+                    other => {
+                        return Err(format!("original extra collision expected:{other:?}").into())
+                    }
+                }
+            }
+        }
+        assert_eq!(provider.calls.get(), 0);
+    }
+    Ok(())
+}

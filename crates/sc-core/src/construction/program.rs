@@ -17,6 +17,7 @@ pub use name_inputs::{
     DraftingInitialError, DraftingInitialRefusal, DraftingOutputName, DraftingOutputPosition,
     DraftingOutputPositionError, DraftingOutputPositionRefusal, DraftingOutputRoleBindingIssue,
     DraftingOutputRoleError, DraftingOutputRoleMismatch, DraftingOutputRoleRefusal,
+    DraftingProgramInitialNamespace, DraftingProgramInitialNamespaceError,
     DraftingProgramNameInputs, DraftingProgramNameLimits, DraftingProgramNameShape,
     DraftingProgramNameWorkError, DraftingProgramNameWorkRefusal, DraftingProgramOutputPositions,
 };

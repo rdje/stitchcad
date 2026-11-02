@@ -958,18 +958,21 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0847 actual initial metadata source loans;[whole scope/proofs](../history/stitchcad-devnotes-part1023.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial.check`
   Status: `done`
-  Goal:whole bounded original initial associations;no values,accepted prefix or all-future geometry.
-  - [x] ROOT CAUSE: 0848 launcher `cargo test -p sc-core --test drafting_context_binding_contract initial_binding`:
-    focused3 pass;complete/repeated/empty loans,Unknown and actual owner/header/snapshot mismatches,original causes/first index,rc=0.
-  - [x] ADDRESSED: 0848 same target rejects point/edge programme creators before live lookup despite snapshot presence;
-    strict library/selected-target clippy and fmt pass after compacting128B canonical diagnostic;allocator cause stays inline,rc=0.
-  - [x] NO REGRESSION: 0848 launcher `cargo test -p sc-core --doc construction::program::name_inputs::initial` docs3,
-    direct actual-owner rustc escape1/keep0,book/publication118/374/1813/3421,26 old/new exact fences,rc=0;
-    1023 Git/body/public spans/archive1477/54,generations21/64 and33/64,rc=0.
-  Commit:STITCHCAD-G1-0848. Promotion declined:existing actual-owner/no-prefix doctrine. Admission implementation done with focused checks;namespace order/dependencies and allocator/coupled .verify pending.
+  Goal:0848 complete initial associations;[whole scope/proofs](../history/stitchcad-devnotes-part1024.md).
 - ID: `G1-SLICE.5f.2.namespace.order`
-  Status: `pending`
+  Status: `in_progress`
   Goal:actual Root and explicit always-visible names plus only earlier scalar/native declarations in mixed order;check reserved/cross-origin/repeated headers and self/future names without values or metadata-prefix acceptance.
+- ID: `G1-SLICE.5f.2.namespace.order.initial`
+  Status: `done`
+  Goal:actual Root-derived private initial map;original sources/first causes,no values.
+  - [x] ROOT CAUSE: 0849 `cargo test -p sc-core --test drafting_context_binding_contract initial_namespace`:namespace2 pass;actual loans/collisions/typed host cause,no scalar/output names,rc=0.
+  - [x] ADDRESSED: 0849 `cargo test -p sc-core --test drafting_context_binding_contract program_name_work`:work3 pass;bounds before row items,Root current/readonly scope,payload privacy,rc=0.
+  - [x] NO REGRESSION: 0849 selected library/target strict clippy,fmt and `cargo test -p sc-core --doc construction::program::name_inputs::namespace` docs3;
+    book/publication118/374/1815/3424,35 old/new exact fences,1024 Git/body/public spans/archive1478/55,generations21/64 and34/64,rc=0.
+  Commit:STITCHCAD-G1-0849. Promotion declined:existing actual-Root/no-prefix doctrine. Mixed visibility/dependencies and allocator/coupled verification pending.
+- ID: `G1-SLICE.5f.2.namespace.order.mixed`
+  Status: `pending`
+  Goal:earlier-only genuine mixed positions and scalar ordinals;check original headers/operands before exposing each actual output,no self/future name or whole acceptance from metadata alone.
 - ID: `G1-SLICE.5f.2.dependencies`
   Status: `pending`
   Goal:all original formula/geometry/semantic dependencies,source frame/current registry/output provenance;canonical Pocket kind/domain/state and Buttonhole button-size dependency,no separately authored hole length or approximation.

@@ -26,6 +26,7 @@ struct Host {
     factories: Cell<usize>,
     reads: Cell<usize>,
     validations: Cell<usize>,
+    reject_items: bool,
 }
 impl DesignMetadataHost for Host {
     type Error = SourceError;
@@ -122,12 +123,16 @@ struct Rows<'a> {
     rows: std::slice::Iter<'a, Row>,
     canonical: &'a CanonicalInputs,
     reads: &'a Cell<usize>,
+    reject_items: bool,
 }
 impl<'a> Iterator for Rows<'a> {
     type Item = Result<FormulaDeclaration<'a>, SourceError>;
     fn next(&mut self) -> Option<Self::Item> {
         let row = self.rows.next()?;
         self.reads.set(self.reads.get() + 1);
+        if self.reject_items {
+            return Some(Err(SourceError::Rejected));
+        }
         Some(
             self.canonical
                 .length(row.target)
@@ -165,6 +170,7 @@ impl DesignFormulaDeclarationSource for Host {
             rows: rows.iter(),
             canonical,
             reads: &self.reads,
+            reject_items: self.reject_items,
         }
     }
 }
@@ -201,6 +207,7 @@ fn actual_host_rows_and_complete_populations_precede_binding_or_namespace_work()
         factories: Cell::new(0),
         reads: Cell::new(0),
         validations: Cell::new(0),
+        reject_items: false,
     };
     let root = root_with_host(
         "let scalar:length=1 mm\nassert closure:eps_geo=scalar==1 mm",
@@ -449,5 +456,189 @@ fn empty_name_work_still_reserves_all_reserved_metadata() -> TestResult {
             required: 8
         }
     );
+    Ok(())
+}
+
+#[test]
+fn initial_namespace_uses_actual_root_rows_and_keeps_original_collision_or_host_causes(
+) -> TestResult {
+    use sc_core::recipe::{
+        FormulaDeclarationSource, FormulaKind, FormulaNamespaceError, FormulaOrigin,
+    };
+    use std::error::Error;
+    for (row_names, reject, expected_reads) in [
+        (["measured_width", "measured_height"], false, 2),
+        (["parameter", "measured_height"], false, 1),
+        (["measured_width", "measured_width"], false, 2),
+        (["eps_geo", "measured_height"], false, 1),
+        (["measured_width", "measured_height"], true, 1),
+    ] {
+        let host = Host {
+            rows: row_names
+                .into_iter()
+                .enumerate()
+                .map(|(index, name)| {
+                    Ok(Row {
+                        id: id(91 + index as u128),
+                        name: MachineToken::new(name)?,
+                        target: id(101 + index as u128),
+                    })
+                })
+                .collect::<TestResult<Vec<_>>>()?,
+            factories: Cell::new(0),
+            reads: Cell::new(0),
+            validations: Cell::new(0),
+            reject_items: reject,
+        };
+        let canonical = CanonicalInputs::new(
+            [101, 102]
+                .into_iter()
+                .map(|n| {
+                    LengthDeclaration::new(LengthDeclarationDefinition {
+                        id: id(n),
+                        source: id(n + 1000),
+                        state: LengthState::Unknown {
+                            observation: id(n + 2000),
+                        },
+                    })
+                })
+                .collect::<Result<Vec<_>, _>>()?,
+            vec![],
+        )?;
+        let root = root_with_host(
+            "let later:length=parameter",
+            vec![],
+            host,
+            canonical,
+            vec![DesignParameterDefinition {
+                id: id(93),
+                token: MachineToken::new("parameter")?,
+                target: DesignParameterTarget::Length(id(101)),
+            }],
+            DesignSourceReferences {
+                measurement_table: Some(id(90)),
+                ease_set: None,
+                size_set: None,
+            },
+        )?;
+        let source = Source::new(&root);
+        let context = scope(&root)?
+            .bind_drafting_context(&source, limits(1000, 10000, 1000)?)
+            .map_err(|e| e.to_string())?;
+        let raw =
+            DraftingProgramInputs::new(context, vec![DraftingProgramStep::Scalar { ordinal: 1 }]);
+        let pp = DraftingProgramLimits::new(limits(1000, 10000, 1000)?, 100, 1000, 10000);
+        let program = raw
+            .admit(&pp)
+            .map_err(|e| e.to_string())?
+            .normalized()
+            .map_err(|e| e.to_string())?;
+        let names = DraftingProgramNameInputs::new(&program, vec![], vec![]);
+        let policy = DraftingProgramNameLimits::new(limits(1000, 10000, 1000)?, 64, 128);
+        let work = names.admit_name_work(&policy).map_err(|e| e.to_string())?;
+        let positions = work.bind_output_positions().map_err(|e| e.to_string())?;
+        let roles = positions.bind_role_sources().map_err(|e| e.to_string())?;
+        let initial = roles.bind_initial_sources().map_err(|e| e.to_string())?;
+        let host = root.sources().host();
+        let factories = host.factories.get();
+        let validations = host.validations.get();
+        source.trace.set(0);
+        assert_eq!(host.reads.get(), 0);
+        let result = initial.bind_initial_namespace();
+        assert_eq!(host.factories.get(), factories + 1);
+        assert_eq!(host.reads.get(), expected_reads);
+        assert!(host.validations.get() > validations);
+        assert_eq!(source.trace.get(), 0);
+        match result {
+            Ok(namespace) => {
+                assert!(!reject && row_names == ["measured_width", "measured_height"]);
+                assert!(std::ptr::eq(namespace.inputs(), &initial));
+                let parameter = &root
+                    .parameters()
+                    .parameters()
+                    .first()
+                    .ok_or("actual parameter")?
+                    .definition()
+                    .token;
+                let bound = namespace
+                    .visible_names()
+                    .resolve(parameter)
+                    .map_err(|error| error.to_string())?;
+                assert!(std::ptr::eq(bound.name(), parameter.as_str()));
+                assert_eq!(bound.origin(), FormulaOrigin::Parameter);
+                for row in &host.rows {
+                    let actual = namespace
+                        .visible_names()
+                        .resolve(&row.name)
+                        .map_err(|error| error.to_string())?;
+                    assert!(std::ptr::eq(actual.name(), row.name.as_str()));
+                    assert_eq!(actual.kind(), FormulaKind::Length);
+                    assert!(
+                        matches!(actual.source(),FormulaDeclarationSource::LengthInput {declaration,..} if std::ptr::eq(declaration,root.inputs().length(row.target).ok_or("actual target")?))
+                    );
+                }
+                assert!(namespace
+                    .visible_names()
+                    .resolve(&MachineToken::new("later")?)
+                    .is_err());
+                assert_eq!(
+                    namespace
+                        .visible_names()
+                        .resolve(&MachineToken::new("eps_geo")?)
+                        .map_err(|error| error.to_string())?
+                        .origin(),
+                    FormulaOrigin::Tolerance
+                );
+                assert!(!format!("{namespace:?}").contains("measured"));
+            }
+            Err(error) => {
+                assert!(std::ptr::eq(error.inputs(), &initial));
+                assert!(!format!("{error:?} {error}").contains("measured_width"));
+                match error.cause() {
+                    DesignFormulaError::Inputs(cause) => {
+                        assert!(reject);
+                        assert!(
+                            matches!(cause.as_ref(),DesignInputsError::References(cause) if **cause==SourceError::Rejected)
+                        );
+                        assert!(error.source().is_some());
+                    }
+                    DesignFormulaError::Namespace(FormulaNamespaceError::ReservedBinding {
+                        attempted,
+                        ..
+                    }) => {
+                        assert_eq!(attempted.name(), "eps_geo");
+                        assert_eq!(attempted.origin(), FormulaOrigin::Measurement);
+                    }
+                    DesignFormulaError::Namespace(FormulaNamespaceError::AmbiguousName {
+                        sources,
+                    }) => {
+                        let [first, second] = **sources;
+                        assert_eq!(second.origin(), FormulaOrigin::Measurement);
+                        assert_eq!(
+                            first.origin(),
+                            if row_names[0] == "parameter" {
+                                FormulaOrigin::Parameter
+                            } else {
+                                FormulaOrigin::Measurement
+                            }
+                        );
+                        assert!(std::ptr::eq(
+                            second.name(),
+                            host.rows
+                                .get(if row_names[0] == "parameter" { 0 } else { 1 })
+                                .ok_or("original conflicting row")?
+                                .name
+                                .as_str()
+                        ));
+                    }
+                    other => {
+                        return Err(
+                            format!("original namespace/host cause expected:{other:?}").into()
+                        )
+                    }
+                }
+            }
+        }
+    }
     Ok(())
 }
