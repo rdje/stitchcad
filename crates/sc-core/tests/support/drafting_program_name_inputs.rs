@@ -24,7 +24,8 @@ fn point(n: u128) -> PointRef {
 
 #[test]
 fn raw_names_keep_all_six_actual_sources_global_names_and_original_vectors() -> TestResult {
-    let root = root()?;
+    // No statements, but actual authored Root text remains before every later component.
+    let root = super::root_with_recipe(" \n")?;
     let source = Source::new(&root);
     let context = scope(&root)?
         .bind_drafting_context(&source, limits(1000, 1000, 1000)?)
@@ -221,6 +222,54 @@ fn raw_names_keep_all_six_actual_sources_global_names_and_original_vectors() -> 
         field:"drafting.names.edge_roles.active_roles",index:Some(5),..}} if owner==id(105))
     );
     assert_eq!(limited.finish(), Err(error));
+    // Empty containing arenas still retain actual Root/context fields before the17 name entries.
+    let raw_entries =
+        context.scope().demand().collection_entries() + context.demand().collection_entries();
+    let full_entries = raw_entries + 17;
+    let full_bytes = context.scope().demand().text_bytes()
+        + context.demand().text_bytes()
+        + scalar_name.as_str().len()
+        + name_bytes
+        + document_bytes
+        + 11
+        + 10;
+    let full_bits = context.scope().demand().counter_bits() + context.demand().counter_bits();
+    source.trace.set(0);
+    let mut meter = DesignResourceMeter::new(limits(full_entries, full_bytes, full_bits)?);
+    names.charge_resources(&mut meter)?;
+    let full = meter.finish()?;
+    assert_eq!(
+        (
+            full.collection_entries(),
+            full.text_bytes(),
+            full.counter_bits()
+        ),
+        (full_entries, full_bytes, full_bits)
+    );
+    assert_eq!(source.trace.get(), 2);
+    let mut limited = DesignResourceMeter::new(limits(full_entries - 1, full_bytes, full_bits)?);
+    let error = names
+        .charge_resources(&mut limited)
+        .expect_err("one cumulative allowance");
+    assert!(matches!(error,DesignResourceLimitError::Count {
+        unit:DesignResourceCount::CollectionEntries,consumed,requested:1,
+        location:DesignResourceLocation {owner:Some(owner),
+            field:"drafting.names.edge_roles.active_roles",index:Some(5),..},..
+    } if consumed == full_entries - 1 && owner == id(105)));
+    assert_eq!(limited.finish(), Err(error));
+    source.trace.set(0);
+    let mut limited = DesignResourceMeter::new(limits(usize::MAX, 1, u64::MAX)?);
+    assert!(matches!(
+        names.charge_resources(&mut limited),
+        Err(DesignResourceLimitError::Count {
+            location: DesignResourceLocation {
+                field: "recipe.source",
+                ..
+            },
+            ..
+        })
+    ));
+    assert_eq!(source.trace.get(), 0);
     Ok(())
 }
 
@@ -256,7 +305,9 @@ fn empty_name_inputs_keep_the_actual_program_without_callbacks_or_implicit_names
         )
         .expect_err("earlier text refusal");
     assert_eq!(names.charge_extra_resources(&mut meter), Err(first));
+    assert_eq!(names.charge_resources(&mut meter), Err(first));
     assert_eq!(meter.finish(), Err(first));
+    assert_eq!(source.trace.get(), 0);
     Ok(())
 }
 

@@ -932,22 +932,26 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.namespace.admit.fields`
   Status: `done`
   Goal:0838 complete additional held fields;[whole scope/proofs](../history/stitchcad-devnotes-part1014.md).
-### G1-SLICE.5f.2.namespace.admit.program
 - ID: `G1-SLICE.5f.2.namespace.admit.program`
   Status: `done`
-  Goal:compose actual Root/context/raw program plus complete normalized source/recipe/native slots,nodes and call-argument vectors;exhaustive owner fields/fixed literal guards,no conservative counts substituted for actual held data.
-  - [x] ROOT CAUSE: 0839 launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
-    native19 pass;actual retained44 versus prospective84,unused source/call vectors and repeated native arenas count with unchanged text/counter demand;fresh source charge only,rc=0.
-  - [x] ADDRESSED: 0839 same target preserves source-call owner82/node2,repeated point owner100/mixed index4,
-    original first refusal and empty complete Root/context demand;`cargo test -p sc-core --doc construction::program` private/lifetime guards/examples12 pass,rc=0.
-  - [x] NO REGRESSION: 0839 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    book/pure publication118/374/1810/3408,nine prior fences/new native-book example exact,rc=0;
-    1014 three Git/body/public spans/archive1468/45,per-generation21/64 and24/64,rc=0.
-  Commit:STITCHCAD-G1-0839. promotion:declined (existing exhaustive-owner/restricted-sink doctrine);whole content/name-work/association and semantic verification remain pending.
-  Check discipline:lost prior lint result discarded;new Copy-clone lint fixed and serial suite rerun0. Accidental publication main(--help) interrupted;partial probe output is not a campaign verdict,pure check rerun0.
+  Goal:0839 complete raw/retained program fields;[whole scope/proofs](../history/stitchcad-devnotes-part1015.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.bounds`
-  Status: `pending`
+  Status: `in_progress`
   Goal:fresh cumulative full content and explicit conservative prospective name-work bounds before namespace factories;actual complete original fields,first typed refusal and checked arithmetic,no caller totals or accepted prefix.
+- ID: `G1-SLICE.5f.2.namespace.admit.bounds.content`
+  Status: `done`
+  Goal:one fresh cumulative actual normalized-program and complete additional-name sink walk;original order/owners/first refusal,no cached demand or namespace callbacks.
+  - [x] ROOT CAUSE: 0840 launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
+    native19 pass;full actual Root/context plus17 extra entries/all bytes/counters,final role-index refusal preserves cumulative consumption,rc=0.
+  - [x] ADDRESSED: 0840 same target preserves original owner105/output index5,Root text before source charging,
+    empty earlier latched refusal and fresh charge-only callbacks;whitespace fixture fixes initial empty-text test assumption,rc=0.
+  - [x] NO REGRESSION: 0840 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
+    `cargo test -p sc-core --doc construction::program::name_inputs` five guards/examples pass,rc=0;
+    book/publication118/374/1810/3409,ten old fences/new example and1015 Git/body/public spans exact,archive1469/46,generations21/64 and25/64,rc=0.
+  Commit:STITCHCAD-G1-0840. promotion:declined (existing cumulative-sink/actual-owner doctrine);prospective work and source/position association remain pending.
+- ID: `G1-SLICE.5f.2.namespace.admit.bounds.workspace`
+  Status: `pending`
+  Goal:explicit complete prospective name-work limits and private bounded owner;actual selected host declarations before namespace allocation,no caller-count substitution or accepted prefix.
 - ID: `G1-SLICE.5f.2.namespace.admit.association`
   Status: `pending`
   Goal:after complete bounds,bind exact original program positions/fixed schemas/typed role metadata and actual initial sources;reject mismatches/future initial geometry before values,retain full owners and original first cause in private admission.

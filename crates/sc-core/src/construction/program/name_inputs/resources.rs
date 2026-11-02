@@ -7,7 +7,7 @@ use crate::{
     },
     design::{
         charge_length_declaration_resources, DesignMetadataHost, DesignResourceLimitError,
-        DesignResourceLocation, DesignResourceScope, DesignResourceSink,
+        DesignResourceLocation, DesignResourceScope, DesignResourceSink, DesignResourceSource,
     },
     ontology::EntityId,
     recipe::{FormulaDeclaration, FormulaDeclarationSource as S},
@@ -18,6 +18,38 @@ fn location(owner: Option<EntityId>, field: &'static str, index: usize) -> Desig
         owner,
         field,
         index: Some(index),
+    }
+}
+impl<H: DesignResourceSource, S: DraftingContextSource<H> + ?Sized>
+    DraftingProgramNameInputs<'_, '_, '_, H, S>
+{
+    /// Charge the complete actual containing normalized program,then all additional name fields
+    /// into the same cumulative sink. Both exhaustive producers run freshly;prior demands and
+    /// conservative bounds supply no credit. Repeated source occurrences count in both components.
+    /// No namespace allocation,source validation,position association or value query occurs.
+    /// This is held-content accounting;prospective name work and whole admission remain separate.
+    /// # Errors
+    /// Original first raw/normalized field refusal precedes additional-name fields;the sink is
+    /// never reset and an earlier failure survives even an empty program and empty name vectors.
+    ///
+    /// ```
+    /// use sc_core::{construction::{DraftingContextSource, DraftingProgramNameInputs},
+    ///     design::{DesignResourceDemand, DesignResourceLimitError, DesignResourceLimits,
+    ///     DesignResourceMeter, DesignResourceSource}};
+    /// fn complete_name_demand<H:DesignResourceSource,S:DraftingContextSource<H> + ?Sized>(
+    ///     names:&DraftingProgramNameInputs<'_, '_, '_,H,S>,policy:DesignResourceLimits)
+    ///     -> Result<DesignResourceDemand,DesignResourceLimitError> {
+    ///     let mut meter=DesignResourceMeter::new(policy);
+    ///     names.charge_resources(&mut meter)?;
+    ///     meter.finish()
+    /// }
+    /// ```
+    pub fn charge_resources(
+        &self,
+        sink: &mut dyn DesignResourceSink,
+    ) -> Result<(), DesignResourceLimitError> {
+        self.program.charge_resources(sink)?;
+        self.charge_extra_resources(sink)
     }
 }
 fn initial(

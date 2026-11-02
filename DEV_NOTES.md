@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — actual retained program accounting
+## _(2026-11-02 UTC)_ — complete cumulative name content
 
-0839 composes fresh raw Root/context/mixed/native fields with exhaustive retained source/statement/slot/node/call-index vectors. Fixed Copy metadata/literals and borrowed names add no buffers;actual lengths replace neither old demand nor conservative normalization bounds.
-Native19 passes exact44 extra entries against prior84 prospective records,nested source-call and repeated-point refusals,empty-context retention and first-failure propagation. Strict selected lint passed after removing one Copy clone in the test;program doctests12 pass0.
-Book/pure publication118-374-1810-3408,nine previous Rust fences/new native-book example,1014 three Git/body/public spans exact0;archive1468-45/per-generation21-64 and24-64. Accidental publication main(--help) started probes;owned run interrupted,partial campaign is no verdict.
-Promotion declined: existing exhaustive-owner/restricted-sink contract. G1still6/18;complete content/name-work/association admission next,whole feature verification deferred.
+0840 charge_resources composes the fresh actual normalized-program producer before complete additional names in one restricted sink. No demand credits or reset;repeated source occurrences remain charged in both components,without association/namespace/source/value acceptance.
+Native19 rerun passed complete Root/context plus17 extra entries/all bytes/counter bits,final catalogue refusal at cumulative consumption,Root text precedence and empty first failure. Initial text assertion used an empty recipe;diagnosed fixture and retained whitespace-only actual source instead.
+Strict selected lint/name-input doctests5 pass0. Book/pure publication118-374-1810-3409,ten previous Rust fences/new native-book example,1015 whole Git/body/public spans exact0;archive1469-46/per-generation21-64 and25-64.
+Promotion declined: existing cumulative restricted-sink/actual-owner doctrine. G1still6/18;prospective name-work owner and actual selected-host enumeration before namespace allocation next,whole verification deferred.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

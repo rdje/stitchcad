@@ -509,3 +509,34 @@ fn program_demand<H:DesignResourceSource,S:DraftingContextSource<H> + ?Sized>(
 This producer performs no normalization,source currentness,geometry lookup or numeric evaluation.
 The additional-name producer composes separately into the same cumulative sink;complete content
 and prospective name-work bounds must still precede namespace construction and ordered checking.
+
+### One cumulative complete name-content walk
+
+`DraftingProgramNameInputs::charge_resources(sink)` now composes the two complete producers in
+order:actual normalized program first,additional initial/output names and their original sources
+second. The same sink retains all earlier consumption and its original first refusal. Repeated
+source content counts in both logical occurrences;no old admitted demand provides credit.
+
+For the six-source example,the empty program's normalized vectors add zero entries but its actual
+Root/context remain. The17 additional entries and all name/document/key bytes follow those fields.
+A budget one entry below the complete sum refuses the final edge-role association at output index5
+with the original operation owner;its consumed count includes the earlier Root/context entries.
+A Root text refusal precedes context charging and every additional-name field. Empty inputs still
+preserve an earlier cumulative failure.
+
+```rust
+use sc_core::{construction::{DraftingContextSource, DraftingProgramNameInputs},
+    design::{DesignResourceDemand, DesignResourceLimitError, DesignResourceLimits,
+    DesignResourceMeter, DesignResourceSource}};
+fn complete_name_demand<H:DesignResourceSource,S:DraftingContextSource<H> + ?Sized>(
+    names:&DraftingProgramNameInputs<'_, '_, '_,H,S>,policy:DesignResourceLimits)
+    -> Result<DesignResourceDemand,DesignResourceLimitError> {
+    let mut meter=DesignResourceMeter::new(policy);
+    names.charge_resources(&mut meter)?;
+    meter.finish()
+}
+```
+
+Success accounts held logical content only. It performs no namespace construction,position/source
+association,currentness check or value query. Prospective namespace work and whole admission remain
+the next stage;this producer introduces no alternate Root or caller-provided demand.
