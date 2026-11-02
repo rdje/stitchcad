@@ -183,18 +183,37 @@ impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
                 name.resource_text(),
                 location(Some(owner), "drafting.names.outputs.name", index),
             )?;
-            match *source {
-                G::Point(p) => I::ConstructPoint(p).charge_resources(sink)?,
-                G::Line(l) => I::DrawLine(l).charge_resources(sink)?,
-                G::CenterArc(a) => I::DrawArc(a).charge_resources(sink)?,
-                G::Bezier(b) => I::DrawBezier(b).charge_resources(sink)?,
-                G::PointRole(role) => role.catalog().charge_retained_resources(index, sink)?,
-                G::EdgeRole(role) => role.catalog().charge_retained_resources(
-                    OutputRoleResourceKind::Edge,
-                    index,
-                    sink,
-                )?,
-            }
+            source.charge_resources(sink, index)?;
+        }
+        Ok(())
+    }
+}
+
+impl G<'_> {
+    /// Append this complete actual source component to a cumulative sink. Fixed schemas charge
+    /// their original held fields;typed catalogues charge raw definitions/active lists,all retained
+    /// indexes/associations and key text. The explicit index identifies the original source
+    /// occurrence in its containing collection;it supplies no resource total or admission grant.
+    /// Global output-name text and containing inventories compose separately. Providers may reuse
+    /// this producer when accounting actual planned-source parent inventories before queries.
+    /// # Errors
+    /// Original first actual field refusal,including an earlier latched failure for fixed sources.
+    pub fn charge_resources(
+        self,
+        sink: &mut dyn DesignResourceSink,
+        index: usize,
+    ) -> Result<(), DesignResourceLimitError> {
+        match self {
+            G::Point(p) => I::ConstructPoint(p).charge_resources(sink)?,
+            G::Line(l) => I::DrawLine(l).charge_resources(sink)?,
+            G::CenterArc(a) => I::DrawArc(a).charge_resources(sink)?,
+            G::Bezier(b) => I::DrawBezier(b).charge_resources(sink)?,
+            G::PointRole(role) => role.catalog().charge_retained_resources(index, sink)?,
+            G::EdgeRole(role) => role.catalog().charge_retained_resources(
+                OutputRoleResourceKind::Edge,
+                index,
+                sink,
+            )?,
         }
         Ok(())
     }

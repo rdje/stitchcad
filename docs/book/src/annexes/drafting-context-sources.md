@@ -411,7 +411,58 @@ All held parent inventories,retained indexes and duplicated snapshots belong in 
 exhaustive content walk. Queries allocate/clone nothing,read no values and perform no existing-
 geometry lookup to make a future output live. Missing or wrong-family sources remain refusals.
 
-The provider shares the context port's immutable honest/exhaustive integration obligation. Core's
-next owned binding stage must still compare actual input owner,catalogue/definition/tag and original
+The provider shares the context port's immutable honest/exhaustive integration obligation. The
+complete binding stage below compares actual input owner,catalogue/definition/tag and original
 frame/snapshot record identity. This raw facet supplies no bound output,namespace prefix,currentness,
 physical feasibility or whole-program approval. Original causes remain typed throughout.
+
+## Bind every planned role source
+
+`DraftingProgramOutputPositions::bind_role_sources()` borrows the complete admitted position owner
+and first reserves all original output slots fallibly. The earlier explicit name-work policy
+already bounds this complete population. Allocation failure retains the original TryReserveError
+inline,before provider queries or a diagnostic box;allocator-fault integration verification remains
+with the final feature gate. Fixed-schema outputs use None slots and perform no planned lookup.
+
+For each unresolved role,in original output-vector order,the readonly provider returns an authentic
+family field and original context records. Core checks actual creating input owner first,then
+Point/Edge role kind,actual admitted catalogue owner,original definition and active-tag fields,
+logical reference,frame record and snapshot record. Equal IDs or equal-looking schema/catalogue
+copies do not replace those original owners. Frame/snapshot comparison uses SourceRecord identity,
+so equal payloads and empty payloads cannot substitute another record. No value or existing-
+geometry lookup,namespace insertion,identity issuance or transform runs here.
+
+`BoundDraftingProgramOutputRoles` has private fields,borrows its original positions and owns only
+the complete original-order result vector. `sources()` contains None for fixed schemas and Some
+for checked planned-role sources. For `[role,fixed,role]`,the complete result is
+`[Some(original),None,Some(original)]` with two provider queries. Repeated occurrences remain
+separate;empty and all-fixed lists query nothing. The owner cannot outlive its position loan and
+opaque provider records require neither Clone nor Debug.
+
+```rust
+use sc_core::{construction::{DraftingPlannedOutputProvider, DraftingProgramOutputPositions},
+    design::DesignMetadataHost};
+fn bind_sources<H:DesignMetadataHost,S:DraftingPlannedOutputProvider<H> + ?Sized>(
+    positions:&DraftingProgramOutputPositions<'_, '_, '_, '_,H,S>)->Result<usize,String> {
+    let bound=positions.bind_role_sources().map_err(|error|error.to_string())?;
+    Ok(bound.sources().len())
+}
+```
+
+`DraftingOutputRoleError` retains the actual positions/input/policy. Its refusal is original
+Allocation,Source with original output index/typed cause,or Mismatch with complete returned source,
+original output index and first issue. `Error::source()` preserves original allocator/provider
+causes. A later failure returns no accepted prefix. Diagnostics omit authored names and opaque
+records. Authentic input mismatch precedes role metadata;metadata precedes frame;frame precedes
+snapshot. The focused example rejects a foreign equal-ID schema,a second admission of the same raw
+catalogue,a different definition,a cross Point/Edge claim and equal-looking foreign context records.
+
+Providers can reuse `DraftingGeometryNameSource::charge_resources(sink,index)` for the complete
+source component before queries:fixed held schema fields or all actual catalogue fields/retained
+indexes/key bytes. The explicit index identifies its original containing source occurrence;it is
+not a resource total. Global output-name text and other parent/cache collections compose separately.
+The name-input producer uses that same component,keeping original field order and first refusal.
+
+This binds planned role metadata to its actual input and containing context. Actual initial sources,
+reserved/cross-origin collisions,earlier-only name visibility,whole kinds and canonical/geometry/
+semantic dependencies remain separate owned stages before values and whole-program acceptance.

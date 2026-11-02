@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — authentic planned family source views
+## _(2026-11-02 UTC)_ — complete planned role source binding
 
-0844 adds six actual output-field variants across five native families;public parent getters retain original creating input,catalogue/definition/tag and logical output. Raw source responses borrow actual frame/snapshot records;readonly provider facet receives genuine position views and preserves original typed causes.
-Focused authentic Offset1/provider alias1,strict selected lint/fmt/planned docs4 pass0;opaque non-Clone/Debug records copy only loans,original schema/catalogue/tag pointers survive and missing source has no geometry fallback. Independent compiler catalogue1/authentic-field0 confirms factory boundary.
-Book/pure publication118-374-1812-3417/18 old fences/new complete positive fence exact0;1019 three Git/body/public spans include full alias correction,archive1473-50/generations21-64 and29-64. Test panic replaced with pattern assertion;diagnostic fence selection fixed without changing native/book bytes.
-Promotion declined: existing authentic-parent/actual-source/no-prefix doctrine. G1still6/18;complete bounded source/input/catalogue/frame/snapshot binding next,actual initial source and full semantic/allocator verification remain pending.
+0845 reserves all output slots before callbacks,skips fixed schemas and checks actual input,role kind,catalogue/definition/tag,logical ref,frame and snapshot in order. Success borrows positions/providers and owns complete slots;allocator cause stays inline,no prefix on later failure.
+Focused role1/output2/name3,strict lint/fmt/roles docs3 pass0;authentic Offset parents,8 success/refusal controls,equal-looking foreign records,opaque payloads,source first cause and fixed/empty zero queries covered. Complete provider fields precede zero work quotas via reusable exhaustive source-component producer.
+Book/pure publication118-374-1813-3419/19 old fences/new positive example and1020 Git/body/public spans exact0;archive1474-51/generations21-64 and30-64. Loan escape rustc1/keep0 confirms boundary;allocator fault injection remains .5f.2.verify.
+Promotion declined: existing actual-owner/bounded-before-callback/no-prefix doctrine. G1still6/18;actual initial source admission next,then ordered namespace/whole kinds/dependencies and coupled feature verification.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

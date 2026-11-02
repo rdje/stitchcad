@@ -317,16 +317,42 @@ fn complete_positions_keep_actual_fixed_owners_and_unresolved_role_candidates() 
         assert_eq!(source.trace.get(), 0);
         assert!(!format!("{error:?}").contains("actual_bad_name"));
     }
+    let fixed_outputs = sources
+        .into_iter()
+        .zip(positions)
+        .take(4)
+        .enumerate()
+        .map(|(index, (source, position))| {
+            Ok(DraftingOutputName::new(
+                position,
+                MachineToken::new(format!("fixed_{index}"))?,
+                source,
+            ))
+        })
+        .collect::<TestResult<Vec<_>>>()?;
+    let fixed_names = DraftingProgramNameInputs::new(&program, vec![], fixed_outputs);
+    let fixed_work = fixed_names
+        .admit_name_work(&policy)
+        .map_err(|e| e.to_string())?;
+    let fixed_positions = fixed_work
+        .bind_output_positions()
+        .map_err(|e| e.to_string())?;
+    source.trace.set(0);
+    let fixed_roles = fixed_positions
+        .bind_role_sources()
+        .map_err(|e| e.to_string())?;
+    assert_eq!(fixed_roles.sources().len(), 4);
+    assert!(fixed_roles.sources().iter().all(Option::is_none));
+    assert_eq!(source.trace.get(), 0);
     let names = DraftingProgramNameInputs::new(&program, vec![], vec![]);
     let work = names.admit_name_work(&policy).map_err(|e| e.to_string())?;
     source.trace.set(0);
-    assert_eq!(
-        work.bind_output_positions()
-            .map_err(|e| e.to_string())?
-            .outputs()
-            .len(),
-        0
-    );
+    let empty_positions = work.bind_output_positions().map_err(|e| e.to_string())?;
+    assert!(empty_positions
+        .bind_role_sources()
+        .map_err(|e| e.to_string())?
+        .sources()
+        .is_empty());
     assert_eq!(source.trace.get(), 0);
     Ok(())
 }

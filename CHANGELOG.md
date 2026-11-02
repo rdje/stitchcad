@@ -3,18 +3,18 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0844 — retain authentic planned family output sources
+## STITCHCAD-G1-0845 — bind complete actual planned role sources
 
-- Added six authentic field-view variants across five native families,original input/role/ref
-  loans and raw frame/snapshot responses through an explicit readonly planned-source facet.
-- Focused Offset1/provider1/strict selected lint/fmt/docs4 pass0;opaque records retain identity,
-  original missing cause and schema/catalogue fields;catalogue-only compiler refusal/control pass.
-- Book/publication118/374/1812/3417/18 old fences/new example exact;1019 full spans retain alias closure.
-  Archive1473/50,generations21/64 and29/64. G1still6/18;complete actual source binding next.
+- Added full reserved-slot role binding to actual input/catalogue/definition/tag/ref/context records;
+  fixed names skip lookup,original allocator/provider causes and bad-source witnesses survive.
+- Focused role1/output2/name3/strict lint/fmt/docs3 pass0;8 success/refusal controls,no prefix,
+  opaque records,fixed/empty zero callbacks and complete source fields before work quotas covered.
+- Book/publication118/374/1813/3419/19 old fences/new example exact;1020 full spans/archive1474/51,
+  generations21/64 and30/64. G1still6/18;initial source admission next,full allocator checks deferred.
 
 # Sealed archive — earlier slices
 
-[Whole0843 published Offset aliases and closed classification issue](docs/history/stitchcad-devnotes-part1019.md) retains exact source bytes.
+[Whole0844 authentic planned output sources](docs/history/stitchcad-devnotes-part1020.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

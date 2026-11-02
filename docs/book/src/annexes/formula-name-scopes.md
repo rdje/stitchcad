@@ -538,8 +538,8 @@ equal. Point,line,center-arc and Bézier sources must borrow the actual input at
 No callback,kind check,value,namespace or new association-index allocation runs in this stage.
 
 Variable point/edge catalogues retain original active membership and matching authored creator IDs
-as **unresolved role candidates**. `requires_role_binding()` marks these views. The next role stage
-must supply actual published family proof parents/manifests. Catalogue metadata at a matching Line
+as **unresolved role candidates**. `requires_role_binding()` marks these views. The [complete role-source stage](drafting-context-sources.md#bind-every-planned-role-source)
+binds actual published family proof parents/manifests. Catalogue metadata at a matching Line
 step,for example,does not establish a valid Point output or family role. Canonical issuance,
 currentness,frame and geometry remain later source/dependency obligations for all families.
 

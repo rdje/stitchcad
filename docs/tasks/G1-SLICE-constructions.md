@@ -933,30 +933,30 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0842 genuine output-name positions;[whole scope/proofs](../history/stitchcad-devnotes-part1018.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles`
-  Status: `in_progress`
+  Status: `done`
   Goal:bind variable-role candidates through actual published family proof parents/manifests;Offset uses intentional shared Edge aliases with its own lineage proof obligations,no operation-id-only source truth.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles.offset`
   Status: `done`
   Goal:0843 Offset/shared Edge aliases and Issue0843 closure;[whole scope/proofs](../history/stitchcad-devnotes-part1019.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles.bind`
-  Status: `in_progress`
+  Status: `done`
   Goal:actual published variable-role proof parents under original Root/context,exact schema/catalogue membership and first typed causes before namespace visibility,no fabricated bound family or matching-id-only source grant.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles.bind.sources`
   Status: `done`
-  Goal:authentic six planned-output view variants and readonly source facet returning original frame/snapshot records;derive actual input/catalogue/role from public proof parents,no reconstructed binding or live geometry claim.
-  - [x] ROOT CAUSE: 0844 launcher `cargo test -p sc-core --test offset_role_presence_contract planned_output_source`:
-    focused1 pass;authentic parent/input/catalogue/definition/tag retained,opaque actual context records copy loans only,rc=0.
-  - [x] ADDRESSED: 0844 launcher `cargo test -p sc-core --test drafting_context_binding_contract published_offset_aliases`:
-    focused1 pass;genuine request preserves original typed missing-source cause without geometry fallback;
-    planned-source docs4 pass and independent catalogue-only rustc1/authentic-field control0 confirm boundary,rc=0.
-  - [x] NO REGRESSION: 0844 launcher `cargo clippy -p sc-core --lib --test offset_role_presence_contract --test drafting_context_binding_contract -- -D warnings`,fmt,
-    book/pure publication118/374/1812/3417,18 old fences/new complete native-book positive fence exact,rc=0;
-    1019 Git/body/public spans include full alias correction;archive1473/50,generations21/64 and29/64,rc=0.
-  Commit:STITCHCAD-G1-0844. promotion:declined (existing authentic-parent/actual-source doctrine);raw facet grants no bound output,complete actual source/context binding next,full verification deferred.
-  Check corrections:explicit test panic replaced with pattern assertion;first diagnostic selected a closing Rustdoc fence,so compare the complete book-encoded positive fence instead. Native/book example bytes already matched;fresh comparison above passes.
+  Goal:0844 authentic planned fields/source facet;[whole scope/proofs](../history/stitchcad-devnotes-part1020.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles.bind.check`
-  Status: `pending`
-  Goal:complete bounded role-source binding with actual input/catalogue/context record checks,original provider/allocation causes and no accepted prefix;fixed names need no planned lookup.
+  Status: `done`
+  Goal:complete bounded role-source binding with actual input/catalogue/context record checks,original provider/allocation causes and no prefix;reuse a public exhaustive source-component producer for provider accounting,fixed names need no lookup.
+  - [x] ROOT CAUSE: 0845 launcher `cargo test -p sc-core --test drafting_context_binding_contract output_role_binding`:
+    focused1 pass;8 success/refusal controls retain actual parents/records,first later index2 and original cause,no prefix or geometry calls,rc=0.
+  - [x] ADDRESSED: 0845 same target program_output_positions2/program_name_inputs3 pass;
+    cross-kind/equal-id foreign schema/second catalogue admission/definition/equal-looking context records refuse,fixed/empty lists query nothing;
+    roles docs3 and actual loan escape rustc1/keep0 control confirm private lifetime boundary,rc=0.
+  - [x] NO REGRESSION: 0845 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
+    book/pure publication118/374/1813/3419,19 old fences/new complete positive example exact,rc=0;
+    1020 Git/body/public spans/archive1474/51,generations21/64 and30/64,rc=0.
+  Commit:STITCHCAD-G1-0845. promotion:declined (existing actual-owner/no-prefix doctrine);initial sources next,allocator fault injection and full coupled verification explicitly remain .5f.2.verify.
+  Fixture corrections:precompute fallible interval outside infallible closure;honor existing Piece quantity with explicit authored CutCopy. Whole source-cache fields refuse before zero work quotas and provider calls;no cached totals or generated source stand-ins.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial`
   Status: `pending`
   Goal:bind actual extra initial sources to the original Root canonical/source/context records,refuse planned creators as initial geometry before values;retain exact original sources and causes,no metadata-id-only truth.

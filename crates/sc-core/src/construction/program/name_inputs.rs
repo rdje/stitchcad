@@ -12,6 +12,11 @@ use crate::{
 };
 use core::fmt;
 mod positions;
+mod roles;
+pub use roles::{
+    BoundDraftingProgramOutputRoles, DraftingOutputRoleBindingIssue, DraftingOutputRoleError,
+    DraftingOutputRoleMismatch, DraftingOutputRoleRefusal,
+};
 mod resources;
 mod work;
 pub use positions::{
