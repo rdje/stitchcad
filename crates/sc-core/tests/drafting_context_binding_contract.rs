@@ -1,6 +1,8 @@
 //! Actual source-owner binding and resource-before-query ordering, without geometry execution.
 #[path = "support/drafting_geometry.rs"]
 mod geometry;
+#[path = "support/drafting_program.rs"]
+mod program;
 use core::{
     cell::Cell,
     fmt,
@@ -79,6 +81,9 @@ impl DesignResourceSource for EmptyHost {
     }
 }
 fn root() -> TestResult<DesignInputs<EmptyHost>> {
+    root_with_recipe("")
+}
+fn root_with_recipe(recipe: &str) -> TestResult<DesignInputs<EmptyHost>> {
     let canonical = CanonicalInputs::new(vec![], vec![])?;
     let parameters = DesignParameters::new(vec![], &canonical)?;
     let materials = MaterialInventory::new(vec![], &canonical)?;
@@ -96,7 +101,7 @@ fn root() -> TestResult<DesignInputs<EmptyHost>> {
         parameters,
         materials,
         sources,
-        recipe: FormulaRecipeDocument::new(String::new())?,
+        recipe: FormulaRecipeDocument::new(recipe.into())?,
         formula_sources: FormulaSources::new(vec![], FormulaSourceLimits::new(0, 0, 0))?,
         references: DesignSourceReferences {
             measurement_table: None,

@@ -191,20 +191,44 @@ part of the complete graph;no separately authored hole length or approximation i
 
 Input composition and held-field charging, bounded actual context and typed existing-output binding
 are implemented. The
-ordered owner,names,complete dependencies and whole checking remain separately owned work. Coupled
+raw mixed source owner is also available;whole admission,names,complete dependencies and checking
+remain separately owned work. Coupled
 verification follows that complete set. The raw input view alone grants no context or program acceptance.
 
 The [drafting context companion](drafting-context-sources.md) specifies actual source binding,
 resource accounting and the remaining existing-output/program integration.
 
-## Whole mixed source owner — planned
+## Mixed source owner and planned whole admission
 
-The mixed scalar/drafting source owner and its admission/normalization factories are **planned**.
-They will pin the actual containing context, its original Root recipe document and every authored
-raw drafting input. A scalar entry requests its original one-based recipe ordinal;that is a
-different field from its combined program position. Every original scalar statement, including each
-assertion, must occur exactly once in its original relative order. No topological reordering,
-statement extraction or implicit scalar source is introduced.
+`DraftingProgramInputs::new(context,steps)` now owns the original `Vec<DraftingProgramStep>` and
+pins its actual bound context. `context()` returns that borrowed handle;`recipe()` returns only its
+actual Root's whole original recipe;`steps()` borrows the complete unchanged sequence. No foreign
+recipe argument, copied source, provider callback, parsing, output identity or namespace is involved.
+The owner has private fields and cannot outlive its actual context or native declarations.
+
+`DraftingProgramStep::Scalar { ordinal }` retains a requested one-based scalar ordinal separately
+from its mixed position;`Drafting` retains the actual `DraftingOperationInput`. Zero, missing,
+repeated, out-of-order or out-of-range requests and empty sequences survive raw construction.
+The whole admission/normalization factories remain **planned**. Admission must require every
+original scalar statement,including each assertion,exactly once in original relative order.
+No topological reordering,statement extraction or implicit scalar source is introduced.
+
+For example,this function retains actual inputs without accepting scalar coverage or reading values:
+
+```rust
+use sc_core::{construction::{DraftingContext, DraftingContextSource, DraftingOperationInput,
+    DraftingProgramInputs, DraftingProgramStep, PointConstruction}, design::DesignMetadataHost};
+fn retain<'a,H:DesignMetadataHost,S:DraftingContextSource<H> + ?Sized>(
+    context:DraftingContext<'a,H,S>,point:&'a PointConstruction) -> DraftingProgramInputs<'a,H,S> {
+    let inputs = DraftingProgramInputs::new(context,vec![
+        DraftingProgramStep::Scalar { ordinal:1 },
+        DraftingProgramStep::Drafting(DraftingOperationInput::ConstructPoint(point)),
+        DraftingProgramStep::Scalar { ordinal:2 },
+    ]);
+    assert!(std::ptr::eq(inputs.recipe(),context.scope().root().recipe()));
+    inputs
+}
+```
 
 For example, these are illustrative positions, not a new text grammar:
 
@@ -229,8 +253,8 @@ argument documents. Repeated/unused/untaken content counts;identity/address dedu
 remove it. Existing source/argument conservative record bounds remain authoritative and compose
 before child factories;they certify no allocator-byte, parser-scratch, CPU or runtime allowance.
 
-Implementation owners separately cover recipe counts, exhaustive native fields, raw mixed steps,
-whole admission, complete normalization and borrowed views. Existing document factories must retain
+Recipe counts,exhaustive native fields and raw mixed steps are implemented;whole admission,complete
+normalization and borrowed normalized views remain owned work. Existing document factories must retain
 their original typed/allocation causes;failure returns no normalized program prefix. Normalized
 views must borrow actual owners and keep source ordinals separate from combined positions.
 

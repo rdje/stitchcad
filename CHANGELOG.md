@@ -3,18 +3,18 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0830 — charge actual native drafting input fields
+## STITCHCAD-G1-0831 — retain actual mixed scalar and drafting inputs
 
-- Added cumulative held-content charging for all13 families,with actual operation/field refusals.
-  Both buffers of every argument and all Walk pairs count;fixed metadata is guarded exhaustively.
-- Native7/strict selected lint/fmt/book/publication118/374/1808/3397 pass0;
-  five prior overview Rust examples and1005 three original Git/body/public spans preserved.
-- Archive1459/36,per-generation21/64 and15/64. G1still6/18;raw mixed owner next,
-  whole admission/normalization/static checking and feature verification remain pending.
+- Added private DraftingProgramInputs owning original mixed steps and actual context;
+  recipe access comes only from that context's Root,with separate original scalar ordinals.
+- Native context10/strict selected lint/fmt/book examples7/publication118/374/1808/3397 pass0;
+  six old Rust fences and1006 three original Git/body/public spans retained.
+- Archive1460/37,per-generation21/64 and16/64. G1still6/18;whole admission,
+  normalization/static checking and full feature verification remain pending.
 
 # Sealed archive — earlier slices
 
-[Whole0829 immutable recipe shape](docs/history/stitchcad-devnotes-part1005.md) retains exact source bytes.
+[Whole0830 exhaustive native field charges](docs/history/stitchcad-devnotes-part1006.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

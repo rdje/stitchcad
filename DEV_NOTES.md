@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — exhaustive native drafting input charges
+## _(2026-11-02 UTC)_ — raw mixed scalar and drafting source owner
 
-0830 adds restricted cumulative charging for13 original native input families:Point2/Arc3/Slash1 documents,source before canonical,and Walk's original pair vector. Exact private owner views/Copy guards keep future fields accountable without reparse,value/target reads or caller totals.
-Native7 covers all13 families/twelve buffer refusals,exact totals,repeated/invalid Walk input and latched fixed/empty refusal;strict selected lint/fmt pass0. Test meter helper now propagates invalid test bounds after lint rejected expect();no policy bypass.
-Book/publication118-374-1808-3397/five old Rust fences exact0;1005 three Git/body/public spans/archive1459-36/per-generation21-64 and15-64 exact0. Whole-program admission and feature verification stay pending.
-Promotion declined: existing exhaustive held-content and first-failure sink contract. G1still6/18;raw mixed source/steps next.
+0831 owns the original mixed Vec and actual Context handle;Root-derived recipe() excludes a foreign scalar document. Scalar ordinals stay explicit and distinct from mixed positions;native inputs remain borrowed,without provider callbacks,parsing,values or mixed identity.
+Native context10 passes with2 raw-owner cases:original Vec/source/context records retained,scalar2 at mixed3,invalid/empty/repeated/max ordinal unchanged. Strict selected lint/fmt pass0 after test indexing changed to exhaustive slice matching;no suppression.
+Book examples7/publication118-374-1808-3397/six prior Rust fences exact0;1006 three Git/body/public spans/archive1460-37/per-generation21-64 and16-64 exact0. Whole admission/normalization/static acceptance remain pending.
+Promotion declined: existing actual-owner/order/complete-admission contract. G1still6/18;complete held-content/population admission next,whole verification after the agreed set.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

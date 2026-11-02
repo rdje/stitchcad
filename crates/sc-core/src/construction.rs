@@ -67,6 +67,8 @@ pub use context::{
 };
 mod operation_input;
 pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};
+mod program;
+pub use program::{DraftingProgramInputs, DraftingProgramStep};
 mod bezier;
 pub use arc::{
     CenterArcArgument, CenterArcCheckError, CenterArcCheckRefusal, CenterArcConstruction,
