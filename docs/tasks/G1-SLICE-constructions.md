@@ -911,22 +911,37 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.program.normalize`
   Status: `done`
   Goal:0833 actual complete child normalization;[whole scope/proofs](../history/stitchcad-devnotes-part1009.md).
-### G1-SLICE.5f.2.program.views
 - ID: `G1-SLICE.5f.2.program.views`
   Status: `done`
-  Goal:borrow actual normalized source/statement/argument owners with distinct original scalar ordinals and combined positions;avoid self-reference or extracted/fabricated spans;whole names/dependencies/kinds/values remain later.
-  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
-    native16 pass;nth/skip/reverse/interleaved reads retain actual original statement/native arena pointers and scalar ordinal2 at mixed3 with exact whole-source assertion offset,rc=0.
-  - [x] ADDRESSED: same target proves exact remaining lengths,fused exhaustion,private debug/no provider calls;
-    `cargo test -p sc-core --doc construction::program`:seven private/default/lifetime guards pass,rc=0.
-  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    `cargo test -p sc-core --doc construction::context_examples`:seven actual examples pass,rc=0;
-    book/publication118/374/1809/3402/twelve prior Rust fences exact,rc=0;
-    1009 three Git/body/public spans/archive1463/40,per-generation21/64 and19/64,rc=0.
-  Commit:STITCHCAD-G1-0834. promotion:declined (existing actual-owner/whole-source/order contract);program parent focused implementation complete,namespace next;whole semantic/allocator-fault verification pending.
+  Goal:0834 original mixed step arena loans;[whole scope/proofs](../history/stitchcad-devnotes-part1010.md).
 - ID: `G1-SLICE.5f.2.namespace`
-  Status: `pending`
+  Status: `in_progress`
   Goal:actual initial/always-visible and earlier-only names;check collisions and future geometry before values,using existing complete kind proofs without treating a metadata cursor as program acceptance.
+### G1-SLICE.5f.2.namespace.plan
+- ID: `G1-SLICE.5f.2.namespace.plan`
+  Status: `done`
+  Goal:source the actual initial/ordered namespace,statement/native checker and output-role interfaces;split bounded implementation preserving genuine recipe ordinals,opaque name scopes and actual manifests before values.
+  - [x] ROOT CAUSE: `python3 -I -B -` targeted source/API census of design/inputs.rs,design/host.rs,
+    recipe/namespace.rs,namespace/ordered.rs,checked_statement.rs and construction/arguments.rs:
+    Root parameter/selected table-Ease ports,genuine scalar checker/native Namespace adapter,four fixed schema outputs/two typed active-role catalogue domains,rc=0.
+  - [x] ADDRESSED: same census and book plan retain actual scalar cursor/private map,explicit initial/output sources,
+    four scope/input/admission/order owners and complete held-content/work admission before callbacks;all thirteen Rust fences and Rust sources unchanged,rc=0.
+  - [x] NO REGRESSION: `scripts/run_make.sh book`,publication `check(ROOT)` and Git source comparison:
+    warning-free118/374/1809/3403/Rust-thirteen examples unchanged,rc=0;
+    1010 three Git/body/public spans/archive1464/41,per-generation21/64 and20/64,rc=0.
+  Commit:STITCHCAD-G1-0835. promotion:declined (existing actual-source/ordered-name/no-prefix contract);scope adapter first,whole namespace/controller and feature verification pending.
+- ID: `G1-SLICE.5f.2.namespace.scope`
+  Status: `pending`
+  Goal:borrowed read-only visible-name scope and common existing expression/native checking adapter;support genuine scalar cursor and earlier geometry metadata without exposing cloneable final namespace or fabricating statement indices.
+- ID: `G1-SLICE.5f.2.namespace.inputs`
+  Status: `pending`
+  Goal:explicit actual extra initial sources and original per-step output names;fixed schema outputs or typed active point/edge role catalogues,original names/manifests/positions,no inferred output tag/name or live geometry.
+- ID: `G1-SLICE.5f.2.namespace.admit`
+  Status: `pending`
+  Goal:fresh complete program/name/source/catalogue held-content and prospective name-work bounds before namespace callbacks;preserve original owner/role locations and first refusal,then exact actual program associations,no accepted prefix.
+- ID: `G1-SLICE.5f.2.namespace.order`
+  Status: `pending`
+  Goal:actual Root and explicit always-visible names plus only earlier scalar/native declarations in mixed order;check reserved/cross-origin/repeated headers and self/future names without values or metadata-prefix acceptance.
 - ID: `G1-SLICE.5f.2.dependencies`
   Status: `pending`
   Goal:all original formula/geometry/semantic dependencies,source frame/current registry/output provenance;canonical Pocket kind/domain/state and Buttonhole button-size dependency,no separately authored hole length or approximation.

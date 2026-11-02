@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — original mixed step arena loans
+## _(2026-11-02 UTC)_ — sourced mixed namespace implementation stages
 
-0834 exposes private mixed-position views borrowing actual whole-recipe statements/native arena owners. Scalar ordinal lookup is direct;exact-sized/bidirectional/fused iteration uses no allocation,reparse,self-reference,substring source or mutable scalar cursor.
-Native16/private lifetime guards7/context book examples7/strict selected lint/fmt pass0. nth/skip/reverse/interleaved traversal preserves actual pointers,ordinal2 at mixed3,whole assertion offset and private debug output;no provider/value query.
-Publication118-374-1809-3402/twelve original Rust fences and1009 three Git/body/public spans exact0;archive1463-40/per-generation21-64 and19-64. Original source/admission/normalization/view parent complete with focused checks.
-Promotion declined: existing actual-owner/whole-source/order contract. G1still6/18;namespace next,whole semantic/allocator-fault/feature verification remains deferred.
+0835 confirms actual Root parameter/selected table-Ease namespace,scalar cursor genuine ordinals/private map,current-statement checker and native Namespace-based proof adapters. Four fixed output schemas/two typed active-role domains supply real output metadata;catalogue keys are not global names.
+Four scope/input/admission/order children preserve borrowed visible metadata without cloning a final cursor namespace,explicit actual extra sources and output manifests,and complete content/work bounds before callbacks. Whole kinds/source truth remain later controller work,no values or live planned geometry.
+Source/API census,Rust/thirteen Rust fences unchanged,book/publication118-374-1809-3403 and1010 three Git/body/public spans pass0;archive1464-41/per-generation21-64 and20-64 exact0. New namespace/controller implementation remains planned.
+Promotion declined: existing actual-source/ordered-name/no-prefix contract. G1still6/18;borrowed visible-name/kernel adapter first,whole feature verification deferred.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

@@ -364,3 +364,33 @@ The complete original program source/admission/normalization/view pipeline is im
 focused checks. Names,whole kind/dependency/current-output checks,values and geometry remain later
 stages;these loans create no accepted executable prefix or release approval. Coupled feature and
 allocator-fault verification remains separate and pending.
+
+### Next namespace stages — planned
+
+The mixed namespace/controller is **planned**. The existing actual `DesignInputs::formula_namespace()`
+factory checks current inputs and obtains actual parameter declarations,then selected measurement/Ease
+host declarations. It supplies reserved metadata and checks collisions. This contract does not silently
+supply a complete Profile/Material or geometry-name environment. Additional always-visible sources
+and per-operation output names must remain explicit actual inputs with complete retained-content admission.
+
+The existing scalar `FormulaNameCursor` retains its actual whole recipe and genuine scalar ordinal.
+Its current-statement scope invokes the existing statement checker with original spans. Native
+argument checkers currently take `FormulaNamespace`;the integration will add a borrowed read-only
+visible-name scope and delegate to the same kernels. It will keep the cursor's map private,including
+against cloning a final namespace out of a prefix,and retain actual scalar declarations. Earlier
+geometry insertion remains metadata until the complete controller checks every kind/dependency.
+
+Planned output names must borrow their real creating step and manifest. Point,line,center-arc and
+Bézier schemas expose fixed outputs through their actual public schema methods. Variable point/edge
+roles have separate typed active-role catalogue views retaining original definitions and membership.
+Local catalogue keys are not global formula names. Names and explicit tags are never generated from
+vector order,guessed from an operation family or treated as live geometry in the current snapshot.
+Catalogue metadata alone grants no canonical history/frame/currentness or evaluated-presence proof.
+
+Implementation is split into borrowed visible-name/kernel adapters,actual initial/output-name inputs,
+fresh complete held-content/prospective name-work admission,and ordered metadata integration. Complete
+program and name/source/catalogue fields,including all retained definitions,active lists,indexes and
+text,are admitted before namespace callbacks or child checking. Existing geometry still requires the
+actual context's exact source binding;planned geometry stays tied to its earlier original step/manifest.
+The resulting metadata stage is not an accepted program. Complete kinds,dependencies and source truth
+remain in their separately owned checking stages before values,followed by coupled feature verification.
