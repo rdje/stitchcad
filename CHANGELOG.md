@@ -3,18 +3,14 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0846 — reserve complete initial-binding work
+## STITCHCAD-G1-0847 — actual extra-initial source records (2026-11-02 UTC)
 
-- Extended explicit retained name-work records to include every extra-initial binding slot;
-  original vectors/checked arithmetic count repeats before future allocation or source callbacks.
-- Focused name-work2/role-binding1/strict lint/fmt pass0;namespace16/retained19,18 refusal,
-  repeated initial15/17 and empty8 covered. No change to output-only role binding.
-- Book/publication118/374/1813/3419/all20 Rust fences unchanged;1021 full spans/archive1475/52,
-  generations21/64 and31/64. G1still6/18;actual canonical/metadata initial-source facet next.
+Readonly initial-source facet retains existing actual canonical join and original opaque metadata/snapshot loans,without values or containing-context acceptance. Dedicated Length owner/general scalar kind remain canonical;original typed provider causes survive.
+Focused canonical1/name-work2,strict lint/fmt/Rustdoc2,book/publication118-374-1813-3420 and25 prior/new exact fences pass0. Archive1022 whole Git/body/public bytes exact;1476 logical/53 working. G1still6/18;whole initial binding,namespace/dependencies and coupled verification remain.
 
 # Sealed archive — earlier slices
 
-[Whole0845 complete actual role binding](docs/history/stitchcad-devnotes-part1021.md) retains exact source bytes.
+[Whole0846 prospective initial-binding slots](docs/history/stitchcad-devnotes-part1022.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

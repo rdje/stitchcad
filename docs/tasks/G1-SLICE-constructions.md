@@ -952,18 +952,18 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:bind actual extra initial sources to the original Root canonical/source/context records,refuse planned creators as initial geometry before values;retain exact original sources and causes,no metadata-id-only truth.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial.bounds`
   Status: `done`
-  Goal:include complete prospective initial-binding slots in explicit retained name-work records before their allocation;checked actual initial count,no cached totals/default caps,namespace precedence retained.
-  - [x] ROOT CAUSE: 0846 launcher `cargo test -p sc-core --test drafting_context_binding_contract program_name_work`:
-    focused2 pass;actual namespace16/retained19 includes initial1,limit18 refuses before metadata items/validation,empty remains8,rc=0.
-  - [x] ADDRESSED: 0846 same target counts two repeated initial occurrences/no outputs as namespace15/retained17,
-    fresh complete content/quota precedence unchanged;`cargo test -p sc-core --test drafting_context_binding_contract output_role_binding` focused1 pass,rc=0.
-  - [x] NO REGRESSION: 0846 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    book/pure publication118/374/1813/3419/all20 Rust fences unchanged,rc=0;
-    1021 three Git/body/public spans/archive1475/52,generations21/64 and31/64,rc=0.
-  Commit:STITCHCAD-G1-0846. promotion:declined (existing complete prospective-bound doctrine);actual initial source facet/binding next,no allocator/coupled verification claim.
+  Goal:0846 complete initial-binding record bounds;[whole scope/proofs](../history/stitchcad-devnotes-part1022.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial.sources`
-  Status: `pending`
+  Status: `done`
   Goal:readonly actual metadata source-record/snapshot facet using existing FormulaCanonicalInput joins,no copied registry/values or declaration-id-only source grant.
+  - [x] ROOT CAUSE: 0847 launcher `cargo test -p sc-core --test formula_canonical_input_contract initial_source_view`:
+    focused1 pass;actual dedicated Length/general scalar,original inventory/name/opaque records,Unknown unchanged,Copy/privacy,rc=0.
+  - [x] ADDRESSED: 0847 launcher `cargo test -p sc-core --test drafting_context_binding_contract program_name_work`:
+    focused2 pass;actual host canonical join reaches readonly facet,original typed Missing/trace9 retained,no geometry fallback,rc=0.
+  - [x] NO REGRESSION: 0847 launcher selected library/two-target strict clippy,fmt and `cargo test -p sc-core --doc construction::context::initial`:
+    docs2 pass;book/pure publication118/374/1813/3420,25 prior Rust fences unchanged/new complete native fence exact,rc=0;
+    1022 three Git/body/public spans/archive1476/53,generations21/64 and32/64,rc=0.
+  Commit:STITCHCAD-G1-0847. Promotion declined:existing source-record/canonical-join doctrine;raw sources grant no association/namespace,whole initial binding and allocator/coupled verification pending.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial.check`
   Status: `pending`
   Goal:whole bounded canonical/metadata/existing geometry bindings;reject all programme creators as initial before lookup,retain original records/causes,no accepted prefix or all-future initial names.

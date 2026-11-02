@@ -400,6 +400,18 @@ fn actual_host_rows_and_complete_populations_precede_binding_or_namespace_work()
         (2, 0, 15, 17)
     );
     assert_eq!(host.reads.get(), 4);
+    let declaration = rows
+        .first()
+        .copied()
+        .ok_or("original actual host declaration")?;
+    let joined = sc_core::recipe::FormulaCanonicalInput::resolve(declaration, root.inputs())
+        .map_err(|e| e.to_string())?;
+    source.trace.set(0);
+    assert!(matches!(
+        sc_core::construction::DraftingInitialInputProvider::initial_input(&source, 0, joined),
+        Err(SourceError::Missing)
+    ));
+    assert_eq!(source.trace.get(), 9);
     Ok(())
 }
 #[test]

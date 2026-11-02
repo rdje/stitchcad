@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — prospective extra-initial binding slots
+## _(2026-11-02 UTC)_ — actual extra-initial source loans
 
-0846 extends retained name work to namespace entries+output associations+extra-initial bindings before the new initial result allocation exists. Counts come from original complete vectors;all additions remain checked. No default cap,source validation,deduplication or namespace grant was introduced.
-Focused name-work2/role-binding1 and strict lint/fmt pass0;namespace16 now needs19 retained records,18 refuses,empty stays8 and two repeated initial claims/no outputs give15/17. Metadata iterator items/currentness remain untouched;fresh complete content still precedes all quotas.
-Book/pure publication118-374-1813-3419/all20 Rust fences unchanged and1021 Git/body/public spans exact0;archive1475-52/generations21-64 and31-64. Existing output-only role binding is unchanged;actual initial-source allocation/binding follows.
-Promotion declined: existing complete prospective-bound/no-default doctrine. G1still6/18;reuse existing FormulaCanonicalInput actual inventory/owner/kind joins in the readonly initial metadata-source facet,next whole initial binding and coupled verification.
+0847 adds DraftingInitialInputProvider and raw DraftingInitialInputSource retaining existing FormulaCanonicalInput plus original metadata/snapshot SourceRecords. Opaque payloads need no Clone/Debug;scalar metadata invents no frame. Providers retain original causes and account all held source fields.
+The canonical join preserves actual inventory/kind/dedicated Length owner without values;raw response construction proves no containing Root,metadata or snapshot association. Initial geometry remains on the existing port;all programme creators must be refused before lookup in the next complete binding stage.
+Native canonical1/name-work2,strict library/two-target lint,fmt and initial Rustdoc2 pass0. Actual Unknown records/opaque loans/privacy and original Missing cause/trace9 checked. Book/pure publication118-374-1813-3420,25 old fences unchanged/new complete native fence exact0.
+1022 three whole Git/body/public spans exact0;archive1476-53,generations21-64 and32-64. Design chapter held at40890B;new source section in context chapter34600B. Promotion declined:existing immutable-source/canonical-join doctrine. G1still6/18;whole initial binding next,allocator/coupled proof deferred.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

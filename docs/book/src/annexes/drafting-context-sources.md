@@ -466,3 +466,44 @@ The name-input producer uses that same component,keeping original field order an
 This binds planned role metadata to its actual input and containing context. Actual initial sources,
 reserved/cross-origin collisions,earlier-only name visibility,whole kinds and canonical/geometry/
 semantic dependencies remain separate owned stages before values and whole-program acceptance.
+
+## Raw extra-initial metadata sources
+
+The mixed drafting path now has a readonly `DraftingInitialInputProvider` facet for extra initial
+scalar/Length metadata. It receives an existing `FormulaCanonicalInput` join against the actual
+Root inventory after complete held-content/prospective bounds. That existing join checks dedicated
+Length owner or general scalar identity/kind without reading Unknown/Derived states. Source family
+is preserved;a general Length scalar cannot replace a dedicated Length record.
+
+`DraftingInitialInputSource` retains the join and actual provider-owned metadata/snapshot
+`DraftingSourceRecord` loans. Copying this raw view copies only those loans;opaque payloads need
+neither Clone nor Debug. Diagnostics show kind/origin and omit names,canonical state and payloads.
+Scalar metadata introduces no Cartesian frame. The metadata record must actually expose the
+returned declaration under that original snapshot;echoed caller IDs alone supply no source truth.
+
+```rust
+use sc_core::{construction::{DraftingInitialInputSource, DraftingSourceRecord},
+    recipe::FormulaCanonicalInput};
+fn raw_initial_source<'a,M:?Sized,S:?Sized>(input:FormulaCanonicalInput<'a>,
+    metadata:&'a DraftingSourceRecord<M>,snapshot:&'a DraftingSourceRecord<S>)
+    ->DraftingInitialInputSource<'a,M,S> {
+    let source=DraftingInitialInputSource {input,metadata,snapshot};
+    let copied=source;
+    assert!(copied.metadata.is_same_record(metadata));
+    copied
+}
+```
+
+The provider's inherited exhaustive content walk includes all metadata collections,tokens,caches
+and snapshots before lookup. `initial_input()` allocates/clones nothing and reads no authored or
+computed value. Missing,retired,wrong-origin or unsupported sources retain original typed causes.
+Shared access preserves immutable original records under the same honest integration contract as
+the context port;this is no security boundary against fabricated metadata.
+
+The canonical join proves membership in its supplied inventory,not its containing Design or actual
+metadata ownership. Public raw-source construction also proves no containing Root/snapshot/name
+association. The next complete binding stage must compare the actual Root inventory,original
+metadata declaration and source/snapshot records. Existing initial Point/Edge inputs use the
+existing-geometry port separately;every programme creator must be rejected as initial geometry
+before a live lookup. Namespace collisions,ordered visibility,values and whole acceptance remain
+later owned stages. No raw response becomes an accepted prefix.

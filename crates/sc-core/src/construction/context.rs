@@ -14,7 +14,11 @@ pub use geometry::{
 };
 mod record;
 pub use record::DraftingSourceRecord;
+mod initial;
 mod planned;
+pub use initial::{
+    DraftingInitialInputProvider, DraftingInitialInputSource, DraftingInitialInputSourceResult,
+};
 pub use planned::{
     DraftingPlannedOutput, DraftingPlannedOutputProvider, DraftingPlannedOutputSource,
     DraftingPlannedOutputSourceResult,

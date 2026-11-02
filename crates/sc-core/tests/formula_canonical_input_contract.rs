@@ -1,5 +1,6 @@
 //! Real inventory membership precedes authored reads and never changes canonical families.
 #![allow(clippy::expect_used)]
+use sc_core::construction::{DraftingInitialInputSource, DraftingSourceRecord};
 use sc_core::{
     name::MachineToken,
     ontology::{EdgeRef, EntityId, LocalTag, PointRef},
@@ -72,6 +73,69 @@ fn inventory() -> CanonicalInputs {
     .expect("unique families")
 }
 
+#[test]
+fn initial_source_view_keeps_actual_inventory_metadata_and_opaque_snapshot_loans() {
+    struct Metadata {
+        name: MachineToken,
+        id: EntityId,
+    }
+    struct Snapshot {
+        data: Vec<u8>,
+    }
+    let inputs = inventory();
+    let metadata = DraftingSourceRecord::new(Metadata {
+        name: MachineToken::new("private_initial_source").expect("source token"),
+        id: id(50),
+    });
+    let snapshot = DraftingSourceRecord::new(Snapshot { data: vec![7, 8] });
+    let actual = inputs.length(id(1)).expect("actual dedicated record");
+    let declarations = [
+        D::length_input(
+            &metadata.data().name,
+            Origin::Measurement,
+            metadata.data().id,
+            actual,
+        ),
+        D::input(
+            &metadata.data().name,
+            ScalarOrigin::Profile,
+            metadata.data().id,
+            id(8),
+            B::Count,
+        ),
+    ];
+    for declaration in declarations {
+        let joined = Joined::resolve(declaration, &inputs).expect("actual inventory/kind join");
+        let source = DraftingInitialInputSource {
+            input: joined,
+            metadata: &metadata,
+            snapshot: &snapshot,
+        };
+        let copied = source;
+        assert!(std::ptr::eq(copied.input.inputs(), &inputs));
+        assert!(copied.metadata.is_same_record(&metadata));
+        assert!(source.snapshot.is_same_record(copied.snapshot));
+        assert!(std::ptr::eq(
+            copied.input.metadata().name(),
+            metadata.data().name.as_str()
+        ));
+        assert_eq!(copied.snapshot.data().data.as_slice(), [7, 8]);
+        assert!(!format!("{copied:?}").contains("private_initial_source"));
+        match copied.input.adapter() {
+            Adapter::Length(input) => {
+                assert!(std::ptr::eq(input.canonical_declaration(), actual));
+                assert!(matches!(input.state(), LengthState::Unknown { .. }));
+            }
+            Adapter::Scalar(input) => {
+                assert!(std::ptr::eq(
+                    input.canonical_declaration(),
+                    inputs.scalar(id(8)).expect("actual scalar")
+                ));
+                assert!(matches!(input.state(), State::Unknown { .. }));
+            }
+        }
+    }
+}
 #[test]
 fn dedicated_records_keep_actual_inventory_borrows_and_all_original_read_requirements() {
     let name = MachineToken::new("body_width").expect("name");

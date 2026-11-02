@@ -63,6 +63,7 @@ pub use context::{
     DraftingContext, DraftingContextError, DraftingContextSource, DraftingGeometryBinding,
     DraftingGeometryBindingIssue, DraftingGeometryError, DraftingGeometryMismatch,
     DraftingGeometryReference, DraftingGeometrySource, DraftingGeometrySourceResult,
+    DraftingInitialInputProvider, DraftingInitialInputSource, DraftingInitialInputSourceResult,
     DraftingPlannedOutput, DraftingPlannedOutputProvider, DraftingPlannedOutputSource,
     DraftingPlannedOutputSourceResult, DraftingSourceRecord,
 };

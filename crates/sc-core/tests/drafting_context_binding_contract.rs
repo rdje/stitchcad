@@ -451,3 +451,22 @@ impl<H: DesignMetadataHost> DraftingPlannedOutputProvider<H> for Source<'_, H> {
         }
     }
 }
+
+impl<H: DesignMetadataHost> sc_core::construction::DraftingInitialInputProvider<H>
+    for Source<'_, H>
+{
+    type Metadata = ();
+    fn initial_input<'a>(
+        &'a self,
+        _index: usize,
+        _input: sc_core::recipe::FormulaCanonicalInput<'a>,
+    ) -> sc_core::construction::DraftingInitialInputSourceResult<
+        'a,
+        Self::Metadata,
+        Self::Snapshot,
+        Self::Error,
+    > {
+        self.observed(9);
+        Err(SourceError::Missing)
+    }
+}
