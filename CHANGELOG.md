@@ -3,17 +3,17 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0857 — original formula geometry dependency views
+## STITCHCAD-G1-0858 — direct original native geometry fields
 
-Stream original Point/Edge formula uses from every selected Root source then complete mixed canonical slots. Retain actual consumers,original dependency indices,spans,declarations and references through unused bodies,repeated branches and filtered names. No allocation,callbacks,values or
-geometry supplier acceptance.
+Stream every direct native Point/range/anchor field through original typed source views,including both motion/axis modes,cubic controls and repeated Walk pair/A/B anchors. Retain actual input/index/selector with independent exhaustive guards across all13 schemas. No source
+queries,values,semantic-target substitution or programme acceptance.
 
-Focused rich/empty1,strict selected lint/fmt,Rustdoc3,guarded book/publication118/374/1817/3434 pass0;46 prior Rust fences unchanged/new native fence exact. Archive1032 four whole source/body/public spans exact0. G1still6/18 In Progress;native fields/requests/bounds/bind and full
-verification pending.
+Native-input8,strict selected lint/fmt,Rustdoc3,guarded book/publication118/374/1818/3436 pass0;53 prior Rust fences across6 chapters unchanged/new native fence exact. Archive1033 four whole source/body/public spans exact0. G1still6/18 In Progress;genuine mixed consumers and complete
+binding/verification remain pending.
 
 # Sealed archive — earlier slices
 
-[Whole0856 canonical bindings and closed0083 metadata protocol](docs/history/stitchcad-devnotes-part1032.md) retain exact source bytes.
+[Whole0857 formula geometry uses and closed0084 declaration protocol](docs/history/stitchcad-devnotes-part1033.md) retain exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

@@ -103,6 +103,19 @@ pub struct OffsetConstruction {
     allowance: EntityId,
 }
 impl OffsetConstruction {
+    // Classify every original field independently of the held-content resource walk.
+    pub(crate) fn geometry_input_guard(&self) {
+        let Self {
+            operation,
+            source,
+            side,
+            allowance,
+        } = self;
+        let _: [&EntityId; 2] = [operation, allowance];
+        let _: &OffsetSide = side;
+        let _: &DirectedRange = source;
+    }
+
     // Exhaustive owner view: new fields must be classified before resource accounting compiles.
     pub(crate) fn resource_fields(&self) {
         use super::operation_input::resources::fixed;

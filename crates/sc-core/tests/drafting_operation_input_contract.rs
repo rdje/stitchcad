@@ -156,6 +156,54 @@ fn mixed_family_views_keep_each_actual_source_and_history_identity() -> Result<(
             .len(),
         13
     );
+    use DraftingGeometryReference::{Edge, Point};
+    let e = Edge(range().range.edge());
+    let expected = [
+        vec![],
+        vec![],
+        vec![],
+        vec![Point(point(9001)), Point(point(9002))],
+        vec![e],
+        vec![e],
+        vec![Point(point(9003))],
+        vec![],
+        vec![Point(point(9004)), Point(point(9005)), Point(point(9004))],
+        vec![],
+        vec![e],
+        vec![],
+        vec![e, Point(point(9006))],
+    ];
+    for (input, expected) in inputs.into_iter().zip(expected) {
+        let uses: Vec<_> = input.geometry_dependencies().collect();
+        assert_eq!(
+            uses.iter().map(|use_| use_.reference()).collect::<Vec<_>>(),
+            expected
+        );
+        for (index, use_) in uses.iter().enumerate() {
+            assert_eq!(use_.index(), index);
+            assert_eq!(use_.input().family(), input.family());
+            assert_eq!(use_.input().operation(), input.operation());
+            use DraftingNativeGeometryField as F;
+            match use_.field() {
+                F::Line(field) => assert!(std::ptr::eq(field.line(), &line)),
+                F::CenterArc(field) => assert!(std::ptr::eq(field.arc(), &arc)),
+                F::Bezier(field) => assert!(std::ptr::eq(field.construction(), &bezier)),
+                F::Offset(source) => {
+                    assert!(std::ptr::eq(source, offset.source()));
+                    assert_eq!(*source, range());
+                }
+                F::SlashSpread(field) => assert!(std::ptr::eq(field.construction(), &slash)),
+                F::NotchAnchor(anchor) => assert_eq!(*anchor, notch.anchor()),
+                F::WalkAnchor { .. } => return Err("empty raw Walk has no direct fields".into()),
+                F::Mirror(field) => assert!(std::ptr::eq(field.input(), &mirror)),
+            }
+            let debug = format!("{use_:?} {:?}", use_.field());
+            assert!(!debug.contains(" mm") && !debug.contains("deg"));
+        }
+        let mut exhausted = input.geometry_dependencies();
+        for _ in exhausted.by_ref() {}
+        assert!(exhausted.next().is_none() && exhausted.next().is_none());
+    }
     Ok(())
 }
 
@@ -226,6 +274,161 @@ fn cubic_layout_and_repeated_sources_remain_in_the_original_declaration(
     assert_eq!(actual.degree(), BezierDegree::Cubic);
     assert_eq!(actual.dependencies().count(), 4);
     assert_eq!(input.operation(), id(10));
+    let uses: Vec<_> = input.geometry_dependencies().collect();
+    assert_eq!(
+        uses.iter().map(|use_| use_.reference()).collect::<Vec<_>>(),
+        [93, 91, 93, 90].map(|n| DraftingGeometryReference::Point(point(n)))
+    );
+    assert_eq!(
+        uses.iter()
+            .map(|use_| match use_.field() {
+                DraftingNativeGeometryField::Bezier(field) => field.role(),
+                _ => unreachable!("actual explicit cubic"),
+            })
+            .collect::<Vec<_>>(),
+        [
+            BezierPointRole::Start,
+            BezierPointRole::FirstControl,
+            BezierPointRole::SecondControl,
+            BezierPointRole::End
+        ]
+    );
+    for (use_, original) in uses.iter().zip(actual.dependencies()) {
+        let DraftingNativeGeometryField::Bezier(field) = use_.field() else {
+            return Err("actual cubic source field".into());
+        };
+        assert!(std::ptr::eq(field.construction(), &curve));
+        assert!(std::ptr::eq(field.point_ref(), original.point_ref()));
+    }
+    Ok(())
+}
+
+#[test]
+fn native_geometry_fields_keep_walk_pair_anchors_and_both_explicit_axis_modes(
+) -> Result<(), Box<dyn Error>> {
+    let a = WalkBalanceNotch::new(
+        EdgeAnchor {
+            edge: range().range.edge(),
+            param: Param::START,
+        },
+        bindings(),
+    );
+    let b = WalkBalanceNotch::new(
+        EdgeAnchor {
+            edge: range().range.edge(),
+            param: Param::END,
+        },
+        bindings(),
+    );
+    let pair = WalkBalancePair::new(a, b);
+    // Raw field inspection does not admit this deliberately invalid same-operation span.
+    let walk = WalkSeamEdit::new(id(200), id(200), vec![pair; 3]);
+    let uses: Vec<_> = DraftingOperationInput::WalkSeam(&walk)
+        .geometry_dependencies()
+        .collect();
+    assert_eq!(uses.len(), 6);
+    for (index, use_) in uses.iter().enumerate() {
+        assert_eq!(use_.index(), index);
+        let DraftingOperationInput::WalkSeam(actual) = use_.input() else {
+            return Err("actual Walk input".into());
+        };
+        assert!(std::ptr::eq(actual, &walk));
+        let DraftingNativeGeometryField::WalkAnchor {
+            pair_index,
+            pair,
+            side,
+            anchor,
+        } = use_.field()
+        else {
+            return Err("actual Walk anchor".into());
+        };
+        assert_eq!(pair_index, index / 2);
+        assert_eq!(
+            side,
+            if index % 2 == 0 {
+                SeamSideId::A
+            } else {
+                SeamSideId::B
+            }
+        );
+        let original = walk.pairs().get(pair_index).ok_or("actual pair")?;
+        assert!(std::ptr::eq(pair, original));
+        assert!(std::ptr::eq(anchor, original.mark(side).anchor()));
+        assert_eq!(
+            anchor.param,
+            if side == SeamSideId::A {
+                Param::START
+            } else {
+                Param::END
+            }
+        );
+        assert_eq!(
+            use_.reference(),
+            DraftingGeometryReference::Edge(range().range.edge())
+        );
+    }
+    assert_eq!(
+        walk.admit(WalkEditLimits::new(3))
+            .expect_err("field views grant no native admission")
+            .refusal(),
+        WalkEditAdmissionRefusal::SelfSpan
+    );
+    let mirror = MirrorPieceCopy::new(
+        id(201),
+        id(301),
+        MirrorAxis::ThroughPoints {
+            start: point(90),
+            end: point(90),
+        },
+    )?;
+    let MirrorAxis::ThroughPoints { start, end } = mirror.axis() else {
+        return Err("actual point axis".into());
+    };
+    let mut uses = DraftingOperationInput::MirrorPiece(&mirror).geometry_dependencies();
+    for (index, original) in [start, end].into_iter().enumerate() {
+        let use_ = uses.next().ok_or("actual repeated axis point")?;
+        assert_eq!(use_.index(), index);
+        let DraftingNativeGeometryField::Mirror(field) = use_.field() else {
+            return Err("actual Mirror field".into());
+        };
+        assert!(std::ptr::eq(field.input(), &mirror));
+        let point = match (index, field.source()) {
+            (0, MirrorAxisSource::Start(point)) | (1, MirrorAxisSource::End(point)) => point,
+            _ => return Err("actual original axis role".into()),
+        };
+        assert!(std::ptr::eq(point, original));
+        assert_eq!(
+            use_.reference(),
+            DraftingGeometryReference::Point(*original)
+        );
+    }
+    assert!(uses.next().is_none() && uses.next().is_none());
+    let slash = SlashSpreadConstruction::separation(
+        id(202),
+        id(302),
+        range(),
+        SlashSpreadSide::Left,
+        range(),
+        doc("1 mm")?,
+    )?;
+    let uses: Vec<_> = DraftingOperationInput::SlashSpread(&slash)
+        .geometry_dependencies()
+        .collect();
+    assert_eq!(uses.len(), 2);
+    for (index, (use_, original)) in uses.iter().zip(slash.dependencies()).enumerate() {
+        assert_eq!(use_.index(), index);
+        let DraftingNativeGeometryField::SlashSpread(field) = use_.field() else {
+            return Err("actual Slash field".into());
+        };
+        assert!(std::ptr::eq(field.construction(), &slash));
+        let (actual, expected) = match (index, field.source(), original.source()) {
+            (0, SlashSpreadSource::Cut(a), SlashSpreadSource::Cut(b))
+            | (1, SlashSpreadSource::Direction(a), SlashSpreadSource::Direction(b)) => (a, b),
+            _ => return Err("original cut/direction order".into()),
+        };
+        assert!(std::ptr::eq(actual, expected));
+        assert_eq!(*actual, range());
+    }
     Ok(())
 }
 

@@ -45,6 +45,13 @@ pub struct PointConstruction {
     y: FormulaExpressionDocument,
 }
 impl PointConstruction {
+    // Classify every original field independently of the held-content resource walk.
+    pub(crate) fn geometry_input_guard(&self) {
+        let Self { operation, x, y } = self;
+        let _: &EntityId = operation;
+        let _: [&FormulaExpressionDocument; 2] = [x, y];
+    }
+
     // Exhaustive actual fields; dynamic documents stay borrowed from this original owner.
     pub(crate) fn resource_documents(&self) -> [&FormulaExpressionDocument; 2] {
         use super::operation_input::resources::fixed;

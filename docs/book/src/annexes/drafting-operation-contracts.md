@@ -180,6 +180,54 @@ fixed-only and empty inputs too. Exhaustive private owner views and Copy guards 
 fields to gain accounting. Charges cover held native inputs only;the containing Root/context,
 mixed-order vector and complete normalization populations still need whole-program admission.
 
+### Direct original geometry fields
+
+`DraftingOperationInput::geometry_dependencies()` now streams original direct geometry fields
+without allocation,source/provider calls or value reads. Every `DraftingNativeGeometryUse` privately
+retains its actual `input()`,original zero-based field `index()` and typed `field()`. `reference()`
+exposes the original persistent PointRef/EdgeRef;the full selector remains on the typed field:
+
+- Line retains the original start/end dependency roles;Arc retains its actual center dependency.
+- Quadratic/cubic Bézier retains every original control role and field loan,including repeats.
+- Offset borrows the actual DirectedRange,including its original bounds and traversal.
+- Slash/spread reuses actual Cut then Pivot/Direction dependencies for its explicit motion mode.
+- AddNotch borrows its actual EdgeAnchor,including the original source-frame parameter.
+- Walk visits every original pair in authored order,then A/B anchors within each pair. It retains
+  the original pair index,actual pair and anchor loans;equal repeated pairs remain separate slots.
+- Mirror reuses the actual Start/End or Range axis dependencies,without sorting repeated points.
+
+The factory classifies all13 closed raw families through independent exhaustive private schema
+views. Added owner fields or source variants must be classified before this producer compiles.
+Point has scalar documents rather than direct geometry fields;its checked formula uses have their
+own occurrence stream. CloseDart,Grainline,Truing and Join carry semantic targets rather than direct
+geometry fields in these raw schemas. Their actual Dart/Grainline/span/Piece geometry still needs
+the original Root-bound semantic records. An empty direct-field stream cannot substitute an empty
+inventory or certify a missing semantic source. Formula and semantic dependencies remain separate.
+
+```rust
+use sc_core::construction::{DraftingOperationInput,DraftingGeometryReference};
+fn direct_points(input:DraftingOperationInput<'_>) -> usize {
+    input.geometry_dependencies().filter(|use_|matches!(use_.reference(),
+        DraftingGeometryReference::Point(_))).count()
+}
+```
+
+For example,a line using the same PointRef twice still emits Start and End. A cubic with control
+references `93,91,93,90` emits all four original roles in that order. Three repeated Walk pairs
+emit six uses at pair/side positions `(0,A),(0,B),(1,A),(1,B),(2,A),(2,B)`;START/END anchor parameters
+remain unchanged. Even a raw Walk whose span equals its own operation can expose those fields;
+its original native admission still refuses SelfSpan. Field inspection grants no native admission.
+
+Focused checks cover all13 families,quadratic/cubic controls,both Slash and Mirror modes,repeated
+Walk pairs,actual source/selector pointers,reference order,empty streams and fused end reads.
+Default diagnostics omit authored documents,range parameters and target payloads. Explicit typed
+field getters preserve that original information. Copying a use copies only metadata/loans;private
+fields and lifetimes prevent replacing or outliving its native owner.
+
+This raw producer grants no containing-programme position,statement ordinal,geometry supplier,
+currentness,frame,resource allowance,physical result or whole acceptance. The next mixed native
+stage must attach genuine programme consumers before complete geometry bounds and source binding.
+
 The containing program must preserve actual scalar-source ordinals separately from combined
 program positions. It must receive its actual Cartesian drafting frame and current output registry,
 then expose initial/always-visible names and only earlier scalar/geometry outputs at each step.
@@ -189,11 +237,12 @@ Whole logical admission and static checks precede values,and a later refusal exp
 program prefix. Pocket kind/domain/state and Buttonhole's canonical button-size dependency remain
 part of the complete graph;no separately authored hole length or approximation is introduced.
 
-Input composition and held-field charging, bounded actual context and typed existing-output binding
-are implemented. The
-raw mixed source owner and complete input admission are also available;names,dependencies and checking
-remain separately owned work. Coupled
-verification follows that complete set. The raw input view alone grants no context or program acceptance.
+Input composition,held-field charging and direct geometry-field views are implemented with focused
+checks,alongside bounded context/existing-output binding and complete mixed input admission.
+[Mixed name/kind and canonical checks](formula-checked-recipes.md#bind-the-complete-mixed-canonical-dependency-stream)
+are available separately. Native mixed geometry consumers,full geometry/semantic association and
+whole composition remain owned implementation work;coupled verification follows the complete set.
+The raw input view alone grants no context or programme acceptance.
 
 The [drafting context companion](drafting-context-sources.md) specifies actual source binding,
 resource accounting and the remaining existing-output/program integration.

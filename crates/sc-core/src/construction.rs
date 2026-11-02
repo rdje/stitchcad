@@ -68,7 +68,10 @@ pub use context::{
     DraftingPlannedOutputSourceResult, DraftingSourceRecord,
 };
 mod operation_input;
-pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};
+pub use operation_input::{
+    DraftingNativeGeometryField, DraftingNativeGeometryUse, DraftingOperationFamily,
+    DraftingOperationInput,
+};
 mod program;
 pub use program::{
     AdmittedDraftingProgramInputs, AdmittedDraftingProgramNameWork,

@@ -133,6 +133,19 @@ pub struct ConstrainedSeamTruing {
     fit_tolerance: EntityId,
 }
 impl ConstrainedSeamTruing {
+    // Classify every original field independently of the held-content resource walk.
+    pub(crate) fn geometry_input_guard(&self) {
+        let Self {
+            operation,
+            span,
+            adjusted_side,
+            piece,
+            fit_tolerance,
+        } = self;
+        let _: [&EntityId; 4] = [operation, span, piece, fit_tolerance];
+        let _: &SeamSideId = adjusted_side;
+    }
+
     // Exhaustive owner view: new fields must be classified before resource accounting compiles.
     pub(crate) fn resource_fields(&self) {
         use super::operation_input::resources::fixed;

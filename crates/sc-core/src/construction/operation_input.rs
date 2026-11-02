@@ -9,7 +9,9 @@ use crate::{
     ontology::EntityId,
 };
 use core::fmt;
+mod geometry;
 pub(super) mod resources;
+pub use geometry::{DraftingNativeGeometryField, DraftingNativeGeometryUse};
 
 /// Closed v1 input families;this tag says nothing about geometric or program acceptance.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]

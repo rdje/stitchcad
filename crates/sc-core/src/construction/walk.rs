@@ -53,6 +53,15 @@ pub struct WalkBalanceNotch {
     representation: NotchProfileBindings,
 }
 impl WalkBalanceNotch {
+    fn geometry_anchor(&self) -> &EdgeAnchor {
+        let Self {
+            anchor,
+            representation,
+        } = self;
+        let _: &NotchProfileBindings = representation;
+        anchor
+    }
+
     /// Retain the original source-frame anchor and all sample/production/profile bindings.
     #[must_use]
     pub const fn new(anchor: EdgeAnchor, representation: NotchProfileBindings) -> Self {
@@ -79,6 +88,14 @@ pub struct WalkBalancePair {
     b: WalkBalanceNotch,
 }
 impl WalkBalancePair {
+    pub(crate) fn geometry_anchors(&self) -> [(SeamSideId, &EdgeAnchor); 2] {
+        let Self { a, b } = self;
+        [
+            (SeamSideId::A, a.geometry_anchor()),
+            (SeamSideId::B, b.geometry_anchor()),
+        ]
+    }
+
     /// Both original requests are required;neither side nor profile context receives a default.
     #[must_use]
     pub const fn new(a: WalkBalanceNotch, b: WalkBalanceNotch) -> Self {
@@ -219,6 +236,16 @@ impl fmt::Debug for WalkSeamEdit {
     }
 }
 impl WalkSeamEdit {
+    pub(crate) fn geometry_pairs(&self) -> &[WalkBalancePair] {
+        let Self {
+            operation,
+            span,
+            pairs,
+        } = self;
+        let _: [&EntityId; 2] = [operation, span];
+        pairs
+    }
+
     // Original collection only; the caller precharges its complete length before any traversal.
     pub(crate) fn resource_pairs(&self) -> &[WalkBalancePair] {
         use super::operation_input::resources::fixed;

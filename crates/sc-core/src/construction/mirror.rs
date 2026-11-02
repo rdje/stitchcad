@@ -137,6 +137,24 @@ pub struct MirrorPieceCopy {
     axis: MirrorAxis,
 }
 impl MirrorPieceCopy {
+    // Classify every original field independently of the held-content resource walk.
+    pub(crate) fn geometry_input_guard(&self) {
+        let Self {
+            operation,
+            source_piece,
+            axis,
+        } = self;
+        let _: [&EntityId; 2] = [operation, source_piece];
+        match axis {
+            MirrorAxis::ThroughPoints { start, end } => {
+                let _: [&PointRef; 2] = [start, end];
+            }
+            MirrorAxis::AlongRange(range) => {
+                let _: &DirectedRange = range;
+            }
+        }
+    }
+
     // Exhaustive owner view: new fields must be classified before resource accounting compiles.
     pub(crate) fn resource_fields(&self) {
         use super::operation_input::resources::fixed;

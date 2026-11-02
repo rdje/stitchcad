@@ -64,6 +64,15 @@ pub struct GrainlinePlacement {
     grainline: EntityId,
 }
 impl GrainlinePlacement {
+    // Classify every original field independently of the held-content resource walk.
+    pub(crate) fn geometry_input_guard(&self) {
+        let Self {
+            operation,
+            grainline,
+        } = self;
+        let _: [&EntityId; 2] = [operation, grainline];
+    }
+
     // Exhaustive owner view: new fields must be classified before resource accounting compiles.
     pub(crate) fn resource_fields(&self) {
         use super::operation_input::resources::fixed;

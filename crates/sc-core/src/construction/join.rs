@@ -203,6 +203,17 @@ pub struct JoinPiecesAtSeam {
     b: EntityId,
 }
 impl JoinPiecesAtSeam {
+    // Classify every original field independently of the held-content resource walk.
+    pub(crate) fn geometry_input_guard(&self) {
+        let Self {
+            operation,
+            span,
+            a,
+            b,
+        } = self;
+        let _: [&EntityId; 4] = [operation, span, a, b];
+    }
+
     // Exhaustive owner view: new fields must be classified before resource accounting compiles.
     pub(crate) fn resource_fields(&self) {
         use super::operation_input::resources::fixed;

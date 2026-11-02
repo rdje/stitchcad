@@ -48,6 +48,11 @@ pub struct CloseDart {
 }
 
 impl CloseDart {
+    pub(crate) fn geometry_input_guard(&self) {
+        let Self { dart } = self;
+        let _: &EntityId = dart;
+    }
+
     /// Preserve the actual requested dart identity; registry/currentness checks belong to execution.
     #[must_use]
     pub const fn new(dart: EntityId) -> Self {
@@ -71,6 +76,17 @@ pub struct AddNotch {
 }
 
 impl AddNotch {
+    pub(crate) fn geometry_anchor(&self) -> &EdgeAnchor {
+        let Self {
+            piece,
+            anchor,
+            representation,
+        } = self;
+        let _: &EntityId = piece;
+        let _: &NotchProfileBindings = representation;
+        anchor
+    }
+
     /// Preserve canonical anchor and symbolic sample/production/profile bindings without defaults.
     #[must_use]
     pub const fn new(

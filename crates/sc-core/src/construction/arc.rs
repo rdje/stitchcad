@@ -77,6 +77,20 @@ pub struct CenterArcConstruction {
     sweep_angle: FormulaExpressionDocument,
 }
 impl CenterArcConstruction {
+    // Classify every original field independently of the held-content resource walk.
+    pub(crate) fn geometry_input_guard(&self) {
+        let Self {
+            operation,
+            center,
+            radius,
+            start_angle,
+            sweep_angle,
+        } = self;
+        let _: &EntityId = operation;
+        let _: &PointRef = center;
+        let _: [&FormulaExpressionDocument; 3] = [radius, start_angle, sweep_angle];
+    }
+
     // Exhaustive actual fields; dynamic documents stay borrowed from this original owner.
     pub(crate) fn resource_documents(&self) -> [&FormulaExpressionDocument; 3] {
         use super::operation_input::resources::fixed;

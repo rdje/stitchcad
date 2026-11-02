@@ -118,6 +118,32 @@ pub struct BezierConstruction {
     controls: BezierControlPoints,
 }
 impl BezierConstruction {
+    // Classify every original field independently of the held-content resource walk.
+    pub(crate) fn geometry_input_guard(&self) {
+        let Self {
+            operation,
+            controls,
+        } = self;
+        let _: &EntityId = operation;
+        match controls {
+            BezierControlPoints::Quadratic {
+                start,
+                control,
+                end,
+            } => {
+                let _: [&PointRef; 3] = [start, control, end];
+            }
+            BezierControlPoints::Cubic {
+                start,
+                first_control,
+                second_control,
+                end,
+            } => {
+                let _: [&PointRef; 4] = [start, first_control, second_control, end];
+            }
+        }
+    }
+
     // Exhaustive owner view: new fields must be classified before resource accounting compiles.
     pub(crate) fn resource_fields(&self) {
         use super::operation_input::resources::fixed;

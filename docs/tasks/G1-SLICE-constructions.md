@@ -448,33 +448,7 @@ Retention: complete predecessor payload preserved by .5b.2b.
 
 - ID: `G1-SLICE.5b.2b`
   Status: `done`
-  Goal: immutable named declarations carrying existing canonical source identities/borrowed records,
-  binding kinds and prior-operation PointRef/EdgeRef; preserve single authored-value ownership.
-  Acceptance: no sc-core to sc-measure cycle or value/state fetch; authored input/recipe/reserved
-  sources distinguished and impossible source-kind combinations refused by types or typed errors.
-  Finalize public construction/ordinal/identity protocol after .2a, before code.
-  Work unit: `STITCHCAD-G1-0084`; clean predecessor cfd0748, handoff0/no jobs/user edits.
-  Pre-code protocol: same contract2/3/3.1/4.1/5.2/grammar1/7.1; complete normalized statement/
-  recipe, MachineToken, LengthDeclaration and stable PointRef/EdgeRef interfaces read.
-  Input origins closed to measurement/ease/parameter/profile/material. Carry input metadata and
-  canonical declaration identities; generic input kind is a caller-authored metadata claim, not
-  record/state/value proof. Canonical length adapter borrows the actual immutable record and forces
-  length without reading state or authored_value. Geometry refs force point/edge and retain creator/tag.
-  Recipe source comes only from an actual normalized recipe ordinal's let; absent/zero/assertion
-  positions return None, no guessed ordinal, declaration or annotation. Preserve original name/
-  whole-statement/name spans and authored annotation without inference; reserved binding still
-  awaits namespace checks. Reserved constructors derive their fixed names/kinds/origins/contexts.
-  Names borrow validated MachineToken or existing normalized source; private immutable construction,
-  Copy/Clone and opaque Debug retain lifetimes/privacy, no copied canonical value/state.
-  D130 draft adapter overgeneralization repaired before commit: generic kinds use only three
-  scalar domains; measurement/Ease require canonical length borrowing, enforced by distinct types.
-  Independently authored five length origins/three scalar domains/six kinds, every LengthState, every
-  reserved name, exact refs, actual recipe positions and borrow/private compile-fail controls.
-  Actual compiled source/kind/origin/name/ordinal/span/privacy faults must fail public body assertions
-  and restore exact bytes. Strict native/WASM and focused reference/book checks; per-leaf docs/commit.
-  Own exact completed-record/oldest ledger/lesson retention under unchanged parts/ceilings.
-  Verification:7 public contracts/19 compiled body reds/one widened API-negative contract red,
-  exact restore; strict native608/50groups and focused book/reference pass0. Commit: `STITCHCAD-G1-0084`.
+  Goal:0084 sourced declaration protocol;[whole scope/proofs](../history/stitchcad-devnotes-part1033.md).
 
 ## Completed declaration receipts — preserved from db19b90
 
@@ -950,17 +924,23 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:all actual native/selector geometry references under original frame/snapshot and strict earlier creators;unlabelled planned roles need authentic manifests,never live-future lookup or synthetic names.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.formulas`
   Status: `done`
-  Goal:allocation-free original Point/Edge formula occurrences from every Root source then complete mixed canonical slots;actual consumer/local index/span/declaration/reference,all repeats/branches,no geometry acceptance.
-  - [x] ROOT CAUSE: 0857 `cargo test -p sc-core --test drafting_context_binding_contract initial_binding::formula_geometry`:1 pass/two rich-empty cases,rc=0;6 unused Root-source plus7 mixed geometry uses retain original consumers/indices.
-  - [x] ADDRESSED: 0857 same native command rc=0;source/mixed actual proof/slot pointers,all Point/Edge references/name loans/spans,nongeometry index gaps,both branches/nth/fused end/empty;zero provider/value calls,no geometry acceptance.
-  - [x] NO REGRESSION: 0857 selected strict clippy/fmt and `cargo test -p sc-core --doc construction::program::dependencies::formula_geometry`:3 pass,rc=0;public example and private-field/lifetime guards,opaque default diagnostics.
-  - [x] BOOK: 0857 guarded build/pure publication118/374/1817/3434,46 prior Rust fences unchanged/new whole native fence exact,rc=0;native extraction/requests/bounds/bind and coupled verification explicitly separate.
-  - [x] CONTINUITY: 0857 archive1032 whole0856 task/lesson/ledger plus closed0083 protocol:4 Git/body/full public spans exact;retention1486/63,generation1 21/64,generation2 42/64,headroom22,rc=0.
-  - [x] BASELINE: 0857 lib check/focused1/strict/fmt/Rustdoc3/build/publication all rc=0;README/LIVE reviewed,G1still6/18 In Progress;feature .5f.2.verify deferred until implementation complete.
-  - [x] PROMOTION: 0857 existing original-occurrence/native-source/no-value principles reused;book owns formula-use API scope,no new cross-cutting decision;focused checks rc=0. Native geometry fields are next.
+  Goal:0857 original formula geometry uses;[whole scope/proofs](../history/stitchcad-devnotes-part1033.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.native`
+  Status: `in_progress`
+  Goal:complete direct geometry fields/selectors across all13 native families,then genuine mixed consumers;semantic-target geometry still requires actual Root-bound sources,no empty/id-only substitutes.
+- ID: `G1-SLICE.5f.2.dependencies.geometry.native.fields`
+  Status: `done`
+  Goal:allocation-free direct original native Point/range/anchor field views for all13 closed families;retain actual input and typed role/selector,all repeated pairs/modes,independent private schema guards;no semantic source or programme acceptance.
+  - [x] ROOT CAUSE: 0858 `cargo test -p sc-core --test drafting_operation_input_contract`:8 pass,rc=0;all13 families plus quadratic/cubic,both Slash/Mirror modes and repeated Walk pairs;direct field order/references/actual source selectors preserved.
+  - [x] ADDRESSED: 0858 same native command rc=0;private Use pins actual input/index/typed field;original range/anchor/pair/point loans and A/B parameters;empty/fused/opaque diagnostics;invalid raw Walk still refuses native SelfSpan.
+  - [x] NO REGRESSION: 0858 selected strict clippy/fmt and `cargo test -p sc-core --doc construction::operation_input::geometry`:3 pass,rc=0;public example/private/lifetime guards,independent exhaustive owners/source variants and explicit request-wrapper fields.
+  - [x] BOOK: 0858 guarded build/pure publication118/374/1818/3436,53 prior Rust fences across6 chapters unchanged/new whole native fence exact,rc=0;raw fields grant no mixed position,semantic-source/currentness/frame/resource or geometry acceptance.
+  - [x] CONTINUITY: 0858 archive1033 whole0857 task/lesson/ledger plus closed0084 protocol:4 Git/body/full public spans exact;retention1487/64,generation1 21/64,generation2 43/64,headroom21,rc=0;aggregate is not per-generation cap.
+  - [x] BASELINE: 0858 lib check/focused8/strict/fmt/Rustdoc3/build/publication all rc=0;README/LIVE reviewed,G1still6/18 In Progress;whole .5f.2.verify deferred until geometry/semantic/composition implemented.
+  - [x] PROMOTION: 0858 existing typed native/source/no-value contracts reused;book owns direct-field API scope,no new cross-cutting decision;focused checks rc=0. Genuine mixed consumers are next;semantic-target geometry still needs actual bound records.
+- ID: `G1-SLICE.5f.2.dependencies.geometry.native.mixed`
   Status: `pending`
-  Goal:complete original geometry reference fields/selectors across all13 actual native families,private schema guards,genuine mixed consumer and original role/index;no synthesized refs or semantic source substitution.
+  Goal:stream every native field under actual complete canonical programme and genuine mixed consumer/position;reuse original native field producer,no synthetic name/span/statement ordinal or source/value callback.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.requests`
   Status: `pending`
   Goal:genuine earlier creating-step/reference request and authentic planned-family port,including unnamed outputs;classify all creators,refuse ambiguous/self/future before live lookup;no global name manufacture.

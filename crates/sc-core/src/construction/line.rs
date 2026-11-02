@@ -63,6 +63,17 @@ pub struct LineConstruction {
     end: PointRef,
 }
 impl LineConstruction {
+    // Classify every original field independently of the held-content resource walk.
+    pub(crate) fn geometry_input_guard(&self) {
+        let Self {
+            operation,
+            start,
+            end,
+        } = self;
+        let _: &EntityId = operation;
+        let _: [&PointRef; 2] = [start, end];
+    }
+
     // Exhaustive owner view: new fields must be classified before resource accounting compiles.
     pub(crate) fn resource_fields(&self) {
         use super::operation_input::resources::fixed;

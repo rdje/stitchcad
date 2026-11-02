@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — original formula geometry consumers
+## _(2026-11-02 UTC)_ — direct original native geometry fields
 
-0857 canonical owner streams selected Root-source proofs then actual mixed occurrence slots;private Use retains original consumer/index/span/declaration/reference. Filtered names keep index gaps;all unused sources/branches/repeats participate.
-Focused rich/empty1 confirms6 Root+7 mixed geometry uses,actual source/slot and name pointers,all references/spans/nth/fused end and zero callbacks. No allocation,supplier acceptance,currentness/frame or native field coverage granted.
-Final focused1/strict selected lint/fmt/Rustdoc3/build/publication118/374/1817/3434 pass0;46 prior positive fences unchanged/new whole native fence exact. Full geometry/semantic/composition verification remains deferred.
-1032 whole0856 task/lesson/ledger plus0083 protocol:4 Git/body/public spans exact0;1486/63,generation1 21/64,generation2 42/64,headroom22. Promotion declined:existing occurrence/source principles;book owns API. G1still6/18;native fields next.
+0858 raw geometry_dependencies reuses original Line/Arc/Bezier/Slash/Mirror dependencies,borrows Offset ranges/Notch anchors and every Walk pair/A/B anchor. Private Use pins actual input/index/field;independent exhaustive guards cover13 schemas/request wrappers.
+Actual range/anchor parameters and repeated fields retained;Point/Dart/Grainline/Truing/Join direct0 grants no semantic source or programme acceptance. Invalid raw Walk still refuses SelfSpan;default diagnostics omit original documents/selector payloads.
+Final native-input8/strict selected lint/fmt/Rustdoc3/build/publication118/374/1818/3436 pass0;53 prior Rust fences across6 chapters unchanged/new whole native fence exact. Full geometry/semantic/composition verification remains deferred.
+1033 whole0857 task/lesson/ledger plus0084 protocol:4 Git/body/public spans exact0;1487/64,generation1 21/64,generation2 43/64,headroom21. Promotion declined:existing typed native/source contracts;book owns API. G1still6/18;genuine mixed consumers next.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

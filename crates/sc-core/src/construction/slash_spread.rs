@@ -134,6 +134,30 @@ pub struct SlashSpreadConstruction {
     motion: Motion,
 }
 impl SlashSpreadConstruction {
+    // Classify every original field independently of the held-content resource walk.
+    pub(crate) fn geometry_input_guard(&self) {
+        let Self {
+            operation,
+            piece,
+            cut,
+            moving_side,
+            motion,
+        } = self;
+        let _: [&EntityId; 2] = [operation, piece];
+        let _: &DirectedRange = cut;
+        let _: &SlashSpreadSide = moving_side;
+        match motion {
+            Motion::Rotation { pivot, opening } => {
+                let _: &PointRef = pivot;
+                let _: &FormulaExpressionDocument = opening.resource_document();
+            }
+            Motion::Separation { direction, opening } => {
+                let _: &DirectedRange = direction;
+                let _: &FormulaExpressionDocument = opening.resource_document();
+            }
+        }
+    }
+
     pub(crate) fn resource_opening(&self) -> &SlashSpreadOpening {
         use super::operation_input::resources::fixed;
         let Self {
