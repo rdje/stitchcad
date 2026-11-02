@@ -956,6 +956,11 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.check`
   Status: `pending`
   Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.
+- ID: `G1-SLICE.5f.2.pause-20261102`
+  Status: `done`
+  Goal:0859 director-requested clean pause after product9f2fca2c;record resume intent without starting native.mixed or changing code/book.
+  - [x] CHECKPOINT: 0859 OS-visible `bash scripts/check_handoff.sh --idle-cua`:handoff OK/no project jobs,rc=0;9f2fca2c clean,brief0,295 ahead. Native8/strict/fmt/Rustdoc3/book proofs remain those of0858.
+  - [x] RESUME: 0859 PNT paused by director;resume only on request at .dependencies.geometry.native.mixed. MEM/index/changelog updated;README/LIVE/book/DEV reviewed unchanged,no new technical lesson or product claim.
 - ID: `G1-SLICE.5f.2.verify`
   Status: `pending`
   Goal:after the agreed integration set,verify coupled source/order/frame/currentness/argument/semantic/resource and allocator refusals,original causes and public proof lifetimes;actual geometry/selector execution stays .5f.3/.4.geometry/G2/G3.

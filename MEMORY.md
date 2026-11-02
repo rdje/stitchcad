@@ -1,6 +1,6 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0858;derive HEAD/ahead from Git;push cadence400. Full PNT continues.
+- Latest unit:STITCHCAD-G1-0859 pause;product9f2fca2c. Derive HEAD/ahead;push cadence400. PNT paused by director.
 - Active/next:G1-SLICE.5f.2.dependencies.geometry.native.mixed in docs/tasks/G1-SLICE-constructions.md#ordered-drafting-integration. Namespace/canonical/formula geometry and raw native fields implemented with focused checks;mixed consumers/requests/bounds/bind/semantics/check/verify pending.
 - Next:attach original native fields to actual complete canonical programme and genuine mixed consumers/positions. Reuse raw field producer;no fabricated name/span/scalar ordinal. Then genuine earlier-creator requests and complete bounds before binding. Sourced plan:formula-declarations.md#complete-dependency-composition.
 - Canonical:program/dependencies/canonical.rs bind_canonical_inputs counts complete D,C(Input/LengthInput),D+C before occurrence/record quotas,then full D-slot reserve/native Root joins. Original consumer/role/span/ordinal retained;noncanonical None grants no geometry. Semantic error pair boxed;allocator inline.

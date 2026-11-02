@@ -3,6 +3,10 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0859 — requested clean pause
+
+Director requested pause at the next handoff-ready checkpoint after product9f2fca2c. Handoff passed0;tree clean,brief0,no project jobs. Record PNT pause in MEMORY.md;resume only on request at genuine mixed native consumers. Code/book and0858 validation unchanged;no new implementation started.
+
 ## STITCHCAD-G1-0858 — direct original native geometry fields
 
 Stream every direct native Point/range/anchor field through original typed source views,including both motion/axis modes,cubic controls and repeated Walk pair/A/B anchors. Retain actual input/index/selector with independent exhaustive guards across all13 schemas. No source
