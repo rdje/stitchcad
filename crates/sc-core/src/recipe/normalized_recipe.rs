@@ -209,6 +209,58 @@ impl fmt::Debug for FormulaNormalizedRecipe<'_> {
     }
 }
 impl<'a> FormulaNormalizedRecipe<'a> {
+    pub(crate) fn charge_retained_resources(
+        &self,
+        sink: &mut dyn crate::design::DesignResourceSink,
+        location: crate::design::DesignResourceLocation,
+    ) -> Result<(), crate::design::DesignResourceLimitError> {
+        use crate::design::{fixed_value, DesignResourceLocation};
+        let Self { statements } = self;
+        sink.charge_entries(statements.len(), location)?;
+        for (index, statement) in statements.iter().enumerate() {
+            let FormulaNormalizedStatement {
+                span,
+                name_span,
+                annotation_span,
+                name,
+                data,
+            } = statement;
+            fixed_value(span);
+            fixed_value(name_span);
+            fixed_value(annotation_span);
+            fixed_value(name);
+            let at = |field| DesignResourceLocation {
+                field,
+                index: Some(index),
+                ..location
+            };
+            match data {
+                NormalizedStatementData::Let(kind, expression) => {
+                    fixed_value(kind);
+                    expression.charge_retained_resources(
+                        sink,
+                        at("drafting.normalized.recipe.bind.nodes"),
+                        at("drafting.normalized.recipe.bind.arguments"),
+                    )?;
+                }
+                NormalizedStatementData::Assert(tolerance, left, right) => {
+                    fixed_value(tolerance);
+                    left.charge_retained_resources(
+                        sink,
+                        at("drafting.normalized.recipe.assert.left.nodes"),
+                        at("drafting.normalized.recipe.assert.left.arguments"),
+                    )?;
+                    right.charge_retained_resources(
+                        sink,
+                        at("drafting.normalized.recipe.assert.right.nodes"),
+                        at("drafting.normalized.recipe.assert.right.arguments"),
+                    )?;
+                }
+            }
+        }
+        Ok(())
+    }
+
     /// Immutable authored order; the slice and every operand view borrow this arena owner.
     /// ```compile_fail
     /// fn escaped(source: &str) -> &[sc_core::recipe::FormulaNormalizedStatement<'_>] {

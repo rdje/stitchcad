@@ -477,3 +477,35 @@ fn extra_demand<H:DesignMetadataHost,S:DraftingContextSource<H> + ?Sized>(
 This demand covers additional inputs;the actual containing Root/context/raw program and retained
 normalized arenas compose separately. Fresh complete composition,prospective name-work bounds and
 creating-step associations remain owned admission stages before namespace construction/checking.
+
+### Complete retained program charges
+
+`NormalizedDraftingProgram::charge_resources(sink)` composes a fresh walk of the actual Root,
+context source,mixed vector and native fields with all retained source,scalar and native arenas.
+It precharges each actual source/statement/slot/node vector and each nested call-index vector.
+Borrowed names/source text and fixed Copy literals own no additional text or counter buffers.
+Repeated native steps count their separate arenas;unused sources and untaken branches count too.
+
+For the complete seven-step example above,the actual extra population is source owners2,source
+nodes11,call indices2,scalar statements2,scalar nodes8,mixed slots7 and native nodes12:44 entries.
+The conservative84-record normalization allowance is a different quantity and never substitutes
+for this held-content walk. Source locations retain source identity;native locations retain actual
+operation identity and original zero-based mixed index. A nested call-vector location uses its
+semantic node index. Empty programs still charge their actual Root/context and preserve first refusal.
+
+```rust
+use sc_core::{construction::{DraftingContextSource, NormalizedDraftingProgram},
+    design::{DesignResourceDemand, DesignResourceLimitError, DesignResourceLimits,
+    DesignResourceMeter, DesignResourceSource}};
+fn program_demand<H:DesignResourceSource,S:DraftingContextSource<H> + ?Sized>(
+    program:&NormalizedDraftingProgram<'_, '_,H,S>,policy:DesignResourceLimits)
+    -> Result<DesignResourceDemand,DesignResourceLimitError> {
+    let mut meter=DesignResourceMeter::new(policy);
+    program.charge_resources(&mut meter)?;
+    meter.finish()
+}
+```
+
+This producer performs no normalization,source currentness,geometry lookup or numeric evaluation.
+The additional-name producer composes separately into the same cumulative sink;complete content
+and prospective name-work bounds must still precede namespace construction and ordered checking.

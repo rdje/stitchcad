@@ -10,7 +10,7 @@ use sc_core::{
     },
     design::{
         DesignResourceCount, DesignResourceLimitError, DesignResourceLimits,
-        DesignResourceLocation, DesignResourceScope,
+        DesignResourceLocation, DesignResourceMeter, DesignResourceScope, DesignResourceSink,
     },
     ontology::{
         DirectedRange, Direction, EdgeAnchor, EdgeRange, EdgeRef, EntityId, LocalTag,
@@ -205,6 +205,54 @@ fn whole_admission_counts_all_three_cohorts_repeats_and_actual_retained_fields()
     );
     assert_eq!(source.trace.get(), 0);
     assert!(!format!("{normalized:?}").contains("private_width"));
+    // Actual held entries: sources2 + source nodes11 + call indices2 + statements2
+    // + scalar nodes8 + mixed slots7 + native nodes12 =44, independently of bound84.
+    let mut meter = DesignResourceMeter::new(limits(entries + 44, bytes, bits)?);
+    normalized.charge_resources(&mut meter)?;
+    let held = meter.finish()?;
+    assert_eq!(
+        (
+            held.collection_entries(),
+            held.text_bytes(),
+            held.counter_bits()
+        ),
+        (entries + 44, bytes, bits)
+    );
+    assert_eq!(source.trace.get(), 2);
+    for (allowance, consumed, requested, field, owner, index) in [
+        (
+            14,
+            13,
+            2,
+            "drafting.normalized.sources.arguments",
+            id(82),
+            Some(2),
+        ),
+        (
+            43,
+            41,
+            3,
+            "drafting.normalized.point.y.nodes",
+            id(100),
+            Some(4),
+        ),
+    ] {
+        source.trace.set(0);
+        let mut meter = DesignResourceMeter::new(limits(entries + allowance, bytes, bits)?);
+        let failure = normalized
+            .charge_resources(&mut meter)
+            .expect_err("actual held field");
+        assert!(matches!(failure, DesignResourceLimitError::Count {
+            unit: DesignResourceCount::CollectionEntries,
+            consumed: actual_consumed, requested: actual_requested,
+            location: DesignResourceLocation {
+                field: actual_field, owner: actual_owner, index: actual_index, ..
+            }, ..
+        } if actual_consumed == entries + consumed && actual_requested == requested
+            && actual_field == field && actual_owner == Some(owner) && actual_index == index));
+        assert_eq!(meter.finish().expect_err("same first refusal"), failure);
+        assert_eq!(source.trace.get(), 2);
+    }
     for (expressions, nodes, records, expected) in [
         (
             12,
@@ -453,6 +501,26 @@ fn empty_program_admits_zero_normalization_but_keeps_complete_context_content() 
         normalized.admitted().inputs().recipe(),
         root.recipe()
     ));
+    assert_eq!(source.trace.get(), 0);
+    let mut meter = DesignResourceMeter::new(all()?);
+    normalized.charge_resources(&mut meter)?;
+    assert_eq!(meter.finish()?, admitted.demand());
+    assert_eq!(source.trace.get(), 2);
+    let mut meter = DesignResourceMeter::new(limits(1, usize::MAX, u64::MAX)?);
+    let first = meter
+        .charge_entries(
+            2,
+            DesignResourceLocation {
+                scope: DesignResourceScope::CommandState,
+                owner: Some(id(999)),
+                field: "preceding.owner",
+                index: None,
+            },
+        )
+        .expect_err("earlier cumulative refusal");
+    source.trace.set(0);
+    assert_eq!(normalized.charge_resources(&mut meter), Err(first));
+    assert_eq!(meter.finish(), Err(first));
     assert_eq!(source.trace.get(), 0);
     Ok(())
 }

@@ -125,6 +125,24 @@ pub struct NormalizedCenterArcConstruction<'a> {
     sweep_angle: FormulaNormalizedExpression<'a>,
 }
 impl<'a> NormalizedCenterArcConstruction<'a> {
+    pub(crate) fn resource_expressions(&self) -> [&FormulaNormalizedExpression<'a>; 3] {
+        use crate::design::fixed_value;
+        let Self {
+            arc,
+            limits,
+            nodes,
+            retained_records,
+            radius,
+            start_angle,
+            sweep_angle,
+        } = self;
+        fixed_value(arc);
+        fixed_value(limits);
+        fixed_value(nodes);
+        fixed_value(retained_records);
+        [radius, start_angle, sweep_angle]
+    }
+
     /// Actual authored center-based variant,center/output roles and original documents.
     #[must_use]
     pub const fn arc(&self) -> &'a CenterArcConstruction {

@@ -929,21 +929,22 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.namespace.admit`
   Status: `in_progress`
   Goal:fresh complete program/name/source/catalogue held-content and prospective name-work bounds before namespace callbacks;preserve original owner/role locations and first refusal,then exact actual program associations,no accepted prefix.
-### G1-SLICE.5f.2.namespace.admit.fields
 - ID: `G1-SLICE.5f.2.namespace.admit.fields`
   Status: `done`
-  Goal:exhaustive extra-name/initial canonical snapshot/fixed-source fields and whole typed role catalogues,including retained indexes;actual buffers/collections/locations,component sink only,no source lookup or admission.
-  - [x] ROOT CAUSE: 0838 launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
-    native19 pass;all six source fields/canonical evidence/inactive role keys/actual raw and retained indexes count,including repeated catalogue use;complete example19 entries/66 text bytes,rc=0.
-  - [x] ADDRESSED: 0838 same target preserves original canonical/operation/field/index refusals and empty latched failure,
-    with zero callbacks;`cargo test -p sc-core --doc construction::program::name_inputs` four guards/examples pass,rc=0.
-  - [x] NO REGRESSION: 0838 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    book/publication118/374/1810/3407/eight prior Rust fences/new native-book example exact,rc=0;
-    1013 three Git/body/public spans/archive1467/44,per-generation21/64 and23/64,rc=0.
-  Commit:STITCHCAD-G1-0838. promotion:declined (existing exhaustive-field/restricted-sink contract);normalized program fields next,complete name admission/semantic verification pending.
+  Goal:0838 complete additional held fields;[whole scope/proofs](../history/stitchcad-devnotes-part1014.md).
+### G1-SLICE.5f.2.namespace.admit.program
 - ID: `G1-SLICE.5f.2.namespace.admit.program`
-  Status: `pending`
+  Status: `done`
   Goal:compose actual Root/context/raw program plus complete normalized source/recipe/native slots,nodes and call-argument vectors;exhaustive owner fields/fixed literal guards,no conservative counts substituted for actual held data.
+  - [x] ROOT CAUSE: 0839 launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
+    native19 pass;actual retained44 versus prospective84,unused source/call vectors and repeated native arenas count with unchanged text/counter demand;fresh source charge only,rc=0.
+  - [x] ADDRESSED: 0839 same target preserves source-call owner82/node2,repeated point owner100/mixed index4,
+    original first refusal and empty complete Root/context demand;`cargo test -p sc-core --doc construction::program` private/lifetime guards/examples12 pass,rc=0.
+  - [x] NO REGRESSION: 0839 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
+    book/pure publication118/374/1810/3408,nine prior fences/new native-book example exact,rc=0;
+    1014 three Git/body/public spans/archive1468/45,per-generation21/64 and24/64,rc=0.
+  Commit:STITCHCAD-G1-0839. promotion:declined (existing exhaustive-owner/restricted-sink doctrine);whole content/name-work/association and semantic verification remain pending.
+  Check discipline:lost prior lint result discarded;new Copy-clone lint fixed and serial suite rerun0. Accidental publication main(--help) interrupted;partial probe output is not a campaign verdict,pure check rerun0.
 - ID: `G1-SLICE.5f.2.namespace.admit.bounds`
   Status: `pending`
   Goal:fresh cumulative full content and explicit conservative prospective name-work bounds before namespace factories;actual complete original fields,first typed refusal and checked arithmetic,no caller totals or accepted prefix.

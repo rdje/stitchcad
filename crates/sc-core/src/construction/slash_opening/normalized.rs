@@ -118,6 +118,22 @@ pub struct NormalizedSlashSpreadOpening<'a> {
     expression: FormulaNormalizedExpression<'a>,
 }
 impl<'a> NormalizedSlashSpreadOpening<'a> {
+    pub(crate) fn resource_expressions(&self) -> [&FormulaNormalizedExpression<'a>; 1] {
+        use crate::design::fixed_value;
+        let Self {
+            opening,
+            limits,
+            nodes,
+            retained_records,
+            expression,
+        } = self;
+        fixed_value(opening);
+        fixed_value(limits);
+        fixed_value(nodes);
+        fixed_value(retained_records);
+        [expression]
+    }
+
     /// Actual explicit authored owner and original document.
     #[must_use]
     pub const fn opening(&self) -> &'a SlashSpreadOpening {

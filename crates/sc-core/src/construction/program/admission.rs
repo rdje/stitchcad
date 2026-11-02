@@ -151,6 +151,20 @@ impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> Clone
 impl<'p, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
     AdmittedDraftingProgramInputs<'p, 'a, H, S>
 {
+    pub(super) fn resource_inputs(&self) -> &'p DraftingProgramInputs<'a, H, S> {
+        use crate::design::fixed_value;
+        let Self {
+            inputs,
+            limits,
+            demand,
+            shape,
+        } = self;
+        fixed_value(*limits);
+        fixed_value(demand);
+        fixed_value(shape);
+        inputs
+    }
+
     /// Actual original complete mixed source owner; no replacement owner is accepted.
     #[must_use]
     pub const fn inputs(&self) -> &'p DraftingProgramInputs<'a, H, S> {
@@ -222,28 +236,44 @@ fn charge<H: DesignResourceSource, S: DraftingContextSource<H> + ?Sized>(
     inputs: &DraftingProgramInputs<'_, H, S>,
     limits: &DraftingProgramLimits,
 ) -> Result<DesignResourceDemand, DesignResourceLimitError> {
-    // Exhaustive held owner; future fields must receive accounting before this compiles.
-    let DraftingProgramInputs { context, steps } = inputs;
-    let root = context.scope().root();
     let mut meter = DesignResourceMeter::new(limits.content());
-    charge_design_input_resources(root, &mut meter)?;
-    let source_result = context.source().charge_resources(&mut meter);
-    let location = DesignResourceLocation {
-        scope: DesignResourceScope::CommandState,
-        owner: Some(root.id()),
-        field: "drafting.program.steps",
-        index: None,
-    };
-    // Catch ignored provider failures before a later returned cause, even for an empty sequence.
-    meter.charge_entries(0, location)?;
-    source_result?;
-    meter.charge_entries(steps.len(), location)?;
-    for step in steps {
-        if let DraftingProgramStep::Drafting(input) = step {
-            input.charge_resources(&mut meter)?;
-        }
-    }
+    inputs.charge_resources(&mut meter)?;
     meter.finish()
+}
+impl<H: DesignResourceSource, S: DraftingContextSource<H> + ?Sized>
+    DraftingProgramInputs<'_, H, S>
+{
+    /// Append the complete actual Root,context source,mixed vector and native held fields to a
+    /// cumulative restricted sink. This reuses the original admission walk without trusting old
+    /// demands,normalizing,looking up geometry or reading values. Normalized arenas compose later.
+    /// # Errors
+    /// Original first field refusal,including an ignored source-sink failure and empty input.
+    pub fn charge_resources(
+        &self,
+        sink: &mut dyn DesignResourceSink,
+    ) -> Result<(), DesignResourceLimitError> {
+        // Exhaustive held owner; future fields must receive accounting before this compiles.
+        let DraftingProgramInputs { context, steps } = self;
+        let root = context.scope().root();
+        charge_design_input_resources(root, sink)?;
+        let source_result = context.source().charge_resources(sink);
+        let location = DesignResourceLocation {
+            scope: DesignResourceScope::CommandState,
+            owner: Some(root.id()),
+            field: "drafting.program.steps",
+            index: None,
+        };
+        // Catch ignored provider failures before a later returned cause, even for an empty sequence.
+        sink.charge_entries(0, location)?;
+        source_result?;
+        sink.charge_entries(steps.len(), location)?;
+        for step in steps {
+            if let DraftingProgramStep::Drafting(input) = step {
+                input.charge_resources(sink)?;
+            }
+        }
+        Ok(())
+    }
 }
 fn add(left: usize, right: usize) -> Result<usize, DraftingProgramAdmissionRefusal> {
     left.checked_add(right)

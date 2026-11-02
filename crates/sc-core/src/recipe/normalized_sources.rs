@@ -173,6 +173,42 @@ pub struct FormulaNormalizedSources<'a> {
     sources: Vec<FormulaNormalizedSource<'a>>,
 }
 impl<'a> FormulaNormalizedSources<'a> {
+    pub(crate) fn charge_retained_resources(
+        &self,
+        sink: &mut dyn crate::design::DesignResourceSink,
+        location: crate::design::DesignResourceLocation,
+    ) -> Result<(), crate::design::DesignResourceLimitError> {
+        use crate::design::{fixed_value, DesignResourceLocation};
+        let Self {
+            inputs,
+            limits,
+            node_count,
+            retained_records,
+            sources,
+        } = self;
+        fixed_value(inputs);
+        fixed_value(limits);
+        fixed_value(node_count);
+        fixed_value(retained_records);
+        sink.charge_entries(sources.len(), location)?;
+        for (index, item) in sources.iter().enumerate() {
+            let FormulaNormalizedSource { source, expression } = item;
+            fixed_value(source);
+            let at = |field| DesignResourceLocation {
+                owner: Some(source.id()),
+                field,
+                index: Some(index),
+                ..location
+            };
+            expression.charge_retained_resources(
+                sink,
+                at("drafting.normalized.sources.nodes"),
+                at("drafting.normalized.sources.arguments"),
+            )?;
+        }
+        Ok(())
+    }
+
     /// Original canonical/source admission; this adds no current Design or execution proof.
     #[must_use]
     pub const fn inputs(&self) -> FormulaSourceInputs<'a> {

@@ -55,8 +55,8 @@ pub(super) enum ResourceProjection<'a> {
 }
 
 // Fixed value/reference payloads own no dynamic content. Removing Copy requires new accounting.
-fn fixed_value<T: Copy>(_: &T) {}
-fn fixed_slice<T: Copy>(_: &[T]) {}
+pub(crate) fn fixed_value<T: Copy>(_: &T) {}
+pub(crate) fn fixed_slice<T: Copy>(_: &[T]) {}
 
 /// Original top-level model scope of a resource charge; no model data or authority is carried.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

@@ -249,6 +249,23 @@ pub struct NormalizedPointConstruction<'a> {
     y: FormulaNormalizedExpression<'a>,
 }
 impl<'a> NormalizedPointConstruction<'a> {
+    pub(crate) fn resource_expressions(&self) -> [&FormulaNormalizedExpression<'a>; 2] {
+        use crate::design::fixed_value;
+        let Self {
+            point,
+            limits,
+            nodes,
+            retained_records,
+            x,
+            y,
+        } = self;
+        fixed_value(point);
+        fixed_value(limits);
+        fixed_value(nodes);
+        fixed_value(retained_records);
+        [x, y]
+    }
+
     /// Actual original declaration and persistent output role.
     #[must_use]
     pub const fn point(&self) -> &'a PointConstruction {

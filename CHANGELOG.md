@@ -3,18 +3,18 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0838 — charge complete extra name fields
+## STITCHCAD-G1-0839 — charge actual retained program fields
 
-- Added restricted component charging for original name tokens,canonical evidence,fixed source
-  documents and whole typed catalogues,including inactive keys and all retained indexes.
-- Native19/strict selected lint/fmt/name-input docs4 pass0;19-entry/66-byte example verified.
-  Eight prior Rust fences/new book-native example exact,publication118/374/1810/3407.
-- 1013 three Git/body/public spans retained;archive1467/44,per-generation21/64 and23/64.
-  G1still6/18;complete normalized-program/name admission and whole checking remain pending.
+- Composed fresh raw Root/context/program content with actual complete source,scalar and native
+  slot/node/call-index vectors;exhaustive owners and fixed metadata preserve original first refusal.
+- Native19/strict selected lint pass0;exact44 retained entries versus84 prospective records,
+  nested/repeated/empty cumulative refusals covered. Program doctests12 pass0.
+- Book/publication118/374/1810/3408,nine prior Rust fences/new native-book example exact0;
+  1014 whole spans/archive1468/45,per-generation21/64 and24/64. G1still6/18;name admission next.
 
 # Sealed archive — earlier slices
 
-[Whole0837 actual name/output inputs](docs/history/stitchcad-devnotes-part1013.md) retains exact source bytes.
+[Whole0838 additional field accounting](docs/history/stitchcad-devnotes-part1014.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

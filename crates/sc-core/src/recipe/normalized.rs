@@ -5,6 +5,7 @@ use super::{
     FormulaSourceSpan,
 };
 use core::fmt;
+mod resources;
 
 #[derive(Clone, Debug)]
 pub(super) struct NormalizedNode<'a> {

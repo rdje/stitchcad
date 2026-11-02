@@ -190,6 +190,11 @@ pub struct DesignNormalizedFormulaSources<'a, H> {
     normalized: FormulaNormalizedSources<'a>,
 }
 impl<'a, H> DesignNormalizedFormulaSources<'a, H> {
+    pub(crate) fn resource_normalized(&self) -> &FormulaNormalizedSources<'a> {
+        let Self { scope, normalized } = self;
+        super::fixed_value(scope);
+        normalized
+    }
     /// Actual root/current-content scope used by this complete normalization.
     #[must_use]
     pub const fn scope(&self) -> DesignFormulaScope<'a, H> {
@@ -216,6 +221,11 @@ pub struct DesignNormalizedFormulaRecipe<'a, H> {
     normalized: FormulaNormalizedRecipe<'a>,
 }
 impl<'a, H> DesignNormalizedFormulaRecipe<'a, H> {
+    pub(crate) fn resource_normalized(&self) -> &FormulaNormalizedRecipe<'a> {
+        let Self { scope, normalized } = self;
+        super::fixed_value(scope);
+        normalized
+    }
     /// Actual root/current-content scope;an empty recipe still pins its real containing owner.
     #[must_use]
     pub const fn scope(&self) -> DesignFormulaScope<'a, H> {

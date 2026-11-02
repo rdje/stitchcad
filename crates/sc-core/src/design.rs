@@ -113,6 +113,7 @@ pub(crate) use resource::{
     charge_garment_notch_append, charge_garment_successor_revision,
 };
 pub(crate) use resource::{charge_length_declaration_resources, charge_revision_bits};
+pub(crate) use resource::{fixed_slice, fixed_value};
 pub use sewing::{DesignSewingAmount, DesignSewingAmountSource, DesignSewingDeclarationError};
 pub use sewing_state::{
     DesignSewing, DesignSewingDefinition, DesignSewingError, DesignSewingPosition,

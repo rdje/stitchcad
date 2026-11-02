@@ -19,6 +19,7 @@ use crate::{
 };
 use core::fmt;
 use std::collections::TryReserveError;
+mod resources;
 
 /// Actual normalized argument owners, or an original family with no scalar argument documents.
 /// No variant certifies namespace, kind, source/current-output dependency or geometry acceptance.
