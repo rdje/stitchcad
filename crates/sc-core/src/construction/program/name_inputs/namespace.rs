@@ -9,6 +9,8 @@ use crate::{
 };
 use core::fmt;
 mod check;
+mod sources;
+pub use sources::{CheckedDraftingProgramSources, DraftingProgramSourceCheckError};
 mod work;
 pub use check::{
     CheckedDraftingProgramOrder, DraftingProgramOrderError, DraftingProgramOrderProofKind,

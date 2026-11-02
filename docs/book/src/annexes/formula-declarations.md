@@ -526,17 +526,18 @@ No geometry/numeric provider is called here,and no values or executable whole pr
 
 ## Complete dependency composition
 
-**Planned after mixed name/kind checking.** The scoped source review separates the next
-implementation into Root sources,canonical relations,geometry and semantic sources. The mixed
-proof above remains available with focused checks;it does not already certify these later stages.
+**Root source bridge implemented with focused checks;remaining dependency composition planned.**
+The scoped source review separates canonical relations,geometry and semantic sources. The mixed
+proof above does not itself certify those stages. The [actual Root source bridge](formula-checked-recipes.md#root-sources-in-the-actual-mixed-scope)
+now invokes the existing complete source factory before mixed checking consumes the initial map.
 
 The actual containing initial map is the right boundary for Root formula-source checking. Its
 `FormulaNormalizedSources` already comes from this programme's actual Root. The existing
 `check_sources(namespace,FormulaSourceCheckLimits)` factory checks every source,including unused
 bodies and all branches,canonical input joins and Derived consumer kinds. Invoke it against the
 private initial map before mixed checking consumes that map. Returned proofs borrow actual
-normalized sources and declaration owners;they need no cloned namespace. The new composition
-must retain those exact owners,explicit allowances and original quota/allocation/static causes.
+normalized sources and declaration owners;they need no cloned namespace. The implemented bridge
+retains those exact owners,explicit allowances and original quota/allocation/static causes.
 
 Reuse `FormulaCheckedSources::prepare_dependencies(FormulaSourceDependencyLimits)` and
 `FormulaSourceDependencies::admit_acyclic(FormulaSourceCycleLimits)` for the actual canonical

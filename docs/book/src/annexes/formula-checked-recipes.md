@@ -213,3 +213,63 @@ D154 tracks the reference's missing available whole-refusal ordinal. The Rust er
 actual ordinal; the reference's static-call trace observes it but its propagated FErr arguments
 omit it. Repair .5b.4c is required before static-lane closure. No missing reference context is
 fabricated in this comparison, and this gap grants no numerical or physical authority.
+
+
+## Root sources in the actual mixed scope
+
+The mixed programme's [actual initial namespace](formula-declarations.md#actual-mixed-program-initial-namespace)
+now exposes `check_root_sources(FormulaSourceCheckLimits)`. It uses that exact programme's complete
+normalized Root source corpus and private initial map. Callers supply only the existing explicit
+source policy;they cannot substitute another namespace,inventory,source corpus or accepted proof.
+This path includes actual bound extra Profile/Material/geometry metadata in addition to Root names;
+it does not rebuild the older allocating Design namespace factory.
+
+The bridge invokes the original `FormulaNormalizedSources::check_sources()` factory. Its complete
+source count,checked arithmetic,node count,Derived-target count and retained-proof bounds precede
+proof reservation and checking. Every source,including unused bodies and all branches,is checked.
+Original canonical input joins and actual Derived consumer root-kind checks remain that factory's
+rules. No metadata revalidation,source callback,geometry query,authored/computed value or namespace
+clone is introduced. Previously admitted held-content/name/source-association limits remain required.
+
+For example,the actual extra names `private_count` and `private_length` borrow an Unknown Count
+and an Unknown dedicated Length from this Root. Source9003 is `private_count+1`;source9004 is the
+unused `private_length`. A real canonical Count103 derives from9003. The complete existing native
+requirements are two sources,four nodes,one Derived target and **2 + 2*4 =10** retained proof records.
+Allowances1 source,3 nodes,0 targets or9 records retain their original complete required2/4/1/10
+refusals in that order. Replacing unused9004 by `private_missing` still returns its original source
+index1/expression cause. Replacing9003 by `private_length` returns the actual Count consumer's
+TargetKind refusal with expected Count/actual Length. Neither Unknown input is read or defaulted.
+
+`CheckedDraftingProgramSources` privately retains the exact original `BoundDraftingProgramInitials`,
+actual `DesignNormalizedFormulaSources` object and complete original `FormulaCheckedSources`.
+`inputs()`,`normalized()` and `proof()` expose those owners,all original source/consumer proofs and
+the selected native policy. Equal model IDs or independently normalized equal text cannot replace
+the retained actual objects. The proof borrows original declarations/arenas,not the namespace map
+allocation. It therefore remains usable while subsequent mixed checking consumes that map:
+
+```rust
+use sc_core::{construction::{DraftingProgramInitialNamespace,DraftingInitialInputProvider,
+    DraftingProgramOrderLimits},design::DesignMetadataHost,recipe::FormulaSourceCheckLimits};
+fn source_and_step_counts<H:DesignMetadataHost,S:DraftingInitialInputProvider<H> + ?Sized>(
+    names:DraftingProgramInitialNamespace<'_, '_, '_, '_, '_, '_, '_,H,S>,
+    source_policy:FormulaSourceCheckLimits,order_policy:DraftingProgramOrderLimits)
+    ->Result<(usize,usize),String> {
+    let sources=names.check_root_sources(source_policy).map_err(|error|error.to_string())?;
+    let order=names.check_order(&order_policy).map_err(|error|error.to_string())?;
+    Ok((sources.proof().sources().len(),order.steps().len()))
+}
+```
+
+`DraftingProgramSourceCheckError` retains those same original associations and normalization object,
+selected limits and the original native source error. `cause()` preserves quota/allocation,
+expression/canonical and actual consumer-kind witnesses. The original allocator cause stays inline;
+this adapter creates no diagnostic box after reservation failure. Default diagnostics omit authored
+names/source payloads,while explicit native cause inspection exposes its original typed arguments.
+No successful source prefix is returned. An empty actual source/Derived-target scope accepts zero
+native source allowances and still retains its actual containing Root,even with a nonempty recipe.
+
+Focused native checks cover actual extra-name loans,consumer kind,unused source error,all four quota
+priorities,empty scope and both source/order proofs surviving map consumption. Public lifetime and
+private-field guards also pass. This implements the Root source bridge;canonical dependency/cycle
+composition,mixed canonical joins,geometry/current frame/provenance,semantic dependencies and
+combined allocator/lifetime verification remain owned by the next dependency stages.

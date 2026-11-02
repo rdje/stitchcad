@@ -1,4 +1,6 @@
 //! Whole initial-source loans,actual owner mismatches and planned creators before live lookup.
+#[path = "drafting_program_sources.rs"]
+mod program_sources;
 use super::{
     limits, root_with_host, scope, EmptyHost, Frame, Snapshot, Source, SourceError, TestResult,
 };

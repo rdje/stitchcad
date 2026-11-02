@@ -73,9 +73,9 @@ mod program;
 pub use program::{
     AdmittedDraftingProgramInputs, AdmittedDraftingProgramNameWork,
     AdmittedDraftingProgramOrderWork, BoundDraftingProgramInitials,
-    BoundDraftingProgramOutputRoles, CheckedDraftingProgramOrder, DraftingGeometryNameSource,
-    DraftingInitialBinding, DraftingInitialBindingIssue, DraftingInitialError,
-    DraftingInitialRefusal, DraftingOutputName, DraftingOutputPosition,
+    BoundDraftingProgramOutputRoles, CheckedDraftingProgramOrder, CheckedDraftingProgramSources,
+    DraftingGeometryNameSource, DraftingInitialBinding, DraftingInitialBindingIssue,
+    DraftingInitialError, DraftingInitialRefusal, DraftingOutputName, DraftingOutputPosition,
     DraftingOutputPositionError, DraftingOutputPositionRefusal, DraftingOutputRoleBindingIssue,
     DraftingOutputRoleError, DraftingOutputRoleMismatch, DraftingOutputRoleRefusal,
     DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
@@ -86,8 +86,9 @@ pub use program::{
     DraftingProgramOrderError, DraftingProgramOrderLimits, DraftingProgramOrderProofKind,
     DraftingProgramOrderRefusal, DraftingProgramOrderShape, DraftingProgramOrderStep,
     DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal, DraftingProgramOutputPositions,
-    DraftingProgramShape, DraftingProgramStep, DraftingProgramStepKind, DraftingProgramStepView,
-    NormalizedDraftingOperation, NormalizedDraftingProgram,
+    DraftingProgramShape, DraftingProgramSourceCheckError, DraftingProgramStep,
+    DraftingProgramStepKind, DraftingProgramStepView, NormalizedDraftingOperation,
+    NormalizedDraftingProgram,
 };
 mod bezier;
 pub use arc::{

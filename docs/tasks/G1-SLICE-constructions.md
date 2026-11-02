@@ -946,17 +946,17 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:all original formula/geometry/semantic dependencies,source frame/current registry/output provenance;canonical Pocket kind/domain/state and Buttonhole button-size dependency,no separately authored hole length or approximation.
 - ID: `G1-SLICE.5f.2.dependencies.plan`
   Status: `done`
-  Goal:actual bounded Root/source/canonical/geometry/semantic composition;[sourced plan](../book/src/annexes/formula-declarations.md#complete-dependency-composition).
-  - [x] ROOT CAUSE: 0852 launcher `python3 -I -B docs/tasks/artifacts/drafting_dependencies/plan_sources.py`:
-    current library build0,closed families13,Garment/input borrow0/escape1 matched actual lifetime cause under DesignReferenceHost,rc=0.
-  - [x] ADDRESSED: 0852 public source/cycle/context/Garment API census plus tracked compiler controls pass0;
-    source/canonical/geometry/semantic children own actual metadata/root/manifest/bounds before values;no empty Garment or synthetic unnamed-role names,rc=0.
-  - [x] NO REGRESSION: 0852 Rust tree unchanged2c3af29c,book/publication118/374/1815/3427/all38 Rust fences exact,rc=0;
-    1027 four Git/body/public spans/archive1481/58,generations21/64 and37/64,rc=0.
-  Commit:STITCHCAD-G1-0852. Promotion declined:existing actual-owner/complete-bound/no-fabrication doctrine. Source implementation next;no new dependency acceptance or physical execution claim.
+  Goal:0852 sourced complete dependency stages;[whole scope/proofs](../history/stitchcad-devnotes-part1028.md).
 - ID: `G1-SLICE.5f.2.dependencies.sources`
-  Status: `pending`
-  Goal:complete existing Root source/canonical-consumer proof against actual initial map before mixed consumption;retain original sources/limits/causes,no caller namespace or values.
+  Status: `done`
+  Goal:actual complete Root source proof under private initial map,retaining source/initial owners and original native causes.
+  - [x] ROOT CAUSE: 0853 `cargo test -p sc-core --test drafting_context_binding_contract program_sources`:focused3 pass;
+    actual Profile/Material loans,Derived kind/unused-source refusals,all four quotas,empty source scope and proof after map consumption,no callbacks,rc=0.
+  - [x] ADDRESSED: 0853 selected library/target strict clippy,fmt and `cargo test -p sc-core --doc construction::program::name_inputs::namespace::sources`:
+    docs3 pass,including generic source/order composition;original native allocator stays inline,rc=0.
+  - [x] NO REGRESSION: 0853 book/publication118/374/1817/3430,42 prior Rust fences unchanged/new complete native fence exact,rc=0;
+    1028 three Git/body/public spans/archive1482/59,generations21/64 and38/64,rc=0.
+  Commit:STITCHCAD-G1-0853. Promotion declined:existing actual-owner/bounded-source/no-map-clone doctrine. Canonical dependency/cycle and geometry/semantic composition plus coupled .verify remain pending.
 - ID: `G1-SLICE.5f.2.dependencies.canonical`
   Status: `pending`
   Goal:all original mixed canonical/Derived dependencies and actual source graph,kind/state/domain and cycle obligations before values,no id-only targets.

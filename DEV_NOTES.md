@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — sourced complete dependency composition
+## _(2026-11-02 UTC)_ — actual mixed Root source proof bridge
 
-0852 sources existing normalized-source/canonical-consumer,dependency and cycle factories against the actual initial map before mixed consumption. Geometry covers all13 native families/selectors;unnamed planned references require genuine step/source requests,not fabricated names or live-future lookup.
-Pocket/Closure inventories belong to actual DesignGarment;semantic binding must match its inputs() to the drafting Root and bound all held fields before queries. Existing intent/declaration vectors do not grant logical kind/domain/state or execution;real readonly sources and bounded composition remain owned.
-Tracked plan_sources.py builds current sc-core,checks family13/public Garment loan0/lifetime escape1,all matched0. Initial probe E0599 refined DesignReferenceHost bound. Local scratch refuses links/nested Git;library fingerprint fixed. Rust unchanged2c3af29c;book/publication118-374-1815-3427/38 fences exact0.
-1027 four Git/body/public spans exact0 (0851 plus whole Buttonhole proof);archive1481-58/generations21-64 and37-64. Declaration chapter39671B. Promotion declined:existing actual-owner/bounded-source/no-fabrication doctrine. G1still6/18;Root source bridge next,dependency/coupled implementation pending.
+0853 checks actual programme Root sources through the existing complete source factory against its private initial map,including bound extra Profile/Material names. Native source/node/target/record quotas,canonical joins and Derived consumer kinds stay authoritative;no callback/value or metadata refactory.
+CheckedDraftingProgramSources pins actual BoundInitials/Design normalization/native proof;the map allocation is not borrowed. Original error/allocator stays inline,explicit cause retains source/consumer witnesses. Both source and mixed proofs remain usable after consuming the map;no clone/accepted prefix.
+Focused sources3,selected strict lint/fmt/Rustdoc3 pass0:actual opaque/Unknown loans,Derived/unused-body causes,quota2/4/1/10 precedence,empty0 and generic map-consuming composition. Fixture closure/TargetKind compiler errors corrected. Book/publication118-374-1817-3430,42 prior/new exact fences pass0.
+1028 three Git/body/public spans exact0;archive1482-59/generations21-64 and38-64. Checked-recipes17945B/declarations39829B. Promotion declined:existing actual-owner/bounded-source/no-map-clone doctrine. G1still6/18;canonical dependency/cycle next,geometry/semantic and allocator/coupled verification pending.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
