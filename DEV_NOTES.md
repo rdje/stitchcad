@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — borrowed visible names and shared checker adapters
+## _(2026-11-02 UTC)_ — raw actual name and output sources
 
-0836 adds readonly FormulaNameScope,geometry-only declaration metadata,initial extension and cursor geometry insertion without scalar advance. Existing expression/Point/Arc/Slash kernels reused;shared original collision logic keeps map private and all source/ordinal witnesses intact.
-Visible3/namespace10/ordered8/strict selected lint/fmt pass0;actual proofs outlive map,conversion rejects scalar/recipe/reserved inputs,and failures retain original sources/position. Serial namespace doctests14 pass0 including exact copied book example;ten prior touched-page fences exact0.
-Own overlapping Cargo rebuild removed old doctest extern rlib;discarded original13-test verdict. Issue0836-CARGO-RACE closed by frozen-input serial14 run with unchanged artifact size/mtime;consume all Cargo terminals before edits/rebuilds. Book/publication118-374-1810-3405/archive1465-42/gen21-64 and21-64 pass0.
-Promotion declined: existing producer-consumption/actual-owner/metadata-scope rules. 1011 three Git/body/public spans exact0;G1still6/18;actual name/manifest inputs next,whole semantic verification pending.
+0837 owns original initial/output vectors beside the actual normalized program loan. Six source variants retain Point/Line/Arc/Bezier schemas or typed active point/edge catalogue roles;global names stay explicit and independent of local keys,requested positions remain unvalidated data.
+Native18/strict selected lint/fmt/name-input docs3 pass0;all six actual references/vectors/initial records/role pointers retained,zero callbacks,empty/zero/repeated/max positions preserved. New book/native example exact after diagnostic excluded an earlier compile-fail closing fence;seven prior Rust fences exact0.
+Book/publication118-374-1810-3406 and1012 three Git/body/public spans exact0;archive1466-43/per-generation21-64 and22-64. Raw inputs grant no content/association/namespace/source-truth acceptance;original scope Cargo race evidence sealed whole.
+Promotion declined: existing actual-source/explicit-name/no-prefix contract. G1still6/18;complete held-content/work/association admission next,whole semantic verification deferred.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

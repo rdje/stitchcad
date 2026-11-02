@@ -3,19 +3,19 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0836 — borrow visible names through existing checkers
+## STITCHCAD-G1-0837 — retain actual extra names and output sources
 
-- Added readonly name scope,native checker adapters,typed geometry metadata insertion and
-  initial namespace extension;shared collision rules preserve original sources and scalar position.
-- Visible3/namespace10/ordered8/strict selected lint/fmt and serial namespace doctests14 pass0;
-  copied book example exact,ten prior touched-page Rust fences retained,publication118/374/1810/3405.
-- Own overlapping Cargo artifact race tracked and closed by serial frozen-input rerun;
-  earlier13-test verdict discarded. 1011 exact spans/archive1465/42,per-generation21/64 and21/64.
-  G1still6/18;actual extra name/manifests,whole checking and coupled verification remain pending.
+- Added raw actual-program/initial/output owners and six fixed-schema/typed active-role
+  source variants;global names and original requested positions remain explicit data.
+- Native18/strict selected lint/fmt/name-input doctests3 pass0;
+  seven previous Rust fences/new book-native example exact,publication118/374/1810/3406.
+- 1012 three whole Git/body/public spans including closed Cargo race retained;
+  archive1466/43,per-generation21/64 and22/64. G1still6/18;complete name admission next,
+  whole semantic and coupled verification remain pending.
 
 # Sealed archive — earlier slices
 
-[Whole0835 sourced namespace stages](docs/history/stitchcad-devnotes-part1011.md) retains exact source bytes.
+[Whole0836 visible names and closed verification race](docs/history/stitchcad-devnotes-part1012.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

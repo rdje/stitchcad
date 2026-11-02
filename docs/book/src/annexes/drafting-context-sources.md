@@ -387,10 +387,55 @@ Local catalogue keys are not global formula names. Names and explicit tags are n
 vector order,guessed from an operation family or treated as live geometry in the current snapshot.
 Catalogue metadata alone grants no canonical history/frame/currentness or evaluated-presence proof.
 
-Borrowed visible-name/kernel adapters are implemented;remaining stages cover actual initial/output-name inputs,
-fresh complete held-content/prospective name-work admission,and ordered metadata integration. Complete
+Borrowed visible-name/kernel adapters and raw initial/output-name owners are implemented;remaining stages
+cover fresh complete held-content/prospective name-work admission and ordered metadata integration. Complete
 program and name/source/catalogue fields,including all retained definitions,active lists,indexes and
 text,are admitted before namespace callbacks or child checking. Existing geometry still requires the
 actual context's exact source binding;planned geometry stays tied to its earlier original step/manifest.
 The resulting metadata stage is not an accepted program. Complete kinds,dependencies and source truth
 remain in their separately owned checking stages before values,followed by coupled feature verification.
+
+### Explicit raw name and output sources
+
+`DraftingProgramNameInputs::new(program,initial,outputs)` now retains the actual normalized program
+loan and both complete original vectors. `initial()` borrows explicit extra `FormulaInitialDeclaration`
+locators;the Root-derived parameter/measurement/Ease environment and reserved metadata compose later.
+These remain metadata claims with their original names and source records;construction does not
+validate canonical targets,existing geometry,source truth or collisions. Borrowed tokens/records
+cannot be replaced while the names are used. `outputs()` borrows all original named output occurrences.
+
+Each `DraftingOutputName::new(position,name,source)` owns an explicit global `MachineToken`,keeps
+the requested one-based combined creating position and borrows a `DraftingGeometryNameSource`:
+point,line,center-arc,Bézier,active point role or active edge role. Fixed variants retain the actual
+original schema and use its published `output()`;variable variants retain authentic typed active
+catalogue membership,its complete catalogue and actual definition/tag. `source().reference()` exposes
+that exact persistent reference without allocating an identity or constructing geometry.
+
+A global name such as `front_waist` can deliberately differ from a local catalogue role key such as
+`waist_corner`;neither spelling is generated from the other. `declaration()` borrows the actual global
+name and carries its source's PointRef/EdgeRef as raw formula metadata. No anonymous caller-provided
+output reference replaces the original schema/catalogue handle. The role catalogue's metadata
+admission still proves neither actual creating-step association nor canonical history/frame/presence.
+
+```rust
+use sc_core::{construction::{DraftingContextSource, DraftingGeometryNameSource, DraftingOutputName,
+    DraftingProgramNameInputs, NormalizedDraftingProgram, PointConstruction},
+    design::DesignMetadataHost, name::{MachineToken, MachineTokenError}};
+fn raw_names<'n,'p,'a,H:DesignMetadataHost,S:DraftingContextSource<H> + ?Sized>(
+    program:&'n NormalizedDraftingProgram<'p,'a,H,S>,point:&'n PointConstruction)
+    -> Result<DraftingProgramNameInputs<'n,'p,'a,H,S>,MachineTokenError> {
+    let output=DraftingOutputName::new(2,MachineToken::new("front_waist")?,
+        DraftingGeometryNameSource::Point(point));
+    let names=DraftingProgramNameInputs::new(program,vec![],vec![output]);
+    assert!(std::ptr::eq(names.program(),program));
+    Ok(names)
+}
+```
+
+The helper above requests position2 explicitly;it does not check whether that program position is
+this point. Zero,repeated,out-of-range,colliding or mismatched records remain inspectable in raw inputs
+for the later complete admission/association stages. Empty vectors still pin the actual program.
+Constructors clone neither vectors nor documents,create no namespace,perform no callbacks or values,
+and expose no accepted name/program prefix. Default Debug shows counts/positions/source families,
+without authored names or formulas. Complete fresh held-content/name-work admission and ordered
+visibility remain the next implementation stages.

@@ -5,6 +5,8 @@ mod geometry;
 mod program;
 #[path = "support/drafting_program_admission.rs"]
 mod program_admission;
+#[path = "support/drafting_program_name_inputs.rs"]
+mod program_name_inputs;
 #[path = "support/drafting_program_views.rs"]
 mod program_views;
 use core::{

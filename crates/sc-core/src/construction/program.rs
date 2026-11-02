@@ -4,12 +4,14 @@ use crate::{design::DesignMetadataHost, recipe::FormulaRecipeDocument};
 use core::fmt;
 mod admission;
 mod limits;
+mod name_inputs;
 mod normalized;
 mod views;
 pub use admission::{
     AdmittedDraftingProgramInputs, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
 };
 pub use limits::{DraftingProgramLimits, DraftingProgramShape};
+pub use name_inputs::{DraftingGeometryNameSource, DraftingOutputName, DraftingProgramNameInputs};
 pub use normalized::{
     DraftingProgramNormalizationError, DraftingProgramNormalizationRefusal,
     NormalizedDraftingOperation, NormalizedDraftingProgram,
