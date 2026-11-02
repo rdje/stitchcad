@@ -3,16 +3,19 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0819 — bound the ordered-integration tracker
+## STITCHCAD-G1-0820 — bind ordered integration to actual native contracts
 
-- Moved the whole closed seven-node search subtree1592B into the existing completed-constructions
-  sibling after whole0818 proof retirement. Every original ID remains unique;all seven statuses done.
-- Original68574B destination prefix and all119 maintained book Markdown/runtime bytes unchanged.
-  No new task file,map row or raised limit;ordered integration contract review is the next leaf.
-- Tree coverage10/13/20/0 and994 four Git/public spans pass0;archive1448/81,per-generation21/64 and60/64.
-  G1still6/18;D372/native declaration checkpoint remains complete;actual frame/ordered integration pending.
+- Inventoried11 operation-owning schemas and two target-only command intents;selected the
+  borrowed13-family input view first,with explicit operation identities beside semantic requests.
+- Seven bounded owners cover input/context/program/name/dependency/whole checking and deferred
+  coupled verification. Book distinguishes this plan from available APIs and geometry acceptance.
+- Existing point-check doctests3/book/publication118/374/1806/3388/tree10-13-20-0 pass0;
+  runtime code/four primitive fences unchanged. 995 three Git/public spans exact;archive1449/82,
+  per-generation21/64 and61/64. G1still6/18;actual input implementation next.
 
 # Sealed archive — earlier slices
+
+[Whole0819 ordered-integration continuity](docs/history/stitchcad-devnotes-part995.md) retains exact source bytes.
 
 [Whole0818 query checkpoint and D372 closure](docs/history/stitchcad-devnotes-part994.md) retain exact source bytes.
 

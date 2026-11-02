@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — bounded ordered-integration frontier
+## _(2026-11-02 UTC)_ — sourced ordered-integration plan
 
-0819 execution999 lines blocked further tracked growth;whole closed7-node search branch1592B moves to existing construction sibling after whole0818 proof retirement.
-Git/receipt proves all original execution IDs remain once,7 statuses done and original68574B destination prefix exact0;no new task part,map row or raised ceiling.
-All119 maintained book Markdown/runtime bytes unchanged0;tree10/13/20/0 and994 four Git/public spans pass0;archive1448/81,per-generation21/64 and60/64.
-Promotion declined: existing whole-record task containment. Ordered .5f.2.plan now owns actual namespace/frame/registry/dependency contract review before code;G1still6/18.
+0820 inventories11 native schemas with operation IDs and2 target-only command intents;first shared13-family borrowed input retains distinct authored operation/target roles.
+Actual expression proofs retain normalized/declaration handles rather than borrowing the temporary namespace map;existing point-check3 doctests pass0 with no runtime change.
+Seven input/context/program/name/dependency/check/verify owners preserve actual scalar/program ordinals,frame/current registry and Pocket/Buttonhole dependencies;book clearly planned0.
+Promotion declined: existing typed/ordered contract. Four Rust fences unchanged;publication118/374/1806/3388/tree10-13-20-0/995 Git-public pass0;archive1449/82,per-generation21/64 and61/64;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

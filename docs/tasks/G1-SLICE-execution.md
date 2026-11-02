@@ -927,17 +927,18 @@ Closed search checkpoint:[whole seven-node subtree](G1-SLICE-constructions.md#na
   canonical button-size declaration. No separately authored hole length or approximation.
   Retain the actual containing drafting frame and current output registries;schema/kind proofs grant neither.
   Verification: `pending`; Commit: `pending`.
-### G1-SLICE.5f.2.tracking
 - ID: `G1-SLICE.5f.2.tracking`
   Status: `done`
-  Goal:move whole closed search subtree to the existing completed-constructions sibling before ordered integration grows the999-line execution tracker;preserve every node/status/proof and book byte.
-  - [x] ROOT CAUSE: `wc -l -c docs/tasks/G1-SLICE*.md` →execution999 lines,construction879/68574B;existing linked sibling has room before new ordered work,rc=0.
-  - [x] ADDRESSED: `python3 -I -B -` Git/receipt comparison →whole7 done nodes1592B exact after0818 proof retirement;all original execution IDs live once and68574B destination prefix unchanged,rc=0.
-  - [x] NO REGRESSION: `run_tree_coverage_census.sh` →10 lanes/13 trees/20 siblings/0 unowned-orphan-dead;119 book Markdown/runtime bytes unchanged;994 four Git/public spans and archive1448/81,per-generation21/64 and60/64,rc=0.
-  Commit:STITCHCAD-G1-0819. promotion: declined (existing whole-record task containment;no new product contract).
+  Goal:0819 bounded ordered-integration tracking;[whole scope/proofs](../history/stitchcad-devnotes-part995.md).
+### G1-SLICE.5f.2.plan
 - ID: `G1-SLICE.5f.2.plan`
-  Status: `pending`
+  Status: `done`
   Goal:inventory actual recipe/operation/frame/namespace/dependency contracts and choose bounded ordered integration slices;no fake geometry/currentness or ambient frame.
+  Planned implementation:[ordered drafting integration](G1-SLICE-constructions.md#ordered-drafting-integration);context contract precedes program admission,verification follows the complete set.
+  - [x] ROOT CAUSE: `python3 -I -B -` native API inventory →11 operation-owning schemas/2 target-only intents/13 families;actual formula proofs retain document/declaration handles,not a namespace-map borrow,rc=0.
+  - [x] ADDRESSED: seven bounded input/context/program/name/dependency/check/verification owners in construction sibling;first borrowed input sum chosen,book explicitly planned and original4 Rust fences exact,rc=0.
+  - [x] NO REGRESSION: launcher `cargo test -p sc-core --doc construction::point::check` →3 pass;book/build/publication118/374/1806/3388/tree10-13-20-0,995 three Git/public spans/archive1449/82,per-generation21/64 and61/64,rc=0.
+  Commit:STITCHCAD-G1-0820. promotion: declined (existing typed-operation/ordered source contract;implementation choices remain within owned stages).
 - ID: `G1-SLICE.5f.3`
   Status: `pending`
   Goal: operation execution/geometry-selector bridge through published typed contracts.

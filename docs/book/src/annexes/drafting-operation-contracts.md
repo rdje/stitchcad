@@ -88,6 +88,29 @@ numeric/parameter error evidence,coupled replay,atomic publication and platform 
 remain .5f.4.geometry/.5g and G2/G3. Schema acceptance grants no running G1 spike waiver,G2 entry
 exception,domain/envelope approval or release readiness;focused native checks are not full verification.
 
+## Ordered program integration — planned
+
+The next G1-SLICE.5f.2 slice composes the existing13 input families as a borrowed
+`DraftingOperationInput`;this shared view is planned,not an available program checker.
+Eleven native schemas already carry their creating operation id. `CloseDart` and `AddNotch`
+are target intents,so their containing authored record must retain an explicit operation identity
+beside the original request. A dart id or owning Piece id cannot stand in for that operation id.
+Binding CloseDart must still check the actual canonical dart's held closing operation;AddNotch's
+fresh semantic notch identity remains allocated by the command bus. The view issues no identities.
+
+The containing program must preserve actual scalar-source ordinals separately from combined
+program positions. It must receive its actual Cartesian drafting frame and current output registry,
+then expose initial/always-visible names and only earlier scalar/geometry outputs at each step.
+An edge parameter frame or physical-copy orientation is not that Cartesian frame. Existing kind
+proofs retain original expression/declaration handles;they do not certify geometry currentness.
+Whole logical admission and static checks precede values,and a later refusal exposes no accepted
+program prefix. Pocket kind/domain/state and Buttonhole's canonical button-size dependency remain
+part of the complete graph;no separately authored hole length or approximation is introduced.
+
+Input composition,context contract,ordered owner,names,complete dependencies and whole checking
+have separate implementation owners. Coupled verification follows that complete set. The input
+view alone grants no frame,namespace,ordering,resource,geometry or runtime acceptance.
+
 ## Points and primitive curves
 
 A point declaration retains the two actual expression documents for x and y,its creating operation

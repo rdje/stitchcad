@@ -1,7 +1,7 @@
-# G1-SLICE — completed construction contracts and acceptance evidence
+# G1-SLICE — construction contracts and ordered integration
 
 The bounded construction sibling of [G1-SLICE](G1-SLICE.md). Completed child goals link to
-sealed originals;acceptance checklists retain their committed text. Current work stays in the parent.
+sealed originals;the final ordered-integration branch owns its active work. MEMORY.md names the current leaf.
 Historical verification/commit/changelog tables stay in [the evidence sibling](G1-SLICE-evidence.md).
 
 ## Completed construction child contracts
@@ -903,3 +903,27 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.1.book-search.verify`
   Status: `done`
   Goal:0818 actual native search/query checkpoint and D372 closure;[whole scope/proofs](../history/stitchcad-devnotes-part994.md).
+
+## Ordered drafting integration
+
+- ID: `G1-SLICE.5f.2.inputs`
+  Status: `pending`
+  Goal:borrowed closed13-family input sum;retain11 embedded operation IDs and explicit authored operation IDs beside CloseDart/AddNotch target intents;no context/proof/default or identity issuance.
+- ID: `G1-SLICE.5f.2.context.contract`
+  Status: `pending`
+  Goal:bind explicit containing frame and actual current geometry/output registry ports to the containing Design/source;distinguish Cartesian frames from edge-parameter/copy frames before context implementation.
+- ID: `G1-SLICE.5f.2.program`
+  Status: `pending`
+  Goal:whole ordered scalar/drafting owner and complete logical limits;retain actual scalar recipe ordinals separately from genuine combined-program positions and original operation/document owners.
+- ID: `G1-SLICE.5f.2.namespace`
+  Status: `pending`
+  Goal:actual initial/always-visible and earlier-only names;check collisions and future geometry before values,using existing complete kind proofs without treating a metadata cursor as program acceptance.
+- ID: `G1-SLICE.5f.2.dependencies`
+  Status: `pending`
+  Goal:all original formula/geometry/semantic dependencies,source frame/current registry/output provenance;canonical Pocket kind/domain/state and Buttonhole button-size dependency,no separately authored hole length or approximation.
+- ID: `G1-SLICE.5f.2.check`
+  Status: `pending`
+  Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.
+- ID: `G1-SLICE.5f.2.verify`
+  Status: `pending`
+  Goal:after the agreed integration set,verify coupled source/order/frame/currentness/argument/semantic/resource refusals and public proof lifetimes;actual geometry/selector execution stays .5f.3/.4.geometry/G2/G3.
