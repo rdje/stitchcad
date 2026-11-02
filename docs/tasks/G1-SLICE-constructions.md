@@ -902,22 +902,22 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.context.source`
   Status: `done`
   Goal:0823 immutable drafting source port;[whole scope/proofs](../history/stitchcad-devnotes-part999.md).
-### G1-SLICE.5f.2.context.archive
 - ID: `G1-SLICE.5f.2.context.archive`
   Status: `done`
-  Goal:pack sealed raw history into the next bounded retrieval window before another record would exceed active generation64 working files;verify all original public bytes and source seals.
-  - [x] ROOT CAUSE: `python3 -I -B docs/tasks/artifacts/history_archive/generation_pressure.py`:
-    active generation64/64 with57 raw/7 windows,aggregate85/192;next record requires packing,rc=0.
-  - [x] ADDRESSED: wrapper `v2_migration.py append target/history_window29_capture --owner G1-SLICE.5f.2.context.archive`,then
-    `v2_install.py install target/history_window29_capture`:57 original full files/all1452 logical records/33 prior backings exact;live public57 reads equal Git,rc=0.
-  - [x] NO REGRESSION: `scripts/history_archive.py --root . verify-retention`:
-    999 five Git/body/public spans exact;1453 logical/30 working,per-generation21/64 and9/64,rc=0;
-    110 live links/8 files/0 stale,all task IDs/Rust/book exact;book/publication118/374/1806/3389,rc=0.
-  Commit:STITCHCAD-G1-0824. promotion:declined (existing bounded archive transaction/whole-byte retention contract).
-  Receipt:target/history_window29_capture/live_receipt.json;original trees retained;never rerun installer/recovery after later archive edits.
+  Goal:0824 sealed window29 packing;[whole scope/proofs](../history/stitchcad-devnotes-part1000.md).
+### G1-SLICE.5f.2.context.bind
 - ID: `G1-SLICE.5f.2.context.bind`
-  Status: `pending`
+  Status: `done`
   Goal:bounded actual scalar-scope/root/revision/source binding,charge complete context before queries and preserve original typed first refusals;no program or geometry values.
+  Fixed P2 D378:external source ports lacked exact public revision charging;borrowed helper now retains actual counter magnitude/location without formatting or supplied totals.
+  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
+    external-provider helper and actual non-Clone Design/frame/snapshot fixture compile/pass5;129-bit revision/128-bit refusal proves D378 repaired,rc=0.
+  - [x] ADDRESSED: same target proves exact owner before accounting,complete bounds/latched first failure before revision/currentness/geometry,
+    original revision/source witnesses and private source loans;`cargo test -p sc-core --doc construction::context` passes5,rc=0.
+  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
+    `cargo test -p sc-core --doc construction::operation_examples`:strict lint/6 book examples pass,rc=0;
+    book/publication118/374/1806/3389/five old fences exact;1000 three Git/public spans/archive1454/31,per-generation21/64 and10/64,rc=0.
+  Commit:STITCHCAD-G1-0825. promotion:declined (existing source/resource/currentness contract);geometry lookup and whole-program/feature verification remain owned.
 - ID: `G1-SLICE.5f.2.context.geometry`
   Status: `pending`
   Goal:resolve exact typed existing geometry request under bound context;check returned reference/frame/snapshot against actual sources,retain original witness and cause,no value query or planned-output liveness.

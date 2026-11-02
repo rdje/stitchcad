@@ -5,6 +5,8 @@ use crate::{
     ontology::{EdgeRef, PointRef},
 };
 use core::fmt;
+mod binding;
+pub use binding::{DraftingContext, DraftingContextError};
 
 /// Exact requested geometric output kind and persistent reference, without a live lookup.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
@@ -127,6 +129,8 @@ pub trait DraftingContextSource<H: DesignMetadataHost> {
     /// Precharge owned collections before traversal, then every retained text field, duplicated
     /// snapshot/cache and represented unbounded counter in stable source/authored order. Charge
     /// the frame and snapshot definitions too; core-owned Design content composes separately.
+    /// Use `crate::design::charge_design_revision_resources` for each retained DesignRevision,
+    /// including the snapshot's revision, without decimal formatting or supplied counter totals.
     /// Use original locations under the containing input scope. Do not clone, normalize, query
     /// geometry, validate currentness or supply a precomputed total instead of walking content.
     /// The restricted sink retains its first refusal even if an implementation ignores it.

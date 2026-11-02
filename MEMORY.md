@@ -1,14 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0824;derive HEAD/ahead from Git;push cadence400.
-- Active/next:G1-SLICE.5f.2.context.bind in docs/tasks/G1-SLICE-constructions.md#ordered-drafting-integration;archive/source/contract/inputs done,parent .context/.5f.2 active.
-- Next:bounded actual scalar-scope/root/revision/source binding;charge complete context before validation/frame/snapshot/geometry queries;original typed first refusals,private binding fields,no accepted program or values.
-- Then:.context.geometry exact typed reference/frame/snapshot existing-source lookup;.program/names/dependencies/check and final .verify remain. Earlier declared outputs stay distinct from live geometry.
+- Latest unit:STITCHCAD-G1-0825;derive HEAD/ahead from Git;push cadence400.
+- Active/next:G1-SLICE.5f.2.context.geometry in docs/tasks/G1-SLICE-constructions.md#ordered-drafting-integration;bind/archive/source/contract/inputs done,parent .context/.5f.2 active.
+- Next:exact typed existing geometry request under bound context;check original returned reference/frame/snapshot/source witnesses without values,repair or planned-output liveness;then .program/names/dependencies/check and final .verify.
+- DraftingContext now privately constructed by DesignFormulaScope::bind_drafting_context. Actual owner pointer first,complete charge/latched meter finish,then actual revision/source validation and retained frame/snapshot. Original owner/revision/cause errors;no accepted prefix/program or values.
+- D378 fixed:public design::charge_design_revision_resources borrows actual counter bits/location with no format/copy/supplied totals. External-provider native5 proves0/1/129 bits,128-bit refusal,foreign twins,ignored sink failure and first causes/no geometry calls.
+- Context/source doctests5 (positive and source/frame/context borrow guards),strict selected lint/fmt/book examples6/build/publication118/374/1806/3389 pass0. Root/context budgets separate;whole-program admission must compose complete demand before children.
 - 0824 window29 captures57 committed whole files;source-pinned preparation/install/public57 reads equal Git,all1452 originals/33 earlier backings exact. 110 live pointers/8 files rebase to catalog,0 stale;task IDs/Rust/book exact.
 - Protected recovery originals:target/history_window28_capture AND target/history_window29_capture;never rerun either installer/recovery after subsequent archive edits. New receipt target/history_window29_capture/live_receipt.json.
 - DraftingContextSource<H> now declared in construction/context.rs;explicit root,snapshot_revision,frame,snapshot,charge_resources,validate_current,geometry. Associated original frame/snapshot/geometry records may be unsized.
 - DraftingGeometryReference distinguishes PointRef/EdgeRef;raw DraftingGeometrySource retains actual reference/frame/snapshot/geometry borrows. Debug hides payload,Copy needs no Clone/Copy on original records. DraftingGeometrySourceResult names the original typed response/cause.
-- No accepted context constructor,default source/frame,geometry values,planned-output liveness or semantic-target resolution yet. Existing-source lookup must remain separate from earlier program declarations. Complete logical accounting before source queries/children.
+- Private context binding grants no accepted program,geometry output/value,physical/runtime/release approval. Geometry lookup and canonical semantic targets remain pending;existing sources stay separate from earlier planned outputs.
 - Source doctests3 (unsized/non-Clone/non-Debug positive and2 source/frame borrow guards),strict lib lint/fmt/book/publication118/374/1806/3389 pass0;five old book Rust fences exact. Initial type_complexity refusal fixed with named result,not a lint allowance.
 - Actual containing contract in book and indexed ADR-0003:exact Design/program/revision,authored Cartesian frame,current typed snapshot;existing topology/scalar proofs are narrower. Canonical semantic targets remain complete-dependency work.
 - Native raw DraftingOperationInput<'a>/DraftingOperationFamily now exported from construction;13 variants borrow actual source payloads. Eleven operation() IDs embedded;CloseDart/AddNotch retain explicit authored history operation IDs.
@@ -16,15 +18,15 @@
 - Focused input4/source-lifetime compile-fail2/book examples5/strict selected lint/fmt pass0;initial test fixture corrected from nonexistent EdgeRange::Full to public EdgeRange::whole.
 - CloseDart later must match actual canonical DartDefinition.closing_operation;never infer authored operation from dart/Piece/anchor source id.
 - Actual FormulaCheckedExpression owns certificates/dependency handles and borrows normalized arenas/declarations,not namespace map;namespace may stage while those source handles stay pinned.
-- Remaining owners:context.bind/geometry,program,namespace,dependencies,check,verify in construction sibling. Verify after complete integration;real geometry/selector execution separate.
+- Remaining owners:context.geometry,program,namespace,dependencies,check,verify in construction sibling. Verify after complete integration;real geometry/selector execution separate.
 - Program distinguishes actual scalar source ordinals from combined positions,actual frame/current registry and initial/prior names;Pocket kind/domain/state and Buttonhole button-size dependency explicit,no separate hole-length source.
-- Normative references:ROADMAP ADR3/6.1;ontology3.1/3.2;drafting-operation-contracts Shared boundary/borrowed inputs. Four old overview Rust fences exact;new actual source example compiled as fifth.
+- Normative references:ROADMAP ADR3/6.1;ontology3.1/3.2;drafting-operation-contracts Shared boundary/borrowed inputs. Five old overview Rust fences exact;new exact revision-charge example compiled as sixth.
 - Book/publication118/374/1806/3389/tree10-13-20-0 pass;G1still6/18,G0closure unapproved;no waiver/G2 exception or geometry/production readiness.
 - Native13-family .5f.1 and D372 done;seven-node search subtree in construction sibling,0819 receipt target/history-proof-0819-search-tracking/source.json;whole prior records994/995/996.
 - D372 runtime queries14/118/4 passed;read-only host Node22.8+ (actual26.8.1),no cache/npm/browser;Make/publication use local mdBook0.5.4/fixed elasticlunr3.1.0 with native post-install field proof.
 - Setup scripts/book_tool.py install/--force;native capture target/book_search_0818_native/ historical after later prose;do not claim its source hashes current.
-- Archive999 five Git/body/public spans exact (whole0823/prior0804/0805);1453 logical/30 working;generation1 21/64,generation2 9/64,headroom55;aggregate never versus64. Next raw1000.
+- Archive1000 three Git/body/public spans exact (whole0824);1454 logical/31 working;generation1 21/64,generation2 10/64,headroom54;aggregate never versus64. Next raw1001.
 - Book build guide40958B/40960B and SUMMARY120-line cap unchanged;task collection near1.5MB:measure before adding;retire complete proofs byte-exact.
-- Selector/budget .5f.3,real geometry/physical .5f.4.geometry/.5g/G2/G3;storage/app/provider/full integration still owned. D376/D377 fixed;D156 broader locality pending.
+- Selector/budget .5f.3,real geometry/physical .5f.4.geometry/.5g/G2/G3;storage/app/provider/full integration still owned. D376/D377/D378 fixed;D156 broader locality pending.
 - Cleanup2026-11-01 14:33 UTC;next due2026-11-02 14:33 UTC. Protected target/history_window28_capture never reinstall after edits.
-- In flight:none at commit;PNT continues with bounded context binding.
+- In flight:none at commit;PNT continues with typed existing-geometry lookup.

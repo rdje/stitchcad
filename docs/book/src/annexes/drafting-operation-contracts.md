@@ -152,7 +152,7 @@ Input composition is implemented. Context contract,ordered owner,names,complete 
 whole checking remain separately owned implementation work. Coupled verification follows that complete set. The input
 view alone grants no frame,namespace,ordering,resource,geometry or runtime acceptance.
 
-## Containing context contract — implementation pending
+## Containing context and remaining integration
 
 Ordered integration must borrow the actual containing `DesignInputs` owner,its exact revision,
 the program's explicitly selected Cartesian drafting-frame source,and the corresponding current
@@ -161,8 +161,13 @@ The frame source retains its authored coordinate-system definition;the checker s
 origin,axis orientation,unit scale,transform or fallback frame. An edge's rational parameter frame
 and a physical copy's orientation remain their own sources.
 
-`DraftingContextSource<H>` now declares the immutable source port;the actual-root context binding
-factory is **not yet implemented**. Supplying an implementation grants no accepted context.
+`DraftingContextSource<H>` declares the immutable source port. An actual `DesignFormulaScope`
+can now call `bind_drafting_context(&source,limits)` to obtain a private `DraftingContext` binding.
+The factory compares the actual owner first,charges complete context content and finishes its
+first-failure meter,then compares actual revisions and validates the source before retaining its
+frame/snapshot. A foreign owner is refused even when identity/revision numbers match. A source
+that ignores a sink error still receives that first refusal;no revision/currentness/geometry query
+runs after content refusal. Errors retain original owner/revision borrows or the provider cause.
 The port borrows `root()`,`snapshot_revision()`,`frame()` and `snapshot()` from the actual source.
 Its `charge_resources` uses the existing restricted first-failure-latching resource sink;
 `validate_current` retains the provider's original typed error. Its `geometry` request carries an
@@ -171,8 +176,37 @@ explicit `DraftingGeometryReference::Point(PointRef)` or `Edge(EdgeRef)` and ret
 These borrowed source types can be unsized and need neither Clone nor Debug. Copying the raw view
 retains all loans;its debug representation shows the reference without source payloads. No default
 frame,registry or identity is supplied. The raw response still needs exact reference/frame/snapshot
-binding checks,owned by the context implementation. Canonical semantic-target resolution remains
+binding checks;the typed existing-output lookup stage is still pending. Canonical semantic-target resolution remains
 part of complete dependency integration;the geometry port alone does not cover it.
+
+The binding exposes the actual `scope()`,`source()`,`frame()`,`snapshot()`,explicit `limits()` and
+charged `demand()`. Copying it copies only held sources and bounded accounting data;its private
+fields prevent source substitution and its lifetime cannot outlive those sources. Its Debug output
+omits source payloads. Root and context allowances/demands remain separate:whole-program admission
+must compose both with its own complete retained content before child work. This binding grants no
+accepted program,geometry output/value,physical feasibility,runtime allowance or release approval.
+
+External providers use `charge_design_revision_resources` to charge each retained revision's actual
+magnitude into the restricted sink without formatting/copying its counter or supplying cached totals.
+For example,a revision just beyond u128 needs129 magnitude bits;zero needs zero:
+
+```rust
+use core::num::{NonZeroU64, NonZeroUsize};
+use sc_core::{command::DesignRevision, design::{charge_design_revision_resources,
+    DesignResourceLimits, DesignResourceLocation, DesignResourceMeter, DesignResourceScope}};
+# fn main() -> Result<(), Box<dyn std::error::Error>> {
+let revision = DesignRevision::from_counter(u128::MAX).successor();
+let mut meter = DesignResourceMeter::new(DesignResourceLimits::new(
+    NonZeroUsize::MIN, NonZeroUsize::MIN, NonZeroU64::new(129).ok_or("bit allowance")?,
+));
+charge_design_revision_resources(&revision, &mut meter, DesignResourceLocation {
+    scope: DesignResourceScope::Inputs, owner: None,
+    field: "snapshot.revision", index: None,
+})?;
+assert_eq!(meter.finish()?.counter_bits(), 129);
+# Ok(())
+# }
+```
 
 Existing `DesignFormulaScope` pins actual scalar/input owners. It supplies no Cartesian frame or
 geometry approval. `IdentityLedger` retains topology/current-edge and point-journal contracts;

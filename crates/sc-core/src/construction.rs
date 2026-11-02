@@ -57,8 +57,8 @@ mod arc;
 mod arguments;
 mod context;
 pub use context::{
-    DraftingContextSource, DraftingGeometryReference, DraftingGeometrySource,
-    DraftingGeometrySourceResult,
+    DraftingContext, DraftingContextError, DraftingContextSource, DraftingGeometryReference,
+    DraftingGeometrySource, DraftingGeometrySourceResult,
 };
 mod operation_input;
 pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};

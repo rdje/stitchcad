@@ -1192,3 +1192,7 @@ Fixed0816;[whole cause/reproduction/proofs](../history/window29.md#stitchcad-dev
 
 ## D377 — publication glossary/index navigation contract drift
 Fixed0817;[whole cause/reproduction/proofs](../history/window29.md#stitchcad-devnotes-part993md).
+
+## D378 — external drafting revision accounting
+Fixed0825,owner G1-SLICE.5f.2.context.bind. Reproduce:the new external source port must charge snapshot counters,but DesignRevision.resource_bits was crate-private;format/copy/supplied totals violate the accounting contract.
+Public charge_design_revision_resources now borrows actual magnitude/location. External-provider native checks pass5,including0/1/129-bit charges and exact128-bit refusal;source docs/book example6/strict lint pass0. No counter serialization or revision authority added.

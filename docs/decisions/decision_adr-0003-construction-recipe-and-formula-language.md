@@ -177,7 +177,7 @@ all affected examples;no implicit optimizer,default curve or silent search-domai
 ## Actual containing context —0822
 
 Owner:G1-SLICE.5f.2.context.contract. The
-[containing context contract](../book/src/annexes/drafting-operation-contracts.md#containing-context-contract--implementation-pending)
+[containing context contract](../book/src/annexes/drafting-operation-contracts.md#containing-context-and-remaining-integration)
 requires actual Design/program/revision,authored Cartesian frame and typed current snapshot sources.
-Earlier declared outputs confer static availability,not live geometry. The .context owner implements
-bounded immutable source binding before .program;whole verification remains .verify,geometry G2/G3.
+Earlier declared outputs confer static availability,not live geometry. Source port/bounded binding
+are available;typed lookup/program remain pending. Whole verification stays .verify,geometry G2/G3.

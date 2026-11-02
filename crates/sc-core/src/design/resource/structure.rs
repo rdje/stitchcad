@@ -4,6 +4,20 @@ use super::{
     DesignResourceLocation, DesignResourceScope, DesignResourceSink, ResourceProjection,
 };
 use crate::design::{DesignStructure, DesignStructureDefinition};
+/// Charge an actual retained revision's magnitude without copying or formatting its counter.
+/// External immutable source providers use this for their snapshot revision and any retained copies.
+/// Zero contributes zero magnitude bits; the caller supplies the original source-field location.
+/// This grants no revision equality, currentness, command authority or complete-content admission.
+/// # Errors
+/// Returns the sink's original first bit-budget refusal, without clipping or replacing its location.
+pub fn charge_design_revision_resources(
+    revision: &crate::command::DesignRevision,
+    sink: &mut dyn DesignResourceSink,
+    location: DesignResourceLocation,
+) -> Result<(), DesignResourceLimitError> {
+    sink.charge_counter_bits(revision.resource_bits(), location)
+}
+
 /// Charge the actual structural root under the caller's cumulative meter, in schema order.
 /// Exact revision magnitude bits precede canonical inputs, Pieces, copies and topology. Zero has zero
 /// magnitude bits. No formatting, counter advance, model copy, current validation or value lookup occurs.
