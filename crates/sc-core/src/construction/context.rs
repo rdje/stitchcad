@@ -7,6 +7,11 @@ use crate::{
 use core::fmt;
 mod binding;
 pub use binding::{DraftingContext, DraftingContextError};
+mod geometry;
+pub use geometry::{
+    DraftingGeometryBinding, DraftingGeometryBindingIssue, DraftingGeometryError,
+    DraftingGeometryMismatch,
+};
 mod record;
 pub use record::DraftingSourceRecord;
 

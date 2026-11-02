@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — original drafting source records
+## _(2026-11-02 UTC)_ — exact existing-output source binding
 
-0826 fixes D379:native zero-sized positions alias;move-only nonzero DraftingSourceRecord retains distinct actual frame/snapshot records even for empty/unsized payloads,is_same_record uses record storage.
-Source3/binding5/context-plus-companion9/overview5/strict selected lint/fmt pass0;typed lookup remains pending. No payload disclosure,Clone/Default,global identity issuance or geometry values added.
-Whole context moves to companion;full focused-check policy body joins publication checks. Six old Rust fences/body proofs/SUMMARY120/119 files/book/publication118-374-1808-3393/native queries14-118-4 pass0.
-Promotion declined: existing actual-source/containment contract. 1001 four whole Git/body/public spans exact0;archive1455/32,per-generation21/64 and11/64;G1still6/18.
+0827 adds private point/edge bindings after exact requested reference,original frame record and original snapshot record checks;no payload copy,geometry values,planned output,repair or identity issuance.
+Mismatch retains original context/request/full raw response and first field;provider cause keeps its actual type/source chain. Native8/context-plus-companion11/strict selected lint/fmt pass0.
+Book/publication118-374-1808-3394/seven old Rust fences/1002 four Git/body/public spans exact0;archive1456/33,per-generation21/64 and12/64. Context branch focused implementation done.
+Promotion declined: existing exact source/provider contract. Whole mixed program/names/dependencies/check/verification pending;G1still6/18 and geometry/physical execution remains later gates.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

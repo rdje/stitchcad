@@ -60,8 +60,10 @@ mod arc;
 mod arguments;
 mod context;
 pub use context::{
-    DraftingContext, DraftingContextError, DraftingContextSource, DraftingGeometryReference,
-    DraftingGeometrySource, DraftingGeometrySourceResult, DraftingSourceRecord,
+    DraftingContext, DraftingContextError, DraftingContextSource, DraftingGeometryBinding,
+    DraftingGeometryBindingIssue, DraftingGeometryError, DraftingGeometryMismatch,
+    DraftingGeometryReference, DraftingGeometrySource, DraftingGeometrySourceResult,
+    DraftingSourceRecord,
 };
 mod operation_input;
 pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};

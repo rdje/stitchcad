@@ -1,4 +1,6 @@
 //! Actual source-owner binding and resource-before-query ordering, without geometry execution.
+#[path = "support/drafting_geometry.rs"]
+mod geometry;
 use core::{
     cell::Cell,
     fmt,

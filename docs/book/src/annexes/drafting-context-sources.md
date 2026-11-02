@@ -23,8 +23,8 @@ explicit `DraftingGeometryReference::Point(PointRef)` or `Edge(EdgeRef)` and ret
 `DraftingGeometrySource` fields:the record's actual typed reference,frame,snapshot and geometry.
 These borrowed source types can be unsized and need neither Clone nor Debug. Copying the raw view
 retains all loans;its debug representation shows the reference without source payloads. No default
-frame,registry or identity is supplied. The raw response still needs exact reference/frame/snapshot
-binding checks;the typed existing-output lookup stage is still pending. Canonical semantic-target resolution remains
+frame,registry or identity is supplied. `bind_existing_geometry` now checks exact reference/frame/snapshot
+binding before returning an existing-output binding. Canonical semantic-target resolution remains
 part of complete dependency integration;the geometry port alone does not cover it.
 
 The binding exposes the actual `scope()`,`source()`,`frame()`,`snapshot()`,explicit `limits()` and
@@ -60,7 +60,7 @@ Existing `DesignFormulaScope` pins actual scalar/input owners. It supplies no Ca
 geometry approval. `IdentityLedger` retains topology/current-edge and point-journal contracts;
 its edge membership is not a replacement for a complete typed geometry/frame registry.
 
-| Required source | Contract of the eventual port |
+| Required source | Source boundary |
 | --- | --- |
 | Containing owner | Borrow the exact Design/program sources and revision;refuse a foreign owner before source queries |
 | Frame | Borrow the actual selected Cartesian source,including its authored definition;never infer it from an output id |
@@ -123,3 +123,39 @@ let borrowed: &DraftingSourceRecord<[u8]> = &empty;
 assert!(borrowed.data().is_empty());
 assert!(core::mem::size_of_val(borrowed) > 0);
 ```
+
+## Bind an existing typed output
+
+After context admission,`context.bind_existing_geometry(requested)` makes one typed source lookup.
+It first matches the returned PointRef/EdgeRef kind and full persistent reference,then the original
+frame record,then the original snapshot record. Equal definitions or ids in different records do
+not substitute for those original sources. Success returns a private `DraftingGeometryBinding`
+retaining the actual context and original opaque geometry record;Copy retains every source loan.
+`reference()`,`context()`,`geometry()` and `source()` expose those exact matched sources.
+
+For example,a consumer can borrow the original source record without copying it or reading values:
+
+```rust
+use sc_core::{construction::{DraftingContext, DraftingContextSource, DraftingGeometryError,
+    DraftingGeometryReference}, design::DesignMetadataHost};
+fn original_geometry<'a,H:DesignMetadataHost,S:DraftingContextSource<H>>(
+    context:DraftingContext<'a,H,S>, requested:DraftingGeometryReference,
+) -> Result<&'a S::Geometry,DraftingGeometryError<'a,H,S>> {
+    let binding = context.bind_existing_geometry(requested)?;
+    assert_eq!(binding.reference(), requested);
+    Ok(binding.geometry())
+}
+```
+
+A provider refusal retains the exact request and original typed cause through the error source
+chain. A mismatch retains the original context,request,complete raw response and first
+`DraftingGeometryBindingIssue`:Reference,Frame or Snapshot. In particular,a wrong-kind response
+cannot become a valid point by matching an id. Multiple wrong fields report Reference before Frame
+before Snapshot,while retaining every actual returned handle for diagnosis. Binding/mismatch Debug
+output omits stored geometry payloads;original provider error content stays with its own error type.
+
+These are bindings of existing source records under the exhaustive immutable provider contract.
+They evaluate no coordinate,length,selector or formula,create no output,perform no repair/transform
+and issue no identity. Planned earlier outputs stay in their actual operation manifests until
+execution creates them;this API never materializes them. An output binding grants no whole-program
+order/dependency/resource proof,geometry/physical feasibility,runtime allowance or release approval.

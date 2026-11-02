@@ -3,17 +3,19 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0826 — retain distinct original drafting source records
+## STITCHCAD-G1-0827 — bind exact existing geometry sources
 
-- Fixed D379 with move-only nonzero source records around opaque frame/snapshot definitions.
-  Actual record identity stays distinct for zero-sized/empty payloads;no global ids or geometry issued.
-- Source3/binding5/context-plus-companion9/overview5/strict selected lint/fmt pass0.
-  Context companion preserves old text/examples;whole focused-check policy moves under Publication checks.
-- Book/publication118/374/1808/3393/native queries14/118/4/SUMMARY120/119 files pass0;six old Rust
-  fences and1001 four Git/body/public spans exact;archive1455/32,per-generation21/64 and11/64.
-  G1still6/18;typed existing-output lookup next,whole integration verification pending.
+- Added private borrowed point/edge source bindings with exact reference/frame/snapshot checks.
+  Original provider errors and complete mismatched source witnesses survive in first-field order.
+- Native8/context-plus-companion11/strict selected lint/fmt/book/publication118/374/1808/3394 pass0;
+  seven prior Rust fences and1002 four Git/body/public spans exact;archive1456/33,
+  per-generation21/64 and12/64. No geometry values,planned outputs,repair or identities produced.
+- Context branch implemented with focused checks;whole mixed program/integration verification
+  remains pending. G1still6/18;ordered owner next.
 
 # Sealed archive — earlier slices
+
+[Whole0826 source records and D379 repair](docs/history/stitchcad-devnotes-part1002.md) retain exact source bytes.
 
 [Whole0825 bounded context and D378 fix](docs/history/stitchcad-devnotes-part1001.md) retain exact source bytes.
 
