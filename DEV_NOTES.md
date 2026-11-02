@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — complete mixed kind and name order
+## _(2026-11-02 UTC)_ — sourced complete dependency composition
 
-0851 consumes the actual private initial map,admits complete checker work and reserves all mixed proof slots first. Scalar headers/operands retain genuine ordinals;native headers reuse existing collision checks without insertion,including same-step original pairs. Point/Arc/Slash arguments use prior names only.
-After complete argument success,actual outputs become visible by mixed position despite unsorted name vectors. Complete original statement/native proofs remain;final cursor map is dropped without clone/extraction. Original indexed header/typed child causes survive errors,no local accepted prefix or value callback.
-Library check,mixed1/empty1 (14 scenarios),strict selected lint/fmt/Rustdoc3 pass0;unused fixture import removed. Self/future names,scalar/native/reserved/duplicate headers and late Point/Arc/Slash/assertion kinds retain actual owners/causes. Book/publication118-374-1815-3426,37 old/new exact fences pass0.
-1026 three whole Git/body/public spans exact0;archive1480-57/generations21-64 and36-64. Declaration chapter34259B. Promotion declined:existing actual-source/earlier-only/no-prefix doctrine. G1still6/18;namespace implemented with focused checks,Root/canonical/geometry/semantic dependencies and coupled .verify pending.
+0852 sources existing normalized-source/canonical-consumer,dependency and cycle factories against the actual initial map before mixed consumption. Geometry covers all13 native families/selectors;unnamed planned references require genuine step/source requests,not fabricated names or live-future lookup.
+Pocket/Closure inventories belong to actual DesignGarment;semantic binding must match its inputs() to the drafting Root and bound all held fields before queries. Existing intent/declaration vectors do not grant logical kind/domain/state or execution;real readonly sources and bounded composition remain owned.
+Tracked plan_sources.py builds current sc-core,checks family13/public Garment loan0/lifetime escape1,all matched0. Initial probe E0599 refined DesignReferenceHost bound. Local scratch refuses links/nested Git;library fingerprint fixed. Rust unchanged2c3af29c;book/publication118-374-1815-3427/38 fences exact0.
+1027 four Git/body/public spans exact0 (0851 plus whole Buttonhole proof);archive1481-58/generations21-64 and37-64. Declaration chapter39671B. Promotion declined:existing actual-owner/bounded-source/no-fabrication doctrine. G1still6/18;Root source bridge next,dependency/coupled implementation pending.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

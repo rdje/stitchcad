@@ -3,15 +3,15 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0851 — complete mixed name and kind order (2026-11-02 UTC)
+## STITCHCAD-G1-0852 — source complete dependency stages (2026-11-02 UTC)
 
-Consume actual initial map,admit complete work,reserve all proof slots and check original scalar/native operands under earlier-only names. Headers preflight without exposing self names;actual output names enter afterward in mixed order. Complete original proof vector/first causes survive;final map is dropped.
-Focused mixed1/empty1 (14 scenarios),library check,strict lint/fmt/Rustdoc3,book/publication118-374-1815-3426 and37 prior/new exact fences pass0. Archive1026 three Git/body/public spans exact;1480 logical/57 working. G1still6/18;namespace implementation
-done,source/canonical/geometry/semantic dependencies/coupled verification remain.
+Source complete dependency stages from current public Root/source/cycle/context/Garment contracts. Own bounded source,canonical,geometry and semantic implementations,including actual Garment input identity and unnamed planned-role requests;no source or physical execution fabricated.
+
+Tracked current-library/public-loan controls build0/families13/borrow0/escape1 matched. Rust unchanged2c3af29c;book/publication118-374-1815-3427/all38 fences exact0. Archive1027 four Git/body/public spans exact;1481 logical/58 working. G1still6/18;Root source bridge next.
 
 # Sealed archive — earlier slices
 
-[Whole0850 complete mixed-order work bounds](docs/history/stitchcad-devnotes-part1026.md) retains exact source bytes.
+[Whole0851 mixed order and original Buttonhole proof](docs/history/stitchcad-devnotes-part1027.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

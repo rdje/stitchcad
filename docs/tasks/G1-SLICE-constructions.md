@@ -228,31 +228,7 @@ Whole0017 [goals/acceptance/proofs](../history/window28.md#stitchcad-devnotes-pa
 
 ### `G1-SLICE.3c.4c.2` — buttonhole length has one canonical button/operation source
 
-- [x] **REPRODUCE / ISSUE** — ontology §4.7 forbids entering buttonhole length twice. The prior Closure
-  supports zipper/hook-bar, but has no button pair or canonical derived-hole source.
-- [x] **ROOT CAUSE (WHY + WHERE)** — an operation id alone leaves the queried size source unspecified.
-  `cargo test -p sc-core --test closure_contract
-  buttonhole_length_source_borrows_the_canonical_button_size_and_derivation_without_defaulting` →
-  `1 passed`, `rc=0`: pointer equality proves both fields borrow canonical authored declarations.
-  `replacing_button_size_or_operation_changes_the_single_observed_hole_source` → `1 passed`, `rc=0`:
-  replacement changes the observed source without mutating the old revision's view.
-- [x] **FIX** — distinct ButtonAndButtonhole kind shares stable instance/count/target validation;
-  required button-size binding and derivation operation have no separate hole-length input/cache.
-  Read-only source view names Closure and borrows both inputs; actual derivation reports DeferredToG3.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test closure_contract` → `15 passed`, `rc=0`:
-  five new contracts cover recipe/profile size origins, canonical borrowing/replacement, non-button
-  absence, existing count/reuse/missing-target rules and current repair blocking. Button-size and
-  operation sources substituted independently → regressions red, `rc=101`; restored strict/privacy
-  checks pass. A compile-fail example proves a second length field is unavailable. Moved closure
-  checklist and task changelog compare unchanged to HEAD, with staged revalidation.
-- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; `make wasm` →
-  green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
-  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
-  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Existing closure kinds stay green.
-- [x] **LOCKSTEP** — pre-code closure decision, typed recipe dependency obligation, module/map,
-  closure examples/API vocabulary and feature row, parent closure, evidence/history retrieval and
-  live frontier/index/docs align. Oldest entries seal unchanged to changelog-part21/devnotes-part20. No formula
-  or default is invented; G3-GRADING.5 still owes executed derivation proof. Next `.3c.4d` pockets.
+[Whole original Buttonhole proof](../history/stitchcad-devnotes-part1027.md) remains byte-exact.
 
 ### `G1-SLICE.3c.4d.1` — Pocket retains physical composition and owned placement intent
 
@@ -964,15 +940,32 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0850 complete actual order-checker work;[whole scope/proofs](../history/stitchcad-devnotes-part1026.md).
 - ID: `G1-SLICE.5f.2.namespace.order.mixed.check`
   Status: `done`
-  Goal:complete bounded mixed name/header and scalar/native argument-kind order;no whole dependency/value grant.
-  - [x] ROOT CAUSE: 0851 `cargo test -p sc-core --test drafting_context_binding_contract program_order`:mixed1/empty1 pass;14 order/kind/header/work cases,original ordinals/positions/proofs and no callbacks,rc=0.
-  - [x] ADDRESSED: 0851 selected library check,strict clippy/fmt pass;consume actual private map,reserve all proof slots,preflight headers before arguments,insert outputs afterward,no final map clone/prefix,rc=0.
-  - [x] NO REGRESSION: 0851 `cargo test -p sc-core --doc construction::program::name_inputs::namespace::check`:docs3 pass;
-    book/publication118/374/1815/3426,37 prior/new exact fences,1026 three Git/body/public spans/archive1480/57,generations21/64 and36/64,rc=0.
-  Commit:STITCHCAD-G1-0851. Promotion declined:existing actual-source/earlier-only/no-prefix doctrine. Namespace implementation focused complete;Root sources/canonical/geometry/semantic dependencies and coupled .verify pending.
+  Goal:0851 complete mixed name/kind order;[whole scope/proofs](../history/stitchcad-devnotes-part1027.md).
 - ID: `G1-SLICE.5f.2.dependencies`
-  Status: `pending`
+  Status: `in_progress`
   Goal:all original formula/geometry/semantic dependencies,source frame/current registry/output provenance;canonical Pocket kind/domain/state and Buttonhole button-size dependency,no separately authored hole length or approximation.
+- ID: `G1-SLICE.5f.2.dependencies.plan`
+  Status: `done`
+  Goal:actual bounded Root/source/canonical/geometry/semantic composition;[sourced plan](../book/src/annexes/formula-declarations.md#complete-dependency-composition).
+  - [x] ROOT CAUSE: 0852 launcher `python3 -I -B docs/tasks/artifacts/drafting_dependencies/plan_sources.py`:
+    current library build0,closed families13,Garment/input borrow0/escape1 matched actual lifetime cause under DesignReferenceHost,rc=0.
+  - [x] ADDRESSED: 0852 public source/cycle/context/Garment API census plus tracked compiler controls pass0;
+    source/canonical/geometry/semantic children own actual metadata/root/manifest/bounds before values;no empty Garment or synthetic unnamed-role names,rc=0.
+  - [x] NO REGRESSION: 0852 Rust tree unchanged2c3af29c,book/publication118/374/1815/3427/all38 Rust fences exact,rc=0;
+    1027 four Git/body/public spans/archive1481/58,generations21/64 and37/64,rc=0.
+  Commit:STITCHCAD-G1-0852. Promotion declined:existing actual-owner/complete-bound/no-fabrication doctrine. Source implementation next;no new dependency acceptance or physical execution claim.
+- ID: `G1-SLICE.5f.2.dependencies.sources`
+  Status: `pending`
+  Goal:complete existing Root source/canonical-consumer proof against actual initial map before mixed consumption;retain original sources/limits/causes,no caller namespace or values.
+- ID: `G1-SLICE.5f.2.dependencies.canonical`
+  Status: `pending`
+  Goal:all original mixed canonical/Derived dependencies and actual source graph,kind/state/domain and cycle obligations before values,no id-only targets.
+- ID: `G1-SLICE.5f.2.dependencies.geometry`
+  Status: `pending`
+  Goal:all actual native/selector geometry references under original frame/snapshot and strict earlier creators;unlabelled planned roles need authentic manifests,never live-future lookup or synthetic names.
+- ID: `G1-SLICE.5f.2.dependencies.semantic`
+  Status: `pending`
+  Goal:actual Root-bound garment/native semantic sources,including Pocket opening kind/domain/state/component recipe and Buttonhole canonical button/derivation;no empty substitute or authored hole length.
 - ID: `G1-SLICE.5f.2.check`
   Status: `pending`
   Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.

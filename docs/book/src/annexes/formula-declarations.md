@@ -522,3 +522,77 @@ This proves complete mixed name/header and scalar/native argument-kind order. Se
 Root formula-source bodies,actual canonical/current geometry/frame and semantic dependencies,
 Pocket/Buttonhole obligations,allocator fault tests and coupled verification remain owned later.
 No geometry/numeric provider is called here,and no values or executable whole programme follow.
+
+
+## Complete dependency composition
+
+**Planned after mixed name/kind checking.** The scoped source review separates the next
+implementation into Root sources,canonical relations,geometry and semantic sources. The mixed
+proof above remains available with focused checks;it does not already certify these later stages.
+
+The actual containing initial map is the right boundary for Root formula-source checking. Its
+`FormulaNormalizedSources` already comes from this programme's actual Root. The existing
+`check_sources(namespace,FormulaSourceCheckLimits)` factory checks every source,including unused
+bodies and all branches,canonical input joins and Derived consumer kinds. Invoke it against the
+private initial map before mixed checking consumes that map. Returned proofs borrow actual
+normalized sources and declaration owners;they need no cloned namespace. The new composition
+must retain those exact owners,explicit allowances and original quota/allocation/static causes.
+
+Reuse `FormulaCheckedSources::prepare_dependencies(FormulaSourceDependencyLimits)` and
+`FormulaSourceDependencies::admit_acyclic(FormulaSourceCycleLimits)` for the actual canonical
+Derived relation. These separate native factories already preserve original edges,source-proof
+identity,complete bounds and concrete cycles without reading values. Their relation is not a
+replacement for mixed scalar/native dependencies,which must also join every original checked
+operand to its actual canonical source/family/state. A copied inventory or equal IDs cannot replace
+those owners. The full feature still owes the combined no-prefix acceptance boundary.
+
+The closed native input enum currently has13 families:Point,Line,Arc,Bezier,Offset,SlashSpread,
+CloseDart,AddNotch,Grainline,Walk,Truing,Mirror and Join. Geometry checking must cover their actual
+published dependency fields plus geometry declarations used by checked selectors. Existing-only
+references reuse the context's exact reference/frame/snapshot binding. Programme creators must be
+classified across the complete original sequence:ambiguous creators,self and future uses refuse
+before live lookup. Earlier fixed outputs come from their actual schemas;variable outputs require
+authentic family fields/manifests and original containing frame/snapshot records.
+
+The current planned-source port takes a genuine **named-output** position request. A dependency
+can refer to an earlier output that has no global name. The geometry slice must therefore expose
+an actual creating-step/reference request and reuse authentic planned-family sources,with complete
+bounds before queries. It must not fabricate a global name or treat planned geometry as live.
+Existing named-output binding remains its own actual catalogue/definition/tag association.
+
+Semantic source ownership requires the actual garment. `DesignGarment<H>` owns sewing, Pocket,
+notion,Closure,layer,Hem and construction inventories;its `inputs()` getter,under the published
+`DesignReferenceHost` bound,borrows its sole nested DesignInputs. The semantic port must bind that
+actual input object to the drafting Root,then admit complete garment/source content before
+currentness or declaration queries. Public `charge_design_garment_resources` and the original
+inventory producers supply existing exhaustive field walks. Original declaration adapters preserve
+actual objects/canonical loans;their allocating vector factories need bounded composition before
+use. No empty garment,matching-id copy or id-only payload can establish an unprovided owner.
+
+The semantic slice owns native Dart/Notch/Grainline/edit/source relations as well as the mandatory
+Pocket and Buttonhole checks. A Pocket opening keeps its actual logical declaration or Profile
+origin,kind/domain/state and component recipe dependency. A Buttonhole keeps its actual canonical
+button-size declaration and derivation operation;there is no second authored hole-length input.
+Actual readonly logical/Profile/operation source facets and their complete bounds are required
+where current intent adapters expose references only. Missing or unsupported sources retain their
+original typed refusal. Physical Pocket construction/opening scope and executed positive hole
+length retain their G2/G3 owners;logical checks cannot be replaced by a physical approximation.
+
+Each stage will keep actual source/context identity,original first causes and a complete result
+before it can join the final programme acceptance. The task tree owns the source composition,
+canonical graph,geometry and semantic implementations separately;coupled allocator/lifetime/
+source/order verification remains a later feature-completion task. This plan adds no fabricated
+source record,context,logical state,geometry or value to the implementation.
+
+
+Reproduce the scoped family/public-owner controls with the tracked probe:
+
+```bash
+python3 -I -B scripts/local_environment.py -- python3 -I -B docs/tasks/artifacts/drafting_dependencies/plan_sources.py
+```
+
+It builds the current sc-core library,then uses the public Garment/input getter with the actual
+DesignReferenceHost bound. The borrowed return compiles;the otherwise identical lifetime escape
+must fail for that lifetime cause. Compiler scratch stays in the repository and rejects linked or
+nested-repository output paths. This control establishes the source interface/lifetime boundary;
+it does not implement the planned dependency stages.
