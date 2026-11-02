@@ -11,8 +11,13 @@ use crate::{
     recipe::{FormulaDeclaration, FormulaInitialDeclaration},
 };
 use core::fmt;
+mod positions;
 mod resources;
 mod work;
+pub use positions::{
+    DraftingOutputPosition, DraftingOutputPositionError, DraftingOutputPositionRefusal,
+    DraftingProgramOutputPositions,
+};
 pub use work::{
     AdmittedDraftingProgramNameWork, DraftingProgramNameLimits, DraftingProgramNameShape,
     DraftingProgramNameWorkError, DraftingProgramNameWorkRefusal,

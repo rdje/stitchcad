@@ -9,6 +9,8 @@ mod program_admission;
 mod program_name_inputs;
 #[path = "support/drafting_program_name_work.rs"]
 mod program_name_work;
+#[path = "support/drafting_program_output_positions.rs"]
+mod program_output_positions;
 #[path = "support/drafting_program_views.rs"]
 mod program_views;
 use core::{

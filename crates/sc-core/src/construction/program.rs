@@ -13,8 +13,9 @@ pub use admission::{
 pub use limits::{DraftingProgramLimits, DraftingProgramShape};
 pub use name_inputs::{
     AdmittedDraftingProgramNameWork, DraftingGeometryNameSource, DraftingOutputName,
+    DraftingOutputPosition, DraftingOutputPositionError, DraftingOutputPositionRefusal,
     DraftingProgramNameInputs, DraftingProgramNameLimits, DraftingProgramNameShape,
-    DraftingProgramNameWorkError, DraftingProgramNameWorkRefusal,
+    DraftingProgramNameWorkError, DraftingProgramNameWorkRefusal, DraftingProgramOutputPositions,
 };
 pub use normalized::{
     DraftingProgramNormalizationError, DraftingProgramNormalizationRefusal,

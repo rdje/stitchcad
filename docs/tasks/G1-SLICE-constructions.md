@@ -756,25 +756,7 @@ before final checks. No checker, cap, grammar or product Rust changed; no needed
 ### G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs`
   Status: `done`
-  Goal:actual selected A/B JoinTo the same explicit result,and exactly one distinct A+B source pair
-  per requested result,without forks,inferred pairing,orientation or physical geometry approval.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test join_copy_pair_contract --test join_copy_source_contract`
-    through `scripts/local_environment.py`:pairs4/prior actions4 pass,rc=0. Complete selected retention
-    is not a join;missing/duplicate A/B contributors and crossed selected results must refuse.
-  - [x] ADDRESSED: `cargo test -p sc-core --doc construction::join::copy_pairs` through launcher:
-    compiler3 pass,rc=0;whole C/Q/checked3Q before selected fields/scans/allocation;actual first
-    selected/group causes and source/result loans;authored result order and real reflected originals
-    retained. Strict selected clippy rc=0. SourceInvariant/ResultInvariant are internal faults;none occurred.
-  - [x] NO REGRESSION: `cargo test -p sc-core --doc construction::join_source_examples` through launcher:
-    source8 pass,rc=0;`cargo fmt --all -- --check`/`scripts/run_make.sh book` rc=0. Rendered exact
-    pair/order/resource/per-pair boundary and refreshed overview present;all old source/overview Rust
-    fences exact. Main9/topology8 unchanged.972 three original Git spans/body/public bytes exact;
-    `history_archive.py --root . verify`:1426 logical/59 working,rc=0.
-    Full geometry/integration remains .5f.4.geometry/.5g/pre-push,not this native copy bookkeeping.
-  Work O(C log(C+Q+2)+Q log(Q+2)+1),peak3Q new entries,successful2Q. Native correspondence complete;
-  each actual pair retains required bank/pose/ease/stop/consumer checks in its own frames. Selected
-  span evidence cannot certify another pair;canonical inventory/currentness/geometry/authority remain.
-  Commit:STITCHCAD-G1-0797. promotion: declined (existing explicit copy/identity/geometry boundary).
+  Goal:0797 original paired-copy correspondence;[whole scope/proofs](../history/stitchcad-devnotes-part1017.md).
 
 ### G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking — retention evidence
 
@@ -943,20 +925,29 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0840 complete cumulative program/name content;[whole scope/proofs](../history/stitchcad-devnotes-part1016.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.bounds.workspace`
   Status: `done`
-  Goal:explicit complete prospective name-work limits and private bounded owner;actual selected host declarations before namespace allocation,no caller-count substitution or accepted prefix.
-  - [x] ROOT CAUSE: 0841 launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
-    native21 pass;actual parameter1/host2/extra1/output2/statement2 plus reserved8 gives16 namespace/18 retained;final focused program_name_work2 pass,rc=0.
-  - [x] ADDRESSED: 0841 same target retains full-content/factory/quota precedence,no row/currentness callbacks,
-    Unknown canonical loans and fallible rows;focused overflow library1 and work docs4 pass,rc=0;
-    actual named-loan escape rustc1/unchanged-lifetime control rustc0,expected boundary confirmed,rc=0.
-  - [x] NO REGRESSION: 0841 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    book/pure publication118/374/1812/3414,15 old chapter fences/new example exact,rc=0;
-    1016 Git/body/public spans/archive1470/47,generations21/64 and26/64,rc=0.
-  Commit:STITCHCAD-G1-0841. promotion:declined (existing actual-owner/bounded-before-factory doctrine);source/position and ordered checking next,full semantic/allocator feature verification deferred.
-  Guard review replaced ambiguous anonymous elision before the final four-doctest run;standalone compiler refusal and positive control confirm the intended actual loan boundary.
+  Goal:0841 actual complete name-work bounds;[whole scope/proofs](../history/stitchcad-devnotes-part1017.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association`
-  Status: `pending`
+  Status: `in_progress`
   Goal:after complete bounds,bind exact original program positions/fixed schemas/typed role metadata and actual initial sources;reject mismatches/future initial geometry before values,retain full owners and original first cause in private admission.
+- ID: `G1-SLICE.5f.2.namespace.admit.association.positions`
+  Status: `done`
+  Goal:bind named-output occurrences to original mixed creating steps;fixed schemas require actual owner identity,typed variable roles remain original creator/catalogue candidates until .roles,no values or manifest/source-truth substitution.
+  - [x] ROOT CAUSE: 0842 launcher `cargo test -p sc-core --test drafting_context_binding_contract program_output_positions`:
+    focused1 pass;four actual fixed owners/two unresolved typed candidates,original mixed/output indexes and zero callbacks,rc=0.
+  - [x] ADDRESSED: 0842 same target refuses zero/max/missing/scalar/wrong fixed family/equal-id foreign schema/role creator,
+    first output index1 without prefix;reverse/nth/fused and empty views pass;positions docs3 pass,rc=0;
+    actual view escape rustc1/unchanged-lifetime control rustc0 confirms intended loan boundary,rc=0.
+  - [x] NO REGRESSION: 0842 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
+    book/pure publication118/374/1812/3415,16 old fences/context chapter/new example exact,rc=0;
+    1017 four Git/body/public spans include whole0797 proof;archive1471/48,generations21/64 and27/64,rc=0.
+  Commit:STITCHCAD-G1-0842. promotion:declined (existing actual-owner/genuine-position doctrine);variable roles/Offset domain and initial sources next,full semantic/allocator verification deferred.
+  Focused fixes:initial indexing lint replaced with private checked lookup;positive Rustdoc/book tail iterator borrow uses a local count. Final serial checks above pass;no role-manifest truth inferred from matching creator IDs.
+- ID: `G1-SLICE.5f.2.namespace.admit.association.roles`
+  Status: `pending`
+  Goal:bind variable-role candidates through actual published family proof parents/manifests;include Offset lineage in its own typed domain,no generic Edge cast or operation-id-only source truth.
+- ID: `G1-SLICE.5f.2.namespace.admit.association.initial`
+  Status: `pending`
+  Goal:bind actual extra initial sources to the original Root canonical/source/context records,refuse planned creators as initial geometry before values;retain exact original sources and causes,no metadata-id-only truth.
 - ID: `G1-SLICE.5f.2.namespace.order`
   Status: `pending`
   Goal:actual Root and explicit always-visible names plus only earlier scalar/native declarations in mixed order;check reserved/cross-origin/repeated headers and self/future names without values or metadata-prefix acceptance.

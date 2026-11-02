@@ -70,13 +70,14 @@ pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};
 mod program;
 pub use program::{
     AdmittedDraftingProgramInputs, AdmittedDraftingProgramNameWork, DraftingGeometryNameSource,
-    DraftingOutputName, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
+    DraftingOutputName, DraftingOutputPosition, DraftingOutputPositionError,
+    DraftingOutputPositionRefusal, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
     DraftingProgramInputs, DraftingProgramLimits, DraftingProgramNameInputs,
     DraftingProgramNameLimits, DraftingProgramNameShape, DraftingProgramNameWorkError,
     DraftingProgramNameWorkRefusal, DraftingProgramNormalizationError,
-    DraftingProgramNormalizationRefusal, DraftingProgramShape, DraftingProgramStep,
-    DraftingProgramStepKind, DraftingProgramStepView, NormalizedDraftingOperation,
-    NormalizedDraftingProgram,
+    DraftingProgramNormalizationRefusal, DraftingProgramOutputPositions, DraftingProgramShape,
+    DraftingProgramStep, DraftingProgramStepKind, DraftingProgramStepView,
+    NormalizedDraftingOperation, NormalizedDraftingProgram,
 };
 mod bezier;
 pub use arc::{

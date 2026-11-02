@@ -527,3 +527,45 @@ and unbound extra sources remain data here:source/position association,collision
 complete kinds and dependency truth require their separately owned stages. These bounds grant
 logical namespace/association records only;allocator capacity,comparison CPU,child proof work and
 runtime/geometry budgets are separate.
+
+### Bind original output positions
+
+`AdmittedDraftingProgramNameWork::bind_output_positions()` consumes the complete bounded work and
+checks every original output-name occurrence in authored vector order. Zero,maximum and missing
+positions refuse;an actual scalar position retains its genuine original recipe ordinal. A wrong
+fixed-schema family or another schema owner refuses,even when the other owner's IDs and fields are
+equal. Point,line,center-arc and Bézier sources must borrow the actual input at the requested step.
+No callback,kind check,value,namespace or new association-index allocation runs in this stage.
+
+Variable point/edge catalogues retain original active membership and matching authored creator IDs
+as **unresolved role candidates**. `requires_role_binding()` marks these views. The next role stage
+must supply actual published family proof parents/manifests. Catalogue metadata at a matching Line
+step,for example,does not establish a valid Point output or family role. Canonical issuance,
+currentness,frame and geometry remain later source/dependency obligations for all families.
+
+Success returns private `DraftingProgramOutputPositions` with its original bounded work.
+`outputs()` gives allocation-free exact-size,bidirectional,fused loans in original output order;
+`nth`,reverse and interleaved reads preserve genuine mixed positions. For requested positions
+`[2,3,4,5,3,3]`,all six original occurrences remain,including repeated step3. Each view returns its
+original zero-based `output_index()`,actual `output()` and genuine normalized `step()` with original
+native arena;scalar ordinals are never reconstructed from output indexes. The view cannot outlive
+its containing loan. Diagnostic formatting omits authored names and argument source.
+
+```rust
+use sc_core::{construction::{AdmittedDraftingProgramNameWork, DraftingContextSource},
+    design::DesignMetadataHost};
+fn inspect_positions<H:DesignMetadataHost,S:DraftingContextSource<H> + ?Sized>(
+    work:AdmittedDraftingProgramNameWork<'_, '_, '_, '_,H,S>)->Result<usize,String> {
+    let positions=work.bind_output_positions().map_err(|error|error.to_string())?;
+    for output in positions.outputs() {
+        assert_eq!(output.step().position(),output.output().position());
+    }
+    let count=positions.outputs().len();
+    Ok(count)
+}
+```
+
+A failure retains complete original `work()`,the first bad `output_index()`,actual authored
+`output()` and typed `refusal()`. No valid prefix is returned. Position association leaves variable
+role proofs,actual initial sources,collisions,earlier-only visibility and whole dependency/kind
+checking to their owned stages;it grants no namespace or executable program approval.

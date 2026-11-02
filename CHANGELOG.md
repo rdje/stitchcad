@@ -3,18 +3,18 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0841 — bound complete actual name work before factories
+## STITCHCAD-G1-0842 — bind genuine output-name positions
 
-- Added explicit content/namespace/retained policy,actual complete shape and private bounded owner;
-  selected-host exact/fused borrowed inventory avoids a preliminary allocating declaration Vec.
-- Native21/focused overflow1/strict lint pass0;16 namespace/18 retained example,content/factory/quota
-  precedence,zero row/currentness callbacks,actual Unknown canonical loans and failed rows covered.
-- Work docs4/named-loan compiler refusal+control pass;book/pure publication118/374/1812/3414;15 old fences/new example exact.
-  1016 whole spans/archive1470/47,generations21/64 and26/64. G1still6/18;source/position association next.
+- Added complete original-position association,actual fixed-schema owner checks and zero-copy
+  genuine step/name views;variable-role candidates remain marked for later actual family proofs.
+- Focused position1/strict lint/fmt/docs3 pass0;original first refusals,equal-id foreign owner,
+  zero/max/scalar requests,reverse/nth/fused views and zero callbacks covered. Loan escape rustc1/keep0 confirmed.
+- Book/publication118/374/1812/3415;16 prior fences/new example exact.1017 four whole spans retain
+  prior0841/0797 proof;archive1471/48,generations21/64 and27/64. G1still6/18;role/source binding next.
 
 # Sealed archive — earlier slices
 
-[Whole0840 complete cumulative content](docs/history/stitchcad-devnotes-part1016.md) retains exact source bytes.
+[Whole0841 bounded name work and0797 paired-copy proof](docs/history/stitchcad-devnotes-part1017.md) retains exact source bytes.
 
 [Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
 

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — bounded actual mixed-name work
+## _(2026-11-02 UTC)_ — genuine output-name positions
 
-0841 fresh complete content precedes actual Root parameter/selected-host/extra/output/statement counts,checked namespace entries and namespace-plus-output association records. New borrowed exact/fused host iterator avoids the older allocating declaration Vec;count/drop consumes no source item.
-Native21/focused arithmetic1/strict lint pass0;final two cases preserve16/18 bounds,no row/currentness callbacks,content before factory/zero quotas,Unknown canonical loans,fallible rows and empty reserved8. Work docs4 pass0;named-loan escape compiler1/keep0 confirms intended boundary.
-Book reference moved whole to existing name-scope chapter before containment limits;all15 prior Rust fences/new native-book example and1016 Git/body/public spans exact0. Pure publication118-374-1812-3414;archive1470-47/generations21-64 and26-64.
-Promotion declined: existing actual-owner/bounded-before-factory doctrine. G1still6/18;private work owner grants no source/position/namespace approval,association/ordered checking and full feature verification remain pending.
+0842 consumes complete bounded work before original output-order scans. Four fixed source families require actual schema owner identity;typed role catalogues retain matching-creator candidates only,explicitly marked for actual family proof parents/manifests next. No callbacks,values,namespace or index allocation.
+Focused position1/strict lint/fmt/docs3 pass0;all fixed/candidate variants,zero/max/missing/scalar/wrong family/equal-id foreign owner/role creator first refusals,original mixed/output indexes and bidirectional/nth/fused loans covered. Initial indexing lint corrected;example tail iterator borrow fixed with local count.
+Book/pure publication118-374-1812-3415/16 old fences/context/new example and1017 four Git/body/public spans exact0;whole0797 proof retained. Archive1471-48/generations21-64 and27-64;loan escape rustc1/keep0 confirms boundary0.
+Promotion declined: existing actual-owner/genuine-position/no-prefix doctrine. G1still6/18;variable role family/Offset domain and actual initial source admission remain owned next,whole semantic/allocator verification deferred.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
