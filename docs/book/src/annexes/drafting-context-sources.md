@@ -159,3 +159,123 @@ They evaluate no coordinate,length,selector or formula,create no output,perform 
 and issue no identity. Planned earlier outputs stay in their actual operation manifests until
 execution creates them;this API never materializes them. An output binding grants no whole-program
 order/dependency/resource proof,geometry/physical feasibility,runtime allowance or release approval.
+
+## Mixed program sources and admission
+
+`DraftingProgramInputs::new(context,steps)` now owns the original `Vec<DraftingProgramStep>` and
+pins its actual bound context. `context()` returns that borrowed handle;`recipe()` returns only its
+actual Root's whole original recipe;`steps()` borrows the complete unchanged sequence. No foreign
+recipe argument, copied source, provider callback, parsing, output identity or namespace is involved.
+The owner has private fields and cannot outlive its actual context or native declarations.
+
+`DraftingProgramStep::Scalar { ordinal }` retains a requested one-based scalar ordinal separately
+from its mixed position;`Drafting` retains the actual `DraftingOperationInput`. Zero, missing,
+repeated, out-of-order or out-of-range requests and empty sequences survive raw construction.
+`admit(&DraftingProgramLimits)` now requires every original scalar statement,including each
+assertion,exactly once in original relative order. Complete normalization remains **planned**.
+No topological reordering,statement extraction or implicit scalar source is introduced.
+
+For example,this function retains actual inputs without accepting scalar coverage or reading values:
+
+```rust
+use sc_core::{construction::{DraftingContext, DraftingContextSource, DraftingOperationInput,
+    DraftingProgramInputs, DraftingProgramStep, PointConstruction}, design::DesignMetadataHost};
+fn retain<'a,H:DesignMetadataHost,S:DraftingContextSource<H> + ?Sized>(
+    context:DraftingContext<'a,H,S>,point:&'a PointConstruction) -> DraftingProgramInputs<'a,H,S> {
+    let inputs = DraftingProgramInputs::new(context,vec![
+        DraftingProgramStep::Scalar { ordinal:1 },
+        DraftingProgramStep::Drafting(DraftingOperationInput::ConstructPoint(point)),
+        DraftingProgramStep::Scalar { ordinal:2 },
+    ]);
+    assert!(std::ptr::eq(inputs.recipe(),context.scope().root().recipe()));
+    inputs
+}
+```
+
+For example, these are illustrative positions, not a new text grammar:
+
+| Combined position | Actual original source |
+| --- | --- |
+| 1 | Scalar statement 1 in the Root recipe |
+| 2 | Original borrowed drafting declaration and all its argument documents |
+| 3 | Scalar statement 2, still source ordinal 2 with its original whole-recipe spans |
+
+Scalar recipe documents now expose factory-derived statement, expression and node counts through
+`shape()`; expression documents retain their complete cached node count. These metadata preserve both
+assertion operands, all conditional branches and unused source bodies, with no value reads, caller
+annotations or parsing merely to discover a required population. Existing grammar/literal limits
+and scalar canonical identity stay unchanged;that identity is not a mixed-program serializer/hash.
+
+Complete input admission now walks actual Root/context/native fields, including both original and
+canonical buffers, retained copies/caches, unbounded counters, the mixed order and Walk's original pair
+vector. Point declarations own two argument documents, center arcs own three, and slash/spread owns
+one. Other raw families retain their original fixed references and symbolic intents. Complete normalization preflight includes three cohorts:
+all separately identified Root formula-source bodies, all scalar recipe operands, and all native
+argument documents. Repeated/unused/untaken content counts;identity/address deduplication cannot
+remove it. Existing source/argument conservative record bounds remain authoritative and compose
+before child factories;they certify no allocator-byte, parser-scratch, CPU or runtime allowance.
+
+Recipe counts,exhaustive native fields,raw mixed steps and complete input admission are implemented;
+normalization and borrowed normalized views remain owned work. Existing document factories must retain
+their original typed/allocation causes;failure returns no normalized program prefix. Normalized
+views must borrow actual owners and keep source ordinals separate from combined positions.
+
+Actual name/output-manifest and canonical semantic bindings remain explicitly supplied at the
+namespace/dependency stages, with their own complete held-content admission. The raw source owner
+invents no output name, role, frame, manifest or identity. Whole name/kind/order/dependency checking
+and coupled verification follow the complete integration set;normalization grants no program,
+geometry, physical or release approval.
+
+### Complete content, shape and original order
+
+`DraftingProgramLimits::new(content,expressions,nodes,retained_records)` selects every allowance
+explicitly. Content uses `DesignResourceLimits`;the three normalization allowances can be zero for
+empty cohorts. Admission freshly charges the actual Root,then the complete context source,then
+precharges the mixed vector before visiting native fields. It does not substitute earlier component
+demands or deduplicate a retained copy. Even an ignored source-sink failure remains the first cause.
+An empty sequence still needs its actual Root/context content allowance.
+
+After held content passes,checked arithmetic counts all three complete cohorts from immutable factory
+metadata,with no parsing,normalization or values. `DraftingProgramShape` reports mixed steps,scalar
+statements,Root source bodies,native arguments,all expressions and all nodes. The conservative
+prospective retained-record bound is `steps + statements + expressions + 2*nodes`:mixed normalized
+slots,scalar statement records,expression owner-views,nodes and possible call-argument indices.
+Inline owners can be counted twice;this composes the existing per-source/per-native conservative
+bounds and grants no allocator capacity,parser scratch,CPU,checker or runtime allowance.
+
+For example,two unused Root bodies with11 nodes,three scalar operands with8 nodes and eight native
+argument occurrences with12 nodes require13 expressions and31 nodes. Seven mixed steps and two
+scalar statements then require a conservative `7 + 2 + 13 + 2*31 = 84` records. Repeating one point
+input counts both documents again. An expression limit12 refuses before a node limit30;with13
+expressions allowed,the node limit30 refuses before a record limit83. A content refusal precedes
+all those quotas and scalar-order checking.
+
+Only then does admission compare scalar requests with actual original recipe ordinals. For a two
+statement recipe,`[1,drafting,2]` preserves scalar ordinal2 at mixed position3;`[1,drafting,1]`
+refuses at position3 with expected2/requested1. `[1,2,2]` reports no next expected ordinal;`[1]`
+reports complete required2/provided1. Zero,out-of-range,reordered and missing assertion requests
+are refused without clipping,sorting or returning an admitted prefix.
+
+```rust
+use sc_core::{construction::{AdmittedDraftingProgramInputs, DraftingContextSource,
+    DraftingProgramAdmissionError, DraftingProgramInputs, DraftingProgramLimits},
+    design::DesignResourceSource};
+fn inspect<'p,'a,H:DesignResourceSource,S:DraftingContextSource<H> + ?Sized>(
+    inputs:&'p DraftingProgramInputs<'a,H,S>,policy:&'p DraftingProgramLimits)
+    -> Result<AdmittedDraftingProgramInputs<'p,'a,H,S>,DraftingProgramAdmissionError<'p,'a,H,S>> {
+    let admitted=inputs.admit(policy)?;
+    assert!(std::ptr::eq(admitted.inputs(),inputs));
+    assert!(std::ptr::eq(admitted.limits(),policy));
+    assert_eq!(admitted.shape().step_count(),inputs.steps().len());
+    Ok(admitted)
+}
+```
+
+Success privately retains the complete original input owner,actual policy,fresh cumulative demand
+and complete shape. Errors retain original inputs/policy and the first content,population or
+original-order cause;resource causes keep their typed error chain. A small diagnostic box compacts
+uncommon semantic/content errors;no child normalization/allocation cause is replaced by it.
+Admitted inputs are not normalized arenas or a whole namespace/kind/dependency/current-output
+proof. No additional currentness or geometry callback runs during this admission;the held context
+continues to rely on its honest immutable source contract. Normalization and complete static checking
+follow,then coupled feature verification.

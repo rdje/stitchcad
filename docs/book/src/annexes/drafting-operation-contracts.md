@@ -191,78 +191,19 @@ part of the complete graph;no separately authored hole length or approximation i
 
 Input composition and held-field charging, bounded actual context and typed existing-output binding
 are implemented. The
-raw mixed source owner is also available;whole admission,names,complete dependencies and checking
+raw mixed source owner and complete input admission are also available;names,dependencies and checking
 remain separately owned work. Coupled
 verification follows that complete set. The raw input view alone grants no context or program acceptance.
 
 The [drafting context companion](drafting-context-sources.md) specifies actual source binding,
 resource accounting and the remaining existing-output/program integration.
 
-## Mixed source owner and planned whole admission
+## Mixed source owner and admission
 
-`DraftingProgramInputs::new(context,steps)` now owns the original `Vec<DraftingProgramStep>` and
-pins its actual bound context. `context()` returns that borrowed handle;`recipe()` returns only its
-actual Root's whole original recipe;`steps()` borrows the complete unchanged sequence. No foreign
-recipe argument, copied source, provider callback, parsing, output identity or namespace is involved.
-The owner has private fields and cannot outlive its actual context or native declarations.
-
-`DraftingProgramStep::Scalar { ordinal }` retains a requested one-based scalar ordinal separately
-from its mixed position;`Drafting` retains the actual `DraftingOperationInput`. Zero, missing,
-repeated, out-of-order or out-of-range requests and empty sequences survive raw construction.
-The whole admission/normalization factories remain **planned**. Admission must require every
-original scalar statement,including each assertion,exactly once in original relative order.
-No topological reordering,statement extraction or implicit scalar source is introduced.
-
-For example,this function retains actual inputs without accepting scalar coverage or reading values:
-
-```rust
-use sc_core::{construction::{DraftingContext, DraftingContextSource, DraftingOperationInput,
-    DraftingProgramInputs, DraftingProgramStep, PointConstruction}, design::DesignMetadataHost};
-fn retain<'a,H:DesignMetadataHost,S:DraftingContextSource<H> + ?Sized>(
-    context:DraftingContext<'a,H,S>,point:&'a PointConstruction) -> DraftingProgramInputs<'a,H,S> {
-    let inputs = DraftingProgramInputs::new(context,vec![
-        DraftingProgramStep::Scalar { ordinal:1 },
-        DraftingProgramStep::Drafting(DraftingOperationInput::ConstructPoint(point)),
-        DraftingProgramStep::Scalar { ordinal:2 },
-    ]);
-    assert!(std::ptr::eq(inputs.recipe(),context.scope().root().recipe()));
-    inputs
-}
-```
-
-For example, these are illustrative positions, not a new text grammar:
-
-| Combined position | Actual original source |
-| --- | --- |
-| 1 | Scalar statement 1 in the Root recipe |
-| 2 | Original borrowed drafting declaration and all its argument documents |
-| 3 | Scalar statement 2, still source ordinal 2 with its original whole-recipe spans |
-
-Scalar recipe documents now expose factory-derived statement, expression and node counts through
-`shape()`; expression documents retain their complete cached node count. These metadata preserve both
-assertion operands, all conditional branches and unused source bodies, with no value reads, caller
-annotations or parsing merely to discover a required population. Existing grammar/literal limits
-and scalar canonical identity stay unchanged;that identity is not a mixed-program serializer/hash.
-
-Complete input admission must walk actual Root/context/native fields, including both original and
-canonical buffers, retained copies/caches, unbounded counters, the mixed order and Walk's original pair
-vector. Point declarations own two argument documents, center arcs own three, and slash/spread owns
-one. Other raw families retain their original fixed references and symbolic intents. Complete normalization preflight includes three cohorts:
-all separately identified Root formula-source bodies, all scalar recipe operands, and all native
-argument documents. Repeated/unused/untaken content counts;identity/address deduplication cannot
-remove it. Existing source/argument conservative record bounds remain authoritative and compose
-before child factories;they certify no allocator-byte, parser-scratch, CPU or runtime allowance.
-
-Recipe counts,exhaustive native fields and raw mixed steps are implemented;whole admission,complete
-normalization and borrowed normalized views remain owned work. Existing document factories must retain
-their original typed/allocation causes;failure returns no normalized program prefix. Normalized
-views must borrow actual owners and keep source ordinals separate from combined positions.
-
-Actual name/output-manifest and canonical semantic bindings remain explicitly supplied at the
-namespace/dependency stages, with their own complete held-content admission. The raw source owner
-invents no output name, role, frame, manifest or identity. Whole name/kind/order/dependency checking
-and coupled verification follow the complete integration set;normalization grants no program,
-geometry, physical or release approval.
+The [context and mixed-program companion](drafting-context-sources.md#mixed-program-sources-and-admission)
+now documents `DraftingProgramInputs`,its original scalar/drafting steps and complete actual
+held-content/population/order admission. Normalization,borrowed normalized views and whole
+name/kind/dependency checking remain separately owned work.
 
 ## Points and primitive curves
 

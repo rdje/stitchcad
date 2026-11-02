@@ -2,6 +2,12 @@
 use super::{DraftingContext, DraftingContextSource, DraftingOperationInput};
 use crate::{design::DesignMetadataHost, recipe::FormulaRecipeDocument};
 use core::fmt;
+mod admission;
+mod limits;
+pub use admission::{
+    AdmittedDraftingProgramInputs, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
+};
+pub use limits::{DraftingProgramLimits, DraftingProgramShape};
 
 /// One explicit original request in a mixed scalar/drafting sequence, without order acceptance.
 #[derive(Clone, Copy, Debug)]

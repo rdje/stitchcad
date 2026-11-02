@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — raw mixed scalar and drafting source owner
+## _(2026-11-02 UTC)_ — complete mixed input admission
 
-0831 owns the original mixed Vec and actual Context handle;Root-derived recipe() excludes a foreign scalar document. Scalar ordinals stay explicit and distinct from mixed positions;native inputs remain borrowed,without provider callbacks,parsing,values or mixed identity.
-Native context10 passes with2 raw-owner cases:original Vec/source/context records retained,scalar2 at mixed3,invalid/empty/repeated/max ordinal unchanged. Strict selected lint/fmt pass0 after test indexing changed to exhaustive slice matching;no suppression.
-Book examples7/publication118-374-1808-3397/six prior Rust fences exact0;1006 three Git/body/public spans/archive1460-37/per-generation21-64 and16-64 exact0. Whole admission/normalization/static acceptance remain pending.
-Promotion declined: existing actual-owner/order/complete-admission contract. G1still6/18;complete held-content/population admission next,whole verification after the agreed set.
+0832 freshly charges Root/context/mixed Vec/native fields,then all3 cached normalization cohorts,then original scalar coverage/order. Shape records conservatively bound steps+statements+expressions+2*nodes;duplicates/unused/untaken content count,no child factory or value/provider query.
+Native14/private-default guards4/compiled context examples5/strict selected lint/fmt pass0. Cohort13-31-84,cumulative/latching refusal,zero quotas before bad order,mixed positions and empty normalization checked. Semantic diagnostics boxed after strict128B error lint;typed resource cause retained.
+Book reference moved into existing context companion to retain part bounds;ten original Rust fences/whole original context prefix exact. Publication118-374-1809-3400 and1007 three Git/body/public spans/archive1461-38/per-generation21-64 and17-64 pass0.
+Promotion declined: existing actual-owner/complete-admission/resource doctrine. G1still6/18;complete child normalization next,whole semantic/feature verification remains deferred.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

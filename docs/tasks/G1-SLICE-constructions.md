@@ -902,22 +902,22 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.program.fields`
   Status: `done`
   Goal:0830 exhaustive native held-field charges;[whole scope/proofs](../history/stitchcad-devnotes-part1006.md).
-### G1-SLICE.5f.2.program.steps
 - ID: `G1-SLICE.5f.2.program.steps`
   Status: `done`
-  Goal:raw source owner pins actual context/Root recipe and explicit mixed scalar-ordinal/drafting order;retain actual operation/document owners,no program/canonical identity or namespace acceptance.
-  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
-    native10 pass,including2 raw-owner cases;scalar2 at mixed3,original Vec/Root/source/frame/snapshot/native references retained with no additional provider calls,rc=0.
-  - [x] ADDRESSED: same target preserves empty/zero/repeated/out-of-range/max requests and original authored source;
-    `cargo test -p sc-core --doc construction::program`:two private owner/lifetime guards pass,rc=0.
-  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    `cargo test -p sc-core --doc construction::operation_examples`:seven actual book examples pass,rc=0;
-    book/publication118/374/1808/3397/six prior Rust fences exact,rc=0;
-    1006 three Git/body/public spans/archive1460/37,per-generation21/64 and16/64,rc=0.
-  Commit:STITCHCAD-G1-0831. promotion:declined (existing actual-owner/order contract);whole admission next,feature verification pending.
+  Goal:0831 actual mixed source owner;[whole scope/proofs](../history/stitchcad-devnotes-part1007.md).
+### G1-SLICE.5f.2.program.admit
 - ID: `G1-SLICE.5f.2.program.admit`
-  Status: `pending`
+  Status: `done`
   Goal:complete actual Root/context/native input content and all3 normalization cohorts before children;checked whole populations,then exact scalar coverage/order with genuine original ordinal versus combined position,no accepted prefix.
+  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
+    native14 pass;all3 cohorts including unused/untaken/repeated/both assertion operands require13 expressions/31 nodes/84 conservative records;fresh cumulative actual fields,rc=0.
+  - [x] ADDRESSED: same target proves original first Root/context/vector/latching refusal before zero quotas/bad order,
+    then complete quota priority and scalar missing/reordered/zero/repeated/out-of-range/extra requests with genuine mixed positions;empty normalization permitted,rc=0.
+  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
+    `cargo test -p sc-core --doc construction::program` private/default guards4 and `--doc construction::context_examples` examples5 pass,rc=0;
+    book/publication118/374/1809/3400/ten prior Rust fences/whole original context prefix exact,rc=0;
+    1007 three Git/body/public spans/archive1461/38,per-generation21/64 and17/64,rc=0.
+  Commit:STITCHCAD-G1-0832. promotion:declined (existing complete-admission/actual-owner contract);child normalization next,whole semantic/feature verification pending.
 - ID: `G1-SLICE.5f.2.program.normalize`
   Status: `pending`
   Goal:normalize all Root formula-source bodies,whole scalar recipe and actual native arguments through existing factories after complete admission;preserve original child/allocator causes,no partial owner or geometry queries.

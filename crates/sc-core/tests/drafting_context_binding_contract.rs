@@ -3,6 +3,8 @@
 mod geometry;
 #[path = "support/drafting_program.rs"]
 mod program;
+#[path = "support/drafting_program_admission.rs"]
+mod program_admission;
 use core::{
     cell::Cell,
     fmt,
@@ -16,7 +18,7 @@ use sc_core::{
     },
     design::*,
     ontology::{CutPlan, EntityId, IdentityLedger, MaterialInventory, PieceInventory},
-    recipe::{FormulaRecipeDocument, FormulaSourceLimits, FormulaSources},
+    recipe::{FormulaRecipeDocument, FormulaSource, FormulaSourceLimits, FormulaSources},
     value::{CanonicalInputs, LengthDeclaration},
 };
 use std::error::Error;
@@ -84,6 +86,12 @@ fn root() -> TestResult<DesignInputs<EmptyHost>> {
     root_with_recipe("")
 }
 fn root_with_recipe(recipe: &str) -> TestResult<DesignInputs<EmptyHost>> {
+    root_with_sources(recipe, vec![])
+}
+fn root_with_sources(
+    recipe: &str,
+    formula_sources: Vec<FormulaSource>,
+) -> TestResult<DesignInputs<EmptyHost>> {
     let canonical = CanonicalInputs::new(vec![], vec![])?;
     let parameters = DesignParameters::new(vec![], &canonical)?;
     let materials = MaterialInventory::new(vec![], &canonical)?;
@@ -102,7 +110,10 @@ fn root_with_recipe(recipe: &str) -> TestResult<DesignInputs<EmptyHost>> {
         materials,
         sources,
         recipe: FormulaRecipeDocument::new(recipe.into())?,
-        formula_sources: FormulaSources::new(vec![], FormulaSourceLimits::new(0, 0, 0))?,
+        formula_sources: FormulaSources::new(
+            formula_sources,
+            FormulaSourceLimits::new(1000, 10000, 10000),
+        )?,
         references: DesignSourceReferences {
             measurement_table: None,
             ease_set: None,
