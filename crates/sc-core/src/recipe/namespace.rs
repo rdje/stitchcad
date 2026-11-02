@@ -2,10 +2,12 @@
 use super::{FormulaDeclaration, FormulaDeclarationSource, FormulaOrigin, FormulaReservedName};
 use crate::name::MachineToken;
 use core::fmt;
-use std::collections::{btree_map::Entry, BTreeMap};
+use std::collections::BTreeMap;
 
 mod ordered;
 pub use ordered::{FormulaNameCursor, FormulaStatementNameScope};
+mod scope;
+pub use scope::{FormulaGeometryDeclaration, FormulaNameScope};
 
 /// Authored input or prior-operation metadata admitted to an initial namespace.
 /// Recipe bindings and language-owned reserved sources cannot seed a recipe's inputs.
@@ -192,28 +194,66 @@ impl<'a> FormulaNamespace<'a> {
             let declaration = FormulaDeclaration::reserved(reserved);
             entries.insert(declaration.name(), declaration);
         }
+        let mut namespace = Self { entries };
         for initial in declarations {
-            let attempted = initial.declaration();
-            match entries.entry(attempted.name()) {
-                Entry::Vacant(slot) => {
-                    slot.insert(attempted);
-                }
-                Entry::Occupied(slot) => {
-                    return Err(match slot.get().source() {
-                        FormulaDeclarationSource::Reserved(reserved) => {
-                            FormulaNamespaceError::ReservedBinding {
-                                reserved,
-                                attempted,
-                            }
-                        }
-                        _ => FormulaNamespaceError::AmbiguousName {
-                            sources: Box::new([*slot.get(), attempted]),
-                        },
-                    });
+            namespace.insert_declaration(initial.declaration())?;
+        }
+        Ok(namespace)
+    }
+
+    // Shared original-source collision rules; a metadata insertion never grants program acceptance.
+    fn check_declaration(
+        &self,
+        attempted: FormulaDeclaration<'a>,
+    ) -> Result<(), FormulaNamespaceError<'a>> {
+        let Some(prior) = self.entries.get(attempted.name()).copied() else {
+            return Ok(());
+        };
+        Err(match (prior.source(), attempted.source()) {
+            (FormulaDeclarationSource::Reserved(reserved), _) => {
+                FormulaNamespaceError::ReservedBinding {
+                    reserved,
+                    attempted,
                 }
             }
+            (FormulaDeclarationSource::Recipe { .. }, FormulaDeclarationSource::Recipe { .. }) => {
+                FormulaNamespaceError::RecipeRebinding {
+                    sources: Box::new([prior, attempted]),
+                }
+            }
+            _ => FormulaNamespaceError::AmbiguousName {
+                sources: Box::new([prior, attempted]),
+            },
+        })
+    }
+    fn insert_declaration(
+        &mut self,
+        attempted: FormulaDeclaration<'a>,
+    ) -> Result<(), FormulaNamespaceError<'a>> {
+        self.check_declaration(attempted)?;
+        self.entries.insert(attempted.name(), attempted);
+        Ok(())
+    }
+
+    /// Extend actual initial metadata in supplied order using the same reserved/collision rules.
+    /// This consumes the original map; no extended prefix escapes a later collision. It reads
+    /// no values and grants no containing owner,geometry,currentness or whole-program admission.
+    /// # Errors
+    /// Original first reserved/ambiguous pair, retaining both actual declaration sources.
+    pub fn with_initial(
+        mut self,
+        declarations: impl IntoIterator<Item = FormulaInitialDeclaration<'a>>,
+    ) -> Result<Self, FormulaNamespaceError<'a>> {
+        for initial in declarations {
+            self.insert_declaration(initial.declaration())?;
         }
-        Ok(Self { entries })
+        Ok(self)
+    }
+
+    /// Borrow readonly resolution/checking without exposing a mutable or cloneable map handle.
+    #[must_use]
+    pub const fn visible_names(&self) -> FormulaNameScope<'_, 'a> {
+        FormulaNameScope::new(self)
     }
 
     /// Inspect exact immutable declarations in lexical name order, independently of recipe order.

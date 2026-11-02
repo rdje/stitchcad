@@ -3,8 +3,8 @@ use super::{CenterArcArgument, NormalizedCenterArcConstruction};
 use crate::{
     construction::arguments::{check_expression, CheckRefusal},
     recipe::{
-        FormulaCheckedExpression, FormulaExpressionCheckError, FormulaKind, FormulaNamespace,
-        FormulaSourceSpan,
+        FormulaCheckedExpression, FormulaExpressionCheckError, FormulaKind, FormulaNameScope,
+        FormulaNamespace, FormulaSourceSpan,
     },
 };
 use core::fmt;
@@ -139,6 +139,20 @@ fn check<'a>(
     })
 }
 impl<'s> NormalizedCenterArcConstruction<'s> {
+    /// Invoke the same complete argument checker through an actual borrowed visible-name scope.
+    /// No map clone,source substitution,values or containing-program acceptance is introduced.
+    /// # Errors
+    /// Original actual argument/role/span and typed expression or required-kind refusal.
+    pub fn check_arguments_in_scope<'a>(
+        &'a self,
+        names: FormulaNameScope<'_, 'a>,
+    ) -> Result<CheckedCenterArcConstruction<'a>, CenterArcCheckError<'a>>
+    where
+        's: 'a,
+    {
+        self.check_arguments(names.namespace())
+    }
+
     /// Check all actual scalar fields in Radius/StartAngle/SweepAngle order,before any value.
     /// Each proof and its required root kind must succeed before the complete private result exists.
     /// Source names/branches retain their original static refusals;center validation stays separate.

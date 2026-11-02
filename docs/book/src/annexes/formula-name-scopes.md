@@ -58,6 +58,59 @@ or can execute. The current-statement checker below checks every operand before 
 metadata advance; whole-recipe acceptance remains separate. No accepted expression, recipe graph, numeric
 binding or partial geometry is returned by this API.
 
+## Borrow visible metadata without the map
+
+`FormulaNamespace::visible_names()` and `FormulaNameCursor::visible_names()` now return a borrowed
+`FormulaNameScope`. It exposes exact `resolve()` and `check_expression()` through the same existing
+name/signature checker. The cursor view includes initial and earlier declarations,even after the last
+scalar statement. Its private map cannot be extracted or cloned. Copying a scope copies only its loan;
+the scope cannot survive mutation/advancement of its original cursor. Debug output omits names/values.
+
+Point and center-arc normalized owners accept `check_arguments_in_scope(scope)`;a normalized
+slash/spread opening accepts `check_argument_in_scope(scope)`. These delegate to their original
+complete argument factories,retaining actual owners,roles,spans,dependencies and first failures.
+Proofs borrow the original expression/declaration owners,so they can survive the cursor allocation.
+No source kind,value,provider availability or geometry is inferred from the scope itself.
+
+`FormulaGeometryDeclaration::try_from(actual_declaration)` admits only explicit Point/Edge metadata;
+scalar,canonical length,recipe and reserved declarations return unchanged as conversion errors.
+`cursor.declare_geometry(metadata)` uses the existing reserved/cross-origin collision rules and
+preserves scalar position on both success and refusal. It does not itself prove that the output
+is earlier,current,from an actual manifest or in the containing frame. The mixed controller must
+bind those sources and order before acceptance;this metadata port supplies no executable prefix.
+
+```rust
+use sc_core::{construction::{PointConstruction, PointConstructionNormalizationLimits, PointCoordinate},
+    name::MachineToken, ontology::{EntityId, LocalTag, PointRef}, recipe::{FormulaDeclaration,
+    FormulaExpressionDocument, FormulaGeometryDeclaration, FormulaKind, FormulaNameCursor,
+    FormulaNamespace, FormulaRecipe}};
+# fn main() -> Result<(), Box<dyn std::error::Error>> {
+let recipe=FormulaRecipe::parse("let width:length=25 mm")?.normalize_literals()?;
+let name=MachineToken::new("p")?;
+let mut cursor=FormulaNameCursor::new(FormulaNamespace::new([])?,&recipe);
+cursor.advance_metadata().map_err(|e|e.to_string())?;
+// This explicitly supplied reference is metadata, not a live geometry/source certificate.
+let geometry=FormulaGeometryDeclaration::try_from(FormulaDeclaration::point(&name,
+    PointRef::new(EntityId::from_bits(80),LocalTag::FIRST))).map_err(|_|"point metadata")?;
+cursor.declare_geometry(geometry).map_err(|e|e.to_string())?;
+let input=PointConstruction::new(EntityId::from_bits(100),
+    FormulaExpressionDocument::new("width".into())?,
+    FormulaExpressionDocument::new("1 mm/0".into())?);
+let normalized=input.normalized(PointConstructionNormalizationLimits::new(4,10))
+    .map_err(|e|e.to_string())?;
+let proof=normalized.check_arguments_in_scope(cursor.visible_names()).map_err(|e|e.to_string())?;
+drop(cursor);
+assert_eq!(proof.coordinate(PointCoordinate::X).kind(),FormulaKind::Length);
+# Ok(())
+# }
+```
+
+`FormulaNamespace::with_initial(extra)` consumes an existing initial map and adds explicit admitted
+initial declarations in supplied order,using the same collision rules. Reserved names and original
+source pairs stay intact. A late failure returns no extended namespace prefix. This neither admits
+additional source content nor certifies its containing owner:complete program/name/source admission
+remains the containing controller's responsibility. No recipe declaration can enter as an initial.
+
 ## Check the actual current statement
 
 FormulaStatementNameScope::check_kinds takes no replacement statement, namespace or ordinal.

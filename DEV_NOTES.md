@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — sourced mixed namespace implementation stages
+## _(2026-11-02 UTC)_ — borrowed visible names and shared checker adapters
 
-0835 confirms actual Root parameter/selected table-Ease namespace,scalar cursor genuine ordinals/private map,current-statement checker and native Namespace-based proof adapters. Four fixed output schemas/two typed active-role domains supply real output metadata;catalogue keys are not global names.
-Four scope/input/admission/order children preserve borrowed visible metadata without cloning a final cursor namespace,explicit actual extra sources and output manifests,and complete content/work bounds before callbacks. Whole kinds/source truth remain later controller work,no values or live planned geometry.
-Source/API census,Rust/thirteen Rust fences unchanged,book/publication118-374-1809-3403 and1010 three Git/body/public spans pass0;archive1464-41/per-generation21-64 and20-64 exact0. New namespace/controller implementation remains planned.
-Promotion declined: existing actual-source/ordered-name/no-prefix contract. G1still6/18;borrowed visible-name/kernel adapter first,whole feature verification deferred.
+0836 adds readonly FormulaNameScope,geometry-only declaration metadata,initial extension and cursor geometry insertion without scalar advance. Existing expression/Point/Arc/Slash kernels reused;shared original collision logic keeps map private and all source/ordinal witnesses intact.
+Visible3/namespace10/ordered8/strict selected lint/fmt pass0;actual proofs outlive map,conversion rejects scalar/recipe/reserved inputs,and failures retain original sources/position. Serial namespace doctests14 pass0 including exact copied book example;ten prior touched-page fences exact0.
+Own overlapping Cargo rebuild removed old doctest extern rlib;discarded original13-test verdict. Issue0836-CARGO-RACE closed by frozen-input serial14 run with unchanged artifact size/mtime;consume all Cargo terminals before edits/rebuilds. Book/publication118-374-1810-3405/archive1465-42/gen21-64 and21-64 pass0.
+Promotion declined: existing producer-consumption/actual-owner/metadata-scope rules. 1011 three Git/body/public spans exact0;G1still6/18;actual name/manifest inputs next,whole semantic verification pending.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

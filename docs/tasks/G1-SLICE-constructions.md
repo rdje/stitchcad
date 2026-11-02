@@ -917,22 +917,24 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.namespace`
   Status: `in_progress`
   Goal:actual initial/always-visible and earlier-only names;check collisions and future geometry before values,using existing complete kind proofs without treating a metadata cursor as program acceptance.
-### G1-SLICE.5f.2.namespace.plan
 - ID: `G1-SLICE.5f.2.namespace.plan`
   Status: `done`
-  Goal:source the actual initial/ordered namespace,statement/native checker and output-role interfaces;split bounded implementation preserving genuine recipe ordinals,opaque name scopes and actual manifests before values.
-  - [x] ROOT CAUSE: `python3 -I -B -` targeted source/API census of design/inputs.rs,design/host.rs,
-    recipe/namespace.rs,namespace/ordered.rs,checked_statement.rs and construction/arguments.rs:
-    Root parameter/selected table-Ease ports,genuine scalar checker/native Namespace adapter,four fixed schema outputs/two typed active-role catalogue domains,rc=0.
-  - [x] ADDRESSED: same census and book plan retain actual scalar cursor/private map,explicit initial/output sources,
-    four scope/input/admission/order owners and complete held-content/work admission before callbacks;all thirteen Rust fences and Rust sources unchanged,rc=0.
-  - [x] NO REGRESSION: `scripts/run_make.sh book`,publication `check(ROOT)` and Git source comparison:
-    warning-free118/374/1809/3403/Rust-thirteen examples unchanged,rc=0;
-    1010 three Git/body/public spans/archive1464/41,per-generation21/64 and20/64,rc=0.
-  Commit:STITCHCAD-G1-0835. promotion:declined (existing actual-source/ordered-name/no-prefix contract);scope adapter first,whole namespace/controller and feature verification pending.
+  Goal:0835 sourced namespace stages;[whole scope/proofs](../history/stitchcad-devnotes-part1011.md).
+### G1-SLICE.5f.2.namespace.scope
 - ID: `G1-SLICE.5f.2.namespace.scope`
-  Status: `pending`
+  Status: `done`
   Goal:borrowed read-only visible-name scope and common existing expression/native checking adapter;support genuine scalar cursor and earlier geometry metadata without exposing cloneable final namespace or fabricating statement indices.
+  Verification issue0836-CARGO-RACE:closed;own overlapping doctest/rebuild removed old run's extern rlib.
+  Original13-test verdict discarded;freeze inputs/consume all producers,then serial namespace14 pass0.
+  Diagnostic:extern rlib present94685768B/mtime2026-11-02T03:26:27.928469Z before/after serial run;no rebuild.
+  - [x] ROOT CAUSE: launcher `cargo test -p sc-core --test formula_visible_names_contract --test formula_namespace_contract --test formula_ordered_names_contract`:
+    visible3/namespace10/ordered8 pass;expression/Point/Arc/Slash proofs retain actual declarations beyond cursor map,original scalar ordinals and first typed causes,rc=0.
+  - [x] ADDRESSED: same targets cover geometry-only conversion,original canonical/input/collision witnesses,
+    no failed insertion/position change and unchanged legacy collisions;serial `cargo test -p sc-core --doc recipe::namespace`14 pass after producer freeze,rc=0.
+  - [x] NO REGRESSION: launcher `cargo clippy -p sc-core --lib --test formula_visible_names_contract -- -D warnings`,fmt,
+    book/publication118/374/1810/3405/ten old touched-page Rust fences/new book-native example exact,rc=0;
+    1011 three Git/body/public spans/archive1465/42,per-generation21/64 and21/64,rc=0.
+  Commit:STITCHCAD-G1-0836. promotion:declined (existing producer-consumption/actual-owner/scope rules);actual extra name/manifests next,metadata alone grants no whole-program acceptance.
 - ID: `G1-SLICE.5f.2.namespace.inputs`
   Status: `pending`
   Goal:explicit actual extra initial sources and original per-step output names;fixed schema outputs or typed active point/edge role catalogues,original names/manifests/positions,no inferred output tag/name or live geometry.

@@ -1,6 +1,7 @@
 //! Ordered declaration metadata; a cursor never grants expression or whole-recipe acceptance.
 use super::{
-    FormulaDeclaration, FormulaDeclarationSource, FormulaNamespace, FormulaNamespaceError,
+    FormulaDeclaration, FormulaGeometryDeclaration, FormulaNameScope, FormulaNamespace,
+    FormulaNamespaceError,
 };
 use crate::{
     name::MachineToken,
@@ -56,24 +57,7 @@ impl<'a> FormulaNameCursor<'a> {
         // Position starts at zero and advances only while an actual statement exists (at most4096).
         let statement_index = self.position + 1;
         if let Some(attempted) = FormulaDeclaration::recipe(self.recipe, statement_index) {
-            if let Some(prior) = self.namespace.entries.get(attempted.name()) {
-                return Err(match prior.source() {
-                    FormulaDeclarationSource::Reserved(reserved) => {
-                        FormulaNamespaceError::ReservedBinding {
-                            reserved,
-                            attempted,
-                        }
-                    }
-                    FormulaDeclarationSource::Recipe { .. } => {
-                        FormulaNamespaceError::RecipeRebinding {
-                            sources: Box::new([*prior, attempted]),
-                        }
-                    }
-                    _ => FormulaNamespaceError::AmbiguousName {
-                        sources: Box::new([*prior, attempted]),
-                    },
-                });
-            }
+            self.namespace.check_declaration(attempted)?;
         }
         Ok(Some(FormulaStatementNameScope {
             namespace: &self.namespace,
@@ -99,6 +83,25 @@ impl<'a> FormulaNameCursor<'a> {
         }
         self.position += 1;
         Ok(true)
+    }
+
+    /// Borrow actual initial and earlier declaration metadata,including after the last scalar.
+    /// The underlying map stays private;this view cannot yield a cloned final initial namespace.
+    #[must_use]
+    pub const fn visible_names(&self) -> FormulaNameScope<'_, 'a> {
+        self.namespace.visible_names()
+    }
+
+    /// Insert explicitly supplied point/edge metadata without advancing the scalar ordinal.
+    /// This is a metadata port,not a registry,frame,actual manifest or earlier-operation proof.
+    /// The containing mixed controller must bind actual outputs and order before acceptance.
+    /// # Errors
+    /// Original reserved/cross-origin name collision;neither namespace nor position changes.
+    pub fn declare_geometry(
+        &mut self,
+        declaration: FormulaGeometryDeclaration<'a>,
+    ) -> Result<(), FormulaNamespaceError<'a>> {
+        self.namespace.insert_declaration(declaration.declaration())
     }
 }
 impl fmt::Debug for FormulaNameCursor<'_> {

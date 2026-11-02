@@ -3,8 +3,8 @@ use super::{NormalizedSlashSpreadOpening, SlashSpreadOpeningMode};
 use crate::{
     construction::arguments::{check_expression, CheckRefusal},
     recipe::{
-        FormulaCheckedExpression, FormulaExpressionCheckError, FormulaKind, FormulaNamespace,
-        FormulaSourceSpan,
+        FormulaCheckedExpression, FormulaExpressionCheckError, FormulaKind, FormulaNameScope,
+        FormulaNamespace, FormulaSourceSpan,
     },
 };
 use core::fmt;
@@ -108,6 +108,20 @@ impl<'a> CheckedSlashSpreadOpening<'a> {
     }
 }
 impl<'s> NormalizedSlashSpreadOpening<'s> {
+    /// Invoke the same complete argument checker through an actual borrowed visible-name scope.
+    /// No map clone,source substitution,values or containing-program acceptance is introduced.
+    /// # Errors
+    /// Original actual argument/role/span and typed expression or required-kind refusal.
+    pub fn check_argument_in_scope<'a>(
+        &'a self,
+        names: FormulaNameScope<'_, 'a>,
+    ) -> Result<CheckedSlashSpreadOpening<'a>, SlashSpreadCheckError<'a>>
+    where
+        's: 'a,
+    {
+        self.check_argument(names.namespace())
+    }
+
     /// Check the actual whole amount against its explicit mode's required kind before any value.
     /// ```
     /// use sc_core::{construction::*,recipe::*};

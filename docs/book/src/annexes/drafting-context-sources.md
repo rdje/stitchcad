@@ -375,8 +375,8 @@ and per-operation output names must remain explicit actual inputs with complete 
 
 The existing scalar `FormulaNameCursor` retains its actual whole recipe and genuine scalar ordinal.
 Its current-statement scope invokes the existing statement checker with original spans. Native
-argument checkers currently take `FormulaNamespace`;the integration will add a borrowed read-only
-visible-name scope and delegate to the same kernels. It will keep the cursor's map private,including
+argument checkers now also accept the [borrowed visible-name scope](formula-name-scopes.md#borrow-visible-metadata-without-the-map)
+and delegate to their same kernels. The cursor map stays private,including
 against cloning a final namespace out of a prefix,and retain actual scalar declarations. Earlier
 geometry insertion remains metadata until the complete controller checks every kind/dependency.
 
@@ -387,7 +387,7 @@ Local catalogue keys are not global formula names. Names and explicit tags are n
 vector order,guessed from an operation family or treated as live geometry in the current snapshot.
 Catalogue metadata alone grants no canonical history/frame/currentness or evaluated-presence proof.
 
-Implementation is split into borrowed visible-name/kernel adapters,actual initial/output-name inputs,
+Borrowed visible-name/kernel adapters are implemented;remaining stages cover actual initial/output-name inputs,
 fresh complete held-content/prospective name-work admission,and ordered metadata integration. Complete
 program and name/source/catalogue fields,including all retained definitions,active lists,indexes and
 text,are admitted before namespace callbacks or child checking. Existing geometry still requires the

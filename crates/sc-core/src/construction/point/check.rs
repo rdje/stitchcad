@@ -1,8 +1,8 @@
 //! Real complete argument proofs; no coordinate values or constructed point are manufactured.
 use super::{NormalizedPointConstruction, PointCoordinate};
 use crate::recipe::{
-    FormulaCheckedExpression, FormulaExpressionCheckError, FormulaKind, FormulaNamespace,
-    FormulaSourceSpan,
+    FormulaCheckedExpression, FormulaExpressionCheckError, FormulaKind, FormulaNameScope,
+    FormulaNamespace, FormulaSourceSpan,
 };
 use core::fmt;
 
@@ -135,6 +135,20 @@ fn check<'a>(
     })
 }
 impl<'s> NormalizedPointConstruction<'s> {
+    /// Invoke the same complete argument checker through an actual borrowed visible-name scope.
+    /// No map clone,source substitution,values or containing-program acceptance is introduced.
+    /// # Errors
+    /// Original actual argument/role/span and typed expression or required-kind refusal.
+    pub fn check_arguments_in_scope<'a>(
+        &'a self,
+        names: FormulaNameScope<'_, 'a>,
+    ) -> Result<CheckedPointConstruction<'a>, PointConstructionCheckError<'a>>
+    where
+        's: 'a,
+    {
+        self.check_arguments(names.namespace())
+    }
+
     /// Check x then y against the actual supplied metadata namespace before any value read.
     /// Both complete expression proofs and Length roots must succeed before the paired proof
     /// exists. An earlier runtime fault cannot hide a later static argument refusal.

@@ -177,8 +177,8 @@ pub use context::{
 
 mod namespace;
 pub use namespace::{
-    FormulaInitialDeclaration, FormulaNameCursor, FormulaNamespace, FormulaNamespaceError,
-    FormulaStatementNameScope, FormulaUnboundName,
+    FormulaGeometryDeclaration, FormulaInitialDeclaration, FormulaNameCursor, FormulaNameScope,
+    FormulaNamespace, FormulaNamespaceError, FormulaStatementNameScope, FormulaUnboundName,
 };
 
 mod checked;
