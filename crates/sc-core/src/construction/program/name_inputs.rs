@@ -12,6 +12,11 @@ use crate::{
 };
 use core::fmt;
 mod resources;
+mod work;
+pub use work::{
+    AdmittedDraftingProgramNameWork, DraftingProgramNameLimits, DraftingProgramNameShape,
+    DraftingProgramNameWorkError, DraftingProgramNameWorkRefusal,
+};
 
 /// Actual original source of a planned point/edge name,not an anonymous supplied output reference.
 /// Fixed schemas use their own published output method. Variable roles retain authentic typed

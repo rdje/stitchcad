@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — complete cumulative name content
+## _(2026-11-02 UTC)_ — bounded actual mixed-name work
 
-0840 charge_resources composes the fresh actual normalized-program producer before complete additional names in one restricted sink. No demand credits or reset;repeated source occurrences remain charged in both components,without association/namespace/source/value acceptance.
-Native19 rerun passed complete Root/context plus17 extra entries/all bytes/counter bits,final catalogue refusal at cumulative consumption,Root text precedence and empty first failure. Initial text assertion used an empty recipe;diagnosed fixture and retained whitespace-only actual source instead.
-Strict selected lint/name-input doctests5 pass0. Book/pure publication118-374-1810-3409,ten previous Rust fences/new native-book example,1015 whole Git/body/public spans exact0;archive1469-46/per-generation21-64 and25-64.
-Promotion declined: existing cumulative restricted-sink/actual-owner doctrine. G1still6/18;prospective name-work owner and actual selected-host enumeration before namespace allocation next,whole verification deferred.
+0841 fresh complete content precedes actual Root parameter/selected-host/extra/output/statement counts,checked namespace entries and namespace-plus-output association records. New borrowed exact/fused host iterator avoids the older allocating declaration Vec;count/drop consumes no source item.
+Native21/focused arithmetic1/strict lint pass0;final two cases preserve16/18 bounds,no row/currentness callbacks,content before factory/zero quotas,Unknown canonical loans,fallible rows and empty reserved8. Work docs4 pass0;named-loan escape compiler1/keep0 confirms intended boundary.
+Book reference moved whole to existing name-scope chapter before containment limits;all15 prior Rust fences/new native-book example and1016 Git/body/public spans exact0. Pure publication118-374-1812-3414;archive1470-47/generations21-64 and26-64.
+Promotion declined: existing actual-owner/bounded-before-factory doctrine. G1still6/18;private work owner grants no source/position/namespace approval,association/ordered checking and full feature verification remain pending.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

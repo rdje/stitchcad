@@ -5,6 +5,8 @@ use crate::{
 };
 use core::fmt;
 use std::{collections::BTreeMap, sync::Arc};
+mod formula_sources;
+pub use formula_sources::DesignFormulaDeclarationSource;
 
 /// Metadata families currently supported by the Design source host.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

@@ -71,8 +71,9 @@ pub use hems::{
     DesignHemDeclarationSource,
 };
 pub use host::{
-    DesignFormulaHost, DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError,
-    DesignMetadataHost, DesignReferenceHost, DesignSizeSetHost, DesignSourceReferences,
+    DesignFormulaDeclarationSource, DesignFormulaHost, DesignHostEntity, DesignHostEntityKind,
+    DesignMetadata, DesignMetadataError, DesignMetadataHost, DesignReferenceHost,
+    DesignSizeSetHost, DesignSourceReferences,
 };
 mod formula;
 pub use formula::{

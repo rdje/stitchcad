@@ -936,22 +936,24 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0839 complete raw/retained program fields;[whole scope/proofs](../history/stitchcad-devnotes-part1015.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.bounds`
-  Status: `in_progress`
+  Status: `done`
   Goal:fresh cumulative full content and explicit conservative prospective name-work bounds before namespace factories;actual complete original fields,first typed refusal and checked arithmetic,no caller totals or accepted prefix.
 - ID: `G1-SLICE.5f.2.namespace.admit.bounds.content`
   Status: `done`
-  Goal:one fresh cumulative actual normalized-program and complete additional-name sink walk;original order/owners/first refusal,no cached demand or namespace callbacks.
-  - [x] ROOT CAUSE: 0840 launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
-    native19 pass;full actual Root/context plus17 extra entries/all bytes/counters,final role-index refusal preserves cumulative consumption,rc=0.
-  - [x] ADDRESSED: 0840 same target preserves original owner105/output index5,Root text before source charging,
-    empty earlier latched refusal and fresh charge-only callbacks;whitespace fixture fixes initial empty-text test assumption,rc=0.
-  - [x] NO REGRESSION: 0840 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    `cargo test -p sc-core --doc construction::program::name_inputs` five guards/examples pass,rc=0;
-    book/publication118/374/1810/3409,ten old fences/new example and1015 Git/body/public spans exact,archive1469/46,generations21/64 and25/64,rc=0.
-  Commit:STITCHCAD-G1-0840. promotion:declined (existing cumulative-sink/actual-owner doctrine);prospective work and source/position association remain pending.
+  Goal:0840 complete cumulative program/name content;[whole scope/proofs](../history/stitchcad-devnotes-part1016.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.bounds.workspace`
-  Status: `pending`
+  Status: `done`
   Goal:explicit complete prospective name-work limits and private bounded owner;actual selected host declarations before namespace allocation,no caller-count substitution or accepted prefix.
+  - [x] ROOT CAUSE: 0841 launcher `cargo test -p sc-core --test drafting_context_binding_contract`:
+    native21 pass;actual parameter1/host2/extra1/output2/statement2 plus reserved8 gives16 namespace/18 retained;final focused program_name_work2 pass,rc=0.
+  - [x] ADDRESSED: 0841 same target retains full-content/factory/quota precedence,no row/currentness callbacks,
+    Unknown canonical loans and fallible rows;focused overflow library1 and work docs4 pass,rc=0;
+    actual named-loan escape rustc1/unchanged-lifetime control rustc0,expected boundary confirmed,rc=0.
+  - [x] NO REGRESSION: 0841 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
+    book/pure publication118/374/1812/3414,15 old chapter fences/new example exact,rc=0;
+    1016 Git/body/public spans/archive1470/47,generations21/64 and26/64,rc=0.
+  Commit:STITCHCAD-G1-0841. promotion:declined (existing actual-owner/bounded-before-factory doctrine);source/position and ordered checking next,full semantic/allocator feature verification deferred.
+  Guard review replaced ambiguous anonymous elision before the final four-doctest run;standalone compiler refusal and positive control confirm the intended actual loan boundary.
 - ID: `G1-SLICE.5f.2.namespace.admit.association`
   Status: `pending`
   Goal:after complete bounds,bind exact original program positions/fixed schemas/typed role metadata and actual initial sources;reject mismatches/future initial geometry before values,retain full owners and original first cause in private admission.

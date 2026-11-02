@@ -7,6 +7,8 @@ mod program;
 mod program_admission;
 #[path = "support/drafting_program_name_inputs.rs"]
 mod program_name_inputs;
+#[path = "support/drafting_program_name_work.rs"]
+mod program_name_work;
 #[path = "support/drafting_program_views.rs"]
 mod program_views;
 use core::{
@@ -86,6 +88,17 @@ impl DesignResourceSource for EmptyHost {
         Ok(()) // This fixture host owns no dynamic records or counters.
     }
 }
+impl DesignFormulaDeclarationSource for EmptyHost {
+    type Declarations<'a> =
+        std::iter::Empty<Result<sc_core::recipe::FormulaDeclaration<'a>, SourceError>>;
+    fn formula_declaration_sources<'a>(
+        &'a self,
+        _: DesignSourceReferences,
+        _: &'a CanonicalInputs,
+    ) -> Self::Declarations<'a> {
+        std::iter::empty()
+    }
+}
 fn root() -> TestResult<DesignInputs<EmptyHost>> {
     root_with_recipe("")
 }
@@ -96,10 +109,30 @@ fn root_with_sources(
     recipe: &str,
     formula_sources: Vec<FormulaSource>,
 ) -> TestResult<DesignInputs<EmptyHost>> {
-    let canonical = CanonicalInputs::new(vec![], vec![])?;
-    let parameters = DesignParameters::new(vec![], &canonical)?;
+    root_with_host(
+        recipe,
+        formula_sources,
+        EmptyHost,
+        CanonicalInputs::new(vec![], vec![])?,
+        vec![],
+        DesignSourceReferences {
+            measurement_table: None,
+            ease_set: None,
+            size_set: None,
+        },
+    )
+}
+fn root_with_host<H: DesignReferenceHost>(
+    recipe: &str,
+    formula_sources: Vec<FormulaSource>,
+    host: H,
+    canonical: CanonicalInputs,
+    parameter_definitions: Vec<DesignParameterDefinition>,
+    references: DesignSourceReferences,
+) -> TestResult<DesignInputs<H>> {
+    let parameters = DesignParameters::new(parameter_definitions, &canonical)?;
     let materials = MaterialInventory::new(vec![], &canonical)?;
-    let sources = DesignMetadata::new(EmptyHost, &canonical)?;
+    let sources = DesignMetadata::new(host, &canonical)?;
     let structure = DesignStructure::new(DesignStructureDefinition {
         id: EntityId::from_bits(1),
         revision: DesignRevision::from_counter(7),
@@ -118,11 +151,7 @@ fn root_with_sources(
             formula_sources,
             FormulaSourceLimits::new(1000, 10000, 10000),
         )?,
-        references: DesignSourceReferences {
-            measurement_table: None,
-            ease_set: None,
-            size_set: None,
-        },
+        references,
     })?)
 }
 fn limits(entries: usize, text: usize, bits: u64) -> TestResult<DesignResourceLimits> {
@@ -132,7 +161,7 @@ fn limits(entries: usize, text: usize, bits: u64) -> TestResult<DesignResourceLi
         NonZeroU64::new(bits).ok_or("positive bit allowance")?,
     ))
 }
-fn scope(root: &DesignInputs<EmptyHost>) -> TestResult<DesignFormulaScope<'_, EmptyHost>> {
+fn scope<H: DesignResourceSource>(root: &DesignInputs<H>) -> TestResult<DesignFormulaScope<'_, H>> {
     Ok(root
         .prepare_formula_scope(limits(1000, 1000, 1000)?)
         .map_err(|e| e.to_string())?)
@@ -146,8 +175,8 @@ struct Frame {
 struct Snapshot {
     label: String,
 }
-struct Source<'a> {
-    root: &'a DesignInputs<EmptyHost>,
+struct Source<'a, H = EmptyHost> {
+    root: &'a DesignInputs<H>,
     revision: DesignRevision,
     frame: DraftingSourceRecord<Frame>,
     snapshot: DraftingSourceRecord<Snapshot>,
@@ -156,8 +185,8 @@ struct Source<'a> {
     ignore_refusal: bool,
     reject: bool,
 }
-impl<'a> Source<'a> {
-    fn new(root: &'a DesignInputs<EmptyHost>) -> Self {
+impl<'a, H: DesignMetadataHost> Source<'a, H> {
+    fn new(root: &'a DesignInputs<H>) -> Self {
         Self {
             root,
             revision: DesignRevision::from_counter(7),
@@ -187,12 +216,12 @@ impl<'a> Source<'a> {
         }
     }
 }
-impl DraftingContextSource<EmptyHost> for Source<'_> {
+impl<H: DesignMetadataHost> DraftingContextSource<H> for Source<'_, H> {
     type Frame = Frame;
     type Snapshot = Snapshot;
     type Geometry = [u8];
     type Error = SourceError;
-    fn root(&self) -> &DesignInputs<EmptyHost> {
+    fn root(&self) -> &DesignInputs<H> {
         self.observed(1);
         self.root
     }

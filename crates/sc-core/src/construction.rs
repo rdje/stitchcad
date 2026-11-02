@@ -69,9 +69,11 @@ mod operation_input;
 pub use operation_input::{DraftingOperationFamily, DraftingOperationInput};
 mod program;
 pub use program::{
-    AdmittedDraftingProgramInputs, DraftingGeometryNameSource, DraftingOutputName,
-    DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal, DraftingProgramInputs,
-    DraftingProgramLimits, DraftingProgramNameInputs, DraftingProgramNormalizationError,
+    AdmittedDraftingProgramInputs, AdmittedDraftingProgramNameWork, DraftingGeometryNameSource,
+    DraftingOutputName, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
+    DraftingProgramInputs, DraftingProgramLimits, DraftingProgramNameInputs,
+    DraftingProgramNameLimits, DraftingProgramNameShape, DraftingProgramNameWorkError,
+    DraftingProgramNameWorkRefusal, DraftingProgramNormalizationError,
     DraftingProgramNormalizationRefusal, DraftingProgramShape, DraftingProgramStep,
     DraftingProgramStepKind, DraftingProgramStepView, NormalizedDraftingOperation,
     NormalizedDraftingProgram,
