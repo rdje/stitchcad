@@ -3,19 +3,20 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0817 — activate the local renderer throughout publication
+## STITCHCAD-G1-0818 — verify real book search queries and close D372
 
-- Make,publication and capture select guarded local mdBook;binary/selector/profile join
-  complete input hashes. Setup/readme/book docs use the explicit local install API.
-- Native capture1093→118 records/118 chapters retains85068 chapter-word/72522 term pairs;
-  both indexes warning-free;chapter payload7729123B,123 inputs unchanged. Actual query proof next.
-- D377 fixed:headings retired0788/0801 now checked through actual ordered glossary/index routes;
-  two positive/eight refusal cases and exact remaining checker AST0. SUMMARY bounds unchanged.
-- Builder19/capture9 body reds,tool4/2,Make/search5/native warning-preservation-repair0;
-  publication118/374/1805/3385 passes0;992 Git/public exact,archive1446/79,per-generation21/64 and58/64.
-- G1still6/18;D372 actual query verification remains owned;no latency/runtime approval claimed.
+- Generated engine/index passes14 real queries across118 chapter landings plus four
+  result-refusal controls. Case,prefix,accented term,body/title and empty/no-match cases pass.
+- Documented read-only Node22.8+ prerequisite;stdin assets,no packages/cache/browser profile;
+  actual poisoned options/cache/coverage remain absent. Section indexes refuse chapter profile.
+- Native full-text migration1094→118 retains85167 word/72600 term pairs;both builds warning-free,
+  chapter payload7736437B. Publication118/374/1806/3387/source census370 pass0;runner watches queries.
+- 993 five Git/public spans exact;archive1447/80,per-generation21/64 and59/64. D372/native declaration
+  parent closed;actual ordered/frame/dependency integration next. G1still6/18;no UI/latency/ranking approval.
 
 # Sealed archive — earlier slices
+
+[Whole0817 renderer activation and D377 record](docs/history/stitchcad-devnotes-part993.md) retain exact source bytes.
 
 [Whole0816 guarded local tool setup](docs/history/stitchcad-devnotes-part992.md) retains exact task,lesson and ledger bytes.
 

@@ -1179,10 +1179,8 @@ D307–D369:[whole prior ledger](../history/window27.md#stitchcad-devnotes-part8
 
 ## D372 — large book-search index warning
 
-P2 active;owner G1-SLICE.5f.1.book-search after native feature completion0813. First payload10015553B/JS10030347B;0814 native build rc0 warns12993569B across118 chapters.
-Root measured0814:body5318916B/breadcrumbs5321651B despite breadcrumb text10580B;all72206 body term/document pairs leak into breadcrumbs. Published upstream fix b7efca70/elasticlunr-rs3.1.0 isolates field frequencies.
-Impact:warning plus incorrect field membership;ranking/latency unmeasured. Build0815 and activation0817 use guarded published local0.5.4/fixed library;normal build now warning-free. Native1093→118 chapter migration retains85068 word/72522 term pairs,payload7729123B. Actual queries remain .verify.
-No source patch,chapter exclusion,warning suppression/cap raise or performance certificate. Existing heading-split-level1/full-text policy retained;native features accepted0813.
+Fixed0818;owner G1-SLICE.5f.1.book-search.verify;[whole cause/prior checkpoints](../history/stitchcad-devnotes-part993.md).
+Published local0.5.4/fixed3.1.0 keeps full text/chapter coverage and warning refusals;native14 queries/118 landings/4 result faults plus exact1094→118 migration85167 words/72600 terms pass0. Browser UI/ranking quality/latency remain unclaimed;no cap raise,excluded chapter or upstream patch.
 
 ## D373/D374 — active journal documentation scope/storage drift
 Fixed0696;[whole original ledger/proofs](../history/window28.md#stitchcad-devnotes-part935md).
@@ -1194,7 +1192,4 @@ Fixed0760;[whole cause/reproduction/fix](../history/stitchcad-devnotes-part942.m
 Fixed0816;[whole cause/reproduction/proofs](../history/stitchcad-devnotes-part992.md).
 
 ## D377 — publication glossary/index navigation contract drift
-
-Fixed0817;owner G1-SLICE.5f.1.book-search.activate.publication. Repro:builder check(ROOT) refused PUBLICATION_PART:# Glossary,then # Index.
-Root:0788 cd7466d9 and0801 bd33add9 retired index/glossary headings to stay within120-line SUMMARY;checker still required them. All chapter routes remained;decision_book-progression requires accessible glossary/index,not those exact headings.
-Actual glossary must follow learning/before annexes;topic index must be last/after annexes. Annex specification boundary now uses actual index route. Two positive/eight missing/misplaced route/part controls and exact remaining checker AST pass0;native publication118/374/1805/3385 pass0. Frozen SUMMARY bounds retained.
+Fixed0817;[whole cause/reproduction/proofs](../history/stitchcad-devnotes-part993.md).

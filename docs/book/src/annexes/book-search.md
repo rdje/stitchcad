@@ -11,8 +11,8 @@ stored text and actual full-text body postings for every document. Missing or du
 empty text,lost body postings and invalid result anchors refuse. The standard renderer's warning check remains mandatory.
 D339 adopted this policy after the default section index crossed mdBook's warning threshold;the
 same-source migration census retained every chapter's searchable words. Focused in-memory controls
-exercise actual data refusals without changing generated or source bytes. No extra runtime tool
-or external service is required by this checker.
+exercise actual data refusals without changing generated or source bytes. This data-only checker
+needs no extra runtime or external service;the separate native query check below uses host Node.
 
 Copied publication fixtures include the generated searchindex-*.js alongside the rendered HTML.
 Both the complete copy plan and each copy effect check the index as an input/output. Before each
@@ -66,8 +66,8 @@ moves token frequencies inside the field loop and adds independent field/frequen
 0815 built published mdBook0.5.4 locally with that dependency;0817 selects it explicitly for Make,
 publication and diagnostic capture. No upstream source is patched. Full text,chapter routes
 and unexpected-warning refusals remain required. Search ranking and reader latency are unmeasured.
-The old ambient renderer remains a diagnostic baseline;normal builds never select it. Actual query
-verification remains separately owned after activation. No warning is hidden or reclassified.
+The old ambient renderer remains a diagnostic baseline;normal builds never select it. The native
+query checkpoint below completes D372's declared search checks. No warning is hidden or reclassified.
 
 ## Isolated renderer checkpoint
 
@@ -91,7 +91,7 @@ The isolated same-source118-chapter candidate has a7712945-byte payload and no r
 Stored document fields,chapter URLs,search/display options and per-chapter stored words/indexed
 term sets match the baseline exactly. Breadcrumb postings shrink to36944 bytes;field membership
 and frequencies intentionally change to the upstream-corrected values. This is tool-build evidence;
-actual query verification remains separately owned after0817 activation.
+the native query checkpoint below extends it without granting browser UI or latency approval.
 
 ## Guarded local setup
 
@@ -118,4 +118,34 @@ post-install probe supplies field-isolation evidence. These are distinct checks.
 All four new search/tool sources are registered in producer_entries.tsv. D376 repaired the
 missing rows that made the complete source census refuse;the passing census remains inspection
 inventory evidence and grants no runtime/locality signoff. Broader D156 integration is still owned.
+
+## Native query verification
+
+After building the book,run the actual generated search engine and index:
+
+```bash
+python3 -I -B scripts/local_environment.py -- python3 -I -B docs/tasks/artifacts/book_publication/search_query_contract.py
+```
+
+The14 cases cover deep body API names,case folding,prefix expansion,an accented sewing term,
+ordinary introduction prose,a title query and empty/no-match inputs. Every positive query must
+include its independently named chapter;every returned URL must land on a real chapter/anchor.
+The complete registered-chapter data contract remains required. Four controlled result faults
+reject missing queries,hits,foreign URLs and duplicates. All input bytes remain unchanged.
+Use --book with a repository-relative chapter-profile snapshot to check that snapshot instead;
+section-profile snapshots refuse the one-record-per-chapter contract before JavaScript dispatch.
+
+This diagnostic needs Node22.8+ as a read-only host runtime,a necessary external platform dependency.
+It uses core modules only and sends guarded engine/index bytes on stdin;no npm packages,network,
+browser profile or generated file is needed. Ambient NODE_* options are removed and the documented
+[compile-cache disabling flag](https://nodejs.org/api/cli.html#node_disable_compile_cache1) is set.
+VM execution has finite timeouts;the child also has an overall timeout. The standard publication
+runner includes this native check after its existing renderer/data controls.
+
+These are engine-query and chapter-landing checks. They establish no browser keyboard/teaser UI,
+ranking-quality,reader-latency,geometry or release claim. The upstream field fix deliberately
+corrects field membership/frequencies;the old erroneous scores are not a compatibility oracle.
+D372's0818 checkpoint combines warning-free local publication,exact full-text/chapter coverage
+and14 real engine queries across118 registered chapter landings. It closes that search defect;
+the broader G1 application/browser and release gates retain their separate owners.
 

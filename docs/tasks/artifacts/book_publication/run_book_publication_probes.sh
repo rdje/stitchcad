@@ -4,3 +4,4 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../../.." && pwd)"
 cd "$ROOT"
 python3 -I -B docs/tasks/artifacts/book_publication/book_publication.py
+python3 -I -B docs/tasks/artifacts/book_publication/search_query_contract.py

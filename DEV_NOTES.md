@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-01 UTC)_ — local renderer selected in normal publication
+## _(2026-11-02 UTC)_ — actual native book search checkpoint
 
-0817 Make/publication/capture bind local tool/selector/profile hashes before output;native1093→118 records/118 chapters keep85068 words/72522 terms exact0.
-Both indexes warning-free;chapter payload7729123B,123 inputs unchanged. Native malformed generic refuses/preserves old bytes;quoted repair0;query proof remains .verify.
-D377 traced headings retired0788/0801;actual glossary/index routes now guarded with2 positives/8 refusals and exact remaining AST0;publication118/374/1805/3385 passes0.
-Promotion declined: existing renderer/navigation policy;focused builder19/capture9 reds,tool4/2/Make/search5 pass0;992 Git/public exact0,archive1446/79,per-generation21/64 and58/64;G1still6/18.
+0818 D372 closes:generated elasticlunr engine14 queries/118 landings/4 data refusals pass0,current/captured chapter indexes;case/prefix/Bézier/empty/no-match covered.
+Node26.8.1 is a documented read-only host dependency;stdin only,cache/options sanitized,poisoned flags create no cache/coverage paths0;section profile refuses0.
+Final native1094→118 migration85167 words/72600 terms exact0;both builds warning-free,chapter7736437B;publication118/374/1806/3387/source census370 pass0.
+Promotion declined: existing public-runtime/search policy;native13-family parent closes with D372,actual ordered/frame integration .5f.2 next. 993 five Git/public exact0,archive1447/80,per-generation21/64 and59/64;G1still6/18.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

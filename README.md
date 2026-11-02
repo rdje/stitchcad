@@ -53,6 +53,7 @@ Crates appear as their stage starts; nothing below exists before its gate.
 ## Quick start
 
 Requires the Rustup launcher and Python 3.9+ (standard library only); book setup installs mdBook locally.
+Publication search-query probes also require a read-only host Node22.8+ runtime.
 The stable channel is declared in `rust-toolchain.toml`.
 
 ```bash

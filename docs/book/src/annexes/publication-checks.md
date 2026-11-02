@@ -114,6 +114,8 @@ python3 -I -B docs/tasks/artifacts/ci_environment/python_publication_fixture_con
 ```
 
 These controls intercept renderer children for fault safety; the publication entry runs real mdBook.
+The publication runner then checks actual generated search queries and chapter landings under
+read-only host Node22.8+;see [native query verification](book-search.md#native-query-verification).
 Historical continuity reads logical reports with `read` and original control/payload identities with
 `read-backing`. The retained v1 master is distinct from the active generation index at the same path;
 original schema/window-prefix checks apply to that retained master. Catalog and source-interval bytes

@@ -665,7 +665,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 ## Drafting operation contracts
 
 - ID: `G1-SLICE.5f.1`
-  Status: `active`
+  Status: `done`
   Goal: complete public operation/dependency/interface inventory from ontology3.1/3.2, roadmap6.1
   and feature matrix before construction code. All v1 operations must have explicit typed schemas.
   Acceptance: points, lines/arcs/Béziers, offset, slash/spread, close dart, notch/grainline,
@@ -674,8 +674,8 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Concrete geometry execution stays G2/G3; missing operation contracts are repaired first.
   .1 closes on implemented typed declarations/output contracts,not future G2/G3 geometric results;
   this grants no G1 running-spike waiver or geometry certificate.
-  Verification:native13-family focused checkpoint0813 accepted;post-feature P2 D372 remains .book-search below.
-  Commit:STITCHCAD-G1-0813;actual program/frame/geometry/physical/full integration remains separately owned.
+  Verification:native13-family checkpoint0813 accepted;post-feature D372 search checkpoint0818 complete;actual integration remains separate.
+  Commit:STITCHCAD-G1-0813(native)/0818(search);actual program/frame/geometry/physical/full integration remains separately owned.
 - ID: `G1-SLICE.5f.1.review`
   Status: `done`
   Goal:0813 aggregate native declaration acceptance;[whole scope/proofs](../history/stitchcad-devnotes-part989.md).
@@ -918,7 +918,7 @@ retains every original goal,status,child relation and focused acceptance proof.
   Status: `done`
   Goal:0812 native join declaration checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part988.md).
 - ID: `G1-SLICE.5f.1.book-search`
-  Status: `in_progress`
+  Status: `done`
   Goal:P2 D372 after typed v1 feature completion:resolve new large-index build warning;
   payload10015553B/JS10030347B. Preserve full-text/chapter search;no latency claim,cap raise or warning suppression.
 - ID: `G1-SLICE.5f.1.book-search.plan`
@@ -934,18 +934,18 @@ retains every original goal,status,child relation and focused acceptance proof.
 - ID: `G1-SLICE.5f.1.book-search.activate.tool`
   Status: `done`
   Goal:0816 guarded local tool setup and D376 repair;[whole scope/proofs](../history/stitchcad-devnotes-part992.md).
-### G1-SLICE.5f.1.book-search.activate.publication
 - ID: `G1-SLICE.5f.1.book-search.activate.publication`
   Status: `done`
-  Goal:route Make/publication/capture through local renderer;fix D377 glossary/index navigation checker drift;update directly affected contracts/setup docs without weakening text/route/warning checks.
-  - [x] ROOT CAUSE: `rg mdbook` found ambient Make/publication/capture dispatch;`git log -1 -p -S` traces missing index/glossary headings to0788 cd7466d9/0801 bd33add9,rc=0;D377 owned here.
-  - [x] ADDRESSED: `scripts/run_make.sh book` and native capture/migration →warning-free local renderer,1093→118 records/118 chapters,85068 word/72522 term pairs exact,123 inputs fixed,payload7729123B,rc=0.
-  - [x] NO REGRESSION: launcher `python_publication_builder_contract.py`/`python_search_capture_contract.py` →19/9 body reds,13 refusals;Make/tool4-2/nav2-8/AST3/search5/native warning-repair/publication118-374-1805-3385 pass,rc=0.
-    992 four Git spans/body/public exact;archive1446/79,per-generation21/64 and58/64,rc=0;actual queries remain .verify,not latency or runtime approval.
-  Commit:STITCHCAD-G1-0817. promotion: declined (existing public renderer/learning-glossary-index policy;D377 repaired without new scope).
+  Goal:0817 local renderer/publication activation and D377 repair;[whole scope/proofs](../history/stitchcad-devnotes-part993.md).
+### G1-SLICE.5f.1.book-search.verify
 - ID: `G1-SLICE.5f.1.book-search.verify`
-  Status: `pending`
+  Status: `done`
   Goal:after implementation verify actual full-text/chapter search and warning-free build against original corpus;preserve existing public behavior.
+  - [x] ROOT CAUSE: `rg search_data` scoped publication reader validates data without JS;`node --version` →v26.8.1,rc=0;actual query/landing proof is the remaining declared D372 boundary.
+  - [x] ADDRESSED: launcher `search_query_contract.py` →14 native cases/118 landings/4 data refusals,current/captured chapters pass,rc=0;poisoned Node options/cache/coverage removed and section profile refused,rc=0.
+    Native capture/migration →1094→118 documents,85167 chapter-word/72600 term pairs exact;both warning-free,chapter payload7736437B,rc=0;no UI/ranking/latency approval.
+  - [x] NO REGRESSION: `check(ROOT)` →118/374/1806/3387,source census370,runner syntax and five search-data refusals pass,rc=0;993 five Git spans/public/archive retained,1447/80,per-generation21/64 and59/64,rc=0.
+  Commit:STITCHCAD-G1-0818. promotion: declined (existing full-text/chapter and public-runtime verification policy;D372 closed).
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.
