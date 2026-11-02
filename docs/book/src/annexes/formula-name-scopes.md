@@ -487,7 +487,8 @@ source/position association and whole checking remain later stages.
 Only then does it count original Root parameters,actual selected measurement/Ease rows,extra initial
 names,output names and scalar statements. Every addition is checked. The conservative namespace
 bound includes all eight reserved names and a slot for every statement,including assertions whose
-labels never declare names. The retained-record bound adds one association slot per output name.
+labels never declare names. Retained records add one association slot per output name and one
+binding slot per extra initial declaration. Repeated initial claims count separately.
 `DraftingProgramNameLimits` selects cumulative content,namespace entries and retained records
 explicitly;it has no Default. Zero name limits refuse reserved metadata even for empty input.
 
@@ -502,9 +503,9 @@ Unprovided selections have no rows;missing selected objects remain later Root-re
 The host's immutable exhaustive integration contract is required;this is no dishonest-host defense.
 
 For example,reserved8 + Root parameters1 + selected host rows2 + extra initial1 + outputs2 + scalar
-statements2 =16 namespace entries. The two output associations give18 prospective retained records.
-The assertion's slot is conservative. Limits15/18 refuse the complete16 namespace population;
-limits16/17 refuse the complete18 retained population. Neither attempt advances the host iterator,
+statements2 =16 namespace entries. Two output associations plus one initial binding give19 retained records.
+The assertion's slot is conservative. Limits15/19 refuse the complete16 namespace population;
+limits16/18 refuse the complete19 retained population. Neither attempt advances the host iterator,
 validates current sources,builds a namespace or returns a prefix. A content refusal precedes even
 iterator construction and zero name quotas. Population overflow precedes both name quotas.
 

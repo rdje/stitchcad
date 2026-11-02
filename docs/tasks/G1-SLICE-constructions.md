@@ -946,20 +946,27 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0844 authentic planned fields/source facet;[whole scope/proofs](../history/stitchcad-devnotes-part1020.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles.bind.check`
   Status: `done`
-  Goal:complete bounded role-source binding with actual input/catalogue/context record checks,original provider/allocation causes and no prefix;reuse a public exhaustive source-component producer for provider accounting,fixed names need no lookup.
-  - [x] ROOT CAUSE: 0845 launcher `cargo test -p sc-core --test drafting_context_binding_contract output_role_binding`:
-    focused1 pass;8 success/refusal controls retain actual parents/records,first later index2 and original cause,no prefix or geometry calls,rc=0.
-  - [x] ADDRESSED: 0845 same target program_output_positions2/program_name_inputs3 pass;
-    cross-kind/equal-id foreign schema/second catalogue admission/definition/equal-looking context records refuse,fixed/empty lists query nothing;
-    roles docs3 and actual loan escape rustc1/keep0 control confirm private lifetime boundary,rc=0.
-  - [x] NO REGRESSION: 0845 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
-    book/pure publication118/374/1813/3419,19 old fences/new complete positive example exact,rc=0;
-    1020 Git/body/public spans/archive1474/51,generations21/64 and30/64,rc=0.
-  Commit:STITCHCAD-G1-0845. promotion:declined (existing actual-owner/no-prefix doctrine);initial sources next,allocator fault injection and full coupled verification explicitly remain .5f.2.verify.
-  Fixture corrections:precompute fallible interval outside infallible closure;honor existing Piece quantity with explicit authored CutCopy. Whole source-cache fields refuse before zero work quotas and provider calls;no cached totals or generated source stand-ins.
+  Goal:0845 complete actual role sources;[whole scope/proofs](../history/stitchcad-devnotes-part1021.md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bind actual extra initial sources to the original Root canonical/source/context records,refuse planned creators as initial geometry before values;retain exact original sources and causes,no metadata-id-only truth.
+- ID: `G1-SLICE.5f.2.namespace.admit.association.initial.bounds`
+  Status: `done`
+  Goal:include complete prospective initial-binding slots in explicit retained name-work records before their allocation;checked actual initial count,no cached totals/default caps,namespace precedence retained.
+  - [x] ROOT CAUSE: 0846 launcher `cargo test -p sc-core --test drafting_context_binding_contract program_name_work`:
+    focused2 pass;actual namespace16/retained19 includes initial1,limit18 refuses before metadata items/validation,empty remains8,rc=0.
+  - [x] ADDRESSED: 0846 same target counts two repeated initial occurrences/no outputs as namespace15/retained17,
+    fresh complete content/quota precedence unchanged;`cargo test -p sc-core --test drafting_context_binding_contract output_role_binding` focused1 pass,rc=0.
+  - [x] NO REGRESSION: 0846 launcher `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`,fmt,
+    book/pure publication118/374/1813/3419/all20 Rust fences unchanged,rc=0;
+    1021 three Git/body/public spans/archive1475/52,generations21/64 and31/64,rc=0.
+  Commit:STITCHCAD-G1-0846. promotion:declined (existing complete prospective-bound doctrine);actual initial source facet/binding next,no allocator/coupled verification claim.
+- ID: `G1-SLICE.5f.2.namespace.admit.association.initial.sources`
+  Status: `pending`
+  Goal:readonly actual metadata source-record/snapshot facet using existing FormulaCanonicalInput joins,no copied registry/values or declaration-id-only source grant.
+- ID: `G1-SLICE.5f.2.namespace.admit.association.initial.check`
+  Status: `pending`
+  Goal:whole bounded canonical/metadata/existing geometry bindings;reject all programme creators as initial before lookup,retain original records/causes,no accepted prefix or all-future initial names.
 - ID: `G1-SLICE.5f.2.namespace.order`
   Status: `pending`
   Goal:actual Root and explicit always-visible names plus only earlier scalar/native declarations in mixed order;check reserved/cross-origin/repeated headers and self/future names without values or metadata-prefix acceptance.

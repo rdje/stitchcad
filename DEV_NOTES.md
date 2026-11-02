@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — complete planned role source binding
+## _(2026-11-02 UTC)_ — prospective extra-initial binding slots
 
-0845 reserves all output slots before callbacks,skips fixed schemas and checks actual input,role kind,catalogue/definition/tag,logical ref,frame and snapshot in order. Success borrows positions/providers and owns complete slots;allocator cause stays inline,no prefix on later failure.
-Focused role1/output2/name3,strict lint/fmt/roles docs3 pass0;authentic Offset parents,8 success/refusal controls,equal-looking foreign records,opaque payloads,source first cause and fixed/empty zero queries covered. Complete provider fields precede zero work quotas via reusable exhaustive source-component producer.
-Book/pure publication118-374-1813-3419/19 old fences/new positive example and1020 Git/body/public spans exact0;archive1474-51/generations21-64 and30-64. Loan escape rustc1/keep0 confirms boundary;allocator fault injection remains .5f.2.verify.
-Promotion declined: existing actual-owner/bounded-before-callback/no-prefix doctrine. G1still6/18;actual initial source admission next,then ordered namespace/whole kinds/dependencies and coupled feature verification.
+0846 extends retained name work to namespace entries+output associations+extra-initial bindings before the new initial result allocation exists. Counts come from original complete vectors;all additions remain checked. No default cap,source validation,deduplication or namespace grant was introduced.
+Focused name-work2/role-binding1 and strict lint/fmt pass0;namespace16 now needs19 retained records,18 refuses,empty stays8 and two repeated initial claims/no outputs give15/17. Metadata iterator items/currentness remain untouched;fresh complete content still precedes all quotas.
+Book/pure publication118-374-1813-3419/all20 Rust fences unchanged and1021 Git/body/public spans exact0;archive1475-52/generations21-64 and31-64. Existing output-only role binding is unchanged;actual initial-source allocation/binding follows.
+Promotion declined: existing complete prospective-bound/no-default doctrine. G1still6/18;reuse existing FormulaCanonicalInput actual inventory/owner/kind joins in the readonly initial metadata-source facet,next whole initial binding and coupled verification.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

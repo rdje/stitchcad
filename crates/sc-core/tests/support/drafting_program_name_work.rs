@@ -268,7 +268,7 @@ fn actual_host_rows_and_complete_populations_precede_binding_or_namespace_work()
     );
     let host = root.sources().host();
     let validations = host.validations.get();
-    let policy = DraftingProgramNameLimits::new(limits(1000, 10000, 1000)?, 16, 18);
+    let policy = DraftingProgramNameLimits::new(limits(1000, 10000, 1000)?, 16, 19);
     source.trace.set(0);
     let admitted = names.admit_name_work(&policy).map_err(|e| e.to_string())?;
     assert!(std::ptr::eq(admitted.inputs(), &names) && std::ptr::eq(admitted.limits(), &policy));
@@ -284,10 +284,10 @@ fn actual_host_rows_and_complete_populations_precede_binding_or_namespace_work()
         (1, 2, 1, 2, 2)
     );
     // Independent bound:reserved8 + parameters1 + host2 + initial1 + outputs2 + statements2 =16;
-    // two prospective associations give18 records,including the assertion's conservative slot.
+    // two output associations plus one initial binding give19 records,including the assertion slot.
     assert_eq!(
         (shape.namespace_entry_bound(), shape.retained_record_bound()),
-        (16, 18)
+        (16, 19)
     );
     assert_eq!(
         (host.factories.get(), host.reads.get(), source.trace.get()),
@@ -308,10 +308,10 @@ fn actual_host_rows_and_complete_populations_precede_binding_or_namespace_work()
         ),
         (
             16,
-            17,
+            18,
             DraftingProgramNameWorkRefusal::RetainedRecords {
-                allowed: 17,
-                required: 18,
+                allowed: 18,
+                required: 19,
             },
         ),
     ] {
@@ -377,6 +377,28 @@ fn actual_host_rows_and_complete_populations_precede_binding_or_namespace_work()
     assert_eq!(broken.len(), 1);
     assert!(matches!(broken.next(), Some(Err(SourceError::Missing))));
     assert!(broken.next().is_none() && broken.next().is_none());
+    assert_eq!(host.reads.get(), 4);
+    // Repeated original initial claims count separately,even before their source/collision checks.
+    let initial = names
+        .initial()
+        .first()
+        .copied()
+        .ok_or("original initial claim")?;
+    let repeated = DraftingProgramNameInputs::new(&program, vec![initial, initial], vec![]);
+    let policy = DraftingProgramNameLimits::new(limits(1000, 10000, 1000)?, 15, 17);
+    let shape = repeated
+        .admit_name_work(&policy)
+        .map_err(|e| e.to_string())?
+        .shape();
+    assert_eq!(
+        (
+            shape.initial_count(),
+            shape.output_count(),
+            shape.namespace_entry_bound(),
+            shape.retained_record_bound()
+        ),
+        (2, 0, 15, 17)
+    );
     assert_eq!(host.reads.get(), 4);
     Ok(())
 }

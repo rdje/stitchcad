@@ -13,7 +13,8 @@ use core::fmt;
 /// Explicit complete held-content and prospective mixed namespace allowances,without defaults.
 /// Namespace entries conservatively include all eight reserved names,actual Root parameters and
 /// selected host rows,extra initial names,named outputs and every scalar statement (assertions too).
-/// Retained records add one association slot per named output. These logical populations grant
+/// Retained records add one association slot per named output and one binding slot per extra initial.
+/// These logical populations grant
 /// no allocator bytes/capacity,comparison CPU,kind checking,dependency or runtime budget.
 /// ```compile_fail
 /// let limits:sc_core::construction::DraftingProgramNameLimits=Default::default();
@@ -48,7 +49,7 @@ impl DraftingProgramNameLimits {
     pub const fn namespace_entries(self) -> usize {
         self.namespace_entries
     }
-    /// Complete namespace plus named-output association-slot allowance.
+    /// Complete namespace plus output-association and extra-initial binding-slot allowance.
     #[must_use]
     pub const fn retained_records(self) -> usize {
         self.retained_records
@@ -97,7 +98,7 @@ impl DraftingProgramNameShape {
     pub const fn namespace_entry_bound(self) -> usize {
         self.namespace_entries
     }
-    /// Namespace entry bound plus one original output-association slot per occurrence.
+    /// Namespace entry bound plus one slot per output association and per extra-initial binding.
     #[must_use]
     pub const fn retained_record_bound(self) -> usize {
         self.retained_records
@@ -319,7 +320,7 @@ impl<
             statements,
         ])
         .map_err(refuse)?;
-        let retained_records = sum([namespace_entries, outputs]).map_err(refuse)?;
+        let retained_records = sum([namespace_entries, outputs, initial]).map_err(refuse)?;
         if namespace_entries > limits.namespace_entries {
             return Err(refuse(DraftingProgramNameWorkRefusal::NamespaceEntries {
                 allowed: limits.namespace_entries,
