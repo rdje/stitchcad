@@ -150,6 +150,65 @@ fn formula_geometry_uses_keep_unused_root_sources_mixed_slots_original_indices_a
         provider.calls.set(0);
         provider.base.trace.set(0);
         let uses: Vec<_> = bound.formula_geometry_dependencies().collect();
+        let requests: Vec<_> = bound.geometry_requests().collect();
+        if rich {
+            assert_eq!(
+                requests
+                    .iter()
+                    .map(|r| r.occurrence().position())
+                    .collect::<Vec<_>>(),
+                [
+                    None,
+                    None,
+                    None,
+                    None,
+                    None,
+                    None,
+                    Some(1),
+                    Some(1),
+                    Some(2),
+                    Some(2),
+                    Some(3),
+                    Some(4),
+                    Some(4),
+                    Some(4)
+                ]
+            );
+            for request in &requests {
+                match request.target().map_err(|e| format!("{e:?}"))? {
+                    DraftingProgramGeometryTarget::Existing => {
+                        assert!(
+                            matches!(request.occurrence().reference(),
+                            DraftingGeometryReference::Point(p) if p==point(80))
+                                || matches!(request.occurrence().reference(),
+                            DraftingGeometryReference::Edge(e) if e==EdgeRef::new(id(81),LocalTag::FIRST))
+                        );
+                    }
+                    DraftingProgramGeometryTarget::Earlier(creator) => {
+                        assert_eq!(request.occurrence().position(), Some(4));
+                        assert!(!creator.requires_role_binding());
+                        assert_eq!(creator.reference(), request.occurrence().reference());
+                        match creator.input() {
+                            DraftingOperationInput::ConstructPoint(actual) => {
+                                assert!(std::ptr::eq(actual, &point_input));
+                                assert_eq!(creator.step().position(), 2);
+                            }
+                            DraftingOperationInput::DrawArc(actual) => {
+                                assert!(std::ptr::eq(actual, &arc));
+                                assert_eq!(creator.step().position(), 3);
+                            }
+                            _ => return Err("actual formula creator".into()),
+                        }
+                    }
+                }
+            }
+        } else {
+            assert!(requests.is_empty());
+        }
+        let mut request_end = bound.geometry_requests().skip(requests.len());
+        for _ in 0..3 {
+            assert!(request_end.next().is_none());
+        }
         if rich {
             assert_eq!(uses.len(), 13);
             assert_eq!(

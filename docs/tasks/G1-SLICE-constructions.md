@@ -926,23 +926,29 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0857 original formula geometry uses;[whole scope/proofs](../history/stitchcad-devnotes-part1033.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.native`
-  Status: `in_progress`
+  Status: `done`
   Goal:complete direct geometry fields/selectors across all13 native families,then genuine mixed consumers;semantic-target geometry still requires actual Root-bound sources,no empty/id-only substitutes.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.native.fields`
   Status: `done`
   Goal:0858 direct original native geometry fields;[whole scope/proofs](../history/stitchcad-devnotes-part1034.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.native.mixed`
   Status: `done`
-  Goal:0861 stream every original native field under actual complete canonical programme and genuine checked mixed consumer;no synthetic name/span/statement ordinal or source/value callback.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract native_geometry`:1 pass/three cases,rc=0;actual order and same privately admitted normalized slots retain genuine consumer and original raw field producer across all13 families.
-  - [x] ADDRESSED: same focused native command rc=0;interleaved scalar position4,equal-ID distinct Line inputs at3/16,quadratic/cubic,both Slash/Mirror modes,repeated Walk pair/A/B selectors,actual consumer/input/pair/anchor pointers,local order/nth/empty/fused end and zero callbacks pass. No geometry supplier or semantic-source acceptance.
-  - [x] NO REGRESSION: selected strict `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings` and fmt check,rc=0;`cargo test -p sc-core --doc construction::program::dependencies::native_geometry`:3 pass,rc=0;public API/private fields/lifetime. Fixture API spellings and empty-graph offset allowance repaired before final pass.
-  - [x] LOCKSTEP: book three affected sections updated;guarded book build rc=0;complete new Rust example matches checked native doc example. README reviewed;LIVE note remains G1still6/18 In Progress. MEM/index/ledger/DEV updated;requests then bounds/binding/semantics/check next. Full .5f.2.verify deferred until implementation complete.
-  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1034.md`:4 exact Git spans,rc=0;whole0858 task/lesson/ledger plus0332 lesson retained byte-exact. Public read/body descriptor proof recorded before commit;no retained windows changed or ceiling raised.
-  - [x] PROMOTION: promotion: declined (existing original-source/typed native/no-value contracts;book owns API). Focused native1/doc3/clippy/fmt/build pass0;no new cross-cutting decision or geometry result claimed. Commit:STITCHCAD-G1-0861.
+  Goal:0861 original native fields under genuine mixed consumers;[whole scope/proofs](../history/stitchcad-devnotes-part1035.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.requests`
-  Status: `pending`
+  Status: `in_progress`
   Goal:genuine earlier creating-step/reference request and authentic planned-family port,including unnamed outputs;classify all creators,refuse ambiguous/self/future before live lookup;no global name manufacture.
+- ID: `G1-SLICE.5f.2.dependencies.geometry.requests.classify`
+  Status: `done`
+  Goal:0862 classify every original formula/native geometry occurrence against complete actual native creators;retain genuine consumers/creating steps and first refusals,no synthetic names or source calls.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract geometry_requests`:1 pass/22 cases,rc=0;full-programme scan retains actual first/second candidates,including later duplicates;all13 native output families exhaustively classified.
+  - [x] ADDRESSED: same focused command rc=0;existing/earlier fixed/unnamed variable,self/future/ambiguity/kind/tag/unsupported guards,actual consumer/normalized/input pointers,nth/fused/no callbacks. No earlier-prefix fallback or invented global name;no geometry source accepted.
+  - [x] NO REGRESSION: focused `initial_binding::formula_geometry`:1 pass/rich-empty cases,rc=0;Root-first and genuine mixed positions/formula/native merge,actual earlier Point/Arc inputs,zero callbacks. Strict selected clippy/fmt and scoped geometry_requests Rustdoc4 pass0. Fixture unused Offset self-source and bounded-window lint repaired before final pass.
+  - [x] LOCKSTEP: book classification/API/example and plan updated;guarded build/example/render checks recorded before commit. README/LIVE reviewed,G1still6/18 In Progress;MEM/index/ledger/DEV updated. Root-source programme-creator guard remains defensive behind initial-source rejection;whole .5f.2.verify deferred until agreed integration complete.
+  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1035.md`:3 exact Git spans,rc=0;whole0861 task/lesson/ledger retained. Public reader/descriptor comparison before commit;no retained window changed or ceiling raised.
+  - [x] PROMOTION: promotion: declined (existing earlier-only/native-source principles;book owns request API). Native22/formula rich-empty/doc4/strict lint pass0;request sources and complete bounds remain separate. Commit:STITCHCAD-G1-0862.
+- ID: `G1-SLICE.5f.2.dependencies.geometry.requests.port`
+  Status: `pending`
+  Goal:readonly request facet for actual unnamed earlier variable geometry;reuse authentic DraftingPlannedOutputSource fields/parents and original typed refusals. Require complete bound work before any callback;no fabricated named-output occurrence or live planned output. Actual source binding remains .geometry.bind.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bounds`
   Status: `pending`
   Goal:complete original geometry occurrence/association/content work and checked arithmetic before reservations,queries or child source work;actual owners/selected explicit policies,no capacity/CPU/runtime grant.

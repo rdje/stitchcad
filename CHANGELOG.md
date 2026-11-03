@@ -3,11 +3,11 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0861 — original native fields with genuine mixed consumers
+## STITCHCAD-G1-0862 — genuine geometry creator requests
 
-Complete canonical inputs now stream native geometry fields under actual checked consumer steps and original mixed positions. Preserve original input/index/selectors and repeated fields;no source callback,value or geometry acceptance.
+Original formula/native uses now retain full-programme creator classification. Refuse later duplicate creators,self/future uses,wrong fixed outputs and unsupported kinds before lookup;unnamed variable outputs keep actual earlier input owners.
 
-Focused native1/three cases,selected strict lint/fmt,Rustdoc3 and guarded book build pass0. Whole0858/0332 continuity retained in1034 with four exact Git spans. G1still6/18 In Progress;requests/bounds/binding/semantic integration and full verification pending.
+Focused creator1/22 cases,formula1/rich-empty,strict lint and Rustdoc4 pass0;book and exact1035 continuity synchronized. G1still6/18 In Progress;source port,bounds,binding and coupled verification remain pending.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -21,6 +21,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0861 mixed native geometry consumers](docs/history/stitchcad-devnotes-part1035.md) retain exact task,lesson and ledger bytes.
 
 [Whole0858 native geometry fields](docs/history/stitchcad-devnotes-part1034.md) retain exact task,lesson and ledger bytes.
 

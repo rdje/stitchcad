@@ -10,7 +10,13 @@ mod formula_geometry;
 pub use formula_geometry::{
     DraftingProgramFormulaGeometryConsumer, DraftingProgramFormulaGeometryUse,
 };
+mod geometry_requests;
 mod native_geometry;
+pub use geometry_requests::{
+    DraftingGeometryStepRequest, DraftingProgramGeometryCreatorRefusal,
+    DraftingProgramGeometryOccurrence, DraftingProgramGeometryRequest,
+    DraftingProgramGeometryTarget,
+};
 mod occurrences;
 pub use native_geometry::DraftingProgramNativeGeometryUse;
 mod owners;

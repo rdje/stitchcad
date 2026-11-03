@@ -3,11 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-03 UTC)_ — original native fields under complete mixed consumers
+## _(2026-11-03 UTC)_ — actual geometry creator classification
 
-0861 canonical-bound native iterator joins actual checked steps to same admitted normalized slots;raw field producer remains authoritative. Private use retains actual consumer/genuine position and original input/index/typed field,without names/spans/scalar ordinals.
-Focused native1/three cases verifies all13 families,interleaved scalar,equal-ID distinct sources,both modes,quadratic/cubic,repeated Walk selectors,actual pointers/order/empty/fused/no callbacks. Strict selected lint/fmt/doc3/book build pass0;whole integration verification deferred.
-1034 preserves whole0858 task/lesson/ledger plus0332 lesson;four exact Git spans. Promotion declined:existing original-source/no-value contracts;book owns API. G1still6/18 In Progress;authentic earlier-creator requests next.
+0862 preserves original formula/native consumers and merges actual mixed positions after Root sources. Per-use complete native scan catches later duplicate creators before self/future/output checks;fixed outputs retain exact kind/tag,unnamed variable requests retain genuine earlier owners.
+Focused creator1/22 cases and formula1/rich-empty pass0;strict selected clippy/scoped Rustdoc4 pass0. No source calls,values,diagnostic allocation,supplier acceptance or whole-work grant. Complete geometry verification remains deferred.
+1035 retains whole0861 task/lesson/ledger with three exact Git spans. Promotion declined:existing earlier-only/native-source contracts;book owns request API. G1still6/18 In Progress;authentic request source port next.
+
+[Whole0861 mixed-native lesson](docs/history/stitchcad-devnotes-part1035.md) retains exact scope and focused proofs.
 
 [Whole0858 native-field and0332 release-input lessons](docs/history/stitchcad-devnotes-part1034.md) retains exact scope and verification.
 

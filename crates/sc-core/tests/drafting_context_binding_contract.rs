@@ -3,6 +3,8 @@
 mod dependency_occurrences;
 #[path = "support/drafting_geometry.rs"]
 mod geometry;
+#[path = "support/drafting_geometry_requests.rs"]
+mod geometry_requests;
 #[path = "support/drafting_initial_binding.rs"]
 mod initial_binding;
 #[path = "support/drafting_native_geometry.rs"]

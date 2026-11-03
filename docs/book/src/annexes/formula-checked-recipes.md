@@ -530,5 +530,55 @@ nth traversal,fused repeated end reads,opaque diagnostics and zero source/provid
 This iterator allocates no buffer and reads no authored value. Empty native slots and semantic-only
 families supply no direct fields;their formulas or actual Root-bound semantic records retain their
 separate obligations. The view accepts no existing or earlier planned geometry supplier,frame,
-current snapshot,semantic target,resource allowance,physical result or whole programme. Authentic
-creating-step requests,complete geometry bounds and source binding remain the next owned stages.
+current snapshot,semantic target,resource allowance,physical result or whole programme. Creating-step
+classification is implemented below;complete geometry bounds and source binding remain separate.
+
+
+## Classify original geometry requests before source lookup
+
+`BoundDraftingProgramCanonicalInputs::geometry_requests()` preserves each original geometry
+occurrence and classifies its creator before any source/provider/value callback. Root formula
+sources come first. Mixed formula and native streams merge by genuine consumer position;formula
+uses precede direct native fields at the same position. Each producer keeps its original local
+order,indices,roles and selectors. Empty streams and repeated end reads remain fused.
+
+Each private `DraftingProgramGeometryRequest` keeps its `occurrence()` and `target()` together.
+The inspectable `DraftingProgramGeometryOccurrence` variants retain the original Formula or Native
+view. `position()` is None for a Root source,otherwise the actual one-based mixed consumer position;
+`reference()` is the original PointRef/EdgeRef. No name,span or scalar ordinal is manufactured.
+
+For each occurrence,the classifier searches the complete original programme's native operations.
+Two matching creator identities refuse as Ambiguous with the first two actual step witnesses,
+even when the second is later than the consumer. A unique programme creator in a Root source
+refuses RootSource. Same-position and later creators refuse SelfCreator and FutureCreator before
+output checks. No match yields Existing,which still needs actual existing-source binding.
+
+An earlier Point,Line,Arc or Bézier must supply its exact original fixed output,including kind and
+tag;otherwise FixedOutput retains that actual output and step. Offset,Slash,Truing and Join accept
+only Edge requests;Mirror permits Point and Edge requests. These variable families still require
+an authentic original family field. CloseDart,AddNotch,Grainline and Walk have no direct Point/Edge
+output in this request schema and refuse Unsupported. A wrong variable output kind refuses
+OutputKind. Their separate semantic inventories cannot be replaced by a direct geometry request.
+
+An Earlier target carries a privately constructed `DraftingGeometryStepRequest`. Its `step()`
+borrows the genuine earlier normalized native owner;`input()` exposes that exact original input,
+`reference()` retains the requested output and `requires_role_binding()` distinguishes variable
+roles from exact fixed outputs. Unnamed outputs need no fabricated global name or named-output
+occurrence. For example,an unnamed earlier Mirror point yields a variable request;its actual
+point-role identity,manifest,frame and snapshot remain obligations of subsequent source binding.
+
+```rust
+use sc_core::{construction::*,design::DesignMetadataHost};
+fn requests<H:DesignMetadataHost,S:DraftingInitialInputProvider<H> + ?Sized>(
+    inputs:&BoundDraftingProgramCanonicalInputs<'_, '_, '_, '_, '_, '_, '_, '_,H,S>) -> usize {
+    inputs.geometry_requests().filter(|r|r.target().is_ok()).count()
+}
+```
+
+A refusal remains beside the original occurrence,and iteration can continue for inspection.
+Neither an individual Earlier request nor a successful prefix certifies the complete programme.
+The iterator allocates no buffers or diagnostic boxes. Each occurrence scans actual native
+creators in the complete mixed sequence;this grants no complete work/CPU allowance. The later
+controller must admit complete geometry work before reservations or source callbacks,then retain
+all bindings or the first original refusal. The source port,complete bounds,actual supplier
+bindings and coupled whole-programme verification remain separately owned.

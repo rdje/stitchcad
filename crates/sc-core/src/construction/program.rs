@@ -4,14 +4,16 @@ use crate::{design::DesignMetadataHost, recipe::FormulaRecipeDocument};
 use core::fmt;
 mod dependencies;
 pub use dependencies::{
-    BoundDraftingProgramCanonicalInputs, DraftingProgramCanonicalBinding,
-    DraftingProgramCanonicalError, DraftingProgramCanonicalJoinFailure,
-    DraftingProgramCanonicalLimits, DraftingProgramCanonicalOccurrence,
-    DraftingProgramCanonicalRefusal, DraftingProgramCanonicalShape,
-    DraftingProgramDependencyInputs, DraftingProgramDependencyOwnerError,
-    DraftingProgramDependencyOwnerIssue, DraftingProgramDependencyRole,
-    DraftingProgramDerivedBinding, DraftingProgramFormulaGeometryConsumer,
-    DraftingProgramFormulaGeometryUse, DraftingProgramNameDependency,
+    BoundDraftingProgramCanonicalInputs, DraftingGeometryStepRequest,
+    DraftingProgramCanonicalBinding, DraftingProgramCanonicalError,
+    DraftingProgramCanonicalJoinFailure, DraftingProgramCanonicalLimits,
+    DraftingProgramCanonicalOccurrence, DraftingProgramCanonicalRefusal,
+    DraftingProgramCanonicalShape, DraftingProgramDependencyInputs,
+    DraftingProgramDependencyOwnerError, DraftingProgramDependencyOwnerIssue,
+    DraftingProgramDependencyRole, DraftingProgramDerivedBinding,
+    DraftingProgramFormulaGeometryConsumer, DraftingProgramFormulaGeometryUse,
+    DraftingProgramGeometryCreatorRefusal, DraftingProgramGeometryOccurrence,
+    DraftingProgramGeometryRequest, DraftingProgramGeometryTarget, DraftingProgramNameDependency,
     DraftingProgramNativeGeometryUse,
 };
 mod admission;
