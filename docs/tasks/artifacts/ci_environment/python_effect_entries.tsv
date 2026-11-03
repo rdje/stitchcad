@@ -106,3 +106,4 @@ docs/tasks/artifacts/book_publication/search_migration_capture.py	output	G1-SLIC
 docs/tasks/artifacts/ci_environment/python_search_capture_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a40
 docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a41
 docs/tasks/artifacts/live_doc_size/book_integrity_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a36
+docs/tasks/artifacts/live_doc_size/task_source_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a37

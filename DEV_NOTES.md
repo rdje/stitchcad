@@ -3,6 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-03 UTC)_ — preserve task/history checks outside book authority
+
+0866 separates the three general native task/history retention methods from the retired BookFixture. Native Git/archive bytes,98 completed nodes,paired live identities and journal navigation still pass3/0. Shared reader helpers retain non-book bounds;book growth has no dependency.
+Standing runner and producer/file/effect dispositions retain that consumer. Promotion declined:existing lossless retention;book reference updated. G1still6/18;geometry binding next,D156 inventory reconciliation before push. No Rust runtime or book-containment change.
+
 ## _(2026-11-03 UTC)_ — director removes all book size containment
 
 0865 retires chapter/index/aggregate/file-count/width/depth caps and exact change-authority receipts. Exempt reference row skips measurement;working/staged checks keep complete local regular UTF-8 Markdown indexing and native object correctness. Shared non-book guards remain.

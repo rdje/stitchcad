@@ -115,6 +115,14 @@ else
   bad NEWLINES "newline measurement/storage contract failed (exit=$rc)" "$out"
 fi
 
+# General task/history preservation stays independent of book growth policy.
+out="$(python3 -I -B "$ROOT/docs/tasks/artifacts/live_doc_size/task_source_contract.py" 2>&1)"; rc=$?
+if [ "$rc" -eq 0 ]; then
+  ok TASK-HISTORY "$out"
+else
+  bad TASK-HISTORY "canonical task/history preservation failed (exit=$rc)" "$out"
+fi
+
 # Director2026-11-04: book growth is unrestricted; structural correctness remains checked.
 out="$(python3 -I -B "$ROOT/docs/tasks/artifacts/live_doc_size/book_integrity_contract.py" 2>&1)"; rc=$?
 if [ "$rc" -eq 0 ]; then

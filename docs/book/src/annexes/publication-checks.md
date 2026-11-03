@@ -161,7 +161,9 @@ make no numerical,sewing,runtime or release-readiness claim.
 
 The superseded policy,its exact proofs and last control remain in retained history;Git also keeps
 the retired writer and tests. Shared task/path/Git helpers retain their independent non-book
-contracts for continuity and measurement consumers. Scoped newline/storage controls still protect
+contracts for continuity and measurement consumers. Three independent native task/history checks
+retain original source extents,unique completed nodes and journal navigation without book authority.
+Scoped newline/storage controls still protect
 original task/history bytes and ordinary source whitespace.
 
 ## Checks

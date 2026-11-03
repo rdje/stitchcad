@@ -1,6 +1,6 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Derive latest commit/ahead from Git;push cadence400 per COMMIT.md. Completed unit0865.
+- Derive latest commit/ahead from Git;push cadence400 per COMMIT.md. Completed unit0866.
 - Next:G1-SLICE.5f.2.dependencies.geometry.bind in docs/tasks/G1-SLICE-constructions.md.
 - Implement complete original existing/strictly earlier fixed/authentic variable suppliers under admitted geometry work;then semantic/check. Coupled .5f.2.verify remains deferred until agreed integration completes.
 - Director2026-11-04 removes ALL book size containment and growth receipts. Current policy is in LIVE_DOCUMENT_SIZE_CONTAINMENT.md and its indexed decision;normal structural/publication correctness remains.

@@ -3,6 +3,11 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0866 — retain independent task/history preservation
+
+Restore three non-book native task/history checks from the retired book-authority fixture. Original source extents,98 completed nodes,paired identities and journal links remain
+watched without a book receipt. Native3 pass0;standing runner/dispositions/book align. Book remains fully exempt from size containment;G1still6/18.
+
 ## STITCHCAD-G1-0865 — remove all book size containment
 
 Director removes every chapter,index,aggregate,count,width,depth and growth-authority restriction. Book edits need no size receipt. Working/staged structure,path/encoding and normal publication correctness remain;non-book containment is unchanged.

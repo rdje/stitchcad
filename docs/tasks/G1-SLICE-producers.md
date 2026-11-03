@@ -460,8 +460,8 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a37`
   Status: `pending`
-  Goal: D156 P1 Native newline/storage fixtures;old book-authority task-family fixture retired0865; role inspection recorded0546,complete runtime audit pending.
-  Paths: docs/tasks/artifacts/live_doc_size/newline_contract.py
+  Goal: D156 P1 Native newline/storage and task/history retention fixtures;book-authority freshness retired0865; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/live_doc_size/newline_contract.py;docs/tasks/artifacts/live_doc_size/task_source_contract.py
   Schedule: existing producer/file verification milestone after active paired feature scope,
   before locality signoff. No historical author,installer or certificate controller is run by inventory.
   Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current

@@ -915,6 +915,14 @@ retains all original goals,statuses and focused acceptance evidence.
   - [x] LOCKSTEP: explicit local policy/decision/README routing exception,COMMIT/hook/registries/probe consumers/producer dispositions and book updated. LIVE remains G1still6/18 In Progress;MEM/index/ledger/DEV align. No growth receipt or size approval is needed for future book edits.
   - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1038.md`:5 exact Git spans,rc=0;whole0864 task/lesson/ledger and superseded book policy/proofs retained. Retired current control remains in predecessor8152ce3b;public archive/descriptor proof before commit. No retained window changes.
   - [x] PROMOTION: existing indexed containment decision records director ruling. Focused growth/structure/path/storage pass0. Full producer/file/effect checks expose pre-existing drift,proven in predecessor and owned P1 by G1-SLICE.5b.4c.h2.b.p.inventory-reconcile before push;no full-CI or inventory acceptance claimed. Commit:STITCHCAD-G1-0865.
+- ID: `G1-SLICE.5f.2.dependencies.geometry.bind.book-capacity.task-guards`
+  Status: `done`
+  Goal:0866 preserve three general task/history checks from the retired book-authority fixture as independent native checks;no book size or growth-control dependency.
+  - [x] ROOT CAUSE: `git show 8152ce3b:docs/tasks/artifacts/live_doc_size/task_source_contract.py` identifies three non-book retention methods inside the retired BookFixture class;they must remain independently watched after book-authority removal.
+  - [x] ADDRESSED: `python3 -I -B docs/tasks/artifacts/live_doc_size/task_source_contract.py`:3 tests pass,rc=0;original paired branch,98-node completed graph and retired journal compare with native Git/archive bytes and current unique live nodes/navigation.
+  - [x] NO REGRESSION: same focused command rc=0;unchanged retention method bodies run without BookFixture,control or growth receipt. Book growth/structure4 and non-book scope/storage17/7/5 remain0865 proofs;runner syntax and book build checked before commit. No runtime Rust or book-size policy change.
+  - [x] LOCKSTEP: standing probe runner and producer/file/effect rows retain the independent task/history consumer;book reference and MEM/DEV/ledger align. README/LIVE reviewed,G1still6/18 In Progress. D156 inventory-reconcile remains P1 before push;no broad inventory acceptance claimed. Commit:STITCHCAD-G1-0866.
+  - [x] PROMOTION: promotion: declined (existing lossless task/history retention;restores independent coverage,not a new policy). Native3 pass0;director book exemption remains unchanged.
 - ID: `G1-SLICE.5f.2.dependencies.semantic`
   Status: `pending`
   Goal:actual Root-bound garment/native semantic sources,including Pocket opening kind/domain/state/component recipe and Buttonhole canonical button/derivation;no empty substitute or authored hole length.
