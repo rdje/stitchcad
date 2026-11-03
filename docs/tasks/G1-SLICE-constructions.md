@@ -902,31 +902,19 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0863 authentic unnamed planned-source facet;[whole scope/proofs](../history/stitchcad-devnotes-part1037.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bounds`
   Status: `done`
-  Goal:0864 fresh complete original content and checked geometry occurrence/record/creator-inspection work before creator scans,result reservation or geometry lookups;actual canonical owner and exact selected explicit policy retained.
-  - [x] ROOT CAUSE: focused `cargo test -p sc-core --test drafting_context_binding_contract initial_binding::formula_geometry`:1 pass/rich-empty cases,rc=0;original names.charge_resources supplies complete fresh content,then F13+N1=E14,S4,records28,inspections56 derived before quotas.
-  - [x] ADDRESSED: same command rc=0;inclusive exact limits,occurrence→record→inspection priority,original content refusal before zero work,actual owner/policy pointers and
-    independent demand equality. No previous-demand credit,creator scan,result vector or geometry query. Resource enumeration callbacks explicitly counted separately from later
-    allocation-free occurrence inspection.
-  - [x] NO REGRESSION: focused native_geometry:1 pass/three cases,rc=0;all13 families/both modes preserve E20,S17,records40,inspections340;scalar-only E0 accepts zero work after content. Selected strict clippy/fmt and scoped geometry_work Rustdoc4 pass0;private fields/lifetime/no-default/public API. Overflow arithmetic guarded;coupled .5f.2.verify remains deferred.
-  - [x] LOCKSTEP: three book sections document selected policies,quota order,numeric examples,fresh content and proof boundary. Guarded build/whole Rust example/render checks before commit. README/LIVE reviewed,G1still6/18 In Progress;MEM/index/ledger/DEV align. Geometry source binding remains unimplemented;book-capacity decision owns the next blocker.
-  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1037.md`:5 exact Git spans,rc=0;whole0863 task/lesson/ledger,0331 lesson and0083 metadata
-    receipts/checklist retained. Public reader/descriptor proof before commit;no immutable window or hard bound changed. Initial commit gate refused
-    aggregate20008L/1501814B;whole0083 retirement restores bounds with original anchors retained.
-  - [x] PROMOTION: promotion: declined (existing complete/fresh resource and explicit logical-work policies;book owns geometry admission API). Native/formula/strict/Rustdoc4 pass0;no capacity,elapsed CPU,source binding or whole-programme grant. Commit:STITCHCAD-G1-0864.
+  Goal:0864 complete fresh geometry work admission;[whole scope/proofs](../history/stitchcad-devnotes-part1038.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bind`
   Status: `pending`
   Goal:complete original existing or strictly earlier fixed/authentic variable geometry suppliers under actual context/frame/snapshot;retain original causes/full result,no prefix or whole programme acceptance.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bind.book-capacity`
-  Status: `blocked`
-  Priority: P1 before geometry binding;owner repo-local,director owns the navigation/bound decision.
-  Goal:own the bounded book-navigation conflict before adding the supplier-binding API and examples;do not widen a frozen limit or demote unique manual content merely to fit.
-  Evidence0864: `wc -lc` SUMMARY=120L/7841B;formula-checked-recipes=39472B,formula-declarations=39918B,context-sources=40198B;all hard40960B. `rg -c` Markdown links in SUMMARY=118. No empty SUMMARY line is available;two part headings plus118 unique registered chapters consume120 lines. Native renderer/control independently retain119 files including SUMMARY.
-  Policy: LIVE_DOCUMENT_SIZE_CONTAINMENT.md local adoption freezes SUMMARY120L/8192B and per-part700L/40960B. The live registry has the same bound;raising a ceiling to fit content is forbidden without reviewed contract authority. New complete geometry supplier/refusal/lifetime examples need a coherent maintained home beyond the remaining fragments.
-  Post-bounds census:the three affected chapters now40918/40812/40807B,leaving343B combined before their frozen per-part limits. Complete supplier binding/refusal/lifetime examples need a coherent home;fragmentary append pressure is owned here.
-  Concrete proposal: new annexes/drafting-program-geometry.md for existing formula/native uses,creator requests,complete work and upcoming bindings. Preserve old anchors with short
-  links;update all in-repo routes and Rustdoc inclusions. Add one SUMMARY row and explicitly review its line bound120→121;leave every chapter byte/line bound unchanged. Fresh book
-  authority/build/routes/complete original-example checks accompany migration.
-  Alternative: keep SUMMARY120 and consolidate existing chapter navigation/content under a reviewed topic grouping,retaining all unique text and old anchor routes. This changes existing browsing structure;do not silently choose it as a numeric workaround. Continue current bounds slice independently;do not start binding until the director chooses.
+  Status: `done`
+  Goal:0865 director2026-11-04 removes ALL book size containment,including chapter/index/aggregate/file-count/width/depth limits and exact growth-authority receipts. Retain structure/path/staged correctness,general task ownership and every non-book size rule.
+  - [x] ROOT CAUSE: `book_integrity_contract.py`:4 pass,rc=0;working/staged checker no longer reads a growth control or size profile. Former policy combined frozen part/index/depth bounds with per-change authorization;user explicitly retires the whole mechanism.
+  - [x] ADDRESSED: same focused command rc=0;150 chapters,deep/wide/large parts and index,aggregate growth and same-size edits pass without receipt. Missing/duplicate/unindexed/escaping/non-UTF8/aliased chapters and invalid staged objects still refuse. Numeric checker skips book measurement entirely;book_summary row/control/writer/obsolete authoring fixtures removed.
+  - [x] NO REGRESSION: measurement_scope_contract.py7 guarded cases and newline_contract.py5 tests pass,rc=0;shared non-book input/storage/Git guards retained. Book integrity working/staged checks pass0. Non-book numerical limits remain;focused existing size refusal controls and build recorded before commit.
+  - [x] LOCKSTEP: explicit local policy/decision/README routing exception,COMMIT/hook/registries/probe consumers/producer dispositions and book updated. LIVE remains G1still6/18 In Progress;MEM/index/ledger/DEV align. No growth receipt or size approval is needed for future book edits.
+  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1038.md`:5 exact Git spans,rc=0;whole0864 task/lesson/ledger and superseded book policy/proofs retained. Retired current control remains in predecessor8152ce3b;public archive/descriptor proof before commit. No retained window changes.
+  - [x] PROMOTION: existing indexed containment decision records director ruling. Focused growth/structure/path/storage pass0. Full producer/file/effect checks expose pre-existing drift,proven in predecessor and owned P1 by G1-SLICE.5b.4c.h2.b.p.inventory-reconcile before push;no full-CI or inventory acceptance claimed. Commit:STITCHCAD-G1-0865.
 - ID: `G1-SLICE.5f.2.dependencies.semantic`
   Status: `pending`
   Goal:actual Root-bound garment/native semantic sources,including Pocket opening kind/domain/state/component recipe and Buttonhole canonical button/derivation;no empty substitute or authored hole length.

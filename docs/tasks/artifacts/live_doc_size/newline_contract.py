@@ -39,7 +39,7 @@ class Newlines(unittest.TestCase):
                     self.assertEqual(int(count.split()[0]), len(body))
 
     def test_native_git_preserves_exact_governed_bytes_under_newline_settings(self):
-        self.compare_storage((API["SOURCE"] + "/introduction.md", API["CONTROL"]))
+        self.compare_storage((API["SOURCE"] + "/introduction.md", API["INDEX"]))
 
     def test_native_git_preserves_the_exact_completed_task_partition_and_sealed_proofs(self):
         self.compare_storage(("docs/tasks/G1-SLICE-garment.md",
@@ -104,7 +104,7 @@ class Newlines(unittest.TestCase):
                             self.assertEqual(raw, stored, "Git storage must match the authority's raw bytes")
 
     def test_effective_attributes_refuse_transformations_and_malformed_native_output(self):
-        paths = {API["SOURCE"] + "/introduction.md", API["CONTROL"]}
+        paths = {API["SOURCE"] + "/introduction.md", API["INDEX"]}
         output = API["git"](ROOT, ["check-attr", "-z", "text", "filter", "ident",
                                    "working-tree-encoding", "--", *sorted(paths)], API["LISTING_BYTES"])
         API["storage_profile"](ROOT, paths)

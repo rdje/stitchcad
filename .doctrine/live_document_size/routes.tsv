@@ -5,11 +5,12 @@
 # which surface row governs that destination, whether the route is for READERS (navigation) or for
 # AUTHORS (overflow — where new prose is told to go), and what bounds it.
 #
+# Director2026-11-04 exempts the product book from all size/growth controls; R01 records that exception.
 # A route whose destination has no row in surfaces.tsv is an unclassified sink and fails the checker.
 # `class` may be `reader_navigation`, `author_overflow`, or `both`.
 #
 #route_id	emitted_by	destination	surface_id	class	lifecycle	pressure_control	notes
-R01	check_readme_stability.sh routing_hint	docs/book/	book_collection	both	maintained_reference	bounded parts/index/depth + exact fresh aggregate/content authority	unique user-facing feature detail and examples; no archival overflow
+R01	check_readme_stability.sh routing_hint	docs/book/	book_collection	both	unbounded_reference	director-exempt from all size containment; structure/link checks only	Unique maintained product documentation; no chapter/index/aggregate/depth cap or growth receipt.
 R02	check_readme_stability.sh routing_hint	docs/tasks/	tasks_collection	author_overflow	partitioned_canonical	per-part + file-count + aggregate ceilings	current work; one file per tree, evidence inside its leaf
 R03	check_readme_stability.sh routing_hint	docs/TASK_TREE.md	task_index	reader_navigation	bounded_snapshot	line/byte/maxline ceilings	the index stays one row per tree; leaf detail never moves here
 R04	check_readme_stability.sh routing_hint	ROADMAP.md	roadmap	reader_navigation	maintained_reference	ceiling + transition debt; section index owed by SPINE.13	priorities and scope, revised under its own disposition log

@@ -31,7 +31,7 @@ def fixture(work, name, part="ok.md"):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--baseline", action="store_true", help="also reproduce the committed0dc4bc7 source in a target copy")
-    parser.add_argument("--refusals-only", action="store_true", help="input guards before book-control bootstrap")
+    parser.add_argument("--refusals-only", action="store_true", help="input guards before book-integrity checks")
     arguments = parser.parse_args()
     base = ROOT / "target/scratch/measurement_scope_contract"
     base.mkdir(parents=True, exist_ok=True)
@@ -96,10 +96,10 @@ def main():
             return 0
         good = fixture(work, "good")
         result, called = run(CHECK, good)
-        require(result.returncode == 0 and called and b"maintained-reference: OK" in result.stdout,
+        require(result.returncode == 0 and called and b"book-integrity: OK" in result.stdout,
                 f"valid ordinary fixture/full canonical book did not pass: {result.stdout[-1800:]!r}")
         guarded += 1
-        print("guard: regular source measured; canonical book check also ran rc=0")
+        print("guard: regular source measured; canonical book structure check also ran rc=0")
         # Redirected metadata belongs to this same repo; no other Git repository is initialized/amended.
         redirected = work / "redirected-worktree"
         redirected.mkdir()
@@ -110,7 +110,7 @@ def main():
             environment.pop(key, None)
         result = subprocess.run(["bash", str(CHECK)], cwd=ROOT, env=environment,
                                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=90, check=False)
-        require(result.returncode == 0 and b"maintained-reference: OK" in result.stdout,
+        require(result.returncode == 0 and b"book-integrity: OK" in result.stdout,
                 f"canonical checker under caller Git overrides refused: {result.stdout[-1600:]!r}")
         require(not (redirected / "target").exists() and not (work / "not-an-index").exists(),
                 "caller-selected metadata/worktree was written")

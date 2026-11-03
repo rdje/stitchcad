@@ -3,11 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-03 UTC)_ — complete geometry work before creator and source processing
+## _(2026-11-03 UTC)_ — director removes all book size containment
 
-0864 freshly charges original names/programme/provider-held content,then derives F+N=E,E+E records and E*S creator inspections with checked arithmetic before ordered quotas. Private admission retains actual canonical owner/policy/demand/shape;no creator scan or geometry lookup runs.
-Focused formula1/rich-empty and native1/three cases pass0:exact quotas,priority,content-first refusal,original pointers and demand equality,all13 native families/repeats. Resource callbacks explicitly isolated from later query-free inspection. Strict selected lint/fmt/Rustdoc4 pass0.
-1037 retains whole0863 task/lesson/ledger,0331 lesson and0083 metadata proofs with five exact Git spans. Promotion declined:existing complete/fresh-work policies;book owns API. G1still6/18;binding awaits owned book-capacity decision;full integration verification deferred.
+0865 retires chapter/index/aggregate/file-count/width/depth caps and exact change-authority receipts. Exempt reference row skips measurement;working/staged checks keep complete local regular UTF-8 Markdown indexing and native object correctness. Shared non-book guards remain.
+Focused unbounded growth/structure4,measurement scope7 and newline/storage5 pass0. Old writer/control/four obsolete fixtures retire;hook,workflow,policy,route/probe consumers and book align. Existing indexed decision records the explicit ruling;no new map row is needed.
+1038 preserves whole0864 and superseded policy/proofs with five exact Git spans;retired control stays in predecessor8152ce3b. Producer/file/effect drift already present there is owned P1 under D156 inventory-reconcile before push. G1still6/18;geometry binding is next.
+
+[Whole0864 geometry-work lesson](docs/history/stitchcad-devnotes-part1038.md) retains exact scope and focused proofs.
 
 [Whole0863 source-port and0331 release-boundary lessons](docs/history/stitchcad-devnotes-part1037.md) retain exact scopes and proofs.
 

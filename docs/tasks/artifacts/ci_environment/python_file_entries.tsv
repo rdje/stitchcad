@@ -198,14 +198,10 @@ docs/tasks/artifacts/history_archive/v3_reader_contract.py	output	G1-SLICE.5b.4c
 docs/tasks/artifacts/history_archive/v3_resource_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a33
 docs/tasks/artifacts/history_archive/v3_transaction_smoke.py	output	G1-SLICE.5b.4c.h2.b.p.o.a34
 docs/tasks/artifacts/live_doc_size/concurrent_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a35
-docs/tasks/artifacts/live_doc_size/maintained_reference.py	output	G1-SLICE.5b.4c.h2.b.p.o.a35
-docs/tasks/artifacts/live_doc_size/maintained_reference_authoring_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a36
-docs/tasks/artifacts/live_doc_size/maintained_reference_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a36
-docs/tasks/artifacts/live_doc_size/maintained_reference_index_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a36
+docs/tasks/artifacts/live_doc_size/maintained_reference.py	reference	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/live_doc_size/measurement_scope.py	output	G1-SLICE.5b.4c.h2.b.p.o.a35
 docs/tasks/artifacts/live_doc_size/measurement_scope_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a36
 docs/tasks/artifacts/live_doc_size/newline_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a37
-docs/tasks/artifacts/live_doc_size/task_source_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a37
 docs/tasks/artifacts/release_contract/approval_identity_probe.py	output	G1-SLICE.5b.4c.h2.b.p.o.a38
 docs/tasks/artifacts/seam_partition/cumulative_quantization_prototype.py	reference	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/seam_partition/nonuniform_ease_oracle.py	reference	G1-SLICE.5b.4c.h2.b.p.v
@@ -245,3 +241,4 @@ docs/tasks/artifacts/formula_structure/irrational_platform.py	native	G1-SLICE.5b
 docs/tasks/artifacts/ci_environment/python_search_capture_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a40
 docs/tasks/artifacts/ci_environment/python_numerical_inventory_contract.py	reference	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a41
+docs/tasks/artifacts/live_doc_size/book_integrity_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a36

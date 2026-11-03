@@ -28,6 +28,9 @@
   purpose, minimal verified first-use path, architecture summary and canonical navigation remain
   directly visible there. Containment routes changing detail and chronology away; it does not
   off-load the landing function.
+- **Book exception — director2026-11-04:** the routed product book has no size containment or
+  growth-authority record. LIVE_DOCUMENT_SIZE_CONTAINMENT.md records this explicit exception;
+  normal chapter/index/link correctness and all other destinations' controls remain.
 <!-- README-POLICY-LOCAL-ADOPTION:END -->
 
 ---

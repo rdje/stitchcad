@@ -29,20 +29,12 @@
   content.
 - **Locality:** the registry and every path in it are repository-root-relative; regenerable scratch
   lives under `target/`. No absolute, escaping or off-volume path may appear in the data plane.
-- **Serialization:** global surfaces/routes retain bounded TSV. The book additionally uses one
-  bounded UTF-8 JSONL header/record (`.doctrine/live_document_size/maintained_reference.jsonl`) and
-  a local Python3.9+/native-Git checker, adopted by `G1-SLICE.6.5.book.2`. This is the maintained-reference
-  contract family; the neutral package and version-retention registry remain unadopted.
-- **Maintained book:** unique browsable product/specification prose keeps semantic parts, complete
-  SUMMARY and depth-three navigation. Parts retain700L/40960B/440B; SUMMARY retains120L/8192B/240B.
-  Aggregate targets are explicitly inapplicable; every content/count change requires exact native-Git
-  baseline/delta/hash and a newly completed task. Stale/reused/banked authority refuses. The existing
-  size-check entry verifies this canonical book unconditionally after numeric checks; fixture root
-  overrides cannot select another book. Source/workspace preflight precedes scratch/part measurements.
-  Governed Markdown/control Git attributes disable clean transformations; effective attributes are
-  checked so committed bytes retain the exact recorded digest. Content width excludes LF/optional CR.
-  Fresh task ownership covers the bounded root/linked same-family siblings, including historical
-  completed-owner detection and complete authoring-source freezing; the canonical graph stays live.
+- **Book exemption — director2026-11-04:** the product book,including SUMMARY,is outside all size
+  containment. No chapter/index/aggregate/file-count/line-width/navigation-depth cap,pressure
+  target,debt baseline or exact growth-authority receipt applies. This overrides book-directed
+  requirements in the neutral body and README routing policy. Registry class unbounded_reference
+  records the explicit exception. General task ownership and working/staged book structure,path,
+  index and publication-link correctness remain;the retired policy/control are retained in part1038.
 - **Landing-page identity:** top-level `README.md` is the rendered project landing page. Its purpose,
   verified first-use path, architecture summary and canonical navigation stay directly visible there;
   containment routes changing detail and chronology away, it does not off-load the landing function.

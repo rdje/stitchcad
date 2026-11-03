@@ -3,7 +3,7 @@
 #
 # THE RULE: every live document in this repository is classified in the containment data plane
 # (.doctrine/live_document_size/surfaces.tsv) with an owner, a lifecycle class, a health target and an
-# INCLUSIVE enforcement ceiling; every route a bounded surface emits ends at a classified destination
+# INCLUSIVE enforcement ceiling,except the director-exempt product book; every route ends at a classified destination
 # (routes.tsv); and the resulting TREE — not the staged diff — is inside those bounds.
 #
 # It refuses on: an unclassified tracked Markdown surface; a malformed registry row (field count,
@@ -43,7 +43,7 @@ cd "$ROOT" || exit 2
 SURFACES="$REGISTRY/surfaces.tsv"
 ROUTES="$REGISTRY/routes.tsv"
 SCRATCH_BASE="$ROOT/target/doctrine_scratch"
-LIFECYCLES='bounded_snapshot partitioned_canonical maintained_reference generated_projection rolling_ledger archive_terminal external_terminal frozen_legacy'
+LIFECYCLES='bounded_snapshot partitioned_canonical maintained_reference generated_projection rolling_ledger archive_terminal external_terminal frozen_legacy unbounded_reference'
 
 for f in "$SURFACES" "$ROUTES"; do
   if [ ! -f "$f" ]; then
@@ -104,8 +104,13 @@ evaluate() { # $1 surfaces · $2 routes · $3 measurements · $4 tracked-md list
       HL[sid]=$11; HB[sid]=$12; HM[sid]=$13
       CL[sid]=$14; CB[sid]=$15; CM[sid]=$16; CF[sid]=$17; AL[sid]=$18; AB[sid]=$19
       EMPTY[sid]=($10 == "0") ? 1 : 0
-      if ($3 !~ /^(file|list|collection|binary_collection|external)$/) bad(sid ": unknown kind `" $3 "`")
+      if ($3 !~ /^(file|list|collection|binary_collection|external|reference)$/) bad(sid ": unknown kind `" $3 "`")
       if (!($4 in OKLC))                              bad(sid ": unknown lifecycle class `" $4 "`")
+      if ($3 == "reference" || $4 == "unbounded_reference") {
+        if (sid != "book_collection" || $2 != "docs/book/src/" || $3 != "reference" || $4 != "unbounded_reference")
+          bad(sid ": only the director-exempt product book may be an unbounded reference")
+        for (c = 11; c <= 20; c++) if ($c != "-") bad(sid ": exempt book must carry no size/debt control")
+      }
       if ($5 == "" || $5 == "-")                      bad(sid ": no owner")
       if ($6 == "" || $6 == "-")                      bad(sid ": no authority")
       if ($2 ~ /^\// || $2 ~ /^~/ || $2 ~ /\/(Users|home|private|Volumes)\//)
@@ -145,11 +150,11 @@ evaluate() { # $1 surfaces · $2 routes · $3 measurements · $4 tracked-md list
 
     END{
       for (i = 1; i <= nt; i++)
-        if (!(TRACKED[i] in PARTOF))
+        if (!(TRACKED[i] in PARTOF) && !(LIFE["book_collection"] == "unbounded_reference" && TRACKED[i] ~ /^docs\/book\/src\//))
           bad("unclassified live surface: " TRACKED[i] " is tracked and claimed by no registry row")
 
       for (sid in SEEN) {
-        if (KIND[sid] == "external") continue
+        if (KIND[sid] == "external" || KIND[sid] == "reference") continue
         p = nparts[sid]+0
         if (p == 0 && EMPTY[sid] != 1)
           bad(sid ": its path/glob matched no file and meas_files is not declared 0 — a silent under-match is how a collection loses its bounds")
@@ -329,7 +334,7 @@ measure_registry "$SURFACES" "$SCRATCH/measurements.tsv" || exit 1
 evaluate "$SURFACES" "$ROUTES" "$SCRATCH/measurements.tsv" "$SCRATCH/tracked_md.txt"
 rc=$?
 [ "$rc" -eq 0 ] || exit "$rc"
-# Numeric fixture overrides never select a different book authority. Normal hook/CI invocations
-# always validate this checkout's complete maintained reference, independently of changed paths.
+# Book correctness is independent of size containment. Numeric fixture overrides cannot select
+# another canonical book; this read-only check imposes no size limits or growth receipt.
 python3 -I -B "$BOOK_AUTHORITY_ROOT/docs/tasks/artifacts/live_doc_size/maintained_reference.py"
 exit $?

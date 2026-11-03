@@ -59,7 +59,7 @@ def parts(root_value, registry, output):
         rows += 1
         READER["need"](rows <= 64, "budget", "measurement registry population")
         identity, value, kind = fields[:3]
-        if kind == "external":
+        if kind in ("external", "reference"):
             names = []
         elif kind == "file":
             names = [value]
@@ -94,7 +94,7 @@ def tracked(root_value, output):
     PROFILE["workspace"](root)
     path, _relative = local(output, root)
     PROFILE["producer_output_path"](ROOT, path)
-    listing = READER["git"](root, ["ls-files", "-z", "--", "*.md"], LIMIT, literal=False)
+    listing = READER["git"](root, ["ls-files", "-z", "--", "*.md", ":(exclude)docs/book/src/**"], LIMIT, literal=False)
     names = [READER["portable"](item.decode("utf-8")) for item in listing.split(b"\0") if item]
     READER["need"](len(names) <= 8192, "budget", "tracked Markdown population")
     PROFILE["plan_producer"](ROOT, sources=(Path(__file__),

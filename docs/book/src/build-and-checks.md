@@ -4,13 +4,13 @@ New task lines: 400 UTF-8 bytes max.
 
 [Checks](annexes/publication-checks.md#checks).
 
-Book changes require a completed owning leaf and exact maintained-reference authority before
-staging. Consume the authority producer's terminal result before starting the commit workflow.
-The doctrine enforcer checks working-tree content;the pre-commit hook additionally runs
-`maintained_reference.py --index` against exact staged book/control/registry/task objects. It
-refuses old authority,unstaged task completion,missing chapters,changed profiles,nonregular/merge
-entries or index drift. This reader changes no index or canonical input. Focused finite controls
-live in docs/tasks/artifacts/live_doc_size/maintained_reference_index_contract.py.
+The director2026-11-04 removes all book size containment:chapters,SUMMARY,aggregate content,
+file count,line width and navigation depth have no policy limits. Book edits need no growth
+receipt or record-change command. General task ownership and accurate product documentation
+remain required. Hooks run read-only working/staged book-integrity checks for complete chapter
+indexing,regular local inputs and valid native objects. Publication checks retain links,anchors,
+learning routes and current API/status correctness. The focused contract lives in
+`docs/tasks/artifacts/live_doc_size/book_integrity_contract.py`.
 
 [Full-text book search](annexes/book-search.md) indexes complete chapters with compact result
 grouping and checks every chapter,text posting and result landing during publication.

@@ -3,11 +3,11 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0864 — complete actual geometry work admission
+## STITCHCAD-G1-0865 — remove all book size containment
 
-Fresh original content and checked complete geometry occurrence,record and creator-inspection bounds now precede classification,reservation and lookups. Preserve original canonical owner,selected policy and first content/quota causes.
+Director removes every chapter,index,aggregate,count,width,depth and growth-authority restriction. Book edits need no size receipt. Working/staged structure,path/encoding and normal publication correctness remain;non-book containment is unchanged.
 
-Focused formula1/rich-empty,native1/three cases,strict lint/fmt and Rustdoc4 pass0;book and exact1037 continuity synchronized. G1still6/18 In Progress;binding and full verification remain. Next:director decision on the frozen full book index and geometry documentation home.
+Focused unbounded-book4,scope7,newline/storage5 pass0;book/policy/workflow/hooks/registries align. Exact1038 history retains five source spans. G1still6/18 In Progress. Pre-existing producer inventory drift is owned P1 before push;geometry binding resumes next.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -21,6 +21,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0864 and superseded book policy/control](docs/history/stitchcad-devnotes-part1038.md) retain exact Git source bytes.
 
 [Whole0863 source port,0331 approval lesson and0083 metadata proofs](docs/history/stitchcad-devnotes-part1037.md) retain exact source bytes.
 

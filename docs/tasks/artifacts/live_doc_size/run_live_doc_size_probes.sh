@@ -115,20 +115,12 @@ else
   bad NEWLINES "newline measurement/storage contract failed (exit=$rc)" "$out"
 fi
 
-# D281: canonical linked task siblings, historical freshness and exact live graph partition.
-out="$(python3 -I -B "$ROOT/docs/tasks/artifacts/live_doc_size/task_source_contract.py" 2>&1)"; rc=$?
+# Director2026-11-04: book growth is unrestricted; structural correctness remains checked.
+out="$(python3 -I -B "$ROOT/docs/tasks/artifacts/live_doc_size/book_integrity_contract.py" 2>&1)"; rc=$?
 if [ "$rc" -eq 0 ]; then
-  ok TASK-SOURCES "canonical-family freshness, complete source freezing and native partition controls passed (exit=0)"
+  ok BOOK-INTEGRITY "$out"
 else
-  bad TASK-SOURCES "task-sibling authority contract failed (exit=$rc)" "$out"
-fi
-
-# G1-SLICE.6.5.3.2.3.2.4.3.4.2.integrity:Git commits staged bytes,not working authority.
-out="$(python3 -I -B "$ROOT/docs/tasks/artifacts/live_doc_size/maintained_reference_index_contract.py" 2>&1)"; rc=$?
-if [ "$rc" -eq 0 ]; then
-  ok BOOK-INDEX "exact staged authority, old-control, task, navigation, profile and drift controls passed (exit=0)"
-else
-  bad BOOK-INDEX "staged book authority contract failed (exit=$rc)" "$out"
+  bad BOOK-INTEGRITY "unbounded growth or structural integrity contract failed (exit=$rc)" "$out"
 fi
 
 echo

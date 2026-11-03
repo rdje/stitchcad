@@ -71,8 +71,7 @@ runtime and approval correctness remain with their canonical contracts and later
 D377 reconciles the checker with the registered glossary/topic-index routes after their optional
 standalone headings retired in0788/0801. The glossary must follow the seven learning chapters and
 precede annexes;the topic index must be the final chapter after annexes. Specification routes stay
-inside that annex boundary. All chapter/link/index coverage checks and the120-line SUMMARY limit
-remain. Focused controls accept current/historical headings and reject eight missing/misplaced
+inside that annex boundary. Chapter/link/index coverage remains;the director2026-11-04 retires the SUMMARY size limit. Focused controls accept current/historical headings and reject eight missing/misplaced
 route/part cases;historical AST checks preserve all other checker behavior exactly.
 
 Fixtures validate complete copied populations before creation and teardown before recursive deletion,
@@ -132,71 +131,38 @@ Compiled production-body omissions must trigger independent assertion failures. 
 write neither off-volume nor to Git. Environment probes watch both contracts; `make probes` also runs
 the publication entry. See [build/checks](../build-and-checks.md) for local stores and remaining audits.
 
-## Exact authority for maintained book changes
+## Book integrity without size containment
 
-The book is a maintained product reference. Its aggregate follows implemented product scope through
-an exact change record, with its existing chapter limits retained:700 lines,40960 bytes and440 bytes
-per content line. SUMMARY retains120 lines/8192 bytes/240 bytes per line, indexes every chapter once,
-and allows at most three navigation levels. The numerical aggregate targets are explicitly inapplicable;
-these part/index limits and a fresh record govern the collection instead.
+The director2026-11-04 removes every book size limit and growth-authority requirement. Chapter
+and index lines/bytes/width,file counts,aggregate content and navigation depth are unrestricted.
+Book changes require ordinary task ownership and accurate complete documentation;no numerical
+headroom,receipt,baseline/delta approval or record-change step is needed.
 
-After focused checks and completing the owning task leaf, record the proposal before staging:
+The legacy-named maintained_reference.py now checks structure only:
 
 ```bash
-python3 -I -B docs/tasks/artifacts/live_doc_size/maintained_reference.py record-change \
-  --task G1-SLICE.new_book_leaf --reason 'Describe this exact book change'
+python3 -I -B docs/tasks/artifacts/live_doc_size/maintained_reference.py
+python3 -I -B docs/tasks/artifacts/live_doc_size/maintained_reference.py --index
 ```
 
-Use the actual new leaf and reason for each change. The command validates the complete proposal,
-prepares a private file under target, then atomically replaces only the canonical control. It edits
-no chapter and preserves a conflicting caller edit. A failure before replacement leaves the previous
-record; owned temporary files are cleaned. Preparation is repeatable within the same uncommitted
-leaf; a previously completed leaf cannot authorize a later change.
+Both modes require every Markdown chapter in SUMMARY exactly once,valid local chapter paths and
+UTF-8 text. Missing,duplicate,self-referential,escaping or unindexed chapters refuse. Working
+sources must be regular,on the repository volume and outside nested repositories;staged entries
+must be ordinary stage-zero native objects. Caller Git overrides cannot redirect staged checking;
+the original object listing must remain stable. No canonical file,index or book control is written.
+Navigation indentation must retain parents;there is no maximum nesting depth.
 
-The bounded UTF-8 JSONL control has one metadata header and one record, with8192 total bytes and6144
-raw record bytes. It binds native Git baseline, exact file/line/byte deltas and framed Markdown digest
-to a newly completed task. Even an edit with the same byte count needs a new record. Missing, stale,
-reused, banked or inexact authority refuses, alongside incomplete navigation and oversized parts.
-This is numerical document-change authority, never cryptographic signing or human release approval.
+Focused controls exceed all former book size axes and permit edits without a receipt,including
+same-size content changes. Independent missing/duplicate/path/encoding/staged-mode refusals remain.
+The numeric document checker excludes the book from measurements and budgets;all non-book
+containment and its original refusal probes remain. Full publication continues to check rendered
+coverage,links,anchors,learning routes and declared API/status owners. These structural checks
+make no numerical,sewing,runtime or release-readiness claim.
 
-Git stores the governed Markdown and JSONL bytes unchanged. The repository attributes explicitly
-disable text/newline conversion, clean filters, identifier expansion and working-tree encoding for
-these paths; the verifier checks their effective attributes before accepting authority. A local or
-nested override that enables a transformation refuses. Authors may use LF or CRLF: byte counts and
-digests include the original line endings, while content width excludes LF and one preceding CR.
-Recording never silently normalizes a chapter. The pinned completed garment task graph and sealed
-Markdown history also retain exact stored bytes. Sealed source copies may end with a blank line:
-their scoped whitespace rule preserves that EOF while ordinary source whitespace remains strict.
-
-Task ownership follows the canonical family under docs/tasks: the root named for its Tree ID and
-linked siblings named with that Tree ID plus a hyphen and suffix. For example, G1-SLICE.md links the
-G1-SLICE-execution.md frontier. Links may traverse siblings and return to the root. The fixed reader
-profile permits32 family files, each at most98304 bytes; directory/native-listing censuses are bounded.
-Missing, unlinked, unsafe or duplicate owners refuse. A newly completed owner in a linked sibling is
-valid; copying a previously completed sibling owner into the main file cannot make it fresh.
-
-The baseline checks every historical family member, including a member whose link later disappeared.
-Authoring freezes every current family source and rechecks its census before replacement. Late sibling
-edits preserve the caller's change and prior authority. The completed structural/input/garment graph
-is retained as a live canonical sibling with all98 node identities/statuses/proof pointers; its exact
-native source copy is checked, and no task is replaced by an anonymous history summary.
-
-Completed chronological evidence can move to sealed history after checking its current nodes and
-consumers. Record572 preserves the complete old verification/commit journal; all seven task IDs have
-current completed nodes and21 current proof links retain their fragments. This restores the generated
-orientation map's existing bound while preserving the neutral generator and every historical byte.
-
-The existing size-check command runs the canonical book verifier for normal commit/CI checks. Numeric
-fixture overrides cannot replace that book; caller Git directory/index/configuration cannot redirect
-its baseline. Read-only checking creates no book control or build store. Native measurement paths
-are preflighted before opening bodies, including symlink/special-file/repository/volume boundaries.
-
-Scoped acceptance covers reader23, guarded authoring8 and native newline/storage3 controls, with
-native wc/SHA calibration and controlled rename/late-input failures. The actual installation commit
-03460b0 passes committed-mode verification; ordinary candidate directories are not simulated commits.
-The default numeric/book gate and its refusal probes remain required. These checks prove document
-scope/freshness, not semantic correctness, cross-platform runtime parity, physical support or release
-readiness. Broader product verification stays with G1 integration and the production gates.
+The superseded policy,its exact proofs and last control remain in retained history;Git also keeps
+the retired writer and tests. Shared task/path/Git helpers retain their independent non-book
+contracts for continuity and measurement consumers. Scoped newline/storage controls still protect
+original task/history bytes and ordinary source whitespace.
 
 ## Checks
 

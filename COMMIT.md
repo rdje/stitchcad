@@ -75,14 +75,10 @@ apply to code changes.
 3. Update every relevant tracked doc (`MEMORY.md`, `CHANGELOG.md`, `DEV_NOTES.md`,
    `LIVE_STATUS.md`, `README.md`, the owning `docs/tasks/<TREE>.md`, `docs/decisions/`,
    `docs/book/` as applicable). Treat markdown sync as systematic, not optional.
-   When book content changes, complete its owning leaf and record the exact proposal before staging:
-   `python3 -I -B docs/tasks/artifacts/live_doc_size/maintained_reference.py record-change --task <leaf> --reason '<scope>'`.
-   This writes only the canonical book control after guarded temporary preparation. Rerun it if book
-   inputs change; prior authority or a prior completed leaf cannot license a new change. The commit/CI
-   gate checks exact bytes/counts, part/index bounds and fresh Git/task binding; it grants no human approval.
-   Consume the authority producer's terminal result before staging; a yielded exec is still running.
-   The pre-commit hook independently verifies exact staged book/control/registry/task objects with
-   `maintained_reference.py --index`; working-tree authority cannot license older staged bytes.
+   Book edits follow normal task ownership and publication correctness. The director2026-11-04
+   removes every book size/growth-authority restriction. No record-change command or receipt is
+   required. Hooks check complete working/staged Markdown indexing and regular local sources;
+   the book has no part,index,aggregate,file-count,line-width or navigation-depth ceiling.
 4. Write a concise message to `git_message_brief.txt`.
 5. Stage only the intended tracked files (`git add <files>`).
 6. Commit: `git commit -F git_message_brief.txt` (the pre-commit hook runs the doctrine

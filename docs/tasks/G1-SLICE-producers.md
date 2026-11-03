@@ -442,7 +442,7 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a35`
   Status: `pending`
-  Goal: D156 P1 Maintained authority writer,numeric scope helper and concurrent checker fixtures; role inspection recorded0546,complete runtime audit pending.
+  Goal: D156 P1 Read-only book/task input helpers,numeric scope and concurrent checker fixtures;book authority writer retired0865; role inspection recorded0546,complete runtime audit pending.
   Paths: docs/tasks/artifacts/live_doc_size/maintained_reference.py;docs/tasks/artifacts/live_doc_size/measurement_scope.py;docs/tasks/artifacts/live_doc_size/concurrent_contract.py
   Schedule: existing producer/file verification milestone after active paired feature scope,
   before locality signoff. No historical author,installer or certificate controller is run by inventory.
@@ -451,8 +451,8 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a36`
   Status: `pending`
-  Goal: D156 P1 Maintained authority and numeric scope fixture controls; role inspection recorded0546,complete runtime audit pending.
-  Paths: docs/tasks/artifacts/live_doc_size/maintained_reference_contract.py;docs/tasks/artifacts/live_doc_size/maintained_reference_authoring_contract.py;docs/tasks/artifacts/live_doc_size/maintained_reference_index_contract.py;docs/tasks/artifacts/live_doc_size/measurement_scope_contract.py
+  Goal: D156 P1 Numeric scope and unbounded-book structural fixture controls;old authority fixtures retired0865; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/live_doc_size/book_integrity_contract.py;docs/tasks/artifacts/live_doc_size/measurement_scope_contract.py
   Schedule: existing producer/file verification milestone after active paired feature scope,
   before locality signoff. No historical author,installer or certificate controller is run by inventory.
   Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
@@ -460,8 +460,8 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a37`
   Status: `pending`
-  Goal: D156 P1 Native newline and task-family source fixtures; role inspection recorded0546,complete runtime audit pending.
-  Paths: docs/tasks/artifacts/live_doc_size/newline_contract.py;docs/tasks/artifacts/live_doc_size/task_source_contract.py
+  Goal: D156 P1 Native newline/storage fixtures;old book-authority task-family fixture retired0865; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/live_doc_size/newline_contract.py
   Schedule: existing producer/file verification milestone after active paired feature scope,
   before locality signoff. No historical author,installer or certificate controller is run by inventory.
   Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
@@ -968,3 +968,9 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer.platform`
   Status: `done`
   Goal:0666 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part826md).
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.inventory-reconcile`
+  Status: `pending`
+  Priority: P1 before the next push/full producer signoff;owner repo-local,D156.
+  Goal:0865 owns pre-existing producer/file/effect drift found during book retirement. Reproduce with producer_census.py and validate_effect_plan/validate_file_plan;predecessor8152ce3b already lacks tracked drafting_dependencies/plan_sources.py in producers,8 effect records and11 Python file records for later platform,numerical and book-tool additions.
+  Schedule:reconcile exact current roles and canonical audit owners after the requested book-policy slice,before any push;do not treat inventory as runtime locality proof. Existing live source/audit nodes remain;no other repository is written.
