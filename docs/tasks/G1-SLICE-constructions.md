@@ -935,20 +935,20 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0861 original native fields under genuine mixed consumers;[whole scope/proofs](../history/stitchcad-devnotes-part1035.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.requests`
-  Status: `in_progress`
+  Status: `done`
   Goal:genuine earlier creating-step/reference request and authentic planned-family port,including unnamed outputs;classify all creators,refuse ambiguous/self/future before live lookup;no global name manufacture.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.requests.classify`
   Status: `done`
-  Goal:0862 classify every original formula/native geometry occurrence against complete actual native creators;retain genuine consumers/creating steps and first refusals,no synthetic names or source calls.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract geometry_requests`:1 pass/22 cases,rc=0;full-programme scan retains actual first/second candidates,including later duplicates;all13 native output families exhaustively classified.
-  - [x] ADDRESSED: same focused command rc=0;existing/earlier fixed/unnamed variable,self/future/ambiguity/kind/tag/unsupported guards,actual consumer/normalized/input pointers,nth/fused/no callbacks. No earlier-prefix fallback or invented global name;no geometry source accepted.
-  - [x] NO REGRESSION: focused `initial_binding::formula_geometry`:1 pass/rich-empty cases,rc=0;Root-first and genuine mixed positions/formula/native merge,actual earlier Point/Arc inputs,zero callbacks. Strict selected clippy/fmt and scoped geometry_requests Rustdoc4 pass0. Fixture unused Offset self-source and bounded-window lint repaired before final pass.
-  - [x] LOCKSTEP: book classification/API/example and plan updated;guarded build/example/render checks recorded before commit. README/LIVE reviewed,G1still6/18 In Progress;MEM/index/ledger/DEV updated. Root-source programme-creator guard remains defensive behind initial-source rejection;whole .5f.2.verify deferred until agreed integration complete.
-  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1035.md`:3 exact Git spans,rc=0;whole0861 task/lesson/ledger retained. Public reader/descriptor comparison before commit;no retained window changed or ceiling raised.
-  - [x] PROMOTION: promotion: declined (existing earlier-only/native-source principles;book owns request API). Native22/formula rich-empty/doc4/strict lint pass0;request sources and complete bounds remain separate. Commit:STITCHCAD-G1-0862.
+  Goal:0862 actual creator classification and genuine earlier-step requests;[whole scope/proofs](../history/stitchcad-devnotes-part1036.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.requests.port`
-  Status: `pending`
-  Goal:readonly request facet for actual unnamed earlier variable geometry;reuse authentic DraftingPlannedOutputSource fields/parents and original typed refusals. Require complete bound work before any callback;no fabricated named-output occurrence or live planned output. Actual source binding remains .geometry.bind.
+  Status: `done`
+  Goal:0863 readonly authentic family facet for actual unnamed earlier variable geometry;reuse original fields/parents/typed causes,no fabricated named output. Complete geometry bounds precede later core callbacks;binding remains .geometry.bind.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract output_role_binding`:1 pass,rc=0;existing named facet requires DraftingOutputPosition,whereas new genuine creating-step/reference requests retain unnamed outputs without synthesizing name metadata.
+  - [x] ADDRESSED: same focused command rc=0;new DraftingGeometryStepProvider returns original authentic Offset field/input/frame/snapshot or unchanged SourceError::Rejected;raw response remains Copy with non-Clone/non-Debug provider records. Zero callbacks during classification;one explicit raw-facet call per new success/refusal branch.
+  - [x] NO REGRESSION: existing named-output faults and complete held-resource refusal retained in same focused test,rc=0;new raw exercise follows original counter assertions after initial fixture-phase interference was repaired. Selected strict clippy and planned::DraftingGeometryStepProvider Rustdoc1 pass0;fmt checked before commit.
+  - [x] LOCKSTEP: book raw source facet/example and request cross-link updated;guarded build/exact example/render proof before commit. README/LIVE reviewed,G1still6/18 In Progress;MEM/index/ledger/DEV align. Core geometry callbacks remain unimplemented until complete bounds;no source binding or whole integration claim.
+  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1036.md`:3 exact Git spans,rc=0;whole0862 task/lesson/ledger retained. Public read/descriptor comparison before commit;no immutable window changed or ceiling raised.
+  - [x] PROMOTION: promotion: declined (existing immutable authentic-family/no-value contracts;book owns facet API). Focused native1/strict lint/Rustdoc1 pass0;requests parent closes,complete geometry bounds next;whole .5f.2.verify stays deferred. Commit:STITCHCAD-G1-0863.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bounds`
   Status: `pending`
   Goal:complete original geometry occurrence/association/content work and checked arithmetic before reservations,queries or child source work;actual owners/selected explicit policies,no capacity/CPU/runtime grant.

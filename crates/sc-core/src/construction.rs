@@ -63,9 +63,9 @@ pub use context::{
     DraftingContext, DraftingContextError, DraftingContextSource, DraftingGeometryBinding,
     DraftingGeometryBindingIssue, DraftingGeometryError, DraftingGeometryMismatch,
     DraftingGeometryReference, DraftingGeometrySource, DraftingGeometrySourceResult,
-    DraftingInitialInputProvider, DraftingInitialInputSource, DraftingInitialInputSourceResult,
-    DraftingPlannedOutput, DraftingPlannedOutputProvider, DraftingPlannedOutputSource,
-    DraftingPlannedOutputSourceResult, DraftingSourceRecord,
+    DraftingGeometryStepProvider, DraftingInitialInputProvider, DraftingInitialInputSource,
+    DraftingInitialInputSourceResult, DraftingPlannedOutput, DraftingPlannedOutputProvider,
+    DraftingPlannedOutputSource, DraftingPlannedOutputSourceResult, DraftingSourceRecord,
 };
 mod operation_input;
 pub use operation_input::{

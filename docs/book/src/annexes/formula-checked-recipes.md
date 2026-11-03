@@ -580,5 +580,6 @@ Neither an individual Earlier request nor a successful prefix certifies the comp
 The iterator allocates no buffers or diagnostic boxes. Each occurrence scans actual native
 creators in the complete mixed sequence;this grants no complete work/CPU allowance. The later
 controller must admit complete geometry work before reservations or source callbacks,then retain
-all bindings or the first original refusal. The source port,complete bounds,actual supplier
-bindings and coupled whole-programme verification remain separately owned.
+all bindings or the first original refusal. The [unnamed planned-source port](drafting-context-sources.md#source-facet-for-unnamed-earlier-geometry)
+is implemented;complete bounds,actual supplier bindings and coupled whole-programme verification
+remain separately owned.

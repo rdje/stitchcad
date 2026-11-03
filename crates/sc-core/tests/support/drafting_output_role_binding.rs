@@ -208,6 +208,46 @@ impl DraftingPlannedOutputProvider<EmptyHost> for Provider<'_> {
         })
     }
 }
+impl DraftingInitialInputProvider<EmptyHost> for Provider<'_> {
+    type Metadata = ();
+    fn initial_input<'a>(
+        &'a self,
+        _: usize,
+        _: sc_core::recipe::FormulaCanonicalInput<'a>,
+    ) -> DraftingInitialInputSourceResult<'a, Self::Metadata, Self::Snapshot, Self::Error> {
+        Err(SourceError::Missing)
+    }
+}
+impl DraftingGeometryStepProvider<EmptyHost> for Provider<'_> {
+    fn planned_geometry<'v, 'i>(
+        &'v self,
+        request: DraftingGeometryStepRequest<'v, 'i>,
+    ) -> DraftingPlannedOutputSourceResult<'v, Self::Frame, Self::Snapshot, Self::Error> {
+        self.calls.set(self.calls.get() + 1);
+        let field = self
+            .snapshot
+            .data()
+            .fields
+            .first()
+            .copied()
+            .ok_or(SourceError::Missing)?;
+        let output = DraftingPlannedOutput::Offset(field);
+        if !request.requires_role_binding()
+            || request.reference() != output.reference()
+            || !matches!((request.input(),output.input()),(DraftingOperationInput::OffsetEdge(a),DraftingOperationInput::OffsetEdge(b)) if std::ptr::eq(a,b))
+        {
+            return Err(SourceError::Missing);
+        }
+        if matches!(self.fault, Fault::Source) {
+            return Err(SourceError::Rejected);
+        }
+        Ok(DraftingPlannedOutputSource {
+            output,
+            frame: &self.base.frame,
+            snapshot: &self.snapshot,
+        })
+    }
+}
 fn root(fixture: fixture::Fixture) -> TestResult<DesignInputs<EmptyHost>> {
     let canonical = CanonicalInputs::new(vec![], vec![])?;
     let parameters = DesignParameters::new(vec![], &canonical)?;
@@ -471,6 +511,91 @@ fn complete_role_sources_keep_actual_owners_records_and_first_later_cause() -> T
             })
         ));
         assert_eq!(source.calls.get(), 2);
+        if matches!(fault, Fault::None | Fault::Source) {
+            // Exercise the raw source facet, not the future geometry admission/binding controller.
+            let consumer = OffsetConstruction::new(
+                id(20000),
+                DirectedRange {
+                    range: EdgeRange::whole(fields.first().ok_or("actual field")?.logical_output()),
+                    direction: Direction::Original,
+                },
+                OffsetSide::Right,
+                id(20001),
+            )?;
+            let raw = DraftingProgramInputs::new(
+                context,
+                vec![
+                    DraftingProgramStep::Drafting(DraftingOperationInput::OffsetEdge(&input)),
+                    DraftingProgramStep::Drafting(DraftingOperationInput::OffsetEdge(&consumer)),
+                ],
+            );
+            let program = raw
+                .admit(&raw_policy)
+                .map_err(|e| e.to_string())?
+                .normalized()
+                .map_err(|e| e.to_string())?;
+            let names = DraftingProgramNameInputs::new(&program, vec![], vec![]);
+            let work = names.admit_name_work(&policy).map_err(|e| e.to_string())?;
+            let positions = work.bind_output_positions().map_err(|e| e.to_string())?;
+            let roles = positions.bind_role_sources().map_err(|e| e.to_string())?;
+            let initial = roles.bind_initial_sources().map_err(|e| e.to_string())?;
+            let namespace = initial
+                .bind_initial_namespace()
+                .map_err(|e| e.to_string())?;
+            let sources = namespace
+                .check_root_sources(sc_core::recipe::FormulaSourceCheckLimits::new(
+                    1, 100, 0, 1000,
+                ))
+                .map_err(|e| e.to_string())?;
+            let dependencies = sources
+                .proof()
+                .prepare_dependencies(sc_core::recipe::FormulaSourceDependencyLimits::new(1, 0, 2))
+                .map_err(|e| e.to_string())?;
+            let graph = dependencies
+                .admit_acyclic(sc_core::recipe::FormulaSourceCycleLimits::new(1, 2))
+                .map_err(|e| e.to_string())?;
+            let op = DraftingProgramOrderLimits::new(100, 1000, 10000);
+            let order = namespace.check_order(&op).map_err(|e| e.to_string())?;
+            let inputs = sources
+                .dependency_inputs(&order, &graph)
+                .map_err(|e| e.to_string())?;
+            let cp = DraftingProgramCanonicalLimits::new(0, 0);
+            let canonical = inputs
+                .bind_canonical_inputs(&cp)
+                .map_err(|e| e.to_string())?;
+            source.calls.set(0);
+            source.base.trace.set(0);
+            let request = canonical
+                .geometry_requests()
+                .find(|r| r.occurrence().position() == Some(2))
+                .ok_or("unnamed consumer")?;
+            let DraftingProgramGeometryTarget::Earlier(request) =
+                request.target().map_err(|e| format!("{e:?}"))?
+            else {
+                return Err("actual earlier source".into());
+            };
+            assert_eq!(request.step().position(), 1);
+            assert!(request.requires_role_binding());
+            assert_eq!(source.calls.get(), 0);
+            match source.planned_geometry(request) {
+                Ok(response) => {
+                    assert!(matches!(fault, Fault::None));
+                    assert_eq!(response.output.reference(), request.reference());
+                    assert!(
+                        matches!(response.output.input(),DraftingOperationInput::OffsetEdge(actual) if std::ptr::eq(actual,&input))
+                    );
+                    assert!(response.frame.is_same_record(context.frame()));
+                    assert!(response.snapshot.is_same_record(context.snapshot()));
+                    let copied = response;
+                    assert!(copied.snapshot.is_same_record(response.snapshot));
+                }
+                Err(error) => {
+                    assert!(matches!(fault, Fault::Source));
+                    assert_eq!(error, SourceError::Rejected);
+                }
+            }
+            assert_eq!(source.calls.get(), 1);
+        }
     }
     Ok(())
 }

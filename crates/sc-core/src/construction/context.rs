@@ -20,8 +20,8 @@ pub use initial::{
     DraftingInitialInputProvider, DraftingInitialInputSource, DraftingInitialInputSourceResult,
 };
 pub use planned::{
-    DraftingPlannedOutput, DraftingPlannedOutputProvider, DraftingPlannedOutputSource,
-    DraftingPlannedOutputSourceResult,
+    DraftingGeometryStepProvider, DraftingPlannedOutput, DraftingPlannedOutputProvider,
+    DraftingPlannedOutputSource, DraftingPlannedOutputSourceResult,
 };
 
 /// Exact requested geometric output kind and persistent reference, without a live lookup.

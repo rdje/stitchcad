@@ -2,9 +2,9 @@
 use super::{DraftingContextSource, DraftingGeometryReference, DraftingSourceRecord};
 use crate::{
     construction::{
-        ActiveOffsetCandidate, DraftingGeometryNameSource, DraftingOperationInput,
-        DraftingOutputPosition, JoinOutputEdge, MirrorPieceOutputEdge, MirrorPiecePoint,
-        SlashSpreadEdge, TruingOutputEdge,
+        ActiveOffsetCandidate, DraftingGeometryNameSource, DraftingGeometryStepRequest,
+        DraftingOperationInput, DraftingOutputPosition, JoinOutputEdge, MirrorPieceOutputEdge,
+        MirrorPiecePoint, SlashSpreadEdge, TruingOutputEdge,
     },
     design::DesignMetadataHost,
 };
@@ -193,5 +193,39 @@ pub trait DraftingPlannedOutputProvider<H: DesignMetadataHost>: DraftingContextS
     fn planned_output<'v, 'n, 'i>(
         &'v self,
         request: DraftingOutputPosition<'v, 'n, 'i>,
+    ) -> DraftingPlannedOutputSourceResult<'v, Self::Frame, Self::Snapshot, Self::Error>;
+}
+
+/// Readonly authentic planned-family source facet for an actual strictly earlier creating step
+/// and reference, including outputs with no global name. This supplements the named-output port;
+/// callers never manufacture a name, catalogue entry or named-output occurrence to use it.
+///
+/// Core may call only after complete geometry content/work admission, for variable-output
+/// requests. Return an actual already-held `DraftingPlannedOutputSource` with original family
+/// parents, frame and snapshot. The inherited exhaustive resource walk covers all those records.
+/// No lazy allocation, cloning, parent-proof manufacture, values, existing-geometry lookup or
+/// currentness mutation may create a response. Missing/unsupported sources retain original causes.
+///
+/// The raw response grants no source acceptance. The later core controller must check original
+/// creating-input identity, exact reference and original frame/snapshot records before retaining
+/// any complete result. A fixed request needs no source callback. This interface supplies no
+/// geometry work allowance, existing/live planned output or whole-programme proof. Providers and
+/// opaque records need neither Clone nor Debug; the honest immutable port is no security boundary.
+///
+/// ```
+/// use sc_core::{construction::*,design::DesignMetadataHost};
+/// fn original_planned_field<'v,'i,H:DesignMetadataHost,S:DraftingGeometryStepProvider<H> + ?Sized>(
+///     source:&'v S,request:DraftingGeometryStepRequest<'v,'i>)
+///     ->DraftingPlannedOutputSourceResult<'v,S::Frame,S::Snapshot,S::Error> {
+///     source.planned_geometry(request)
+/// }
+/// ```
+pub trait DraftingGeometryStepProvider<H: DesignMetadataHost>: DraftingContextSource<H> {
+    /// Resolve the exact genuine earlier variable-output request to an authentic held family field.
+    /// # Errors
+    /// Original missing, retired, unsupported or current-source cause; no fabricated output.
+    fn planned_geometry<'v, 'i>(
+        &'v self,
+        request: DraftingGeometryStepRequest<'v, 'i>,
     ) -> DraftingPlannedOutputSourceResult<'v, Self::Frame, Self::Snapshot, Self::Error>;
 }

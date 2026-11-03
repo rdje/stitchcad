@@ -558,5 +558,39 @@ Any failure discards the successful local prefix. `DraftingInitialError` keeps o
 Allocation,Canonical,Source,Mismatch,PlannedCreator or Geometry causes with original indexes and
 witnesses. Allocation keeps its TryReserveError inline;boxes compact semantic diagnostics only.
 Debug omits authored names and opaque payloads. The [bounded actual initial namespace](formula-declarations.md#actual-mixed-program-initial-namespace)
-checks reserved/cross-origin/repeated names next. Earlier-only mixed visibility,whole kind/dependency
-checking and values remain later stages.
+checks reserved/cross-origin/repeated names. Earlier-only mixed visibility and whole kind checks
+are implemented in [the ordered programme](formula-declarations.md#complete-dependency-composition);
+complete geometry/semantic binding and values retain their separate stages.
+
+
+## Source facet for unnamed earlier geometry
+
+`DraftingGeometryStepProvider::planned_geometry(request)` is the readonly planned-family facet
+for a genuine `DraftingGeometryStepRequest`. The original named-output port remains available.
+An unnamed earlier output needs no invented global name or named-output occurrence.
+
+The request retains its actual earlier normalized step,original creating input and persistent
+reference. A variable request returns the existing `DraftingPlannedOutputSource`:an authentic
+Offset,Slash,Truing,Mirror or Join field with original family parents and actual frame/snapshot
+records. All held parents,indexes and duplicated snapshots belong in the provider's inherited
+exhaustive resource walk. Providers and opaque records need neither Clone nor Debug.
+
+```rust
+use sc_core::{construction::*,design::DesignMetadataHost};
+fn original_planned_field<'v,'i,H:DesignMetadataHost,S:DraftingGeometryStepProvider<H> + ?Sized>(
+    source:&'v S,request:DraftingGeometryStepRequest<'v,'i>)
+    ->DraftingPlannedOutputSourceResult<'v,S::Frame,S::Snapshot,S::Error> {
+    source.planned_geometry(request)
+}
+```
+
+Return an actual already-held family field or the original typed missing/unsupported/current-source
+cause. No allocation,cloning,manufactured parent proof,authored value,existing-geometry lookup or
+currentness mutation may create a response. A fixed-schema output needs no callback. The focused
+raw-facet test requests an actual unnamed earlier Offset output,retains its original input and
+frame/snapshot loans,and preserves an original provider refusal without translation.
+
+This raw response is not source acceptance. Core calls remain pending until complete geometry
+content/work is admitted. The later binding controller must check original input identity,exact
+reference and original frame/snapshot records,then retain the complete result or first refusal.
+The port grants no geometry work allowance,live planned output,physical result or whole programme.

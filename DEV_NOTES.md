@@ -3,11 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-03 UTC)_ — actual geometry creator classification
+## _(2026-11-03 UTC)_ — source facet for genuine unnamed earlier outputs
 
-0862 preserves original formula/native consumers and merges actual mixed positions after Root sources. Per-use complete native scan catches later duplicate creators before self/future/output checks;fixed outputs retain exact kind/tag,unnamed variable requests retain genuine earlier owners.
-Focused creator1/22 cases and formula1/rich-empty pass0;strict selected clippy/scoped Rustdoc4 pass0. No source calls,values,diagnostic allocation,supplier acceptance or whole-work grant. Complete geometry verification remains deferred.
-1035 retains whole0861 task/lesson/ledger with three exact Git spans. Promotion declined:existing earlier-only/native-source contracts;book owns request API. G1still6/18 In Progress;authentic request source port next.
+0863 separate readonly DraftingGeometryStepProvider uses private actual earlier-step/reference requests and existing authentic family/source records. Named-output port remains intact;raw responses preserve original field/input/frame/snapshot and typed causes without values or manufacture.
+Focused existing role-source1 adds actual unnamed Offset success/original refusal;original named faults and held-content quota remain. Strict selected lint/Rustdoc1 pass0. Core callbacks,bounds and source binding remain later;raw fixture phases separated after counter interference.
+1036 retains whole0862 task/lesson/ledger with three exact Git spans. Promotion declined:existing authentic-family/no-value contracts;book owns API. G1still6/18 In Progress;complete geometry bounds next.
+
+[Whole0862 creator-classification lesson](docs/history/stitchcad-devnotes-part1036.md) retains exact scope and focused proofs.
 
 [Whole0861 mixed-native lesson](docs/history/stitchcad-devnotes-part1035.md) retains exact scope and focused proofs.
 
