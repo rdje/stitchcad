@@ -4,7 +4,7 @@ use super::{
 };
 use sc_core::{
     construction::*,
-    design::DesignSourceReferences,
+    design::{DesignResourceMeter, DesignSourceReferences},
     name::MachineToken,
     ontology::{EdgeRef, EntityId, LocalTag},
     recipe::*,
@@ -148,6 +148,97 @@ fn formula_geometry_uses_keep_unused_root_sources_mixed_slots_original_indices_a
             .bind_canonical_inputs(&cp)
             .map_err(|e| e.to_string())?;
         provider.calls.set(0);
+        provider.base.trace.set(0);
+        let content = limits(100000, 100000, 100000)?;
+        let mut meter = DesignResourceMeter::new(content);
+        names.charge_resources(&mut meter)?;
+        let original_demand = meter.finish()?;
+        let population = if rich { 14 } else { 0 };
+        let steps = if rich { 4 } else { 1 };
+        let gp = DraftingProgramGeometryLimits::new(
+            content,
+            population,
+            population * 2,
+            population * steps,
+        );
+        let admitted = bound.admit_geometry_work(&gp).map_err(|e| e.to_string())?;
+        assert!(std::ptr::eq(admitted.inputs(), &bound));
+        assert!(std::ptr::eq(admitted.limits(), &gp));
+        assert_eq!(admitted.demand(), original_demand);
+        let shape = admitted.shape();
+        assert_eq!(
+            (
+                shape.formula_count(),
+                shape.native_count(),
+                shape.step_count(),
+                shape.occurrence_count(),
+                shape.retained_record_bound(),
+                shape.creator_inspection_bound()
+            ),
+            if rich {
+                (13, 1, 4, 14, 28, 56)
+            } else {
+                (0, 0, 1, 0, 0, 0)
+            }
+        );
+        if rich {
+            for (policy, expected) in [
+                (
+                    DraftingProgramGeometryLimits::new(content, 13, 0, 0),
+                    DraftingProgramGeometryWorkRefusal::Occurrences {
+                        allowed: 13,
+                        required: 14,
+                    },
+                ),
+                (
+                    DraftingProgramGeometryLimits::new(content, 14, 27, 0),
+                    DraftingProgramGeometryWorkRefusal::RetainedRecords {
+                        allowed: 27,
+                        required: 28,
+                    },
+                ),
+                (
+                    DraftingProgramGeometryLimits::new(content, 14, 28, 55),
+                    DraftingProgramGeometryWorkRefusal::CreatorInspections {
+                        allowed: 55,
+                        required: 56,
+                    },
+                ),
+            ] {
+                let Err(error) = bound.admit_geometry_work(&policy) else {
+                    return Err("complete geometry quota".into());
+                };
+                assert!(std::ptr::eq(error.inputs(), &bound));
+                assert!(std::ptr::eq(error.limits(), &policy));
+                assert_eq!(error.refusal(), &expected);
+            }
+        }
+        let short = limits(
+            original_demand
+                .collection_entries()
+                .checked_sub(1)
+                .ok_or("nonempty original content")?,
+            usize::MAX,
+            u64::MAX,
+        )?;
+        let mut meter = DesignResourceMeter::new(short);
+        let Err(original) = names.charge_resources(&mut meter) else {
+            return Err("fresh actual content refusal".into());
+        };
+        let gp = DraftingProgramGeometryLimits::new(short, 0, 0, 0);
+        let Err(error) = bound.admit_geometry_work(&gp) else {
+            return Err("content before zero geometry quotas".into());
+        };
+        assert_eq!(
+            error.refusal(),
+            &DraftingProgramGeometryWorkRefusal::Resources(original)
+        );
+        assert_eq!(provider.calls.get(), 0);
+        assert_eq!(
+            provider.base.trace.get(),
+            if rich { 2222222 } else { 2222 },
+            "only fresh resource walks may run during admission"
+        );
         provider.base.trace.set(0);
         let uses: Vec<_> = bound.formula_geometry_dependencies().collect();
         let requests: Vec<_> = bound.geometry_requests().collect();

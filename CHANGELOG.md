@@ -3,11 +3,11 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0863 — actual unnamed planned-source facet
+## STITCHCAD-G1-0864 — complete actual geometry work admission
 
-Genuine earlier-step/reference requests now have a readonly source facet returning existing authentic family fields and original context records or typed causes. No synthetic global name,named-output occurrence,value or live planned output is supplied.
+Fresh original content and checked complete geometry occurrence,record and creator-inspection bounds now precede classification,reservation and lookups. Preserve original canonical owner,selected policy and first content/quota causes.
 
-Focused role-source1,strict lint and Rustdoc1 pass0;book and exact1036 continuity synchronized. G1still6/18 In Progress;complete geometry bounds and binding remain pending before core callbacks.
+Focused formula1/rich-empty,native1/three cases,strict lint/fmt and Rustdoc4 pass0;book and exact1037 continuity synchronized. G1still6/18 In Progress;binding and full verification remain. Next:director decision on the frozen full book index and geometry documentation home.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -21,6 +21,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0863 source port,0331 approval lesson and0083 metadata proofs](docs/history/stitchcad-devnotes-part1037.md) retain exact source bytes.
 
 [Whole0862 geometry creator classification](docs/history/stitchcad-devnotes-part1036.md) retains exact task,lesson and ledger bytes.
 

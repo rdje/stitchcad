@@ -587,6 +587,19 @@ source/order verification remains a later feature-completion task. This plan add
 source record,context,logical state,geometry or value to the implementation.
 
 
+### Geometry work before binding
+
+Implemented `admit_geometry_work` charges complete original content afresh,then derives E,
+E+E records and E*S creator inspections with checked arithmetic before work quotas. Refusal order
+is content,population overflow,occurrences,records,inspections. The error retains actual canonical
+inputs,selected policy and original `refusal()`;only the semantic diagnostic is boxed.
+
+A rich fixture has13 formula uses plus1 native field across4 mixed slots:E14,records28,inspections56.
+Limits `(13,0,0)` refuse E14;`(14,27,0)` refuse28 records;`(14,28,55)` refuse56 inspections.
+`(14,28,56)` passes. A scalar-only programme permits all zero geometry allowances after content
+passes. Native fixtures retain20 repeated/direct fields across17 slots,requiring40 records/340
+inspections. No successful admission establishes a supplier,frame,currentness,geometry or value.
+
 Reproduce the scoped family/public-owner controls with the tracked probe:
 
 ```bash

@@ -594,3 +594,13 @@ This raw response is not source acceptance. Core calls remain pending until comp
 content/work is admitted. The later binding controller must check original input identity,exact
 reference and original frame/snapshot records,then retain the complete result or first refusal.
 The port grants no geometry work allowance,live planned output,physical result or whole programme.
+
+
+## Fresh geometry content accounting
+
+Geometry work admission reruns the original complete name/programme resource producers in one
+fresh meter:Root/context/provider-held parents,raw/normalized sources and native/name fields all
+participate. Prior successful demands supply no credit. This required readonly resource walk is
+the only provider callback during admission;geometry lookup,currentness validation and values do
+not run. A content shortage precedes even zero geometry quotas and retains its original field
+cause. Source/order/graph/canonical proof buffers keep their separately admitted policies.

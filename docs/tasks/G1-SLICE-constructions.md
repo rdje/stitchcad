@@ -385,56 +385,13 @@ Retention: complete predecessor payload preserved by .5b.2a.
 
 ## Product semantic vocabulary receipts — .5b.2a,2026-10-03 (UTC)
 
-- New explicit metadata-only FormulaKind/Origin/ReservedName/ReservedContext; all8/six/9/8/four
-  populations checked against independently authored rows and actual canonical tables. Tolerance
-  roles reuse existing syntax variants. No provider, value/state availability or numeric conversion API.
-- Five public contracts pass0; ten actual compiled mapping/population/context/role/lookup faults
-  fail in Rust assertion bodies, rc101, and restore exact source. Standing structural suite verifies
-  unique anchors and rejects compiler/expect-only/passing-name noise; normal restored tests pass0.
-- Strict fmt/clippy/native make check:596 passes/49 result groups/0 failed, terminal0; WASM all
-  three libraries compile0. Initial test-fixture tuple triggered type_complexity; owned/fixed here
-  with named ReservedCase fields rather than a lint suppression. Final strict rerun passes.
-- Full reference structural and language16/publication9 terminal0;55 chapters/29 scoped API rows/
-  1135 source links/1762 rendered links, warning-free. No grammar or runtime result changed.
-- D129 scoped current orientation repaired; former .1b/.1c frontier promises absent. Original
-  seven-line/630B report retained exact in part52, digest645bed69; no history audit claimed.
-- Exact predecessor task91lines/7051B/6cae1199 moved from recipes to constructions,41lines/3295B/
-  24e36f3e checklists to measurements. Oldest ledger15lines/1243B/ffd1e428 and lesson12lines/1049B/
-  de02f486 match d7a421e predecessor; existing archived content unchanged, no ceiling raised.
-- Publication/tree/archive/ledger and staged gate recording receipts follow before commit.
-  G1 stays5/18 In Progress. Next .5b.2b final sourced-declaration protocol before implementation.
-- Final tree10lanes/13trees/10siblings/zero gaps and archive218 logical/32 resident records pass0.
-  Fresh materialization yields10open/118sealed disjoint defect IDs; exact task/ledger predecessor
-  comparisons pass0. Ledger9/0fail terminal0; final diff/fmt checks0. Staged doctrine gate follows.
-- Final staged make gate:13 checks/all green, rc=0; the initial gate refused unformatted rc0
-  evidence signatures. Actual output now uses rc=0/rc=101 inside all three required fresh boxes;
-  no gate or signature policy changed. Diff check0; pre-commit hook repeats the staged gate.
-
-Retention: complete predecessor payload preserved by .5b.2b.
+[Whole closed receipt](../history/stitchcad-devnotes-part1037.md) retains its exact original evidence.
 
 ## Completed product metadata checklist — preserved from cfd0748
 
 ### G1-SLICE.5b.2a — closed product semantic metadata
 
-- [x] **REPRODUCE / ISSUE** — prior product API stops at syntax annotations; scoped declaration
-  metadata foundation is next .5b.2. D129 stale orientation reproduced by exact current prose.
-- [x] **ROOT CAUSE (WHY + WHERE)** — kind/binding, semantic origin/value provider and tolerance/
-  size roles need distinct closed metadata. formula_semantic_contract →5 tests/0 failed, rc=0,
-  compares independent8/six/9/8 populations with actual canonical table rows in both directions.
-- [x] **FIX** — four metadata types preserve all normative roles without provider/value access.
-  Reuse existing symbolic tolerances and preserve MachineToken/D124 current keyword set.
-- [x] **ADDRESSED (verified)** — semantic_mutations.py →10 actual compiled body assertion reds,
-  rc=101 per faulty build, producer restored exactly; script rc=0. Normal restored5 tests pass0.
-  Every context/role mapping, geometry non-bindability, exact lookup and closed population checked.
-- [x] **NO REGRESSION** — make check →596 native passes/49 groups, strict fmt/clippy rc=0; WASM3
-  compile0; full structural/reference/language16/publication9 terminal rc=0. No runtime or grammar claim.
-- [x] **LOCKSTEP** — metadata annex/examples/API map/status/navigation and README/live/task/
-  resume agree;55 chapters/29 APIs/1135 source/1762 rendered links verified0. D129 fixed;
-  exact predecessor task/ledger/lesson payloads retained in bounded parts, no caps raised.
-  promotion: declined (existing kinds, origins, context and no-value-access principles).
-
-
-Retention: complete predecessor payload preserved by .5b.2b.
+[Whole closed checklist](../history/stitchcad-devnotes-part1037.md) retains its exact original evidence.
 
 ## Completed product metadata protocol — preserved from cfd0748
 
@@ -942,19 +899,34 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0862 actual creator classification and genuine earlier-step requests;[whole scope/proofs](../history/stitchcad-devnotes-part1036.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.requests.port`
   Status: `done`
-  Goal:0863 readonly authentic family facet for actual unnamed earlier variable geometry;reuse original fields/parents/typed causes,no fabricated named output. Complete geometry bounds precede later core callbacks;binding remains .geometry.bind.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract output_role_binding`:1 pass,rc=0;existing named facet requires DraftingOutputPosition,whereas new genuine creating-step/reference requests retain unnamed outputs without synthesizing name metadata.
-  - [x] ADDRESSED: same focused command rc=0;new DraftingGeometryStepProvider returns original authentic Offset field/input/frame/snapshot or unchanged SourceError::Rejected;raw response remains Copy with non-Clone/non-Debug provider records. Zero callbacks during classification;one explicit raw-facet call per new success/refusal branch.
-  - [x] NO REGRESSION: existing named-output faults and complete held-resource refusal retained in same focused test,rc=0;new raw exercise follows original counter assertions after initial fixture-phase interference was repaired. Selected strict clippy and planned::DraftingGeometryStepProvider Rustdoc1 pass0;fmt checked before commit.
-  - [x] LOCKSTEP: book raw source facet/example and request cross-link updated;guarded build/exact example/render proof before commit. README/LIVE reviewed,G1still6/18 In Progress;MEM/index/ledger/DEV align. Core geometry callbacks remain unimplemented until complete bounds;no source binding or whole integration claim.
-  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1036.md`:3 exact Git spans,rc=0;whole0862 task/lesson/ledger retained. Public read/descriptor comparison before commit;no immutable window changed or ceiling raised.
-  - [x] PROMOTION: promotion: declined (existing immutable authentic-family/no-value contracts;book owns facet API). Focused native1/strict lint/Rustdoc1 pass0;requests parent closes,complete geometry bounds next;whole .5f.2.verify stays deferred. Commit:STITCHCAD-G1-0863.
+  Goal:0863 authentic unnamed planned-source facet;[whole scope/proofs](../history/stitchcad-devnotes-part1037.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bounds`
-  Status: `pending`
-  Goal:complete original geometry occurrence/association/content work and checked arithmetic before reservations,queries or child source work;actual owners/selected explicit policies,no capacity/CPU/runtime grant.
+  Status: `done`
+  Goal:0864 fresh complete original content and checked geometry occurrence/record/creator-inspection work before creator scans,result reservation or geometry lookups;actual canonical owner and exact selected explicit policy retained.
+  - [x] ROOT CAUSE: focused `cargo test -p sc-core --test drafting_context_binding_contract initial_binding::formula_geometry`:1 pass/rich-empty cases,rc=0;original names.charge_resources supplies complete fresh content,then F13+N1=E14,S4,records28,inspections56 derived before quotas.
+  - [x] ADDRESSED: same command rc=0;inclusive exact limits,occurrence→record→inspection priority,original content refusal before zero work,actual owner/policy pointers and
+    independent demand equality. No previous-demand credit,creator scan,result vector or geometry query. Resource enumeration callbacks explicitly counted separately from later
+    allocation-free occurrence inspection.
+  - [x] NO REGRESSION: focused native_geometry:1 pass/three cases,rc=0;all13 families/both modes preserve E20,S17,records40,inspections340;scalar-only E0 accepts zero work after content. Selected strict clippy/fmt and scoped geometry_work Rustdoc4 pass0;private fields/lifetime/no-default/public API. Overflow arithmetic guarded;coupled .5f.2.verify remains deferred.
+  - [x] LOCKSTEP: three book sections document selected policies,quota order,numeric examples,fresh content and proof boundary. Guarded build/whole Rust example/render checks before commit. README/LIVE reviewed,G1still6/18 In Progress;MEM/index/ledger/DEV align. Geometry source binding remains unimplemented;book-capacity decision owns the next blocker.
+  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1037.md`:5 exact Git spans,rc=0;whole0863 task/lesson/ledger,0331 lesson and0083 metadata
+    receipts/checklist retained. Public reader/descriptor proof before commit;no immutable window or hard bound changed. Initial commit gate refused
+    aggregate20008L/1501814B;whole0083 retirement restores bounds with original anchors retained.
+  - [x] PROMOTION: promotion: declined (existing complete/fresh resource and explicit logical-work policies;book owns geometry admission API). Native/formula/strict/Rustdoc4 pass0;no capacity,elapsed CPU,source binding or whole-programme grant. Commit:STITCHCAD-G1-0864.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bind`
   Status: `pending`
   Goal:complete original existing or strictly earlier fixed/authentic variable geometry suppliers under actual context/frame/snapshot;retain original causes/full result,no prefix or whole programme acceptance.
+- ID: `G1-SLICE.5f.2.dependencies.geometry.bind.book-capacity`
+  Status: `blocked`
+  Priority: P1 before geometry binding;owner repo-local,director owns the navigation/bound decision.
+  Goal:own the bounded book-navigation conflict before adding the supplier-binding API and examples;do not widen a frozen limit or demote unique manual content merely to fit.
+  Evidence0864: `wc -lc` SUMMARY=120L/7841B;formula-checked-recipes=39472B,formula-declarations=39918B,context-sources=40198B;all hard40960B. `rg -c` Markdown links in SUMMARY=118. No empty SUMMARY line is available;two part headings plus118 unique registered chapters consume120 lines. Native renderer/control independently retain119 files including SUMMARY.
+  Policy: LIVE_DOCUMENT_SIZE_CONTAINMENT.md local adoption freezes SUMMARY120L/8192B and per-part700L/40960B. The live registry has the same bound;raising a ceiling to fit content is forbidden without reviewed contract authority. New complete geometry supplier/refusal/lifetime examples need a coherent maintained home beyond the remaining fragments.
+  Post-bounds census:the three affected chapters now40918/40812/40807B,leaving343B combined before their frozen per-part limits. Complete supplier binding/refusal/lifetime examples need a coherent home;fragmentary append pressure is owned here.
+  Concrete proposal: new annexes/drafting-program-geometry.md for existing formula/native uses,creator requests,complete work and upcoming bindings. Preserve old anchors with short
+  links;update all in-repo routes and Rustdoc inclusions. Add one SUMMARY row and explicitly review its line bound120→121;leave every chapter byte/line bound unchanged. Fresh book
+  authority/build/routes/complete original-example checks accompany migration.
+  Alternative: keep SUMMARY120 and consolidate existing chapter navigation/content under a reviewed topic grouping,retaining all unique text and old anchor routes. This changes existing browsing structure;do not silently choose it as a numeric workaround. Continue current bounds slice independently;do not start binding until the director chooses.
 - ID: `G1-SLICE.5f.2.dependencies.semantic`
   Status: `pending`
   Goal:actual Root-bound garment/native semantic sources,including Pocket opening kind/domain/state/component recipe and Buttonhole canonical button/derivation;no empty substitute or authored hole length.

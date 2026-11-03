@@ -11,6 +11,12 @@ pub use formula_geometry::{
     DraftingProgramFormulaGeometryConsumer, DraftingProgramFormulaGeometryUse,
 };
 mod geometry_requests;
+mod geometry_work;
+pub use geometry_work::{
+    AdmittedDraftingProgramGeometryWork, DraftingProgramGeometryLimits,
+    DraftingProgramGeometryShape, DraftingProgramGeometryWorkError,
+    DraftingProgramGeometryWorkRefusal,
+};
 mod native_geometry;
 pub use geometry_requests::{
     DraftingGeometryStepRequest, DraftingProgramGeometryCreatorRefusal,

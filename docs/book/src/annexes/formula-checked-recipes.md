@@ -583,3 +583,27 @@ controller must admit complete geometry work before reservations or source callb
 all bindings or the first original refusal. The [unnamed planned-source port](drafting-context-sources.md#source-facet-for-unnamed-earlier-geometry)
 is implemented;complete bounds,actual supplier bindings and coupled whole-programme verification
 remain separately owned.
+
+
+## Admit complete geometry work
+
+Select `DraftingProgramGeometryLimits::new(content,occurrences,retained_records,creator_inspections)`
+explicitly. E counts every original Root/mixed formula geometry use and direct native field.
+Records cover E request slots plus E supplier associations;inspections conservatively cover E*S,
+where S includes all original mixed slots. Earlier proof buffers retain their original policies.
+These logical bounds grant no allocator capacity,scratch,elapsed CPU or execution allowance.
+
+```rust
+use sc_core::{construction::*,design::DesignResourceSource};
+fn geometry_work<H:DesignResourceSource,S:DraftingInitialInputProvider<H> + ?Sized>(
+    inputs:&BoundDraftingProgramCanonicalInputs<'_, '_, '_, '_, '_, '_, '_, '_,H,S>,
+    limits:&DraftingProgramGeometryLimits)->Result<DraftingProgramGeometryShape,String> {
+    Ok(inputs.admit_geometry_work(limits).map_err(|e|e.to_string())?.shape())
+}
+```
+
+The private admitted work retains actual `inputs()`,`limits()`,fresh `demand()` and complete
+`shape()`:formula/native/step/occurrence counts and both work bounds. It allocates no result buffer,
+classifies no creator and queries no geometry. [Quota order and examples](formula-declarations.md#geometry-work-before-binding)
+and [fresh content accounting](drafting-context-sources.md#fresh-geometry-content-accounting)
+complete this admission contract. Supplier/semantic binding and whole acceptance remain separate.

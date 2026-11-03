@@ -3,25 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-03 UTC)_ — source facet for genuine unnamed earlier outputs
+## _(2026-11-03 UTC)_ — complete geometry work before creator and source processing
 
-0863 separate readonly DraftingGeometryStepProvider uses private actual earlier-step/reference requests and existing authentic family/source records. Named-output port remains intact;raw responses preserve original field/input/frame/snapshot and typed causes without values or manufacture.
-Focused existing role-source1 adds actual unnamed Offset success/original refusal;original named faults and held-content quota remain. Strict selected lint/Rustdoc1 pass0. Core callbacks,bounds and source binding remain later;raw fixture phases separated after counter interference.
-1036 retains whole0862 task/lesson/ledger with three exact Git spans. Promotion declined:existing authentic-family/no-value contracts;book owns API. G1still6/18 In Progress;complete geometry bounds next.
+0864 freshly charges original names/programme/provider-held content,then derives F+N=E,E+E records and E*S creator inspections with checked arithmetic before ordered quotas. Private admission retains actual canonical owner/policy/demand/shape;no creator scan or geometry lookup runs.
+Focused formula1/rich-empty and native1/three cases pass0:exact quotas,priority,content-first refusal,original pointers and demand equality,all13 native families/repeats. Resource callbacks explicitly isolated from later query-free inspection. Strict selected lint/fmt/Rustdoc4 pass0.
+1037 retains whole0863 task/lesson/ledger,0331 lesson and0083 metadata proofs with five exact Git spans. Promotion declined:existing complete/fresh-work policies;book owns API. G1still6/18;binding awaits owned book-capacity decision;full integration verification deferred.
+
+[Whole0863 source-port and0331 release-boundary lessons](docs/history/stitchcad-devnotes-part1037.md) retain exact scopes and proofs.
 
 [Whole0862 creator-classification lesson](docs/history/stitchcad-devnotes-part1036.md) retains exact scope and focused proofs.
 
 [Whole0861 mixed-native lesson](docs/history/stitchcad-devnotes-part1035.md) retains exact scope and focused proofs.
 
 [Whole0858 native-field and0332 release-input lessons](docs/history/stitchcad-devnotes-part1034.md) retains exact scope and verification.
-
-## _(2026-10-26 UTC)_ — detached approval boundary adopted
-
-0331 .6.2.2.c.2.5.2 aligns roadmap9/book/decision with approved D239: fixed binding, separate human/scope/date record.
-C7 placement guards reject inline/self/missing/agent claims. Null sentinel red23/1 fixed; D240 duplicate-key
-red24/1 fixed by C1 uniqueness. Final focused25/0, witness3/census9-6-8-0/book/publication76-95 pass0.
-485/303/144 whole120cc6e source/hash/public exact0; Rust unchanged, no product hash or approval implemented.
-Promotion: existing indexed release decision records adoption. G1still6/18; candidate input schema next.
 
 ## _(2026-10-26 UTC)_ — release approval identity ruling
 

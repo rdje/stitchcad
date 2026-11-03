@@ -250,6 +250,32 @@ fn native_geometry_keeps_complete_mixed_consumers_all_families_and_original_sele
             .bind_canonical_inputs(&cp)
             .map_err(|e| e.to_string())?;
         source.trace.set(0);
+        let count = if mode == 0 { 0 } else { 20 };
+        let slots = if mode == 0 { 3 } else { 17 };
+        let gp = DraftingProgramGeometryLimits::new(
+            limits(100000, 100000, 100000)?,
+            count,
+            count * 2,
+            count * slots,
+        );
+        let work = bound.admit_geometry_work(&gp).map_err(|e| e.to_string())?;
+        assert_eq!(
+            (
+                work.shape().formula_count(),
+                work.shape().native_count(),
+                work.shape().step_count(),
+                work.shape().occurrence_count(),
+                work.shape().retained_record_bound(),
+                work.shape().creator_inspection_bound()
+            ),
+            (0, count, slots, count, count * 2, count * slots)
+        );
+        assert_eq!(
+            source.trace.get(),
+            2,
+            "only the fresh resource walk runs before geometry work admission"
+        );
+        source.trace.set(0);
         let uses: Vec<_> = bound.native_geometry_dependencies().collect();
         let mut expected = vec![];
         if mode != 0 {
