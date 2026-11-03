@@ -3,11 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-03 UTC)_ — complete static geometry supplier binding
+## _(2026-11-03 UTC)_ — actual garment source content before semantic queries
 
-0867 adds bind_geometry under actual admitted fresh work. Both complete vectors reserve before creator preflight;all creators pass before source lookups. Original Existing/Fixed/Planned suppliers retain actual context/schema/family loans. Shared variable-input identity checks preserve named-role behavior.
-Focused geometry10 and named-role2 pass0;new11-case native fixture covers later failures,first mismatch priority,original typed causes,repeats and empty streams. Root/mixed fixture binds14 original uses,12 existing/2 fixed,including untaken/unused selectors. Scoped Rustdoc3,strict selected lint/fmt and book pass0.
-1039 retains four exact Git spans for whole0865/0866 and0330 continuity. Promotion declined:existing authentic-source/complete-work/no-prefix contracts;book owns API. G1still6/18;semantic sources next,coupled verification/allocator faults deferred. No executed geometry or whole acceptance claim.
+0868 readonly garment/snapshot facet borrows the actual populated owner. Admission compares original Root object,charges complete garment/provider fields afresh in one meter,then
+matches actual snapshot. Final meter preserves ignored first sink errors. No currentness,declaration vector,value or complete semantic grant.
+Focused3 pass0:valid/held-damaged Pocket,foreign equal-ID Root,content-before-snapshot,actual limits/demand/source loans and original field/error chain. Fixture reflection/quantity
+failures corrected through explicit two authored copies and replacement component identity. Strict lint passes after boxing264-byte diagnostic witnesses;fmt/Rustdoc4/book pass0.
+1040 preserves whole0867/0329 in four exact Git spans after the hook refused journal width/task aggregate;existing bounds restored without policy changes. Promotion declined:existing actual-owner/content contracts;book owns API. G1still6/18;logical/Profile/operation records next.
+
+
+[Whole0867 geometry supplier lesson](docs/history/stitchcad-devnotes-part1040.md) retains exact source bytes.
 
 [Whole0865/0866 book exemption and task/history lessons](docs/history/stitchcad-devnotes-part1039.md) retain exact source bytes.
 
@@ -23,13 +28,7 @@ Focused geometry10 and named-role2 pass0;new11-case native fixture covers later 
 
 [Whole0330 release-identity lesson](docs/history/stitchcad-devnotes-part1039.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — artifact input-schema review
-
-0329 .6.2.2.c.2.4.5 closes .4's current registered input scope: four typed payloads match all normative artifact rows.
-Changed artifact target5/0; library sources identicala092435, other9 focused proofs retained. Strict lint/fmt/
-book/publication76-95 pass0; generation, closure traversal, policy/auth and serializer truth remain later work.
-483/301 wholea092435 source/hash/public exact0. G3.10/G6 owns all-contours registration/receiver evidence.
-Promotion declined: existing artifact contract, watched native row coverage. G1still6/18; release schemas next.
+[Whole0329 artifact-schema lesson](docs/history/stitchcad-devnotes-part1040.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — canonical tech-pack source request
 

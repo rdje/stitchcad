@@ -1,0 +1,367 @@
+//! Actual populated garment ownership and fresh source accounting precede semantic queries.
+use super::{limits, scope, EmptyHost, Frame, Snapshot, Source, SourceError, TestResult};
+use sc_core::{
+    command::DesignRevision, construction::*, design::*, ontology::*, recipe::*,
+    value::CanonicalInputs,
+};
+use std::error::Error;
+fn id(n: u128) -> EntityId {
+    EntityId::from_bits(n)
+}
+fn garment(damaged: bool) -> TestResult<DesignGarment<EmptyHost>> {
+    let mut ledger = IdentityLedger::new();
+    let mut ids = DeterministicIdGenerator::new();
+    let edges = ledger.declare_edges(&mut ids, 1)?;
+    let edge = *edges.first().ok_or("actual declared edge")?;
+    let piece = Piece::new(
+        PieceDefinition {
+            id: id(100),
+            boundary: vec![DirectedEdge {
+                edge,
+                direction: Direction::Original,
+            }],
+            holes: vec![],
+            construction_lines: vec![],
+            quantity: 2,
+            mirroring: Mirroring::Single,
+            cut_on_fold: false,
+            fold_edges: vec![],
+            cutting_side: CuttingSide::Face,
+            material: MaterialAssignment::Unresolved("actual material pending".into()),
+            layer_index: 0,
+            label: LabelText {
+                name: "private garment Piece".into(),
+                size: "M".into(),
+                fabric: "woven".into(),
+                colorway: "plain".into(),
+            },
+        },
+        &ledger,
+    )?;
+    let pieces = vec![piece];
+    let definitions = vec![
+        CutCopyDefinition {
+            id: id(10001),
+            piece: id(100),
+            orientation: CopyOrientation::Authored,
+        },
+        CutCopyDefinition {
+            id: id(10002),
+            piece: id(100),
+            orientation: CopyOrientation::Authored,
+        },
+    ];
+    let plan = CutPlan::new(definitions.clone(), &pieces)?;
+    let pocket = Pocket::new(
+        PocketDefinition {
+            id: id(10003),
+            served: PocketPieceRef {
+                copy: id(10001),
+                piece: id(100),
+            },
+            position: EdgeAnchor {
+                edge,
+                param: Param::START,
+            },
+            orientation: DirectedRange {
+                range: EdgeRange::whole(edge),
+                direction: Direction::Original,
+            },
+            opening: PocketOpening::Profile(ProfileParameterRef::new(id(700))),
+            components: vec![PocketPieceRef {
+                copy: id(10002),
+                piece: id(100),
+            }],
+        },
+        &plan,
+        &pieces,
+        &ledger,
+    )?;
+    let plan = if damaged {
+        CutPlan::new(
+            definitions
+                .into_iter()
+                .enumerate()
+                .map(|(index, mut definition)| {
+                    if index == 1 {
+                        definition.id = id(10005);
+                    }
+                    definition
+                })
+                .collect(),
+            &pieces,
+        )?
+    } else {
+        plan
+    };
+    let canonical = CanonicalInputs::new(vec![], vec![])?;
+    let parameters = DesignParameters::new(vec![], &canonical)?;
+    let materials = MaterialInventory::new(vec![], &canonical)?;
+    let sources = DesignMetadata::new(EmptyHost, &canonical)?;
+    let structure = DesignStructure::new(DesignStructureDefinition {
+        id: id(10000),
+        revision: DesignRevision::from_counter(7),
+        inputs: canonical,
+        pieces: PieceInventory::new(pieces)?,
+        cut_plan: plan,
+        topology: ledger,
+    })?;
+    let inputs = DesignInputs::new(DesignInputsDefinition {
+        structure,
+        parameters,
+        materials,
+        sources,
+        recipe: FormulaRecipeDocument::new("".into())?,
+        formula_sources: FormulaSources::new(vec![], FormulaSourceLimits::new(0, 0, 0))?,
+        references: DesignSourceReferences {
+            measurement_table: None,
+            ease_set: None,
+            size_set: None,
+        },
+    })?;
+    let structure = inputs.structure();
+    let graph = SewingGraph::new(
+        SewingGraphDefinition {
+            id: id(10004),
+            spans: vec![],
+        },
+        structure.cut_plan(),
+        structure.pieces().pieces(),
+        &[],
+        structure.topology(),
+    )?;
+    let sewing = DesignSewing::new(DesignSewingDefinition {
+        inputs,
+        graph,
+        landmarks: vec![],
+    })
+    .map_err(|e| e.to_string())?;
+    Ok(DesignGarment::new(DesignGarmentDefinition {
+        sewing,
+        pockets: PocketInventory::new(vec![pocket])?,
+        notions: NotionPlacementInventory::new(vec![])?,
+        closures: ClosureInventory::new(vec![])?,
+        layers: LayerInventory::new(vec![], vec![], vec![])?,
+        hems: HemInventory::new(vec![])?,
+        constructions: ConstructionInventory::new(vec![], vec![], vec![], vec![], vec![], vec![])?,
+    })
+    .map_err(|e| e.to_string())?)
+}
+struct Provider<'a> {
+    base: Source<'a>,
+    garment: &'a DesignGarment<EmptyHost>,
+    foreign_snapshot: DraftingSourceRecord<Snapshot>,
+    wrong_snapshot: bool,
+    ignore_refusal: bool,
+    retained: Vec<u8>,
+}
+impl<'a> Provider<'a> {
+    fn new(
+        root: &'a DesignInputs<EmptyHost>,
+        garment: &'a DesignGarment<EmptyHost>,
+        wrong_snapshot: bool,
+        ignore_refusal: bool,
+    ) -> Self {
+        Self {
+            base: Source::new(root),
+            garment,
+            foreign_snapshot: DraftingSourceRecord::new(Snapshot {
+                label: "foreign private semantic snapshot".into(),
+            }),
+            wrong_snapshot,
+            ignore_refusal,
+            retained: vec![1, 2, 3, 4, 5],
+        }
+    }
+    fn location(&self) -> DesignResourceLocation {
+        self.base.location("garment.retained")
+    }
+}
+impl DraftingContextSource<EmptyHost> for Provider<'_> {
+    type Frame = Frame;
+    type Snapshot = Snapshot;
+    type Geometry = [u8];
+    type Error = SourceError;
+    fn root(&self) -> &DesignInputs<EmptyHost> {
+        self.base.root()
+    }
+    fn snapshot_revision(&self) -> &DesignRevision {
+        self.base.snapshot_revision()
+    }
+    fn frame(&self) -> &DraftingSourceRecord<Frame> {
+        self.base.frame()
+    }
+    fn snapshot(&self) -> &DraftingSourceRecord<Snapshot> {
+        self.base.snapshot()
+    }
+    fn geometry(
+        &self,
+        r: DraftingGeometryReference,
+    ) -> DraftingGeometrySourceResult<'_, Frame, Snapshot, [u8], SourceError> {
+        self.base.geometry(r)
+    }
+    fn validate_current(&self) -> Result<(), SourceError> {
+        self.base.validate_current()
+    }
+    fn charge_resources(
+        &self,
+        sink: &mut dyn DesignResourceSink,
+    ) -> Result<(), DesignResourceLimitError> {
+        self.base.charge_resources(sink)?;
+        sink.charge_text(
+            &self.foreign_snapshot.data().label,
+            self.base.location("garment.foreign_snapshot"),
+        )?;
+        let result = sink.charge_entries(self.retained.len(), self.location());
+        if self.ignore_refusal {
+            let _ = result;
+            let _ = sink.charge_entries(1, self.base.location("garment.later"));
+            Ok(())
+        } else {
+            result
+        }
+    }
+}
+impl DraftingGarmentProvider<EmptyHost> for Provider<'_> {
+    fn garment_source(&self) -> DraftingGarmentSource<'_, EmptyHost, Snapshot> {
+        self.base.observed(8);
+        DraftingGarmentSource {
+            garment: self.garment,
+            snapshot: if self.wrong_snapshot {
+                &self.foreign_snapshot
+            } else {
+                &self.base.snapshot
+            },
+        }
+    }
+}
+#[test]
+fn actual_populated_garment_source_retains_original_root_snapshot_and_fresh_demand() -> TestResult {
+    for damaged in [false, true] {
+        let garment = garment(damaged)?;
+        assert_eq!(garment.validate_current().is_err(), damaged);
+        let provider = Provider::new(garment.inputs(), &garment, false, false);
+        let content = limits(100000, 100000, 100000)?;
+        let context = scope(garment.inputs())?
+            .bind_drafting_context(&provider, content)
+            .map_err(|e| e.to_string())?;
+        let mut meter = DesignResourceMeter::new(content);
+        charge_design_garment_resources(&garment, &mut meter)?;
+        provider.charge_resources(&mut meter)?;
+        let demand = meter.finish()?;
+        provider.base.trace.set(0);
+        let proof = context
+            .admit_garment_source(content)
+            .map_err(|e| e.to_string())?;
+        assert_eq!(proof.limits(), content);
+        assert_eq!(proof.demand(), demand);
+        assert!(std::ptr::eq(
+            proof.context().scope().root(),
+            garment.inputs()
+        ));
+        let returned = proof.source();
+        let copied = returned;
+        assert!(std::ptr::eq(copied.garment, &garment));
+        assert!(copied.snapshot.is_same_record(context.snapshot()));
+        assert_eq!(copied.garment.pockets().pockets().len(), 1);
+        assert_eq!(
+            provider.base.trace.get(),
+            82,
+            "raw getter then fresh resource walk only"
+        );
+        assert!(!format!("{proof:?} {returned:?}").contains("private"));
+    }
+    Ok(())
+}
+#[test]
+fn foreign_actual_garment_root_refuses_before_content_even_with_equal_ids_and_revision(
+) -> TestResult {
+    let actual = garment(false)?;
+    let other = garment(false)?;
+    assert_eq!(actual.inputs().id(), other.inputs().id());
+    assert_eq!(actual.inputs().revision(), other.inputs().revision());
+    let provider = Provider::new(actual.inputs(), &other, true, false);
+    let context = scope(actual.inputs())?
+        .bind_drafting_context(&provider, limits(100000, 100000, 100000)?)
+        .map_err(|e| e.to_string())?;
+    provider.base.trace.set(0);
+    let selected = limits(1, 1, 1)?;
+    let error = context
+        .admit_garment_source(selected)
+        .err()
+        .ok_or("actual foreign owner")?;
+    assert_eq!(error.issue(), DraftingGarmentSourceIssue::Root);
+    assert_eq!(error.limits(), selected);
+    assert!(std::ptr::eq(
+        error.context().scope().root(),
+        actual.inputs()
+    ));
+    assert!(std::ptr::eq(error.returned().garment, &other));
+    assert!(error
+        .returned()
+        .snapshot
+        .is_same_record(&provider.foreign_snapshot));
+    assert_eq!(provider.base.trace.get(), 8);
+    Ok(())
+}
+#[test]
+fn complete_original_content_refuses_before_snapshot_and_preserves_ignored_sink_cause() -> TestResult
+{
+    let garment = garment(false)?;
+    for ignore in [false, true] {
+        let provider = Provider::new(garment.inputs(), &garment, true, ignore);
+        let content = limits(100000, 100000, 100000)?;
+        let context = scope(garment.inputs())?
+            .bind_drafting_context(&provider, content)
+            .map_err(|e| e.to_string())?;
+        let mut meter = DesignResourceMeter::new(content);
+        charge_design_garment_resources(&garment, &mut meter)?;
+        provider.charge_resources(&mut meter)?;
+        let demand = meter.finish()?;
+        // The ignoring arm deliberately charges one additional retained entry after the first group.
+        let short = limits(
+            demand
+                .collection_entries()
+                .checked_sub(if ignore { 2 } else { 1 })
+                .ok_or("nonempty retained content")?,
+            100000,
+            100000,
+        )?;
+        let mut meter = DesignResourceMeter::new(short);
+        charge_design_garment_resources(&garment, &mut meter)?;
+        let _ = provider.charge_resources(&mut meter);
+        let original = meter
+            .finish()
+            .err()
+            .ok_or("first retained group exceeds allowance")?;
+        assert!(
+            matches!(original,DesignResourceLimitError::Count {location,..} if location==provider.location())
+        );
+        provider.base.trace.set(0);
+        let error = context
+            .admit_garment_source(short)
+            .err()
+            .ok_or("complete content before snapshot")?;
+        assert_eq!(
+            error.issue(),
+            DraftingGarmentSourceIssue::Resources(original)
+        );
+        assert!(error
+            .source()
+            .is_some_and(|e| e.is::<DesignResourceLimitError>()));
+        assert_eq!(provider.base.trace.get(), 82);
+        provider.base.trace.set(0);
+        let error = context
+            .admit_garment_source(content)
+            .err()
+            .ok_or("original snapshot record differs")?;
+        assert_eq!(error.issue(), DraftingGarmentSourceIssue::Snapshot);
+        assert!(error
+            .returned()
+            .snapshot
+            .is_same_record(&provider.foreign_snapshot));
+        assert_eq!(provider.base.trace.get(), 82);
+        assert!(!format!("{error:?}").contains("private"));
+    }
+    Ok(())
+}

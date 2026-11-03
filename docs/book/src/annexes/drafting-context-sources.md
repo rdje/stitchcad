@@ -605,3 +605,57 @@ participate. Prior successful demands supply no credit. This required readonly r
 the only provider callback during admission;geometry lookup,currentness validation and values do
 not run. A content shortage precedes even zero geometry quotas and retains its original field
 cause. Source/order/graph/canonical proof buffers keep their separately admitted policies.
+
+
+## Admit actual garment source content
+
+`DraftingGarmentProvider` is a separate readonly facet over the actual drafting context source.
+`garment_source()` borrows the already-held `DesignGarment` and its original snapshot record as
+`DraftingGarmentSource`. Public raw fields grant no acceptance. The garment owns sewing and its
+sole nested input Root,plus the actual Pocket,notion,Closure,layer,Hem and construction inventories.
+A source without an actual garment cannot supply an empty substitute to satisfy this interface.
+The getter performs no lookup,allocation,cloning,currentness validation,declaration-vector creation
+or value read. Opaque host/provider/snapshot types need neither Clone nor Debug.
+
+`context.admit_garment_source(explicit_content_limits)` compares the returned garment's actual
+`inputs()` object with the original context Root before charging anything. Equal identity/revision
+numbers on a separately created garment do not satisfy that comparison. Core then freshly walks
+the complete actual garment in schema order using `charge_design_garment_resources`,followed by
+all additional context/provider-held fields,in one cumulative meter. The garment walk includes
+its input Root,graph,unused landmarks and every semantic inventory;none is replaced with a caller
+total or a prior successful demand. Extra logical/Profile/operation records,duplicated inventories
+and caches remain the provider's exhaustive accounting responsibility. Shared borrowed references
+are not copied into another model. The original Root/context admission policies remain separate.
+
+The final meter is inspected before the provider's return value,so ignoring an earlier sink refusal
+and returning success or a later error cannot erase the original field cause. Only after all
+content passes does core compare the returned snapshot record with the original context snapshot.
+A content shortage therefore refuses before a wrong snapshot. Source admission runs no fresh
+currentness,geometry,semantic-declaration or numeric queries and allocates no result vector.
+
+```rust
+use sc_core::{construction::*,design::{DesignReferenceHost,DesignResourceSource,DesignResourceLimits}};
+fn original_garment<'a,H:DesignReferenceHost+DesignResourceSource,S:DraftingGarmentProvider<H>>(
+    context:DraftingContext<'a,H,S>,limits:DesignResourceLimits)
+    ->Result<AdmittedDraftingGarmentSource<'a,H,S>,DraftingGarmentSourceError<'a,H,S>> {
+    let proof=context.admit_garment_source(limits)?;
+    assert!(std::ptr::eq(proof.source().garment.inputs(),context.scope().root()));
+    assert!(proof.source().snapshot.is_same_record(context.snapshot()));
+    Ok(proof)
+}
+```
+
+`AdmittedDraftingGarmentSource` privately retains the original `context()`,raw matched `source()`,
+selected `limits()` and complete fresh `demand()`. Its source preserves every original inventory
+loan. The proof cannot replace its Root/garment/snapshot or outlive them. A privately admitted raw
+source still carries held semantic damage:for example,a Pocket's original component copy can be
+absent from the current CutPlan while the actual input Root remains valid. The source remains
+inspectable;this admission does not approve that Pocket's current physical composition.
+
+`DraftingGarmentSourceError` retains the actual context,complete `returned()` raw source,selected
+limits and first `issue()`:Root,Resources or Snapshot,in that order. Resources preserves the
+original typed field/location/index and error chain. A foreign Root keeps both actual objects;
+a snapshot mismatch keeps both actual records. Debug omits authored and opaque source payloads.
+Logical domains and states,operation existence/kinds,component recipes,canonical Buttonhole sizing,
+semantic work quotas,current-validation workspace and complete dependency acceptance remain later
+stages. No source-content proof certifies values,physical feasibility or whole-programme execution.

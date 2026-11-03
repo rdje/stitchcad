@@ -905,19 +905,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0864 complete fresh geometry work admission;[whole scope/proofs](../history/stitchcad-devnotes-part1038.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bind`
   Status: `done`
-  Goal:complete original existing or strictly earlier fixed/authentic variable geometry suppliers under actual context/frame/snapshot;retain original causes/full result,no prefix or whole programme acceptance.
-  - [x] REPRODUCE / ISSUE: historical `git grep -n 'fn bind_geometry' 03b1f295 -- crates/sc-core`:no matches,rc=1;the separate work,creator and source facets did not produce complete geometry suppliers.
-  - [x] ROOT CAUSE: baseline `cargo test -p sc-core --test drafting_context_binding_contract geometry_requests`:1 pass,rc=0;classification proves original creator positions only. Existing bind_existing_geometry and planned_geometry supply independent raw source paths;the actual admitted work must own their complete composition.
-  - [x] FIX: reserve complete request/supplier vectors,preflight every creator,then bind original existing/fixed/authentic variable sources. Shared family-input identity helper retains named-role checks. Private complete owner borrows actual work;first refusal retains original request,index,records and typed cause,never an accepted prefix.
-  - [x] ADDRESSED: `cargo test -p sc-core --test drafting_context_binding_contract geometry`:10 pass,rc=0;new11-case native fixture covers existing/fixed/unnamed/repeated/empty
-    suppliers,late future and wrong-fixed refusals before callbacks,Input/Reference/Frame/Snapshot priority and original source chains. Rich Root/mixed fixture binds14
-    occurrences,including12 existing and2 fixed;untaken/unused uses remain.
-  - [x] NO REGRESSION: `cargo test -p sc-core --test drafting_context_binding_contract output_role_binding`:2 pass,rc=0;original named catalogue/input/context refusals stay green.
-    Selected strict clippy and fmt check pass0;`cargo test -p sc-core --doc geometry_bind`:3 pass,rc=0,private fields/lifetime escape and API. Coupled .5f.2.verify and allocator
-    faults remain deferred;no full verification claim.
-  - [x] LOCKSTEP: three book references/examples,README review and LIVE product boundary,task/frontier/MEM/DEV/ledger align. Guarded book build pass0. G1still6/18 In Progress;geometry static bindings complete,semantic sources next. Cross-repo policy bodies match read-only references;cleanup remains within24h.
-  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1039.md`:4 exact Git spans,rc=0;whole0865/0866 task/lesson/ledger plus0330 lesson preserved before live reduction. Public archive retrieval and mandatory integrity checks precede commit;no retained window or ceiling changes.
-  - [x] PROMOTION: promotion: declined (existing authentic-source/complete-bound/no-prefix contracts;book owns API). Focused native/formula/role checks,strict lint/fmt/Rustdoc3/book pass0. Commit:STITCHCAD-G1-0867.
+  Goal:0867 complete static geometry suppliers;[whole scope/proofs](../history/stitchcad-devnotes-part1040.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bind.book-capacity`
   Status: `done`
   Goal:0865 full book exemption;[whole scope/proofs](../history/stitchcad-devnotes-part1039.md).
@@ -925,11 +913,25 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0866 independent task/history guards;[whole scope/proofs](../history/stitchcad-devnotes-part1039.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic`
-  Status: `pending`
+  Status: `in_progress`
   Goal:actual Root-bound garment/native semantic sources,including Pocket opening kind/domain/state/component recipe and Buttonhole canonical button/derivation;no empty substitute or authored hole length.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.sources`
+  Status: `done`
+  Goal:0868 actual immutable garment/snapshot source facet and original Root-bound fresh complete content admission;native semantic inventories remain original loans.
+  - [x] REPRODUCE / ISSUE: `git grep -n 'garment_source\|admit_garment' d48d313d -- crates/sc-core/src/construction`:no matches,rc=1;the completed geometry supplier path had no actual garment source association.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract garment_source`:3 pass,rc=0;two populated garments can have equal Root IDs/revisions yet different actual input objects. Existing DesignGarment::inputs and charge_design_garment_resources provide the authentic owner and exhaustive schema walk;raw context alone proves neither.
+  - [x] FIX: separate readonly raw garment/snapshot facet,private source-content admission and boxed original error witnesses. Compare actual Root first;fresh garment/provider cumulative content and latched first cause next;snapshot record last. No currentness,declaration vectors,values or semantic-prefix grant.
+  - [x] ADDRESSED: same focused command3 pass,rc=0;valid and held-damaged Pocket sources retain actual inventories/context/limits/demand;foreign equal-ID Root refuses before
+    content,content before foreign snapshot,ignored sink failure preserves original field/error chain. Fixtures preserve actual CutPlan reflection and quantity contracts;replaced
+    component identity exposes held damage without breaking Root.
+  - [x] NO REGRESSION: selected strict clippy passes0 after compacting its measured264-byte diagnostic;fmt check0;`cargo test -p sc-core --doc context::garment`:4 pass,rc=0,raw/proof lifetime,private fields and public API. Source/frame/provider types need no Clone/Debug. Scoped source admission only;semantic workspace,currentness and coupled .5f.2.verify remain deferred.
+  - [x] LOCKSTEP: garment source/admission examples and semantic plan in two book references;guarded book build0. README/LIVE reviewed,G1still6/18 In Progress. MEM/index/DEV/ledger align;next actual logical/Profile/operation source facets. No new domain policy or physical approval.
+  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1040.md`:4 exact Git spans,rc=0;whole0867 task/lesson/ledger plus0329 lesson retained.
+    Initial hook refused journal358B line and task aggregate1500265B;lossless reduction and prose wrapping restore existing bounds. Public read exact0;no immutable window or ceiling change.
+  - [x] PROMOTION: promotion: declined (existing actual-owner/exhaustive-content/inspection-before-readiness contracts;book owns API). Focused3,strict lint/fmt,Rustdoc4/book pass0. Commit:STITCHCAD-G1-0868.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources`
   Status: `pending`
-  Goal:actual immutable garment/native source facet and explicit original Root binding;use published garment/input/resource contracts,retain actual inventories and typed causes. Own complete source content before currentness/declaration queries;no empty substitute or id-only source.
+  Goal:actual readonly logical/Profile/operation source records for Pocket openings and canonical Buttonhole button/derivation,including original kind/domain/state and component recipe sources;no id-only or empty replacement. Exhaustively charge new held records before bounded core queries.
 - ID: `G1-SLICE.5f.2.check`
   Status: `pending`
   Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.

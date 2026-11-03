@@ -3,11 +3,11 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0867 — bind complete original geometry suppliers
+## STITCHCAD-G1-0868 — admit actual garment source content
 
-Complete static geometry binding reserves both whole streams,preflights all creators and retains original existing/fixed/authentic variable suppliers. First refusals keep actual requests,source records and typed causes;planned outputs remain unissued.
+Borrow actual garment/snapshot sources,require the original Root object and freshly charge complete garment/provider fields before snapshot matching or semantic queries. Original first content causes and held semantic damage remain visible.
 
-Focused geometry10/named-role2,strict selected lint/fmt,Rustdoc3 and book pass0. Root/mixed and native fixtures retain complete occurrences and original owners. Exact1039 continuity preserves prior units. G1still6/18 In Progress;semantic sources next,coupled verification deferred.
+Focused source3,strict selected lint/fmt,Rustdoc4 and book pass0. G1still6/18 In Progress;actual logical/Profile/operation source facets next. Currentness,semantic workspace and complete dependency acceptance remain deferred.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -21,6 +21,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0867 geometry supplier unit](docs/history/stitchcad-devnotes-part1040.md) retains exact task,lesson and ledger source bytes.
 
 [Whole0865/0866 book exemption and independent history guards](docs/history/stitchcad-devnotes-part1039.md) retain exact task,lesson and ledger source bytes.
 

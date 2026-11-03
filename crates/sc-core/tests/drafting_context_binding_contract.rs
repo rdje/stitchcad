@@ -1,6 +1,8 @@
 //! Actual source-owner binding and resource-before-query ordering, without geometry execution.
 #[path = "support/drafting_dependency_occurrences.rs"]
 mod dependency_occurrences;
+#[path = "support/drafting_garment_source.rs"]
+mod garment_source;
 #[path = "support/drafting_geometry.rs"]
 mod geometry;
 #[path = "support/drafting_geometry_requests.rs"]

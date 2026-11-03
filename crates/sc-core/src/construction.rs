@@ -60,12 +60,14 @@ mod arc;
 mod arguments;
 mod context;
 pub use context::{
-    DraftingContext, DraftingContextError, DraftingContextSource, DraftingGeometryBinding,
-    DraftingGeometryBindingIssue, DraftingGeometryError, DraftingGeometryMismatch,
-    DraftingGeometryReference, DraftingGeometrySource, DraftingGeometrySourceResult,
-    DraftingGeometryStepProvider, DraftingInitialInputProvider, DraftingInitialInputSource,
-    DraftingInitialInputSourceResult, DraftingPlannedOutput, DraftingPlannedOutputProvider,
-    DraftingPlannedOutputSource, DraftingPlannedOutputSourceResult, DraftingSourceRecord,
+    AdmittedDraftingGarmentSource, DraftingContext, DraftingContextError, DraftingContextSource,
+    DraftingGarmentProvider, DraftingGarmentSource, DraftingGarmentSourceError,
+    DraftingGarmentSourceIssue, DraftingGeometryBinding, DraftingGeometryBindingIssue,
+    DraftingGeometryError, DraftingGeometryMismatch, DraftingGeometryReference,
+    DraftingGeometrySource, DraftingGeometrySourceResult, DraftingGeometryStepProvider,
+    DraftingInitialInputProvider, DraftingInitialInputSource, DraftingInitialInputSourceResult,
+    DraftingPlannedOutput, DraftingPlannedOutputProvider, DraftingPlannedOutputSource,
+    DraftingPlannedOutputSourceResult, DraftingSourceRecord,
 };
 mod operation_input;
 pub use operation_input::{

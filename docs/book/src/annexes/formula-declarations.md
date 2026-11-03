@@ -527,7 +527,8 @@ No geometry/numeric provider is called here,and no values or executable whole pr
 ## Complete dependency composition
 
 **Root source bridge,canonical joins and complete geometry supplier binding are implemented
-with focused checks;semantic composition and whole acceptance remain planned.**
+with focused checks;actual garment source content admission is also available. Semantic
+dependency composition and whole acceptance remain planned.**
 The scoped source review separates canonical relations,geometry and semantic sources. The mixed
 proof above does not itself certify those stages. The [actual Root source bridge](formula-checked-recipes.md#root-sources-in-the-actual-mixed-scope)
 now invokes the existing complete source factory before mixed checking consumes the initial map.
@@ -564,9 +565,9 @@ Existing named-output binding remains its own actual catalogue/definition/tag as
 
 Semantic source ownership requires the actual garment. `DesignGarment<H>` owns sewing, Pocket,
 notion,Closure,layer,Hem and construction inventories;its `inputs()` getter,under the published
-`DesignReferenceHost` bound,borrows its sole nested DesignInputs. The semantic port must bind that
-actual input object to the drafting Root,then admit complete garment/source content before
-currentness or declaration queries. Public `charge_design_garment_resources` and the original
+`DesignReferenceHost` bound,borrows its sole nested DesignInputs. The [implemented garment source facet](drafting-context-sources.md#admit-actual-garment-source-content)
+binds that actual input object to the drafting Root and admits complete fresh garment/provider
+content before currentness or declaration queries. Public `charge_design_garment_resources` and the original
 inventory producers supply existing exhaustive field walks. Original declaration adapters preserve
 actual objects/canonical loans;their allocating vector factories need bounded composition before
 use. No empty garment,matching-id copy or id-only payload can establish an unprovided owner.

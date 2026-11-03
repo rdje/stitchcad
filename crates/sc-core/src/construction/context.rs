@@ -179,3 +179,9 @@ pub trait DraftingContextSource<H: DesignMetadataHost> {
         reference: DraftingGeometryReference,
     ) -> DraftingGeometrySourceResult<'_, Self::Frame, Self::Snapshot, Self::Geometry, Self::Error>;
 }
+
+mod garment;
+pub use garment::{
+    AdmittedDraftingGarmentSource, DraftingGarmentProvider, DraftingGarmentSource,
+    DraftingGarmentSourceError, DraftingGarmentSourceIssue,
+};
