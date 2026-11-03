@@ -3,16 +3,11 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0866 — retain independent task/history preservation
+## STITCHCAD-G1-0867 — bind complete original geometry suppliers
 
-Restore three non-book native task/history checks from the retired book-authority fixture. Original source extents,98 completed nodes,paired identities and journal links remain
-watched without a book receipt. Native3 pass0;standing runner/dispositions/book align. Book remains fully exempt from size containment;G1still6/18.
+Complete static geometry binding reserves both whole streams,preflights all creators and retains original existing/fixed/authentic variable suppliers. First refusals keep actual requests,source records and typed causes;planned outputs remain unissued.
 
-## STITCHCAD-G1-0865 — remove all book size containment
-
-Director removes every chapter,index,aggregate,count,width,depth and growth-authority restriction. Book edits need no size receipt. Working/staged structure,path/encoding and normal publication correctness remain;non-book containment is unchanged.
-
-Focused unbounded-book4,scope7,newline/storage5 pass0;book/policy/workflow/hooks/registries align. Exact1038 history retains five source spans. G1still6/18 In Progress. Pre-existing producer inventory drift is owned P1 before push;geometry binding resumes next.
+Focused geometry10/named-role2,strict selected lint/fmt,Rustdoc3 and book pass0. Root/mixed and native fixtures retain complete occurrences and original owners. Exact1039 continuity preserves prior units. G1still6/18 In Progress;semantic sources next,coupled verification deferred.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -26,6 +21,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0865/0866 book exemption and independent history guards](docs/history/stitchcad-devnotes-part1039.md) retain exact task,lesson and ledger source bytes.
 
 [Whole0864 and superseded book policy/control](docs/history/stitchcad-devnotes-part1038.md) retain exact Git source bytes.
 

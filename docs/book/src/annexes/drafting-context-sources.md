@@ -560,7 +560,7 @@ witnesses. Allocation keeps its TryReserveError inline;boxes compact semantic di
 Debug omits authored names and opaque payloads. The [bounded actual initial namespace](formula-declarations.md#actual-mixed-program-initial-namespace)
 checks reserved/cross-origin/repeated names. Earlier-only mixed visibility and whole kind checks
 are implemented in [the ordered programme](formula-declarations.md#complete-dependency-composition);
-complete geometry/semantic binding and values retain their separate stages.
+complete geometry binding is described in the supplier section below;semantic binding and values retain their separate stages.
 
 
 ## Source facet for unnamed earlier geometry
@@ -590,9 +590,10 @@ currentness mutation may create a response. A fixed-schema output needs no callb
 raw-facet test requests an actual unnamed earlier Offset output,retains its original input and
 frame/snapshot loans,and preserves an original provider refusal without translation.
 
-This raw response is not source acceptance. Core calls remain pending until complete geometry
-content/work is admitted. The later binding controller must check original input identity,exact
-reference and original frame/snapshot records,then retain the complete result or first refusal.
+This raw response is not source acceptance. After complete geometry content/work admission,the
+[complete supplier controller](formula-declarations.md#bind-complete-geometry-suppliers) checks
+original input identity,exact reference and original frame/snapshot records,then retains the
+complete result or first refusal.
 The port grants no geometry work allowance,live planned output,physical result or whole programme.
 
 

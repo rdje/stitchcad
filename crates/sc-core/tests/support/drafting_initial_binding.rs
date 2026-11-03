@@ -727,3 +727,15 @@ fn initial_namespace_keeps_bound_extras_and_refuses_repeated_or_reserved_names_w
     }
     Ok(())
 }
+
+// This fixture has no variable-family outputs. A binding controller must not use this facet
+// for its fixed earlier Point/Arc schemas, or to turn planned geometry into an existing record.
+impl DraftingGeometryStepProvider<EmptyHost> for Provider<'_> {
+    fn planned_geometry<'v, 'i>(
+        &'v self,
+        _: DraftingGeometryStepRequest<'v, 'i>,
+    ) -> DraftingPlannedOutputSourceResult<'v, Self::Frame, Self::Snapshot, Self::Error> {
+        self.calls.set(self.calls.get() * 10 + 4);
+        Err(SourceError::Missing)
+    }
+}

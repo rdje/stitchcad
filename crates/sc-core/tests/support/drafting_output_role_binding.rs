@@ -23,6 +23,8 @@ fn parameter(n: i64, d: i64) -> Param {
 #[path = "offset_sources.rs"]
 #[allow(clippy::expect_used)]
 mod fixture;
+#[path = "drafting_geometry_binding.rs"]
+mod geometry_binding;
 #[derive(Clone, Copy)]
 enum Fault {
     None,
@@ -45,6 +47,7 @@ struct Provider<'a> {
     foreign_frame: DraftingSourceRecord<Frame>,
     fault: Fault,
     calls: Cell<usize>,
+    existing: [DraftingGeometryReference; 3],
 }
 impl<'a> Provider<'a> {
     fn new(
@@ -52,7 +55,22 @@ impl<'a> Provider<'a> {
         fields: [ActiveOffsetCandidate<'a>; 4],
         fault: Fault,
     ) -> Self {
+        let [first, ..] = fields;
         Self {
+            existing: [
+                DraftingGeometryReference::Edge(
+                    first
+                        .presence()
+                        .admitted()
+                        .bound_input()
+                        .construction()
+                        .source()
+                        .range
+                        .edge(),
+                ),
+                DraftingGeometryReference::Point(PointRef::new(id(411), LocalTag::FIRST)),
+                DraftingGeometryReference::Point(PointRef::new(id(412), LocalTag::FIRST)),
+            ],
             base: Source::new(root),
             snapshot: DraftingSourceRecord::new(Snapshot {
                 label: "planned immutable source".into(),
@@ -76,7 +94,7 @@ fn fixed<T: Copy>(_: &T) {}
 impl<'a> DraftingContextSource<EmptyHost> for Provider<'a> {
     type Frame = Frame;
     type Snapshot = Snapshot<'a>;
-    type Geometry = [u8];
+    type Geometry = DraftingGeometryReference;
     type Error = SourceError;
     fn root(&self) -> &DesignInputs<EmptyHost> {
         self.base.root()
@@ -96,17 +114,28 @@ impl<'a> DraftingContextSource<EmptyHost> for Provider<'a> {
     }
     fn geometry(
         &self,
-        _: DraftingGeometryReference,
+        requested: DraftingGeometryReference,
     ) -> DraftingGeometrySourceResult<'_, Self::Frame, Self::Snapshot, Self::Geometry, Self::Error>
     {
         self.base.observed(7);
-        Err(SourceError::Missing)
+        let geometry = self
+            .existing
+            .iter()
+            .find(|r| **r == requested)
+            .ok_or(SourceError::Missing)?;
+        Ok(DraftingGeometrySource {
+            reference: *geometry,
+            frame: &self.base.frame,
+            snapshot: &self.snapshot,
+            geometry,
+        })
     }
     fn charge_resources(
         &self,
         sink: &mut dyn DesignResourceSink,
     ) -> Result<(), DesignResourceLimitError> {
         self.base.charge_resources(sink)?; // Its original snapshot is also a retained cache.
+        sink.charge_entries(self.existing.len(), self.base.location("planned.existing"))?;
         let at = |field, index| DesignResourceLocation {
             scope: DesignResourceScope::CommandState,
             owner: Some(self.base.root.id()),
@@ -224,27 +253,38 @@ impl DraftingGeometryStepProvider<EmptyHost> for Provider<'_> {
         request: DraftingGeometryStepRequest<'v, 'i>,
     ) -> DraftingPlannedOutputSourceResult<'v, Self::Frame, Self::Snapshot, Self::Error> {
         self.calls.set(self.calls.get() + 1);
+        if !request.requires_role_binding() {
+            return Err(SourceError::Rejected);
+        }
+        let index = match self.fault {
+            Fault::Input => 1,
+            Fault::Catalogue => 2,
+            Fault::Definition => 3,
+            _ => 0,
+        };
         let field = self
             .snapshot
             .data()
             .fields
-            .first()
+            .get(index)
             .copied()
             .ok_or(SourceError::Missing)?;
         let output = DraftingPlannedOutput::Offset(field);
-        if !request.requires_role_binding()
-            || request.reference() != output.reference()
-            || !matches!((request.input(),output.input()),(DraftingOperationInput::OffsetEdge(a),DraftingOperationInput::OffsetEdge(b)) if std::ptr::eq(a,b))
-        {
-            return Err(SourceError::Missing);
-        }
         if matches!(self.fault, Fault::Source) {
             return Err(SourceError::Rejected);
         }
         Ok(DraftingPlannedOutputSource {
             output,
-            frame: &self.base.frame,
-            snapshot: &self.snapshot,
+            frame: if matches!(self.fault, Fault::Input | Fault::Definition | Fault::Frame) {
+                &self.foreign_frame
+            } else {
+                &self.base.frame
+            },
+            snapshot: if matches!(self.fault, Fault::Frame | Fault::Snapshot) {
+                &self.foreign_snapshot
+            } else {
+                &self.snapshot
+            },
         })
     }
 }

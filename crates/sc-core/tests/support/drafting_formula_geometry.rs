@@ -181,6 +181,38 @@ fn formula_geometry_uses_keep_unused_root_sources_mixed_slots_original_indices_a
                 (0, 0, 1, 0, 0, 0)
             }
         );
+        // Bind the original Root-source and mixed selector occurrences, including unused sources,
+        // untaken branches, repeated uses and fixed earlier Point/Arc outputs. No values are read.
+        let proof = admitted.bind_geometry().map_err(|e| e.to_string())?;
+        assert!(std::ptr::eq(proof.work(), &admitted));
+        assert_eq!(proof.requests().len(), population);
+        assert_eq!(proof.suppliers().len(), population);
+        let mut existing = 0;
+        for (request, supplier) in proof.requests().iter().zip(proof.suppliers()) {
+            match (request.target().map_err(|e| format!("{e:?}"))?, supplier) {
+                (
+                    DraftingProgramGeometryTarget::Existing,
+                    DraftingProgramGeometrySupplier::Existing(binding),
+                ) => {
+                    assert_eq!(binding.reference(), request.occurrence().reference());
+                    assert!(binding.source().frame.is_same_record(context.frame()));
+                    assert!(binding.source().snapshot.is_same_record(context.snapshot()));
+                    existing += 1;
+                }
+                (
+                    DraftingProgramGeometryTarget::Earlier(expected),
+                    DraftingProgramGeometrySupplier::Fixed(actual),
+                ) => {
+                    assert_eq!(actual.reference(), expected.reference());
+                    assert_eq!(actual.step().position(), expected.step().position());
+                    assert!(!actual.requires_role_binding());
+                }
+                _ => return Err("original formula geometry supplier".into()),
+            }
+        }
+        assert_eq!(existing, if rich { 12 } else { 0 });
+        assert_eq!(provider.calls.get(), if rich { 222222222222 } else { 0 });
+        provider.calls.set(0);
         if rich {
             for (policy, expected) in [
                 (

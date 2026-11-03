@@ -40,6 +40,26 @@ pub enum DraftingPlannedOutput<'a> {
     Join(JoinOutputEdge<'a>),
 }
 impl<'a> DraftingPlannedOutput<'a> {
+    pub(crate) fn is_from_input(self, expected: DraftingOperationInput<'_>) -> bool {
+        use DraftingOperationInput as I;
+        let actual = self.input();
+        match expected {
+            I::OffsetEdge(e) => matches!(actual,I::OffsetEdge(a) if std::ptr::eq(e,a)),
+            I::SlashSpread(e) => matches!(actual,I::SlashSpread(a) if std::ptr::eq(e,a)),
+            I::TrueSeam(e) => matches!(actual,I::TrueSeam(a) if std::ptr::eq(e,a)),
+            I::MirrorPiece(e) => matches!(actual,I::MirrorPiece(a) if std::ptr::eq(e,a)),
+            I::JoinPieces(e) => matches!(actual,I::JoinPieces(a) if std::ptr::eq(e,a)),
+            I::ConstructPoint(_)
+            | I::DrawLine(_)
+            | I::DrawArc(_)
+            | I::DrawBezier(_)
+            | I::CloseDart { .. }
+            | I::AddNotch { .. }
+            | I::PlaceGrainline(_)
+            | I::WalkSeam(_) => false,
+        }
+    }
+
     /// Actual original creating input borrowed through the authentic public family parent chain.
     /// Equal-looking copied inputs are not substituted and no binding is reconstructed from ids.
     #[must_use]
@@ -206,7 +226,7 @@ pub trait DraftingPlannedOutputProvider<H: DesignMetadataHost>: DraftingContextS
 /// No lazy allocation, cloning, parent-proof manufacture, values, existing-geometry lookup or
 /// currentness mutation may create a response. Missing/unsupported sources retain original causes.
 ///
-/// The raw response grants no source acceptance. The later core controller must check original
+/// The raw response grants no source acceptance. The complete core controller checks original
 /// creating-input identity, exact reference and original frame/snapshot records before retaining
 /// any complete result. A fixed request needs no source callback. This interface supplies no
 /// geometry work allowance, existing/live planned output or whole-programme proof. Providers and

@@ -371,7 +371,8 @@ whole Root recipe. No field is deduplicated or assigned a synthetic ordinal.
 Focused checks cover all argument roles,header/operand order,repeated/untaken uses,original spans,
 actual consumer pointer identity,nth traversal and repeated end reads. Existing mixed-order checks
 and private-field/lifetime examples pass. These views establish original dependency occurrences. The bounded canonical stage below joins
-actual scalar inputs;geometry/semantic source binding and coupled verification remain separate.
+actual scalar inputs;complete geometry binding now follows explicit work admission. Semantic
+source binding and coupled verification remain separate.
 Supplier metadata alone does not grant source validity.
 
 
@@ -581,8 +582,8 @@ The iterator allocates no buffers or diagnostic boxes. Each occurrence scans act
 creators in the complete mixed sequence;this grants no complete work/CPU allowance. The later
 controller must admit complete geometry work before reservations or source callbacks,then retain
 all bindings or the first original refusal. The [unnamed planned-source port](drafting-context-sources.md#source-facet-for-unnamed-earlier-geometry)
-is implemented;complete bounds,actual supplier bindings and coupled whole-programme verification
-remain separately owned.
+and complete work admission are implemented. The [supplier controller](formula-declarations.md#bind-complete-geometry-suppliers)
+now binds complete actual suppliers;semantic and coupled whole-programme verification remain owned.
 
 
 ## Admit complete geometry work
@@ -606,4 +607,5 @@ The private admitted work retains actual `inputs()`,`limits()`,fresh `demand()` 
 `shape()`:formula/native/step/occurrence counts and both work bounds. It allocates no result buffer,
 classifies no creator and queries no geometry. [Quota order and examples](formula-declarations.md#geometry-work-before-binding)
 and [fresh content accounting](drafting-context-sources.md#fresh-geometry-content-accounting)
-complete this admission contract. Supplier/semantic binding and whole acceptance remain separate.
+complete this admission contract. The [complete supplier controller](formula-declarations.md#bind-complete-geometry-suppliers)
+uses this admission next;semantic binding and whole acceptance remain separate.

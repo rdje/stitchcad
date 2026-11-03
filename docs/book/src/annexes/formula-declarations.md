@@ -526,8 +526,8 @@ No geometry/numeric provider is called here,and no values or executable whole pr
 
 ## Complete dependency composition
 
-**Root source bridge,canonical joins,original geometry uses and creator classification implemented
-with focused checks;geometry source binding and semantic composition remain planned.**
+**Root source bridge,canonical joins and complete geometry supplier binding are implemented
+with focused checks;semantic composition and whole acceptance remain planned.**
 The scoped source review separates canonical relations,geometry and semantic sources. The mixed
 proof above does not itself certify those stages. The [actual Root source bridge](formula-checked-recipes.md#root-sources-in-the-actual-mixed-scope)
 now invokes the existing complete source factory before mixed checking consumes the initial map.
@@ -556,10 +556,10 @@ classified across the complete original sequence:ambiguous creators,self and fut
 before live lookup. Earlier fixed outputs come from their actual schemas;variable outputs require
 authentic family fields/manifests and original containing frame/snapshot records.
 
-The current planned-source port takes a genuine **named-output** position request. A dependency
-can refer to an earlier output that has no global name. The geometry slice must therefore expose
-an actual creating-step/reference request and reuse authentic planned-family sources,with complete
-bounds before queries. It must not fabricate a global name or treat planned geometry as live.
+The named planned-source port takes a genuine **named-output** position request. A dependency
+can refer to an earlier output that has no global name. The implemented geometry controller therefore uses
+an actual creating-step/reference request and authentic planned-family sources,with complete
+bounds before queries. It fabricates no global name and never treats planned geometry as live.
 Existing named-output binding remains its own actual catalogue/definition/tag association.
 
 Semantic source ownership requires the actual garment. `DesignGarment<H>` owns sewing, Pocket,
@@ -611,3 +611,66 @@ DesignReferenceHost bound. The borrowed return compiles;the otherwise identical 
 must fail for that lifetime cause. Compiler scratch stays in the repository and rejects linked or
 nested-repository output paths. This control establishes the source interface/lifetime boundary;
 it does not implement the planned dependency stages.
+
+
+## Bind complete geometry suppliers
+
+After `admit_geometry_work`,call `work.bind_geometry()` with a source implementing both
+`DraftingInitialInputProvider` and `DraftingGeometryStepProvider`. The controller reserves the
+complete E request slots and E supplier slots before any source lookup. It then classifies every
+original creator across the whole mixed sequence before binding a supplier. A later self/future
+or ambiguous creator therefore refuses before even an earlier existing reference is queried.
+Original merged occurrence order remains Root sources first,then mixed positions,with formula
+uses before direct native fields at the same position. Repeated uses retain separate slots.
+
+There are three supplier variants:
+
+| Variant | Source and guarantee |
+| --- | --- |
+| Existing | Original opaque geometry,with exact reference and held frame/snapshot record binding |
+| Fixed | Exact strictly earlier Point/Line/Arc/Bézier schema output;no provider lookup |
+| Planned | Authentic strictly earlier variable family field and original context records;output remains unissued |
+
+A variable request calls `planned_geometry` once. The response is checked against the actual
+creating input object,then exact Point/Edge reference,then the original frame record,then original
+snapshot record. Equal IDs or equal-looking foreign inputs/records do not satisfy identity.
+Authentic family parents establish active role/manifest membership. An unnamed dependency has no
+independently authored catalogue to compare;the separately implemented named-output controller
+still checks its actual catalogue/definition/tag identity. Neither path fabricates a global name.
+
+For example,an Offset at mixed position1 consumes an existing source edge. A Point at2 declares
+its fixed output. A Line at3 uses that point and an existing point. Offsets at4 and5 both consume
+the unnamed active edge from position1. The complete result has five requests and suppliers in
+order:Existing,Fixed,Existing,Planned,Planned. Only the two Existing slots query live geometry;
+only the two Planned slots query authentic family fields. A Point argument `1 mm/0` remains
+statically valid and unevaluated. Missing geometry and unavailable planned fields remain errors.
+
+```rust
+use sc_core::{construction::*,design::DesignMetadataHost};
+fn geometry_count<H:DesignMetadataHost,
+    S:DraftingInitialInputProvider<H> + DraftingGeometryStepProvider<H> + ?Sized>(
+    work:&AdmittedDraftingProgramGeometryWork<'_, '_, '_, '_, '_, '_, '_, '_, '_,H,S>)
+    ->Result<usize,String> {
+    let proof=work.bind_geometry().map_err(|error|error.to_string())?;
+    assert_eq!(proof.requests().len(),proof.suppliers().len());
+    assert!(std::ptr::eq(proof.work(),work));
+    Ok(proof.suppliers().len())
+}
+```
+
+`BoundDraftingProgramGeometry` privately owns both complete vectors and borrows the exact admitted
+`work()`,which reaches the original canonical/source/order owners and selected geometry policy.
+`requests()` and `suppliers()` expose readonly complete slices. Empty occurrence streams succeed
+with empty slices and no source callbacks. Individual inspectable supplier variants cannot create
+this private complete owner or replace its slots;the proof cannot outlive its original work.
+
+`DraftingProgramGeometryError` retains that same actual work. `refusal()` distinguishes an inline
+original reservation cause from a boxed `Binding` refusal. Binding variants retain the zero-based
+original occurrence index and exact request:Creator,Existing,PlannedSource or PlannedMismatch.
+Existing errors retain their original reference/frame/snapshot witnesses and provider error chain.
+PlannedSource preserves its original typed cause. PlannedMismatch retains the entire returned
+family field and actual records,plus the first Input,Reference,Frame or Snapshot issue. A later
+failure drops all private partial vectors;it exposes no accepted prefix or successful supplier.
+Diagnostics omit authored names and opaque payloads. This provides complete static supplier
+association,without reading values,issuing identities or executing geometry. Semantic targets,
+whole-programme acceptance,allocator faults and coupled verification retain their separate owners.

@@ -5,18 +5,21 @@ use core::fmt;
 mod dependencies;
 pub use dependencies::{
     AdmittedDraftingProgramGeometryWork, BoundDraftingProgramCanonicalInputs,
-    DraftingGeometryStepRequest, DraftingProgramCanonicalBinding, DraftingProgramCanonicalError,
-    DraftingProgramCanonicalJoinFailure, DraftingProgramCanonicalLimits,
-    DraftingProgramCanonicalOccurrence, DraftingProgramCanonicalRefusal,
-    DraftingProgramCanonicalShape, DraftingProgramDependencyInputs,
-    DraftingProgramDependencyOwnerError, DraftingProgramDependencyOwnerIssue,
-    DraftingProgramDependencyRole, DraftingProgramDerivedBinding,
-    DraftingProgramFormulaGeometryConsumer, DraftingProgramFormulaGeometryUse,
-    DraftingProgramGeometryCreatorRefusal, DraftingProgramGeometryLimits,
-    DraftingProgramGeometryOccurrence, DraftingProgramGeometryRequest,
-    DraftingProgramGeometryShape, DraftingProgramGeometryTarget, DraftingProgramGeometryWorkError,
-    DraftingProgramGeometryWorkRefusal, DraftingProgramNameDependency,
-    DraftingProgramNativeGeometryUse,
+    BoundDraftingProgramGeometry, DraftingGeometryStepRequest, DraftingProgramCanonicalBinding,
+    DraftingProgramCanonicalError, DraftingProgramCanonicalJoinFailure,
+    DraftingProgramCanonicalLimits, DraftingProgramCanonicalOccurrence,
+    DraftingProgramCanonicalRefusal, DraftingProgramCanonicalShape,
+    DraftingProgramDependencyInputs, DraftingProgramDependencyOwnerError,
+    DraftingProgramDependencyOwnerIssue, DraftingProgramDependencyRole,
+    DraftingProgramDerivedBinding, DraftingProgramFormulaGeometryConsumer,
+    DraftingProgramFormulaGeometryUse, DraftingProgramGeometryBindingRefusal,
+    DraftingProgramGeometryCreatorRefusal, DraftingProgramGeometryError,
+    DraftingProgramGeometryLimits, DraftingProgramGeometryOccurrence,
+    DraftingProgramGeometryRefusal, DraftingProgramGeometryRequest, DraftingProgramGeometryShape,
+    DraftingProgramGeometrySupplier, DraftingProgramGeometryTarget,
+    DraftingProgramGeometryWorkError, DraftingProgramGeometryWorkRefusal,
+    DraftingProgramNameDependency, DraftingProgramNativeGeometryUse,
+    DraftingProgramPlannedGeometryIssue,
 };
 mod admission;
 mod limits;

@@ -877,7 +877,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0856 bounded complete canonical bindings;[whole scope/proofs](../history/stitchcad-devnotes-part1032.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry`
-  Status: `in_progress`
+  Status: `done`
   Goal:all actual native/selector geometry references under original frame/snapshot and strict earlier creators;unlabelled planned roles need authentic manifests,never live-future lookup or synthetic names.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.formulas`
   Status: `done`
@@ -904,28 +904,32 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0864 complete fresh geometry work admission;[whole scope/proofs](../history/stitchcad-devnotes-part1038.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bind`
-  Status: `pending`
+  Status: `done`
   Goal:complete original existing or strictly earlier fixed/authentic variable geometry suppliers under actual context/frame/snapshot;retain original causes/full result,no prefix or whole programme acceptance.
+  - [x] REPRODUCE / ISSUE: historical `git grep -n 'fn bind_geometry' 03b1f295 -- crates/sc-core`:no matches,rc=1;the separate work,creator and source facets did not produce complete geometry suppliers.
+  - [x] ROOT CAUSE: baseline `cargo test -p sc-core --test drafting_context_binding_contract geometry_requests`:1 pass,rc=0;classification proves original creator positions only. Existing bind_existing_geometry and planned_geometry supply independent raw source paths;the actual admitted work must own their complete composition.
+  - [x] FIX: reserve complete request/supplier vectors,preflight every creator,then bind original existing/fixed/authentic variable sources. Shared family-input identity helper retains named-role checks. Private complete owner borrows actual work;first refusal retains original request,index,records and typed cause,never an accepted prefix.
+  - [x] ADDRESSED: `cargo test -p sc-core --test drafting_context_binding_contract geometry`:10 pass,rc=0;new11-case native fixture covers existing/fixed/unnamed/repeated/empty
+    suppliers,late future and wrong-fixed refusals before callbacks,Input/Reference/Frame/Snapshot priority and original source chains. Rich Root/mixed fixture binds14
+    occurrences,including12 existing and2 fixed;untaken/unused uses remain.
+  - [x] NO REGRESSION: `cargo test -p sc-core --test drafting_context_binding_contract output_role_binding`:2 pass,rc=0;original named catalogue/input/context refusals stay green.
+    Selected strict clippy and fmt check pass0;`cargo test -p sc-core --doc geometry_bind`:3 pass,rc=0,private fields/lifetime escape and API. Coupled .5f.2.verify and allocator
+    faults remain deferred;no full verification claim.
+  - [x] LOCKSTEP: three book references/examples,README review and LIVE product boundary,task/frontier/MEM/DEV/ledger align. Guarded book build pass0. G1still6/18 In Progress;geometry static bindings complete,semantic sources next. Cross-repo policy bodies match read-only references;cleanup remains within24h.
+  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1039.md`:4 exact Git spans,rc=0;whole0865/0866 task/lesson/ledger plus0330 lesson preserved before live reduction. Public archive retrieval and mandatory integrity checks precede commit;no retained window or ceiling changes.
+  - [x] PROMOTION: promotion: declined (existing authentic-source/complete-bound/no-prefix contracts;book owns API). Focused native/formula/role checks,strict lint/fmt/Rustdoc3/book pass0. Commit:STITCHCAD-G1-0867.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bind.book-capacity`
   Status: `done`
-  Goal:0865 director2026-11-04 removes ALL book size containment,including chapter/index/aggregate/file-count/width/depth limits and exact growth-authority receipts. Retain structure/path/staged correctness,general task ownership and every non-book size rule.
-  - [x] ROOT CAUSE: `book_integrity_contract.py`:4 pass,rc=0;working/staged checker no longer reads a growth control or size profile. Former policy combined frozen part/index/depth bounds with per-change authorization;user explicitly retires the whole mechanism.
-  - [x] ADDRESSED: same focused command rc=0;150 chapters,deep/wide/large parts and index,aggregate growth and same-size edits pass without receipt. Missing/duplicate/unindexed/escaping/non-UTF8/aliased chapters and invalid staged objects still refuse. Numeric checker skips book measurement entirely;book_summary row/control/writer/obsolete authoring fixtures removed.
-  - [x] NO REGRESSION: measurement_scope_contract.py7 guarded cases and newline_contract.py5 tests pass,rc=0;shared non-book input/storage/Git guards retained. Book integrity working/staged checks pass0. Non-book numerical limits remain;focused existing size refusal controls and build recorded before commit.
-  - [x] LOCKSTEP: explicit local policy/decision/README routing exception,COMMIT/hook/registries/probe consumers/producer dispositions and book updated. LIVE remains G1still6/18 In Progress;MEM/index/ledger/DEV align. No growth receipt or size approval is needed for future book edits.
-  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1038.md`:5 exact Git spans,rc=0;whole0864 task/lesson/ledger and superseded book policy/proofs retained. Retired current control remains in predecessor8152ce3b;public archive/descriptor proof before commit. No retained window changes.
-  - [x] PROMOTION: existing indexed containment decision records director ruling. Focused growth/structure/path/storage pass0. Full producer/file/effect checks expose pre-existing drift,proven in predecessor and owned P1 by G1-SLICE.5b.4c.h2.b.p.inventory-reconcile before push;no full-CI or inventory acceptance claimed. Commit:STITCHCAD-G1-0865.
+  Goal:0865 full book exemption;[whole scope/proofs](../history/stitchcad-devnotes-part1039.md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bind.book-capacity.task-guards`
   Status: `done`
-  Goal:0866 preserve three general task/history checks from the retired book-authority fixture as independent native checks;no book size or growth-control dependency.
-  - [x] ROOT CAUSE: `git show 8152ce3b:docs/tasks/artifacts/live_doc_size/task_source_contract.py` identifies three non-book retention methods inside the retired BookFixture class;they must remain independently watched after book-authority removal.
-  - [x] ADDRESSED: `python3 -I -B docs/tasks/artifacts/live_doc_size/task_source_contract.py`:3 tests pass,rc=0;original paired branch,98-node completed graph and retired journal compare with native Git/archive bytes and current unique live nodes/navigation.
-  - [x] NO REGRESSION: same focused command rc=0;unchanged retention method bodies run without BookFixture,control or growth receipt. Book growth/structure4 and non-book scope/storage17/7/5 remain0865 proofs;runner syntax and book build checked before commit. No runtime Rust or book-size policy change.
-  - [x] LOCKSTEP: standing probe runner and producer/file/effect rows retain the independent task/history consumer;book reference and MEM/DEV/ledger align. README/LIVE reviewed,G1still6/18 In Progress. D156 inventory-reconcile remains P1 before push;no broad inventory acceptance claimed. Commit:STITCHCAD-G1-0866.
-  - [x] PROMOTION: promotion: declined (existing lossless task/history retention;restores independent coverage,not a new policy). Native3 pass0;director book exemption remains unchanged.
+  Goal:0866 independent task/history guards;[whole scope/proofs](../history/stitchcad-devnotes-part1039.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic`
   Status: `pending`
   Goal:actual Root-bound garment/native semantic sources,including Pocket opening kind/domain/state/component recipe and Buttonhole canonical button/derivation;no empty substitute or authored hole length.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.sources`
+  Status: `pending`
+  Goal:actual immutable garment/native source facet and explicit original Root binding;use published garment/input/resource contracts,retain actual inventories and typed causes. Own complete source content before currentness/declaration queries;no empty substitute or id-only source.
 - ID: `G1-SLICE.5f.2.check`
   Status: `pending`
   Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.

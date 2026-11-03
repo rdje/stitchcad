@@ -31,3 +31,10 @@ pub use owners::{
     DraftingProgramDependencyInputs, DraftingProgramDependencyOwnerError,
     DraftingProgramDependencyOwnerIssue,
 };
+
+mod geometry_bind;
+pub use geometry_bind::{
+    BoundDraftingProgramGeometry, DraftingProgramGeometryBindingRefusal,
+    DraftingProgramGeometryError, DraftingProgramGeometryRefusal, DraftingProgramGeometrySupplier,
+    DraftingProgramPlannedGeometryIssue,
+};

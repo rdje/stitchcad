@@ -3,16 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-03 UTC)_ — preserve task/history checks outside book authority
+## _(2026-11-03 UTC)_ — complete static geometry supplier binding
 
-0866 separates the three general native task/history retention methods from the retired BookFixture. Native Git/archive bytes,98 completed nodes,paired live identities and journal navigation still pass3/0. Shared reader helpers retain non-book bounds;book growth has no dependency.
-Standing runner and producer/file/effect dispositions retain that consumer. Promotion declined:existing lossless retention;book reference updated. G1still6/18;geometry binding next,D156 inventory reconciliation before push. No Rust runtime or book-containment change.
+0867 adds bind_geometry under actual admitted fresh work. Both complete vectors reserve before creator preflight;all creators pass before source lookups. Original Existing/Fixed/Planned suppliers retain actual context/schema/family loans. Shared variable-input identity checks preserve named-role behavior.
+Focused geometry10 and named-role2 pass0;new11-case native fixture covers later failures,first mismatch priority,original typed causes,repeats and empty streams. Root/mixed fixture binds14 original uses,12 existing/2 fixed,including untaken/unused selectors. Scoped Rustdoc3,strict selected lint/fmt and book pass0.
+1039 retains four exact Git spans for whole0865/0866 and0330 continuity. Promotion declined:existing authentic-source/complete-work/no-prefix contracts;book owns API. G1still6/18;semantic sources next,coupled verification/allocator faults deferred. No executed geometry or whole acceptance claim.
 
-## _(2026-11-03 UTC)_ — director removes all book size containment
-
-0865 retires chapter/index/aggregate/file-count/width/depth caps and exact change-authority receipts. Exempt reference row skips measurement;working/staged checks keep complete local regular UTF-8 Markdown indexing and native object correctness. Shared non-book guards remain.
-Focused unbounded growth/structure4,measurement scope7 and newline/storage5 pass0. Old writer/control/four obsolete fixtures retire;hook,workflow,policy,route/probe consumers and book align. Existing indexed decision records the explicit ruling;no new map row is needed.
-1038 preserves whole0864 and superseded policy/proofs with five exact Git spans;retired control stays in predecessor8152ce3b. Producer/file/effect drift already present there is owned P1 under D156 inventory-reconcile before push. G1still6/18;geometry binding is next.
+[Whole0865/0866 book exemption and task/history lessons](docs/history/stitchcad-devnotes-part1039.md) retain exact source bytes.
 
 [Whole0864 geometry-work lesson](docs/history/stitchcad-devnotes-part1038.md) retains exact scope and focused proofs.
 
@@ -24,13 +21,7 @@ Focused unbounded growth/structure4,measurement scope7 and newline/storage5 pass
 
 [Whole0858 native-field and0332 release-input lessons](docs/history/stitchcad-devnotes-part1034.md) retains exact scope and verification.
 
-## _(2026-10-26 UTC)_ — release approval identity ruling
-
-0330 .6.2.2.c.2.5.1 finds D239: actual approval fields versus immutable hashed candidate lack transition semantics.
-Guarded historical witness3/unknown-arg2 confirms post-hash fill changes bytes/digest; existing list census9/6/8/0.
-Director chose detached immutable approval records/stable manifest binding. Coordinated adoption .2 is next;
-book/publication76-95 pass0, Rust unchanged22ab074;484/302/143 whole source/hash/public exact0.
-Promotion: existing indexed release decision records D239 ruling; no duplicate record. G1still6/18.
+[Whole0330 release-identity lesson](docs/history/stitchcad-devnotes-part1039.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — artifact input-schema review
 

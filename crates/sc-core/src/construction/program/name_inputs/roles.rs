@@ -2,8 +2,8 @@
 use super::{DraftingGeometryNameSource as G, DraftingProgramOutputPositions};
 use crate::{
     construction::{
-        DraftingContextSource, DraftingOperationInput as I, DraftingPlannedOutputProvider,
-        DraftingPlannedOutputSource, DraftingProgramStepKind,
+        DraftingContextSource, DraftingPlannedOutputProvider, DraftingPlannedOutputSource,
+        DraftingProgramStepKind,
     },
     design::DesignMetadataHost,
 };
@@ -189,23 +189,6 @@ impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> fmt::Debug
             .finish_non_exhaustive()
     }
 }
-fn same_input(expected: I<'_>, actual: I<'_>) -> bool {
-    match expected {
-        I::OffsetEdge(e) => matches!(actual,I::OffsetEdge(a) if std::ptr::eq(e,a)),
-        I::SlashSpread(e) => matches!(actual,I::SlashSpread(a) if std::ptr::eq(e,a)),
-        I::TrueSeam(e) => matches!(actual,I::TrueSeam(a) if std::ptr::eq(e,a)),
-        I::MirrorPiece(e) => matches!(actual,I::MirrorPiece(a) if std::ptr::eq(e,a)),
-        I::JoinPieces(e) => matches!(actual,I::JoinPieces(a) if std::ptr::eq(e,a)),
-        I::ConstructPoint(_)
-        | I::DrawLine(_)
-        | I::DrawArc(_)
-        | I::DrawBezier(_)
-        | I::CloseDart { .. }
-        | I::AddNotch { .. }
-        | I::PlaceGrainline(_)
-        | I::WalkSeam(_) => false,
-    }
-}
 fn role(expected: G<'_>, actual: G<'_>) -> Option<DraftingOutputRoleBindingIssue> {
     use DraftingOutputRoleBindingIssue as R;
     match (expected, actual) {
@@ -286,7 +269,7 @@ impl<'b, 'n, 'p, 'a, H: DesignMetadataHost, S: DraftingPlannedOutputProvider<H> 
                 unreachable!("private actual native output-position invariant");
             };
             let expected = request.output().source();
-            let issue = if !same_input(operation.input(), source.output.input()) {
+            let issue = if !source.output.is_from_input(operation.input()) {
                 Some(DraftingOutputRoleBindingIssue::Input)
             } else if let Some(issue) = role(expected, source.output.name_source()) {
                 Some(issue)
