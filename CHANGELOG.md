@@ -3,6 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
+
+Unchanged guarded cleanup removed4 generated trees and26 synthetic CLI fixture logs:183 files/17785182B. Strict OS-visible admission and immediate independent residue/tracked-byte
+proof passed0;all30 paths absent and2254 skipped entries retained before launcher activation. Prior ps/type refusals deleted nothing. Adopted policy bodies match reference
+sources;G1still6/18 In Progress. Resume genuine mixed native consumers;book/API unchanged.
+
 ## STITCHCAD-G1-0859 — requested clean pause
 
 Director requested pause at the next handoff-ready checkpoint after product9f2fca2c. Handoff passed0;tree clean,brief0,no project jobs. Record PNT pause in MEMORY.md;resume only on request at genuine mixed native consumers. Code/book and0858 validation unchanged;no new implementation started.

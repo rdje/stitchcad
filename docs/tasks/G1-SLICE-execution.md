@@ -662,6 +662,14 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0762 guarded cleanup;[whole scope/proofs](../history/window28.md#stitchcad-devnotes-part938md).
 
+- ID: `G1-SLICE.6.5.3.2.cleanup-20261103`
+  Status: `done`
+  Goal:0860 director-required overdue daily cleanup with unchanged frozen-plan producer;commit before product native.mixed.
+  - [x] ROOT CAUSE: `cleanup.py plan target/artifact_cleanup_audit/daily-20261103-native`:30 candidates/2254 skipped,rc=0;four regenerable trees plus26 synthetic search-capture fixture logs traced to python_search_capture_contract.py. Original native/archive/search proof stores excluded.
+  - [x] ADDRESSED: same producer `apply ... --idle-cua` under OS visibility:4 trees/26 strays/183 files/17785182B removed,zero residue/tracked changes,rc=0. Review and result retained in that run directory;no protected whole-store hash claim.
+  - [x] NO REGRESSION: immediate independent-post.json:all30 paths absent,all2254 skips present,tracked digest equals frozen plan,before launcher activation,rc=0. First sandbox ps refusal2 and then incomplete PID94696/FD52 type refusal2 occurred before deletion;fresh strict census0 and final apply0 kept guards intact.
+  - [x] LOCKSTEP: latest cleanup record/changelog/resume/index updated;README/LIVE/book/DEV reviewed unchanged,process/API scope unchanged. All three adopted policy neutral bodies equal current external references;no policy update needed. G1still6/18 In Progress;PNT resumes native.mixed. No new technical lesson. Initial commit gate refused an overlong new ledger line;wrapped before retry.
+
 ## Drafting operation contracts
 
 - ID: `G1-SLICE.5f.1`
