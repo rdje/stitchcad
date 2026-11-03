@@ -5,6 +5,8 @@ mod dependency_occurrences;
 mod geometry;
 #[path = "support/drafting_initial_binding.rs"]
 mod initial_binding;
+#[path = "support/drafting_native_geometry.rs"]
+mod native_geometry;
 #[path = "support/drafting_output_role_binding.rs"]
 mod output_role_binding;
 #[path = "support/drafting_program.rs"]

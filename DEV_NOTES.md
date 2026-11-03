@@ -3,20 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-02 UTC)_ — direct original native geometry fields
+## _(2026-11-03 UTC)_ — original native fields under complete mixed consumers
 
-0858 raw geometry_dependencies reuses original Line/Arc/Bezier/Slash/Mirror dependencies,borrows Offset ranges/Notch anchors and every Walk pair/A/B anchor. Private Use pins actual input/index/field;independent exhaustive guards cover13 schemas/request wrappers.
-Actual range/anchor parameters and repeated fields retained;Point/Dart/Grainline/Truing/Join direct0 grants no semantic source or programme acceptance. Invalid raw Walk still refuses SelfSpan;default diagnostics omit original documents/selector payloads.
-Final native-input8/strict selected lint/fmt/Rustdoc3/build/publication118/374/1818/3436 pass0;53 prior Rust fences across6 chapters unchanged/new whole native fence exact. Full geometry/semantic/composition verification remains deferred.
-1033 whole0857 task/lesson/ledger plus0084 protocol:4 Git/body/public spans exact0;1487/64,generation1 21/64,generation2 43/64,headroom21. Promotion declined:existing typed native/source contracts;book owns API. G1still6/18;genuine mixed consumers next.
+0861 canonical-bound native iterator joins actual checked steps to same admitted normalized slots;raw field producer remains authoritative. Private use retains actual consumer/genuine position and original input/index/typed field,without names/spans/scalar ordinals.
+Focused native1/three cases verifies all13 families,interleaved scalar,equal-ID distinct sources,both modes,quadratic/cubic,repeated Walk selectors,actual pointers/order/empty/fused/no callbacks. Strict selected lint/fmt/doc3/book build pass0;whole integration verification deferred.
+1034 preserves whole0858 task/lesson/ledger plus0332 lesson;four exact Git spans. Promotion declined:existing original-source/no-value contracts;book owns API. G1still6/18 In Progress;authentic earlier-creator requests next.
 
-## _(2026-10-26 UTC)_ — explicit release candidate inputs
-
-0332 .6.2.2.c.2.5.3 adds nonempty PrepareRelease/ReleasePayload/CommandRelease with exact Design/actor/revision.
-Ordered artifact requests, including repetitions, reach execution unchanged; no default outputs or approval fields.
-Generate metadata is separate from approve; output collisions/completeness/production policy and sealing remain handlers.
-Native release2/artifact5/query2/catalog2, strict selected lint/fmt/book/publication76-97/census9-6-8-0 pass0.
-486/304 whole5d3a9e2 exact0. Promotion declined: existing ruled release contract. G1still6/18; approval intent next.
+[Whole0858 native-field and0332 release-input lessons](docs/history/stitchcad-devnotes-part1034.md) retains exact scope and verification.
 
 ## _(2026-10-26 UTC)_ — detached approval boundary adopted
 

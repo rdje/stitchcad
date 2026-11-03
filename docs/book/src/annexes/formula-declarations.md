@@ -526,7 +526,8 @@ No geometry/numeric provider is called here,and no values or executable whole pr
 
 ## Complete dependency composition
 
-**Root source bridge implemented with focused checks;remaining dependency composition planned.**
+**Root source bridge,canonical joins and original formula/native geometry uses implemented with
+focused checks;geometry suppliers and semantic composition remain planned.**
 The scoped source review separates canonical relations,geometry and semantic sources. The mixed
 proof above does not itself certify those stages. The [actual Root source bridge](formula-checked-recipes.md#root-sources-in-the-actual-mixed-scope)
 now invokes the existing complete source factory before mixed checking consumes the initial map.

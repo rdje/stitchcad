@@ -3,6 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0861 — original native fields with genuine mixed consumers
+
+Complete canonical inputs now stream native geometry fields under actual checked consumer steps and original mixed positions. Preserve original input/index/selectors and repeated fields;no source callback,value or geometry acceptance.
+
+Focused native1/three cases,selected strict lint/fmt,Rustdoc3 and guarded book build pass0. Whole0858/0332 continuity retained in1034 with four exact Git spans. G1still6/18 In Progress;requests/bounds/binding/semantic integration and full verification pending.
+
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
 Unchanged guarded cleanup removed4 generated trees and26 synthetic CLI fixture logs:183 files/17785182B. Strict OS-visible admission and immediate independent residue/tracked-byte
@@ -13,15 +19,10 @@ sources;G1still6/18 In Progress. Resume genuine mixed native consumers;book/API 
 
 Director requested pause at the next handoff-ready checkpoint after product9f2fca2c. Handoff passed0;tree clean,brief0,no project jobs. Record PNT pause in MEMORY.md;resume only on request at genuine mixed native consumers. Code/book and0858 validation unchanged;no new implementation started.
 
-## STITCHCAD-G1-0858 — direct original native geometry fields
-
-Stream every direct native Point/range/anchor field through original typed source views,including both motion/axis modes,cubic controls and repeated Walk pair/A/B anchors. Retain actual input/index/selector with independent exhaustive guards across all13 schemas. No source
-queries,values,semantic-target substitution or programme acceptance.
-
-Native-input8,strict selected lint/fmt,Rustdoc3,guarded book/publication118/374/1818/3436 pass0;53 prior Rust fences across6 chapters unchanged/new native fence exact. Archive1033 four whole source/body/public spans exact0. G1still6/18 In Progress;genuine mixed consumers and complete
-binding/verification remain pending.
 
 # Sealed archive — earlier slices
+
+[Whole0858 native geometry fields](docs/history/stitchcad-devnotes-part1034.md) retain exact task,lesson and ledger bytes.
 
 [Whole0857 formula geometry uses and closed0084 declaration protocol](docs/history/stitchcad-devnotes-part1033.md) retain exact source bytes.
 

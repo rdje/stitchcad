@@ -488,6 +488,47 @@ borrowed spans,and cover nth traversal,repeated end reads,empty cohorts and zero
 Default formatting omits source text and metadata names;explicit getters preserve original data.
 
 The stream is fused and grants no native reference-field coverage,geometry supplier acceptance,
-new resource allowance,currentness,physical values or whole-programme acceptance. Native field
-extraction,earlier-creator requests,complete geometry bounds and binding remain separate owned
-leaves;combined verification stays deferred until the agreed integration feature is implemented.
+new resource allowance,currentness,physical values or whole-programme acceptance. Direct native
+fields and their mixed consumers are implemented below. Earlier-creator requests,complete geometry
+bounds and binding remain separate owned leaves;combined verification stays deferred until the
+agreed integration feature is implemented.
+
+
+## Original native geometry in complete canonical programmes
+
+`BoundDraftingProgramCanonicalInputs::native_geometry_dependencies()` attaches every original
+native geometry field to its actual checked mixed consumer. It follows the complete order proof
+and its same privately admitted normalized programme slots,then reuses each original native
+`geometry_dependencies()` producer. No detached operation-id table,reconstructed family schema,
+filtered statement ordinal,invented name or fabricated source span participates.
+
+Each private `DraftingProgramNativeGeometryUse` keeps `step()`,the actual
+`DraftingProgramOrderStep`;`position()` is that consumer's genuine one-based mixed position.
+`native()` returns the original `DraftingNativeGeometryUse`,retaining its exact raw input,
+zero-based local field index,typed role and selector loans. `reference()` exposes that same
+original PointRef or EdgeRef. Equal operation IDs cannot replace the original input object.
+The scalar-source ordinal remains on actual scalar proofs;native fields acquire none.
+
+```rust
+use sc_core::{construction::*,design::DesignMetadataHost};
+fn native_uses<H:DesignMetadataHost,S:DraftingInitialInputProvider<H> + ?Sized>(
+    inputs:&BoundDraftingProgramCanonicalInputs<'_, '_, '_, '_, '_, '_, '_, '_,H,S>) -> usize {
+    inputs.native_geometry_dependencies().count()
+}
+```
+
+The focused fixture interleaves three scalar statements with every native family and an additional
+Line whose ID and endpoint values equal an earlier Line but whose declaration is a distinct object.
+Their fields retain mixed positions3 and16,each with local field indices0 and1,and borrow the two
+correct original declarations. The intervening scalar statement at position4 never shifts the
+later fields into a native-only ordinal. Quadratic/cubic controls,both Slash motion and Mirror axis
+modes,and three repeated Walk pairs retain their original order and actual selector/pair/anchor
+loans. A scalar-only programme yields no direct native fields,even with unevaluated division by zero.
+Tests compare genuine consumer and input pointers,original pair/anchor pointers,local field order,
+nth traversal,fused repeated end reads,opaque diagnostics and zero source/provider calls.
+
+This iterator allocates no buffer and reads no authored value. Empty native slots and semantic-only
+families supply no direct fields;their formulas or actual Root-bound semantic records retain their
+separate obligations. The view accepts no existing or earlier planned geometry supplier,frame,
+current snapshot,semantic target,resource allowance,physical result or whole programme. Authentic
+creating-step requests,complete geometry bounds and source binding remain the next owned stages.

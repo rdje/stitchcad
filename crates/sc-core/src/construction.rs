@@ -92,13 +92,14 @@ pub use program::{
     DraftingProgramInitialNamespace, DraftingProgramInitialNamespaceError, DraftingProgramInputs,
     DraftingProgramLimits, DraftingProgramNameDependency, DraftingProgramNameInputs,
     DraftingProgramNameLimits, DraftingProgramNameShape, DraftingProgramNameWorkError,
-    DraftingProgramNameWorkRefusal, DraftingProgramNormalizationError,
-    DraftingProgramNormalizationRefusal, DraftingProgramOrderError, DraftingProgramOrderLimits,
-    DraftingProgramOrderProofKind, DraftingProgramOrderRefusal, DraftingProgramOrderShape,
-    DraftingProgramOrderStep, DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal,
-    DraftingProgramOutputPositions, DraftingProgramShape, DraftingProgramSourceCheckError,
-    DraftingProgramStep, DraftingProgramStepKind, DraftingProgramStepView,
-    NormalizedDraftingOperation, NormalizedDraftingProgram,
+    DraftingProgramNameWorkRefusal, DraftingProgramNativeGeometryUse,
+    DraftingProgramNormalizationError, DraftingProgramNormalizationRefusal,
+    DraftingProgramOrderError, DraftingProgramOrderLimits, DraftingProgramOrderProofKind,
+    DraftingProgramOrderRefusal, DraftingProgramOrderShape, DraftingProgramOrderStep,
+    DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal, DraftingProgramOutputPositions,
+    DraftingProgramShape, DraftingProgramSourceCheckError, DraftingProgramStep,
+    DraftingProgramStepKind, DraftingProgramStepView, NormalizedDraftingOperation,
+    NormalizedDraftingProgram,
 };
 mod bezier;
 pub use arc::{

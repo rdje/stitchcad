@@ -225,8 +225,9 @@ field getters preserve that original information. Copying a use copies only meta
 fields and lifetimes prevent replacing or outliving its native owner.
 
 This raw producer grants no containing-programme position,statement ordinal,geometry supplier,
-currentness,frame,resource allowance,physical result or whole acceptance. The next mixed native
-stage must attach genuine programme consumers before complete geometry bounds and source binding.
+currentness,frame,resource allowance,physical result or whole acceptance. The implemented
+[mixed native view](formula-checked-recipes.md#original-native-geometry-in-complete-canonical-programmes)
+attaches genuine programme consumers;complete geometry bounds and source binding remain separate.
 
 The containing program must preserve actual scalar-source ordinals separately from combined
 program positions. It must receive its actual Cartesian drafting frame and current output registry,
