@@ -248,6 +248,21 @@ impl fmt::Debug for LogicalInputDeclaration {
     }
 }
 impl LogicalInputDeclaration {
+    // Exhaustive complete owned view: a new field requires an explicit accounting decision.
+    pub(crate) fn resource_parts(
+        &self,
+    ) -> (
+        &LogicalInputDeclarationDefinition,
+        LogicalInputLimits,
+        LogicalInputShape,
+    ) {
+        let Self {
+            definition,
+            limits,
+            shape,
+        } = self;
+        (definition, *limits, *shape)
+    }
     /// Admit complete content/comparison bounds before domain/state validation, using no validation
     /// workspace allocation. Existing owned input vectors are supplied by the caller, not budgeted
     /// allocator capacity. Checks preserve original domain/evidence order and referenced provenance.

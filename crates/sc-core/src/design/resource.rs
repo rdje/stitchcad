@@ -6,6 +6,8 @@ use core::{
 };
 
 mod canonical;
+mod logical;
+pub use logical::{charge_logical_declaration_resources, charge_logical_input_resources};
 mod composition;
 mod constructions;
 mod garment;

@@ -141,3 +141,68 @@ This inventory is not yet attached to canonical Design/Profile inputs. Its const
 supply no aggregate content credit to the later source gate. Exhaustive content accounting comes
 next, then atomic Root/identity/resource integration. Source facets, evidence truth, currentness,
 semantic recipes and complete programme acceptance retain their separate owners.
+
+
+## Account for actual logical content
+
+`charge_logical_input_resources(&inputs,sink)` now walks the complete actual standalone inventory.
+It charges the declaration vector before visiting members, then each original domain vector before
+its tokens. Every domain member's original text is counted. Known, Assumed, Choice and Preference
+also charge their separately owned selection text; equal content in a domain and selection still
+counts twice. Known precharges its original evidence vector. Unknown and Derived have no selected
+text to charge; their observation/operation references remain fixed identity payloads.
+
+`charge_logical_declaration_resources(&record,sink)` exposes the same complete record walk for a
+separately held snapshot. It does not invent an inventory index or charge a nonexistent container.
+Exhaustive private owner views and definition/state patterns ensure new owned fields require an
+accounting decision. Retained constructor limits and shapes are fixed Copy metadata, checked as
+such; neither their allowances nor cached totals provide content credit.
+
+Both functions use the caller's original cumulative `DesignResourceSink`. They create no meter,
+result vector, lookup, cloned model or validation pass. They compute no selection and query no
+source or currentness. Every original separately owned field counts, including unused records.
+The caller finishes the meter and owns the complete source allowance. A previous sink refusal
+remains the same refusal, including for an empty inventory and its zero collection charge.
+
+```rust
+use sc_core::{design::*,value::LogicalInputs};
+fn logical_content(inputs:&LogicalInputs,limits:DesignResourceLimits)
+    ->Result<DesignResourceDemand,DesignResourceLimitError> {
+    let mut meter=DesignResourceMeter::new(limits);
+    charge_logical_input_resources(inputs,&mut meter)?;
+    meter.finish()
+}
+```
+
+Locations use Structure scope and these original field tokens:
+
+| Field | Owner and index |
+| --- | --- |
+| `canonical.logicals` | No declaration owner/index;complete standalone vector |
+| `canonical.logicals.domain` | Original declaration ID and inventory position |
+| `canonical.logicals.domain.member` | Original declaration ID and domain member position |
+| `canonical.logicals.value` | Original declaration ID and inventory position |
+| `canonical.logicals.evidence` | Original declaration ID and inventory position |
+
+A directly supplied declaration has no invented inventory position:domain,selection and evidence
+use index None. Domain-member text still retains its actual original member position. Field tokens
+and declaration owner distinguish those positions; no ID sorting or registry reconstruction occurs.
+
+For one declaration in each state, each with domain `small,large`, Known evidence2 and selected
+`small` in the four selection-bearing states, the inventory requires20 collection entries and80
+text bytes:6 declarations +12 domain entries +2 evidence entries;60 domain bytes +20 selection
+bytes. Fixed IDs and constructor proof fields add no dynamic counter bits. Prior2 entries,3 text
+bytes and1 counter bit remain in the same meter, producing22/83/1. One direct Known declaration
+requires4 entries/15 bytes without an invented container entry.
+
+Short allowances retain the original first field. For that six-record fixture, entry allowance5
+refuses the complete declaration vector6 before traversal. Allowance7 reaches the first domain's
+required2 after6 entries. Text allowance14 reaches its selected value5 after10 domain bytes;
+entry allowance9 reaches Known evidence2 after8 entries. Later Choice/Preference and final Derived
+domain refusals keep their actual original owner and field position. No aggregate cached charge
+can replace those original causes.
+
+This is standalone content accounting. Canonical Root/identity integration, Profile/source binding,
+currentness and semantic execution remain separate. Root attachment must wire this producer into
+every actual/prospective canonical traversal atomically;the standalone function grants no uncharged
+Root or whole-source acceptance.

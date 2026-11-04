@@ -195,6 +195,21 @@ impl<'a> LogicalInputBinding<'a> {
     }
 }
 impl LogicalInputs {
+    // Preserve the complete actual owned vector and fixed proof fields without lookup or cloning.
+    pub(crate) fn resource_parts(
+        &self,
+    ) -> (
+        &[LogicalInputDeclaration],
+        LogicalInputInventoryLimits,
+        LogicalInputInventoryShape,
+    ) {
+        let Self {
+            declarations,
+            limits,
+            shape,
+        } = self;
+        (declarations, *limits, *shape)
+    }
     /// Own the complete supplied vector after checked L*L arithmetic and declaration/comparison
     /// quotas, then original-order duplicate checks. Validation allocates no workspace and reads
     /// no selected member, currentness or source value. Prior record proofs grant no aggregate

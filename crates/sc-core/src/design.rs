@@ -101,6 +101,7 @@ pub use resource::{
     charge_design_revision_resources, charge_design_sewing_resources,
     charge_design_structure_resources, charge_formula_source_resources,
     charge_hem_inventory_resources, charge_layer_inventory_resources,
+    charge_logical_declaration_resources, charge_logical_input_resources,
     charge_material_inventory_resources, charge_notion_placement_inventory_resources,
     charge_parameter_resources, charge_piece_inventory_resources,
     charge_pocket_inventory_resources, charge_recipe_document_resources,

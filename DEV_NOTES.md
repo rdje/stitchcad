@@ -3,10 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — standalone original logical membership
+## _(2026-11-04 UTC)_ — actual standalone logical content accounting
 
-0871 owns original logical declarations under complete L/L*L quotas before duplicate scans. Kind bindings retain actual inventory/member/index;equal authored data cannot substitute owner pointers. Missing retains ID/kind,wrong Kind the actual loan;values/source references do not become declarations.
-Focused3,strict lint/fmt,Rustdoc6 and actual book2/build pass0. Borrowed error remains local;owned-error examples explicitly render it. Indexed logical reference preserves old anchors. Promotion declined:existing owner/bound contracts;G1still6/18. Accounting next,Root/resource attachment remains atomic.
+0872 exhaustive owner/state views charge original inventory/domain/member/selection/evidence fields in one sink. Constructor policies/shapes are fixed,never demand credit. Direct snapshots invent no inventory index;empty scopes preserve prior sink failures. No source/value/currentness queries.
+Focused3 count20/80/0,prior22/83/1,direct4/15/0 plus11 exact first-field refusals;strict lint/fmt,API1/book3/build pass0. Promotion declined:existing exhaustive/cumulative contracts;G1still6/18. Actual Root identity/resource attachment next,no Root or coupled proof yet.
+
+[Whole0871 logical inventory lesson](docs/history/stitchcad-devnotes-part1044.md) retains exact source bytes.
 
 [Whole0870 logical declaration lesson](docs/history/stitchcad-devnotes-part1043.md) retains exact source bytes.
 
@@ -36,13 +38,7 @@ Focused3,strict lint/fmt,Rustdoc6 and actual book2/build pass0. Borrowed error r
 
 [Whole0327 plotter/print lesson](docs/history/stitchcad-devnotes-part1043.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — explicit graded DXF carriage
-
-0326 .6.2.2.c.2.4.2 preserves ordered distinct member claims at one SizeSet/Count revision; empty/duplicate
-inventories refuse with original positions. Explicit base/rules/selection pair AAMA companion or ASTM embedded.
-Single-instance API/closure stay intact; no base inference, chart subtraction or readiness/serialization claim.
-Native artifact4/query2/catalog2 and selected strict lint/fmt/book/publication76-90 pass0;480/298 exact06dfb78.
-Promotion declined: existing grading/registry contracts. G1still6/18, PLT/PDF next; broad CI integration/pre-push.
+[Whole0326 graded-DXF lesson](docs/history/stitchcad-devnotes-part1044.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — exact DXF and uncertainty requests
 
