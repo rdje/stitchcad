@@ -27,6 +27,12 @@ pub use buttonhole::{
 #[cfg(doctest)]
 #[doc = include_str!("../../../../docs/book/src/annexes/semantic-recipes.md")]
 mod semantic_examples {}
+mod semantic_recipe;
+pub use semantic_recipe::{
+    SemanticOperation, SemanticOperationBinding, SemanticOperationKind,
+    SemanticOperationLookupError, SemanticRecipe, SemanticRecipeError, SemanticRecipeLimits,
+    SemanticRecipeRefusal, SemanticRecipeShape,
+};
 mod logical_derivation;
 pub use logical_derivation::{
     LogicalDerivationDefinition, LogicalDerivationError, LogicalDerivationInput,

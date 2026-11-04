@@ -86,8 +86,8 @@ constructor allowances. Prior1 entry,3 text bytes and2 bits remain3/19/2. Entry 
 vector2; text15 refuses second role8 after8 bytes. Empty and nonempty producers preserve the same
 earlier latched refusal.
 
-This is a standalone source record and exhaustive content walk. Genuine ordered semantic recipe
-ownership, component origin binding, Root/program attachment,
+This is a standalone source record and exhaustive content walk. The semantic owner below now
+retains original declaration order; component origin binding, Root/program attachment,
 Closure-to-operation dependency binding and readonly source ports remain tracked work. It creates
 no scalar statement, native drafting slot or geometry. Profile pins, currentness, physical execution
 and the deferred coupled verification remain separate.
@@ -182,7 +182,8 @@ The four-role fixture costs4 entries/32 text bytes/0 counter bits. Prior2 entrie
 finish6/35/1. Entry allowance3 refuses the original vector4; text31 refuses final role8 after24 bytes
 at original index3. Empty and nonempty walks preserve an earlier latched cause. The caller finishes
 the same cumulative meter. Standalone accounting grants no ordered owner, Root/Profile/rule binding,
-graph acceptance or execution; those remain tracked alongside component origin binding and source ports.
+graph acceptance or execution. The semantic owner below retains original declaration order;
+component origin binding and source ports remain tracked separately.
 
 ## Raw original component origins
 
@@ -247,3 +248,85 @@ native constructor proofs provide no whole-source credit. Complete Root Piece/co
 actual recipe/native-input association, frame/snapshot identity and original first causes remain
 with the tracked component binding task after source ports/accounting exist. Other creation forms
 need genuine supported source records; these carriers supply no synthetic native history for them.
+
+## Original ordered semantic recipe
+
+`SemanticRecipe` now owns the exact supplied `Vec<SemanticOperation>` in authored order.
+The implemented variants are Buttonhole and LogicalDerivation, each retaining its original
+immutable operation record and constructor metadata. `SemanticOperation::id()` and `kind()`
+report that actual original declaration. Scalar statements and native drafting inputs retain their
+separate original owners. Raw component recipe carriers continue to borrow genuine native families;
+they do not become invented semantic/native slots in this vector.
+
+Select `SemanticRecipeLimits::new(operations,validation_inspections)` explicitly; there is no
+Default. The factory derives complete original N and checked conservative N*N identity comparisons
+before operation-count then comparison quotas. Only after both pass does it scan for the first
+repeated owned identity in authored order. Identical definitions and different-family records
+with the same ID both refuse. Rule, policy, output and input IDs are references, not additional
+owned operations. Validation uses borrowed prefix scans without workspace allocation. Input buffers
+already exist; these counts/comparisons do not bound allocator capacity, CPU, queries or execution.
+
+For N3, exact3/9 passes. Count2 refuses complete3 before duplicate scans; comparison8 refuses9.
+IDs `[90,90,80]` with full allowances refuse DuplicateIdentity first0/duplicate1 even when the
+first two operations have different families. IDs `[90,70,90]` retain first0/duplicate2. An empty
+vector with explicit0/0 is legal and creates no unknown, default or placeholder operation.
+
+The original vector and each operation's authored content remain unchanged. `operations()` returns
+the complete readonly slice; `operation(id)` loans only an actual owned member. A shared rule ID900
+does not become a member merely because two operations reference it. `limits()` and `shape()`
+retain the original selected bounds and complete population; authored equality compares operations
+and ignores constructor allowances. Debug omits authored local role text.
+
+`resolve(id,expected_kind)` returns a private `SemanticOperationBinding` retaining the actual
+recipe/member loans and original zero-based semantic-vector index. That index is neither a scalar
+ordinal, native step nor combined-program position. Missing retains the requested identity/family;
+Kind retains the expected family and actual original member loan. No matching-kind alternative,
+copied definition or fallback substitutes. Equal-data recipes can compare equal while their bindings
+still refer to different owners and members. Root/source consumers must bind that exact owner
+separately. A caller returning an owned static error may render the native lending error explicitly:
+
+```rust
+use sc_core::{ontology::{EntityId,NotionSize},recipe::*};
+# fn main()->Result<(),Box<dyn std::error::Error>> {
+let operation=ButtonholeOperation::new(ButtonholeOperationDefinition {
+    id:EntityId::from_bits(90),button:NotionSize::Declaration(EntityId::from_bits(903)),
+    policy:EntityId::from_bits(900),inputs:vec![],
+},ButtonholeOperationLimits::new(0,0,0))?;
+let recipe=SemanticRecipe::new(vec![SemanticOperation::Buttonhole(operation)],
+    SemanticRecipeLimits::new(1,1))?;
+let binding=recipe.resolve(EntityId::from_bits(90),SemanticOperationKind::Buttonhole)
+    .map_err(|e|e.to_string())?;
+assert!(std::ptr::eq(binding.recipe(),&recipe));
+assert_eq!(binding.index(),0);
+# Ok(()) }
+```
+
+## Account for the complete semantic recipe
+
+`charge_semantic_recipe_resources(&recipe,sink)` precharges the actual complete operation vector,
+then invokes the exhaustive actual Buttonhole/logical member walks in original order. The whole
+vector uses Inputs scope, field `semantic.operations`, owner None and index None. Nested fields
+retain each original operation ID and its actual local-input index; no containing mixed position
+is invented. Exhaustive owner/variant/member views expose new held-field obligations. Fixed Copy
+constructor metadata supplies no cached-shape credit. The caller owns and finishes the same meter.
+
+```rust
+use sc_core::{design::*,recipe::SemanticRecipe};
+fn semantic_content(recipe:&SemanticRecipe,limits:DesignResourceLimits)
+    ->Result<DesignResourceDemand,DesignResourceLimitError> {
+    let mut meter=DesignResourceMeter::new(limits);
+    charge_semantic_recipe_resources(recipe,&mut meter)?;
+    meter.finish()
+}
+```
+
+For Buttonhole90 with two eight-byte roles, Logical70 with one eight-byte role, then Buttonhole80
+with explicit empty dependencies, actual demand is6 entries/24 text bytes/0 bits:3 operations plus
+3 member input entries. Prior2 entries/3 bytes/1 bit finish8/27/1. Entry allowance2 refuses complete
+operations3. Allowance4 reaches Buttonhole90 inputs2 after3 entries; allowance5 reaches Logical70
+inputs1 after5 entries. Text23 refuses its role8 after16 bytes at owner70/index0. Every original
+first field survives; empty and nonempty recipes preserve any earlier latched sink refusal.
+
+The owner and producer are standalone. Actual Root attachment, all-family identity joins, combined
+program order, rule/policy signatures, complete source/graph binding and execution remain separate
+tracked work. No record acquires a fabricated mixed/native/scalar position or whole-source allowance.

@@ -3,12 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — raw actual component origin loans
+## _(2026-11-04 UTC)_ — original ordered semantic operation owner
 
-0876 reuses real Mirror/Join Piece identity factory parents to return original native inputs/identity fields. Recipe carriers retain whole original program/Piece/creator loans;imported carriers retain actual primitive/original opaque source record,then frame/snapshot loans. No fabricated ordinal or accepted history.
-Three selected native/import pointer checks pass;first Join selector ran0 tests and was corrected to the actual named1 pass. Strict lint/fmt and four compiler guards pass0. Copy/Debug require no opaque payload/context traits;all APIs are constant-work loans without lookup,cloning or allocation.
-Seven actual maintained semantic recipe examples and guarded book build pass0.
-Promotion declined:existing authentic native parents/original source/lifetime contracts;book owns carriers. Actual Root/recipe/frame/snapshot association waits at component .bind after ports/accounting;ordered semantic owner is next. Archive1048 retains whole0875,Hem acceptance/0322;G1still6/18.
+0877 moves exact Buttonhole/logical operation vector,checks complete N/N*N quotas before original cross-family/identical duplicate scans without workspace allocation. Original member/kind bindings retain recipe/member/index loans;referenced rules/outputs/inputs are not owners or mixed positions.
+Focused3 verify original buffers/order,exact3/9 and short bounds,duplicate witnesses,kind/missing causes,equal-data foreign owners and explicit empty scope. Exhaustive actual inventory/member walk gives6/24/0 and cumulative8/27/1;first fields and prior latch survive without cached constructor credit.
+Selected strict lint/fmt,API3,actual semantic book9 and guarded build pass0.
+Promotion declined:existing original ownership/complete bounds/exhaustive accounting contracts;book owns semantic owner API. Root/candidate/resource attachment then mixed integration are separate next leaves. Archive1049 retains whole0876,notion acceptance and0321;G1still6/18 In Progress.
+
+[Whole0876 component origin lesson](docs/history/stitchcad-devnotes-part1049.md) retains exact source bytes.
 
 [Whole0875 logical derivation lesson](docs/history/stitchcad-devnotes-part1048.md) retains exact source bytes.
 
@@ -58,13 +60,7 @@ Promotion declined:existing authentic native parents/original source/lifetime co
 
 [Whole0322 profile-pin lesson](docs/history/stitchcad-devnotes-part1048.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — combined structural model acceptance
-
-0321 .4d.2 closes .4: metadata16/table16/Ease14 pass0, prior model25/composite31 proof retained.
-D235 overview/metadata claims lagged models/native trig; D236 topic index missed4 chapters; both fixed.
-Publication74 chapters/87 scoped entries pass0;13 principal model APIs registered. No fresh platform/engine claim.
-472/473/474/475/293/140 whole140422e Git/hash/public exact0; canonical18 census changes only.4 to done,6/18.
-Promotion declined: existing publication policy; include overview/index in feature sync. Next .6.2.2.c.2 schemas.
+[Whole0321 structural acceptance lesson](docs/history/stitchcad-devnotes-part1049.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — complete SizeSet structural requirements review
 

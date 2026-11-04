@@ -97,30 +97,7 @@ Whole0017 [goals/acceptance/proofs](../history/window28.md#stitchcad-devnotes-pa
 
 ### `G1-SLICE.3c.4c.1a` — physical notion placements preserve stable copy bindings
 
-- [x] **REPRODUCE / ISSUE** — closure components attach to physical material; Piece-only positions
-  cannot distinguish copies. The prior commit has CutCopy identities but no notion-placement API.
-- [x] **ROOT CAUSE (WHY + WHERE)** — birth and current anchor validation have different contracts.
-  `cargo test -p sc-core --test notion_contract
-  current_validation_follows_historical_anchors_but_reports_current_choice_and_repairs` → `1 passed`,
-  `rc=0`: historical anchors resolve while split choices/deletions remain current repair evidence.
-  `copy_source_reassignment_and_wrong_provided_piece_are_typed_refusals` → `1 passed`, `rc=0`:
-  the original copy id cannot silently adopt another source Piece.
-- [x] **FIX** — immutable placement id/copy/anchor/direction plus original source identity guard.
-  Born-live anchoring keeps existing errors; shared current validation follows journal ownership.
-  Current copy/Piece checks and whole direction intervals refuse retargeting, lost/foreign material.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test notion_contract` → `10 passed`, `rc=0`:
-  distinct copies, ordering/removal/reassignment, historical anchors, current ownership, choices,
-  interior repairs, directed order and immutable input. Four mutations (copy binding, range ownership,
-  historical resolution and current anchor ownership) independently fail red, `rc=101`; restored
-  privacy/checks pass. Hem checklist and completed verification table compare unchanged to HEAD.
-- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; `make wasm` →
-  green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
-  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
-  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Notch/TurnPoint contracts unchanged.
-- [x] **LOCKSTEP** — pre-code copy decision, closure children, current Design obligations, module/map,
-  bounded closure chapter/API vocabulary and feature reasons, evidence/log retrieval, frontier/index
-  and live docs align. The oldest lesson seals unchanged to devnotes-part18. No closure kind/count/size or
-  physical transform claim yet; next `.3c.4c.1b`. G1 remains 3/4 object families.
+[Whole original notion acceptance](../history/stitchcad-devnotes-part1049.md) remains byte-exact.
 
 ### `G1-SLICE.3c.4c.1b` — zipper/hook-bar instances borrow current placements and refuse fly scope
 
@@ -866,24 +843,31 @@ retains all original goals,statuses and focused acceptance evidence.
   `.bind` (bounded authentic Root/program/snapshot/source association after source ports exist).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.carriers`
   Status: `done`
-  Goal:raw readonly component origins retain actual Piece,original recipe owner and genuine Mirror/Join native Piece identity parents,or explicit original imported-primitive record;no synthetic ordinal or accepted creation-history/geometry claim.
-  - [x] REPRODUCE / ISSUE:0875 typed semantic declarations did not retain component recipe/native creator or imported primitive source loans. Actual origin data must exist before bounded source queries;IDs or fabricated native positions cannot supply it.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test mirror_piece_identity_contract canonical_identity_borrows`:1 pass,rc=0;published Mirror/Join Piece identity factories retain genuine original parents. Component carriers can loan those fields directly without reconstructing an input or inventing a native slot.
-  - [x] FIX:raw creator enum retains actual native identity proofs;recipe source retains whole original program/Piece/creator loans,import source retains primitive/original opaque record,and outer source retains actual frame/snapshot. Fixed field access only,no allocation/query or accepted history.
-  - [x] ADDRESSED: same selected Mirror1,imported_component_source1 and join_piece_identity_contract unlisted_and_equal_external_source_values1 pass,rc=0;identity/native-input pointer equality survives both real families,opaque imported payload needs neither Clone nor Debug. Initial wrong Join selector0 corrected to actual named1.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test mirror_piece_identity_contract --test join_piece_identity_contract -- -D warnings`:pass,rc=0;fmt0,`cargo test -p sc-core --doc construction::context::component`:4 pass0,recipe::semantic_examples7 pass0. Guarded book build0;coupled .5f.2.verify deferred.
-  - [x] LOCKSTEP:semantic/source/Pocket book links show raw loans and actual family parents without certifying history/Root/currentness. Provider accounting and bounded .components.bind remain owned after ports;MEM/index select semantic inventory next. README reviewed unchanged,LIVE note updated,G1still6/18 In Progress.
-  - [x] CONTINUITY:1048 retains whole0875,original Hem acceptance and0322;transition_receipts.py reports5 exact Git spans0 and public reader byte-exact0. No retained-window or ceiling changes;DEV/ledger align.
-  - [x] PROMOTION: promotion: declined (existing authentic family/original-source/lifetime contracts;book owns raw component API). Supported native Piece identities remain Mirror/Join;other original source forms cannot acquire synthetic history. Commit:STITCHCAD-G1-0876.
+  Goal:0876 raw actual component source loans;[whole scope/proofs](../history/stitchcad-devnotes-part1049.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind`
   Status: `pending`
   Goal:after source ports/accounting,bind complete original component origins to actual Root Piece/copy,recipe owner/native creator and frame/snapshot under explicit bounds;typed original causes,no historical reconstruction or prefix acceptance.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.inventory`
-  Status: `pending`
+  Status: `done`
   Goal:complete immutable original semantic operation order/membership with explicit bounds and first duplicate causes;typed original operation positions remain distinct from scalar/native positions.
+  - [x] REPRODUCE / ISSUE:0876 held standalone semantic declarations and raw component origins,but no immutable original semantic sequence/member owner. Actual Root/source association requires this owner before any mixed ordinal can be admitted.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test semantic_recipe_contract`:3 pass,rc=0;original semantic operation IDs/kinds and whole owned sequence need a separate owner. Referenced rule/output/input IDs are not operation declarations or mixed-program positions.
+  - [x] FIX:SemanticRecipe moves exact original typed operation vector;complete N/N*N arithmetic and count/comparison quotas precede original duplicate scans without workspace allocation. Private member/kind loans retain actual recipe/operation/semantic index;no source/value or rule execution.
+  - [x] ADDRESSED: same focused command3 pass,rc=0;original buffers/order,exact3/9 and short quotas,cross-family/identical duplicates,missing/kind causes,equal-data foreign owner/member pointers and empty0/0. Exhaustive actual producer gives6/24/0 and prior8/27/1;four exact first-field refusals and prior latch remain original.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test semantic_recipe_contract -- -D warnings`:pass,rc=0;fmt0,`cargo test -p sc-core --doc recipe::semantic_recipe`:3 pass0 and recipe::semantic_examples9 pass0. Guarded book build0;coupled .5f.2.verify deferred.
+  - [x] LOCKSTEP:semantic reference documents source sequence/kind/member/limits/complete resource fields with compiled examples;implementation plan reflects standalone owner only. README reviewed unchanged,LIVE note updated,G1still6/18;MEM/index/DEV/ledger select atomic actual Root integration,next mixed program.
+  - [x] CONTINUITY:1049 retains whole0876,original notion acceptance and0321;transition_receipts.py reports5 exact Git spans0 and public reader byte-exact0. No retained-window or ceiling changes.
+  - [x] PROMOTION: promotion: declined (existing original ownership/complete bounds/exhaustive actual accounting;book owns semantic owner API). Root/mixed/source/rule/graph/currentness and execution remain pending;no fabricated native/scalar position. Commit:STITCHCAD-G1-0877.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.attach`
   Status: `pending`
   Goal:atomically attach actual ordered semantic recipe to Root/program identity,resource and order contracts;numeric-only scopes stay explicitly empty and no invented native position appears.
+  Children: `.root` (whole actual Root identity/resource/data paths), `.program` (actual mixed order/admission).
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.attach.root`
+  Status: `pending`
+  Goal:actual semantic recipe field/getter and all-family Design identity census;exhaustive actual/prospective accounting and candidate reconstruction preserve the complete original cohort atomically. Legacy numeric-only fixtures supply explicit empty semantic scope;source/rule binding remains separate.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.attach.program`
+  Status: `pending`
+  Goal:actual original Root semantic ordinals in complete mixed admission,normalization/order/dependency metadata and bounds;scalar/native positions remain authentic and semantic operations gain no fabricated geometry output/name.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports`
   Status: `pending`
   Goal:readonly authentic logical/Profile/operation facets with original record/Root/snapshot

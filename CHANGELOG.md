@@ -3,12 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0876 — raw original component origins
+## STITCHCAD-G1-0877 — original ordered semantic recipe
 
-Retain actual Piece/program/native identity parents or explicit imported primitive/source-record loans,plus original frame/snapshot. Genuine Mirror/Join inputs and identity fields remain borrowed;no synthetic ordinal or accepted history/geometry is introduced.
-Three selected pointer checks,strict lint/fmt,API4 and compiled book7 pass0.
+Own exact authored Buttonhole/logical operation order with complete constructor bounds and original duplicate/member/kind witnesses. Compose actual inventory/member resource fields in the same sink,without cached credit or synthetic mixed positions. Focused3 pass;Root integration is next.
 
-G1still6/18 In Progress;original ordered semantic ownership is next. Component binding waits for source ports/accounting;coupled verification remains deferred. Whole0875/Hem/0322 retained in1048.
+G1still6/18 In Progress;source/rule signatures,component binding and coupled verification remain pending. Whole0876/notion/0321 retained in1049.
+Selected strict lint/fmt,API3/book9/build pass0;full coupled verification deferred.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -22,6 +22,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0876 component origins and original notion acceptance](docs/history/stitchcad-devnotes-part1049.md) retain exact source bytes.
 
 [Whole0875 logical derivation and original Hem acceptance](docs/history/stitchcad-devnotes-part1048.md) retain exact source bytes.
 
