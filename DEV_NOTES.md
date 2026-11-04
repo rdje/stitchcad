@@ -3,14 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — original Profile records and complete pin text
+## _(2026-11-04 UTC)_ — actual selected Profile source binding
 
-0881 raw Profile/parameter carriers loan actual Root,pin,canonical inventory,body,snapshot and metadata fields. Profile canonical data is a separate source owner.
-Parameter600 and canonical declaration90 remain distinct;Derived keeps its operation reference without a selected result. Carriers perform no lookup/acceptance.
-Manual Copy/Clone/Debug needs no H/payload traits and omits pin/domain/body text. Foreign equal-data records remain inspectable raw responses for later refusal. Existing SelectedProfilePin nonblank/opaque label behavior and DeferredToG4 stay unchanged.
-The selected-pin producer exhaustively views owner/definition and charges profile/schema/content UTF8 text in order;caller supplies original scope/owner/index. Focused3 pass0:original pointer/record loans,zero callbacks,exact0/T/0,three first-field shortages,prior1/(T+2)/1 and unchanged first latch/labels.
-Strict selected lint/fmt0,Profile API lifetime/raw-construction2 and actual semantic_examples17 pass,rc=0;guarded book build0. Provider/binding follows;full semantic/G4/currentness/evidence/physical acceptance remains separate.
-Promotion declined:existing source/pin doctrine;book owns API. Archive1053 retains whole0880/original0068 with exact/public receipts0;G1still6/18.
+0882 readonly provider output loans belong to Self independently of requested-pin lifetime. Core freshly charges actual Root/provider/request fields before one lookup,then checks actual Root,opaque profile/schema/content labels and snapshot in order. Request/source pins may be distinct equal-data objects.
+Private binding retains original context,request,source,limits and demand;errors retain original typed provider/resource causes and complete returned mismatch records. Body/canonical association relies on the immutable honest provider contract;G4 registry/schema/evidence truth stays separate.
+Focused3 pass0:exact7/T/9 and prior8/(T+2)/10,original source pointers,five first mismatches,typed provider chain and provider/request quota refusals before lookup. Ignored provider-sink failure stays first. Shared Root-scope3 pass0;strict selected lint/fmt0.
+Profile Rustdoc6 pass0:provider-only output lifetime positive,request echo E0621,private field and short pin E0515 refuse. Actual semantic_examples19 and guarded book0. No parameter/currentness/value/graph or aggregate-query proof;parameter binding follows. Promotion declined:existing source/pin doctrine;book owns API.
+Archive1054 retains exact whole0881/original0068 receipts,public/exact-span0. Initial atomic patch context mismatch applied nothing;actual export wrapping checked before corrected edit. G1still6/18 In Progress.
+
+[Whole0881 original Profile record lesson](docs/history/stitchcad-devnotes-part1054.md) retains exact source bytes.
 
 [Whole0880 fresh Root semantic source lesson](docs/history/stitchcad-devnotes-part1053.md) retains exact source bytes.
 

@@ -175,7 +175,7 @@ impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> fmt::Debug
             .finish_non_exhaustive()
     }
 }
-fn charge_context<H: DesignResourceSource, S: DraftingContextSource<H> + ?Sized>(
+pub(super) fn charge_context<H: DesignResourceSource, S: DraftingContextSource<H> + ?Sized>(
     context: DraftingContext<'_, H, S>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {

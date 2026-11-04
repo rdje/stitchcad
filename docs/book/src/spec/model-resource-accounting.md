@@ -458,6 +458,13 @@ command-admission certificate.
 Actual measurement and external SizeSet component examples continue in
 [Actual source resource accounting](source-resource-accounting.md).
 
+Selected Profile sources retain their own pins,canonical inventories,payloads and metadata.
+The [selected-pin producer](../annexes/semantic-recipes.md#complete-selected-pin-text-accounting)
+charges all three original labels with caller scope/owner/index. The
+[selected-source binding](../annexes/semantic-recipes.md#bind-the-original-selected-profile-source)
+freshly composes actual Root,complete provider and requested-pin content before lookup;individual
+pin accounting alone supplies no Profile/canonical association,G4 validation or whole-source proof.
+
 ## Complete actual Inputs, Sewing and Garment roots
 
 charge_design_input_resources borrows every private DesignInputsDefinition field in schema order:

@@ -591,8 +591,8 @@ These are raw responses,not public accepted-source constructors. Foreign equal-d
 inventory records,another snapshot or a detached equal-data declaration remain inspectable for
 later typed refusal. Matching labels or IDs alone do not establish original Profile metadata,
 canonical membership,currentness,domain acceptance,evidence truth or physical resolution. The
-following provider/binding leaf owns explicit requested-pin association and original Root/profile/
-snapshot/canonical/member checks. The honest immutable source contract requires actual original
+selected-source binding below checks explicit requested labels,Root and snapshot;the following
+parameter leaf checks original profile/canonical/member association. The honest immutable source contract requires actual original
 records;echoing a request or supplying a fabricated empty body cannot satisfy it.
 
 ### Complete selected-pin text accounting
@@ -631,6 +631,93 @@ This helper does not look up or validate a Profile,parse versions or create a me
 The complete provider walk must also charge all actual canonical fields,Profile bodies,metadata,
 duplicated records/caches and represented counters,including unused entries,before queries.
 Existing canonical and logical producers compose those represented fields;opaque payloads need
-their actual integration-owned exhaustive producer. Whole-source admission,typed provider causes
-and accepted bindings remain the next leaf. G4 still owns schema/registry/evidence/physical
+their actual integration-owned exhaustive producer. Selected-source admission and typed provider
+causes are implemented below;parameter binding remains next. G4 still owns schema/registry/evidence/physical
 resolution;these original source loans and text charges grant none of those proofs.
+
+## Bind the original selected Profile source
+
+`DraftingProfileProvider` now extends the immutable containing context with one readonly
+`profile_source(requested_pin)` query. Its response loans come from the provider independently
+of the request pin's lifetime. The requested profile/schema/content labels select an actual
+already-held source;they are not a replacement original source pin. The port's compiled lifetime
+controls permit a short-lived selection claim and refuse returning that claim as the original
+longer-lived pin. The query loads/clones/allocates no body and reads no parameter value.
+
+The provider's inherited exhaustive content walk must charge every actual Profile pin,canonical
+inventory,body,metadata record,retained copy/cache and represented counter,including unused
+sources,before lookup. It exposes the actual original Profile/body/canonical association under
+the honest immutable integration contract. Core's explicit field checks complement that contract;
+they do not establish G4 registry/schema/evidence truth or defend against invented source data.
+Missing,retired or unsupported exact selections retain the provider's original typed cause.
+There is no default/latest/single-candidate fallback or manufactured empty success.
+
+`DraftingContext::bind_profile_source(requested_pin,content_limits)` freshly accounts for the
+complete Root,all held provider content,then every requested pin string in one cumulative meter.
+The request fields have CommandState scope,actual containing Root owner and no invented index.
+The existing zero fence and final meter retain an ignored first provider-sink failure. Only after
+all content passes does core issue one Profile query. Earlier context/source demands supply no
+aggregate credit. The pin borrow may be shorter than the original containing context borrow.
+
+After a response,core compares the actual returned Root pointer,then exact profile_id,
+schema_version and content_version text in that order,then the original snapshot record identity.
+Equal-ID/equal-revision foreign Roots refuse. Labels are not trimmed,parsed or normalized;
+schema `2.0` differs from ` 2.0 `. The caller's selection pin and provider's actual original pin
+may be distinct equal-data objects:the request is intent,the returned pin belongs to the source.
+The actual Profile/canonical association stays with the original provider contract;the following
+parameter binder must use that same original source and inventory,not equal-looking substitutes.
+
+Successful `BoundDraftingProfileSource` privately retains original `context()`,requested
+`selected()` pin,actual returned `source()`,explicit `limits()` and fresh `demand()`. Its fields
+cannot be replaced,and it cannot outlive the requested pin or original context/provider records.
+Host/provider payloads need neither Clone nor Debug. Debug omits pin labels and opaque data.
+The raw returned source alone cannot construct a private accepted binding.
+
+```rust
+use sc_core::{construction::*,design::{DesignResourceSource,DesignResourceLimits},
+    ontology::SelectedProfilePin};
+fn selected_source<'p,'a,H:DesignResourceSource,S:DraftingProfileProvider<H>+?Sized>(
+    context:DraftingContext<'a,H,S>,selected:&'p SelectedProfilePin,limits:DesignResourceLimits)
+    ->Result<BoundDraftingProfileSource<'p,H,S>,String> where 'a:'p {
+    let bound=context.bind_profile_source(selected,limits).map_err(|e|e.to_string())?;
+    assert!(std::ptr::eq(bound.selected(),selected));
+    assert_eq!(bound.source().selected.definition(),selected.definition());
+    Ok(bound)
+}
+```
+
+Failure preserves the exact original `context()`,requested `selected()` pin and selected
+`limits()`. `refusal()` distinguishes Resources,original Source error and Mismatch. Mismatch
+identifies Root,the first SelectedPin field,or Snapshot. `returned()` retains the whole actual
+raw response for mismatches,including foreign records;it is None before a successful response.
+The standard error chain preserves concrete resource/provider causes. No partial accepted
+source or substituted diagnostic/value escapes failure.
+
+The focused fixture has an empty Design Root,a provider cache3,a separate Profile canonical
+inventory4,an additional unused equal-ID Root,actual pin/body and alternate snapshot records.
+Three separately represented revision7 counters require9 bits;all actual text,including both
+the provider-owned pin and distinct requested pin,requires T bytes. Exact7/T/9 passes. Entry2
+refuses provider cache3 after0,before lookup,even if its error is ignored. Text T-1 reaches the
+request's final content_version byte after T-1 bytes,also before lookup. A returned foreign Root
+wins over wrong pin labels/snapshot;profile ID precedes schema,then content,then snapshot.
+
+`BoundDraftingProfileSource::charge_resources(sink)` walks those actual Root/provider/request
+fields again. The returned header is a borrowed view of the original provider-owned data;cached
+demand never replaces content and no new Profile lookup occurs. A meter with prior1 entry,
+2 bytes and1 bit composes the fixture to8/(T+2)/10.
+
+```rust
+use sc_core::{construction::*,design::*};
+fn selected_content<H:DesignResourceSource,S:DraftingProfileProvider<H>+?Sized>(
+    bound:&BoundDraftingProfileSource<'_,H,S>,limits:DesignResourceLimits)
+    ->Result<DesignResourceDemand,DesignResourceLimitError> {
+    let mut meter=DesignResourceMeter::new(limits);
+    bound.charge_resources(&mut meter)?;
+    meter.finish()
+}
+```
+
+This is one selected-source association under fresh logical content bounds. It does not grant
+aggregate lookup/comparison work,parameter/canonical member or kind binding,additional source
+currentness validation,garment content,semantic dependency graph,value resolution,physical
+execution or whole-program acceptance. Those stages retain their original tracked owners.

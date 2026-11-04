@@ -125,18 +125,7 @@ Whole0017 [goals/acceptance/proofs](../history/window28.md#stitchcad-devnotes-pa
 
 ### Complete recipe contract recording receipts
 
-Ledger9/13 pointer controls, archive28/184 CLI controls/175 logical reads and retention175 records/
-50 working Markdown/8712 decoded lines/673893 decoded bytes/330215 resident bytes pass0. Fresh
-reconstruction yields10open/99unique sealed/zero overlap0. Tree10lanes/13trees/nine siblings/zero gaps;
-glossary310/nine/158; feature105/29; uncertainty133/16; fixture20/four/five/zero mismatch all0.
-Original D109 report and oldest G1-0046 changelog/G1-0066 lesson payloads compare exact eee15a8.
-All scoped jobs observed terminal; final staged doctrine gate is required before commit.
-Two actual reference witnesses serialize bind(width, length, 25 mm) identically to its binding
-statement and recipe(bind(n, count, 1)) identically to its one-statement recipe. Typed field/digest
-framing is therefore a concrete .7 acceptance obligation, not a new keyword or untyped hash claim.
-Producer and watched structural rerun observed terminal rc=0 after all nine actual renderer reds;
-source restoration remains exact. Product implementations are unchanged.
-Staged make gate → === all doctrines green ===, rc=0; every scoped verification job observed terminal.
+[Whole original0068 recording receipts](../history/stitchcad-devnotes-part1054.md) remain byte-exact.
 
 ## Complete recipe byte closure — preserved during G1-0069
 
@@ -788,18 +777,27 @@ retains all original goals,statuses and focused acceptance evidence.
   `.binding` (readonly provider and fresh bounded Root/pin/snapshot/canonical source association).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.records`
   Status: `done`
-  Goal:0881 raw original selected pin/profile payload,canonical inventory,logical parameter/declaration metadata,Root and snapshot loans. Explicitly account all three actual pin strings with original caller scope/owner/index before later source queries;no manufactured profile,parameter,value,currentness or G4 validation.
-  - [x] REPRODUCE / ISSUE:0880 provides actual Design member sources;Profile inputs need distinct original selected pin,canonical inventory,body/parameter metadata and snapshot loans. SelectedProfilePin retains three opaque labels;later fresh admission must walk every actual field without claiming G4 resolution or manufacturing a profile source.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract profile_sources::`:3 pass,rc=0;parameter and canonical declaration IDs are distinct roles. Raw sources retain actual owners/records without accepting their associations. Exhaustive private pin-owner/public-definition views require all owned text to enter the explicit producer.
-  - [x] FIX:raw DraftingProfileSource/LogicalSource retain original Root/pin/canonical/body/snapshot and parameter/declaration/metadata loans. Manual Copy/Clone/Debug adds no H/payload traits and hides private text. Selected-pin producer charges three original UTF8 strings in schema order with caller's original scope/owner/index;no normalization,currentness or lookup.
-  - [x] ADDRESSED:same focused3 pass,rc=0;original owner/member/record pointers,parameter600→declaration90,Derived unchanged,opaque no-Clone/Debug payloads,nonblank whitespace and DeferredToG4 retained. Foreign equal-data records remain inspectable unaccepted responses. Exact0/T/0,three field refusals,prior1/(T+2)/1 and first latch pass;zero provider callbacks.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0;fmt --check0. `cargo test -p sc-core --doc context::profile`:2 lifetime/raw-construction checks pass,rc=0;semantic_examples17 pass,rc=0. `make book`:0. Complete source acceptance remains .profile.binding;coupled .5f.2.verify deferred.
-  - [x] LOCKSTEP:book documents actual raw source fields,distinct parameter/declaration roles,original privacy/ownership/lifetime and complete pin field examples/refusals;source implementation route aligns. README/LIVE reviewed unchanged,G1still6/18 In Progress;MEM/index/DEV/ledger select provider/binding next.
-  - [x] CONTINUITY:1053 retains whole0880 and original0068 protocol;transition_receipts.py reports4 exact Git spans,rc=0;public reader byte-exact0. Closed goals/lessons/ledger preserved without ceiling/window changes.
-  - [x] PROMOTION: promotion: declined (existing explicit selected-profile pin/symbolic G1 boundary and original-source/accounting doctrine;book owns carriers/API). Raw source/pin fields implemented;provider,Root/pin/snapshot/canonical binding and G4 schema/evidence/physical resolution remain separate. Commit:STITCHCAD-G1-0881.
+  Goal:0881 original Profile/pin/parameter records;[whole scope/proofs](../history/stitchcad-devnotes-part1054.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.binding`
-  Status: `pending`
+  Status: `in_progress`
   Goal:explicit selected pin request and original readonly profile/parameter facets;fresh whole Root/provider/request accounting before lookup,then original Root/pin/snapshot/profile/canonical/member association and typed causes. Preserve actual records and no accepted prefix;aggregate consumer work and G4 physical/evidence resolution stay separate.
+  Children: `.profile` (individual original profile source under exact requested labels/Root/snapshot),
+  `.parameter` (original parameter metadata and canonical member/kind under that exact profile).
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.binding.profile`
+  Status: `done`
+  Goal:0882 original readonly provider facet and explicit requested-pin binding after fresh complete Root/provider/request content. Preserve original provider causes and returned records;compare Root,profile/schema/content labels and snapshot in order.
+  Private scope retains original profile/canonical source under immutable honest integration,no G4 schema/evidence/value validation or aggregate lookup grant.
+  - [x] REPRODUCE / ISSUE:0881 raw responses preserve actual records without selected-source acceptance. Explicit requested labels need fresh whole Root/provider/request content before lookup and original Root/pin/snapshot checks;caller intent must not replace the original provider pin. Parameter/canonical binding remains the following leaf.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract profile_binding::`:3 pass,rc=0;request pin and provider source pin may be distinct equal-data records. Response lifetime belongs to provider alone;first causes follow content,provider,Root,profile/schema/content labels,snapshot. Existing immutable provider contract owns body/canonical association.
+  - [x] FIX:readonly Profile facet,private BoundDraftingProfileSource and typed content/provider/mismatch error retaining actual context/request/policy/returned records. Shared Root/provider walk plus request-pin producer precedes one lookup;exhaustive response/pin definitions and retained scope guard new fields. Short request borrows remain valid;no revalidation or value lookup.
+  - [x] ADDRESSED:same focused3 pass,rc=0;actual distinct request/provider pins,Root/canonical/body/snapshot loans,exact7/T/9 and prior8/(T+2)/10. Five ordered mismatches preserve returned sources;typed provider cause/chain survives. Provider cache2→3 and request T-1 refusals precede lookup,including ignored first sink error;fresh rewalk queries no source again.
+  - [x] NO REGRESSION: `cargo test -p sc-core --test drafting_context_binding_contract design_semantic::`:3 pass,rc=0 for shared walk. Selected strict clippy/fmt0. `cargo test -p sc-core --doc context::profile`:6 pass,rc=0;independent provider loan positive,request echo E0621 and bound pin lifetime E0515 refuse. semantic_examples19/book build0. Coupled .5f.2.verify deferred.
+  - [x] LOCKSTEP:book details exact scope/Root/label/snapshot boundaries,original provider/source witnesses,resource examples and remaining parameter/G4 proof;model-resource route aligns. README reviewed unchanged,LIVE product detail/MEM/index/DEV/ledger align,G1still6/18 In Progress. Individual parameter source binding next.
+  - [x] CONTINUITY:1054 retains whole0881 and original0068 recording receipts;transition_receipts.py reports4 exact Git spans,rc=0;public reader byte-exact0. Initial multi-file patch context refusal applied nothing;corrected against actual exports before code/checks. No policy/window/ceiling changes.
+  - [x] PROMOTION: promotion: declined (existing explicit pin,immutable actual-source and complete-content doctrine;book owns facet/API). One selected-source binding implemented;parameter/canonical kind,aggregate work,additional currentness,graph,G4 evidence/schema/physical and execution remain separately owned. Commit:STITCHCAD-G1-0882.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.binding.parameter`
+  Status: `pending`
+  Goal:original readonly parameter facet after selected-profile binding;associate exact original profile/Root/pin/canonical/snapshot records,actual parameter field and canonical declaration/kind. Preserve original missing/unsupported/provider and lending member causes,without source/value substitution;fresh complete bounds before the individual query and no whole-program prefix grant.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.rules`
   Status: `pending`
   Goal:original rule/policy source records with actual typed local input/output signatures and body loans under original Root/snapshot. Exhaustive fresh accounting covers signatures,body metadata and caches before queries;operation IDs alone prove neither source existence nor signature. No physical rule evaluation or fabricated rule body.

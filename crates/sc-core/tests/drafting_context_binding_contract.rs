@@ -17,6 +17,8 @@ mod logical_root;
 mod native_geometry;
 #[path = "support/drafting_output_role_binding.rs"]
 mod output_role_binding;
+#[path = "support/drafting_profile_binding.rs"]
+mod profile_binding;
 #[path = "support/drafting_profile_sources.rs"]
 mod profile_sources;
 #[path = "support/drafting_program.rs"]

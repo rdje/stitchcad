@@ -1,5 +1,5 @@
 //! Raw original selected Profile and logical-parameter source loans;no binding or G4 resolution.
-use super::DraftingSourceRecord;
+use super::{DraftingContextSource, DraftingSourceRecord};
 use crate::{
     design::{DesignInputs, DesignMetadataHost},
     ontology::{ProfileParameterRef, SelectedProfilePin},
@@ -99,3 +99,52 @@ impl<H: DesignMetadataHost, S: ?Sized, P: ?Sized, M: ?Sized> fmt::Debug
             .finish_non_exhaustive()
     }
 }
+
+/// Readonly original selected-Profile facet under the immutable containing context contract.
+/// Every actual pin,canonical inventory,body,metadata record,copy/cache and represented counter
+/// belongs in inherited exhaustive resource accounting before lookup,including unused sources.
+/// Returned fields expose the actual association held by the original Profile record;this relies
+/// on the honest immutable integration contract,not a security boundary against invented sources.
+/// Query allocates/clones nothing,loads no new body and reads no physical/authored parameter value.
+///
+/// Response loans belong to the provider independently of the request pin's lifetime;the argument
+/// is a selection claim,not a substitute original pin. Core compares actual Root,exact labels and
+/// snapshot before private binding. G4 registry/schema/evidence/physical validation stays separate.
+/// ```
+/// use sc_core::{construction::{DraftingProfileProvider,DraftingProfileSource},
+///     design::DesignMetadataHost,ontology::SelectedProfilePin};
+/// fn original<'s,H:DesignMetadataHost,S:DraftingProfileProvider<H>>(
+///     provider:&'s S,requested:&SelectedProfilePin)
+///     ->Result<DraftingProfileSource<'s,H,S::Snapshot,S::Profile>,S::Error> {
+///     provider.profile_source(requested)
+/// }
+/// ```
+/// A shorter-lived request cannot replace the returned original source pin:
+/// ```compile_fail,E0621
+/// use sc_core::{construction::{DraftingProfileProvider,DraftingProfileSource},
+///     design::DesignMetadataHost,ontology::SelectedProfilePin};
+/// fn echo<'s,H:DesignMetadataHost,S:DraftingProfileProvider<H>>(
+///     provider:&'s S,requested:&SelectedProfilePin)
+///     ->Result<DraftingProfileSource<'s,H,S::Snapshot,S::Profile>,S::Error> {
+///     let mut source=provider.profile_source(requested)?;
+///     source.selected=requested;
+///     Ok(source)
+/// }
+/// ```
+pub trait DraftingProfileProvider<H: DesignMetadataHost>: DraftingContextSource<H> {
+    /// Actual original immutable Profile payload type;no Clone/Debug/size requirement.
+    type Profile: ?Sized;
+    /// Resolve this exact explicit profile/schema/content selection to an already-held source.
+    /// No default/latest/single-candidate fallback or manufactured empty success is permitted.
+    /// # Errors
+    /// Original typed missing,retired,unsupported selection or actual current-source cause.
+    fn profile_source<'s>(
+        &'s self,
+        selected: &SelectedProfilePin,
+    ) -> Result<DraftingProfileSource<'s, H, Self::Snapshot, Self::Profile>, Self::Error>;
+}
+mod binding;
+pub use binding::{
+    BoundDraftingProfileSource, DraftingProfileSourceError, DraftingProfileSourceIssue,
+    DraftingProfileSourceRefusal,
+};

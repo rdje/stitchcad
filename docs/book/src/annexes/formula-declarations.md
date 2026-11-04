@@ -691,9 +691,11 @@ implemented and [attached to the actual Root](semantic-recipes.md#attach-the-ori
 Original semantic mixed ordinals,complete coverage and scalar-name order metadata are implemented.
 [Actual Design semantic source scopes](semantic-recipes.md#actual-design-semantic-source-scope)
 now lend Root logical/operation members after fresh complete Root/provider accounting.
-Complete semantic dependency binding,component binding and Profile/rule source facets remain **planned**.
+The [selected-Profile source facet](semantic-recipes.md#bind-the-original-selected-profile-source)
+now preserves explicit pin/Root/snapshot association after fresh complete content checks.
+Complete semantic dependency binding,component binding and Profile parameter/rule facets remain **planned**.
 [Raw original Profile/parameter source records](semantic-recipes.md#raw-original-profile-and-parameter-records)
-and exhaustive selected-pin text accounting are implemented;accepted Profile binding remains next.
+and exhaustive selected-pin text accounting are implemented;Profile parameter binding remains next.
 Garment source-content admission does not implement those remaining stages.
 The existing numeric formula targets,scalar formula statements and
 mixed ordinal metadata cannot complete source binding merely because an identifier matches.
@@ -726,7 +728,7 @@ The implementation sequence is:
    scalar ordinal,global geometry name or live output. The original thirteen drafting families
    keep their distinct authentic geometry contracts. All new bounds precede child queries or
    result allocation,and all original occurrences remain visible on refusal.
-5. **Design member source scope implemented;Profile/rule facets planned:** return actual canonical declaration,
+5. **Design member/selected-Profile source scopes implemented;parameter/rule facets planned:** return actual canonical declaration,
    domain/state and operation loans under original Root/snapshot ownership. A Profile source also
    retains its explicit selected profile/schema/content pin and actual canonical inventory;
    another profile or matching parameter ID is insufficient. The source's exhaustive resource
