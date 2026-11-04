@@ -188,8 +188,8 @@ component origin binding and source ports remain tracked separately.
 
 ## Raw original component origins
 
-Component origin carriers now preserve actual original loans before any provider query or binding
-API is introduced. `DraftingComponentCreator` has Mirror and Join variants holding their real
+Component origin carriers preserve actual original loans before query/binding validation.
+`DraftingComponentCreator` has Mirror and Join variants holding their real
 `DeclaredMirrorPieceIdentity` or `DeclaredJoinPieceIdentity` factory result. A geometry role catalog
 or matching ID cannot construct either variant. `piece_id()` borrows the exact declared identity
 field; `input()` follows the published family parents to the actual original `MirrorPieceCopy` or
@@ -243,7 +243,7 @@ where H:DesignMetadataHost,S:DraftingContextSource<H>+?Sized,I:?Sized {
 
 All carrier operations are constant-work borrowed field access. They allocate no collection or
 accepted prefix, compute no geometry and query no source. They grant no content allowance. The
-future source provider must freshly account every actual additional recipe input, manifest,
+source provider must freshly account every actual additional recipe input, manifest,
 primitive-source payload, duplicated record and cache before bounded binding queries; earlier
 native constructor proofs provide no whole-source credit. Complete Root Piece/copy membership,
 actual recipe/native-input association, frame/snapshot identity and original first causes remain
@@ -252,9 +252,9 @@ need genuine supported source records; these carriers supply no synthetic native
 
 ## Component source binding contract
 
-Component source query and accepted binding APIs are **planned**. The existing raw carriers above
-are implemented. Program-record accounting is also implemented below;the next leaves add a
-readonly original source port,then complete fresh association checks. They add no geometry algorithm,importer or history
+The readonly component query port is implemented below;accepted component binding is **planned**.
+The raw carriers and program-record accounting are implemented. The next binding leaf adds
+complete fresh association checks. These APIs add no geometry algorithm,importer or history
 reconstruction. All original source records must already be held before lookup.
 
 A component target is an explicit `PocketPieceRef {copy,piece}`:a stable physical cut-copy ID and
@@ -363,8 +363,62 @@ Maximum1 entry refuses a two-slot vector before native traversal. Text maximum12
 first native `drafting.point.x.source` field's13-byte `private_width` at operation100,before its
 canonical or later arguments. Empty records contribute0/0/0;empty and nonempty walks preserve a
 previously latched cause. The caller must finish its meter. These checks accept no scalar order,
-native kind/value,geometry,source association or executable program. Component source query and
-binding remain the next leaves;coupled verification stays deferred to `.5f.2.verify`.
+native kind/value,geometry,source association or executable program. The component source query
+is implemented below;complete binding remains next. Coupled verification stays deferred to `.5f.2.verify`.
+
+## Readonly original component query port
+
+`DraftingComponentProvider` extends the existing actual garment/context ports. Its `Imported`
+associated type is the actual opaque import payload,with no Clone/Debug/size requirement.
+`component_source` takes an explicit by-value `PocketPieceRef {copy,piece}` and returns original
+Piece/import or recipe/creator/frame/snapshot loans. The request cannot substitute a borrowed
+source record,and numeric IDs cannot manufacture original data or creation positions.
+
+```rust
+use sc_core::{construction::*,design::DesignReferenceHost,ontology::PocketPieceRef};
+fn original<'a,H:DesignReferenceHost,S:DraftingComponentProvider<H>+?Sized>(provider:&'a S,
+    requested:PocketPieceRef)->Result<DraftingComponentResponse<'a,H,S>,S::Error> {
+    provider.component_source(requested)
+}
+```
+
+`DraftingComponentResponse` is a transparent alias using that provider's actual context,Frame,
+Snapshot and Imported types. Both raw source lifetimes are tied to the provider borrow. An
+original program context may live longer and be shortened into this view without cloning,
+rebinding or replacing any original field. API examples check that conversion and refuse a
+temporary request-backed import record. Existing source/creator/data-owner escape refusals remain.
+
+Query returns already-held original records and loads,allocates,clones and evaluates nothing.
+Missing,reassigned,retired,ambiguous or unsupported sources preserve original typed provider causes.
+An unprovided source cannot return an empty import or reconstructed recipe. Original program,
+native creator and context fields stay in recipe origin;import origin retains its actual record.
+No source/currentness/creation-history or executable acceptance follows from constructing a raw
+response. Direct port calls perform no automatic resource preflight or complete binding checks.
+
+Inherited complete fresh accounting covers every actual original import/program/native field,
+creator manifest,retained context,unused record,copy/cache and counter before lookup. Providers
+holding recipes compose `charge_record_resources` without recursively reentering themselves and
+account real context bodies through their original owners. The honest immutable integration
+contract forbids fabricated source metadata and omitted resources;it is no security boundary
+against a provider violating that contract.
+
+The maintained fixture returns actual Root Piece100 and import record for copy10002,including
+original frame/snapshot records. The opaque payload needs no Clone/Debug,and copying the view
+preserves its exact Piece/source pointers. It separately holds unsupported copy10001's original
+record and an unused cache;all are charged. Original import names occupy18/22 UTF-8 bytes;their
+byte vectors have3/2 entries and their actual revision counters need3/129 bits.
+
+Fresh garment/provider admission totals138 counter bits:Root3,snapshot3 and both imports3+129.
+Maximum137 refuses the unused second import at9+129 before a component query. Provider-only
+entry maximum4 refuses the complete two-record vector at3+2 before traversal. An ignored return
+error still leaves the sink's original cause latched. Raw missing copy404,copy10002 with expected
+Piece999,and unsupported copy10001 retain their exact original requests and typed causes.
+
+These are source-port/accounting checks. The next private binder must still admit complete fresh
+content/work,bind current actual CutPlan/Piece membership and exact source/frame/snapshot owners,
+and validate original recipe/native creator membership without a successful prefix. Original
+source truth,execution/history,physical geometry and whole semantic dependencies remain separate;
+coupled verification stays `.5f.2.verify` after the agreed integration set.
 
 ## Original ordered semantic recipe
 

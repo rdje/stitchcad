@@ -3,17 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — original program-record resource composition
+## _(2026-11-04 UTC)_ — readonly original component query port
 
-0892 exposes charge_record_resources under only metadata/context source bounds. Exhaustive owner/step views and fixed context/ordinal guards precharge the complete step vector,then every actual native field in original order.
-No Root/provider resource callback,currentness/member/value query,normalization or body clone occurs. Context bodies remain separately accounted by their real owners.
-Complete program accounting keeps Root→provider→zero-entry first-error fence,then composes the same record walk. Removed imports exposed by the refactor;strict selected lint/fmt0.
-Native3 pass0:four raw slots and repeated Point retain4/(2T)/0,prior6/(2T+3)/1,zero provider trace and one-bit allowance despite Root/snapshot three-bit revisions.
-Whole vector shortage and actual13-byte first native field refuse before later work;empty/nonempty records preserve original latched errors. Independent UTF-8 census confirms13B.
-Existing whole-population count1 and fresh-root/provider/step refusal1 pass0. Narrow metadata-host API1 and guarded book0;record composition grants no complete program or source admission.
-Actual semantic_examples27 pass,rc=0;source-held record helper compiles. No coupled/full CI verdict claimed.
-Promotion declined:existing exhaustive actual-field/first-refusal/borrowed-source composition doctrine;book owns public method. Whole0891 retained1064 by three exact Git spans/public0.
-README/LIVE reviewed unchanged,G1still6/18 In Progress. Original component query port follows;coupled .5f.2.verify deferred.
+0893 adds a garment/context component facet with opaque Imported payload and exact by-value PocketPieceRef. Response alias preserves original import/recipe/native/frame/snapshot loans and permits original program context shortening without data copies.
+Query exposes already-held actual source records and typed missing/reassigned/unsupported causes. No automatic preflight,accepted Piece/copy/creator association,execution/history or geometry truth.
+Native3 pass0:actual Piece100/import10002/frame/snapshot pointers survive short request storage;unused unsupported import10001,body bytes,cache and3/129-bit counters remain charged.
+Whole garment/provider138 bits;137 refuses unused import9+129 before query. Provider entry maximum4 refuses complete row vector3+2;ignored return discipline preserves first sink cause.
+Independent UTF-8/bit census confirms18/22B and138 bits. Strict selected lint/fmt0,API7 pass0 including original context shortening,temporary request-record refusal and existing raw-owner escapes;guarded book0.
+Actual semantic_examples28 pass,rc=0;original component port helper compiles. No coupled/full CI verdict claimed.
+Record-only recipe composition remains the integration boundary for held programs;real context bodies are separately accounted. Complete private component binding follows.
+Promotion declined:existing honest original-source,by-value request/lifetime and exhaustive held-field doctrine;book owns port API. Whole0892 retained1065 by three exact Git spans/public0.
+README/LIVE reviewed unchanged,G1still6/18 In Progress;coupled .5f.2.verify remains deferred.
+
+[Whole0892 program record accounting lesson](docs/history/stitchcad-devnotes-part1065.md) retains exact source bytes.
 
 [Whole0891 component binding contract lesson](docs/history/stitchcad-devnotes-part1064.md) retains exact source bytes.
 

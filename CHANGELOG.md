@@ -3,10 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0892 — original program-record resource walk
+## STITCHCAD-G1-0893 — readonly original component source query
 
-Record-only composition precharges actual mixed/native fields without Root/provider callbacks;complete program accounting reuses it after existing Root/provider/first-error ordering.
-Native3,prior count1/refusal1,strict lint/fmt,API1,actual semantic examples27 and book pass0. Whole0891 retained exactly1064;component port next,G1still6/18 In Progress,coupled verification deferred.
+Exact by-value copy/Piece requests return original provider-owned import or recipe/creator/frame/snapshot loans with typed causes. Complete unused source accounting remains required;raw response grants no accepted association/history.
+Native3,strict lint/fmt,API7,actual semantic examples28 and book pass0. Whole0892 retained exactly1065;complete component binding next,G1still6/18 In Progress,coupled verification deferred.
+
+[Whole0892 program record accounting unit](docs/history/stitchcad-devnotes-part1065.md) retains exact task,lesson and ledger.
 
 [Whole0891 component binding contract unit](docs/history/stitchcad-devnotes-part1064.md) retains exact task,lesson and ledger.
 

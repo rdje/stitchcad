@@ -751,6 +751,8 @@ The implementation sequence is:
    actual Piece/copy/recipe/native creator loans and complete accounting without reconstructing history.
    [Original program-record accounting](semantic-recipes.md#original-program-record-accounting-for-source-providers)
    now walks held step/native fields without Root/provider callbacks;component query/binding follow.
+   The [readonly component query port](semantic-recipes.md#readonly-original-component-query-port)
+   now returns original source loans and typed causes;complete bounded component binding remains planned.
 6. Bind complete semantic occurrences only after their complete source/content/work allowances.
    Keep the original Pocket opening and all component source Pieces/copies. A recipe-built
    component retains its actual original recipe/creator;explicit imported primitives retain their

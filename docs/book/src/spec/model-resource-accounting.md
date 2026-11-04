@@ -490,6 +490,9 @@ Additional source-held recipes can use the
 [original program-record walk](../annexes/semantic-recipes.md#original-program-record-accounting-for-source-providers)
 without calling their Root/provider again. Integrations still account actual context/source bodies
 through their owners;the complete program walk composes Root→provider→first-error fence→records.
+The [component source port](../annexes/semantic-recipes.md#readonly-original-component-query-port)
+inherits complete source accounting,including unused imports/programs/caches/counters. Raw lookup
+does not automatically admit content,bind current Piece/copy or certify creation/history.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

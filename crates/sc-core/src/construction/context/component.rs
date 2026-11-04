@@ -1,12 +1,12 @@
 //! Actual component provenance loans; raw carriers do not establish current/history acceptance.
-use super::{DraftingContextSource, DraftingSourceRecord};
+use super::{DraftingContextSource, DraftingGarmentProvider, DraftingSourceRecord};
 use crate::{
     construction::{
         DeclaredJoinPieceIdentity, DeclaredMirrorPieceIdentity, DraftingOperationInput,
         DraftingProgramInputs,
     },
-    design::DesignMetadataHost,
-    ontology::{EntityId, Piece},
+    design::{DesignMetadataHost, DesignReferenceHost},
+    ontology::{EntityId, Piece, PocketPieceRef},
 };
 use core::fmt;
 
@@ -220,3 +220,60 @@ impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized, I: ?Sized> fmt
             .finish_non_exhaustive()
     }
 }
+
+/// Readonly original component source facet over actual garment/context data. All original import
+/// payloads,program records/native fields/creator manifests,retained contexts,unused records,
+/// copies/caches and represented counters participate in inherited complete fresh accounting before
+/// query. A source-held recipe uses record-only composition without recursively reentering this
+/// provider;its actual context bodies are accounted through their real original owners.
+///
+/// Return the actual already-held source association;matching IDs or declarations do not invent
+/// executed creation/history. Query loads,allocates,clones and evaluates nothing. Missing,retired
+/// or unsupported sources retain original typed causes,never an empty import or reconstructed
+/// recipe. Raw responses still need fresh core bounds,actual Piece/copy,source owner,frame/snapshot
+/// and original native membership checks. This is the honest immutable integration contract,
+/// not a security boundary against invented metadata or omitted resources.
+///
+/// Output loans belong to original source records independently of a by-value request:
+/// ```
+/// use sc_core::{construction::*,design::DesignReferenceHost,ontology::PocketPieceRef};
+/// fn original<'a,H:DesignReferenceHost,S:DraftingComponentProvider<H>+?Sized>(provider:&'a S,
+///     requested:PocketPieceRef)->Result<DraftingComponentResponse<'a,H,S>,S::Error> {
+///     provider.component_source(requested)
+/// }
+/// ```
+/// A request cannot become an invented borrowed import record:
+/// ```compile_fail,E0515
+/// use sc_core::{construction::*,design::DesignReferenceHost,ontology::{Piece,PocketPieceRef}};
+/// fn echo<'a,H:DesignReferenceHost,S:DraftingComponentProvider<H,Imported=PocketPieceRef>+?Sized>(
+///     piece:&'a Piece,frame:&'a DraftingSourceRecord<S::Frame>,snapshot:&'a DraftingSourceRecord<S::Snapshot>,
+///     requested:PocketPieceRef)->DraftingComponentResponse<'a,H,S> {
+///     let invented=DraftingSourceRecord::new(requested);
+///     DraftingComponentSource {origin:DraftingComponentOrigin::Imported(DraftingImportedComponentSource {
+///         piece,source:&invented}),frame,snapshot}
+/// }
+/// ```
+pub trait DraftingComponentProvider<H: DesignReferenceHost>: DraftingGarmentProvider<H> {
+    /// Actual opaque original imported-source payload;no Clone/Debug/size requirement.
+    type Imported: ?Sized;
+    /// Resolve exactly this explicit copy/expected-Piece request to original held source fields.
+    /// Return original program/creator loans for recipe origin,never a reconstructed operation or
+    /// numeric creation position. The response itself grants no accepted source or query budget.
+    /// # Errors
+    /// Original typed missing,reassigned,retired,ambiguous or unsupported component/source cause.
+    fn component_source<'a>(
+        &'a self,
+        requested: PocketPieceRef,
+    ) -> Result<DraftingComponentResponse<'a, H, Self>, Self::Error>;
+}
+/// Raw original response using one provider's actual context/frame/snapshot/imported payload types.
+/// Original program context loans may be shortened to this source borrow without cloning data.
+/// This alias adds no resource,ownership,currentness,creation/history or execution acceptance.
+/// ```
+/// use sc_core::{construction::*,design::DesignReferenceHost};
+/// fn original_context<'p,'a,H:DesignReferenceHost,S:DraftingComponentProvider<H>+?Sized>(
+///     source:DraftingComponentSource<'p,'a,H,S,S::Imported>)->DraftingComponentResponse<'p,H,S>
+///     where 'a:'p {source}
+/// ```
+pub type DraftingComponentResponse<'a, H, S> =
+    DraftingComponentSource<'a, 'a, H, S, <S as DraftingComponentProvider<H>>::Imported>;

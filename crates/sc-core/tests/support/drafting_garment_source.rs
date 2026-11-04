@@ -8,7 +8,7 @@ use std::error::Error;
 fn id(n: u128) -> EntityId {
     EntityId::from_bits(n)
 }
-fn garment(damaged: bool) -> TestResult<DesignGarment<EmptyHost>> {
+pub(super) fn garment(damaged: bool) -> TestResult<DesignGarment<EmptyHost>> {
     let mut ledger = IdentityLedger::new();
     let mut ids = DeterministicIdGenerator::new();
     let edges = ledger.declare_edges(&mut ids, 1)?;

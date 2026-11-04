@@ -186,8 +186,9 @@ mod garment;
 mod profile;
 mod rule;
 pub use component::{
-    DraftingComponentCreator, DraftingComponentOrigin, DraftingComponentRecipeSource,
-    DraftingComponentSource, DraftingImportedComponentSource,
+    DraftingComponentCreator, DraftingComponentOrigin, DraftingComponentProvider,
+    DraftingComponentRecipeSource, DraftingComponentResponse, DraftingComponentSource,
+    DraftingImportedComponentSource,
 };
 pub use design_semantic::{
     DraftingDesignLogicalSource, DraftingDesignOperationSource, DraftingDesignSemanticLookupCause,
