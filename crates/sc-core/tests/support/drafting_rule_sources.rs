@@ -19,7 +19,7 @@ fn pin() -> TestResult<SelectedProfilePin> {
         content_version: "7".into(),
     })?)
 }
-struct Opaque {
+pub(super) struct Opaque {
     text: String,
 }
 #[derive(Clone, Copy)]
@@ -33,7 +33,7 @@ struct Row {
     origin: RowOrigin,
 }
 #[derive(Debug)]
-enum Cause {
+pub(super) enum Cause {
     Base(BaseCause),
     Missing {
         rule: EntityId,
@@ -59,7 +59,7 @@ impl Error for Cause {
         }
     }
 }
-struct Provider<'a> {
+pub(super) struct Provider<'a> {
     inner: Base<'a>,
     rows: Vec<Row>,
     cache: String,
@@ -69,7 +69,7 @@ struct Provider<'a> {
     ignore: bool,
 }
 impl<'a> Provider<'a> {
-    fn new(
+    pub(super) fn new(
         root: &'a DesignInputs<EmptyHost>,
         other: &'a DesignInputs<EmptyHost>,
     ) -> TestResult<Self> {
@@ -133,8 +133,17 @@ impl<'a> Provider<'a> {
             ignore: false,
         })
     }
-    fn text(&self, request: &SelectedProfilePin) -> usize {
+    pub(super) fn text(&self, request: &SelectedProfilePin) -> usize {
         self.inner.text(request) - 16 + 100
+    }
+    pub(super) fn query_count(&self) -> usize {
+        self.queries.get()
+    }
+    pub(super) fn charge_count(&self) -> usize {
+        self.charges.get()
+    }
+    pub(super) fn ignore_refusals(&mut self) {
+        self.ignore = true;
     }
     fn walk(&self, sink: &mut dyn DesignResourceSink) -> Result<(), DesignResourceLimitError> {
         let Self {

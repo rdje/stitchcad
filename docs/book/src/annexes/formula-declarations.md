@@ -702,6 +702,8 @@ The [immutable rule signature model](semantic-recipes.md#immutable-rule-signatur
 now retains actual typed local requirements and performs complete constructor/resource accounting.
 The [raw rule body/origin facet](semantic-recipes.md#raw-original-rule-body-and-origin-facets)
 now loans original declaration/body and explicit Design/Profile sources;accepted association follows.
+The [fresh rule work scope](semantic-recipes.md#fresh-rule-binding-work-admission) now preflights
+complete held content and matching inspections before original Root operation lookup,without a source query.
 [Raw original Profile/parameter source records](semantic-recipes.md#raw-original-profile-and-parameter-records)
 and exhaustive selected-pin text accounting are implemented with bounded original parameter binding.
 Garment source-content admission does not implement those remaining stages.

@@ -477,6 +477,9 @@ copy,cache and counter still require exhaustive provider accounting before sourc
 The [raw rule provider](../annexes/semantic-recipes.md#raw-original-rule-body-and-origin-facets)
 inherits that complete walk,including unused rule bodies,signature records and retained counters.
 Raw lookup does not automatically admit content or bind the returned source association.
+The [rule work scope](../annexes/semantic-recipes.md#fresh-rule-binding-work-admission) freshly
+composes complete Root/provider/request-pin content and checks conservative matching work before
+operation lookup. Actual rule/Profile association and signature acceptance remain separate.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

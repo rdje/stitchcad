@@ -1014,8 +1014,74 @@ An ignored provider refusal remains the sink's original first cause and no rule 
 These are source-walk conformance checks,not rule-binding or execution acceptance.
 
 Direct port calls and raw carriers perform no automatic content admission or association check.
-The existing fresh Design semantic scope can walk the complete Root/provider,but a later accepted
-rule binder must still bound all prospective comparisons and check actual Root/snapshot/origin,
+The existing fresh Design semantic scope can walk the complete Root/provider,and work admission
+below now bounds prospective rule comparisons. A later accepted binder must still check actual Root/snapshot/origin,
 selected Profile owners,rule identity/family,result and local input signature. Public raw fields
 prove none of those matches. Canonical domain/state,value/evidence truth,G3 physical policy
 execution and complete program acceptance remain separate;`.5f.2.verify` owns deferred coupling.
+
+## Fresh rule binding work admission
+
+`DraftingContext::prepare_rule_binding` freshly walks the complete actual Root,all held provider
+content and the explicit requested Profile pin when present. Earlier context,member and signature
+constructor admissions grant no content credit. The request supplies an operation ID,expected
+semantic family and `DraftingRuleSelection`;the operation's actual rule/policy ID is read only
+after complete work admission and original Root member lookup.
+
+`DraftingRuleBindingLimits::new(content,matching_inspections)` selects both allowances explicitly.
+Let E be the newly walked total collection entries,including all unused signatures,rule records,
+copies and caches. Original operation input count P and any honest held source signature count Q
+are each at most E. A complete local-role search therefore requires at most E² role inspections.
+The conservative bound W=(E+8)² additionally allows16E linear inspections and64 fixed header/control
+inspections. It covers prospective rule association/signature matching and original operation/output
+member work. Whole semantic input/dependency binding has its own later complete policy;provider
+internal algorithms,string-comparison byte work,content traversal,CPU time,allocator capacity and
+execution are not certified by W.
+
+Both E+8 and its square are checked before the explicit W quota. Only then does the method resolve
+the exact original Root semantic operation and expected family. Thus whole content refusal comes
+before arithmetic/work refusal,and work refusal comes before missing/wrong-kind member refusal.
+An ignored provider sink failure remains the original first cause. No Profile source,rule body,
+currentness or value query runs,and no request/result vector is allocated. Refused diagnostics
+are boxed;the immutable successful scope retains original loans and fixed metadata only.
+
+```rust
+use sc_core::{construction::*,design::{DesignResourceLimits,DesignResourceSource},
+    ontology::EntityId,recipe::SemanticOperationKind};
+fn prepare<'a,H:DesignResourceSource,S:DraftingRuleProvider<H>+?Sized>(
+    context:DraftingContext<'a,H,S>,operation:EntityId,kind:SemanticOperationKind,
+    selection:DraftingRuleSelection<'a>,content:DesignResourceLimits,inspections:usize)
+    ->Result<AdmittedDraftingRuleWork<'a,H,S>,String> {
+    context.prepare_rule_binding(operation,kind,selection,
+        DraftingRuleBindingLimits::new(content,inspections)).map_err(|e|e.to_string())
+}
+```
+
+`AdmittedDraftingRuleWork` exposes its actual `context()`,original recipe/member/index through
+`operation()`,exact requested `selection()`,`limits()`,fresh `demand()` and derived `shape()`.
+`request()` derives the rule/policy ID and family from that actual operation while retaining the
+original source-selection intent. It does not query or certify that source. A requested Profile
+pin may be created after the context;the returned scope remains tied to that shorter borrow.
+Private fields and the pin lifetime prevent mutation or escape into a longer-lived certificate.
+
+The maintained fixture has E=21 and W=841. Root logical domain/semantic role text adds24 bytes to
+the prior source fixture's text T;an explicit Profile intent adds its separately owned16 pin bytes.
+Complete demand is21/T′/138 and prior2 entries/3 text bytes/1 bit compose to23/(T′+3)/139.
+Maximum20 entries refuses the unused signature at20+1 before either W or missing operation999.
+W maximum840 refuses required841 before that missing member;841 permits the original missing or
+wrong-kind cause. A Profile text maximum T′−1 refuses the final one-byte content-version field
+before work/member/source lookup. Every case keeps zero rule queries. Checked arithmetic also
+refuses E+8 and square overflow without constructing fake source populations.
+
+`charge_resources` rewalks every actual Root/provider/request-pin field in the caller's cumulative
+sink;cached demand/shape grant no fresh content credit. It preserves earlier/ignored first errors
+and performs no source/member/value query or matching scan. `DraftingRuleWorkError` retains the
+exact context,requested operation/family,selection,policy and original resource/arithmetic/quota
+or lending member cause. Resource causes retain their standard error chain;member causes retain
+their actual original operation loan through the typed refusal getter.
+
+This scope accepts complete prospective work and original Root membership. Actual selected
+Profile/rule/body/origin association,complete local signature and logical Derived-output relation
+remain the following binding leaves. It supplies no canonical input value,physical Buttonhole
+result,source/schema/evidence truth,whole dependency order or executable program. Coupled
+verification remains `.5f.2.verify` after the agreed integration set.

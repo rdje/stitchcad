@@ -3,18 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — original rule body and explicit source origins
+## _(2026-11-04 UTC)_ — fresh complete rule binding work
 
-0887 adds raw immutable declaration/body loans with explicit Design Root/snapshot or actual selected Profile source.
-The readonly provider extends context/Profile ports;request names exact ID/family/origin while output loans belong to original records independently of request pin lifetime. Payloads/host require no Clone/Debug/size bounds.
-Complete inherited walk includes all actual signatures,bodies,unused records,cache and represented counters.
-Native3 pass0 with original pointer/opaque/unsized views,typed missing/family/origin/Profile causes and exact13/T/138 plus prior15/(T+3)/139.
-Independent UTF-8 census confirms added100B;whole record vector/cache refusals precede queries,including ignored errors.
-Initial whole-walk failure traced to repeated binding overflowing the existing finite decimal observer;RUST_BACKTRACE=1 identifies Source::observed→frame during a later bind.
-Independent provider instances per refusal phase fix the new fixture. Review also replaced request-selected origins with stored original row origins and typed mismatch refusal.
-Strict selected lint/fmt0,API4 pass0 for provider loans,escape/replacement/request-pin refusal;guarded book0. Raw port calls still perform no automatic admission or accepted source association.
-Promotion declined:existing original-source/lifetime/accounting doctrine;book owns facet API. Whole0886 retained1059 by three exact Git spans/public0;G1still6/18.
-Actual semantic_examples23 pass,rc=0;raw original source/provider example compiles. Accepted rule binding and coupled verification remain pending.
+0888 derives fresh complete Root/provider/request-pin content and checked W=(E+8)² before actual Root operation lookup.
+E bounds held operation/signature populations;E² role work plus16E linear/64 fixed inspections is conservative for rule association/signature matching.
+Provider-internal CPU,string bytes,content traversal,allocator capacity and whole dependency/physical execution remain separate.
+Private scope retains exact context/member/index,selection,policy,demand/shape;request derives original rule ID/family from the actual member.
+Native3 and overflow1 pass0:exact21/T/138,W841,prior23/(T+3)/139;content/W shortages precede missing/kind causes and keep zero source queries.
+Ignored signature refusal and separately owned final request-pin byte retain original first fields. Independent arithmetic/UTF-8 census confirms841/24B.
+Strict selected lint/fmt0 and API3 pass0:private owner/default limits/short request-pin escape refuse. Guarded book0.
+Actual semantic_examples24 pass,rc=0;prepare-work scope example compiles. Source and complete signature/output relation still pending.
+Fresh producer rewalks all actual fields without cached demand credit. No rule/Profile/currentness/value query or accepted source/signature association.
+Promotion declined:existing fresh-content/prospective-bound/original-member doctrine;book owns API. Whole0887 retained1060 by three exact Git spans/public0.
+G1still6/18 In Progress;source association then complete signature/output relation follow. Coupled .5f.2.verify remains deferred.
+
+[Whole0887 original rule source lesson](docs/history/stitchcad-devnotes-part1060.md) retains exact source bytes.
 
 [Whole0886 immutable rule signature lesson](docs/history/stitchcad-devnotes-part1059.md) retains exact source bytes.
 

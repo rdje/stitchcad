@@ -183,3 +183,8 @@ pub type DraftingRuleResponse<'a, H, S> = DraftingRuleSource<
     <S as DraftingProfileProvider<H>>::Profile,
     <S as DraftingRuleProvider<H>>::RuleBody,
 >;
+mod work;
+pub use work::{
+    AdmittedDraftingRuleWork, DraftingRuleBindingLimits, DraftingRuleBindingShape,
+    DraftingRuleWorkError, DraftingRuleWorkRefusal,
+};

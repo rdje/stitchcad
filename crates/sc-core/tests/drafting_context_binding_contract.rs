@@ -39,6 +39,8 @@ mod program_output_positions;
 mod program_views;
 #[path = "support/drafting_rule_sources.rs"]
 mod rule_sources;
+#[path = "support/drafting_rule_work.rs"]
+mod rule_work;
 #[path = "support/drafting_semantic_program.rs"]
 mod semantic_program;
 #[path = "support/drafting_semantic_root.rs"]
