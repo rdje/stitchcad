@@ -3,10 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0895 — complete original component source association
+## STITCHCAD-G1-0896 — planned whole semantic consumer contract
 
-Fresh complete work now precedes actual Piece/frame/snapshot and imported or captured recipe/native creator association. Original contexts/snapshots and genuine unique mixed positions survive;equal-ID owners/inputs,missing/repeated creators and original typed causes remain explicit.
-Native4,affected garment3,strict lint/fmt and API2,actual semantic_examples30 and book pass0. Whole0894 retained exactly1067;whole semantic consumer binding remains next. LIVE product note advances,G1still6/18 In Progress,coupled verification deferred.
+Book/task plan now distinguishes original Root locations,ordered semantic/native consumers and external Profile Derived scope. Exact source selection,canonical/Closure/component/native joins and fresh aggregate work/cohort bounds are owned before implementation.
+Source-derived13/13 native/five consumer census and book pass0;two stale standalone status paragraphs corrected. Rust unchanged,whole0895 retained1068,G1still6/18 In Progress;next original occurrence views,coupled verification deferred.
+
+[Whole0895 original component association unit](docs/history/stitchcad-devnotes-part1068.md) retains exact task,lesson and ledger.
 
 [Whole0894 fresh component work unit](docs/history/stitchcad-devnotes-part1067.md) retains exact task,lesson and ledger.
 

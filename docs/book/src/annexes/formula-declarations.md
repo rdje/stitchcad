@@ -757,7 +757,8 @@ The implementation sequence is:
    [Complete original association](semantic-recipes.md#bind-the-complete-original-component-association)
    now binds source/frame/snapshot and original recipe/native creator owners and genuine positions.
    Whole semantic consumer dependencies remain separate.
-6. Bind complete semantic occurrences only after their complete source/content/work allowances.
+6. Follow the [whole semantic consumer contract](semantic-recipes.md#whole-semantic-consumer-binding-contract-planned)
+   to bind complete occurrences after their complete source/content/work allowances.
    Keep the original Pocket opening and all component source Pieces/copies. A recipe-built
    component retains its actual original recipe/creator;explicit imported primitives retain their
    real source without fabricated history. Unknown state stays Unknown,Derived retains its sole

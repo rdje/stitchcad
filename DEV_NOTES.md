@@ -3,18 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — complete original component source association
+## _(2026-11-04 UTC)_ — whole semantic consumer contract before implementation
 
-0895 repeats complete fresh garment/provider content,checked W and current copy/Piece work before one original component query. Private complete proof retains the original work,response,genuine creator position and fresh demand/shape;no accepted source prefix.
-Common association checks actual Piece pointer,frame record and containing snapshot in order. Imported origin preserves its actual opaque record. Recipe preserves its original program/context/snapshot and requires the same actual compatible frame.
-Mirror source Piece must be the exact captured Root member;Join additionally binds original Piece inventory/source slice/CutPlan and A/B sources. Genuine declared result Piece and exact unique native input membership yield actual one-based mixed position,not an ordinal/ID reconstruction.
-Native4 pass0:imports/header priorities,Mirror and Join position2 between raw scalar0/semantic999,equal-ID input copies refused,duplicates2/4 exact. Foreign source owners/inventory/CutPlan,recipe frame and declared Piece refuse;original captured snapshots remain distinct.
-Initial fixture failures counted the existing context validate_current call;context/binding.rs197 verified the cause. The corrected baseline asserts no additional source/value/currentness calls. Two Copy clones removed after strict lint;no core suppression.
-Actual held-cache growth deliberately violates immutability to falsify cached admission:content or larger W refuses before any query,including ignored return. Typed missing-source cause and complete raw mismatches remain inspectable.
-Provider fixtures account full original garments/context bodies,record-only program fields,creator inputs,unused imports/caches/129-bit counters. Creator catalogues are actually empty and metadata policies borrow source fields;no universal creator producer or source-truth claim.
-Strict selected lib/harness lint/fmt0,API2 and affected garment3 pass0. Actual semantic_examples30 pass,rc=0;guarded book publication0. No full/coupled verification claim.
-Promotion declined:existing original-owner/native membership,fresh accounting and honest provenance doctrine;book owns API. Whole0894 retained1067 as3 exact Git spans/public0;protected recovery stores unchanged.
-README unchanged;LIVE product note adds component source association,G1still6/18 In Progress. Next whole semantic consumer contract,then bounded binding and whole/coupled checks.
+0896 records the planned aggregate semantic contract after source primitives. Root-owned Pocket/Closure locations have original indices and no invented mixed positions;ordered semantic/native consumers retain genuine checked positions.
+Design Derived inputs require actual Root operation/output and strict earlier suppliers. Profile Derived remains attached to its original external Profile;equal operation IDs cannot create Root order evidence or claim Profile-body acceptance.
+Complete explicit Profile/rule source selection,canonical kind/domain/state,Closure button/operation identity,original component program provenance and all13 native target families precede whole semantic acceptance.
+Fresh aggregate occurrence/comparison/child-walk/result bounds must precede child queries or allocation. Individual proofs/quotas grant no aggregate credit;no prefix,default logical member or physical opening/hole length is introduced.
+Source-derived doc census confirms13/13 actual native variants and5 consumer classes,rc=0;two stale standalone paragraphs now acknowledge implemented source/component primitives. Guarded book0;Rust unchanged and no broad verification claimed.
+Seven implementation leaves now own original occurrences,complete requests,aggregate work,logical/garment/native joins and complete cohort;whole .5f.2.check/.verify follow. Next original occurrence views.
+Promotion declined:existing original-owner/order,explicit external Profile and fresh aggregate doctrine;book owns specific contract. Whole0895 retained1068 as3 exact Git spans/public0;protected recovery stores unchanged.
+README/LIVE reviewed unchanged,G1still6/18 In Progress;planned contract creates no new implemented public API or execution proof.
+
+[Whole0895 original component association lesson](docs/history/stitchcad-devnotes-part1068.md) retains exact source bytes.
 
 [Whole0894 fresh component work lesson](docs/history/stitchcad-devnotes-part1067.md) retains exact source bytes.
 

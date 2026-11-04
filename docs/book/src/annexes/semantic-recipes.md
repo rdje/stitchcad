@@ -87,9 +87,9 @@ vector2; text15 refuses second role8 after8 bytes. Empty and nonempty producers 
 earlier latched refusal.
 
 This is a standalone source record and exhaustive content walk. The semantic owner below now
-retains original declaration order and is attached to the actual Root below; component origin
-binding, combined-program integration,
-Closure-to-operation dependency binding and readonly source ports remain tracked work. It creates
+retains original declaration order and is attached to the actual Root below. Mixed-program metadata,
+component origin binding and readonly source ports are implemented below;complete Closure-to-operation
+consumer binding follows the planned whole semantic contract at the end of this chapter. It creates
 no scalar statement, native drafting slot or geometry. Profile pins, currentness, physical execution
 and the deferred coupled verification remain separate.
 
@@ -184,7 +184,8 @@ finish6/35/1. Entry allowance3 refuses the original vector4; text31 refuses fina
 at original index3. Empty and nonempty walks preserve an earlier latched cause. The caller finishes
 the same cumulative meter. Standalone accounting grants no ordered owner, Root/Profile/rule binding,
 graph acceptance or execution. The semantic owner below retains original declaration order;
-component origin binding and source ports remain tracked separately.
+component origin binding and source ports are implemented below. Whole consumer binding remains
+planned under the contract at the end of this chapter.
 
 ## Raw original component origins
 
@@ -1528,3 +1529,152 @@ signature and one canonical output-relation acceptance. Actual canonical input/P
 whole source/order/graph proof,body conformance and result-domain/value validation,physical
 Buttonhole length,G4 truth and execution remain separate. Coupled verification stays deferred to
 `.5f.2.verify` after the agreed integration set.
+
+## Whole semantic consumer binding contract (planned)
+
+The source primitives above are implemented with focused checks. The aggregate semantic consumer
+binder described here is **planned**. This contract owns the next implementation slices;it grants
+no new public proof,selected logical value,whole-program acceptance or physical execution.
+Roadmap §2 requires replayable recipe semantics and explicit uncertainty;§8.2 makes dependency
+closure specific to the requested artifact. Complete static checking preserves all occurrences
+in its selected source universe. A later artifact closure may use that graph without silently
+omitting inputs during admission or resolving an unrelated Unknown.
+
+The whole binder must join the actual admitted garment/context with the existing private
+program source/order/acyclic/canonical/geometry owners. Independently recomputed equal-looking
+proofs cannot substitute. The original mixed sequence,scalar recipe and semantic recipe remain
+separate owners with their genuine ordinals and positions. Existing
+`DraftingProgramDependencyInputs` already joins source/order/acyclic owners;canonical and geometry
+proofs add their own complete obligations. Semantic composition must retain those owners and
+boundaries rather than rebuilding a second source graph from IDs.
+
+### Original consumers and order
+
+Root-owned semantic records and ordered recipe consumers have different provenance:
+
+| Consumer | Original witnesses retained | Order rule |
+| --- | --- | --- |
+| Pocket | Actual Pocket,original inventory index,opening field,served copy/Piece and every original component index/reference | No mixed position is authored on this Root record;none is invented |
+| Closure | Actual Closure/index,kind,canonical size fields,physical instances and original derivation field | No invented native creator or mixed position |
+| LogicalDerivation | Actual Root operation and input/role index,output and rule source request | Genuine checked semantic ordinal and mixed consumer position |
+| Buttonhole | Actual Root operation,canonical button,policy and every original named numeric input | Genuine checked semantic ordinal and mixed consumer position |
+| Native drafting input | Actual checked mixed step and original typed semantic target fields | Genuine original mixed position;family proofs preserve actual canonical parents |
+
+The first occurrence view must stream original loans and locations without source queries,value
+reads,result buffers or fabricated positions. Complete counts precede traversal in the later work
+stage. Repeated references remain separate occurrences;an empty iterator for one dependency class
+cannot certify that a native family has no obligations in other classes.
+
+A logical Declaration source must bind its actual Root member and expected logical kind. A Profile
+source must bind an explicitly selected original pin,schema/content source,canonical inventory and
+actual parameter/member. Complete source-selection metadata must be accounted before queries;
+missing,duplicate,extra or foreign selection records refuse. A parameter ID,matching pin text or
+shared domain token cannot choose an owner. Rule/policy origin is also explicit. No implicit Design
+first lookup,Profile fallback or replacement source is allowed.
+
+Known,Assumed,Unknown,Choice,Preference and Derived retain their original domain,state and
+provenance. Static binding selects no domain member and supplies no physical opening/hardware
+vocabulary. A local rule signature specifies kinds and named roles;it does not authorize domain
+conversion or evidence acceptance. Numeric targets retain dedicated Length versus general Scalar
+representation and exact scalar kind. Numeric Profile fields need their genuine numeric source
+contract;the logical Profile port cannot be coerced into one.
+
+For each Design/Root Derived logical input,bind its sole original operation,the exact logical
+output member and kind,then its genuine semantic/mixed position. An ordered recipe consumer requires that
+supplier strictly earlier;self/future/missing/foreign suppliers refuse before value access. The
+complete relation must cover all original operation inputs,not only a successful prefix. Root
+Pocket/Closure consumers instead retain their Root location and link to the actual operation;
+their absent position cannot be replaced with a fabricated end-of-program sentinel.
+
+A Profile member's Derived state remains attached to its actual external Profile source. Its
+operation reference is not a Root operation merely because the IDs match. Profile-internal
+recipe/order acceptance requires genuine Profile metadata and its stated proof scope;this G1
+consumer join cannot invent that program or a current mixed position. It retains the external
+source obligation and states that boundary explicitly rather than claiming its body was checked.
+
+For example,the following describes metadata relations,not new formula syntax:
+
+```text
+Root Pocket P: opening -> declaration90
+Root declaration90: PocketOpening, Derived(operation80)
+Mixed position2: semantic operation80 -> declaration90
+```
+
+The Pocket remains a Root consumer with no invented mixed position. If operation80 itself reads
+a logical declaration Derived from a supplier at position4,its ordered input is a future dependency
+and must refuse. If that input is Unknown,static association can retain the Unknown without
+choosing a member;later execution/export still needs the relevant resolution.
+
+### Garment and operation joins
+
+A Pocket's opening must resolve as PocketOpening under its actual source owner. Its served copy
+and every component reference retain both copy and expected-Piece identity,actual current members
+and original orientation. Component source acceptance reuses the complete original association
+binder above. Captured recipe creator positions belong to that captured original program;they
+cannot become current-program order evidence merely because operation IDs match. An imported
+component keeps its actual primitive record and has no fabricated creating recipe or position.
+
+A ButtonAndButtonhole Closure must bind the actual typed Buttonhole operation named by its
+original `ButtonholeDerivation`. The Closure's canonical button and that operation's button must
+resolve to the same actual declaration/Profile member and selected source owner. Equal parameter
+IDs under different original Profiles are insufficient. Its complete named numeric policy inputs
+and local policy signature must also bind. No independently authored hole length,default clearance,
+physical formula or positive-length proof is introduced. HookAndBar retains both actual logical
+size origins;CentredZipper retains its original length origin and numeric provenance. Unsupported
+kinds retain their explicit envelope refusal.
+
+Every LogicalDerivation must reuse complete original rule-source/signature/output association,
+then bind each actual named logical/Profile/numeric input. Output must be the actual Root member
+whose Derived state names that exact operation. Signature equality alone certifies no canonical
+input membership,source selection,dependency order,domain truth or executable body.
+
+The existing thirteen native families keep all their direct geometry and numeric obligations.
+Their additional semantic targets are classified below;this table is an implementation contract,
+not a claim that those whole joins are already implemented:
+
+| Original native variant | Additional semantic association to preserve |
+| --- | --- |
+| `ConstructPoint` | Original numeric arguments;no new garment target is invented |
+| `DrawLine` | Original point references;no new garment target is invented |
+| `DrawArc` | Original point/numeric fields;no new garment target is invented |
+| `DrawBezier` | Original control references;no new garment target is invented |
+| `OffsetEdge` | Actual SeamAllowance,width/corner/inclusion provenance and original owning Piece/range |
+| `SlashSpread` | Actual named source Piece and original cut/bank/motion fields |
+| `CloseDart` | Actual canonical Dart and its own closing-operation/intake/source fields |
+| `AddNotch` | Actual requested Piece/anchor and original symbolic sample/production/Profile bindings |
+| `PlaceGrainline` | Actual canonical Grainline,Piece and original arrow/alignment/print fields |
+| `WalkSeam` | Actual span/copies/Pieces and every original balance pair/notch/Profile field |
+| `TrueSeam` | Actual span,adjusted side,Piece and exact typed fit-tolerance source |
+| `MirrorPiece` | Actual source Piece,axis and genuine existing family source/metadata parents |
+| `JoinPieces` | Actual span,A/B Pieces,copies/inventory/CutPlan and genuine family source parents |
+
+Actual geometry reached through a semantic target still needs the existing frame/snapshot and
+supplier/currentness contracts. A direct geometry view with zero entries does not discharge that
+work. Each family must either expose its genuine original source association or return an actual
+typed missing/unsupported cause. Numeric/Profile/physical facts remain separate from their symbolic
+references. No empty target,authored geometry copy,inferred frame transform or made-up native role
+can fill a missing source. A context without an actual garment cannot manufacture one to satisfy
+this binder;the existing narrower formula/geometry proofs retain their stated scopes.
+
+### Complete bounds and acceptance
+
+Fresh aggregate accounting must include the actual whole garment/Root/provider,original program
+and held sources,all explicit Profile/rule selection requests,unused records/caches/copies and
+represented counters. Prospective occurrence/comparison work and any result reservation have
+explicit checked policies before child queries or allocation. Earlier source proofs,constructor
+shapes,stored demand and individually successful lookups grant no aggregate credit. All original
+collections are precharged before traversal,including refused/repeated/unused occurrences.
+
+The implementation must bound repeated child-factory walks and matching work explicitly when
+composing them. A per-component or per-rule bound alone cannot justify a whole consumer cohort.
+Resource arithmetic/quotas precede child work;original first field/provider/owner/order/argument
+causes and all raw witnesses survive. The final private semantic cohort exists only after every
+required join succeeds. No successful Piece,rule,creator or consumer prefix becomes whole proof.
+Physical source truth,evidence approval,G3 policy/geometry execution,allocator capacity and CPU
+remain outside this static logical contract.
+
+Implementation order is original occurrence views,complete explicit source-selection requests,
+fresh aggregate work admission,logical/rule joins,garment/component/Closure joins,native target
+joins,then the complete semantic cohort. Whole `.5f.2.check` composes it with existing owner/order/
+context/argument proofs. Coupled `.5f.2.verify` activates after that agreed feature set is implemented;
+focused checks remain the verification level for each preceding slice.

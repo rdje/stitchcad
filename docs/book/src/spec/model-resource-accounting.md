@@ -502,6 +502,10 @@ No component query occurs at this work stage. The
 repeats this fresh walk/work/current-member admission before one original query and complete
 source/frame/snapshot/recipe/native creator checks. Its proof reuses the same fresh resource walk;
 returned source loans and fixed metadata create no duplicate body or stored-demand credit.
+The [planned whole semantic consumer contract](../annexes/semantic-recipes.md#whole-semantic-consumer-binding-contract-planned)
+requires fresh aggregate occurrence,request/source-selection,comparison and result bounds before
+child queries or reservation. Individual source proofs and constructor quotas grant no aggregate
+credit. Root-owned garment references retain original indices without manufactured mixed positions.
 
 ## Complete actual Inputs, Sewing and Garment roots
 
