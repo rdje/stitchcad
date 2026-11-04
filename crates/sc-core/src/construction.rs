@@ -62,14 +62,16 @@ mod context;
 pub use context::{
     AdmittedDraftingGarmentSource, DraftingComponentCreator, DraftingComponentOrigin,
     DraftingComponentRecipeSource, DraftingComponentSource, DraftingContext, DraftingContextError,
-    DraftingContextSource, DraftingGarmentProvider, DraftingGarmentSource,
-    DraftingGarmentSourceError, DraftingGarmentSourceIssue, DraftingGeometryBinding,
-    DraftingGeometryBindingIssue, DraftingGeometryError, DraftingGeometryMismatch,
-    DraftingGeometryReference, DraftingGeometrySource, DraftingGeometrySourceResult,
-    DraftingGeometryStepProvider, DraftingImportedComponentSource, DraftingInitialInputProvider,
-    DraftingInitialInputSource, DraftingInitialInputSourceResult, DraftingPlannedOutput,
-    DraftingPlannedOutputProvider, DraftingPlannedOutputSource, DraftingPlannedOutputSourceResult,
-    DraftingSourceRecord,
+    DraftingContextSource, DraftingDesignLogicalSource, DraftingDesignOperationSource,
+    DraftingDesignSemanticLookupCause, DraftingDesignSemanticLookupError,
+    DraftingDesignSemanticRequest, DraftingDesignSemanticScope, DraftingDesignSemanticScopeError,
+    DraftingGarmentProvider, DraftingGarmentSource, DraftingGarmentSourceError,
+    DraftingGarmentSourceIssue, DraftingGeometryBinding, DraftingGeometryBindingIssue,
+    DraftingGeometryError, DraftingGeometryMismatch, DraftingGeometryReference,
+    DraftingGeometrySource, DraftingGeometrySourceResult, DraftingGeometryStepProvider,
+    DraftingImportedComponentSource, DraftingInitialInputProvider, DraftingInitialInputSource,
+    DraftingInitialInputSourceResult, DraftingPlannedOutput, DraftingPlannedOutputProvider,
+    DraftingPlannedOutputSource, DraftingPlannedOutputSourceResult, DraftingSourceRecord,
 };
 mod operation_input;
 pub use operation_input::{

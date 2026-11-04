@@ -3,14 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — authentic mixed semantic ordinals
+## _(2026-11-04 UTC)_ — fresh actual Design semantic source scope
 
-0879 adds Semantic requests for actual Root semantic ordinals,independent of scalar/mixed positions. Complete held content/shape precedes first mixed ordinal refusal;end omissions use scalar then semantic schema order. Normalized/order views loan original Root members without formula arenas or scalar namespace advance.
-Focused3 pass0:seven exact order/coverage failures,unused semantic content before queries,shape4 steps/1 scalar/2 semantic with3 expressions/3 nodes/14 records,record13 refusal and8 retained entries. Root/member/nth/reverse/order pointers remain actual.
-Semantic IDs cannot issue geometry names or fall through initial/creator providers.
-Equal-ID native/semantic creator ambiguity retains both genuine positions. Formula-name occurrences keep real AST uses;typed semantic ID/rule/domain/Profile/component binding remains separate. Initial fixture API errors and two numeric-vector undercounts were corrected;raw scalar recipe resource fields are text only.
-Affected admission5/order2/creator1,strict lint/fmt,semantic_examples12/context_examples13 and guarded book pass0. The context helper's old exhaustive match exposed E0004 and now handles Semantic explicitly. Actual enum/borrow controls pass0;native13 unchanged. Coupled .5f.2.verify stays deferred.
-Promotion declined:existing bounded original-owner/typed-family doctrine;book owns API. Archive1051 retains exact whole0878,original object-family review and0319 lesson;public/exact-span receipts0. G1still6/18;readonly source ports next.
+0880 composes complete actual Root and provider content before individual canonical logical/semantic operation lookups. The private scope holds original context/snapshot,explicit limits and fresh demand;old constructor/scope demands grant no aggregate credit. A zero sink fence preserves ignored first source failures.
+Focused3 pass0 after module separation:exact11/(32+X)/6 and prior12/(34+X)/7,original scope/member/snapshot loans,Derived unchanged,equal-data foreign record distinct. Four exact content refusals and ignored cache failure preserve first causes.
+Four missing/kind lookups retain original request/scope and actual lending members.
+Member access allocates/clones/queries no provider or value. Scope/member Debug omits domains,roles and opaque payloads;H/S need no Clone/Debug. Admission resource errors retain original context/policy/cause;lookup errors expose lending causes directly.
+Fresh charge_resources walks actual Root/provider fields again and preserves a prior latch.
+Strict selected lint/fmt0,private/lifetime API3 and actual semantic_examples14 pass,rc=0;guarded book build0. Aggregate lookup/comparison work,garment inventories,Profile/rule/currentness/graph/physical acceptance stay separately owned.
+Promotion declined:existing source/ownership doctrine;book owns API. Exact archive1052 retains0879,original byte closure/0318;G1still6/18.
+
+[Whole0879 mixed semantic ordinal lesson](docs/history/stitchcad-devnotes-part1052.md) retains exact source bytes.
 
 [Whole0878 actual Root semantic lesson](docs/history/stitchcad-devnotes-part1051.md) retains exact source bytes.
 
@@ -72,14 +75,7 @@ Promotion declined:existing bounded original-owner/typed-family doctrine;book ow
 
 [Whole0319 immutable history lesson](docs/history/stitchcad-devnotes-part1051.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — bounded profile intent scope review
-
-0318 .4c.4.5 reviews exact pins/four domains/five states/current source and candidate bindings, ordered
-empty/draft/no-op intent and identity/provenance. Actual G3/G4 numeric/profile composition/conflicts,
-evidence/global truth, storage/equivalence/approval stay separate. D233 duplicated main-book frontier
-still called intent pending; whole prior receipt retained468 and current paragraph aligns. Rust equals
-fb53a44; reuse31-test/strict lint/fmt proof. Book/five rendered anchors/navigation pass0;468/290/139
-wholefb53a44 Git/hash/public exact0, history63/64. G1still5/18; .4c.5 next. Promotion: SizeSet decision extended.
+[Whole0318 profile intent review lesson](docs/history/stitchcad-devnotes-part1052.md) retains exact source bytes.
 
 [Complete immutable profile intent lesson](docs/history/window20.md#stitchcad-devnotes-part493md) retains
 original four-domain/five-state validation and numeric/profile/approval boundaries.

@@ -167,21 +167,7 @@ Staged make gate → === all doctrines green ===, rc=0; every scoped verificatio
 
 ## Complete recipe byte closure — preserved during G1-0069
 
-### `G1-SLICE.5a.3f.1a` — exact complete recipe byte contract
-
-- [x] **REPRODUCE / ISSUE** — D109 exact assertion/empty/envelope bytes absent from grammar4;
-  original report preserved byte-identically in sealed part40. Existing binding bytes stay fixed.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `git diff -- docs/book/src/spec/formula-language/grammar.md`
-  shows predecessor's explicit missing contract versus exact new4.1 templates/examples, rc=0.
-- [x] **FIX** — retained bind, flat assert payload, ordered/empty recipe wrapper/single spaces/no
-  final newline; decision discloses same-party author/applier, review/reversal and future typed .7 owner.
-- [x] **ADDRESSED (verified)** — `recipe_byte_contract.py` actual reference syntax matches16 authored
-  statements/nine whole sources/twelve chunks/all four published examples; `recipe_byte_mutations.py`
-  nine actual authored-byte assertion reds/exact restoration, rc=0. No compiled product claim.
-- [x] **NO REGRESSION** — focused `cargo test` recipe11/statement9:20 passed, rc=0; structural/
-  language16/publication9 all rc=0. Every Rust source/test byte equals eee15a8; no behavior changed.
-- [x] **LOCKSTEP** — normative grammar/annex/index and decision/ADR/current live records align;
-  old subtree/closure/three sealed payloads exact; D109 technical gap closed, .1b normalization next.
+[Whole original exact-byte closure](../history/stitchcad-devnotes-part1052.md) remains byte-exact.
 
 ## Verification Log
 
@@ -810,20 +796,32 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0878 actual Root semantic cohort;[whole scope/proofs](../history/stitchcad-devnotes-part1051.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.attach.program`
   Status: `done`
-  Goal:actual original Root semantic ordinals in complete mixed admission,normalization/order/dependency metadata and bounds;scalar/native positions remain authentic and semantic operations gain no fabricated geometry output/name.
-  - [x] REPRODUCE / ISSUE:0878 attached semantic records to actual Root,but raw mixed steps had only Scalar/Drafting. A semantic reference must retain its own real Root ordinal/member,complete coverage and bounded slot;matching IDs cannot manufacture formula operands,native families or existing geometry.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract semantic_program`:3 pass,rc=0;scalar/native representations cannot carry original semantic ordinals. Complete recipe order uses independent counters;formula-name scopes never interpret semantic local roles/ID inputs as AST names.
-  - [x] FIX:Semantic raw request,actual Root getter and complete semantic count;fresh complete content/shape bounds before first mixed ordinal error and fixed scalar-then-semantic end omissions. Normalized/order views retain actual Root members;scalar/semantic slots own no native arena. Output,initial and geometry guards recognize semantic identity before provider lookup.
-  - [x] ADDRESSED:same focused3 pass,rc=0;seven exact coverage/ordering refusals,unused semantic field before quotas/queries,shape4/1/2 and3 expressions/3 nodes/14 records,record13 refusal,original pointer/nth/reverse/order loans and retained8-entry delta. Semantic output/initial/creator and equal-ID native ambiguity refuse without callbacks.
-  - [x] NO REGRESSION: `cargo test -p sc-core --test drafting_context_binding_contract program_admission::`:5 pass;program_order::2 and geometry_requests::1 pass,rc=0. Strict selected clippy/fmt0;semantic_examples12/context_examples13 pass,rc=0. plan_sources.py actual enum/borrow controls0;native families13. `make book`:0. Coupled .5f.2.verify deferred.
-  - [x] LOCKSTEP:book documents independent ordinals,actual loans,bounds and exact refusal examples;scalar name checking/occurrences remain distinct from pending typed semantic dependency/rule binding. README reviewed unchanged;LIVE/MEM/index/DEV/ledger align,G1still6/18 In Progress.
-  - [x] CONTINUITY:1051 retains whole0878,original object-family review and0319 lesson;transition_receipts.py reports5 exact Git spans,rc=0;public reader byte-exact0. Test fixture API/entry/self-reference and strict indexing errors corrected;canonical vectors/domain count4 entries,scalar recipe is text only. Context example's exhaustive match fixed after observed E0004.
-  - [x] PROMOTION: promotion: declined (existing original-owner,bounded complete-input and typed-family doctrine;book owns API). Semantic data/order metadata implemented;typed rule/domain/Profile/component/currentness/graph/source binding and execution remain pending. Commit:STITCHCAD-G1-0879.
+  Goal:0879 actual mixed semantic ordinals;[whole scope/proofs](../history/stitchcad-devnotes-part1052.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports`
-  Status: `pending`
+  Status: `in_progress`
   Goal:readonly authentic logical/Profile/operation facets with original record/Root/snapshot
   loans and typed causes;all held source fields participate in fresh accounting before queries.
   Includes original rule/policy source loans and typed signatures;operation-held IDs alone grant no complete dependency acceptance.
+  Children: `.design` (fresh actual Root/provider scope and kind-checked member loans),
+  `.profile` (actual selected pin/canonical inventory and original readonly source facet),
+  `.rules` (original rule/policy body records,typed signatures and exhaustive held accounting).
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.design`
+  Status: `done`
+  Goal:0880 fresh complete actual Root/provider content before readonly original logical/semantic member lookup;private source scope retains actual Root/snapshot/policy and typed original missing/kind causes. No provider lookup,value read,domain copy,whole-query work or complete dependency acceptance.
+  - [x] REPRODUCE / ISSUE:0879 retains actual semantic Root/mixed owners;standalone logical/operation joins identify members. This leaf composes those actual joins with the explicit fresh Root/provider source-content scope and original context/snapshot/policy before lending records. Profile/rule/component/whole-query work remains separately owned.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract design_semantic::`:3 pass,rc=0;the complete Root and provider fields need one fresh meter. Cached separate context/Root demands cannot grant cumulative source credit;actual member joins retain lending missing/kind causes and never read Unknown/Derived values.
+  - [x] FIX:prepare_design_semantic_sources privately retains actual context,selected limits/fresh demand after exhaustive Root/provider walks and ignored-failure fence. Individual logical/operation lookups loan exact Root members under their original scope and typed request/cause. Separate scope,diagnostic and member modules keep public ownership explicit.
+  - [x] ADDRESSED:same focused3 pass,rc=0 after module separation;exact11/(32+X)/6 and prior12/(34+X)/7,actual Root/snapshot/member loans,Derived unchanged and equal-data foreign pointer distinction. Four exact first quota fields plus ignored source failure preserve originals;four typed missing/kind errors retain requested IDs/roles and actual record loans,zero member-query callbacks.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0;fmt --check0. `cargo test -p sc-core --doc context::design_semantic`:3 private/lifetime checks pass,rc=0;semantic_examples14 pass,rc=0. `make book`:0. Coupled .5f.2.verify deferred;complete graph/Profile/rule/garment/physical/execution remains unclaimed.
+  - [x] LOCKSTEP:book documents complete Root/provider scope,actual member joins,precise resource/lookup causes,examples and retained/deferred proof boundaries. Source implementation contract updated;README reviewed unchanged,LIVE product detail/MEM/index/DEV/ledger align. G1still6/18 In Progress;Profile then rule ports next.
+  - [x] CONTINUITY:1052 retains whole0879,original byte closure and0318 review;transition_receipts.py reports5 exact Git spans,rc=0;public reader byte-exact0. No limits,retained windows or existing source family contracts changed.
+  - [x] PROMOTION: promotion: declined (existing actual-owner,complete fresh-content and immutable source-port doctrine;book owns specific API). Individual Root member source scope implemented;following Profile/rule/component/whole semantic work remains pending. Commit:STITCHCAD-G1-0880.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile`
+  Status: `pending`
+  Goal:readonly actual selected Profile/schema/content pin,canonical logical inventory and original parameter/declaration source loans under the containing Root/snapshot. Exhaustively charge held pins,records,domains,state/provenance and caches before bounded query;typed original unsupported/missing/kind/owner causes,no value/evidence/G4 resolution or fallback selection.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.rules`
+  Status: `pending`
+  Goal:original rule/policy source records with actual typed local input/output signatures and body loans under original Root/snapshot. Exhaustive fresh accounting covers signatures,body metadata and caches before queries;operation IDs alone prove neither source existence nor signature. No physical rule evaluation or fabricated rule body.
 - ID: `G1-SLICE.5f.2.check`
   Status: `pending`
   Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.

@@ -181,10 +181,16 @@ pub trait DraftingContextSource<H: DesignMetadataHost> {
 }
 
 mod component;
+mod design_semantic;
 mod garment;
 pub use component::{
     DraftingComponentCreator, DraftingComponentOrigin, DraftingComponentRecipeSource,
     DraftingComponentSource, DraftingImportedComponentSource,
+};
+pub use design_semantic::{
+    DraftingDesignLogicalSource, DraftingDesignOperationSource, DraftingDesignSemanticLookupCause,
+    DraftingDesignSemanticLookupError, DraftingDesignSemanticRequest, DraftingDesignSemanticScope,
+    DraftingDesignSemanticScopeError,
 };
 pub use garment::{
     AdmittedDraftingGarmentSource, DraftingGarmentProvider, DraftingGarmentSource,

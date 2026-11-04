@@ -466,3 +466,83 @@ classification includes semantic IDs:one semantic candidate yields SemanticCreat
 member/mixed position;an equal-ID native candidate yields Ambiguous with both original positions.
 The ID cannot fall through to an existing geometry provider. No Point/Edge output,fixed native
 family,role manifest,frame,physical length or executed logical selection is invented.
+
+## Actual Design semantic source scope
+
+`DraftingContext::prepare_design_semantic_sources(content_limits)` now creates a private
+`DraftingDesignSemanticScope` for individual readonly Root member lookups. It freshly charges
+every actual Root field,including unused logical declarations and semantic operations,then every
+held provider field in one cumulative meter. Earlier Root/context demands provide no credit.
+The provider's exhaustive resource walk runs;Root,currentness,member,geometry and value queries do
+not. A zero-entry fence and the final meter preserve an ignored first provider-sink refusal before
+any later returned cause. No result vector or accepted prefix is allocated.
+
+The scope retains the exact actual context,Root and original snapshot record,selected `limits()`
+and fresh complete `demand()`. The original immutable context's current-source association is
+retained;preparing this scope performs no additional currentness validation. This covers Root
+and provider content,not an actual garment's separately represented inventories. It grants no
+aggregate query/comparison work,Profile/rule binding,semantic dependency order,evidence truth,
+selected value,physical result or complete program acceptance. A complete consumer must bound
+all its requests/comparisons before using these individual lookup primitives.
+
+`logical_source(LogicalInputTarget)` resolves only the actual Root logical inventory and exact
+expected `LogicalInputKind`. Its private `DraftingDesignLogicalSource` loans the actual scope and
+existing inventory/member/kind `binding()`. `declaration()` returns the same canonical record,
+including original domain,state,source and provenance. Unknown stays Unknown;Derived retains
+its operation reference without supplying a selection. A dedicated numeric declaration with a
+matching ID is not logical membership. No provider declaration lookup or copied domain is used.
+
+```rust
+use sc_core::{construction::*,design::{DesignResourceLimits,DesignResourceSource},
+    value::LogicalInputTarget};
+fn logical_domain_size<'a,H:DesignResourceSource,S:DraftingContextSource<H>+?Sized>(
+    context:DraftingContext<'a,H,S>,content:DesignResourceLimits,target:LogicalInputTarget)
+    ->Result<usize,String> {
+    let sources=context.prepare_design_semantic_sources(content).map_err(|e|e.to_string())?;
+    let source=sources.logical_source(target).map_err(|e|e.to_string())?;
+    assert!(std::ptr::eq(source.scope(),&sources));
+    assert!(std::ptr::eq(source.binding().inputs(),context.scope().root().inputs().logicals()));
+    Ok(source.declaration().definition().domain.len())
+}
+```
+
+`operation_source(id,SemanticOperationKind)` similarly loans the actual Root semantic recipe
+member and its original zero-based semantic index. `DraftingDesignOperationSource::operation()`
+returns that exact immutable body. Its index is not a scalar ordinal,native family or mixed
+position. Neither this lookup nor a logical lookup binds rule/policy existence/signatures,
+validates their mutual Derived/output relationship or checks whole semantic dependency order.
+Both member views copy only loans and fixed joins;host/provider payloads need neither Clone nor
+Debug. Views cannot outlive their actual source-scope loan. Debug omits domains,roles and opaque
+source payloads.
+
+```rust
+use sc_core::{construction::*,design::DesignMetadataHost,ontology::EntityId,
+    recipe::SemanticOperationKind};
+fn original_operation_index<H:DesignMetadataHost,S:DraftingContextSource<H>+?Sized>(
+    sources:&DraftingDesignSemanticScope<'_,H,S>,id:EntityId,kind:SemanticOperationKind)
+    ->Result<usize,String> {
+    let source=sources.operation_source(id,kind).map_err(|e|e.to_string())?;
+    assert!(std::ptr::eq(source.binding().recipe(),sources.context().scope().root().semantic_recipe()));
+    Ok(source.binding().index())
+}
+```
+
+Admission refusal retains actual `context()`,selected `limits()` and the original first resource
+`cause()`;its standard error chain retains that concrete resource cause. Lookup refusal instead
+retains exact `scope()`,original typed `request()` and lending `cause()`:Logical or Operation.
+Missing preserves requested ID/kind;Kind preserves expected kind and the actual original member
+loan. Those lending causes remain available through typed access rather than a `'static` error
+chain. No same-ID foreign owner or alternate family substitutes for the actual Root member.
+
+For the Root8/32/3 fixture above,a provider with three cache entries,X UTF-8 label bytes and a
+revision7 needs a combined11/(32+X)/6. Entry limit7 refuses Root Logical80 inputs1 after7 entries,
+before the provider walk. Entry limit10 reaches provider cache3 after8 entries. A bit limit5
+reaches its snapshot revision3 after Root revision3. An ignored cache failure still refuses with
+the original cache location;the later zero fence cannot replace it. Freshly charging an already
+prepared scope into a meter containing1 entry,2 text bytes and1 bit yields12/(34+X)/7.
+`charge_resources(sink)` exhaustively walks actual Root/provider fields again;cached scope demand
+and constructor policies never replace held-content accounting or clear an earlier sink failure.
+
+Pinned Profile source records and original rule/policy signatures remain the following source-port
+leaves. G4 retains Profile schema/registry/evidence/physical resolution;G3 retains physical recipe
+execution. The Design source scope creates none of those proofs or results.
