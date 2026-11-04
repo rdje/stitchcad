@@ -798,3 +798,67 @@ This remains individual source/member/kind binding. Aggregate query/comparison w
 revalidation,semantic dependency graph,Profile schema/evidence truth,physical/value resolution
 and whole-program execution retain their separate owners. Original rule/policy source signatures
 are the next tracked source-port stage.
+
+## Rule and policy source contract
+
+This is the implementation contract for the next rule-source leaves. The source record types,
+providers and accepted bindings in this section are **planned**. Existing operation records retain
+rule/policy IDs and local inputs;they do not establish that an actual rule exists or has the
+required signature. The implemented Root/Profile member facets supply original data loans,
+not a fabricated rule body or evaluator.
+
+An actual rule source must retain three separate things:its immutable declaration identity and
+typed signature,its original body record,and its containing origin/Root/snapshot. The body may be
+opaque to this G1 integration. It must be the actual already-held source,with an exhaustive
+integration-owned resource producer;an empty placeholder or a copied operation definition cannot
+stand in for it. Static metadata does not prove that an opaque implementation honors its signature.
+That association relies on the honest immutable source contract;execution/conformance is separate.
+
+The signature distinguishes logical derivation from Buttonhole policy. A logical rule declares
+its logical result kind and complete named input requirements. Each input requirement preserves
+LogicalInputKind or the actual numeric canonical representation:dedicated Length versus Scalar
+with its precise ScalarInputKind. Logical source origin stays separately explicit as Design or
+Profile;it is not coerced into a numeric operand. A Buttonhole policy has its mandatory canonical
+button-size source and complete named numeric policy-input requirements. Its result is the later
+physical buttonhole length,not a new authored/cached result field on ButtonholeOperation.
+
+Local roles remain original MachineTokens,not global formula names,spatial output names or a
+new executable language. Distinct roles may use the same actual source. Repeated signature roles
+refuse even when their kinds match. Construction must derive complete input count,text and
+conservative comparison bounds before quotas,then reject the first duplicate in original order.
+Every allowance is explicit;an empty signature is explicit and cannot remove the Buttonhole's
+required button source. Constructor policy/shape metadata gives no later whole-source credit.
+
+Source origins are explicit. A Design source retains the actual containing Design owner. A
+Profile source retains the actual selected Profile/pin/source/canonical/snapshot association,
+including separate profile/schema/content labels. Matching a rule ID or a parameter ID does not
+select a factory or a latest revision. Missing/unprovided/retired/unsupported/ambiguous sources
+retain original typed causes rather than a default policy or reconstructed history.
+
+The provider must expose original declaration/signature/body/origin records after complete content
+admission. Every owned signature role/vector,body field,unused declaration,retained copy/cache and
+represented counter belongs in the actual source walk. Opaque bodies do not waive accounting.
+Collections are precharged before traversal,and original text is charged without normalization,
+cloning or supplied demand totals. Borrowed views of already-accounted records do not create
+copies of their domains or bodies. Exhaustive owner/definition/variant views and fixed Copy fields
+must make new retained fields an explicit accounting obligation.
+
+The later binder admits all held content and complete prospective operation/role comparisons
+before provider queries,result reservation or role matching. It retains the original operation,
+requested rule/policy ID and every supplied source occurrence. Matching then checks actual
+Root/snapshot/origin,rule identity/family,result kind and exact local-role/input requirements.
+Roles match their original names,not a guessed positional meaning;both original orders remain
+inspectable. Missing,extra,repeated or wrong-kind inputs refuse without exposing an accepted
+prefix. Equal-data foreign records cannot replace the selected original source or canonical member.
+
+Logical input/output declarations retain their actual canonical domains,state,source and
+provenance. Matching a logical signature does not compute a result,select a domain member or
+upgrade Unknown/Derived to Known. The original Derived operation/output relationship is checked
+against actual operation and canonical owners;body evaluation and result-domain/value validation
+remain with execution. G3 owns physical Buttonhole policy execution and positive length;G4 owns
+Profile schema/registry/evidence/policy truth. No hardware dimensions,clearance,formula,logical
+default,geometry output,allocator/time budget or whole-program acceptance is inferred here.
+
+Implementation proceeds through immutable bounded signature records/accounting,original body and
+origin facets,then fresh bounded binding. Whole source/order/graph/allocator/lifetime integration
+verification remains the separately tracked `.5f.2.verify` leaf after the agreed integration set.

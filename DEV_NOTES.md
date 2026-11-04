@@ -3,15 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — original Profile parameter and canonical binding
+## _(2026-11-04 UTC)_ — rule/policy source implementation contract
 
-0884 rewalks complete parent/provider/request content before one logical metadata query. Same original Root/pin/inventory/Profile/snapshot header precedes parameter ID,canonical membership/kind and exact declaration pointer.
-Opaque metadata association stays the honest provider contract;G4 schema/evidence/value truth remains separate.
-Private proof/error retain original parent,request,metadata,canonical member,policy/demand and typed lending causes. Primary3 pass0:parameter600→canonical90/index0/Derived80,exact14/T/9 and prior15/(T+2)/10.
-Seven association refusals,actual kind/missing999 causes,metadata-vector shortage/ignored latch before missing404 query and original provider cause remain inspectable.
-Transparent provider-response alias replaces complex projected return/storage types;unused import removed. Selected strict lint/fmt0,parameter3/parent3,Profile API9 and actual semantic_examples20 pass,rc=0;guarded book build0.
-No value clone/read,repeat Profile query or accepted partial member. Promotion declined:existing source/pin/canonical doctrine;book owns API. Rule/policy sources follow.
-Same-tree retention0883 committed8035041c before product staging;whole task/lesson/ledger retained1056 with three exact Git spans/public0. Window30/original transaction/draft/proof stores remain protected;never rerun installation/recovery after later edits. G1still6/18 In Progress.
+0885 separates actual rule declaration/signature/body/origin from operation-held IDs. Typed logical/exact numeric input families,local role semantics,mandatory canonical button and explicit Design/Profile origin remain original data;no evaluator,new grammar,default policy or physical result is introduced.
+Complete signature count/text/comparison and held-source field accounting precede duplicate checks,query/matching/reservation. Actual metadata/body association remains the honest immutable source contract;canonical domain/state and original causes/orders survive without selected values or a program prefix.
+Scoped four-field operation census0 and guarded book build0;Rust/interfaces unchanged. Model/facets/binding children own implementation;coupled verification deferred.
+Promotion declined:existing source/type/accounting doctrine;book owns implementation contract. Whole0884 retained1057 by three exact Git spans/public0;G1still6/18.
+
+[Whole0884 Profile parameter binding lesson](docs/history/stitchcad-devnotes-part1057.md) retains exact source bytes.
 
 [Whole0883 window30 boundary lesson](docs/history/stitchcad-devnotes-part1056.md) retains exact source bytes.
 

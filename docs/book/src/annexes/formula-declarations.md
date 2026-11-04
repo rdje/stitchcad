@@ -696,6 +696,8 @@ now preserves explicit pin/Root/snapshot association after fresh complete conten
 The [Profile parameter facet](semantic-recipes.md#bind-actual-profile-logical-parameter-metadata)
 now retains actual metadata,source owners and canonical logical member/kind loans.
 Complete semantic dependency binding,component binding and rule/policy source facets remain **planned**.
+The [rule/policy source contract](semantic-recipes.md#rule-and-policy-source-contract) fixes original
+signature/body/origin ownership,complete field accounting and role/type matching before those types.
 [Raw original Profile/parameter source records](semantic-recipes.md#raw-original-profile-and-parameter-records)
 and exhaustive selected-pin text accounting are implemented with bounded original parameter binding.
 Garment source-content admission does not implement those remaining stages.

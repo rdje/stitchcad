@@ -3,12 +3,13 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0884 — bind original Profile parameter metadata
+## STITCHCAD-G1-0885 — actual rule/policy source contract
 
-Fresh complete selected-source content precedes one metadata query;actual source owners,parameter ID and canonical membership/kind/declaration pointer are required. Original parent,metadata,state and typed provider/lending causes survive.
-Primary3 pass0 with seven association refusals,exact quotas and ignored-failure retention.
+Document separate declaration/signature/body/origin ownership,exact typed roles,complete resource/comparison preflight and original source/cause matching. G3/G4 execution/evidence/value boundaries remain explicit;types/facets/binding are planned. Actual operation field census/book build0;product Rust unchanged.
 
-Strict lint/fmt0,parameter3/parent3,Profile API9,actual book examples20 and guarded book pass0 after response alias cleanup. Retention prerequisite committed8035041c;whole0883 retained exactly in1056. G1still6/18 In Progress;rule/policy sources and coupled .5f.2.verify remain pending.
+Whole0884 retained exactly in1057. G1still6/18 In Progress;immutable bounded signature records/accounting next,then original source facets/binding. Coupled .5f.2.verify stays deferred.
+
+[Whole0884 Profile parameter binding unit](docs/history/stitchcad-devnotes-part1057.md) retains exact task,lesson and ledger.
 
 [Whole0883 window30 boundary unit](docs/history/stitchcad-devnotes-part1056.md) retains exact task,lesson and ledger.
 
