@@ -749,6 +749,8 @@ The implementation sequence is:
    walk includes all those records,unused entries,duplicated caches and represented counters.
    The [component source contract](semantic-recipes.md#component-source-binding-contract) requires
    actual Piece/copy/recipe/native creator loans and complete accounting without reconstructing history.
+   [Original program-record accounting](semantic-recipes.md#original-program-record-accounting-for-source-providers)
+   now walks held step/native fields without Root/provider callbacks;component query/binding follow.
 6. Bind complete semantic occurrences only after their complete source/content/work allowances.
    Keep the original Pocket opening and all component source Pieces/copies. A recipe-built
    component retains its actual original recipe/creator;explicit imported primitives retain their

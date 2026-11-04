@@ -253,8 +253,8 @@ need genuine supported source records; these carriers supply no synthetic native
 ## Component source binding contract
 
 Component source query and accepted binding APIs are **planned**. The existing raw carriers above
-are implemented. The next leaves add program-record accounting,a readonly original source port,
-then complete fresh association checks. They do not add a geometry algorithm,importer or history
+are implemented. Program-record accounting is also implemented below;the next leaves add a
+readonly original source port,then complete fresh association checks. They add no geometry algorithm,importer or history
 reconstruction. All original source records must already be held before lookup.
 
 A component target is an explicit `PocketPieceRef {copy,piece}`:a stable physical cut-copy ID and
@@ -298,10 +298,10 @@ all original occurrences and first field causes remain inspectable on refusal.
 Program-record accounting needs a separate composition boundary. Existing
 `DraftingProgramInputs::charge_resources` walks the Root,then calls its provider,then walks steps.
 A provider accounting its own held recipe must not recursively invoke itself through that whole
-walk. The next record leaf adds an exhaustive step/native-field walk without Root/provider,
+walk. The record producer below provides an exhaustive step/native-field walk without Root/provider,
 currentness or value callbacks. Integrations then account original context bodies through their
 actual owners,while the existing whole-program method composes the same record walk and keeps
-its complete first-refusal contract. This planned helper grants no whole-source admission itself.
+its complete first-refusal contract. This helper grants no whole-source admission itself.
 
 The readonly source port must return original source-owned loans independently of a by-value
 copy/Piece request. Query loads,clones and evaluates nothing. All raw responses remain inspectable
@@ -314,6 +314,57 @@ supported source records and explicit future implementation;they receive no synt
 history. Whole Pocket/semantic dependency order,canonical logical input/Profile parameter binding,
 G3 physical effects,G4 source/evidence truth and execution remain separate. Coupled verification
 stays `.5f.2.verify` after the agreed integration set.
+
+## Original program record accounting for source providers
+
+`DraftingProgramInputs::charge_record_resources(sink)` appends only the actual original mixed step
+vector and complete native input fields to the caller's cumulative meter. It requires only
+`DesignMetadataHost` and `DraftingContextSource`;it makes no Root/provider resource callback,
+currentness/member/value query or normalization call. A provider holding its original recipe can
+compose this walk without reentering itself through whole-program accounting.
+
+```rust
+use sc_core::{construction::{DraftingContextSource,DraftingProgramInputs},
+    design::{DesignMetadataHost,DesignResourceSink,DesignResourceLimitError}};
+fn records<H:DesignMetadataHost,S:DraftingContextSource<H>+?Sized>(
+    program:&DraftingProgramInputs<'_,H,S>,sink:&mut dyn DesignResourceSink)
+    ->Result<(),DesignResourceLimitError> {
+    program.charge_record_resources(sink)
+}
+```
+
+The method exhaustively matches the private original program owner and every step variant.
+Context and scalar/semantic ordinals have fixed Copy guards. It precharges the complete vector
+at `CommandState`,actual original Root ID,`drafting.program.steps`,no invented index. Scalar and
+semantic ordinals remain data;even an invalid ordinal is charged without coverage/order lookup.
+Every native occurrence uses the existing exhaustive native-field producer,including repeated
+references to the same input. Original/canonical argument buffers and actual nested collections
+keep their original operation owners,field names and indices;there is no deduplication,cloning,
+normalization or supplied demand credit.
+
+The integration separately accounts its actual original Root,frame/snapshot,source payloads,
+retained copies/caches and represented counters through their real owners. This record walk
+does not replace complete source/program admission or supply allocator capacity,CPU or execution
+credit. A captured program context remains its original borrowed context;the record method uses
+its actual Root ID for locations without requerying that provider or reconstructing provenance.
+
+The existing complete `charge_resources` method still walks Root,then provider,then a zero-entry
+fence retaining ignored provider errors,and finally this same record producer. Complete program
+accounting therefore keeps its earlier field order and first-cause behavior. Normalized arenas
+and later proof buffers remain separate resource scopes.
+
+The focused fixture has four raw slots:invalid scalar ordinal0,a Point input,invalid semantic
+ordinal999,and the same original Point input again. If T is that Point's actual original plus
+canonical argument bytes,record demand is4/(2T)/0. Prior2 entries/3 text bytes/1 bit compose to
+6/(2T+3)/1. A one-bit maximum succeeds despite Root/snapshot revisions needing three bits each,
+and the provider call trace stays0. This checks that record accounting does not walk those bodies.
+
+Maximum1 entry refuses a two-slot vector before native traversal. Text maximum12 refuses the
+first native `drafting.point.x.source` field's13-byte `private_width` at operation100,before its
+canonical or later arguments. Empty records contribute0/0/0;empty and nonempty walks preserve a
+previously latched cause. The caller must finish its meter. These checks accept no scalar order,
+native kind/value,geometry,source association or executable program. Component source query and
+binding remain the next leaves;coupled verification stays deferred to `.5f.2.verify`.
 
 ## Original ordered semantic recipe
 

@@ -486,6 +486,10 @@ named signature/result matching is a separate implemented stage;borrowed headers
 The [local signature binder](../annexes/semantic-recipes.md#bind-complete-local-rule-signature-and-logical-output)
 also repeats complete content/W/member admission before named kinds and actual logical output
 relation checks. It creates no accepted prefix,body/domain clone or additional source/value query.
+Additional source-held recipes can use the
+[original program-record walk](../annexes/semantic-recipes.md#original-program-record-accounting-for-source-providers)
+without calling their Root/provider again. Integrations still account actual context/source bodies
+through their owners;the complete program walk composes Root→provider→first-error fence→records.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

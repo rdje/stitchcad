@@ -6,8 +6,7 @@ use crate::{
     construction::{DraftingContextSource, DraftingOperationInput},
     design::{
         charge_design_input_resources, DesignMetadataHost, DesignResourceDemand,
-        DesignResourceLimitError, DesignResourceLocation, DesignResourceMeter, DesignResourceScope,
-        DesignResourceSink, DesignResourceSource,
+        DesignResourceLimitError, DesignResourceMeter, DesignResourceSink, DesignResourceSource,
     },
     recipe::FormulaExpressionDocument,
 };
@@ -270,31 +269,16 @@ impl<H: DesignResourceSource, S: DraftingContextSource<H> + ?Sized>
         &self,
         sink: &mut dyn DesignResourceSink,
     ) -> Result<(), DesignResourceLimitError> {
-        // Exhaustive held owner; future fields must receive accounting before this compiles.
-        let DraftingProgramInputs { context, steps } = self;
+        // The shared record walk below exhaustively covers the original private program owner.
+        let context = self.context();
         let root = context.scope().root();
         charge_design_input_resources(root, sink)?;
         let source_result = context.source().charge_resources(sink);
-        let location = DesignResourceLocation {
-            scope: DesignResourceScope::CommandState,
-            owner: Some(root.id()),
-            field: "drafting.program.steps",
-            index: None,
-        };
+        let location = super::records::location(root.id());
         // Catch ignored provider failures before a later returned cause, even for an empty sequence.
         sink.charge_entries(0, location)?;
         source_result?;
-        sink.charge_entries(steps.len(), location)?;
-        for step in steps {
-            match step {
-                DraftingProgramStep::Scalar { ordinal }
-                | DraftingProgramStep::Semantic { ordinal } => {
-                    crate::design::fixed_value(ordinal);
-                }
-                DraftingProgramStep::Drafting(input) => input.charge_resources(sink)?,
-            }
-        }
-        Ok(())
+        self.charge_record_resources(sink)
     }
 }
 fn add(left: usize, right: usize) -> Result<usize, DraftingProgramAdmissionRefusal> {

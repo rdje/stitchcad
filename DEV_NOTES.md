@@ -3,15 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — original component binding implementation contract
+## _(2026-11-04 UTC)_ — original program-record resource composition
 
-0891 fixes the boundary between actual current Piece/copy/source association and native declaration metadata;Mirror/Join identity witnesses certify no issued/fresh/current result or executed history.
-Current copy/Piece/frame/snapshot and original recipe/creator/context loans remain distinct. Exact original native membership supplies a genuine position;no inferred copy,recipe,ordinal or transform.
-Provider holds the recorded original association and every additional program/import/context/cache/counter before queries. Metadata binding still grants no execution/history/source truth.
-Producer census confirms whole-program accounting calls its provider before steps. A provider-owned recipe needs a separate exhaustive record walk without callbacks;records leaf is the next product prerequisite.
-Scoped declaration/producer census and guarded book0;Rust/public APIs unchanged. Implementation remains records→port→binding;coupled .5f.2.verify deferred.
-Source-plan step5 corrected to implemented rule sources/local signatures. Promotion declined:existing original-source/proof/resource composition doctrine;book owns implementation contract.
-Whole0890 retained1063 by three exact Git spans/public0. README/LIVE reviewed unchanged,G1still6/18 In Progress;record accounting next.
+0892 exposes charge_record_resources under only metadata/context source bounds. Exhaustive owner/step views and fixed context/ordinal guards precharge the complete step vector,then every actual native field in original order.
+No Root/provider resource callback,currentness/member/value query,normalization or body clone occurs. Context bodies remain separately accounted by their real owners.
+Complete program accounting keeps Root→provider→zero-entry first-error fence,then composes the same record walk. Removed imports exposed by the refactor;strict selected lint/fmt0.
+Native3 pass0:four raw slots and repeated Point retain4/(2T)/0,prior6/(2T+3)/1,zero provider trace and one-bit allowance despite Root/snapshot three-bit revisions.
+Whole vector shortage and actual13-byte first native field refuse before later work;empty/nonempty records preserve original latched errors. Independent UTF-8 census confirms13B.
+Existing whole-population count1 and fresh-root/provider/step refusal1 pass0. Narrow metadata-host API1 and guarded book0;record composition grants no complete program or source admission.
+Actual semantic_examples27 pass,rc=0;source-held record helper compiles. No coupled/full CI verdict claimed.
+Promotion declined:existing exhaustive actual-field/first-refusal/borrowed-source composition doctrine;book owns public method. Whole0891 retained1064 by three exact Git spans/public0.
+README/LIVE reviewed unchanged,G1still6/18 In Progress. Original component query port follows;coupled .5f.2.verify deferred.
+
+[Whole0891 component binding contract lesson](docs/history/stitchcad-devnotes-part1064.md) retains exact source bytes.
 
 [Whole0890 local rule signature lesson](docs/history/stitchcad-devnotes-part1063.md) retains exact source bytes.
 

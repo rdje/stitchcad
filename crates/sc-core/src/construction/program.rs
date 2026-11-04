@@ -28,6 +28,7 @@ mod admission;
 mod limits;
 mod name_inputs;
 mod normalized;
+mod records;
 mod views;
 pub use admission::{
     AdmittedDraftingProgramInputs, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
