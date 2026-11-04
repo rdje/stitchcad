@@ -3,12 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — original typed logical derivation sources
+## _(2026-11-04 UTC)_ — raw actual component origin loans
 
-0875 retains explicit rule source/output logical target and authored named logical,Profile-logical or numeric canonical dependencies. Actual domains/state/selections stay in source owners. Complete P/role-byte/P*P bounds precede role validation;no workspace allocation,source query or fabricated native step.
-Focused3 verify both output roles,all source representations,original buffers/authored equality,quota priority/shared references/empty input and cumulative6/35/1. Exact collection/first/final role refusals and prior latch survive. Actual rule signatures,graph/order,Root/ports and execution remain pending.
-Selected strict lint/fmt,API compiler guards3,actual semantic book examples4 and guarded build pass0.
-Promotion declined:existing explicit sources/complete bounds/exhaustive accounting;book owns raw logical target and operation API. Archive1047 retains whole0874,Gather acceptance and0323;no retained-window change. G1still6/18 In Progress.
+0876 reuses real Mirror/Join Piece identity factory parents to return original native inputs/identity fields. Recipe carriers retain whole original program/Piece/creator loans;imported carriers retain actual primitive/original opaque source record,then frame/snapshot loans. No fabricated ordinal or accepted history.
+Three selected native/import pointer checks pass;first Join selector ran0 tests and was corrected to the actual named1 pass. Strict lint/fmt and four compiler guards pass0. Copy/Debug require no opaque payload/context traits;all APIs are constant-work loans without lookup,cloning or allocation.
+Seven actual maintained semantic recipe examples and guarded book build pass0.
+Promotion declined:existing authentic native parents/original source/lifetime contracts;book owns carriers. Actual Root/recipe/frame/snapshot association waits at component .bind after ports/accounting;ordered semantic owner is next. Archive1048 retains whole0875,Hem acceptance/0322;G1still6/18.
+
+[Whole0875 logical derivation lesson](docs/history/stitchcad-devnotes-part1048.md) retains exact source bytes.
 
 [Whole0874 Buttonhole recipe lesson](docs/history/stitchcad-devnotes-part1047.md) retains exact source bytes.
 
@@ -54,13 +56,7 @@ Promotion declined:existing explicit sources/complete bounds/exhaustive accounti
 
 [Whole0323 instantiation lesson](docs/history/stitchcad-devnotes-part1047.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — shared exact selected-profile pin
-
-0322 .6.2.2.c.2.1 moves the immutable selected pin to core; measure names alias all four shared types.
-Core bus cannot depend on measure; this removes the input dependency obstacle without duplicated validation.
-Opaque strings/field order/blank refusal/G4 deferral remain; human Display prefix uses selected profile wording.
-Pin4+garment21+MTM10 pass0, strict core/measure lint/fmt/book/publication74-87 pass0;476/294 exact13b12b8.
-Promotion: existing shared ontology boundary; no new policy. Next concrete evaluation schemas; G1still6/18.
+[Whole0322 profile-pin lesson](docs/history/stitchcad-devnotes-part1048.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — combined structural model acceptance
 

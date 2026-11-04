@@ -420,6 +420,11 @@ copy/expected Piece ids. A pocket on `front-left` may use `bag-left`/`bag-right`
 distinct physical objects share pattern geometry. The served copy may explicitly be a component;
 G1 infers no construction support or recipe-cycle correctness.
 
+The [raw component origin carriers](../annexes/semantic-recipes.md#raw-original-component-origins)
+retain actual Piece, recipe/native identity parents or an explicit imported-source record. They
+do not bind this Pocket's component membership, current Root, history, frame or snapshot; that
+complete bounded association remains pending source ports/accounting.
+
 `Pocket::new` requires actual copies/unique Piece ids, unique component copies, a live owned anchor
 and complete owned orientation with unique ends. `validate_current()` repeats target/placement checks:
 missing copies never select peers; same-copy Piece reassignment refuses. Historical split/reversal

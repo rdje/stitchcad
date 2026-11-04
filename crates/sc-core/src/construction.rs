@@ -60,14 +60,16 @@ mod arc;
 mod arguments;
 mod context;
 pub use context::{
-    AdmittedDraftingGarmentSource, DraftingContext, DraftingContextError, DraftingContextSource,
-    DraftingGarmentProvider, DraftingGarmentSource, DraftingGarmentSourceError,
-    DraftingGarmentSourceIssue, DraftingGeometryBinding, DraftingGeometryBindingIssue,
-    DraftingGeometryError, DraftingGeometryMismatch, DraftingGeometryReference,
-    DraftingGeometrySource, DraftingGeometrySourceResult, DraftingGeometryStepProvider,
-    DraftingInitialInputProvider, DraftingInitialInputSource, DraftingInitialInputSourceResult,
-    DraftingPlannedOutput, DraftingPlannedOutputProvider, DraftingPlannedOutputSource,
-    DraftingPlannedOutputSourceResult, DraftingSourceRecord,
+    AdmittedDraftingGarmentSource, DraftingComponentCreator, DraftingComponentOrigin,
+    DraftingComponentRecipeSource, DraftingComponentSource, DraftingContext, DraftingContextError,
+    DraftingContextSource, DraftingGarmentProvider, DraftingGarmentSource,
+    DraftingGarmentSourceError, DraftingGarmentSourceIssue, DraftingGeometryBinding,
+    DraftingGeometryBindingIssue, DraftingGeometryError, DraftingGeometryMismatch,
+    DraftingGeometryReference, DraftingGeometrySource, DraftingGeometrySourceResult,
+    DraftingGeometryStepProvider, DraftingImportedComponentSource, DraftingInitialInputProvider,
+    DraftingInitialInputSource, DraftingInitialInputSourceResult, DraftingPlannedOutput,
+    DraftingPlannedOutputProvider, DraftingPlannedOutputSource, DraftingPlannedOutputSourceResult,
+    DraftingSourceRecord,
 };
 mod operation_input;
 pub use operation_input::{

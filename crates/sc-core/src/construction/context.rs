@@ -180,7 +180,12 @@ pub trait DraftingContextSource<H: DesignMetadataHost> {
     ) -> DraftingGeometrySourceResult<'_, Self::Frame, Self::Snapshot, Self::Geometry, Self::Error>;
 }
 
+mod component;
 mod garment;
+pub use component::{
+    DraftingComponentCreator, DraftingComponentOrigin, DraftingComponentRecipeSource,
+    DraftingComponentSource, DraftingImportedComponentSource,
+};
 pub use garment::{
     AdmittedDraftingGarmentSource, DraftingGarmentProvider, DraftingGarmentSource,
     DraftingGarmentSourceError, DraftingGarmentSourceIssue,

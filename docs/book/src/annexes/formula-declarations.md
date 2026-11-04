@@ -684,7 +684,9 @@ semantic operation forms and source facets below retain their individual impleme
 Finite logical declarations,inventories and canonical Design attachment are
 [implemented](logical-inputs.md). The [standalone Buttonhole operation record](semantic-recipes.md)
 and [standalone logical derivation sources](semantic-recipes.md#standalone-logical-derivation-operation)
-are implemented; ordered semantic ownership,component origins and source facets remain **planned**.
+are implemented. [Raw component origin carriers](semantic-recipes.md#raw-original-component-origins)
+retain genuine native declarations or imported-source loans. Ordered semantic ownership,component
+binding and source facets remain **planned**.
 Garment source-content admission does not implement those remaining stages.
 The existing numeric formula targets,scalar formula statements and
 mixed scalar/native programme cannot supply them merely because an identifier matches.
@@ -704,7 +706,7 @@ The implementation sequence is:
    cannot provide a substitute. Existing numeric-only construction remains an explicitly empty
    logical cohort;it never manufactures an Unknown or default declaration. Logical declarations
    add no formula operand kind,string literal or enum-valued `let` to the existing formula grammar.
-3. **Buttonhole/logical source records implemented;component origins planned:** represent actual semantic recipe operations for logical derivation,component
+3. **Buttonhole/logical records and raw component carriers implemented;binding planned:** represent actual semantic recipe operations for logical derivation,component
    sources and Buttonhole dependencies. They need their own immutable typed input and authentic
    ordered owner before any public source facet can return one. A Buttonhole operation retains
    the canonical button-size declaration and explicit policy dependencies. Its physical formula,

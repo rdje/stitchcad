@@ -87,7 +87,7 @@ vector2; text15 refuses second role8 after8 bytes. Empty and nonempty producers 
 earlier latched refusal.
 
 This is a standalone source record and exhaustive content walk. Genuine ordered semantic recipe
-ownership, component creation/import sources, Root/program attachment,
+ownership, component origin binding, Root/program attachment,
 Closure-to-operation dependency binding and readonly source ports remain tracked work. It creates
 no scalar statement, native drafting slot or geometry. Profile pins, currentness, physical execution
 and the deferred coupled verification remain separate.
@@ -182,4 +182,68 @@ The four-role fixture costs4 entries/32 text bytes/0 counter bits. Prior2 entrie
 finish6/35/1. Entry allowance3 refuses the original vector4; text31 refuses final role8 after24 bytes
 at original index3. Empty and nonempty walks preserve an earlier latched cause. The caller finishes
 the same cumulative meter. Standalone accounting grants no ordered owner, Root/Profile/rule binding,
-graph acceptance or execution; those remain tracked alongside component origins and source ports.
+graph acceptance or execution; those remain tracked alongside component origin binding and source ports.
+
+## Raw original component origins
+
+Component origin carriers now preserve actual original loans before any provider query or binding
+API is introduced. `DraftingComponentCreator` has Mirror and Join variants holding their real
+`DeclaredMirrorPieceIdentity` or `DeclaredJoinPieceIdentity` factory result. A geometry role catalog
+or matching ID cannot construct either variant. `piece_id()` borrows the exact declared identity
+field; `input()` follows the published family parents to the actual original `MirrorPieceCopy` or
+`JoinPiecesAtSeam` input. It performs no lookup, cloning, identity issuance or position inference.
+These are native declaration witnesses, not evidence of executed creation, history or geometry.
+
+`DraftingComponentRecipeSource` retains the actual supplied Piece, original `DraftingProgramInputs`
+owner and that native creator witness. The complete scalar recipe and native sequence stay in their
+original owner. No extracted source, synthetic ordinal, reconstructed operation or replacement
+recipe is created. Construction is raw: a foreign program, wrong Piece or mismatched creator can
+still be represented for later typed refusal. This record itself certifies no program membership,
+current Root, accepted creation history, output geometry or valid original source position.
+
+```rust
+use sc_core::{construction::*,design::DesignMetadataHost,ontology::Piece};
+fn recipe_source<'p,'a,H:DesignMetadataHost,S:DraftingContextSource<H>+?Sized>(
+    program:&'p DraftingProgramInputs<'a,H,S>,piece:&'p Piece,creator:DraftingComponentCreator<'p>)
+    ->DraftingComponentRecipeSource<'p,'a,H,S> {
+    DraftingComponentRecipeSource {program,piece,creator}
+}
+```
+
+`DraftingImportedComponentSource` instead retains an actual primitive Piece and original
+`DraftingSourceRecord<I>` containing its explicit import-source payload. The integration supplies
+that real record; an empty substitute or made-up recipe violates the source contract. Core infers
+no importer, file format, imported geometry or historical creator from this raw carrier. The payload
+may be opaque or unsized and need not implement Clone or Debug. Copying the carrier copies loans.
+
+```rust
+use sc_core::{construction::*,ontology::Piece};
+fn imported_source<'a,I:?Sized>(piece:&'a Piece,source:&'a DraftingSourceRecord<I>)
+    ->DraftingImportedComponentSource<'a,I> {
+    DraftingImportedComponentSource {piece,source}
+}
+```
+
+`DraftingComponentOrigin` selects Imported or Recipe explicitly; `piece()` loans the Piece retained
+by that original branch. `DraftingComponentSource` adds the actual original Cartesian frame and
+snapshot records, each with the provider's associated type. Those record loans retain identity
+even for zero-sized payloads. Debug omits primitive/import payloads, names and authored data. None
+of the generic context or payload types needs Clone or Debug for these carrier operations:
+
+```rust
+use sc_core::{construction::*,design::DesignMetadataHost};
+fn copy_source<'p,'a,H,S,I>(source:DraftingComponentSource<'p,'a,H,S,I>)
+    ->(DraftingComponentSource<'p,'a,H,S,I>,DraftingComponentSource<'p,'a,H,S,I>)
+where H:DesignMetadataHost,S:DraftingContextSource<H>+?Sized,I:?Sized {
+    (source,source)
+}
+```
+
+All carrier operations are constant-work borrowed field access. They allocate no collection or
+accepted prefix, compute no geometry and query no source. They grant no content allowance. The
+future source provider must freshly account every actual additional recipe input, manifest,
+primitive-source payload, duplicated record and cache before bounded binding queries; earlier
+native constructor proofs provide no whole-source credit. Complete Root Piece/copy membership,
+actual recipe/native-input association, frame/snapshot identity and original first causes remain
+with the tracked component binding task after source ports/accounting exist. Other creation forms
+need genuine supported source records; these carriers supply no synthetic native history for them.

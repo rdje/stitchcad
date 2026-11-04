@@ -27,6 +27,12 @@ fn unlisted_and_equal_external_source_values_remain_local_declarations_with_actu
                 .expect("listed local exclusions only");
             assert!(std::ptr::eq(declared.roles(), &roles));
             assert!(std::ptr::eq(declared.piece_id(), &field));
+            let creator = DraftingComponentCreator::Join(&declared);
+            assert!(std::ptr::eq(creator.piece_id(), &field));
+            assert!(
+                matches!(creator.input(),DraftingOperationInput::JoinPieces(input)
+                if std::ptr::eq(input,roles.banks().sources().population().metadata().splice().source().edit()))
+            );
             assert_eq!(declared.limits(), limits);
             assert_eq!(declared.stop_occurrences(), 1);
             assert_eq!(*declared.piece_id(), field);

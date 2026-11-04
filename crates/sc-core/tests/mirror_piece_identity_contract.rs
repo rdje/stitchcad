@@ -23,12 +23,40 @@ fn canonical_identity_borrows_actual_field_and_parents_without_minting_or_reinte
                 .expect("local declaration only");
             assert!(std::ptr::eq(declared.roles(), &roles));
             assert!(std::ptr::eq(declared.piece_id(), &piece_id));
+            let creator = DraftingComponentCreator::Mirror(&declared);
+            assert!(std::ptr::eq(creator.piece_id(), &piece_id));
+            assert!(
+                matches!(creator.input(),DraftingOperationInput::MirrorPiece(input)
+                if std::ptr::eq(input,roles.metadata().cut().source().input()))
+            );
             assert_eq!(*declared.piece_id(), piece_id);
             assert_eq!(
                 declared.roles().metadata().cut().source().piece().id(),
                 id(100)
             );
         }
+    });
+}
+
+#[test]
+fn imported_component_source_lends_actual_primitive_and_opaque_original_record_without_history() {
+    struct Imported {
+        bytes: Vec<u8>,
+    }
+    with_roles(|roles| {
+        let piece = roles.metadata().cut().source().piece();
+        let record = DraftingSourceRecord::new(Imported {
+            bytes: vec![11, 22, 33],
+        });
+        let raw = DraftingImportedComponentSource {
+            piece,
+            source: &record,
+        };
+        let copied = raw;
+        assert!(std::ptr::eq(raw.piece, piece));
+        assert!(std::ptr::eq(copied.source, &record));
+        assert_eq!(raw.source.data().bytes, [11, 22, 33]);
+        assert_eq!(format!("{raw:?}"), "DraftingImportedComponentSource(..)");
     });
 }
 
