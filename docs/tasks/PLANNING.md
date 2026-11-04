@@ -1187,6 +1187,6 @@ Fixed0696;[whole original ledger/proofs](../history/window28.md#stitchcad-devnot
 ## D375 — drafting chapters missing from the topic index
 Fixed0760;[whole cause/reproduction/fix](../history/window29.md#stitchcad-devnotes-part942md).
 
-D376/D377 fixed0816/0817;D378 fixed0825;[whole causes/proofs](../history/stitchcad-devnotes-part1001.md).
+D376/D377 fixed0816/0817;D378 fixed0825;[whole causes/proofs](../history/window30.md#stitchcad-devnotes-part1001md).
 
-D379 fixed0826;[whole source identity cause/proofs](../history/stitchcad-devnotes-part1002.md).
+D379 fixed0826;[whole source identity cause/proofs](../history/window30.md#stitchcad-devnotes-part1002md).

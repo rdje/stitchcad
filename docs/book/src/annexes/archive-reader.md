@@ -302,6 +302,28 @@ Latest public read941 matches3844 original bytes;the installer verifies complete
 retention and keeps original trees in protected target/history_window28_capture for recovery.
 Live links route55 destinations to window28 headings. Never rerun install/recovery after later edits.
 
+### Active64 boundary and window30 —0883
+
+Draft1055 expanded the active generation from64 to65 working Markdown files. A native pressure
+census,after copy/hash-preserving the10967-byte draft,confirmed56 committed raw records plus
+eight catalogs in generation2;aggregate85/192 was not the limiting scope. The published append
+captured all56 exact whole files from a024533e into window30 without changing any budget.
+
+Independent public before/candidate/installed materializations match1508 logical names and
+6305703 bytes by size,line count and SHA-256. All114 original physical files remain exact in
+the protected transaction backup;56 retained physical files,including older windows,stay
+byte-identical. One guarded installation retired only the captured56 complete files. Draft1055
+was restored byte-exact after the installed comparison;its four original Git source intervals
+and public read match. Live navigation retargeted141 links in five maintained files.
+
+Generation2 now has10/64 working files (nine catalogs plus the restored raw draft),leaving54
+active slots;aggregate working31/192. Original transaction/draft storage remains under
+`target/history-capture-0883` and `target/history-capture-0883-drafts`;independent manifests are
+under `target/history-proof-0883`. Never rerun install/recovery after restoration or later edits.
+This verifies retained bytes and existing process-interruption safeguards;it adds no power-loss
+claim. Profile parameter product work stays separately owned/in flight while this prerequisite
+is committed,and no product-code signoff is inferred from archive checks.
+
 ### Closed task goals and live navigation —0775
 
 Whole0774 continuity and the original completed walk/mirror/slash goals/proof links remain

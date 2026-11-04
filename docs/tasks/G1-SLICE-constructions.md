@@ -77,11 +77,11 @@ Whole closed goals/acceptance/proofs remain byte-exact in [part959](../history/w
 
 ### `G1-SLICE.3c.4a.1` — semantic dart intent with visible closure obligations
 
-[Whole original dart acceptance](../history/stitchcad-devnotes-part1003.md) remains byte-exact.
+[Whole original dart acceptance](../history/window30.md#stitchcad-devnotes-part1003md) remains byte-exact.
 
 ### `G1-SLICE.3c.4a.2a` — distinct tuck/pleat intent with shared structural checks
 
-[Whole original fold acceptance](../history/stitchcad-devnotes-part1046.md) remains byte-exact.
+[Whole original fold acceptance](../history/window30.md#stitchcad-devnotes-part1046md) remains byte-exact.
 
 ### `G1-SLICE.3c.4b.1` — completed served-layer protocol
 
@@ -89,31 +89,31 @@ Whole0017 [goals/acceptance/proofs](../history/window28.md#stitchcad-devnotes-pa
 
 ### `G1-SLICE.3c.4a.2b` — gathers bind physical span sides and borrow canonical ease
 
-[Whole original Gather acceptance](../history/stitchcad-devnotes-part1047.md) remains byte-exact.
+[Whole original Gather acceptance](../history/window30.md#stitchcad-devnotes-part1047md) remains byte-exact.
 
 ### `G1-SLICE.3c.4b.2` — Hem retains depth/fold intent and validates current Facing targets
 
-[Whole original Hem acceptance](../history/stitchcad-devnotes-part1048.md) remains byte-exact.
+[Whole original Hem acceptance](../history/window30.md#stitchcad-devnotes-part1048md) remains byte-exact.
 
 ### `G1-SLICE.3c.4c.1a` — physical notion placements preserve stable copy bindings
 
-[Whole original notion acceptance](../history/stitchcad-devnotes-part1049.md) remains byte-exact.
+[Whole original notion acceptance](../history/window30.md#stitchcad-devnotes-part1049md) remains byte-exact.
 
 ### `G1-SLICE.3c.4c.1b` — zipper/hook-bar instances borrow current placements and refuse fly scope
 
-[Whole original closure acceptance](../history/stitchcad-devnotes-part1050.md) remains byte-exact.
+[Whole original closure acceptance](../history/window30.md#stitchcad-devnotes-part1050md) remains byte-exact.
 
 ### `G1-SLICE.3c.4c.2` — buttonhole length has one canonical button/operation source
 
-[Whole original Buttonhole proof](../history/stitchcad-devnotes-part1027.md) remains byte-exact.
+[Whole original Buttonhole proof](../history/window30.md#stitchcad-devnotes-part1027md) remains byte-exact.
 
 ### `G1-SLICE.3c.4d.1` — Pocket retains physical composition and owned placement intent
 
-[Whole original Pocket acceptance](../history/stitchcad-devnotes-part1041.md) remains byte-exact.
+[Whole original Pocket acceptance](../history/window30.md#stitchcad-devnotes-part1041md) remains byte-exact.
 
 ### `G1-SLICE.3c.4d.2` — structural object families reviewed against the production-grade bar
 
-[Whole original object-family review](../history/stitchcad-devnotes-part1051.md) remains byte-exact.
+[Whole original object-family review](../history/window30.md#stitchcad-devnotes-part1051md) remains byte-exact.
 
 ## Completed recipe byte records — preserved from d7a421e
 
@@ -121,60 +121,41 @@ Whole0017 [goals/acceptance/proofs](../history/window28.md#stitchcad-devnotes-pa
 
 - ID: `G1-SLICE.5a.3f.1a`
   Status: `done`
-  Goal:0068 exact-byte protocol;[whole original scope/proofs](../history/stitchcad-devnotes-part1053.md).
+  Goal:0068 exact-byte protocol;[whole original scope/proofs](../history/window30.md#stitchcad-devnotes-part1053md).
 
 ### Complete recipe contract recording receipts
 
-[Whole original0068 recording receipts](../history/stitchcad-devnotes-part1054.md) remain byte-exact.
+[Whole original0068 recording receipts](../history/window30.md#stitchcad-devnotes-part1054md) remain byte-exact.
 
 ## Complete recipe byte closure — preserved during G1-0069
 
-[Whole original exact-byte closure](../history/stitchcad-devnotes-part1052.md) remains byte-exact.
+[Whole original exact-byte closure](../history/window30.md#stitchcad-devnotes-part1052md) remains byte-exact.
 
 ## Verification Log
 
-Pre-change protocol precedes instruments/book edits. Actual recursive reference syntax independently
-renders16 authored statement rows (six kinds/five tolerances), nine complete sources/twelve chunks and
-all four actual book/decision examples. Inference/evaluation trapped; no whole-reference-recipe parser
-or compiled product serializer claim. Two actual ordinary-call byte collisions confirm the typed
-identity boundary assigned to .7. Nine actual interpreter authored-byte assertion reds/exact
-source restore and normal rerun observed terminal0; classifier anchors/noise controls watched.
-Focused syntax20 (recipe11/statement9), structural suite/language16 and publication9 pass0:
-51 chapters/21 APIs/1060 source/1640 rendered links. Rust source/test bytes compare exact eee15a8.
-Ledger9 arms/13 pointers, archive28 arms/184 CLI controls/175 logical reads and retention175 records/
-50 working Markdown/8712 decoded lines/673893 decoded bytes/330215 resident bytes pass0.
-Fresh reconstructed defects10open/99unique sealed/zero overlap; tree10 lanes/13trees/nine siblings/
-zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16, fixture20/four/five pass0.
-Predecessor complete syntax subtree/closure and three sealed payloads compare byte-identically0.
-Map orientation shortened within unchanged ceiling; no unique maintained facts or ceilings removed.
-Staged make gate → === all doctrines green ===, rc=0; independent evidence approval unapproved.
+[Whole original0068 verification log](../history/stitchcad-devnotes-part1055.md) remains byte-exact.
 
 ## Commit Log
 
-| Leaf | Commit subject | Verification |
-| --- | --- | --- |
-| `.5a.3f.1a` | `STITCHCAD-G1-0068 (leaf G1-SLICE.5a.3f.1a): specify exact statement and ordered recipe identity bytes` | 16 statements/nine sources/nine actual reds |
-
-
-Retention: complete predecessor payload preserved by .5b.2a.
+[Whole original0068 commit log/retention note](../history/stitchcad-devnotes-part1055.md) remain byte-exact.
 
 ## Completed product metadata receipts — preserved from cfd0748
 
 ## Product semantic vocabulary receipts — .5b.2a,2026-10-03 (UTC)
 
-[Whole closed receipt](../history/stitchcad-devnotes-part1037.md) retains its exact original evidence.
+[Whole closed receipt](../history/window30.md#stitchcad-devnotes-part1037md) retains its exact original evidence.
 
 ## Completed product metadata checklist — preserved from cfd0748
 
 ### G1-SLICE.5b.2a — closed product semantic metadata
 
-[Whole closed checklist](../history/stitchcad-devnotes-part1037.md) retains its exact original evidence.
+[Whole closed checklist](../history/window30.md#stitchcad-devnotes-part1037md) retains its exact original evidence.
 
 ## Completed product metadata protocol — preserved from cfd0748
 
 - ID: `G1-SLICE.5b.2a`
   Status: `done`
-  Goal:0083 closed metadata protocol;[whole scope/proofs](../history/stitchcad-devnotes-part1032.md).
+  Goal:0083 closed metadata protocol;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1032md).
 
 Retention: complete predecessor payload preserved by .5b.2b.
 
@@ -182,7 +163,7 @@ Retention: complete predecessor payload preserved by .5b.2b.
 
 - ID: `G1-SLICE.5b.2b`
   Status: `done`
-  Goal:0084 sourced declaration protocol;[whole scope/proofs](../history/stitchcad-devnotes-part1033.md).
+  Goal:0084 sourced declaration protocol;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1033md).
 
 ## Completed declaration receipts — preserved from db19b90
 
@@ -423,11 +404,11 @@ before final checks. No checker, cap, grammar or product Rust changed; no needed
 ### G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence.pairs`
   Status: `done`
-  Goal:0797 original paired-copy correspondence;[whole scope/proofs](../history/stitchcad-devnotes-part1017.md).
+  Goal:0797 original paired-copy correspondence;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1017md).
 
 ### G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking — retention evidence
 
-[Whole0798 retention proof](../history/stitchcad-devnotes-part1025.md) remains byte-exact.
+[Whole0798 retention proof](../history/window30.md#stitchcad-devnotes-part1025md) remains byte-exact.
 
 ## Complete join candidate inventory
 
@@ -465,7 +446,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0803 exact original preservation;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part979md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.result`
   Status: `done`
-  Goal:0804 actual joined-result fields;[whole scope/proofs](../history/stitchcad-devnotes-part999.md).
+  Goal:0804 actual joined-result fields;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part999md).
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.inventory.tracking`
   Status: `done`
   Goal:0798 bounded inventory continuity;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part974md).
@@ -473,7 +454,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0775 bounded continuity;[whole scope/proofs](../history/window29.md#stitchcad-devnotes-part951md).
 
-[Whole0805 retention evidence](../history/stitchcad-devnotes-part999.md) remains byte-exact.
+[Whole0805 retention evidence](../history/window30.md#stitchcad-devnotes-part999md) remains byte-exact.
 
 ## Native declaration search checkpoint
 
@@ -514,187 +495,187 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:implement explicit immutable source port and bounded actual-root binding from .context.contract;retain actual frame/current typed output provenance and original causes,no fabricated geometry or planned-output liveness.
 - ID: `G1-SLICE.5f.2.context.source`
   Status: `done`
-  Goal:0823 immutable drafting source port;[whole scope/proofs](../history/stitchcad-devnotes-part999.md).
+  Goal:0823 immutable drafting source port;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part999md).
 - ID: `G1-SLICE.5f.2.context.archive`
   Status: `done`
-  Goal:0824 sealed window29 packing;[whole scope/proofs](../history/stitchcad-devnotes-part1000.md).
+  Goal:0824 sealed window29 packing;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1000md).
 - ID: `G1-SLICE.5f.2.context.bind`
   Status: `done`
-  Goal:0825 bounded actual context and D378 fix;[whole scope/proofs](../history/stitchcad-devnotes-part1001.md).
+  Goal:0825 bounded actual context and D378 fix;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1001md).
 - ID: `G1-SLICE.5f.2.context.geometry`
   Status: `done`
   Goal:resolve exact typed existing geometry request under bound context;check returned reference/frame/snapshot against actual sources,retain original witness and cause,no value query or planned-output liveness.
 - ID: `G1-SLICE.5f.2.context.geometry.sources`
   Status: `done`
-  Goal:0826 original source records and D379 repair;[whole scope/proofs](../history/stitchcad-devnotes-part1002.md).
+  Goal:0826 original source records and D379 repair;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1002md).
 - ID: `G1-SLICE.5f.2.context.geometry.check`
   Status: `done`
-  Goal:0827 exact existing-output bindings;[whole scope/proofs](../history/stitchcad-devnotes-part1003.md).
+  Goal:0827 exact existing-output bindings;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1003md).
 - ID: `G1-SLICE.5f.2.program`
   Status: `done`
   Goal:whole ordered scalar/drafting owner and complete logical limits;retain actual scalar recipe ordinals separately from genuine combined-program positions and original operation/document owners.
 - ID: `G1-SLICE.5f.2.program.plan`
   Status: `done`
-  Goal:0828 sourced six-stage programme plan;[whole scope/proofs](../history/stitchcad-devnotes-part1004.md).
+  Goal:0828 sourced six-stage programme plan;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1004md).
 - ID: `G1-SLICE.5f.2.program.recipe`
   Status: `done`
-  Goal:0829 immutable complete factory recipe shape;[whole scope/proofs](../history/stitchcad-devnotes-part1005.md).
+  Goal:0829 immutable complete factory recipe shape;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1005md).
 - ID: `G1-SLICE.5f.2.program.fields`
   Status: `done`
-  Goal:0830 exhaustive native held-field charges;[whole scope/proofs](../history/stitchcad-devnotes-part1006.md).
+  Goal:0830 exhaustive native held-field charges;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1006md).
 - ID: `G1-SLICE.5f.2.program.steps`
   Status: `done`
-  Goal:0831 actual mixed source owner;[whole scope/proofs](../history/stitchcad-devnotes-part1007.md).
+  Goal:0831 actual mixed source owner;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1007md).
 - ID: `G1-SLICE.5f.2.program.admit`
   Status: `done`
-  Goal:0832 complete actual mixed content/population/order admission;[whole scope/proofs](../history/stitchcad-devnotes-part1008.md).
+  Goal:0832 complete actual mixed content/population/order admission;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1008md).
 - ID: `G1-SLICE.5f.2.program.normalize`
   Status: `done`
-  Goal:0833 actual complete child normalization;[whole scope/proofs](../history/stitchcad-devnotes-part1009.md).
+  Goal:0833 actual complete child normalization;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1009md).
 - ID: `G1-SLICE.5f.2.program.views`
   Status: `done`
-  Goal:0834 original mixed step arena loans;[whole scope/proofs](../history/stitchcad-devnotes-part1010.md).
+  Goal:0834 original mixed step arena loans;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1010md).
 - ID: `G1-SLICE.5f.2.namespace`
   Status: `done`
   Goal:actual initial/always-visible and earlier-only names;check collisions and future geometry before values,using existing complete kind proofs without treating a metadata cursor as program acceptance.
 - ID: `G1-SLICE.5f.2.namespace.plan`
   Status: `done`
-  Goal:0835 sourced namespace stages;[whole scope/proofs](../history/stitchcad-devnotes-part1011.md).
+  Goal:0835 sourced namespace stages;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1011md).
 - ID: `G1-SLICE.5f.2.namespace.scope`
   Status: `done`
-  Goal:0836 borrowed visible-name/checker adapters;[whole scope/proofs and closed race](../history/stitchcad-devnotes-part1012.md).
+  Goal:0836 borrowed visible-name/checker adapters;[whole scope/proofs and closed race](../history/window30.md#stitchcad-devnotes-part1012md).
 - ID: `G1-SLICE.5f.2.namespace.inputs`
   Status: `done`
-  Goal:0837 raw actual name/output sources;[whole scope/proofs](../history/stitchcad-devnotes-part1013.md).
+  Goal:0837 raw actual name/output sources;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1013md).
 - ID: `G1-SLICE.5f.2.namespace.admit`
   Status: `done`
   Goal:fresh complete program/name/source/catalogue held-content and prospective name-work bounds before namespace callbacks;preserve original owner/role locations and first refusal,then exact actual program associations,no accepted prefix.
 - ID: `G1-SLICE.5f.2.namespace.admit.fields`
   Status: `done`
-  Goal:0838 complete additional held fields;[whole scope/proofs](../history/stitchcad-devnotes-part1014.md).
+  Goal:0838 complete additional held fields;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1014md).
 - ID: `G1-SLICE.5f.2.namespace.admit.program`
   Status: `done`
-  Goal:0839 complete raw/retained program fields;[whole scope/proofs](../history/stitchcad-devnotes-part1015.md).
+  Goal:0839 complete raw/retained program fields;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1015md).
 - ID: `G1-SLICE.5f.2.namespace.admit.bounds`
   Status: `done`
   Goal:fresh cumulative full content and explicit conservative prospective name-work bounds before namespace factories;actual complete original fields,first typed refusal and checked arithmetic,no caller totals or accepted prefix.
 - ID: `G1-SLICE.5f.2.namespace.admit.bounds.content`
   Status: `done`
-  Goal:0840 complete cumulative program/name content;[whole scope/proofs](../history/stitchcad-devnotes-part1016.md).
+  Goal:0840 complete cumulative program/name content;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1016md).
 - ID: `G1-SLICE.5f.2.namespace.admit.bounds.workspace`
   Status: `done`
-  Goal:0841 actual complete name-work bounds;[whole scope/proofs](../history/stitchcad-devnotes-part1017.md).
+  Goal:0841 actual complete name-work bounds;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1017md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association`
   Status: `done`
   Goal:after complete bounds,bind exact original program positions/fixed schemas/typed role metadata and actual initial sources;reject mismatches/future initial geometry before values,retain full owners and original first cause in private admission.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.positions`
   Status: `done`
-  Goal:0842 genuine output-name positions;[whole scope/proofs](../history/stitchcad-devnotes-part1018.md).
+  Goal:0842 genuine output-name positions;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1018md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles`
   Status: `done`
   Goal:bind variable-role candidates through actual published family proof parents/manifests;Offset uses intentional shared Edge aliases with its own lineage proof obligations,no operation-id-only source truth.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles.offset`
   Status: `done`
-  Goal:0843 Offset/shared Edge aliases and Issue0843 closure;[whole scope/proofs](../history/stitchcad-devnotes-part1019.md).
+  Goal:0843 Offset/shared Edge aliases and Issue0843 closure;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1019md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles.bind`
   Status: `done`
   Goal:actual published variable-role proof parents under original Root/context,exact schema/catalogue membership and first typed causes before namespace visibility,no fabricated bound family or matching-id-only source grant.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles.bind.sources`
   Status: `done`
-  Goal:0844 authentic planned fields/source facet;[whole scope/proofs](../history/stitchcad-devnotes-part1020.md).
+  Goal:0844 authentic planned fields/source facet;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1020md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.roles.bind.check`
   Status: `done`
-  Goal:0845 complete actual role sources;[whole scope/proofs](../history/stitchcad-devnotes-part1021.md).
+  Goal:0845 complete actual role sources;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1021md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial`
   Status: `done`
   Goal:bind actual extra initial sources to the original Root canonical/source/context records,refuse planned creators as initial geometry before values;retain exact original sources and causes,no metadata-id-only truth.
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial.bounds`
   Status: `done`
-  Goal:0846 complete initial-binding record bounds;[whole scope/proofs](../history/stitchcad-devnotes-part1022.md).
+  Goal:0846 complete initial-binding record bounds;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1022md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial.sources`
   Status: `done`
-  Goal:0847 actual initial metadata source loans;[whole scope/proofs](../history/stitchcad-devnotes-part1023.md).
+  Goal:0847 actual initial metadata source loans;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1023md).
 - ID: `G1-SLICE.5f.2.namespace.admit.association.initial.check`
   Status: `done`
-  Goal:0848 complete initial associations;[whole scope/proofs](../history/stitchcad-devnotes-part1024.md).
+  Goal:0848 complete initial associations;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1024md).
 - ID: `G1-SLICE.5f.2.namespace.order`
   Status: `done`
   Goal:actual Root and explicit always-visible names plus only earlier scalar/native declarations in mixed order;check reserved/cross-origin/repeated headers and self/future names without values or metadata-prefix acceptance.
 - ID: `G1-SLICE.5f.2.namespace.order.initial`
   Status: `done`
-  Goal:0849 actual private initial namespace;[whole scope/proofs](../history/stitchcad-devnotes-part1025.md).
+  Goal:0849 actual private initial namespace;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1025md).
 - ID: `G1-SLICE.5f.2.namespace.order.mixed`
   Status: `done`
   Goal:earlier-only genuine mixed positions and scalar ordinals;check original headers/operands before exposing each actual output,no self/future name or whole acceptance from metadata alone.
 - ID: `G1-SLICE.5f.2.namespace.order.mixed.bounds`
   Status: `done`
-  Goal:0850 complete actual order-checker work;[whole scope/proofs](../history/stitchcad-devnotes-part1026.md).
+  Goal:0850 complete actual order-checker work;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1026md).
 - ID: `G1-SLICE.5f.2.namespace.order.mixed.check`
   Status: `done`
-  Goal:0851 complete mixed name/kind order;[whole scope/proofs](../history/stitchcad-devnotes-part1027.md).
+  Goal:0851 complete mixed name/kind order;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1027md).
 - ID: `G1-SLICE.5f.2.dependencies`
   Status: `in_progress`
   Goal:all original formula/geometry/semantic dependencies,source frame/current registry/output provenance;canonical Pocket kind/domain/state and Buttonhole button-size dependency,no separately authored hole length or approximation.
 - ID: `G1-SLICE.5f.2.dependencies.plan`
   Status: `done`
-  Goal:0852 sourced complete dependency stages;[whole scope/proofs](../history/stitchcad-devnotes-part1028.md).
+  Goal:0852 sourced complete dependency stages;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1028md).
 - ID: `G1-SLICE.5f.2.dependencies.sources`
   Status: `done`
-  Goal:0853 actual mixed Root source proof bridge;[whole scope/proofs](../history/stitchcad-devnotes-part1029.md).
+  Goal:0853 actual mixed Root source proof bridge;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1029md).
 - ID: `G1-SLICE.5f.2.dependencies.canonical`
   Status: `done`
   Goal:all original mixed canonical/Derived dependencies and actual source graph,kind/state/domain and cycle obligations before values,no id-only targets.
 - ID: `G1-SLICE.5f.2.dependencies.canonical.owners`
   Status: `done`
-  Goal:0854 exact dependency proof owners;[whole scope/proofs](../history/stitchcad-devnotes-part1030.md).
+  Goal:0854 exact dependency proof owners;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1030md).
 - ID: `G1-SLICE.5f.2.dependencies.canonical.occurrences`
   Status: `done`
-  Goal:0855 original mixed dependency stream;[whole scope/proofs](../history/stitchcad-devnotes-part1031.md).
+  Goal:0855 original mixed dependency stream;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1031md).
 - ID: `G1-SLICE.5f.2.dependencies.canonical.bind`
   Status: `done`
-  Goal:0856 bounded complete canonical bindings;[whole scope/proofs](../history/stitchcad-devnotes-part1032.md).
+  Goal:0856 bounded complete canonical bindings;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1032md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry`
   Status: `done`
   Goal:all actual native/selector geometry references under original frame/snapshot and strict earlier creators;unlabelled planned roles need authentic manifests,never live-future lookup or synthetic names.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.formulas`
   Status: `done`
-  Goal:0857 original formula geometry uses;[whole scope/proofs](../history/stitchcad-devnotes-part1033.md).
+  Goal:0857 original formula geometry uses;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1033md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.native`
   Status: `done`
   Goal:complete direct geometry fields/selectors across all13 native families,then genuine mixed consumers;semantic-target geometry still requires actual Root-bound sources,no empty/id-only substitutes.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.native.fields`
   Status: `done`
-  Goal:0858 direct original native geometry fields;[whole scope/proofs](../history/stitchcad-devnotes-part1034.md).
+  Goal:0858 direct original native geometry fields;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1034md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.native.mixed`
   Status: `done`
-  Goal:0861 original native fields under genuine mixed consumers;[whole scope/proofs](../history/stitchcad-devnotes-part1035.md).
+  Goal:0861 original native fields under genuine mixed consumers;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1035md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.requests`
   Status: `done`
   Goal:genuine earlier creating-step/reference request and authentic planned-family port,including unnamed outputs;classify all creators,refuse ambiguous/self/future before live lookup;no global name manufacture.
 - ID: `G1-SLICE.5f.2.dependencies.geometry.requests.classify`
   Status: `done`
-  Goal:0862 actual creator classification and genuine earlier-step requests;[whole scope/proofs](../history/stitchcad-devnotes-part1036.md).
+  Goal:0862 actual creator classification and genuine earlier-step requests;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1036md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.requests.port`
   Status: `done`
-  Goal:0863 authentic unnamed planned-source facet;[whole scope/proofs](../history/stitchcad-devnotes-part1037.md).
+  Goal:0863 authentic unnamed planned-source facet;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1037md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bounds`
   Status: `done`
-  Goal:0864 complete fresh geometry work admission;[whole scope/proofs](../history/stitchcad-devnotes-part1038.md).
+  Goal:0864 complete fresh geometry work admission;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1038md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bind`
   Status: `done`
-  Goal:0867 complete static geometry suppliers;[whole scope/proofs](../history/stitchcad-devnotes-part1040.md).
+  Goal:0867 complete static geometry suppliers;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1040md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bind.book-capacity`
   Status: `done`
-  Goal:0865 full book exemption;[whole scope/proofs](../history/stitchcad-devnotes-part1039.md).
+  Goal:0865 full book exemption;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1039md).
 - ID: `G1-SLICE.5f.2.dependencies.geometry.bind.book-capacity.task-guards`
   Status: `done`
-  Goal:0866 independent task/history guards;[whole scope/proofs](../history/stitchcad-devnotes-part1039.md).
+  Goal:0866 independent task/history guards;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1039md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic`
   Status: `in_progress`
   Goal:actual Root-bound garment/native semantic sources,including Pocket opening kind/domain/state/component recipe and Buttonhole canonical button/derivation;no empty substitute or authored hole length.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.sources`
   Status: `done`
-  Goal:0868 actual garment source and fresh content admission;[whole scope/proofs](../history/stitchcad-devnotes-part1041.md).
+  Goal:0868 actual garment source and fresh content admission;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1041md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources`
   Status: `in_progress`
   Goal:actual readonly logical/Profile/operation source records for Pocket openings and canonical Buttonhole button/derivation,including original kind/domain/state and component recipe sources;no id-only or empty replacement. Exhaustively charge new held records before bounded core queries.
@@ -702,27 +683,27 @@ retains all original goals,statuses and focused acceptance evidence.
   `.operations` (actual typed semantic operation dependencies), `.ports` (original source facets).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.contract`
   Status: `done`
-  Goal:0869 actual logical model/recipe source contract;[whole scope/proofs](../history/stitchcad-devnotes-part1042.md).
+  Goal:0869 actual logical model/recipe source contract;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1042md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model`
   Status: `done`
   Goal:immutable canonical logical declarations with actual authored domain/state/provenance,
   explicit complete bounds and exhaustive field accounting;Unknown/Derived have no fallback.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.declarations`
   Status: `done`
-  Goal:0870 immutable finite logical declarations;[whole scope/proofs](../history/stitchcad-devnotes-part1043.md).
+  Goal:0870 immutable finite logical declarations;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1043md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory`
   Status: `done`
   Goal:actual logical inventory membership and disjoint identities,then atomic original Root/resource integration;numeric-only scopes stay explicitly empty,never defaulted logical state.
   Children: `.component` (standalone original owner), `.attach` (actual Root plus complete producers).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.resources`
   Status: `done`
-  Goal:0872 exhaustive original logical content;[whole scope/proofs](../history/stitchcad-devnotes-part1045.md).
+  Goal:0872 exhaustive original logical content;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1045md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory.component`
   Status: `done`
-  Goal:0871 original logical membership/kind loans;[whole scope/proofs](../history/stitchcad-devnotes-part1044.md).
+  Goal:0871 original logical membership/kind loans;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1044md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory.attach`
   Status: `done`
-  Goal:0873 actual canonical logical attachment;[whole scope/proofs](../history/stitchcad-devnotes-part1046.md).
+  Goal:0873 actual canonical logical attachment;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1046md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations`
   Status: `in_progress`
   Goal:actual typed semantic derivation/component-recipe sources under original ownership;
@@ -731,10 +712,10 @@ retains all original goals,statuses and focused acceptance evidence.
   `.components` (genuine creating/import origins), `.inventory` (original ordered owner), `.attach` (Root/program/accounting integration).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.buttonhole`
   Status: `done`
-  Goal:0874 standalone bounded Buttonhole recipe;[whole scope/proofs](../history/stitchcad-devnotes-part1047.md).
+  Goal:0874 standalone bounded Buttonhole recipe;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1047md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.logical`
   Status: `done`
-  Goal:0875 standalone original typed logical derivations;[whole scope/proofs](../history/stitchcad-devnotes-part1048.md).
+  Goal:0875 standalone original typed logical derivations;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1048md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components`
   Status: `in_progress`
   Goal:authentic component-creation recipe and explicit imported primitive origins;no fabricated native step or reconstructed creation history.
@@ -742,23 +723,23 @@ retains all original goals,statuses and focused acceptance evidence.
   `.bind` (bounded authentic Root/program/snapshot/source association after source ports exist).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.carriers`
   Status: `done`
-  Goal:0876 raw actual component source loans;[whole scope/proofs](../history/stitchcad-devnotes-part1049.md).
+  Goal:0876 raw actual component source loans;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1049md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind`
   Status: `pending`
   Goal:after source ports/accounting,bind complete original component origins to actual Root Piece/copy,recipe owner/native creator and frame/snapshot under explicit bounds;typed original causes,no historical reconstruction or prefix acceptance.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.inventory`
   Status: `done`
-  Goal:0877 original ordered semantic owner;[whole scope/proofs](../history/stitchcad-devnotes-part1050.md).
+  Goal:0877 original ordered semantic owner;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1050md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.attach`
   Status: `done`
   Goal:atomically attach actual ordered semantic recipe to Root/program identity,resource and order contracts;numeric-only scopes stay explicitly empty and no invented native position appears.
   Children: `.root` (whole actual Root identity/resource/data paths), `.program` (actual mixed order/admission).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.attach.root`
   Status: `done`
-  Goal:0878 actual Root semantic cohort;[whole scope/proofs](../history/stitchcad-devnotes-part1051.md).
+  Goal:0878 actual Root semantic cohort;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1051md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.attach.program`
   Status: `done`
-  Goal:0879 actual mixed semantic ordinals;[whole scope/proofs](../history/stitchcad-devnotes-part1052.md).
+  Goal:0879 actual mixed semantic ordinals;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1052md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports`
   Status: `in_progress`
   Goal:readonly authentic logical/Profile/operation facets with original record/Root/snapshot
@@ -769,7 +750,7 @@ retains all original goals,statuses and focused acceptance evidence.
   `.rules` (original rule/policy body records,typed signatures and exhaustive held accounting).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.design`
   Status: `done`
-  Goal:0880 fresh actual Root semantic member scope;[whole scope/proofs](../history/stitchcad-devnotes-part1053.md).
+  Goal:0880 fresh actual Root semantic member scope;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1053md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile`
   Status: `in_progress`
   Goal:readonly actual selected Profile/schema/content pin,canonical logical inventory and original parameter/declaration source loans under the containing Root/snapshot. Exhaustively charge held pins,records,domains,state/provenance and caches before bounded query;typed original unsupported/missing/kind/owner causes,no value/evidence/G4 resolution or fallback selection.
@@ -777,7 +758,7 @@ retains all original goals,statuses and focused acceptance evidence.
   `.binding` (readonly provider and fresh bounded Root/pin/snapshot/canonical source association).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.records`
   Status: `done`
-  Goal:0881 original Profile/pin/parameter records;[whole scope/proofs](../history/stitchcad-devnotes-part1054.md).
+  Goal:0881 original Profile/pin/parameter records;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1054md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.binding`
   Status: `in_progress`
   Goal:explicit selected pin request and original readonly profile/parameter facets;fresh whole Root/provider/request accounting before lookup,then original Root/pin/snapshot/profile/canonical/member association and typed causes. Preserve actual records and no accepted prefix;aggregate consumer work and G4 physical/evidence resolution stay separate.
@@ -785,19 +766,23 @@ retains all original goals,statuses and focused acceptance evidence.
   `.parameter` (original parameter metadata and canonical member/kind under that exact profile).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.binding.profile`
   Status: `done`
-  Goal:0882 original readonly provider facet and explicit requested-pin binding after fresh complete Root/provider/request content. Preserve original provider causes and returned records;compare Root,profile/schema/content labels and snapshot in order.
-  Private scope retains original profile/canonical source under immutable honest integration,no G4 schema/evidence/value validation or aggregate lookup grant.
-  - [x] REPRODUCE / ISSUE:0881 raw responses preserve actual records without selected-source acceptance. Explicit requested labels need fresh whole Root/provider/request content before lookup and original Root/pin/snapshot checks;caller intent must not replace the original provider pin. Parameter/canonical binding remains the following leaf.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract profile_binding::`:3 pass,rc=0;request pin and provider source pin may be distinct equal-data records. Response lifetime belongs to provider alone;first causes follow content,provider,Root,profile/schema/content labels,snapshot. Existing immutable provider contract owns body/canonical association.
-  - [x] FIX:readonly Profile facet,private BoundDraftingProfileSource and typed content/provider/mismatch error retaining actual context/request/policy/returned records. Shared Root/provider walk plus request-pin producer precedes one lookup;exhaustive response/pin definitions and retained scope guard new fields. Short request borrows remain valid;no revalidation or value lookup.
-  - [x] ADDRESSED:same focused3 pass,rc=0;actual distinct request/provider pins,Root/canonical/body/snapshot loans,exact7/T/9 and prior8/(T+2)/10. Five ordered mismatches preserve returned sources;typed provider cause/chain survives. Provider cache2→3 and request T-1 refusals precede lookup,including ignored first sink error;fresh rewalk queries no source again.
-  - [x] NO REGRESSION: `cargo test -p sc-core --test drafting_context_binding_contract design_semantic::`:3 pass,rc=0 for shared walk. Selected strict clippy/fmt0. `cargo test -p sc-core --doc context::profile`:6 pass,rc=0;independent provider loan positive,request echo E0621 and bound pin lifetime E0515 refuse. semantic_examples19/book build0. Coupled .5f.2.verify deferred.
-  - [x] LOCKSTEP:book details exact scope/Root/label/snapshot boundaries,original provider/source witnesses,resource examples and remaining parameter/G4 proof;model-resource route aligns. README reviewed unchanged,LIVE product detail/MEM/index/DEV/ledger align,G1still6/18 In Progress. Individual parameter source binding next.
-  - [x] CONTINUITY:1054 retains whole0881 and original0068 recording receipts;transition_receipts.py reports4 exact Git spans,rc=0;public reader byte-exact0. Initial multi-file patch context refusal applied nothing;corrected against actual exports before code/checks. No policy/window/ceiling changes.
-  - [x] PROMOTION: promotion: declined (existing explicit pin,immutable actual-source and complete-content doctrine;book owns facet/API). One selected-source binding implemented;parameter/canonical kind,aggregate work,additional currentness,graph,G4 evidence/schema/physical and execution remain separately owned. Commit:STITCHCAD-G1-0882.
+  Goal:0882 original selected Profile binding;[whole scope/proofs](../history/stitchcad-devnotes-part1055.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.binding.parameter`
-  Status: `pending`
+  Status: `in_progress`
   Goal:original readonly parameter facet after selected-profile binding;associate exact original profile/Root/pin/canonical/snapshot records,actual parameter field and canonical declaration/kind. Preserve original missing/unsupported/provider and lending member causes,without source/value substitution;fresh complete bounds before the individual query and no whole-program prefix grant.
+  - [ ] SCOPE:0884 fresh selected-source content before one parameter lookup;borrow original parameter→canonical metadata. Compare original returned profile header before parameter ID,canonical lookup/kind and declaration owner. Private source retains parent/request/metadata/member/policy/demand;no aggregate work,G4 truth or selected value.
+  - [ ] PREREQUISITE:retention-0883 owns the observed generation working-file overflow on draft1055. Product code remains owned here with primary parameter3 passing;finish/commit same-tree retention prerequisite before this leaf's final book/commit workflow. No other task-tree pivot or code/source discard.
+- ID: `G1-SLICE.5f.2.retention-0883`
+  Status: `done`
+  Goal:restore published active-generation capacity after draft1055 made the native reader refuse group working Markdown bound64. Follow documented0734 copy/hash-preserve draft,append committed cohort,independently compare whole logical identities/public materialization,install once and restore draft. Preserve all old windows/backups;no cap raise or product-code staging.
+  - [x] REPRODUCE / ISSUE:transition_receipts.py --record docs/history/stitchcad-devnotes-part1055.md and public read refused group working Markdown bound64,rc=1. Draft1055 temporarily expanded native active64→65;source intervals remain exact. Product parameter code stays owned/in flight under .profile.binding.parameter (unit0884).
+  - [x] ROOT CAUSE: `generation_pressure.py`:gen1 working21,gen2 working64 with56 raw/eight windows,aggregate85;active headroom0,rc=0 after verified draft hold. Aggregate192 was not the limiting scope. The documented0734 boundary procedure preserves a draft before capturing the committed cohort;no policy change is needed.
+  - [x] FIX:copy/hash-preserved draft1055 (10967B,f7df16467fdecc89df5981070e3dce6d0ad2243e891c1dc5fdd649d8fb6b7e08) under protected target/history-capture-0883-drafts. Published append captured56 committed full files into window30 from a024533e;installed once after independent candidate comparison,then restored exact draft and retargeted141 live links/five files.
+  - [x] ADDRESSED: `v2_migration.py append target/history-capture-0883 --owner G1-SLICE.5f.2.retention-0883`:56 byte-identical files/zero missing-extra,rc=0. Public before/candidate/installed materializations independently match1508 names/6305703B by size,line-count,SHA256;all114 original backup files exact,56 retained physical files unchanged,56 full files safely packed.
+  - [x] NO REGRESSION: `bash scripts/history_archive.sh verify` and verify-retention:1509 logical/31 working/7493172 decodedB,rc=0. `generation_pressure.py`:active54 free,rc=0;draft source/public exact0. `make book`:0. Product parameter3 passes;four generic type-complexity lint findings remain owned by0884,no product-code signoff/staging here.
+  - [x] LOCKSTEP:archive book records scoped window30 process/proofs/recovery boundary;141 live-link updates preserve maintained navigation. README/LIVE reviewed unchanged,G1still6/18 In Progress;MEM/index/DEV/ledger explicitly preserve pending product code and immediate parameter-lint resume. All maintenance jobs observed terminal before commit.
+  - [x] CONTINUITY:gen2 restored working10/64,raw1/windows9;aggregate31/192,active54 free,rc=0. Draft1055 four exact Git spans/public byte equality0. Evidence under target/history-proof-0883 and target/history-capture-0883;keep original transaction/draft storage. Never rerun install/recovery after draft/navigation edits;older window28/29 stores remain protected.
+  - [x] PROMOTION: promotion: declined (published generation pressure,append/install/draft-preservation doctrine;archive book records scoped capture). No source/reader/producer/budget changes or new power-loss claim. G1still6/18 In Progress;resume parameter aliases/book/signoff next. Commit:STITCHCAD-G1-0883.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.rules`
   Status: `pending`
   Goal:original rule/policy source records with actual typed local input/output signatures and body loans under original Root/snapshot. Exhaustive fresh accounting covers signatures,body metadata and caches before queries;operation IDs alone prove neither source existence nor signature. No physical rule evaluation or fabricated rule body.

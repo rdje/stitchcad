@@ -81,7 +81,7 @@ link/correctness checks remain. No size measurement or approval record is requir
 answers: "does the book have size limits?" · "do book changes need an authority receipt?"
 
 Prior book policy and authoring/staged proofs are retained byte-exact in
-[part1038](../history/stitchcad-devnotes-part1038.md);they are superseded. The retired control remains
+[part1038](../history/window30.md#stitchcad-devnotes-part1038md);they are superseded. The retired control remains
 in Git at8152ce3b. Owner:
 G1-SLICE.5f.2.dependencies.geometry.bind.book-capacity.
 

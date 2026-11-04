@@ -10,10 +10,10 @@
     },
     {
       "path": ".doctrine/history_archive/generation2.json",
-      "lines": 14,
-      "bytes": 439,
-      "sha256": "127946cfff33b9aa9c0f64d158b86c04871c7f1a1dac980229006ad7217c4f1e",
-      "tree_sha256": "2cdc482b066937f85b48ac429246b6382e7b51882f095fa02f1f1b3032aceaab"
+      "lines": 15,
+      "bytes": 486,
+      "sha256": "5309b9e130c5d69f1a71bb5bd1ebedb537c74ba52a36135c9d1551dc155db470",
+      "tree_sha256": "a03ceb3925fe5e248bd96e2052b24e12cb4a814ae8aba34d71c79a69b541979e"
     }
   ]
 }

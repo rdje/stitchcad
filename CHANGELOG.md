@@ -3,20 +3,22 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0882 — bind the original selected Profile source
+## STITCHCAD-G1-0883 — window30 restores active archive headroom
 
-Fresh complete Root/provider/request accounting precedes one actual Profile lookup. Original request/source pins,Root,snapshot,body and canonical loans survive;typed provider errors and ordered Root/pin-field/snapshot causes remain inspectable.
-Focused3/shared Root3 pass0 with exact quotas and ignored-failure retention.
+Actual active64→65 pressure from draft1055 resolved by documented copy/hash-preserve,committed append,independent public cohort comparison,one installation and exact draft restoration.
+Window30 retains56 whole files from a024533e;1508 logical records/6305703B match before/candidate/installed. Original114 files remain exact in recovery storage.
 
-Strict lint/fmt0,Profile API lifetime/privacy6,actual book examples19 and guarded book pass0. Parameter binding and coupled .5f.2.verify remain pending;G4 schema/evidence/physical proof unclaimed. Whole0881/original0068 receipts retained exactly in1054. G1still6/18 In Progress.
+Retarget141 live links/five files;active10/64 and aggregate31/192,54 active slots free. Native verify/retention,pressure,draft exact source/public and book pass0. G1still6/18 In Progress;product parameter code stays owned/in flight for0884 and is excluded from this maintenance commit.
 
-[Whole0881 original Profile record unit](docs/history/stitchcad-devnotes-part1054.md) retains exact task,lesson and ledger.
+[Whole0882 selected Profile binding unit](docs/history/stitchcad-devnotes-part1055.md) retains exact task,lesson and ledger.
 
-[Whole0880 fresh Root semantic source unit](docs/history/stitchcad-devnotes-part1053.md) retains exact task,lesson and ledger.
+[Whole0881 original Profile record unit](docs/history/window30.md#stitchcad-devnotes-part1054md) retains exact task,lesson and ledger.
 
-[Whole0879 mixed semantic ordinal unit](docs/history/stitchcad-devnotes-part1052.md) retains exact task,lesson and ledger.
+[Whole0880 fresh Root semantic source unit](docs/history/window30.md#stitchcad-devnotes-part1053md) retains exact task,lesson and ledger.
 
-[Whole0878 actual Root semantic unit](docs/history/stitchcad-devnotes-part1051.md) retains exact task,lesson and ledger.
+[Whole0879 mixed semantic ordinal unit](docs/history/window30.md#stitchcad-devnotes-part1052md) retains exact task,lesson and ledger.
+
+[Whole0878 actual Root semantic unit](docs/history/window30.md#stitchcad-devnotes-part1051md) retains exact task,lesson and ledger.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -31,51 +33,51 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 # Sealed archive — earlier slices
 
-[Whole0877 semantic owner and original closure acceptance](docs/history/stitchcad-devnotes-part1050.md) retain exact source bytes.
+[Whole0877 semantic owner and original closure acceptance](docs/history/window30.md#stitchcad-devnotes-part1050md) retain exact source bytes.
 
-[Whole0876 component origins and original notion acceptance](docs/history/stitchcad-devnotes-part1049.md) retain exact source bytes.
+[Whole0876 component origins and original notion acceptance](docs/history/window30.md#stitchcad-devnotes-part1049md) retain exact source bytes.
 
-[Whole0875 logical derivation and original Hem acceptance](docs/history/stitchcad-devnotes-part1048.md) retain exact source bytes.
+[Whole0875 logical derivation and original Hem acceptance](docs/history/window30.md#stitchcad-devnotes-part1048md) retain exact source bytes.
 
-[Whole0874 Buttonhole recipe and original Gather acceptance](docs/history/stitchcad-devnotes-part1047.md) retain exact source bytes.
+[Whole0874 Buttonhole recipe and original Gather acceptance](docs/history/window30.md#stitchcad-devnotes-part1047md) retain exact source bytes.
 
-[Whole0873 canonical attachment and original fold acceptance](docs/history/stitchcad-devnotes-part1046.md) retain exact source bytes.
+[Whole0873 canonical attachment and original fold acceptance](docs/history/window30.md#stitchcad-devnotes-part1046md) retain exact source bytes.
 
-[Whole0872 logical content unit](docs/history/stitchcad-devnotes-part1045.md) retains exact task,lesson and ledger source bytes.
+[Whole0872 logical content unit](docs/history/window30.md#stitchcad-devnotes-part1045md) retains exact task,lesson and ledger source bytes.
 
-[Whole0871 logical inventory unit](docs/history/stitchcad-devnotes-part1044.md) retains exact task,lesson and ledger source bytes.
+[Whole0871 logical inventory unit](docs/history/window30.md#stitchcad-devnotes-part1044md) retains exact task,lesson and ledger source bytes.
 
-[Whole0870 logical declaration unit](docs/history/stitchcad-devnotes-part1043.md) retains exact task,lesson and ledger source bytes.
+[Whole0870 logical declaration unit](docs/history/window30.md#stitchcad-devnotes-part1043md) retains exact task,lesson and ledger source bytes.
 
-[Whole0869 logical source contract](docs/history/stitchcad-devnotes-part1042.md) retains exact task,lesson and ledger source bytes.
+[Whole0869 logical source contract](docs/history/window30.md#stitchcad-devnotes-part1042md) retains exact task,lesson and ledger source bytes.
 
-[Whole0868 garment source unit and original Pocket acceptance](docs/history/stitchcad-devnotes-part1041.md) retain exact source bytes.
+[Whole0868 garment source unit and original Pocket acceptance](docs/history/window30.md#stitchcad-devnotes-part1041md) retain exact source bytes.
 
-[Whole0867 geometry supplier unit](docs/history/stitchcad-devnotes-part1040.md) retains exact task,lesson and ledger source bytes.
+[Whole0867 geometry supplier unit](docs/history/window30.md#stitchcad-devnotes-part1040md) retains exact task,lesson and ledger source bytes.
 
-[Whole0865/0866 book exemption and independent history guards](docs/history/stitchcad-devnotes-part1039.md) retain exact task,lesson and ledger source bytes.
+[Whole0865/0866 book exemption and independent history guards](docs/history/window30.md#stitchcad-devnotes-part1039md) retain exact task,lesson and ledger source bytes.
 
-[Whole0864 and superseded book policy/control](docs/history/stitchcad-devnotes-part1038.md) retain exact Git source bytes.
+[Whole0864 and superseded book policy/control](docs/history/window30.md#stitchcad-devnotes-part1038md) retain exact Git source bytes.
 
-[Whole0863 source port,0331 approval lesson and0083 metadata proofs](docs/history/stitchcad-devnotes-part1037.md) retain exact source bytes.
+[Whole0863 source port,0331 approval lesson and0083 metadata proofs](docs/history/window30.md#stitchcad-devnotes-part1037md) retain exact source bytes.
 
-[Whole0862 geometry creator classification](docs/history/stitchcad-devnotes-part1036.md) retains exact task,lesson and ledger bytes.
+[Whole0862 geometry creator classification](docs/history/window30.md#stitchcad-devnotes-part1036md) retains exact task,lesson and ledger bytes.
 
-[Whole0861 mixed native geometry consumers](docs/history/stitchcad-devnotes-part1035.md) retain exact task,lesson and ledger bytes.
+[Whole0861 mixed native geometry consumers](docs/history/window30.md#stitchcad-devnotes-part1035md) retain exact task,lesson and ledger bytes.
 
-[Whole0858 native geometry fields](docs/history/stitchcad-devnotes-part1034.md) retain exact task,lesson and ledger bytes.
+[Whole0858 native geometry fields](docs/history/window30.md#stitchcad-devnotes-part1034md) retain exact task,lesson and ledger bytes.
 
-[Whole0857 formula geometry uses and closed0084 declaration protocol](docs/history/stitchcad-devnotes-part1033.md) retain exact source bytes.
+[Whole0857 formula geometry uses and closed0084 declaration protocol](docs/history/window30.md#stitchcad-devnotes-part1033md) retain exact source bytes.
 
-[Whole0827 exact source binding and prior dart acceptance](docs/history/stitchcad-devnotes-part1003.md) retain exact source bytes.
+[Whole0827 exact source binding and prior dart acceptance](docs/history/window30.md#stitchcad-devnotes-part1003md) retain exact source bytes.
 
-[Whole0826 source records and D379 repair](docs/history/stitchcad-devnotes-part1002.md) retain exact source bytes.
+[Whole0826 source records and D379 repair](docs/history/window30.md#stitchcad-devnotes-part1002md) retain exact source bytes.
 
-[Whole0825 bounded context and D378 fix](docs/history/stitchcad-devnotes-part1001.md) retain exact source bytes.
+[Whole0825 bounded context and D378 fix](docs/history/window30.md#stitchcad-devnotes-part1001md) retain exact source bytes.
 
-[Whole0824 bounded history packing](docs/history/stitchcad-devnotes-part1000.md) retains exact source bytes.
+[Whole0824 bounded history packing](docs/history/window30.md#stitchcad-devnotes-part1000md) retains exact source bytes.
 
-[Whole0823 immutable source port](docs/history/stitchcad-devnotes-part999.md) retains exact source bytes.
+[Whole0823 immutable source port](docs/history/window30.md#stitchcad-devnotes-part999md) retains exact source bytes.
 
 [Whole0822 actual context contract](docs/history/window29.md#stitchcad-devnotes-part998md) retains exact source bytes.
 

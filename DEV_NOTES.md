@@ -3,81 +3,84 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — actual selected Profile source binding
+## _(2026-11-04 UTC)_ — window30 at the actual generation boundary
 
-0882 readonly provider output loans belong to Self independently of requested-pin lifetime. Core freshly charges actual Root/provider/request fields before one lookup,then checks actual Root,opaque profile/schema/content labels and snapshot in order. Request/source pins may be distinct equal-data objects.
-Private binding retains original context,request,source,limits and demand;errors retain original typed provider/resource causes and complete returned mismatch records. Body/canonical association relies on the immutable honest provider contract;G4 registry/schema/evidence truth stays separate.
-Focused3 pass0:exact7/T/9 and prior8/(T+2)/10,original source pointers,five first mismatches,typed provider chain and provider/request quota refusals before lookup. Ignored provider-sink failure stays first. Shared Root-scope3 pass0;strict selected lint/fmt0.
-Profile Rustdoc6 pass0:provider-only output lifetime positive,request echo E0621,private field and short pin E0515 refuse. Actual semantic_examples19 and guarded book0. No parameter/currentness/value/graph or aggregate-query proof;parameter binding follows. Promotion declined:existing source/pin doctrine;book owns API.
-Archive1054 retains exact whole0881/original0068 receipts,public/exact-span0. Initial atomic patch context mismatch applied nothing;actual export wrapping checked before corrected edit. G1still6/18 In Progress.
+0883 draft1055 expanded active64→65 (56 committed raws/eight windows);native refusal correctly enforced the per-group limit. Aggregate85/192 was not the bound. Same G1 tree retention prerequisite preserves product parameter code for0884;primary3 pass,but generic type-complexity lint remains pending there.
+Copied/hash-verified draft10967B before temporary removal. Published append from a024533e captured56 exact whole files into window30;independent public before/candidate/installed materializations match1508 names/6305703B by size,lines,SHA256. All114 original backup files exact;56 retained physical files unchanged.
+Installed once,restored exact draft,four source spans/public read0;141 live links/five maintained files retarget. Active working10/64,raw1/windows9;aggregate31/192,headroom54. No budget/producer/reader/source changes.
+Keep protected capture/proof/draft roots;never rerun old or current installer/recovery after later edits.
+Native verify/retention1509 logical/31 working/7493172 decodedB,pressure54 active slots,draft exact source/public and guarded book all pass,rc=0. Promotion declined:existing finite-generation/draft-preservation doctrine;book owns capture evidence.
+Product code is not staged;its parameter source aliases/book/signoff resume immediately. G1still6/18 In Progress.
 
-[Whole0881 original Profile record lesson](docs/history/stitchcad-devnotes-part1054.md) retains exact source bytes.
+[Whole0882 selected Profile binding lesson](docs/history/stitchcad-devnotes-part1055.md) retains exact source bytes.
 
-[Whole0880 fresh Root semantic source lesson](docs/history/stitchcad-devnotes-part1053.md) retains exact source bytes.
+[Whole0881 original Profile record lesson](docs/history/window30.md#stitchcad-devnotes-part1054md) retains exact source bytes.
 
-[Whole0879 mixed semantic ordinal lesson](docs/history/stitchcad-devnotes-part1052.md) retains exact source bytes.
+[Whole0880 fresh Root semantic source lesson](docs/history/window30.md#stitchcad-devnotes-part1053md) retains exact source bytes.
 
-[Whole0878 actual Root semantic lesson](docs/history/stitchcad-devnotes-part1051.md) retains exact source bytes.
+[Whole0879 mixed semantic ordinal lesson](docs/history/window30.md#stitchcad-devnotes-part1052md) retains exact source bytes.
 
-[Whole0877 semantic owner lesson](docs/history/stitchcad-devnotes-part1050.md) retains exact source bytes.
+[Whole0878 actual Root semantic lesson](docs/history/window30.md#stitchcad-devnotes-part1051md) retains exact source bytes.
 
-[Whole0876 component origin lesson](docs/history/stitchcad-devnotes-part1049.md) retains exact source bytes.
+[Whole0877 semantic owner lesson](docs/history/window30.md#stitchcad-devnotes-part1050md) retains exact source bytes.
 
-[Whole0875 logical derivation lesson](docs/history/stitchcad-devnotes-part1048.md) retains exact source bytes.
+[Whole0876 component origin lesson](docs/history/window30.md#stitchcad-devnotes-part1049md) retains exact source bytes.
 
-[Whole0874 Buttonhole recipe lesson](docs/history/stitchcad-devnotes-part1047.md) retains exact source bytes.
+[Whole0875 logical derivation lesson](docs/history/window30.md#stitchcad-devnotes-part1048md) retains exact source bytes.
 
-[Whole0873 canonical logical lesson](docs/history/stitchcad-devnotes-part1046.md) retains exact source bytes.
+[Whole0874 Buttonhole recipe lesson](docs/history/window30.md#stitchcad-devnotes-part1047md) retains exact source bytes.
 
-[Whole0872 logical content lesson](docs/history/stitchcad-devnotes-part1045.md) retains exact source bytes.
+[Whole0873 canonical logical lesson](docs/history/window30.md#stitchcad-devnotes-part1046md) retains exact source bytes.
 
-[Whole0871 logical inventory lesson](docs/history/stitchcad-devnotes-part1044.md) retains exact source bytes.
+[Whole0872 logical content lesson](docs/history/window30.md#stitchcad-devnotes-part1045md) retains exact source bytes.
 
-[Whole0870 logical declaration lesson](docs/history/stitchcad-devnotes-part1043.md) retains exact source bytes.
+[Whole0871 logical inventory lesson](docs/history/window30.md#stitchcad-devnotes-part1044md) retains exact source bytes.
 
-[Whole0869 logical source contract lesson](docs/history/stitchcad-devnotes-part1042.md) retains exact source bytes.
+[Whole0870 logical declaration lesson](docs/history/window30.md#stitchcad-devnotes-part1043md) retains exact source bytes.
 
-[Whole0868 garment source lesson](docs/history/stitchcad-devnotes-part1041.md) retains exact source bytes.
+[Whole0869 logical source contract lesson](docs/history/window30.md#stitchcad-devnotes-part1042md) retains exact source bytes.
 
-[Whole0867 geometry supplier lesson](docs/history/stitchcad-devnotes-part1040.md) retains exact source bytes.
+[Whole0868 garment source lesson](docs/history/window30.md#stitchcad-devnotes-part1041md) retains exact source bytes.
 
-[Whole0865/0866 book exemption and task/history lessons](docs/history/stitchcad-devnotes-part1039.md) retain exact source bytes.
+[Whole0867 geometry supplier lesson](docs/history/window30.md#stitchcad-devnotes-part1040md) retains exact source bytes.
 
-[Whole0864 geometry-work lesson](docs/history/stitchcad-devnotes-part1038.md) retains exact scope and focused proofs.
+[Whole0865/0866 book exemption and task/history lessons](docs/history/window30.md#stitchcad-devnotes-part1039md) retain exact source bytes.
 
-[Whole0863 source-port and0331 release-boundary lessons](docs/history/stitchcad-devnotes-part1037.md) retain exact scopes and proofs.
+[Whole0864 geometry-work lesson](docs/history/window30.md#stitchcad-devnotes-part1038md) retains exact scope and focused proofs.
 
-[Whole0862 creator-classification lesson](docs/history/stitchcad-devnotes-part1036.md) retains exact scope and focused proofs.
+[Whole0863 source-port and0331 release-boundary lessons](docs/history/window30.md#stitchcad-devnotes-part1037md) retain exact scopes and proofs.
 
-[Whole0861 mixed-native lesson](docs/history/stitchcad-devnotes-part1035.md) retains exact scope and focused proofs.
+[Whole0862 creator-classification lesson](docs/history/window30.md#stitchcad-devnotes-part1036md) retains exact scope and focused proofs.
 
-[Whole0858 native-field and0332 release-input lessons](docs/history/stitchcad-devnotes-part1034.md) retains exact scope and verification.
+[Whole0861 mixed-native lesson](docs/history/window30.md#stitchcad-devnotes-part1035md) retains exact scope and focused proofs.
 
-[Whole0330 release-identity lesson](docs/history/stitchcad-devnotes-part1039.md) retains exact source bytes.
+[Whole0858 native-field and0332 release-input lessons](docs/history/window30.md#stitchcad-devnotes-part1034md) retains exact scope and verification.
 
-[Whole0329 artifact-schema lesson](docs/history/stitchcad-devnotes-part1040.md) retains exact source bytes.
+[Whole0330 release-identity lesson](docs/history/window30.md#stitchcad-devnotes-part1039md) retains exact source bytes.
 
-[Whole0328 tech-pack source lesson](docs/history/stitchcad-devnotes-part1042.md) retains exact source bytes.
+[Whole0329 artifact-schema lesson](docs/history/window30.md#stitchcad-devnotes-part1040md) retains exact source bytes.
 
-[Whole0327 plotter/print lesson](docs/history/stitchcad-devnotes-part1043.md) retains exact source bytes.
+[Whole0328 tech-pack source lesson](docs/history/window30.md#stitchcad-devnotes-part1042md) retains exact source bytes.
 
-[Whole0326 graded-DXF lesson](docs/history/stitchcad-devnotes-part1044.md) retains exact source bytes.
+[Whole0327 plotter/print lesson](docs/history/window30.md#stitchcad-devnotes-part1043md) retains exact source bytes.
 
-[Whole0325 exact-DXF lesson](docs/history/stitchcad-devnotes-part1045.md) retains exact source bytes.
+[Whole0326 graded-DXF lesson](docs/history/window30.md#stitchcad-devnotes-part1044md) retains exact source bytes.
 
-[Whole0324 profile resolution lesson](docs/history/stitchcad-devnotes-part1046.md) retains exact source bytes.
+[Whole0325 exact-DXF lesson](docs/history/window30.md#stitchcad-devnotes-part1045md) retains exact source bytes.
 
-[Whole0323 instantiation lesson](docs/history/stitchcad-devnotes-part1047.md) retains exact source bytes.
+[Whole0324 profile resolution lesson](docs/history/window30.md#stitchcad-devnotes-part1046md) retains exact source bytes.
 
-[Whole0322 profile-pin lesson](docs/history/stitchcad-devnotes-part1048.md) retains exact source bytes.
+[Whole0323 instantiation lesson](docs/history/window30.md#stitchcad-devnotes-part1047md) retains exact source bytes.
 
-[Whole0321 structural acceptance lesson](docs/history/stitchcad-devnotes-part1049.md) retains exact source bytes.
+[Whole0322 profile-pin lesson](docs/history/window30.md#stitchcad-devnotes-part1048md) retains exact source bytes.
 
-[Whole0320 SizeSet review lesson](docs/history/stitchcad-devnotes-part1050.md) retains exact source bytes.
+[Whole0321 structural acceptance lesson](docs/history/window30.md#stitchcad-devnotes-part1049md) retains exact source bytes.
 
-[Whole0319 immutable history lesson](docs/history/stitchcad-devnotes-part1051.md) retains exact source bytes.
+[Whole0320 SizeSet review lesson](docs/history/window30.md#stitchcad-devnotes-part1050md) retains exact source bytes.
 
-[Whole0318 profile intent review lesson](docs/history/stitchcad-devnotes-part1052.md) retains exact source bytes.
+[Whole0319 immutable history lesson](docs/history/window30.md#stitchcad-devnotes-part1051md) retains exact source bytes.
+
+[Whole0318 profile intent review lesson](docs/history/window30.md#stitchcad-devnotes-part1052md) retains exact source bytes.
 
 [Complete immutable profile intent lesson](docs/history/window20.md#stitchcad-devnotes-part493md) retains
 original four-domain/five-state validation and numeric/profile/approval boundaries.
