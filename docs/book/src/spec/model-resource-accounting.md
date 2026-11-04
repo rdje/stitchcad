@@ -512,6 +512,9 @@ does not replace complete aggregate content/occurrence/comparison admission befo
 The [ordered semantic field view](../annexes/semantic-recipes.md#original-semantic-operation-dependency-fields)
 likewise streams actual normalized program/header/input loans without callbacks or work credit.
 Original coverage/normalization is distinct from later source,dependency-order and aggregate bounds.
+The [raw native semantic producer](../annexes/semantic-recipes.md#original-raw-native-semantic-fields)
+classifies all13 schemas with original target/Profile field loans and repeated Walk pair/side roles.
+It supplies no resource/work credit;whole input/vector/occurrence bounds precede later matching.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

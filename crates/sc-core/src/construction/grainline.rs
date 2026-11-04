@@ -65,6 +65,16 @@ pub struct GrainlinePlacement {
 }
 impl GrainlinePlacement {
     // Classify every original field independently of the held-content resource walk.
+    // Independently classify every original semantic field;numeric/direct geometry stays separate.
+    pub(crate) fn semantic_grainline(&self) -> &EntityId {
+        let Self {
+            operation,
+            grainline,
+        } = self;
+        let _: [&EntityId; 2] = [operation, grainline];
+        grainline
+    }
+
     pub(crate) fn geometry_input_guard(&self) {
         let Self {
             operation,

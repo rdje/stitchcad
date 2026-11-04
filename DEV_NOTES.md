@@ -3,15 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — original typed semantic operation occurrences
+## _(2026-11-04 UTC)_ — all original raw native semantic target/Profile fields
 
-0898 streams all Buttonhole/logical headers and original named inputs under the exact normalized program/step/Root operation owner. Genuine semantic ordinal and mixed position remain independent;input indices stay original.
-Private use retains the actual normalized program so another normalization over the same Root/sequence cannot substitute by matching IDs. Exhaustive operation/definition/input and Copy source/target guards classify growth;constant-size header views borrow original buffers.
-Native2 pass0:semantic1 at mixed1 and semantic2 at4 yield4+5=9 exact original fields. Repeated numeric targets and Logical/Profile/Numeric sources,actual header/role/input pointers and distinct normalized owners survive. Actual empty program stays exhausted;provider traces remain0.
-The self-Derived logical input is intentionally raw metadata;this view grants no source/dependency-order acceptance. Later .binding.logical owns strict refusal. Existing source/order/canonical/geometry proof owners are joined by later aggregate work.
-Manual Copy/Clone/Debug avoids host/source bounds and authored role output. No query,value,new arena,result vector or fresh work/content allowance. Strict selected lib/harness lint/fmt0,API3 pass,rc=0;guarded book0.
-Promotion declined:existing original normalized owner/ordinal/field and exhaustive/no manufactured position doctrine;book owns API. Whole0897 retained1070 as3 exact Git spans/public0;protected recovery stores unchanged.
-README/LIVE unchanged,G1still6/18 In Progress;next all13 native semantic target occurrences,then explicit requests,aggregate work and complete binding. Whole/coupled verification remains deferred.
+0899 independently classifies every original field across13 native schemas. Borrowed target/Profile references retain actual raw input owners and explicit target/Notch roles;Walk retains original pair index,A/B side and all six Profile roles.
+Exhaustive owner helpers distinguish numeric/direct geometry from canonical semantic targets. Walk pair/notch and Profile/dimension records are independently matched. Constant-size inline views and borrowed vectors yield a fused stream without
+query,value,clone,result allocation or work/source acceptance.
+Native3 pass0 across both quadratic/cubic,rotation/separation and point/range modes:43 fields total,13 target refs+6 Notch refs+24 Walk refs over2 pairs. Every view retains actual input;Walk nested Profile pointers/indices/sides/roles exact.
+Equal-ID Mirror fields and equal Notch Profile sources in distinct original inputs remain different loans. An actual empty Walk still retains its span and yields no fabricated Profile occurrences. Deferred invalid numeric expressions are not
+evaluated.
+Source-derived classifier census confirms13/13 actual native variants and6 Profile roles,rc=0. Strict selected lib/harness lint/fmt0,API3 pass,rc=0;generic getter/private field/original input escape checked. Guarded book0;no broad/full CI verdict.
+Existing numeric/direct geometry/resource producers unchanged. Next normalized-owner/mixed-position wrapper;then complete requests,aggregate work and actual source/family binding. Raw metadata selects no Profile or physical value and certifies
+no target existence/currentness.
+Promotion declined:existing exhaustive original-owner/field/role,no invented position and fresh aggregate doctrine;book owns API. Whole0898 retained1071 as3 exact Git spans/public0;protected recovery stores unchanged.
+README/LIVE unchanged,G1still6/18 In Progress;whole .5f.2.check and coupled .verify remain deferred.
+
+[Whole0898 ordered semantic occurrence lesson](docs/history/stitchcad-devnotes-part1071.md) retains exact source bytes.
 
 [Whole0897 original garment occurrence lesson](docs/history/stitchcad-devnotes-part1070.md) retains exact source bytes.
 

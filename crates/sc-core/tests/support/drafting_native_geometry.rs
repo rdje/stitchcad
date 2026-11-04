@@ -15,7 +15,7 @@ fn point(n: u128) -> PointRef {
 fn doc(text: &str) -> TestResult<FormulaExpressionDocument> {
     Ok(FormulaExpressionDocument::new(text.into())?)
 }
-fn bindings() -> NotchProfileBindings {
+pub(super) fn bindings() -> NotchProfileBindings {
     let p = |n| ProfileParameterRef::new(id(n));
     NotchProfileBindings {
         style: p(31),
@@ -30,7 +30,7 @@ fn bindings() -> NotchProfileBindings {
         encoding: p(36),
     }
 }
-fn same_input(a: DraftingOperationInput<'_>, b: DraftingOperationInput<'_>) -> bool {
+pub(super) fn same_input(a: DraftingOperationInput<'_>, b: DraftingOperationInput<'_>) -> bool {
     use DraftingOperationInput as I;
     match (a, b) {
         (I::ConstructPoint(a), I::ConstructPoint(b)) => std::ptr::eq(a, b),

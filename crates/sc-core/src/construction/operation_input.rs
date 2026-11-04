@@ -10,6 +10,11 @@ use crate::{
 };
 use core::fmt;
 mod geometry;
+mod semantic;
+pub use semantic::{
+    DraftingNativeSemanticField, DraftingNativeSemanticTargetRole, DraftingNativeSemanticUse,
+    DraftingNotchProfileRole,
+};
 pub(super) mod resources;
 pub use geometry::{DraftingNativeGeometryField, DraftingNativeGeometryUse};
 

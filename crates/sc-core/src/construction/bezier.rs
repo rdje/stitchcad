@@ -119,6 +119,32 @@ pub struct BezierConstruction {
 }
 impl BezierConstruction {
     // Classify every original field independently of the held-content resource walk.
+    // Independently classify every original semantic field;numeric/direct geometry stays separate.
+    pub(crate) fn semantic_input_guard(&self) {
+        let Self {
+            operation,
+            controls,
+        } = self;
+        let _: &EntityId = operation;
+        match controls {
+            BezierControlPoints::Quadratic {
+                start,
+                control,
+                end,
+            } => {
+                let _: [&PointRef; 3] = [start, control, end];
+            }
+            BezierControlPoints::Cubic {
+                start,
+                first_control,
+                second_control,
+                end,
+            } => {
+                let _: [&PointRef; 4] = [start, first_control, second_control, end];
+            }
+        }
+    }
+
     pub(crate) fn geometry_input_guard(&self) {
         let Self {
             operation,

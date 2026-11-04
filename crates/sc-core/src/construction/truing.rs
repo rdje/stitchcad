@@ -134,6 +134,20 @@ pub struct ConstrainedSeamTruing {
 }
 impl ConstrainedSeamTruing {
     // Classify every original field independently of the held-content resource walk.
+    // Independently classify every original semantic field;numeric/direct geometry stays separate.
+    pub(crate) fn semantic_targets(&self) -> [&EntityId; 3] {
+        let Self {
+            operation,
+            span,
+            adjusted_side,
+            piece,
+            fit_tolerance,
+        } = self;
+        let _: [&EntityId; 4] = [operation, span, piece, fit_tolerance];
+        let _: &SeamSideId = adjusted_side;
+        [span, piece, fit_tolerance]
+    }
+
     pub(crate) fn geometry_input_guard(&self) {
         let Self {
             operation,

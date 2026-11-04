@@ -78,6 +78,20 @@ pub struct CenterArcConstruction {
 }
 impl CenterArcConstruction {
     // Classify every original field independently of the held-content resource walk.
+    // Independently classify every original semantic field;numeric/direct geometry stays separate.
+    pub(crate) fn semantic_input_guard(&self) {
+        let Self {
+            operation,
+            center,
+            radius,
+            start_angle,
+            sweep_angle,
+        } = self;
+        let _: &EntityId = operation;
+        let _: &PointRef = center;
+        let _: [&FormulaExpressionDocument; 3] = [radius, start_angle, sweep_angle];
+    }
+
     pub(crate) fn geometry_input_guard(&self) {
         let Self {
             operation,

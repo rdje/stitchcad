@@ -23,6 +23,8 @@ mod initial_binding;
 mod logical_root;
 #[path = "support/drafting_native_geometry.rs"]
 mod native_geometry;
+#[path = "support/drafting_native_semantic.rs"]
+mod native_semantic;
 #[path = "support/drafting_output_role_binding.rs"]
 mod output_role_binding;
 #[path = "support/drafting_profile_binding.rs"]

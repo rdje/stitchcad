@@ -138,6 +138,25 @@ pub struct MirrorPieceCopy {
 }
 impl MirrorPieceCopy {
     // Classify every original field independently of the held-content resource walk.
+    // Independently classify every original semantic field;numeric/direct geometry stays separate.
+    pub(crate) fn semantic_piece(&self) -> &EntityId {
+        let Self {
+            operation,
+            source_piece,
+            axis,
+        } = self;
+        let _: [&EntityId; 2] = [operation, source_piece];
+        match axis {
+            MirrorAxis::ThroughPoints { start, end } => {
+                let _: [&PointRef; 2] = [start, end];
+            }
+            MirrorAxis::AlongRange(range) => {
+                let _: &DirectedRange = range;
+            }
+        }
+        source_piece
+    }
+
     pub(crate) fn geometry_input_guard(&self) {
         let Self {
             operation,

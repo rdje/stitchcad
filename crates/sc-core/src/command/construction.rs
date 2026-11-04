@@ -48,6 +48,10 @@ pub struct CloseDart {
 }
 
 impl CloseDart {
+    pub(crate) fn semantic_dart(&self) -> &EntityId {
+        let Self { dart } = self;
+        dart
+    }
     pub(crate) fn geometry_input_guard(&self) {
         let Self { dart } = self;
         let _: &EntityId = dart;
@@ -76,6 +80,15 @@ pub struct AddNotch {
 }
 
 impl AddNotch {
+    pub(crate) fn semantic_fields(&self) -> (&EntityId, &NotchProfileBindings) {
+        let Self {
+            piece,
+            anchor,
+            representation,
+        } = self;
+        let _: &EdgeAnchor = anchor;
+        (piece, representation)
+    }
     pub(crate) fn geometry_anchor(&self) -> &EdgeAnchor {
         let Self {
             piece,

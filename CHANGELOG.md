@@ -3,10 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0898 — original typed semantic operation fields
+## STITCHCAD-G1-0899 — all13 original native semantic field schemas
 
-Fused views now pin all original Buttonhole/logical headers and named inputs to their actual normalized program,Root operation,genuine mixed position and separate semantic ordinal. Native2 pass0,exact9 fields/distinct owners/provider trace0;strict lint/fmt,API3 and book pass0.
-Whole0897 retained1070;native target occurrences and aggregate binding remain next,G1still6/18 In Progress,coupled verification deferred.
+Fused raw views now retain actual target/Profile fields,input owners,pair/A/B locations and six Notch roles. Independent exhaustive guards cover all13 schemas. Native3,strict lint/fmt,API3,source census and book pass0;43 original fixture fields and distinct equal-ID loans verified.
+Whole0898 retained1071;exact normalized-owner/mixed wrapper next,G1still6/18 In Progress;aggregate and whole/coupled binding deferred.
+
+[Whole0898 ordered semantic occurrence unit](docs/history/stitchcad-devnotes-part1071.md) retains exact task,lesson and ledger.
 
 [Whole0897 original garment occurrence unit](docs/history/stitchcad-devnotes-part1070.md) retains exact task,lesson and ledger.
 

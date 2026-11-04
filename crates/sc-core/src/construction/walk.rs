@@ -53,6 +53,14 @@ pub struct WalkBalanceNotch {
     representation: NotchProfileBindings,
 }
 impl WalkBalanceNotch {
+    fn semantic_profile(&self) -> &NotchProfileBindings {
+        let Self {
+            anchor,
+            representation,
+        } = self;
+        let _: &EdgeAnchor = anchor;
+        representation
+    }
     fn geometry_anchor(&self) -> &EdgeAnchor {
         let Self {
             anchor,
@@ -88,6 +96,13 @@ pub struct WalkBalancePair {
     b: WalkBalanceNotch,
 }
 impl WalkBalancePair {
+    pub(crate) fn semantic_profiles(&self) -> [(SeamSideId, &NotchProfileBindings); 2] {
+        let Self { a, b } = self;
+        [
+            (SeamSideId::A, a.semantic_profile()),
+            (SeamSideId::B, b.semantic_profile()),
+        ]
+    }
     pub(crate) fn geometry_anchors(&self) -> [(SeamSideId, &EdgeAnchor); 2] {
         let Self { a, b } = self;
         [
@@ -236,6 +251,15 @@ impl fmt::Debug for WalkSeamEdit {
     }
 }
 impl WalkSeamEdit {
+    pub(crate) fn semantic_fields(&self) -> (&EntityId, &[WalkBalancePair]) {
+        let Self {
+            operation,
+            span,
+            pairs,
+        } = self;
+        let _: &EntityId = operation;
+        (span, pairs)
+    }
     pub(crate) fn geometry_pairs(&self) -> &[WalkBalancePair] {
         let Self {
             operation,

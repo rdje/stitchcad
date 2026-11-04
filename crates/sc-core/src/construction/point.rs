@@ -46,6 +46,13 @@ pub struct PointConstruction {
 }
 impl PointConstruction {
     // Classify every original field independently of the held-content resource walk.
+    // Independently classify every original semantic field;numeric/direct geometry stays separate.
+    pub(crate) fn semantic_input_guard(&self) {
+        let Self { operation, x, y } = self;
+        let _: &EntityId = operation;
+        let _: [&FormulaExpressionDocument; 2] = [x, y];
+    }
+
     pub(crate) fn geometry_input_guard(&self) {
         let Self { operation, x, y } = self;
         let _: &EntityId = operation;

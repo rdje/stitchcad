@@ -64,6 +64,17 @@ pub struct LineConstruction {
 }
 impl LineConstruction {
     // Classify every original field independently of the held-content resource walk.
+    // Independently classify every original semantic field;numeric/direct geometry stays separate.
+    pub(crate) fn semantic_input_guard(&self) {
+        let Self {
+            operation,
+            start,
+            end,
+        } = self;
+        let _: &EntityId = operation;
+        let _: [&PointRef; 2] = [start, end];
+    }
+
     pub(crate) fn geometry_input_guard(&self) {
         let Self {
             operation,

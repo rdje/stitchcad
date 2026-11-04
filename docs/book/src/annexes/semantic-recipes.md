@@ -1764,3 +1764,59 @@ this view establishes no dependency-order acceptance. The future bounded binder 
 relation when composing a whole proof. API examples compile the generic getter and refuse private
 ordinal mutation or normalized-owner lifetime escape. Native target occurrences remain the next
 slice;complete request/work/source/cohort and coupled verification remain tracked.
+
+## Original raw native semantic fields
+
+`DraftingOperationInput::semantic_dependencies()` now classifies all thirteen native schemas and
+streams actual semantic target and symbolic Notch Profile field loans. This implemented raw stage
+retains the exact original native input. Its program-owner/mixed-position wrapper is still next;
+source selection,canonical association,currentness,aggregate work and executable acceptance remain
+separate. No mixed position is inferred from an operation ID or local field index.
+
+Each private `DraftingNativeSemanticUse` retains its original `DraftingOperationInput` and a
+`DraftingNativeSemanticField`. Target fields retain their actual `EntityId` borrow and explicit
+`DraftingNativeSemanticTargetRole`. Notch Profile fields retain their actual `ProfileParameterRef`
+borrow and `DraftingNotchProfileRole`. Copying a view copies those loans and fixed metadata;it
+constructs no canonical object,source body or selected Profile value.
+
+| Original family | Fields in this semantic view |
+| --- | --- |
+| ConstructPoint,DrawLine,DrawArc,DrawBezier | No additional semantic targets;their original numeric/direct geometry obligations remain |
+| OffsetEdge | Actual SeamAllowance target |
+| SlashSpread | Actual source Piece target |
+| CloseDart | Actual canonical Dart target,with the original request and explicit history identity retained |
+| AddNotch | Actual owning Piece,then all six original symbolic Profile fields |
+| PlaceGrainline | Actual canonical Grainline target |
+| WalkSeam | Actual span,then every original pair/A/B/Profile field |
+| TrueSeam | Actual span,adjusted Piece and fit-tolerance source;the original input retains its selected side |
+| MirrorPiece | Actual source Piece;original axis remains on the native input/direct geometry view |
+| JoinPieces | Actual span,source Piece A and source Piece B |
+
+The six Profile roles are Style,SampleDepth,SampleWidth,ProductionDepth,ProductionWidth and
+Encoding,in original schema order. Equal references remain separate authored occurrences. A Walk
+streams its span first,then original pair order,A before B,and all six roles on each side. It
+retains every original zero-based pair index and explicit `SeamSideId`;repeated balance pairs are
+not deduplicated. With N pairs,the semantic stream has one span plus12N Profile occurrences.
+An actual empty pair vector still contributes its original span and no invented Profile fields.
+
+Independent exhaustive native-owner guards classify schema growth separately from numeric content
+and direct geometry producers. Walk pair/notch and Profile binding/dimension records are also
+matched exhaustively. The raw iterator borrows original target fields and buffers,uses constant-size
+inline views,is fused,and allocates,clones,queries and evaluates nothing. It supplies no content,
+comparison,Profile pin,source/frame/currentness or physical allowance. Complete aggregate preflight
+and actual target/source/family joins remain mandatory before whole acceptance.
+
+The focused fixture covers all thirteen families in both quadratic/cubic Bézier,rotation/separation
+SlashSpread and point/range Mirror-axis modes. Four direct point/curve families contribute zero
+fields to this class. Two original Walk pairs contribute25 fields. Across all families,the stream
+contains43 occurrences:13 target fields,six Notch Profile fields and24 Walk Profile fields. Every
+emitted view keeps the actual original input. Walk fields retain exact original nested Profile
+pointers,pair indices,sides and role order. Equal-ID Mirror inputs and equal Notch Profile values
+in separate original inputs retain different actual field loans. An empty Walk retains its span
+and remains exhausted after it. Deferred invalid numeric expressions are not evaluated by this view.
+
+API examples compile the raw getter and refuse private-field mutation or original-data lifetime
+escape. These are original-field classification checks. They establish no existence or liveness of
+the referenced Dart,Piece,span,allowance,grainline,tolerance or Profile declaration. The next wrapper
+will keep these original raw fields under the exact normalized program and genuine mixed step;
+complete semantic source/work/cohort and coupled verification remain tracked.

@@ -104,6 +104,20 @@ pub struct OffsetConstruction {
 }
 impl OffsetConstruction {
     // Classify every original field independently of the held-content resource walk.
+    // Independently classify every original semantic field;numeric/direct geometry stays separate.
+    pub(crate) fn semantic_allowance(&self) -> &EntityId {
+        let Self {
+            operation,
+            source,
+            side,
+            allowance,
+        } = self;
+        let _: [&EntityId; 2] = [operation, allowance];
+        let _: &OffsetSide = side;
+        let _: &DirectedRange = source;
+        allowance
+    }
+
     pub(crate) fn geometry_input_guard(&self) {
         let Self {
             operation,

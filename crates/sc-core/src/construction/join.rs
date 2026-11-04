@@ -204,6 +204,18 @@ pub struct JoinPiecesAtSeam {
 }
 impl JoinPiecesAtSeam {
     // Classify every original field independently of the held-content resource walk.
+    // Independently classify every original semantic field;numeric/direct geometry stays separate.
+    pub(crate) fn semantic_targets(&self) -> [&EntityId; 3] {
+        let Self {
+            operation,
+            span,
+            a,
+            b,
+        } = self;
+        let _: [&EntityId; 4] = [operation, span, a, b];
+        [span, a, b]
+    }
+
     pub(crate) fn geometry_input_guard(&self) {
         let Self {
             operation,

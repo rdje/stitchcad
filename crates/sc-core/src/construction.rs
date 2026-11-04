@@ -91,8 +91,9 @@ pub use context::{
 };
 mod operation_input;
 pub use operation_input::{
-    DraftingNativeGeometryField, DraftingNativeGeometryUse, DraftingOperationFamily,
-    DraftingOperationInput,
+    DraftingNativeGeometryField, DraftingNativeGeometryUse, DraftingNativeSemanticField,
+    DraftingNativeSemanticTargetRole, DraftingNativeSemanticUse, DraftingNotchProfileRole,
+    DraftingOperationFamily, DraftingOperationInput,
 };
 mod program;
 pub use program::{
