@@ -910,28 +910,30 @@ retains all original goals,statuses and focused acceptance evidence.
   explicit complete bounds and exhaustive field accounting;Unknown/Derived have no fallback.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.declarations`
   Status: `done`
-  Goal:0870 immutable finite logical role/domain/state/provenance records;[public reference](../book/src/annexes/formula-declarations.md#finite-logical-declaration-records).
-  - [x] REPRODUCE / ISSUE:0869 `plan_sources.py` actual canonical/scalar/mixed producer and exhaustive compiler census matched0;current canonical targets cannot supply logical state/domain. Contract requires a separate actual core record before any source adapter can borrow one.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test logical_input_declaration_contract`:3 pass,rc=0;authored finite logical selections require distinct PocketOpening/NotionSize roles and Known/Assumed/Unknown/Choice/Preference/Derived provenance. Scalar formula kinds cannot carry those domains or explicit Choice without conflating existing semantics.
-  - [x] FIX: immutable original definition with explicit domain/evidence/text/comparison limits;derive complete checked D/E/text and D*D+E*E+D before quotas,then allocation-free original field checks. Unknown/Derived have no selection;no numeric conversion/default/vocabulary. Authored equality excludes constructor policy;definition vectors retain original order/storage.
-  - [x] ADDRESSED: same focused command3 pass,rc=0;both kinds/six independently expected tags,unsorted domain/evidence loans,first/last selected members,all original provenance,exact bounds and quota priority,duplicate/outside-domain/missing-evidence first causes. Constructor-policy changes preserve authored equality;Debug omits member text.
-  - [x] NO REGRESSION: `cargo test -p sc-core --test logical_input_declaration_contract --test canonical_inputs_contract`:3+9 pass,rc=0;original dedicated/general scalar
-    ownership/refusals stay green. Selected strict clippy/fmt pass0;`cargo test -p sc-core --doc value::logical`:6 pass,rc=0,private fields,Unknown/Derived absence of value,scalar
-    coercion refusal,no Default and exact book API.
-  - [x] LOCKSTEP: public record/state/bounds/errors and examples in book;guarded build0. LIVE product boundary updated,README reviewed,G1still6/18 In Progress. MEM/index/DEV/ledger align. Inventory/source/Root membership is unimplemented;resource integration must accompany actual Root attachment,never follow an exposed uncharged cohort.
-  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1042.md`:4 exact Git spans,rc=0;whole0869 and0328 retained before live reduction.
-    Lossless source reduction preserves the existing task-collection bounds before staging. Public archive read exact0;no retained window or ceiling changed.
-  - [x] PROMOTION: promotion: declined (existing explicit uncertainty/canonical-core/no-fabrication contracts;book owns standalone model API). Focused3/legacy9/strict/fmt/Rustdoc6/book pass0;complete logical inventory,semantic operations and .5f.2.verify remain deferred. Commit:STITCHCAD-G1-0870.
+  Goal:0870 immutable finite logical declarations;[whole scope/proofs](../history/stitchcad-devnotes-part1043.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory`
-  Status: `pending`
+  Status: `in_progress`
   Goal:actual logical inventory membership and disjoint identities,then atomic original Root/resource integration;numeric-only scopes stay explicitly empty,never defaulted logical state.
   Children: `.component` (standalone original owner), `.attach` (actual Root plus complete producers).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.resources`
   Status: `pending`
   Goal:exhaustive standalone logical declaration/inventory content producer,including original domain/state/provenance and constructor proof fields. Implement before actual Root attachment;no admitted Root may omit this new cohort.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory.component`
-  Status: `pending`
-  Goal:immutable standalone logical inventory,actual original membership loans,complete count/work bounds and duplicate positions;no Root/source membership or runtime grant.
+  Status: `done`
+  Goal:0871 standalone immutable logical membership and kind loans;[public reference](../book/src/annexes/logical-inputs.md#standalone-logical-inventory).
+  - [x] REPRODUCE / ISSUE:0870 logical declarations own valid domains/states but no inventory can prove unique owned membership. Existing CanonicalInputs holds numeric families only;this slice adds no Root cohort before accounting exists.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test logical_input_inventory_contract`:3 pass,rc=0;equal-data owners have different actual member loans,source/provenance references
+    are not owned IDs,and wrong-kind lookup must retain its actual record. Initial E0515 showed a borrowed lookup error cannot escape as Box<dyn Error>;tests/book explicitly render
+    only at that owned-error boundary.
+  - [x] FIX: immutable original vector with explicit complete L/L*L quotas before allocation-free duplicate scans;actual privately bound owner/member/index and kind. Missing keeps requested ID/kind;Kind keeps expected role/actual loan. No cloned lookup,sorting,value read,default declaration or Root/source-content grant.
+  - [x] ADDRESSED: same focused command3 pass,rc=0;unsorted original vector storage,distinct equal-owner pointers,Unknown/Derived preservation,exact3/9 quota priority,identical/cross-kind duplicate positions,full missing requests and actual kind causes,empty0/0 and diagnostic privacy. Constructor policy does not change authored equality.
+  - [x] NO REGRESSION: selected strict clippy/fmt pass0;`cargo test -p sc-core --doc value::logical::inventory`:6 pass,rc=0,private fields,lifetime/no-Default and API. `cargo test
+    -p sc-core --doc value::logical_examples`:2 pass,rc=0,actual maintained record/inventory examples including exact declaration bounds. Core numeric/root code unchanged;coupled
+    .5f.2.verify remains deferred.
+  - [x] LOCKSTEP: new indexed logical reference chapter owns detailed record/inventory examples;old formula anchors remain links. Guarded book build0. LIVE/README reviewed,G1still6/18 In Progress;MEM/index/DEV/ledger align. Standalone accounting next;actual Root/resource attachment remains atomic and unimplemented.
+  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1043.md`:4 exact Git spans,rc=0;whole0870 and0327 retained before live reduction.
+    Public archive read exact0;existing task/journal bounds preserved without retained-window or ceiling changes. Book reference relocation retains original anchors and examples.
+  - [x] PROMOTION: promotion: declined (existing actual-owner/complete-bounds/no-fallback contracts;book owns component API). Focused3/strict/fmt/Rustdoc6+2/book pass0. No source/Root membership,aggregate-content,currentness or execution proof. Commit:STITCHCAD-G1-0871.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory.attach`
   Status: `pending`
   Goal:atomically integrate original logical cohort with canonical Root identity/metadata joins and exhaustive resource producers,after standalone owner/accounting. Preserve numeric-only constructor scopes and native formula semantics;no temporarily uncharged Root field.

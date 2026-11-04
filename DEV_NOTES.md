@@ -3,10 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — immutable finite logical declaration records
+## _(2026-11-04 UTC)_ — standalone original logical membership
 
-0870 adds separate PocketOpening/NotionSize records and six explicit states,including Choice. Complete domain/evidence/text and D*D+E*E+D bounds precede quotas and allocation-free field checks;Unknown/Derived have no result. Authored equality ignores constructor policy.
-Focused logical3/canonical9,strict lint/fmt,Rustdoc6 and book pass0. Original unsorted vectors/provenance,independent tags,inclusive bounds/first refusals and privacy remain. Promotion declined:existing uncertainty/core contracts;G1still6/18. Standalone inventory/accounting next;Root integration must be atomic.
+0871 owns original logical declarations under complete L/L*L quotas before duplicate scans. Kind bindings retain actual inventory/member/index;equal authored data cannot substitute owner pointers. Missing retains ID/kind,wrong Kind the actual loan;values/source references do not become declarations.
+Focused3,strict lint/fmt,Rustdoc6 and actual book2/build pass0. Borrowed error remains local;owned-error examples explicitly render it. Indexed logical reference preserves old anchors. Promotion declined:existing owner/bound contracts;G1still6/18. Accounting next,Root/resource attachment remains atomic.
+
+[Whole0870 logical declaration lesson](docs/history/stitchcad-devnotes-part1043.md) retains exact source bytes.
 
 [Whole0869 logical source contract lesson](docs/history/stitchcad-devnotes-part1042.md) retains exact source bytes.
 
@@ -32,13 +34,7 @@ Focused logical3/canonical9,strict lint/fmt,Rustdoc6 and book pass0. Original un
 
 [Whole0328 tech-pack source lesson](docs/history/stitchcad-devnotes-part1042.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — plotter and vector-print requests
-
-0327 .6.2.2.c.2.4.3 retains PLT profile/result bindings and PDF logical/factory inputs plus authored print choices.
-A0/tiled A3/A4, orientation/order and positive overlap/scale-square are explicit; invalid lengths retain values.
-Native3+4+2+2 pass0; initial helper-expect lint3 resolved by two fixture-only allowances, final strict lint/fmt0.
-Book/publication76-93 pass0; D238 clarifies implemented intent versus application;481/299/142 exact516895d.
-Promotion declined: existing print/profile contracts. G1still6/18; tech pack next, full CI integration/pre-push.
+[Whole0327 plotter/print lesson](docs/history/stitchcad-devnotes-part1043.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — explicit graded DXF carriage
 

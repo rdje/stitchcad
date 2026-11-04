@@ -353,3 +353,10 @@ impl LogicalInputDeclaration {
         self.shape
     }
 }
+
+mod inventory;
+pub use inventory::{
+    LogicalInputBinding, LogicalInputInventoryError, LogicalInputInventoryLimits,
+    LogicalInputInventoryRefusal, LogicalInputInventoryShape, LogicalInputLookupError,
+    LogicalInputs,
+};

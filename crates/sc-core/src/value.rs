@@ -1,4 +1,8 @@
 //! Canonical length/general scalar inputs: authored state/provenance without unknown fallbacks.
+// Compile the maintained logical API examples as part of the native documentation contracts.
+#[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/logical-inputs.md")]
+mod logical_examples {}
 use crate::ontology::EntityId;
 use core::fmt;
 use sc_units::Length;
@@ -236,7 +240,9 @@ impl LengthDeclaration {
 
 mod logical;
 pub use logical::{
-    LogicalInputDeclaration, LogicalInputDeclarationDefinition, LogicalInputDeclarationError,
-    LogicalInputKind, LogicalInputLimits, LogicalInputRefusal, LogicalInputShape,
-    LogicalInputState, LogicalInputStateTag,
+    LogicalInputBinding, LogicalInputDeclaration, LogicalInputDeclarationDefinition,
+    LogicalInputDeclarationError, LogicalInputInventoryError, LogicalInputInventoryLimits,
+    LogicalInputInventoryRefusal, LogicalInputInventoryShape, LogicalInputKind, LogicalInputLimits,
+    LogicalInputLookupError, LogicalInputRefusal, LogicalInputShape, LogicalInputState,
+    LogicalInputStateTag, LogicalInputs,
 };

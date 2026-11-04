@@ -3,11 +3,11 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0870 — immutable finite logical declarations
+## STITCHCAD-G1-0871 — standalone logical inventory and kind loans
 
-Add authored PocketOpening/NotionSize domains with six distinct states and explicit content/comparison allowances. Unknown/Derived carry no result;choices remain distinct from facts. Keep original order/provenance,first typed refusals and policy-independent authored equality.
+Own original logical declarations with complete population/comparison limits and first duplicate positions. Actual owner/member/kind loans preserve identity and authored state;missing/wrong-kind requests retain original causes without a default.
 
-Focused logical3/canonical9,strict lint/fmt,Rustdoc6 and book pass0. G1still6/18 In Progress;standalone inventory/accounting and atomic Root attachment remain next. No logical source or complete semantic acceptance claim.
+Focused3,strict selected lint/fmt,Rustdoc6/book2 and build pass0. Indexed logical reference preserves earlier anchors. G1still6/18 In Progress;content accounting and atomic Root attachment remain pending.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -21,6 +21,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0870 logical declaration unit](docs/history/stitchcad-devnotes-part1043.md) retains exact task,lesson and ledger source bytes.
 
 [Whole0869 logical source contract](docs/history/stitchcad-devnotes-part1042.md) retains exact task,lesson and ledger source bytes.
 
