@@ -221,6 +221,20 @@ impl<'a> SemanticOperationBinding<'a> {
     }
 }
 impl SemanticRecipe {
+    /// Explicitly select an empty semantic cohort with exact zero operation/comparison allowances.
+    /// This invents no declaration or default for nonempty data. Root construction still requires
+    /// the caller to supply this owner explicitly; no omitted field is filled automatically.
+    #[must_use]
+    pub const fn empty() -> Self {
+        Self {
+            operations: Vec::new(),
+            limits: SemanticRecipeLimits::new(0, 0),
+            shape: SemanticRecipeShape {
+                operations: 0,
+                inspections: 0,
+            },
+        }
+    }
     /// Move exact original operations after complete N*N arithmetic,count then comparison quotas,
     /// then first duplicate identity in authored order. Validation uses borrowed prefix scans and
     /// allocates no workspace. Prior member proofs grant no whole-source content credit. Input

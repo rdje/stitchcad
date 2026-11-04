@@ -311,6 +311,7 @@ fn root(fixture: fixture::Fixture) -> TestResult<DesignInputs<EmptyHost>> {
         topology: fixture.ledger,
     })?;
     Ok(DesignInputs::new(DesignInputsDefinition {
+        semantic_recipe: sc_core::recipe::SemanticRecipe::empty(),
         structure,
         parameters,
         materials,

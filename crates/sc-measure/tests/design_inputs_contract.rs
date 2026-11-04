@@ -58,6 +58,7 @@ fn fixture() -> DesignInputsDefinition<DesignSources> {
     })
     .expect("actual structural owner");
     DesignInputsDefinition {
+        semantic_recipe: sc_core::recipe::SemanticRecipe::empty(),
         references: DesignSourceReferences {
             measurement_table: None,
             ease_set: None,
@@ -2208,6 +2209,7 @@ fn construction_and_garment_ownership_rechecks_whole_root_before_empty_scope() {
     )
     .expect("actual stable metadata snapshot");
     let state = DesignInputs::new(DesignInputsDefinition {
+        semantic_recipe: definition.semantic_recipe,
         structure: definition.structure,
         parameters: definition.parameters,
         recipe: definition.recipe,

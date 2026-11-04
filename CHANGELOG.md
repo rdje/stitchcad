@@ -3,12 +3,11 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0877 — original ordered semantic recipe
+## STITCHCAD-G1-0878 — actual Root semantic ownership and accounting
 
-Own exact authored Buttonhole/logical operation order with complete constructor bounds and original duplicate/member/kind witnesses. Compose actual inventory/member resource fields in the same sink,without cached credit or synthetic mixed positions. Focused3 pass;Root integration is next.
+Require the original semantic cohort in Root construction;preserve actual member loans,all-family ownership,candidate content and complete actual/prospective resource fields. Explicit empty numeric-only scopes use0/0;no field is filled implicitly. Root3/projection1/legacy5/whole-model refusal1 pass.
 
-G1still6/18 In Progress;source/rule signatures,component binding and coupled verification remain pending. Whole0876/notion/0321 retained in1049.
-Selected strict lint/fmt,API3/book9/build pass0;full coupled verification deferred.
+Targeted caller compilation,strict selected lint/fmt,API2/book10/build pass0. G1still6/18 In Progress;genuine mixed semantic ordinals are next. Full coupled verification remains deferred;whole0877/closure/0320 retained in1050.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -22,6 +21,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0877 semantic owner and original closure acceptance](docs/history/stitchcad-devnotes-part1050.md) retain exact source bytes.
 
 [Whole0876 component origins and original notion acceptance](docs/history/stitchcad-devnotes-part1049.md) retain exact source bytes.
 

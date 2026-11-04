@@ -10,6 +10,7 @@ use crate::{
     recipe::{
         FormulaDeclaration, FormulaInitialDeclaration, FormulaNamespace, FormulaNamespaceError,
         FormulaRecipeDocument, FormulaSourceInputRefusal, FormulaSourceInputs, FormulaSources,
+        SemanticRecipe,
     },
     value::{CanonicalInputPosition, CanonicalInputTarget, CanonicalInputs},
 };
@@ -22,9 +23,19 @@ use std::collections::BTreeMap;
 /// fn omit<H>(definition:sc_core::design::DesignInputsDefinition<H>)
 ///     ->sc_core::design::DesignInputsDefinition<H> {
 ///     let sc_core::design::DesignInputsDefinition {
-///         structure,parameters,recipe,materials,sources,references,..
+///         structure,parameters,recipe,semantic_recipe,materials,sources,references,..
 ///     }=definition;
-///     sc_core::design::DesignInputsDefinition {structure,parameters,recipe,materials,sources,references}
+///     sc_core::design::DesignInputsDefinition {structure,parameters,recipe,semantic_recipe,materials,sources,references}
+/// }
+/// ```
+/// The original semantic cohort is also required;there is no implicit empty replacement:
+/// ```compile_fail,E0063
+/// fn omit<H>(definition:sc_core::design::DesignInputsDefinition<H>)
+///     ->sc_core::design::DesignInputsDefinition<H> {
+///     let sc_core::design::DesignInputsDefinition {
+///         structure,parameters,recipe,formula_sources,materials,sources,references,..
+///     }=definition;
+///     sc_core::design::DesignInputsDefinition {structure,parameters,recipe,formula_sources,materials,sources,references}
 /// }
 /// ```
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -37,6 +48,9 @@ pub struct DesignInputsDefinition<H> {
     pub recipe: FormulaRecipeDocument,
     /// Actual separately identified original formula sources;no computed values or default registry.
     pub formula_sources: FormulaSources,
+    /// Actual original ordered semantic operation cohort,including explicit empty numeric-only scopes.
+    /// Rule/policy/source binding and combined-program order remain separate from this owned data.
+    pub semantic_recipe: SemanticRecipe,
     /// Actual Material inventory and canonical property targets.
     pub materials: MaterialInventory,
     /// Actual checked higher metadata owner; canonical declarations remain in structure only.
@@ -58,6 +72,11 @@ pub enum DesignInputsPosition {
     /// Actual original separately owned expression-source entity.
     FormulaSource {
         /// Zero-based original source position,including unused sources.
+        index: usize,
+    },
+    /// Actual original semantic operation declaration,including unused operations.
+    SemanticOperation {
+        /// Zero-based original semantic recipe position,not a scalar/native/mixed position.
         index: usize,
     },
     /// Actual Material metadata.
@@ -265,6 +284,12 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
     pub const fn formula_sources(&self) -> &FormulaSources {
         &self.definition.formula_sources
     }
+    /// Actual original ordered semantic owner,without a copied or implicit empty cohort.
+    /// This loan grants no rule/policy/source binding,domain/currentness or combined-program proof.
+    #[must_use]
+    pub const fn semantic_recipe(&self) -> &SemanticRecipe {
+        &self.definition.semantic_recipe
+    }
     /// Original actual Material inventory, without physical/evidence certification.
     #[must_use]
     pub const fn materials(&self) -> &MaterialInventory {
@@ -329,7 +354,8 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
             .collect::<Result<Vec<_>, _>>()?;
         FormulaNamespace::new(initial).map_err(DesignFormulaError::Namespace)
     }
-    /// Complete actual ownership positions:structure,parameters,formula sources,Materials,then higher metadata.
+    /// Complete actual ownership positions:structure,parameters,formula sources,semantic operations,
+    /// Materials,then higher metadata. Local semantic references are not additional owned entities.
     /// Referenced source/evidence/formula/assignment ids remain uses, not additional owners.
     #[must_use]
     pub fn identities(&self) -> Vec<(EntityId, DesignInputsPosition)> {
@@ -354,6 +380,14 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
                         (source.id(), DesignInputsPosition::FormulaSource { index })
                     }),
             )
+            .chain(self.semantic_recipe().operations().iter().enumerate().map(
+                |(index, operation)| {
+                    (
+                        operation.id(),
+                        DesignInputsPosition::SemanticOperation { index },
+                    )
+                },
+            ))
             .chain(
                 self.materials()
                     .materials()
@@ -376,6 +410,8 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
     /// All-family identity checks precede parameters,numeric canonical Derived/source joins,Material/current Piece
     /// assignments,then complete
     /// higher sources and provided reference joins. Uncertain states and unresolved assignments remain intact.
+    /// Semantic declarations participate in owned identities;their rule/policy/domain/dependency
+    /// bindings and original mixed positions require the later source/program integration.
     /// No namespace/kind/evaluation, geometry, physical or release readiness follows acceptance.
     ///
     /// # Errors

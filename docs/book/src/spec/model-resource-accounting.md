@@ -461,7 +461,11 @@ Actual measurement and external SizeSet component examples continue in
 ## Complete actual Inputs, Sewing and Garment roots
 
 charge_design_input_resources borrows every private DesignInputsDefinition field in schema order:
-structure,parameters,retained recipe,formula sources,Materials,higher metadata and provided refs. Actual
+structure,parameters,retained scalar recipe,formula sources,complete semantic recipe,Materials,
+higher metadata and provided refs. The
+[semantic inventory/member walk](../annexes/semantic-recipes.md#account-for-the-complete-semantic-recipe)
+counts all original operations and fields,including unused operations. Actual and prospective
+length/material/notch/revision paths share this same whole-input traversal. Actual
 source metadata owns both the higher host and a separately retained vector of DesignHostEntity.
 The producer first charges the host through DesignResourceSource, then precharges that exact stored
 vector. It does not regenerate a census through the semantic entities callback. Fixed Copy guards

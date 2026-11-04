@@ -87,7 +87,8 @@ vector2; text15 refuses second role8 after8 bytes. Empty and nonempty producers 
 earlier latched refusal.
 
 This is a standalone source record and exhaustive content walk. The semantic owner below now
-retains original declaration order; component origin binding, Root/program attachment,
+retains original declaration order and is attached to the actual Root below; component origin
+binding, combined-program integration,
 Closure-to-operation dependency binding and readonly source ports remain tracked work. It creates
 no scalar statement, native drafting slot or geometry. Profile pins, currentness, physical execution
 and the deferred coupled verification remain separate.
@@ -259,7 +260,9 @@ separate original owners. Raw component recipe carriers continue to borrow genui
 they do not become invented semantic/native slots in this vector.
 
 Select `SemanticRecipeLimits::new(operations,validation_inspections)` explicitly; there is no
-Default. The factory derives complete original N and checked conservative N*N identity comparisons
+Default. `SemanticRecipe::empty()` explicitly selects the same empty cohort with exact0/0 bounds;
+it supplies no policy for nonempty input and invents no declaration. The factory derives complete
+original N and checked conservative N*N identity comparisons
 before operation-count then comparison quotas. Only after both pass does it scan for the first
 repeated owned identity in authored order. Identical definitions and different-family records
 with the same ID both refuse. Rule, policy, output and input IDs are references, not additional
@@ -327,6 +330,66 @@ operations3. Allowance4 reaches Buttonhole90 inputs2 after3 entries; allowance5 
 inputs1 after5 entries. Text23 refuses its role8 after16 bytes at owner70/index0. Every original
 first field survives; empty and nonempty recipes preserve any earlier latched sink refusal.
 
-The owner and producer are standalone. Actual Root attachment, all-family identity joins, combined
-program order, rule/policy signatures, complete source/graph binding and execution remain separate
+The owner/producer also compose into the actual Root below. Combined program order, rule/policy
+signatures, complete source/graph binding and execution remain separate
 tracked work. No record acquires a fabricated mixed/native/scalar position or whole-source allowance.
+
+## Attach the original semantic cohort to Design
+
+`DesignInputsDefinition::semantic_recipe` is now a required original component. Omitting it fails
+compilation; no constructor fills an empty/default cohort for the caller. Numeric-only roots
+explicitly supply `SemanticRecipe::empty()` with exact0/0 bounds. `DesignInputs::semantic_recipe()`
+loans the actual retained owner, including every original operation, role and constructor record.
+Moving the cohort into the Root preserves its operation buffer. No equal-data replacement is
+manufactured, and member bindings continue to loan this exact original owner.
+
+This complete construction example supplies the actual semantic owner alongside the other components:
+
+```rust
+use sc_core::{design::{DesignInputs,DesignInputsDefinition,DesignInputsError,DesignMetadata,
+    DesignReferenceHost,DesignSourceReferences,DesignParameters,DesignStructure},
+    ontology::MaterialInventory,recipe::{FormulaRecipeDocument,FormulaSources,SemanticRecipe}};
+fn combine<H:DesignReferenceHost>(structure:DesignStructure,parameters:DesignParameters,
+    recipe:FormulaRecipeDocument,formula_sources:FormulaSources,semantic_recipe:SemanticRecipe,
+    materials:MaterialInventory,host:H,references:DesignSourceReferences)
+    ->Result<DesignInputs<H>,DesignInputsError<H::Error>> {
+    let sources=DesignMetadata::new(host,structure.inputs())
+        .map_err(|issue|DesignInputsError::Sources(Box::new(issue)))?;
+    DesignInputs::new(DesignInputsDefinition {structure,parameters,recipe,formula_sources,
+        semantic_recipe,materials,sources,references})
+}
+```
+
+The complete ownership census visits structural entities, parameters, formula sources, semantic
+operations, Materials, then higher metadata. Every semantic operation ID is an owner even when
+unused. `DesignInputsPosition::SemanticOperation {index}` retains its original zero-based semantic
+position. Rule, policy, output and input references remain uses. For example, operation10 aliasing
+dedicated length10 refuses at Structure(Length0)/SemanticOperation0. Operation90 aliasing logical
+declaration90 refuses at Structure(Logical0)/SemanticOperation0. Formula source70 and operation70
+refuse at FormulaSource0/SemanticOperation0; parameter70 precedes that same operation as Parameter0.
+These are actual original positions, not a synthetic scalar/native/mixed index.
+
+All actual and prospective input/garment resource paths compose the complete semantic walk after
+scalar recipe and formula-source content. The source host and later fields remain in the same
+cumulative sink. Detached candidate reconstruction preserves the complete semantic cohort.
+Existing metadata command difference guards also compare all authored semantic content;
+measurement/material/notch edits cannot silently change it while reporting only allowed fields.
+
+For an explicitly empty scalar recipe, canonical Unknown length10 and Boolean20, logical Derived90
+with domain `option_a`, then Buttonhole70 and LogicalDerivation80 each holding one eight-byte role,
+the represented Inputs Root requires8 entries/32 text bytes/3 revision bits at revision7. The
+canonical domain owns8 bytes, retained scalar-recipe canonical identity8, and semantic roles16.
+Entry allowance6 reaches Buttonhole70 inputs1 after6 entries. Text31 reaches Logical80 role8 after24
+bytes. The original owner/field/index survives both direct accounting and formula-scope resource
+refusal, before later source queries.
+
+A separate prospective fixture has one Known length/evidence1 and Buttonhole70/input1. Actual
+Root demand is4/16/3; replacing only that length with Known evidence2 requires5/16/3. Entry allowance4
+refuses `semantic.buttonhole.inputs` after4 entries, proving the unchanged semantic content remains
+in the projected walk and old/new evidence is not double-counted. The original Root stays unchanged.
+
+This attachment establishes owned data,identity disjointness across represented components and complete held-field
+accounting. Semantic rule/policy existence/signatures,logical domain/dependency binding,Profile pins,
+source currentness and graph acceptance remain with later bounded source integration. Genuine
+combined-program semantic ordinals remain the next implementation slice. No source values or
+physical buttonhole/logical results are computed by Root construction or resource accounting.

@@ -29,6 +29,8 @@ mod program_order;
 mod program_output_positions;
 #[path = "support/drafting_program_views.rs"]
 mod program_views;
+#[path = "support/drafting_semantic_root.rs"]
+mod semantic_root;
 use core::{
     cell::Cell,
     fmt,
@@ -43,7 +45,9 @@ use sc_core::{
     },
     design::*,
     ontology::{CutPlan, EntityId, IdentityLedger, MaterialInventory, PieceInventory},
-    recipe::{FormulaRecipeDocument, FormulaSource, FormulaSourceLimits, FormulaSources},
+    recipe::{
+        FormulaRecipeDocument, FormulaSource, FormulaSourceLimits, FormulaSources, SemanticRecipe,
+    },
     value::{CanonicalInputs, LengthDeclaration},
 };
 use std::error::Error;
@@ -149,6 +153,25 @@ fn root_with_host<H: DesignReferenceHost>(
     parameter_definitions: Vec<DesignParameterDefinition>,
     references: DesignSourceReferences,
 ) -> TestResult<DesignInputs<H>> {
+    root_with_host_and_semantic(
+        recipe,
+        formula_sources,
+        host,
+        canonical,
+        parameter_definitions,
+        references,
+        SemanticRecipe::empty(),
+    )
+}
+fn root_with_host_and_semantic<H: DesignReferenceHost>(
+    recipe: &str,
+    formula_sources: Vec<FormulaSource>,
+    host: H,
+    canonical: CanonicalInputs,
+    parameter_definitions: Vec<DesignParameterDefinition>,
+    references: DesignSourceReferences,
+    semantic_recipe: SemanticRecipe,
+) -> TestResult<DesignInputs<H>> {
     let parameters = DesignParameters::new(parameter_definitions, &canonical)?;
     let materials = MaterialInventory::new(vec![], &canonical)?;
     let sources = DesignMetadata::new(host, &canonical)?;
@@ -161,6 +184,7 @@ fn root_with_host<H: DesignReferenceHost>(
         topology: IdentityLedger::new(),
     })?;
     Ok(DesignInputs::new(DesignInputsDefinition {
+        semantic_recipe,
         structure,
         parameters,
         materials,

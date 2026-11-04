@@ -468,6 +468,7 @@ mod input_composition {
         )
         .expect("actual distinct formula owner,not operation1000");
         DesignInputsDefinition {
+            semantic_recipe: sc_core::recipe::SemanticRecipe::empty(),
             references: DesignSourceReferences {
                 measurement_table: None,
                 ease_set: None,

@@ -107,6 +107,7 @@ fn garment(damaged: bool) -> TestResult<DesignGarment<EmptyHost>> {
         topology: ledger,
     })?;
     let inputs = DesignInputs::new(DesignInputsDefinition {
+        semantic_recipe: sc_core::recipe::SemanticRecipe::empty(),
         structure,
         parameters,
         materials,

@@ -106,6 +106,7 @@ fn owner() -> DesignGarment<CacheHost> {
     let sources = DesignMetadata::new(host, inputs.structure.inputs())
         .expect("actual complete source owner plus honestly charged cache");
     let inputs = DesignInputs::new(DesignInputsDefinition {
+        semantic_recipe: inputs.semantic_recipe.clone(),
         structure: inputs.structure.clone(),
         parameters: inputs.parameters.clone(),
         recipe: inputs.recipe.clone(),

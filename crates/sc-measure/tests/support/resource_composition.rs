@@ -147,6 +147,7 @@ fn fixture() -> DesignGarment<DesignSources> {
         "actual retained identity records"
     );
     let inputs = DesignInputs::new(DesignInputsDefinition {
+        semantic_recipe: sc_core::recipe::SemanticRecipe::empty(),
         structure: DesignStructure::new(DesignStructureDefinition {
             id: id(50000),
             revision: DesignRevision::from_counter(u128::MAX).successor(),
@@ -454,6 +455,7 @@ fn actual_empty_draft_keeps_its_retained_canonical_recipe_and_zero_other_dynamic
     )
     .expect("actual empty sewing graph");
     let inputs = DesignInputs::new(DesignInputsDefinition {
+        semantic_recipe: sc_core::recipe::SemanticRecipe::empty(),
         structure: DesignStructure::new(DesignStructureDefinition {
             id: id(50000),
             revision: DesignRevision::initial(),

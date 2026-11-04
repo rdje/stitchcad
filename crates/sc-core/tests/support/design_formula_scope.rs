@@ -115,6 +115,7 @@ pub(super) fn observed_definition(
     )
     .expect("actual source metadata");
     let root = DesignInputs::new(DesignInputsDefinition {
+        semantic_recipe: sc_core::recipe::SemanticRecipe::empty(),
         structure: supplied.structure,
         parameters: supplied.parameters,
         recipe: supplied.recipe,

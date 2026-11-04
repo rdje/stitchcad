@@ -111,6 +111,7 @@ pub(super) fn owner(copies: Rc<Cell<usize>>) -> (DesignGarment<CountedSources>, 
     )
     .expect("actual source host under a copy observer");
     let inputs = DesignInputs::new(DesignInputsDefinition {
+        semantic_recipe: inputs.semantic_recipe.clone(),
         structure: inputs.structure.clone(),
         parameters: inputs.parameters.clone(),
         recipe: inputs.recipe.clone(),

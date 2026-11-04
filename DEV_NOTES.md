@@ -3,12 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — original ordered semantic operation owner
+## _(2026-11-04 UTC)_ — atomic actual Root semantic cohort
 
-0877 moves exact Buttonhole/logical operation vector,checks complete N/N*N quotas before original cross-family/identical duplicate scans without workspace allocation. Original member/kind bindings retain recipe/member/index loans;referenced rules/outputs/inputs are not owners or mixed positions.
-Focused3 verify original buffers/order,exact3/9 and short bounds,duplicate witnesses,kind/missing causes,equal-data foreign owners and explicit empty scope. Exhaustive actual inventory/member walk gives6/24/0 and cumulative8/27/1;first fields and prior latch survive without cached constructor credit.
-Selected strict lint/fmt,API3,actual semantic book9 and guarded build pass0.
-Promotion declined:existing original ownership/complete bounds/exhaustive accounting contracts;book owns semantic owner API. Root/candidate/resource attachment then mixed integration are separate next leaves. Archive1049 retains whole0876,notion acceptance and0321;G1still6/18 In Progress.
+0878 requires original SemanticRecipe in DesignInputsDefinition;explicit empty() means exact0/0,never a missing-field default. Original getter/census and actual/prospective whole-input walks include it. Exhaustive command differences compare authored semantic content;reconstruction fixtures preserve actual cohorts.
+Root3/projection1 pass:actual8/32/3,original buffer/member loans,all-family collision positions,exact semantic refusal fields. Known evidence1→2 projection4/16/3→5/16/3 retains semantic fields and only replacement evidence;logical legacy5 and whole-model refusal1 stay green.
+Affected constructor targets compile0;strict selected lint/fmt,required-field API2,actual book10/build pass0. Broader caller compile was canceled130 before a verdict and narrowed;no broad suite or coupled proof claimed. Source book now says numeric Derived where scalar expression sources are meant.
+Promotion declined:existing original ownership/exhaustive resource/difference contracts;book owns required cohort/API. Mixed ordinals next;rule/policy/domain/source/graph binding deferred. Archive1050 retains whole0877,closure acceptance/0320;G1still6/18 In Progress.
+
+[Whole0877 semantic owner lesson](docs/history/stitchcad-devnotes-part1050.md) retains exact source bytes.
 
 [Whole0876 component origin lesson](docs/history/stitchcad-devnotes-part1049.md) retains exact source bytes.
 
@@ -62,14 +64,7 @@ Promotion declined:existing original ownership/complete bounds/exhaustive accoun
 
 [Whole0321 structural acceptance lesson](docs/history/stitchcad-devnotes-part1049.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — complete SizeSet structural requirements review
-
-0320 .4c.5 reviews identity/revision/system, labels/order/base, D70 axes, D228 signed breaks,
-canonical garment/MTM states and paths, immutable profile intent and excluded quantities. D234 older
-paragraphs still deferred completed inputs/intent; current main/member/MTM frontiers now align.
-Member12+axes5+break-coverage5+pin3 pass0; Rust unchangedfb53a44 composite31 proof retained. Book/
-rendered navigation/intent anchor0;470/471/292 whole44ec7d0 source/hash/public exact0. G1still5/18;
-.4c closes, combined .4d.2 next. Capacity goal moves unchanged to RETENTION-CAPACITY (old declaration471). Promotion: existing SizeSet decision; full CI remains pre-push/G1 integration.
+[Whole0320 SizeSet review lesson](docs/history/stitchcad-devnotes-part1050.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — sixteenth immutable history window
 

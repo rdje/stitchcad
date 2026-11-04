@@ -260,20 +260,25 @@ cargo test -p sc-measure --test design_sources_contract
 
 ## Owned core input composition
 
-DesignInputs owns structure,parameters,exact recipe,explicit FormulaSources,Materials and checked
+DesignInputs owns structure,parameters,exact scalar recipe,explicit FormulaSources,original
+SemanticRecipe,Materials and checked
 higher metadata host;only structure owns CanonicalInputs. formula_sources is a required construction
 field,with no implicit registry or synthesized body. Source-free drafts explicitly supply an empty
-registry and cannot contain an unresolved required Derived formula reference. Provided optional
+registry and cannot contain an unresolved required numeric Derived formula reference.
+semantic_recipe is also required;numeric-only roots explicitly supply SemanticRecipe::empty(),
+whose exact operation/comparison bounds are0/0. No omitted cohort is filled automatically.
+Provided optional
 refs/selected names need explicit checks below;sewing/garment currentness/readiness remain separate.
 
 Ownership visits structure (Design/canonical/Pieces/copies/operations),parameters,original formula
-sources,Materials,then higher metadata. Every formula source is a real separately owned entity,
+sources,semantic operations,Materials,then higher metadata. Every formula source and semantic
+operation is a real separately owned entity,
 including unused sources. Retired creators still own ids. DuplicateIdentity keeps both actual
 DesignInputsPositions in this schema order. Canonical formula/provenance/evidence/material fields
 remain references;they do not create another owner or permit two owned roles to share one id.
 
 After identities,current parameter targets precede the complete existing FormulaSourceInputs join:
-every actual canonical Derived state's sole formula id must select an owned expression. Dedicated
+every actual numeric canonical Derived state's sole formula id must select an owned expression. Dedicated
 Length order precedes general scalar order,including unused targets. Unknown,Known,Assumed and
 Preference do not require expression sources. The separate provenance/source field never substitutes
 for formula. Original family/position,target/id/kind and FormulaSourceInputRefusal survive in the
@@ -288,26 +293,18 @@ later checking/execution;current ownership supplies no evaluated result or round
 | API or variant | Meaning |
 | --- | --- |
 | `DesignInputs`, `DesignInputsDefinition` | Private implemented-component owner and exact construction input |
-| `DesignInputsPosition` | Structure,Parameter,FormulaSource,Material or higher Source original position |
+| `DesignInputsPosition` | Structure,Parameter,FormulaSource,SemanticOperation,Material or higher Source position |
 | `DesignInputsError` | DuplicateIdentity or original Parameters,FormulaSources,Materials,Sources,References cause |
 
 Shared getters/identities() expose owners; validate_current() repeats checks. id()/revision() retain
 structure identity/counter. Debug omits customer content; no context is stored:
 
-```rust
-use sc_core::{design::{DesignInputs, DesignInputsDefinition, DesignInputsError,
-    DesignMetadata, DesignReferenceHost, DesignSourceReferences, DesignParameters, DesignStructure},
-    ontology::MaterialInventory, recipe::{FormulaRecipeDocument, FormulaSources}};
-fn combine<H: DesignReferenceHost>(structure: DesignStructure, parameters: DesignParameters,
-    recipe: FormulaRecipeDocument, formula_sources: FormulaSources, materials: MaterialInventory,
-    host: H, references: DesignSourceReferences)
-    -> Result<DesignInputs<H>, DesignInputsError<H::Error>>
-{
-    let sources = DesignMetadata::new(host, structure.inputs())
-        .map_err(|issue| DesignInputsError::Sources(Box::new(issue)))?;
-    DesignInputs::new(DesignInputsDefinition {structure, parameters, recipe, formula_sources, materials, sources, references})
-}
-```
+The [compiled complete construction example](../annexes/semantic-recipes.md#attach-the-original-semantic-cohort-to-design)
+supplies the actual semantic cohort alongside every original component. Semantic IDs participate
+in the complete Root census, including unused operations. References within those declarations
+do not become additional owners. Actual rule/policy signatures,logical domain/dependency binding,
+original mixed-program order and physical execution remain later source/program work; current
+Root ownership does not invent those proofs or replace unresolved semantic data.
 
 ```bash
 cargo test -p sc-core --test design_structure_contract
