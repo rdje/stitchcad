@@ -361,7 +361,7 @@ impl Material {
     /// # Errors
     /// Returns canonical identity collision, then first property refusal, then nonpositive width.
     pub fn validate_current(&self, inputs: &CanonicalInputs) -> Result<(), MaterialError> {
-        if inputs.length(self.id()).is_some() || inputs.scalar(self.id()).is_some() {
+        if inputs.contains(self.id()) {
             return Err(MaterialError::IdentityCollision {
                 material: self.id(),
             });

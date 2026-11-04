@@ -71,15 +71,13 @@ that same domain use text10/comparisons6 and no selected-value field.
 its public `refusal` field. Domain/evidence duplication reports first and repeated authored
 indices;duplicate evidence also retains its original identity. An outside-domain selection keeps
 its original state label without emitting authored member text. Debug omits domain/selection text.
-Private record fields prevent mutation,and no scalar conversion exists. This is standalone
-structural admission:actual canonical inventory membership,Root/resource integration,Profile
-source binding,semantic operations,currentness and complete dependency proof remain separate.
+Private record fields prevent mutation,and no scalar conversion exists. Record construction is
+structural admission. Canonical attachment and complete content accounting are described below;
+Profile source binding,semantic operations,currentness and complete dependency proof remain separate.
 
 
-The standalone inventory and its exhaustive content producer come before actual Root attachment.
-Canonical Root attachment must include complete identity/metadata and resource-producer updates
-in the same change. An exposed Root with an uncharged logical cohort is never an intermediate
-accepted state. Numeric-only construction remains an explicitly empty logical scope throughout.
+Canonical Root attachment includes complete identity/metadata and resource-producer updates.
+Numeric-only construction remains an explicitly empty logical scope throughout.
 
 
 ## Standalone logical inventory
@@ -137,10 +135,62 @@ Diagnostics omit authored member text. Equal-data inventories can compare equal 
 bindings still hold different actual owner/member pointers. A later source controller must compare
 that actual inventory with the original Root/Profile owner; equality or matching IDs is insufficient.
 
-This inventory is not yet attached to canonical Design/Profile inputs. Its constructor limits
-supply no aggregate content credit to the later source gate. Exhaustive content accounting comes
-next, then atomic Root/identity/resource integration. Source facets, evidence truth, currentness,
-semantic recipes and complete programme acceptance retain their separate owners.
+The inventory can now be attached to canonical Design inputs as described below. Its constructor
+limits supply no aggregate content credit to the source gate. Profile attachment, source facets,
+evidence truth,currentness,semantic recipes and complete programme acceptance retain separate owners.
+
+## Attach to the original canonical Design
+
+`CanonicalInputs::with_logicals(lengths,scalars,logicals)` moves the original logical owner beside
+the original numeric vectors. It preserves the original logical declaration buffers, domains,
+states, provenance and order. `logicals()` borrows that exact inventory; `resolve` then loans the
+actual original member. A matching clone or equal ID supplies no replacement for these loans.
+
+Owned IDs must be disjoint across lengths, then scalars, then logical declarations in authored
+order. `CanonicalInputsError::DuplicateIdentity` retains both original `CanonicalInputPosition`
+witnesses, including Logical. `contains(id)` checks ownership across all three families; source,
+observation and operation references do not become owned declarations. The containing
+DesignStructure census adds logical IDs after scalars and before Pieces. DesignInputs and higher
+owners inherit that census, so a logical ID cannot also own a formula source, metadata, Piece or
+other contained entity. Parameter, Material, metadata-host and measurement-inventory checks also
+include logical ownership before their target/reference validation.
+
+For example, a length ID70 with logical IDs `[80,70,90]` refuses with first Length0 and duplicate
+Logical1. A containing Design ID70 likewise refuses at Design/Logical1. A formula source ID70
+beside that logical cohort refuses at Structure(Logical1)/FormulaSource0. These checks involve
+actual owned identities; a Derived operation reference901 may remain unresolved for later semantic
+source binding without being mistaken for a separately owned scalar expression.
+
+`CanonicalInputs::new(lengths,scalars)` remains an explicitly numeric-only constructor. Its logical
+inventory has zero declarations and explicit zero count/comparison allowances. It creates no
+Unknown state, domain or selection. Numeric Length/Scalar lookups never return logical records.
+`CanonicalInputTarget` remains a numeric target representation, and scalar named parameters cannot
+bind a logical declaration. Logical member binding uses `LogicalInputs::resolve` separately.
+The numeric `FormulaSourceInputs` projection checks numeric declarations and their expression
+sources; containing Design admission enforces the complete all-family ownership census first.
+Logical Derived operation references never enter that numeric source graph or become formula `let`s.
+
+```rust
+use sc_core::{name::MachineToken,ontology::EntityId,value::*};
+# fn main()->Result<(),Box<dyn std::error::Error>> {
+let record=LogicalInputDeclaration::new(LogicalInputDeclarationDefinition {
+    id:EntityId::from_bits(70),source:EntityId::from_bits(900),
+    kind:LogicalInputKind::PocketOpening,domain:vec![MachineToken::new("option_a")?],
+    state:LogicalInputState::Unknown {observation:EntityId::from_bits(901)},
+},LogicalInputLimits::new(1,0,8,2))?;
+let logicals=LogicalInputs::new(vec![record],LogicalInputInventoryLimits::new(1,1))?;
+let original_buffer=logicals.declarations().as_ptr();
+let inputs=CanonicalInputs::with_logicals(vec![],vec![],logicals)?;
+assert_eq!(inputs.logicals().declarations().as_ptr(),original_buffer);
+assert!(inputs.contains(EntityId::from_bits(70)));
+assert!(inputs.length(EntityId::from_bits(70)).is_none());
+# Ok(()) }
+```
+
+`with_length_declaration` preserves the complete logical cohort while replacing only an existing
+dedicated length in a detached candidate. Actual and prospective length-replacement accounting
+both walk the original logical fields through the same producer below. This attachment grants no
+logical mutation command, Profile binding, operation dependency proof or physical readiness.
 
 
 ## Account for actual logical content
@@ -202,7 +252,14 @@ entry allowance9 reaches Known evidence2 after8 entries. Later Choice/Preference
 domain refusals keep their actual original owner and field position. No aggregate cached charge
 can replace those original causes.
 
-This is standalone content accounting. Canonical Root/identity integration, Profile/source binding,
-currentness and semantic execution remain separate. Root attachment must wire this producer into
-every actual/prospective canonical traversal atomically;the standalone function grants no uncharged
-Root or whole-source acceptance.
+Canonical accounting now composes this same walk after all length/scalar content, for both actual
+Roots and prospective length replacements. A Root with one Known length/evidence2, one Known
+Boolean scalar/evidence1, and logical Unknown/Derived/Known over `small,large` with Known evidence2
+requires16 entries/35 text bytes in canonical content. With revision7, an empty recipe's retained
+canonical identity8 bytes and otherwise empty components, the Inputs Root requires16 entries,
+43 text bytes and3 counter bits.
+Text allowance34 refuses
+the final logical selection5 after30 domain bytes at owner90,index2; it retains that exact cause
+before later source queries. Constructor policy and shape metadata supply no content credit.
+Profile/source binding,currentness,semantic execution and complete programme acceptance remain
+separate. Standalone accounting itself grants no containing Root membership or whole-source proof.

@@ -21,7 +21,7 @@ fn location(
         index,
     }
 }
-/// Charge actual canonical inventories/evidence vectors, in authored length-then-scalar order.
+/// Charge actual canonical content in authored length, scalar, then finite logical order.
 /// Each inventory is precharged before its members, then each Known evidence vector by exact length.
 /// Shared evidence identities in different declarations still count as distinct logical vector entries.
 /// Exhaustive owner/state patterns and Copy payload constraints guard the present dynamic-field scope.
@@ -42,7 +42,7 @@ pub(super) fn charge_canonical_with_length(
     replacement: Option<&LengthDeclaration>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
-    let (lengths, scalars) = inputs.resource_collections();
+    let (lengths, scalars, logicals) = inputs.resource_collections();
     sink.charge_entries(lengths.len(), location("canonical.lengths", None, None))?;
     for (index, declaration) in lengths.iter().enumerate() {
         let declaration = replacement
@@ -89,7 +89,7 @@ pub(super) fn charge_canonical_with_length(
             ScalarInputState::Derived { formula } => fixed_value(formula),
         }
     }
-    Ok(())
+    super::charge_logical_input_resources(logicals, sink)
 }
 
 // Shared actual declaration snapshot accounting. The caller supplies its static original containing
@@ -121,4 +121,84 @@ pub(crate) fn charge_length_declaration_resources(
         LengthState::Derived { formula } => fixed_value(formula),
     }
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::{
+        design::{DesignResourceCount, DesignResourceLimits, DesignResourceMeter},
+        name::MachineToken,
+        value::*,
+    };
+    use core::num::{NonZeroU64, NonZeroUsize};
+    #[test]
+    fn prospective_length_charges_original_logical_content_after_only_replacement_evidence(
+    ) -> Result<(), Box<dyn std::error::Error>> {
+        let id = EntityId::from_bits;
+        let original = LengthDeclaration::new(LengthDeclarationDefinition {
+            id: id(10),
+            source: id(90),
+            state: LengthState::Unknown {
+                observation: id(91),
+            },
+        })?;
+        let replacement = LengthDeclaration::new(LengthDeclarationDefinition {
+            id: id(10),
+            source: id(90),
+            state: LengthState::Known {
+                value: sc_units::Length::ZERO,
+                evidence: vec![id(92), id(93)],
+            },
+        })?;
+        let logical = LogicalInputDeclaration::new(
+            LogicalInputDeclarationDefinition {
+                id: id(20),
+                source: id(94),
+                kind: LogicalInputKind::NotionSize,
+                domain: vec![MachineToken::new("small")?],
+                state: LogicalInputState::Choice {
+                    value: MachineToken::new("small")?,
+                    decision: id(95),
+                },
+            },
+            LogicalInputLimits::new(1, 0, 10, 2),
+        )?;
+        let inputs = CanonicalInputs::with_logicals(
+            vec![original],
+            vec![],
+            LogicalInputs::new(vec![logical], LogicalInputInventoryLimits::new(1, 1))?,
+        )?;
+        let limits = |text| DesignResourceLimits::new(NonZeroUsize::MAX, text, NonZeroU64::MAX);
+        let mut actual = DesignResourceMeter::new(limits(NonZeroUsize::MAX));
+        charge_canonical_input_resources(&inputs, &mut actual)?;
+        let actual = actual.finish()?;
+        assert_eq!((actual.collection_entries(), actual.text_bytes()), (3, 10));
+        let mut candidate = DesignResourceMeter::new(limits(NonZeroUsize::MAX));
+        charge_canonical_with_length(&inputs, Some(&replacement), &mut candidate)?;
+        let candidate = candidate.finish()?;
+        assert_eq!(
+            (candidate.collection_entries(), candidate.text_bytes()),
+            (5, 10)
+        );
+        let mut short =
+            DesignResourceMeter::new(limits(NonZeroUsize::new(9).ok_or("positive text")?));
+        let expected = DesignResourceLimitError::Count {
+            unit: DesignResourceCount::TextBytes,
+            maximum: 9,
+            consumed: 5,
+            requested: 5,
+            location: location("canonical.logicals.value", Some(0), Some(id(20))),
+        };
+        assert_eq!(
+            charge_canonical_with_length(&inputs, Some(&replacement), &mut short),
+            Err(expected)
+        );
+        assert_eq!(short.finish(), Err(expected));
+        assert!(matches!(
+            inputs.length(id(10)).map(LengthDeclaration::state),
+            Some(LengthState::Unknown { .. })
+        ));
+        Ok(())
+    }
 }

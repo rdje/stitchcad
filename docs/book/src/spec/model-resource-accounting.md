@@ -58,7 +58,12 @@ let actual_entries = canonical_component.collection_entries();
 ```
 
 The order is exact: charge the length inventory's full length, visit lengths in authored order and
-charge each Known evidence vector, then do the scalar inventory and its Known evidence vectors.
+charge each Known evidence vector, then do the scalar inventory and its Known evidence vectors,
+then the complete logical inventory/domain/selection/evidence walk described in
+[logical content accounting](../annexes/logical-inputs.md#account-for-actual-logical-content).
+Actual Roots and prospective length replacements share this order; every original logical field
+counts even when no scalar recipe selects it. Numeric-only constructors add an explicit empty
+logical inventory, without manufacturing state or changing the numeric example below.
 Static fields are canonical.lengths, canonical.lengths.evidence, canonical.scalars and
 canonical.scalars.evidence in Structure scope. Inventory charges have no index; evidence charges
 retain the actual declaration owner identity and original zero-based declaration index. Reused evidence identities in different declarations

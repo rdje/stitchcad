@@ -1,5 +1,5 @@
 //! Owned canonical declarations; metadata keeps borrowing these records rather than copying state.
-use super::{LengthDeclaration, ScalarInputDeclaration, ScalarInputKind};
+use super::{LengthDeclaration, LogicalInputs, ScalarInputDeclaration, ScalarInputKind};
 use crate::ontology::EntityId;
 use core::fmt;
 use std::collections::BTreeMap;
@@ -15,6 +15,11 @@ pub enum CanonicalInputPosition {
     /// General scalar declaration, even when its declared kind is Length.
     Scalar {
         /// Zero-based index in the authored scalar vector.
+        index: usize,
+    },
+    /// Finite logical declaration in its original inventory order.
+    Logical {
+        /// Zero-based declaration position.
         index: usize,
     },
 }
@@ -56,7 +61,7 @@ impl fmt::Display for CanonicalInputsError {
 }
 impl std::error::Error for CanonicalInputsError {}
 
-/// An immutable owner of dedicated length and general-scalar declarations, in authored family order.
+/// An immutable owner of dedicated length, general-scalar and finite logical declarations.
 ///
 /// This is a component for canonical Design state, not a complete Design, namespace or evidence
 /// registry. Referenced source/evidence/formula identities are retained without claiming their
@@ -71,17 +76,19 @@ impl std::error::Error for CanonicalInputsError {}
 pub struct CanonicalInputs {
     lengths: Vec<LengthDeclaration>,
     scalars: Vec<ScalarInputDeclaration>,
+    logicals: LogicalInputs,
 }
 impl fmt::Debug for CanonicalInputs {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.debug_struct("CanonicalInputs")
             .field("length_count", &self.lengths.len())
             .field("scalar_count", &self.scalars.len())
+            .field("logical_count", &self.logicals.declarations().len())
             .finish_non_exhaustive()
     }
 }
 impl CanonicalInputs {
-    /// Own exact validated records without conversion, sorting, numeric reads or inferred sources.
+    /// Own an explicitly numeric-only cohort, with an empty logical inventory.
     ///
     /// Empty drafts are legal. Uniqueness covers owned ids across both vectors; referenced ids are
     /// not mistaken for declarations owned here. Lengths are checked first, then general scalars,
@@ -93,6 +100,21 @@ impl CanonicalInputs {
         lengths: Vec<LengthDeclaration>,
         scalars: Vec<ScalarInputDeclaration>,
     ) -> Result<Self, CanonicalInputsError> {
+        Self::with_logicals(lengths, scalars, LogicalInputs::empty())
+    }
+
+    /// Own the complete explicit three-family cohort without conversion, sorting or value reads.
+    /// Original vectors and the actual logical owner move unchanged. Identity uniqueness covers
+    /// lengths, then scalars, then logical declarations in authored order. Referenced provenance
+    /// and semantic operation IDs remain references. Logical records never become scalar operands.
+    /// This checks composition, not aggregate resources, source truth or semantic readiness.
+    /// # Errors
+    /// Returns the first cross-family or numeric-family duplicate with original positions.
+    pub fn with_logicals(
+        lengths: Vec<LengthDeclaration>,
+        scalars: Vec<ScalarInputDeclaration>,
+        logicals: LogicalInputs,
+    ) -> Result<Self, CanonicalInputsError> {
         let mut seen = BTreeMap::new();
         let positions = lengths
             .iter()
@@ -102,7 +124,16 @@ impl CanonicalInputs {
             })
             .chain(scalars.iter().enumerate().map(|(index, declaration)| {
                 (declaration.id(), CanonicalInputPosition::Scalar { index })
-            }));
+            }))
+            .chain(
+                logicals
+                    .declarations()
+                    .iter()
+                    .enumerate()
+                    .map(|(index, declaration)| {
+                        (declaration.id(), CanonicalInputPosition::Logical { index })
+                    }),
+            );
         for (identity, position) in positions {
             if let Some(first) = seen.insert(identity, position) {
                 return Err(CanonicalInputsError::DuplicateIdentity {
@@ -112,7 +143,11 @@ impl CanonicalInputs {
                 });
             }
         }
-        Ok(Self { lengths, scalars })
+        Ok(Self {
+            lengths,
+            scalars,
+            logicals,
+        })
     }
 
     /// Return a detached copy with one existing dedicated length replaced at its original position.
@@ -140,9 +175,19 @@ impl CanonicalInputs {
 
     // Exhaustive borrowed view for Design resource accounting. New owned fields must extend the
     // accounting contract rather than silently disappearing behind the existing public getters.
-    pub(crate) fn resource_collections(&self) -> (&[LengthDeclaration], &[ScalarInputDeclaration]) {
-        let Self { lengths, scalars } = self;
-        (lengths, scalars)
+    pub(crate) fn resource_collections(
+        &self,
+    ) -> (
+        &[LengthDeclaration],
+        &[ScalarInputDeclaration],
+        &LogicalInputs,
+    ) {
+        let Self {
+            lengths,
+            scalars,
+            logicals,
+        } = self;
+        (lengths, scalars, logicals)
     }
 
     /// Exact dedicated length declarations in authored order.
@@ -154,6 +199,18 @@ impl CanonicalInputs {
     #[must_use]
     pub fn scalars(&self) -> &[ScalarInputDeclaration] {
         &self.scalars
+    }
+    /// Actual original finite logical owner, kept separate from numeric target representations.
+    #[must_use]
+    pub const fn logicals(&self) -> &LogicalInputs {
+        &self.logicals
+    }
+    /// Whether any actual declaration family owns this identity; provenance references do not count.
+    #[must_use]
+    pub fn contains(&self, identity: EntityId) -> bool {
+        self.length(identity).is_some()
+            || self.scalar(identity).is_some()
+            || self.logicals.declaration(identity).is_some()
     }
     /// Borrow the actual dedicated length record; a general Length-kind scalar does not match.
     #[must_use]
@@ -171,7 +228,8 @@ impl CanonicalInputs {
     }
 }
 
-/// Pinned canonical target representation; a general Length scalar never becomes a dedicated length.
+/// Pinned numeric target representation; a general Length scalar never becomes a dedicated length.
+/// Finite logical members bind separately through [`LogicalInputs::resolve`], never as formula kinds.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CanonicalInputTarget {
     /// Existing dedicated length declaration.

@@ -905,38 +905,34 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0869 actual logical model/recipe source contract;[whole scope/proofs](../history/stitchcad-devnotes-part1042.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model`
-  Status: `in_progress`
+  Status: `done`
   Goal:immutable canonical logical declarations with actual authored domain/state/provenance,
   explicit complete bounds and exhaustive field accounting;Unknown/Derived have no fallback.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.declarations`
   Status: `done`
   Goal:0870 immutable finite logical declarations;[whole scope/proofs](../history/stitchcad-devnotes-part1043.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory`
-  Status: `in_progress`
+  Status: `done`
   Goal:actual logical inventory membership and disjoint identities,then atomic original Root/resource integration;numeric-only scopes stay explicitly empty,never defaulted logical state.
   Children: `.component` (standalone original owner), `.attach` (actual Root plus complete producers).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.resources`
   Status: `done`
-  Goal:0872 exhaustive standalone logical record/inventory content;[public reference](../book/src/annexes/logical-inputs.md#account-for-actual-logical-content).
-  - [x] REPRODUCE / ISSUE:0871 record/inventory bounds admit constructor work only;existing numeric canonical producer cannot account for an unattached logical cohort. Actual Root attachment requires this complete producer first,without cached-shape credit.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test logical_input_resource_contract`:3 pass,rc=0;six states own separate domain/selection/evidence fields,while constructor proof metadata is fixed. Exact raw field locations distinguish complete original traversal from a single cached aggregate.
-  - [x] FIX: exhaustive private owned views,definition/state patterns and fixed Copy guards;precharge complete inventory/domain/evidence vectors,charge every original domain and
-    selected token in the same caller sink. Standalone declaration keeps no invented inventory index;original owner/field/member position stays visible. No
-    lookup,currentness,normalization,clone or value computation.
-  - [x] ADDRESSED: same focused command3 pass,rc=0;all six states/both roles count20 entries/80 text/0 counter bits,prior2/3/1 remains22/83/1,direct Known4/15/0. Eleven exact
-    first-field quota refusals plus direct-record indexNone cover inventory/domain/member/value/evidence and later Choice/Preference/Derived positions. Empty and nonempty producers
-    retain previously latched causes.
-  - [x] NO REGRESSION: selected strict clippy/fmt pass0;`cargo test -p sc-core --doc design::resource::logical`:1 pass,rc=0;`cargo test -p sc-core --doc value::logical_examples`:3 pass,rc=0,actual maintained model/inventory/accounting examples. Numeric canonical/root producers remain unchanged until atomic attach;no whole-Root or coupled verification claim.
-  - [x] LOCKSTEP: detailed field/order/count examples in logical reference;guarded book build0. README/LIVE reviewed,G1still6/18 In Progress;MEM/index/DEV/ledger align. Actual canonical Root/identity/resource attachment is next;source/currentness/semantic/coupled proof remains owned.
-  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1044.md`:4 exact Git spans,rc=0;whole0871 and0326 retained before live reduction.
-    Public archive read exact0;existing task/journal bounds preserved without retained-window or ceiling changes.
-  - [x] PROMOTION: promotion: declined (existing exhaustive actual-field/first-refusal/cumulative-meter contracts;book owns logical producer API). Focused3/strict/fmt/API1/book3/build pass0. No constructor allowance supplies content credit or physical/source approval. Commit:STITCHCAD-G1-0872.
+  Goal:0872 exhaustive original logical content;[whole scope/proofs](../history/stitchcad-devnotes-part1045.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory.component`
   Status: `done`
   Goal:0871 original logical membership/kind loans;[whole scope/proofs](../history/stitchcad-devnotes-part1044.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory.attach`
-  Status: `pending`
+  Status: `done`
   Goal:atomically integrate original logical cohort with canonical Root identity/metadata joins and exhaustive resource producers,after standalone owner/accounting. Preserve numeric-only constructor scopes and native formula semantics;no temporarily uncharged Root field.
+  - [x] REPRODUCE / ISSUE:0872 logical owner/accounting was standalone;CanonicalInputs,structural census and metadata guards covered numeric families only. Attaching a logical Root field alone would omit owned identities/content.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract logical_root`:5 pass,rc=0;actual owner/resource views and metadata predicates needed all-family membership while numeric Derived source projection must stay separate from semantic operation references.
+  - [x] FIX:explicit with_logicals moves original owner;new remains empty0/0. Logical positions and contains extend canonical,structural/Design,parameter,Material,host and measurement censuses. Actual/prospective producers compose complete logical fields atomically.
+  - [x] ADDRESSED: `cargo test -p sc-core --test drafting_context_binding_contract logical_root`:5 pass,rc=0;original buffer/member loans,first collisions,state preservation,numeric exclusion,source-ID collision and exact Root refusal.
+    `cargo test -p sc-core --lib prospective_length_charges_original_logical_content`:1 pass0;original logical text retained with replacement-only evidence. Canonical16/35/0 becomes Root16/43/3 including empty-recipe identity8;short text keeps original owner90/index2.
+  - [x] NO REGRESSION: `cargo test -p sc-core --test canonical_inputs_contract`:9 pass,rc=0;selected metadata/material/measurement guards1 each pass0. Core/measure strict lint/fmt0;unchecked test index fixed with checked lookup. Book logical_examples4/build0;coupled .5f.2.verify deferred.
+  - [x] LOCKSTEP:logical reference documents original attachment,censuses,numeric projection and actual/prospective accounting with compiled example. Canonical/resource/ontology chapters align;README reviewed unchanged,LIVE product note updated,G1still6/18 In Progress.
+  - [x] CONTINUITY:1045 seals whole0872 and0325;transition_receipts.py reports4 exact Git spans0,public reader byte-exact0. No retained-window or ceiling changes. MEM/index/DEV/ledger point next at typed semantic operations.
+  - [x] PROMOTION: promotion: declined (existing original ownership,typed numeric projection and exhaustive cumulative resource contracts;book owns constructor/API). Focused checks distinguish implemented attachment from pending Profile/source/operation and coupled acceptance. Commit:STITCHCAD-G1-0873.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations`
   Status: `pending`
   Goal:actual typed semantic derivation/component-recipe sources under original ownership;

@@ -129,7 +129,7 @@ pub struct DesignStructureDefinition {
     pub id: EntityId,
     /// Exact revision represented by this state; constructing it does not commit a command.
     pub revision: DesignRevision,
-    /// Original dedicated-length and general-scalar declarations.
+    /// Original dedicated-length, general-scalar and finite logical declarations.
     pub inputs: CanonicalInputs,
     /// Complete pair-consistent pattern Piece inventory.
     pub pieces: PieceInventory,
@@ -151,6 +151,11 @@ pub enum DesignStructurePosition {
     },
     /// General-scalar declaration in authored order.
     Scalar {
+        /// Zero-based declaration position.
+        index: usize,
+    },
+    /// Finite logical declaration in authored inventory order.
+    Logical {
         /// Zero-based declaration position.
         index: usize,
     },
@@ -236,7 +241,7 @@ impl DesignStructure {
     }
     /// Own the exact components after identity and actual Piece/copy consistency checks.
     ///
-    /// The identity census runs Design, lengths, scalars, Pieces, copies, then journal operations,
+    /// The identity census runs Design, lengths, scalars, logicals, Pieces, copies, then journal operations,
     /// each in original order. Edge creators, source/evidence ids and registration owners are
     /// references, so their legitimate repeated uses are not treated as duplicate declarations.
     /// An explicitly empty structural draft is legal. No Piece is reconstructed against the current
@@ -288,6 +293,14 @@ impl DesignStructure {
                     .iter()
                     .enumerate()
                     .map(|(index, value)| (value.id(), DesignStructurePosition::Scalar { index })),
+            )
+            .chain(
+                self.inputs()
+                    .logicals()
+                    .declarations()
+                    .iter()
+                    .enumerate()
+                    .map(|(index, value)| (value.id(), DesignStructurePosition::Logical { index })),
             )
             .chain(
                 self.pieces()

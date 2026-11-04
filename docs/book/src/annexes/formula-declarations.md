@@ -681,9 +681,10 @@ whole-programme acceptance,allocator faults and coupled verification retain thei
 
 This is the design for `G1-SLICE.5f.2.dependencies.semantic.logical.sources`;the logical models,
 semantic operation forms and source facets below retain their individual implementation stages.
-Standalone finite logical declarations and inventories are [implemented separately](logical-inputs.md);canonical inventory attachment,
-semantic operations and source facets remain **planned**. Garment source-content admission does
-not implement those stages. The existing numeric canonical owner,scalar formula statements and
+Finite logical declarations,inventories and canonical Design attachment are
+[implemented](logical-inputs.md); semantic operations and source facets remain **planned**.
+Garment source-content admission does not implement those remaining stages.
+The existing numeric formula targets,scalar formula statements and
 mixed scalar/native programme cannot supply them merely because an identifier matches.
 The tracked dependency-plan probe reports those actual producer enum variants before building
 its current-library public-owner controls. This separates the source interface that exists from
@@ -696,7 +697,7 @@ The implementation sequence is:
    supplies no list of physical Pocket opening types,hardware sizes or selected defaults. A finite
    logical selection can name a stable member without interpreting a vendor code as dimensions.
    Unsupported representations retain an explicit source refusal rather than a scalar substitute.
-2. Integrate those records into actual canonical ownership and identity/resource traversal. Design
+2. **Canonical Design attachment implemented:** integrate those records into actual canonical ownership and identity/resource traversal. Design
    declarations must resolve to their original canonical object. Equal IDs on another inventory
    cannot provide a substitute. Existing numeric-only construction remains an explicitly empty
    logical cohort;it never manufactures an Unknown or default declaration. Logical declarations
@@ -751,5 +752,7 @@ implemented finite domains,authored states,constructor bounds and remaining inte
 ## Standalone logical inventory
 
 The [standalone logical inventory reference](logical-inputs.md#standalone-logical-inventory)
-documents original membership/kind loans and complete constructor limits. Root attachment and
-source-content admission retain their separate stages.
+documents original membership/kind loans and complete constructor limits. The
+[canonical Design attachment](logical-inputs.md#attach-to-the-original-canonical-design) now includes
+all-family identity checks and actual/prospective resource walks. Profile/source binding and
+semantic operation acceptance retain their separate stages.

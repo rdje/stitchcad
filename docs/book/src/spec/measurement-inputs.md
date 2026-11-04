@@ -91,11 +91,14 @@ copies or a reverse crate dependency. Metadata/reference APIs exist; executed ev
 
 ## Owned canonical inputs
 
-`CanonicalInputs::new(lengths, scalars)` owns both exact declaration families in their authored order.
+`CanonicalInputs::new(lengths, scalars)` owns both exact numeric declaration families in their authored order,
+with an explicitly empty logical cohort. `with_logicals(lengths,scalars,logicals)` additionally owns
+the original finite logical inventory; see [logical membership](../annexes/logical-inputs.md#attach-to-the-original-canonical-design).
 Owned ids must be unique across both vectors; even identical duplicates refuse with
 `CanonicalInputPosition` witnesses for first/repeated family and index. Lengths are checked first.
 Source/evidence/formula references stay unchanged and are not counted as declarations owned here.
-Empty vectors are legal; no records or numeric defaults are manufactured.
+The explicit three-family constructor checks logical owned IDs after the scalar vector.
+Empty vectors are legal; no records or numeric/logical defaults are manufactured.
 
 `lengths()`/`scalars()` and `length(id)`/`scalar(id)` borrow canonical objects. A general Length-kind
 scalar stays general: querying its id with length(id) returns None, without converting it. For example,
@@ -106,7 +109,7 @@ This component grants no metadata binding, current Design revision, evidence tru
 replaced at its original position. The replacement's stable declaration id selects the target; it
 cannot append or rename a record. Exact source identity and authored state/provenance survive,
 including Unknown observation and Derived formula references without numeric fallbacks. Other
-lengths and every general scalar remain identical; the original owner remains unchanged:
+lengths,every general scalar and the complete logical inventory remain identical; the original owner remains unchanged:
 
 ```rust
 let candidate_inputs = inputs.with_length_declaration(replacement.clone())?;
@@ -164,7 +167,7 @@ rebind. Tokens prove no source truth, value or display text.
 | `LengthDeclarationDefinition` | Editable stable id, source record and canonical length/state input |
 | `LengthDeclaration` | Immutable structurally validated input |
 | `LengthDeclarationError` | Missing/duplicate known-state evidence inventory |
-| `CanonicalInputs` | Immutable owned dedicated-length/general-scalar records |
+| `CanonicalInputs` | Immutable dedicated-length,general-scalar and finite logical records |
 | `CanonicalInputsError` | Repeated owned identity or absent dedicated replacement target |
 | `CanonicalInputPosition` | Dedicated-length or general-scalar family and index |
 | `DesignParameters` | Immutable ordered named Design parameter registry |

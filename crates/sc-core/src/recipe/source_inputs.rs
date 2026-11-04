@@ -1,4 +1,4 @@
-//! Complete original canonical Derived references joined to actual source owners, without values.
+//! Complete original numeric Derived references joined to actual source owners, without values.
 use super::{FormulaSource, FormulaSources};
 use crate::{
     ontology::EntityId,
@@ -184,8 +184,8 @@ impl<'a> FormulaDerivedInput<'a> {
     }
 }
 
-/// Complete allocation-free input/source admission over the two supplied immutable owners.
-/// Source ids are disjoint from canonical declaration ids and every Derived source exists.
+/// Complete allocation-free numeric input/source admission over the two supplied immutable owners.
+/// Source ids are disjoint from numeric declaration ids and every numeric Derived source exists.
 /// This is not a global Design, namespace, result-kind, graph, currentness or value certificate.
 /// It neither resolves quantity `Formula(id)` parameters nor adds a numeric binding boundary.
 /// ```compile_fail
@@ -213,10 +213,13 @@ pub struct FormulaSourceInputs<'a> {
     sources: &'a FormulaSources,
 }
 impl<'a> FormulaSourceInputs<'a> {
-    /// Check the complete identity census first, then every Derived reference, in length/scalar
+    /// Check the complete numeric identity census first, then every numeric Derived reference, in length/scalar
     /// authored order. Unused targets and unused source entities participate. Provenance ids are
     /// references, not newly owned declarations. Non-Derived states require no formula source.
     /// There is no allocation, value read, state clone, normalization, name inference or fallback.
+    /// Finite logical declarations are outside this numeric projection. Their semantic operation
+    /// references are not formula sources; the containing Design enforces all-family identity
+    /// disjointness against its complete source registry before constructing this numeric join.
     ///
     /// ```
     /// use sc_core::{ontology::EntityId, recipe::*, value::*};

@@ -253,6 +253,38 @@ fn all_owned_measurements_require_actual_targets_even_when_no_table_selects_them
 }
 
 #[test]
+fn logical_canonical_ids_cannot_be_reowned_as_measurement_metadata() {
+    use sc_core::value::*;
+    let numeric = unknown();
+    let logical = LogicalInputDeclaration::new(
+        LogicalInputDeclarationDefinition {
+            id: id(10),
+            source: id(310),
+            kind: LogicalInputKind::PocketOpening,
+            domain: vec![token("option_a")],
+            state: LogicalInputState::Derived { operation: id(311) },
+        },
+        LogicalInputLimits::new(1, 0, 8, 2),
+    )
+    .expect("logical declaration");
+    let canonical = CanonicalInputs::with_logicals(
+        numeric.lengths().to_vec(),
+        numeric.scalars().to_vec(),
+        LogicalInputs::new(vec![logical], LogicalInputInventoryLimits::new(1, 1))
+            .expect("logical owner"),
+    )
+    .expect("cross-family ownership");
+    assert_eq!(
+        Inventory::new(fixture(&canonical), &canonical),
+        Err(Error::DuplicateIdentity {
+            identity: id(10),
+            first: Position::Logical { index: 0 },
+            duplicate: Position::Landmark { index: 0 },
+        })
+    );
+}
+
+#[test]
 fn same_id_landmark_or_procedure_domain_changes_use_original_current_validation() {
     let canonical = unknown();
     let mut definition = fixture(&canonical);

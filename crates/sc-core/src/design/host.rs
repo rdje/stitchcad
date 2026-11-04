@@ -323,7 +323,7 @@ impl<H: DesignMetadataHost> DesignMetadata<H> {
                     duplicate: *entity,
                 });
             }
-            if canonical.length(entity.id).is_some() || canonical.scalar(entity.id).is_some() {
+            if canonical.contains(entity.id) {
                 return Err(DesignMetadataError::CanonicalIdentityCollision { entity: *entity });
             }
         }

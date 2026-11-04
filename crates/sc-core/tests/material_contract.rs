@@ -300,6 +300,7 @@ fn present_widths_are_positive_for_every_authored_value_state_and_both_represent
 
 #[test]
 fn metadata_identity_disjointness_is_rechecked_after_canonical_replacement() {
+    use sc_core::{name::MachineToken, value::*};
     let canonical = unknown();
     let mut definition = definition();
     definition.id = id(1);
@@ -319,6 +320,33 @@ fn metadata_identity_disjointness_is_rechecked_after_canonical_replacement() {
     let current = CanonicalInputs::new(canonical.lengths().to_vec(), scalars).unwrap();
     assert_eq!(
         material.validate_current(&current),
+        Err(Error::IdentityCollision { material: id(100) })
+    );
+    let logical = LogicalInputDeclaration::new(
+        LogicalInputDeclarationDefinition {
+            id: id(100),
+            source: id(90),
+            kind: LogicalInputKind::NotionSize,
+            domain: vec![MachineToken::new("small").expect("member")],
+            state: LogicalInputState::Unknown {
+                observation: id(91),
+            },
+        },
+        LogicalInputLimits::new(1, 0, 5, 2),
+    )
+    .expect("explicit logical");
+    let current = CanonicalInputs::with_logicals(
+        canonical.lengths().to_vec(),
+        canonical.scalars().to_vec(),
+        LogicalInputs::new(vec![logical], LogicalInputInventoryLimits::new(1, 1)).expect("owner"),
+    )
+    .expect("disjoint families");
+    assert_eq!(
+        material.validate_current(&current),
+        Err(Error::IdentityCollision { material: id(100) })
+    );
+    assert_eq!(
+        Material::new(self::definition(), &current),
         Err(Error::IdentityCollision { material: id(100) })
     );
 }

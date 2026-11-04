@@ -27,7 +27,8 @@ fn at(
 /// members are separately owned text; repeated evidence in separate records is not deduplicated.
 /// Fixed constructor allowances/shapes are checked as Copy payloads,never used as demand credit.
 /// No validation,member lookup,cloning,normalization,source,currentness or numeric query occurs.
-/// This is not actual Root attachment,whole-source admission,allocator capacity or runtime proof.
+/// Canonical Design accounting composes this same walk. Standalone use supplies no containing
+/// Root membership,whole-source admission,allocator capacity or runtime proof.
 ///
 /// ```
 /// use sc_core::{design::*,value::LogicalInputs};

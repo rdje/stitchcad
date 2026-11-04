@@ -1,4 +1,4 @@
-//! Standalone original logical ownership; aggregate source accounting and Root attachment follow.
+//! Original logical ownership, usable standalone or inside canonical Design inputs.
 use super::{LogicalInputDeclaration, LogicalInputKind};
 use crate::ontology::EntityId;
 use core::fmt;
@@ -97,7 +97,7 @@ impl fmt::Display for LogicalInputInventoryError {
 impl std::error::Error for LogicalInputInventoryError {}
 
 /// Immutable standalone original logical owner. Existing records keep their original domains,
-/// state/provenance and authored order. This does not attach them to a Design/Profile Root, admit
+/// state/provenance and authored order. Construction alone does not attach them to a Design/Profile Root, admit
 /// aggregate held content, validate sources/evidence or supply runtime/physical readiness.
 /// ```compile_fail,E0616
 /// fn alter(inputs:&mut sc_core::value::LogicalInputs) {inputs.declarations.clear();}
@@ -195,6 +195,18 @@ impl<'a> LogicalInputBinding<'a> {
     }
 }
 impl LogicalInputs {
+    // The numeric-only canonical constructor supplies no logical data or implicit declaration.
+    // This is the exact zero-population proof, not a default policy for nonempty inventories.
+    pub(crate) const fn empty() -> Self {
+        Self {
+            declarations: Vec::new(),
+            limits: LogicalInputInventoryLimits::new(0, 0),
+            shape: LogicalInputInventoryShape {
+                declarations: 0,
+                inspections: 0,
+            },
+        }
+    }
     // Preserve the complete actual owned vector and fixed proof fields without lookup or cloning.
     pub(crate) fn resource_parts(
         &self,

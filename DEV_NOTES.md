@@ -3,10 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — actual standalone logical content accounting
+## _(2026-11-04 UTC)_ — actual canonical logical attachment
 
-0872 exhaustive owner/state views charge original inventory/domain/member/selection/evidence fields in one sink. Constructor policies/shapes are fixed,never demand credit. Direct snapshots invent no inventory index;empty scopes preserve prior sink failures. No source/value/currentness queries.
-Focused3 count20/80/0,prior22/83/1,direct4/15/0 plus11 exact first-field refusals;strict lint/fmt,API1/book3/build pass0. Promotion declined:existing exhaustive/cumulative contracts;G1still6/18. Actual Root identity/resource attachment next,no Root or coupled proof yet.
+0873 moves the original logical cohort beside numeric declarations;all-family ownership enters structural/Design and standalone metadata checks. Numeric target/Derived graph stays separate. Actual/prospective resource paths compose the complete logical walk atomically;no cached policy credit.
+Root5/projection1/legacy9 and metadata/material/measurement guards pass focused checks. Canonical fixture16/35/0 becomes Root16/43/3:empty recipe retains8 canonical bytes. Exact logical selection refusal precedes source queries;typed semantic operations/ports and coupled verification remain pending.
+Promotion declined:existing ownership,source-bound numeric projection and exhaustive-resource contracts;book owns the new constructor/examples. G1still6/18 In Progress. Archive1045 retains whole0872/0325;no retained-window changes.
+
+[Whole0872 logical content lesson](docs/history/stitchcad-devnotes-part1045.md) retains exact source bytes.
 
 [Whole0871 logical inventory lesson](docs/history/stitchcad-devnotes-part1044.md) retains exact source bytes.
 
@@ -40,13 +43,7 @@ Focused3 count20/80/0,prior22/83/1,direct4/15/0 plus11 exact first-field refusal
 
 [Whole0326 graded-DXF lesson](docs/history/stitchcad-devnotes-part1044.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — exact DXF and uncertainty requests
-
-0325 .6.2.2.c.2.4.1 adds named single-instance DXF/profile-result inputs and identical artifact closure payload.
-Generate versus inspect metadata stays distinct; neither performs lookup/traversal/writes or grants authority.
-Native artifact2/query2/catalog2 pass0; initial test lint5 fixed with checked columns/matches, final strict lint0.
-Fmt/book/publication76-89 pass0; D237 stale inverse intro/pilot status corrected, full prior chapter retained.
-479/297/141 whole8827a23 Git/hash/public exact0. Promotion declined: existing contracts; G1still6/18, graded next.
+[Whole0325 exact-DXF lesson](docs/history/stitchcad-devnotes-part1045.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — selected profile resolution request
 

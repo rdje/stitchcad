@@ -37,7 +37,7 @@ pub enum DesignParameterError {
         /// Repeated occurrence.
         duplicate: usize,
     },
-    /// Parameter metadata aliases a canonical length or general-scalar declaration identity.
+    /// Parameter metadata aliases a canonical declaration identity in any family.
     CanonicalIdentityCollision {
         /// Aliased identity.
         identity: EntityId,
@@ -226,7 +226,7 @@ impl DesignParameters {
                     duplicate: index,
                 });
             }
-            if inputs.length(definition.id).is_some() || inputs.scalar(definition.id).is_some() {
+            if inputs.contains(definition.id) {
                 return Err(DesignParameterError::CanonicalIdentityCollision {
                     identity: definition.id,
                     index,
@@ -261,7 +261,7 @@ impl DesignParameters {
     /// Canonical identity disjointness is checked again after same-id canonical inventory replacement.
     pub fn validate_current(&self, inputs: &CanonicalInputs) -> Result<(), DesignParameterError> {
         for (index, parameter) in self.parameters.iter().enumerate() {
-            if inputs.length(parameter.id()).is_some() || inputs.scalar(parameter.id()).is_some() {
+            if inputs.contains(parameter.id()) {
                 return Err(DesignParameterError::CanonicalIdentityCollision {
                     identity: parameter.id(),
                     index,

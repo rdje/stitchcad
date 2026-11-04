@@ -3,11 +3,11 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0872 — exhaustive logical content producer
+## STITCHCAD-G1-0873 — actual canonical logical membership
 
-Charge every actual standalone logical domain,selected token and evidence field without cached constructor credit or source/value queries. Keep original field/owner/index and cumulative first refusals,including explicit empty scope.
+Attach the original logical cohort to canonical Design ownership and all-family identity/metadata checks. Keep numeric targets distinct and compose complete logical content in actual/prospective resource walks. Original storage/state and exact first refusals survive.
 
-Focused3,strict selected lint/fmt,API1/book3 and build pass0. G1still6/18 In Progress;atomic canonical Root/identity/resource attachment is next. No uncharged Root field or whole-source acceptance introduced.
+Root5/projection1/legacy9 plus selected metadata/material/measurement guards pass. Book records canonical16/35/0 and Root16/43/3 with retained empty-recipe identity. G1still6/18 In Progress;typed semantic operation ownership is next,ports/coupled verification pending.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -21,6 +21,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0872 logical content unit](docs/history/stitchcad-devnotes-part1045.md) retains exact task,lesson and ledger source bytes.
 
 [Whole0871 logical inventory unit](docs/history/stitchcad-devnotes-part1044.md) retains exact task,lesson and ledger source bytes.
 

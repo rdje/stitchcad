@@ -33,6 +33,11 @@ pub enum MeasurementInventoryPosition {
         /// Zero-based authored position.
         index: usize,
     },
+    /// Finite logical canonical declaration, used for identity disjointness only.
+    Logical {
+        /// Zero-based authored position.
+        index: usize,
+    },
     /// Owned landmark.
     Landmark {
         /// Zero-based authored position.
@@ -209,6 +214,16 @@ impl MeasurementInventory {
                 inputs.scalars().iter().enumerate().map(|(index, value)| {
                     (value.id(), MeasurementInventoryPosition::Scalar { index })
                 }),
+            )
+            .chain(
+                inputs
+                    .logicals()
+                    .declarations()
+                    .iter()
+                    .enumerate()
+                    .map(|(index, value)| {
+                        (value.id(), MeasurementInventoryPosition::Logical { index })
+                    }),
             )
             .chain(
                 self.definition

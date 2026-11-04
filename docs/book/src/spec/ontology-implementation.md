@@ -126,7 +126,7 @@ IdentityLedger. No record, revision, copy or registration is generated. definiti
 component getters return shared canonical borrows; editing a detached definition does not change state.
 An explicit empty draft accepts, including revision0; a counter beyond u128 remains exact.
 
-Owned ids are checked in deterministic order: Design, lengths, scalars, Pieces, copies, journal
+Owned ids are checked in deterministic order: Design, lengths, scalars, finite logical declarations, Pieces, copies, journal
 operations, with each family's original order retained. DuplicateIdentity reports both
 DesignStructurePosition witnesses, including retired creating operations. Source/evidence/formula,
 edge-creator and registration-owner references are legitimate uses rather than additional owners.

@@ -83,7 +83,7 @@ pub enum DesignInputsError<E> {
     },
     /// Original parameter/current-canonical target refusal.
     Parameters(Box<DesignParameterError>),
-    /// Original all-canonical/source join refusal,with owned witnesses after construction input drops.
+    /// Original numeric canonical/source join refusal,with owned witnesses after construction input drops.
     /// No source text,value or fabricated language token is copied into this structural error.
     FormulaSources {
         /// Actual original canonical family/position.
@@ -373,7 +373,7 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
     }
     /// Recheck whole implemented ownership and actual current links against this state's canonical inputs.
     ///
-    /// Identity checks precede parameters,all actual canonical Derived/source joins,Material/current Piece
+    /// All-family identity checks precede parameters,numeric canonical Derived/source joins,Material/current Piece
     /// assignments,then complete
     /// higher sources and provided reference joins. Uncertain states and unresolved assignments remain intact.
     /// No namespace/kind/evaluation, geometry, physical or release readiness follows acceptance.

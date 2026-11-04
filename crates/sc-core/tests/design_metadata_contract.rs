@@ -158,11 +158,32 @@ fn duplicate_witnesses_keep_actual_family_and_authored_positions() {
 }
 
 #[test]
-fn neither_canonical_representation_family_can_be_owned_as_metadata() {
-    for bits in [1, 2] {
+fn no_canonical_representation_family_can_be_owned_as_metadata() {
+    use sc_core::{name::MachineToken, value::*};
+    let numeric = canonical();
+    let logical = LogicalInputDeclaration::new(
+        LogicalInputDeclarationDefinition {
+            id: id(3),
+            source: id(92),
+            kind: LogicalInputKind::NotionSize,
+            domain: vec![MachineToken::new("small").expect("member")],
+            state: LogicalInputState::Unknown {
+                observation: id(93),
+            },
+        },
+        LogicalInputLimits::new(1, 0, 5, 2),
+    )
+    .expect("explicit logical");
+    let canonical = CanonicalInputs::with_logicals(
+        numeric.lengths().to_vec(),
+        numeric.scalars().to_vec(),
+        LogicalInputs::new(vec![logical], LogicalInputInventoryLimits::new(1, 1)).expect("owner"),
+    )
+    .expect("disjoint families");
+    for bits in [1, 2, 3] {
         let entity = entity(bits, Kind::MeasurementTable, 7);
         assert!(
-            matches!(DesignMetadata::new(host(vec![entity]), &canonical()),
+            matches!(DesignMetadata::new(host(vec![entity]), &canonical),
             Err(Error::CanonicalIdentityCollision { entity: actual }) if actual == entity)
         );
     }
