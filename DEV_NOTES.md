@@ -3,17 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — readonly original component query port
+## _(2026-11-04 UTC)_ — fresh current component work before source lookup
 
-0893 adds a garment/context component facet with opaque Imported payload and exact by-value PocketPieceRef. Response alias preserves original import/recipe/native/frame/snapshot loans and permits original program context shortening without data copies.
-Query exposes already-held actual source records and typed missing/reassigned/unsupported causes. No automatic preflight,accepted Piece/copy/creator association,execution/history or geometry truth.
-Native3 pass0:actual Piece100/import10002/frame/snapshot pointers survive short request storage;unused unsupported import10001,body bytes,cache and3/129-bit counters remain charged.
-Whole garment/provider138 bits;137 refuses unused import9+129 before query. Provider entry maximum4 refuses complete row vector3+2;ignored return discipline preserves first sink cause.
-Independent UTF-8/bit census confirms18/22B and138 bits. Strict selected lint/fmt0,API7 pass0 including original context shortening,temporary request-record refusal and existing raw-owner escapes;guarded book0.
-Actual semantic_examples28 pass,rc=0;original component port helper compiles. No coupled/full CI verdict claimed.
-Record-only recipe composition remains the integration boundary for held programs;real context bodies are separately accounted. Complete private component binding follows.
-Promotion declined:existing honest original-source,by-value request/lifetime and exhaustive held-field doctrine;book owns port API. Whole0892 retained1065 by three exact Git spans/public0.
-README/LIVE reviewed unchanged,G1still6/18 In Progress;coupled .5f.2.verify remains deferred.
+0894 adds shared exhaustive admitted-garment resource composition with a zero-entry first-error fence. Existing garment admission retains Root→content→snapshot priority;stored demand grants no credit.
+Component preparation freshly walks complete garment/provider content,derives checked (E+8)²,then resolves actual current CutPlan copy and expected Piece. Explicit policy has no default;private scope preserves original parent,target,members,limits,demand and shape.
+Work makes no component/currentness/value query,accepts no source/creator/history and creates no transform,identity or result vector. Current copy10001 can pass work even though its source is unsupported.
+Native3 pass0:original pointers/orientations for both copies,one fresh provider walk,zero queries,prior2/3B/1bit compose with138 bits. Counter137 refuses unused9+129 before work/member,including ignored returns.
+W-1 precedes missing404;exactW exposes missing404 and copy10002→expected999 with exact original copy. Earlier latched cause survives shared parent composition. Garment admission3 still pass0;checked arithmetic1 covers addition/square overflow.
+Strict selected lib/harness lint/fmt0;API3 pass0 refuse private-field mutation,parent escape and default limits. Actual semantic_examples29 pass,rc=0;guarded book publication0.
+Promotion declined:existing fresh accounting,prospective work and borrowed membership doctrine;book owns API. Whole0893 retained1066 by three exact Git spans/public reader0;protected recovery stores unchanged.
+README/LIVE reviewed unchanged,G1still6/18 In Progress. Original source/creator association is next;coupled .5f.2.verify remains deferred.
+
+[Whole0893 original component port lesson](docs/history/stitchcad-devnotes-part1066.md) retains exact source bytes.
 
 [Whole0892 program record accounting lesson](docs/history/stitchcad-devnotes-part1065.md) retains exact source bytes.
 

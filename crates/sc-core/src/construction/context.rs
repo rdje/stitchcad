@@ -186,9 +186,10 @@ mod garment;
 mod profile;
 mod rule;
 pub use component::{
+    AdmittedDraftingComponentWork, DraftingComponentBindingLimits, DraftingComponentBindingShape,
     DraftingComponentCreator, DraftingComponentOrigin, DraftingComponentProvider,
     DraftingComponentRecipeSource, DraftingComponentResponse, DraftingComponentSource,
-    DraftingImportedComponentSource,
+    DraftingComponentWorkError, DraftingComponentWorkRefusal, DraftingImportedComponentSource,
 };
 pub use design_semantic::{
     DraftingDesignLogicalSource, DraftingDesignOperationSource, DraftingDesignSemanticLookupCause,

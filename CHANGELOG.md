@@ -3,10 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0893 — readonly original component source query
+## STITCHCAD-G1-0894 — fresh current component membership work
 
-Exact by-value copy/Piece requests return original provider-owned import or recipe/creator/frame/snapshot loans with typed causes. Complete unused source accounting remains required;raw response grants no accepted association/history.
-Native3,strict lint/fmt,API7,actual semantic examples28 and book pass0. Whole0892 retained exactly1065;complete component binding next,G1still6/18 In Progress,coupled verification deferred.
+Complete fresh garment/provider content and checked matching bounds now precede actual current copy/expected-Piece lookup. Private original member loans retain orientation and exact first typed causes;no component query or source/creator/history acceptance.
+Native3,affected garment3,overflow1,strict lint/fmt and API3 pass0. Actual semantic_examples29/book pass0;whole0893 retained exactly1066. Original source binding next,G1still6/18 In Progress,coupled verification deferred.
+
+[Whole0893 original component query unit](docs/history/stitchcad-devnotes-part1066.md) retains exact task,lesson and ledger.
 
 [Whole0892 program record accounting unit](docs/history/stitchcad-devnotes-part1065.md) retains exact task,lesson and ledger.
 

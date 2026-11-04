@@ -252,9 +252,9 @@ need genuine supported source records; these carriers supply no synthetic native
 
 ## Component source binding contract
 
-The readonly component query port is implemented below;accepted component binding is **planned**.
-The raw carriers and program-record accounting are implemented. The next binding leaf adds
-complete fresh association checks. These APIs add no geometry algorithm,importer or history
+The readonly component query port and fresh current copy/Piece work stage are implemented below;
+accepted original source/creator binding is **planned**. Raw carriers and program-record accounting
+are implemented. The next binding leaf adds complete original association checks. These APIs add no geometry algorithm,importer or history
 reconstruction. All original source records must already be held before lookup.
 
 A component target is an explicit `PocketPieceRef {copy,piece}`:a stable physical cut-copy ID and
@@ -414,11 +414,59 @@ entry maximum4 refuses the complete two-record vector at3+2 before traversal. An
 error still leaves the sink's original cause latched. Raw missing copy404,copy10002 with expected
 Piece999,and unsupported copy10001 retain their exact original requests and typed causes.
 
-These are source-port/accounting checks. The next private binder must still admit complete fresh
-content/work,bind current actual CutPlan/Piece membership and exact source/frame/snapshot owners,
-and validate original recipe/native creator membership without a successful prefix. Original
+These are source-port/accounting checks. The fresh work stage below binds current actual
+CutPlan/Piece membership. The next source binder must bind exact original source/frame/snapshot
+owners and validate original recipe/native creator membership without a successful prefix. Original
 source truth,execution/history,physical geometry and whole semantic dependencies remain separate;
 coupled verification stays `.5f.2.verify` after the agreed integration set.
+
+## Fresh current component work
+
+An `AdmittedDraftingGarmentSource` now exposes `charge_resources(sink)` for fresh composition.
+It walks the entire actual garment and provider again,without using its earlier stored demand
+as credit or calling the garment getter,currentness,member,value or component queries. A zero-entry
+fence preserves an ignored provider failure. The caller owns and finishes the cumulative meter;
+an earlier latched cause remains the first cause. Existing garment admission uses the same walk
+and retains its Root-before-content-before-snapshot order.
+
+`prepare_component_binding(target,limits)` first performs that complete fresh walk,then derives
+the checked prospective matching bound `(E+8)²`,where E is the actual complete held collection
+population. `DraftingComponentBindingLimits::new(content,matching_inspections)` has no default.
+Content failure precedes arithmetic/work refusal,which precedes current copy/Piece lookup.
+The conservative bound covers original member/creator and fixed-header inspections. It supplies
+no string-byte,provider-internal CPU,allocator,geometry or execution allowance.
+
+```rust
+use sc_core::{construction::*,design::{DesignReferenceHost,DesignResourceSource},
+    ontology::PocketPieceRef};
+fn work<'g,'a,H:DesignReferenceHost+DesignResourceSource,S:DraftingComponentProvider<H>>(
+    parent:&'g AdmittedDraftingGarmentSource<'a,H,S>,target:PocketPieceRef,
+    limits:DraftingComponentBindingLimits)
+    ->Result<AdmittedDraftingComponentWork<'g,'a,H,S>,DraftingComponentWorkError<'g,'a,H,S>> {
+    parent.prepare_component_binding(target,limits)
+}
+```
+
+After work admission,the actual current CutPlan must contain `target.copy`,that original copy
+must name `target.piece`,and the actual current Piece inventory must contain that Piece. The
+private work result retains the exact original parent,target,copy and Piece loans,selected limits,
+fresh demand and derived shape. Copy orientation remains unchanged metadata. No transform or
+identity is produced. Missing-copy,reassigned-copy and missing-Piece refusals retain the original
+request and policy;reassigned-copy diagnostics also lend the exact actual current copy.
+
+Work acceptance makes no component query and accepts no import,recipe,creator,frame/history or
+executable source association. A current copy whose original source is unsupported can pass this
+stage;its later source binding must still refuse. Recharging a work scope walks all its original
+parent fields again,without credit for the stored demand or duplicate charging of borrowed views.
+
+Focused checks cover both copies10001/10002 of Piece100 and exact member pointers/orientations,
+one fresh provider walk per preparation,and zero component queries. Prior2 entries/3 text bytes/
+1 counter bit compose with the full current demand,whose represented counters total138 bits.
+Maximum137 refuses the unused import at9+129 before work or missing-copy checks,including when
+the provider ignores its return error. One inspection below `(E+8)²` refuses before missing404;
+the exact bound permits that missing-copy diagnostic and original copy10002→expected999 refusal.
+Checked arithmetic refuses addition/square overflow. API examples refuse private-field mutation,
+work escaping its parent and default policy construction. Coupled verification remains deferred.
 
 ## Original ordered semantic recipe
 

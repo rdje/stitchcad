@@ -493,6 +493,11 @@ through their owners;the complete program walk composes Root→provider→first-
 The [component source port](../annexes/semantic-recipes.md#readonly-original-component-query-port)
 inherits complete source accounting,including unused imports/programs/caches/counters. Raw lookup
 does not automatically admit content,bind current Piece/copy or certify creation/history.
+The [component work stage](../annexes/semantic-recipes.md#fresh-current-component-work) freshly
+composes the complete garment/provider walk and checks `(E+8)²` before current copy/Piece lookup.
+An admitted garment/work scope can append that same fresh walk to a caller's cumulative meter;
+stored demand gives no credit and a zero-entry fence preserves ignored provider failures.
+Original source/creator association remains separate and no component query occurs at this stage.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

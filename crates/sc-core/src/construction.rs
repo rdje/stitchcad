@@ -60,11 +60,13 @@ mod arc;
 mod arguments;
 mod context;
 pub use context::{
-    AdmittedDraftingGarmentSource, AdmittedDraftingRuleWork, BoundDraftingProfileLogicalSource,
-    BoundDraftingProfileSource, BoundDraftingRuleSignature, BoundDraftingRuleSource,
+    AdmittedDraftingComponentWork, AdmittedDraftingGarmentSource, AdmittedDraftingRuleWork,
+    BoundDraftingProfileLogicalSource, BoundDraftingProfileSource, BoundDraftingRuleSignature,
+    BoundDraftingRuleSource, DraftingComponentBindingLimits, DraftingComponentBindingShape,
     DraftingComponentCreator, DraftingComponentOrigin, DraftingComponentProvider,
     DraftingComponentRecipeSource, DraftingComponentResponse, DraftingComponentSource,
-    DraftingContext, DraftingContextError, DraftingContextSource, DraftingDesignLogicalSource,
+    DraftingComponentWorkError, DraftingComponentWorkRefusal, DraftingContext,
+    DraftingContextError, DraftingContextSource, DraftingDesignLogicalSource,
     DraftingDesignOperationSource, DraftingDesignSemanticLookupCause,
     DraftingDesignSemanticLookupError, DraftingDesignSemanticRequest, DraftingDesignSemanticScope,
     DraftingDesignSemanticScopeError, DraftingGarmentProvider, DraftingGarmentSource,

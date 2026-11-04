@@ -14,7 +14,7 @@ fn target(copy: u128, piece: u128) -> PocketPieceRef {
         piece: id(piece),
     }
 }
-struct Imported {
+pub(super) struct Imported {
     name: String,
     bytes: Vec<u8>,
     revision: DesignRevision,
@@ -25,7 +25,7 @@ struct Row {
     supported: bool,
 }
 #[derive(Debug)]
-enum Cause {
+pub(super) enum Cause {
     Base(SourceError),
     Missing {
         target: PocketPieceRef,
@@ -51,16 +51,17 @@ impl Error for Cause {
         }
     }
 }
-struct Provider<'a> {
+pub(super) struct Provider<'a> {
     base: Source<'a>,
     garment: &'a DesignGarment<EmptyHost>,
     imports: Vec<Row>,
     cache: Vec<u8>,
     ignore: bool,
     queries: Cell<usize>,
+    charges: Cell<usize>,
 }
 impl<'a> Provider<'a> {
-    fn new(garment: &'a DesignGarment<EmptyHost>, ignore: bool) -> Self {
+    pub(super) fn new(garment: &'a DesignGarment<EmptyHost>, ignore: bool) -> Self {
         Self {
             base: Source::new(garment.inputs()),
             garment,
@@ -87,7 +88,14 @@ impl<'a> Provider<'a> {
             cache: vec![8, 9],
             ignore,
             queries: Cell::new(0),
+            charges: Cell::new(0),
         }
+    }
+    pub(super) fn query_count(&self) -> usize {
+        self.queries.get()
+    }
+    pub(super) fn charge_count(&self) -> usize {
+        self.charges.get()
     }
     fn walk(&self, sink: &mut dyn DesignResourceSink) -> Result<(), DesignResourceLimitError> {
         let Self {
@@ -97,10 +105,12 @@ impl<'a> Provider<'a> {
             cache,
             ignore,
             queries,
+            charges,
         } = self;
         fixed(garment);
         fixed(ignore);
         let _: &Cell<usize> = queries;
+        let _: &Cell<usize> = charges;
         base.charge_resources(sink)?;
         sink.charge_entries(imports.len(), at(None, "component.imports", None))?;
         for (index, row) in imports.iter().enumerate() {
@@ -165,6 +175,7 @@ impl DraftingContextSource<EmptyHost> for Provider<'_> {
         &self,
         sink: &mut dyn DesignResourceSink,
     ) -> Result<(), DesignResourceLimitError> {
+        self.charges.set(self.charges.get() + 1);
         let result = self.walk(sink);
         if self.ignore {
             Ok(())

@@ -1,8 +1,9 @@
 //! Actual garment source identity and complete fresh content, without semantic query acceptance.
 use super::{DraftingContext, DraftingContextSource, DraftingSourceRecord};
 use crate::design::{
-    charge_design_garment_resources, DesignGarment, DesignReferenceHost, DesignResourceDemand,
-    DesignResourceLimitError, DesignResourceLimits, DesignResourceMeter, DesignResourceSource,
+    charge_design_garment_resources, fixed_value, DesignGarment, DesignReferenceHost,
+    DesignResourceDemand, DesignResourceLimitError, DesignResourceLimits, DesignResourceLocation,
+    DesignResourceMeter, DesignResourceScope, DesignResourceSink, DesignResourceSource,
 };
 use core::fmt;
 
@@ -100,6 +101,51 @@ impl<H: DesignReferenceHost, S: DraftingGarmentProvider<H> + ?Sized> fmt::Debug
         f.debug_struct("DraftingGarmentSourceError")
             .field("issue", &self.details.issue)
             .finish_non_exhaustive()
+    }
+}
+fn charge<H: DesignReferenceHost + DesignResourceSource, S: DraftingGarmentProvider<H> + ?Sized>(
+    context: DraftingContext<'_, H, S>,
+    source: DraftingGarmentSource<'_, H, S::Snapshot>,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    let DraftingGarmentSource { garment, snapshot } = source;
+    fixed_value(&snapshot);
+    charge_design_garment_resources(garment, sink)?;
+    let result = context.source().charge_resources(sink);
+    sink.charge_entries(
+        0,
+        DesignResourceLocation {
+            scope: DesignResourceScope::CommandState,
+            owner: Some(garment.inputs().id()),
+            field: "drafting.garment.source",
+            index: None,
+        },
+    )?;
+    result
+}
+impl<H: DesignReferenceHost + DesignResourceSource, S: DraftingGarmentProvider<H> + ?Sized>
+    AdmittedDraftingGarmentSource<'_, H, S>
+{
+    /// Freshly append every actual garment/provider field in one cumulative sink. Original source
+    /// and context are borrowed views;stored policy/demand gives no credit. Preserve first ignored
+    /// or earlier sink failure before a later returned cause. No garment/source/currentness/member
+    /// or value query,clone or result collection occurs. Caller owns/finishes the meter.
+    /// # Errors
+    /// Original first cumulative logical-content cause with actual owning fields.
+    pub fn charge_resources(
+        &self,
+        sink: &mut dyn DesignResourceSink,
+    ) -> Result<(), DesignResourceLimitError> {
+        let Self {
+            context,
+            source,
+            limits,
+            demand,
+        } = self;
+        fixed_value(source);
+        fixed_value(limits);
+        fixed_value(demand);
+        charge(*context, *source, sink)
     }
 }
 impl<H: DesignReferenceHost, S: DraftingGarmentProvider<H> + ?Sized> fmt::Display
@@ -211,8 +257,7 @@ impl<'a, H: DesignReferenceHost + DesignResourceSource, S: DraftingGarmentProvid
             return Err(refuse(DraftingGarmentSourceIssue::Root));
         }
         let mut meter = DesignResourceMeter::new(limits);
-        let charged = charge_design_garment_resources(source.garment, &mut meter)
-            .and_then(|()| self.source().charge_resources(&mut meter));
+        let charged = charge(self, source, &mut meter);
         let demand = meter
             .finish()
             .map_err(|cause| refuse(DraftingGarmentSourceIssue::Resources(cause)))?;
