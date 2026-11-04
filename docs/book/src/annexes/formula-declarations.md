@@ -766,7 +766,8 @@ The implementation sequence is:
    retains exact normalized owners and genuine steps. The [explicit request contract](semantic-recipes.md#explicit-semantic-source-selection-request-contract-planned)
    separates raw source-selection intent,local admission and actual-scope/target coverage before whole binding.
    [Original typed request rows](semantic-recipes.md#original-typed-semantic-selection-rows) preserve the actual row buffer/pin loans and explicit relative keys.
-   [Record-only accounting](semantic-recipes.md#account-for-original-semantic-selection-records) now charges all original rows/pins;local and aggregate admission follow.
+   [Record-only accounting](semantic-recipes.md#account-for-original-semantic-selection-records) charges all original rows/pins;
+   [local content/duplicate admission](semantic-recipes.md#admit-complete-local-semantic-selection-structure) now retains the original raw owner and checked work. Actual aggregate source/coverage admission remains next.
    Keep the original Pocket opening and all component source Pieces/copies. A recipe-built
    component retains its actual original recipe/creator;explicit imported primitives retain their
    real source without fabricated history. Unknown state stays Unknown,Derived retains its sole

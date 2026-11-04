@@ -1,14 +1,18 @@
 //! Exact cumulative row/pin content and original first field causes,without target/source lookup.
 use super::TestResult;
 use sc_core::{construction::*, design::*, ontology::*};
-fn pin(p: &str, s: &str, c: &str) -> Result<SelectedProfilePin, Box<dyn std::error::Error>> {
+pub(super) fn pin(
+    p: &str,
+    s: &str,
+    c: &str,
+) -> Result<SelectedProfilePin, Box<dyn std::error::Error>> {
     Ok(SelectedProfilePin::new(SelectedProfilePinDefinition {
         profile_id: p.into(),
         schema_version: s.into(),
         content_version: c.into(),
     })?)
 }
-fn limits(
+pub(super) fn limits(
     entries: usize,
     text: usize,
     bits: u64,
@@ -20,7 +24,7 @@ fn limits(
         NonZeroU64::new(bits).ok_or("positive bits")?,
     ))
 }
-fn rows<'a>(
+pub(super) fn rows<'a>(
     p: &'a SelectedProfilePin,
     q: &'a SelectedProfilePin,
 ) -> DraftingSemanticSelectionInputs<'a> {

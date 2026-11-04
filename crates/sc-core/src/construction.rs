@@ -135,9 +135,12 @@ pub use program::{
 };
 pub use program::{DraftingProgramSemanticUse, DraftingSemanticField};
 pub use semantic_selection::{
-    DraftingClosureSelectionField, DraftingNativeSelectionField, DraftingPocketSelectionField,
-    DraftingSemanticSelectionField, DraftingSemanticSelectionInputs, DraftingSemanticSelectionKey,
-    DraftingSemanticSelectionLocation, DraftingSemanticSelectionRow,
+    AdmittedDraftingSemanticSelections, DraftingClosureSelectionField,
+    DraftingNativeSelectionField, DraftingPocketSelectionField,
+    DraftingSemanticSelectionAdmissionError, DraftingSemanticSelectionField,
+    DraftingSemanticSelectionInputs, DraftingSemanticSelectionKey, DraftingSemanticSelectionLimits,
+    DraftingSemanticSelectionLocation, DraftingSemanticSelectionRefusal,
+    DraftingSemanticSelectionRow, DraftingSemanticSelectionShape,
 };
 mod bezier;
 pub use arc::{

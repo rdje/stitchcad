@@ -1859,8 +1859,8 @@ complete request/work/source/family/cohort and whole/coupled verification remain
 
 ## Explicit semantic source-selection request contract (planned)
 
-Original occurrence views,raw selection request records and record-only accounting are implemented.
-Local admission described here is **planned**. Raw records below hold authored intent and create no actual
+Original occurrence views,raw selection records,record-only accounting and local admission are
+implemented below. Actual-scope/source coverage remains **planned**. Raw records hold authored intent and create no actual
 source,member,dependency,Profile value or whole binding proof.
 
 A request owner will retain one original ordered row vector. A Profile row supplies a fixed typed
@@ -1932,8 +1932,8 @@ selection row remains unconsumed. All candidate rows and pins are accounted befo
 and all child-walk/comparison/result bounds are explicit before work. No partial consumer/source
 success can hide a missing,extra,foreign or unsupported selection.
 
-Request records,record-only accounting and local structural admission are separately owned next
-slices. Aggregate `.work.coverage`,native-family binders and the final cohort own their respective
+Request records,record-only accounting and local structural admission are implemented below.
+Aggregate `.work.coverage`,native-family binders and the final cohort own their respective
 actual-source coverage stages. G4 registry/schema/evidence and Profile-internal body acceptance,
 physical compatibility,execution and coupled verification remain separate.
 
@@ -1941,8 +1941,8 @@ physical compatibility,execution and coupled verification remain separate.
 
 `DraftingSemanticSelectionInputs::new(rows)` now owns the caller's exact original ordered
 `Vec<DraftingSemanticSelectionRow>` without validation,cloning,lookup or source selection. The raw
-owner,typed coordinates and record accounting are implemented with focused checks. Local admission,
-actual scope/coverage,source binding and aggregate work remain the next stages.
+owner,typed coordinates,record accounting and local admission are implemented with focused checks.
+Actual scope/coverage,source binding and aggregate work remain the next stages.
 
 A Profile row holds its requested `DraftingSemanticSelectionLocation` and original explicit pin
 loan. A Rule row holds a requested semantic ordinal and explicit Design/Profile origin. All three
@@ -1962,7 +1962,7 @@ string path,parameter ID or operation ID substitutes for those coordinates.
 `DraftingSemanticSelectionRow::key()` projects only the fixed structural key. Profile keys use
 the complete requested location. Rule keys use their requested semantic ordinal. Choosing another
 pin or changing Design to Profile does not create another key for the same requested target.
-This getter performs no matching or duplicate validation. The future local admission must refuse
+This getter performs no matching or duplicate validation. Local admission below refuses
 duplicate keys;the raw owner deliberately retains every original conflicting row for inspection.
 
 The focused fixture retains eight rows in the original vector allocation,with exact first/second
@@ -2010,5 +2010,53 @@ Entry maximum3 refuses the complete four-row vector before pin traversal. Text m
 the unused final rule pin's original content-version field at row3,after31 bytes with3 requested.
 The exact caller scope/owner and original row index survive. Empty and nonempty walks preserve an
 earlier latched cause;an actual empty row vector contributes0/0/0. The generic API example compiles
-without a host/provider or source association. Local structural admission is next;complete actual
+without a host/provider or source association. Local structural admission is implemented below;complete actual
 scope/target/source coverage,aggregate work and whole/coupled verification remain pending.
+
+## Admit complete local semantic selection structure
+
+`DraftingSemanticSelectionInputs::admit(limits)` now freshly admits complete local record content
+and conservative duplicate-key work,then rejects the first duplicate structural key. It borrows
+the actual raw request owner. This stage establishes complete local content/work and unique keys;
+actual coordinate validity,required/extra selection coverage,Profile/source/body/currentness,
+dependency order,value and whole acceptance remain separate.
+
+`DraftingSemanticSelectionLimits::new(content,key_comparisons)` requires both policies explicitly
+and has no Default. Core first reuses the complete record producer in an unattached CommandState
+scope with no entity owner. It finishes the cumulative meter before acting on the returned cause,
+then derives checked N² from the actual complete original row count. Complete content refusal
+precedes arithmetic/work refusal,which precedes the borrowed prefix duplicate scan. Pin labels
+are never compared;keys contain fixed typed coordinates. N² is a conservative key-comparison
+count,not CPU,allocator capacity,string-byte work or a whole consumer/source matching allowance.
+
+The private `AdmittedDraftingSemanticSelections` retains its exact `inputs()`,selected `limits()`,
+fresh `demand()` and derived `shape()`. The shape exposes actual row count and conservative key
+comparison bound. Success creates no lookup map,result vector or source prefix. Diagnostic errors
+are boxed and retain the exact raw owner/policy,first typed refusal and fresh demand/shape when
+those stages succeeded. Duplicate refusal preserves the original first/repeated row indices and
+complete requested key,regardless of different selected pins or rule origins.
+
+A proof's `charge_record_resources` delegates another fresh complete record walk. Proof metadata
+and stored demand grant no credit. It performs no duplicate rescan,source lookup or scope/coverage
+check. The raw table,its pins and local proof keep their original lifetimes;the proof cannot outlive
+its raw owner. Actual containing Root/provider/program bodies still require separate accounting.
+
+The focused positive fixture has two unique keys but intentionally invalid coordinates:rule
+ordinal0 and native position0 with pairMAX. Exact2 entries/12 text bytes/0 bits and work4 admit
+those records locally and retain every original row. This does not accept either coordinate in a
+real program. Prior1 entry,3 text bytes and1 bit compose through the proof to3/15/1.
+
+The duplicate four-row fixture needs4/34/0 and conservative work16. Entry maximum3 refuses the
+whole vector. Text maximum33 refuses the unused final pin at31+3 before work or duplicates. With
+complete content,work15 refuses required16. Exact work16 reaches DuplicateKey first0/repeated2,
+with the original key and pin loans. Design and Profile rule rows sharing ordinal0 also duplicate;
+their differing source choices cannot excuse it. An explicitly empty table admits0/0/0 and work0,
+and fresh empty-proof composition preserves an earlier sink latch. Checked arithmetic refuses
+square overflow. API examples compile the local factory and refuse default policy construction,
+private proof mutation and raw-owner lifetime escape.
+
+Raw request records,record accounting and local structural admission are implemented with focused
+checks. The next aggregate work/coverage stage must join actual garment/program/proof owners,
+freshly account the entire source universe plus requests and bound every child walk/comparison/
+result before lookup. Native family and final cohort stages still confirm target-internal Profile
+needs and unconsumed rows. Whole `.5f.2.check` and coupled `.verify` remain deferred.

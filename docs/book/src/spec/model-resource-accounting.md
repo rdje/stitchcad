@@ -525,7 +525,10 @@ The [raw request owner](../annexes/semantic-recipes.md#original-typed-semantic-s
 now retains the original row vector/pin loans and fixed typed relative keys. It performs no walk
 or admission itself. [Record-only selection accounting](../annexes/semantic-recipes.md#account-for-original-semantic-selection-records)
 now precharges all rows and complete original pin strings,including duplicates/unused requests,with
-caller scope/owner and actual row indices. Fresh local/whole policies and body accounting remain separate.
+caller scope/owner and actual row indices.
+[Local selection admission](../annexes/semantic-recipes.md#admit-complete-local-semantic-selection-structure)
+now repeats that walk and checks N² before duplicate keys. Its proof recharges the same original
+records without stored-demand credit;actual whole-source/body/coverage policies remain separate.
 
 ## Complete actual Inputs, Sewing and Garment roots
 
