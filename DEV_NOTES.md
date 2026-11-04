@@ -3,11 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — actual canonical logical attachment
+## _(2026-11-04 UTC)_ — standalone typed Buttonhole recipe source
 
-0873 moves the original logical cohort beside numeric declarations;all-family ownership enters structural/Design and standalone metadata checks. Numeric target/Derived graph stays separate. Actual/prospective resource paths compose the complete logical walk atomically;no cached policy credit.
-Root5/projection1/legacy9 and metadata/material/measurement guards pass focused checks. Canonical fixture16/35/0 becomes Root16/43/3:empty recipe retains8 canonical bytes. Exact logical selection refusal precedes source queries;typed semantic operations/ports and coupled verification remain pending.
-Promotion declined:existing ownership,source-bound numeric projection and exhaustive-resource contracts;book owns the new constructor/examples. G1still6/18 In Progress. Archive1045 retains whole0872/0325;no retained-window changes.
+0874 retains original Declaration/Profile button origin,explicit physical-policy reference and ordered named numeric dependencies. Whole P/role-byte/P*P bounds precede duplicate-role checks;no workspace allocation or value/source reads. No independent hole length,default policy or invented native position.
+Focused3 verify original buffers/state,quota priority,shared targets,empty scope and cumulative exact content/refusal locations. Actual producer counts2/16/0 and prior3/19/2 without cached-shape credit. Ordered ownership/Root binding and physical execution remain pending;coupled verification stays .5f.2.verify.
+Selected strict lint/fmt,API compiler guards3,actual book examples2 and guarded build pass0.
+Promotion declined:existing explicit-source/bounds/exhaustive accounting contracts;book owns the operation API. Archive1046 retains whole0873,fold acceptance and0324;no retained-window change. G1still6/18 In Progress.
+
+[Whole0873 canonical logical lesson](docs/history/stitchcad-devnotes-part1046.md) retains exact source bytes.
 
 [Whole0872 logical content lesson](docs/history/stitchcad-devnotes-part1045.md) retains exact source bytes.
 
@@ -45,13 +48,7 @@ Promotion declined:existing ownership,source-bound numeric projection and exhaus
 
 [Whole0325 exact-DXF lesson](docs/history/stitchcad-devnotes-part1045.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — selected profile resolution request
-
-0324 .6.2.2.c.2.3 binds exact profile/schema/content labels to shared Design snapshot through ResolveProfile.
-Canonical Design/profile records supply inputs; no generic maps, copied states, constraint strings or defaults.
-Native evaluation4/query2/catalog2, selected strict lint/fmt/book/publication75-88 pass0;478/296 exact9210e03.
-G4 owns registry/AST/solver/evidence/composition; no executable result or grant. G1still6/18, artifacts next.
-Promotion declined: existing profile/command contracts; no new policy. Broad CI remains integration/pre-push.
+[Whole0324 profile resolution lesson](docs/history/stitchcad-devnotes-part1046.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — distinct instantiation requests
 

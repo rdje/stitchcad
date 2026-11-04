@@ -77,6 +77,7 @@
   - [Formula documents in actual Design inputs](annexes/formula-design-integration.md)
   - [Formula declaration metadata](annexes/formula-declarations.md)
   - [Logical inputs and source membership](annexes/logical-inputs.md)
+  - [Semantic recipe sources](annexes/semantic-recipes.md)
   - [Ordered formula name scopes](annexes/formula-name-scopes.md)
   - [Formula operator kind signatures](annexes/formula-operator-signatures.md)
   - [Built-in and selector signatures](annexes/formula-builtin-signatures.md)

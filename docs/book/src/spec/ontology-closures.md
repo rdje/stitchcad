@@ -227,6 +227,12 @@ kind and dependency on this canonical size; G3 executes that operation and check
 length. The ontology requires derivation but does not prescribe a physical formula or clearance,
 so G1 does not invent one. G3's garment/mutation proof remains owed by G3-GRADING.5.
 
+A [standalone typed Buttonhole operation](../annexes/semantic-recipes.md#standalone-buttonhole-operation)
+now retains the original button-size origin, explicit policy source and named numeric dependencies
+with complete constructor bounds and actual content accounting. It has no separate hole length.
+Ordered recipe/Root ownership and this Closure's actual operation dependency binding remain pending;
+the standalone record does not discharge those obligations.
+
 For example, replacing an authored button-size declaration with a target-profile size binding
 changes the source observed by `buttonhole_length_source()` on the replacement Closure. Replacing
 the derivation operation changes that same source view. Both fields borrow the canonical kind's

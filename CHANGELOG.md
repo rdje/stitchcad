@@ -3,11 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0873 — actual canonical logical membership
+## STITCHCAD-G1-0874 — standalone Buttonhole recipe operation
 
-Attach the original logical cohort to canonical Design ownership and all-family identity/metadata checks. Keep numeric targets distinct and compose complete logical content in actual/prospective resource walks. Original storage/state and exact first refusals survive.
+Retain the original button-size origin,explicit physical-policy reference and named typed dependencies in an immutable bounded operation. Charge actual policy-input/role content;there is no independent hole length or invented native step. Focused3 pass;ordered semantic/Root/source integration remains pending.
 
-Root5/projection1/legacy9 plus selected metadata/material/measurement guards pass. Book records canonical16/35/0 and Root16/43/3 with retained empty-recipe identity. G1still6/18 In Progress;typed semantic operation ownership is next,ports/coupled verification pending.
+G1still6/18 In Progress;typed logical derivation sources are next. Original0873/fold/0324 source bytes retained in1046.
+Selected strict lint/fmt,API3/book2/build pass0;coupled verification remains deferred.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -21,6 +22,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0873 canonical attachment and original fold acceptance](docs/history/stitchcad-devnotes-part1046.md) retain exact source bytes.
 
 [Whole0872 logical content unit](docs/history/stitchcad-devnotes-part1045.md) retains exact task,lesson and ledger source bytes.
 

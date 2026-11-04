@@ -81,32 +81,7 @@ Whole closed goals/acceptance/proofs remain byte-exact in [part959](../history/w
 
 ### `G1-SLICE.3c.4a.2a` — distinct tuck/pleat intent with shared structural checks
 
-- [x] **REPRODUCE / ISSUE** — ontology §4.3 requires semantic tucks and pleats, not line art;
-  `8753290` has only dart intent. A fold-reference list and a declared intake cannot certify a
-  physical fold shape, type-specific closing operation or conservation proof.
-- [x] **ROOT CAUSE (WHY + WHERE)** — current interval ownership matters independently of endpoints.
-  `cargo test -p sc-core --test fold_contract
-  foreign_middle_of_a_merged_fold_line_is_refused_despite_owned_endpoints_after_reversal` → `1 passed`,
-  `rc=0`: both Tuck/Pleat refuse the owned-ends/foreign-middle merge before/after reversal.
-  Shared structural inputs must not collapse the two semantic kinds into one untyped recipe operation.
-- [x] **FIX** — separate immutable wrappers share validated fold content: intake provenance,
-  nonempty directed ranges, explicit direction and required closing-operation identity. Reject negative
-  explicit intake, empty/duplicate held intervals, unresolved endpoints and unowned current portions.
-  Query authored line order + directed raw evidence; retain typed physical/registry obligations.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test fold_contract` → `9 passed`, `rc=0`;
-  both types discriminate empty/duplicate opposite lines, explicit/symbolic intake, all reference roles,
-  split choices, hidden foreign interiors, directed repairs, partial ranges and immutable replacement.
-  Ownership refusal disabled → merged-middle regression fails, `rc=101`; restored strict check passes.
-  Two privacy doctests are green; no physical fold-count/shape or executed-conservation claim.
-- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green, `rc=0`;
-  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
-  feature/glossary → `0 failure(s)`; tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`;
-  ledger probes → `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
-  Earlier dart/mark/sewing contracts stay green; no numerical golden changes.
-- [x] **LOCKSTEP** — `.3c.4a.2` decomposed before code; existing structural/geometric decision,
-  Rust/subsystem status, bounded construction examples/API vocabulary/ontology index and feature row,
-  task evidence/frontier/logs, TASK_TREE/MEMORY/LIVE_STATUS/CHANGELOG and promoted DEV_NOTES.
-  Oldest changelog/dev-note entries seal to part18/part14. Next `.3c.4a.2b` gathers.
+[Whole original fold acceptance](../history/stitchcad-devnotes-part1046.md) remains byte-exact.
 
 ### `G1-SLICE.3c.4b.1` — completed served-layer protocol
 
@@ -923,20 +898,36 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0871 original logical membership/kind loans;[whole scope/proofs](../history/stitchcad-devnotes-part1044.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory.attach`
   Status: `done`
-  Goal:atomically integrate original logical cohort with canonical Root identity/metadata joins and exhaustive resource producers,after standalone owner/accounting. Preserve numeric-only constructor scopes and native formula semantics;no temporarily uncharged Root field.
-  - [x] REPRODUCE / ISSUE:0872 logical owner/accounting was standalone;CanonicalInputs,structural census and metadata guards covered numeric families only. Attaching a logical Root field alone would omit owned identities/content.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract logical_root`:5 pass,rc=0;actual owner/resource views and metadata predicates needed all-family membership while numeric Derived source projection must stay separate from semantic operation references.
-  - [x] FIX:explicit with_logicals moves original owner;new remains empty0/0. Logical positions and contains extend canonical,structural/Design,parameter,Material,host and measurement censuses. Actual/prospective producers compose complete logical fields atomically.
-  - [x] ADDRESSED: `cargo test -p sc-core --test drafting_context_binding_contract logical_root`:5 pass,rc=0;original buffer/member loans,first collisions,state preservation,numeric exclusion,source-ID collision and exact Root refusal.
-    `cargo test -p sc-core --lib prospective_length_charges_original_logical_content`:1 pass0;original logical text retained with replacement-only evidence. Canonical16/35/0 becomes Root16/43/3 including empty-recipe identity8;short text keeps original owner90/index2.
-  - [x] NO REGRESSION: `cargo test -p sc-core --test canonical_inputs_contract`:9 pass,rc=0;selected metadata/material/measurement guards1 each pass0. Core/measure strict lint/fmt0;unchecked test index fixed with checked lookup. Book logical_examples4/build0;coupled .5f.2.verify deferred.
-  - [x] LOCKSTEP:logical reference documents original attachment,censuses,numeric projection and actual/prospective accounting with compiled example. Canonical/resource/ontology chapters align;README reviewed unchanged,LIVE product note updated,G1still6/18 In Progress.
-  - [x] CONTINUITY:1045 seals whole0872 and0325;transition_receipts.py reports4 exact Git spans0,public reader byte-exact0. No retained-window or ceiling changes. MEM/index/DEV/ledger point next at typed semantic operations.
-  - [x] PROMOTION: promotion: declined (existing original ownership,typed numeric projection and exhaustive cumulative resource contracts;book owns constructor/API). Focused checks distinguish implemented attachment from pending Profile/source/operation and coupled acceptance. Commit:STITCHCAD-G1-0873.
+  Goal:0873 actual canonical logical attachment;[whole scope/proofs](../history/stitchcad-devnotes-part1046.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations`
-  Status: `pending`
+  Status: `in_progress`
   Goal:actual typed semantic derivation/component-recipe sources under original ownership;
   canonical button declaration is the dependency,no independent hole length or invented native step.
+  Children: `.buttonhole` (immutable bounded operation), `.logical` (logical derivation sources),
+  `.components` (genuine creating/import origins), `.inventory` (original ordered owner), `.attach` (Root/program/accounting integration).
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.buttonhole`
+  Status: `done`
+  Goal:immutable original Buttonhole recipe definition with actual button-size origin,explicit policy reference and named numeric canonical dependencies;complete bounds and standalone accounting,no independent physical length or currentness claim.
+  - [x] REPRODUCE / ISSUE:existing ButtonholeDerivation names an operation but0873 supplied no immutable typed semantic recipe record. Actual operation sources need original button/policy/dependency fields without an independent hole length.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test buttonhole_operation_contract`:3 pass,rc=0;actual Declaration/Profile button origins and named numeric dependencies require standalone ownership/bounds before ordered Root/source integration. Numeric/native slots cannot stand in for that owner.
+  - [x] FIX:immutable ButtonholeOperation retains original definition/vector,explicit policy reference and typed local numeric inputs. Complete P/role bytes/P*P precede input/text/work quotas and first duplicate-role prefix scan;no workspace allocation or source/value read.
+  - [x] ADDRESSED: same focused command3 pass,rc=0;original buffers,origins,authored equality/privacy,exact2/16/4 and each short quota,repeated roles/shared targets/explicit0/0/0. Exhaustive actual producer gives2/16/0 and cumulative3/19/2;three exact first-field refusals and prior latch stay original.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test buttonhole_operation_contract -- -D warnings`:pass,rc=0;fmt0,`cargo test -p sc-core --doc recipe::buttonhole`:3 pass0 and recipe::semantic_examples2 pass0. Guarded book build0;coupled .5f.2.verify remains deferred.
+  - [x] LOCKSTEP:new indexed semantic recipe reference compiles original operation/accounting examples;Closure/source contract links distinguish standalone implementation from pending actual ordered owner/Root/ports. README reviewed unchanged,LIVE product note updated,G1still6/18 In Progress;MEM/index/DEV/ledger align.
+  - [x] CONTINUITY:1046 retains whole0873,original fold acceptance and0324;transition_receipts.py reports5 exact Git spans0,public archive read byte-exact0. No retained-window or ceiling changes.
+  - [x] PROMOTION: promotion: declined (existing explicit original sources,complete bounds and exhaustive cumulative accounting;book owns new API). No physical formula,independent length,policy default,selected profile or fabricated native step. Commit:STITCHCAD-G1-0874.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.logical`
+  Status: `pending`
+  Goal:actual typed logical derivation recipe sources;retain original target/domain/dependencies without selecting values or inventing scalar logical operands.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components`
+  Status: `pending`
+  Goal:authentic component-creation recipe and explicit imported primitive origins;no fabricated native step or reconstructed creation history.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.inventory`
+  Status: `pending`
+  Goal:complete immutable original semantic operation order/membership with explicit bounds and first duplicate causes;typed original operation positions remain distinct from scalar/native positions.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.attach`
+  Status: `pending`
+  Goal:atomically attach actual ordered semantic recipe to Root/program identity,resource and order contracts;numeric-only scopes stay explicitly empty and no invented native position appears.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports`
   Status: `pending`
   Goal:readonly authentic logical/Profile/operation facets with original record/Root/snapshot

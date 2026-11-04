@@ -5,7 +5,9 @@ use core::{
     num::{NonZeroU64, NonZeroUsize},
 };
 
+mod buttonhole;
 mod canonical;
+pub use buttonhole::charge_buttonhole_operation_resources;
 mod logical;
 pub use logical::{charge_logical_declaration_resources, charge_logical_input_resources};
 mod composition;

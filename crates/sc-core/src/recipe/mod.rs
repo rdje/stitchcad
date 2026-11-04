@@ -18,6 +18,15 @@
 //! check every statement before exposing complete sourced dependencies. Exact numeric values,
 //! operators, authored quantization and binding conversion are available. Canonical length authored
 //! reads retain source/state beside exact values or required observation/evaluation; recipe execution follows.
+mod buttonhole;
+pub use buttonhole::{
+    ButtonholeOperation, ButtonholeOperationDefinition, ButtonholeOperationError,
+    ButtonholeOperationLimits, ButtonholeOperationRefusal, ButtonholeOperationResource,
+    ButtonholeOperationShape, ButtonholePolicyInput,
+};
+#[cfg(doctest)]
+#[doc = include_str!("../../../../docs/book/src/annexes/semantic-recipes.md")]
+mod semantic_examples {}
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,

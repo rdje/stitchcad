@@ -95,9 +95,9 @@ pub use parameters::{
 };
 pub use pockets::DesignPocketOpeningDeclaration;
 pub use resource::{
-    charge_canonical_input_resources, charge_closure_inventory_resources,
-    charge_construction_inventory_resources, charge_cut_plan_resources,
-    charge_design_garment_resources, charge_design_input_resources,
+    charge_buttonhole_operation_resources, charge_canonical_input_resources,
+    charge_closure_inventory_resources, charge_construction_inventory_resources,
+    charge_cut_plan_resources, charge_design_garment_resources, charge_design_input_resources,
     charge_design_revision_resources, charge_design_sewing_resources,
     charge_design_structure_resources, charge_formula_source_resources,
     charge_hem_inventory_resources, charge_layer_inventory_resources,
