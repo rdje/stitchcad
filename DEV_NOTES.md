@@ -3,17 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — exact native semantic program and mixed-step provenance
+## _(2026-11-04 UTC)_ — explicit semantic selection request contract
 
-0900 wraps every original raw native semantic field in the exact actual normalized program and genuine mixed step. The all13 raw producer is reused unchanged;original input/target/Profile/pair/A/B/role loans remain intact.
-Private wrapper and manual Copy/Clone/Debug retain program identity without host/source bounds. Scalar/semantic slots keep their own dependency classes;no ordinal/ID position reconstruction,callbacks,values,new arena,result allocation or
-work/source/order acceptance.
-Focused native_semantic filter5 pass0:raw3 remain exact after sharing the original all13 constructor fixture;mixed2 retain all43 original fields around scalar slots1/10 at genuine6/7/8/9/11/12/13/14/15 positions. Both curve/motion/axis modes pass.
-A second normalization over equal source data remains a different actual program owner. Every raw field pointer/local role survives;scalar-only and exhausted streams stay empty,provider traces0. Original coverage/normalization is distinct from
-later checked source/order/kind/work owners.
-One unused test import removed before strict lint;selected lib/harness lint/fmt0. Native wrapper API3 pass,rc=0;guarded book0. No new book Rust example or broad/full CI verdict.
-Promotion declined:existing exact normalized owner/genuine position and raw field/role/no aggregate credit doctrine;book owns API. Whole0899 retained1072 as3 exact Git spans/public0;protected recovery stores unchanged.
-README/LIVE unchanged,G1still6/18 In Progress. Original occurrence-view stage completes with focused checks;next explicit complete source-selection requests,then aggregate work/source/cohort and whole/coupled verification.
+0901 defines planned raw source-selection intent before records. Relative garment/semantic/native coordinates are requested data;actual consumers/positions still come from original views after whole preflight. Repeated input fields require
+consumer coordinates beyond pointer/parameter ID.
+One ordered row vector retains original pin loans and explicit Design/Profile rule origin,without latest/default fallback or copied domains. Fixed location keys hide no foreign program/garment bodies;actual owners are joined by the later work
+factory.
+Local accounting/admission covers complete rows,pin text and checked duplicate-key work only. Aggregate direct coverage,native target-internal Profile needs and final unused-row checks remain separate stages;no accepted prefix or source/body
+truth claim.
+Source-derived doc census confirms3 current occurrence classes/19 typed field variants,rc=0;guarded book0. Rust unchanged. Separate request records/accounting/admission and aggregate coverage leaves now own implementation.
+Promotion declined:existing explicit intent,original coordinates/fresh aggregate and honest target/source scope;book owns contract. Whole0900 retained1073 as3 exact Git spans/public0;protected recovery stores unchanged.
+README/LIVE unchanged,G1still6/18 In Progress;next raw typed request row owner,then record composition/local admission and actual-scope coverage. Whole/coupled verification deferred.
+
+[Whole0900 native mixed occurrence lesson](docs/history/stitchcad-devnotes-part1073.md) retains exact source bytes.
 
 [Whole0899 raw native semantic lesson](docs/history/stitchcad-devnotes-part1072.md) retains exact source bytes.
 

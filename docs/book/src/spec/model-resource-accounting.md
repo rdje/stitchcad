@@ -518,6 +518,9 @@ It supplies no resource/work credit;whole input/vector/occurrence bounds precede
 The [mixed native wrapper](../annexes/semantic-recipes.md#original-native-semantic-fields-in-the-mixed-program)
 retains that exact raw view under the actual normalized owner and genuine step. It allocates no
 new result/arena and grants no aggregate work credit or source/dependency-order acceptance.
+The [planned selection request contract](../annexes/semantic-recipes.md#explicit-semantic-source-selection-request-contract-planned)
+keeps complete original row/pin accounting separate from Root/provider/program bodies and actual
+coverage. Unused/repeated pins count before lookup;local shapes grant no whole-work credit.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

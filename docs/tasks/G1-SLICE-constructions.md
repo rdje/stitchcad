@@ -699,23 +699,37 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0899 all13 original native semantic schemas;[whole scope/proofs](../history/stitchcad-devnotes-part1072.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.occurrences.native.mixed`
   Status: `done`
-  Goal:wrap complete original native semantic fields in the exact actual normalized program/step owner with genuine mixed positions,without ID reconstruction or new source/work acceptance. Preserve original raw inputs,field/pair/side/role indices and other dependency-class boundaries.
-  Scope:reuse complete raw native producer through actual normalized native slots;private exact program/step/raw-use wrapper. Scalar/semantic slots stay in their own classes;no ordinal/ID position inference,callback,arena,result allocation or source/order/work acceptance. Share the actual all13 fixture and verify distinct normalized owners under mixed scalar/native ordering.
-  - [x] REPRODUCE / ISSUE:raw native semantic fields alone carry no actual normalized program or genuine mixed consumer. An equal-ID/recomputed owner cannot replace those original loans;scalar slots must not renumber native positions or original pair/Profile roles.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract native_semantic`:5 pass,rc=0. Actual normalized steps already retain complete coverage and native input owners;the wrapper must preserve that exact owner/step with the complete raw field rather than reconstructing a consumer from IDs.
-  - [x] FIX:private exact normalized program/step/raw-use wrapper and fused native semantic stream reusing the existing all13 producer. Scalar/semantic slots keep their own dependency classes. Manual Copy/Clone/Debug avoids host/source bounds;no callbacks,values,arena,result allocation,source/order or fresh work acceptance.
-  - [x] ADDRESSED:native_semantic filter5 pass,rc=0:raw3 still pass after sharing the unchanged all13 constructor fixture;mixed2 preserve all43 exact raw input/field/pair/A/B/Profile loans under genuine6/7/8/9/11/12/13/14/15 positions around scalar slots1/10. Distinct normalized owners stay distinct;scalar-only/exhausted streams remain empty and provider traces0.
-  - [x] CENSUS:guarded task-root census19909L/1491382B before acceptance,rc=0. Whole0899 retained1072 as3 exact Git spans/public reader byte-exact0. Existing caps,sealed bytes and protected Window30/recovery/proof/draft stores unchanged;all13 raw producer/schema bodies unchanged.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0;fmt0. `cargo test -p sc-core --doc program::native_semantic`:3 pass,rc=0;generic getter/private raw-use/actual owner escape checked. One unused fixture import removed;no core suppression or broad/full CI claim.
-  - [x] BOOK: `make book`:rc=0. Exact normalized owner/genuine step/raw-field API,43-field mixed fixture and source/order/work boundaries align with source-plan/resource routes. No new book Rust example or whole/currentness/physical acceptance claim.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger align;README/LIVE reviewed unchanged,G1still6/18 In Progress. Raw garment/semantic/native occurrence cohort completes with focused checks;next complete explicit source-selection requests. Aggregate .work/.bind and whole .5f.2.check/.verify remain pending.
-  - [x] PROMOTION: promotion: declined (existing exact normalized owner/genuine position and original raw field/role/no aggregate credit doctrine;book owns wrapper API). Implemented with focused checks;source/whole/coupled verification remains tracked. Commit:STITCHCAD-G1-0900.
+  Goal:0900 exact native semantic program/step owner;[whole scope/proofs](../history/stitchcad-devnotes-part1073.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.requests`
+  Status: `in_progress`
+  Goal:retain explicit original Profile pin and Design/Profile rule-origin requests with fixed typed relative locations,original row order and fresh local structural/content bounds. Aggregate .work.coverage owns actual-scope key/required-selection joins;native family/final cohort check discovered target Profile needs and unused rows. No lookup fallback or copied domains.
+  Children: `.contract` (raw intent/actual location and coverage boundaries),`.records` (original typed request rows/owner),`.accounting` (complete pin/row composition),`.admission` (fresh local content/comparison/duplicate-key proof).
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.requests.contract`
+  Status: `done`
+  Goal:define explicit raw source-selection row/location semantics,original pin/Design/Profile origin preservation,local record-only accounting/admission and actual-scope/target coverage ownership before code. Repeated native input fields remain distinct by genuine consumer coordinates;no ID-only or pointer-only selection key.
+  Scope:metadata-only contract;raw requested indices grant no issued position or source binding. Single original row vector with fixed typed locations and original pin loans;no borrowed foreign program/garment bodies hidden in request keys. Native target context selections cover actual reached Profile refs only after authentic target association.
+  - [x] SOURCE:actual garment/semantic/native view types,original Profile pin record/producer,explicit DraftingRuleSelection and current single-source Profile/rule binder scopes reviewed. Repeated native inputs can share raw field pointers while having different actual consumers;relative keys must retain consumer coordinates and typed field roles.
+  - [x] CONTRACT:planned original ordered row owner,explicit Profile pin/rule-origin choices,fixed typed relative locations and separate local record/content/duplicate-key admission. Raw coordinates remain intent,not actual positions;full pin accounting precedes lookup. Actual direct coverage follows aggregate preflight;native target needs/final unused rows follow authentic family/cohort joins.
+  - [x] CHECK:guarded source-derived contract census confirms3 actual occurrence classes/19 typed field variants,rc=0; `make book`:rc=0. Rust unchanged;no whole/coupled/full-CI verdict. Requests/accounting/admission and coverage implementation owners now explicit.
+  - [x] CONTINUITY:whole0900 task/lesson/ledger retained1073;transition_receipts.py reports3 exact Git spans,rc=0;public reader byte-exact0. Caps/sealed history and protected Window30/recovery/proof/draft stores unchanged.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/source-plan/resource routes align;README/LIVE reviewed unchanged,G1still6/18 In Progress. Next original typed raw request rows;no global Profile compatibility,source-body/evidence,physical value or accepted selection claim.
+  - [x] PROMOTION: promotion: declined (existing explicit source intent,original relative coordinates/fresh aggregate and honest native target/source-scope doctrine;book owns request contract). Commit:STITCHCAD-G1-0901.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.requests.records`
   Status: `pending`
-  Goal:retain complete explicit original Profile pin and Design/Profile rule-origin selection metadata for actual semantic occurrences. Reject missing/duplicate/extra/foreign selections under fresh bounded accounting;no owner inference,lookup fallback or copied domains.
+  Goal:own the exact original request row Vec without validation/clone/query or lookup default. Fixed typed garment/semantic/native occurrence locations and explicit Profile/rule rows preserve pin loans and invalid requested coordinates for later refusal;no source/coverage/work proof.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.requests.accounting`
+  Status: `pending`
+  Goal:precharge the complete actual row vector,then every original selected-pin string in one cumulative sink,including unused/repeated/Profile-origin rule rows. Exhaustive row/key/origin guards,actual supplied containing owner/original row indices,first latch preserved;record-only scope,no Root/provider/body callbacks.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.requests.admission`
+  Status: `pending`
+  Goal:freshly admit complete local record content and checked conservative fixed-key duplicate comparison work before scans. Borrow original raw owner,retain limits/demand/shape and first typed causes;invalid/missing/extra actual-scope coordinates remain data for aggregate coverage,not accepted members.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work`
   Status: `pending`
   Goal:join exact actual garment/context and existing program source/order/acyclic/canonical/geometry proof owners;freshly account all held fields/requests and checked aggregate occurrence,comparison,child-walk and result bounds before queries/reservation. Preserve first original causes.
+  Children: `.coverage` (after aggregate preflight,actual direct/source-selection key joins;authentic native target needs/final unused rows remain with family/cohort binders).
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.coverage`
+  Status: `pending`
+  Goal:after complete aggregate work,match explicit relative request coordinates to actual original garment/program/semantic/native occurrences and complete direct Profile/rule needs. Preserve actual owners/first causes;do not certify native target-internal Profile need until authentic target association or treat unconsumed rows as accepted.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical`
   Status: `pending`
   Goal:bind complete actual logical/Profile/numeric inputs,original rule/signature/output and Design Derived supplier order under aggregate preflight. Preserve domains/states and external Profile Derived source scope;never select values or reinterpret Profile operation IDs as Root positions.

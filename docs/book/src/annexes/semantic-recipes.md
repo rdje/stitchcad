@@ -1856,3 +1856,83 @@ passes all target/Profile/pair and equal-ID owner checks. API examples compile t
 and refuse private raw-use replacement or normalized-owner lifetime escape. Root Pocket/Closure,
 ordered semantic operation and native occurrence views are now implemented with focused checks;
 complete request/work/source/family/cohort and whole/coupled verification remain separate.
+
+## Explicit semantic source-selection request contract (planned)
+
+Original occurrence views are implemented above. The next source-selection request records and
+local admission described here are **planned**. They hold authored intent and create no actual
+source,member,dependency,Profile value or whole binding proof.
+
+A request owner will retain one original ordered row vector. A Profile row supplies a fixed typed
+relative occurrence location and an original explicit `SelectedProfilePin` loan. A rule row supplies
+a requested one-based semantic ordinal and explicit `DraftingRuleSelection::Design` or Profile pin.
+Design is an authored choice;missing rows cannot silently become Design or a latest/default Profile.
+Rule/policy IDs and expected families come from the actual Root operation during binding,never
+from a replacement source declaration supplied in the request.
+
+Relative locations preserve the three existing occurrence classes:
+
+| Request class | Coordinates and field identity | Accepted provenance comes from |
+| --- | --- | --- |
+| Garment | Original zero-based Pocket/Closure index and typed original field/nested role | Actual current garment/member/field view |
+| Semantic operation | Requested one-based semantic ordinal and typed header/input index | Actual Root semantic member and genuine normalized mixed step |
+| Native input | Requested one-based mixed position and actual target or Notch/Profile/pair/A/B role | Exact normalized program/step and original raw native field |
+
+These integers are requested coordinates,not issued positions or identity certificates. Zero,
+missing,out-of-range or wrong-kind coordinates remain inspectable data until the actual-scope
+factory checks them. A scalar ordinal,operation ID,Profile parameter ID or pointer alone cannot
+manufacture a consumer location. Reusing the same native input twice produces two distinct mixed
+consumers,even though their raw field pointers match. Requests must distinguish those positions.
+Raw location keys contain fixed metadata and do not hide borrowed foreign programs,garments or
+source bodies. Actual proof owners are supplied and joined by the later whole work factory.
+
+For example,these are request descriptions rather than new Rust API or formula syntax:
+
+```text
+Native position12 / pair0 / sideA / SampleDepth -> explicit pin P
+Native position12 / pair1 / sideA / SampleDepth -> explicit pin P
+Semantic ordinal2 / logical input1 -> explicit pin Q
+Semantic ordinal1 / rule origin -> explicit Design
+```
+
+The two Walk rows remain separate even when their parameter IDs and selected pin agree. The
+semantic input and rule-origin requests keep their own coordinate classes. Matching IDs or
+labels do not collapse these rows or imply that P and Q are physically compatible.
+
+Direct Profile fields use their actual field location. A native canonical target may itself
+retain Profile references,for example an allowance or grainline descriptor. An explicit target
+context selection applies to the actual Profile references reached through that authentic target
+association;it does not create those fields or prove that the target needs a Profile. Actual target
+metadata and family proof must be inspected under complete bounds before those needs are known.
+If no such need exists,the context row cannot quietly count as a consumed selection. Missing
+native source support returns its original typed cause,not an invented descriptor or empty source.
+
+Every selected pin preserves its original profile/schema/content strings and lifetime. The records
+parse no version,trim no label,select no value and copy no domains. The raw row vector moves into
+its owner unchanged,including invalid coordinates,duplicate keys and extra rows. Inspection retains
+original row order and indices. A separate private local admission borrows that exact raw owner.
+It freshly accounts complete record content and checked conservative duplicate-key comparison
+work before scanning. Duplicate selection keys refuse regardless of differing pins/origins.
+No result map,index buffer,source lookup or successful source prefix is needed for local admission.
+
+Record-only accounting must precharge the complete original vector before traversal,then charge
+all three actual pin strings in each Profile row and Profile-origin rule row. Repeated or unused
+pin loans still count as original row occurrences. Design-origin rule rows and fixed location/kind
+metadata own no dynamic body. Exhaustive row/key/origin views and the existing selected-pin producer
+must preserve first cumulative field failures,including an earlier latch on an empty vector.
+The containing caller supplies the real scope/owner;opaque labels cannot manufacture entity IDs.
+Root/provider/program bodies are accounted separately through their actual owners. Local shapes,
+previous admission and borrowed record views give no later whole-work credit.
+
+Coverage is deliberately staged. After fresh aggregate owner/content/work preflight,the coverage
+factory matches direct keys to actual original occurrences and complete direct Profile/rule needs.
+Local record admission alone proves none of that. Native target-internal Profile requirements are
+confirmed by actual target/family association;final cohort acceptance also checks that no supplied
+selection row remains unconsumed. All candidate rows and pins are accounted before any child query,
+and all child-walk/comparison/result bounds are explicit before work. No partial consumer/source
+success can hide a missing,extra,foreign or unsupported selection.
+
+Request records,record-only accounting and local structural admission are separately owned next
+slices. Aggregate `.work.coverage`,native-family binders and the final cohort own their respective
+actual-source coverage stages. G4 registry/schema/evidence and Profile-internal body acceptance,
+physical compatibility,execution and coupled verification remain separate.

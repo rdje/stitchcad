@@ -3,10 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0900 — exact native semantic program/step owners
+## STITCHCAD-G1-0901 — planned explicit semantic source-selection requests
 
-Fused native semantic views now retain exact normalized program owners,genuine mixed steps and every original raw field/pair/A/B/Profile loan. Focused5 and strict lint/fmt pass0;API3 and book pass0. Shared raw all13 fixture remains exact;43 mixed fields and distinct owners verified.
-Whole0899 retained1072;occurrence stage completes with focused checks,explicit source requests next,G1still6/18 In Progress;aggregate and whole/coupled binding deferred.
+Contract separates raw relative location/pin/rule-origin intent,local record admission and later actual-scope/native-target/final coverage. All original rows/pins count before lookup;no fallback,position issuance or source/body acceptance.
+Source-derived3-class/19-field census and book pass0;Rust unchanged,whole0900 retained1073. Typed raw request owner next,G1still6/18 In Progress,whole/coupled verification deferred.
+
+[Whole0900 native mixed occurrence unit](docs/history/stitchcad-devnotes-part1073.md) retains exact task,lesson and ledger.
 
 [Whole0899 raw native semantic unit](docs/history/stitchcad-devnotes-part1072.md) retains exact task,lesson and ledger.
 
