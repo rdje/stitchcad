@@ -17,6 +17,17 @@ bash scripts/history_archive.sh materialize target/history-review
 # ARCHIVE-RETENTION: REFUSED — destination exists; overwrite refused
 ```
 
+Completed task navigation may keep each original ID and status beside a pointer to its whole
+retained contract and proof. Part1077 retains the closed semantic-selection request subtree and
+the complete lesson journal and changelog from commit9567e5b0, including their earlier navigation.
+Part1078 retains the closed logical-source subtree from the same commit. The declared Git byte
+intervals and decoded payload hashes preserve those original documents; live stubs are navigation.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1077.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1078.md
+```
+
 `HISTORY_ARCHIVE_ROOT` selects the project or a fixture below project `target/`. Destinations stay in
 that root's `target/` on the repository volume. Symlinks, nested Git boundaries, other volumes and
 invalid kinds refuse.
