@@ -130,6 +130,7 @@ pub use program::{
     DraftingProgramStep, DraftingProgramStepKind, DraftingProgramStepView,
     NormalizedDraftingOperation, NormalizedDraftingProgram,
 };
+pub use program::{DraftingProgramSemanticUse, DraftingSemanticField};
 mod bezier;
 pub use arc::{
     CenterArcArgument, CenterArcCheckError, CenterArcCheckRefusal, CenterArcConstruction,

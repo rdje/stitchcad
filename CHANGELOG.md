@@ -3,10 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0897 — original Pocket/Closure dependency fields
+## STITCHCAD-G1-0898 — original typed semantic operation fields
 
-Scoped fused views now retain exact actual garment/member/field loans and original component/instance indices without invented program positions or source/work acceptance. Native2 and strict lint/fmt pass0;garment API7,affected source3 and book pass0.
-Whole0896 retained1069;ordered semantic/native occurrences remain next,G1still6/18 In Progress;aggregate and whole/coupled binding deferred.
+Fused views now pin all original Buttonhole/logical headers and named inputs to their actual normalized program,Root operation,genuine mixed position and separate semantic ordinal. Native2 pass0,exact9 fields/distinct owners/provider trace0;strict lint/fmt,API3 and book pass0.
+Whole0897 retained1070;native target occurrences and aggregate binding remain next,G1still6/18 In Progress,coupled verification deferred.
+
+[Whole0897 original garment occurrence unit](docs/history/stitchcad-devnotes-part1070.md) retains exact task,lesson and ledger.
 
 [Whole0896 whole semantic contract unit](docs/history/stitchcad-devnotes-part1069.md) retains exact task,lesson and ledger.
 

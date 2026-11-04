@@ -509,6 +509,9 @@ credit. Root-owned garment references retain original indices without manufactur
 The [Pocket/Closure raw occurrence view](../annexes/semantic-recipes.md#original-pocket-and-closure-dependency-fields)
 borrows actual fields without a resource callback or allowance. Its constant-size iterator metadata
 does not replace complete aggregate content/occurrence/comparison admission before matching.
+The [ordered semantic field view](../annexes/semantic-recipes.md#original-semantic-operation-dependency-fields)
+likewise streams actual normalized program/header/input loans without callbacks or work credit.
+Original coverage/normalization is distinct from later source,dependency-order and aggregate bounds.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

@@ -3,15 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — original Pocket and Closure dependency occurrences
+## _(2026-11-04 UTC)_ — original typed semantic operation occurrences
 
-0897 adds a scoped fused raw iterator over exact actual garment/member/field loans and original indices. Pocket fields retain definition order;Closure kind fields precede every original physical instance. Root locations gain no mixed position or creating operation.
-Typed owner/field/Closure-size-role views preserve actual source buffers. Exhaustive definition/kind/instance guards classify schema growth;constant-size inline view arrays allocate no result vector. Manual Copy/Clone/Debug avoids host bounds and authored length display.
-Native2 pass0:one Pocket yields5 exact original pointers;three zipper origins,Hook/Bar equal-but-distinct Declaration fields and a Profile Button/derivation plus instances add12,for17 total. Actual Closure indices/instance0 pointers and fused exhaustion remain exact.
-Initial compile bound used DesignMetadataHost while existing model getters require DesignReferenceHost;impl now preserves that existing contract. The raw iterator needs no ResourceSource or provider and supplies no work/source/currentness/value acceptance.
-Strict selected lint/fmt0;Garment API7 and affected garment-source3 pass,rc=0. Guarded book0;no new book Rust example or full/coupled verification claim.
-Promotion declined:existing original field/owner/index and exhaustive/no synthetic position doctrine;book owns API. Whole0896 retained1069 as3 exact Git spans/public0;protected recovery stores unchanged.
-README/LIVE unchanged,G1still6/18 In Progress;next ordered semantic operation occurrences,then native targets,explicit requests and aggregate work/binding.
+0898 streams all Buttonhole/logical headers and original named inputs under the exact normalized program/step/Root operation owner. Genuine semantic ordinal and mixed position remain independent;input indices stay original.
+Private use retains the actual normalized program so another normalization over the same Root/sequence cannot substitute by matching IDs. Exhaustive operation/definition/input and Copy source/target guards classify growth;constant-size header views borrow original buffers.
+Native2 pass0:semantic1 at mixed1 and semantic2 at4 yield4+5=9 exact original fields. Repeated numeric targets and Logical/Profile/Numeric sources,actual header/role/input pointers and distinct normalized owners survive. Actual empty program stays exhausted;provider traces remain0.
+The self-Derived logical input is intentionally raw metadata;this view grants no source/dependency-order acceptance. Later .binding.logical owns strict refusal. Existing source/order/canonical/geometry proof owners are joined by later aggregate work.
+Manual Copy/Clone/Debug avoids host/source bounds and authored role output. No query,value,new arena,result vector or fresh work/content allowance. Strict selected lib/harness lint/fmt0,API3 pass,rc=0;guarded book0.
+Promotion declined:existing original normalized owner/ordinal/field and exhaustive/no manufactured position doctrine;book owns API. Whole0897 retained1070 as3 exact Git spans/public0;protected recovery stores unchanged.
+README/LIVE unchanged,G1still6/18 In Progress;next all13 native semantic target occurrences,then explicit requests,aggregate work and complete binding. Whole/coupled verification remains deferred.
+
+[Whole0897 original garment occurrence lesson](docs/history/stitchcad-devnotes-part1070.md) retains exact source bytes.
 
 [Whole0896 whole semantic contract lesson](docs/history/stitchcad-devnotes-part1069.md) retains exact source bytes.
 

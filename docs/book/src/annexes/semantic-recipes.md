@@ -1722,3 +1722,45 @@ fields,and ButtonAndButtonhole with a Profile button. Their original kind and in
 add twelve occurrences,for seventeen total. All Closure inventory indices and instance0 pointers
 stay exact. Exhausted iterators continue returning None. API examples compile the narrow generic
 getter contract and refuse private field mutation or original-owner lifetime escape.
+
+## Original semantic operation dependency fields
+
+`NormalizedDraftingProgram::semantic_dependencies()` now streams every original Buttonhole and
+LogicalDerivation field at its genuine mixed step. This implemented raw occurrence stage follows
+complete original program coverage and normalization. Namespace/kind/source/dependency checks,
+explicit Profile/rule requests,aggregate work and whole semantic binding remain separate.
+
+Each private `DraftingProgramSemanticUse` retains the exact actual normalized program,its genuine
+`DraftingProgramStepView`,original semantic ordinal,actual Root operation and typed
+`DraftingSemanticField`. `program()` keeps the actual source owner inspectable;an independently
+normalized program over the same Root cannot replace it merely because IDs/positions match.
+`position()` reports the genuine one-based mixed position. `ordinal()` reports the separate
+one-based semantic recipe ordinal. Nested input indices remain zero-based original locations.
+
+Fields stream in original mixed order. A Buttonhole contributes its original canonical button
+origin,explicit policy reference,and every original named numeric policy input. A LogicalDerivation
+contributes its typed output,explicit rule reference,and every original named logical/Profile/
+numeric input. The complete input records retain their actual role buffers and typed sources.
+Repeated targets remain separate named occurrences. There is no independently authored hole length,
+source selection,canonical value,domain copy or fabricated formula/native operation.
+
+Scalar/native slots contribute no semantic-operation fields to this scoped view. Their own
+numeric,geometry and semantic target obligations remain separate,as do Root Pocket/Closure fields.
+The producer exhaustively matches both operation variants,definitions and input records. Fixed
+Copy guards cover typed source/target representations;role buffers stay borrowed. The fused
+iterator uses constant-size inline header views and original input vectors,without queries,
+clones,new arenas or result-vector allocation. It requires no new resource-source bound and grants
+no content/comparison/source/currentness or executable allowance. Debug omits authored role text.
+
+The focused mixed fixture has semantic1 at position1,scalar1 at2,a Point at3 and semantic2 at4.
+Its Buttonhole headers plus two distinct roles sharing the same numeric target yield four fields.
+Its logical headers plus Logical,Profile and Numeric inputs yield five more. All nine retain exact
+Root operation/header/input/role/typed-source pointers and the actual program owner. A second
+normalized program over the same Root and sequence remains a different owner. No provider callback
+occurs during either stream. An actual empty program yields no fields and remains exhausted.
+
+The logical input fixture intentionally retains a self-referential Derived target as raw metadata;
+this view establishes no dependency-order acceptance. The future bounded binder must refuse that
+relation when composing a whole proof. API examples compile the generic getter and refuse private
+ordinal mutation or normalized-owner lifetime escape. Native target occurrences remain the next
+slice;complete request/work/source/cohort and coupled verification remain tracked.

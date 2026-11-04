@@ -29,6 +29,7 @@ mod limits;
 mod name_inputs;
 mod normalized;
 mod records;
+mod semantic_occurrences;
 mod views;
 pub use admission::{
     AdmittedDraftingProgramInputs, DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
@@ -53,6 +54,7 @@ pub use normalized::{
     DraftingProgramNormalizationError, DraftingProgramNormalizationRefusal,
     NormalizedDraftingOperation, NormalizedDraftingProgram,
 };
+pub use semantic_occurrences::{DraftingProgramSemanticUse, DraftingSemanticField};
 pub use views::{DraftingProgramStepKind, DraftingProgramStepView};
 
 /// One explicit original request in a mixed scalar/semantic/drafting sequence, without acceptance.

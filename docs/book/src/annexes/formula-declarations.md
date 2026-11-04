@@ -760,7 +760,8 @@ The implementation sequence is:
 6. Follow the [whole semantic consumer contract](semantic-recipes.md#whole-semantic-consumer-binding-contract-planned)
    to bind complete occurrences after their complete source/content/work allowances.
    [Original Pocket/Closure field views](semantic-recipes.md#original-pocket-and-closure-dependency-fields)
-   now retain actual owners/indices without queries;ordered operation/native views and whole binding remain next.
+   now retain actual owners/indices without queries. [Ordered semantic field views](semantic-recipes.md#original-semantic-operation-dependency-fields)
+   preserve actual normalized owners/positions/ordinals;native target views and whole binding remain next.
    Keep the original Pocket opening and all component source Pieces/copies. A recipe-built
    component retains its actual original recipe/creator;explicit imported primitives retain their
    real source without fabricated history. Unknown state stays Unknown,Derived retains its sole
