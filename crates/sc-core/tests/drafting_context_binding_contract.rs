@@ -9,6 +9,8 @@ mod component_work;
 mod dependency_occurrences;
 #[path = "support/drafting_design_semantic.rs"]
 mod design_semantic;
+#[path = "support/drafting_garment_occurrences.rs"]
+mod garment_occurrences;
 #[path = "support/drafting_garment_source.rs"]
 mod garment_source;
 #[path = "support/drafting_geometry.rs"]

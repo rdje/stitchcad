@@ -3,10 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0896 — planned whole semantic consumer contract
+## STITCHCAD-G1-0897 — original Pocket/Closure dependency fields
 
-Book/task plan now distinguishes original Root locations,ordered semantic/native consumers and external Profile Derived scope. Exact source selection,canonical/Closure/component/native joins and fresh aggregate work/cohort bounds are owned before implementation.
-Source-derived13/13 native/five consumer census and book pass0;two stale standalone status paragraphs corrected. Rust unchanged,whole0895 retained1068,G1still6/18 In Progress;next original occurrence views,coupled verification deferred.
+Scoped fused views now retain exact actual garment/member/field loans and original component/instance indices without invented program positions or source/work acceptance. Native2 and strict lint/fmt pass0;garment API7,affected source3 and book pass0.
+Whole0896 retained1069;ordered semantic/native occurrences remain next,G1still6/18 In Progress;aggregate and whole/coupled binding deferred.
+
+[Whole0896 whole semantic contract unit](docs/history/stitchcad-devnotes-part1069.md) retains exact task,lesson and ledger.
 
 [Whole0895 original component association unit](docs/history/stitchcad-devnotes-part1068.md) retains exact task,lesson and ledger.
 

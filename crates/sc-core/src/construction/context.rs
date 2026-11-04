@@ -199,8 +199,9 @@ pub use design_semantic::{
     DraftingDesignSemanticScopeError,
 };
 pub use garment::{
-    AdmittedDraftingGarmentSource, DraftingGarmentProvider, DraftingGarmentSource,
-    DraftingGarmentSourceError, DraftingGarmentSourceIssue,
+    AdmittedDraftingGarmentSource, DraftingClosureSizeRole, DraftingGarmentProvider,
+    DraftingGarmentSemanticField, DraftingGarmentSemanticOwner, DraftingGarmentSemanticUse,
+    DraftingGarmentSource, DraftingGarmentSourceError, DraftingGarmentSourceIssue,
 };
 pub use profile::{
     BoundDraftingProfileLogicalSource, BoundDraftingProfileSource, DraftingProfileLogicalError,

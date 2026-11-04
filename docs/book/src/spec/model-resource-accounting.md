@@ -506,6 +506,9 @@ The [planned whole semantic consumer contract](../annexes/semantic-recipes.md#wh
 requires fresh aggregate occurrence,request/source-selection,comparison and result bounds before
 child queries or reservation. Individual source proofs and constructor quotas grant no aggregate
 credit. Root-owned garment references retain original indices without manufactured mixed positions.
+The [Pocket/Closure raw occurrence view](../annexes/semantic-recipes.md#original-pocket-and-closure-dependency-fields)
+borrows actual fields without a resource callback or allowance. Its constant-size iterator metadata
+does not replace complete aggregate content/occurrence/comparison admission before matching.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

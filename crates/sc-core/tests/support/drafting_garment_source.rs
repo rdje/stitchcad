@@ -15,6 +15,18 @@ pub(super) fn garment_with_piece(
     damaged: bool,
     identity: EntityId,
 ) -> TestResult<DesignGarment<EmptyHost>> {
+    build(damaged, identity, vec![])
+}
+pub(super) fn garment_with_closures(
+    kinds: Vec<ClosureKind>,
+) -> TestResult<DesignGarment<EmptyHost>> {
+    build(false, id(100), kinds)
+}
+fn build(
+    damaged: bool,
+    identity: EntityId,
+    kinds: Vec<ClosureKind>,
+) -> TestResult<DesignGarment<EmptyHost>> {
     let mut ledger = IdentityLedger::new();
     let mut ids = DeterministicIdGenerator::new();
     let edges = ledger.declare_edges(&mut ids, 1)?;
@@ -127,6 +139,46 @@ pub(super) fn garment_with_piece(
         },
     })?;
     let structure = inputs.structure();
+    let mut placements = vec![];
+    let mut closures = vec![];
+    for (index, kind) in kinds.into_iter().enumerate() {
+        let offset = u128::try_from(index)? * 10;
+        let pair = [id(20000 + offset), id(20001 + offset)];
+        for (copy, placement) in [id(10001), id(10002)].into_iter().zip(pair) {
+            placements.push(NotionPlacement::new(
+                NotionPlacementDefinition {
+                    id: placement,
+                    copy,
+                    anchor: EdgeAnchor {
+                        edge,
+                        param: Param::START,
+                    },
+                    direction: DirectedRange {
+                        range: EdgeRange::whole(edge),
+                        direction: Direction::Original,
+                    },
+                },
+                structure.cut_plan(),
+                structure.pieces().pieces().first().ok_or("actual Piece")?,
+                structure.topology(),
+            )?);
+        }
+        closures.push(Closure::new(
+            ClosureDefinition {
+                id: id(20002 + offset),
+                kind,
+                instances: vec![ClosureInstance {
+                    id: id(20003 + offset),
+                    first: pair[0],
+                    second: pair[1],
+                }],
+            },
+            &placements,
+            structure.cut_plan(),
+            structure.pieces().pieces(),
+            structure.topology(),
+        )?);
+    }
     let graph = SewingGraph::new(
         SewingGraphDefinition {
             id: id(10004),
@@ -146,8 +198,8 @@ pub(super) fn garment_with_piece(
     Ok(DesignGarment::new(DesignGarmentDefinition {
         sewing,
         pockets: PocketInventory::new(vec![pocket])?,
-        notions: NotionPlacementInventory::new(vec![])?,
-        closures: ClosureInventory::new(vec![])?,
+        notions: NotionPlacementInventory::new(placements)?,
+        closures: ClosureInventory::new(closures)?,
         layers: LayerInventory::new(vec![], vec![], vec![])?,
         hems: HemInventory::new(vec![])?,
         constructions: ConstructionInventory::new(vec![], vec![], vec![], vec![], vec![], vec![])?,

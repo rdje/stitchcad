@@ -1678,3 +1678,47 @@ fresh aggregate work admission,logical/rule joins,garment/component/Closure join
 joins,then the complete semantic cohort. Whole `.5f.2.check` composes it with existing owner/order/
 context/argument proofs. Coupled `.5f.2.verify` activates after that agreed feature set is implemented;
 focused checks remain the verification level for each preceding slice.
+
+## Original Pocket and Closure dependency fields
+
+`DesignGarment::pocket_closure_dependencies()` now streams original Pocket/Closure field views.
+This first occurrence stage is implemented with focused checks;the planned whole semantic contract
+above still needs ordered operation/native occurrences,complete source-selection requests,fresh
+aggregate work and complete source binding. This method covers Pockets/Closures specifically;
+it certifies no other garment family,program slot or whole dependency cohort.
+
+Each private `DraftingGarmentSemanticUse` retains the actual garment,original member/index and
+`DraftingGarmentSemanticField`. `owner()` returns either the actual Pocket and its original inventory
+index,or the actual Closure and its original inventory index. Those are zero-based metadata
+locations. There is no fabricated mixed-program position or creating operation. Copying a view
+copies only original loans and fixed indices,without a Clone/Debug requirement on the host.
+
+Pockets stream in authored inventory order. Within each Pocket,the fields follow its original
+definition:served copy/expected-Piece reference,attachment position,directed orientation,logical
+opening,and every component reference in original component order. Component fields retain their
+actual zero-based index and exact original borrowed `PocketPieceRef`. Source-frame geometry and
+copy orientation are not transformed or evaluated.
+
+Closures follow the Pockets,in original Closure inventory order. A CentredZipper contributes its
+original `ClosureLength` field. HookAndBar contributes distinct Hook and Bar source fields,even
+when their authored `NotionSize` values are equal. ButtonAndButtonhole contributes the original
+Button source and `ButtonholeDerivation`. Each kind is followed by every original physical instance
+in instance order,with its original index and complete instance loan. Stable instance identity
+remains its own field;the array index cannot replace it. The raw classifier explicitly retains the
+unsupported Fly gap field;normal Closure construction already refuses that envelope.
+
+The implementation exhaustively matches Pocket and Closure definitions,all Closure kinds and
+instance identity/placement fields. Growing these records requires a fresh classification.
+The fused iterator borrows original buffers and uses constant-size inline field views. It allocates,
+clones,queries and selects no value;Debug prints roles/indices without authored length content.
+It needs the model's existing `DesignReferenceHost` getter bound and no `DesignResourceSource` or
+provider. Raw iteration grants no resource,comparison,source/currentness or executable allowance.
+The future aggregate binder must preflight complete content and occurrence work before matching.
+
+The focused fixture's one Pocket yields five fields:served,position,orientation,opening and
+component0. Every field and owner pointer is the original actual object. A second fixture adds
+three zipper origins (Explicit,Formula,Profile),HookAndBar with equal-but-distinct Declaration
+fields,and ButtonAndButtonhole with a Profile button. Their original kind and instance fields
+add twelve occurrences,for seventeen total. All Closure inventory indices and instance0 pointers
+stay exact. Exhausted iterators continue returning None. API examples compile the narrow generic
+getter contract and refuse private field mutation or original-owner lifetime escape.

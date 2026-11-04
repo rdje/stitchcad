@@ -6,6 +6,11 @@ use crate::design::{
     DesignResourceMeter, DesignResourceScope, DesignResourceSink, DesignResourceSource,
 };
 use core::fmt;
+mod occurrences;
+pub use occurrences::{
+    DraftingClosureSizeRole, DraftingGarmentSemanticField, DraftingGarmentSemanticOwner,
+    DraftingGarmentSemanticUse,
+};
 
 /// Raw original garment and its containing snapshot. Public construction grants no Root binding,
 /// resource allowance, currentness, declaration/domain or operation-execution certificate.

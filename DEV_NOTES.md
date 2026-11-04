@@ -3,16 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — whole semantic consumer contract before implementation
+## _(2026-11-04 UTC)_ — original Pocket and Closure dependency occurrences
 
-0896 records the planned aggregate semantic contract after source primitives. Root-owned Pocket/Closure locations have original indices and no invented mixed positions;ordered semantic/native consumers retain genuine checked positions.
-Design Derived inputs require actual Root operation/output and strict earlier suppliers. Profile Derived remains attached to its original external Profile;equal operation IDs cannot create Root order evidence or claim Profile-body acceptance.
-Complete explicit Profile/rule source selection,canonical kind/domain/state,Closure button/operation identity,original component program provenance and all13 native target families precede whole semantic acceptance.
-Fresh aggregate occurrence/comparison/child-walk/result bounds must precede child queries or allocation. Individual proofs/quotas grant no aggregate credit;no prefix,default logical member or physical opening/hole length is introduced.
-Source-derived doc census confirms13/13 actual native variants and5 consumer classes,rc=0;two stale standalone paragraphs now acknowledge implemented source/component primitives. Guarded book0;Rust unchanged and no broad verification claimed.
-Seven implementation leaves now own original occurrences,complete requests,aggregate work,logical/garment/native joins and complete cohort;whole .5f.2.check/.verify follow. Next original occurrence views.
-Promotion declined:existing original-owner/order,explicit external Profile and fresh aggregate doctrine;book owns specific contract. Whole0895 retained1068 as3 exact Git spans/public0;protected recovery stores unchanged.
-README/LIVE reviewed unchanged,G1still6/18 In Progress;planned contract creates no new implemented public API or execution proof.
+0897 adds a scoped fused raw iterator over exact actual garment/member/field loans and original indices. Pocket fields retain definition order;Closure kind fields precede every original physical instance. Root locations gain no mixed position or creating operation.
+Typed owner/field/Closure-size-role views preserve actual source buffers. Exhaustive definition/kind/instance guards classify schema growth;constant-size inline view arrays allocate no result vector. Manual Copy/Clone/Debug avoids host bounds and authored length display.
+Native2 pass0:one Pocket yields5 exact original pointers;three zipper origins,Hook/Bar equal-but-distinct Declaration fields and a Profile Button/derivation plus instances add12,for17 total. Actual Closure indices/instance0 pointers and fused exhaustion remain exact.
+Initial compile bound used DesignMetadataHost while existing model getters require DesignReferenceHost;impl now preserves that existing contract. The raw iterator needs no ResourceSource or provider and supplies no work/source/currentness/value acceptance.
+Strict selected lint/fmt0;Garment API7 and affected garment-source3 pass,rc=0. Guarded book0;no new book Rust example or full/coupled verification claim.
+Promotion declined:existing original field/owner/index and exhaustive/no synthetic position doctrine;book owns API. Whole0896 retained1069 as3 exact Git spans/public0;protected recovery stores unchanged.
+README/LIVE unchanged,G1still6/18 In Progress;next ordered semantic operation occurrences,then native targets,explicit requests and aggregate work/binding.
+
+[Whole0896 whole semantic contract lesson](docs/history/stitchcad-devnotes-part1069.md) retains exact source bytes.
 
 [Whole0895 original component association lesson](docs/history/stitchcad-devnotes-part1068.md) retains exact source bytes.
 
