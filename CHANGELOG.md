@@ -3,10 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0890 — complete local signature and Derived-output binding
+## STITCHCAD-G1-0891 — original component source binding contract
 
-Fresh whole work precedes exact named kinds/result and actual Root canonical output/Derived-operation checks. Original orders,pair indices,domains/states and typed first causes survive without values or source requery.
-Native5,strict lint/fmt,API4,actual semantic examples26 and book pass0. Whole0889 retained exactly1062;LIVE includes local signatures,G1still6/18 In Progress. Component/whole dependency binding and coupled verification remain pending.
+Specify current copy/Piece/frame/snapshot and original recipe/native declaration boundaries,complete fresh accounting/work and typed no-prefix refusal.
+Whole-program provider callback census owns separate record accounting before the component port;no execution/history truth inferred. Census/book0,Rust unchanged. Whole0890 retained exactly1063;G1still6/18 In Progress.
+
+[Whole0890 local rule signature unit](docs/history/stitchcad-devnotes-part1063.md) retains exact task,lesson and ledger.
 
 [Whole0889 original rule association unit](docs/history/stitchcad-devnotes-part1062.md) retains exact task,lesson and ledger.
 

@@ -742,11 +742,13 @@ The implementation sequence is:
    scalar ordinal,global geometry name or live output. The original thirteen drafting families
    keep their distinct authentic geometry contracts. All new bounds precede child queries or
    result allocation,and all original occurrences remain visible on refusal.
-5. **Design/Profile logical-source facets implemented;rule sources planned:** return actual canonical declaration,
+5. **Design/Profile/rule source facets and local signatures implemented:** return actual canonical declaration,
    domain/state and operation loans under original Root/snapshot ownership. A Profile source also
    retains its explicit selected profile/schema/content pin and actual canonical inventory;
    another profile or matching parameter ID is insufficient. The source's exhaustive resource
    walk includes all those records,unused entries,duplicated caches and represented counters.
+   The [component source contract](semantic-recipes.md#component-source-binding-contract) requires
+   actual Piece/copy/recipe/native creator loans and complete accounting without reconstructing history.
 6. Bind complete semantic occurrences only after their complete source/content/work allowances.
    Keep the original Pocket opening and all component source Pieces/copies. A recipe-built
    component retains its actual original recipe/creator;explicit imported primitives retain their

@@ -725,8 +725,31 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0876 raw actual component source loans;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1049md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind`
-  Status: `pending`
+  Status: `in_progress`
   Goal:after source ports/accounting,bind complete original component origins to actual Root Piece/copy,recipe owner/native creator and frame/snapshot under explicit bounds;typed original causes,no historical reconstruction or prefix acceptance.
+  Children: `.contract` (actual declaration/source/proof boundaries),`.records` (callback-free original program-record accounting),`.port` (original readonly component query),`.binding` (fresh complete Root/copy/frame/source/creator association).
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind.contract`
+  Status: `done`
+  Goal:specify actual current Root Piece/copy membership,original import/recipe/native creator source records,frame/snapshot loans and complete fresh accounting/work before implementation. Preserve original recipe contexts and declared creator facts without promoting declarations to executed creation,history or geometry truth;typed unsupported/missing sources remain explicit.
+  - [x] REPRODUCE / ISSUE:raw component carriers are not complete current Piece/copy/source or recipe membership proof. Native identity declarations are local intent,not executed/current history. Original source/accounting boundaries must be explicit before introducing the query/binder.
+  - [x] ROOT CAUSE: `rg -n 'not an issued/fresh/current|canonical result identity field' crates/sc-core/src/construction/mirror/identity.rs`:actual declaration boundary,rc=0.
+  `rg -n 'source\(\).charge_resources|charge_entries\(steps.len\(\)' crates/sc-core/src/construction/program/admission.rs`:provider callback277 then step walk287,rc=0;whole accounting cannot be recursively reused for its own held recipe.
+  - [x] FIX:book contract preserves explicit PocketPieceRef copy/Piece,actual source/root/frame/snapshot and original program/native creator/context loans. Complete fresh bounds precede queries/scans;actual native membership yields original position. Host returns recorded association,no request echo/reconstructed recipe/history or implicit transform.
+  - [x] ADDRESSED: `make book`:guarded renderer,rc=0. Contract marks query/binding APIs planned,keeps declaration/source/history truth distinct and records callback-free original record walk as next prerequisite. Other creator forms require genuine support/typed refusal;all actual extra data remains accounted.
+  - [x] NO REGRESSION: `git diff --check`:rc=0;book0. Rust/public interfaces unchanged;0890 native5/strict/API4/book26 are existing scoped evidence,not rerun or full verification. Coupled .5f.2.verify remains deferred;records/port/binding own implementation.
+  - [x] LOCKSTEP:source-plan step5 now reflects implemented rule/local signature APIs;MEM/index/DEV/ledger advance to record accounting. README/LIVE reviewed unchanged,G1still6/18 In Progress. No executable component or creation-history acceptance claimed.
+  - [x] CONTINUITY:whole0890 task/lesson/ledger retained1063;transition_receipts.py reports3 exact Git spans,rc=0;public reader byte-exact0. Window30/recovery/proof/draft stores protected;no sealed bytes/caps/producers changed.
+  - [x] PROMOTION: promotion: declined (existing original-source,exact-owner/proof and exhaustive resource-composition doctrine;book owns contract). Records then port/binding remain owned;no new physical/import/history algorithm. Commit:STITCHCAD-G1-0891.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind.records`
+  Status: `pending`
+  Goal:exhaustively precharge original program step records and actual native fields without calling Root/provider/currentness/value ports. Existing complete program accounting composes this same record walk;additional source providers account their original context data separately and must not recursively reenter themselves for a held recipe.
+  Priority: P1 product prerequisite for `.port`;the existing complete walk calls the source provider. Add record composition before any component provider holds its recipe.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind.port`
+  Status: `pending`
+  Goal:readonly already-held component source query for exact physical-copy/expected-Piece target under original garment/context,without request echo,body loading or invented source. Every original import/program/creator/context field,unused record/copy/cache/counter is accounted before query;retain actual typed source causes and source-owned loans.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind.binding`
+  Status: `pending`
+  Goal:fresh complete current garment/provider/request and prospective member/creator bounds before source lookup;bind exact actual Piece/copy,frame/snapshot and original import or recipe/native creator association. Preserve original contexts/orders/first causes and genuine creator positions;no reconstructed recipe,identity issuance,geometry result or execution/history certificate.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.inventory`
   Status: `done`
   Goal:0877 original ordered semantic owner;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1050md).
@@ -799,20 +822,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0889 original rule source association;[whole scope/proofs](../history/stitchcad-devnotes-part1062.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.rules.binding.signature`
   Status: `done`
-  Goal:complete exact local-role/input-kind and result-kind matching with original operation/source orders and canonical logical output Derived-operation association. Preserve domains/states/causes without selecting values,querying physical results or exposing an accepted prefix;whole semantic source/order/graph acceptance remains .5f.2.check/.verify.
-  Scope:refresh complete content/W/member work before metadata scans,then result/count/first original local role/kind checks and actual Root logical output membership/kind/Derived-operation link.
-  Preserve both original orders and exact input-pair indices through borrowed views;no source/value query,buffer clone or result vector. Actual canonical input/Profile parameter binding remains whole dependency work.
-  - [x] REPRODUCE / ISSUE:original source association supplies body/origin/ID/family,not complete named requirements or actual output relation. Equal numeric IDs,matching dimensions or positional roles cannot establish these;input reference kinds still need separate actual canonical source binding.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract rule_signature::`:5 pass,rc=0. Original role order differs from signature order;exact local kinds,complete populations and actual Root output/Derived-operation relation must join without source requery,cloned domain or selected result.
-  - [x] FIX:private source-parent signature proof/error,complete result/count/first named role-kind checks and actual Root logical output kind/member/Derived link. Original unique constructors plus equal counts/full membership prove bijection;borrowed match views preserve both original owners,pairs and indices. No positional pairing or accepted prefix.
-  - [x] ADDRESSED:focused5 pass,rc=0;reversed0→1/1→0 mappings and exact pointer loans for logical/numeric policy inputs,Design/Profile logical representation preserved. Dedicated Length versus Scalar(Length),both logical kinds,result/count/extra/missing/ref-kind causes refuse at original indices. Empty signatures preserve mandatory button and actual Derived output.
-  - [x] OUTPUT:focused5 pass,rc=0;Root output90/index0/domain output_a/Derived80 retained. Actual missing/wrong-kind output,Unknown/Known state and Derived81 preserve original record/typed cause without mutation. Same-ID Profile inventory cannot replace actual Root output;actual canonical input/Profile parameter membership stays whole checker scope.
-  - [x] FRESHNESS:exact26/T/9,W1156 and prior28/(T+3)/10;actual cache26→27 refuses26+1 or newW1225 before bad role,including ignored errors. Guarded independent arithmetic/UTF-8 census:26/1156/1225,added135B,rc=0. Rule query count remains1 from source association;signature/source/currentness/value queries absent.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0;fmt0. `cargo test -p sc-core --doc context::rule::signature`:4 pass,rc=0;private fields,parent escape and original match-data lifetime refuse. Fresh producer rewalks all original content with fixed output-loan/metadata guards.
-  - [x] BOOK: `cargo test -p sc-core --doc semantic_examples`:26 pass,rc=0;actual bound-signature helper compiles. `make book`:rc=0. Scoped deferred-status paragraphs reconciled to implemented primitives;canonical inputs,whole order/graph,body/result/value/G3/G4 truth remain separate,coupled .5f.2.verify deferred.
-  - [x] LOCKSTEP:book/source-plan/resource routes and MEM/index/DEV/ledger align;README reviewed unchanged. LIVE product note includes local signatures,G1still6/18 In Progress. Ports/rules/binding branches close with their completed children/focused proofs;actual component source binding is next.
-  - [x] CONTINUITY:whole0889 task/lesson/ledger retained1062;transition_receipts.py reports3 exact Git spans,rc=0;public reader byte-exact0. Window30/recovery/proof/draft stores protected;no sealed bytes/caps/producers changed.
-  - [x] PROMOTION: promotion: declined (existing exact-local-kind,original-owner,fresh-accounting and Derived-link doctrine;book owns API). Local signature/output binding implemented with focused checks;component/whole dependency and coupled verification remain tracked. Commit:STITCHCAD-G1-0890.
+  Goal:0890 complete local signatures/Root output relation;[whole scope/proofs](../history/stitchcad-devnotes-part1063.md).
 - ID: `G1-SLICE.5f.2.check`
   Status: `pending`
   Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.

@@ -3,19 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — complete local rule signatures and Root output relation
+## _(2026-11-04 UTC)_ — original component binding implementation contract
 
-0890 refreshes complete content/W/member work before original result/count/named role-kind scans and actual Root logical output lookup.
-Unique original role populations plus equal counts/full membership prove bijection without positional pairing or reverse scan. Matched views preserve original owners,records and both indices.
-Actual Root output kind/member must be Derived naming the exact operation. Unknown/Known/other states and another Derived operation refuse without mutation or selected values.
-Native5 pass0:reversed logical/numeric policy requirements,Design/Profile logical references,exact Length/Scalar distinction,all first metadata/output causes and explicit empty signatures.
-Exact26/T/9,W1156 and prior28/(T+3)/10;independent arithmetic/UTF-8 census confirms26/1156/1225 and added135B. Actual cache growth refuses before bad role,including ignored errors.
-No additional rule/Profile/value query or result vector. Canonical input/Profile parameter membership,body conformance,result-domain/value truth and whole graph/order remain separate.
-Strict selected lint/fmt0,API4 pass0 for private signature/match fields,parent escape and original-data lifetime;guarded book0.
-Actual semantic_examples26 pass,rc=0;bound-signature helper compiles. Ports/rules/binding branches close with focused checks;no coupled/full CI verdict claimed.
-Scoped book deferred-status census corrected earlier primitive paragraphs;source/signature/output acceptance now explicit while whole input/dependency proof stays pending.
-Promotion declined:existing exact-local-kind,original-owner/fresh-accounting/Derived-link doctrine;book owns API. Whole0889 retained1062 by three exact Git spans/public0.
-LIVE product note includes local signatures;G1still6/18 In Progress. Component source binding follows;coupled .5f.2.verify remains deferred.
+0891 fixes the boundary between actual current Piece/copy/source association and native declaration metadata;Mirror/Join identity witnesses certify no issued/fresh/current result or executed history.
+Current copy/Piece/frame/snapshot and original recipe/creator/context loans remain distinct. Exact original native membership supplies a genuine position;no inferred copy,recipe,ordinal or transform.
+Provider holds the recorded original association and every additional program/import/context/cache/counter before queries. Metadata binding still grants no execution/history/source truth.
+Producer census confirms whole-program accounting calls its provider before steps. A provider-owned recipe needs a separate exhaustive record walk without callbacks;records leaf is the next product prerequisite.
+Scoped declaration/producer census and guarded book0;Rust/public APIs unchanged. Implementation remains records→port→binding;coupled .5f.2.verify deferred.
+Source-plan step5 corrected to implemented rule sources/local signatures. Promotion declined:existing original-source/proof/resource composition doctrine;book owns implementation contract.
+Whole0890 retained1063 by three exact Git spans/public0. README/LIVE reviewed unchanged,G1still6/18 In Progress;record accounting next.
+
+[Whole0890 local rule signature lesson](docs/history/stitchcad-devnotes-part1063.md) retains exact source bytes.
 
 [Whole0889 original rule association lesson](docs/history/stitchcad-devnotes-part1062.md) retains exact source bytes.
 

@@ -250,6 +250,71 @@ actual recipe/native-input association, frame/snapshot identity and original fir
 with the tracked component binding task after source ports/accounting exist. Other creation forms
 need genuine supported source records; these carriers supply no synthetic native history for them.
 
+## Component source binding contract
+
+Component source query and accepted binding APIs are **planned**. The existing raw carriers above
+are implemented. The next leaves add program-record accounting,a readonly original source port,
+then complete fresh association checks. They do not add a geometry algorithm,importer or history
+reconstruction. All original source records must already be held before lookup.
+
+A component target is an explicit `PocketPieceRef {copy,piece}`:a stable physical cut-copy ID and
+its expected pattern Piece ID. A list position,quantity or equal-looking Piece cannot supply either
+identity. Binding must retain the actual current Root's CutPlan copy and Piece inventory member,
+including original copy orientation and Piece metadata. The copy must name that expected Piece,
+and the returned origin's Piece must be that exact original member. These checks create no
+reflected geometry or inferred Cartesian transform.
+
+Imported origin requires its actual primitive Piece and original import-source record. The
+payload may be opaque,but its complete fields still need an integration-owned resource producer.
+Missing/unprovided/retired/unsupported source data returns the original typed cause. An unknown
+recipe does not become an imported success,and an imported primitive does not acquire a fabricated
+recipe,creator,format or creation position.
+
+Recipe origin retains the actual complete original `DraftingProgramInputs` owner and genuine
+Mirror/Join Piece-identity declaration. Those declarations are locally checked metadata facts;
+they issue no fresh/current identity and prove no executed creation or history. The binder must
+check the declared result Piece ID against the actual selected Piece and match the exact creator
+input loan to its original native program member. Scalar and semantic slots cannot supply native
+creation. No original occurrence is skipped:missing or repeated creator membership refuses rather
+than choosing a position. A successful position comes from the actual mixed sequence,never from
+a numeric operation ID,source label or reconstructed ordinal.
+
+The source provider must return the recorded original recipe association under its actual
+immutable snapshot contract. Original program context,Root,frame and snapshot loans remain
+original;do not replace them with the current containing context or infer ancestry from equal
+IDs. Native source Piece/metadata associations must be checked against their actual original
+program owner. The component header's frame/snapshot must match the containing context's actual
+records,and recipe frame compatibility uses original record identity with no implicit transform.
+Captured original program snapshot provenance remains separately inspectable. Matching these
+metadata fields does not prove execution,geometric correctness or historical source truth.
+
+Complete fresh current garment/provider/request content and prospective copy/member/creator work
+must be admitted before query,source scans or result reservation. The provider's exhaustive walk
+includes every actual additional original program,its complete native inputs/manifests,import
+payloads,retained contexts,unused records,copies/caches and represented counters. Constructor
+policies and previous demand totals give no credit. Precharge all collections before traversal;
+all original occurrences and first field causes remain inspectable on refusal.
+
+Program-record accounting needs a separate composition boundary. Existing
+`DraftingProgramInputs::charge_resources` walks the Root,then calls its provider,then walks steps.
+A provider accounting its own held recipe must not recursively invoke itself through that whole
+walk. The next record leaf adds an exhaustive step/native-field walk without Root/provider,
+currentness or value callbacks. Integrations then account original context bodies through their
+actual owners,while the existing whole-program method composes the same record walk and keeps
+its complete first-refusal contract. This planned helper grants no whole-source admission itself.
+
+The readonly source port must return original source-owned loans independently of a by-value
+copy/Piece request. Query loads,clones and evaluates nothing. All raw responses remain inspectable
+before core checks them;only a private complete source binding may report successful association.
+Original missing/unsupported/provider errors and actual ownership/frame/snapshot/creator witnesses
+survive. No successful Piece/copy or creator prefix is published on failure.
+
+Current supported recipe creator carriers are Mirror and Join. Other creation forms need genuine
+supported source records and explicit future implementation;they receive no synthetic native
+history. Whole Pocket/semantic dependency order,canonical logical input/Profile parameter binding,
+G3 physical effects,G4 source/evidence truth and execution remain separate. Coupled verification
+stays `.5f.2.verify` after the agreed integration set.
+
 ## Original ordered semantic recipe
 
 `SemanticRecipe` now owns the exact supplied `Vec<SemanticOperation>` in authored order.
