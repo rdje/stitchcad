@@ -3,15 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — fresh actual Design semantic source scope
+## _(2026-11-04 UTC)_ — original Profile records and complete pin text
 
-0880 composes complete actual Root and provider content before individual canonical logical/semantic operation lookups. The private scope holds original context/snapshot,explicit limits and fresh demand;old constructor/scope demands grant no aggregate credit. A zero sink fence preserves ignored first source failures.
-Focused3 pass0 after module separation:exact11/(32+X)/6 and prior12/(34+X)/7,original scope/member/snapshot loans,Derived unchanged,equal-data foreign record distinct. Four exact content refusals and ignored cache failure preserve first causes.
-Four missing/kind lookups retain original request/scope and actual lending members.
-Member access allocates/clones/queries no provider or value. Scope/member Debug omits domains,roles and opaque payloads;H/S need no Clone/Debug. Admission resource errors retain original context/policy/cause;lookup errors expose lending causes directly.
-Fresh charge_resources walks actual Root/provider fields again and preserves a prior latch.
-Strict selected lint/fmt0,private/lifetime API3 and actual semantic_examples14 pass,rc=0;guarded book build0. Aggregate lookup/comparison work,garment inventories,Profile/rule/currentness/graph/physical acceptance stay separately owned.
-Promotion declined:existing source/ownership doctrine;book owns API. Exact archive1052 retains0879,original byte closure/0318;G1still6/18.
+0881 raw Profile/parameter carriers loan actual Root,pin,canonical inventory,body,snapshot and metadata fields. Profile canonical data is a separate source owner.
+Parameter600 and canonical declaration90 remain distinct;Derived keeps its operation reference without a selected result. Carriers perform no lookup/acceptance.
+Manual Copy/Clone/Debug needs no H/payload traits and omits pin/domain/body text. Foreign equal-data records remain inspectable raw responses for later refusal. Existing SelectedProfilePin nonblank/opaque label behavior and DeferredToG4 stay unchanged.
+The selected-pin producer exhaustively views owner/definition and charges profile/schema/content UTF8 text in order;caller supplies original scope/owner/index. Focused3 pass0:original pointer/record loans,zero callbacks,exact0/T/0,three first-field shortages,prior1/(T+2)/1 and unchanged first latch/labels.
+Strict selected lint/fmt0,Profile API lifetime/raw-construction2 and actual semantic_examples17 pass,rc=0;guarded book build0. Provider/binding follows;full semantic/G4/currentness/evidence/physical acceptance remains separate.
+Promotion declined:existing source/pin doctrine;book owns API. Archive1053 retains whole0880/original0068 with exact/public receipts0;G1still6/18.
+
+[Whole0880 fresh Root semantic source lesson](docs/history/stitchcad-devnotes-part1053.md) retains exact source bytes.
 
 [Whole0879 mixed semantic ordinal lesson](docs/history/stitchcad-devnotes-part1052.md) retains exact source bytes.
 

@@ -692,6 +692,8 @@ Original semantic mixed ordinals,complete coverage and scalar-name order metadat
 [Actual Design semantic source scopes](semantic-recipes.md#actual-design-semantic-source-scope)
 now lend Root logical/operation members after fresh complete Root/provider accounting.
 Complete semantic dependency binding,component binding and Profile/rule source facets remain **planned**.
+[Raw original Profile/parameter source records](semantic-recipes.md#raw-original-profile-and-parameter-records)
+and exhaustive selected-pin text accounting are implemented;accepted Profile binding remains next.
 Garment source-content admission does not implement those remaining stages.
 The existing numeric formula targets,scalar formula statements and
 mixed ordinal metadata cannot complete source binding merely because an identifier matches.

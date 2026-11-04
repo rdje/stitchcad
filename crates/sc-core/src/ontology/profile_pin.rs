@@ -77,6 +77,11 @@ impl SelectedProfilePin {
     pub const fn definition(&self) -> &SelectedProfilePinDefinition {
         &self.definition
     }
+    /// Exhaustive retained owner view;new owned fields must enter resource accounting.
+    pub(crate) fn resource_definition(&self) -> &SelectedProfilePinDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Explicit profile validation/resolution boundary; this pin supplies no physical values or authority.
     #[must_use]
     pub const fn validation(&self) -> ProfileBindingValidation {

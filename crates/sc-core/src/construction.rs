@@ -71,7 +71,8 @@ pub use context::{
     DraftingGeometrySource, DraftingGeometrySourceResult, DraftingGeometryStepProvider,
     DraftingImportedComponentSource, DraftingInitialInputProvider, DraftingInitialInputSource,
     DraftingInitialInputSourceResult, DraftingPlannedOutput, DraftingPlannedOutputProvider,
-    DraftingPlannedOutputSource, DraftingPlannedOutputSourceResult, DraftingSourceRecord,
+    DraftingPlannedOutputSource, DraftingPlannedOutputSourceResult, DraftingProfileLogicalSource,
+    DraftingProfileSource, DraftingSourceRecord,
 };
 mod operation_input;
 pub use operation_input::{

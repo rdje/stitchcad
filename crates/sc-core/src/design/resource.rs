@@ -20,6 +20,7 @@ mod garment;
 mod inputs;
 mod layers;
 mod pieces;
+mod profile;
 mod sewing;
 mod structure;
 mod topology;
@@ -43,6 +44,7 @@ pub use inputs::{
 };
 pub use layers::{charge_hem_inventory_resources, charge_layer_inventory_resources};
 pub use pieces::{charge_cut_plan_resources, charge_piece_inventory_resources};
+pub use profile::charge_selected_profile_pin_resources;
 pub use sewing::{charge_sewing_graph_resources, charge_sewing_landmark_resources};
 pub(crate) use structure::charge_revision_bits;
 pub use structure::{charge_design_revision_resources, charge_design_structure_resources};

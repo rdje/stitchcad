@@ -546,3 +546,91 @@ and constructor policies never replace held-content accounting or clear an earli
 Pinned Profile source records and original rule/policy signatures remain the following source-port
 leaves. G4 retains Profile schema/registry/evidence/physical resolution;G3 retains physical recipe
 execution. The Design source scope creates none of those proofs or results.
+
+## Raw original Profile and parameter records
+
+`DraftingProfileSource` now retains explicit original loans for the containing Design `root`,the
+actual `selected` profile/schema/content pin,the Profile's canonical `inputs`,its original
+`profile` payload record and the containing `snapshot` record. The Profile inventory is a separate
+source owner;it is not implicitly the Design's canonical inventory. `SelectedProfilePin` keeps all
+three authored labels distinct and unchanged,including nonblank whitespace and opaque version
+spellings. Its existing validation boundary remains DeferredToG4. A raw source chooses no latest
+version,default profile or physical parameter.
+
+```rust
+use sc_core::{construction::{DraftingProfileSource,DraftingSourceRecord},
+    design::{DesignInputs,DesignMetadataHost},ontology::SelectedProfilePin,value::CanonicalInputs};
+fn raw_profile<'a,H:DesignMetadataHost,S:?Sized,P:?Sized>(root:&'a DesignInputs<H>,
+    selected:&'a SelectedProfilePin,inputs:&'a CanonicalInputs,
+    profile:&'a DraftingSourceRecord<P>,snapshot:&'a DraftingSourceRecord<S>)
+    ->DraftingProfileSource<'a,H,S,P> {
+    DraftingProfileSource {root,selected,inputs,profile,snapshot}
+}
+```
+
+`DraftingProfileLogicalSource` additionally retains the original `parameter` field loan,actual
+canonical logical `declaration` and original `metadata` record exposing that association. The
+parameter ID and canonical declaration ID are distinct roles:for example,parameter600 can bind
+declaration90. The actual declaration retains its domain,state,source and provenance;the carrier
+clones none of them. A Derived operation reference stays a reference,without a selected result or
+proof that its rule exists. Metadata/profile payloads may be opaque or unsized and need neither
+Clone nor Debug. Manual carrier Copy/Clone copies only loans;Debug omits pin/domain/body text.
+
+```rust
+use sc_core::{construction::{DraftingProfileSource,DraftingProfileLogicalSource,DraftingSourceRecord},
+    design::DesignMetadataHost,ontology::ProfileParameterRef,value::LogicalInputDeclaration};
+fn raw_parameter<'a,H:DesignMetadataHost,S:?Sized,P:?Sized,M:?Sized>(
+    profile:DraftingProfileSource<'a,H,S,P>,parameter:&'a ProfileParameterRef,
+    declaration:&'a LogicalInputDeclaration,metadata:&'a DraftingSourceRecord<M>)
+    ->DraftingProfileLogicalSource<'a,H,S,P,M> {
+    DraftingProfileLogicalSource {profile,parameter,declaration,metadata}
+}
+```
+
+These are raw responses,not public accepted-source constructors. Foreign equal-data Root/pin/
+inventory records,another snapshot or a detached equal-data declaration remain inspectable for
+later typed refusal. Matching labels or IDs alone do not establish original Profile metadata,
+canonical membership,currentness,domain acceptance,evidence truth or physical resolution. The
+following provider/binding leaf owns explicit requested-pin association and original Root/profile/
+snapshot/canonical/member checks. The honest immutable source contract requires actual original
+records;echoing a request or supplying a fabricated empty body cannot satisfy it.
+
+### Complete selected-pin text accounting
+
+`charge_selected_profile_pin_resources(pin,sink,scope,owner,index)` now charges the exact original
+profile_id,schema_version and content_version strings in that order. Both the retained pin owner
+and its definition are exhaustively classified;adding an owned field requires new accounting.
+The caller supplies its original containing scope,optional entity owner and optional authored
+collection position. The producer supplies static fields `selected_profile.profile_id`,
+`selected_profile.schema_version` and `selected_profile.content_version`. It derives no entity or
+index from an opaque profile label. Earlier pin construction supplies no content-budget credit.
+
+For profile `atelier é`,schema ` 2.0 ` and content `7`,UTF-8 text demand is10+5+1=16 bytes,with no
+collection entries or counter bits. Text9 refuses profile_id10 after0;text14 refuses schema5
+after10;text15 refuses content1 after15. Original scope/owner/index survive the first refusal.
+A prior1 entry,2 bytes and1 bit composes to1/18/1. A prior sink failure stays first.
+
+```rust
+use sc_core::{design::*,ontology::{SelectedProfilePin,SelectedProfilePinDefinition}};
+use std::num::{NonZeroU64,NonZeroUsize};
+# fn main()->Result<(),Box<dyn std::error::Error>> {
+let pin=SelectedProfilePin::new(SelectedProfilePinDefinition {
+    profile_id:"atelier é".into(),schema_version:" 2.0 ".into(),content_version:"7".into(),
+})?;
+let limits=DesignResourceLimits::new(NonZeroUsize::new(1).ok_or("entries")?,
+    NonZeroUsize::new(16).ok_or("text")?,NonZeroU64::new(1).ok_or("bits")?);
+let mut meter=DesignResourceMeter::new(limits);
+charge_selected_profile_pin_resources(&pin,&mut meter,DesignResourceScope::SourceHost,None,None)?;
+let demand=meter.finish()?;
+assert_eq!((demand.collection_entries(),demand.text_bytes(),demand.counter_bits()),(0,16,0));
+assert_eq!(pin.definition().schema_version," 2.0 ");
+# Ok(()) }
+```
+
+This helper does not look up or validate a Profile,parse versions or create a meter/allowance.
+The complete provider walk must also charge all actual canonical fields,Profile bodies,metadata,
+duplicated records/caches and represented counters,including unused entries,before queries.
+Existing canonical and logical producers compose those represented fields;opaque payloads need
+their actual integration-owned exhaustive producer. Whole-source admission,typed provider causes
+and accepted bindings remain the next leaf. G4 still owns schema/registry/evidence/physical
+resolution;these original source loans and text charges grant none of those proofs.

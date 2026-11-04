@@ -3,11 +3,14 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0880 — fresh Root semantic member sources
+## STITCHCAD-G1-0881 — original Profile loans and pin accounting
 
-Fresh complete Root/provider accounting precedes individual actual logical/operation member loans. Original Root,snapshot,policy,domains/state and typed missing/kind causes survive;old demands grant no cumulative credit. Focused3 pass0 with exact quotas,prior/ignored-failure latches and original member pointers.
+Raw original Root/pin/Profile/canonical/snapshot and logical parameter/declaration/metadata loans preserve all data without source acceptance. Exhaustive selected-pin producer charges exact original profile/schema/content text with caller locations.
+Focused3 pass0:original/foreign owners,distinct IDs,all field quotas and prior latches.
 
-Strict lint/fmt0,private/lifetime API3,actual book examples14 and guarded book pass0. Aggregate semantic work,Profile/rule/component binding and coupled .5f.2.verify remain pending;G1still6/18 In Progress. Whole0879/byte closure/0318 retained exactly in1052.
+Strict lint/fmt0,Profile API lifetime/raw-construction2,actual book examples17 and guarded book pass0. Profile source/provider binding is next;coupled .5f.2.verify and G4 resolution remain pending. Whole0880/original0068 retained exactly in1053. G1still6/18 In Progress.
+
+[Whole0880 fresh Root semantic source unit](docs/history/stitchcad-devnotes-part1053.md) retains exact task,lesson and ledger.
 
 [Whole0879 mixed semantic ordinal unit](docs/history/stitchcad-devnotes-part1052.md) retains exact task,lesson and ledger.
 

@@ -121,34 +121,7 @@ Whole0017 [goals/acceptance/proofs](../history/window28.md#stitchcad-devnotes-pa
 
 - ID: `G1-SLICE.5a.3f.1a`
   Status: `done`
-  Goal: repair D109 exact-byte specification before complete recipe identity implementation.
-  Clean predecessor eee15a8; no jobs/user edits. Read grammar4, contract, worked examples, existing
-  D84/D95/D103 expression rules, statement/ordered APIs and governance6.1 delegated authority.
-  Decide engineering bytes under the director's standing delegation; engineer authors/applies same
-  decision and cannot approve its evidence. No new human/release/gate closure claimed.
-  Retain existing (bind name kind expression); select flat (assert name tolerance left right),
-  explicit (recipe statement...) envelope, empty (recipe), one space/no final newline. Names,
-  declared kind/symbolic tolerance and authored operand/statement order remain identity-bearing.
-  No sorting, duplicate merging, annotation inference, tolerance resolution or algebraic rewrite.
-  Typed identity domains remain distinct; bytes do not claim project schema, hash namespace or
-  canonical-input reader. Later store .7 must frame its typed fields/digest domains explicitly.
-  Independently author statement and empty/whole ordered recipe byte fixtures; actual recursive
-  book-reference parsing supplies every operand without infer/evaluate. Author-chunk recipe
-  coverage remains distinct from an independent whole-recipe parser. Check all six bindable kinds/
-  five tolerances plus aliases/raw angles/signs/calls/branches/order/empty/whitespace examples.
-  Actual renderer opcode/name/annotation/operand/envelope/order/newline/empty faults must fail
-  authored exact-byte assertions; exclusive finally restore exact tracked producer source.
-  Standing structural suite watches producer/anchors/classifier; no product serializer proof claim.
-  Book grammar + statement annex/index and a one-record technical decision expose exact bytes,
-  implementation status, independent reviewer/unapproved evidence and principal's reversal path.
-  Preserve closed subtree/closure/oldest ledger payloads exactly; shorten orientation input only
-  as needed for new record within unchanged map ceiling. Scoped syntax/book/recording gates.
-  Verification: actual reference16 statements/six kinds/five tolerances; nine whole sources/
-  twelve ordered chunks/all four displayed examples; nine interpreter authored-byte assertion reds/
-  exact restore. Focused syntax20/structural/language16/publication9 pass0. Product Rust source/test
-  bytes stay exact eee15a8; original subtree/closure/oldest ledgers/report payloads preserved.
-  Book51 chapters/21 APIs/1060 source/1640 rendered links; technical evidence unapproved.
-  Commit: `STITCHCAD-G1-0068`.
+  Goal:0068 exact-byte protocol;[whole original scope/proofs](../history/stitchcad-devnotes-part1053.md).
 
 ### Complete recipe contract recording receipts
 
@@ -807,18 +780,26 @@ retains all original goals,statuses and focused acceptance evidence.
   `.rules` (original rule/policy body records,typed signatures and exhaustive held accounting).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.design`
   Status: `done`
-  Goal:0880 fresh complete actual Root/provider content before readonly original logical/semantic member lookup;private source scope retains actual Root/snapshot/policy and typed original missing/kind causes. No provider lookup,value read,domain copy,whole-query work or complete dependency acceptance.
-  - [x] REPRODUCE / ISSUE:0879 retains actual semantic Root/mixed owners;standalone logical/operation joins identify members. This leaf composes those actual joins with the explicit fresh Root/provider source-content scope and original context/snapshot/policy before lending records. Profile/rule/component/whole-query work remains separately owned.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract design_semantic::`:3 pass,rc=0;the complete Root and provider fields need one fresh meter. Cached separate context/Root demands cannot grant cumulative source credit;actual member joins retain lending missing/kind causes and never read Unknown/Derived values.
-  - [x] FIX:prepare_design_semantic_sources privately retains actual context,selected limits/fresh demand after exhaustive Root/provider walks and ignored-failure fence. Individual logical/operation lookups loan exact Root members under their original scope and typed request/cause. Separate scope,diagnostic and member modules keep public ownership explicit.
-  - [x] ADDRESSED:same focused3 pass,rc=0 after module separation;exact11/(32+X)/6 and prior12/(34+X)/7,actual Root/snapshot/member loans,Derived unchanged and equal-data foreign pointer distinction. Four exact first quota fields plus ignored source failure preserve originals;four typed missing/kind errors retain requested IDs/roles and actual record loans,zero member-query callbacks.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0;fmt --check0. `cargo test -p sc-core --doc context::design_semantic`:3 private/lifetime checks pass,rc=0;semantic_examples14 pass,rc=0. `make book`:0. Coupled .5f.2.verify deferred;complete graph/Profile/rule/garment/physical/execution remains unclaimed.
-  - [x] LOCKSTEP:book documents complete Root/provider scope,actual member joins,precise resource/lookup causes,examples and retained/deferred proof boundaries. Source implementation contract updated;README reviewed unchanged,LIVE product detail/MEM/index/DEV/ledger align. G1still6/18 In Progress;Profile then rule ports next.
-  - [x] CONTINUITY:1052 retains whole0879,original byte closure and0318 review;transition_receipts.py reports5 exact Git spans,rc=0;public reader byte-exact0. No limits,retained windows or existing source family contracts changed.
-  - [x] PROMOTION: promotion: declined (existing actual-owner,complete fresh-content and immutable source-port doctrine;book owns specific API). Individual Root member source scope implemented;following Profile/rule/component/whole semantic work remains pending. Commit:STITCHCAD-G1-0880.
+  Goal:0880 fresh actual Root semantic member scope;[whole scope/proofs](../history/stitchcad-devnotes-part1053.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile`
-  Status: `pending`
+  Status: `in_progress`
   Goal:readonly actual selected Profile/schema/content pin,canonical logical inventory and original parameter/declaration source loans under the containing Root/snapshot. Exhaustively charge held pins,records,domains,state/provenance and caches before bounded query;typed original unsupported/missing/kind/owner causes,no value/evidence/G4 resolution or fallback selection.
+  Children: `.records` (raw original profile/parameter loans and exhaustive pin producer),
+  `.binding` (readonly provider and fresh bounded Root/pin/snapshot/canonical source association).
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.records`
+  Status: `done`
+  Goal:0881 raw original selected pin/profile payload,canonical inventory,logical parameter/declaration metadata,Root and snapshot loans. Explicitly account all three actual pin strings with original caller scope/owner/index before later source queries;no manufactured profile,parameter,value,currentness or G4 validation.
+  - [x] REPRODUCE / ISSUE:0880 provides actual Design member sources;Profile inputs need distinct original selected pin,canonical inventory,body/parameter metadata and snapshot loans. SelectedProfilePin retains three opaque labels;later fresh admission must walk every actual field without claiming G4 resolution or manufacturing a profile source.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract profile_sources::`:3 pass,rc=0;parameter and canonical declaration IDs are distinct roles. Raw sources retain actual owners/records without accepting their associations. Exhaustive private pin-owner/public-definition views require all owned text to enter the explicit producer.
+  - [x] FIX:raw DraftingProfileSource/LogicalSource retain original Root/pin/canonical/body/snapshot and parameter/declaration/metadata loans. Manual Copy/Clone/Debug adds no H/payload traits and hides private text. Selected-pin producer charges three original UTF8 strings in schema order with caller's original scope/owner/index;no normalization,currentness or lookup.
+  - [x] ADDRESSED:same focused3 pass,rc=0;original owner/member/record pointers,parameter600→declaration90,Derived unchanged,opaque no-Clone/Debug payloads,nonblank whitespace and DeferredToG4 retained. Foreign equal-data records remain inspectable unaccepted responses. Exact0/T/0,three field refusals,prior1/(T+2)/1 and first latch pass;zero provider callbacks.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0;fmt --check0. `cargo test -p sc-core --doc context::profile`:2 lifetime/raw-construction checks pass,rc=0;semantic_examples17 pass,rc=0. `make book`:0. Complete source acceptance remains .profile.binding;coupled .5f.2.verify deferred.
+  - [x] LOCKSTEP:book documents actual raw source fields,distinct parameter/declaration roles,original privacy/ownership/lifetime and complete pin field examples/refusals;source implementation route aligns. README/LIVE reviewed unchanged,G1still6/18 In Progress;MEM/index/DEV/ledger select provider/binding next.
+  - [x] CONTINUITY:1053 retains whole0880 and original0068 protocol;transition_receipts.py reports4 exact Git spans,rc=0;public reader byte-exact0. Closed goals/lessons/ledger preserved without ceiling/window changes.
+  - [x] PROMOTION: promotion: declined (existing explicit selected-profile pin/symbolic G1 boundary and original-source/accounting doctrine;book owns carriers/API). Raw source/pin fields implemented;provider,Root/pin/snapshot/canonical binding and G4 schema/evidence/physical resolution remain separate. Commit:STITCHCAD-G1-0881.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.binding`
+  Status: `pending`
+  Goal:explicit selected pin request and original readonly profile/parameter facets;fresh whole Root/provider/request accounting before lookup,then original Root/pin/snapshot/profile/canonical/member association and typed causes. Preserve actual records and no accepted prefix;aggregate consumer work and G4 physical/evidence resolution stay separate.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.rules`
   Status: `pending`
   Goal:original rule/policy source records with actual typed local input/output signatures and body loans under original Root/snapshot. Exhaustive fresh accounting covers signatures,body metadata and caches before queries;operation IDs alone prove neither source existence nor signature. No physical rule evaluation or fabricated rule body.
