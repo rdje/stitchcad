@@ -3,17 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — explicit semantic selection request contract
+## _(2026-11-04 UTC)_ — original typed semantic source-selection rows
 
-0901 defines planned raw source-selection intent before records. Relative garment/semantic/native coordinates are requested data;actual consumers/positions still come from original views after whole preflight. Repeated input fields require
-consumer coordinates beyond pointer/parameter ID.
-One ordered row vector retains original pin loans and explicit Design/Profile rule origin,without latest/default fallback or copied domains. Fixed location keys hide no foreign program/garment bodies;actual owners are joined by the later work
-factory.
-Local accounting/admission covers complete rows,pin text and checked duplicate-key work only. Aggregate direct coverage,native target-internal Profile needs and final unused-row checks remain separate stages;no accepted prefix or source/body
-truth claim.
-Source-derived doc census confirms3 current occurrence classes/19 typed field variants,rc=0;guarded book0. Rust unchanged. Separate request records/accounting/admission and aggregate coverage leaves now own implementation.
-Promotion declined:existing explicit intent,original coordinates/fresh aggregate and honest target/source scope;book owns contract. Whole0900 retained1073 as3 exact Git spans/public0;protected recovery stores unchanged.
-README/LIVE unchanged,G1still6/18 In Progress;next raw typed request row owner,then record composition/local admission and actual-scope coverage. Whole/coupled verification deferred.
+0902 owns the exact original ordered row Vec,explicit Profile pin/rule-origin loans and fixed relative typed locations. Raw construction validates/queries/selects nothing and moves the existing buffer unchanged;zero coordinates,duplicates and
+extra requests remain inspectable.
+Structural key projection preserves full requested coordinates or semantic rule ordinal. Different pins/origins do not create another key for the same target. Actual scope/consumer/position/source need and original body acceptance remain later work.
+Focused2 pass0:exact eight-row buffer/pin pointers/order,zero ordinals,input999,Closure99 and duplicate keys preserved. Walk position/pair/A/B and semantic/native coordinate classes remain distinct. Empty vector is raw data;Debug omits pin labels.
+Source census confirms19 field selectors/4 locations/2 key-row classes,rc=0 after fixing the probe regex to include unit enum forms. Strict selected lib/test lint/fmt0,API3 and guarded book pass0;constructor/private mutation/pin lifetime
+boundaries checked.
+No source/occurrence binder changed. Next record-only row/pin accounting,local admission and aggregate coverage;no default Profile/Design origin,domain copy,source/body/value or resource allowance is introduced.
+Promotion declined:existing explicit intent,typed relative metadata/pin lifetime and raw/admitted scope;book owns API. Whole0901 retained1074 as3 exact Git spans/public0;protected recovery stores unchanged.
+README/LIVE unchanged,G1still6/18 In Progress;whole .5f.2.check and coupled .verify deferred.
+
+[Whole0901 semantic selection contract lesson](docs/history/stitchcad-devnotes-part1074.md) retains exact source bytes.
 
 [Whole0900 native mixed occurrence lesson](docs/history/stitchcad-devnotes-part1073.md) retains exact source bytes.
 

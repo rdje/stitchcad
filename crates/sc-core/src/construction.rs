@@ -96,6 +96,7 @@ pub use operation_input::{
     DraftingOperationFamily, DraftingOperationInput,
 };
 mod program;
+mod semantic_selection;
 pub use program::DraftingProgramNativeSemanticUse;
 pub use program::{
     AdmittedDraftingProgramGeometryWork, AdmittedDraftingProgramInputs,
@@ -133,6 +134,11 @@ pub use program::{
     NormalizedDraftingOperation, NormalizedDraftingProgram,
 };
 pub use program::{DraftingProgramSemanticUse, DraftingSemanticField};
+pub use semantic_selection::{
+    DraftingClosureSelectionField, DraftingNativeSelectionField, DraftingPocketSelectionField,
+    DraftingSemanticSelectionField, DraftingSemanticSelectionInputs, DraftingSemanticSelectionKey,
+    DraftingSemanticSelectionLocation, DraftingSemanticSelectionRow,
+};
 mod bezier;
 pub use arc::{
     CenterArcArgument, CenterArcCheckError, CenterArcCheckRefusal, CenterArcConstruction,

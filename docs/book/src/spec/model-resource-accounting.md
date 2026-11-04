@@ -521,6 +521,9 @@ new result/arena and grants no aggregate work credit or source/dependency-order 
 The [planned selection request contract](../annexes/semantic-recipes.md#explicit-semantic-source-selection-request-contract-planned)
 keeps complete original row/pin accounting separate from Root/provider/program bodies and actual
 coverage. Unused/repeated pins count before lookup;local shapes grant no whole-work credit.
+The [raw request owner](../annexes/semantic-recipes.md#original-typed-semantic-selection-rows)
+now retains the original row vector/pin loans and fixed typed relative keys. It performs no walk
+or admission itself;record-only composition and fresh local/whole policies remain separate.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

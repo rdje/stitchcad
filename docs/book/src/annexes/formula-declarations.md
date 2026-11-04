@@ -765,6 +765,7 @@ The implementation sequence is:
    now classify all13 families and every symbolic Notch/Walk Profile role. The [native program wrapper](semantic-recipes.md#original-native-semantic-fields-in-the-mixed-program)
    retains exact normalized owners and genuine steps. The [explicit request contract](semantic-recipes.md#explicit-semantic-source-selection-request-contract-planned)
    separates raw source-selection intent,local admission and actual-scope/target coverage before whole binding.
+   [Original typed request rows](semantic-recipes.md#original-typed-semantic-selection-rows) now preserve the actual row buffer/pin loans and explicit relative keys;accounting/local admission follow.
    Keep the original Pocket opening and all component source Pieces/copies. A recipe-built
    component retains its actual original recipe/creator;explicit imported primitives retain their
    real source without fabricated history. Unknown state stays Unknown,Derived retains its sole

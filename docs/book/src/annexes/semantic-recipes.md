@@ -1859,8 +1859,8 @@ complete request/work/source/family/cohort and whole/coupled verification remain
 
 ## Explicit semantic source-selection request contract (planned)
 
-Original occurrence views are implemented above. The next source-selection request records and
-local admission described here are **planned**. They hold authored intent and create no actual
+Original occurrence views and raw selection request records are implemented. Record-only accounting
+and local admission described here are **planned**. Raw records below hold authored intent and create no actual
 source,member,dependency,Profile value or whole binding proof.
 
 A request owner will retain one original ordered row vector. A Profile row supplies a fixed typed
@@ -1936,3 +1936,44 @@ Request records,record-only accounting and local structural admission are separa
 slices. Aggregate `.work.coverage`,native-family binders and the final cohort own their respective
 actual-source coverage stages. G4 registry/schema/evidence and Profile-internal body acceptance,
 physical compatibility,execution and coupled verification remain separate.
+
+## Original typed semantic selection rows
+
+`DraftingSemanticSelectionInputs::new(rows)` now owns the caller's exact original ordered
+`Vec<DraftingSemanticSelectionRow>` without validation,cloning,lookup or source selection. The raw
+owner and typed coordinates are implemented with focused checks. Record accounting,local admission,
+actual scope/coverage,source binding and aggregate work remain the next stages.
+
+A Profile row holds its requested `DraftingSemanticSelectionLocation` and original explicit pin
+loan. A Rule row holds a requested semantic ordinal and explicit Design/Profile origin. All three
+pin labels remain in their actual original `SelectedProfilePin`;the row copies no strings or
+values. `rows()` lends the original immutable slice,including duplicates,extra rows and invalid
+coordinates. Construction moves the existing vector buffer unchanged and creates no result map
+or replacement source. An explicitly empty vector is raw request data,not a complete binding.
+
+Locations use four typed variants: Pocket,Closure,Semantic and Native. The first two belong to
+the same garment occurrence class. Pocket and Closure coordinates use requested zero-based
+inventory indices and distinct typed field selectors. Semantic coordinates use a requested
+one-based semantic ordinal plus a typed header/input selector. Native coordinates use a requested
+one-based mixed position plus a target or Notch/Profile/pair/A/B selector. Nested indices remain
+zero-based. The field selector families preserve the existing5/5/6/3 raw field classes;no arbitrary
+string path,parameter ID or operation ID substitutes for those coordinates.
+
+`DraftingSemanticSelectionRow::key()` projects only the fixed structural key. Profile keys use
+the complete requested location. Rule keys use their requested semantic ordinal. Choosing another
+pin or changing Design to Profile does not create another key for the same requested target.
+This getter performs no matching or duplicate validation. The future local admission must refuse
+duplicate keys;the raw owner deliberately retains every original conflicting row for inspection.
+
+The focused fixture retains eight rows in the original vector allocation,with exact first/second
+pin pointers and authored order. It includes a zero rule ordinal,a zero semantic ordinal with
+input999,two Walk pair locations,duplicate Profile and Rule keys with different selections,and
+a nonexistent Closure99 request. None is silently normalized,dropped or accepted. Walk keys at
+positions12/13,pairs0/1 and sidesA/B stay distinct even with the same selected pin and field role;
+a semantic ordinal12 is a different coordinate class from native mixed position12.
+
+Debug omits pin-label content. API examples compile the original-row constructor and refuse private
+row mutation or selected-pin lifetime escape. These records contain no foreign program/garment
+body and claim no actual owner,issued position,source existence,Profile compatibility,domain/value,
+local/whole quota or default origin. Their literal coordinates are resolved only against the actual
+scope at the later bounded factory,which retains both the original requests and genuine data views.
