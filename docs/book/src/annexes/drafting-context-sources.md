@@ -163,16 +163,19 @@ order/dependency/resource proof,geometry/physical feasibility,runtime allowance 
 ## Mixed program sources and admission
 
 `DraftingProgramInputs::new(context,steps)` now owns the original `Vec<DraftingProgramStep>` and
-pins its actual bound context. `context()` returns that borrowed handle;`recipe()` returns only its
-actual Root's whole original recipe;`steps()` borrows the complete unchanged sequence. No foreign
+pins its actual bound context. `context()` returns that borrowed handle;`recipe()` and
+`semantic_recipe()` return only its actual Root's complete original cohorts;`steps()` borrows
+the complete unchanged sequence. No foreign
 recipe argument, copied source, provider callback, parsing, output identity or namespace is involved.
 The owner has private fields and cannot outlive its actual context or native declarations.
 
 `DraftingProgramStep::Scalar { ordinal }` retains a requested one-based scalar ordinal separately
-from its mixed position;`Drafting` retains the actual `DraftingOperationInput`. Zero, missing,
+from its mixed position;`Semantic { ordinal }` independently addresses the actual Root semantic
+recipe;`Drafting` retains the actual `DraftingOperationInput`. Zero, missing,
 repeated, out-of-order or out-of-range requests and empty sequences survive raw construction.
 `admit(&DraftingProgramLimits)` now requires every original scalar statement,including each
-assertion,exactly once in original relative order. `normalized()` now derives complete child arenas.
+assertion,and every semantic operation exactly once in each cohort's original relative order.
+`normalized()` now derives complete child arenas.
 No topological reordering,statement extraction or implicit scalar source is introduced.
 
 For example,this function retains actual inputs without accepting scalar coverage or reading values:
@@ -237,7 +240,9 @@ An empty sequence still needs its actual Root/context content allowance.
 
 After held content passes,checked arithmetic counts all three complete cohorts from immutable factory
 metadata,with no parsing,normalization or values. `DraftingProgramShape` reports mixed steps,scalar
-statements,Root source bodies,native arguments,all expressions and all nodes. The conservative
+statements,semantic operations,Root source bodies,native arguments,all expressions and all nodes.
+Semantic operation bodies stay in the actual Root and are freshly charged there;their mixed slots
+add steps without fabricated formula expressions or new argument arenas. The conservative
 prospective retained-record bound is `steps + statements + expressions + 2*nodes`:mixed normalized
 slots,scalar statement records,expression owner-views,nodes and possible call-argument indices.
 Inline owners can be counted twice;this composes the existing per-source/per-native conservative
@@ -254,7 +259,10 @@ Only then does admission compare scalar requests with actual original recipe ord
 statement recipe,`[1,drafting,2]` preserves scalar ordinal2 at mixed position3;`[1,drafting,1]`
 refuses at position3 with expected2/requested1. `[1,2,2]` reports no next expected ordinal;`[1]`
 reports complete required2/provided1. Zero,out-of-range,reordered and missing assertion requests
-are refused without clipping,sorting or returning an admitted prefix.
+are refused without clipping,sorting or returning an admitted prefix. Semantic requests have an
+independent original-ordinal cursor with the same complete coverage rule. The first wrong scalar
+or semantic request in mixed order refuses;end-of-sequence omissions report missing scalars before
+missing semantics. See [actual mixed semantic positions](semantic-recipes.md#original-semantic-positions-in-the-mixed-program).
 
 ```rust
 use sc_core::{construction::{AdmittedDraftingProgramInputs, DraftingContextSource,
@@ -300,7 +308,9 @@ part of the separately owned coupled feature verification.
 
 `sources()` exposes the actual complete Design-backed source owner;`recipe()` exposes the actual whole
 Design-backed scalar recipe owner. `operations()` borrows a complete position-aligned slice:scalar
-positions are `None`,and native positions hold a `NormalizedDraftingOperation`. Point and center-arc
+and semantic positions are `None`,and native positions hold a `NormalizedDraftingOperation`. These
+None slots retain their distinct actual owners through `steps()`;they are not missing operations.
+Point and center-arc
 variants own all actual argument arenas;slash/spread retains its actual whole declaration and normalized
 opening. `Other` retains original families with no scalar argument documents. For `[scalar1,point,scalar2]`,
 the slots are `[None,Some(Point(...)),None]`;scalar2 stays in the original whole recipe with its original
@@ -334,6 +344,9 @@ retains its genuine one-based `position()` and borrowed `kind()`. `DraftingProgr
 contains the original scalar `ordinal` and a reference to the actual `FormulaNormalizedStatement`
 in the complete recipe arena. `Drafting` borrows the actual `NormalizedDraftingOperation`,whose
 argument arenas and original declaration remain accessible without copying or reparsing.
+`Semantic { ordinal, operation }` lends the actual immutable member of the held Root's semantic
+recipe with its independent original ordinal. It adds no normalized scalar source,statement span,
+formula kind or native family. Direct lookup preserves that same member under nth/skip/reverse.
 
 For `[scalar1,point,scalar2]`,scalar2 still has ordinal2 at position3. Calling `nth(2)` directly,
 skipping earlier steps,reversing,or interleaving front/back traversal returns that same actual
@@ -344,7 +357,7 @@ substring or canonical text. The view cannot outlive its normalized arena,and it
 cannot be rewritten by callers. Debug output reports position/ordinal/family without formula text.
 
 For example,this helper selects a zero-based mixed index and returns both distinct one-based
-positions plus the actual borrowed statement. A native step returns None:
+positions plus the actual borrowed statement. A native or semantic step returns None:
 
 ```rust
 use sc_core::{construction::{DraftingContextSource, DraftingProgramStepKind,
@@ -355,7 +368,7 @@ fn original_scalar<'n,'p,'a,H:DesignMetadataHost,S:DraftingContextSource<H> + ?S
     let step=program.steps().nth(mixed_index)?;
     match step.kind() {
         DraftingProgramStepKind::Scalar {ordinal,statement} => Some((step.position(),ordinal,statement)),
-        DraftingProgramStepKind::Drafting(_) => None,
+        DraftingProgramStepKind::Drafting(_) | DraftingProgramStepKind::Semantic {..} => None,
     }
 }
 ```

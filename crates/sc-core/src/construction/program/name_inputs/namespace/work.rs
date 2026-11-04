@@ -308,6 +308,9 @@ impl<
         };
         for step in program.steps() {
             match step.kind() {
+                DraftingProgramStepKind::Semantic { .. } => {
+                    // Original Root body was fully charged; this slot owns no formula arena.
+                }
                 DraftingProgramStepKind::Scalar { statement, .. } => {
                     shape.statements = shape.statements.checked_add(1).ok_or_else(overflow)?;
                     match statement.kind() {

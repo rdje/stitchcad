@@ -4,7 +4,7 @@ use sc_core::{design::*, name::MachineToken, ontology::*, recipe::*, value::*};
 fn id(n: u128) -> EntityId {
     EntityId::from_bits(n)
 }
-fn canonical() -> TestResult<CanonicalInputs> {
+pub(super) fn canonical() -> TestResult<CanonicalInputs> {
     let logical = LogicalInputDeclaration::new(
         LogicalInputDeclarationDefinition {
             id: id(90),
@@ -36,7 +36,7 @@ fn canonical() -> TestResult<CanonicalInputs> {
         LogicalInputs::new(vec![logical], LogicalInputInventoryLimits::new(1, 1))?,
     )?)
 }
-fn recipe(button_id: u128) -> TestResult<SemanticRecipe> {
+pub(super) fn recipe(button_id: u128) -> TestResult<SemanticRecipe> {
     let button = ButtonholeOperation::new(
         ButtonholeOperationDefinition {
             id: id(button_id),

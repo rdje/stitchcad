@@ -155,6 +155,9 @@ fn mixed_order_keeps_all_original_proofs_and_refuses_self_future_headers_and_lat
                 assert!(!format!("{proof:?}").contains("anchor"));
                 for step in proof.steps() {
                     match step.kind() {
+                        DraftingProgramOrderProofKind::Semantic { .. } => {
+                            return Err("fixture has explicit empty semantic cohort".into());
+                        }
                         DraftingProgramOrderProofKind::Scalar(statement) => {
                             let ordinal = match step.position() {
                                 1 => 1,

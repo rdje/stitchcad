@@ -533,7 +533,9 @@ runtime/geometry budgets are separate.
 
 `AdmittedDraftingProgramNameWork::bind_output_positions()` consumes the complete bounded work and
 checks every original output-name occurrence in authored vector order. Zero,maximum and missing
-positions refuse;an actual scalar position retains its genuine original recipe ordinal. A wrong
+positions refuse;an actual scalar position retains its genuine original recipe ordinal. An actual
+semantic position refuses SemanticStep with its independent actual semantic ordinal;it cannot
+issue a native output name. A wrong
 fixed-schema family or another schema owner refuses,even when the other owner's IDs and fields are
 equal. Point,line,center-arc and Bézier sources must borrow the actual input at the requested step.
 No callback,kind check,value,namespace or new association-index allocation runs in this stage.

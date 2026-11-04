@@ -1,6 +1,9 @@
 //! Original mixed source order, before whole logical admission or normalization.
 use super::{DraftingContext, DraftingContextSource, DraftingOperationInput};
-use crate::{design::DesignMetadataHost, recipe::FormulaRecipeDocument};
+use crate::{
+    design::DesignMetadataHost,
+    recipe::{FormulaRecipeDocument, SemanticRecipe},
+};
 use core::fmt;
 mod dependencies;
 pub use dependencies::{
@@ -51,7 +54,7 @@ pub use normalized::{
 };
 pub use views::{DraftingProgramStepKind, DraftingProgramStepView};
 
-/// One explicit original request in a mixed scalar/drafting sequence, without order acceptance.
+/// One explicit original request in a mixed scalar/semantic/drafting sequence, without acceptance.
 #[derive(Clone, Copy, Debug)]
 pub enum DraftingProgramStep<'a> {
     /// Requested one-based ordinal in the actual Root's whole original scalar recipe.
@@ -61,15 +64,21 @@ pub enum DraftingProgramStep<'a> {
         /// Exact requested ordinal, including invalid input; no clipping or renumbering.
         ordinal: usize,
     },
+    /// Requested one-based ordinal in this actual Root's complete semantic recipe.
+    /// Independent of scalar ordinals and mixed positions; invalid requests remain inspectable.
+    Semantic {
+        /// Exact requested original semantic ordinal, including zero or out-of-range input.
+        ordinal: usize,
+    },
     /// Actual original native declaration/request and all of its held input fields.
     Drafting(DraftingOperationInput<'a>),
 }
 
-/// Raw mixed source owner pinning an actual context, its Root recipe and every native input.
+/// Raw mixed source owner pinning an actual context, both Root recipes and every native input.
 ///
 /// The original Vec is owned without sorting, deduplication, cloning, source extraction or parsing.
 /// Its earlier allocation is separate from later admission. Construction performs no provider
-/// callbacks or values and certifies no complete scalar coverage, resource allowance, namespace,
+/// callbacks or values and certifies no complete recipe coverage, resource allowance, namespace,
 /// dependency, kind, current-output, geometry or executable program. Empty/invalid data survives.
 /// The recipe can only come from the held actual context's Root; no replacement recipe is accepted.
 ///
@@ -113,7 +122,12 @@ impl<'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
     pub const fn recipe(&self) -> &'a FormulaRecipeDocument {
         self.context.scope().root().recipe()
     }
-    /// Every original request in authored mixed order; scalar ordinals are separate fields.
+    /// Actual Root's complete original semantic recipe; no replacement member owner is accepted.
+    #[must_use]
+    pub const fn semantic_recipe(&self) -> &'a SemanticRecipe {
+        self.context.scope().root().semantic_recipe()
+    }
+    /// Every original request in authored mixed order; each recipe has its own source ordinals.
     #[must_use]
     pub fn steps(&self) -> &[DraftingProgramStep<'a>] {
         &self.steps

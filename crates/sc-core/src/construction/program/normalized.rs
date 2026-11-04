@@ -189,8 +189,8 @@ impl<'p, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
     pub const fn recipe(&self) -> &DesignNormalizedFormulaRecipe<'a, H> {
         &self.recipe
     }
-    /// Complete mixed-position-aligned native slots: None only for original scalar requests.
-    /// A scalar slot is not a missing statement; its arena stays in the whole original recipe.
+    /// Complete mixed-position-aligned native slots: None for scalar and semantic requests.
+    /// Both kinds retain their actual Root recipe owners through the separate typed step views.
     #[must_use]
     pub fn operations(&self) -> &[Option<NormalizedDraftingOperation<'a>>] {
         &self.operations
@@ -247,7 +247,7 @@ impl<'p, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
             // A Vec of nonzero-size mixed slots has len <= isize::MAX; one-based position fits.
             let position = index + 1;
             let operation = match step {
-                DraftingProgramStep::Scalar { .. } => None,
+                DraftingProgramStep::Scalar { .. } | DraftingProgramStep::Semantic { .. } => None,
                 DraftingProgramStep::Drafting(input) => Some(match input {
                     DraftingOperationInput::ConstructPoint(p) => {
                         NormalizedDraftingOperation::Point(

@@ -291,7 +291,8 @@ impl<'r, 'b, 'n, 'p, 'a, H: DesignMetadataHost, S: DraftingInitialInputProvider<
     /// Bind all original extra initials after complete held-content/work/output association.
     /// Reserve every initial slot before callbacks. Canonical inputs first join the actual Root
     /// inventory,then compare returned inventory,name owner,declaration and snapshot in that order.
-    /// For each geometry occurrence,scan every actual native creator before existing-output lookup.
+    /// For each geometry occurrence,scan every actual native/semantic operation identity before
+    /// existing-output lookup. A semantic member cannot supply native Point/Edge geometry.
     /// Earlier borrowed sources are discarded on any later refusal;no accepted prefix escapes.
     ///
     /// ```
@@ -379,8 +380,16 @@ impl<'r, 'b, 'n, 'p, 'a, H: DesignMetadataHost, S: DraftingInitialInputProvider<
                 DraftingGeometryReference::Edge(edge) => edge.creator(),
             };
             for step in program.steps() {
-                if matches!(step.kind(),DraftingProgramStepKind::Drafting(operation) if operation.input().operation()==creator)
-                {
+                let is_planned = match step.kind() {
+                    DraftingProgramStepKind::Drafting(operation) => {
+                        operation.input().operation() == creator
+                    }
+                    DraftingProgramStepKind::Semantic { operation, .. } => {
+                        operation.id() == creator
+                    }
+                    DraftingProgramStepKind::Scalar { .. } => false,
+                };
+                if is_planned {
                     return Err(refuse(DraftingInitialRefusal::PlannedCreator {
                         index,
                         creator,

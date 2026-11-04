@@ -20,6 +20,11 @@ pub enum DraftingOutputPositionRefusal {
         /// Genuine ordinal in the whole original scalar recipe.
         ordinal: usize,
     },
+    /// Requested position is a Root semantic operation, with no native Point/Edge output.
+    SemanticStep {
+        /// Genuine original semantic recipe ordinal, independent of mixed/scalar positions.
+        ordinal: usize,
+    },
     /// Actual fixed source family differs from the native input at the requested position.
     Family {
         /// Family required by the original fixed source variant.
@@ -327,6 +332,9 @@ impl<'b, 'n, 'p, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized
                     Some(DraftingOutputPositionRefusal::ScalarStep { ordinal: *ordinal })
                 }
                 Some(DraftingProgramStep::Drafting(input)) => source(output.source(), *input),
+                Some(DraftingProgramStep::Semantic { ordinal }) => {
+                    Some(DraftingOutputPositionRefusal::SemanticStep { ordinal: *ordinal })
+                }
             };
             if let Some(refusal) = refusal {
                 return Err(DraftingOutputPositionError {

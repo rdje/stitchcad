@@ -1,4 +1,4 @@
-//! Complete original mixed canonical bindings, before geometry, authored reads or execution.
+//! Complete original mixed formula-name canonical bindings, before geometry or execution.
 use super::{DraftingProgramDependencyInputs, DraftingProgramNameDependency};
 use crate::{
     construction::DraftingInitialInputProvider,
@@ -12,7 +12,8 @@ use core::fmt;
 use std::collections::TryReserveError;
 
 /// Explicit additional occurrence and logical binding-record allowances, without defaults.
-/// All original uses count, including assertion tolerance headers and noncanonical metadata.
+/// All original formula-name uses count,including tolerance headers and noncanonical metadata.
+/// Direct native/semantic ID references have separate typed producers;no AST span is invented.
 /// Records cover D occurrence slots plus C canonical associations, including their borrowed
 /// Derived relation. Existing content, names, order and source/graph policies stay separate.
 /// These are not allocator bytes, capacity, scratch, CPU or execution allowances.
@@ -390,7 +391,7 @@ impl<
         S: DraftingInitialInputProvider<H> + ?Sized,
     > DraftingProgramDependencyInputs<'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>
 {
-    /// Bind every original canonical occurrence after complete arithmetic and quotas, then full
+    /// Bind every original formula-name canonical occurrence after complete arithmetic and quotas, then full
     /// result reservation. Native inventory joins retain actual family/kind/Length owners.
     /// Derived matching reuses the native input/source iterator and exact selected source proof;
     /// repeated occurrences remain separate, and Unknown is retained without a numeric read.

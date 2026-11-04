@@ -56,7 +56,11 @@ impl<'v, 'q> DraftingProgramNameDependency<'v, 'q> {
     pub fn statement_index(self) -> Option<usize> {
         match self.step.kind() {
             K::Scalar(proof) => Some(proof.statement_index()),
-            K::Point(_) | K::CenterArc(_) | K::SlashSpread(_) | K::Other(_) => None,
+            K::Point(_)
+            | K::CenterArc(_)
+            | K::SlashSpread(_)
+            | K::Other(_)
+            | K::Semantic { .. } => None,
         }
     }
     /// Original header/operand/argument role.
@@ -90,7 +94,9 @@ fn step_dependencies<'v, 'q>(
 ) -> impl Iterator<Item = DraftingProgramNameDependency<'v, 'q>> + 'v {
     let scalar = match step.kind() {
         K::Scalar(proof) => Some(proof),
-        K::Point(_) | K::CenterArc(_) | K::SlashSpread(_) | K::Other(_) => None,
+        K::Point(_) | K::CenterArc(_) | K::SlashSpread(_) | K::Other(_) | K::Semantic { .. } => {
+            None
+        }
     };
     let scalar = scalar.into_iter().flat_map(move |proof| {
         proof
@@ -140,7 +146,7 @@ fn step_dependencies<'v, 'q>(
                     None,
                 ]
             }
-            K::Scalar(_) | K::Other(_) => [None, None, None],
+            K::Scalar(_) | K::Other(_) | K::Semantic { .. } => [None, None, None],
         };
     scalar.chain(
         operands
@@ -176,6 +182,8 @@ impl<
     /// header before assertion left/right. Native order is Point X/Y,Arc Radius/Start/Sweep,
     /// Slash opening;Other has no scalar operands. All repeated/untaken uses remain distinct.
     /// Native proof-owner field guards keep added arguments from silently disappearing.
+    /// Semantic local role/ID inputs have no formula-name occurrence or fabricated AST span;
+    /// their typed source/rule/dependency acceptance remains a separate integration stage.
     ///
     /// ```
     /// use sc_core::{construction::{CheckedDraftingProgramOrder,DraftingInitialInputProvider},design::DesignMetadataHost};

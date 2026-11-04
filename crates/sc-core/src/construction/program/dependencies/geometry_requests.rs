@@ -74,7 +74,7 @@ impl<'v, 'a> DraftingGeometryStepRequest<'v, 'a> {
     pub fn input(self) -> I<'a> {
         match self.step.kind() {
             DraftingProgramStepKind::Drafting(input) => input.input(),
-            DraftingProgramStepKind::Scalar { .. } => {
+            DraftingProgramStepKind::Scalar { .. } | DraftingProgramStepKind::Semantic { .. } => {
                 unreachable!("private native creator request")
             }
         }
@@ -88,7 +88,7 @@ impl<'v, 'a> DraftingGeometryStepRequest<'v, 'a> {
 /// Creator classification, not accepted geometry/frame/currentness or complete programme proof.
 #[derive(Clone, Copy, Debug)]
 pub enum DraftingProgramGeometryTarget<'v, 'a> {
-    /// No actual native creator in the complete programme; existing-source binding is still owed.
+    /// No native/semantic operation with this creator ID; existing-source binding is still owed.
     Existing,
     /// Actual strictly earlier creating step, with a fixed output or unresolved authentic role.
     Earlier(DraftingGeometryStepRequest<'v, 'a>),
@@ -96,7 +96,13 @@ pub enum DraftingProgramGeometryTarget<'v, 'a> {
 /// Original first creator refusal with genuine original step witnesses; no source was queried.
 #[derive(Clone, Copy, Debug)]
 pub enum DraftingProgramGeometryCreatorRefusal<'v, 'a> {
-    /// Two actual native steps carry this creator identity; no earlier-prefix selection is allowed.
+    /// Original semantic operation has no native Point/Edge output; its ID cannot fall through
+    /// to an existing geometry provider or be reinterpreted as a native family.
+    SemanticCreator {
+        /// Actual Root member and original semantic/mixed positions.
+        step: DraftingProgramStepView<'v, 'a>,
+    },
+    /// Two actual native/semantic steps carry this identity;no earlier-prefix selection is allowed.
     Ambiguous {
         /// First original candidate.
         first: DraftingProgramStepView<'v, 'a>,
@@ -184,9 +190,10 @@ fn classify<'v, 'j, H: DesignMetadataHost, S: DraftingInitialInputProvider<H> + 
         R::Point(p) => p.creator(),
         R::Edge(e) => e.creator(),
     };
-    let mut candidates = program.steps().filter(|step| {
-        matches!(step.kind(),
-        DraftingProgramStepKind::Drafting(input) if input.input().operation() == creator)
+    let mut candidates = program.steps().filter(|step| match step.kind() {
+        DraftingProgramStepKind::Drafting(input) => input.input().operation() == creator,
+        DraftingProgramStepKind::Semantic { operation, .. } => operation.id() == creator,
+        DraftingProgramStepKind::Scalar { .. } => false,
     });
     let Some(step) = candidates.next() else {
         return Ok(DraftingProgramGeometryTarget::Existing);
@@ -196,6 +203,9 @@ fn classify<'v, 'j, H: DesignMetadataHost, S: DraftingInitialInputProvider<H> + 
             first: step,
             second,
         });
+    }
+    if matches!(step.kind(), DraftingProgramStepKind::Semantic { .. }) {
+        return Err(E::SemanticCreator { step });
     }
     let Some(position) = occurrence.position() else {
         return Err(E::RootSource { step });

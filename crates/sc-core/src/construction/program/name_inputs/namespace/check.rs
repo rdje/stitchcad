@@ -13,7 +13,7 @@ use crate::{
     design::DesignMetadataHost,
     recipe::{
         FormulaCheckedStatement, FormulaGeometryDeclaration, FormulaNameCursor,
-        FormulaNamespaceError, FormulaStatementCheckError,
+        FormulaNamespaceError, FormulaStatementCheckError, SemanticOperation,
     },
 };
 use core::fmt;
@@ -22,6 +22,14 @@ use std::collections::TryReserveError;
 /// Inspect complete original scalar/native argument proofs;this enum alone is no programme proof.
 #[derive(Debug)]
 pub enum DraftingProgramOrderProofKind<'q> {
+    /// Actual Root semantic member in its original order. Its typed ID/rule dependencies remain
+    /// separate; it contributes no scalar declaration, formula kind or Point/Edge name.
+    Semantic {
+        /// Original one-based semantic recipe ordinal.
+        ordinal: usize,
+        /// Actual immutable member, without a value, source/rule or execution grant.
+        operation: &'q SemanticOperation,
+    },
     /// Whole actual scalar statement,including both assertion operands and original ordinal.
     Scalar(FormulaCheckedStatement<'q>),
     /// Both original Length coordinate arguments.
@@ -339,6 +347,9 @@ impl<
         for step in program.steps() {
             let position = step.position();
             let kind = match step.kind() {
+                DraftingProgramStepKind::Semantic { ordinal, operation } => {
+                    DraftingProgramOrderProofKind::Semantic { ordinal, operation }
+                }
                 DraftingProgramStepKind::Scalar { ordinal, statement } => {
                     let current = cursor
                         .current()

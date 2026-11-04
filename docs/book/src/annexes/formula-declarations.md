@@ -688,10 +688,11 @@ are implemented. [Raw component origin carriers](semantic-recipes.md#raw-origina
 retain genuine native declarations or imported-source loans. The
 [standalone ordered semantic owner](semantic-recipes.md#original-ordered-semantic-recipe) is
 implemented and [attached to the actual Root](semantic-recipes.md#attach-the-original-semantic-cohort-to-design).
-Mixed-program integration,component binding and source facets remain **planned**.
+Original semantic mixed ordinals,complete coverage and scalar-name order metadata are implemented.
+Complete semantic dependency binding,component binding and source facets remain **planned**.
 Garment source-content admission does not implement those remaining stages.
 The existing numeric formula targets,scalar formula statements and
-mixed scalar/native programme cannot supply them merely because an identifier matches.
+mixed ordinal metadata cannot complete source binding merely because an identifier matches.
 The tracked dependency-plan probe reports those actual producer enum variants before building
 its current-library public-owner controls. This separates the source interface that exists from
 the records and complete acceptance that still have to be implemented.
@@ -713,8 +714,10 @@ The implementation sequence is:
    ordered owner before any public source facet can return one. A Buttonhole operation retains
    the canonical button-size declaration and explicit policy dependencies. Its physical formula,
    clearance,geometry and positive executed length stay G3 work;there is no authored hole length.
-4. **Semantic owner/Root identity and content implemented;mixed integration planned:** integrate semantic operations with genuine original recipe positions and complete held-field,
-   work,normalization,kind/order and dependency accounting. A new semantic operation is not one of
+4. **Semantic owner/Root identity,content and mixed ordinal metadata implemented;semantic binding planned:**
+   semantic operations retain genuine original recipe ordinals under complete held-field,shape
+   and coverage checks. Normalized/scalar-name-order views loan actual Root members without new
+   formula arenas. Typed rule/ID/dependency checking remains separate. A new semantic operation is not one of
    the current direct Point/Edge drafting schemas. It cannot acquire a synthetic native step,
    scalar ordinal,global geometry name or live output. The original thirteen drafting families
    keep their distinct authentic geometry contracts. All new bounds precede child queries or

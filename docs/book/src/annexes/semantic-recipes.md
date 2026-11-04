@@ -391,5 +391,78 @@ in the projected walk and old/new evidence is not double-counted. The original R
 This attachment establishes owned data,identity disjointness across represented components and complete held-field
 accounting. Semantic rule/policy existence/signatures,logical domain/dependency binding,Profile pins,
 source currentness and graph acceptance remain with later bounded source integration. Genuine
-combined-program semantic ordinals remain the next implementation slice. No source values or
+combined-program semantic ordinals are implemented below. No source values or
 physical buttonhole/logical results are computed by Root construction or resource accounting.
+
+## Original semantic positions in the mixed program
+
+`DraftingProgramStep::Semantic {ordinal}` now retains an exact requested one-based ordinal in
+the actual context Root's complete `SemanticRecipe`. `DraftingProgramInputs::semantic_recipe()`
+lends that same owner. Raw construction preserves zero,out-of-range,repeated,reordered or missing
+requests without queries or acceptance. A semantic ordinal is independent of scalar recipe
+ordinals,native family identities and the containing one-based mixed position.
+
+Whole input admission freshly charges every Root semantic body,including unused operations,
+then context source,mixed vector and native inputs. Complete expression/node/record bounds pass
+before either recipe's order check. Semantic bodies introduce no scalar expressions or normalized
+argument arenas;they stay in the actual Root. Each requested semantic slot counts as a mixed step.
+`DraftingProgramShape::semantic_operation_count()` reports the complete actual Root population,
+separate from `statement_count()`. The retained bound remains
+`steps + scalar_statements + expressions + 2*nodes` because semantic slots borrow Root members.
+
+Admission requires scalar ordinals1..S and semantic ordinals1..N independently,each exactly once
+in its original relative order. Their interleaving with native requests is authored data. It
+checks requests in genuine mixed order and reports the first ScalarOrder or SemanticOrder with
+position,expected ordinal and original request. Expected None means that entire cohort already
+occurred. After scanning,missing scalars precede missing semantics. There is no accepted prefix.
+
+For a Root with one scalar statement and two semantic operations,this sequence passes recipe coverage:
+
+| Mixed position | Original source |
+| --- | --- |
+| 1 | Semantic operation1 in the actual Root semantic recipe |
+| 2 | Scalar statement1 in the actual complete scalar recipe |
+| 3 | Native Point declaration,with two original scalar argument documents |
+| 4 | Semantic operation2 in the actual Root semantic recipe |
+
+For one-node scalar and Point arguments,this requires4 steps,1 scalar statement,2 semantic
+operations,3 expressions,3 nodes and14 prospective records. Record limit13 refuses before order
+checking. Replacing the final semantic ordinal2 with1 refuses at mixed position4,expected2/requested1.
+Ending after semantic1 reports MissingSemantics required2/provided1. Requesting semantic1 from an
+explicitly empty semantic Root refuses with expected None;no operation is synthesized.
+
+Normalization reserves the complete mixed slot vector before child factories. Its `operations()`
+slice contains None for scalar and semantic positions,and Some for native owners. `steps()` keeps
+the distinction: `DraftingProgramStepKind::Semantic {ordinal,operation}` loans the exact immutable
+Root member. Direct ordinal lookup preserves that pointer under nth,skip,reverse and interleaved
+iteration. No semantic body is cloned into an arena. Debug exposes ordinal/kind without local role
+text. For example,this helper returns all three distinct pieces of source information:
+
+```rust
+use sc_core::{construction::*,design::DesignMetadataHost,recipe::SemanticOperation};
+fn original_semantic<'a,H:DesignMetadataHost,S:DraftingContextSource<H>+?Sized>(
+    program:&NormalizedDraftingProgram<'_, 'a,H,S>,mixed_index:usize)
+    ->Option<(usize,usize,&'a SemanticOperation)> {
+    let step=program.steps().nth(mixed_index)?;
+    match step.kind() {
+        DraftingProgramStepKind::Semantic {ordinal,operation} =>
+            Some((step.position(),ordinal,operation)),
+        DraftingProgramStepKind::Scalar {..} | DraftingProgramStepKind::Drafting(_) => None,
+    }
+}
+```
+
+The scalar namespace/order checker retains `DraftingProgramOrderProofKind::Semantic` with that
+same original ordinal/member. It adds no formula declaration,FormulaKind,global name or metadata
+cursor advance. Formula-name dependency iteration continues to stream only actual scalar/native
+formula uses;semantic role/ID inputs have no fabricated AST span. Their typed rule,logical,Profile,
+numeric and operation dependency binding remains a later source-integration stage. Passing this
+scalar name check does not establish semantic dependency order or a complete executable program.
+
+Semantic slots cannot issue native geometry output names:output-position binding returns
+SemanticStep with the original semantic ordinal. Extra initial Point/Edge references using a
+semantic operation ID refuse as a planned creator before geometry lookup. Complete geometry creator
+classification includes semantic IDs:one semantic candidate yields SemanticCreator with its actual
+member/mixed position;an equal-ID native candidate yields Ambiguous with both original positions.
+The ID cannot fall through to an existing geometry provider. No Point/Edge output,fixed native
+family,role manifest,frame,physical length or executed logical selection is invented.

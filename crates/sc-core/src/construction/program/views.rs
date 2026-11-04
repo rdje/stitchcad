@@ -1,12 +1,13 @@
 //! Allocation-free loans of actual complete normalized owners, with separate source positions.
 use super::{DraftingProgramStep, NormalizedDraftingOperation, NormalizedDraftingProgram};
 use crate::{
-    construction::DraftingContextSource, design::DesignMetadataHost,
-    recipe::FormulaNormalizedStatement,
+    construction::DraftingContextSource,
+    design::DesignMetadataHost,
+    recipe::{FormulaNormalizedStatement, SemanticOperation},
 };
 use core::{fmt, iter::FusedIterator};
 
-/// Borrowed actual scalar statement or native argument owner; no copied/extracted source arena.
+/// Borrowed actual scalar, Root semantic member or native owner; no copied/extracted source arena.
 #[derive(Clone, Copy)]
 pub enum DraftingProgramStepKind<'n, 'a> {
     /// Actual statement in the complete original scalar recipe, including assertion operands.
@@ -15,6 +16,13 @@ pub enum DraftingProgramStepKind<'n, 'a> {
         ordinal: usize,
         /// Actual whole-source normalized statement, borrowing its real arena owner.
         statement: &'n FormulaNormalizedStatement<'a>,
+    },
+    /// Actual member of the complete original Root semantic recipe, without evaluation.
+    Semantic {
+        /// Original one-based semantic ordinal, independent of scalar and mixed positions.
+        ordinal: usize,
+        /// Actual immutable member; no cloned body or fabricated scalar argument arena.
+        operation: &'a SemanticOperation,
     },
     /// Actual native argument arena owner, or original no-argument input family.
     Drafting(&'n NormalizedDraftingOperation<'a>),
@@ -27,12 +35,17 @@ impl fmt::Debug for DraftingProgramStepKind<'_, '_> {
                 .field("ordinal", ordinal)
                 .finish_non_exhaustive(),
             Self::Drafting(input) => input.fmt(f),
+            Self::Semantic { ordinal, operation } => f
+                .debug_struct("Semantic")
+                .field("ordinal", ordinal)
+                .field("kind", &operation.kind())
+                .finish_non_exhaustive(),
         }
     }
 }
 
 /// Actual normalized step loan with a private genuine one-based combined-program position.
-/// The original scalar ordinal and actual statement/native owners remain separate fields.
+/// Each original recipe ordinal and the actual member/native owners remain separate fields.
 /// This is normalized syntax, not a namespace/kind/dependency/value or executable-prefix proof.
 /// ```compile_fail,E0616
 /// fn renumber(step:&mut sc_core::construction::DraftingProgramStepView<'_, '_>) {step.position=1;}
@@ -57,7 +70,7 @@ impl<'n, 'a> DraftingProgramStepView<'n, 'a> {
     pub const fn position(self) -> usize {
         self.position
     }
-    /// Original scalar ordinal and actual arena loan, or actual native owner loan.
+    /// Original recipe ordinal and actual member loan, or actual native owner loan.
     #[must_use]
     pub const fn kind(self) -> DraftingProgramStepKind<'n, 'a> {
         self.kind
@@ -98,6 +111,26 @@ impl<'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
                     }
                     (DraftingProgramStep::Drafting(_), Some(Some(operation))) => {
                         DraftingProgramStepKind::Drafting(operation)
+                    }
+                    (DraftingProgramStep::Semantic { ordinal }, Some(None)) => {
+                        let operation = ordinal
+                            .checked_sub(1)
+                            .and_then(|i| {
+                                self.admitted()
+                                    .inputs()
+                                    .semantic_recipe()
+                                    .operations()
+                                    .get(i)
+                            })
+                            .unwrap_or_else(|| {
+                                unreachable!(
+                                    "private complete original semantic coverage invariant"
+                                )
+                            });
+                        DraftingProgramStepKind::Semantic {
+                            ordinal: *ordinal,
+                            operation,
+                        }
                     }
                     _ => unreachable!("private complete mixed-slot normalization invariant"),
                 };

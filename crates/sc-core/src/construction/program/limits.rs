@@ -6,6 +6,8 @@ use crate::design::DesignResourceLimits;
 /// arguments. Retained records conservatively cover `steps + statements + expressions + 2*nodes`:
 /// mixed slots, scalar statement records, expression owner-views, nodes and call-argument indices.
 /// This composes existing source/native bounds; inline owners may be conservatively counted twice.
+/// Semantic operations stay in the actual Root; their complete content is charged there. Their
+/// mixed slots count as steps, without fabricated scalar expressions or extra normalized arenas.
 /// No allocator bytes/capacity, parser/literal scratch, CPU, checking or runtime budget is granted.
 /// ```compile_fail
 /// let limits:sc_core::construction::DraftingProgramLimits=Default::default();
@@ -61,6 +63,7 @@ impl DraftingProgramLimits {
 pub struct DraftingProgramShape {
     pub(super) steps: usize,
     pub(super) statements: usize,
+    pub(super) semantics: usize,
     pub(super) sources: usize,
     pub(super) arguments: usize,
     pub(super) expressions: usize,
@@ -77,6 +80,11 @@ impl DraftingProgramShape {
     #[must_use]
     pub const fn statement_count(self) -> usize {
         self.statements
+    }
+    /// Complete actual Root semantic operation population, independent of scalar statements.
+    #[must_use]
+    pub const fn semantic_operation_count(self) -> usize {
+        self.semantics
     }
     /// All original separately identified Root formula-source bodies, including unused sources.
     #[must_use]

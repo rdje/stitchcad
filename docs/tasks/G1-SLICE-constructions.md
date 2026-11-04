@@ -113,33 +113,7 @@ Whole0017 [goals/acceptance/proofs](../history/window28.md#stitchcad-devnotes-pa
 
 ### `G1-SLICE.3c.4d.2` — structural object families reviewed against the production-grade bar
 
-- [x] **REPRODUCE / ISSUE** — all individual §4 objects are delivered; parents still await a complete
-  review. Full probes expose D63 (feature `11 pass / 1 fail`), and crate-scoped test counts expose D62.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-core -- --list` → `260` tests including `18`
-  docs, `rc=0`; fourteen object/support suites contain `149` contracts. Source/API review accounts
-  for sixteen §4 objects in four families. `cargo test -p sc-units` → `5 + 21 + 1`, `rc=0`;
-  `git show eb83f01:crates/sc-core/src/lib.rs` → three original smoke tests, explaining workspace 30.
-  D63's literal old explanation matches no current tuck/pleat row; fixture unchanged, census green.
-- [x] **FIX** — close structural object parents after review; retain all geometric, recipe/profile,
-  current-registry and release obligations. Correct crate-scoped live counts (D62). D63 targets the
-  feature's gate cell and independently proves one malformed gate; absent/duplicate targets refuse
-  setup. Director's API/MCP control requirement belongs existing .6/.9/G5 parity/evaluation contracts.
-- [x] **ADDRESSED (verified)** — `run_feature_matrix_probes.sh` → `14 pass / 0 fail`, `rc=0`:
-  malformed gate refused by unchanged census; missing/duplicate target setup refused. No-op mutation
-  of gate writer → `13 pass / 1 fail`, `rc=1`, naming fixture setup failure; restored suite passes.
-  `make check` executes `287` tests including `19` docs, `rc=0`; all 149 object/support contracts pass.
-  Completed Pocket/button checklists compare unchanged to HEAD and staged gates revalidate them.
-- [x] **NO REGRESSION** — strict `make check`, `make wasm`, warning-free `make book`, full `make probes`
-  → `22 suite(s) green`; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`; tree →
-  `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`; staged `make gate` →
-  `=== all doctrines green ===`, all `rc=0`. No census predicate, diagnostic or envelope was weakened.
-- [x] **LOCKSTEP** — object status/module/map, bounded book review and current-query limits,
-  command/MCP requirement, parent closures, fresh frontier/index/live records align. D62/D63 close
-  in the sealed defect ledger; 8 open / 54 sealed. G1 → 5/18 leaves, all four structural families;
-  next .4 measurements/ease/sizes. G0 stays unapproved and production declaration remains G7.
-  Review examples have a bounded ontology-review chapter; oldest allowance lesson seals unchanged
-  to devnotes-part22. Completed historical checklists retain independent HEAD comparison evidence.
-  promotion: declined (review re-verifies existing canonical decisions; D63 is a local fixture repair).
+[Whole original object-family review](../history/stitchcad-devnotes-part1051.md) remains byte-exact.
 
 ## Completed recipe byte records — preserved from d7a421e
 
@@ -828,23 +802,23 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0877 original ordered semantic owner;[whole scope/proofs](../history/stitchcad-devnotes-part1050.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.attach`
-  Status: `in_progress`
+  Status: `done`
   Goal:atomically attach actual ordered semantic recipe to Root/program identity,resource and order contracts;numeric-only scopes stay explicitly empty and no invented native position appears.
   Children: `.root` (whole actual Root identity/resource/data paths), `.program` (actual mixed order/admission).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.attach.root`
   Status: `done`
-  Goal:actual semantic recipe field/getter and all-family Design identity census;exhaustive actual/prospective accounting and candidate reconstruction preserve the complete original cohort atomically. Legacy numeric-only fixtures supply explicit empty semantic scope;source/rule binding remains separate.
-  - [x] REPRODUCE / ISSUE:0877 semantic owner/accounting was standalone;actual Root had no cohort/identity/resource/candidate field. Root attachment cannot precede full current/prospective accounting or silently default missing source data. Legacy book's all-Derived expression claim also needed numeric scope.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract semantic_root`:3 pass,rc=0;Root,resource and command-difference definitions require one actual semantic cohort. Global owned semantic IDs and private candidate context must survive without implied rule/domain/source binding.
-  - [x] FIX:required semantic_recipe field,actual getter/positions and complete whole-input producer,shared by every projection. Exhaustive command differences include it;all current constructors select actual cohorts or explicit empty0/0. Observer/reconstruction fixtures clone/move original cohorts rather than reset them.
-  - [x] ADDRESSED: same Root3 pass0;original buffers/member/Root loans,four exact cross-family collisions and actual8/32/3 with three exact first refusals. `cargo test -p sc-core --lib prospective_length_root_keeps_actual_semantic_fields`:1 pass,rc=0;4/16/3→5/16/3,short quota reaches original semantic input,old/new evidence not double-counted.
-  - [x] NO REGRESSION: `cargo check -p sc-core --test design_structure_contract`:0;sc-measure design_inputs_contract/resource_contract targeted check0. Selected strict core lint/fmt0;logical_root5 and whole_model_refusals1 pass,rc=0. Required-field Rustdoc2/book10/build0;broader --tests check canceled130,no verdict. Coupled .5f.2.verify deferred.
-  - [x] LOCKSTEP:compiled full Root construction example and detailed source/identity/resource/projection chapter;Root/resource/source-plan routes align. Numeric Derived expression wording corrected without implying logical source acceptance. README reviewed unchanged,LIVE updated,G1still6/18;MEM/index/DEV/ledger select mixed semantic ordinals.
-  - [x] CONTINUITY:1050 retains whole0877,original closure acceptance and0320;transition_receipts.py reports5 exact Git spans0,public reader byte-exact0. No retained-window or ceiling changes.
-  - [x] PROMOTION: promotion: declined (existing required original owners,exhaustive actual resources/differences;book owns Root API). Root ownership/accounting is implemented;rule/policy/domain/source/graph/mixed/execution acceptance remains separate. Commit:STITCHCAD-G1-0878.
+  Goal:0878 actual Root semantic cohort;[whole scope/proofs](../history/stitchcad-devnotes-part1051.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.attach.program`
-  Status: `pending`
+  Status: `done`
   Goal:actual original Root semantic ordinals in complete mixed admission,normalization/order/dependency metadata and bounds;scalar/native positions remain authentic and semantic operations gain no fabricated geometry output/name.
+  - [x] REPRODUCE / ISSUE:0878 attached semantic records to actual Root,but raw mixed steps had only Scalar/Drafting. A semantic reference must retain its own real Root ordinal/member,complete coverage and bounded slot;matching IDs cannot manufacture formula operands,native families or existing geometry.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract semantic_program`:3 pass,rc=0;scalar/native representations cannot carry original semantic ordinals. Complete recipe order uses independent counters;formula-name scopes never interpret semantic local roles/ID inputs as AST names.
+  - [x] FIX:Semantic raw request,actual Root getter and complete semantic count;fresh complete content/shape bounds before first mixed ordinal error and fixed scalar-then-semantic end omissions. Normalized/order views retain actual Root members;scalar/semantic slots own no native arena. Output,initial and geometry guards recognize semantic identity before provider lookup.
+  - [x] ADDRESSED:same focused3 pass,rc=0;seven exact coverage/ordering refusals,unused semantic field before quotas/queries,shape4/1/2 and3 expressions/3 nodes/14 records,record13 refusal,original pointer/nth/reverse/order loans and retained8-entry delta. Semantic output/initial/creator and equal-ID native ambiguity refuse without callbacks.
+  - [x] NO REGRESSION: `cargo test -p sc-core --test drafting_context_binding_contract program_admission::`:5 pass;program_order::2 and geometry_requests::1 pass,rc=0. Strict selected clippy/fmt0;semantic_examples12/context_examples13 pass,rc=0. plan_sources.py actual enum/borrow controls0;native families13. `make book`:0. Coupled .5f.2.verify deferred.
+  - [x] LOCKSTEP:book documents independent ordinals,actual loans,bounds and exact refusal examples;scalar name checking/occurrences remain distinct from pending typed semantic dependency/rule binding. README reviewed unchanged;LIVE/MEM/index/DEV/ledger align,G1still6/18 In Progress.
+  - [x] CONTINUITY:1051 retains whole0878,original object-family review and0319 lesson;transition_receipts.py reports5 exact Git spans,rc=0;public reader byte-exact0. Test fixture API/entry/self-reference and strict indexing errors corrected;canonical vectors/domain count4 entries,scalar recipe is text only. Context example's exhaustive match fixed after observed E0004.
+  - [x] PROMOTION: promotion: declined (existing original-owner,bounded complete-input and typed-family doctrine;book owns API). Semantic data/order metadata implemented;typed rule/domain/Profile/component/currentness/graph/source binding and execution remain pending. Commit:STITCHCAD-G1-0879.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports`
   Status: `pending`
   Goal:readonly authentic logical/Profile/operation facets with original record/Root/snapshot

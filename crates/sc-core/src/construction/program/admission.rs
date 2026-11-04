@@ -1,4 +1,4 @@
-//! Whole actual held-content admission, then complete shape and original scalar coverage/order.
+//! Whole actual held-content admission, then complete shape and both original recipe orders.
 use super::{
     DraftingProgramInputs, DraftingProgramLimits, DraftingProgramShape, DraftingProgramStep,
 };
@@ -55,6 +55,22 @@ pub enum DraftingProgramAdmissionRefusal {
         /// Complete original scalar statement population, including assertions.
         required: usize,
         /// Original scalar statements present in correct relative order before sequence end.
+        provided: usize,
+    },
+    /// First semantic request disagrees with actual Root semantic recipe order/coverage.
+    SemanticOrder {
+        /// Genuine one-based mixed position, independent of either recipe's ordinal.
+        position: usize,
+        /// Next original semantic ordinal, or None after the complete actual cohort.
+        expected: Option<usize>,
+        /// Exact original request, including zero or out-of-range input.
+        requested: usize,
+    },
+    /// Sequence ended before the complete actual Root semantic cohort was included.
+    MissingSemantics {
+        /// Complete actual semantic recipe population.
+        required: usize,
+        /// Semantic operations present in correct relative order before sequence end.
         provided: usize,
     },
 }
@@ -118,7 +134,7 @@ impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> std::error::Er
     }
 }
 
-/// Complete held-content, prospective shape and scalar-coverage/order admission; not normalization.
+/// Complete held-content, prospective shape and both recipe coverage/order admission.
 /// No names, kinds, output dependencies, geometry values, runtime or release approval are proved.
 /// ```compile_fail,E0616
 /// use sc_core::{construction::{AdmittedDraftingProgramInputs,DraftingContextSource},
@@ -202,11 +218,13 @@ impl<'a, H: DesignResourceSource, S: DraftingContextSource<H> + ?Sized>
 {
     /// Freshly charge the actual Root, complete context source, mixed Vec and all native fields;
     /// then bound all source/recipe/native expression nodes and conservative prospective records;
-    /// only then require every original scalar statement exactly once in original relative order.
+    /// only then require every original scalar statement and semantic operation exactly once in
+    /// each actual recipe's original relative order. The first wrong mixed request wins;at sequence
+    /// end,missing scalar coverage precedes missing semantic coverage.
     /// No reparse, normalization, value, geometry lookup, identity set or accepted prefix is created.
     /// Existing Root/context demands are not trusted as a replacement for this cumulative walk.
     /// # Errors
-    /// Complete content, checked populations/quotas, then original scalar order/coverage refusal.
+    /// Complete content,checked populations/quotas,then original recipe order/coverage refusal.
     /// Every refusal borrows the complete original source owner and explicit policy.
     pub fn admit<'p>(
         &'p self,
@@ -223,7 +241,7 @@ impl<'a, H: DesignResourceSource, S: DraftingContextSource<H> + ?Sized>
         let demand = charge(self, limits)
             .map_err(|e| refuse(DraftingProgramAdmissionRefusal::Resources(e)))?;
         let shape = measure(self, limits).map_err(refuse)?;
-        scalar_order(self, shape.statements).map_err(refuse)?;
+        recipe_order(self, shape.statements, shape.semantics).map_err(refuse)?;
         Ok(AdmittedDraftingProgramInputs {
             inputs: self,
             limits,
@@ -268,8 +286,12 @@ impl<H: DesignResourceSource, S: DraftingContextSource<H> + ?Sized>
         source_result?;
         sink.charge_entries(steps.len(), location)?;
         for step in steps {
-            if let DraftingProgramStep::Drafting(input) = step {
-                input.charge_resources(sink)?;
+            match step {
+                DraftingProgramStep::Scalar { ordinal }
+                | DraftingProgramStep::Semantic { ordinal } => {
+                    crate::design::fixed_value(ordinal);
+                }
+                DraftingProgramStep::Drafting(input) => input.charge_resources(sink)?,
             }
         }
         Ok(())
@@ -356,6 +378,7 @@ fn measure<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>(
     Ok(DraftingProgramShape {
         steps: inputs.steps().len(),
         statements: recipe.statement_count(),
+        semantics: inputs.semantic_recipe().operations().len(),
         sources: sources.len(),
         arguments,
         expressions,
@@ -363,34 +386,50 @@ fn measure<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>(
         retained_records,
     })
 }
-fn scalar_order<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>(
+fn recipe_order<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>(
     inputs: &DraftingProgramInputs<'_, H, S>,
     statements: usize,
+    semantics: usize,
 ) -> Result<(), DraftingProgramAdmissionRefusal> {
     use DraftingProgramAdmissionRefusal as R;
-    let mut matched = 0;
+    let (mut scalars, mut semantic) = (0, 0);
     for (index, step) in inputs.steps().iter().enumerate() {
-        if let DraftingProgramStep::Scalar { ordinal } = step {
-            let next = add(matched, 1)?;
-            let expected = if matched < statements {
-                Some(next)
-            } else {
-                None
-            };
-            if expected != Some(*ordinal) {
-                return Err(R::ScalarOrder {
-                    position: add(index, 1)?,
+        let (ordinal, matched, count, is_semantic) = match step {
+            DraftingProgramStep::Scalar { ordinal } => (ordinal, &mut scalars, statements, false),
+            DraftingProgramStep::Semantic { ordinal } => (ordinal, &mut semantic, semantics, true),
+            DraftingProgramStep::Drafting(_) => continue,
+        };
+        let next = add(*matched, 1)?;
+        let expected = (*matched < count).then_some(next);
+        if expected != Some(*ordinal) {
+            let position = add(index, 1)?;
+            return Err(if is_semantic {
+                R::SemanticOrder {
+                    position,
                     expected,
                     requested: *ordinal,
-                });
-            }
-            matched = next;
+                }
+            } else {
+                R::ScalarOrder {
+                    position,
+                    expected,
+                    requested: *ordinal,
+                }
+            });
         }
+        *matched = next;
     }
-    if matched != statements {
+    // End-of-sequence omissions use fixed schema order: scalar, then semantic.
+    if scalars != statements {
         return Err(R::MissingScalars {
             required: statements,
-            provided: matched,
+            provided: scalars,
+        });
+    }
+    if semantic != semantics {
+        return Err(R::MissingSemantics {
+            required: semantics,
+            provided: semantic,
         });
     }
     Ok(())

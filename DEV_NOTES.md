@@ -3,12 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — atomic actual Root semantic cohort
+## _(2026-11-04 UTC)_ — authentic mixed semantic ordinals
 
-0878 requires original SemanticRecipe in DesignInputsDefinition;explicit empty() means exact0/0,never a missing-field default. Original getter/census and actual/prospective whole-input walks include it. Exhaustive command differences compare authored semantic content;reconstruction fixtures preserve actual cohorts.
-Root3/projection1 pass:actual8/32/3,original buffer/member loans,all-family collision positions,exact semantic refusal fields. Known evidence1→2 projection4/16/3→5/16/3 retains semantic fields and only replacement evidence;logical legacy5 and whole-model refusal1 stay green.
-Affected constructor targets compile0;strict selected lint/fmt,required-field API2,actual book10/build pass0. Broader caller compile was canceled130 before a verdict and narrowed;no broad suite or coupled proof claimed. Source book now says numeric Derived where scalar expression sources are meant.
-Promotion declined:existing original ownership/exhaustive resource/difference contracts;book owns required cohort/API. Mixed ordinals next;rule/policy/domain/source/graph binding deferred. Archive1050 retains whole0877,closure acceptance/0320;G1still6/18 In Progress.
+0879 adds Semantic requests for actual Root semantic ordinals,independent of scalar/mixed positions. Complete held content/shape precedes first mixed ordinal refusal;end omissions use scalar then semantic schema order. Normalized/order views loan original Root members without formula arenas or scalar namespace advance.
+Focused3 pass0:seven exact order/coverage failures,unused semantic content before queries,shape4 steps/1 scalar/2 semantic with3 expressions/3 nodes/14 records,record13 refusal and8 retained entries. Root/member/nth/reverse/order pointers remain actual.
+Semantic IDs cannot issue geometry names or fall through initial/creator providers.
+Equal-ID native/semantic creator ambiguity retains both genuine positions. Formula-name occurrences keep real AST uses;typed semantic ID/rule/domain/Profile/component binding remains separate. Initial fixture API errors and two numeric-vector undercounts were corrected;raw scalar recipe resource fields are text only.
+Affected admission5/order2/creator1,strict lint/fmt,semantic_examples12/context_examples13 and guarded book pass0. The context helper's old exhaustive match exposed E0004 and now handles Semantic explicitly. Actual enum/borrow controls pass0;native13 unchanged. Coupled .5f.2.verify stays deferred.
+Promotion declined:existing bounded original-owner/typed-family doctrine;book owns API. Archive1051 retains exact whole0878,original object-family review and0319 lesson;public/exact-span receipts0. G1still6/18;readonly source ports next.
+
+[Whole0878 actual Root semantic lesson](docs/history/stitchcad-devnotes-part1051.md) retains exact source bytes.
 
 [Whole0877 semantic owner lesson](docs/history/stitchcad-devnotes-part1050.md) retains exact source bytes.
 
@@ -66,14 +70,7 @@ Promotion declined:existing original ownership/exhaustive resource/difference co
 
 [Whole0320 SizeSet review lesson](docs/history/stitchcad-devnotes-part1050.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — sixteenth immutable history window
-
-0319 .4c.5.h16 packs48 complete raw27bff4f records,94681B into28399B payload. Public source48/0,
-reads and materialization899 match; installed48 full reads/materialized bytes match Git, prior15
-backing windows unchanged. Retired only manifest48 regular/single-link originals after proof; all
-maintained links retarget exact headings.469/291 whole task/lesson/current15 receipt/ledger exact0.
-Book0; fixed bounds/schema/reader/old producers unchanged. Last16th slot used; .capacity owns P1
-continuation before next packing. G1still5/18; SizeSet review .4c.5 next. Promotion declined: existing retention protocol.
+[Whole0319 immutable history lesson](docs/history/stitchcad-devnotes-part1051.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — bounded profile intent scope review
 

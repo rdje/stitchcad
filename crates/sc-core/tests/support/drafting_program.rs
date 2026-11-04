@@ -86,7 +86,9 @@ fn empty_and_invalid_sequences_survive_raw_construction_without_child_work() -> 
         .iter()
         .map(|step| match step {
             Step::Scalar { ordinal } => *ordinal,
-            Step::Drafting(_) => unreachable!("explicit scalar test requests"),
+            Step::Drafting(_) | Step::Semantic { .. } => {
+                unreachable!("explicit scalar test requests")
+            }
         })
         .collect();
     assert_eq!(ordinals, [0, 2, 2, usize::MAX]);

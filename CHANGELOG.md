@@ -3,11 +3,13 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0878 — actual Root semantic ownership and accounting
+## STITCHCAD-G1-0879 — actual semantic ordinals in mixed programs
 
-Require the original semantic cohort in Root construction;preserve actual member loans,all-family ownership,candidate content and complete actual/prospective resource fields. Explicit empty numeric-only scopes use0/0;no field is filled implicitly. Root3/projection1/legacy5/whole-model refusal1 pass.
+Require complete independent scalar/semantic coverage after fresh whole content/shape bounds. Normalized and scalar-name-order slots loan actual Root semantic members;no cloned formula/native arena or invented geometry output. Focused3 pass0 with exact quotas,original loans and source-before-query refusals.
 
-Targeted caller compilation,strict selected lint/fmt,API2/book10/build pass0. G1still6/18 In Progress;genuine mixed semantic ordinals are next. Full coupled verification remains deferred;whole0877/closure/0320 retained in1050.
+Affected admission5/order2/creator1,strict lint/fmt,book examples12+13,actual enum/borrow controls and guarded book pass0. Coupled verification stays .5f.2.verify. G1still6/18 In Progress;authentic readonly semantic source ports next. Whole0878/object-family review/0319 remain exact in1051.
+
+[Whole0878 actual Root semantic unit](docs/history/stitchcad-devnotes-part1051.md) retains exact task,lesson and ledger.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
