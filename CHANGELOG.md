@@ -3,11 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0885 — actual rule/policy source contract
+## STITCHCAD-G1-0886 — immutable typed rule signatures
 
-Document separate declaration/signature/body/origin ownership,exact typed roles,complete resource/comparison preflight and original source/cause matching. G3/G4 execution/evidence/value boundaries remain explicit;types/facets/binding are planned. Actual operation field census/book build0;product Rust unchanged.
+Original logical/Buttonhole declarations retain exact numeric/logical requirement kinds and role buffers. Complete constructor quotas precede duplicates;fresh exhaustive signature accounting composes with original caller scope and first refusals.
+Primary3,strict lint/fmt,API2,actual semantic examples22 and book pass0. Original body/origin sources and binding remain planned;G1still6/18 In Progress. Whole0885 retained exactly in1058;coupled .5f.2.verify deferred.
 
-Whole0884 retained exactly in1057. G1still6/18 In Progress;immutable bounded signature records/accounting next,then original source facets/binding. Coupled .5f.2.verify stays deferred.
+[Whole0885 rule source contract unit](docs/history/stitchcad-devnotes-part1058.md) retains exact task,lesson and ledger.
 
 [Whole0884 Profile parameter binding unit](docs/history/stitchcad-devnotes-part1057.md) retains exact task,lesson and ledger.
 

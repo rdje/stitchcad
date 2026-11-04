@@ -6,6 +6,8 @@ use core::{
 };
 
 mod buttonhole;
+mod semantic_rule;
+pub use semantic_rule::charge_semantic_rule_resources;
 mod canonical;
 pub use buttonhole::charge_buttonhole_operation_resources;
 mod logical_derivation;

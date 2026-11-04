@@ -3,12 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — rule/policy source implementation contract
+## _(2026-11-04 UTC)_ — original immutable rule signatures
 
-0885 separates actual rule declaration/signature/body/origin from operation-held IDs. Typed logical/exact numeric input families,local role semantics,mandatory canonical button and explicit Design/Profile origin remain original data;no evaluator,new grammar,default policy or physical result is introduced.
-Complete signature count/text/comparison and held-source field accounting precede duplicate checks,query/matching/reservation. Actual metadata/body association remains the honest immutable source contract;canonical domain/state and original causes/orders survive without selected values or a program prefix.
-Scoped four-field operation census0 and guarded book build0;Rust/interfaces unchanged. Model/facets/binding children own implementation;coupled verification deferred.
-Promotion declined:existing source/type/accounting doctrine;book owns implementation contract. Whole0884 retained1057 by three exact Git spans/public0;G1still6/18.
+0886 separates actual declaration identity/signature from operation-held rule IDs and later body/origin records. Logical signatures retain both logical kinds and exact dedicated Length/general Scalar requirements;Buttonhole requirements are numeric only,with mandatory button/later Length intrinsic to the family.
+Explicit P/text/P² admission precedes quotas and first repeated role;original vector/text buffers move unchanged. Complete field producer precharges actual vectors,then role bytes with original rule owner/position and caller scope;shape totals give no content credit.
+Exhaustive views/Copy guards expose new owned fields.
+Primary3 pass0 across both logical results,all numeric kinds,both source scopes,exact/prior demands and first/last/vector refusals. Empty signatures preserve first latched causes. Initial redundant reference clone warning fixed;strict selected lint/fmt0 and private-field/default-policy API2 pass0.
+Actual semantic_examples22 pass,rc=0;numeric-only policy refusal and compiled declaration/accounting example included. Guarded book build0;coupled verification remains deferred.
+Book documents declaration shape,typed numeric distinction,complete accounting and remaining source/body/execution proof. Promotion declined:existing immutable-source/type/resource doctrine;book owns API.
+Whole0885 retained1058 by three exact Git spans/public0. G1still6/18;source facets/binding and coupled verification remain pending.
+
+[Whole0885 rule source contract lesson](docs/history/stitchcad-devnotes-part1058.md) retains exact source bytes.
 
 [Whole0884 Profile parameter binding lesson](docs/history/stitchcad-devnotes-part1057.md) retains exact source bytes.
 

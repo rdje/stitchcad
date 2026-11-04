@@ -801,8 +801,9 @@ are the next tracked source-port stage.
 
 ## Rule and policy source contract
 
-This is the implementation contract for the next rule-source leaves. The source record types,
-providers and accepted bindings in this section are **planned**. Existing operation records retain
+This is the implementation contract for the rule-source leaves. Immutable signature declarations
+and their resource producer are implemented below;original body/origin source records,providers
+and accepted source bindings are **planned**. Existing operation records retain
 rule/policy IDs and local inputs;they do not establish that an actual rule exists or has the
 required signature. The implemented Root/Profile member facets supply original data loans,
 not a fabricated rule body or evaluator.
@@ -862,3 +863,88 @@ default,geometry output,allocator/time budget or whole-program acceptance is inf
 Implementation proceeds through immutable bounded signature records/accounting,original body and
 origin facets,then fresh bounded binding. Whole source/order/graph/allocator/lifetime integration
 verification remains the separately tracked `.5f.2.verify` leaf after the agreed integration set.
+
+## Immutable rule signature declarations
+
+`SemanticRuleDeclaration::new` moves a complete `SemanticRuleDefinition` into an immutable owner.
+The definition retains its original rule ID and `SemanticRuleSignature`. `Logical` declares its
+`LogicalInputKind` result and a vector of `SemanticRuleInput` requirements. Each requirement is
+either an exact logical kind or a `CanonicalNumericInputKind`:dedicated `Length`,or `Scalar` with
+the precise `ScalarInputKind`. Thus dedicated Length and Scalar(Length) remain distinct even when
+their physical dimensions agree. Input origin,canonical identity,domain and state stay elsewhere.
+
+`Buttonhole` contains only `ButtonholePolicyRequirement` numeric requirements. The policy family
+always requires the operation's canonical button-size source and has a later physical Length
+result. An empty requirement vector removes neither obligation. It adds no hole-length field,
+physical formula,button dimensions,clearance or evaluator. A logical requirement cannot occupy a
+numeric policy slot:
+
+```compile_fail,E0308
+use sc_core::{name::MachineToken,recipe::*,value::LogicalInputKind};
+let input=ButtonholePolicyRequirement {
+    role:MachineToken::new("clearance").unwrap(),
+    kind:SemanticRuleInputKind::Logical(LogicalInputKind::NotionSize),
+};
+```
+
+Every constructor allowance is explicit through `SemanticRuleLimits::new(P,T,I)`. Construction
+derives the complete input count P,all separately owned role bytes T and conservative P×P
+comparison bound before checking the input,text and inspection quotas in that order. It then
+rejects the first repeated role in original declaration order,retaining both zero-based indices.
+Equal kinds do not excuse repeated roles;distinct roles may require the same kind. Zero allowances
+admit an explicitly empty signature. Validation queries nothing,allocates no workspace and retains
+the original vector and role buffers. Input allocation already happened in the caller;these
+logical bounds do not bound buffer capacity,string-comparison byte work,CPU or body execution.
+
+This declaration requires an original logical input,a dedicated length and a general Length
+scalar. Three eight-byte roles require exactly 3 inputs,24 text bytes and 9 inspections:
+
+```rust
+use core::num::{NonZeroU64,NonZeroUsize};
+use sc_core::{design::*,name::MachineToken,ontology::EntityId,recipe::*,value::*};
+# fn main()->Result<(),Box<dyn std::error::Error>> {
+let rule=SemanticRuleDeclaration::new(SemanticRuleDefinition {
+    id:EntityId::from_bits(900),
+    signature:SemanticRuleSignature::Logical {
+        result:LogicalInputKind::PocketOpening,
+        inputs:vec![
+            SemanticRuleInput {role:MachineToken::new("source_a")?,
+                kind:SemanticRuleInputKind::Logical(LogicalInputKind::NotionSize)},
+            SemanticRuleInput {role:MachineToken::new("source_b")?,
+                kind:SemanticRuleInputKind::Numeric(CanonicalNumericInputKind::Length)},
+            SemanticRuleInput {role:MachineToken::new("source_c")?,
+                kind:SemanticRuleInputKind::Numeric(CanonicalNumericInputKind::Scalar(ScalarInputKind::Length))},
+        ],
+    },
+},SemanticRuleLimits::new(3,24,9))?;
+assert_eq!(rule.kind(),SemanticOperationKind::LogicalDerivation);
+assert_eq!(rule.shape().role_text_bytes(),24);
+let mut meter=DesignResourceMeter::new(DesignResourceLimits::new(
+    NonZeroUsize::new(3).ok_or("entries")?,NonZeroUsize::new(24).ok_or("text")?,NonZeroU64::MAX));
+charge_semantic_rule_resources(&rule,&mut meter,DesignResourceScope::SourceHost)?;
+let demand=meter.finish()?;
+assert_eq!((demand.collection_entries(),demand.text_bytes(),demand.counter_bits()),(3,24,0));
+let policy=SemanticRuleDeclaration::new(SemanticRuleDefinition {
+    id:EntityId::from_bits(901),signature:SemanticRuleSignature::Buttonhole {inputs:vec![]},
+},SemanticRuleLimits::new(0,0,0))?;
+assert_eq!(policy.kind(),SemanticOperationKind::Buttonhole);
+# Ok(()) }
+```
+
+`definition()`,`id()`,`kind()`,`limits()` and `shape()` expose the exact immutable metadata.
+Equality compares original definition content,independent of selected constructor allowances.
+Diagnostics retain identity,family,shape and refusal without local role text.
+
+`charge_semantic_rule_resources` freshly walks actual fields rather than trusting shape totals.
+The caller supplies the actual containing scope;the owner is the rule ID. It precharges the whole
+`semantic.rule.inputs` vector with no fabricated containing collection index,then charges each
+original `semantic.rule.inputs.role` at its zero-based declaration index. All fixed kinds/results,
+constructor policy and shape are guarded as Copy fields;exhaustive owner/definition/variant views
+expose future accounting obligations. It uses the caller's cumulative sink and preserves its first
+latched refusal,including for an empty signature. The caller must finish that sink and separately
+account for the original body,all held declarations,unused records,copies,caches and counters.
+
+This API validates a declaration's complete local shape and role uniqueness. Original body,
+Design/Profile origin,Root/snapshot membership,operation signature matching,canonical source
+binding,value/domain truth and execution remain separate proof obligations. The source facets
+and binder above remain planned;complete coupled verification is deferred to `.5f.2.verify`.

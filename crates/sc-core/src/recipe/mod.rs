@@ -19,10 +19,17 @@
 //! operators, authored quantization and binding conversion are available. Canonical length authored
 //! reads retain source/state beside exact values or required observation/evaluation; recipe execution follows.
 mod buttonhole;
+mod semantic_rule;
 pub use buttonhole::{
     ButtonholeOperation, ButtonholeOperationDefinition, ButtonholeOperationError,
     ButtonholeOperationLimits, ButtonholeOperationRefusal, ButtonholeOperationResource,
     ButtonholeOperationShape, ButtonholePolicyInput,
+};
+pub use semantic_rule::{
+    ButtonholePolicyRequirement, CanonicalNumericInputKind, SemanticRuleDeclaration,
+    SemanticRuleDeclarationError, SemanticRuleDefinition, SemanticRuleInput, SemanticRuleInputKind,
+    SemanticRuleLimits, SemanticRuleRefusal, SemanticRuleResource, SemanticRuleShape,
+    SemanticRuleSignature,
 };
 #[cfg(doctest)]
 #[doc = include_str!("../../../../docs/book/src/annexes/semantic-recipes.md")]

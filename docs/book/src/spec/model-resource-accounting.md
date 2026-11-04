@@ -469,6 +469,12 @@ reuses fresh complete Root/provider/request accounting before metadata lookup,th
 source owners and actual canonical membership/kind. Returned metadata/domain views are borrowed;
 their original owner fields remain in the provider walk rather than a copied result budget.
 
+Original [rule signature declarations](../annexes/semantic-recipes.md#immutable-rule-signature-declarations)
+have a separate `charge_semantic_rule_resources` producer. It precharges the actual complete input
+vector,then each original role's text,under the caller's containing scope and actual rule ID.
+Constructor shape totals grant no source-content credit;original body and every held declaration,
+copy,cache and counter still require exhaustive provider accounting before source lookup.
+
 ## Complete actual Inputs, Sewing and Garment roots
 
 charge_design_input_resources borrows every private DesignInputsDefinition field in schema order:
