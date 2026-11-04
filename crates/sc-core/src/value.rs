@@ -244,5 +244,5 @@ pub use logical::{
     LogicalInputDeclarationError, LogicalInputInventoryError, LogicalInputInventoryLimits,
     LogicalInputInventoryRefusal, LogicalInputInventoryShape, LogicalInputKind, LogicalInputLimits,
     LogicalInputLookupError, LogicalInputRefusal, LogicalInputShape, LogicalInputState,
-    LogicalInputStateTag, LogicalInputs,
+    LogicalInputStateTag, LogicalInputTarget, LogicalInputs,
 };

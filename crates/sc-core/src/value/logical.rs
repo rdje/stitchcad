@@ -12,6 +12,16 @@ pub enum LogicalInputKind {
     /// Authored hardware designation domain; no diameter or dimensions are inferred from its code.
     NotionSize,
 }
+/// Explicit logical declaration reference and expected role, without a membership/value proof.
+/// Numeric metadata continues to use CanonicalInputTarget separately. Resolve this raw reference
+/// against an actual LogicalInputs owner; equal IDs on another Root do not establish that binding.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct LogicalInputTarget {
+    /// Exact original requested declaration identity.
+    pub declaration: EntityId,
+    /// Expected finite logical role; no scalar formula kind or physical dimensions are inferred.
+    pub kind: LogicalInputKind,
+}
 /// Authored logical state label; a design choice is distinct from an unknown factual input.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LogicalInputStateTag {

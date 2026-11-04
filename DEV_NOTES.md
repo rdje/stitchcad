@@ -3,12 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — standalone typed Buttonhole recipe source
+## _(2026-11-04 UTC)_ — original typed logical derivation sources
 
-0874 retains original Declaration/Profile button origin,explicit physical-policy reference and ordered named numeric dependencies. Whole P/role-byte/P*P bounds precede duplicate-role checks;no workspace allocation or value/source reads. No independent hole length,default policy or invented native position.
-Focused3 verify original buffers/state,quota priority,shared targets,empty scope and cumulative exact content/refusal locations. Actual producer counts2/16/0 and prior3/19/2 without cached-shape credit. Ordered ownership/Root binding and physical execution remain pending;coupled verification stays .5f.2.verify.
-Selected strict lint/fmt,API compiler guards3,actual book examples2 and guarded build pass0.
-Promotion declined:existing explicit-source/bounds/exhaustive accounting contracts;book owns the operation API. Archive1046 retains whole0873,fold acceptance and0324;no retained-window change. G1still6/18 In Progress.
+0875 retains explicit rule source/output logical target and authored named logical,Profile-logical or numeric canonical dependencies. Actual domains/state/selections stay in source owners. Complete P/role-byte/P*P bounds precede role validation;no workspace allocation,source query or fabricated native step.
+Focused3 verify both output roles,all source representations,original buffers/authored equality,quota priority/shared references/empty input and cumulative6/35/1. Exact collection/first/final role refusals and prior latch survive. Actual rule signatures,graph/order,Root/ports and execution remain pending.
+Selected strict lint/fmt,API compiler guards3,actual semantic book examples4 and guarded build pass0.
+Promotion declined:existing explicit sources/complete bounds/exhaustive accounting;book owns raw logical target and operation API. Archive1047 retains whole0874,Gather acceptance and0323;no retained-window change. G1still6/18 In Progress.
+
+[Whole0874 Buttonhole recipe lesson](docs/history/stitchcad-devnotes-part1047.md) retains exact source bytes.
 
 [Whole0873 canonical logical lesson](docs/history/stitchcad-devnotes-part1046.md) retains exact source bytes.
 
@@ -50,13 +52,7 @@ Promotion declined:existing explicit-source/bounds/exhaustive accounting contrac
 
 [Whole0324 profile resolution lesson](docs/history/stitchcad-devnotes-part1046.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — distinct instantiation requests
-
-0323 .6.2.2.c.2.2 shares Design/actor/exact-revision snapshot; legacy query context remains same type.
-Regeneration binds explicit garment/MTM chart inputs and logical or exact factory resolution selection;
-grade rules retain imported/base Instance, rule table and target set/member/break revision. No execution.
-Native evaluation3/query2/catalog2, selected strict lint/fmt/book/publication75-88 pass0;477/295 exacta423713.
-Promotion: existing two-path/SizeSet/command contracts; no new policy. G1still6/18, profile schema next.
+[Whole0323 instantiation lesson](docs/history/stitchcad-devnotes-part1047.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — shared exact selected-profile pin
 

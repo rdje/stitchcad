@@ -3,12 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0874 — standalone Buttonhole recipe operation
+## STITCHCAD-G1-0875 — typed logical recipe sources
 
-Retain the original button-size origin,explicit physical-policy reference and named typed dependencies in an immutable bounded operation. Charge actual policy-input/role content;there is no independent hole length or invented native step. Focused3 pass;ordered semantic/Root/source integration remains pending.
+Retain original rule/output references and ordered typed Design logical,Profile-logical and numeric inputs in a bounded immutable operation. Preserve source-owned domains/states and actual content/refusal fields without a selected or cached result. Focused3 pass;component origins are next.
 
-G1still6/18 In Progress;typed logical derivation sources are next. Original0873/fold/0324 source bytes retained in1046.
-Selected strict lint/fmt,API3/book2/build pass0;coupled verification remains deferred.
+G1still6/18 In Progress;ordered owner/Root integration,actual rule signatures,source ports and coupled verification remain pending. Whole0874/Gather/0323 retained in1047.
+Selected strict lint/fmt,API3/book4/build pass0;no full integration verification claim.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -22,6 +22,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0874 Buttonhole recipe and original Gather acceptance](docs/history/stitchcad-devnotes-part1047.md) retain exact source bytes.
 
 [Whole0873 canonical attachment and original fold acceptance](docs/history/stitchcad-devnotes-part1046.md) retain exact source bytes.
 

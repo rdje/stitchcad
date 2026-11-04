@@ -27,6 +27,12 @@ pub use buttonhole::{
 #[cfg(doctest)]
 #[doc = include_str!("../../../../docs/book/src/annexes/semantic-recipes.md")]
 mod semantic_examples {}
+mod logical_derivation;
+pub use logical_derivation::{
+    LogicalDerivationDefinition, LogicalDerivationError, LogicalDerivationInput,
+    LogicalDerivationInputSource, LogicalDerivationLimits, LogicalDerivationOperation,
+    LogicalDerivationRefusal, LogicalDerivationResource, LogicalDerivationShape,
+};
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,

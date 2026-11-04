@@ -192,6 +192,11 @@ dedicated length in a detached candidate. Actual and prospective length-replacem
 both walk the original logical fields through the same producer below. This attachment grants no
 logical mutation command, Profile binding, operation dependency proof or physical readiness.
 
+`LogicalInputTarget {declaration,kind}` now supplies an explicit raw logical reference for
+[typed logical recipe sources](semantic-recipes.md#standalone-logical-derivation-operation).
+It grants no owner/member proof itself; use the actual inventory's `resolve` with those fields.
+Domain, state and selected value remain singly owned by the actual canonical declaration.
+
 
 ## Account for actual logical content
 

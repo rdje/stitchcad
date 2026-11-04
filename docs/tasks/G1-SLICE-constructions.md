@@ -89,34 +89,7 @@ Whole0017 [goals/acceptance/proofs](../history/window28.md#stitchcad-devnotes-pa
 
 ### `G1-SLICE.3c.4a.2b` — gathers bind physical span sides and borrow canonical ease
 
-- [x] **REPRODUCE / ISSUE** — feature matrix §5 defines gathering through seam ease distribution;
-  `0cb97e4` has no Gather. An independent intake/allocation would duplicate the span's source, while
-  binding only a span side would silently transfer gathering to a replacement physical copy.
-- [x] **ROOT CAUSE (WHY + WHERE)** — span side and physical-copy identity are separate authored facts.
-  `cargo test -p sc-core --test gather_contract
-  wrong_graph_missing_span_and_changed_side_copy_are_refused_without_retargeting` → `1 passed`,
-  `rc=0`: a changed A-side copy sharing the same Piece/range returns CopyBindingChanged.
-  `uniform_weighted_and_between_notch_allocation_have_one_canonical_graph_source` → `1 passed`,
-  `rc=0`: pointer equality proves each allocation view borrows the graph's existing declaration.
-- [x] **FIX** — immutable graph/span/side/copy binding, explicit direction and closing operation;
-  borrow attachment and signed intake/allocation from the canonical span. Validate explicit ease
-  sign, copy owner and complete owned attachment/direction with unique endpoints. Target queries
-  refuse missing/changed bindings; raw evidence and independent current-plan checks remain visible.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test gather_contract` → `11 passed`,
-  `rc=0`: both gathered sides, symbolic sources, canonical allocations, changed/missing targets,
-  copy reassignment, hidden merged interiors, split choices, repairs and immutable replacement.
-  Copy-binding and ownership refusals disabled separately → their regressions fail, `rc=101`;
-  restored `make check` passes. Privacy doctest green; three moved mark/dart checklists compare
-  unchanged to committed originals. Four public intake structs re-derived from dart/fold/gather sources.
-- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green, `rc=0`;
-  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
-  feature/glossary → `0 failure(s)`; tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`;
-  ledger → `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
-  Earlier sewing/intake/mark contracts stay green; no fixture golden changes.
-- [x] **LOCKSTEP** — pre-code sewing decision extended, module/subsystem status, bounded construction
-  examples/API vocabulary/ontology index and feature row, intake parents closed, evidence relocation,
-  frontier/logs/index, MEMORY/LIVE_STATUS/CHANGELOG and promoted DEV_NOTES. Oldest lesson seals to
-  devnotes-part15. Three of four object families remain done; next `.3c.4b` hem/layer descriptors.
+[Whole original Gather acceptance](../history/stitchcad-devnotes-part1047.md) remains byte-exact.
 
 ### `G1-SLICE.3c.4b.2` — Hem retains depth/fold intent and validates current Facing targets
 
@@ -907,18 +880,18 @@ retains all original goals,statuses and focused acceptance evidence.
   `.components` (genuine creating/import origins), `.inventory` (original ordered owner), `.attach` (Root/program/accounting integration).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.buttonhole`
   Status: `done`
-  Goal:immutable original Buttonhole recipe definition with actual button-size origin,explicit policy reference and named numeric canonical dependencies;complete bounds and standalone accounting,no independent physical length or currentness claim.
-  - [x] REPRODUCE / ISSUE:existing ButtonholeDerivation names an operation but0873 supplied no immutable typed semantic recipe record. Actual operation sources need original button/policy/dependency fields without an independent hole length.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test buttonhole_operation_contract`:3 pass,rc=0;actual Declaration/Profile button origins and named numeric dependencies require standalone ownership/bounds before ordered Root/source integration. Numeric/native slots cannot stand in for that owner.
-  - [x] FIX:immutable ButtonholeOperation retains original definition/vector,explicit policy reference and typed local numeric inputs. Complete P/role bytes/P*P precede input/text/work quotas and first duplicate-role prefix scan;no workspace allocation or source/value read.
-  - [x] ADDRESSED: same focused command3 pass,rc=0;original buffers,origins,authored equality/privacy,exact2/16/4 and each short quota,repeated roles/shared targets/explicit0/0/0. Exhaustive actual producer gives2/16/0 and cumulative3/19/2;three exact first-field refusals and prior latch stay original.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test buttonhole_operation_contract -- -D warnings`:pass,rc=0;fmt0,`cargo test -p sc-core --doc recipe::buttonhole`:3 pass0 and recipe::semantic_examples2 pass0. Guarded book build0;coupled .5f.2.verify remains deferred.
-  - [x] LOCKSTEP:new indexed semantic recipe reference compiles original operation/accounting examples;Closure/source contract links distinguish standalone implementation from pending actual ordered owner/Root/ports. README reviewed unchanged,LIVE product note updated,G1still6/18 In Progress;MEM/index/DEV/ledger align.
-  - [x] CONTINUITY:1046 retains whole0873,original fold acceptance and0324;transition_receipts.py reports5 exact Git spans0,public archive read byte-exact0. No retained-window or ceiling changes.
-  - [x] PROMOTION: promotion: declined (existing explicit original sources,complete bounds and exhaustive cumulative accounting;book owns new API). No physical formula,independent length,policy default,selected profile or fabricated native step. Commit:STITCHCAD-G1-0874.
+  Goal:0874 standalone bounded Buttonhole recipe;[whole scope/proofs](../history/stitchcad-devnotes-part1047.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.logical`
-  Status: `pending`
+  Status: `done`
   Goal:actual typed logical derivation recipe sources;retain original target/domain/dependencies without selecting values or inventing scalar logical operands.
+  - [x] REPRODUCE / ISSUE:0874 supplied typed Buttonhole intent only;logical Derived states still had no original typed operation record. Complete source binding requires explicit output/rule and actual ordered typed dependencies before graph/port work.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test logical_derivation_contract`:3 pass,rc=0;actual output logical kinds and Design/Profile-logical/numeric representations need a separate immutable owner,without copied domains/selections or scalar logical operands.
+  - [x] FIX:raw LogicalInputTarget records exact reference/expected role;LogicalDerivationOperation retains original explicit rule/output and named typed sources. Complete P/role-byte/P*P arithmetic and input/text/comparison quotas precede original duplicate-role scans;no validation workspace/source/value query.
+  - [x] ADDRESSED: same focused command3 pass,rc=0;both output kinds,all three source forms,dedicated/general numeric targets,original buffers/authored equality,quota priority,repeated roles/shared sources/empty0/0/0. Actual producer gives4/32/0 and cumulative6/35/1;first/final role refusals and prior latch remain original.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test logical_derivation_contract -- -D warnings`:pass,rc=0;fmt0,`cargo test -p sc-core --doc recipe::logical_derivation`:3 pass0,recipe::semantic_examples4 pass0. Book build0;coupled .5f.2.verify deferred.
+  - [x] LOCKSTEP:semantic recipe reference documents complete constructor/resource contracts and compiled original example;logical/raw-target/source-plan links align. Actual rule/policy loans/signatures explicitly owned by ports,not implied by operation IDs. README reviewed unchanged,LIVE product note updated,G1still6/18.
+  - [x] CONTINUITY:1047 retains whole0874,original Gather acceptance and0323;transition_receipts.py reports5 exact Git spans0 and public reader byte-exact0. MEM/index/DEV/ledger select component origins next;no retained-window or ceiling changes.
+  - [x] PROMOTION: promotion: declined (existing explicit original sources,complete bounds and exhaustive cumulative accounting;book owns raw logical target/new operation). Ordered ownership,Root/rule/Profile/graph binding and execution remain unimplemented here. Commit:STITCHCAD-G1-0875.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components`
   Status: `pending`
   Goal:authentic component-creation recipe and explicit imported primitive origins;no fabricated native step or reconstructed creation history.
@@ -932,6 +905,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `pending`
   Goal:readonly authentic logical/Profile/operation facets with original record/Root/snapshot
   loans and typed causes;all held source fields participate in fresh accounting before queries.
+  Includes original rule/policy source loans and typed signatures;operation-held IDs alone grant no complete dependency acceptance.
 - ID: `G1-SLICE.5f.2.check`
   Status: `pending`
   Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.
