@@ -480,6 +480,9 @@ Raw lookup does not automatically admit content or bind the returned source asso
 The [rule work scope](../annexes/semantic-recipes.md#fresh-rule-binding-work-admission) freshly
 composes complete Root/provider/request-pin content and checks conservative matching work before
 operation lookup. Actual rule/Profile association and signature acceptance remain separate.
+The [rule source binder](../annexes/semantic-recipes.md#bind-the-original-rule-source-association)
+repeats fresh work and selected-Profile admission before original source association. Complete
+named signature/result matching remains the next stage;borrowed headers create no body copies.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

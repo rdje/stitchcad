@@ -37,6 +37,8 @@ mod program_order;
 mod program_output_positions;
 #[path = "support/drafting_program_views.rs"]
 mod program_views;
+#[path = "support/drafting_rule_binding.rs"]
+mod rule_binding;
 #[path = "support/drafting_rule_sources.rs"]
 mod rule_sources;
 #[path = "support/drafting_rule_work.rs"]

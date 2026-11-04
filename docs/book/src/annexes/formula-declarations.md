@@ -695,13 +695,15 @@ The [selected-Profile source facet](semantic-recipes.md#bind-the-original-select
 now preserves explicit pin/Root/snapshot association after fresh complete content checks.
 The [Profile parameter facet](semantic-recipes.md#bind-actual-profile-logical-parameter-metadata)
 now retains actual metadata,source owners and canonical logical member/kind loans.
-Complete semantic dependency binding,component binding and accepted rule/policy source binding remain **planned**.
+Complete semantic dependency binding,component binding and rule signature/output binding remain **planned**.
 The [rule/policy source contract](semantic-recipes.md#rule-and-policy-source-contract) fixes original
 signature/body/origin ownership,complete field accounting and role/type matching before source facets.
 The [immutable rule signature model](semantic-recipes.md#immutable-rule-signature-declarations)
 now retains actual typed local requirements and performs complete constructor/resource accounting.
 The [raw rule body/origin facet](semantic-recipes.md#raw-original-rule-body-and-origin-facets)
 now loans original declaration/body and explicit Design/Profile sources;accepted association follows.
+The [original rule source binder](semantic-recipes.md#bind-the-original-rule-source-association)
+now checks actual source owners,rule ID/family and explicit origin after fresh work/selected-Profile admission.
 The [fresh rule work scope](semantic-recipes.md#fresh-rule-binding-work-admission) now preflights
 complete held content and matching inspections before original Root operation lookup,without a source query.
 [Raw original Profile/parameter source records](semantic-recipes.md#raw-original-profile-and-parameter-records)

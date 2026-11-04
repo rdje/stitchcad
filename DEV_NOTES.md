@@ -3,19 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — fresh complete rule binding work
+## _(2026-11-04 UTC)_ — original rule source association
 
-0888 derives fresh complete Root/provider/request-pin content and checked W=(E+8)² before actual Root operation lookup.
-E bounds held operation/signature populations;E² role work plus16E linear/64 fixed inspections is conservative for rule association/signature matching.
-Provider-internal CPU,string bytes,content traversal,allocator capacity and whole dependency/physical execution remain separate.
-Private scope retains exact context/member/index,selection,policy,demand/shape;request derives original rule ID/family from the actual member.
-Native3 and overflow1 pass0:exact21/T/138,W841,prior23/(T+3)/139;content/W shortages precede missing/kind causes and keep zero source queries.
-Ignored signature refusal and separately owned final request-pin byte retain original first fields. Independent arithmetic/UTF-8 census confirms841/24B.
-Strict selected lint/fmt0 and API3 pass0:private owner/default limits/short request-pin escape refuse. Guarded book0.
-Actual semantic_examples24 pass,rc=0;prepare-work scope example compiles. Source and complete signature/output relation still pending.
-Fresh producer rewalks all actual fields without cached demand credit. No rule/Profile/currentness/value query or accepted source/signature association.
-Promotion declined:existing fresh-content/prospective-bound/original-member doctrine;book owns API. Whole0887 retained1060 by three exact Git spans/public0.
-G1still6/18 In Progress;source association then complete signature/output relation follow. Coupled .5f.2.verify remains deferred.
+0889 refreshes complete work/member admission before any source query;explicit Profile intent reuses its existing fresh selected-source binder.
+Actual Root/snapshot/origin,Profile pin/inventory/body identity,rule ID and family match before private source proof construction.
+Original work parent,accepted Profile header,returned declaration/body and fresh demand/shape remain loaned or fixed metadata;no body/domain/signature clone.
+Native3 pass0:Design/Profile21/T/138 and W841,prior23/(T+3)/139,one rule query,explicit independent Profile walk where requested.
+Eight mismatch cases retain first Root/snapshot/origin/pin/inventory/Profile/rule/kind causes and complete original witnesses,including equal-data substitutions.
+Actual post-work cache growth refuses33+1 under entry maximum33,including ignored sink errors;maximum34 with old W1681 refuses new1764 before queries.
+Independent guarded arithmetic confirms33/1681/1764. Nested work/Profile/provider causes retain original typed fields and underlying standard error chains.
+Strict selected lint/fmt0,private-field/work-parent API2 and guarded book0. Local roles/types are deliberately unchecked here;signature/output relation follows.
+Actual semantic_examples25 pass,rc=0;original bound-source helper compiles. No broader source/order/graph/allocator or full CI verdict claimed.
+Promotion declined:existing original-source/owner/fresh-accounting doctrine;book owns API. Whole0888 retained1061 by three exact Git spans/public0.
+LIVE product note now includes actual rule sources with signatures pending;G1still6/18 In Progress. Coupled .5f.2.verify remains deferred.
+
+[Whole0888 fresh rule work lesson](docs/history/stitchcad-devnotes-part1061.md) retains exact source bytes.
 
 [Whole0887 original rule source lesson](docs/history/stitchcad-devnotes-part1060.md) retains exact source bytes.
 

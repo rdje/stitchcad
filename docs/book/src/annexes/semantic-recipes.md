@@ -803,7 +803,8 @@ are the next tracked source-port stage.
 
 This is the implementation contract for the rule-source leaves. Immutable signature declarations
 and their resource producer,raw original body/origin source records and providers are implemented
-below;accepted rule source bindings are **planned**. Existing operation records retain
+below;original rule source association is also implemented. Complete local signature/output
+binding remains **planned**. Existing operation records retain
 rule/policy IDs and local inputs;they do not establish that an actual rule exists or has the
 required signature. The implemented Root/Profile member facets supply original data loans,
 not a fabricated rule body or evaluator.
@@ -1015,8 +1016,8 @@ These are source-walk conformance checks,not rule-binding or execution acceptanc
 
 Direct port calls and raw carriers perform no automatic content admission or association check.
 The existing fresh Design semantic scope can walk the complete Root/provider,and work admission
-below now bounds prospective rule comparisons. A later accepted binder must still check actual Root/snapshot/origin,
-selected Profile owners,rule identity/family,result and local input signature. Public raw fields
+below now bounds prospective rule comparisons. The source binder below checks actual Root/snapshot/origin,
+selected Profile owners and rule identity/family;result and local input signature matching follow. Public raw fields
 prove none of those matches. Canonical domain/state,value/evidence truth,G3 physical policy
 execution and complete program acceptance remain separate;`.5f.2.verify` owns deferred coupling.
 
@@ -1081,7 +1082,76 @@ or lending member cause. Resource causes retain their standard error chain;membe
 their actual original operation loan through the typed refusal getter.
 
 This scope accepts complete prospective work and original Root membership. Actual selected
-Profile/rule/body/origin association,complete local signature and logical Derived-output relation
-remain the following binding leaves. It supplies no canonical input value,physical Buttonhole
+Profile/rule/body/origin association is implemented below;complete local signature and logical
+Derived-output relation remain the following binding leaf. It supplies no canonical input value,physical Buttonhole
 result,source/schema/evidence truth,whole dependency order or executable program. Coupled
 verification remains `.5f.2.verify` after the agreed integration set.
+
+## Bind the original rule source association
+
+`AdmittedDraftingRuleWork::bind_source` loans its exact original work parent and repeats complete
+fresh Root/provider/request-pin content,W and member admission. An earlier demand/shape gives no
+credit. For explicit Profile intent,it then uses the existing `bind_profile_source` method,which
+performs its own fresh content walk before selected-source lookup. Both readonly lookups follow
+the complete prospective matching preflight;the immutable provider contract keeps original
+semantic records stable. Design selection performs no Profile lookup.
+
+The method resolves one exact rule request derived from the actual Root operation. It checks
+returned Root identity,snapshot record identity,Design/Profile origin,actual Profile pin/inventory/
+body owners,rule ID and family in that order. Profile header fields must be the very originals
+accepted by the selected-Profile binder. A distinct equal-label pin,equal-data canonical inventory
+or equal-payload Profile record cannot substitute for those owners. Requested pins remain separate
+selection intent;the existing Profile binder compares their exact labels before the rule-header
+comparison requires original source identities.
+
+```rust
+use sc_core::{construction::*,design::DesignResourceSource};
+fn original_source<'w,'a,H:DesignResourceSource,S:DraftingRuleProvider<H>+?Sized>(
+    work:&'w AdmittedDraftingRuleWork<'a,H,S>)
+    ->Result<BoundDraftingRuleSource<'w,'a,H,S>,String> {
+    work.bind_source().map_err(|e|e.to_string())
+}
+```
+
+`BoundDraftingRuleSource::work()` loans the exact original parent. `source()` returns the original
+declaration/body/origin view;`profile_source()` returns the accepted original Profile header when
+requested. Both are borrowed views of the provider's already-accounted records. `demand()` and
+`shape()` retain this bind's fresh content and prospective work metadata. The private proof cannot
+outlive its work parent or replace a source field. No body,domain,state or signature buffer is
+cloned or allocated,and the opaque body must remain the actual source's original record. Core
+does not prove that an opaque body implements its declaration;that remains the honest immutable
+integration and execution/conformance contract.
+
+The maintained Design/Profile fixture retains exact21/T′/138 and W841. Source binding adds one
+fresh work walk;Profile selection also adds the selected-Profile binder's independent walk.
+There is one rule query. A subsequent `charge_resources` walk composes prior2 entries/3 text
+bytes/1 bit to23/(T′+3)/139 without a new lookup or cached demand credit.
+
+Eight direct mismatch controls preserve first-cause priority and complete original returned
+witnesses:foreign Root with the same ID,foreign equal-payload snapshot,wrong origin,foreign equal-label
+pin,foreign equal-data inventory,foreign equal-payload Profile record,wrong rule ID and wrong
+family under the same ID. Several controls also have a later bad field,so the priority is checked.
+The source proof deliberately accepts only source association;the fixture's local roles still
+need the separate signature checker. No argument/output or executable prefix is certified.
+
+An additional complete source holds33 collection entries,W1681 and every unused alternative
+record. A negative control grows its actual separately held test cache by one after initial work.
+Repeating admission refuses33+1 at the original cache field when maximum33 is selected,including
+an ignored provider failure. With content maximum34 but W maximum1681,new required1764 refuses
+before source lookup. These controls falsify cached-credit reuse;they do not relax the immutable
+source contract. A failed Profile admission makes zero rule queries;an original rule-provider
+failure retains its typed rule request and standard error cause chain.
+
+`DraftingRuleSourceError` retains `work()`,fresh `demand()`/`shape()` when work succeeded,accepted
+`profile_source()` when available,and the complete original `returned()` rule source when lookup
+succeeded. `refusal()` distinguishes the original work error,selected-Profile error,provider error
+and exact first `DraftingRuleSourceIssue`. Nested lending causes remain available through typed
+getters;underlying resource/provider causes retain their standard source chains. Failure exposes
+no private successful source proof.
+
+`charge_resources` exhaustively rewalks the actual work parent and guards the borrowed source/
+Profile views and fixed fresh metadata. It performs no source,currentness,member,value or local
+signature query. Complete named input/result matching and the actual canonical logical
+Derived-output relation remain the next leaf. Canonical input binding,source/schema/evidence
+truth,G3 physical results,whole dependency order and execution remain separate obligations;
+coupled verification is deferred to `.5f.2.verify`.

@@ -3,11 +3,13 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0888 — fresh rule work admission
+## STITCHCAD-G1-0889 — bind original rule body and origin
 
-Complete Root/provider/request-pin content and checked conservative matching work precede actual original operation lookup.
-Immutable scope retains original member/selection/policies and typed first causes;no Profile/rule/value query or accepted source association occurs.
-Native3,overflow1,strict lint/fmt,API3,actual semantic examples24 and book pass0. Whole0887 retained exactly1060;G1still6/18 In Progress. Source/signature binding and coupled verification remain pending.
+Fresh work/selected-Profile admission precedes actual Root/snapshot/origin/owner/rule/family matching and one rule lookup.
+Original expected/returned loans and typed nested causes survive;local signature/result and canonical value acceptance remain separate.
+Native3,strict lint/fmt,API2,actual semantic examples25 and book pass0. Whole0888 retained exactly1061. LIVE product note includes rule sources;G1still6/18 In Progress,coupled verification deferred.
+
+[Whole0888 fresh rule work unit](docs/history/stitchcad-devnotes-part1061.md) retains exact task,lesson and ledger.
 
 [Whole0887 original rule source unit](docs/history/stitchcad-devnotes-part1060.md) retains exact task,lesson and ledger.
 
