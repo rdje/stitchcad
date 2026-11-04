@@ -903,31 +903,38 @@ retains all original goals,statuses and focused acceptance evidence.
   `.operations` (actual typed semantic operation dependencies), `.ports` (original source facets).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.contract`
   Status: `done`
-  Goal:0869 actual logical/canonical/semantic-recipe model boundary before new sources;[implementation contract](../book/src/annexes/formula-declarations.md#logical-source-implementation-contract).
-  - [x] REPRODUCE / ISSUE: `plan_sources.py` through the local launcher prints actual canonical Length/Scalar,scalar Let/Assert and mixed Scalar/Drafting variants. Those producers cannot prove logical declarations or typed semantic operations through matching IDs.
-  - [x] ROOT CAUSE: same focused command rc=0;actual public enum census matches an independently compiled exhaustive Rust match. First parser omitted whitespace before struct variants;actual producer inspection pinpointed it and the exhaustive compiler control now rejects that omission with E0004.
-  - [x] FIX: source/model contract separates immutable logical records,actual canonical inventory membership,genuine typed semantic recipe ownership and readonly facets. Keep all13
-    existing drafting families/formula grammar;no fabricated native position,opening vocabulary,physical hole formula or imported history. Own model/inventory/resources,operation
-    and port stages before core binding.
-  - [x] ADDRESSED: `python3 -I -B scripts/local_environment.py -- python3 -I -B docs/tasks/artifacts/drafting_dependencies/plan_sources.py`:current library build0,public enum match0,missing-arm1/E0004,invented-arm1/E0599,Garment/input borrow0 and escape1/actual lifetime cause,all expected;final rc=0.
-  - [x] NO REGRESSION: same focused producer retains closed native13 and original public-owner controls,rc=0;Rust product sources unchanged from ab4ddd4c. Guarded book build0;new contract is planned model work,not implemented logical or whole semantic acceptance. No broad CI/verification campaign.
-  - [x] LOCKSTEP: book sequence/boundaries and task children,frontier/MEM/DEV/ledger align. README/LIVE reviewed,G1still6/18 In Progress;actual logical declaration model next. Currentness/workspace/coupled source proof retains .5f.2.verify.
-  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1041.md`:4 exact Git spans,rc=0;whole0868 and original Pocket acceptance retained.
-    Initial hook refused task aggregate20010L/1502138B;lossless source reduction restores original bounds. Public read exact0;no retained window or ceiling changes.
-  - [x] PROMOTION: promotion: declined (applies existing canonical-core/actual-owner/closed-formula/no-fabrication contracts;product plan belongs in book/task). Focused producer/compiler refusals and book pass0. Commit:STITCHCAD-G1-0869.
+  Goal:0869 actual logical model/recipe source contract;[whole scope/proofs](../history/stitchcad-devnotes-part1042.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model`
-  Status: `pending`
+  Status: `in_progress`
   Goal:immutable canonical logical declarations with actual authored domain/state/provenance,
   explicit complete bounds and exhaustive field accounting;Unknown/Derived have no fallback.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.declarations`
-  Status: `pending`
-  Goal:immutable logical role/domain/state/provenance records with explicit complete construction bounds;no formula kind/value conversion or physical vocabulary.
+  Status: `done`
+  Goal:0870 immutable finite logical role/domain/state/provenance records;[public reference](../book/src/annexes/formula-declarations.md#finite-logical-declaration-records).
+  - [x] REPRODUCE / ISSUE:0869 `plan_sources.py` actual canonical/scalar/mixed producer and exhaustive compiler census matched0;current canonical targets cannot supply logical state/domain. Contract requires a separate actual core record before any source adapter can borrow one.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test logical_input_declaration_contract`:3 pass,rc=0;authored finite logical selections require distinct PocketOpening/NotionSize roles and Known/Assumed/Unknown/Choice/Preference/Derived provenance. Scalar formula kinds cannot carry those domains or explicit Choice without conflating existing semantics.
+  - [x] FIX: immutable original definition with explicit domain/evidence/text/comparison limits;derive complete checked D/E/text and D*D+E*E+D before quotas,then allocation-free original field checks. Unknown/Derived have no selection;no numeric conversion/default/vocabulary. Authored equality excludes constructor policy;definition vectors retain original order/storage.
+  - [x] ADDRESSED: same focused command3 pass,rc=0;both kinds/six independently expected tags,unsorted domain/evidence loans,first/last selected members,all original provenance,exact bounds and quota priority,duplicate/outside-domain/missing-evidence first causes. Constructor-policy changes preserve authored equality;Debug omits member text.
+  - [x] NO REGRESSION: `cargo test -p sc-core --test logical_input_declaration_contract --test canonical_inputs_contract`:3+9 pass,rc=0;original dedicated/general scalar
+    ownership/refusals stay green. Selected strict clippy/fmt pass0;`cargo test -p sc-core --doc value::logical`:6 pass,rc=0,private fields,Unknown/Derived absence of value,scalar
+    coercion refusal,no Default and exact book API.
+  - [x] LOCKSTEP: public record/state/bounds/errors and examples in book;guarded build0. LIVE product boundary updated,README reviewed,G1still6/18 In Progress. MEM/index/DEV/ledger align. Inventory/source/Root membership is unimplemented;resource integration must accompany actual Root attachment,never follow an exposed uncharged cohort.
+  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1042.md`:4 exact Git spans,rc=0;whole0869 and0328 retained before live reduction.
+    Lossless source reduction preserves the existing task-collection bounds before staging. Public archive read exact0;no retained window or ceiling changed.
+  - [x] PROMOTION: promotion: declined (existing explicit uncertainty/canonical-core/no-fabrication contracts;book owns standalone model API). Focused3/legacy9/strict/fmt/Rustdoc6/book pass0;complete logical inventory,semantic operations and .5f.2.verify remain deferred. Commit:STITCHCAD-G1-0870.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory`
   Status: `pending`
-  Goal:actual canonical logical membership,disjoint identities and original Root metadata joins;numeric-only scopes remain explicitly empty,never defaulted logical state.
+  Goal:actual logical inventory membership and disjoint identities,then atomic original Root/resource integration;numeric-only scopes stay explicitly empty,never defaulted logical state.
+  Children: `.component` (standalone original owner), `.attach` (actual Root plus complete producers).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.resources`
   Status: `pending`
-  Goal:complete logical domain/state/provenance/owned-index content accounting through actual canonical Root producers,retaining first original fields before queries.
+  Goal:exhaustive standalone logical declaration/inventory content producer,including original domain/state/provenance and constructor proof fields. Implement before actual Root attachment;no admitted Root may omit this new cohort.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory.component`
+  Status: `pending`
+  Goal:immutable standalone logical inventory,actual original membership loans,complete count/work bounds and duplicate positions;no Root/source membership or runtime grant.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory.attach`
+  Status: `pending`
+  Goal:atomically integrate original logical cohort with canonical Root identity/metadata joins and exhaustive resource producers,after standalone owner/accounting. Preserve numeric-only constructor scopes and native formula semantics;no temporarily uncharged Root field.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations`
   Status: `pending`
   Goal:actual typed semantic derivation/component-recipe sources under original ownership;

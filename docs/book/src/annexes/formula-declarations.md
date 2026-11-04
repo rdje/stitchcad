@@ -680,8 +680,10 @@ whole-programme acceptance,allocator faults and coupled verification retain thei
 ## Logical source implementation contract
 
 This is the design for `G1-SLICE.5f.2.dependencies.semantic.logical.sources`;the logical models,
-semantic operation forms and source facets below are **planned**,not implemented by garment
-source-content admission. The existing numeric canonical owner,scalar formula statements and
+semantic operation forms and source facets below retain their individual implementation stages.
+Standalone finite logical declarations are implemented below;canonical inventory attachment,
+semantic operations and source facets remain **planned**. Garment source-content admission does
+not implement those stages. The existing numeric canonical owner,scalar formula statements and
 mixed scalar/native programme cannot supply them merely because an identifier matches.
 The tracked dependency-plan probe reports those actual producer enum variants before building
 its current-library public-owner controls. This separates the source interface that exists from
@@ -689,7 +691,7 @@ the records and complete acceptance that still have to be implemented.
 
 The implementation sequence is:
 
-1. Introduce immutable logical declaration records in core. They retain an explicit semantic role,
+1. **Standalone records implemented:** immutable logical declaration records in core. They retain an explicit semantic role,
    original declared domain,authored state and provenance. Domain members are authored data;core
    supplies no list of physical Pocket opening types,hardware sizes or selected defaults. A finite
    logical selection can name a stable member without interpreting a vendor code as dimensions.
@@ -739,3 +741,85 @@ workspace,canonical joins,operation existence/kinds/dependencies and complete no
 Allocator failures,source lifetimes and coupled acceptance remain `.5f.2.verify` after the agreed
 integration set. G4 still owns Profile registry/schema/evidence policy and G3 physical execution;
 these logical interfaces cannot manufacture either approval.
+
+
+## Finite logical declaration records
+
+`LogicalInputDeclaration` now owns an immutable authored finite domain,state and provenance.
+Its `LogicalInputKind` is PocketOpening or NotionSize. Neither is a scalar formula operand kind;
+a hardware member identifier supplies no inferred dimensions,and an opening identifier supplies
+no physical construction or supported-envelope approval. Domain members are explicit validated
+`MachineToken`s. Vendor codes and localized labels are not normalized into these identifiers;
+a future source must preserve their own original records and explicit member association.
+
+The editable `LogicalInputDeclarationDefinition` supplies the original declaration/source IDs,
+kind,nonempty distinct domain vector and one state. No selection or domain member is supplied
+implicitly. These state forms retain different authored meanings:
+
+| State | Original fields |
+| --- | --- |
+| Known | Selected domain member and nonempty distinct scoped-evidence references |
+| Assumed | Selected member and human-assumption reference |
+| Unknown | Observation request;no selected value or fallback |
+| Choice | Explicit selected member and design-decision provenance;no observed-fact claim |
+| Preference | Selected member and preference provenance |
+| Derived | Sole semantic operation reference;no authored or cached result |
+
+Known,Assumed,Choice and Preference selections must belong to this actual domain. Unknown and
+Derived still need their original possible domain. Evidence/assumption/observation/decision/
+preference/operation IDs retain their source meaning;this constructor proves neither existence
+nor truth,human approval,operation kind/dependencies or current Profile binding. Logical Derived
+uses an actual later-bound semantic computation;it does not add enum-valued `let` or scalar strings.
+
+Select `LogicalInputLimits::new(domain_members,evidence_records,text_bytes,validation_inspections)`
+explicitly. There is no Default. The factory first derives complete actual domain count D,Known
+evidence count E,all owned domain text plus separately owned selection text,and a conservative
+`D*D + E*E + D` member/identity comparison bound. Every original repeated entry counts. Complete
+checked arithmetic precedes domain,evidence,text,then comparison quotas. These are logical counts,
+UTF-8 bytes and comparisons;they do not measure allocator capacity,string-comparison byte work,
+CPU time or runtime execution. Caller-owned input buffers were allocated before this constructor.
+
+Only after every quota passes does core check empty/duplicate domain,selection membership,then
+missing/duplicate Known evidence,in that order. Validation uses borrowed prefix scans and no
+workspace allocation. The successful record moves the original vectors without cloning,sorting,
+normalizing or deduplicating them. `definition()` returns that immutable original data;`id()` and
+`kind()` retain its original declaration fields. `limits()` retains constructor proof metadata and
+`shape()` exposes the complete actual populations/bound. Authored equality compares definitions,
+so changing constructor allowances cannot change the record's authored semantic content.
+
+For example,neutral identifiers `option_a` and `option_b` describe no physical opening vocabulary:
+
+```rust
+use sc_core::{name::MachineToken,ontology::EntityId,value::*};
+# fn main()->Result<(),Box<dyn std::error::Error>> {
+let record=LogicalInputDeclaration::new(LogicalInputDeclarationDefinition {
+    id:EntityId::from_bits(1),source:EntityId::from_bits(2),
+    kind:LogicalInputKind::PocketOpening,
+    domain:vec![MachineToken::new("option_a")?,MachineToken::new("option_b")?],
+    state:LogicalInputState::Choice {
+        value:MachineToken::new("option_b")?,decision:EntityId::from_bits(3),
+    },
+},LogicalInputLimits::new(2,0,24,6))?;
+assert_eq!(record.definition().state.tag(),LogicalInputStateTag::Choice);
+# Ok(()) }
+```
+
+The two domain members own16 bytes and the separate selection8 bytes:E0,text24,comparisons6.
+For domain `small,large` with Known selection `small` and two evidence references,the complete
+requirements are D2/E2/text15/comparisons10. Exact quotas pass;D1,E1,text14 or comparisons9 refuses
+the respective complete requirement before any domain/state validation. Unknown/Derived with
+that same domain use text10/comparisons6 and no selected-value field.
+
+`LogicalInputDeclarationError` retains the original declaration ID and typed refusal data in
+its public `refusal` field. Domain/evidence duplication reports first and repeated authored
+indices;duplicate evidence also retains its original identity. An outside-domain selection keeps
+its original state label without emitting authored member text. Debug omits domain/selection text.
+Private record fields prevent mutation,and no scalar conversion exists. This is standalone
+structural admission:actual canonical inventory membership,Root/resource integration,Profile
+source binding,semantic operations,currentness and complete dependency proof remain separate.
+
+
+The standalone inventory and its exhaustive content producer come before actual Root attachment.
+Canonical Root attachment must include complete identity/metadata and resource-producer updates
+in the same change. An exposed Root with an uncharged logical cohort is never an intermediate
+accepted state. Numeric-only construction remains an explicitly empty logical scope throughout.

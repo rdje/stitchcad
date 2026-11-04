@@ -3,11 +3,11 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0869 — source logical declaration and recipe model stages
+## STITCHCAD-G1-0870 — immutable finite logical declarations
 
-Document the actual logical model/canonical ownership/semantic recipe/source-facet sequence. An actual producer census and exhaustive compiler match preserve current representation boundaries;missing/invented variants and lifetime escape refuse as expected.
+Add authored PocketOpening/NotionSize domains with six distinct states and explicit content/comparison allowances. Unknown/Derived carry no result;choices remain distinct from facts. Keep original order/provenance,first typed refusals and policy-independent authored equality.
 
-Focused plan producer/compiler controls and book pass0;Rust product unchanged. G1still6/18 In Progress;immutable logical declaration records next. No logical or complete semantic acceptance claim.
+Focused logical3/canonical9,strict lint/fmt,Rustdoc6 and book pass0. G1still6/18 In Progress;standalone inventory/accounting and atomic Root attachment remain next. No logical source or complete semantic acceptance claim.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -21,6 +21,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0869 logical source contract](docs/history/stitchcad-devnotes-part1042.md) retains exact task,lesson and ledger source bytes.
 
 [Whole0868 garment source unit and original Pocket acceptance](docs/history/stitchcad-devnotes-part1041.md) retain exact source bytes.
 

@@ -233,3 +233,10 @@ impl LengthDeclaration {
         ValueProvenanceValidation::DeferredToDesignAndG4
     }
 }
+
+mod logical;
+pub use logical::{
+    LogicalInputDeclaration, LogicalInputDeclarationDefinition, LogicalInputDeclarationError,
+    LogicalInputKind, LogicalInputLimits, LogicalInputRefusal, LogicalInputShape,
+    LogicalInputState, LogicalInputStateTag,
+};

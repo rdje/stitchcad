@@ -3,10 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-03 UTC)_ — source logical model and recipe ownership before facets
+## _(2026-11-04 UTC)_ — immutable finite logical declaration records
 
-0869 derives current canonical/scalar/mixed variants from their producers and checks an exhaustive public Rust match. Missing/invented variants fail with E0004/E0599;borrow/escape controls retain actual ownership/lifetime evidence. Focused producer and book pass0.
-Book/task sequence separates immutable logical records,canonical inventory,typed semantic recipe ownership and actual facets. No scalar coercion,synthetic native position,physical vocabulary/formula or imported history. Promotion declined:existing canonical-core/actual-source contracts;G1still6/18,model next.
+0870 adds separate PocketOpening/NotionSize records and six explicit states,including Choice. Complete domain/evidence/text and D*D+E*E+D bounds precede quotas and allocation-free field checks;Unknown/Derived have no result. Authored equality ignores constructor policy.
+Focused logical3/canonical9,strict lint/fmt,Rustdoc6 and book pass0. Original unsorted vectors/provenance,independent tags,inclusive bounds/first refusals and privacy remain. Promotion declined:existing uncertainty/core contracts;G1still6/18. Standalone inventory/accounting next;Root integration must be atomic.
+
+[Whole0869 logical source contract lesson](docs/history/stitchcad-devnotes-part1042.md) retains exact source bytes.
 
 [Whole0868 garment source lesson](docs/history/stitchcad-devnotes-part1041.md) retains exact source bytes.
 
@@ -28,13 +30,7 @@ Book/task sequence separates immutable logical records,canonical inventory,typed
 
 [Whole0329 artifact-schema lesson](docs/history/stitchcad-devnotes-part1040.md) retains exact source bytes.
 
-## _(2026-10-26 UTC)_ — canonical tech-pack source request
-
-0328 .6.2.2.c.2.4.4 keeps nonempty distinct Instance IDs in authored order with exact profile and Design snapshot.
-Design owns authored knowledge; evaluated sources retain actual content/provenance checks. No report edits,
-latest-instance fallback or fabricated Order quantities; piece cut quantities retain canonical cut-plan sources.
-Native tech-pack2/print3/artifact4/query2/catalog2, selected strict lint/fmt/book/publication76-95 pass0.
-482/300 whole48a06ba exact0. Promotion declined: existing canonical tech-pack contract; G1still6/18, review next.
+[Whole0328 tech-pack source lesson](docs/history/stitchcad-devnotes-part1042.md) retains exact source bytes.
 
 ## _(2026-10-26 UTC)_ — plotter and vector-print requests
 
