@@ -3,10 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0899 — all13 original native semantic field schemas
+## STITCHCAD-G1-0900 — exact native semantic program/step owners
 
-Fused raw views now retain actual target/Profile fields,input owners,pair/A/B locations and six Notch roles. Independent exhaustive guards cover all13 schemas. Native3,strict lint/fmt,API3,source census and book pass0;43 original fixture fields and distinct equal-ID loans verified.
-Whole0898 retained1071;exact normalized-owner/mixed wrapper next,G1still6/18 In Progress;aggregate and whole/coupled binding deferred.
+Fused native semantic views now retain exact normalized program owners,genuine mixed steps and every original raw field/pair/A/B/Profile loan. Focused5 and strict lint/fmt pass0;API3 and book pass0. Shared raw all13 fixture remains exact;43 mixed fields and distinct owners verified.
+Whole0899 retained1072;occurrence stage completes with focused checks,explicit source requests next,G1still6/18 In Progress;aggregate and whole/coupled binding deferred.
+
+[Whole0899 raw native semantic unit](docs/history/stitchcad-devnotes-part1072.md) retains exact task,lesson and ledger.
 
 [Whole0898 ordered semantic occurrence unit](docs/history/stitchcad-devnotes-part1071.md) retains exact task,lesson and ledger.
 

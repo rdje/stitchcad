@@ -3,19 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — all original raw native semantic target/Profile fields
+## _(2026-11-04 UTC)_ — exact native semantic program and mixed-step provenance
 
-0899 independently classifies every original field across13 native schemas. Borrowed target/Profile references retain actual raw input owners and explicit target/Notch roles;Walk retains original pair index,A/B side and all six Profile roles.
-Exhaustive owner helpers distinguish numeric/direct geometry from canonical semantic targets. Walk pair/notch and Profile/dimension records are independently matched. Constant-size inline views and borrowed vectors yield a fused stream without
-query,value,clone,result allocation or work/source acceptance.
-Native3 pass0 across both quadratic/cubic,rotation/separation and point/range modes:43 fields total,13 target refs+6 Notch refs+24 Walk refs over2 pairs. Every view retains actual input;Walk nested Profile pointers/indices/sides/roles exact.
-Equal-ID Mirror fields and equal Notch Profile sources in distinct original inputs remain different loans. An actual empty Walk still retains its span and yields no fabricated Profile occurrences. Deferred invalid numeric expressions are not
-evaluated.
-Source-derived classifier census confirms13/13 actual native variants and6 Profile roles,rc=0. Strict selected lib/harness lint/fmt0,API3 pass,rc=0;generic getter/private field/original input escape checked. Guarded book0;no broad/full CI verdict.
-Existing numeric/direct geometry/resource producers unchanged. Next normalized-owner/mixed-position wrapper;then complete requests,aggregate work and actual source/family binding. Raw metadata selects no Profile or physical value and certifies
-no target existence/currentness.
-Promotion declined:existing exhaustive original-owner/field/role,no invented position and fresh aggregate doctrine;book owns API. Whole0898 retained1071 as3 exact Git spans/public0;protected recovery stores unchanged.
-README/LIVE unchanged,G1still6/18 In Progress;whole .5f.2.check and coupled .verify remain deferred.
+0900 wraps every original raw native semantic field in the exact actual normalized program and genuine mixed step. The all13 raw producer is reused unchanged;original input/target/Profile/pair/A/B/role loans remain intact.
+Private wrapper and manual Copy/Clone/Debug retain program identity without host/source bounds. Scalar/semantic slots keep their own dependency classes;no ordinal/ID position reconstruction,callbacks,values,new arena,result allocation or
+work/source/order acceptance.
+Focused native_semantic filter5 pass0:raw3 remain exact after sharing the original all13 constructor fixture;mixed2 retain all43 original fields around scalar slots1/10 at genuine6/7/8/9/11/12/13/14/15 positions. Both curve/motion/axis modes pass.
+A second normalization over equal source data remains a different actual program owner. Every raw field pointer/local role survives;scalar-only and exhausted streams stay empty,provider traces0. Original coverage/normalization is distinct from
+later checked source/order/kind/work owners.
+One unused test import removed before strict lint;selected lib/harness lint/fmt0. Native wrapper API3 pass,rc=0;guarded book0. No new book Rust example or broad/full CI verdict.
+Promotion declined:existing exact normalized owner/genuine position and raw field/role/no aggregate credit doctrine;book owns API. Whole0899 retained1072 as3 exact Git spans/public0;protected recovery stores unchanged.
+README/LIVE unchanged,G1still6/18 In Progress. Original occurrence-view stage completes with focused checks;next explicit complete source-selection requests,then aggregate work/source/cohort and whole/coupled verification.
+
+[Whole0899 raw native semantic lesson](docs/history/stitchcad-devnotes-part1072.md) retains exact source bytes.
 
 [Whole0898 ordered semantic occurrence lesson](docs/history/stitchcad-devnotes-part1071.md) retains exact source bytes.
 

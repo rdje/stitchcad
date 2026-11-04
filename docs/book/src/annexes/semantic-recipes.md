@@ -1769,7 +1769,7 @@ slice;complete request/work/source/cohort and coupled verification remain tracke
 
 `DraftingOperationInput::semantic_dependencies()` now classifies all thirteen native schemas and
 streams actual semantic target and symbolic Notch Profile field loans. This implemented raw stage
-retains the exact original native input. Its program-owner/mixed-position wrapper is still next;
+retains the exact original native input. Its program-owner/mixed-position wrapper is implemented below;
 source selection,canonical association,currentness,aggregate work and executable acceptance remain
 separate. No mixed position is inferred from an operation ID or local field index.
 
@@ -1817,6 +1817,42 @@ and remains exhausted after it. Deferred invalid numeric expressions are not eva
 
 API examples compile the raw getter and refuse private-field mutation or original-data lifetime
 escape. These are original-field classification checks. They establish no existence or liveness of
-the referenced Dart,Piece,span,allowance,grainline,tolerance or Profile declaration. The next wrapper
-will keep these original raw fields under the exact normalized program and genuine mixed step;
+the referenced Dart,Piece,span,allowance,grainline,tolerance or Profile declaration. The wrapper below
+keeps these original raw fields under the exact normalized program and genuine mixed step;
 complete semantic source/work/cohort and coupled verification remain tracked.
+
+## Original native semantic fields in the mixed program
+
+`NormalizedDraftingProgram::native_semantic_dependencies()` now wraps every original raw native
+semantic field with the exact actual normalized program and genuine mixed step. It reuses the
+complete thirteen-family producer above. This completes the planned original occurrence-view
+stage;explicit source-selection requests,aggregate work and actual source/cohort binding remain
+pending. Original coverage/normalization does not supply namespace,kind,dependency-order,currentness
+or executable acceptance.
+
+Each private `DraftingProgramNativeSemanticUse` retains `program()`,`step()` and `native()`.
+`position()` comes from its actual original `DraftingProgramStepView`. The raw native view keeps
+its exact input,target/Profile reference and original pair/A/B/role metadata. No scalar or semantic
+recipe ordinal is fabricated for a native operation. A separately normalized program over equal
+source data remains a different owner;later proof joins must use this exact actual program.
+
+Iteration follows genuine mixed order,then the raw producer's original local field order. Scalar
+and semantic-only slots contribute no fields to this specific stream and keep their own dependency
+obligations. Four point/curve families have zero additional semantic targets;their numeric/direct
+geometry still belongs to the existing producers. There is no deduplication,body clone,new arena,
+result-vector reservation,provider callback or value read. The fused wrapper borrows all original
+owners and grants no new content/comparison/source-work allowance.
+
+The focused fixture inserts scalar1 at mixed position1 and scalar2 at10 around thirteen native
+inputs. Semantic fields occur at positions6/7/8/9,then11/12/13/14/15. The Walk at12 preserves all25
+of its raw fields,including both original pairs and every A/B/Profile role. All43 fields retain
+exact original raw target/Profile pointers,input loans and local locations. A second normalized
+program shares the same source data but cannot replace the actual program owner. Both curve/
+motion/axis modes pass,and iteration leaves the provider trace at0.
+
+An actual scalar-only program produces no native semantic fields and stays exhausted. Its deferred
+invalid numeric expression remains unevaluated. The shared raw thirteen-family fixture still
+passes all target/Profile/pair and equal-ID owner checks. API examples compile the generic wrapper
+and refuse private raw-use replacement or normalized-owner lifetime escape. Root Pocket/Closure,
+ordered semantic operation and native occurrence views are now implemented with focused checks;
+complete request/work/source/family/cohort and whole/coupled verification remain separate.

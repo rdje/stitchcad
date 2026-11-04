@@ -96,6 +96,7 @@ pub use operation_input::{
     DraftingOperationFamily, DraftingOperationInput,
 };
 mod program;
+pub use program::DraftingProgramNativeSemanticUse;
 pub use program::{
     AdmittedDraftingProgramGeometryWork, AdmittedDraftingProgramInputs,
     AdmittedDraftingProgramNameWork, AdmittedDraftingProgramOrderWork,

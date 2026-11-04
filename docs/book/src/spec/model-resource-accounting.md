@@ -515,6 +515,9 @@ Original coverage/normalization is distinct from later source,dependency-order a
 The [raw native semantic producer](../annexes/semantic-recipes.md#original-raw-native-semantic-fields)
 classifies all13 schemas with original target/Profile field loans and repeated Walk pair/side roles.
 It supplies no resource/work credit;whole input/vector/occurrence bounds precede later matching.
+The [mixed native wrapper](../annexes/semantic-recipes.md#original-native-semantic-fields-in-the-mixed-program)
+retains that exact raw view under the actual normalized owner and genuine step. It allocates no
+new result/arena and grants no aggregate work credit or source/dependency-order acceptance.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

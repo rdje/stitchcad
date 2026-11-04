@@ -32,203 +32,214 @@ fn profile_field(
         R::Encoding => &profile.encoding,
     }
 }
-#[test]
-fn all_thirteen_families_preserve_every_target_profile_role_and_original_input() -> TestResult {
-    use DraftingNativeSemanticTargetRole as R;
+pub(super) fn with_native(
+    rotated: bool,
+    run: impl FnOnce(&[DraftingOperationInput<'_>], &WalkSeamEdit) -> TestResult,
+) -> TestResult {
     use DraftingOperationInput as I;
-    for rotated in [false, true] {
-        let range = DirectedRange {
-            range: EdgeRange::whole(EdgeRef::new(id(9000), LocalTag::new(23))),
-            direction: Direction::Reversed,
-        };
-        let p = PointConstruction::new(id(1001), doc("1 mm/0")?, doc("2 mm/0")?);
-        let line = LineConstruction::new(id(1002), point(91), point(91))?;
-        let arc = CenterArcConstruction::new(
-            id(1003),
-            point(92),
-            doc("1 mm/0")?,
-            doc("0 deg")?,
-            doc("90 deg")?,
-        )?;
-        let bezier = BezierConstruction::new(
-            id(1004),
-            if rotated {
-                BezierControlPoints::Quadratic {
-                    start: point(93),
-                    control: point(94),
-                    end: point(93),
-                }
-            } else {
-                BezierControlPoints::Cubic {
-                    start: point(93),
-                    first_control: point(94),
-                    second_control: point(93),
-                    end: point(95),
-                }
-            },
-        )?;
-        let offset = OffsetConstruction::new(id(1005), range, OffsetSide::Left, id(8005))?;
-        let slash = if rotated {
-            SlashSpreadConstruction::rotation(
-                id(1006),
-                id(8006),
-                range,
-                SlashSpreadSide::Right,
-                point(96),
-                doc("-450 deg")?,
-            )?
+    let range = DirectedRange {
+        range: EdgeRange::whole(EdgeRef::new(id(9000), LocalTag::new(23))),
+        direction: Direction::Reversed,
+    };
+    let p = PointConstruction::new(id(1001), doc("1 mm/0")?, doc("2 mm/0")?);
+    let line = LineConstruction::new(id(1002), point(91), point(91))?;
+    let arc = CenterArcConstruction::new(
+        id(1003),
+        point(92),
+        doc("1 mm/0")?,
+        doc("0 deg")?,
+        doc("90 deg")?,
+    )?;
+    let bezier = BezierConstruction::new(
+        id(1004),
+        if rotated {
+            BezierControlPoints::Quadratic {
+                start: point(93),
+                control: point(94),
+                end: point(93),
+            }
         } else {
-            SlashSpreadConstruction::separation(
-                id(1006),
-                id(8006),
-                range,
-                SlashSpreadSide::Right,
-                range,
-                doc("1 mm/0")?,
-            )?
-        };
-        let dart = CloseDart::new(id(8007));
-        let notch = AddNotch::new(
-            id(8008),
+            BezierControlPoints::Cubic {
+                start: point(93),
+                first_control: point(94),
+                second_control: point(93),
+                end: point(95),
+            }
+        },
+    )?;
+    let offset = OffsetConstruction::new(id(1005), range, OffsetSide::Left, id(8005))?;
+    let slash = if rotated {
+        SlashSpreadConstruction::rotation(
+            id(1006),
+            id(8006),
+            range,
+            SlashSpreadSide::Right,
+            point(96),
+            doc("-450 deg")?,
+        )?
+    } else {
+        SlashSpreadConstruction::separation(
+            id(1006),
+            id(8006),
+            range,
+            SlashSpreadSide::Right,
+            range,
+            doc("1 mm/0")?,
+        )?
+    };
+    let dart = CloseDart::new(id(8007));
+    let notch = AddNotch::new(
+        id(8008),
+        EdgeAnchor {
+            edge: range.range.edge(),
+            param: Param::END,
+        },
+        bindings(),
+    );
+    let grain = GrainlinePlacement::new(id(1009), id(8009))?;
+    let pair = WalkBalancePair::new(
+        WalkBalanceNotch::new(
+            EdgeAnchor {
+                edge: range.range.edge(),
+                param: Param::START,
+            },
+            bindings(),
+        ),
+        WalkBalanceNotch::new(
             EdgeAnchor {
                 edge: range.range.edge(),
                 param: Param::END,
             },
             bindings(),
-        );
-        let grain = GrainlinePlacement::new(id(1009), id(8009))?;
-        let pair = WalkBalancePair::new(
-            WalkBalanceNotch::new(
-                EdgeAnchor {
-                    edge: range.range.edge(),
-                    param: Param::START,
-                },
-                bindings(),
-            ),
-            WalkBalanceNotch::new(
-                EdgeAnchor {
-                    edge: range.range.edge(),
-                    param: Param::END,
-                },
-                bindings(),
-            ),
-        );
-        let walk = WalkSeamEdit::new(id(1010), id(8010), vec![pair; 2]);
-        let truing =
-            ConstrainedSeamTruing::new(id(1011), id(8011), SeamSideId::B, id(7011), id(6011))?;
-        let mirror = MirrorPieceCopy::new(
-            id(1012),
-            id(8012),
-            if rotated {
-                MirrorAxis::ThroughPoints {
-                    start: point(97),
-                    end: point(98),
-                }
-            } else {
-                MirrorAxis::AlongRange(range)
-            },
-        )?;
-        let join = JoinPiecesAtSeam::new(id(1013), id(8013), id(7013), id(6013))?;
-        let native = [
-            I::ConstructPoint(&p),
-            I::DrawLine(&line),
-            I::DrawArc(&arc),
-            I::DrawBezier(&bezier),
-            I::OffsetEdge(&offset),
-            I::SlashSpread(&slash),
-            I::CloseDart {
-                operation: id(1007),
-                request: &dart,
-            },
-            I::AddNotch {
-                operation: id(1008),
-                request: &notch,
-            },
-            I::PlaceGrainline(&grain),
-            I::WalkSeam(&walk),
-            I::TrueSeam(&truing),
-            I::MirrorPiece(&mirror),
-            I::JoinPieces(&join),
-        ];
-        let mut targets = vec![];
-        let mut profiles = vec![];
-        let mut walk_fields = vec![];
-        let mut total = 0;
-        for (input, expected) in native
-            .into_iter()
-            .zip([0, 0, 0, 0, 1, 1, 1, 7, 1, 25, 3, 1, 3])
-        {
-            let mut count = 0;
-            let mut uses = input.semantic_dependencies();
-            for use_ in uses.by_ref() {
-                assert!(same_input(use_.input(), input));
-                count += 1;
-                total += 1;
-                match use_.field() {
-                    DraftingNativeSemanticField::Target { role, reference } => {
-                        targets.push((role, *reference))
-                    }
-                    DraftingNativeSemanticField::NotchProfile { role, reference } => {
-                        assert_eq!(*reference, *profile_field(&bindings(), role));
-                        profiles.push(role);
-                    }
-                    DraftingNativeSemanticField::WalkNotchProfile {
-                        pair_index,
-                        side,
-                        role,
-                        reference,
-                    } => {
-                        let actual = walk
-                            .pairs()
-                            .get(pair_index)
-                            .ok_or("actual pair")?
-                            .mark(side)
-                            .representation();
-                        assert!(core::ptr::eq(reference, profile_field(actual, role)));
-                        walk_fields.push((pair_index, side, role));
-                    }
-                }
+        ),
+    );
+    let walk = WalkSeamEdit::new(id(1010), id(8010), vec![pair; 2]);
+    let truing = ConstrainedSeamTruing::new(id(1011), id(8011), SeamSideId::B, id(7011), id(6011))?;
+    let mirror = MirrorPieceCopy::new(
+        id(1012),
+        id(8012),
+        if rotated {
+            MirrorAxis::ThroughPoints {
+                start: point(97),
+                end: point(98),
             }
-            assert_eq!(count, expected);
-            assert!(uses.next().is_none());
-            assert!(uses.next().is_none());
-        }
-        assert_eq!(total, 43);
-        assert_eq!(
-            targets,
-            [
-                (R::OffsetAllowance, id(8005)),
-                (R::SlashPiece, id(8006)),
-                (R::Dart, id(8007)),
-                (R::NotchPiece, id(8008)),
-                (R::Grainline, id(8009)),
-                (R::WalkSpan, id(8010)),
-                (R::TruingSpan, id(8011)),
-                (R::TruingPiece, id(7011)),
-                (R::TruingFitTolerance, id(6011)),
-                (R::MirrorPiece, id(8012)),
-                (R::JoinSpan, id(8013)),
-                (R::JoinPieceA, id(7013)),
-                (R::JoinPieceB, id(6013))
-            ]
-        );
-        let roles = [
-            DraftingNotchProfileRole::Style,
-            DraftingNotchProfileRole::SampleDepth,
-            DraftingNotchProfileRole::SampleWidth,
-            DraftingNotchProfileRole::ProductionDepth,
-            DraftingNotchProfileRole::ProductionWidth,
-            DraftingNotchProfileRole::Encoding,
-        ];
-        assert_eq!(profiles, roles);
-        let expected = (0..2)
-            .flat_map(|index| {
-                [SeamSideId::A, SeamSideId::B]
-                    .into_iter()
-                    .flat_map(move |side| roles.into_iter().map(move |role| (index, side, role)))
-            })
-            .collect::<Vec<_>>();
-        assert_eq!(walk_fields, expected);
+        } else {
+            MirrorAxis::AlongRange(range)
+        },
+    )?;
+    let join = JoinPiecesAtSeam::new(id(1013), id(8013), id(7013), id(6013))?;
+    let native = [
+        I::ConstructPoint(&p),
+        I::DrawLine(&line),
+        I::DrawArc(&arc),
+        I::DrawBezier(&bezier),
+        I::OffsetEdge(&offset),
+        I::SlashSpread(&slash),
+        I::CloseDart {
+            operation: id(1007),
+            request: &dart,
+        },
+        I::AddNotch {
+            operation: id(1008),
+            request: &notch,
+        },
+        I::PlaceGrainline(&grain),
+        I::WalkSeam(&walk),
+        I::TrueSeam(&truing),
+        I::MirrorPiece(&mirror),
+        I::JoinPieces(&join),
+    ];
+    run(&native, &walk)
+}
+#[test]
+fn all_thirteen_families_preserve_every_target_profile_role_and_original_input() -> TestResult {
+    use DraftingNativeSemanticTargetRole as R;
+    for rotated in [false, true] {
+        with_native(rotated, |native, walk| {
+            let mut targets = vec![];
+            let mut profiles = vec![];
+            let mut walk_fields = vec![];
+            let mut total = 0;
+            for (input, expected) in native
+                .iter()
+                .copied()
+                .zip([0, 0, 0, 0, 1, 1, 1, 7, 1, 25, 3, 1, 3])
+            {
+                let mut count = 0;
+                let mut uses = input.semantic_dependencies();
+                for use_ in uses.by_ref() {
+                    assert!(same_input(use_.input(), input));
+                    count += 1;
+                    total += 1;
+                    match use_.field() {
+                        DraftingNativeSemanticField::Target { role, reference } => {
+                            targets.push((role, *reference))
+                        }
+                        DraftingNativeSemanticField::NotchProfile { role, reference } => {
+                            assert_eq!(*reference, *profile_field(&bindings(), role));
+                            profiles.push(role);
+                        }
+                        DraftingNativeSemanticField::WalkNotchProfile {
+                            pair_index,
+                            side,
+                            role,
+                            reference,
+                        } => {
+                            let actual = walk
+                                .pairs()
+                                .get(pair_index)
+                                .ok_or("actual pair")?
+                                .mark(side)
+                                .representation();
+                            assert!(core::ptr::eq(reference, profile_field(actual, role)));
+                            walk_fields.push((pair_index, side, role));
+                        }
+                    }
+                }
+                assert_eq!(count, expected);
+                assert!(uses.next().is_none());
+                assert!(uses.next().is_none());
+            }
+            assert_eq!(total, 43);
+            assert_eq!(
+                targets,
+                [
+                    (R::OffsetAllowance, id(8005)),
+                    (R::SlashPiece, id(8006)),
+                    (R::Dart, id(8007)),
+                    (R::NotchPiece, id(8008)),
+                    (R::Grainline, id(8009)),
+                    (R::WalkSpan, id(8010)),
+                    (R::TruingSpan, id(8011)),
+                    (R::TruingPiece, id(7011)),
+                    (R::TruingFitTolerance, id(6011)),
+                    (R::MirrorPiece, id(8012)),
+                    (R::JoinSpan, id(8013)),
+                    (R::JoinPieceA, id(7013)),
+                    (R::JoinPieceB, id(6013))
+                ]
+            );
+            let roles = [
+                DraftingNotchProfileRole::Style,
+                DraftingNotchProfileRole::SampleDepth,
+                DraftingNotchProfileRole::SampleWidth,
+                DraftingNotchProfileRole::ProductionDepth,
+                DraftingNotchProfileRole::ProductionWidth,
+                DraftingNotchProfileRole::Encoding,
+            ];
+            assert_eq!(profiles, roles);
+            let expected = (0..2)
+                .flat_map(|index| {
+                    [SeamSideId::A, SeamSideId::B]
+                        .into_iter()
+                        .flat_map(move |side| {
+                            roles.into_iter().map(move |role| (index, side, role))
+                        })
+                })
+                .collect::<Vec<_>>();
+            assert_eq!(walk_fields, expected);
+            Ok(())
+        })?;
     }
     Ok(())
 }

@@ -681,7 +681,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0896 whole semantic consumer contract;[whole scope/proofs](../history/stitchcad-devnotes-part1069.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.occurrences`
-  Status: `in_progress`
+  Status: `done`
   Goal:stream complete original Pocket/Closure,Buttonhole/logical and native target field loans with actual owner/index and genuine checked mixed positions only where authored. Exhaustive variant/field guards,no query,value,buffer or synthetic ordinal.
   Children: `.garment` (Pocket/Closure original fields/indices),`.operations` (typed semantic operation fields/genuine mixed positions),`.native` (all13 original target families/mixed consumers).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.occurrences.garment`
@@ -691,25 +691,25 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0898 original ordered semantic fields;[whole scope/proofs](../history/stitchcad-devnotes-part1071.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.occurrences.native`
-  Status: `in_progress`
+  Status: `done`
   Goal:classify complete original semantic target fields across all13 native families with exhaustive guards and genuine mixed consumer owners. Keep direct geometry/numeric fields in their own producers;no source lookup,empty obligation claim or synthetic role.
   Children: `.fields` (complete raw original targets/Profile fields),`.mixed` (exact normalized owner and genuine step positions).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.occurrences.native.fields`
   Status: `done`
-  Goal:classify all13 raw native schemas and stream every original semantic target/Profile field with authentic input loans,original pair/side/role metadata and borrowed reference fields. Independent exhaustive owner guards;no source/value/currentness lookup,allocation,synthetic mixed position or empty obligation claim for other dependency classes.
-  Scope:typed direct EntityId roles and all six NotchProfileBindings fields;Walk retains every original pair/A/B occurrence and Profile role. Four direct point/curve families have no extra semantic target after exhaustive classification. Numeric/direct geometry remain their original producers. Every target view retains the actual native input.
-  - [x] REPRODUCE / ISSUE:direct geometry views leave actual canonical/native targets and symbolic Notch/Walk Profile references in their original inputs. A zero direct-geometry count cannot certify absent semantic obligations;repeated targets,pairs and sample/production fields must retain original loans and roles.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract native_semantic::`:3 pass,rc=0. All13 native schemas need independent semantic field classification;actual borrowed targets and six Profile roles remain inspectable before source binding. Original pair/A/B locations cannot come from filtered indices or numeric operation IDs.
-  - [x] FIX:independent exhaustive native-owner helpers,typed target/Profile/pair role views and private original input/field uses. Complete fused producer over all13 cases;Walk/notch/pair/Profile/dimension records exhaustive. Borrow actual fields,constant-size inline views,no clone,reservation,query,value,work credit,source acceptance or mixed position.
-  - [x] ADDRESSED:native_semantic::3 pass,rc=0. Both curve/motion/axis modes retain43 original occurrences:13 target refs,6 Notch Profile refs,24 Walk refs over2 pairs. Actual input loans,pair indices,A/B order and six roles exact. Equal-ID Mirror and Notch inputs retain distinct actual fields;empty Walk still has1 span and no fabricated Profile fields;fused exhaustion preserved.
-  - [x] CENSUS:guarded source-derived classifier census confirms13/13 actual DraftingOperationInput variants and6 Profile roles,rc=0. Whole0898 retained1071 as3 exact Git spans/public reader byte-exact0. No caps,sealed history or protected Window30/recovery/proof/draft stores changed;no broad inventory/full-CI verdict claimed.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0;fmt0. `cargo test -p sc-core --doc operation_input::semantic`:3 pass,rc=0;generic raw getter/private mutation/original input escape checked. Existing numeric/direct geometry/resource methods unchanged;deferred invalid numeric expressions remain unexecuted.
-  - [x] BOOK: `make book`:rc=0. All13 classifications,6 Notch/Walk Profile roles,43-field fixture,raw resource/source boundaries and pending normalized wrapper documented;source-plan/resource routes align. No new book Rust example or complete semantic/currentness/physical claim.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger align;README/LIVE reviewed unchanged,G1still6/18 In Progress. Native parent remains open for .mixed;aggregate requests/work/source/cohort and whole .5f.2.check/.verify remain pending.
-  - [x] PROMOTION: promotion: declined (existing exhaustive original-owner/field/role,no invented position and fresh aggregate doctrine;book owns raw semantic API). Implemented with focused checks;next exact normalized owner/mixed wrapper. Commit:STITCHCAD-G1-0899.
+  Goal:0899 all13 original native semantic schemas;[whole scope/proofs](../history/stitchcad-devnotes-part1072.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.occurrences.native.mixed`
-  Status: `pending`
+  Status: `done`
   Goal:wrap complete original native semantic fields in the exact actual normalized program/step owner with genuine mixed positions,without ID reconstruction or new source/work acceptance. Preserve original raw inputs,field/pair/side/role indices and other dependency-class boundaries.
+  Scope:reuse complete raw native producer through actual normalized native slots;private exact program/step/raw-use wrapper. Scalar/semantic slots stay in their own classes;no ordinal/ID position inference,callback,arena,result allocation or source/order/work acceptance. Share the actual all13 fixture and verify distinct normalized owners under mixed scalar/native ordering.
+  - [x] REPRODUCE / ISSUE:raw native semantic fields alone carry no actual normalized program or genuine mixed consumer. An equal-ID/recomputed owner cannot replace those original loans;scalar slots must not renumber native positions or original pair/Profile roles.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract native_semantic`:5 pass,rc=0. Actual normalized steps already retain complete coverage and native input owners;the wrapper must preserve that exact owner/step with the complete raw field rather than reconstructing a consumer from IDs.
+  - [x] FIX:private exact normalized program/step/raw-use wrapper and fused native semantic stream reusing the existing all13 producer. Scalar/semantic slots keep their own dependency classes. Manual Copy/Clone/Debug avoids host/source bounds;no callbacks,values,arena,result allocation,source/order or fresh work acceptance.
+  - [x] ADDRESSED:native_semantic filter5 pass,rc=0:raw3 still pass after sharing the unchanged all13 constructor fixture;mixed2 preserve all43 exact raw input/field/pair/A/B/Profile loans under genuine6/7/8/9/11/12/13/14/15 positions around scalar slots1/10. Distinct normalized owners stay distinct;scalar-only/exhausted streams remain empty and provider traces0.
+  - [x] CENSUS:guarded task-root census19909L/1491382B before acceptance,rc=0. Whole0899 retained1072 as3 exact Git spans/public reader byte-exact0. Existing caps,sealed bytes and protected Window30/recovery/proof/draft stores unchanged;all13 raw producer/schema bodies unchanged.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0;fmt0. `cargo test -p sc-core --doc program::native_semantic`:3 pass,rc=0;generic getter/private raw-use/actual owner escape checked. One unused fixture import removed;no core suppression or broad/full CI claim.
+  - [x] BOOK: `make book`:rc=0. Exact normalized owner/genuine step/raw-field API,43-field mixed fixture and source/order/work boundaries align with source-plan/resource routes. No new book Rust example or whole/currentness/physical acceptance claim.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger align;README/LIVE reviewed unchanged,G1still6/18 In Progress. Raw garment/semantic/native occurrence cohort completes with focused checks;next complete explicit source-selection requests. Aggregate .work/.bind and whole .5f.2.check/.verify remain pending.
+  - [x] PROMOTION: promotion: declined (existing exact normalized owner/genuine position and original raw field/role/no aggregate credit doctrine;book owns wrapper API). Implemented with focused checks;source/whole/coupled verification remains tracked. Commit:STITCHCAD-G1-0900.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.requests`
   Status: `pending`
   Goal:retain complete explicit original Profile pin and Design/Profile rule-origin selection metadata for actual semantic occurrences. Reject missing/duplicate/extra/foreign selections under fresh bounded accounting;no owner inference,lookup fallback or copied domains.

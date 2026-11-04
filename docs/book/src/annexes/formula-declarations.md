@@ -762,7 +762,8 @@ The implementation sequence is:
    [Original Pocket/Closure field views](semantic-recipes.md#original-pocket-and-closure-dependency-fields)
    now retain actual owners/indices without queries. [Ordered semantic field views](semantic-recipes.md#original-semantic-operation-dependency-fields)
    preserve actual normalized owners/positions/ordinals. [Raw native semantic fields](semantic-recipes.md#original-raw-native-semantic-fields)
-   now classify all13 families and every symbolic Notch/Walk Profile role;their exact program wrapper and whole binding remain next.
+   now classify all13 families and every symbolic Notch/Walk Profile role. The [native program wrapper](semantic-recipes.md#original-native-semantic-fields-in-the-mixed-program)
+   retains exact normalized owners and genuine steps;complete requests/work/source/cohort binding remains next.
    Keep the original Pocket opening and all component source Pieces/copies. A recipe-built
    component retains its actual original recipe/creator;explicit imported primitives retain their
    real source without fabricated history. Unknown state stays Unknown,Derived retains its sole

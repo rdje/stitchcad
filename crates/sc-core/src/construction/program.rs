@@ -27,6 +27,7 @@ pub use dependencies::{
 mod admission;
 mod limits;
 mod name_inputs;
+mod native_semantic;
 mod normalized;
 mod records;
 mod semantic_occurrences;
@@ -50,6 +51,7 @@ pub use name_inputs::{
     DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal, DraftingProgramOutputPositions,
     DraftingProgramSourceCheckError,
 };
+pub use native_semantic::DraftingProgramNativeSemanticUse;
 pub use normalized::{
     DraftingProgramNormalizationError, DraftingProgramNormalizationRefusal,
     NormalizedDraftingOperation, NormalizedDraftingProgram,
