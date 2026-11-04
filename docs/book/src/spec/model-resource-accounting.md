@@ -464,6 +464,10 @@ charges all three original labels with caller scope/owner/index. The
 [selected-source binding](../annexes/semantic-recipes.md#bind-the-original-selected-profile-source)
 freshly composes actual Root,complete provider and requested-pin content before lookup;individual
 pin accounting alone supplies no Profile/canonical association,G4 validation or whole-source proof.
+The [logical parameter binder](../annexes/semantic-recipes.md#bind-actual-profile-logical-parameter-metadata)
+reuses fresh complete Root/provider/request accounting before metadata lookup,then retains exact
+source owners and actual canonical membership/kind. Returned metadata/domain views are borrowed;
+their original owner fields remain in the provider walk rather than a copied result budget.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

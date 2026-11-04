@@ -592,7 +592,7 @@ inventory records,another snapshot or a detached equal-data declaration remain i
 later typed refusal. Matching labels or IDs alone do not establish original Profile metadata,
 canonical membership,currentness,domain acceptance,evidence truth or physical resolution. The
 selected-source binding below checks explicit requested labels,Root and snapshot;the following
-parameter leaf checks original profile/canonical/member association. The honest immutable source contract requires actual original
+parameter binding below checks original profile/canonical/member association. The honest immutable source contract requires actual original
 records;echoing a request or supplying a fabricated empty body cannot satisfy it.
 
 ### Complete selected-pin text accounting
@@ -632,7 +632,7 @@ The complete provider walk must also charge all actual canonical fields,Profile 
 duplicated records/caches and represented counters,including unused entries,before queries.
 Existing canonical and logical producers compose those represented fields;opaque payloads need
 their actual integration-owned exhaustive producer. Selected-source admission and typed provider
-causes are implemented below;parameter binding remains next. G4 still owns schema/registry/evidence/physical
+causes and parameter binding are implemented below. G4 still owns schema/registry/evidence/physical
 resolution;these original source loans and text charges grant none of those proofs.
 
 ## Bind the original selected Profile source
@@ -665,7 +665,7 @@ Equal-ID/equal-revision foreign Roots refuse. Labels are not trimmed,parsed or n
 schema `2.0` differs from ` 2.0 `. The caller's selection pin and provider's actual original pin
 may be distinct equal-data objects:the request is intent,the returned pin belongs to the source.
 The actual Profile/canonical association stays with the original provider contract;the following
-parameter binder must use that same original source and inventory,not equal-looking substitutes.
+parameter binder below uses that same original source and inventory,not equal-looking substitutes.
 
 Successful `BoundDraftingProfileSource` privately retains original `context()`,requested
 `selected()` pin,actual returned `source()`,explicit `limits()` and fresh `demand()`. Its fields
@@ -721,3 +721,80 @@ This is one selected-source association under fresh logical content bounds. It d
 aggregate lookup/comparison work,parameter/canonical member or kind binding,additional source
 currentness validation,garment content,semantic dependency graph,value resolution,physical
 execution or whole-program acceptance. Those stages retain their original tracked owners.
+
+## Bind actual Profile logical parameter metadata
+
+`DraftingProfileLogicalProvider` adds readonly `profile_logical_source(original_profile,parameter)`
+to the selected-Profile facet. It returns the actual original metadata record,parameter field,
+canonical declaration and Profile header. The parameter request is a value,not a substitute
+metadata-field loan;the compiled E0515 control refuses returning its stack address. The source
+contract requires the parameter→declaration association exposed by that original metadata.
+Core checks its returned header,parameter ID and actual canonical member/kind under that contract.
+The query allocates/clones no data,loads no body and reads no parameter value.
+`DraftingProfileLogicalResponse<'a,H,S>` names that same raw response using the provider's actual
+associated snapshot,Profile and metadata types;the alias grants no additional source proof.
+
+All held metadata vectors,text,source copies/caches and counters,including unused records,must be
+part of inherited exhaustive provider accounting. `BoundDraftingProfileSource::bind_logical_parameter`
+freshly walks the whole Root/provider/request content under its explicit selected limits before
+issuing one metadata query. Earlier parent demand gives no credit. It does not repeat the selected
+Profile lookup. Requested parameter ID and expected `LogicalInputKind` are fixed metadata,not
+formula names,caller resource totals or selected values.
+
+After a response,core requires the same original source header in this order:Root,pin owner,
+canonical inventory owner,Profile payload record,snapshot record. Unlike the initial selection
+claim,these returned header fields must identify the exact source already bound by the parent.
+Another equal-label pin or equal-data canonical inventory refuses. Core then compares the actual
+returned metadata parameter ID with the request,joins the returned declaration ID and expected
+kind against the parent's actual Profile logical inventory,and requires that exact canonical
+declaration pointer. A detached equal-data record refuses after the real kind/member join.
+No numeric declaration or different logical family substitutes for the requested source.
+
+`BoundDraftingProfileLogicalSource` privately retains the exact original `parent()`,requested
+`parameter()` and `kind()`,returned `source()`,actual canonical `binding()`,explicit `limits()`
+and fresh `demand()`. `declaration()` loans the real canonical record,including its untouched
+domain,state,source and provenance. Parameter600 can map to canonical declaration90 at original
+logical inventory index0;none of those identities is a mixed/scalar/native position. Derived80
+remains a reference,without a selected result or a rule/graph proof. The proof cannot outlive its
+parent's loan,and its fields cannot be replaced. Debug omits opaque metadata/domain/pin text.
+
+```rust
+use sc_core::{construction::*,design::{DesignResourceSource,DesignResourceLimits},
+    ontology::ProfileParameterRef,value::LogicalInputKind};
+fn original_parameter<'b,'a,H:DesignResourceSource,S:DraftingProfileLogicalProvider<H>+?Sized>(
+    parent:&'b BoundDraftingProfileSource<'a,H,S>,parameter:ProfileParameterRef,
+    kind:LogicalInputKind,limits:DesignResourceLimits)
+    ->Result<BoundDraftingProfileLogicalSource<'b,'a,H,S>,String> {
+    let source=parent.bind_logical_parameter(parameter,kind,limits).map_err(|e|e.to_string())?;
+    assert!(std::ptr::eq(source.parent(),parent));
+    assert!(std::ptr::eq(source.binding().inputs(),parent.source().inputs.logicals()));
+    Ok(source)
+}
+```
+
+Refusal preserves original parent,parameter,kind and limits. `returned()` retains the entire
+actual raw response,including wrong/detached metadata and declarations,once a response exists.
+`refusal()` distinguishes original Resources,typed Source error,Mismatch and lending Canonical
+cause. Mismatch identifies the first Root,SelectedPin,Inventory,Profile,Snapshot,Parameter or
+Declaration issue. Canonical retains the original `LogicalInputLookupError`:Missing preserves
+returned declaration ID/expected role;Kind loans the actual original canonical member. Concrete
+resource/provider causes remain in the standard error chain;borrowed member causes stay available
+through typed access. No accepted parameter prefix or fabricated replacement source escapes.
+
+The focused fixture extends the selected-source fixture with two original metadata records,
+an unused equal-data canonical inventory,an independently held missing declaration and alternate
+pin/body/snapshot records. All count before query. Exact14/T/9 passes;one prior entry,2 bytes and
+1 bit compose to15/(T+2)/10. Entry8 refuses metadata vector2 after7 entries,before a missing
+parameter lookup,even if the provider ignores the sink error. A missing parameter404 instead
+preserves its typed provider cause when complete content is admitted. All seven association
+refusals retain original responses;wrong logical kind and missing canonical999 retain their real
+inventory causes. Successful lookup uses one fresh resource walk,zero repeat Profile queries
+and one metadata query.
+
+`charge_resources(sink)` freshly walks actual complete parent/provider content again. The
+metadata/member/header are original borrowed views,not newly owned copies of bodies or domains.
+Cached demand and earlier limits never replace accounting;no metadata/value/source query occurs.
+This remains individual source/member/kind binding. Aggregate query/comparison work,currentness
+revalidation,semantic dependency graph,Profile schema/evidence truth,physical/value resolution
+and whole-program execution retain their separate owners. Original rule/policy source signatures
+are the next tracked source-port stage.

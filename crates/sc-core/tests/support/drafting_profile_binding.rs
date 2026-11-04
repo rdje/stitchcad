@@ -18,7 +18,7 @@ fn pin() -> TestResult<SelectedProfilePin> {
     })?)
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-enum Fault {
+pub(super) enum Fault {
     None,
     Root,
     Profile,
@@ -28,9 +28,10 @@ enum Fault {
     Unavailable,
 }
 #[derive(Debug)]
-enum Cause {
+pub(super) enum Cause {
     Base(SourceError),
     Unavailable,
+    MissingParameter { parameter: EntityId },
 }
 impl fmt::Display for Cause {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -41,14 +42,14 @@ impl std::error::Error for Cause {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
             Self::Base(e) => Some(e),
-            Self::Unavailable => None,
+            Self::Unavailable | Self::MissingParameter { .. } => None,
         }
     }
 }
-struct Body {
-    text: String,
+pub(super) struct Body {
+    pub(super) text: String,
 }
-struct Provider<'a> {
+pub(super) struct Provider<'a> {
     base: Source<'a>,
     other: &'a DesignInputs<EmptyHost>,
     selected: SelectedProfilePin,
@@ -59,7 +60,7 @@ struct Provider<'a> {
     ignore: bool,
 }
 impl<'a> Provider<'a> {
-    fn new(
+    pub(super) fn new(
         root: &'a DesignInputs<EmptyHost>,
         other: &'a DesignInputs<EmptyHost>,
         fault: Fault,
@@ -100,7 +101,7 @@ impl<'a> Provider<'a> {
             index: None,
         }
     }
-    fn text(&self, requested: &SelectedProfilePin) -> usize {
+    pub(super) fn text(&self, requested: &SelectedProfilePin) -> usize {
         let pin_text = |p: &SelectedProfilePin| {
             let d = p.definition();
             d.profile_id.len() + d.schema_version.len() + d.content_version.len()

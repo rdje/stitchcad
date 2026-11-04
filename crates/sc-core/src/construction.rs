@@ -60,10 +60,10 @@ mod arc;
 mod arguments;
 mod context;
 pub use context::{
-    AdmittedDraftingGarmentSource, BoundDraftingProfileSource, DraftingComponentCreator,
-    DraftingComponentOrigin, DraftingComponentRecipeSource, DraftingComponentSource,
-    DraftingContext, DraftingContextError, DraftingContextSource, DraftingDesignLogicalSource,
-    DraftingDesignOperationSource, DraftingDesignSemanticLookupCause,
+    AdmittedDraftingGarmentSource, BoundDraftingProfileLogicalSource, BoundDraftingProfileSource,
+    DraftingComponentCreator, DraftingComponentOrigin, DraftingComponentRecipeSource,
+    DraftingComponentSource, DraftingContext, DraftingContextError, DraftingContextSource,
+    DraftingDesignLogicalSource, DraftingDesignOperationSource, DraftingDesignSemanticLookupCause,
     DraftingDesignSemanticLookupError, DraftingDesignSemanticRequest, DraftingDesignSemanticScope,
     DraftingDesignSemanticScopeError, DraftingGarmentProvider, DraftingGarmentSource,
     DraftingGarmentSourceError, DraftingGarmentSourceIssue, DraftingGeometryBinding,
@@ -72,9 +72,10 @@ pub use context::{
     DraftingGeometryStepProvider, DraftingImportedComponentSource, DraftingInitialInputProvider,
     DraftingInitialInputSource, DraftingInitialInputSourceResult, DraftingPlannedOutput,
     DraftingPlannedOutputProvider, DraftingPlannedOutputSource, DraftingPlannedOutputSourceResult,
-    DraftingProfileLogicalSource, DraftingProfileProvider, DraftingProfileSource,
-    DraftingProfileSourceError, DraftingProfileSourceIssue, DraftingProfileSourceRefusal,
-    DraftingSourceRecord,
+    DraftingProfileLogicalError, DraftingProfileLogicalIssue, DraftingProfileLogicalProvider,
+    DraftingProfileLogicalRefusal, DraftingProfileLogicalResponse, DraftingProfileLogicalSource,
+    DraftingProfileProvider, DraftingProfileSource, DraftingProfileSourceError,
+    DraftingProfileSourceIssue, DraftingProfileSourceRefusal, DraftingSourceRecord,
 };
 mod operation_input;
 pub use operation_input::{

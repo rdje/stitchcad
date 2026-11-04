@@ -3,12 +3,14 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0883 — window30 restores active archive headroom
+## STITCHCAD-G1-0884 — bind original Profile parameter metadata
 
-Actual active64→65 pressure from draft1055 resolved by documented copy/hash-preserve,committed append,independent public cohort comparison,one installation and exact draft restoration.
-Window30 retains56 whole files from a024533e;1508 logical records/6305703B match before/candidate/installed. Original114 files remain exact in recovery storage.
+Fresh complete selected-source content precedes one metadata query;actual source owners,parameter ID and canonical membership/kind/declaration pointer are required. Original parent,metadata,state and typed provider/lending causes survive.
+Primary3 pass0 with seven association refusals,exact quotas and ignored-failure retention.
 
-Retarget141 live links/five files;active10/64 and aggregate31/192,54 active slots free. Native verify/retention,pressure,draft exact source/public and book pass0. G1still6/18 In Progress;product parameter code stays owned/in flight for0884 and is excluded from this maintenance commit.
+Strict lint/fmt0,parameter3/parent3,Profile API9,actual book examples20 and guarded book pass0 after response alias cleanup. Retention prerequisite committed8035041c;whole0883 retained exactly in1056. G1still6/18 In Progress;rule/policy sources and coupled .5f.2.verify remain pending.
+
+[Whole0883 window30 boundary unit](docs/history/stitchcad-devnotes-part1056.md) retains exact task,lesson and ledger.
 
 [Whole0882 selected Profile binding unit](docs/history/stitchcad-devnotes-part1055.md) retains exact task,lesson and ledger.
 

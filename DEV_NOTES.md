@@ -3,14 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — window30 at the actual generation boundary
+## _(2026-11-04 UTC)_ — original Profile parameter and canonical binding
 
-0883 draft1055 expanded active64→65 (56 committed raws/eight windows);native refusal correctly enforced the per-group limit. Aggregate85/192 was not the bound. Same G1 tree retention prerequisite preserves product parameter code for0884;primary3 pass,but generic type-complexity lint remains pending there.
-Copied/hash-verified draft10967B before temporary removal. Published append from a024533e captured56 exact whole files into window30;independent public before/candidate/installed materializations match1508 names/6305703B by size,lines,SHA256. All114 original backup files exact;56 retained physical files unchanged.
-Installed once,restored exact draft,four source spans/public read0;141 live links/five maintained files retarget. Active working10/64,raw1/windows9;aggregate31/192,headroom54. No budget/producer/reader/source changes.
-Keep protected capture/proof/draft roots;never rerun old or current installer/recovery after later edits.
-Native verify/retention1509 logical/31 working/7493172 decodedB,pressure54 active slots,draft exact source/public and guarded book all pass,rc=0. Promotion declined:existing finite-generation/draft-preservation doctrine;book owns capture evidence.
-Product code is not staged;its parameter source aliases/book/signoff resume immediately. G1still6/18 In Progress.
+0884 rewalks complete parent/provider/request content before one logical metadata query. Same original Root/pin/inventory/Profile/snapshot header precedes parameter ID,canonical membership/kind and exact declaration pointer.
+Opaque metadata association stays the honest provider contract;G4 schema/evidence/value truth remains separate.
+Private proof/error retain original parent,request,metadata,canonical member,policy/demand and typed lending causes. Primary3 pass0:parameter600→canonical90/index0/Derived80,exact14/T/9 and prior15/(T+2)/10.
+Seven association refusals,actual kind/missing999 causes,metadata-vector shortage/ignored latch before missing404 query and original provider cause remain inspectable.
+Transparent provider-response alias replaces complex projected return/storage types;unused import removed. Selected strict lint/fmt0,parameter3/parent3,Profile API9 and actual semantic_examples20 pass,rc=0;guarded book build0.
+No value clone/read,repeat Profile query or accepted partial member. Promotion declined:existing source/pin/canonical doctrine;book owns API. Rule/policy sources follow.
+Same-tree retention0883 committed8035041c before product staging;whole task/lesson/ledger retained1056 with three exact Git spans/public0. Window30/original transaction/draft/proof stores remain protected;never rerun installation/recovery after later edits. G1still6/18 In Progress.
+
+[Whole0883 window30 boundary lesson](docs/history/stitchcad-devnotes-part1056.md) retains exact source bytes.
 
 [Whole0882 selected Profile binding lesson](docs/history/stitchcad-devnotes-part1055.md) retains exact source bytes.
 

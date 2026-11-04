@@ -752,7 +752,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0880 fresh actual Root semantic member scope;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1053md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile`
-  Status: `in_progress`
+  Status: `done`
   Goal:readonly actual selected Profile/schema/content pin,canonical logical inventory and original parameter/declaration source loans under the containing Root/snapshot. Exhaustively charge held pins,records,domains,state/provenance and caches before bounded query;typed original unsupported/missing/kind/owner causes,no value/evidence/G4 resolution or fallback selection.
   Children: `.records` (raw original profile/parameter loans and exhaustive pin producer),
   `.binding` (readonly provider and fresh bounded Root/pin/snapshot/canonical source association).
@@ -760,7 +760,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0881 original Profile/pin/parameter records;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1054md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.binding`
-  Status: `in_progress`
+  Status: `done`
   Goal:explicit selected pin request and original readonly profile/parameter facets;fresh whole Root/provider/request accounting before lookup,then original Root/pin/snapshot/profile/canonical/member association and typed causes. Preserve actual records and no accepted prefix;aggregate consumer work and G4 physical/evidence resolution stay separate.
   Children: `.profile` (individual original profile source under exact requested labels/Root/snapshot),
   `.parameter` (original parameter metadata and canonical member/kind under that exact profile).
@@ -768,21 +768,20 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0882 original selected Profile binding;[whole scope/proofs](../history/stitchcad-devnotes-part1055.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.profile.binding.parameter`
-  Status: `in_progress`
+  Status: `done`
   Goal:original readonly parameter facet after selected-profile binding;associate exact original profile/Root/pin/canonical/snapshot records,actual parameter field and canonical declaration/kind. Preserve original missing/unsupported/provider and lending member causes,without source/value substitution;fresh complete bounds before the individual query and no whole-program prefix grant.
-  - [ ] SCOPE:0884 fresh selected-source content before one parameter lookup;borrow original parameter→canonical metadata. Compare original returned profile header before parameter ID,canonical lookup/kind and declaration owner. Private source retains parent/request/metadata/member/policy/demand;no aggregate work,G4 truth or selected value.
-  - [ ] PREREQUISITE:retention-0883 owns the observed generation working-file overflow on draft1055. Product code remains owned here with primary parameter3 passing;finish/commit same-tree retention prerequisite before this leaf's final book/commit workflow. No other task-tree pivot or code/source discard.
+  - [x] REPRODUCE / ISSUE:0882 binds the actual selected Profile header;logical parameters still need original metadata/parameter fields and actual canonical member/kind association. Opaque metadata mapping belongs to the honest immutable provider contract;core must reject foreign equal-data headers/declarations without reading or resolving values.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract profile_parameter::`:3 pass,rc=0. Original parameter600 and canonical90 are distinct roles. Existing parent source scopes retain exact owners;member binding needs complete fresh held-content admission before one query,then those same owners and lending inventory causes.
+  - [x] FIX:readonly logical metadata facet,provider response alias,private member proof/error/check modules. Parent content rewalk precedes one metadata query;header Root/pin/inventory/Profile/snapshot precedes parameter ID,canonical lookup/kind and exact declaration pointer. Original parent/request/metadata/member/policy/demand and typed missing/source/canonical causes survive.
+  - [x] ADDRESSED:focused3 pass,rc=0;parameter600→canonical90/index0/Derived80,one fresh walk/zero repeat Profile lookups/one metadata query,exact14/T/9 and prior15/(T+2)/10. Seven ordered association refusals retain responses;missing999/wrong kind retain real causes. Metadata vector8→7+2 and ignored sink failures precede missing404 query;typed provider cause preserved.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0;fmt0. Parameter3/parent Profile3 pass,rc=0 after alias cleanup. `cargo test -p sc-core --doc context::profile`:9 pass,rc=0;request echo E0515/private field/parent escape refuse. semantic_examples20/book build0. Coupled .5f.2.verify deferred.
+  - [x] LOCKSTEP:book/source-plan/resource routes document actual parameter/member ownership,request/metadata roles,exact refusal order,quota examples and remaining G4/graph/physical proof. README reviewed unchanged,LIVE product detail/MEM/index/DEV/ledger align. G1still6/18 In Progress;original rule/policy source signatures next.
+  - [x] PREREQUISITE:retention-0883 committed8035041c;whole scope/proofs retained1056. Window30 captured56 original files,original transaction/draft/proof stores protected;never rerun installers. Primary product work stayed owned/uncommitted here during same-tree maintenance. No source/code discard or task-tree pivot.
+  - [x] CONTINUITY:1056 retains whole0883 task/lesson/ledger;transition_receipts.py reports3 exact Git spans,rc=0;public reader byte-exact0. Profile code's initial four type-complexity diagnostics led to a transparent provider response alias;unused import removed. Budgets/reader/producer/window bytes unchanged after capture.
+  - [x] PROMOTION: promotion: declined (existing original-owner,explicit pin,immutable source/content and canonical-kind doctrine;book owns specific facet/API). Original parameter/canonical binding implemented under honest provider association;rule/policy sources next,component binding and complete semantic acceptance remain pending. Commit:STITCHCAD-G1-0884.
 - ID: `G1-SLICE.5f.2.retention-0883`
   Status: `done`
-  Goal:restore published active-generation capacity after draft1055 made the native reader refuse group working Markdown bound64. Follow documented0734 copy/hash-preserve draft,append committed cohort,independently compare whole logical identities/public materialization,install once and restore draft. Preserve all old windows/backups;no cap raise or product-code staging.
-  - [x] REPRODUCE / ISSUE:transition_receipts.py --record docs/history/stitchcad-devnotes-part1055.md and public read refused group working Markdown bound64,rc=1. Draft1055 temporarily expanded native active64→65;source intervals remain exact. Product parameter code stays owned/in flight under .profile.binding.parameter (unit0884).
-  - [x] ROOT CAUSE: `generation_pressure.py`:gen1 working21,gen2 working64 with56 raw/eight windows,aggregate85;active headroom0,rc=0 after verified draft hold. Aggregate192 was not the limiting scope. The documented0734 boundary procedure preserves a draft before capturing the committed cohort;no policy change is needed.
-  - [x] FIX:copy/hash-preserved draft1055 (10967B,f7df16467fdecc89df5981070e3dce6d0ad2243e891c1dc5fdd649d8fb6b7e08) under protected target/history-capture-0883-drafts. Published append captured56 committed full files into window30 from a024533e;installed once after independent candidate comparison,then restored exact draft and retargeted141 live links/five files.
-  - [x] ADDRESSED: `v2_migration.py append target/history-capture-0883 --owner G1-SLICE.5f.2.retention-0883`:56 byte-identical files/zero missing-extra,rc=0. Public before/candidate/installed materializations independently match1508 names/6305703B by size,line-count,SHA256;all114 original backup files exact,56 retained physical files unchanged,56 full files safely packed.
-  - [x] NO REGRESSION: `bash scripts/history_archive.sh verify` and verify-retention:1509 logical/31 working/7493172 decodedB,rc=0. `generation_pressure.py`:active54 free,rc=0;draft source/public exact0. `make book`:0. Product parameter3 passes;four generic type-complexity lint findings remain owned by0884,no product-code signoff/staging here.
-  - [x] LOCKSTEP:archive book records scoped window30 process/proofs/recovery boundary;141 live-link updates preserve maintained navigation. README/LIVE reviewed unchanged,G1still6/18 In Progress;MEM/index/DEV/ledger explicitly preserve pending product code and immediate parameter-lint resume. All maintenance jobs observed terminal before commit.
-  - [x] CONTINUITY:gen2 restored working10/64,raw1/windows9;aggregate31/192,active54 free,rc=0. Draft1055 four exact Git spans/public byte equality0. Evidence under target/history-proof-0883 and target/history-capture-0883;keep original transaction/draft storage. Never rerun install/recovery after draft/navigation edits;older window28/29 stores remain protected.
-  - [x] PROMOTION: promotion: declined (published generation pressure,append/install/draft-preservation doctrine;archive book records scoped capture). No source/reader/producer/budget changes or new power-loss claim. G1still6/18 In Progress;resume parameter aliases/book/signoff next. Commit:STITCHCAD-G1-0883.
+  Goal:0883 window30 boundary capture;[whole scope/proofs](../history/stitchcad-devnotes-part1056.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.rules`
   Status: `pending`
   Goal:original rule/policy source records with actual typed local input/output signatures and body loans under original Root/snapshot. Exhaustive fresh accounting covers signatures,body metadata and caches before queries;operation IDs alone prove neither source existence nor signature. No physical rule evaluation or fabricated rule body.

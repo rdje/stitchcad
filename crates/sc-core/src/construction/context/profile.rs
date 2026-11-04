@@ -143,8 +143,53 @@ pub trait DraftingProfileProvider<H: DesignMetadataHost>: DraftingContextSource<
         selected: &SelectedProfilePin,
     ) -> Result<DraftingProfileSource<'s, H, Self::Snapshot, Self::Profile>, Self::Error>;
 }
+/// Readonly actual logical-parameter metadata facet under an original selected Profile source.
+/// The header identifies the already-held Profile,not an accepted parameter. Return original
+/// metadata/parameter/declaration fields without echoing an ID as a fabricated record. Every held
+/// metadata collection,text,copy/cache and counter belongs in inherited complete accounting before
+/// lookup. No value read,cloning,allocation,body loading or G4 schema/evidence resolution occurs.
+/// A by-value request cannot serve as the returned original metadata field:
+/// ```compile_fail,E0515
+/// use sc_core::{construction::{DraftingProfileSource,DraftingProfileLogicalSource,DraftingSourceRecord},
+///     design::DesignMetadataHost,ontology::ProfileParameterRef,value::LogicalInputDeclaration};
+/// fn echo<'a,H:DesignMetadataHost,S:?Sized,P:?Sized,M:?Sized>(
+///     profile:DraftingProfileSource<'a,H,S,P>,parameter:ProfileParameterRef,
+///     declaration:&'a LogicalInputDeclaration,metadata:&'a DraftingSourceRecord<M>)
+///     ->DraftingProfileLogicalSource<'a,H,S,P,M> {
+///     DraftingProfileLogicalSource {profile,parameter:&parameter,declaration,metadata}
+/// }
+/// ```
+pub trait DraftingProfileLogicalProvider<H: DesignMetadataHost>:
+    DraftingProfileProvider<H>
+{
+    /// Actual immutable metadata record payload;no Clone/Debug/size requirement.
+    type Metadata: ?Sized;
+    /// Resolve one explicit parameter to actual original metadata and canonical declaration loans.
+    /// The parameter is passed by value;the returned field reference belongs to original metadata.
+    /// # Errors
+    /// Original typed missing,retired,unsupported parameter or actual source cause.
+    fn profile_logical_source<'s>(
+        &'s self,
+        profile: DraftingProfileSource<'s, H, Self::Snapshot, Self::Profile>,
+        parameter: ProfileParameterRef,
+    ) -> Result<DraftingProfileLogicalResponse<'s, H, Self>, Self::Error>;
+}
+/// Original raw logical response using one provider's actual snapshot/Profile/metadata types.
+/// This alias changes no ownership,lifetime,source acceptance or error semantics.
+pub type DraftingProfileLogicalResponse<'a, H, S> = DraftingProfileLogicalSource<
+    'a,
+    H,
+    <S as DraftingContextSource<H>>::Snapshot,
+    <S as DraftingProfileProvider<H>>::Profile,
+    <S as DraftingProfileLogicalProvider<H>>::Metadata,
+>;
 mod binding;
+mod parameter;
 pub use binding::{
     BoundDraftingProfileSource, DraftingProfileSourceError, DraftingProfileSourceIssue,
     DraftingProfileSourceRefusal,
+};
+pub use parameter::{
+    BoundDraftingProfileLogicalSource, DraftingProfileLogicalError, DraftingProfileLogicalIssue,
+    DraftingProfileLogicalRefusal,
 };
