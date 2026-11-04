@@ -1,4 +1,6 @@
 //! Original raw row buffers/pin loans and fixed relative keys,without source/coverage admission.
+#[path = "support/drafting_semantic_selection_resources.rs"]
+mod resources;
 use sc_core::{
     construction::*,
     ontology::{SeamSideId, SelectedProfilePin, SelectedProfilePinDefinition},

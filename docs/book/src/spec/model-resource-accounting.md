@@ -523,7 +523,9 @@ keeps complete original row/pin accounting separate from Root/provider/program b
 coverage. Unused/repeated pins count before lookup;local shapes grant no whole-work credit.
 The [raw request owner](../annexes/semantic-recipes.md#original-typed-semantic-selection-rows)
 now retains the original row vector/pin loans and fixed typed relative keys. It performs no walk
-or admission itself;record-only composition and fresh local/whole policies remain separate.
+or admission itself. [Record-only selection accounting](../annexes/semantic-recipes.md#account-for-original-semantic-selection-records)
+now precharges all rows and complete original pin strings,including duplicates/unused requests,with
+caller scope/owner and actual row indices. Fresh local/whole policies and body accounting remain separate.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

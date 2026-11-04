@@ -5,6 +5,7 @@ use super::{
 };
 use crate::ontology::{SeamSideId, SelectedProfilePin};
 use core::fmt;
+mod resources;
 /// Requested original Pocket field;locations are data,not member/source proofs.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DraftingPocketSelectionField {

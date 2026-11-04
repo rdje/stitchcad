@@ -1859,8 +1859,8 @@ complete request/work/source/family/cohort and whole/coupled verification remain
 
 ## Explicit semantic source-selection request contract (planned)
 
-Original occurrence views and raw selection request records are implemented. Record-only accounting
-and local admission described here are **planned**. Raw records below hold authored intent and create no actual
+Original occurrence views,raw selection request records and record-only accounting are implemented.
+Local admission described here is **planned**. Raw records below hold authored intent and create no actual
 source,member,dependency,Profile value or whole binding proof.
 
 A request owner will retain one original ordered row vector. A Profile row supplies a fixed typed
@@ -1941,7 +1941,7 @@ physical compatibility,execution and coupled verification remain separate.
 
 `DraftingSemanticSelectionInputs::new(rows)` now owns the caller's exact original ordered
 `Vec<DraftingSemanticSelectionRow>` without validation,cloning,lookup or source selection. The raw
-owner and typed coordinates are implemented with focused checks. Record accounting,local admission,
+owner,typed coordinates and record accounting are implemented with focused checks. Local admission,
 actual scope/coverage,source binding and aggregate work remain the next stages.
 
 A Profile row holds its requested `DraftingSemanticSelectionLocation` and original explicit pin
@@ -1977,3 +1977,38 @@ row mutation or selected-pin lifetime escape. These records contain no foreign p
 body and claim no actual owner,issued position,source existence,Profile compatibility,domain/value,
 local/whole quota or default origin. Their literal coordinates are resolved only against the actual
 scope at the later bounded factory,which retains both the original requests and genuine data views.
+
+## Account for original semantic selection records
+
+`DraftingSemanticSelectionInputs::charge_record_resources(sink,scope,owner)` now appends complete
+original request content into the caller's cumulative sink. The caller supplies the actual
+containing `DesignResourceScope` and optional entity owner. The producer does not manufacture an
+entity from an opaque Profile label or infer a Root/program association from requested coordinates.
+The caller owns and finishes the meter.
+
+The complete original row vector is charged before any traversal,at static field
+`drafting.semantic.selections.rows`,with index None. Every Profile row then charges its original
+selected pin using the existing exhaustive pin producer. A Profile-origin Rule row does the same;
+a Design-origin Rule row adds only its already-counted fixed row metadata. Every pin contributes
+all three actual profile/schema/content strings in original order,with the actual original row
+index. Repeated pins,unused selections,invalid coordinates and duplicate keys still count.
+
+The method exhaustively matches its private owner,rows,origins,locations and nested typed field
+selectors. Fixed metadata has Copy guards;no logical counter is manufactured from a position or
+ordinal. It performs no request lookup,duplicate/coverage validation,Profile/source/currentness/
+value query,Root/provider/body callback,clone or result reservation. Cached constructor metadata
+provides no credit. This record-only walk does not account the actual containing program/garment/
+provider bodies,which belong to their real owners and later aggregate admission.
+
+The focused fixture contains four rows:Profile P,explicit Design rule,Profile P again,and a
+Profile-origin rule using Q. Coordinates deliberately include zero and maximum requested indices;
+the producer charges them as fixed data without indexing a real scope. P's three original strings
+occupy6/3/3 UTF-8 bytes and Q's occupy3/4/3. Exact record demand is4 entries/34 text bytes/0 counter
+bits. Prior2 entries,3 text bytes and1 bit compose to6/37/1. No source or physical value is read.
+
+Entry maximum3 refuses the complete four-row vector before pin traversal. Text maximum33 refuses
+the unused final rule pin's original content-version field at row3,after31 bytes with3 requested.
+The exact caller scope/owner and original row index survive. Empty and nonempty walks preserve an
+earlier latched cause;an actual empty row vector contributes0/0/0. The generic API example compiles
+without a host/provider or source association. Local structural admission is next;complete actual
+scope/target/source coverage,aggregate work and whole/coupled verification remain pending.

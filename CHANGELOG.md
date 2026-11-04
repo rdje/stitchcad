@@ -3,10 +3,13 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0902 — original typed semantic selection rows
+## STITCHCAD-G1-0903 — complete cumulative selection row/pin accounting
 
-Raw request owner preserves the exact row Vec,pin/origin loans and typed relative locations. Structural keys retain consumer/field coordinates independently of selected pins;invalid/duplicate requests remain data. Focused2,strict lint/fmt,API3,source census and book pass0.
-Whole0901 retained1074;record-only accounting next,G1still6/18 In Progress;source/local/aggregate/whole/coupled acceptance remains deferred.
+Record walk precharges the entire row vector and all original pin strings,including repeated/unused/Profile-origin rule rows. Actual caller scope/owner and row indices preserve first causes;no lookup/body callback or admission credit. Focused3
+and strict lint/fmt pass0,API4 and book pass0;4/34 and prior6/37/1 exact.
+Whole0902 retained1075;local admission next,G1still6/18 In Progress;aggregate/source/whole/coupled binding deferred.
+
+[Whole0902 typed semantic selection unit](docs/history/stitchcad-devnotes-part1075.md) retains exact task,lesson and ledger.
 
 [Whole0901 semantic selection contract unit](docs/history/stitchcad-devnotes-part1074.md) retains exact task,lesson and ledger.
 

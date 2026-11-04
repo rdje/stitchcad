@@ -3,17 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — original typed semantic source-selection rows
+## _(2026-11-04 UTC)_ — complete original semantic selection record content
 
-0902 owns the exact original ordered row Vec,explicit Profile pin/rule-origin loans and fixed relative typed locations. Raw construction validates/queries/selects nothing and moves the existing buffer unchanged;zero coordinates,duplicates and
-extra requests remain inspectable.
-Structural key projection preserves full requested coordinates or semantic rule ordinal. Different pins/origins do not create another key for the same target. Actual scope/consumer/position/source need and original body acceptance remain later work.
-Focused2 pass0:exact eight-row buffer/pin pointers/order,zero ordinals,input999,Closure99 and duplicate keys preserved. Walk position/pair/A/B and semantic/native coordinate classes remain distinct. Empty vector is raw data;Debug omits pin labels.
-Source census confirms19 field selectors/4 locations/2 key-row classes,rc=0 after fixing the probe regex to include unit enum forms. Strict selected lib/test lint/fmt0,API3 and guarded book pass0;constructor/private mutation/pin lifetime
-boundaries checked.
-No source/occurrence binder changed. Next record-only row/pin accounting,local admission and aggregate coverage;no default Profile/Design origin,domain copy,source/body/value or resource allowance is introduced.
-Promotion declined:existing explicit intent,typed relative metadata/pin lifetime and raw/admitted scope;book owns API. Whole0901 retained1074 as3 exact Git spans/public0;protected recovery stores unchanged.
-README/LIVE unchanged,G1still6/18 In Progress;whole .5f.2.check and coupled .verify deferred.
+0903 precharges all original rows,then each Profile/Profile-origin rule pin's actual three strings. Caller supplies actual containing scope/optional owner;static fields and original row indices locate causes without inventing entity IDs from labels.
+Exhaustive owner/row/origin/deep location/selector views and Copy guards preserve field growth. Record-only walk makes no lookup,validation,Root/provider/body/currentness/value callback,clone or result allocation;old demand grants no credit.
+Focused resources3 pass0:exact4/34/0;prior2/3/1 composes6/37/1. Vector max3 refuses4 before text;text33 refuses unused final row3 content_version at31+3 with owner42/scope exact. Empty/nonempty preserve an earlier latch;empty contributes0/0/0.
+Independent UTF-8 census confirms P6/3/3,Q3/4/3,total34B,rc=0. Invalid/duplicate/zero/MAX request metadata is still charged without a coordinate lookup. Test limits now explicitly reject invalid positive counts instead of a fallback.
+Strict selected lib/test lint/fmt0;Selection API4 pass,rc=0. Guarded book0;no broad/full CI or new book Rust example. Actual Root/provider/program bodies remain separately accounted owners.
+Promotion declined:existing exhaustive cumulative/pin/first-latch and no source-credit doctrine;book owns API. Whole0902 retained1075 as3 exact Git spans/public0;protected recovery stores unchanged.
+README/LIVE unchanged,G1still6/18 In Progress;next local content/checked duplicate-key admission,then aggregate actual-source/coverage and whole/coupled checks.
+
+[Whole0902 typed semantic selection lesson](docs/history/stitchcad-devnotes-part1075.md) retains exact source bytes.
 
 [Whole0901 semantic selection contract lesson](docs/history/stitchcad-devnotes-part1074.md) retains exact source bytes.
 
