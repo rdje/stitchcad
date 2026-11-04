@@ -206,9 +206,11 @@ pub use profile::{
     DraftingProfileSourceRefusal,
 };
 pub use rule::{
-    AdmittedDraftingRuleWork, BoundDraftingRuleSource, DraftingRuleBindingLimits,
-    DraftingRuleBindingShape, DraftingRuleOrigin, DraftingRuleProvider, DraftingRuleRequest,
-    DraftingRuleResponse, DraftingRuleSelection, DraftingRuleSource, DraftingRuleSourceError,
-    DraftingRuleSourceIssue, DraftingRuleSourceRefusal, DraftingRuleWorkError,
-    DraftingRuleWorkRefusal,
+    AdmittedDraftingRuleWork, BoundDraftingRuleSignature, BoundDraftingRuleSource,
+    DraftingRuleBindingLimits, DraftingRuleBindingShape, DraftingRuleInputMatch,
+    DraftingRuleInputPair, DraftingRuleOrigin, DraftingRuleProvider, DraftingRuleRequest,
+    DraftingRuleResponse, DraftingRuleSelection, DraftingRuleSignatureError,
+    DraftingRuleSignatureIssue, DraftingRuleSignatureRefusal, DraftingRuleSource,
+    DraftingRuleSourceError, DraftingRuleSourceIssue, DraftingRuleSourceRefusal,
+    DraftingRuleWorkError, DraftingRuleWorkRefusal,
 };

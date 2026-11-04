@@ -482,7 +482,10 @@ composes complete Root/provider/request-pin content and checks conservative matc
 operation lookup. Actual rule/Profile association and signature acceptance remain separate.
 The [rule source binder](../annexes/semantic-recipes.md#bind-the-original-rule-source-association)
 repeats fresh work and selected-Profile admission before original source association. Complete
-named signature/result matching remains the next stage;borrowed headers create no body copies.
+named signature/result matching is a separate implemented stage;borrowed headers create no body copies.
+The [local signature binder](../annexes/semantic-recipes.md#bind-complete-local-rule-signature-and-logical-output)
+also repeats complete content/W/member admission before named kinds and actual logical output
+relation checks. It creates no accepted prefix,body/domain clone or additional source/value query.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

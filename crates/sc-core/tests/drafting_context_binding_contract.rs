@@ -39,6 +39,8 @@ mod program_output_positions;
 mod program_views;
 #[path = "support/drafting_rule_binding.rs"]
 mod rule_binding;
+#[path = "support/drafting_rule_signature.rs"]
+mod rule_signature;
 #[path = "support/drafting_rule_sources.rs"]
 mod rule_sources;
 #[path = "support/drafting_rule_work.rs"]

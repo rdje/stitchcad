@@ -61,10 +61,10 @@ mod arguments;
 mod context;
 pub use context::{
     AdmittedDraftingGarmentSource, AdmittedDraftingRuleWork, BoundDraftingProfileLogicalSource,
-    BoundDraftingProfileSource, BoundDraftingRuleSource, DraftingComponentCreator,
-    DraftingComponentOrigin, DraftingComponentRecipeSource, DraftingComponentSource,
-    DraftingContext, DraftingContextError, DraftingContextSource, DraftingDesignLogicalSource,
-    DraftingDesignOperationSource, DraftingDesignSemanticLookupCause,
+    BoundDraftingProfileSource, BoundDraftingRuleSignature, BoundDraftingRuleSource,
+    DraftingComponentCreator, DraftingComponentOrigin, DraftingComponentRecipeSource,
+    DraftingComponentSource, DraftingContext, DraftingContextError, DraftingContextSource,
+    DraftingDesignLogicalSource, DraftingDesignOperationSource, DraftingDesignSemanticLookupCause,
     DraftingDesignSemanticLookupError, DraftingDesignSemanticRequest, DraftingDesignSemanticScope,
     DraftingDesignSemanticScopeError, DraftingGarmentProvider, DraftingGarmentSource,
     DraftingGarmentSourceError, DraftingGarmentSourceIssue, DraftingGeometryBinding,
@@ -77,10 +77,12 @@ pub use context::{
     DraftingProfileLogicalRefusal, DraftingProfileLogicalResponse, DraftingProfileLogicalSource,
     DraftingProfileProvider, DraftingProfileSource, DraftingProfileSourceError,
     DraftingProfileSourceIssue, DraftingProfileSourceRefusal, DraftingRuleBindingLimits,
-    DraftingRuleBindingShape, DraftingRuleOrigin, DraftingRuleProvider, DraftingRuleRequest,
-    DraftingRuleResponse, DraftingRuleSelection, DraftingRuleSource, DraftingRuleSourceError,
-    DraftingRuleSourceIssue, DraftingRuleSourceRefusal, DraftingRuleWorkError,
-    DraftingRuleWorkRefusal, DraftingSourceRecord,
+    DraftingRuleBindingShape, DraftingRuleInputMatch, DraftingRuleInputPair, DraftingRuleOrigin,
+    DraftingRuleProvider, DraftingRuleRequest, DraftingRuleResponse, DraftingRuleSelection,
+    DraftingRuleSignatureError, DraftingRuleSignatureIssue, DraftingRuleSignatureRefusal,
+    DraftingRuleSource, DraftingRuleSourceError, DraftingRuleSourceIssue,
+    DraftingRuleSourceRefusal, DraftingRuleWorkError, DraftingRuleWorkRefusal,
+    DraftingSourceRecord,
 };
 mod operation_input;
 pub use operation_input::{

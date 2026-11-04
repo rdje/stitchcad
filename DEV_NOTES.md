@@ -3,19 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — original rule source association
+## _(2026-11-04 UTC)_ — complete local rule signatures and Root output relation
 
-0889 refreshes complete work/member admission before any source query;explicit Profile intent reuses its existing fresh selected-source binder.
-Actual Root/snapshot/origin,Profile pin/inventory/body identity,rule ID and family match before private source proof construction.
-Original work parent,accepted Profile header,returned declaration/body and fresh demand/shape remain loaned or fixed metadata;no body/domain/signature clone.
-Native3 pass0:Design/Profile21/T/138 and W841,prior23/(T+3)/139,one rule query,explicit independent Profile walk where requested.
-Eight mismatch cases retain first Root/snapshot/origin/pin/inventory/Profile/rule/kind causes and complete original witnesses,including equal-data substitutions.
-Actual post-work cache growth refuses33+1 under entry maximum33,including ignored sink errors;maximum34 with old W1681 refuses new1764 before queries.
-Independent guarded arithmetic confirms33/1681/1764. Nested work/Profile/provider causes retain original typed fields and underlying standard error chains.
-Strict selected lint/fmt0,private-field/work-parent API2 and guarded book0. Local roles/types are deliberately unchecked here;signature/output relation follows.
-Actual semantic_examples25 pass,rc=0;original bound-source helper compiles. No broader source/order/graph/allocator or full CI verdict claimed.
-Promotion declined:existing original-source/owner/fresh-accounting doctrine;book owns API. Whole0888 retained1061 by three exact Git spans/public0.
-LIVE product note now includes actual rule sources with signatures pending;G1still6/18 In Progress. Coupled .5f.2.verify remains deferred.
+0890 refreshes complete content/W/member work before original result/count/named role-kind scans and actual Root logical output lookup.
+Unique original role populations plus equal counts/full membership prove bijection without positional pairing or reverse scan. Matched views preserve original owners,records and both indices.
+Actual Root output kind/member must be Derived naming the exact operation. Unknown/Known/other states and another Derived operation refuse without mutation or selected values.
+Native5 pass0:reversed logical/numeric policy requirements,Design/Profile logical references,exact Length/Scalar distinction,all first metadata/output causes and explicit empty signatures.
+Exact26/T/9,W1156 and prior28/(T+3)/10;independent arithmetic/UTF-8 census confirms26/1156/1225 and added135B. Actual cache growth refuses before bad role,including ignored errors.
+No additional rule/Profile/value query or result vector. Canonical input/Profile parameter membership,body conformance,result-domain/value truth and whole graph/order remain separate.
+Strict selected lint/fmt0,API4 pass0 for private signature/match fields,parent escape and original-data lifetime;guarded book0.
+Actual semantic_examples26 pass,rc=0;bound-signature helper compiles. Ports/rules/binding branches close with focused checks;no coupled/full CI verdict claimed.
+Scoped book deferred-status census corrected earlier primitive paragraphs;source/signature/output acceptance now explicit while whole input/dependency proof stays pending.
+Promotion declined:existing exact-local-kind,original-owner/fresh-accounting/Derived-link doctrine;book owns API. Whole0889 retained1062 by three exact Git spans/public0.
+LIVE product note includes local signatures;G1still6/18 In Progress. Component source binding follows;coupled .5f.2.verify remains deferred.
+
+[Whole0889 original rule association lesson](docs/history/stitchcad-devnotes-part1062.md) retains exact source bytes.
 
 [Whole0888 fresh rule work lesson](docs/history/stitchcad-devnotes-part1061.md) retains exact source bytes.
 

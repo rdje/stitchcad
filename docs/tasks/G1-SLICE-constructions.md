@@ -741,7 +741,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0879 actual mixed semantic ordinals;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1052md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports`
-  Status: `in_progress`
+  Status: `done`
   Goal:readonly authentic logical/Profile/operation facets with original record/Root/snapshot
   loans and typed causes;all held source fields participate in fresh accounting before queries.
   Includes original rule/policy source loans and typed signatures;operation-held IDs alone grant no complete dependency acceptance.
@@ -774,7 +774,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0883 window30 boundary capture;[whole scope/proofs](../history/stitchcad-devnotes-part1056.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.rules`
-  Status: `in_progress`
+  Status: `done`
   Goal:original rule/policy source records with actual typed local input/output signatures and body loans under original Root/snapshot. Exhaustive fresh accounting covers signatures,body metadata and caches before queries;operation IDs alone prove neither source existence nor signature. No physical rule evaluation or fabricated rule body.
   Children: `.contract` (actual source/signature boundaries before types),`.model` (immutable bounded signature records/accounting),
   `.facets` (original body/origin/query loans and typed causes),`.binding` (fresh bounded original operation/signature/source association).
@@ -788,7 +788,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0887 original rule body/origin facets;[whole scope/proofs](../history/stitchcad-devnotes-part1060.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.rules.binding`
-  Status: `in_progress`
+  Status: `done`
   Goal:complete fresh source/operation/role comparison bounds before readonly lookup;bind exact original Root/snapshot/origin,rule ID/family,typed local inputs and output kind with actual member loans and first causes. Retain canonical domains/states without selected results;source/signature acceptance grants no evaluator,Profile truth or executable program.
   Children: `.work` (fresh complete held content and prospective matching bounds),`.source` (original source/origin/ID/family association),`.signature` (complete named kinds/result/output relation without values).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.rules.binding.work`
@@ -796,22 +796,23 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:0888 fresh complete rule work;[whole scope/proofs](../history/stitchcad-devnotes-part1061.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.rules.binding.source`
   Status: `done`
-  Goal:consume admitted complete work and bind actual original rule body/declaration to the exact operation's ID/family and explicit Design or original selected Profile Root/snapshot/owners. Preserve returned witnesses and typed first causes;no local input/result or canonical value acceptance.
-  Scope:borrow original work,repeat its complete fresh content/W/member preflight,then reuse existing selected-Profile admission for explicit Profile intent before one rule lookup.
-  Check original Root/snapshot,origin and actual Profile pin/inventory/body owners,then exact rule ID/family;retain original expected/returned loans and typed nested causes. Body/signature conformance and role/result matching remain separate.
-  - [x] REPRODUCE / ISSUE:work admission proves actual operation membership and prospective bounds,not original body/origin/ID/family association. Reusing cached work demand or matching pin labels alone cannot supply those original source owners.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract rule_binding::`:3 pass,rc=0. Actual source association needs fresh work plus selected-Profile admission,then Root/snapshot/origin/pin/inventory/Profile/rule/family checks. Tests retain original expected/returned loans and exact first causes without local role/result acceptance.
-  - [x] FIX:private parent-loaned source proof/error/check modules;fresh repeated work admission and existing Profile binder precede one rule query. Explicit Design performs no Profile lookup. Stored profile/source are original borrowed views;demand/shape fixed metadata give no fresh credit. Opaque body/signature conformance remains honest integration/execution contract.
-  - [x] ADDRESSED:focused3 pass,rc=0;Design/Profile exact21/T/138,W841 and prior23/(T+3)/139. Original parent/body/origin owners survive,Profile source pin differs from equal-label request intent. Eight priority controls retain complete actual witnesses,including same-ID Root,equal-payload snapshot and equal-data Profile fields;wrong ID precedes wrong family.
-  - [x] FRESHNESS:actual cache growth control33→34 refuses original33+1 field at maximum33,including ignored provider failure. Wider content34 with W1681 refuses new1764 before queries. Guarded independent arithmetic:33/1681/1764,rc=0. Original work/Profile/provider nested causes and standard resource/provider chains remain inspectable;no successful prefix escapes.
-  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0;fmt0. `cargo test -p sc-core --doc context::rule::source`:2 pass,rc=0;private source mutation and work-parent escape refuse. Producer freshly rewalks actual parent content without source/member/value queries or body copies.
-  - [x] BOOK: `cargo test -p sc-core --doc semantic_examples`:25 pass,rc=0;actual bound-source helper compiles. `make book`:rc=0. Complete named signature/output relation,canonical inputs,source/schema/evidence truth and physical results remain separate;coupled .5f.2.verify deferred.
-  - [x] LOCKSTEP:book/source-plan/resource routes and MEM/index/DEV/ledger align;README reviewed unchanged. LIVE product note now includes actual rule sources with signatures pending;G1still6/18 In Progress. Complete signature/output relation is next.
-  - [x] CONTINUITY:whole0888 task/lesson/ledger retained1061;transition_receipts.py reports3 exact Git spans,rc=0;public reader byte-exact0. Window30/recovery/proof/draft stores protected;no sealed bytes/caps/producers changed.
-  - [x] PROMOTION: promotion: declined (existing original-source,exact-owner and fresh-accounting doctrine;book owns API). Source association implemented with focused checks;signature/output,whole dependency and coupled verification remain tracked. Commit:STITCHCAD-G1-0889.
+  Goal:0889 original rule source association;[whole scope/proofs](../history/stitchcad-devnotes-part1062.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports.rules.binding.signature`
-  Status: `pending`
+  Status: `done`
   Goal:complete exact local-role/input-kind and result-kind matching with original operation/source orders and canonical logical output Derived-operation association. Preserve domains/states/causes without selecting values,querying physical results or exposing an accepted prefix;whole semantic source/order/graph acceptance remains .5f.2.check/.verify.
+  Scope:refresh complete content/W/member work before metadata scans,then result/count/first original local role/kind checks and actual Root logical output membership/kind/Derived-operation link.
+  Preserve both original orders and exact input-pair indices through borrowed views;no source/value query,buffer clone or result vector. Actual canonical input/Profile parameter binding remains whole dependency work.
+  - [x] REPRODUCE / ISSUE:original source association supplies body/origin/ID/family,not complete named requirements or actual output relation. Equal numeric IDs,matching dimensions or positional roles cannot establish these;input reference kinds still need separate actual canonical source binding.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract rule_signature::`:5 pass,rc=0. Original role order differs from signature order;exact local kinds,complete populations and actual Root output/Derived-operation relation must join without source requery,cloned domain or selected result.
+  - [x] FIX:private source-parent signature proof/error,complete result/count/first named role-kind checks and actual Root logical output kind/member/Derived link. Original unique constructors plus equal counts/full membership prove bijection;borrowed match views preserve both original owners,pairs and indices. No positional pairing or accepted prefix.
+  - [x] ADDRESSED:focused5 pass,rc=0;reversed0→1/1→0 mappings and exact pointer loans for logical/numeric policy inputs,Design/Profile logical representation preserved. Dedicated Length versus Scalar(Length),both logical kinds,result/count/extra/missing/ref-kind causes refuse at original indices. Empty signatures preserve mandatory button and actual Derived output.
+  - [x] OUTPUT:focused5 pass,rc=0;Root output90/index0/domain output_a/Derived80 retained. Actual missing/wrong-kind output,Unknown/Known state and Derived81 preserve original record/typed cause without mutation. Same-ID Profile inventory cannot replace actual Root output;actual canonical input/Profile parameter membership stays whole checker scope.
+  - [x] FRESHNESS:exact26/T/9,W1156 and prior28/(T+3)/10;actual cache26→27 refuses26+1 or newW1225 before bad role,including ignored errors. Guarded independent arithmetic/UTF-8 census:26/1156/1225,added135B,rc=0. Rule query count remains1 from source association;signature/source/currentness/value queries absent.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0;fmt0. `cargo test -p sc-core --doc context::rule::signature`:4 pass,rc=0;private fields,parent escape and original match-data lifetime refuse. Fresh producer rewalks all original content with fixed output-loan/metadata guards.
+  - [x] BOOK: `cargo test -p sc-core --doc semantic_examples`:26 pass,rc=0;actual bound-signature helper compiles. `make book`:rc=0. Scoped deferred-status paragraphs reconciled to implemented primitives;canonical inputs,whole order/graph,body/result/value/G3/G4 truth remain separate,coupled .5f.2.verify deferred.
+  - [x] LOCKSTEP:book/source-plan/resource routes and MEM/index/DEV/ledger align;README reviewed unchanged. LIVE product note includes local signatures,G1still6/18 In Progress. Ports/rules/binding branches close with their completed children/focused proofs;actual component source binding is next.
+  - [x] CONTINUITY:whole0889 task/lesson/ledger retained1062;transition_receipts.py reports3 exact Git spans,rc=0;public reader byte-exact0. Window30/recovery/proof/draft stores protected;no sealed bytes/caps/producers changed.
+  - [x] PROMOTION: promotion: declined (existing exact-local-kind,original-owner,fresh-accounting and Derived-link doctrine;book owns API). Local signature/output binding implemented with focused checks;component/whole dependency and coupled verification remain tracked. Commit:STITCHCAD-G1-0890.
 - ID: `G1-SLICE.5f.2.check`
   Status: `pending`
   Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.

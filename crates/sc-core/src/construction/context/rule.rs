@@ -183,7 +183,12 @@ pub type DraftingRuleResponse<'a, H, S> = DraftingRuleSource<
     <S as DraftingProfileProvider<H>>::Profile,
     <S as DraftingRuleProvider<H>>::RuleBody,
 >;
+mod signature;
 mod source;
+pub use signature::{
+    BoundDraftingRuleSignature, DraftingRuleInputMatch, DraftingRuleInputPair,
+    DraftingRuleSignatureError, DraftingRuleSignatureIssue, DraftingRuleSignatureRefusal,
+};
 mod work;
 pub use source::{
     BoundDraftingRuleSource, DraftingRuleSourceError, DraftingRuleSourceIssue,

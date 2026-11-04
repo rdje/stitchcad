@@ -543,8 +543,8 @@ prepared scope into a meter containing1 entry,2 text bytes and1 bit yields12/(34
 `charge_resources(sink)` exhaustively walks actual Root/provider fields again;cached scope demand
 and constructor policies never replace held-content accounting or clear an earlier sink failure.
 
-Pinned Profile source records and original rule/policy signatures remain the following source-port
-leaves. G4 retains Profile schema/registry/evidence/physical resolution;G3 retains physical recipe
+Pinned Profile sources and original rule/policy signatures have their own implemented sections
+below. G4 retains Profile schema/registry/evidence/physical resolution;G3 retains physical recipe
 execution. The Design source scope creates none of those proofs or results.
 
 ## Raw original Profile and parameter records
@@ -803,8 +803,9 @@ are the next tracked source-port stage.
 
 This is the implementation contract for the rule-source leaves. Immutable signature declarations
 and their resource producer,raw original body/origin source records and providers are implemented
-below;original rule source association is also implemented. Complete local signature/output
-binding remains **planned**. Existing operation records retain
+below;original rule source association and complete local signature/output binding are also
+implemented. Actual canonical input/Profile parameter and whole dependency binding remain separate.
+Existing operation records retain
 rule/policy IDs and local inputs;they do not establish that an actual rule exists or has the
 required signature. The implemented Root/Profile member facets supply original data loans,
 not a fabricated rule body or evaluator.
@@ -948,7 +949,7 @@ account for the original body,all held declarations,unused records,copies,caches
 This API validates a declaration's complete local shape and role uniqueness. Original body,
 Design/Profile origin,Root/snapshot membership,operation signature matching,canonical source
 binding,value/domain truth and execution remain separate proof obligations. Raw source facets
-follow below;the accepted binder remains planned and coupled verification is deferred to `.5f.2.verify`.
+and local signature binders follow below;coupled verification remains deferred to `.5f.2.verify`.
 
 ## Raw original rule body and origin facets
 
@@ -1082,8 +1083,8 @@ or lending member cause. Resource causes retain their standard error chain;membe
 their actual original operation loan through the typed refusal getter.
 
 This scope accepts complete prospective work and original Root membership. Actual selected
-Profile/rule/body/origin association is implemented below;complete local signature and logical
-Derived-output relation remain the following binding leaf. It supplies no canonical input value,physical Buttonhole
+Profile/rule/body/origin association,complete local signature and logical Derived-output relation
+are implemented below. This work scope alone supplies no canonical input value,physical Buttonhole
 result,source/schema/evidence truth,whole dependency order or executable program. Coupled
 verification remains `.5f.2.verify` after the agreed integration set.
 
@@ -1152,6 +1153,92 @@ no private successful source proof.
 `charge_resources` exhaustively rewalks the actual work parent and guards the borrowed source/
 Profile views and fixed fresh metadata. It performs no source,currentness,member,value or local
 signature query. Complete named input/result matching and the actual canonical logical
-Derived-output relation remain the next leaf. Canonical input binding,source/schema/evidence
+Derived-output relation are implemented below. Canonical input binding,source/schema/evidence
 truth,G3 physical results,whole dependency order and execution remain separate obligations;
 coupled verification is deferred to `.5f.2.verify`.
+
+## Bind complete local rule signature and logical output
+
+`BoundDraftingRuleSource::bind_signature` repeats complete fresh content,W and Root member
+admission before inspecting the original operation/signature metadata. It performs no additional
+Profile,rule,currentness or value query. The accepted source declaration and original operation
+remain immutable loans;no signature,domain,state or body is cloned or selected.
+
+The checker distinguishes a supplied reference's declared kind from its actual canonical source
+binding. A Design logical target or Profile parameter retains its explicit `LogicalInputKind` and
+original representation. Numeric targets retain dedicated Length versus Scalar with the precise
+`ScalarInputKind`;a general Scalar(Length) cannot satisfy a dedicated Length requirement. Matching
+these metadata fields does **not** prove actual canonical input membership,Profile parameter
+metadata or source/evidence truth. Those dependencies still require the whole semantic checker.
+
+After fresh admission,the refusal order is:
+
+1. Actual operation/signature family and logical result-kind agreement.
+2. Complete supplied/required named input counts,including missing or extra requirements.
+3. Each original operation input's local role,then exact kind,in original operation order.
+4. Actual Root logical output membership and kind,when the operation is logical.
+5. That actual canonical record must be `Derived` and name this exact semantic operation.
+
+Both immutable constructors already establish unique local roles. Equal counts plus complete
+name membership therefore establish a bijection;no positional meaning or reverse scan is needed.
+For example,operation roles `[source_a,source_b]` match signature order `[source_b,source_a]` as
+original index pairs `(0,1)` and `(1,0)`. Equal kinds never excuse repeated roles at construction.
+All prospective work is bounded before a missing role,kind or output diagnostic is inspected.
+
+```rust
+use sc_core::{construction::*,design::DesignResourceSource};
+fn signature<'b,'w,'a,H:DesignResourceSource,S:DraftingRuleProvider<H>+?Sized>(
+    source:&'b BoundDraftingRuleSource<'w,'a,H,S>)
+    ->Result<BoundDraftingRuleSignature<'b,'w,'a,H,S>,String> {
+    source.bind_signature().map_err(|e|e.to_string())
+}
+```
+
+`BoundDraftingRuleSignature::parent()` preserves the exact original source proof. `input_count()`
+is the original complete named population. `input_match(index)` returns a private
+`DraftingRuleInputMatch` for one valid original operation-input position,or None for an invalid
+index. It exposes both original owners through `operation()`/`rule()`,both authored positions
+through `input_index()`/`requirement_index()`,and original field loans through `pair()`.
+`DraftingRuleInputPair::Logical` retains the exact Design/Profile/numeric input and corresponding
+logical-rule requirement;`Buttonhole` retains the exact numeric policy input/requirement. The
+public pair enum is a raw view;constructing one cannot forge the private match or signature proof.
+No local token buffer is copied. Each getter search is one bounded allocation-free scan;repeated
+caller inspections need their own aggregate allowance. Local matches remain tied to their original
+data owners and prove no actual input source or value binding.
+
+`output()` is None for Buttonhole. Its mandatory canonical button source remains in the original
+operation,and its physical Length result is still G3 execution's responsibility. An empty named
+policy signature removes neither obligation. Logical operations return the actual Root
+`LogicalInputBinding`:original inventory/member/index,domain,state and provenance. The checker
+refuses Unknown,Known and every other non-Derived output instead of upgrading or overwriting it.
+It also refuses a Derived record naming another operation. The exact operation output reference
+and canonical member are joined;no logical domain member is computed or validated as a result.
+Both logical and Buttonhole named signatures may be explicitly empty.
+
+The maintained fixture covers Design and Profile logical input representations,reversed logical
+and numeric policy requirement order,and actual Root output90/index0/Derived80/domain `output_a`.
+The same-ID Profile declaration remains separately owned and cannot supply that Root output.
+Native positive demand is26/T′/9,W1156;prior2 entries/3 text bytes/1 bit compose to28/(T′+3)/10.
+Five focused tests cover complete named matches,result/count/extra/missing/type refusals,actual
+missing/wrong-kind/non-Derived/other-operation output causes,empty signatures and fresh admission.
+No additional rule query runs after source association.
+
+A deliberate actual cache-growth control26→27 refuses26+1 under maximum26,including an ignored
+provider sink error. With content maximum27 but W maximum1156,new required1225 refuses before
+the known bad local role. These controls falsify cached-credit reuse without relaxing the
+immutable source contract. Missing output90 and wrong-kind output retain original lending
+causes;Unknown/Known or other Derived records remain unchanged and inspectable.
+
+`DraftingRuleSignatureError` preserves `parent()`,fresh `demand()`/`shape()` when work succeeded,
+the original raw `output()` record when encountered,and the exact `refusal()`. Typed refusals
+retain original work errors,first `DraftingRuleSignatureIssue`,lending output lookup cause,
+non-Derived state or expected/actual Derived operation IDs. No partial successful signature or
+accepted input vector is published. Underlying resource causes keep their standard source chain;
+lending records remain available through typed getters.
+
+`charge_resources` freshly rewalks the original complete parent content and guards output loans
+and fixed demand/shape metadata. It performs no matching or source/value query. This is local
+signature and one canonical output-relation acceptance. Actual canonical input/Profile metadata,
+whole source/order/graph proof,body conformance and result-domain/value validation,physical
+Buttonhole length,G4 truth and execution remain separate. Coupled verification stays deferred to
+`.5f.2.verify` after the agreed integration set.
