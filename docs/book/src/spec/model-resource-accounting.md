@@ -497,7 +497,11 @@ The [component work stage](../annexes/semantic-recipes.md#fresh-current-componen
 composes the complete garment/provider walk and checks `(E+8)²` before current copy/Piece lookup.
 An admitted garment/work scope can append that same fresh walk to a caller's cumulative meter;
 stored demand gives no credit and a zero-entry fence preserves ignored provider failures.
-Original source/creator association remains separate and no component query occurs at this stage.
+No component query occurs at this work stage. The
+[complete association binder](../annexes/semantic-recipes.md#bind-the-complete-original-component-association)
+repeats this fresh walk/work/current-member admission before one original query and complete
+source/frame/snapshot/recipe/native creator checks. Its proof reuses the same fresh resource walk;
+returned source loans and fixed metadata create no duplicate body or stored-demand credit.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

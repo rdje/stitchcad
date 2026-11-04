@@ -277,7 +277,12 @@ pub trait DraftingComponentProvider<H: DesignReferenceHost>: DraftingGarmentProv
 /// ```
 pub type DraftingComponentResponse<'a, H, S> =
     DraftingComponentSource<'a, 'a, H, S, <S as DraftingComponentProvider<H>>::Imported>;
+mod source;
 mod work;
+pub use source::{
+    BoundDraftingComponentSource, DraftingComponentSourceError, DraftingComponentSourceIssue,
+    DraftingComponentSourceRefusal,
+};
 pub use work::{
     AdmittedDraftingComponentWork, DraftingComponentBindingLimits, DraftingComponentBindingShape,
     DraftingComponentWorkError, DraftingComponentWorkRefusal,

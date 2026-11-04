@@ -673,11 +673,18 @@ retains all original goals,statuses and focused acceptance evidence.
 - ID: `G1-SLICE.5f.2.dependencies.semantic`
   Status: `in_progress`
   Goal:actual Root-bound garment/native semantic sources,including Pocket opening kind/domain/state/component recipe and Buttonhole canonical button/derivation;no empty substitute or authored hole length.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding`
+  Status: `pending`
+  Goal:bind complete original semantic consumers and dependencies after actual source primitives. Preserve logical kind/domain/state,Profile ownership,component source/creator loans and genuine order/context under fresh complete bounds;no value selection,physical execution or accepted prefix.
+  Children: `.contract` (exact consumer/source/order boundaries before whole binding),then owned implementation slices derived from it;whole .5f.2.check and coupled .5f.2.verify follow the agreed integration set.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.contract`
+  Status: `pending`
+  Goal:specify complete original Pocket/native semantic and Buttonhole/logical operation occurrences,actual declaration/Profile/rule/component source joins and strict order/context boundaries. Reconcile existing geometry/canonical/order proof APIs before implementation;retain Unknown/Derived and actual first causes without synthetic roles or history.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.sources`
   Status: `done`
   Goal:0868 actual garment source and fresh content admission;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1041md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources`
-  Status: `in_progress`
+  Status: `done`
   Goal:actual readonly logical/Profile/operation source records for Pocket openings and canonical Buttonhole button/derivation,including original kind/domain/state and component recipe sources;no id-only or empty replacement. Exhaustively charge new held records before bounded core queries.
   Children: `.contract` (actual source/model boundary), `.model` (immutable logical domain/state),
   `.operations` (actual typed semantic operation dependencies), `.ports` (original source facets).
@@ -705,7 +712,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0873 actual canonical logical attachment;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1046md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations`
-  Status: `in_progress`
+  Status: `done`
   Goal:actual typed semantic derivation/component-recipe sources under original ownership;
   canonical button declaration is the dependency,no independent hole length or invented native step.
   Children: `.buttonhole` (immutable bounded operation), `.logical` (logical derivation sources),
@@ -717,7 +724,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0875 standalone original typed logical derivations;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1048md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components`
-  Status: `in_progress`
+  Status: `done`
   Goal:authentic component-creation recipe and explicit imported primitive origins;no fabricated native step or reconstructed creation history.
   Children: `.carriers` (original native Piece identity/recipe or imported source loans),
   `.bind` (bounded authentic Root/program/snapshot/source association after source ports exist).
@@ -725,7 +732,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0876 raw actual component source loans;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1049md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind`
-  Status: `in_progress`
+  Status: `done`
   Goal:after source ports/accounting,bind complete original component origins to actual Root Piece/copy,recipe owner/native creator and frame/snapshot under explicit bounds;typed original causes,no historical reconstruction or prefix acceptance.
   Children: `.contract` (actual declaration/source/proof boundaries),`.records` (callback-free original program-record accounting),`.port` (original readonly component query),`.binding` (fresh complete Root/copy/frame/source/creator association).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind.contract`
@@ -738,25 +745,31 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0893 original readonly component query;[whole scope/proofs](../history/stitchcad-devnotes-part1066.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind.binding`
-  Status: `in_progress`
+  Status: `done`
   Goal:fresh complete current garment/provider/request and prospective member/creator bounds before source lookup;bind exact actual Piece/copy,frame/snapshot and original import or recipe/native creator association. Preserve original contexts/orders/first causes and genuine creator positions;no reconstructed recipe,identity issuance,geometry result or execution/history certificate.
   Children: `.work` (fresh complete current garment/provider work and actual copy/Piece admission),`.source` (complete original import/recipe/creator/frame/snapshot association).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind.binding.work`
   Status: `done`
-  Goal:fresh complete garment/provider content and explicit checked prospective member/creator inspections before actual current CutPlan copy/expected-Piece lookup. Retain original parent,target,actual copy/Piece,limits/demand/shape and first typed causes;no component/currentness/value query,creator/source or executable acceptance.
-  Scope:add exhaustive shared admitted-garment resource composition with first-error fence;existing garment admission reuses it. Derive (E+8)² from fresh held entries before quotas and copy/Piece scans. Copy orientation remains original metadata;no transform,ID issuance or result buffer.
-  - [x] REPRODUCE / ISSUE:original source port alone admits no current copy/Piece or complete prospective work. Reusing parent demand would skip actual held unused import/cache/counter fields;lookup must follow fresh complete content and work refusal.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract component_work::`:3 pass,rc=0. Fresh original parent walk is required before conservative E/member work;unsupported original source10001 is still a legitimate current copy,not an accepted source association.
-  - [x] FIX:shared exhaustive garment/provider composition and zero-entry first-error fence;existing garment admission reuses it. Explicit nondefault component limits,checked (E+8)²,private original parent/target/copy/Piece/demand/shape,boxed exact typed first resource/work/member refusals. No source/currentness/value query or result vector.
-  - [x] ADDRESSED:component_work::3 pass,rc=0. Original pointers/orientations for copies10001/10002 Piece100,one fresh provider walk,zero queries. Prior2 entries/3B/1bit compose to E+2/T+3/139. Counter137 refuses unused9+129 before work/missing404 even on ignored return;W-1 before missing404;exactW exposes missing404/reassigned10002→999 with original copy.
-  - [x] CENSUS:guarded actual task-root census19864L/1486591B before this acceptance,rc=0;whole0893 retained1066 as3 exact Git spans and public reader exact0. No caps raised,sealed bytes rewritten or Window30/recovery/proof/draft stores changed. Independent formula unit checks0→64,12→400,addition/square overflow.
-  - [x] NO REGRESSION: `cargo test -p sc-core --test drafting_context_binding_contract garment_source::`:3 pass,rc=0;Root/content/snapshot priority unchanged. `cargo test -p sc-core --lib component_checked_bound`:1 pass,rc=0. Selected strict lib/harness clippy and fmt check0;component work API3 pass,rc=0,private fields/parent escape/default refuse.
-  - [x] BOOK: `cargo test -p sc-core --doc semantic_examples`:29 pass,rc=0; `make book`:rc=0. Source-plan/resource routes match fresh work and pending original source/creator association;coupled .5f.2.verify remains deferred.
-  - [x] LOCKSTEP:README/LIVE reviewed unchanged,G1still6/18 In Progress;MEM/index/DEV/ledger advance to original source binding. Work accepts no imported/recipe source,creator/history,geometry or executable association.
-  - [x] PROMOTION: promotion: declined (existing fresh exhaustive accounting,checked prospective work and actual borrowed membership doctrine;book owns API). Focused implementation only;complete source binding and whole/coupled verification remain tracked. Commit:STITCHCAD-G1-0894.
+  Goal:0894 fresh current component membership work;[whole scope/proofs](../history/stitchcad-devnotes-part1067.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.components.bind.binding.source`
-  Status: `pending`
+  Status: `done`
   Goal:consume complete current copy/Piece work and bind actual original source Piece/frame/snapshot plus imported record or exact original recipe/native creator/owner association under fresh complete bounds. Preserve genuine original positions/contexts/first causes;no fabricated history,geometry or accepted source prefix.
+  Scope:repeat fresh complete work before one original component query. Match actual current Piece/frame/snapshot;recipe keeps original context/snapshot,requires compatible actual frame,declared Piece,actual original Root source Piece/inventory/CutPlan and unique exact native-input occurrence. Retain genuine one-based mixed position and typed original witnesses;no history/geometry truth.
+  - [x] REPRODUCE / ISSUE:raw component response and current membership work alone establish no original import/recipe/creator association. Equal-ID replacement owners or repeated native inputs cannot supply an accepted original source or invented creation position.
+  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract component_binding::`:4 pass,rc=0. Actual current Piece/frame/snapshot and captured program Root/source owners plus exact unique native input must be joined after fresh work. Initial fixture expected zero total currentness calls;context/binding.rs197 already calls validate_current,so
+    baseline is captured before binding.
+  - [x] FIX:private complete source proof over original work,raw response,genuine optional creator position and fresh demand/shape. Repeated complete content/W/current-member admission before one query;common Piece/frame/snapshot then captured recipe frame,result Piece,actual original Root Piece/inventory/slice/CutPlan and unique exact native member. No program
+    context/snapshot rewrite or accepted prefix.
+  - [x] ADDRESSED:component_binding::4 pass,rc=0. Import body/current records exact;Mirror/Join original creator at genuine mixed2,raw scalar0/semantic999 remain data. Equal-ID input records refuse,duplicates2/4 retain actual positions;foreign original Piece/inventory/CutPlan,recipe frame and declared Piece refuse. Captured original snapshots remain distinct;typed
+    provider missing cause and raw mismatch witnesses survive.
+  - [x] CENSUS:focused cache-growth negative control refuses fresh content or larger W before any query,including ignored return;no earlier demand credit. Provider walks all actual original garments,context bodies,program records,creator inputs,unused imports/caches/129-bit counters;fixture catalogues are actually empty and field policies borrow originals. No broad
+    inventory/full CI verdict claimed.
+  - [x] NO REGRESSION: `cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings`:rc=0 after replacing two fixture Copy clones;fmt0. `cargo test -p sc-core --doc context::component::source`:2 pass,rc=0;private mutation/work escape refuse. Affected garment_source::3 pass,rc=0;resource producer composes freshly and source/value/currentness
+    count stays at pre-bind baseline.
+  - [x] BOOK: `cargo test -p sc-core --doc semantic_examples`:30 pass,rc=0; `make book`:rc=0. Source-plan/resource routes and original provenance limits aligned;whole semantic consumer binding and coupled .5f.2.verify remain pending.
+  - [x] CONTINUITY:whole0894 task/lesson/ledger retained1067;transition_receipts.py reports3 exact Git spans,rc=0;public reader byte-exact0. Existing sealed bytes/caps and protected Window30/recovery/proof/draft stores unchanged.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger advance to whole semantic consumer contract;source/operation/component primitive parents close with focused checks. README reviewed unchanged;LIVE product note adds component association,G1still6/18 In Progress. No source truth,execution/history or physical geometry claim.
+  - [x] PROMOTION: promotion: declined (existing exact original-owner/native membership,fresh resource/work and honest recorded provenance doctrine;book owns source association API). Implemented with focused checks;whole/coupled proofs remain tracked. Commit:STITCHCAD-G1-0895.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations.inventory`
   Status: `done`
   Goal:0877 original ordered semantic owner;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1050md).

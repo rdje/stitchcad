@@ -3,16 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-04 UTC)_ — fresh current component work before source lookup
+## _(2026-11-04 UTC)_ — complete original component source association
 
-0894 adds shared exhaustive admitted-garment resource composition with a zero-entry first-error fence. Existing garment admission retains Root→content→snapshot priority;stored demand grants no credit.
-Component preparation freshly walks complete garment/provider content,derives checked (E+8)²,then resolves actual current CutPlan copy and expected Piece. Explicit policy has no default;private scope preserves original parent,target,members,limits,demand and shape.
-Work makes no component/currentness/value query,accepts no source/creator/history and creates no transform,identity or result vector. Current copy10001 can pass work even though its source is unsupported.
-Native3 pass0:original pointers/orientations for both copies,one fresh provider walk,zero queries,prior2/3B/1bit compose with138 bits. Counter137 refuses unused9+129 before work/member,including ignored returns.
-W-1 precedes missing404;exactW exposes missing404 and copy10002→expected999 with exact original copy. Earlier latched cause survives shared parent composition. Garment admission3 still pass0;checked arithmetic1 covers addition/square overflow.
-Strict selected lib/harness lint/fmt0;API3 pass0 refuse private-field mutation,parent escape and default limits. Actual semantic_examples29 pass,rc=0;guarded book publication0.
-Promotion declined:existing fresh accounting,prospective work and borrowed membership doctrine;book owns API. Whole0893 retained1066 by three exact Git spans/public reader0;protected recovery stores unchanged.
-README/LIVE reviewed unchanged,G1still6/18 In Progress. Original source/creator association is next;coupled .5f.2.verify remains deferred.
+0895 repeats complete fresh garment/provider content,checked W and current copy/Piece work before one original component query. Private complete proof retains the original work,response,genuine creator position and fresh demand/shape;no accepted source prefix.
+Common association checks actual Piece pointer,frame record and containing snapshot in order. Imported origin preserves its actual opaque record. Recipe preserves its original program/context/snapshot and requires the same actual compatible frame.
+Mirror source Piece must be the exact captured Root member;Join additionally binds original Piece inventory/source slice/CutPlan and A/B sources. Genuine declared result Piece and exact unique native input membership yield actual one-based mixed position,not an ordinal/ID reconstruction.
+Native4 pass0:imports/header priorities,Mirror and Join position2 between raw scalar0/semantic999,equal-ID input copies refused,duplicates2/4 exact. Foreign source owners/inventory/CutPlan,recipe frame and declared Piece refuse;original captured snapshots remain distinct.
+Initial fixture failures counted the existing context validate_current call;context/binding.rs197 verified the cause. The corrected baseline asserts no additional source/value/currentness calls. Two Copy clones removed after strict lint;no core suppression.
+Actual held-cache growth deliberately violates immutability to falsify cached admission:content or larger W refuses before any query,including ignored return. Typed missing-source cause and complete raw mismatches remain inspectable.
+Provider fixtures account full original garments/context bodies,record-only program fields,creator inputs,unused imports/caches/129-bit counters. Creator catalogues are actually empty and metadata policies borrow source fields;no universal creator producer or source-truth claim.
+Strict selected lib/harness lint/fmt0,API2 and affected garment3 pass0. Actual semantic_examples30 pass,rc=0;guarded book publication0. No full/coupled verification claim.
+Promotion declined:existing original-owner/native membership,fresh accounting and honest provenance doctrine;book owns API. Whole0894 retained1067 as3 exact Git spans/public0;protected recovery stores unchanged.
+README unchanged;LIVE product note adds component source association,G1still6/18 In Progress. Next whole semantic consumer contract,then bounded binding and whole/coupled checks.
+
+[Whole0894 fresh component work lesson](docs/history/stitchcad-devnotes-part1067.md) retains exact source bytes.
 
 [Whole0893 original component port lesson](docs/history/stitchcad-devnotes-part1066.md) retains exact source bytes.
 

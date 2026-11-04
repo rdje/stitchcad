@@ -3,10 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0894 — fresh current component membership work
+## STITCHCAD-G1-0895 — complete original component source association
 
-Complete fresh garment/provider content and checked matching bounds now precede actual current copy/expected-Piece lookup. Private original member loans retain orientation and exact first typed causes;no component query or source/creator/history acceptance.
-Native3,affected garment3,overflow1,strict lint/fmt and API3 pass0. Actual semantic_examples29/book pass0;whole0893 retained exactly1066. Original source binding next,G1still6/18 In Progress,coupled verification deferred.
+Fresh complete work now precedes actual Piece/frame/snapshot and imported or captured recipe/native creator association. Original contexts/snapshots and genuine unique mixed positions survive;equal-ID owners/inputs,missing/repeated creators and original typed causes remain explicit.
+Native4,affected garment3,strict lint/fmt and API2,actual semantic_examples30 and book pass0. Whole0894 retained exactly1067;whole semantic consumer binding remains next. LIVE product note advances,G1still6/18 In Progress,coupled verification deferred.
+
+[Whole0894 fresh component work unit](docs/history/stitchcad-devnotes-part1067.md) retains exact task,lesson and ledger.
 
 [Whole0893 original component query unit](docs/history/stitchcad-devnotes-part1066.md) retains exact task,lesson and ledger.
 

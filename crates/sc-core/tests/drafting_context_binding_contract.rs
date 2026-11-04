@@ -1,4 +1,6 @@
 //! Actual source-owner binding and resource-before-query ordering, without geometry execution.
+#[path = "support/drafting_component_binding.rs"]
+mod component_binding;
 #[path = "support/drafting_component_port.rs"]
 mod component_port;
 #[path = "support/drafting_component_work.rs"]

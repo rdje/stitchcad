@@ -246,15 +246,15 @@ accepted prefix, compute no geometry and query no source. They grant no content 
 source provider must freshly account every actual additional recipe input, manifest,
 primitive-source payload, duplicated record and cache before bounded binding queries; earlier
 native constructor proofs provide no whole-source credit. Complete Root Piece/copy membership,
-actual recipe/native-input association, frame/snapshot identity and original first causes remain
-with the tracked component binding task after source ports/accounting exist. Other creation forms
+actual recipe/native-input association,frame/snapshot identity and original first causes are
+checked by the implemented work/association stages below. Other creation forms
 need genuine supported source records; these carriers supply no synthetic native history for them.
 
 ## Component source binding contract
 
-The readonly component query port and fresh current copy/Piece work stage are implemented below;
-accepted original source/creator binding is **planned**. Raw carriers and program-record accounting
-are implemented. The next binding leaf adds complete original association checks. These APIs add no geometry algorithm,importer or history
+The readonly query port,fresh current copy/Piece work stage and complete original source/creator
+association binder are implemented below. Raw carriers and program-record accounting are also
+implemented. These APIs add no geometry algorithm,importer or history
 reconstruction. All original source records must already be held before lookup.
 
 A component target is an explicit `PocketPieceRef {copy,piece}`:a stable physical cut-copy ID and
@@ -364,7 +364,7 @@ first native `drafting.point.x.source` field's13-byte `private_width` at operati
 canonical or later arguments. Empty records contribute0/0/0;empty and nonempty walks preserve a
 previously latched cause. The caller must finish its meter. These checks accept no scalar order,
 native kind/value,geometry,source association or executable program. The component source query
-is implemented below;complete binding remains next. Coupled verification stays deferred to `.5f.2.verify`.
+and complete association binder are implemented below. Coupled verification stays deferred to `.5f.2.verify`.
 
 ## Readonly original component query port
 
@@ -415,8 +415,8 @@ error still leaves the sink's original cause latched. Raw missing copy404,copy10
 Piece999,and unsupported copy10001 retain their exact original requests and typed causes.
 
 These are source-port/accounting checks. The fresh work stage below binds current actual
-CutPlan/Piece membership. The next source binder must bind exact original source/frame/snapshot
-owners and validate original recipe/native creator membership without a successful prefix. Original
+CutPlan/Piece membership. The source binder below binds exact original source/frame/snapshot
+owners and validates original recipe/native creator membership without a successful prefix. Original
 source truth,execution/history,physical geometry and whole semantic dependencies remain separate;
 coupled verification stays `.5f.2.verify` after the agreed integration set.
 
@@ -467,6 +467,74 @@ the provider ignores its return error. One inspection below `(E+8)²` refuses be
 the exact bound permits that missing-copy diagnostic and original copy10002→expected999 refusal.
 Checked arithmetic refuses addition/square overflow. API examples refuse private-field mutation,
 work escaping its parent and default policy construction. Coupled verification remains deferred.
+
+## Bind the complete original component association
+
+`AdmittedDraftingComponentWork::bind_source()` repeats complete fresh garment/provider content,
+checked prospective matching work and current copy/Piece membership before making one exact
+`component_source` query. Earlier demand grants no credit. A fresh content/work refusal makes no
+query and retains the original nested work cause. An original provider refusal retains its typed
+cause,request and fresh admission metadata. No successful source prefix is returned.
+
+```rust
+use sc_core::{construction::*,design::{DesignReferenceHost,DesignResourceSource}};
+fn bind<'w,'g,'a,H:DesignReferenceHost+DesignResourceSource,S:DraftingComponentProvider<H>>(
+    work:&'w AdmittedDraftingComponentWork<'g,'a,H,S>)
+    ->Result<BoundDraftingComponentSource<'w,'g,'a,H,S>,DraftingComponentSourceError<'w,'g,'a,H,S>> {
+    work.bind_source()
+}
+```
+
+Every returned origin must lend the exact actual current Piece accepted by the work scope.
+The common frame and containing snapshot must be the context's original records. Equal Piece
+IDs,matching payload bytes or equal frame coordinates do not substitute for those owners.
+The first mismatch order is Piece,frame,then snapshot. Refusals retain the entire raw response,
+including mismatched fields,plus the original work parent and complete fresh demand/shape.
+
+An imported origin then retains its actual opaque import record and has no creator position.
+The source's immutable integration contract owns the truth of that recorded import association;
+the binder creates no importer,format inference or historical certificate.
+
+A recipe origin must preserve its original program/context and snapshot. Its original frame
+must be the actual compatible component frame;no implicit transform is inferred. The genuine
+creator declaration must name the actual current result Piece. The source Piece of a Mirror
+must be the exact original member of that captured program Root. A Join additionally requires
+the exact original Root Piece inventory,source Piece slice and CutPlan,then exact A/B source
+Piece members. Equal-data replacement owners refuse. These checks retain the original metadata
+parents and grant no globally fresh identity or geometric result.
+
+The binder scans the complete captured mixed sequence for the creator's exact original native
+input loan. An equal-ID Copy of that input is another record and refuses. Scalar and semantic
+slots supply no native creator. No occurrence is skipped:missing membership refuses,and a second
+matching occurrence reports the first two genuine one-based mixed positions. A complete binding
+reports the unique actual position through `creator_position()`. It never derives a position
+from a scalar/semantic ordinal or operation ID. The captured program snapshot remains separately
+inspectable and may differ from the current component's containing snapshot.
+
+The successful private `BoundDraftingComponentSource` retains its exact work parent,complete raw
+source,optional creator position and fresh demand/shape. Its `charge_resources` method rewalks the
+whole original garment/provider content. Returned loans and fixed metadata contribute no duplicate
+body ownership or stored-demand credit. The binder performs no additional currentness,value or
+geometry query,source/body clone,transform,identity issuance or result-vector reservation.
+
+Focused fixtures check imported original record loans and ordered Piece/frame/snapshot refusals.
+Actual Mirror and Join creators occur at mixed position2 between raw scalar0 and semantic999
+requests;those requests remain data and this association proves no whole-program coverage/order.
+Equal-ID native copies refuse,as do repeated creator positions2/4,foreign original source owners,
+incompatible recipe frames,wrong declared result Piece and equal-data foreign CutPlans/inventories.
+Successful captured program snapshots remain distinct from the current containing snapshot.
+
+The provider accounts complete original garments,context bodies,program records,creator inputs,
+unused import/cache fields and represented counters before lookup. Fixture creator catalogues are
+actually empty and selected metadata policies borrow their original source fields. A deliberate
+negative control grows a held cache after work admission:the old content maximum refuses first;
+with one spare entry,the larger fresh matching bound refuses instead. Both make zero component
+queries,including an ignored provider return. Original typed missing-source causes also survive.
+These fixtures model the immutable contract's violation only to falsify cached admission credit.
+
+Complete source association is implemented with focused checks. Whole semantic consumer binding,
+dependency order,source truth,execution/history and physical geometry remain separate. Coupled
+verification stays `.5f.2.verify` after the agreed integration set.
 
 ## Original ordered semantic recipe
 

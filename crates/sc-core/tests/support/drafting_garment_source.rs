@@ -9,13 +9,19 @@ fn id(n: u128) -> EntityId {
     EntityId::from_bits(n)
 }
 pub(super) fn garment(damaged: bool) -> TestResult<DesignGarment<EmptyHost>> {
+    garment_with_piece(damaged, id(100))
+}
+pub(super) fn garment_with_piece(
+    damaged: bool,
+    identity: EntityId,
+) -> TestResult<DesignGarment<EmptyHost>> {
     let mut ledger = IdentityLedger::new();
     let mut ids = DeterministicIdGenerator::new();
     let edges = ledger.declare_edges(&mut ids, 1)?;
     let edge = *edges.first().ok_or("actual declared edge")?;
     let piece = Piece::new(
         PieceDefinition {
-            id: id(100),
+            id: identity,
             boundary: vec![DirectedEdge {
                 edge,
                 direction: Direction::Original,
@@ -42,12 +48,12 @@ pub(super) fn garment(damaged: bool) -> TestResult<DesignGarment<EmptyHost>> {
     let definitions = vec![
         CutCopyDefinition {
             id: id(10001),
-            piece: id(100),
+            piece: identity,
             orientation: CopyOrientation::Authored,
         },
         CutCopyDefinition {
             id: id(10002),
-            piece: id(100),
+            piece: identity,
             orientation: CopyOrientation::Authored,
         },
     ];
@@ -57,7 +63,7 @@ pub(super) fn garment(damaged: bool) -> TestResult<DesignGarment<EmptyHost>> {
             id: id(10003),
             served: PocketPieceRef {
                 copy: id(10001),
-                piece: id(100),
+                piece: identity,
             },
             position: EdgeAnchor {
                 edge,
@@ -70,7 +76,7 @@ pub(super) fn garment(damaged: bool) -> TestResult<DesignGarment<EmptyHost>> {
             opening: PocketOpening::Profile(ProfileParameterRef::new(id(700))),
             components: vec![PocketPieceRef {
                 copy: id(10002),
-                piece: id(100),
+                piece: identity,
             }],
         },
         &plan,

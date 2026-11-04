@@ -754,7 +754,9 @@ The implementation sequence is:
    The [readonly component query port](semantic-recipes.md#readonly-original-component-query-port)
    now returns original source loans and typed causes. [Fresh current component work](semantic-recipes.md#fresh-current-component-work)
    admits complete content/matching bounds and actual current copy/Piece members without a query;
-   complete original source/creator binding remains planned.
+   [Complete original association](semantic-recipes.md#bind-the-complete-original-component-association)
+   now binds source/frame/snapshot and original recipe/native creator owners and genuine positions.
+   Whole semantic consumer dependencies remain separate.
 6. Bind complete semantic occurrences only after their complete source/content/work allowances.
    Keep the original Pocket opening and all component source Pieces/copies. A recipe-built
    component retains its actual original recipe/creator;explicit imported primitives retain their
