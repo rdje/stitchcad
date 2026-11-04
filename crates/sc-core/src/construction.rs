@@ -75,7 +75,9 @@ pub use context::{
     DraftingProfileLogicalError, DraftingProfileLogicalIssue, DraftingProfileLogicalProvider,
     DraftingProfileLogicalRefusal, DraftingProfileLogicalResponse, DraftingProfileLogicalSource,
     DraftingProfileProvider, DraftingProfileSource, DraftingProfileSourceError,
-    DraftingProfileSourceIssue, DraftingProfileSourceRefusal, DraftingSourceRecord,
+    DraftingProfileSourceIssue, DraftingProfileSourceRefusal, DraftingRuleOrigin,
+    DraftingRuleProvider, DraftingRuleRequest, DraftingRuleResponse, DraftingRuleSelection,
+    DraftingRuleSource, DraftingSourceRecord,
 };
 mod operation_input;
 pub use operation_input::{

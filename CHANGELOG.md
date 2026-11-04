@@ -3,10 +3,12 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0886 — immutable typed rule signatures
+## STITCHCAD-G1-0887 — original rule body and origin facets
 
-Original logical/Buttonhole declarations retain exact numeric/logical requirement kinds and role buffers. Complete constructor quotas precede duplicates;fresh exhaustive signature accounting composes with original caller scope and first refusals.
-Primary3,strict lint/fmt,API2,actual semantic examples22 and book pass0. Original body/origin sources and binding remain planned;G1still6/18 In Progress. Whole0885 retained exactly in1058;coupled .5f.2.verify deferred.
+Raw declaration/body sources preserve explicit original Design/Profile origin,Root/snapshot and provider-owned loans. Readonly exact ID/family/origin lookup retains typed causes and complete held-field accounting;accepted rule binding remains planned.
+Native3,strict lint/fmt,API4,actual semantic examples23 and book pass0 after isolating finite trace phases and retaining stored rule origins. Whole0886 retained exactly in1059;G1still6/18 In Progress,coupled verification deferred.
+
+[Whole0886 immutable rule signature unit](docs/history/stitchcad-devnotes-part1059.md) retains exact task,lesson and ledger.
 
 [Whole0885 rule source contract unit](docs/history/stitchcad-devnotes-part1058.md) retains exact task,lesson and ledger.
 

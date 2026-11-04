@@ -184,6 +184,7 @@ mod component;
 mod design_semantic;
 mod garment;
 mod profile;
+mod rule;
 pub use component::{
     DraftingComponentCreator, DraftingComponentOrigin, DraftingComponentRecipeSource,
     DraftingComponentSource, DraftingImportedComponentSource,
@@ -203,4 +204,8 @@ pub use profile::{
     DraftingProfileLogicalResponse, DraftingProfileLogicalSource, DraftingProfileProvider,
     DraftingProfileSource, DraftingProfileSourceError, DraftingProfileSourceIssue,
     DraftingProfileSourceRefusal,
+};
+pub use rule::{
+    DraftingRuleOrigin, DraftingRuleProvider, DraftingRuleRequest, DraftingRuleResponse,
+    DraftingRuleSelection, DraftingRuleSource,
 };

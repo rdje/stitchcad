@@ -474,6 +474,9 @@ have a separate `charge_semantic_rule_resources` producer. It precharges the act
 vector,then each original role's text,under the caller's containing scope and actual rule ID.
 Constructor shape totals grant no source-content credit;original body and every held declaration,
 copy,cache and counter still require exhaustive provider accounting before source lookup.
+The [raw rule provider](../annexes/semantic-recipes.md#raw-original-rule-body-and-origin-facets)
+inherits that complete walk,including unused rule bodies,signature records and retained counters.
+Raw lookup does not automatically admit content or bind the returned source association.
 
 ## Complete actual Inputs, Sewing and Garment roots
 

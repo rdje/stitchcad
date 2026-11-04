@@ -695,11 +695,13 @@ The [selected-Profile source facet](semantic-recipes.md#bind-the-original-select
 now preserves explicit pin/Root/snapshot association after fresh complete content checks.
 The [Profile parameter facet](semantic-recipes.md#bind-actual-profile-logical-parameter-metadata)
 now retains actual metadata,source owners and canonical logical member/kind loans.
-Complete semantic dependency binding,component binding and rule/policy source facets remain **planned**.
+Complete semantic dependency binding,component binding and accepted rule/policy source binding remain **planned**.
 The [rule/policy source contract](semantic-recipes.md#rule-and-policy-source-contract) fixes original
 signature/body/origin ownership,complete field accounting and role/type matching before source facets.
 The [immutable rule signature model](semantic-recipes.md#immutable-rule-signature-declarations)
 now retains actual typed local requirements and performs complete constructor/resource accounting.
+The [raw rule body/origin facet](semantic-recipes.md#raw-original-rule-body-and-origin-facets)
+now loans original declaration/body and explicit Design/Profile sources;accepted association follows.
 [Raw original Profile/parameter source records](semantic-recipes.md#raw-original-profile-and-parameter-records)
 and exhaustive selected-pin text accounting are implemented with bounded original parameter binding.
 Garment source-content admission does not implement those remaining stages.

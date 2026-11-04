@@ -802,8 +802,8 @@ are the next tracked source-port stage.
 ## Rule and policy source contract
 
 This is the implementation contract for the rule-source leaves. Immutable signature declarations
-and their resource producer are implemented below;original body/origin source records,providers
-and accepted source bindings are **planned**. Existing operation records retain
+and their resource producer,raw original body/origin source records and providers are implemented
+below;accepted rule source bindings are **planned**. Existing operation records retain
 rule/policy IDs and local inputs;they do not establish that an actual rule exists or has the
 required signature. The implemented Root/Profile member facets supply original data loans,
 not a fabricated rule body or evaluator.
@@ -946,5 +946,76 @@ account for the original body,all held declarations,unused records,copies,caches
 
 This API validates a declaration's complete local shape and role uniqueness. Original body,
 Design/Profile origin,Root/snapshot membership,operation signature matching,canonical source
-binding,value/domain truth and execution remain separate proof obligations. The source facets
-and binder above remain planned;complete coupled verification is deferred to `.5f.2.verify`.
+binding,value/domain truth and execution remain separate proof obligations. Raw source facets
+follow below;the accepted binder remains planned and coupled verification is deferred to `.5f.2.verify`.
+
+## Raw original rule body and origin facets
+
+`DraftingRuleSource` loans an actual immutable `SemanticRuleDeclaration`,an original opaque body
+`DraftingSourceRecord` and a `DraftingRuleOrigin`. A Design origin holds the actual containing
+Root and original snapshot record. A Profile origin holds the complete original
+`DraftingProfileSource`:Root,selected profile/schema/content pin,canonical inventory,Profile body
+and snapshot. `origin.root()` and `origin.snapshot()` return those exact loans. Copying a carrier
+copies references only;the host,snapshot,Profile and body need neither Clone nor Debug,and body
+payloads may be unsized. Debug output omits body,signature role and pin text.
+
+These helpers expose only already-held original fields. They neither create a body from an
+operation nor choose a Profile. Their public construction permits mismatched or equal-data
+foreign fields for later inspection and typed binding refusal:
+
+```rust
+use sc_core::{construction::*,design::{DesignInputs,DesignMetadataHost},
+    recipe::{SemanticOperationKind,SemanticRuleDeclaration},ontology::EntityId};
+fn design_rule<'a,H:DesignMetadataHost,S:?Sized,P:?Sized,B:?Sized>(
+    root:&'a DesignInputs<H>,snapshot:&'a DraftingSourceRecord<S>,
+    declaration:&'a SemanticRuleDeclaration,body:&'a DraftingSourceRecord<B>)
+    ->DraftingRuleSource<'a,H,S,P,B> {
+    DraftingRuleSource {declaration,body,origin:DraftingRuleOrigin::Design {root,snapshot}}
+}
+fn profile_rule<'a,H:DesignMetadataHost,S:?Sized,P:?Sized,B:?Sized>(
+    profile:DraftingProfileSource<'a,H,S,P>,declaration:&'a SemanticRuleDeclaration,
+    body:&'a DraftingSourceRecord<B>)->DraftingRuleSource<'a,H,S,P,B> {
+    DraftingRuleSource {declaration,body,origin:DraftingRuleOrigin::Profile(profile)}
+}
+fn original<'a,H:DesignMetadataHost,S:DraftingRuleProvider<H>+?Sized>(provider:&'a S,
+    rule:EntityId,kind:SemanticOperationKind,origin:DraftingRuleSelection<'_>)
+    ->Result<DraftingRuleResponse<'a,H,S>,S::Error> {
+    provider.rule_source(DraftingRuleRequest {rule,kind,origin})
+}
+```
+
+`DraftingRuleProvider` extends the existing immutable context and selected-Profile ports. Its
+`RuleBody` associated type is the actual opaque body payload;the Profile type comes from the
+same selected-Profile provider. A Design-only integration refuses unsupported Profile selection
+through its original typed cause. It supplies no invented Profile or empty body success.
+
+`rule_source` receives an exact rule ID,expected operation family and explicit
+`DraftingRuleSelection::Design` or `Profile(&SelectedProfilePin)`. Numeric rule/parameter IDs do
+not select a factory,latest revision or default policy. `DraftingRuleResponse` is a transparent
+alias using the provider's original snapshot,Profile and body types. Response loans belong to
+the provider independently of the request pin's lifetime;that pin is selection intent and cannot
+replace the original source pin. Missing,retired,ambiguous,unsupported-family and Profile failures
+retain original typed provider causes and their source chains.
+
+The inherited complete resource walk must cover every actual declaration/signature,opaque body,
+origin,pin,canonical inventory,unused record,retained copy/cache and represented counter before
+lookup. Use `charge_semantic_rule_resources` for each declaration and actual integration-owned
+producers for bodies. Precharge collections before traversal,without cloning,normalizing or
+supplied totals. An opaque body still has real accounting obligations. The provider query loads,
+allocates and evaluates nothing;the integration must expose the original declaration/body
+association honestly. Signature/body conformance is a separate execution obligation.
+
+The maintained fixture accounts for three rule records,three one-input signatures,all body/role
+text,an unused cache and a 129-bit retained revision. These add 6 entries,100 UTF-8 bytes and129
+counter bits to its existing complete source walk. The containing Root/provider demand is
+13/T/138;prior2 entries/3 text bytes/1 bit compose to15/(T+3)/139. Maximum9 entries refuses the
+three-record vector at7+3 before traversal;T−1 text bytes refuses the final18-byte unused cache.
+An ignored provider refusal remains the sink's original first cause and no rule query runs.
+These are source-walk conformance checks,not rule-binding or execution acceptance.
+
+Direct port calls and raw carriers perform no automatic content admission or association check.
+The existing fresh Design semantic scope can walk the complete Root/provider,but a later accepted
+rule binder must still bound all prospective comparisons and check actual Root/snapshot/origin,
+selected Profile owners,rule identity/family,result and local input signature. Public raw fields
+prove none of those matches. Canonical domain/state,value/evidence truth,G3 physical policy
+execution and complete program acceptance remain separate;`.5f.2.verify` owns deferred coupling.
