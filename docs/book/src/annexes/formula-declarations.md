@@ -675,3 +675,67 @@ failure drops all private partial vectors;it exposes no accepted prefix or succe
 Diagnostics omit authored names and opaque payloads. This provides complete static supplier
 association,without reading values,issuing identities or executing geometry. Semantic targets,
 whole-programme acceptance,allocator faults and coupled verification retain their separate owners.
+
+
+## Logical source implementation contract
+
+This is the design for `G1-SLICE.5f.2.dependencies.semantic.logical.sources`;the logical models,
+semantic operation forms and source facets below are **planned**,not implemented by garment
+source-content admission. The existing numeric canonical owner,scalar formula statements and
+mixed scalar/native programme cannot supply them merely because an identifier matches.
+The tracked dependency-plan probe reports those actual producer enum variants before building
+its current-library public-owner controls. This separates the source interface that exists from
+the records and complete acceptance that still have to be implemented.
+
+The implementation sequence is:
+
+1. Introduce immutable logical declaration records in core. They retain an explicit semantic role,
+   original declared domain,authored state and provenance. Domain members are authored data;core
+   supplies no list of physical Pocket opening types,hardware sizes or selected defaults. A finite
+   logical selection can name a stable member without interpreting a vendor code as dimensions.
+   Unsupported representations retain an explicit source refusal rather than a scalar substitute.
+2. Integrate those records into actual canonical ownership and identity/resource traversal. Design
+   declarations must resolve to their original canonical object. Equal IDs on another inventory
+   cannot provide a substitute. Existing numeric-only construction remains an explicitly empty
+   logical cohort;it never manufactures an Unknown or default declaration. Logical declarations
+   add no formula operand kind,string literal or enum-valued `let` to the existing formula grammar.
+3. Represent the actual semantic recipe operations required for logical derivation,component
+   sources and Buttonhole dependencies. They need their own immutable typed input and authentic
+   ordered owner before any public source facet can return one. A Buttonhole operation retains
+   the canonical button-size declaration and explicit policy dependencies. Its physical formula,
+   clearance,geometry and positive executed length stay G3 work;there is no authored hole length.
+4. Integrate semantic operations with genuine original recipe positions and complete held-field,
+   work,normalization,kind/order and dependency accounting. A new semantic operation is not one of
+   the current direct Point/Edge drafting schemas. It cannot acquire a synthetic native step,
+   scalar ordinal,global geometry name or live output. The original thirteen drafting families
+   keep their distinct authentic geometry contracts. All new bounds precede child queries or
+   result allocation,and all original occurrences remain visible on refusal.
+5. Add readonly actual Design/Profile/operation source facets. Return actual canonical declaration,
+   domain/state and operation loans under original Root/snapshot ownership. A Profile source also
+   retains its explicit selected profile/schema/content pin and actual canonical inventory;
+   another profile or matching parameter ID is insufficient. The source's exhaustive resource
+   walk includes all those records,unused entries,duplicated caches and represented counters.
+6. Bind complete semantic occurrences only after their complete source/content/work allowances.
+   Keep the original Pocket opening and all component source Pieces/copies. A recipe-built
+   component retains its actual original recipe/creator;explicit imported primitives retain their
+   real source without fabricated history. Unknown state stays Unknown,Derived retains its sole
+   operation source,and neither becomes a selected opening or hardware value during static checks.
+
+Logical state must retain the same distinctions already made by canonical scalar inputs:claimed
+Known with scoped-evidence references,explicit Assumed with a human-assumption reference,Unknown
+with an observation request,Preference with provenance,and Derived with its sole computation
+source. Known/Assumed/Preference selections must belong to their actual declared domain. Unknown
+and Derived have no authored selection or cached result field. A source's claimed state does not
+prove evidence truth,human approval,Profile readiness or physical feasibility. A selectable design
+choice keeps an explicit category and selection/provenance,distinct from an unknown fact;no
+choice/default supplies a missing observation. It does not add an enum-valued scalar formula.
+
+The logical model slice owns complete domain/state/provenance structural validation and explicit
+construction bounds before later inventory attachment. The canonical inventory slice owns actual
+membership,identity disjointness and current Root/resource integration. The operation slice owns
+typed operation inputs and genuine complete ordered ownership. The port slice owns original
+source loans and typed causes. Subsequent semantic work/checking owns complete currentness
+workspace,canonical joins,operation existence/kinds/dependencies and complete no-prefix results.
+Allocator failures,source lifetimes and coupled acceptance remain `.5f.2.verify` after the agreed
+integration set. G4 still owns Profile registry/schema/evidence policy and G3 physical execution;
+these logical interfaces cannot manufacture either approval.

@@ -3,11 +3,11 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
-## STITCHCAD-G1-0868 — admit actual garment source content
+## STITCHCAD-G1-0869 — source logical declaration and recipe model stages
 
-Borrow actual garment/snapshot sources,require the original Root object and freshly charge complete garment/provider fields before snapshot matching or semantic queries. Original first content causes and held semantic damage remain visible.
+Document the actual logical model/canonical ownership/semantic recipe/source-facet sequence. An actual producer census and exhaustive compiler match preserve current representation boundaries;missing/invented variants and lifetime escape refuse as expected.
 
-Focused source3,strict selected lint/fmt,Rustdoc4 and book pass0. G1still6/18 In Progress;actual logical/Profile/operation source facets next. Currentness,semantic workspace and complete dependency acceptance remain deferred.
+Focused plan producer/compiler controls and book pass0;Rust product unchanged. G1still6/18 In Progress;immutable logical declaration records next. No logical or complete semantic acceptance claim.
 
 ## STITCHCAD-G1-0860 — daily artifact cleanup and PNT resume
 
@@ -21,6 +21,8 @@ Director requested pause at the next handoff-ready checkpoint after product9f2fc
 
 
 # Sealed archive — earlier slices
+
+[Whole0868 garment source unit and original Pocket acceptance](docs/history/stitchcad-devnotes-part1041.md) retain exact source bytes.
 
 [Whole0867 geometry supplier unit](docs/history/stitchcad-devnotes-part1040.md) retains exact task,lesson and ledger source bytes.
 

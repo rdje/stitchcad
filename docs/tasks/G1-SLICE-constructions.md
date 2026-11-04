@@ -232,29 +232,7 @@ Whole0017 [goals/acceptance/proofs](../history/window28.md#stitchcad-devnotes-pa
 
 ### `G1-SLICE.3c.4d.1` — Pocket retains physical composition and owned placement intent
 
-- [x] **REPRODUCE / ISSUE** — ontology §4.7 requires Pocket placement, opening and component Pieces;
-  the prior object families have no Pocket API. Explicit physical-copy identity applies to composition.
-- [x] **ROOT CAUSE (WHY + WHERE)** — pattern-only references cannot distinguish multiple physical
-  components or refuse reassignment. `cargo test -p sc-core --test pocket_contract
-  physical_components_borrow_canonical_pattern_metadata_and_retain_all_deferred_proofs` → `1 passed`,
-  `rc=0`: distinct copy references borrow the same canonical Piece. `orientation_cannot_hide_foreign_middle_geometry_behind_owned_live_endpoints`
-  → `1 passed`, `rc=0`: valid ends cannot prove whole-range ownership, even after reversal.
-- [x] **FIX** — immutable Pocket holds served copy/source guard, position/directed orientation,
-  logical opening and nonempty unique component copy/source references. Current validation repeats
-  target/placement checks; component queries borrow canonical metadata without copying geometry.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test pocket_contract` → `11 passed`, `rc=0`:
-  composition, ambiguity/missing/reassigned targets, canonical metadata, historical point choices,
-  interior loss/foreign geometry and updated same-id Piece ownership covered. Disabling copy-source,
-  orientation-ownership and nonempty-component guards independently yields actual test failures,
-  `rc=101`; restored suite and compile-fail privacy pass. Component repairs stay visible separately.
-- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; restored `make wasm`
-  → green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
-  tree → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`; staged `make gate`
-  → `=== all doctrines green ===`, all `rc=0`. Existing structural object families remain green.
-- [x] **LOCKSTEP** — structural/geometric decision extended before code; recipe/Design opening and
-  component-contour obligations named. API/module/map, Pocket examples/local vocabulary, feature
-  row, tree/frontier/index/live docs align. Oldest changelog/lesson seal unchanged to part22/part21.
-  Director's quality bar remains explicit in `.3c.4d.2`; physical scope/geometry are not approved here.
+[Whole original Pocket acceptance](../history/stitchcad-devnotes-part1041.md) remains byte-exact.
 
 ### `G1-SLICE.3c.4d.2` — structural object families reviewed against the production-grade bar
 
@@ -917,21 +895,47 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:actual Root-bound garment/native semantic sources,including Pocket opening kind/domain/state/component recipe and Buttonhole canonical button/derivation;no empty substitute or authored hole length.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.sources`
   Status: `done`
-  Goal:0868 actual immutable garment/snapshot source facet and original Root-bound fresh complete content admission;native semantic inventories remain original loans.
-  - [x] REPRODUCE / ISSUE: `git grep -n 'garment_source\|admit_garment' d48d313d -- crates/sc-core/src/construction`:no matches,rc=1;the completed geometry supplier path had no actual garment source association.
-  - [x] ROOT CAUSE: `cargo test -p sc-core --test drafting_context_binding_contract garment_source`:3 pass,rc=0;two populated garments can have equal Root IDs/revisions yet different actual input objects. Existing DesignGarment::inputs and charge_design_garment_resources provide the authentic owner and exhaustive schema walk;raw context alone proves neither.
-  - [x] FIX: separate readonly raw garment/snapshot facet,private source-content admission and boxed original error witnesses. Compare actual Root first;fresh garment/provider cumulative content and latched first cause next;snapshot record last. No currentness,declaration vectors,values or semantic-prefix grant.
-  - [x] ADDRESSED: same focused command3 pass,rc=0;valid and held-damaged Pocket sources retain actual inventories/context/limits/demand;foreign equal-ID Root refuses before
-    content,content before foreign snapshot,ignored sink failure preserves original field/error chain. Fixtures preserve actual CutPlan reflection and quantity contracts;replaced
-    component identity exposes held damage without breaking Root.
-  - [x] NO REGRESSION: selected strict clippy passes0 after compacting its measured264-byte diagnostic;fmt check0;`cargo test -p sc-core --doc context::garment`:4 pass,rc=0,raw/proof lifetime,private fields and public API. Source/frame/provider types need no Clone/Debug. Scoped source admission only;semantic workspace,currentness and coupled .5f.2.verify remain deferred.
-  - [x] LOCKSTEP: garment source/admission examples and semantic plan in two book references;guarded book build0. README/LIVE reviewed,G1still6/18 In Progress. MEM/index/DEV/ledger align;next actual logical/Profile/operation source facets. No new domain policy or physical approval.
-  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1040.md`:4 exact Git spans,rc=0;whole0867 task/lesson/ledger plus0329 lesson retained.
-    Initial hook refused journal358B line and task aggregate1500265B;lossless reduction and prose wrapping restore existing bounds. Public read exact0;no immutable window or ceiling change.
-  - [x] PROMOTION: promotion: declined (existing actual-owner/exhaustive-content/inspection-before-readiness contracts;book owns API). Focused3,strict lint/fmt,Rustdoc4/book pass0. Commit:STITCHCAD-G1-0868.
+  Goal:0868 actual garment source and fresh content admission;[whole scope/proofs](../history/stitchcad-devnotes-part1041.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources`
-  Status: `pending`
+  Status: `in_progress`
   Goal:actual readonly logical/Profile/operation source records for Pocket openings and canonical Buttonhole button/derivation,including original kind/domain/state and component recipe sources;no id-only or empty replacement. Exhaustively charge new held records before bounded core queries.
+  Children: `.contract` (actual source/model boundary), `.model` (immutable logical domain/state),
+  `.operations` (actual typed semantic operation dependencies), `.ports` (original source facets).
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.contract`
+  Status: `done`
+  Goal:0869 actual logical/canonical/semantic-recipe model boundary before new sources;[implementation contract](../book/src/annexes/formula-declarations.md#logical-source-implementation-contract).
+  - [x] REPRODUCE / ISSUE: `plan_sources.py` through the local launcher prints actual canonical Length/Scalar,scalar Let/Assert and mixed Scalar/Drafting variants. Those producers cannot prove logical declarations or typed semantic operations through matching IDs.
+  - [x] ROOT CAUSE: same focused command rc=0;actual public enum census matches an independently compiled exhaustive Rust match. First parser omitted whitespace before struct variants;actual producer inspection pinpointed it and the exhaustive compiler control now rejects that omission with E0004.
+  - [x] FIX: source/model contract separates immutable logical records,actual canonical inventory membership,genuine typed semantic recipe ownership and readonly facets. Keep all13
+    existing drafting families/formula grammar;no fabricated native position,opening vocabulary,physical hole formula or imported history. Own model/inventory/resources,operation
+    and port stages before core binding.
+  - [x] ADDRESSED: `python3 -I -B scripts/local_environment.py -- python3 -I -B docs/tasks/artifacts/drafting_dependencies/plan_sources.py`:current library build0,public enum match0,missing-arm1/E0004,invented-arm1/E0599,Garment/input borrow0 and escape1/actual lifetime cause,all expected;final rc=0.
+  - [x] NO REGRESSION: same focused producer retains closed native13 and original public-owner controls,rc=0;Rust product sources unchanged from ab4ddd4c. Guarded book build0;new contract is planned model work,not implemented logical or whole semantic acceptance. No broad CI/verification campaign.
+  - [x] LOCKSTEP: book sequence/boundaries and task children,frontier/MEM/DEV/ledger align. README/LIVE reviewed,G1still6/18 In Progress;actual logical declaration model next. Currentness/workspace/coupled source proof retains .5f.2.verify.
+  - [x] CONTINUITY: `transition_receipts.py --record docs/history/stitchcad-devnotes-part1041.md`:4 exact Git spans,rc=0;whole0868 and original Pocket acceptance retained.
+    Initial hook refused task aggregate20010L/1502138B;lossless source reduction restores original bounds. Public read exact0;no retained window or ceiling changes.
+  - [x] PROMOTION: promotion: declined (applies existing canonical-core/actual-owner/closed-formula/no-fabrication contracts;product plan belongs in book/task). Focused producer/compiler refusals and book pass0. Commit:STITCHCAD-G1-0869.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model`
+  Status: `pending`
+  Goal:immutable canonical logical declarations with actual authored domain/state/provenance,
+  explicit complete bounds and exhaustive field accounting;Unknown/Derived have no fallback.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.declarations`
+  Status: `pending`
+  Goal:immutable logical role/domain/state/provenance records with explicit complete construction bounds;no formula kind/value conversion or physical vocabulary.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.inventory`
+  Status: `pending`
+  Goal:actual canonical logical membership,disjoint identities and original Root metadata joins;numeric-only scopes remain explicitly empty,never defaulted logical state.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.model.resources`
+  Status: `pending`
+  Goal:complete logical domain/state/provenance/owned-index content accounting through actual canonical Root producers,retaining first original fields before queries.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.operations`
+  Status: `pending`
+  Goal:actual typed semantic derivation/component-recipe sources under original ownership;
+  canonical button declaration is the dependency,no independent hole length or invented native step.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.logical.sources.ports`
+  Status: `pending`
+  Goal:readonly authentic logical/Profile/operation facets with original record/Root/snapshot
+  loans and typed causes;all held source fields participate in fresh accounting before queries.
 - ID: `G1-SLICE.5f.2.check`
   Status: `pending`
   Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.

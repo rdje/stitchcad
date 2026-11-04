@@ -3,14 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-11-03 UTC)_ — actual garment source content before semantic queries
+## _(2026-11-03 UTC)_ — source logical model and recipe ownership before facets
 
-0868 readonly garment/snapshot facet borrows the actual populated owner. Admission compares original Root object,charges complete garment/provider fields afresh in one meter,then
-matches actual snapshot. Final meter preserves ignored first sink errors. No currentness,declaration vector,value or complete semantic grant.
-Focused3 pass0:valid/held-damaged Pocket,foreign equal-ID Root,content-before-snapshot,actual limits/demand/source loans and original field/error chain. Fixture reflection/quantity
-failures corrected through explicit two authored copies and replacement component identity. Strict lint passes after boxing264-byte diagnostic witnesses;fmt/Rustdoc4/book pass0.
-1040 preserves whole0867/0329 in four exact Git spans after the hook refused journal width/task aggregate;existing bounds restored without policy changes. Promotion declined:existing actual-owner/content contracts;book owns API. G1still6/18;logical/Profile/operation records next.
+0869 derives current canonical/scalar/mixed variants from their producers and checks an exhaustive public Rust match. Missing/invented variants fail with E0004/E0599;borrow/escape controls retain actual ownership/lifetime evidence. Focused producer and book pass0.
+Book/task sequence separates immutable logical records,canonical inventory,typed semantic recipe ownership and actual facets. No scalar coercion,synthetic native position,physical vocabulary/formula or imported history. Promotion declined:existing canonical-core/actual-source contracts;G1still6/18,model next.
 
+[Whole0868 garment source lesson](docs/history/stitchcad-devnotes-part1041.md) retains exact source bytes.
 
 [Whole0867 geometry supplier lesson](docs/history/stitchcad-devnotes-part1040.md) retains exact source bytes.
 
