@@ -75,6 +75,37 @@ The normalized owner and source may outlive the proof. Its checked node/argument
 their certificates belong to the successful proof allocation. Constructors and fields
 remain private; compile-fail examples watch forgery and lifetime boundaries.
 
+## Account for actual retained proof buffers
+
+`FormulaCheckedExpression::charge_retained_resources` appends the actual certificate-vector
+length,then the actual ordered dependency-vector length,to a caller-owned cumulative resource
+sink. The caller supplies each containing field's `DesignResourceLocation`. A shortage preserves
+that original field,scope,owner,index and attempted complete length. An earlier sink refusal wins,
+including when the dependency vector is empty. The method never finishes or resets the meter.
+
+```rust
+use sc_core::{recipe::FormulaCheckedExpression,design::*};
+fn add_original_proof(proof:&FormulaCheckedExpression<'_, '_, '_>,sink:&mut dyn DesignResourceSink,
+    certificates:DesignResourceLocation,dependencies:DesignResourceLocation)
+    ->Result<(),DesignResourceLimitError> {
+    proof.charge_retained_resources(sink,certificates,dependencies)
+}
+```
+
+Each original dependency occurrence counts,including repeated names and both conditional branches.
+Calling the producer twice charges two logical occurrences of the held proof;the previous demand
+or constructor policy provides no credit. The fixed certificate and dependency records borrow
+syntax,declarations and source strings. Those bodies compose through their original resource
+owners;this producer adds no text or counter charge and grants no complete source/work allowance.
+Its exhaustive owner destructuring and fixed-Copy record guards require future owned fields to
+receive explicit accounting.
+
+The focused public-factory check covers literal,unary,builtin and nested conditional trees. It
+checks exact and short certificate/dependency allowances,repeated composition,earlier refusal
+latching and unchanged owner loans. A checked zero divisor remains unevaluated. This producer
+supports the next aggregate semantic accounting stage;complete proof-chain composition and
+aggregate bounds are still pending.
+
 ## Focused evidence and remaining work
 
 The new native target passes six tests: every node shape, all eight named kinds, actual Unknown

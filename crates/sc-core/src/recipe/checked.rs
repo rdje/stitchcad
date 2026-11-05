@@ -9,6 +9,7 @@ use super::{
 use core::fmt;
 
 mod nodes;
+mod resources;
 pub use nodes::{FormulaCheckedArguments, FormulaCheckedNode, FormulaCheckedNodeForm};
 
 #[derive(Clone, Copy)]

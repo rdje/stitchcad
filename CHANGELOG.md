@@ -3,6 +3,13 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0909 — freshly account checked-expression proof buffers
+
+The cumulative resource producer charges actual certificate and ordered dependency vectors with
+original field locations. Focused exact/short/repeated/latch tests preserve source loans and avoid
+values,including untaken branches and a zero divisor. API example,format and scoped strict Clippy
+pass. Complete aggregate composition/work remains pending;G1still6/18 unchanged.
+
 ## STITCHCAD-G1-0908 — join exact aggregate semantic owners
 
 New private owner join retains the exact garment/context,complete geometry proof chain and locally

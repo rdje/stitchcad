@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — fresh checked-expression proof records
+
+0909 adds an exhaustive cumulative producer for the actual certificate and dependency arrays.
+Successful record types are Copy and borrow their original normalized/declaration owners;their
+resource bodies compose separately. Earlier proof policies and demands supply no fresh credit.
+The producer charges both complete lengths in order without evaluating,allocating,resetting the
+sink or querying names. Fixed record guards expose future owned fields at compile time.
+Independent grammar trees exercise exact/short quotas,repeated names/composition,empty dependencies,
+earlier error latches,untaken branches and a zero divisor. Focused runtime/API/format/lint pass.
+Promotion declined:the existing resource-component contract and maintained API/book own this fact.
+Statement/source/graph and complete mixed aggregate composition remain next;G1still6/18 unchanged.
+
 ## _(2026-11-05 UTC)_ — exact semantic owner association
 
 0908 joins the already existing complete geometry/canonical/source/order/acyclic owner to the actual

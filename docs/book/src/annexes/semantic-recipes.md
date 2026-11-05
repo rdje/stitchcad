@@ -2086,3 +2086,12 @@ inspectable data; this join supplies no coverage or semantic source approval. Fr
 aggregate content/work admission comes next, before actual selection matching or child queries.
 Logical, garment and native source binding, complete cohort acceptance, physical execution and
 whole-programme verification retain their separate task owners.
+
+### Retained expression proofs before aggregate work
+
+The [fresh checked-expression producer](formula-checked-nodes.md#account-for-actual-retained-proof-buffers)
+now counts actual node certificates and ordered dependency records in a cumulative sink. Complete
+aggregate admission must compose those records with statement,source,graph and program proof
+owners as well as the original garment/program/selection content. The owner join itself still
+performs no content walk. The remaining composition and prospective work checks are not supplied
+by an expression-level demand or an earlier successful source proof.

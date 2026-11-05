@@ -905,5 +905,18 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] NO REGRESSION:cargo test -p sc-core --doc semantic_owners →2 compile-fail guards pass,exit0;cargo fmt -p sc-core -- --check and cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings →pass,exit0. Setup tracer/allowance repairs precede final green. Whole .5f.2.check/.verify remain deferred.
   - [x] LOCKSTEP:MEM/index/DEV/ledger/LIVE/book reflect owner association and next fresh bounds;README reviewed unchanged. G1still6/18 In Progress. Promotion declined:the API/book/test owns this local contract. Commit:STITCHCAD-G1-0908.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.bounds`
-  Status: `pending`
+  Status: `in_progress`
   Goal:freshly compose all actual garment/Root/provider,program/source/name and selection fields plus held proof records;derive checked occurrence/comparison/child-walk/result populations before source queries,reservation or actual key coverage. Earlier demand/policy grants no aggregate credit;preserve exact owner and first field cause.
+  Children: `.expressions` (fresh actual expression proof buffers),then statement/source/graph and complete program proof composition before aggregate admission.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.bounds.expressions`
+  Status: `done`
+  Goal:expose fresh cumulative accounting for actual checked-expression certificate/dependency vectors,without rewalking borrowed normalized bodies or selecting values. Preserve exact original field causes and empty/prior sink latches;verify exact and short quotas,repeated calls and untaken/division-by-zero inputs with the existing public factory.
+  - [x] REPRODUCE / ISSUE:aggregate semantic work must freshly account held proof records as well as source content. The actual successful checked expression retains distinct certificate/dependency buffers;prior constructor policies are not a fresh cumulative charge.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'dependencies: Vec|certificates: Vec' crates/sc-core/src/recipe/checked.rs →actual buffers253/254,rc=0. Public node_count/dependencies expose their actual lengths;the new owned producer destructures the proof and fixes both record types as Copy,so future dynamic fields cannot silently pass.
+  - [x] FIX:charge_retained_resources appends actual certificate then dependency vector lengths to one sink,with original caller locations. Normalized syntax/declaration bodies remain borrowed and separately owned;no values,lookup,clone,result allocation,prior totals or meter reset.
+  - [x] ADDRESSED (verified):cargo test -p sc-core --test formula_checked_proof_resources_contract →1 passed,rc=0. Independent grammar-tree populations exercise exact/short first and second vectors,repeated composition,empty dependencies,untaken branches and zero division;original refusal latch and immutable owner loans remain exact.
+  - [x] NO REGRESSION:cargo test -p sc-core --doc checked::resources →1 API example passed,rc=0;cargo fmt -p sc-core -- --check and cargo clippy -p sc-core --lib --test formula_checked_proof_resources_contract -- -D warnings →pass,rc=0. No original checker behavior changed. Whole .5f.2.check/.verify remain deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger and checked-node/semantic book sections reflect the actual producer and remaining complete composition. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:existing resource component doctrine/API is canonical. Commit:STITCHCAD-G1-0909.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.bounds.components`
+  Status: `pending`
+  Goal:compose actual statement operands,Root source proofs and retained source graph edge/offset buffers through fresh cumulative producers before complete mixed proof/source/garment/request accounting. Preserve original owners,field locations and first causes;no cached reservation or acyclic scratch becomes held content.
