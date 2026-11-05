@@ -42,6 +42,10 @@ Part1084 retains whole closed0920–0923 task intervals and complete journals fr
 Seven exact Git intervals preserve original source/member and planning evidence before logical
 supplier acceptance. Every original task identity/status remains live beside its retrieval pointer.
 
+Part1085 retains the whole completed Root input/supplier subtree and complete committed journals
+fromddfea0b1. Three exact Git intervals preserve all original goals and focused source/order/proof
+checks before Profile binding;the live tree retains each original task identity/status.
+
 ```bash
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1077.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1078.md
@@ -51,6 +55,7 @@ bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1081.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1082.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1083.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1084.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1085.md
 ```
 
 `HISTORY_ARCHIVE_ROOT` selects the project or a fixture below project `target/`. Destinations stay in

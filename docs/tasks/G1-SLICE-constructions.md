@@ -877,76 +877,53 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs`
   Status: `done`
-  Goal:compose complete actual Root logical/numeric operation-input members under the original direct-key owner and finite child budget. Preserve original states,actual source scopes,typed causes and genuine Design Derived supplier/output/mixed-order joins without value reads or formula metadata. Profile inputs/rule signatures and final cohort stay separate.
-
+  Goal:completed Root input/supplier scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1085.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.owners`
   Status: `done`
-  Goal:completed0920–0923;[whole original scope/proofs](../history/stitchcad-devnotes-part1084.md).
-
+  Goal:completed Root input/supplier scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1085.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.members`
   Status: `done`
-  Goal:completed0920–0923;[whole original scope/proofs](../history/stitchcad-devnotes-part1084.md).
-
+  Goal:completed Root input/supplier scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1085.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived`
   Status: `done`
-  Goal:bind actual Root logical Derived operation/output suppliers with strict genuine mixed order,and numeric Derived inputs through their original formula-source/acyclic owners. Preserve source family/typed causes;formula sources receive no invented mixed position and external Profile Derived IDs never become Root suppliers.
-
+  Goal:completed Root input/supplier scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1085.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.plan`
   Status: `done`
-  Goal:completed0920–0923;[whole original scope/proofs](../history/stitchcad-devnotes-part1084.md).
-
+  Goal:completed Root input/supplier scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1085.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.logical`
   Status: `done`
-  Goal:reserve complete logical Derived source work before fresh scope accounting;join actual Root LogicalDerivation operations and exact output declarations,then genuine strict earlier mixed suppliers. Preserve actual owners,states and typed first causes;refuse self/future/missing/wrong-output suppliers without values or accepted prefix.
-  - [x] REPRODUCE / ISSUE:completed0922 member-only self-reference is valid membership,not supplier acceptance. Actual logical Derived consumers require their original Root LogicalDerivation output and strict earlier genuine mixed position before any complete semantic proof;numeric formula positions remain separate.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'operation_source|LogicalInputState::Derived|program.steps' context/design_semantic.rs and root_input_scope/members/logical.rs →original kind-checked Root source,canonical state and complete mixed-step pointer join,rc=0. Complete normalized coverage preserves semantic recipe order;raw reordering correctly refuses SemanticOrder.
-  - [x] FIX:consume complete member owner,count/reserve all N logical Derived passes/results,freshly charge actual Root/provider content,then reserve every result and join original supplier/output/strict order. Retain original member index,scope,output field and genuine supplier ordinal/position. N0 does no child work;typed first causes retain
-    original owners/cursor and drop private supplier prefixes.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract root_logical_suppliers →1 test/10 real fixture modes pass,rc=0. Actual earlier/repeated loans,semantic1/mixed1 versus semantic2/mixed3,self/future/missing/wrong-family/output-ID/output-kind,short remaining cursor,N0 and late private-prefix refusal pass. No value or
-    Profile/numeric supplier is accepted.
-  - [x] NO REGRESSION:cargo test -p sc-core --doc root_input_scope::members::logical →3 privacy/lifetime/Clone guards pass,rc=0. Scoped lib/harness strict Clippy and cargo fmt -p sc-core -- --check pass,rc=0. Fixture uses checked get/first after indexing lint,actual13 occurrences and resource trace2 after a walk. Whole .5f.2.check/.verify remain deferred.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish complete logical suppliers from pending numeric/Root composition,Profile/rule/family/cohort and whole acceptance. README/LIVE reviewed unchanged,G1still6/18 In Progress. Read-only external README/claim bodies identical;source book exemption already adopted locally. Promotion declined:local
-    supplier/source API/book owns the contract. Commit:STITCHCAD-G1-0924.
-
+  Goal:completed Root input/supplier scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1085.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.numeric`
   Status: `done`
-  Goal:join actual dedicated-length/general-scalar Derived members to original FormulaDerivedInput,checked source and exact already-held acyclic graph owners. Preserve target/source/kind identity and complete fresh work bounds;invent no formula metadata,mixed position or executable result.
-  - [x] REPRODUCE / ISSUE:complete Root numeric Derived operation-input members require their original formula-source/checked/acyclic loans,not logical operations or invented mixed positions. Original member/logical successes retain states but do not supply this numeric relation;the original complete source prerequisite must remain authoritative.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'derived_inputs|fn source|fn graph|charge_resources' recipe/source_inputs.rs,checked_sources.rs and dependencies/owners.rs/semantic_owners/resources.rs →actual declaration/source joins,checked lookup,exact held graph and fresh whole proof producer,rc=0. The numeric source scope is already exact through
-    original Root/checked/acyclic owner joins.
-  - [x] FIX:consume complete logical owner,count/reserve all N numeric Derived passes/results,freshly charge complete aggregate inputs/proofs before allocation/matching,then retain actual declaration/source/checked/graph loans. Keep original member index and canonical family position. No formula metadata/mixed position/value is fabricated;N0 makes
-    no child work or fresh-demand claim.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract root_numeric_suppliers →1 test/4 actual owner modes pass,rc=0. Dedicated/general Length,Boolean,repeated input/source,all exact canonical/checked/graph pointers,empty Derived work,atomic5-reserved/4-requested versus8-allowed and injected numeric.extra100001 quota
-    refusal pass. Original target quota0→3 control also passes.
-  - [x] NO REGRESSION:cargo test -p sc-core --doc logical::numeric →3 privacy/lifetime/Clone guards pass,rc=0. Focused root_logical_suppliers →1 pass;cargo fmt -p sc-core -- --check and scoped lib/harness strict Clippy pass,rc=0. Fixture limits/source spelling corrected to actual3 targets and1==1;needless format borrow removed. Whole .5f.2.check/.verify remain deferred.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish numeric formula-source/checked/acyclic scope from logical mixed suppliers;final Root composition,Profile/rule/family/cohort and whole checking remain separate. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:local supplier and original source/proof API/book own this
-    contract. Commit:STITCHCAD-G1-0925.
-
+  Goal:completed Root input/supplier scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1085.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.compose`
   Status: `done`
-  Goal:compose complete logical and numeric Root supplier relations with exact original member/source/key owners and the same finite child cursor. Retain every original field,typed cause and separate supplier scope;Profile/rule/family/cohort and whole checking remain separate.
-
-  - [x] REPRODUCE / ISSUE:complete logical and numeric factories retain the same actual members/cursor but callers need a complete per-field projection without mixing semantic-operation and formula-source supplier scopes. Repeated consumers must stay separate;no extra validation/source budget or accepted construction prefix may be introduced.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'member_index|members:|logical:' root_input_scope/members/logical.rs and its numeric.rs →both private complete supplier vectors retain original sorted member indices and one original consuming owner,rc=0. Their disjoint classes support a constant-storage linear borrowed projection with no new lookup or allocation.
-  - [x] FIX:bindings lends every original Root member once with typed optional Logical/Numeric relation loans. Preserve actual member index,operation/field/source and consumer positions;numeric source positions remain canonical. Original complete member/logical/numeric ownership and unique cursor stay unchanged. No new
-    source/value/whole-cohort acceptance follows from reading the view.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract root_numeric_suppliers →1 test/5 actual modes pass,rc=0. Combined fixture preserves five members,one earlier semantic1/mixed1 logical supplier,four numeric records,consumer semantic2/mixed3 and ten reserved passes. Pointer/field joins,nth/skip/fused length and
-    unchanged walks/cursor pass;empty and failure cases remain scoped.
-  - [x] NO REGRESSION:cargo test -p sc-core --doc numeric::compose →2 private/lifetime guards pass,rc=0. Scoped lib/harness strict Clippy and cargo fmt -p sc-core -- --check pass,rc=0. Initial cargo-check rustc SIGKILL is not a passing check;subsequent same-source native/strict builds pass. OS kill cause unknown,owned by
-    .5f.2.verify.compiler-termination before pre-push;whole .5f.2.check/.verify remain deferred.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book name complete Root member/supplier class and next actual Profile input binding. README/LIVE reviewed unchanged,G1still6/18 In Progress. Profile/rule/family/cohort/source truth and physical execution remain separate. Promotion declined:local complete projection and original source APIs/book own the contract. Commit:STITCHCAD-G1-0926.
-
+  Goal:completed Root input/supplier scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1085.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.logical.retention`
   Status: `done`
-  Goal:retain whole closed0920–0923 source intervals and complete committed journals before adding logical supplier acceptance;preserve every task identity/status and original heading route under fixed task ceilings. No old seal,cap or protected evidence changes.
-  - [x] ROOT CAUSE / ISSUE:task collection19965L/1498442B before new acceptance leaves insufficient fixed-byte headroom. Whole closed0920–0923 source blocks and committed journals must remain exact before live compaction;no archive prefix,cap or original heading route may change.
-  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1084.md →7 exact Git spans,rc=0. Independent decode/hash/Git intervals/public-reader bytes prove32002 decodedB before compaction;all200 task IDs/statuses remain exact at that boundary. Closed blocks alone become retrieval pointers.
-  - [x] NO REGRESSION / LOCKSTEP:independent1084.json records source_intervals7/public_exact true/task_ids_statuses_exact200,rc=0. Task collection remains within unchanged20000L/1500000B ceilings;complete committed journals retained before live retirement. Book reader and0924 journals align;old seals,producers and protected evidence unchanged. Commit:STITCHCAD-G1-0924.
-
+  Goal:completed Root input/supplier scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1085.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bind complete actual Profile-owned operation inputs under exact direct selections and original admitted source pins/schema/content/snapshot,with fresh complete aggregate work. Preserve kind/domain/state and external Derived scope;no invented Root operation positions or numeric Profile port.
 
 - ID: `G1-SLICE.5f.2.verify.compiler-termination`
   Status: `pending`
   Goal:P2 before pre-push verification,diagnose the isolated compose cargo-check rustc SIGKILL. Same-source focused native compilation subsequently succeeds. OS census shows24GB RAM and unrelated rustc RSS10158288KiB;recent logs show no kill cause. Preserve the unknown;do not blame memory or alter foreign jobs without evidence.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.retention`
+  Status: `done`
+  Goal:retain the complete closed Root member/supplier subtree and committed journals before Profile header/parameter ownership grows. Preserve all task IDs/statuses and whole original evidence under fixed task ceilings;no old seal,cap or protected-store changes.
+  - [x] ROOT CAUSE / ISSUE:committed task collection19982L/1497245B leaves18 lines before fixed20000L ceiling. Closed Root subtree and whole journals must be retained before adding Profile header/parameter ownership;the source APIs require logical parameter proofs to borrow actual accepted header parents.
+  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1085.md →3 exact Git spans,rc=0. Independent decode/hash/Git/public-reader proof preserves17839 decodedB before compaction;all203 task IDs/statuses survive at that boundary,including9 closed Root nodes. Whole original goals/checks remain retrievable.
+  - [x] NO REGRESSION / LOCKSTEP:independent1085.json →public_exact true/source_intervals3/closed_nodes9,rc=0. Current task collection fits unchanged ceilings;all old seals/caps/producers/protected stores unchanged. Book reader/journals/resume align. README/LIVE unchanged,G1still6/18 In Progress. Promotion declined:existing retention and
+    source-parent API own these facts. Commit:STITCHCAD-G1-0927.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.headers`
+  Status: `pending`
+  Goal:consume exact complete Root input/supplier owner,count all actual Profile operation-input fields,and reserve N+1 fresh whole/header passes for N>0 before work. Fresh whole content precedes fallible full N header reservation and exact original selection-pin/source joins. Preserve all original field/row/header loans and first typed causes;N0 does no new work.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.parameters`
+  Status: `pending`
+  Goal:bind every actual Profile logical parameter/kind/member under its original accepted header with complete fresh work. Borrow stable header storage and the same unique cursor through disjoint parent fields;do not construct a self-referential owner,clone source bodies or invent Profile Derived Root positions.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.compose`
+  Status: `pending`
+  Goal:compose complete original Root and Profile operation-input classes with exact parent/source/key loans and one finite cursor. Preserve every raw field,actual canonical state and external Derived scope;rule/signature/output,family/cohort and whole checking remain separate.
