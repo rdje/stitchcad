@@ -2484,7 +2484,7 @@ The source scope's initial admission and cached demand grant no later fresh cred
 Root member stage must reserve its complete pass/result population and freshly charge that actual
 Root/provider scope under the original work policy **before lookups or result reservation**.
 This owner join itself accepts no operation-input member,Derived supplier/order,Profile source,
-value or whole semantic cohort. Root member binding and logical supplier binding are implemented below;numeric supplier composition remains pending.
+value or whole semantic cohort. Root member binding and logical/numeric supplier binding are implemented below;final Root composition remains separate.
 
 ## Bind all actual Root operation-input members
 
@@ -2604,12 +2604,70 @@ Derived work and a late self failure after one valid private relation. Privacy,l
 cursor guards supplement the runtime checks. These are focused checks;whole/coupled verification
 remains deferred to the existing checking tasks.
 
-### Pending numeric Derived supplier scope
+## Bind actual Root numeric Derived suppliers
 
-A numeric Derived member instead names its actual `FormulaSource` expression. Existing
-`FormulaDerivedInput` retains its original canonical declaration and exact source;its `position()`
-is a **canonical family position**. The checked-source and already-held acyclic graph owners
-provide that source proof scope. It receives no synthetic mixed position or logical-operation
-identity. Numeric supplier binding and final Root supplier composition remain pending under the
-same finite child cursor. Logical supplier success grants no numeric formula-source,Profile/rule,
-family/cohort,source-truth,value or whole semantic acceptance.
+`BoundDraftingProgramRootLogicalSuppliers::bind_root_numeric_suppliers()` consumes the complete
+logical supplier owner and associates every numeric input whose actual canonical state is Derived.
+Dedicated Length and general scalar Length remain separate representations;other scalar kinds
+retain their exact kind. Logical and Profile inputs produce no numeric relation in this stage.
+Repeated input fields remain separate consumers even when their target or formula source matches.
+
+The complete numeric Derived population N reserves N child passes/results on the same cursor
+before any new content walk,record allocation or source matching. For N>0,the factory freshly
+charges the **complete original aggregate input and held proof chain**,including all actual
+Root/provider content,program records,selection rows,checked sources,order and acyclic graph.
+It uses the original whole-content policy;earlier aggregate/member/logical demand grants no credit.
+After complete content success,the factory fallibly reserves the complete N-record vector.
+
+Each consumer joins its exact actual canonical declaration loan to the original
+`FormulaDerivedInput` from the already-held source-input owner. That original input supplies its
+actual source and **canonical family position**,not a mixed statement position. The factory then
+retains the exact original checked expression proof for that actual source and the exact held
+acyclic graph over the same complete checked-source owner. It creates no formula declaration
+metadata,name,synthetic statement,topological order or evaluated value.
+
+One reserved pass bounds a complete native Derived-input scan with its source lookups and one
+checked-source lookup within the original (E+8)² allowance. This work is bounded by the freshly
+charged original corpus and proof populations. Matching uses actual declaration/source pointers;
+equal IDs in another independently owned inventory or checked graph cannot replace those loans.
+Source existence,result-kind and acyclic validation already belong to the exact prerequisite
+owners. Their original refusals occur before this factory becomes available.
+
+For example,the focused fixture supplies these four numeric consumers:
+
+| Actual consumer input | Canonical family position | Original formula source |
+| --- | --- | --- |
+| Dedicated Length10 | Length index0 | Source500,expression `1 mm` |
+| General scalar Length20 | Scalar index0 | The same Source500 |
+| General Boolean30 | Scalar index1 | Source501,expression `1==1` |
+| Another dedicated Length10 input | Length index0 | The same Source500,another consumer field |
+
+The three canonical Derived targets consume the source checker's target allowance once each;
+the repeated Length10 input instead consumes its own numeric supplier pass/result. Formula syntax
+has no Boolean literal:the source expression `1==1` derives a Boolean kind without evaluating it
+here. The original Unknown logical and explicit Profile input remain in their prior owners.
+
+`BoundDraftingProgramRootNumericSuppliers` keeps the complete previous logical/member/source/key
+owner through `logical()` and the same updated unique child cursor. `records()` returns every
+numeric Derived relation in original member order. Each private
+`DraftingProgramRootNumericSupplier` exposes the original `member_index()`,original `input()`,
+actual checked `source()` and exact `graph()`. The `input()` exposes original target,canonical
+position,canonical declaration and FormulaSource;no supplier mixed position exists on this view.
+
+For nonempty work,`demand()` is the completed fresh **aggregate/proof** demand,which differs in
+scope from the logical stage's fresh Root/provider demand. If N=0,the factory performs no child
+reservation,content walk,allocation or lookup;its new demand is None. Non-Derived numeric members
+keep their original state and acquire no Derived supplier relation.
+
+`DraftingProgramRootNumericSupplierError` retains the complete original logical/member owner,
+complete `supplier_count()`,only fully completed fresh `demand()`,and first typed `refusal()`.
+Insufficient remaining cursor capacity refuses atomically before a callback. An injected later
+provider resource excess preserves its exact original field and cause after passes were reserved;
+no accepted result vector escapes. Full result allocator failures retain their concrete cause.
+
+Focused public-factory checks cover dedicated/general Length distinction,Boolean source kind,
+repeated declaration/source pointers,exact canonical positions,held checked/acyclic identities,
+Unknown/Derived preservation,N=0,atomic short remaining budget and injected fresh provider resource refusal.
+Privacy,lifetime and unique cursor compiler guards supplement them. Whole/coupled verification
+remains deferred to its existing tasks;final Root composition and Profile/rule/family/cohort
+acceptance remain separate. No source-truth,evidence,value or physical execution is certified.

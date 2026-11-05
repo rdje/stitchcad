@@ -14,11 +14,13 @@ use core::fmt;
 mod members;
 pub use members::{
     BoundDraftingProgramRootInputMembers, BoundDraftingProgramRootLogicalSuppliers,
-    DraftingProgramRootInputMember, DraftingProgramRootInputMemberError,
-    DraftingProgramRootInputMemberRefusal, DraftingProgramRootInputMembersResult,
-    DraftingProgramRootInputSource, DraftingProgramRootLogicalSupplier,
-    DraftingProgramRootLogicalSupplierError, DraftingProgramRootLogicalSupplierRefusal,
-    DraftingProgramRootLogicalSuppliersResult,
+    BoundDraftingProgramRootNumericSuppliers, DraftingProgramRootInputMember,
+    DraftingProgramRootInputMemberError, DraftingProgramRootInputMemberRefusal,
+    DraftingProgramRootInputMembersResult, DraftingProgramRootInputSource,
+    DraftingProgramRootLogicalSupplier, DraftingProgramRootLogicalSupplierError,
+    DraftingProgramRootLogicalSupplierRefusal, DraftingProgramRootLogicalSuppliersResult,
+    DraftingProgramRootNumericSupplier, DraftingProgramRootNumericSupplierError,
+    DraftingProgramRootNumericSupplierRefusal, DraftingProgramRootNumericSuppliersResult,
 };
 
 /// Exact owner-join result,retaining original consumer and supplied source-scope witnesses on

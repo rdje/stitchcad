@@ -15,8 +15,14 @@ use crate::{
 };
 use core::fmt;
 mod error;
+mod numeric;
 pub use error::{
     DraftingProgramRootLogicalSupplierError, DraftingProgramRootLogicalSupplierRefusal,
+};
+pub use numeric::{
+    BoundDraftingProgramRootNumericSuppliers, DraftingProgramRootNumericSupplier,
+    DraftingProgramRootNumericSupplierError, DraftingProgramRootNumericSupplierRefusal,
+    DraftingProgramRootNumericSuppliersResult,
 };
 
 /// One actual logical Derived consumer and its original Root supplier/output/order association.

@@ -19,9 +19,11 @@ mod error;
 mod logical;
 pub use error::{DraftingProgramRootInputMemberError, DraftingProgramRootInputMemberRefusal};
 pub use logical::{
-    BoundDraftingProgramRootLogicalSuppliers, DraftingProgramRootLogicalSupplier,
-    DraftingProgramRootLogicalSupplierError, DraftingProgramRootLogicalSupplierRefusal,
-    DraftingProgramRootLogicalSuppliersResult,
+    BoundDraftingProgramRootLogicalSuppliers, BoundDraftingProgramRootNumericSuppliers,
+    DraftingProgramRootLogicalSupplier, DraftingProgramRootLogicalSupplierError,
+    DraftingProgramRootLogicalSupplierRefusal, DraftingProgramRootLogicalSuppliersResult,
+    DraftingProgramRootNumericSupplier, DraftingProgramRootNumericSupplierError,
+    DraftingProgramRootNumericSupplierRefusal, DraftingProgramRootNumericSuppliersResult,
 };
 
 /// Original kind-checked Root source view. It reads no value and accepts no Derived supplier/order.

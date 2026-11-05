@@ -14,6 +14,8 @@ use std::cell::Cell;
 mod root_input_members;
 #[path = "drafting_root_logical_suppliers.rs"]
 mod root_logical_suppliers;
+#[path = "drafting_root_numeric_suppliers.rs"]
+mod root_numeric_suppliers;
 
 struct Provider<'a> {
     base: Source<'a>,
@@ -22,6 +24,7 @@ struct Provider<'a> {
     variant: Cell<u8>,
     walks: Cell<usize>,
     ignore_refusal: Cell<bool>,
+    extra_charge: Cell<usize>,
 }
 impl<'a> Provider<'a> {
     fn new(garment: &'a DesignGarment<EmptyHost>) -> Self {
@@ -32,6 +35,7 @@ impl<'a> Provider<'a> {
             variant: Cell::new(0),
             walks: Cell::new(0),
             ignore_refusal: Cell::new(false),
+            extra_charge: Cell::new(0),
         }
     }
 }
@@ -79,14 +83,27 @@ impl DraftingContextSource<EmptyHost> for Provider<'_> {
         self.base.trace.set(0);
         self.alternate.trace.set(0);
         let first = self.base.charge_resources(sink);
-        if self.ignore_refusal.get() {
+        let charged = if self.ignore_refusal.get() {
             let _ = first;
             let _ = self.alternate.charge_resources(sink);
             Ok(())
         } else {
             first?;
             self.alternate.charge_resources(sink)
+        };
+        charged?;
+        if self.extra_charge.get() > 0 {
+            sink.charge_entries(
+                self.extra_charge.get(),
+                DesignResourceLocation {
+                    scope: DesignResourceScope::CommandState,
+                    owner: Some(self.garment.inputs().id()),
+                    field: "numeric.extra",
+                    index: None,
+                },
+            )?;
         }
+        Ok(())
     }
 }
 impl DraftingGarmentProvider<EmptyHost> for Provider<'_> {

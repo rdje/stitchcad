@@ -909,8 +909,19 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
     supplier/source API/book owns the contract. Commit:STITCHCAD-G1-0924.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.numeric`
-  Status: `pending`
+  Status: `done`
   Goal:join actual dedicated-length/general-scalar Derived members to original FormulaDerivedInput,checked source and exact already-held acyclic graph owners. Preserve target/source/kind identity and complete fresh work bounds;invent no formula metadata,mixed position or executable result.
+  - [x] REPRODUCE / ISSUE:complete Root numeric Derived operation-input members require their original formula-source/checked/acyclic loans,not logical operations or invented mixed positions. Original member/logical successes retain states but do not supply this numeric relation;the original complete source prerequisite must remain authoritative.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'derived_inputs|fn source|fn graph|charge_resources' recipe/source_inputs.rs,checked_sources.rs and dependencies/owners.rs/semantic_owners/resources.rs →actual declaration/source joins,checked lookup,exact held graph and fresh whole proof producer,rc=0. The numeric source scope is already exact through
+    original Root/checked/acyclic owner joins.
+  - [x] FIX:consume complete logical owner,count/reserve all N numeric Derived passes/results,freshly charge complete aggregate inputs/proofs before allocation/matching,then retain actual declaration/source/checked/graph loans. Keep original member index and canonical family position. No formula metadata/mixed position/value is fabricated;N0 makes
+    no child work or fresh-demand claim.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract root_numeric_suppliers →1 test/4 actual owner modes pass,rc=0. Dedicated/general Length,Boolean,repeated input/source,all exact canonical/checked/graph pointers,empty Derived work,atomic5-reserved/4-requested versus8-allowed and injected numeric.extra100001 quota
+    refusal pass. Original target quota0→3 control also passes.
+  - [x] NO REGRESSION:cargo test -p sc-core --doc logical::numeric →3 privacy/lifetime/Clone guards pass,rc=0. Focused root_logical_suppliers →1 pass;cargo fmt -p sc-core -- --check and scoped lib/harness strict Clippy pass,rc=0. Fixture limits/source spelling corrected to actual3 targets and1==1;needless format borrow removed. Whole .5f.2.check/.verify remain deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish numeric formula-source/checked/acyclic scope from logical mixed suppliers;final Root composition,Profile/rule/family/cohort and whole checking remain separate. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:local supplier and original source/proof API/book own this
+    contract. Commit:STITCHCAD-G1-0925.
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.compose`
   Status: `pending`
   Goal:compose complete logical and numeric Root supplier relations with exact original member/source/key owners and the same finite child cursor. Retain every original field,typed cause and separate supplier scope;Profile/rule/family/cohort and whole checking remain separate.
