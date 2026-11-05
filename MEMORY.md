@@ -1,8 +1,8 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
 - Derive HEAD/ahead from Git;push cadence400 per COMMIT.md.
-- PNT active at G1-SLICE.5f.2.dependencies.semantic.binding.logical in docs/tasks/G1-SLICE-constructions.md.
-- Next:bind actual logical/Profile/numeric inputs and original rule/signature/output with Design Derived supplier order,using admitted direct associations and the same finite child budget. Garment/native/cohort and whole .5f.2.check/.verify remain pending.
+- PNT active at G1-SLICE.5f.2.dependencies.semantic.binding.logical.numeric-target in docs/tasks/G1-SLICE-constructions.md.
+- Next:add genuine CanonicalInputTarget membership against the actual numeric inventory without formula metadata or value reads. Then compose original logical/Profile/rule sources under direct associations and the same finite child budget. Whole .5f.2.check/.verify remain pending.
 - Before push:resolve owned producer inventory reconciliation in G1-SLICE-producers.md;no broad verification claimed.
 - Protected recovery/evidence stores and retained window rules:docs/ARTIFACT_CLEANUP.md and docs/tasks/G1-SLICE-retention-proof.md. Never rerun old installers after archive edits.
 - Commit each slice and clear brief;handoff requires clean Git and OS-visible check_handoff.sh --idle-cua.

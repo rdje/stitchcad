@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — retain closed direct-key evidence before numeric binding
+
+0918 unblocks the selected genuine numeric-target primitive at the fixed task line/byte ceilings.
+Whole closed0916–0917 intervals and complete committed journal/ledger bytes frome9e2e9fd remain
+exact in immutable1082. Three exact Git spans,independent payload/source/hash and public-reader
+bytes pass before final compaction;all189 task identities/statuses survive. No old seal,cap,code,
+producer or protected store changes. No broad verification or historical feature reapproval is
+claimed. The next product primitive must bind actual CanonicalInputTarget against its inventory;
+formula-only metadata cannot be invented for those original semantic inputs.
+Promotion declined:existing whole-source retention and book reader are canonical.
+README/LIVE reviewed unchanged,G1still6/18 In Progress.
+
 ## _(2026-11-05 UTC)_ — bounded actual direct selection-key coverage
 
 0917 freshly admits complete original work before fallible O/R association reservations and two

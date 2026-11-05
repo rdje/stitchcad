@@ -3,6 +3,13 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0918 — retain closed evidence before genuine numeric binding
+
+Whole closed0916–0917 task/journal/ledger bytes remain exact in1082. Three Git spans and independent
+source/hash/public-byte checks pass;all189 task identities/statuses survive compaction under fixed
+ceilings. Product behavior and G1still6/18 In Progress stay unchanged;genuine numeric membership
+is selected next.
+
 ## STITCHCAD-G1-0917 — check bounded actual direct selection keys
 
 Fresh complete work admission now precedes actual two-way key matching and private field/row

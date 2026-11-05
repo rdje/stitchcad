@@ -31,6 +31,9 @@ the live content node now has its own direct pointer. Every task identity/status
 Part1081 retains whole completed0914–0915 task intervals and complete journals from3c8bae8f.
 Its three exact Git intervals preserve the finite child-work and coordinate-projection evidence;
 the live tree keeps every original identity/status beside its retrieval pointer.
+Part1082 retains whole completed0916–0917 task intervals and complete journals frome9e2e9fd.
+Its three exact Git intervals preserve direct need/key coverage evidence before the next numeric
+source primitive. Live task identities/statuses remain beside their exact retrieval pointers.
 
 ```bash
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1077.md
@@ -38,6 +41,7 @@ bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1078.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1079.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1080.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1081.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1082.md
 ```
 
 `HISTORY_ARCHIVE_ROOT` selects the project or a fixture below project `target/`. Destinations stay in
