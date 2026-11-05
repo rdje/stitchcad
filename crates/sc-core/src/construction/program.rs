@@ -7,23 +7,25 @@ use crate::{
 use core::fmt;
 mod dependencies;
 pub use dependencies::{
-    AdmittedDraftingProgramGeometryWork, BoundDraftingProgramCanonicalInputs,
-    BoundDraftingProgramGeometry, DraftingGeometryStepRequest, DraftingProgramCanonicalBinding,
-    DraftingProgramCanonicalError, DraftingProgramCanonicalJoinFailure,
-    DraftingProgramCanonicalLimits, DraftingProgramCanonicalOccurrence,
-    DraftingProgramCanonicalRefusal, DraftingProgramCanonicalShape,
-    DraftingProgramDependencyInputs, DraftingProgramDependencyOwnerError,
-    DraftingProgramDependencyOwnerIssue, DraftingProgramDependencyRole,
-    DraftingProgramDerivedBinding, DraftingProgramFormulaGeometryConsumer,
-    DraftingProgramFormulaGeometryUse, DraftingProgramGeometryBindingRefusal,
-    DraftingProgramGeometryCreatorRefusal, DraftingProgramGeometryError,
-    DraftingProgramGeometryLimits, DraftingProgramGeometryOccurrence,
+    AdmittedDraftingProgramGeometryWork, AdmittedDraftingProgramSemanticPopulation,
+    BoundDraftingProgramCanonicalInputs, BoundDraftingProgramGeometry, DraftingGeometryStepRequest,
+    DraftingProgramCanonicalBinding, DraftingProgramCanonicalError,
+    DraftingProgramCanonicalJoinFailure, DraftingProgramCanonicalLimits,
+    DraftingProgramCanonicalOccurrence, DraftingProgramCanonicalRefusal,
+    DraftingProgramCanonicalShape, DraftingProgramDependencyInputs,
+    DraftingProgramDependencyOwnerError, DraftingProgramDependencyOwnerIssue,
+    DraftingProgramDependencyRole, DraftingProgramDerivedBinding,
+    DraftingProgramFormulaGeometryConsumer, DraftingProgramFormulaGeometryUse,
+    DraftingProgramGeometryBindingRefusal, DraftingProgramGeometryCreatorRefusal,
+    DraftingProgramGeometryError, DraftingProgramGeometryLimits, DraftingProgramGeometryOccurrence,
     DraftingProgramGeometryRefusal, DraftingProgramGeometryRequest, DraftingProgramGeometryShape,
     DraftingProgramGeometrySupplier, DraftingProgramGeometryTarget,
     DraftingProgramGeometryWorkError, DraftingProgramGeometryWorkRefusal,
     DraftingProgramNameDependency, DraftingProgramNativeGeometryUse,
     DraftingProgramPlannedGeometryIssue, DraftingProgramSemanticInputs,
     DraftingProgramSemanticOwnerError, DraftingProgramSemanticOwnerIssue,
+    DraftingProgramSemanticPopulationError, DraftingProgramSemanticPopulationLimits,
+    DraftingProgramSemanticPopulationRefusal, DraftingProgramSemanticPopulationShape,
 };
 mod admission;
 mod limits;

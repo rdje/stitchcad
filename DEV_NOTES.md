@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — fresh direct semantic populations
+
+0913 counts actual garment,ordered semantic/native fields and every raw row only after the whole
+fresh content producer succeeds. Checked occurrence sum,2OR comparisons and O+R association slots
+precede quotas. Private success/error objects borrow the exact original owner and policy;their
+owner type stays generic without requiring opaque source Debug/Clone. Error metadata describes
+only fully completed stages. No child allowance,source coverage,nested geometry or result follows.
+The joined fixture now includes one actual raw native request:5/0/1 fields and2 invalid rows give
+6/24/8. Independent content accounting includes its raw/normalized/order records. Exact and short
+quotas,original first pin cause,one provider walk and raw coordinates pass. Zero/overflow arithmetic,
+default/privacy/lifetime/API guards,format and scoped strict lint pass. Promotion declined:the
+resource/API/book contract is canonical. Finite child-work admission remains next;G1still6/18.
+
 ## _(2026-11-05 UTC)_ — fresh complete semantic content
 
 0912 composes actual garment/Root/provider,raw/normalized programme records,extra names,original

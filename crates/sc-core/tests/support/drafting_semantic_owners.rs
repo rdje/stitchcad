@@ -192,8 +192,18 @@ fn exact_semantic_owners_reject_foreign_records_before_callbacks() -> TestResult
         .admit_garment_source(content)
         .map_err(|e| e.to_string())?;
     source.variant.set(0);
-    let raw = DraftingProgramInputs::new(context, vec![]);
-    let pp = DraftingProgramLimits::new(content, 0, 0, 0);
+    // An actual original native target request stays unbound; counting it is not target lookup.
+    let grainline = GrainlinePlacement::new(
+        sc_core::ontology::EntityId::from_bits(80000),
+        sc_core::ontology::EntityId::from_bits(90000),
+    )?;
+    let raw = DraftingProgramInputs::new(
+        context,
+        vec![DraftingProgramStep::Drafting(
+            DraftingOperationInput::PlaceGrainline(&grainline),
+        )],
+    );
+    let pp = DraftingProgramLimits::new(content, 0, 0, 1);
     let program = raw
         .admit(&pp)
         .map_err(|e| e.to_string())?
@@ -296,12 +306,12 @@ fn exact_semantic_owners_reject_foreign_records_before_callbacks() -> TestResult
     assert_eq!(source.base.trace.get(), 0);
     assert_eq!(source.alternate.trace.get(), 0);
     assert!(!format!("{joined:?}").contains("private"));
-    // Independently walk just the actual garment/provider component. Empty programme/name
-    // records own no entries; the two raw request rows and one graph sentinel add three.
+    // Independently walk just the actual garment/provider component. One raw/normalized native
+    // slot, one order record, two request rows and the graph sentinel add six held entries.
     let mut garment_meter = DesignResourceMeter::new(content);
     actual_garment.charge_resources(&mut garment_meter)?;
     let garment_demand = garment_meter.finish()?;
-    let entries = garment_demand.collection_entries() + 3;
+    let entries = garment_demand.collection_entries() + 6;
     let text =
         garment_demand.text_bytes() + pin_text.iter().map(|value| value.len()).sum::<usize>();
     let bits = garment_demand.counter_bits();
@@ -391,6 +401,97 @@ fn exact_semantic_owners_reject_foreign_records_before_callbacks() -> TestResult
     assert_eq!(joined.charge_resources(&mut earlier), Err(first));
     assert_eq!(earlier.finish(), Err(first));
     assert_eq!(source.walks.get(), 0);
+    assert_eq!(joined.selections().inputs().rows().len(), 2);
+    let population_limits = DraftingProgramSemanticPopulationLimits::new(policy, 6, 24, 8);
+    source.walks.set(0);
+    let population = joined
+        .admit_consumer_population(&population_limits)
+        .map_err(|e| e.to_string())?;
+    let shape = population.shape();
+    assert_eq!(
+        (
+            shape.garment_occurrences(),
+            shape.semantic_occurrences(),
+            shape.native_occurrences(),
+            shape.selection_rows()
+        ),
+        (5, 0, 1, 2)
+    );
+    assert_eq!(
+        (
+            shape.occurrence_count(),
+            shape.selection_comparison_bound(),
+            shape.association_record_bound()
+        ),
+        (6, 24, 8)
+    );
+    assert!(core::ptr::eq(population.inputs(), &joined));
+    assert!(core::ptr::eq(population.limits(), &population_limits));
+    assert_eq!(population.demand(), demand);
+    assert_eq!(source.walks.get(), 1);
+    assert_eq!(source.base.trace.get(), 2);
+    assert_eq!(source.alternate.trace.get(), 2);
+    use DraftingProgramSemanticPopulationRefusal as R;
+    for (limits, expected) in [
+        (
+            DraftingProgramSemanticPopulationLimits::new(policy, 5, 0, 0),
+            R::Occurrences {
+                allowed: 5,
+                required: 6,
+            },
+        ),
+        (
+            DraftingProgramSemanticPopulationLimits::new(policy, 6, 23, 0),
+            R::SelectionComparisons {
+                allowed: 23,
+                required: 24,
+            },
+        ),
+        (
+            DraftingProgramSemanticPopulationLimits::new(policy, 6, 24, 7),
+            R::AssociationRecords {
+                allowed: 7,
+                required: 8,
+            },
+        ),
+    ] {
+        source.walks.set(0);
+        let error = joined
+            .admit_consumer_population(&limits)
+            .expect_err("complete direct quota");
+        assert_eq!(error.refusal(), expected);
+        assert!(core::ptr::eq(error.inputs(), &joined));
+        assert!(core::ptr::eq(error.limits(), &limits));
+        assert_eq!(error.demand(), Some(demand));
+        assert_eq!(error.shape(), Some(shape));
+        assert_eq!(source.walks.get(), 1);
+        assert!(!format!("{error:?} {error}").contains("private"));
+    }
+    let too_short = DraftingProgramSemanticPopulationLimits::new(
+        limits(entries, text - 1, bits.max(1))?,
+        0,
+        0,
+        0,
+    );
+    let error = joined
+        .admit_consumer_population(&too_short)
+        .expect_err("whole content precedes even zero occurrence quotas");
+    assert!(matches!(
+        error.refusal(),
+        R::Resources(DesignResourceLimitError::Count {
+            unit: DesignResourceCount::TextBytes,
+            location: DesignResourceLocation {
+                field: "selected_profile.content_version",
+                index: Some(1),
+                ..
+            },
+            ..
+        })
+    ));
+    assert_eq!(error.demand(), None);
+    assert_eq!(error.shape(), None);
+    assert!(std::error::Error::source(&error).is_some());
+    assert!(!format!("{population:?}").contains("private"));
     assert_eq!(joined.selections().inputs().rows().len(), 2);
     Ok(())
 }

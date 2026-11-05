@@ -3,6 +3,13 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0913 — admit fresh complete direct consumer populations
+
+The exact joined owner now freshly derives garment/semantic/native occurrences,all request rows,
+2OR coverage comparisons and O+R direct association slots before quotas. No row/source/child work
+is accepted. Focused source/quota and arithmetic tests,compiler/API guards,format and scoped strict
+Clippy pass. Finite child-work admission and whole verification remain pending;G1still6/18 unchanged.
+
 ## STITCHCAD-G1-0912 — freshly compose complete semantic source content
 
 Actual garment/Root/provider,record-only raw/normalized programme,extra names,selection rows/pins and

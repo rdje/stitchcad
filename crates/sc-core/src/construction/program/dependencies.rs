@@ -44,3 +44,10 @@ pub use semantic_owners::{
     DraftingProgramSemanticInputs, DraftingProgramSemanticOwnerError,
     DraftingProgramSemanticOwnerIssue,
 };
+
+mod semantic_population;
+pub use semantic_population::{
+    AdmittedDraftingProgramSemanticPopulation, DraftingProgramSemanticPopulationError,
+    DraftingProgramSemanticPopulationLimits, DraftingProgramSemanticPopulationRefusal,
+    DraftingProgramSemanticPopulationShape,
+};

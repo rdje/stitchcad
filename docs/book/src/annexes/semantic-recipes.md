@@ -2134,10 +2134,62 @@ allocation occurs. A provider that ignores a sink refusal cannot replace its ori
 cause. The caller finishes the meter;the method returns no accepted partial demand.
 
 The focused joined-owner fixture independently composes a fresh garment/provider demand with its
-raw selection rows,pin text and retained graph sentinel. It checks one provider walk,exact and
+original native slots,raw request rows/pin text and held order/graph records. It checks one provider walk,exact and
 short unused-pin/proof quotas,repeated whole composition,earlier latches and an ignored provider
 failure. Invalid requested coordinates remain raw data. The normalized programme fixture checks
 its independent13-record raw/arena population without provider calls and preserves the original
 standalone full demand. These are content checks;prospective occurrence/comparison,child-walk and
 result allowances and actual source coverage remain the next admission stages. Whole/coupled
 verification remains deferred to the existing task owners.
+
+## Admit complete direct consumer and request populations
+
+`DraftingProgramSemanticInputs::admit_consumer_population` takes explicit
+`DraftingProgramSemanticPopulationLimits`. It first runs the complete fresh content producer above,
+then streams every original Pocket/Closure field,ordered semantic operation field and native
+semantic field from the exact held owners. All raw selection rows participate,including invalid
+or unused coordinates. No count,shape or previous demand supplied by a caller can replace them.
+
+The derived `DraftingProgramSemanticPopulationShape` reports each of those three populations,the
+raw row count R and their complete occurrence sum O. Checked arithmetic derives a conservative
+2 × O × R fixed-key comparison bound for coverage in both directions,and O + R direct association
+and row-use slots. These counts represent logical records/comparisons. They are not string-byte
+work,allocator capacity,child factory walks,nested geometry associations or final source buffers.
+
+All count/addition/multiplication checks finish before quota checks. Content precedes arithmetic;
+occurrence quota precedes selection comparisons,then association records. Every allowance is
+explicit and has no Default. An empty direct cohort can select zero direct work. This factory
+counts and checks bounds without matching a row,reserving result vectors,querying a source/member
+or reading a value. Its required provider resource walk remains the sole provider callback.
+
+```rust
+use sc_core::{construction::*,design::*};
+fn count_original_consumers<H:DesignReferenceHost+DesignResourceSource,
+    S:DraftingInitialInputProvider<H>+DraftingGarmentProvider<H>+?Sized>(
+    inputs:&DraftingProgramSemanticInputs<'_, '_, '_, '_, '_, '_, '_, '_, '_, '_,H,S>,
+    limits:&DraftingProgramSemanticPopulationLimits)
+    ->Result<DraftingProgramSemanticPopulationShape,String> {
+    let proof=inputs.admit_consumer_population(limits).map_err(|e|e.to_string())?;
+    assert!(std::ptr::eq(proof.inputs(),inputs));
+    Ok(proof.shape())
+}
+```
+
+`AdmittedDraftingProgramSemanticPopulation` borrows the exact original joined owner and selected
+policy,with complete fresh demand and complete shape. Its generic owner parameter is that actual
+owner type;it supplies no public constructor,field replacement or lifetime escape. The error also
+retains the original owner/policy and first typed refusal. It exposes demand only after the entire
+content stage passed,and shape only after all counting/arithmetic passed. Failed quotas expose no
+accepted prefix. Diagnostic formatting omits authored source and pin text;resource causes keep
+their original field/location and error chain. Only a refused diagnostic is boxed.
+
+The focused fixture has five original Pocket fields,one raw native target request and two raw
+selection rows. O is6,2 × O × R is24,and direct association slots are8. Exact and each short quota
+preserve original owners,stage metadata and one provider resource walk. A short unused pin refuses
+before even zero direct-work quotas. The native target is still unbound;counting it approves no
+member. Separate integer boundary checks cover zero products and overflow. API/compiler guards
+cover policy defaults,private proof replacement and owner lifetimes.
+
+Finite aggregate child-work admission,actual key coverage,authentic native target-internal needs,
+remaining geometry/result bounds and whole/coupled verification remain separate task stages.
+This direct population proof cannot stand in for those later grants.

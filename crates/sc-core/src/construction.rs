@@ -101,11 +101,11 @@ pub use program::DraftingProgramNativeSemanticUse;
 pub use program::{
     AdmittedDraftingProgramGeometryWork, AdmittedDraftingProgramInputs,
     AdmittedDraftingProgramNameWork, AdmittedDraftingProgramOrderWork,
-    BoundDraftingProgramCanonicalInputs, BoundDraftingProgramGeometry,
-    BoundDraftingProgramInitials, BoundDraftingProgramOutputRoles, CheckedDraftingProgramOrder,
-    CheckedDraftingProgramSources, DraftingGeometryNameSource, DraftingGeometryStepRequest,
-    DraftingInitialBinding, DraftingInitialBindingIssue, DraftingInitialError,
-    DraftingInitialRefusal, DraftingOutputName, DraftingOutputPosition,
+    AdmittedDraftingProgramSemanticPopulation, BoundDraftingProgramCanonicalInputs,
+    BoundDraftingProgramGeometry, BoundDraftingProgramInitials, BoundDraftingProgramOutputRoles,
+    CheckedDraftingProgramOrder, CheckedDraftingProgramSources, DraftingGeometryNameSource,
+    DraftingGeometryStepRequest, DraftingInitialBinding, DraftingInitialBindingIssue,
+    DraftingInitialError, DraftingInitialRefusal, DraftingOutputName, DraftingOutputPosition,
     DraftingOutputPositionError, DraftingOutputPositionRefusal, DraftingOutputRoleBindingIssue,
     DraftingOutputRoleError, DraftingOutputRoleMismatch, DraftingOutputRoleRefusal,
     DraftingProgramAdmissionError, DraftingProgramAdmissionRefusal,
@@ -130,9 +130,12 @@ pub use program::{
     DraftingProgramOrderRefusal, DraftingProgramOrderShape, DraftingProgramOrderStep,
     DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal, DraftingProgramOutputPositions,
     DraftingProgramPlannedGeometryIssue, DraftingProgramSemanticInputs,
-    DraftingProgramSemanticOwnerError, DraftingProgramSemanticOwnerIssue, DraftingProgramShape,
-    DraftingProgramSourceCheckError, DraftingProgramStep, DraftingProgramStepKind,
-    DraftingProgramStepView, NormalizedDraftingOperation, NormalizedDraftingProgram,
+    DraftingProgramSemanticOwnerError, DraftingProgramSemanticOwnerIssue,
+    DraftingProgramSemanticPopulationError, DraftingProgramSemanticPopulationLimits,
+    DraftingProgramSemanticPopulationRefusal, DraftingProgramSemanticPopulationShape,
+    DraftingProgramShape, DraftingProgramSourceCheckError, DraftingProgramStep,
+    DraftingProgramStepKind, DraftingProgramStepView, NormalizedDraftingOperation,
+    NormalizedDraftingProgram,
 };
 pub use program::{DraftingProgramSemanticUse, DraftingSemanticField};
 pub use semantic_selection::{

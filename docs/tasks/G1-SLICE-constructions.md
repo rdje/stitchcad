@@ -930,5 +930,17 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] NO REGRESSION:cargo test -p sc-core --doc semantic_owners::resources →1 pass;--doc program::normalized::resources →2 pass,rc=0 each. cargo fmt -p sc-core -- --check and cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings pass,rc=0. Existing full producer demand and genuine source loans remain exact;whole .5f.2.check/.verify deferred.
   - [x] LOCKSTEP:MEM/index/DEV/ledger and semantic/checked-recipe book explain exact content order,record-only Root/provider boundary and remaining prospective admission. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:the actual resource/API/book contract is canonical. Commit:STITCHCAD-G1-0912.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.bounds.admit`
-  Status: `pending`
+  Status: `in_progress`
   Goal:after fresh whole content,derive checked aggregate original occurrence,selection-comparison and result-record bounds;admit an explicit finite aggregate child-walk/matching policy before queries or reservation. Derive it against the existing child resource contracts,retain exact owners/policy/first causes and grant no actual source/coverage acceptance.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.bounds.admit.population`
+  Status: `done`
+  Goal:after fresh whole content,count actual garment/semantic/native occurrences and all original request rows;check complete O,R,2OR and O+R association-slot arithmetic/quotas before coverage or reservation. Retain exact original owner/policy/first causes;grant no child-work,source or nested-geometry allowance.
+  - [x] ROOT CAUSE:rg -n 'fn shape|pub fn admit_consumer_population' semantic_population.rs →checked derivation264/factory322,rc=0. The existing original garment/semantic/native streams plus immutable raw rows supply actual populations;whole content must pass before these counts or direct key work.
+  - [x] FIX:private generic owner loan retains exact joined inputs/policy;fresh content,checked O/2OR/O+R,then occurrence/comparison/association quotas. No child/source/nested-geometry grant,coverage scan or result vector. Errors preserve only complete stage metadata and the original first cause.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract exact_semantic_owners →1 pass,rc=0;actual5/0/1 fields and2 rows derive6/24/8. Exact/short quotas,content-before-zero-quotas,raw invalid coordinates,source loans and one provider walk pass.
+  - [x] NO REGRESSION:cargo test -p sc-core --lib semantic_population_checked_arithmetic →1 pass;--doc semantic_population →4 pass,rc=0 each. cargo fmt -p sc-core -- --check and scoped lib/test strict Clippy pass,rc=0. Zero products/overflow and private/default/lifetime/API guards pass;whole .5f.2.check/.verify deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book reflect direct counts and remaining finite child-work admission. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:API/book owns this local contract. Commit:STITCHCAD-G1-0913.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.bounds.admit.children`
+  Status: `pending`
+  Goal:derive explicit finite aggregate child-pass/content/matching/result envelopes from fresh original demand and existing child resource contracts;distinguish selected capacity from actual source acceptance. Complete arithmetic/quotas precede child work,reservation or queries;retain exact owner/policy/first cause and no accepted prefix.
