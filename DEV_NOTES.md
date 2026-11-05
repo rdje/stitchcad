@@ -2,6 +2,22 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — bounded placement reference implementation contract
+
+0962 derives the next source-bound stage from existing bounded point/coverage producers and actual
+ownership consumers. The book records complete query,retained-portion,structural resolver-visit
+and ownership-scan bounds,checked before queries or derived allocations. An allocation-free
+greedy union check prevents endpoint-only acceptance of missing interior material. The original
+source/member/work owners supply the notion,Piece and ledger;no replacement parent is accepted.
+One-record and complete-class implementation/checks remain pending under explicit child owners.
+
+No Rust command was started:OS-visible host census reports21G used/2078M unused on24GiB,so the
+director RAM policy defers compilation. Director will free memory and confirm a quiet window;
+recheck<=80% before starting one worker. Planning changes receive structural/document checks and
+mandatory commit gates only. Whole0960 acceptance moves byte-exact to its existing evidence sibling.
+README/LIVE unchanged,G1still6/18 In Progress;no new runtime verification or feature closure.
+Promotion declined:existing bounded resolver,original-source and finite cursor contracts apply.
+
 ## _(2026-11-05 UTC)_ — complete original Closure placement source joins
 
 0960 borrows disjoint original operation/input/cursor and stable complete placement-work fields.

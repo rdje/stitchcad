@@ -937,3 +937,48 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
     policy or resolver integration was activated. Native/cohort/.check/.verify remain pending.
   - [x] LOCKSTEP:MEMORY/index/changelog save the pause;README/LIVE/book/DEV reviewed unchanged,
     G1still6/18 In Progress. No new technical lesson or product behavior. Commit:STITCHCAD-G1-0961.
+
+## Completed original Closure placement sources0960
+
+  - [x] ROOT CAUSE / ISSUE:git grep -n bind_closure_placement_sources 4eaf2638 -- crates/sc-core →empty,rc=1. Stable work had no complete source continuation. Initial strict library Clippy found an unused copied continuation;removed without a waiver.
+  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract closure_placement_sources_keep →test result:ok. 1 passed,rc=0;ten cases retain original imports/work/roles,N0,repeats,shortage and late typed causes/no prefix/refund.
+  - [x] NO REGRESSION / LOCKSTEP:the same target component_binding:: →4 original import/Mirror/Join guards passed;--doc BoundDraftingProgramClosurePlacementSources →3 passed;strict Clippy --lib/--test drafting_context_binding_contract →Finished;fmt --check/git diff --check/book build pass,all rc=0.
+    Book/journals/LIVE/resume align,G1still6/18 In Progress;README unchanged. Closed0959 owner/proof moved whole to evidence;fixed bounds unchanged. Aggregate recipe/native/cohort,current references and whole .check/.verify remain pending.
+  promotion: declined (existing original component-source and finite cursor contracts).
+  Commit:STITCHCAD-G1-0960.
+
+## Bounded placement reference contract0962
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.plan`
+  Status: `done`
+  Goal:derive complete bounded current-reference execution/retention from actual point/interval
+  producers before implementation;preserve original source parents and first causes.
+  Acceptance:book protocol states query/retention arithmetic,ownership algorithm,admission/refusal
+  order and focused falsification cases;actual runtime acceptance explicitly remains pending.
+  - [x] SOURCE CONTRACT:actual UniquePoint/RangeCoverage admission,creation scans,point steps and
+    interval ownership consumers inspected;book records Q/R/T/W/M and original-source refusal order.
+    git diff --check →empty,rc=0. This is a plan;no new runtime proof is claimed.
+  - [x] PRESERVATION:whole0960 acceptance moved without editing its bytes into this evidence
+    sibling before construction growth. task_source_contract.py →3 tests OK,rc=0;fixed caps unchanged.
+  - [x] LOCKSTEP:book/DEV/changelog/MEMORY/index align;README/LIVE reviewed unchanged,G1still6/18
+    In Progress. README/claim neutral copies match the read-only sources;containment source delta
+    is its project-owned unbounded-book exception,already covered by our director ruling.
+  promotion: declined (existing bounded point/range and original-source integration contracts).
+  Commit:STITCHCAD-G1-0962.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.record`
+  Status: `blocked`
+  Goal:implement one original source-bound notion current-reference view using the0962 protocol;
+  explicit fresh resources/query/retention/ownership quotas,raw bounded point/range causes and G2 deferral.
+  Blocker:2026-11-05 OS-visible top reports21G used/2078M unused on24GiB host;Rust work deferred
+  under director RAM policy. No owned memory-intensive job started. Director will free memory and
+  confirm readiness;then recheck usage<=80% before single-worker focused Rust work,monitor at86%.
+  Focused checks:legacy-consumer parity on curated intact/split/reverse/merge,choices/offset gaps,
+  deleted interior/foreign ownership,original loans and complete quota/arithmetic/refusal priority.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.cohort`
+  Status: `pending`
+  Goal:compose every original source record/role after.record;complete result/child workspace
+  admission,N+1 atomic cursor passes,N0 idle,late first causes/no accepted prefix or refund.
+  Deferred verification:actual native-family/semantic cohort plus whole.5f.2.check/.verify remain
+  with their existing owners;this class does not claim those milestones.

@@ -983,13 +983,13 @@ Completed original placement-work owner/proof: [the evidence sibling](G1-SLICE-e
   and first typed raw source causes;no accepted prefix or refunded work.
   Focused actual imports,repeated/multiple roles,N0,atomic shortage,late resources/provider/Piece/
   frame/snapshot causes;existing Mirror/Join source association guards remain required.
-  - [x] ROOT CAUSE / ISSUE:git grep -n bind_closure_placement_sources 4eaf2638 -- crates/sc-core →empty,rc=1. Stable work had no complete source continuation. Initial strict library Clippy found an unused copied continuation;removed without a waiver.
-  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract closure_placement_sources_keep →test result:ok. 1 passed,rc=0;ten cases retain original imports/work/roles,N0,repeats,shortage and late typed causes/no prefix/refund.
-  - [x] NO REGRESSION / LOCKSTEP:the same target component_binding:: →4 original import/Mirror/Join guards passed;--doc BoundDraftingProgramClosurePlacementSources →3 passed;strict Clippy --lib/--test drafting_context_binding_contract →Finished;fmt --check/git diff --check/book build pass,all rc=0.
-    Book/journals/LIVE/resume align,G1still6/18 In Progress;README unchanged. Closed0959 owner/proof moved whole to evidence;fixed bounds unchanged. Aggregate recipe/native/cohort,current references and whole .check/.verify remain pending.
-  promotion: declined (existing original component-source and finite cursor contracts).
-  Commit:STITCHCAD-G1-0960.
+  Acceptance:whole original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-original-closure-placement-sources0960).
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bind current original placement anchor/full direction under explicit complete resolver-work
   bounds after member/source joins;retain original topology/repair causes and G2 physical deferral.
+  Children: `.plan` (bounded execution/retention contract),`.record` (one original source-bound
+  placement),`.cohort` (complete source class and unique cursor);native/cohort/.check/.verify stay pending.
+
+Implementation plan/child owners: [the evidence sibling](G1-SLICE-evidence.md#bounded-placement-reference-contract0962).

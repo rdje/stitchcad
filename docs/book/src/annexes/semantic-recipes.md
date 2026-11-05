@@ -3930,3 +3930,78 @@ and Piece/frame/snapshot mismatches. Existing original import/Mirror/Join child 
 remain passing. Complete aggregate recipe/native cohort proof, bounded current anchor/full-
 direction references and whole `.5f.2.check`/`.verify` stay deferred. No value, physical placement,
 positive hole length or geometric truth is produced by this source association.
+
+## Planned bounded Closure placement references
+
+This is the execution contract for the next implementation, not an available validation API.
+The source stage above currently stops before anchor or full-direction resolution. The owner is
+`G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references`.
+
+The first implementation slice binds one original source record. It must obtain the canonical
+notion, current Piece, ledger and containing Root through that record's existing private member,
+work and source associations. A caller cannot substitute a copied notion, another Piece or a
+different ledger. Fresh complete garment/Root/provider charging precedes reference work; the
+earlier member and source admissions grant no new credit. Existing copy, source, frame and
+snapshot proofs remain original parent loans. Hardware geometry remains deferred to G2.
+
+Use `IdentityLedger::resolve_unique_point` for the held anchor and both direction endpoints.
+Use `resolve_range_coverage` for the complete positive direction interval and every held Piece
+edge, including boundary, holes and construction lines. These bounded producers avoid allocating
+endpoint choice trees. A split choice stops at its actual first split; it is not a final current
+branch set. Unknown sources, journal limits, offset ambiguity/gaps, deleted interior portions and
+numeric causes remain their original typed outcomes. No registration choice or repair is applied.
+
+Select complete journal/nested-item limits and peak range portions explicitly, with no default.
+Also select complete query, inspection and retained-item allowances. After fresh input charging,
+determine H, the number of held Piece edges. P is the selected peak portion limit; J and K are
+the selected complete journal-entry and nested-item maxima. Admit checked arithmetic before
+resolver calls or derived collections:
+
+| Bound | Meaning |
+| --- | --- |
+| `Q = H + 4` | H Piece-edge interval queries, one direction interval, anchor and two endpoints |
+| `R = H * P` | Maximum resolved Piece ownership intervals retained in a local cache |
+| `T = R + 2*P + 3` | Ownership cache, retained direction, one resolver's transient portions and three point results |
+| `W = 8*Q*(J+K+1)*(P+1)` | Conservative journal/nested-item and portion-queue visits across all resolver calls |
+| `M = P*R*(R+1) + 3*R` | Conservative interval/point ownership inspections for the algorithm below |
+
+Overflow and allowance shortage refuse before any topology query. Each of the Q resolver calls
+also admits its complete journal and nested collections; each interval fold checks its own peak
+P before appending. Thus query count, per-query input, transient portions and consumer ownership
+work are all finite. W covers repeated admission and known-source scans, per-entry queue reversal,
+mapping/emission and offset-fragment scans; it counts structural visits, not arithmetic instructions.
+These are logical population/inspection bounds, not CPU, RSS, allocator capacity or physical geometry
+certificates. The complete journal includes unrelated edits.
+
+For ownership, cache only resolved positive portions of each complete held Piece-edge coverage.
+Unresolved Piece portions confer no ownership; they do not erase surviving disjoint material.
+Check the uniquely resolved anchor and direction endpoints against those intervals. Require full
+direction coverage and require every resulting positive interval to be covered by their union.
+An allocation-free union scan starts at the requested lower bound, scans all R cached intervals
+for the farthest reachable upper bound, and repeats only after strict progress. At most R advances
+and one unsuccessful scan are possible. Applying that to at most P direction portions, plus three
+point scans, gives M above. Endpoint checks alone cannot accept a lost interior interval.
+
+Retain complete direction coverage and fixed original point outcomes as diagnostic witnesses,
+including on a later ownership refusal. A successful view borrows the exact source/member/work
+parents; it cannot be cloned, forged or outlive them. The local ownership cache may drop after
+validation. Do not expose an accepted prefix when a later point, interval or ownership check fails.
+Refusal order must be explicit and tested: fresh resources, checked bound/policy admission,
+whole journal admission, original anchor, direction endpoints, full direction, then owned material.
+Within an actual producer call, preserve that producer's first typed cause.
+
+The second implementation slice composes all N original source records in their current order,
+including repeated targets and distinct First/Second roles. Atomically reserve N+1 finite cursor
+passes before aggregate charging, complete result reservation or child validation. N0 remains idle.
+Admit whole result retention `N*(P+3)` and simultaneous child workspace before processing a prefix;
+prior owned parent storage remains charged by its existing contracts. A late refusal preserves the
+entire original class, original work index and first child cause; earlier private results drop and
+spent work is never refunded. No invented programme position or source-body clone is introduced.
+
+Focused checks must distinguish intact, split, reversed and merged references from anchor choices,
+offset ambiguity, deleted interior material and foreign ownership. Compare curated admissible
+outcomes with the existing public current-validation API as an independent consumer; exercise
+exact limit boundaries, arithmetic overflow and quota priority separately. Complete-class checks
+must cover late refusal, original loans/roles, repeated targets, N0, whole shortage and no refund.
+Native-family/semantic cohort composition and whole `.5f.2.check`/`.verify` remain separate pending
+verification tasks. Planning and existing source checks certify none of this unimplemented work.

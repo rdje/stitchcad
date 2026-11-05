@@ -3,6 +3,13 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0962 — specify bounded placement reference execution
+
+Current-reference planning now names complete query,retention,resolver-visit and ownership-work
+bounds,original source parents and first-cause order. One-record and complete-class implementation
+remain pending. Focused task-history/document checks pass;no new Rust/runtime proof claimed.
+Rust work awaits director-confirmed RAM headroom;no memory-intensive job started.
+
 ## STITCHCAD-G1-0961 — save director-requested clean pause
 
 PNT pauses after committed source joins d539e866. OS-visible handoff census passes;brief empty
