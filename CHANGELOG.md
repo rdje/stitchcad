@@ -3,6 +3,15 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0920 — attach numeric members to fresh original Root sources
+
+Actual numeric member views now retain the fresh original source scope and exact Root inventory.
+Shared typed lookup errors preserve original witnesses in a private boxed refusal;success allocates
+no workspace. Four focused fixtures,six compiler/API guards,format and scoped strict Clippy pass.
+Required retention1083 preserves4 Git intervals,all191 task IDs/statuses and46 heading routes with
+independent source/hash/public-byte checks. Aggregate inputs/Derived order and whole verification
+remain pending;G1still6/18 In Progress unchanged.
+
 ## STITCHCAD-G1-0919 — bind genuine original numeric targets
 
 Canonical numeric targets now bind directly to actual inventory/member/position without invented

@@ -194,9 +194,9 @@ pub use component::{
     DraftingImportedComponentSource,
 };
 pub use design_semantic::{
-    DraftingDesignLogicalSource, DraftingDesignOperationSource, DraftingDesignSemanticLookupCause,
-    DraftingDesignSemanticLookupError, DraftingDesignSemanticRequest, DraftingDesignSemanticScope,
-    DraftingDesignSemanticScopeError,
+    DraftingDesignLogicalSource, DraftingDesignNumericSource, DraftingDesignOperationSource,
+    DraftingDesignSemanticLookupCause, DraftingDesignSemanticLookupError,
+    DraftingDesignSemanticRequest, DraftingDesignSemanticScope, DraftingDesignSemanticScopeError,
 };
 pub use garment::{
     AdmittedDraftingGarmentSource, DraftingClosureSizeRole, DraftingGarmentProvider,

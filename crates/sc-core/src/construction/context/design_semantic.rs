@@ -8,12 +8,12 @@ use crate::{
     },
     ontology::EntityId,
     recipe::SemanticOperationKind,
-    value::LogicalInputTarget,
+    value::{CanonicalInputTarget, LogicalInputTarget},
 };
 use core::fmt;
 
 /// Actual original context,selected complete content policy and first resource refusal.
-/// Only refused content diagnostics allocate; no member/result collection is constructed.
+/// Only refused diagnostics allocate; no member/result collection is constructed.
 pub struct DraftingDesignSemanticScopeError<
     'a,
     H: DesignMetadataHost,
@@ -69,7 +69,7 @@ impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> std::error::Er
     }
 }
 
-/// Fresh actual Root/provider content scope for individual original logical/operation member loans.
+/// Fresh actual Root/provider content scope for individual original numeric/logical/operation loans.
 /// It retains the existing immutable context's Root/snapshot association; it performs no new
 /// currentness query. This is not complete garment content,Profile/rule binding,aggregate lookup
 /// work,semantic dependency order,evidence truth,value or whole-program/execution acceptance.
@@ -106,8 +106,50 @@ impl<'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
     pub const fn demand(&self) -> DesignResourceDemand {
         self.demand
     }
+    /// Loan the actual Root numeric target's original representation,kind and member position.
+    /// Complete fresh Root/provider content already belongs to this exact scope. Success allocates
+    /// no workspace;only refused diagnostics are boxed. No provider/value call or formula metadata.
+    /// The containing checker separately bounds every lookup before using this primitive;
+    /// Unknown/Derived stay unchanged and no supplier/order/source truth is accepted.
+    /// ```
+    /// use sc_core::{construction::*,design::DesignMetadataHost,value::*};
+    /// fn member_position<H:DesignMetadataHost,S:DraftingContextSource<H>+?Sized>(
+    ///     scope:&DraftingDesignSemanticScope<'_,H,S>,target:CanonicalInputTarget)
+    ///     ->Result<CanonicalInputPosition,String> {
+    ///     let member=scope.numeric_source(target).map_err(|e|e.to_string())?;
+    ///     assert!(std::ptr::eq(member.scope(),scope));
+    ///     Ok(member.binding().position())
+    /// }
+    /// ```
+    /// # Errors
+    /// Original request,exact source scope and actual lending family/missing/kind cause.
+    pub fn numeric_source(
+        &self,
+        target: CanonicalInputTarget,
+    ) -> Result<
+        DraftingDesignNumericSource<'_, 'a, H, S>,
+        DraftingDesignSemanticLookupError<'_, 'a, H, S>,
+    > {
+        let binding = self
+            .context
+            .scope()
+            .root()
+            .inputs()
+            .resolve_numeric(target)
+            .map_err(|cause| {
+                DraftingDesignSemanticLookupError::new(
+                    self,
+                    DraftingDesignSemanticRequest::Numeric(target),
+                    DraftingDesignSemanticLookupCause::Numeric(cause),
+                )
+            })?;
+        Ok(DraftingDesignNumericSource {
+            scope: self,
+            binding,
+        })
+    }
     /// Loan the actual Root logical member and its original domain/state/provenance.
-    /// This performs one allocation-free inventory lookup; it invokes no provider or value query.
+    /// Success allocates no workspace;only refused diagnostics are boxed. No provider/value query.
     /// A containing complete checker must separately bound all its requests/comparisons before
     /// using this primitive. Unknown/Derived remain unchanged and grant no selected result.
     /// # Errors
@@ -126,10 +168,12 @@ impl<'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
             .inputs()
             .logicals()
             .resolve(target.declaration, target.kind)
-            .map_err(|cause| DraftingDesignSemanticLookupError {
-                scope: self,
-                request: DraftingDesignSemanticRequest::Logical(target),
-                cause: DraftingDesignSemanticLookupCause::Logical(cause),
+            .map_err(|cause| {
+                DraftingDesignSemanticLookupError::new(
+                    self,
+                    DraftingDesignSemanticRequest::Logical(target),
+                    DraftingDesignSemanticLookupCause::Logical(cause),
+                )
             })?;
         Ok(DraftingDesignLogicalSource {
             scope: self,
@@ -138,7 +182,8 @@ impl<'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
     }
     /// Loan the actual Root semantic member and original semantic recipe position.
     /// This neither interprets rule/policy/input IDs nor invents a mixed/scalar/native position.
-    /// No provider,currentness,value,rule lookup or result allocation occurs.
+    /// No provider,currentness,value,rule lookup or result collection occurs. Only refused
+    /// diagnostics are boxed;successful member loans allocate no workspace.
     /// # Errors
     /// Original requested ID/kind and actual missing/kind cause under this exact source scope.
     pub fn operation_source(
@@ -155,10 +200,12 @@ impl<'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
             .root()
             .semantic_recipe()
             .resolve(operation, kind)
-            .map_err(|cause| DraftingDesignSemanticLookupError {
-                scope: self,
-                request: DraftingDesignSemanticRequest::Operation { operation, kind },
-                cause: DraftingDesignSemanticLookupCause::Operation(cause),
+            .map_err(|cause| {
+                DraftingDesignSemanticLookupError::new(
+                    self,
+                    DraftingDesignSemanticRequest::Operation { operation, kind },
+                    DraftingDesignSemanticLookupCause::Operation(cause),
+                )
             })?;
         Ok(DraftingDesignOperationSource {
             scope: self,
@@ -251,4 +298,6 @@ pub use lookup::{
     DraftingDesignSemanticLookupCause, DraftingDesignSemanticLookupError,
     DraftingDesignSemanticRequest,
 };
-pub use members::{DraftingDesignLogicalSource, DraftingDesignOperationSource};
+pub use members::{
+    DraftingDesignLogicalSource, DraftingDesignNumericSource, DraftingDesignOperationSource,
+};

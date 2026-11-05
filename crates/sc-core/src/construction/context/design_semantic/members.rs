@@ -3,9 +3,75 @@ use super::{DraftingContextSource, DraftingDesignSemanticScope};
 use crate::{
     design::DesignMetadataHost,
     recipe::{SemanticOperation, SemanticOperationBinding},
-    value::{LogicalInputBinding, LogicalInputDeclaration},
+    value::{
+        CanonicalNumericInputBinding, CanonicalNumericInputMember, LogicalInputBinding,
+        LogicalInputDeclaration,
+    },
 };
 use core::fmt;
+
+/// Actual original numeric member pinned to the exact freshly admitted Root/provider scope.
+/// Original representation,kind,state and provenance stay in their canonical owner. This lends
+/// no value,source truth,Derived supplier/order or complete aggregate semantic acceptance.
+/// ```compile_fail
+/// use sc_core::{construction::*,design::DesignMetadataHost,value::CanonicalInputTarget};
+/// fn escape<'s,'a,H:DesignMetadataHost,S:DraftingContextSource<H>>(
+///     scope:&'s DraftingDesignSemanticScope<'a,H,S>,target:CanonicalInputTarget)
+///     ->DraftingDesignNumericSource<'static,'a,H,S> {scope.numeric_source(target).unwrap()}
+/// ```
+/// ```compile_fail,E0616
+/// use sc_core::{construction::*,design::DesignMetadataHost};
+/// fn alter<H:DesignMetadataHost,S:DraftingContextSource<H>>(p:&mut DraftingDesignNumericSource<'_,'_,H,S>) {p.scope=todo!();}
+/// ```
+pub struct DraftingDesignNumericSource<
+    's,
+    'a,
+    H: DesignMetadataHost,
+    S: DraftingContextSource<H> + ?Sized,
+> {
+    pub(super) scope: &'s DraftingDesignSemanticScope<'a, H, S>,
+    pub(super) binding: CanonicalNumericInputBinding<'a>,
+}
+impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> Copy
+    for DraftingDesignNumericSource<'_, '_, H, S>
+{
+}
+impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> Clone
+    for DraftingDesignNumericSource<'_, '_, H, S>
+{
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl<'s, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
+    DraftingDesignNumericSource<'s, 'a, H, S>
+{
+    /// Exact original fresh source scope and its Root/provider/frame/snapshot/policy loans.
+    #[must_use]
+    pub const fn scope(self) -> &'s DraftingDesignSemanticScope<'a, H, S> {
+        self.scope
+    }
+    /// Exact original canonical inventory,target,kind and actual authored member position.
+    #[must_use]
+    pub const fn binding(self) -> CanonicalNumericInputBinding<'a> {
+        self.binding
+    }
+    /// Actual original numeric declaration view,without state or numeric-value copying.
+    #[must_use]
+    pub const fn member(self) -> CanonicalNumericInputMember<'a> {
+        self.binding.member()
+    }
+}
+impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> fmt::Debug
+    for DraftingDesignNumericSource<'_, '_, H, S>
+{
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("DraftingDesignNumericSource")
+            .field("target", &self.binding.target())
+            .field("position", &self.binding.position())
+            .finish_non_exhaustive()
+    }
+}
 
 /// Actual original kind-checked logical member pinned to its complete fresh Root/source scope.
 /// Domain/state/provenance stay in the canonical owner;no selected value or evidence is created.

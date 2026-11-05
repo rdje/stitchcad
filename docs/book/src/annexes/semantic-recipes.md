@@ -793,12 +793,32 @@ fn logical_domain_size<'a,H:DesignResourceSource,S:DraftingContextSource<H>+?Siz
 }
 ```
 
+`numeric_source(CanonicalInputTarget)` now loans the actual Root numeric member through the
+same freshly admitted scope. `DraftingDesignNumericSource::scope()` retains that exact parent;
+`binding()` retains the actual Root canonical inventory,target representation,exact scalar kind
+and original member position. `member()` lends the original Length/Scalar declaration. A dedicated
+length never becomes a general Length scalar. Unknown/Derived remain original states,with no
+value read,source query,formula metadata or supplier/order acceptance. Copying the view copies
+only original loans and imposes no Clone/Debug requirement on opaque host/provider payloads.
+
+```rust
+use sc_core::{construction::*,design::DesignMetadataHost,value::*};
+fn original_numeric_position<H:DesignMetadataHost,S:DraftingContextSource<H>+?Sized>(
+    scope:&DraftingDesignSemanticScope<'_,H,S>,target:CanonicalInputTarget)
+    ->Result<CanonicalInputPosition,String> {
+    let source=scope.numeric_source(target).map_err(|e|e.to_string())?;
+    assert!(std::ptr::eq(source.scope(),scope));
+    assert!(std::ptr::eq(source.binding().inputs(),scope.context().scope().root().inputs()));
+    Ok(source.binding().position())
+}
+```
+
 `operation_source(id,SemanticOperationKind)` similarly loans the actual Root semantic recipe
 member and its original zero-based semantic index. `DraftingDesignOperationSource::operation()`
 returns that exact immutable body. Its index is not a scalar ordinal,native family or mixed
 position. Neither this lookup nor a logical lookup binds rule/policy existence/signatures,
 validates their mutual Derived/output relationship or checks whole semantic dependency order.
-Both member views copy only loans and fixed joins;host/provider payloads need neither Clone nor
+All three member views copy only loans and fixed joins;host/provider payloads need neither Clone nor
 Debug. Views cannot outlive their actual source-scope loan. Debug omits domains,roles and opaque
 source payloads.
 
@@ -816,10 +836,13 @@ fn original_operation_index<H:DesignMetadataHost,S:DraftingContextSource<H>+?Siz
 
 Admission refusal retains actual `context()`,selected `limits()` and the original first resource
 `cause()`;its standard error chain retains that concrete resource cause. Lookup refusal instead
-retains exact `scope()`,original typed `request()` and lending `cause()`:Logical or Operation.
-Missing preserves requested ID/kind;Kind preserves expected kind and the actual original member
+retains exact `scope()`,original typed `request()` and lending `cause()`:Numeric,Logical or Operation.
+Numeric retains the actual canonical target/family/kind error,including wrong-family positions and
+actual scalar loans. Missing preserves requested ID/kind;Kind preserves expected kind and the actual original member
 loan. Those lending causes remain available through typed access rather than a `'static` error
-chain. No same-ID foreign owner or alternate family substitutes for the actual Root member.
+chain. Lookup errors box only their private failure record,retaining all original witnesses;
+successful member loans allocate no workspace. No same-ID foreign owner or alternate family
+substitutes for the actual Root member.
 
 For the Root8/32/3 fixture above,a provider with three cache entries,X UTF-8 label bytes and a
 revision7 needs a combined11/(32+X)/6. Entry limit7 refuses Root Logical80 inputs1 after7 entries,
@@ -2408,6 +2431,13 @@ garment,native and final cohort binders remain the next implementation stages.
 Original numeric policy/logical-operation fields now have direct inventory membership through
 `CanonicalInputs::resolve_numeric`,documented in the logical-input chapter. It preserves dedicated
 length versus general scalar representation,exact scalar kind and original member/index without
-manufactured formula metadata or value reads. This is actual supplied-inventory membership only;
-attaching it to the fresh original Root source scope and composing semantic supplier/order proof
-remain subsequent logical-source stages.
+manufactured formula metadata or value reads. The existing Design source scope now attaches that
+member to its exact freshly admitted Root/context through `numeric_source`,described above.
+Aggregate semantic input/supplier/order composition remains the subsequent logical-source stage.
+
+The focused fresh numeric-source fixtures preserve actual Root/scope/member pointers and unchanged
+Unknown states against equal-data foreign Roots. Missing/wrong-family/logical targets and scalar
+kind refusals retain exact scope,original request and nested lending cause without callbacks.
+Existing fresh-content,ignored-sink and logical/operation refusal cases also pass. Scope lifetime,
+private fields and generic numeric API guards pass;the source view grants no aggregate matching
+budget,Profile numeric member or complete semantic cohort.

@@ -34,6 +34,9 @@ the live tree keeps every original identity/status beside its retrieval pointer.
 Part1082 retains whole completed0916–0917 task intervals and complete journals frome9e2e9fd.
 Its three exact Git intervals preserve direct need/key coverage evidence before the next numeric
 source primitive. Live task identities/statuses remain beside their exact retrieval pointers.
+Part1083 retains whole completed0085 diagnostic receipts and closed0918–0919 task/journal intervals
+fromc35ecaf5. Four exact Git intervals preserve the full original evidence;all live task identities,
+statuses and historical heading routes remain. Existing closed headings now point to that record.
 
 ```bash
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1077.md
@@ -42,6 +45,7 @@ bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1079.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1080.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1081.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1082.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1083.md
 ```
 
 `HISTORY_ARCHIVE_ROOT` selects the project or a fixture below project `target/`. Destinations stay in

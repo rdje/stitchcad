@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — fresh actual Root numeric sources
+
+0920 attaches genuine numeric target membership to the existing freshly admitted actual Root/
+provider scope. The private Copy view retains exact scope,original inventory/member/position and
+unchanged states. Numeric requests/causes join existing typed logical/operation refusals without
+fabricated formula metadata,value reads,source queries or opaque Clone/Debug bounds.
+The enlarged shared inline lookup error triggered strict Clippy at128B. A private boxed failure
+retains all original scope/request/lending-cause data while successful loans stay allocation-free.
+Four focused fixtures pass after boxing,including actual/foreign Root distinction,Unknown states,
+original numeric family/kind causes,zero lookup callbacks and existing first resource/sink errors.
+Six API/private/lifetime guards,format and scoped strict Clippy pass without suppression.
+Required containment retains whole completed0085 diagnostic receipts and closed0918–0919 intervals
+plus full committed journals in1083. Four exact Git spans,independent source/hash/public bytes pass
+before compaction;all191 task IDs/statuses and46 exact heading routes survive. No old seal,cap,
+producer or protected evidence changes. No historical feature reapproval is claimed.
+Promotion declined:local source API/book and existing whole-source retention are canonical.
+README/LIVE reviewed unchanged,G1still6/18 In Progress. Root operation-input composition and
+Derived supplier/order are next;Profile/rule/family/cohort and whole verification remain pending.
+
 ## _(2026-11-05 UTC)_ — genuine original numeric target membership
 
 0919 binds original CanonicalInputTarget directly against actual immutable canonical records,

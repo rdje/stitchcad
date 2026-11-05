@@ -102,6 +102,71 @@ fn fresh_design_semantic_scope_preserves_actual_root_snapshot_members_and_author
     assert!(std::ptr::eq(copied.declaration(), original));
     let copied = operation;
     assert!(std::ptr::eq(copied.operation(), operation.operation()));
+    for target in [
+        CanonicalInputTarget::Length(id(10)),
+        CanonicalInputTarget::Scalar {
+            declaration: id(20),
+            kind: ScalarInputKind::Boolean,
+        },
+    ] {
+        let numeric = sources.numeric_source(target).map_err(|e| e.to_string())?;
+        assert!(std::ptr::eq(numeric.scope(), &sources));
+        assert!(std::ptr::eq(numeric.binding().inputs(), root.inputs()));
+        assert!(!std::ptr::eq(numeric.binding().inputs(), other.inputs()));
+        assert_eq!(numeric.binding().target(), target);
+        match numeric.member() {
+            CanonicalNumericInputMember::Length {
+                index: 0,
+                declaration,
+            } => {
+                assert!(std::ptr::eq(
+                    declaration,
+                    root.inputs().length(id(10)).ok_or("actual Root length")?
+                ));
+                assert!(!std::ptr::eq(
+                    declaration,
+                    other
+                        .inputs()
+                        .length(id(10))
+                        .ok_or("foreign same-ID length")?
+                ));
+                assert_eq!(
+                    declaration.state(),
+                    &LengthState::Unknown {
+                        observation: id(1001)
+                    }
+                );
+            }
+            CanonicalNumericInputMember::Scalar {
+                index: 0,
+                declaration,
+            } => {
+                assert!(std::ptr::eq(
+                    declaration,
+                    root.inputs().scalar(id(20)).ok_or("actual Root scalar")?
+                ));
+                assert!(!std::ptr::eq(
+                    declaration,
+                    other
+                        .inputs()
+                        .scalar(id(20))
+                        .ok_or("foreign same-ID scalar")?
+                ));
+                assert_eq!(
+                    declaration.state(),
+                    &ScalarInputState::Unknown {
+                        observation: id(1003)
+                    }
+                );
+            }
+            _ => return Err("wrong original numeric member/index".into()),
+        }
+        let copied = numeric;
+        assert!(std::ptr::eq(copied.scope(), &sources));
+        for private in ["Unknown", "option_a", "private empty"] {
+            assert!(!format!("{numeric:?}").contains(private));
+        }
+    }
     assert_eq!(source.trace.get(), 0);
     for debug in [
         format!("{logical:?}"),
@@ -139,6 +204,89 @@ fn fresh_design_semantic_scope_preserves_actual_root_snapshot_members_and_author
         .ok_or("prior first refusal")?;
     assert_eq!(sources.charge_resources(&mut meter), Err(first));
     assert_eq!(meter.finish(), Err(first));
+    Ok(())
+}
+#[test]
+fn design_numeric_sources_keep_exact_scope_target_and_original_lending_failures() -> TestResult {
+    let root = semantic_root()?;
+    let source = Source::new(&root);
+    let context = scope(&root)?
+        .bind_drafting_context(&source, limits(1000, 1000, 1000)?)
+        .map_err(|e| e.to_string())?;
+    let sources = context
+        .prepare_design_semantic_sources(limits(1000, 1000, 1000)?)
+        .map_err(|e| e.to_string())?;
+    source.trace.set(0);
+    for (case, target) in [
+        CanonicalInputTarget::Length(id(20)),
+        CanonicalInputTarget::Scalar {
+            declaration: id(10),
+            kind: ScalarInputKind::Boolean,
+        },
+        CanonicalInputTarget::Length(id(90)),
+        CanonicalInputTarget::Scalar {
+            declaration: id(20),
+            kind: ScalarInputKind::Count,
+        },
+    ]
+    .into_iter()
+    .enumerate()
+    {
+        let error = sources
+            .numeric_source(target)
+            .expect_err("original numeric source refusal");
+        assert!(std::ptr::eq(error.scope(), &sources));
+        assert_eq!(
+            error.request(),
+            DraftingDesignSemanticRequest::Numeric(target)
+        );
+        let DraftingDesignSemanticLookupCause::Numeric(cause) = error.cause() else {
+            return Err("numeric cause not retained".into());
+        };
+        assert!(std::ptr::eq(cause.inputs(), root.inputs()));
+        assert_eq!(cause.target(), target);
+        match (case, cause.refusal()) {
+            (
+                0,
+                CanonicalNumericInputRefusal::MissingLength {
+                    other: Some(CanonicalInputPosition::Scalar { index: 0 }),
+                },
+            )
+            | (
+                1,
+                CanonicalNumericInputRefusal::MissingScalar {
+                    other: Some(CanonicalInputPosition::Length { index: 0 }),
+                },
+            )
+            | (
+                2,
+                CanonicalNumericInputRefusal::MissingLength {
+                    other: Some(CanonicalInputPosition::Logical { index: 0 }),
+                },
+            ) => {}
+            (
+                3,
+                CanonicalNumericInputRefusal::ScalarKind {
+                    expected: ScalarInputKind::Count,
+                    index: 0,
+                    actual,
+                },
+            ) => {
+                assert!(std::ptr::eq(
+                    actual,
+                    root.inputs()
+                        .scalar(id(20))
+                        .ok_or("actual mismatched Root scalar")?
+                ));
+                assert_eq!(actual.kind(), ScalarInputKind::Boolean);
+            }
+            _ => return Err(format!("wrong original numeric cause: {error}").into()),
+        }
+        for private in ["option_a", "Unknown", "private empty"] {
+            assert!(!format!("{error:?} {error}").contains(private));
+        }
+    }
+    assert_eq!(source.trace.get(), 0);
     Ok(())
 }
 #[test]
