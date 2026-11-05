@@ -51,3 +51,11 @@ pub use semantic_population::{
     DraftingProgramSemanticPopulationLimits, DraftingProgramSemanticPopulationRefusal,
     DraftingProgramSemanticPopulationShape,
 };
+
+mod semantic_work;
+pub use semantic_work::{
+    AdmittedDraftingProgramSemanticWork, DraftingProgramSemanticChildContentLimits,
+    DraftingProgramSemanticWorkArithmetic, DraftingProgramSemanticWorkBudget,
+    DraftingProgramSemanticWorkError, DraftingProgramSemanticWorkLimits,
+    DraftingProgramSemanticWorkRefusal, DraftingProgramSemanticWorkShape,
+};

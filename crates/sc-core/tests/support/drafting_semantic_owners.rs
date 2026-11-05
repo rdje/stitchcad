@@ -493,5 +493,235 @@ fn exact_semantic_owners_reject_foreign_records_before_callbacks() -> TestResult
     assert!(std::error::Error::source(&error).is_some());
     assert!(!format!("{population:?}").contains("private"));
     assert_eq!(joined.selections().inputs().rows().len(), 2);
+    // Two selected passes are capacity only: the invalid raw selections are still untouched.
+    // Derive their allowance from the independent garment-plus-record fixture above.
+    let child_entries = 2 * entries as u128;
+    let child_text = 2 * text as u128;
+    let child_bits = 2 * u128::from(bits);
+    let per_pass = (entries + 8) * (entries + 8);
+    let child_matching = 2 * per_pass as u128;
+    let child_content =
+        DraftingProgramSemanticChildContentLimits::new(child_entries, child_text, child_bits);
+    let work_limits = DraftingProgramSemanticWorkLimits::new(
+        population_limits,
+        2,
+        child_content,
+        child_matching,
+        10,
+    );
+    source.walks.set(0);
+    let work = joined
+        .admit_semantic_work(&work_limits)
+        .map_err(|e| e.to_string())?;
+    assert_eq!(source.walks.get(), 1);
+    assert_eq!(source.base.trace.get(), 2);
+    assert_eq!(source.alternate.trace.get(), 2);
+    assert!(core::ptr::eq(work.inputs(), &joined));
+    assert!(core::ptr::eq(work.limits(), &work_limits));
+    assert_eq!(work.demand(), demand);
+    assert_eq!(work.population_shape(), shape);
+    let work_shape = work.shape();
+    assert_eq!(
+        (
+            work_shape.child_pass_capacity(),
+            work_shape.result_record_bound()
+        ),
+        (2, 10)
+    );
+    assert_eq!(
+        (
+            work_shape.child_collection_entry_bound(),
+            work_shape.child_text_byte_bound(),
+            work_shape.child_counter_bit_bound(),
+            work_shape.per_pass_matching_bound(),
+            work_shape.child_matching_bound()
+        ),
+        (
+            child_entries,
+            child_text,
+            child_bits,
+            per_pass,
+            child_matching
+        )
+    );
+    use DraftingProgramSemanticWorkRefusal as W;
+    for (case, entries, text, bits, matching, results) in [
+        (0, child_entries - 1, 0, 0, 0, 0),
+        (1, child_entries, child_text - 1, 0, 0, 0),
+        (2, child_entries, child_text, child_bits - 1, 0, 0),
+        (
+            3,
+            child_entries,
+            child_text,
+            child_bits,
+            child_matching - 1,
+            0,
+        ),
+        (4, child_entries, child_text, child_bits, child_matching, 9),
+    ] {
+        let limits = DraftingProgramSemanticWorkLimits::new(
+            population_limits,
+            2,
+            DraftingProgramSemanticChildContentLimits::new(entries, text, bits),
+            matching,
+            results,
+        );
+        source.walks.set(0);
+        let error = joined
+            .admit_semantic_work(&limits)
+            .expect_err("first complete child quota");
+        match (case, error.refusal()) {
+            (0, W::ChildCollectionEntries { allowed, required }) => {
+                assert_eq!((*allowed, *required), (child_entries - 1, child_entries))
+            }
+            (1, W::ChildTextBytes { allowed, required }) => {
+                assert_eq!((*allowed, *required), (child_text - 1, child_text))
+            }
+            (2, W::ChildCounterBits { allowed, required }) => {
+                assert_eq!((*allowed, *required), (child_bits - 1, child_bits))
+            }
+            (3, W::ChildMatching { allowed, required }) => {
+                assert_eq!((*allowed, *required), (child_matching - 1, child_matching))
+            }
+            (4, W::ResultRecords { allowed, required }) => {
+                assert_eq!((*allowed, *required), (9, 10))
+            }
+            _ => return Err(format!("wrong child quota: {case}: {error}").into()),
+        }
+        assert!(core::ptr::eq(error.inputs(), &joined));
+        assert!(core::ptr::eq(error.limits(), &limits));
+        assert_eq!(error.demand(), Some(demand));
+        assert_eq!(error.population_shape(), Some(shape));
+        assert_eq!(error.shape(), Some(work_shape));
+        assert_eq!(source.walks.get(), 1);
+        assert!(!format!("{error:?} {error}").contains("private"));
+    }
+    let empty_content = DraftingProgramSemanticChildContentLimits::new(0, 0, 0);
+    let content_first = DraftingProgramSemanticWorkLimits::new(too_short, 0, empty_content, 0, 0);
+    let error = joined
+        .admit_semantic_work(&content_first)
+        .expect_err("fresh content before child work");
+    let W::Population(cause) = error.refusal() else {
+        return Err("missing original content cause".into());
+    };
+    assert!(matches!(
+        cause.refusal(),
+        R::Resources(DesignResourceLimitError::Count {
+            unit: DesignResourceCount::TextBytes,
+            location: DesignResourceLocation {
+                field: "selected_profile.content_version",
+                index: Some(1),
+                ..
+            },
+            ..
+        })
+    ));
+    assert!(core::ptr::eq(cause.inputs(), &joined));
+    assert!(core::ptr::eq(cause.limits(), content_first.population()));
+    assert_eq!(error.demand(), None);
+    assert_eq!(error.population_shape(), None);
+    assert_eq!(error.shape(), None);
+    assert!(std::error::Error::source(&error).is_some());
+    let occurrence_first = DraftingProgramSemanticWorkLimits::new(
+        DraftingProgramSemanticPopulationLimits::new(policy, 5, 0, 0),
+        usize::MAX,
+        empty_content,
+        0,
+        0,
+    );
+    let error = joined
+        .admit_semantic_work(&occurrence_first)
+        .expect_err("population before child arithmetic");
+    let W::Population(cause) = error.refusal() else {
+        return Err("missing original population cause".into());
+    };
+    assert_eq!(
+        cause.refusal(),
+        R::Occurrences {
+            allowed: 5,
+            required: 6
+        }
+    );
+    assert_eq!(error.demand(), Some(demand));
+    assert_eq!(error.population_shape(), Some(shape));
+    assert_eq!(error.shape(), None);
+    let overflowing =
+        DraftingProgramSemanticWorkLimits::new(population_limits, usize::MAX, empty_content, 0, 0);
+    let error = joined
+        .admit_semantic_work(&overflowing)
+        .expect_err("checked result envelope before quotas");
+    assert!(matches!(
+        error.refusal(),
+        W::Arithmetic(DraftingProgramSemanticWorkArithmetic::ResultRecords)
+    ));
+    assert_eq!(error.demand(), Some(demand));
+    assert_eq!(error.population_shape(), Some(shape));
+    assert_eq!(error.shape(), None);
+    let no_children =
+        DraftingProgramSemanticWorkLimits::new(population_limits, 0, empty_content, 0, 8);
+    let zero = joined
+        .admit_semantic_work(&no_children)
+        .map_err(|e| e.to_string())?;
+    assert_eq!(zero.shape().child_matching_bound(), 0);
+    assert_eq!(zero.shape().result_record_bound(), 8);
+    let mut zero = zero.into_budget();
+    let error = zero
+        .reserve_child_passes(1)
+        .expect_err("zero permits no child stage");
+    assert!(matches!(
+        error.refusal(),
+        W::ChildPasses {
+            allowed: 0,
+            reserved: 0,
+            requested: 1
+        }
+    ));
+    assert_eq!((zero.remaining_passes(), zero.reserved_passes()), (0, 0));
+    // Reservations consume the unique plan without rewalking or querying any source.
+    source.walks.set(0);
+    let mut budget = work.into_budget();
+    budget.reserve_child_passes(1).map_err(|e| e.to_string())?;
+    let error = budget
+        .reserve_child_passes(2)
+        .expect_err("whole stage refuses atomically");
+    assert!(matches!(
+        error.refusal(),
+        W::ChildPasses {
+            allowed: 2,
+            reserved: 1,
+            requested: 2
+        }
+    ));
+    assert!(core::ptr::eq(error.inputs(), &joined));
+    assert!(core::ptr::eq(error.limits(), &work_limits));
+    assert_eq!(error.demand(), Some(demand));
+    assert_eq!(error.population_shape(), Some(shape));
+    assert_eq!(error.shape(), Some(work_shape));
+    assert_eq!(
+        (budget.remaining_passes(), budget.reserved_passes()),
+        (1, 1)
+    );
+    budget.reserve_child_passes(1).map_err(|e| e.to_string())?;
+    budget.reserve_child_passes(0).map_err(|e| e.to_string())?;
+    let error = budget
+        .reserve_child_passes(1)
+        .expect_err("exhausted original capacity");
+    assert!(matches!(
+        error.refusal(),
+        W::ChildPasses {
+            allowed: 2,
+            reserved: 2,
+            requested: 1
+        }
+    ));
+    assert_eq!(
+        (budget.remaining_passes(), budget.reserved_passes()),
+        (0, 2)
+    );
+    assert!(core::ptr::eq(budget.work().inputs(), &joined));
+    assert_eq!(source.walks.get(), 0);
+    assert_eq!(source.base.trace.get(), 2);
+    assert_eq!(source.alternate.trace.get(), 2);
+    assert_eq!(joined.selections().inputs().rows().len(), 2);
     Ok(())
 }

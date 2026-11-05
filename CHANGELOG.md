@@ -3,6 +3,15 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0914 — admit finite aggregate child-work capacity
+
+Fresh whole content/populations precede checked P-pass content/matching/result quotas. A unique
+consuming cursor reserves full stages before work and refuses atomically with exact original
+witnesses. Focused runtime/arithmetic/compiler checks,format and scoped strict Clippy pass.
+Whole coverage/source/nested geometry and coupled verification remain pending;G1still6/18 unchanged.
+Required retention1080 preserves4 Git spans/full journals and all183 task IDs/statuses;independent
+hash/source/public-byte checks pass. Fixed caps and prior seals remain unchanged.
+
 ## STITCHCAD-G1-0913 — admit fresh complete direct consumer populations
 
 The exact joined owner now freshly derives garment/semantic/native occurrences,all request rows,

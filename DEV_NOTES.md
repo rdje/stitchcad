@@ -3,6 +3,27 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — finite aggregate child-work capacity
+
+0914 freshly admits the complete original content/population policy,then checks selected P-pass
+content,existing child matching and A+P result-slot envelopes before ordered child quotas. P is
+explicit finite capacity,not predicted source need. Existing Profile/rule/component child scopes
+fit whole demand under the provider's exhaustive immutable contract. Profile rule-source binding
+performs another Profile admission;multi-walk stages reserve every pass before starting.
+Cumulative content/matching totals use u128;single-child matching and physical record slots remain
+usize. A private non-Clone plan consumes into one nonresettable cursor. Insufficient reservations
+preserve original policy,owner,completed metadata and remaining capacity without callbacks.
+Focused tests cover every child quota,earlier original causes,overflow,zero capacity and cursor
+exhaustion. Compiler guards,format and scoped strict Clippy pass. An erroneous fixture getter was
+removed before green;no extra public accessor was introduced. Actual source/coverage/family joins,
+nested geometry and whole/coupled verification remain owned and pending.
+Required retention preserves whole committed0911–0913 intervals and full journals in1080. Four
+exact Git spans,independent payload/source hashes and public bytes pass before final compaction;
+all183 task IDs/statuses survive. Original0912 acceptance placement is retained byte-exact and its
+live node gains an unambiguous pointer. Caps,old seals and protected evidence remain unchanged.
+Promotion declined:the local API/book and existing retention procedure own these facts.
+README/LIVE reviewed unchanged,G1still6/18 In Progress;next is actual direct selection coverage.
+
 ## _(2026-11-05 UTC)_ — fresh direct semantic populations
 
 0913 counts actual garment,ordered semantic/native fields and every raw row only after the whole

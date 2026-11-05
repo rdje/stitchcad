@@ -25,11 +25,15 @@ intervals and decoded payload hashes preserve those original documents; live stu
 Part1079 retains four completed0907–0910 task nodes and the complete committed lesson/ledger
 snapshots from5480fb92. All original task IDs/statuses remain live;the complete original contracts,
 check output and earlier journal navigation are retrievable from that immutable record.
+Part1080 retains the whole completed0911–0913 task intervals and complete lesson/ledger snapshots
+from75d08d59. Its four exact Git intervals also preserve the earlier0912 acceptance placement;
+the live content node now has its own direct pointer. Every task identity/status remains live.
 
 ```bash
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1077.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1078.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1079.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1080.md
 ```
 
 `HISTORY_ARCHIVE_ROOT` selects the project or a fixture below project `target/`. Destinations stay in

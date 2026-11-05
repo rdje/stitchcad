@@ -2190,6 +2190,82 @@ before even zero direct-work quotas. The native target is still unbound;counting
 member. Separate integer boundary checks cover zero products and overflow. API/compiler guards
 cover policy defaults,private proof replacement and owner lifetimes.
 
-Finite aggregate child-work admission,actual key coverage,authentic native target-internal needs,
+Finite aggregate child-work admission below,actual key coverage,authentic native target-internal needs,
 remaining geometry/result bounds and whole/coupled verification remain separate task stages.
 This direct population proof cannot stand in for those later grants.
+
+## Admit finite aggregate child-work capacity
+
+`DraftingProgramSemanticInputs::admit_semantic_work` accepts explicit
+`DraftingProgramSemanticWorkLimits`. It freshly repeats the complete content and direct population
+admission above. Neither a previous population proof nor an earlier demand supplies credit.
+The policy then selects a finite child-pass capacity P,three cumulative child-content allowances,
+a cumulative matching allowance and a direct/child-result record allowance. There is no Default.
+
+A pass permits at most one fresh walk within the original complete demand D and one existing child
+matching envelope. Let E,T and B be D's collection entries,logical text bytes and represented counter
+bits,and A the admitted O+R direct association slots. Checked arithmetic derives:
+
+| Work | Complete selected-capacity bound |
+| --- | --- |
+| Child collection entries | P × E |
+| Child logical text bytes | P × T |
+| Child counter bits | P × B |
+| Child matching inspections | P × (E+8)² |
+| Direct and child-result record slots | A + P |
+
+The existing Profile binders freshly charge their Root/provider/request pin. Rule preparation and
+signature admission repeat Root/provider content;binding a Profile rule source also invokes the
+Profile binder. The complete original provider contract accounts for all held source bodies,and
+the whole selection producer accounts for every supplied pin. Their child scopes therefore fit
+within D. Existing rule/component matching admission uses (Echild+8)²,and Echild is bounded by E.
+These are logical bounds under the existing exhaustive immutable provider contract. They measure
+neither string-comparison CPU nor allocator bytes. Nested geometry and future family-specific
+buffers still need their own complete contracts before integration.
+
+All arithmetic finishes before quotas. Original content/population causes come first,then the
+first child arithmetic refusal,then child entries,text,bits,matching and result-record quotas in
+that order. Cumulative child content and matching use u128 because repeated logical walks can
+exceed a single source's usize/u64 totals. A single child matching bound and physical record-slot
+count remain usize. No count saturates. P=0 admits zero child work and A record slots;it does not
+derive an unused square or certify that no child is needed.
+
+`AdmittedDraftingProgramSemanticWork` retains the exact original joined owner,selected policy,
+fresh demand,direct shape and complete selected-capacity shape. Its private fields and loans prevent
+replacement or lifetime escape. Errors preserve the same original witnesses and only completed
+stage metadata;original population/resource causes remain typed. Admission makes no source/member
+query,coverage scan or successful result allocation. The required provider resource walk runs once.
+
+Consume the plan with `into_budget()` to obtain one `DraftingProgramSemanticWorkBudget`.
+`reserve_child_passes(n)` must succeed for the **complete stage cost before that stage runs**.
+For example,initial rule preparation,Profile rule-source binding and signature binding together
+can require four fresh passes:one,two,and one. Reserve all four before starting that whole stage.
+Each reserved pass also allows at most one child-result slot. No Clone,reset or mutable policy is
+available. Another plan requires fresh original admission. Reservations execute no provider call.
+
+```rust
+use sc_core::{construction::*,design::*};
+fn reserve_original_stage<H:DesignReferenceHost+DesignResourceSource,
+    S:DraftingInitialInputProvider<H>+DraftingGarmentProvider<H>+?Sized>(
+    inputs:&DraftingProgramSemanticInputs<'_, '_, '_, '_, '_, '_, '_, '_, '_, '_,H,S>,
+    limits:&DraftingProgramSemanticWorkLimits,passes:usize)->Result<(),String> {
+    let work=inputs.admit_semantic_work(limits).map_err(|e|e.to_string())?;
+    let mut budget=work.into_budget();
+    budget.reserve_child_passes(passes).map_err(|e|e.to_string())?;
+    // The later binder may now begin this stage under its original child contract.
+    Ok(())
+}
+```
+
+P is selected capacity,not a prediction of source need. Exhaustion refuses before a new stage;
+it leaves previous reservations and remaining capacity unchanged and exposes no accepted source
+prefix. Future aggregate binders must consume this cursor and discard partial private work on
+failure. This primitive alone accepts no actual source,selection coverage,value or complete cohort.
+
+The focused original-owner fixture selects two passes and independently derives their content,
+matching and ten result slots from its garment/record counts. Each short quota preserves complete
+original metadata. Earlier content/population failures precede child arithmetic and quotas;
+overflow precedes quota checks. Zero capacity,partial reservation,atomic refusal and exhaustion
+retain exact policy/input loans without callbacks. Integer boundary checks also cover aggregate
+counter totals beyond u64 and unused zero-capacity arithmetic. Compiler guards prevent Default,
+field replacement,lifetime escape and cursor cloning. Whole/coupled verification remains deferred.
