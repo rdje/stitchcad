@@ -32,11 +32,10 @@ Full guide:docs/book/src/annexes/artifact-cleanup.md. Probe controls never apply
 
 ## Latest cleanup
 
-- Run:2026-11-03 21:44 UTC;owner G1-SLICE.6.5.3.2.cleanup-20261103.
-- Removed4 regenerable trees plus26 synthetic CLI fixture logs:183 files,17785182B;all30 paths absent.
-- Evidence:target/artifact_cleanup_audit/daily-20261103-native/ plan/review/result/independent-post.json.
-- Final OS-visible strict idle admission passed;immediate independent residue/tracked-byte proof
-  passed before launcher activation. All2254 unsafe/ambiguous skipped entries still present.
+- Run:2026-11-05 00:20 UTC;owner G1-SLICE.5f.2.cleanup-20261105.
+- Removed4 reviewed regenerable trees:159 files,18967760B;all4 selected paths absent.
+- Evidence:target/artifact_cleanup_audit/daily-20261105/ plan/review/result/independent-post.json.
+- OS-visible strict idle admission passed;immediate independent tracked-byte/residue proof passed
+  before launcher activation. All2254 unsafe/ambiguous skipped paths still present.
 - Stores,numerical/native and retained-proof roots excluded;no whole-store byte-hash claim.
-  Guarded ps/type refusals preceded deletion;fresh census and final unchanged apply passed.
-- Cleanup/handoff guards and book scope unchanged;later scratch/book regeneration is expected.
+  Later scratch/book regeneration is expected;cleanup/handoff guards unchanged.

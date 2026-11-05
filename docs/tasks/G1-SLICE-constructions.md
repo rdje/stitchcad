@@ -885,3 +885,11 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
 - ID: `G1-SLICE.5f.2.verify`
   Status: `pending`
   Goal:after the agreed integration set,verify coupled source/order/frame/currentness/argument/semantic/resource and allocator refusals,original causes and public proof lifetimes;actual geometry/selector execution stays .5f.3/.4.geometry/G2/G3.
+
+- ID: `G1-SLICE.5f.2.cleanup-20261105`
+  Status: `done`
+  Goal:perform due daily guarded cleanup before resuming aggregate semantic binding;review fresh frozen candidates,strict OS-visible idle evidence and immediate independent residue/tracked-byte proof. Preserve all retained proof/store roots;record the actual result without broad verification claims.
+  - [x] REPRODUCE / ROOT CAUSE:cleanup record2026-11-03 exceeded24h;cleanup.py plan target/artifact_cleanup_audit/daily-20261105 →4 candidates/2254 skipped,exit0. Candidate review identifies regenerable book,doctrine snapshots,xcrun cache and empty tmp.
+  - [x] FIX / ADDRESSED:cleanup.py apply same run --idle-cua with OS visibility →handoff OK;4 trees/159 files/18967760B removed,zero residue,tracked_change false,exit0. Independent-post.json →all4 paths absent,2254 skips present and frozen tracked hash exact before launcher,exit0.
+  - [x] NO REGRESSION / LOCKSTEP:independent digest agrees with frozen plan;protected proof/store families outside selection. Policy reference review:README/claim neutral bodies exact;containment deltas only already-adopted director book exception. MEM/index/ledger/book/cleanup record
+    align;README/LIVE unchanged,G1still6/18. Promotion declined:existing cleanup procedure. Commit:STITCHCAD-G1-0907.

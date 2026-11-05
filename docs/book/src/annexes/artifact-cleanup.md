@@ -117,6 +117,14 @@ proof,not a whole-store byte-hash claim. Audit plan/review/result/independent-po
 protected daily-20261101-native. The prior published run's complete scope remains in retained part937.
 Book/scratch regeneration follows that immediate residue proof and does not invalidate its cleanup moment.
 
+The 2026-11-05 run removed four reviewed regenerable trees:rendered book output,doctrine staging
+snapshots,a local tool cache and empty temporary output. The frozen result records159 files and
+18967760 bytes. Strict OS-visible idle admission passed. Before any producer launcher ran again,
+an independent census found every selected path absent,all2254 skipped entries still present and
+tracked bytes equal to the frozen digest. Receipts remain under
+target/artifact_cleanup_audit/daily-20261105. Protected proof and dependency stores were outside
+selection;this is no claim that every store byte was hashed. Later regeneration is expected.
+
 ### Incomplete runtime observations
 
 SPINE.23r captured a recurrence: lsof emitted descriptor4 and a name without the requested type.
