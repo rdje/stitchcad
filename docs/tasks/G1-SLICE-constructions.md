@@ -908,5 +908,22 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] NO REGRESSION:cargo clippy -p sc-core --lib -- -D warnings,cargo fmt --all -- --check and git diff --check →pass,rc=0. Existing logical/source APIs unchanged;no whole cohort,physical or G4 verdict. Checked parameter acceptance remains the next owned leaf.
   - [x] LOCKSTEP:MEM/index/DEV/ledger/book describe raw numeric port and actual-member binding next;README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local raw port and existing canonical/provider contracts own scope). Commit:STITCHCAD-G1-0945.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.binding`
-  Status: `pending`
+  Status: `done`
   Goal:bind original numeric Profile parameter metadata to exact accepted parent and actual canonical numeric member/expected kind after fresh complete content. Preserve typed original resource/provider/header/parameter/member/kind causes and source states;then own aggregate garment header/parameter/composition work.
+  - [x] REPRODUCE / ISSUE:raw numeric Profile metadata accepts inspectable wrong headers/targets;garment length membership needs actual selected-parent,representation and expected-kind proofs without Root inference.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'bind_logical_parameter|resolve_numeric|CanonicalNumericInputMember|ScalarInputKind' context/profile/parameter.rs,value/inventory/numeric.rs and value/scalar.rs →existing exact parent/content and actual numeric member contracts,rc=0. ScalarInputKind expresses the numeric request while the metadata target keeps its authored family/annotation.
+  - [x] FIX:bind_numeric_parameter freshly charges complete parent/provider/request,queries original numeric metadata,checks exact Root/pin/inventory/body/snapshot/parameter,then resolves actual numeric representation/annotation before expected kind. Private lending proof and typed first refusal retain exact parent,metadata/member/request/policy;no value,clone or partial grant.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract numeric_profile_parameter →1 test/16 modes pass,rc=0. Dedicated Derived500 versus same-ID Root
+    Unknown,general Length/Boolean Unknown,actual field/member pointers,all header axes,equal-data pin/body,parameter,family/annotation/expected-kind,absent target and two
+    fresh-resource-before-missing controls pass. One walk/at most one query exact.
+  - [x] NO REGRESSION:profile_input_parameters →prior10 modes pass;cargo doc construction::context::profile::numeric →5 tests incl.two private/lifetime binding guards pass;scoped
+    strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Fixture initializer/resource trace and fallible fixture lookups corrected before green;production contract
+    unchanged. Whole .check/.verify remains deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book describe individual original numeric parameter binding and aggregate garment headers next. README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local numeric binding and existing original-parent/canonical/provider contracts own scope). Commit:STITCHCAD-G1-0946.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.headers`
+  Status: `pending`
+  Goal:consume complete original logical Profile garment parameters and same unique cursor;reserve complete fresh work and bind every original Profile zipper-length direct row/pin/source header into stable parents. Preserve prior logical/Root proofs and genuine garment locations;numeric metadata/member loans follow under those exact parents.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.parameters`
+  Status: `pending`
+  Goal:borrow stable numeric Profile garment headers and unique prior input owner;reserve complete fresh work and bind every original numeric metadata/member/Length-kind proof. Compose complete original Root/logical/numeric garment input classes without Root interpretation of external Derived states;retain first typed causes/no prefix.

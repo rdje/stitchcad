@@ -204,12 +204,13 @@ pub use garment::{
     DraftingGarmentSource, DraftingGarmentSourceError, DraftingGarmentSourceIssue,
 };
 pub use profile::{
-    BoundDraftingProfileLogicalSource, BoundDraftingProfileSource, DraftingProfileLogicalError,
-    DraftingProfileLogicalIssue, DraftingProfileLogicalProvider, DraftingProfileLogicalRefusal,
-    DraftingProfileLogicalResponse, DraftingProfileLogicalSource, DraftingProfileNumericProvider,
-    DraftingProfileNumericResponse, DraftingProfileNumericSource, DraftingProfileProvider,
-    DraftingProfileSource, DraftingProfileSourceError, DraftingProfileSourceIssue,
-    DraftingProfileSourceRefusal,
+    BoundDraftingProfileLogicalSource, BoundDraftingProfileNumericSource,
+    BoundDraftingProfileSource, DraftingProfileLogicalError, DraftingProfileLogicalIssue,
+    DraftingProfileLogicalProvider, DraftingProfileLogicalRefusal, DraftingProfileLogicalResponse,
+    DraftingProfileLogicalSource, DraftingProfileNumericError, DraftingProfileNumericIssue,
+    DraftingProfileNumericProvider, DraftingProfileNumericRefusal, DraftingProfileNumericResponse,
+    DraftingProfileNumericSource, DraftingProfileProvider, DraftingProfileSource,
+    DraftingProfileSourceError, DraftingProfileSourceIssue, DraftingProfileSourceRefusal,
 };
 pub use rule::{
     AdmittedDraftingRuleWork, BoundDraftingRuleSignature, BoundDraftingRuleSource,

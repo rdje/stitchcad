@@ -3417,3 +3417,69 @@ after fresh complete content admission. Aggregate garment work remains separatel
 Original Known/Unknown/Derived states and provenance remain in the Profile canonical inventory.
 This port grants no value resolution,external formula supplier,G4 schema/evidence or physical
 zipper-length truth. Logical Profile input acceptance does not accept this numeric class.
+
+## Bind an original numeric Profile parameter
+
+`BoundDraftingProfileSource::bind_numeric_parameter(parameter, kind, limits)` binds one actual
+numeric metadata association to that exact accepted Profile parent. `kind` is a
+`ScalarInputKind`,so a garment zipper requests `ScalarInputKind::Length`. Dedicated Length and
+general Scalar Length remain separate canonical representations while sharing that expected
+numeric dimension. The binding never converts between them.
+
+```rust
+use sc_core::{
+    construction::{BoundDraftingProfileSource, BoundDraftingProfileNumericSource,
+        DraftingProfileNumericError, DraftingProfileNumericProvider},
+    design::{DesignResourceSource, DesignResourceLimits},
+    ontology::ProfileParameterRef,
+    value::ScalarInputKind,
+};
+fn zipper_length<'b, 'a, H: DesignResourceSource,
+    S: DraftingProfileNumericProvider<H> + ?Sized>(
+    parent: &'b BoundDraftingProfileSource<'a, H, S>,
+    parameter: ProfileParameterRef,
+    limits: DesignResourceLimits,
+) -> Result<BoundDraftingProfileNumericSource<'b, 'a, H, S>,
+    DraftingProfileNumericError<'b, 'a, H, S>> {
+    parent.bind_numeric_parameter(parameter, ScalarInputKind::Length, limits)
+}
+```
+
+The factory freshly walks complete Root/provider/request content,including unused numeric
+metadata and caches,before one numeric parameter query. Earlier parent demand supplies no
+credit. It then checks the returned original Root,pin owner,inventory,Profile body,snapshot and
+parameter identity,in that order. Equal pin labels or equal body bytes do not replace original
+record ownership. Exact `CanonicalInputs::resolve_numeric` membership follows:the metadata's
+actual target family,identity and scalar annotation must resolve in this Profile inventory.
+Only then does the actual member kind have to match the request.
+
+| Original metadata target / actual inventory | Requested kind | Result |
+| --- | --- | --- |
+| Dedicated Length10 / actual Length10 | Length | Original dedicated member |
+| Scalar20 annotated Length / actual Scalar20 Length | Length | Original general scalar member |
+| Dedicated Length20 / only Scalar20 Length exists | Length | MissingLength with actual Scalar position |
+| Scalar10 / only dedicated Length10 exists | Length | MissingScalar with actual Length position |
+| Scalar20 annotated Boolean / actual Scalar20 Length | Length | Canonical ScalarKind refusal |
+| Scalar30 annotated Boolean / actual Scalar30 Boolean | Length | Expected-kind refusal,actual Boolean |
+
+The successful `BoundDraftingProfileNumericSource` loans `parent()`,the exact original
+`source()` metadata/target fields and `binding()` canonical inventory/member/position.
+`parameter()`, `kind()` and `limits()` retain the request. `demand()` reports this fresh complete
+content admission;it does not grant aggregate query/comparison work. The proof cannot outlive
+its exact selected parent and its private fields cannot be replaced. Payloads and the provider
+need no Clone/Debug bound;the native fixture uses a dynamic provider and an unsized Profile body.
+`charge_resources(sink)` walks the complete original parent/provider/request again,without
+requerying metadata or duplicating the member's state.
+
+`DraftingProfileNumericError` retains that same parent,parameter,expected kind,limits,returned
+raw response when one exists,and first typed refusal. `Resources` precedes every parameter
+query;`Source` retains the provider's actual error;`Mismatch` identifies the original header or
+parameter axis;`Canonical` retains actual inventory/target/member witnesses;`Kind` reports the
+actual member kind after membership succeeds. No partial accepted source escapes a refusal.
+
+For example,the focused fixture's Profile Length10 is Derived500 while the Design's independent
+Length10 is Unknown. Success borrows the Profile record and preserves Derived500 without looking
+for a Design source500 or validating a Profile recipe. Scalar20 remains Unknown. No selected
+value,formula execution,currentness revalidation,G4 schema/evidence or physical zipper truth is
+read or granted. This individual factory is implemented with focused checks;complete numeric
+Profile garment headers/parameters,aggregate work and whole cohort verification remain pending.

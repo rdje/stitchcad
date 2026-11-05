@@ -4,6 +4,8 @@ use super::{
 };
 use sc_core::{command::DesignRevision, construction::*, design::*, ontology::*, recipe::*};
 use std::cell::Cell;
+#[path = "drafting_profile_numeric.rs"]
+mod numeric;
 #[path = "drafting_operation_inputs.rs"]
 mod operation_inputs;
 #[path = "drafting_profile_parameters.rs"]
@@ -31,6 +33,10 @@ struct Provider<'a> {
     parameter_mode: Cell<u8>,
     parameter_calls: Cell<usize>,
     metadata: Vec<DraftingSourceRecord<ParameterMapping>>,
+    numeric_metadata: Vec<DraftingSourceRecord<numeric::NumericMapping>>,
+    numeric_mode: u8,
+    numeric_calls: Cell<usize>,
+    numeric_body: Option<DraftingSourceRecord<[u8; 4]>>,
 }
 struct RuleRow {
     declaration: SemanticRuleDeclaration,
@@ -99,6 +105,10 @@ impl<'a> Provider<'a> {
             parameter_mode: Cell::new(0),
             parameter_calls: Cell::new(0),
             metadata,
+            numeric_metadata: vec![],
+            numeric_mode: 0,
+            numeric_calls: Cell::new(0),
+            numeric_body: None,
         })
     }
 }
@@ -208,6 +218,37 @@ impl DraftingContextSource<EmptyHost> for Provider<'_> {
                     owner: None,
                     field: "profile.parameter.text",
                     index: Some(index),
+                },
+            )?;
+        }
+        sink.charge_entries(
+            self.numeric_metadata.len(),
+            DesignResourceLocation {
+                scope: DesignResourceScope::SourceHost,
+                owner: None,
+                field: "profile.numeric-parameters",
+                index: None,
+            },
+        )?;
+        for (index, record) in self.numeric_metadata.iter().enumerate() {
+            sink.charge_text(
+                &record.data().text,
+                DesignResourceLocation {
+                    scope: DesignResourceScope::SourceHost,
+                    owner: None,
+                    field: "profile.numeric-parameter.text",
+                    index: Some(index),
+                },
+            )?;
+        }
+        if let Some(record) = &self.numeric_body {
+            sink.charge_entries(
+                record.data().len(),
+                DesignResourceLocation {
+                    scope: DesignResourceScope::SourceHost,
+                    owner: None,
+                    field: "profile.numeric-alternate-body",
+                    index: None,
                 },
             )?;
         }

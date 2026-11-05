@@ -197,3 +197,9 @@ pub use parameter::{
     BoundDraftingProfileLogicalSource, DraftingProfileLogicalError, DraftingProfileLogicalIssue,
     DraftingProfileLogicalRefusal,
 };
+
+mod numeric;
+pub use numeric::{
+    BoundDraftingProfileNumericSource, DraftingProfileNumericError, DraftingProfileNumericIssue,
+    DraftingProfileNumericRefusal,
+};

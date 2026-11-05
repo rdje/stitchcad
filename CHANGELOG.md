@@ -3,6 +3,13 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0946 — bind original numeric Profile metadata and members
+
+Exact selected parents now bind original numeric metadata,target representation/member and
+expected kind after fresh complete content. Sixteen native modes,prior logical parameter ten
+modes,five compiler checks,format and scoped strict lint pass. External Derived state stays
+Profile-owned. Complete numeric garment composition and broader verification remain pending.
+
 ## STITCHCAD-G1-0945 — expose original numeric Profile metadata loans
 
 Raw numeric Profile sources preserve actual header,parameter,target and metadata loans through
