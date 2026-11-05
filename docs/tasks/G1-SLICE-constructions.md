@@ -906,8 +906,36 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Status: `done`
   Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bind complete actual Pocket served/component and Closure derivation/operation relations under original input/cursor owners and complete source/member/component proofs. Preserve genuine garment locations without invented Root consumer positions;introduce authentic missing facets before use and retain first typed causes/no accepted prefix.
+  Children: `.pocket-work` (complete current served/component members),`.pocket-sources` (stable original source parents),`.closures` (original derivation/placement relations);then native/cohort and whole .5f.2.check/.verify.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.pocket-work`
+  Status: `done`
+  Goal:retain the complete original numeric/logical garment input owner and unique aggregate cursor while binding every original Pocket served/component field through prepare_component_binding.
+  Count N first,reserve N+1 full passes atomically,then fresh aggregate charging,complete result reservation and original child factories. N0 adds no work;first typed error retains the parent and drops private prefixes.
+  No source/geometry/value query or invented mixed position.
+  - [x] ROOT CAUSE / ISSUE:git show fe836a5d:crates/sc-core/src/construction/context/component/work.rs and the original numeric garment parameter parent show an existing bounded
+    single-target factory and the original input-only join. The new aggregate stage must preserve actual fields/current members under that cursor. Initial fixture E0038 and
+    identity/MissingCopy setup refusals were diagnosed and corrected without changing product contracts.
+  - [x] FIX / ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract
+    pocket_component_work_keeps_original_members_complete_cursor_and_first_typed_cause →test result: ok. 1 passed,rc=0. Seven cases cover original field/member pointers,duplicate
+    targets,N0,atomic shortage/no refunds,fresh aggregate/late child resources and original late MissingCopy;no accepted prefix or source query.
+  - [x] NO REGRESSION / LOCKSTEP:the same test target with garment_profile_numeric →2 passed;cargo clippy -j1 -p sc-core --lib -- -D warnings →Finished;cargo test -j1 -p sc-core --doc
+    BoundDraftingProgramPocketWork →3 compile-fail guards passed;cargo fmt --all -- --check and git diff --check pass,all rc=0. Book/journals/resume/LIVE align;G1 remains6/18 In
+    Progress. Whole .check/.verify and source/Closure/native/cohort work remain deferred. promotion: declined (existing original-source and bounded-cursor contracts own scope).
+    Commit:STITCHCAD-G1-0951.
+  Owned doc defect:the Pocket overview called source ports/accounting pending despite existing prepare_component_binding/bind_source factories. Corrected links distinguish this
+  current-member stage from pending aggregate source/placement/Closure work. Initial RAM blocker cleared by the director's quiet window;no memory-intensive job overlapped another owned
+  job.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.pocket-sources`
+  Status: `pending`
+  Goal:borrow the complete stable original Pocket work parents and bind actual imported/recipe sources with the same finite cursor,original field locations and first typed causes. Preserve authentic source frame/snapshot/creator proof;no fabricated Root consumer position or complete cohort claim.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures`
+  Status: `pending`
+  Goal:bind actual original Closure buttonhole operation/canonical button and physical placement relations with authentic source facets,complete fresh work and original owner/instance roles. No separately authored hole length,guessed source or geometry/execution acceptance.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.retention`
   Status: `done`

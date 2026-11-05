@@ -145,12 +145,43 @@ pub(super) fn garment_with_formula_declarations(
         },
     )
 }
+pub(super) fn garment_with_declarations_and_pockets(
+    canonical: CanonicalInputs,
+    parameters: Vec<DesignParameterDefinition>,
+    kinds: Vec<ClosureKind>,
+    opening: PocketOpening,
+    pocket_mode: u8,
+) -> TestResult<DesignGarment<EmptyHost>> {
+    build_with_pocket_mode(
+        pocket_mode == 1,
+        id(100),
+        kinds,
+        opening,
+        SemanticFixture {
+            canonical,
+            semantic_recipe: SemanticRecipe::empty(),
+            parameter_definitions: parameters,
+            formula_sources: FormulaSources::new(vec![], FormulaSourceLimits::new(0, 0, 0))?,
+        },
+        pocket_mode,
+    )
+}
 fn build_with_semantic_data(
     damaged: bool,
     identity: EntityId,
     kinds: Vec<ClosureKind>,
     opening: PocketOpening,
     data: SemanticFixture,
+) -> TestResult<DesignGarment<EmptyHost>> {
+    build_with_pocket_mode(damaged, identity, kinds, opening, data, 0)
+}
+fn build_with_pocket_mode(
+    damaged: bool,
+    identity: EntityId,
+    kinds: Vec<ClosureKind>,
+    opening: PocketOpening,
+    data: SemanticFixture,
+    pocket_mode: u8,
 ) -> TestResult<DesignGarment<EmptyHost>> {
     let SemanticFixture {
         canonical,
@@ -274,7 +305,10 @@ fn build_with_semantic_data(
     for (index, kind) in kinds.into_iter().enumerate() {
         let offset = u128::try_from(index)? * 10;
         let pair = [id(20000 + offset), id(20001 + offset)];
-        for (copy, placement) in [id(10001), id(10002)].into_iter().zip(pair) {
+        for (copy, placement) in [id(10001), id(if damaged { 10005 } else { 10002 })]
+            .into_iter()
+            .zip(pair)
+        {
             placements.push(NotionPlacement::new(
                 NotionPlacementDefinition {
                     id: placement,
@@ -325,9 +359,26 @@ fn build_with_semantic_data(
         landmarks: vec![],
     })
     .map_err(|e| e.to_string())?;
+    let pockets = PocketInventory::new(match pocket_mode {
+        2 => vec![],
+        3 => {
+            let mut definition = pocket.definition().clone();
+            definition.id = id(11003);
+            vec![
+                pocket,
+                Pocket::new(
+                    definition,
+                    sewing.inputs().structure().cut_plan(),
+                    sewing.inputs().structure().pieces().pieces(),
+                    sewing.inputs().structure().topology(),
+                )?,
+            ]
+        }
+        _ => vec![pocket],
+    })?;
     Ok(DesignGarment::new(DesignGarmentDefinition {
         sewing,
-        pockets: PocketInventory::new(vec![pocket])?,
+        pockets,
         notions: NotionPlacementInventory::new(placements)?,
         closures: ClosureInventory::new(closures)?,
         layers: LayerInventory::new(vec![], vec![], vec![])?,

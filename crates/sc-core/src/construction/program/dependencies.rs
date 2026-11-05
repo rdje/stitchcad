@@ -120,3 +120,9 @@ pub use root_input_scope::{
     DraftingProgramRuleWorkError, DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest,
     DraftingProgramRuleWorkResult,
 };
+
+mod pocket_work;
+pub use pocket_work::{
+    BoundDraftingProgramPocketWork, DraftingProgramPocketWork, DraftingProgramPocketWorkError,
+    DraftingProgramPocketWorkRefusal, DraftingProgramPocketWorkResult,
+};

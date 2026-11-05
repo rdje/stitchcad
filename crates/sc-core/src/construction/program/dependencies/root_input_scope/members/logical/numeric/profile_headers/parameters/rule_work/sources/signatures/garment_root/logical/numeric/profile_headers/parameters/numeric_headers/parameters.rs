@@ -412,3 +412,87 @@ impl<
         })
     }
 }
+
+impl<
+        'u,
+        't,
+        'z,
+        'q,
+        'h,
+        'v,
+        'w,
+        's,
+        'g,
+        'k,
+        'j,
+        'i,
+        'r,
+        'b,
+        'n,
+        'p,
+        'a,
+        H: DesignReferenceHost + DesignResourceSource,
+        S: DraftingInitialInputProvider<H>
+            + DraftingGarmentProvider<H>
+            + DraftingProfileNumericProvider<H>
+            + DraftingProfileLogicalProvider<H>
+            + DraftingRuleProvider<H>
+            + crate::construction::DraftingComponentProvider<H>
+            + ?Sized,
+    >
+    BoundDraftingProgramGarmentProfileNumericParameters<
+        'u,
+        't,
+        'z,
+        'q,
+        'h,
+        'v,
+        'w,
+        'a,
+        DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+        H,
+        S,
+    >
+{
+    /// Consume the complete original garment input proof and reserve all N+1 Pocket passes before
+    /// fresh aggregate charging,complete N-record reservation and each existing current-member
+    /// factory. Every original served/component field keeps its actual Pocket/local position.
+    /// N0 performs no walk,query,allocation or reservation. No source/geometry/value query runs.
+    /// The generic parent type is this exact consumed proof;no body clone or self-reference occurs.
+    /// # Errors
+    /// Complete arithmetic,atomic work shortage,fresh aggregate resources,allocator,then first
+    /// original child content/matching/current-copy/Piece cause. Both outcomes retain the entire
+    /// prior proof and unique cursor;private accepted prefixes drop and reserved work is not reset.
+    pub fn bind_pocket_component_work(
+        self,
+    ) -> crate::construction::DraftingProgramPocketWorkResult<
+        's,
+        'w,
+        'a,
+        Self,
+        DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+        H,
+        S,
+    > {
+        let parent = self;
+        let cursor = &mut parent
+            .logical
+            .root
+            .logical
+            .members
+            .owner
+            .inputs
+            .root
+            .logical
+            .members
+            .owner
+            .selections;
+        let inputs = cursor.inputs();
+        let outcome = crate::construction::program::dependencies::pocket_work::prepare(
+            cursor,
+            inputs.garment(),
+            |sink| inputs.charge_resources(sink),
+        );
+        outcome.finish(parent)
+    }
+}

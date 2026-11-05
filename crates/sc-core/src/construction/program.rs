@@ -208,3 +208,8 @@ impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized> fmt::Debug
             .finish_non_exhaustive()
     }
 }
+
+pub use dependencies::{
+    BoundDraftingProgramPocketWork, DraftingProgramPocketWork, DraftingProgramPocketWorkError,
+    DraftingProgramPocketWorkRefusal, DraftingProgramPocketWorkResult,
+};

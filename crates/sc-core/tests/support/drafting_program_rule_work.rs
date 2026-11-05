@@ -18,6 +18,8 @@ mod garment_root_logical;
 mod garment_root_members;
 #[path = "drafting_program_garment_root_numeric.rs"]
 mod garment_root_numeric;
+#[path = "drafting_program_pocket_work.rs"]
+mod pocket_work;
 #[path = "drafting_program_rule_signatures.rs"]
 mod signatures;
 #[path = "drafting_program_rule_sources.rs"]

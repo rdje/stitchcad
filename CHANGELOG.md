@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0951 — bind complete original Pocket current members
+
+Complete garment input proofs now bind every original Pocket served/component copy and Piece
+through fresh bounded child factories. Whole N+1 reservation,empty scope,typed late refusal and
+no-refund parent recovery preserve the unique cursor. Seven focused cases,adjacent numeric2,
+new API guards3,strict library lint and formatting pass. Aggregate source/Closure/native/cohort
+joins and whole integration verification remain pending;G1 stays6/18 In Progress.
+
 ## STITCHCAD-G1-0950 — save director-requested reset pause
 
 PNT pauses at the director's explicit request after completed garment input/retention slices.

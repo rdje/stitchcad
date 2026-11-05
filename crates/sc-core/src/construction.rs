@@ -465,3 +465,8 @@ pub use truing::{
     TruingSourceDomainEdge, TruingSourceDomainError, TruingSourceDomainLimits,
     TruingSourceDomainRefusal, TruingSourceIdentityIntent, TruingStopRequirement,
 };
+
+pub use program::{
+    BoundDraftingProgramPocketWork, DraftingProgramPocketWork, DraftingProgramPocketWorkError,
+    DraftingProgramPocketWorkRefusal, DraftingProgramPocketWorkResult,
+};

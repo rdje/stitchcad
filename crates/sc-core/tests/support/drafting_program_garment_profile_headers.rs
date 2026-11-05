@@ -9,6 +9,13 @@ pub(super) fn numeric_fixture(empty: bool) -> TestResult<DesignGarment<super::Em
     fixture_with_numeric(0, if empty { 2 } else { 1 })
 }
 fn fixture_with_numeric(case: u8, numeric: u8) -> TestResult<DesignGarment<super::EmptyHost>> {
+    fixture_with_pockets(case, numeric, 0)
+}
+pub(super) fn fixture_with_pockets(
+    case: u8,
+    numeric: u8,
+    pocket_mode: u8,
+) -> TestResult<DesignGarment<super::EmptyHost>> {
     let canonical = CanonicalInputs::with_logicals(
         vec![LengthDeclaration::new(LengthDeclarationDefinition {
             id: id(10),
@@ -122,8 +129,12 @@ fn fixture_with_numeric(case: u8, numeric: u8) -> TestResult<DesignGarment<super
     } else {
         PocketOpening::Profile(ProfileParameterRef::new(id(702)))
     };
-    super::super::super::super::garment_source::garment_with_declarations(
-        canonical, parameters, kinds, opening,
+    super::super::super::super::garment_source::garment_with_declarations_and_pockets(
+        canonical,
+        parameters,
+        kinds,
+        opening,
+        pocket_mode,
     )
 }
 #[test]

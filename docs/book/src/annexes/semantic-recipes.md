@@ -3594,8 +3594,62 @@ original header index and parent-bound numeric diagnostic. Late wrong parameter/
 body/snapshot,missing parameter,representation,annotation and expected-kind errors retain actual
 original witnesses while earlier private accepted parameter prefixes drop.
 
-Original logical/numeric garment input binding is implemented with focused checks. Pocket served/
-component relations,Closure derivation/operation joins,native semantic targets and complete cohort
-acceptance remain pending. This input proof selects no value and grants no physical opening,
+Original logical/numeric garment input binding is implemented with focused checks. The Pocket
+current-member stage below extends it;Pocket source relations,Closure derivation/operation joins,
+native semantic targets and complete cohort acceptance remain pending. This input proof selects no value and grants no physical opening,
 zipper/buttonhole length,external evidence or G4 schema truth. Whole `.5f.2.check`/`.verify` remain
 separate deferred verification tasks.
+
+## Bind original Pocket current copy and Piece work
+
+`BoundDraftingProgramGarmentProfileNumericParameters::bind_pocket_component_work()` consumes
+the complete original garment input proof. Its `BoundDraftingProgramPocketWork` retains that
+exact proof as `parent()` and the same unique aggregate work cursor. The parent type is inferred
+from the consuming factory;no input body is copied or placed into a self-referential record.
+
+Each `DraftingProgramPocketWork` lends its original `occurrence()` and `work()`. The occurrence
+keeps the actual garment,Pocket inventory index and served field or original component index.
+The work is an existing `AdmittedDraftingComponentWork` bound to the actual admitted garment,
+explicit copy/expected-Piece target,current CutCopy and current Piece. It preserves copy
+orientation metadata and the complete fresh child content/matching bounds. No synthetic Root
+consumer position is added.
+
+For an already constructed garment input proof:
+
+```text
+let pockets = parameters.bind_pocket_component_work()?;
+for record in pockets.records() {
+    inspect(record.occurrence().selection_location(),
+            record.work().copy(), record.work().piece());
+}
+```
+
+Every Pocket contributes its served reference followed by each component in original local order.
+Repeated copy/Piece targets in different Pockets remain separate requiring fields. The complete
+result is reserved before calling a child factory;private successful prefixes drop on refusal.
+
+The stage first counts N original served/component fields. For N>0 it atomically reserves N+1
+passes from the existing cursor before fresh complete aggregate charging,N-record reservation
+and each original `prepare_component_binding` call. Each child freshly rewalks its whole actual
+garment/provider content before current membership matching;earlier proof demands supply no
+credit. Its existing (Echild+8)² bound is covered by the full aggregate per-pass envelope.
+
+An actually empty Pocket collection adds no pass,walk,query,allocation or demand claim,even when
+the provider retains other garment and source data. `child_pass_count()` is zero for N0 and N+1
+otherwise;`demand()` is absent for N0 and holds the fresh complete aggregate demand for N>0.
+`into_parent()` recovers the exact prior input proof from either outcome. It never refunds spent
+passes or replaces the cursor with a fresh allowance.
+
+`DraftingProgramPocketWorkError` retains that entire original parent,complete count when
+available,completed aggregate demand when available,and the first arithmetic,work,resource,
+allocator or current-member cause. Child errors retain the exact requiring occurrence and
+original `DraftingComponentWorkError`,including the actual child parent and target. An atomic
+work shortage leaves prior reservations unchanged;later failures retain all newly reserved work.
+
+This stage checks current copy/Piece membership under complete bounds. Actual import/recipe
+source association is the next aggregate stage and will borrow these stable work records.
+Placement anchors/orientation intervals,physical contours,opening execution,Closure relations,
+native families and whole-cohort acceptance remain separate. No source,currentness,geometry
+or value query is made here. Focused runtime checks cover seven current-member/work cases;the
+new private-field,non-cloning and lifetime guards pass. Complete `.5f.2.check`/`.verify` remains
+deferred.
