@@ -3,6 +3,14 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0922 — bind complete actual Root operation-input members
+
+Complete original Root input counting/reservation and fresh source charging now precede actual
+member joins. Original field/source loans,repeated references,states and genuine mixed positions
+survive;failure exposes no successful prefix. Seven real fixture modes plus focused empty/garment,
+compiler,format and strict lint checks pass. Derived supplier/order and remaining source/cohort
+acceptance stay pending;G1still6/18 In Progress unchanged.
+
 ## STITCHCAD-G1-0921 — join exact original Root input source owners
 
 The actual checked key/work owner now consumes into an exact Design source-scope join. Root/

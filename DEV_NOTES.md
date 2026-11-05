@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — complete fresh Root operation-input members
+
+0922 counts actual Root-owned declaration-button/logical/numeric fields before reserving all N
+passes/results on the same cursor. Fresh exact Root/provider charging precedes record allocation
+and original member lookups. One fresh walk and N inventory joins fit the admitted N-pass envelope.
+All original operation/field/ordinal/mixed/source loans survive without value reads or body clones;
+Profile/rule/output and Derived supplier/order remain separate. N0 creates no new content credit
+and makes no child walk,reservation or allocation. Refusals retain original owners,complete stage
+metadata and first typed cause;private successful prefixes drop without escaping.
+Seven real public-factory fixture modes cover four input records,two length10 references,semantic
+ordinal2/mixed3,actual Unknown/Derived states,missing first member,late kind mismatch,short2-versus4
+capacity before callbacks,Profile deferral and zero Root work. Focused main/empty/garment checks,
+two compiler guards,format and scoped strict Clippy pass. Fixture canonical/geometry constructor
+argument arities were corrected from their actual API signatures before green.
+Promotion declined:the local member/source API/book owns the contract. README/LIVE reviewed
+unchanged,G1still6/18 In Progress. Actual Derived suppliers and strict order are next;Profile/rule/
+family/cohort and whole .5f.2.check/.verify remain pending. The raw self-referential Derived fixture
+is member-only here and must refuse in the supplier stage before whole acceptance.
+
 ## _(2026-11-05 UTC)_ — exact Root input source owners
 
 0921 joins the consumed original direct-key/work owner with an explicitly supplied admitted

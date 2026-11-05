@@ -10,6 +10,8 @@ use sc_core::{
     recipe::*,
 };
 use std::cell::Cell;
+#[path = "drafting_root_input_members.rs"]
+mod root_input_members;
 
 struct Provider<'a> {
     base: Source<'a>,
@@ -983,6 +985,23 @@ fn exact_semantic_owners_reject_foreign_records_before_callbacks() -> TestResult
                 assert_eq!(provider.alternate.trace.get(), 0);
             }
             assert!(!format!("{owners:?}").contains("private"));
+            let members = owners
+                .bind_root_input_members()
+                .map_err(|e| e.to_string())?;
+            assert!(members.records().is_empty());
+            assert_eq!(members.demand(), None);
+            assert!(core::ptr::eq(members.owner().inputs(), &actual));
+            assert!(core::ptr::eq(members.owner().scope(), &root_scope));
+            assert_eq!(
+                (
+                    members.owner().selections().remaining_child_passes(),
+                    members.owner().selections().reserved_child_passes()
+                ),
+                (1, 1)
+            );
+            assert_eq!(source.walks.get(), 0);
+            assert_eq!(source.base.trace.get(), 0);
+            assert_eq!(source.alternate.trace.get(), 0);
         } else {
             let error = result.expect_err("no accepted coverage prefix");
             match case {

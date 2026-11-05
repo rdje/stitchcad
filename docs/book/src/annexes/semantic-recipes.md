@@ -2484,4 +2484,70 @@ The source scope's initial admission and cached demand grant no later fresh cred
 Root member stage must reserve its complete pass/result population and freshly charge that actual
 Root/provider scope under the original work policy **before lookups or result reservation**.
 This owner join itself accepts no operation-input member,Derived supplier/order,Profile source,
-value or whole semantic cohort. The actual member and supplier stages remain pending.
+value or whole semantic cohort. Root member binding is implemented below;the supplier stage remains pending.
+
+## Bind all actual Root operation-input members
+
+`DraftingProgramRootInputScope::bind_root_input_members()` now consumes the exact source/consumer
+owner and derives its eligible Root input population N from original semantic fields. Eligible
+fields are Declaration-origin Buttonhole buttons,all named numeric policy inputs,and each
+LogicalDerivation input whose original source is Root Logical or Numeric. A declaration button
+requires the actual NotionSize logical kind. Profile-origin fields stay with their Profile stage;
+rule/policy headers and logical output stay with rule/signature/output binding. Native/garment
+source obligations remain in their own stages.
+
+The factory completes counting before reserving **all N child passes and N result slots** through
+the same unique cursor. Insufficient capacity refuses atomically before any child content walk,
+allocation or lookup. For N>0,it freshly charges the actual supplied Root/provider scope under the
+original whole work policy;its old scope demand supplies no credit. Complete meter/producer success
+precedes fallible reservation of the entire N-record vector and every actual member lookup.
+One fresh scope walk and N inventory lookups fit the admitted N-pass content/matching envelope;
+each lookup is bounded by the original held collection population and existing (E+8)² allowance.
+The remaining selected pass/result capacity stays available for subsequent source stages.
+
+An actual N=0 stage makes no child reservation,resource walk,record allocation or lookup. Its
+`demand()` is None because no new Root-content proof was produced. This covers only the eligible
+Root-input class;it does not certify that other semantic,Profile,rule or native obligations are
+empty. Nonempty success exposes the complete freshly measured Root/provider demand.
+
+`BoundDraftingProgramRootInputMembers` retains the original exact `owner()` and every actual
+Root input once in genuine mixed/local order through `records()`. Each private
+`DraftingProgramRootInputMember` preserves the original operation loan,semantic ordinal,mixed
+position,typed field/location and `source()`. The latter is the original kind-checked
+`DraftingDesignLogicalSource` or `DraftingDesignNumericSource` under the same supplied scope.
+All domains,states,source IDs and provenance remain in their original canonical owners.
+
+For example,the focused real-owner fixture interleaves a native step between two semantic steps:
+
+| Original input | Semantic ordinal / mixed position | Root member |
+| --- | --- | --- |
+| Button declaration | 1 / 1 | Original Unknown NotionSize logical |
+| Policy input0 | 1 / 1 | Original dedicated length10 |
+| Policy input1 | 1 / 1 | The same dedicated length10,another original field |
+| Logical/numeric input0 | 2 / 3 | Original canonical logical or general scalar |
+
+The two length references stay separate records with their original input indices and field
+loans. The native target at mixed position2 remains unbound. A Profile button and Profile logical
+input produce only the two Root numeric policy records. Removing those policy fields leaves N=0;
+all five explicit Profile/rule intent rows remain in their original checked owner.
+
+A missing first button member or a wrong last numeric kind retains the original source scope,
+requested target,typed lending cause and genuine consumer field location. The latter can follow
+three successful private member lookups;their temporary records are dropped and no accepted
+prefix escapes. `DraftingProgramRootInputMemberError` retains `owner()`,the complete
+`member_count()`,only completed fresh `demand()`,and its first typed `refusal()`. Reservation,
+resource and allocator causes preserve their concrete error chains;borrowed lookup witnesses
+remain inspectable through the original typed cause. The error also retains the same updated or
+unchanged cursor,so no failure resets previously reserved work.
+
+Focused public-factory cases check actual Root/operation/field/source owners,repeated references,
+Unknown and Derived state preservation,genuine ordinal/position distinction,late failure,short
+capacity before walks,Profile deferral and empty Root work. Existing empty-program and affected
+garment construction checks pass. Private-field/lifetime guards,format and scoped strict lint pass.
+These are focused checks;whole/coupled verification remains deferred to its existing task owners.
+
+This layer binds members without reading a value. A self-referential Derived logical can therefore
+retain its original member here;the pending Derived supplier/output/order stage must refuse that
+relationship before any complete semantic proof. External Profile Derived operations never become
+Root positions. Rule/signature/output,Profile sources,garment/native joins,source truth,physical
+execution and complete cohort acceptance remain separate.

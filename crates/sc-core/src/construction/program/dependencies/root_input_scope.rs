@@ -11,6 +11,12 @@ use crate::{
     design::{DesignMetadataHost, DesignReferenceHost},
 };
 use core::fmt;
+mod members;
+pub use members::{
+    BoundDraftingProgramRootInputMembers, DraftingProgramRootInputMember,
+    DraftingProgramRootInputMemberError, DraftingProgramRootInputMemberRefusal,
+    DraftingProgramRootInputMembersResult, DraftingProgramRootInputSource,
+};
 
 /// Exact owner-join result,retaining original consumer and supplied source-scope witnesses on
 /// either branch. The alias supplies no constructor,copy,source or fresh-work acceptance.

@@ -41,6 +41,36 @@ fn build(
     kinds: Vec<ClosureKind>,
     opening: PocketOpening,
 ) -> TestResult<DesignGarment<EmptyHost>> {
+    build_with_semantics(
+        damaged,
+        identity,
+        kinds,
+        opening,
+        CanonicalInputs::new(vec![], vec![])?,
+        SemanticRecipe::empty(),
+    )
+}
+pub(super) fn garment_with_semantics(
+    canonical: CanonicalInputs,
+    semantic_recipe: SemanticRecipe,
+) -> TestResult<DesignGarment<EmptyHost>> {
+    build_with_semantics(
+        false,
+        id(100),
+        vec![],
+        PocketOpening::Profile(ProfileParameterRef::new(id(700))),
+        canonical,
+        semantic_recipe,
+    )
+}
+fn build_with_semantics(
+    damaged: bool,
+    identity: EntityId,
+    kinds: Vec<ClosureKind>,
+    opening: PocketOpening,
+    canonical: CanonicalInputs,
+    semantic_recipe: SemanticRecipe,
+) -> TestResult<DesignGarment<EmptyHost>> {
     let mut ledger = IdentityLedger::new();
     let mut ids = DeterministicIdGenerator::new();
     let edges = ledger.declare_edges(&mut ids, 1)?;
@@ -126,7 +156,6 @@ fn build(
     } else {
         plan
     };
-    let canonical = CanonicalInputs::new(vec![], vec![])?;
     let parameters = DesignParameters::new(vec![], &canonical)?;
     let materials = MaterialInventory::new(vec![], &canonical)?;
     let sources = DesignMetadata::new(EmptyHost, &canonical)?;
@@ -139,7 +168,7 @@ fn build(
         topology: ledger,
     })?;
     let inputs = DesignInputs::new(DesignInputsDefinition {
-        semantic_recipe: sc_core::recipe::SemanticRecipe::empty(),
+        semantic_recipe,
         structure,
         parameters,
         materials,
