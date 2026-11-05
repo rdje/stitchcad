@@ -568,3 +568,15 @@ with explicit root mutable-source guard, failed preparation excluded.
 The byte-exact source records above keep their original logical addresses. For their
 retained preimplementation record, use [the current window8 member](../history/window8.md#stitchcad-devnotes-part195md)
 or `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part195.md`.
+
+## Current pre-push gate
+
+The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
+
+- ID: `G1-SLICE.5f.2.prepush-400`
+  Status: `in_progress`
+  Goal:at the derived cadence,run full make check/gate/wasm/probes from one clean commit,then push
+  this project's main normally and observe the exact SHA's hosted jobs and steps.
+  Plan:one Cargo worker;cache-adjusted RAM watchdog stops only this gate at86%/88%. Logs stay under
+  target/prepush-0967/. A refusal gets its own child leaf and fresh full gates from the repair commit.
+  Deferred semantic acceptance(.5f.2.check/.verify and G1 integration) is not claimed by this gate.

@@ -3,6 +3,11 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0967 — own the due pre-push gate
+
+A new leaf owns the full check/gate/wasm/probes run,normal push and hosted-job observation for the
+derived400-commit milestone. It claims no semantic acceptance;gate results follow in later commits.
+
 ## STITCHCAD-G1-0966 — reconcile producer inventory before push (D381)
 
 The census and effect/file plans cover all370 sources again;a42/a43/n17 own later additions and n16 groups
