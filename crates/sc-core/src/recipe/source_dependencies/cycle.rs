@@ -1,4 +1,5 @@
 //! Bounded iterative cycle admission over the exact original canonical Derived relation.
+mod resources;
 use super::{FormulaSourceDependencies, FormulaSourceDependency};
 use core::fmt;
 use std::collections::TryReserveError;

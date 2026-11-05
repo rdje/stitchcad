@@ -2090,8 +2090,8 @@ whole-programme verification retain their separate task owners.
 ### Retained expression proofs before aggregate work
 
 The [fresh checked-expression producer](formula-checked-nodes.md#account-for-actual-retained-proof-buffers)
-now counts actual node certificates and ordered dependency records in a cumulative sink. Complete
-aggregate admission must compose those records with statement,source,graph and program proof
-owners as well as the original garment/program/selection content. The owner join itself still
+now counts actual node certificates and ordered dependency records in a cumulative sink. Fresh [statement,source and graph producers](formula-checked-recipes.md#fresh-retained-statement-source-and-relation-records)
+now supply their actual held records too. Complete aggregate admission must compose these with
+program proof owners and the original garment/program/selection content. The owner join itself still
 performs no content walk. The remaining composition and prospective work checks are not supplied
 by an expression-level demand or an earlier successful source proof.

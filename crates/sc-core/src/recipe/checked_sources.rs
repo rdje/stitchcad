@@ -1,4 +1,5 @@
 //! Complete initial-namespace source kind proofs and actual canonical dependency/target checks.
+mod resources;
 use super::{
     FormulaBindingKind, FormulaCanonicalInput, FormulaCanonicalInputError,
     FormulaCheckedExpression, FormulaDeclarationSource, FormulaDerivedInput,

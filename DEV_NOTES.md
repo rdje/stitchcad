@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — actual statement/source/relation proof composition
+
+0910 composes checked-expression buffers through actual statement variants and the complete source
+proof vector. Statement locations preserve real one-based ordinals;source operands preserve actual
+source IDs and zero-based source indexes. The relation component charges actual edge/offset arrays,
+including the empty graph's terminal sentinel. Its acyclic wrapper retains only a relation borrow
+and fixed metadata;old scratch totals are not held records. Borrowed bodies remain separately owned.
+Exhaustive schemas and fixed-Copy guards expose future dynamic fields. The focused public-factory
+fixture covers exact/short first causes,repeated components,empty owners,unused Derived sources,
+unchanged Unknown state and aggregate13 source/relation records without cycle scratch. All3 tests,
+format and scoped strict Clippy pass. No source/value/whole-programme approval follows.
+Promotion declined:the actual resource producer/API/book is canonical. Mixed proof records and
+complete fresh aggregate admission remain next;G1still6/18 In Progress unchanged.
+
 ## _(2026-11-05 UTC)_ — fresh checked-expression proof records
 
 0909 adds an exhaustive cumulative producer for the actual certificate and dependency arrays.

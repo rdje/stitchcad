@@ -1,4 +1,5 @@
 //! Complete prospective canonical Derived-source relation; no cycle, operation or execution proof.
+mod resources;
 use super::{
     FormulaCanonicalInput, FormulaCheckedSource, FormulaCheckedSources, FormulaDeclarationSource,
     FormulaNameDependency,

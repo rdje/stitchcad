@@ -1,4 +1,5 @@
 //! Value-free current-statement proof, available only through a real ordered name scope.
+mod resources;
 use super::{
     normalized_recipe::NormalizedStatementData as Data, FormulaBinaryOperator, FormulaBindingKind,
     FormulaCanonicalStatement, FormulaCheckedExpression, FormulaDimensionRefusal,

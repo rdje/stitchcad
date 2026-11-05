@@ -609,3 +609,52 @@ classifies no creator and queries no geometry. [Quota order and examples](formul
 and [fresh content accounting](drafting-context-sources.md#fresh-geometry-content-accounting)
 complete this admission contract. The [complete supplier controller](formula-declarations.md#bind-complete-geometry-suppliers)
 uses this admission next;semantic binding and whole acceptance remain separate.
+
+## Fresh retained statement, source and relation records
+
+Complete aggregate accounting now has separate cumulative producers for the actual retained
+statement,source and dependency-relation proof components. Each appends to the caller's
+`DesignResourceSink` without finishing or resetting it. The containing caller supplies its actual
+`DesignResourceScope` and optional owner ID. Constructor limits,old reservation totals and earlier
+successful demand never replace these fresh vector lengths.
+
+`FormulaCheckedStatement::charge_retained_resources` charges a let's expression,or an assertion's
+left expression then right expression,through the [expression-buffer producer](formula-checked-nodes.md#account-for-actual-retained-proof-buffers).
+The statement itself holds fixed metadata and borrowed normalized syntax. Its operand locations
+retain the genuine one-based source statement ordinal and distinct let/left/right field names.
+An outer statement or mixed-step vector is a separate containing collection charge. A symbolic
+assertion tolerance is borrowed metadata;it does not acquire an invented expression allocation.
+
+`FormulaCheckedSources::charge_retained_resources` first precharges the actual complete source-proof
+vector,then each source's certificate and ordered dependency vectors in original source order.
+Operand locations preserve the actual original source ID and zero-based source index. Unused
+sources participate. Raw/normalized sources,canonical inputs and declaration bodies compose through
+their original owners;this producer counts their held proof records without duplicating bodies.
+
+`FormulaSourceDependencies::charge_retained_resources` charges the actual edge vector followed by
+the actual offset vector,including the terminal offset. The empty relation therefore still holds
+one offset. Its borrowed checked-source proof composes separately. The corresponding method on
+`FormulaAcyclicSourceDependencies` delegates to that exact retained relation after accounting for
+its fixed wrapper fields. The successful acyclic wrapper owns no cycle-workspace vector:the earlier
+scratch reservation is excluded from held content.
+
+```rust
+use sc_core::{recipe::{FormulaCheckedSources,FormulaAcyclicSourceDependencies},design::*,ontology::EntityId};
+fn add_original_source_proofs(sources:&FormulaCheckedSources<'_>,acyclic:&FormulaAcyclicSourceDependencies<'_>,
+    sink:&mut dyn DesignResourceSink,scope:DesignResourceScope,owner:Option<EntityId>)
+    ->Result<(),DesignResourceLimitError> {
+    sources.charge_retained_resources(sink,scope,owner)?;
+    acyclic.charge_retained_resources(sink,scope,owner)
+}
+```
+
+A shortage retains the original first array/operand location and complete attempted length.
+An earlier sink refusal wins even for an empty source vector or zero edges. Repeated composition
+counts each logical occurrence again. Exhaustive owner/variant destructuring and fixed-Copy guards
+expose future owned fields. These methods perform no namespace lookup,graph traversal,value read,
+source callback,clone or result allocation. They approve no new source or whole programme.
+
+The focused public-factory checks include let/assertion operand order,a Derived/Unknown canonical
+source population,an unused source with a real Derived edge,exact/short quotas,earlier latches,
+repeated composition and an empty relation. Complete mixed-proof/garment/program/request composition
+and aggregate occurrence/comparison/child-walk/result bounds remain the next stage.

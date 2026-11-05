@@ -3,6 +3,13 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0910 — freshly compose statement/source/relation proof records
+
+New cumulative producers count actual let/assert operand arrays,complete source proofs and relation
+edges/offsets. Genuine ordinals/source IDs and first field causes survive;empty relations retain their
+terminal offset,and old acyclic scratch is excluded. Focused public-factory tests3,format and scoped
+strict Clippy pass. Complete mixed aggregate work remains pending;G1still6/18 unchanged.
+
 ## STITCHCAD-G1-0909 — freshly account checked-expression proof buffers
 
 The cumulative resource producer charges actual certificate and ordered dependency vectors with
