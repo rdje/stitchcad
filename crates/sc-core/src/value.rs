@@ -11,6 +11,8 @@ use std::collections::BTreeSet;
 mod inventory;
 pub use inventory::{
     CanonicalInputPosition, CanonicalInputTarget, CanonicalInputs, CanonicalInputsError,
+    CanonicalNumericInputBinding, CanonicalNumericInputError, CanonicalNumericInputMember,
+    CanonicalNumericInputRefusal,
 };
 
 mod scalar;

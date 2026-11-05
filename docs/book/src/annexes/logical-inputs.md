@@ -268,3 +268,61 @@ the final logical selection5 after30 domain bytes at owner90,index2; it retains 
 before later source queries. Constructor policy and shape metadata supply no content credit.
 Profile/source binding,currentness,semantic execution and complete programme acceptance remain
 separate. Standalone accounting itself grants no containing Root membership or whole-source proof.
+
+## Resolve original numeric target membership
+
+`CanonicalInputs::resolve_numeric(CanonicalInputTarget)` now resolves an original numeric target
+without requiring formula metadata. Semantic policy/logical-operation inputs already carry that
+exact target representation;the caller does not invent a formula name,origin or metadata input ID.
+This primitive is parallel to logical inventory membership above. It binds the actual supplied
+inventory,not a containing Root/Profile source,currentness,Derived supplier or work allowance.
+
+`CanonicalInputTarget::Length(id)` selects only a dedicated length. `Scalar { declaration,kind }`
+selects only a general scalar of the exact declared kind. A Length-kind general scalar never
+substitutes for a dedicated length,or conversely. A logical declaration with the same requested ID
+is another representation,not a numeric operand. Missing targets have no fallback.
+
+The private `CanonicalNumericInputBinding` retains `inputs()`,the exact requested `target()`,and
+an actual original `member()`. Its `position()` is the genuine zero-based family position. The
+member view is Length or Scalar with its original declaration loan and index;public member-view
+construction alone is not a membership certificate. The binding is Copy without copying any state,
+value or source body,and cannot replace or outlive its actual inventory. Equal-data inventories
+still produce bindings to different original owner/member pointers.
+
+```rust
+use sc_core::{ontology::EntityId,value::*};
+# fn main()->Result<(),Box<dyn std::error::Error>> {
+let identity=EntityId::from_bits(1);
+let record=LengthDeclaration::new(LengthDeclarationDefinition {
+    id:identity,source:EntityId::from_bits(2),
+    state:LengthState::Unknown {observation:EntityId::from_bits(3)},
+})?;
+let inputs=CanonicalInputs::new(vec![record],vec![])?;
+let binding=inputs.resolve_numeric(CanonicalInputTarget::Length(identity))
+    .map_err(|e|e.to_string())?;
+assert!(std::ptr::eq(binding.inputs(),&inputs));
+assert_eq!(binding.position(),CanonicalInputPosition::Length {index:0});
+# Ok(()) }
+```
+
+Unknown and Derived records remain valid membership results with their original state and sole
+observation/formula source;no authored value is read or selected. Other state/provenance also stays
+in its owner. The factory allocates no workspace,clones no body and performs no provider/source or
+value query. A containing checker must freshly admit complete content and bound all these lookup
+scans before calling it.
+
+`CanonicalNumericInputError` retains the exact original inventory and requested target.
+`MissingLength` and `MissingScalar` retain the actual other-family position when that identity
+belongs to a scalar,length or logical record. `ScalarKind` retains expected kind,the original
+scalar index and the actual mismatched declaration loan. The caller can explicitly inspect its
+original state;Debug/Display omit authored values. The typed error borrows its witnesses. An
+owning static error boundary can explicitly render it,as in the example,without discarding the
+native lending API.
+
+Focused cases cover dedicated versus general Length,original indices,Unknown/Derived/Preference
+states,equal-data owner separation,logical-family collisions,missing targets,kind mismatch and
+empty inventories. Original record-buffer addresses stay unchanged. Diagnostic checks use an
+authored Count sentinel and confirm it does not appear in binding/member/error/refusal formatting.
+Compiler/API guards prevent private owner replacement and lifetime escape. Root context/source
+composition,Profile numeric sources and complete semantic supplier/order acceptance remain
+separate;this membership primitive certifies none of them.

@@ -723,7 +723,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:after complete aggregate work,match explicit relative request coordinates to actual original garment/program/semantic/native occurrences and complete direct Profile/rule needs. Preserve actual owners/first causes;do not certify native target-internal Profile need until authentic target association or treat unconsumed rows as accepted.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bind complete actual logical/Profile/numeric inputs,original rule/signature/output and Design Derived supplier order under aggregate preflight. Preserve domains/states and external Profile Derived source scope;never select values or reinterpret Profile operation IDs as Root positions.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment`
   Status: `pending`
@@ -944,5 +944,17 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] NO REGRESSION:independent1082.json →169 lines/16815 decodedB,23667 sealedB,3 source intervals/public_exact true,rc=0. Task collection after compaction19974L/1492810B;old seals,caps,code,producers and protected stores are unchanged. Mandatory doctrine/book checks own final publication integrity.
   - [x] LOCKSTEP:MEM/index/DEV/ledger/book retrieval align on selected .logical.numeric-target;README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:existing whole-source retention/book reader owns this procedure. Commit:STITCHCAD-G1-0918.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.numeric-target`
-  Status: `pending`
+  Status: `done`
   Goal:bind genuine CanonicalInputTarget directly to the actual immutable canonical numeric inventory with exact family,scalar kind,original position/member and typed lending refusals. No invented formula metadata,values,source/work credit or supplier order;Root aggregate composition remains with the logical parent.
+  - [x] REPRODUCE / ISSUE:original semantic numeric fields carry CanonicalInputTarget,whereas the formula canonical join requires actual FormulaDeclaration metadata. Inventing a name/origin/metadata ID would replace original source representation. A genuine supplied-inventory target join is required before aggregate semantic composition.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'pub fn resolve_numeric|pub fn resolve' value/inventory/numeric.rs and recipe/input/canonical.rs →new direct target factory and existing formula-metadata factory,rc=0. CanonicalInputs owns disjoint dedicated-length,scalar and logical records;lookup must retain exact numeric representation,scalar kind and original member/index.
+  - [x] FIX:allocation-free lending binding retains exact actual inventory,target and member/index. Dedicated versus general Length never converts;missing numeric families retain actual other-family positions,kind refusal retains the actual scalar loan. State/value/source/order/work are not selected or certified. Debug/Display omit authored
+    values,including the separately inspectable refusal.
+  - [x] ADDRESSED:cargo test -p sc-core --test canonical_inputs_contract numeric_targets →2 pass,rc=0. Actual positions,original buffers/loans,equal-data owner separation,Unknown/Derived/Preference states,length/scalar/logical collisions,missing/empty targets,kind witnesses and Count-sentinel diagnostic omission pass. Fixture logical
+    inspection allowance corrected1→2 under its existing constructor contract before green.
+  - [x] NO REGRESSION:cargo test -p sc-core --doc value::inventory::numeric →3 API/private/lifetime guards pass,rc=0. The owning-error example explicitly renders its lending error before boxing. cargo fmt -p sc-core -- --check and cargo clippy -p sc-core --lib --test canonical_inputs_contract -- -D warnings pass,rc=0. Whole .5f.2.check/.verify
+    and Root/Profile source/order composition remain deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger and logical/semantic book sections describe genuine numeric membership without fabricated metadata. README/LIVE reviewed unchanged,G1still6/18 In Progress. Next .logical.numeric-source owns actual fresh Root source attachment. Promotion declined:local member API/book owns this fact. Commit:STITCHCAD-G1-0919.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.numeric-source`
+  Status: `pending`
+  Goal:attach genuine numeric target membership to the actual freshly admitted Design semantic source scope,retaining original Root/context/policy/member witnesses and typed causes. Preserve all states without formula metadata or values;aggregate lookups and Derived supplier/order composition remain with the logical parent.

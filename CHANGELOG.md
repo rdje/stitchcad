@@ -3,6 +3,14 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0919 — bind genuine original numeric targets
+
+Canonical numeric targets now bind directly to actual inventory/member/position without invented
+formula metadata or value reads. Dedicated/general Length,exact scalar kind and typed lending
+causes stay distinct. Two focused fixture tests,three compiler/API guards,format and scoped strict
+Clippy pass. Root source attachment and aggregate source/order verification remain pending;
+G1still6/18 In Progress unchanged.
+
 ## STITCHCAD-G1-0918 — retain closed evidence before genuine numeric binding
 
 Whole closed0916–0917 task/journal/ledger bytes remain exact in1082. Three Git spans and independent

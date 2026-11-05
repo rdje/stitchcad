@@ -3,6 +3,23 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — genuine original numeric target membership
+
+0919 binds original CanonicalInputTarget directly against actual immutable canonical records,
+without invented formula metadata/name/origin/ID. The private Copy binding retains exact actual
+inventory,requested representation/kind,original member and authored position. Dedicated length
+and general Length scalar stay distinct. Missing targets preserve other numeric/logical-family
+positions;kind mismatch preserves the actual scalar loan. No state/value/source/work/order fact
+is manufactured. Diagnostics omit authored values,including explicit refusal formatting.
+Two focused fixture tests cover representations,positions,exact buffers/loans,equal-data owner
+separation,Unknown/Derived/Preference states,other-family/missing/empty targets,kind witnesses and
+a Count sentinel. Three compiler/API guards,format and scoped strict Clippy pass. Fixture logical
+inspection allowance was corrected1→2 under its existing contract;the owning-error doctest renders
+the lending error explicitly before boxing. Neither correction changes the actual member API.
+Promotion declined:the local direct-membership API/book owns the contract. README/LIVE reviewed
+unchanged,G1still6/18 In Progress. Fresh original Root source attachment is next;aggregate semantic
+source/Derived order and whole .5f.2.check/.verify remain owned and pending.
+
 ## _(2026-11-05 UTC)_ — retain closed direct-key evidence before numeric binding
 
 0918 unblocks the selected genuine numeric-target primitive at the fixed task line/byte ceilings.

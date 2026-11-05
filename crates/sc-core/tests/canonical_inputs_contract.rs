@@ -3,10 +3,12 @@
 use sc_core::{
     ontology::EntityId,
     value::{
-        CanonicalInputPosition as Position, CanonicalInputs, CanonicalInputsError as Error,
-        LengthDeclaration, LengthDeclarationDefinition, LengthState, LengthValueError,
-        ScalarInputDeclaration, ScalarInputDeclarationDefinition, ScalarInputKind as Kind,
-        ScalarInputReadError, ScalarInputState as State, ScalarInputValue as Value,
+        CanonicalInputPosition as Position, CanonicalInputTarget as Target, CanonicalInputs,
+        CanonicalInputsError as Error, CanonicalNumericInputMember as Member,
+        CanonicalNumericInputRefusal as Refusal, LengthDeclaration, LengthDeclarationDefinition,
+        LengthState, LengthValueError, ScalarInputDeclaration, ScalarInputDeclarationDefinition,
+        ScalarInputKind as Kind, ScalarInputReadError, ScalarInputState as State,
+        ScalarInputValue as Value,
     },
 };
 use sc_units::Length;
@@ -324,4 +326,217 @@ fn empty_drafts_are_legal_and_referenced_ids_are_not_claimed_as_owned_records() 
         inputs.length(id(1)).unwrap().state(),
         &LengthState::Unknown { observation: id(2) }
     );
+}
+
+fn numeric_target_fixture() -> CanonicalInputs {
+    use sc_core::{name::MachineToken, value::*};
+    let logical = LogicalInputDeclaration::new(
+        LogicalInputDeclarationDefinition {
+            id: id(7),
+            source: id(700),
+            kind: LogicalInputKind::PocketOpening,
+            domain: vec![MachineToken::new("small").expect("original logical member")],
+            state: LogicalInputState::Unknown {
+                observation: id(701),
+            },
+        },
+        LogicalInputLimits::new(1, 0, 5, 2),
+    )
+    .expect("original logical declaration");
+    CanonicalInputs::with_logicals(
+        vec![
+            unknown(9),
+            length(3, LengthState::Derived { formula: id(702) }),
+        ],
+        vec![
+            scalar(
+                8,
+                Kind::Length,
+                State::Unknown {
+                    observation: id(703),
+                },
+            ),
+            scalar(
+                5,
+                Kind::Count,
+                State::Preference {
+                    value: Value::from_count(123456789).expect("original Count"),
+                    provenance: id(704),
+                },
+            ),
+        ],
+        LogicalInputs::new(vec![logical], LogicalInputInventoryLimits::new(1, 1))
+            .expect("actual logical owner"),
+    )
+    .expect("actual disjoint canonical families")
+}
+#[test]
+fn numeric_targets_keep_actual_inventory_positions_representations_and_states() {
+    let inputs = numeric_target_fixture();
+    let lengths = inputs.lengths().as_ptr();
+    let scalars = inputs.scalars().as_ptr();
+    for (target, position) in [
+        (Target::Length(id(3)), Position::Length { index: 1 }),
+        (Target::Length(id(9)), Position::Length { index: 0 }),
+        (
+            Target::Scalar {
+                declaration: id(8),
+                kind: Kind::Length,
+            },
+            Position::Scalar { index: 0 },
+        ),
+        (
+            Target::Scalar {
+                declaration: id(5),
+                kind: Kind::Count,
+            },
+            Position::Scalar { index: 1 },
+        ),
+    ] {
+        let binding = inputs
+            .resolve_numeric(target)
+            .expect("actual original numeric member");
+        assert!(core::ptr::eq(binding.inputs(), &inputs));
+        assert_eq!(binding.target(), target);
+        assert_eq!(binding.position(), position);
+        assert_eq!(binding.member().position(), position);
+        match binding.member() {
+            Member::Length { index, declaration } => assert!(core::ptr::eq(
+                declaration,
+                inputs
+                    .lengths()
+                    .get(index)
+                    .expect("actual original length position")
+            )),
+            Member::Scalar { index, declaration } => assert!(core::ptr::eq(
+                declaration,
+                inputs
+                    .scalars()
+                    .get(index)
+                    .expect("actual original scalar position")
+            )),
+        }
+        assert!(!format!("{binding:?} {:?}", binding.member()).contains("123456789"));
+    }
+    assert_eq!(inputs.lengths().as_ptr(), lengths);
+    assert_eq!(inputs.scalars().as_ptr(), scalars);
+    assert_eq!(
+        inputs.length(id(3)).expect("original Derived").state(),
+        &LengthState::Derived { formula: id(702) }
+    );
+    assert_eq!(
+        inputs.length(id(9)).expect("original Unknown").state(),
+        &LengthState::Unknown {
+            observation: id(901)
+        }
+    );
+    assert_eq!(
+        inputs
+            .scalar(id(8))
+            .expect("original general Length")
+            .state(),
+        &State::Unknown {
+            observation: id(703)
+        }
+    );
+    let other = inputs.clone();
+    assert_eq!(other, inputs);
+    let target = Target::Length(id(9));
+    let first = inputs
+        .resolve_numeric(target)
+        .expect("first actual inventory");
+    let second = other
+        .resolve_numeric(target)
+        .expect("second actual inventory");
+    assert!(!core::ptr::eq(first.inputs(), second.inputs()));
+    assert!(
+        matches!((first.member(),second.member()),(Member::Length {declaration:a,..},Member::Length {declaration:b,..}) if !core::ptr::eq(a,b))
+    );
+}
+#[test]
+fn numeric_targets_preserve_missing_other_family_and_original_kind_refusals(
+) -> Result<(), Box<dyn std::error::Error>> {
+    let inputs = numeric_target_fixture();
+    let requests = [
+        Target::Length(id(8)),
+        Target::Scalar {
+            declaration: id(9),
+            kind: Kind::Length,
+        },
+        Target::Length(id(7)),
+        Target::Scalar {
+            declaration: id(7),
+            kind: Kind::Boolean,
+        },
+        Target::Length(id(999)),
+        Target::Scalar {
+            declaration: id(999),
+            kind: Kind::Count,
+        },
+        Target::Scalar {
+            declaration: id(5),
+            kind: Kind::Boolean,
+        },
+    ];
+    for (case, target) in requests.into_iter().enumerate() {
+        let error = inputs
+            .resolve_numeric(target)
+            .expect_err("no family substitution or value default");
+        assert!(core::ptr::eq(error.inputs(), &inputs));
+        assert_eq!(error.target(), target);
+        match (case, error.refusal()) {
+            (
+                0,
+                Refusal::MissingLength {
+                    other: Some(Position::Scalar { index: 0 }),
+                },
+            )
+            | (
+                1,
+                Refusal::MissingScalar {
+                    other: Some(Position::Length { index: 0 }),
+                },
+            )
+            | (
+                2,
+                Refusal::MissingLength {
+                    other: Some(Position::Logical { index: 0 }),
+                },
+            )
+            | (
+                3,
+                Refusal::MissingScalar {
+                    other: Some(Position::Logical { index: 0 }),
+                },
+            )
+            | (4, Refusal::MissingLength { other: None })
+            | (5, Refusal::MissingScalar { other: None }) => {}
+            (
+                6,
+                Refusal::ScalarKind {
+                    expected: Kind::Boolean,
+                    index: 1,
+                    actual,
+                },
+            ) => {
+                assert!(core::ptr::eq(
+                    actual,
+                    inputs.scalar(id(5)).expect("actual mismatched Count")
+                ));
+                assert_eq!(actual.kind(), Kind::Count);
+                assert!(matches!(actual.state(), State::Preference { .. }));
+            }
+            _ => return Err(format!("unexpected target refusal: {case}: {error}").into()),
+        }
+        assert!(!format!("{error:?} {error} {:?}", error.refusal()).contains("123456789"));
+    }
+    let empty = CanonicalInputs::new(vec![], vec![]).expect("actual empty inventory");
+    assert!(matches!(
+        empty
+            .resolve_numeric(Target::Length(id(1)))
+            .expect_err("empty target")
+            .refusal(),
+        Refusal::MissingLength { other: None }
+    ));
+    Ok(())
 }

@@ -2402,3 +2402,12 @@ This proof checks direct keys and required direct selections. It accepts no actu
 canonical member,rule body,Profile value,native target-internal need or complete semantic cohort.
 Deferred context rows still require authentic family need and final unused-row checks. Logical,
 garment,native and final cohort binders remain the next implementation stages.
+
+### Genuine numeric target membership before semantic composition
+
+Original numeric policy/logical-operation fields now have direct inventory membership through
+`CanonicalInputs::resolve_numeric`,documented in the logical-input chapter. It preserves dedicated
+length versus general scalar representation,exact scalar kind and original member/index without
+manufactured formula metadata or value reads. This is actual supplied-inventory membership only;
+attaching it to the fresh original Root source scope and composing semantic supplier/order proof
+remain subsequent logical-source stages.

@@ -3,6 +3,11 @@ use super::{LengthDeclaration, LogicalInputs, ScalarInputDeclaration, ScalarInpu
 use crate::ontology::EntityId;
 use core::fmt;
 use std::collections::BTreeMap;
+mod numeric;
+pub use numeric::{
+    CanonicalNumericInputBinding, CanonicalNumericInputError, CanonicalNumericInputMember,
+    CanonicalNumericInputRefusal,
+};
 
 /// Original position of an owned declaration, preserving its canonical representation family.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
