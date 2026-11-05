@@ -3,6 +3,12 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0963 — record authorized run and tighter RAM ceiling
+
+Director authorizes continued work with88% hard host RAM ceiling. The new OS-visible reading
+is already above that ceiling;Rust remains deferred until stable headroom is available.
+Resume/task owners retain the precise blocker. No memory-intensive job or product change.
+
 ## STITCHCAD-G1-0962 — specify bounded placement reference execution
 
 Current-reference planning now names complete query,retention,resolver-visit and ownership-work

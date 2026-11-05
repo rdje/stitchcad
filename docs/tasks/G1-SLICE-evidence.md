@@ -970,9 +970,9 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   Status: `blocked`
   Goal:implement one original source-bound notion current-reference view using the0962 protocol;
   explicit fresh resources/query/retention/ownership quotas,raw bounded point/range causes and G2 deferral.
-  Blocker:2026-11-05 OS-visible top reports21G used/2078M unused on24GiB host;Rust work deferred
-  under director RAM policy. No owned memory-intensive job started. Director will free memory and
-  confirm readiness;then recheck usage<=80% before single-worker focused Rust work,monitor at86%.
+  Blocker:director authorizes the run2026-11-05 with a new88% hard host RAM ceiling. OS-visible
+  top at19:36UTC reports23G used/172M unused on24GiB;headroom unavailable. No owned intensive
+  job started. Recheck stable usage<=80% before single-worker work;reduce at86%,stop before88%.
   Focused checks:legacy-consumer parity on curated intact/split/reverse/merge,choices/offset gaps,
   deleted interior/foreign ownership,original loans and complete quota/arithmetic/refusal priority.
 
@@ -982,3 +982,14 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   admission,N+1 atomic cursor passes,N0 idle,late first causes/no accepted prefix or refund.
   Deferred verification:actual native-family/semantic cohort plus whole.5f.2.check/.verify remain
   with their existing owners;this class does not claim those milestones.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.ram`
+  Status: `done`
+  Goal:save director run authorization and updated88% hard host ceiling without starting Rust
+  above that ceiling;keep.record as the blocked implementation frontier.
+  - [x] CHECKPOINT:OS-visible top -l 1 -n 0 →23G used/172M unused at19:36UTC,rc=0;
+    host already exceeds88%. No owned memory-intensive job started;other projects untouched.
+  - [x] LOCKSTEP:MEMORY/changelog reflect authorization and physical headroom blocker;
+    git diff --check →empty,rc=0. README/LIVE/DEV/book reviewed unchanged;G1still6/18 In Progress.
+    No product change,new lesson,Rust verification or full pre-push gate claimed.
+  Commit:STITCHCAD-G1-0963.
