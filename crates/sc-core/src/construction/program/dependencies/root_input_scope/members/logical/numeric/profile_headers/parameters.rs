@@ -19,10 +19,13 @@ pub use compose::DraftingProgramOperationInput;
 pub use error::{DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal};
 pub use rule_work::{
     AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentRootInputMembers,
-    BoundDraftingProgramRuleSignatures, BoundDraftingProgramRuleSources,
-    DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
-    DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
-    DraftingProgramGarmentRootInputSource, DraftingProgramRuleSignature,
+    BoundDraftingProgramGarmentRootLogicalSuppliers, BoundDraftingProgramRuleSignatures,
+    BoundDraftingProgramRuleSources, DraftingProgramGarmentRootInputMember,
+    DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
+    DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
+    DraftingProgramGarmentRootLogicalSupplier, DraftingProgramGarmentRootLogicalSupplierError,
+    DraftingProgramGarmentRootLogicalSupplierRefusal,
+    DraftingProgramGarmentRootLogicalSuppliersResult, DraftingProgramRuleSignature,
     DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal,
     DraftingProgramRuleSignaturesResult, DraftingProgramRuleSource, DraftingProgramRuleSourceError,
     DraftingProgramRuleSourceRefusal, DraftingProgramRuleSourcesResult, DraftingProgramRuleWork,

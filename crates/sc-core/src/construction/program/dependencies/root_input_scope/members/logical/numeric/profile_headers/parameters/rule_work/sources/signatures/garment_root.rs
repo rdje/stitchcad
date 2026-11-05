@@ -17,8 +17,15 @@ use crate::{
 use core::fmt;
 use sc_units::Length;
 mod error;
+mod logical;
 pub use error::{
     DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
+};
+pub use logical::{
+    BoundDraftingProgramGarmentRootLogicalSuppliers, DraftingProgramGarmentRootLogicalSupplier,
+    DraftingProgramGarmentRootLogicalSupplierError,
+    DraftingProgramGarmentRootLogicalSupplierRefusal,
+    DraftingProgramGarmentRootLogicalSuppliersResult,
 };
 /// Exact original logical member,inline length intent,or parameter-to-canonical numeric member.
 /// Public variants are views;only the private complete owner certifies coverage and admission.

@@ -18,14 +18,17 @@ mod error;
 mod sources;
 pub use error::{DraftingProgramRuleWorkError, DraftingProgramRuleWorkRefusal};
 pub use sources::{
-    BoundDraftingProgramGarmentRootInputMembers, BoundDraftingProgramRuleSignatures,
-    BoundDraftingProgramRuleSources, DraftingProgramGarmentRootInputMember,
-    DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
-    DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
-    DraftingProgramRuleSignature, DraftingProgramRuleSignatureError,
-    DraftingProgramRuleSignatureRefusal, DraftingProgramRuleSignaturesResult,
-    DraftingProgramRuleSource, DraftingProgramRuleSourceError, DraftingProgramRuleSourceRefusal,
-    DraftingProgramRuleSourcesResult,
+    BoundDraftingProgramGarmentRootInputMembers, BoundDraftingProgramGarmentRootLogicalSuppliers,
+    BoundDraftingProgramRuleSignatures, BoundDraftingProgramRuleSources,
+    DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
+    DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
+    DraftingProgramGarmentRootInputSource, DraftingProgramGarmentRootLogicalSupplier,
+    DraftingProgramGarmentRootLogicalSupplierError,
+    DraftingProgramGarmentRootLogicalSupplierRefusal,
+    DraftingProgramGarmentRootLogicalSuppliersResult, DraftingProgramRuleSignature,
+    DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal,
+    DraftingProgramRuleSignaturesResult, DraftingProgramRuleSource, DraftingProgramRuleSourceError,
+    DraftingProgramRuleSourceRefusal, DraftingProgramRuleSourcesResult,
 };
 
 /// One actual original rule/policy field and its exact checked explicit origin row.

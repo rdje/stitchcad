@@ -20,18 +20,21 @@ mod parameters;
 pub use error::{DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal};
 pub use parameters::{
     AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentRootInputMembers,
-    BoundDraftingProgramProfileParameters, BoundDraftingProgramRuleSignatures,
-    BoundDraftingProgramRuleSources, DraftingProgramGarmentRootInputMember,
-    DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
-    DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
-    DraftingProgramOperationInput, DraftingProgramProfileInputParameter,
-    DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal,
-    DraftingProgramProfileParametersResult, DraftingProgramRuleSignature,
-    DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal,
-    DraftingProgramRuleSignaturesResult, DraftingProgramRuleSource, DraftingProgramRuleSourceError,
-    DraftingProgramRuleSourceRefusal, DraftingProgramRuleSourcesResult, DraftingProgramRuleWork,
-    DraftingProgramRuleWorkError, DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest,
-    DraftingProgramRuleWorkResult,
+    BoundDraftingProgramGarmentRootLogicalSuppliers, BoundDraftingProgramProfileParameters,
+    BoundDraftingProgramRuleSignatures, BoundDraftingProgramRuleSources,
+    DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
+    DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
+    DraftingProgramGarmentRootInputSource, DraftingProgramGarmentRootLogicalSupplier,
+    DraftingProgramGarmentRootLogicalSupplierError,
+    DraftingProgramGarmentRootLogicalSupplierRefusal,
+    DraftingProgramGarmentRootLogicalSuppliersResult, DraftingProgramOperationInput,
+    DraftingProgramProfileInputParameter, DraftingProgramProfileParameterError,
+    DraftingProgramProfileParameterRefusal, DraftingProgramProfileParametersResult,
+    DraftingProgramRuleSignature, DraftingProgramRuleSignatureError,
+    DraftingProgramRuleSignatureRefusal, DraftingProgramRuleSignaturesResult,
+    DraftingProgramRuleSource, DraftingProgramRuleSourceError, DraftingProgramRuleSourceRefusal,
+    DraftingProgramRuleSourcesResult, DraftingProgramRuleWork, DraftingProgramRuleWorkError,
+    DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest, DraftingProgramRuleWorkResult,
 };
 
 /// Actual original Profile operation-input request and exact already-checked selection row.

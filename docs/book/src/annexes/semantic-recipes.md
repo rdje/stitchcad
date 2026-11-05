@@ -3143,3 +3143,62 @@ general Length provenance and unchanged Derived scope. Full fresh demand equals 
 measured original aggregate. Three compiler guards preserve privacy,non-Clone ownership and
 owner lifetimes. Profile input binding,Root Derived suppliers,served/components,Closure operation
 relations,native families and the complete semantic cohort remain separately owned.
+
+## Bind original Root garment logical Derived suppliers
+
+`BoundDraftingProgramGarmentRootInputMembers::bind_garment_root_logical_suppliers()` consumes
+complete original Root garment members and retains the same operation proofs/cursor. It binds
+every actual logical member whose original state is Derived. Inline/formula numeric fields and
+non-Derived logical states are unchanged and remain outside this scoped supplier class.
+`BoundDraftingProgramGarmentRootLogicalSuppliers::members()` retains all original members;
+`records()` keeps every Derived logical occurrence once,in original member order without merging
+shared suppliers. Each `DraftingProgramGarmentRootLogicalSupplier` exposes its original
+`member_index()`,actual Root `source()`,original exact `output()`,genuine supplier `ordinal()` and
+mixed `position()`,and actual complete `signature_index()` in `members().owner().records()`.
+
+The actual supplier must be a Root LogicalDerivation operation. Its original output must name the
+exact canonical logical member ID and kind. The same original operation also retains its complete
+prior rule-source/signature/output proof. A Profile member with an equal operation ID cannot
+supply this Root relationship. Missing operations,Buttonhole suppliers and wrong output IDs/kinds
+refuse with original member/scope/source/output witnesses. Earlier scoped member acceptance never
+substitutes for that supplier relationship.
+
+A Root Pocket or Closure has no mixed consumer position. This stage therefore preserves genuine
+supplier positions without imposing an invented Root consumer order. Ordered operation inputs
+retain their separate strictly-earlier rule;Root locations remain original garment coordinates.
+For example,the independent fixture puts a native step before both actual suppliers:
+
+| Original Root consumer | Actual supplier ordinal / mixed position | Complete signature index |
+| --- | --- | --- |
+| Pocket0 opening → Root90 | Logical80:1 / 2 | 0 |
+| Closure0 hook → Root92 | Logical81:2 / 3 | 1 |
+| Closure0 bar → Root92 | The same actual supplier:2 / 3 | 1 |
+| Closure1 button → Root92 | The same actual supplier:2 / 3 | 1 |
+
+All four consumers remain separate original records. Adding a genuine intervening native step
+moves Logical81's mixed position from3 to4 while ordinal2 and signature index1 stay unchanged.
+Semantic ordinals keep their required source order;the program correctly refuses an attempt to
+reverse them. A Root inventory index cannot replace any supplier coordinate or become a consumer
+position. Actual supplier output fields and prior signature output members remain original loans.
+
+For N>0,the factory atomically reserves N whole/supplier/result envelopes before fresh complete
+aggregate/proof charging,fallible N-record reservation or supplier lookup. One fresh full walk and
+each original recipe/mixed/signature scan fit N*(whole-demand,(E+8)²). Earlier demand gives no
+credit. The ordinary fixture already reserves sixteen input/rule/member passes;four logical
+Derived occurrences reserve four more,for twenty total. Their supplier stage performs one fresh
+full resource walk and no source/Profile/rule/currentness/value query. In the wrong-family case,
+an earlier Pocket supplier succeeds privately before a Closure's Buttonhole supplier refuses;
+that successful prefix is discarded.
+
+`child_pass_count()` reports N. N0 adds no walk,work,allocation,lookup,reservation or new demand.
+`DraftingProgramGarmentRootLogicalSupplierError` retains original complete members/cursor,
+`supplier_count()` when known,completed aggregate demand and first typed cause. A lookup cause
+keeps its original scope/request/actual missing or family witness;an output cause names the original
+member index and actual supplier. Capacity refusal changes no cursor reservation;later failures
+keep the complete stage spent. No successful supplier prefix is exposed.
+
+Nine focused modes check repeated suppliers,N0,atomic shortage,fresh resources before a known
+missing supplier,missing/wrong-family/output-ID/output-kind refusals and genuine native interleaving.
+The affected Root member fixture and three compiler guards also pass under scoped strict lint.
+This accepts the Root logical supplier relation only. Numeric suppliers,Profile garment inputs,
+component/Closure physical joins,native families,whole cohort checking and execution remain separate.

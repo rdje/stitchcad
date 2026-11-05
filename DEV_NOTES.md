@@ -2,6 +2,27 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — original Root garment logical suppliers without consumer positions
+
+0939 consumes complete Root garment members into complete logical Derived supplier associations.
+N whole/supplier/result envelopes precede full fresh aggregate/proof charging,N-record reservation
+and actual Root operation/output/mixed/signature joins. LogicalDerivation and exact output ID/kind
+are required;the genuine original supplier ordinal,mixed position and complete signature index
+remain attached to each original consumer. Root garment locations have no fabricated consumer
+position or end sentinel. Repeated Root92 consumers retain separate original records/source loans.
+Nine native modes pass:four consumers,two original suppliers,N0,atomic16+4 versus19 shortage,
+fresh resources before a known missing supplier,missing/late wrong-family/output-ID/output-kind
+refusals and actual native interleaving. Ordinary reservation is twenty total passes;late-family
+case uses a separately accepted Profile button and refuses after the earlier Pocket association.
+Fresh full demand equals the original meter and all query counts stay unchanged. The attempted
+semantic-ordinal reversal was correctly refused by program admission;the fixture instead inserts
+an actual native step,shifting supplier2 from mixed3 to4 while ordinal2/signature index1 stay fixed.
+Affected Root members10 modes and foreign-Root control,three compiler guards,format and scoped
+strict lint pass. Redundant fixture condition removed;no production/order contract changed.
+README/LIVE unchanged,G1still6/18 In Progress. Numeric suppliers,Profile/component/Closure/native
+and whole .check/.verify remain pending. Promotion declined:local Root supplier and original
+program/member/signature contracts own scope.
+
 ## _(2026-11-05 UTC)_ — complete original Root Pocket/Closure input membership
 
 0938 consumes complete operation inputs/rules into bounded Root garment input membership. Actual

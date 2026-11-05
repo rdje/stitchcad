@@ -3,6 +3,13 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0939 — bind original Root garment logical suppliers
+
+Every Root logical Derived field now retains its actual Root supplier/output,original signature
+and genuine supplier coordinates without an invented consumer order. Nine native modes,affected
+Root member/foreign-Root cases,three compiler guards,format and scoped strict lint pass. Numeric
+sources lead next;physical/cohort scope and G1six-of18 In Progress are unchanged.
+
 ## STITCHCAD-G1-0938 — bind original Root Pocket/Closure input members
 
 Complete Root garment membership now preserves logical members,inline zipper intent and actual

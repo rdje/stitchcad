@@ -71,16 +71,32 @@ pub(super) fn garment_with_declarations(
     kinds: Vec<ClosureKind>,
     opening: PocketOpening,
 ) -> TestResult<DesignGarment<EmptyHost>> {
+    garment_with_semantic_declarations(
+        canonical,
+        parameters,
+        kinds,
+        opening,
+        SemanticRecipe::empty(),
+    )
+}
+pub(super) fn garment_with_semantic_declarations(
+    canonical: CanonicalInputs,
+    parameters: Vec<DesignParameterDefinition>,
+    kinds: Vec<ClosureKind>,
+    opening: PocketOpening,
+    semantic_recipe: SemanticRecipe,
+) -> TestResult<DesignGarment<EmptyHost>> {
     build_with_semantics(
         false,
         id(100),
         kinds,
         opening,
         canonical,
-        SemanticRecipe::empty(),
+        semantic_recipe,
         parameters,
     )
 }
+
 fn build_with_semantics(
     damaged: bool,
     identity: EntityId,
