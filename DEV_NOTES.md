@@ -2,6 +2,15 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-06 UTC)_ — D381: an inventory row is not the producer guard
+
+0966 reconciles the producer census before the due push. 370 maintained sources had369 rows;8 effect and
+11 file rows were absent,and history moves had dropped the two n16 `Paths:` fields that native ownership
+parses. The census stops at the first refusal,so the later drift only appears once the earlier row exists.
+Reading the unlisted source found a separate defect:plan_sources.py guarded its scratch but passed ambient
+stores to Cargo. A fake Cargo captured the escaped CARGO_HOME;after entering the shared profile it captures
+target/cargo-home. The existing census refuses any later unlisted source by path.
+
 ## _(2026-11-05 UTC)_ — D380: occupied memory is not cache-adjusted used RAM
 
 0964 corrects the19:36UTC top-based refusal. The top23G observation was real;interpreting it as

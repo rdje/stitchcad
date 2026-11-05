@@ -557,6 +557,13 @@ Assigning a source to an owner does not establish destination resolution or runt
 The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
+A new maintained Python source needs its producer row and, when its kind requires them, an effect row,
+file row and native group in the same commit. `python3 -I -B docs/tasks/artifacts/ci_environment/producer_census.py`
+refuses an unlisted source with its path, and `producer_census_contract.py` refuses incomplete plans.
+Sources added after the original division are owned by `.p.o.a42` (numerical platform controllers),
+`.p.o.a43` (book renderer tool and fixtures) and `.p.o.f.n17` (search-query and dependency-plan probes).
+These rows record ownership and destinations reviewed from source; they are not runtime locality signoff.
+
 Twenty-six native-child capture cases execute actual entries with custom local stores,
 intercepting every source/output write and initial/restoration child calls. The declaration entry
 also captures negative-construction and native/doc restoration calls. The captures check actual

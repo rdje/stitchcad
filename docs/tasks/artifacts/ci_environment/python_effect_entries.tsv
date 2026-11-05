@@ -104,6 +104,14 @@ docs/tasks/artifacts/release_contract/approval_identity_probe.py	output	G1-SLICE
 docs/tasks/artifacts/seam_partition/oracle_watch_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a39
 docs/tasks/artifacts/book_publication/search_migration_capture.py	output	G1-SLICE.5b.4c.h2.b.p.o.a40
 docs/tasks/artifacts/ci_environment/python_search_capture_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a40
-docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a41
+docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a41.effects.ownership
 docs/tasks/artifacts/live_doc_size/book_integrity_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a36
 docs/tasks/artifacts/live_doc_size/task_source_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a37
+docs/tasks/artifacts/ci_environment/numerical_fixture_startup_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a41.startup
+docs/tasks/artifacts/ci_environment/numerical_fixture_provenance_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a41.effects.provenance
+docs/tasks/artifacts/ci_environment/numerical_fixture_alias_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a41.signoff
+docs/tasks/artifacts/ci_environment/platform_dispatch_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a42
+docs/tasks/artifacts/ci_environment/platform_runtime_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a42
+scripts/book_tool.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a43
+docs/tasks/artifacts/book_publication/book_tool_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a43
+docs/tasks/artifacts/book_publication/search_field_probe.py	output	G1-SLICE.5b.4c.h2.b.p.o.a43

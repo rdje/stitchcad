@@ -7,8 +7,11 @@ regenerable compiler scratch under target;this grants no new dependency/programm
 """
 from pathlib import Path
 import re
+import runpy
 import subprocess
 import sys
+
+OUTPUT_LABELS = ("borrow", "escape", "enums", "missing_arm", "invented_arm")
 
 
 def require(condition, message):
@@ -26,6 +29,18 @@ def main():
         ("scalar statements", "crates/sc-core/src/recipe/statement.rs", "FormulaStatementKind", "sc_core::recipe::FormulaStatementKind<'_>"),
         ("mixed step kinds", "crates/sc-core/src/construction/program.rs", "DraftingProgramStep", "sc_core::construction::DraftingProgramStep<'_>"),
     )
+    family_source = "crates/sc-core/src/construction/operation_input.rs"
+    out = root / "target/drafting_dependency_plan"
+    profile_source = root / "scripts/local_environment.py"
+    # Plan every owned path and activate project-local stores before any source read or child.
+    runpy.run_path(str(profile_source))["enter_producer"](
+        root,
+        directories=(out,),
+        output_files=tuple(out / (label + suffix) for label in OUTPUT_LABELS
+                           for suffix in (".rs", ".rmeta")),
+        sources=(Path(__file__), profile_source, family_source,
+                 *(row[1] for row in representations)),
+    )
     enum_functions = []
     for index, (label, path, name, rust_type) in enumerate(representations):
         text = (root / path).read_text()
@@ -40,19 +55,10 @@ def main():
         enum_functions.append((
             "fn shape_" + str(index) + "(value:" + rust_type + ") {\nuse "
             + rust_type.split("<", 1)[0] + ";\nmatch value {\n", arms, "\n}\n}\n"))
-    source = (root / "crates/sc-core/src/construction/operation_input.rs").read_text()
+    source = (root / family_source).read_text()
     family = source.split("pub enum DraftingOperationFamily {", 1)[1].split("\n}", 1)[0]
     names = re.findall(r"^    ([A-Za-z]+),$", family, re.M)
     require(len(names) == 13, "closed v1 native-family population changed;review the plan")
-    out = root / "target/drafting_dependency_plan"
-    for directory in (out.parent, out):
-        require(not directory.is_symlink(), "compiler scratch traverses a symlink")
-        require(not (directory / ".git").exists(), "compiler scratch crosses a nested repository")
-    require(out.parent.stat().st_dev == root.stat().st_dev, "compiler scratch is off-volume")
-    out.mkdir(exist_ok=True)
-    for label in ("borrow", "escape", "enums", "missing_arm", "invented_arm"):
-        for suffix in (".rs", ".rmeta"):
-            require(not (out / (label + suffix)).is_symlink(), "compiler output is a symlink")
     built = subprocess.run(["cargo", "build", "-p", "sc-core", "--lib"], cwd=root,
                            capture_output=True, text=True, check=False)
     require(built.returncode == 0, built.stdout + built.stderr)

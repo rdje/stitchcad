@@ -609,8 +609,10 @@ python3 -I -B scripts/local_environment.py -- python3 -I -B docs/tasks/artifacts
 
 It builds the current sc-core library,then uses the public Garment/input getter with the actual
 DesignReferenceHost bound. The borrowed return compiles;the otherwise identical lifetime escape
-must fail for that lifetime cause. Compiler scratch stays in the repository and rejects linked or
-nested-repository output paths. This control establishes the source interface/lifetime boundary;
+must fail for that lifetime cause. The probe enters the shared producer profile before reading sources
+or starting Cargo, so an ambient `CARGO_HOME` or `RUSTUP_HOME` outside the project is replaced by the
+project-local store even when the launcher is omitted. Compiler scratch stays in the repository and rejects
+linked or nested-repository output paths. This control establishes the source interface/lifetime boundary;
 it does not implement the planned dependency stages.
 
 

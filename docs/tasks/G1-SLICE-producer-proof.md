@@ -422,3 +422,50 @@ final ledger9+13 green, rc=0, target/recipe-ledger-final2.log. All required term
 The byte-exact source records above keep their original logical addresses. For their
 retained preimplementation record, use [the current window8 member](../history/window8.md#stitchcad-devnotes-part193md)
 or `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part193.md`.
+
+## Whole closed RAM records moved before inventory reconciliation
+
+Moved unchanged from the producer tree by `G1-SLICE.5b.4c.h2.b.p.inventory-reconcile`, which
+keeps that tree under its 1000-line split boundary. Commits 0964/0965 remain the owners.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.memory-accounting`
+  Status: `done`
+  Goal:D380 correct cache-inclusive top interpretation before product work;add read-only,
+  cache-aware macOS diagnostic with explicit estimate semantics and fail-closed input checks.
+  Paths:scripts/macos_memory.py;producer entry/file ledgers;book build guide;resume/task records.
+  Acceptance:independent Activity Monitor/Apple definitions/Stats calculation distinguish occupied
+  from used memory;frozen raw fixture and malformed/pressure/threshold controls pass. No claim
+  of exact simultaneous Activity Monitor equivalence or control over other projects' processes.
+  Product reference implementation,producer reconciliation and full pre-push gates stay pending.
+  - [x] REPRODUCE / ISSUE:top -l1 -n0 →23G occupied;independent Activity Monitor20.44/24GB plus3.60GB cache;rc=0. Captures are not simultaneous;top did not earn the used-RAM claim.
+  - [x] ROOT CAUSE:published Stats VM-category calculation subtracts purgeable/file-backed cache;Apple defines separate categories. macos_memory.py --self-test →frozen cache discrimination OK,rc=0.
+  - [x] FIX:read-only explicit estimate/units/pressure/peak admission;python3 -I -B scripts/macos_memory.py --self-test →thresholds/refusals OK,rc=0;no workload dispatch or cache deletion.
+  - [x] ADDRESSED:actual used=occupied subtraction omission in memory →expected assertion RED,rc=0. Live21:34UTC --reserve-mib2048 →used75.919/projected84.253%,within-budget,rc=0.
+  - [x] NO REGRESSION:focused self-test/diff check pass,rc=0;watched probe hook/source/file rows added. Existing producer census still refuses known plan_sources.py omission;inventory-reconcile owns pre-push repair.
+  - [x] LOCKSTEP:book/MEMORY/index/DEV/changelog/D380 corrected;whole closed D372–D375 ledger moved unchanged to PLANNING evidence. README/LIVE reviewed,G1still6/18 In Progress;no Rust/full verification claim.
+  promotion: declined (existing measurement-definition and explicit RAM admission policy;canonical book section updated).
+  Commit:STITCHCAD-G1-0964.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.pause-20261105`
+  Status: `done`
+  Goal:honor director-requested next handoff-ready checkpoint after a47d761f;no reference implementation started.
+  Acceptance:bash scripts/check_handoff.sh --idle-cua →handoff:OK,rc=0;Git clean/brief empty before pause. MEMORY/index/changelog persist resume.record;README/LIVE/DEV/book reviewed unchanged,G1still6/18 In Progress. No pending CUA result or owned background job.
+  Commit:STITCHCAD-G1-0965.
+
+## Original0151 division scope
+
+Moved unchanged from the producer tree by the same reconciliation owner;
+counts describe commit0151. Procedure and proofs remain in the producer tree.
+
+STITCHCAD-G1-0151 owns the complete current ledger division, its watched path/owner coverage,
+public-boundary inspection plan and source/book/live sync. It also owns blocking retention of whole
+committed older lessons and ledger records before growing the bounded live receipts, with exact
+Git intervals, prior archive bytes and public reads verified under unchanged ceilings.
+This is an inspection plan, not runtime
+locality signoff. Current source/call snapshot: target/effect-plan-current-census.json; regenerate with
+python3 -I -B docs/tasks/artifacts/ci_environment/producer_census.py --json through the local launcher.
+
+This division also owns D176: the task index's current-command examples still claim11 siblings
+and seven probes despite the actual expanded census/probe suites. Reproduce both commands and
+inspect their source/history; remove stale fixed totals from the current-command recipes, keep
+derived live counts and immutable historical records. Record closure only after current proof.

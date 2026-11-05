@@ -116,3 +116,9 @@ Fixed0696;[whole original ledger/proofs](../history/window28.md#stitchcad-devnot
 ## D375 — drafting chapters missing from the topic index
 Fixed0760;[whole cause/reproduction/fix](../history/window29.md#stitchcad-devnotes-part942md).
 
+
+## D380 — cache-inclusive occupancy mistaken for used RAM
+
+Owner:G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.memory-accounting;P1 before Rust admission.
+Top23G occupied was wrongly treated as >95% used RAM;Activity Monitor reported20.44/24GB with3.60GB reusable cache. Captures are not simultaneous;no exact UI/CLI parity claim.
+Fixed by explicit cache-adjusted estimate/pressure/headroom diagnostic,frozen independent subtraction and watched refusal/threshold controls. Book/resume/incorrect blocker corrected;original captures retained as history.

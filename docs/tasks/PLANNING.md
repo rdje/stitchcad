@@ -1183,8 +1183,10 @@ D376/D377 fixed0816/0817;D378 fixed0825;[whole causes/proofs](../history/window3
 
 D379 fixed0826;[whole source identity cause/proofs](../history/window30.md#stitchcad-devnotes-part1002md).
 
-## D380 — cache-inclusive occupancy mistaken for used RAM
+D380 fixed0964;[whole record](PLANNING-evidence.md#d380--cache-inclusive-occupancy-mistaken-for-used-ram).
 
-Owner:G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.memory-accounting;P1 before Rust admission.
-Top23G occupied was wrongly treated as >95% used RAM;Activity Monitor reported20.44/24GB with3.60GB reusable cache. Captures are not simultaneous;no exact UI/CLI parity claim.
-Fixed by explicit cache-adjusted estimate/pressure/headroom diagnostic,frozen independent subtraction and watched refusal/threshold controls. Book/resume/incorrect blocker corrected;original captures retained as history.
+## D381 — dependency-plan probe inherited ambient Rust stores
+
+Owner:G1-SLICE.5b.4c.h2.b.p.inventory-reconcile;P1 before push. plan_sources.py passed ambient CARGO_HOME/RUSTUP_HOME
+to Cargo when run without the launcher;only its scratch was guarded. Fixed0966:shared enter_producer before reads/children.
+Fake-Cargo capture now receives target/cargo-home;linked output refuses rc=2;real probe rc=0. D156 runtime signoff stays open.

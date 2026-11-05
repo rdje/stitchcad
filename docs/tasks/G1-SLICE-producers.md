@@ -12,18 +12,7 @@ This continues D156 .5b.4c.h2.b.p.o; native source/directory receipts exist, com
 
 ## Original0151 division record (historical counts and evidence)
 
-STITCHCAD-G1-0151 owns the complete current ledger division, its watched path/owner coverage,
-public-boundary inspection plan and source/book/live sync. It also owns blocking retention of whole
-committed older lessons and ledger records before growing the bounded live receipts, with exact
-Git intervals, prior archive bytes and public reads verified under unchanged ceilings.
-This is an inspection plan, not runtime
-locality signoff. Current source/call snapshot: target/effect-plan-current-census.json; regenerate with
-python3 -I -B docs/tasks/artifacts/ci_environment/producer_census.py --json through the local launcher.
-
-This division also owns D176: the task index's current-command examples still claim11 siblings
-and seven probes despite the actual expanded census/probe suites. Reproduce both commands and
-inspect their source/history; remove stale fixed totals from the current-command recipes, keep
-derived live counts and immutable historical records. Record closure only after current proof.
+[Original0151 scope paragraphs moved whole](G1-SLICE-producer-proof.md#original0151-division-scope).
 
 Each group owns its source rows in
 [python_effect_entries.tsv](artifacts/ci_environment/python_effect_entries.tsv).
@@ -513,6 +502,21 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Status: `done`
   Goal:0670 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part833md).
 
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a42`
+  Status: `done`
+  Goal:effect-plan group for the numerical platform controller contracts added after the original
+  division;their fixture/effect proofs stay with .f.n16.2.effects.dispatch and .effects.platform.
+  Paths: docs/tasks/artifacts/ci_environment/platform_dispatch_contract.py;docs/tasks/artifacts/ci_environment/platform_runtime_contract.py
+  Review:complete sources write only under per-PID target/platform-*-controls through the profile;
+  children are modeled. This assigns ownership;final runtime locality stays with .p.v.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a43`
+  Status: `done`
+  Goal:effect-plan group for the book renderer tool and its fixtures added after the original
+  division;their install/search proofs stay with G1-SLICE.5f.1.book-search.activate.tool and .build.
+  Paths: scripts/book_tool.py;docs/tasks/artifacts/book_publication/book_tool_contract.py;docs/tasks/artifacts/book_publication/search_field_probe.py
+  Review:complete sources plan every store/output through the profile before dispatch;fixtures stay
+  under target/book_tool_contracts and target/book_search_*. Final runtime locality stays with .p.v.
+
 ## Ordered native file-destination repairs
 
 These P1 leaves extend the verified source/directory guards with complete file plans.
@@ -926,6 +930,7 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Goal:0666 scoped closure;[whole parent scope](../history/window26.md#stitchcad-devnotes-part827md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1`
   Status: `done`
+  Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py;docs/tasks/artifacts/formula_structure/arc_body_faults.py;docs/tasks/artifacts/formula_structure/forward_body_faults.py;docs/tasks/artifacts/formula_structure/inverse_body_faults.py
   Goal:0659 four-entry closure;[whole parent scope](../history/window26.md#stitchcad-devnotes-part827md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.inventory`
   Status: `done`
@@ -939,6 +944,7 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Goal:0659 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part819md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2`
   Status: `done`
+  Paths: docs/tasks/artifacts/formula_structure/tangent_body_faults.py;docs/tasks/artifacts/formula_structure/tangent_resource_body_faults.py;docs/tasks/artifacts/formula_structure/irrational_platform.py
   Goal:0666 scoped closure;[whole scope](../history/window26.md#stitchcad-devnotes-part830md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.inventory`
   Status: `done`
@@ -969,32 +975,22 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Status: `done`
   Goal:0666 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part826md).
 
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n17`
+  Status: `done`
+  Goal:native group for the search-query contract and the dependency-plan probe added after the
+  ordered division;search proof stays with G1-SLICE.5f.1.book-search.verify.
+  Paths: docs/tasks/artifacts/book_publication/search_query_contract.py;docs/tasks/artifacts/drafting_dependencies/plan_sources.py
+  Repair:plan_sources.py enters the shared producer profile before reads or children (D381).
+
 - ID: `G1-SLICE.5b.4c.h2.b.p.inventory-reconcile`
-  Status: `pending`
-  Priority: P1 before the next push/full producer signoff;owner repo-local,D156.
-  Goal:0865 owns pre-existing producer/file/effect drift found during book retirement. Reproduce with producer_census.py and validate_effect_plan/validate_file_plan;predecessor8152ce3b already lacks tracked drafting_dependencies/plan_sources.py in producers,8 effect records and11 Python file records for later platform,numerical and book-tool additions.
-  Schedule:reconcile exact current roles and canonical audit owners after the requested book-policy slice,before any push;do not treat inventory as runtime locality proof. Existing live source/audit nodes remain;no other repository is written.
-
-- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.memory-accounting`
   Status: `done`
-  Goal:D380 correct cache-inclusive top interpretation before product work;add read-only,
-  cache-aware macOS diagnostic with explicit estimate semantics and fail-closed input checks.
-  Paths:scripts/macos_memory.py;producer entry/file ledgers;book build guide;resume/task records.
-  Acceptance:independent Activity Monitor/Apple definitions/Stats calculation distinguish occupied
-  from used memory;frozen raw fixture and malformed/pressure/threshold controls pass. No claim
-  of exact simultaneous Activity Monitor equivalence or control over other projects' processes.
-  Product reference implementation,producer reconciliation and full pre-push gates stay pending.
-  - [x] REPRODUCE / ISSUE:top -l1 -n0 →23G occupied;independent Activity Monitor20.44/24GB plus3.60GB cache;rc=0. Captures are not simultaneous;top did not earn the used-RAM claim.
-  - [x] ROOT CAUSE:published Stats VM-category calculation subtracts purgeable/file-backed cache;Apple defines separate categories. macos_memory.py --self-test →frozen cache discrimination OK,rc=0.
-  - [x] FIX:read-only explicit estimate/units/pressure/peak admission;python3 -I -B scripts/macos_memory.py --self-test →thresholds/refusals OK,rc=0;no workload dispatch or cache deletion.
-  - [x] ADDRESSED:actual used=occupied subtraction omission in memory →expected assertion RED,rc=0. Live21:34UTC --reserve-mib2048 →used75.919/projected84.253%,within-budget,rc=0.
-  - [x] NO REGRESSION:focused self-test/diff check pass,rc=0;watched probe hook/source/file rows added. Existing producer census still refuses known plan_sources.py omission;inventory-reconcile owns pre-push repair.
-  - [x] LOCKSTEP:book/MEMORY/index/DEV/changelog/D380 corrected;whole closed D372–D375 ledger moved unchanged to PLANNING evidence. README/LIVE reviewed,G1still6/18 In Progress;no Rust/full verification claim.
-  promotion: declined (existing measurement-definition and explicit RAM admission policy;canonical book section updated).
-  Commit:STITCHCAD-G1-0964.
-
-- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.pause-20261105`
-  Status: `done`
-  Goal:honor director-requested next handoff-ready checkpoint after a47d761f;no reference implementation started.
-  Acceptance:bash scripts/check_handoff.sh --idle-cua →handoff:OK,rc=0;Git clean/brief empty before pause. MEMORY/index/changelog persist resume.record;README/LIVE/DEV/book reviewed unchanged,G1still6/18 In Progress. No pending CUA result or owned background job.
-  Commit:STITCHCAD-G1-0965.
+  Goal:0865 owned drift;reconcile every source/effect/file row and native/effect group before push.
+  Paths:producer/effect/file TSVs;n16.1/n16.2/n17/a42/a43 groups;plan_sources.py;book/D381.
+  - [x] REPRODUCE / ISSUE:producer_census.py →REFUSED plan_sources.py,rc=2. Fake cargo with ambient CARGO_HOME received /private/tmp/ambient-cargo-home,rc=1;drift8 effect/11 file,two groups lost Paths.
+  - [x] ROOT CAUSE (WHY + WHERE):producer_census.py inventory →370 sources vs369 rows,rc=2;later additions skipped the plans and history moves dropped n16 Paths. plan_sources.py only checked scratch,not stores (D381).
+  - [x] FIX:rows,a41 terminal owners,a42/a43/n17 and restored Paths;plan_sources.py enters enter_producer before reads/children. Reviewed sources write only under profile-planned target roots.
+  - [x] ADDRESSED:producer_census_contract.py →116 effects/54 groups,257 files/98 owners/41 native,15+8 refusals,12+7 guard reds,rc=0. Same fake cargo now receives target/cargo-home;linked output →REFUSED,rc=2.
+  - [x] NO REGRESSION:local_environment.py -- plan_sources.py →13 families,all compiler controls matched,rc=0;task_source_contract.py and git diff --check pass,rc=0. Whole CI remains the pre-push gate.
+  - [x] LOCKSTEP:book/D381/DEV/changelog/MEMORY/index align;README/LIVE reviewed unchanged,G1still6/18 In Progress. Inventory is ownership,not runtime locality;.p.v and D156 stay open.
+  promotion: declined (existing producer profile and inventory contracts;canonical book updated).
+  Commit:STITCHCAD-G1-0966.
