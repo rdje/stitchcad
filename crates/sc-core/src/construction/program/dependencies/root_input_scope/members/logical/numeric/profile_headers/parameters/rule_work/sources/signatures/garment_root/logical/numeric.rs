@@ -23,8 +23,9 @@ pub use error::{
 pub use profile_headers::{
     BoundDraftingProgramGarmentProfileLogicalHeaders,
     BoundDraftingProgramGarmentProfileLogicalParameters,
-    BoundDraftingProgramGarmentProfileNumericHeaders, DraftingProgramGarmentProfileLogicalHeader,
-    DraftingProgramGarmentProfileLogicalHeaderError,
+    BoundDraftingProgramGarmentProfileNumericHeaders,
+    BoundDraftingProgramGarmentProfileNumericParameters,
+    DraftingProgramGarmentProfileLogicalHeader, DraftingProgramGarmentProfileLogicalHeaderError,
     DraftingProgramGarmentProfileLogicalHeaderRefusal,
     DraftingProgramGarmentProfileLogicalHeadersResult,
     DraftingProgramGarmentProfileLogicalParameter,
@@ -34,7 +35,12 @@ pub use profile_headers::{
     DraftingProgramGarmentProfileLogicalRequest, DraftingProgramGarmentProfileNumericHeader,
     DraftingProgramGarmentProfileNumericHeaderError,
     DraftingProgramGarmentProfileNumericHeaderRefusal,
-    DraftingProgramGarmentProfileNumericHeadersResult, DraftingProgramGarmentProfileNumericRequest,
+    DraftingProgramGarmentProfileNumericHeadersResult,
+    DraftingProgramGarmentProfileNumericParameter,
+    DraftingProgramGarmentProfileNumericParameterError,
+    DraftingProgramGarmentProfileNumericParameterRefusal,
+    DraftingProgramGarmentProfileNumericParametersResult,
+    DraftingProgramGarmentProfileNumericRequest,
 };
 /// Complete numeric Derived garment-input class retaining original members/logical suppliers and
 /// the same unique cursor. Inline fields acquire no numeric formula or mixed supplier position.

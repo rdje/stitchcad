@@ -23,13 +23,19 @@ pub use error::{
 pub use parameters::{
     BoundDraftingProgramGarmentProfileLogicalParameters,
     BoundDraftingProgramGarmentProfileNumericHeaders,
+    BoundDraftingProgramGarmentProfileNumericParameters,
     DraftingProgramGarmentProfileLogicalParameter,
     DraftingProgramGarmentProfileLogicalParameterError,
     DraftingProgramGarmentProfileLogicalParameterRefusal,
     DraftingProgramGarmentProfileLogicalParametersResult,
     DraftingProgramGarmentProfileNumericHeader, DraftingProgramGarmentProfileNumericHeaderError,
     DraftingProgramGarmentProfileNumericHeaderRefusal,
-    DraftingProgramGarmentProfileNumericHeadersResult, DraftingProgramGarmentProfileNumericRequest,
+    DraftingProgramGarmentProfileNumericHeadersResult,
+    DraftingProgramGarmentProfileNumericParameter,
+    DraftingProgramGarmentProfileNumericParameterError,
+    DraftingProgramGarmentProfileNumericParameterRefusal,
+    DraftingProgramGarmentProfileNumericParametersResult,
+    DraftingProgramGarmentProfileNumericRequest,
 };
 /// One actual original Profile logical input field and its exact checked direct row/pin intent.
 pub struct DraftingProgramGarmentProfileLogicalRequest<'w, 'a, H: DesignMetadataHost> {

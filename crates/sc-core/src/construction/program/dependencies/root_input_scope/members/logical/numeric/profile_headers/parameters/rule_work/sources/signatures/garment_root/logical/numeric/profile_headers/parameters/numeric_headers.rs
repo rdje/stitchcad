@@ -470,3 +470,12 @@ impl<
         })
     }
 }
+
+mod parameters;
+pub use parameters::{
+    BoundDraftingProgramGarmentProfileNumericParameters,
+    DraftingProgramGarmentProfileNumericParameter,
+    DraftingProgramGarmentProfileNumericParameterError,
+    DraftingProgramGarmentProfileNumericParameterRefusal,
+    DraftingProgramGarmentProfileNumericParametersResult,
+};

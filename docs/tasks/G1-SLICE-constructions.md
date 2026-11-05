@@ -861,7 +861,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Status: `done`
   Goal:completed original rule-work/source/signature scope;[whole goals/proofs](../history/stitchcad-devnotes-part1089.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs`
-  Status: `pending`
+  Status: `done`
   Goal:bind every actual Pocket/Closure logical/numeric input under its original Root/Profile source and exact direct selection. Preserve complete canonical state/domain/provenance and original Root Derived suppliers without a fabricated consumer position;component/physical relation joins remain with their own garment steps.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.root-members`
   Status: `done`
@@ -879,7 +879,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Status: `done`
   Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1090.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile`
-  Status: `in_progress`
+  Status: `done`
   Goal:bind complete actual Profile-owned Pocket/Closure inputs under original direct rows/pins and actual source/parameter/member/kind proofs. Preserve source-owned states and external Derived scope;numeric Profile lengths require an authentic numeric facet before acceptance,never a logical-port cast or same-ID Root inference.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.logical.headers`
   Status: `done`
@@ -888,7 +888,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Status: `done`
   Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1090.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric`
-  Status: `in_progress`
+  Status: `done`
   Goal:use an authentic numeric Profile metadata/member facet for every original Profile zipper-length input before full garment-input acceptance. Preserve actual canonical family/kind/state and source-owned metadata under exact selected Profile parents;do not coerce logical sources,infer Root declarations or claim Profile recipe/G4 truth.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.retention`
@@ -934,5 +934,21 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] LOCKSTEP:MEM/index/DEV/ledger/book describe numeric garment headers and original parameter/member/composition next. README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local numeric header and existing original-owner/direct-row/Profile contracts own scope). Commit:STITCHCAD-G1-0947.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.parameters`
-  Status: `pending`
+  Status: `done`
   Goal:borrow stable numeric Profile garment headers and unique prior input owner;reserve complete fresh work and bind every original numeric metadata/member/Length-kind proof. Compose complete original Root/logical/numeric garment input classes without Root interpretation of external Derived states;retain first typed causes/no prefix.
+  - [x] REPRODUCE / ISSUE:stable numeric Profile garment headers still need original metadata/member/Length-kind proofs before all scoped garment input classes can compose. Header success must not grant missing parameter membership or Root interpretation of external Derived state. Earlier book pending-stage text must route completed numeric composition accurately.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'bind_numeric_parameter|reserve_child_passes|logical:|headers:' context/profile/numeric.rs and numeric_headers.rs/parameters.rs →original lending member factory and separate stable header/logical-owner fields,rc=0. Borrow both fields without self-reference while retaining the same unique Root/cursor.
+  - [x] FIX:bind_garment_profile_numeric_parameters borrows original stable numeric headers/prior logical proofs,reserves complete N+1 fresh whole/parameter/result
+    envelopes,charges full aggregate/proofs,reserves all N records,then invokes exact parent-bound numeric factories. Actual metadata,target family/member/kind/state and all prior
+    input proofs survive;N0 adds no work,private prefixes drop and spent work never resets.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract garment_profile_numeric_parameters →1 test/16 modes pass,rc=0. Dedicated Derived500/general Length
+    Unknown,shared target/distinct metadata,N0,atomic16+3 versus18,fresh resources,late kind/parameter/pin/inventory/body/snapshot/missing/annotation/family and first missing
+    controls preserve original loans;three walks/two queries/no header/logical requery exact;spent repeat refuses.
+  - [x] NO REGRESSION:numeric_profile_parameter →prior16 modes pass;cargo doc garment_root::logical::numeric::profile_headers::parameters::numeric_headers::parameters →three
+    private/non-Clone/lifetime guards pass;scoped strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Fixture generation corrected before compile;numeric fault controls
+    now select the actual opposite parameter for either order and preserve original logical inventory. Whole .check/.verify deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book close original scoped garment input classes and own garment relations next. README reviewed unchanged;LIVE product note now distinguishes completed input members from pending relations;G1still6/18 In Progress. promotion: declined (local numeric parameter and existing original-owner/canonical/provider contracts own scope). Commit:STITCHCAD-G1-0948.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations`
+  Status: `pending`
+  Goal:bind complete actual Pocket served/component and Closure derivation/operation relations under original input/cursor owners and complete source/member/component proofs. Preserve genuine garment locations without invented Root consumer positions;introduce authentic missing facets before use and retain first typed causes/no accepted prefix.

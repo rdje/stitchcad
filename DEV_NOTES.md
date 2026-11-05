@@ -2,6 +2,27 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — original numeric Profile garment parameters and input composition
+
+0948 borrows stable numeric header parents and prior logical/Root proofs through disjoint fields.
+Complete N+1 fresh whole/parameter reservation precedes full aggregate/proof content,N-record
+reservation and original parent-bound numeric metadata/member/Length-kind factories. Actual target
+family,metadata/member/state loans and prior complete input classes compose under one cursor.
+No self-reference,body/value clone or Root interpretation of external Profile Derived is added.
+N0 adds no work or demand;first typed refusals retain original prior owner/whole headers/request/
+member witnesses while private prefixes drop. Dropping either result restores no spent capacity.
+Sixteen modes pass with dedicated Derived500 versus same-ID Root Unknown/empty source graph,
+general Length Unknown,shared canonical target/distinct metadata,N0,atomic16+3 versus18 shortage,
+fresh resources,late kind/parameter/pin/inventory/body/snapshot/missing/annotation/family and first
+missing. Full demand,three walks/two numeric queries and zero header/logical/rule/value queries
+stay exact;spent repeat refuses before callbacks. Fixture generation corrected before compile;
+fault controls now choose an actual opposite parameter for either order and retain the original
+logical inventory while adding numeric members. Prior individual numeric16 modes,three compiler
+guards,format and scoped strict library/harness lint pass. README unchanged;LIVE product note
+now separates complete input members from pending garment relations;G1remains6/18 In Progress.
+Pocket/component/Closure relations lead next;native/cohort and whole .check/.verify stay deferred.
+Promotion declined:local numeric parameter and original-owner/canonical/provider contracts own scope.
+
 ## _(2026-11-05 UTC)_ — original numeric Profile garment header parents
 
 0947 consumes complete logical Profile parameters into stable numeric zipper header parents while

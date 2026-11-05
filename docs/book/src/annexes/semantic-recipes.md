@@ -3289,8 +3289,8 @@ its four logical headers remain in original garment/local order:
 | Closure1 button | 703 / NotionSize | 3 |
 
 Row0 belongs to a separate Profile zipper-length704 field. It remains in the original checked
-request owner and is not bound through this logical class. Numeric Profile length needs its
-actual numeric facet. Repeated hook/bar requests retain separate stable header parents and field
+request owner and is not bound through this logical class. Numeric Profile length uses the
+independent numeric facet and aggregate stages described below. Repeated hook/bar requests retain separate stable header parents and field
 locations even when each provider response borrows the same original Profile body/inventory.
 Their original requested pin remains distinct from the provider-owned pin whose labels matched.
 
@@ -3481,8 +3481,9 @@ For example,the focused fixture's Profile Length10 is Derived500 while the Desig
 Length10 is Unknown. Success borrows the Profile record and preserves Derived500 without looking
 for a Design source500 or validating a Profile recipe. Scalar20 remains Unknown. No selected
 value,formula execution,currentness revalidation,G4 schema/evidence or physical zipper truth is
-read or granted. This individual factory is implemented with focused checks;complete numeric
-Profile garment headers/parameters,aggregate work and whole cohort verification remain pending.
+read or granted. This individual factory is implemented with focused checks. The aggregate header
+and parameter stages below compose original numeric garment inputs under their own complete work
+allowances. Whole cohort verification remains pending.
 
 ## Bind original numeric Profile garment headers
 
@@ -3531,4 +3532,70 @@ work,resource,allocator or typed source cause. A source refusal carries its orig
 pin request and complete selected-source diagnostic. Earlier private numeric header prefixes drop.
 A foreign Root refuses before its wrong pin;late profile/schema/request-pin failures preserve the
 actual second field and original row0. No external Derived,physical or whole-cohort acceptance
-follows. Numeric metadata/member borrowing and complete garment input composition remain next.
+follows. The parameter stage below borrows numeric metadata/members from these stable parents
+and completes the scoped original garment input composition.
+
+## Bind original numeric Profile garment parameters
+
+`BoundDraftingProgramGarmentProfileNumericHeaders::bind_garment_profile_numeric_parameters()`
+borrows the stable actual numeric headers and prior logical/Root proof through separate fields.
+The caller keeps the numeric-header owner alive. Its `BoundDraftingProgramGarmentProfileNumericParameters`
+result holds those exact parent loans and the same unique work cursor. Each
+`DraftingProgramGarmentProfileNumericParameter` retains its original `header_index()`,exact
+`header()` and original `source()` metadata/member/kind proof. No self-referential owner or source
+body/state copy is created.
+
+For a previously constructed logical input proof,the borrowing order is:
+
+```text
+let mut numeric_headers = logical_parameters.bind_garment_profile_numeric_headers()?;
+let parameters = numeric_headers.bind_garment_profile_numeric_parameters()?;
+for parameter in parameters.records() {
+    inspect(parameter.header().request(), parameter.source().binding().member());
+}
+```
+
+`headers()` exposes every original stable numeric parent;`records()` contains every accepted
+numeric parameter in the same order;`logical()` preserves the complete prior logical Profile
+and Root garment input proofs. The resulting chain implements these scoped input classes:
+
+| Actual garment input | Original retained proof |
+| --- | --- |
+| Root Pocket opening / Closure notion size | Logical member/kind and actual Derived supplier/output when present |
+| Root inline zipper length | Original positive intent field and parameter identity |
+| Root formula zipper length | Actual Design parameter metadata,numeric member/Length kind and Derived checked source/acyclic owner when present |
+| Profile Pocket opening / Closure notion size | Exact selected header,original logical metadata/member/kind |
+| Profile zipper length | Exact selected header,original numeric metadata/target family/member/Length kind |
+
+The two-zipper fixture binds parameter704 to actual Profile Length10/Derived500 and705 to actual
+Profile Scalar20/Length/Unknown. Both remain under their exact original header parents. The
+independent Design Length10 remains Unknown and its formula-source cohort is empty. No matching
+Design ID converts Profile Derived500 into a Root supplier or checked Profile-internal recipe.
+A shared-target fixture maps both distinct metadata records704/705 to the same actual Profile
+Length10 while preserving both original field locations and stable parents.
+
+For N>0,the stage reserves N+1 complete fresh whole/parameter passes before fresh complete
+aggregate/proof charging,N-record reservation and original parent-bound numeric factories. The
+fixture's16 prior passes plus three parameter passes require19 total. Allowance18 refuses the
+whole three-pass request with16 still reserved and no new walk or query. Success makes three
+fresh walks/two numeric metadata queries,without another source-header,logical-parameter,rule,
+currentness or value query. Original parent demand supplies no credit.
+
+N0 adds no work,walk,allocation,query or demand claim even when unused numeric metadata remains
+held by the provider. The complete prior logical/Root proof survives. `child_pass_count()` is zero
+for N0 and N+1 otherwise;`demand()` is absent for N0 and records complete fresh aggregate demand
+for a nonempty accepted stage. Dropping either result releases its borrow and restores no spent
+work capacity;a second complete request after success refuses before a walk or metadata query.
+
+`DraftingProgramGarmentProfileNumericParameterError` retains the original borrowed logical/Root
+owner,whole numeric header slice,complete count,completed aggregate demand when available and
+first typed work/resource/allocator/parameter cause. A parameter refusal includes the exact
+original header index and parent-bound numeric diagnostic. Late wrong parameter/pin/inventory/
+body/snapshot,missing parameter,representation,annotation and expected-kind errors retain actual
+original witnesses while earlier private accepted parameter prefixes drop.
+
+Original logical/numeric garment input binding is implemented with focused checks. Pocket served/
+component relations,Closure derivation/operation joins,native semantic targets and complete cohort
+acceptance remain pending. This input proof selects no value and grants no physical opening,
+zipper/buttonhole length,external evidence or G4 schema truth. Whole `.5f.2.check`/`.verify` remain
+separate deferred verification tasks.

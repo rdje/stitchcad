@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0948 — bind original numeric Profile garment parameters
+
+Stable original numeric parents now bind actual metadata/member/Length kind and preserve complete
+prior logical/Root input proofs under one cursor. Sixteen native modes,prior numeric16 modes,
+three compiler guards,format and scoped strict lint pass. Original scoped garment input classes
+are implemented with focused checks;relations/native/cohort and broader verification remain.
+LIVE product note reflects that scope;G1six-of18 remains unchanged.
+
 ## STITCHCAD-G1-0947 — bind original numeric Profile garment headers
 
 Complete prior logical/Root proofs now own stable original zipper header parents under exact

@@ -36,6 +36,7 @@ struct Provider<'a> {
     metadata: Vec<DraftingSourceRecord<ParameterMapping>>,
     numeric_metadata: Vec<DraftingSourceRecord<numeric::NumericMapping>>,
     numeric_mode: u8,
+    numeric_late: bool,
     numeric_calls: Cell<usize>,
     numeric_body: Option<DraftingSourceRecord<[u8; 4]>>,
 }
@@ -109,6 +110,7 @@ impl<'a> Provider<'a> {
             metadata,
             numeric_metadata: vec![],
             numeric_mode: 0,
+            numeric_late: false,
             numeric_calls: Cell::new(0),
             numeric_body: None,
         })

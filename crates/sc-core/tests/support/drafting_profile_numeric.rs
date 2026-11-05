@@ -2,8 +2,8 @@
 use super::{id, limits, scope, EmptyHost, Provider, Snapshot, SourceError, TestResult};
 use sc_core::{construction::*, design::*, ontology::*, value::*};
 pub(super) struct NumericMapping {
-    parameter: ProfileParameterRef,
-    target: CanonicalInputTarget,
+    pub(super) parameter: ProfileParameterRef,
+    pub(super) target: CanonicalInputTarget,
     pub(super) text: String,
 }
 impl DraftingProfileNumericProvider<EmptyHost> for Provider<'_> {
@@ -14,22 +14,26 @@ impl DraftingProfileNumericProvider<EmptyHost> for Provider<'_> {
         parameter: ProfileParameterRef,
     ) -> Result<DraftingProfileNumericResponse<'s, EmptyHost, Self>, SourceError> {
         self.numeric_calls.set(self.numeric_calls.get() + 1);
-        if self.numeric_mode == 1 {
+        let mode = if self.numeric_late && self.numeric_calls.get() != 2 {
+            0
+        } else {
+            self.numeric_mode
+        };
+        if mode == 1 {
             return Err(SourceError::Missing);
         }
         let metadata = self
             .numeric_metadata
             .iter()
             .find(|m| {
-                m.data().parameter
-                    == if self.numeric_mode == 7 || self.numeric_mode == 2 {
-                        ProfileParameterRef::new(id(705))
-                    } else {
-                        parameter
-                    }
+                if mode == 7 || mode == 2 {
+                    m.data().parameter != parameter
+                } else {
+                    m.data().parameter == parameter
+                }
             })
             .ok_or(SourceError::Missing)?;
-        match self.numeric_mode {
+        match mode {
             2 => {
                 profile.root = self.other;
                 profile.selected = &self.wrong_pin;
@@ -57,11 +61,11 @@ type SourceView<'a> = dyn DraftingProfileNumericProvider<
         Profile = [u8],
         NumericMetadata = NumericMapping,
     > + 'a;
-fn prepare(source: &mut Provider<'_>, case: u8) -> TestResult {
+pub(super) fn prepare(source: &mut Provider<'_>, case: u8) -> TestResult {
     source.numeric_mode = if case == 12 || case == 13 { 1 } else { case };
     source.wrong_pin = source.selected.clone(); // Equal labels do not establish the same source pin.
     source.numeric_body = Some(DraftingSourceRecord::new(*source.body.data()));
-    source.inputs = CanonicalInputs::new(
+    source.inputs = CanonicalInputs::with_logicals(
         vec![LengthDeclaration::new(LengthDeclarationDefinition {
             id: id(10),
             source: id(1010),
@@ -85,6 +89,7 @@ fn prepare(source: &mut Provider<'_>, case: u8) -> TestResult {
             )?)
         })
         .collect::<TestResult<Vec<_>>>()?,
+        source.inputs.logicals().clone(),
     )?;
     let scalar = |n, kind| CanonicalInputTarget::Scalar {
         declaration: id(n),

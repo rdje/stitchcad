@@ -364,8 +364,14 @@ impl<
 
 mod numeric_headers;
 pub use numeric_headers::{
-    BoundDraftingProgramGarmentProfileNumericHeaders, DraftingProgramGarmentProfileNumericHeader,
-    DraftingProgramGarmentProfileNumericHeaderError,
+    BoundDraftingProgramGarmentProfileNumericHeaders,
+    BoundDraftingProgramGarmentProfileNumericParameters,
+    DraftingProgramGarmentProfileNumericHeader, DraftingProgramGarmentProfileNumericHeaderError,
     DraftingProgramGarmentProfileNumericHeaderRefusal,
-    DraftingProgramGarmentProfileNumericHeadersResult, DraftingProgramGarmentProfileNumericRequest,
+    DraftingProgramGarmentProfileNumericHeadersResult,
+    DraftingProgramGarmentProfileNumericParameter,
+    DraftingProgramGarmentProfileNumericParameterError,
+    DraftingProgramGarmentProfileNumericParameterRefusal,
+    DraftingProgramGarmentProfileNumericParametersResult,
+    DraftingProgramGarmentProfileNumericRequest,
 };

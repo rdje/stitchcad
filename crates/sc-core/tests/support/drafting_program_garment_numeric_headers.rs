@@ -1,7 +1,7 @@
 //! Complete original numeric garment header parents after logical Profile parameters.
 use super::{id, limits, scope, EmptyHost, Frame, Provider, Snapshot, SourceError, TestResult};
 use sc_core::{construction::*, design::*, ontology::*, recipe::*, value::*};
-trait NumericProvider:
+pub(super) trait NumericProvider:
     super::RuleProvider
     + DraftingProfileNumericProvider<
         EmptyHost,
@@ -10,7 +10,7 @@ trait NumericProvider:
 {
 }
 impl NumericProvider for Provider<'_> {}
-type NumericSourceView<'a> = dyn NumericProvider<
+pub(super) type NumericSourceView<'a> = dyn NumericProvider<
         Frame = Frame,
         Snapshot = Snapshot,
         Geometry = [u8],
