@@ -472,3 +472,15 @@ body and public-reader readback verify retention for the committed shortened nav
 ```bash
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md
 ```
+
+
+Part1093 retains complete closed original recipe-factory and acceptance protocols,original early
+bootstrap acceptance,recent Pocket/Closure relation plans and proofs,and the complete committed
+lesson/ledger snapshots fromfb02c244. Each original live task identity,status and heading remains
+beside its retrieval pointer. Eight whole Git intervals are decoded and compared before narrative
+retirement;older sealed records and fixed resource bounds remain unchanged.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1093.md
+python3 -I -B docs/tasks/artifacts/history_archive/transition_receipts.py --record docs/history/stitchcad-devnotes-part1093.md
+```

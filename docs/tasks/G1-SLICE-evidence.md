@@ -15,84 +15,11 @@ boxes remain first in the primary tree, with detailed capture/remote receipts in
 
 ### `G1-SLICE.1` (reconciled) — the workspace shape shipped under `G0-CONTRACT.18`, so this leaf closes on re-derived evidence, not new code
 
-`G0-CONTRACT.18` (commit `eb83f01`) landed the G0 CI shape and, in its own words, retired the bedrock
-starter crate "closing defect D10 ahead of `G1-SLICE.1`". It therefore delivered every artifact this leaf
-names, but the leaf was left `pending` — a tree↔code drift: the leaf's status disagreed with the shipped
-workspace. This slice audits that delivery against each acceptance criterion and records the closure. No
-Rust changes; the gate that judges it is the doctrine enforcer plus the re-derived commands below.
-
-- [x] **REPRODUCE / ISSUE** — the leaf said `pending` while its deliverables were committed:
-  `git show HEAD:docs/tasks/G1-SLICE.md | awk '/ID: .G1-SLICE\.1./{f=1} f&&/Status:/{print;exit}'` →
-  ``  Status: `pending` ``, `rc=0`, against `git log --oneline -- crates/sc-units crates/sc-core` →
-  `eb83f01 STITCHCAD-G0-0018 (leaf G0-CONTRACT.18): the first product code - sc-units`, `rc=0`. A frontier
-  that points at a leaf whose work already shipped misdirects the next session into redoing it.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `G0-CONTRACT.18`'s acceptance let it answer the starter-crate question
-  itself ("retired here or explicitly handed to `G1-SLICE.1`"), and its commit message records "The bedrock
-  starter crate is retired (git rm crates/app), closing defect D10 ahead of G1-SLICE.1". The G0 leaf closed;
-  the G1 leaf it pre-empted was never reconciled. The remedy is the audit, not new code: the deliverables
-  exist and are green.
-  Revalidated during `.3c.2b.1` relocation (D60): `git show --format=fuller --no-patch eb83f01`
-  → `STITCHCAD-G0-0018 (leaf G0-CONTRACT.18): the first product code - sc-units`, explicitly
-  "closing defect D10 ahead of G1-SLICE.1", `rc=0`, confirming the pre-emption at its source.
-- [x] **ADDRESSED (verified)** — each acceptance criterion re-derived by command. (1) `cargo metadata
-  --no-deps --format-version 1` lists exactly the roadmap crates that exist so far, `sc-core, sc-units`
-  (§4.3 — the rest appear when their stage starts), `rc=0`. (2) `git ls-tree HEAD crates/` shows only those
-  two trees, so `crates/app` is gone, and `grep -rn 'Hello\|template\|starter' crates/` returns no match —
-  no crate prints the template message. (3) The G0 CI shape is green locally and in the gate: `make check`
-  → `test result: ok. 21 passed` (property) plus `1 passed` (doc-test), `make wasm` → `wasm-viewer
-  smoketest: sc-units + sc-core build for wasm32-unknown-unknown`, and `run_g0_exit_review.sh` reports
-  `G0-17 MET` (CI) and `G0-18 MET` (the wasm build). (4) `KNOWLEDGE_MAP.md` names both subsystems (lines 12
-  and 17, each with entry point, conformance and owner).
-- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `rc=0`; `make check` green; `make
-  wasm` green. This slice stages no Rust, so the acceptance gate (`check_task_acceptance.sh`, which fires
-  only on staged code) does not govern it; these boxes are the tree's own per-leaf record.
-- [x] **FIX** — marked `.1` `done`, recorded its verification and commit, advanced the frontier, and added
-  this subsection so the closure carries re-derivable evidence.
-- [x] **LOCKSTEP** — `docs/TASK_TREE.md` (frontier cell), `MEMORY.md` (next action), `LIVE_STATUS.md` (G1 row
-  → In Progress), `CHANGELOG.md`, `DEV_NOTES.md` and the regenerated Knowledge Map, all in this commit.
-  promotion: declined (instance of the D34 hand-kept-state class `PLANNING.5` owns; this slice fixes the instance, a new record would duplicate that ownership).
+[Whole original protocol/proof](../history/stitchcad-devnotes-part1093.md) remains byte-exact.
 
 ### `G1-SLICE.2` (reconciled) — `sc-units` shipped under `G0-CONTRACT.18`, and the property-test choice it made is now a recorded decision
 
-`G0-CONTRACT.18` (commit `eb83f01`) landed `sc-units` in full — 1097 lines of library and 564 lines of
-property tests — as "the first product code", well past the skeleton its own leaf scoped. That is this leaf's
-deliverable, so `.2` closes on the same audit `.1` did: every acceptance criterion re-derived by command, no
-new code. The one thing `eb83f01` left unrecorded was the property-test-framework choice this tree's Open
-Questions deferred to `.2`; closing the leaf records it.
-
-- [x] **REPRODUCE / ISSUE** — the leaf said `pending` while `sc-units` was committed and green:
-  `git show HEAD:docs/tasks/G1-SLICE.md | awk '/ID: .G1-SLICE\.2./{f=1} f&&/Status:/{print;exit}'` →
-  ``  Status: `pending` ``, `rc=0`, against `wc -l crates/sc-units/src/*.rs crates/sc-units/tests/*.rs` →
-  `1723` lines delivered by `eb83f01`. The Open Question "Property-test framework choice … decided in `.2`"
-  was never discharged, so a later crate would re-litigate `proptest` vs `quickcheck`.
-- [x] **ROOT CAUSE (WHY + WHERE)** — the same pre-emption as `.1`: `G0-CONTRACT.18` answered the G0 CI clause
-  by building `sc-units` out fully rather than as a skeleton, and closed only itself. `.2`'s work was done but
-  its leaf, and the decision the Open Question routed to it, were not recorded.
-  Revalidated during `.3c.2b.1` relocation (D60): `git show --format=fuller --no-patch eb83f01`
-  → the committed delivery lists 1097 library lines, 564 property-test lines and 30 passing tests,
-  `rc=0`; `git log --oneline -- crates/sc-units crates/sc-core` still traces `sc-units` to that
-  commit. This confirms the delivery, not a new implementation or a rerun of its old test counts.
-- [x] **ADDRESSED (verified)** — each acceptance criterion re-derived. (1) Property tests for conversion
-  round-trips and tolerance-class separation: `cargo test -p sc-units --test property` → `test result: ok. 21
-  passed; 0 failed`, including `conversion_round_trips_for_integral_units` (line 62),
-  `the_classes_disagree_so_they_are_load_bearing` (448) and `counts_are_their_own_dimension` (500). (2) A
-  dimension error is a typed error, never a silent coercion: `UnitError` (`crates/sc-units/src/error.rs`)
-  carries `DomainExceeded`/`DivisionByZero`/`NonFinite`/`Overflow`/`EmptyDerivation`, and
-  `non_finite_floats_are_rejected_at_the_boundary` (291) proves the boundary rejects NaN/inf. (3) Compiles for
-  `wasm32-unknown-unknown`: `make wasm` → `wasm-viewer smoketest: sc-units + sc-core build for
-  wasm32-unknown-unknown`. The five tolerance classes are distinct `ToleranceClass` variants (T1–T5,
-  `tolerance.rs`). The framework choice is recorded as
-  `docs/decisions/decision_property-tests-dependency-free-recorded-seed.md` (with `answers:`, listed in the
-  INDEX), resolving the Open Question.
-- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `rc=0`; `make check` green; `make wasm`
-  green. The new decision record is a `docs/decisions` file; the KNOWLEDGE-MAP doctrine confirms the
-  regenerated map is in sync. No Rust staged, so the acceptance gate does not fire.
-- [x] **FIX** — marked `.2` `done`, recorded its verification and commit, resolved the Open Question into the
-  Decisions section and a layer-C record, advanced the frontier to `.3`, and added this subsection.
-- [x] **LOCKSTEP** — `docs/decisions/decision_property-tests-dependency-free-recorded-seed.md` (new) and its
-  INDEX row; `docs/TASK_TREE.md` (frontier cell), `MEMORY.md` (next action), `LIVE_STATUS.md` (G1 row → 2 of
-  16), `CHANGELOG.md`, `DEV_NOTES.md` (the lesson, promoted by the new record's `answers:`) and the
-  regenerated Knowledge Map, all in this commit.
+[Whole original protocol/proof](../history/stitchcad-devnotes-part1093.md) remains byte-exact.
 
 ### `G1-SLICE.3a` — the identity layer: a ULID with an injected generator, stable references, an exact parameter
 
@@ -919,56 +846,16 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 ## Completed original Pocket source joins0953
 
-  - [x] ROOT CAUSE / ISSUE:cargo clippy -j1 -p sc-core --lib -- -D warnings →type_complexity at parameters.rs558;after a result alias →Finished dev profile,rc=0.
-    Existing component/source.rs bind_source checks actual current work,header and captured recipe association. The aggregate work proof exposed only its immutable input parent;
-    the new factory splits its disjoint input/cursor and stable work fields without a source-factory contract change or lint waiver.
-  - [x] FIX / ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract profile_headers::rule_work::pocket →test result:
-    ok. 2 passed,rc=0. Seven current-member plus10 source cases retain original parents/imports,whole N+1 cursor reservation,N0,repeated targets,no refunds and first late typed
-    work/provider/Piece/frame/snapshot causes with no accepted prefix.
-  - [x] NO REGRESSION / LOCKSTEP:the same target component_binding:: →4 original import/Mirror/Join guards passed;garment_profile_numeric →2 passed;cargo test -j1 -p sc-core --doc
-    BoundDraftingProgramPocketSources →3 private/clone/lifetime guards passed;cargo clippy -j1 -p sc-core --lib -- -D warnings →Finished;fmt --check/git diff --check pass,all rc=0.
-    Book/journals/resume/LIVE align,G1still6/18 In Progress. Whole recipe/cohort .check/.verify and Closure/native/physical work remain deferred. Commit:STITCHCAD-G1-0953.
-  promotion: declined (existing source association and bounded cursor contracts).
-  Commit-integrity correction:the initial hook refused the RCA's missing command/result signature and a wrapped decline token. Explicit invocation/rc and a whole-line decline now meet the existing checker contract;product/runtime checks are unchanged.
+[Whole original protocol/proof](../history/stitchcad-devnotes-part1093.md) remains byte-exact.
 
 ## Completed whole protocol retention0952
 
-  - [x] ROOT CAUSE / ISSUE:git-backed byte/line census atfa5ca25a →task collection19982L/1491586B,rc=0;only18 lines remain before fixed20000L ceiling. Complete original closed protocols are the retained intervals;historical predecessor mirrors stay unchanged.
-  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1092.md →9 exact Git spans,rc=0. Independent Git/hash/base64/public-reader proof preserves26117 decodedB before7 whole protocol retrieval stubs. Original task identity/status occurrences and headings remain exact.
-  - [x] NO REGRESSION / LOCKSTEP:history_archive.sh verify-retention →archive: OK,rc=0;target/history-proof-0952/capture2/independent-after.json records public_exact/original_graph_exact/original_headings_exact
-    true. Book/journals/resume align;README/LIVE unchanged,G1still6/18 In Progress. No older seal,producer,bound or protected store changes. promotion: declined (existing whole-record
-    retention contract). Commit:STITCHCAD-G1-0952.
+[Whole original protocol/proof](../history/stitchcad-devnotes-part1093.md) remains byte-exact.
 
 ## Completed original Closure operation join0954
 
-  - [x] ROOT CAUSE / ISSUE:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core
-    --test drafting_context_binding_contract closure_buttonhole --no-run →E0599 missing
-    bind_closure_buttonhole and missing public limits/refusal types,rc=101. Existing Root
-    SemanticRecipe::resolve supplies original typed members;the admitted garment had no relation join.
-  - [x] FIX / ADDRESSED:the same test command without --no-run →test result:ok. 2 passed,rc=0.
-    Actual nonzero original Closure/operation indices and parent/recipe/member/source pointers,
-    Declaration/Profile equality and mismatch,Missing/Kind,complete content/matching priority pass.
-    One fresh whole walk and checked (E+8)^2 precede lookups;no clone,value or successful buffer.
-  - [x] NO REGRESSION / LOCKSTEP:cargo test -j1 -p sc-core --test drafting_context_binding_contract
-    garment_source:: →3 passed;cargo test -j1 -p sc-core --doc DraftingClosureButtonhole →3 passed;
-    --lib closure_buttonhole_matching_bound →1 passed;cargo clippy -j1 -p sc-core --lib -- -D warnings
-    →Finished;fmt --check/git diff --check pass;book_tool.py build →published,all rc=0. Book/journals/
-    LIVE/resume align,G1still6/18 In Progress;README scope unchanged. Aggregate/physical/native/cohort
-    and whole .check/.verify deferred to existing owners. No full verification claim.
-  Startup:cleanup recorded2026-11-05 remains current;policy body comparison found README/claim
-  neutral bodies unchanged and donor book exception already adopted locally. Deep source-chain
-  recovery exceeded the startup target;no unresolved source-contract ambiguity remains for this leaf.
-  promotion: declined (existing original semantic ownership and canonical origin contracts).
-  Commit:STITCHCAD-G1-0954.
+[Whole original protocol/proof](../history/stitchcad-devnotes-part1093.md) remains byte-exact.
+
 ## Completed Closure cohort prerequisite0955
 
-  - [x] ROOT CAUSE / ISSUE:wc -l docs/tasks/G1-SLICE-constructions.md →1003L before split,rc=0;
-    the registered tasks_collection requires a completed-evidence split after1000L before growth.
-  - [x] ADDRESSED:Python original-Git payload/unique-live-ID assertions →closed acceptance transfer:
-    exact original Git payloads retained;live IDs unique,rc=0. Whole0952/0953/0954 boxes and their
-    promotion/commit/correction notes now live verbatim in the existing evidence sibling.
-  - [x] NO REGRESSION / LOCKSTEP:git diff --check →empty,rc=0. Working/evidence978/962L immediately
-    after transfer;fixed collection/per-part bounds unchanged. Product/book/README/LIVE/resume
-    reviewed unchanged,G1still6/18 In Progress. Journals record the prerequisite;next operation-cohort.
-  promotion: declined (existing complete evidence split contract).
-  Commit:STITCHCAD-G1-0955.
+[Whole original protocol/proof](../history/stitchcad-devnotes-part1093.md) remains byte-exact.

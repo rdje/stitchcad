@@ -916,13 +916,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.pocket-sources`
   Status: `done`
-  Goal:borrow the complete stable original Pocket work parents and bind actual imported/recipe sources with the same finite cursor,original field locations and first typed causes.
-  Preserve authentic source frame/snapshot/creator proof;no fabricated Root consumer position or complete cohort claim.
-  Plan:borrow the input parent and stable work slice through disjoint fields;reserve N+1 fresh aggregate/source passes atomically before whole charging,result reservation or existing
-  bind_source factories. N0 is idle. Typed late child refusals retain the original work/index/source witnesses and no successful prefix. Focused aggregate/import controls plus existing
-  original Mirror/Join child association guards precede closure;whole cohort/.check/.verify stay deferred.
-
-  Acceptance:complete original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-original-pocket-source-joins0953).
+  Goal:completed;[whole original protocol/proof](../history/stitchcad-devnotes-part1093.md).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.pocket-sources.retention`
   Status: `done`
@@ -944,41 +938,12 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.operations`
   Status: `done`
-  Goal:fresh bounded original garment Closure-to-Root Buttonhole operation binding;retain actual
-  Closure/member indices,canonical source and typed Missing/Kind/button-origin causes. No value,
-  policy execution,physical placement,currentness or mixed-program ordering acceptance.
-  Plan:one fresh complete garment/provider walk;checked (E+8)^2 matching allowance before original
-  Closure/operation lookup. Exact Declaration/Profile origin equality,including variant,with no
-  invented consumer position. Public loans stay tied to the original admitted garment parent.
-  Focused tests:original parent/member/recipe pointers,both origin variants,missing/nonbutton
-  Closure,missing/wrong-family operation,changed target/variant,resource and matching priority.
-  Deferred aggregate integration belongs to .closures.operation-cohort;physical relations to
-  .closures.placements;whole .5f.2.check/.verify remain pending.
-  Acceptance:complete original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-original-closure-operation-join0954).
+  Goal:completed;[whole original protocol/proof](../history/stitchcad-devnotes-part1093.md).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.operation-cohort`
   Status: `done`
-  Goal:compose every original Closure Buttonhole relation through the same finite semantic cursor
-  after complete input/Pocket work;reserve all walks/records before matching and retain first cause.
-  Plan:consume complete original Pocket source proof;reserve N+1 aggregate/relation passes atomically
-  before fresh original inputs charging,N-result reservation and0954 child factories. N0 idle.
-  Preserve every original Closure field/semantic location and exact admitted garment parent;
-  both outcomes retain original prior proof and unchanged/spent cursor with no prefix or refund.
-  Focused contract:two repeated operation targets,late missing/origin/resource failures,whole
-  shortage,empty relation class and same-cursor retry;private/clone/lifetime API guards.
-  - [x] ROOT CAUSE / ISSUE:git grep -n bind_closure_buttonholes 335bbc96 -- crates/sc-core →empty,rc=1.
-    The completed source proof had no aggregate relation factory/cursor continuation;0954 supplies
-    original typed child relations. The new consuming stage borrows its exact disjoint prior cursor.
-  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test
-    drafting_context_binding_contract closure_cohort →test result:ok. 1 passed,rc=0;seven cases cover
-    repeated targets,original loans,N0,atomic shortage,late resources/Missing/origin,no prefix/refund.
-  - [x] NO REGRESSION / LOCKSTEP:the same target pocket_sources_keep →1 passed;--doc
-    BoundDraftingProgramClosureButtonholes →3 passed;cargo clippy -j1 -p sc-core --lib -- -D warnings
-    →Finished;fmt --check/git diff --check pass,all rc=0. Book/journals/LIVE/resume align,G1still6/18
-    In Progress;README scope unchanged. Original0955 proof moved whole to evidence;bounds unchanged.
-    Physical/native/cohort and whole .check/.verify stay pending;book_tool.py build →published,rc=0.
-  promotion: declined (existing original owner and finite nonresettable cursor contracts).
-  Commit:STITCHCAD-G1-0956.
+  Goal:completed;[whole original protocol/proof](../history/stitchcad-devnotes-part1093.md).
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements`
   Status: `pending`
   Goal:bind all original Closure instance First/Second placements under fresh whole work and actual
@@ -990,3 +955,25 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   before the construction working part grows beyond its1000-line transition boundary. Preserve
   original live task IDs/statuses and every original proof byte;no archive or runtime changes.
   Acceptance:whole original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-closure-cohort-prerequisite0955).
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.retention`
+  Status: `done`
+  Goal:retain whole closed factory/acceptance and recent relation protocols plus committed journals
+  before physical-relation planning exceeds fixed working/aggregate bounds. Preserve exact original
+  Git/public bytes,all live task identities/statuses/headings and unchanged archive/collection limits.
+  - [x] ROOT CAUSE / ISSUE:Git-backed task census atfb02c244 →19911L/1482588B,rc=0;only89 lines
+    remain below fixed20000L before physical relation planning. Closed whole units,not arbitrary
+    narrative samples,are retained;existing live IDs/statuses/headings remain.
+  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/history_archive/transition_receipts.py --record
+    docs/history/stitchcad-devnotes-part1093.md →8 exact Git spans,rc=0. Independent original
+    Git/hash/base64/public-reader proof preserves37279 decodedB before complete protocol stubs.
+  - [x] NO REGRESSION / LOCKSTEP:bash scripts/history_archive.sh verify-retention →archive:OK,rc=0;
+    target/history-proof-0957/independent-final.json records exact original graph/headings/public
+    bytes and only the new authored owner. Book/journals/resume align;README/LIVE unchanged,
+    G1still6/18 In Progress. task_source_contract.py →3 tests OK;book_tool.py build →published;
+    git diff --check pass,all rc=0. No old seal,producer,cap or protected recovery-store changes.
+  Diagnostic corrections:strict base64 decode first refused line breaks before retirement;join
+  encoded lines before strict decode. The first graph control then correctly exposed the new
+  authored owner;compare every original node exactly and allow only that explicit addition.
+  promotion: declined (existing whole-record retention and original task graph contracts).
+  Commit:STITCHCAD-G1-0957.

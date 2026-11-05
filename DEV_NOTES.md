@@ -2,76 +2,19 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
-## _(2026-11-05 UTC)_ — complete original Closure operation relation class
+## _(2026-11-05 UTC)_ — preserve complete closed protocols before physical relations
 
-0956 consumes the exact prior Pocket source proof and borrows its existing cursor through an
-internal continuation. N+1 complete pass reservation precedes fresh whole aggregate charging,
-N-record reservation and0954 original relation factories. Every requiring Closure/Buttonhole
-field stays separate,including repeated operation targets. Both outcomes retain the original
-prior proof;private successful prefixes drop and into_parent refunds no work. N0 is idle.
+0957 retains eight complete original Git spans fromfb02c244 in part1093 before physical relation
+planning crosses fixed collection limits. Whole factory protocol/acceptance,original closed
+bootstrap acceptance,recent relation plans/proofs and complete committed journals remain public.
+Independent Git/hash/base64/public-reader checks precede narrative retirement;every original
+live task identity/status/heading remains. All older archive seals and fixed bounds stay intact.
 
-A focused public contract covers seven success/shortage/aggregate/late-resource/Missing/origin/
-empty cases,actual parent/work/source/Closure/member loans and retries on the same cursor. The
-prior Pocket source contract,three new API guards,strict library Clippy and formatting pass.
-Whole0955 prerequisite proof moves verbatim to the existing evidence sibling before working-part
-growth. Book/live/resume align;README scope/G1 6/18 unchanged;physical/native/cohort/.check/.verify
-remain pending. Promotion declined:existing original-owner and finite cursor contracts own scope.
+The independent decoder initially refused unjoined base64 lines before retirement. After joining
+the declared line encoding,it proves exact source bytes. The graph guard then exposed only the
+new authored retention owner;all original nodes remain exact and only that explicit addition is
+permitted. Final public/source/retention checks pass. Product/book scope and G1 6/18 In Progress
+stay unchanged;the book adds retrieval guidance. Original Closure physical relations remain next.
+Promotion declined:existing whole-record retention and original graph contracts own scope.
 
-## _(2026-11-05 UTC)_ — preserve closed acceptance before cohort growth
-
-0955 moves complete closed0952–0954 acceptance blocks verbatim into the existing evidence sibling
-before the working construction part grows beyond its transition boundary. Original Git payload
-and unique-live-ID assertions pass;retrieval links replace only moved proof text. No new sibling,
-archive,ceiling,code or product/book claim changes. Operation-cohort remains next.
-Promotion declined:existing complete evidence split contract.
-
-## _(2026-11-05 UTC)_ — bounded original Closure Buttonhole relation
-
-0954 adds a lending factory on the admitted actual garment. Fresh whole garment/Root/provider
-content and checked (E+8)^2 matching admission precede Closure and typed Root operation lookup.
-The original canonical button must match the operation's complete NotionSize representation;
-matching ID bits alone cannot join Declaration to Profile. No result body,physical length or
-consumer programme position is invented. Refusals preserve original parent/request/policy and
-first typed source/member causes,including actual wrong-family operations and differing origins.
-
-The initial contract compile reports the missing API;the fixture's logical target was corrected
-to its existing typed target struct. Public reexports complete the construction facade. Focused
-runtime2,privacy/lifetime/default guards3,arithmetic overflow guard,strict library Clippy and
-formatting pass. Deferred owners:Closure operation-cohort/placements,native/cohort,.check/.verify.
-README scope and G1 6/18 In Progress stay unchanged;book/live detail now names the narrower proof.
-Promotion declined:existing canonical origin and original owner/resource contracts own this scope.
-
-## _(2026-11-05 UTC)_ — complete original Pocket source joins
-
-0953 borrows original input/cursor and complete stable current-member records through disjoint
-fields. N+1 atomic reservation precedes a fresh complete aggregate walk,result reservation and
-each existing bind_source call. No source/body clone or self-reference is introduced. Every
-binding retains exact work/index/import-or-recipe/frame/snapshot/creator witnesses. Refusals
-retain the entire original work/input class and first typed child cause;private prefixes drop.
-N0 adds no walk/query/allocation/demand and dropping either outcome refunds no reserved work.
-
-Two focused tests cover seven member and ten source cases,including stable loans,unused import,
-repeated targets,atomic shortage and late resources/provider/Piece/frame/snapshot errors. Existing
-four import/Mirror/Join association guards,two adjacent numeric contracts,three new API guards,
-strict library Clippy and formatting pass. Initial unused fixture imports were removed;strict
-Clippy's expanded return-type complexity was resolved by a result alias without a lint waiver.
-Whole aggregate recipe/cohort .check/.verify,Closure/native and physical proof remain deferred.
-README scope unchanged;LIVE detail advances while G1 remains6/18 In Progress.
-Promotion declined:existing original source association and finite cursor contracts own scope.
-
-## _(2026-11-05 UTC)_ — retain closed protocols before Pocket source work
-
-0952 retains nine exact Git intervals/26117 decodedB fromfa5ca25a in part1092. Seven complete
-closed protocols and the entire committed lesson/ledger snapshots remain retrievable before
-narrative retirement. Every original task identity/status occurrence and heading stays exact.
-The collection had18 lines left before its fixed20000L ceiling;the transition makes room for
-source-binding acceptance without widening limits or changing old seals,producers or stores.
-
-The first capture selector refused historical predecessor mirrors instead of guessing one.
-Explicit original protocol intervals now distinguish them;later preserved mirror records remain
-unchanged. Actual Git/hash/base64/public-reader proof passes before compaction. The tracked
-transition receipt verifier checks all nine source spans. Product scope and deferred whole
-.check/.verify stay unchanged;original Pocket source joins remain next.
-Promotion declined:existing whole-record retention and finite collection contracts own scope.
-
-[Whole earlier journal and navigation](docs/history/stitchcad-devnotes-part1092.md) retains exact committed bytes fromfa5ca25a.
+[Whole earlier journal and navigation](docs/history/stitchcad-devnotes-part1093.md) retains exact committed bytes fromfb02c244.
