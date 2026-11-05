@@ -1,8 +1,8 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
 - Derive HEAD/ahead from Git;push cadence400 per COMMIT.md.
-- PNT active at G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.root-suppliers.numeric in docs/tasks/G1-SLICE-constructions.md.
-- Next:bind complete original Root garment numeric Derived sources under actual parameter/canonical representations,checked sources/acyclic owners and same cursor. Profile/component/derivation,native/cohort and whole .5f.2.check/.verify remain pending.
+- PNT active at G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.logical.headers in docs/tasks/G1-SLICE-constructions.md.
+- Next:bind all original Profile Pocket opening/Closure notion-size headers under exact direct pins and same Root supplier/cursor owners;fresh N+1 work precedes buffers/queries. Parameters/numeric Profile facets,component/derivation,native/cohort and whole .5f.2.check/.verify remain pending.
 - Before push:resolve owned producer inventory reconciliation in G1-SLICE-producers.md;no broad verification claimed.
 - Protected recovery/evidence stores and retained window rules:docs/ARTIFACT_CLEANUP.md and docs/tasks/G1-SLICE-retention-proof.md. Never rerun old installers after archive edits.
 - Commit each slice and clear brief;handoff requires clean Git and OS-visible check_handoff.sh --idle-cua.

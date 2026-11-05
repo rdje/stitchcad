@@ -14,7 +14,8 @@ use core::fmt;
 mod members;
 pub use members::{
     AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentRootInputMembers,
-    BoundDraftingProgramGarmentRootLogicalSuppliers, BoundDraftingProgramProfileHeaders,
+    BoundDraftingProgramGarmentRootLogicalSuppliers,
+    BoundDraftingProgramGarmentRootNumericSuppliers, BoundDraftingProgramProfileHeaders,
     BoundDraftingProgramProfileParameters, BoundDraftingProgramRootInputMembers,
     BoundDraftingProgramRootLogicalSuppliers, BoundDraftingProgramRootNumericSuppliers,
     BoundDraftingProgramRuleSignatures, BoundDraftingProgramRuleSources,
@@ -23,7 +24,10 @@ pub use members::{
     DraftingProgramGarmentRootInputSource, DraftingProgramGarmentRootLogicalSupplier,
     DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
-    DraftingProgramGarmentRootLogicalSuppliersResult, DraftingProgramOperationInput,
+    DraftingProgramGarmentRootLogicalSuppliersResult,
+    DraftingProgramGarmentRootNumericSupplierError,
+    DraftingProgramGarmentRootNumericSupplierRefusal,
+    DraftingProgramGarmentRootNumericSuppliersResult, DraftingProgramOperationInput,
     DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
     DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
     DraftingProgramProfileInputParameter, DraftingProgramProfileInputRequest,

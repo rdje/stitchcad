@@ -3202,3 +3202,62 @@ missing supplier,missing/wrong-family/output-ID/output-kind refusals and genuine
 The affected Root member fixture and three compiler guards also pass under scoped strict lint.
 This accepts the Root logical supplier relation only. Numeric suppliers,Profile garment inputs,
 component/Closure physical joins,native families,whole cohort checking and execution remain separate.
+
+## Bind original Root garment numeric Derived suppliers
+
+`BoundDraftingProgramGarmentRootLogicalSuppliers::bind_garment_root_numeric_suppliers()` consumes
+the complete original Root garment member/logical supplier owner and retains its same finite
+cursor. It binds actual canonical Derived numeric targets reached through original FormulaLength
+fields. Inline lengths acquire no formula source,and non-Derived canonical states stay unchanged.
+`BoundDraftingProgramGarmentRootNumericSuppliers::logical()` retains the complete preceding proof;
+`records()` reuses the existing `DraftingProgramRootNumericSupplier` relation type. Its
+`member_index()` refers to `logical().members().records()`,the actual garment member storage.
+
+Each relation preserves the actual original `FormulaDerivedInput`,checked source and already-held
+acyclic owner. Original canonical declaration pointers choose the association,not equal IDs or
+parameter names. `input()` retains dedicated/general representation,original canonical family
+position and state/source provenance. `source()` is the exact already-held checked expression
+proof for that actual source record. `graph()` is the exact original acyclic owner over the whole
+checked source proof. No numeric formula receives a semantic/mixed supplier position.
+
+The focused fixture retains these separate identities:
+
+| Original garment member index | Formula metadata field | Actual canonical target | Checked source |
+| --- | --- | --- | --- |
+| 5 | Closure3:parameter7101 | dedicated Length10,Derived500 | source500,Length-kind |
+| 6 | Closure4:parameter7102 | general Scalar(Length)20,Derived500 | The same original source500 |
+
+Both canonical targets remain distinct original declarations even though they share a checked
+expression. A separate fixture maps both metadata7101 and7102 to the same actual dedicated
+Length10. Those original consumer fields and metadata records remain separate numeric relations;
+Scalar20 remains an unused Derived Root target included in the prerequisite whole-source proof.
+The inline length at member4/metadata7100 never receives a numeric relation or fabricated formula.
+
+For N>0,the factory atomically reserves N whole/numeric/result envelopes before fresh complete
+aggregate/proof charging,fallible N-record reservation and any original canonical/source join.
+Each Derived-input scan and source lookup fits the selected (E+8)² per-pass matching bound;one
+fresh whole walk fits N complete content envelopes. Earlier demand grants no credit. The ordinary
+fixture reserves seven Root garment member passes and two numeric passes,for nine total. Numeric
+binding adds one fresh full resource walk and no provider/Profile/rule/currentness/value query.
+
+The same original prerequisites already establish complete source existence,result-kind agreement
+and acyclicity. No new accepted-looking source or empty graph substitutes for them. A Boolean
+source for a Length Derived target is refused by the original source checker before this numeric
+owner can exist;its actual target and typed expected/actual kind remain in that upstream error.
+This numeric stage adds no impossible duplicate matching diagnostic under those exact immutable
+owners. Its successful relations retain the already-held proofs rather than evaluating a formula.
+
+`child_pass_count()` reports N. N0 adds no walk,work,allocation,lookup,reservation or demand claim;
+unused source bodies remain covered by the earlier complete admissions. The typed error retains
+the original full logical/member/cursor owner,complete `supplier_count()` when known,completed
+aggregate demand and first arithmetic/work/resource/allocator cause. Capacity shortage leaves
+the cursor unchanged;later refusal keeps the complete stage spent. Private successful numeric
+prefixes drop. Underlying resource causes retain their standard error chain.
+
+Six focused modes comprise five numeric-factory paths and one actual upstream kind refusal:
+dedicated/general targets,shared canonical target with distinct metadata,N0,atomic7+2 versus8
+shortage and fresh resource refusal. Actual declaration/source/graph pointers,original member
+indices,full fresh demand and unchanged callbacks are checked. Three compiler guards preserve
+privacy,non-Clone ownership and owner lifetime. Root logical and numeric supplier classes are now
+implemented with focused checks;Profile garment inputs,component/Closure/native joins,whole
+cohort checking,G4 truth and physical execution remain separately owned.

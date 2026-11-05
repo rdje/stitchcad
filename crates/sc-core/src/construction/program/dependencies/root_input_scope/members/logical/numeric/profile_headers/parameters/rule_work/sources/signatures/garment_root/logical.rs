@@ -16,9 +16,16 @@ use crate::{
 };
 use core::fmt;
 mod error;
+mod numeric;
 pub use error::{
     DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
+};
+pub use numeric::{
+    BoundDraftingProgramGarmentRootNumericSuppliers,
+    DraftingProgramGarmentRootNumericSupplierError,
+    DraftingProgramGarmentRootNumericSupplierRefusal,
+    DraftingProgramGarmentRootNumericSuppliersResult,
 };
 /// One original Root garment logical Derived member and its actual original supplier/output.
 pub struct DraftingProgramGarmentRootLogicalSupplier<

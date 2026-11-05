@@ -106,6 +106,58 @@ fn build_with_semantics(
     semantic_recipe: SemanticRecipe,
     parameter_definitions: Vec<DesignParameterDefinition>,
 ) -> TestResult<DesignGarment<EmptyHost>> {
+    build_with_semantic_data(
+        damaged,
+        identity,
+        kinds,
+        opening,
+        SemanticFixture {
+            canonical,
+            semantic_recipe,
+            parameter_definitions,
+            formula_sources: FormulaSources::new(vec![], FormulaSourceLimits::new(0, 0, 0))?,
+        },
+    )
+}
+struct SemanticFixture {
+    canonical: CanonicalInputs,
+    semantic_recipe: SemanticRecipe,
+    parameter_definitions: Vec<DesignParameterDefinition>,
+    formula_sources: FormulaSources,
+}
+pub(super) fn garment_with_formula_declarations(
+    canonical: CanonicalInputs,
+    parameters: Vec<DesignParameterDefinition>,
+    kinds: Vec<ClosureKind>,
+    opening: PocketOpening,
+    formula_sources: FormulaSources,
+) -> TestResult<DesignGarment<EmptyHost>> {
+    build_with_semantic_data(
+        false,
+        id(100),
+        kinds,
+        opening,
+        SemanticFixture {
+            canonical,
+            semantic_recipe: SemanticRecipe::empty(),
+            parameter_definitions: parameters,
+            formula_sources,
+        },
+    )
+}
+fn build_with_semantic_data(
+    damaged: bool,
+    identity: EntityId,
+    kinds: Vec<ClosureKind>,
+    opening: PocketOpening,
+    data: SemanticFixture,
+) -> TestResult<DesignGarment<EmptyHost>> {
+    let SemanticFixture {
+        canonical,
+        semantic_recipe,
+        parameter_definitions,
+        formula_sources,
+    } = data;
     let mut ledger = IdentityLedger::new();
     let mut ids = DeterministicIdGenerator::new();
     let edges = ledger.declare_edges(&mut ids, 1)?;
@@ -209,7 +261,7 @@ fn build_with_semantics(
         materials,
         sources,
         recipe: FormulaRecipeDocument::new("".into())?,
-        formula_sources: FormulaSources::new(vec![], FormulaSourceLimits::new(0, 0, 0))?,
+        formula_sources,
         references: DesignSourceReferences {
             measurement_table: None,
             ease_set: None,

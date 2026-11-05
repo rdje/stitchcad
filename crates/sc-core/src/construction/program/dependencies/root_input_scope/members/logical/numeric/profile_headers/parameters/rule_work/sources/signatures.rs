@@ -19,12 +19,15 @@ mod garment_root;
 pub use error::{DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal};
 pub use garment_root::{
     BoundDraftingProgramGarmentRootInputMembers, BoundDraftingProgramGarmentRootLogicalSuppliers,
-    DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
-    DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
-    DraftingProgramGarmentRootInputSource, DraftingProgramGarmentRootLogicalSupplier,
-    DraftingProgramGarmentRootLogicalSupplierError,
+    BoundDraftingProgramGarmentRootNumericSuppliers, DraftingProgramGarmentRootInputMember,
+    DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
+    DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
+    DraftingProgramGarmentRootLogicalSupplier, DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
     DraftingProgramGarmentRootLogicalSuppliersResult,
+    DraftingProgramGarmentRootNumericSupplierError,
+    DraftingProgramGarmentRootNumericSupplierRefusal,
+    DraftingProgramGarmentRootNumericSuppliersResult,
 };
 /// One original source parent and its complete named signature/actual canonical output relation.
 pub struct DraftingProgramRuleSignature<

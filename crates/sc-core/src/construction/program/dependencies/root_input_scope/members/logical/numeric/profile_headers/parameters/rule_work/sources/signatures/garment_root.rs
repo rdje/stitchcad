@@ -22,10 +22,14 @@ pub use error::{
     DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
 };
 pub use logical::{
-    BoundDraftingProgramGarmentRootLogicalSuppliers, DraftingProgramGarmentRootLogicalSupplier,
+    BoundDraftingProgramGarmentRootLogicalSuppliers,
+    BoundDraftingProgramGarmentRootNumericSuppliers, DraftingProgramGarmentRootLogicalSupplier,
     DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
     DraftingProgramGarmentRootLogicalSuppliersResult,
+    DraftingProgramGarmentRootNumericSupplierError,
+    DraftingProgramGarmentRootNumericSupplierRefusal,
+    DraftingProgramGarmentRootNumericSuppliersResult,
 };
 /// Exact original logical member,inline length intent,or parameter-to-canonical numeric member.
 /// Public variants are views;only the private complete owner certifies coverage and admission.

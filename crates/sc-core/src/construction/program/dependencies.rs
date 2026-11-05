@@ -68,7 +68,8 @@ pub use semantic_coverage::{
 mod root_input_scope;
 pub use root_input_scope::{
     AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentRootInputMembers,
-    BoundDraftingProgramGarmentRootLogicalSuppliers, BoundDraftingProgramProfileHeaders,
+    BoundDraftingProgramGarmentRootLogicalSuppliers,
+    BoundDraftingProgramGarmentRootNumericSuppliers, BoundDraftingProgramProfileHeaders,
     BoundDraftingProgramProfileParameters, BoundDraftingProgramRootInputMembers,
     BoundDraftingProgramRootLogicalSuppliers, BoundDraftingProgramRootNumericSuppliers,
     BoundDraftingProgramRuleSignatures, BoundDraftingProgramRuleSources,
@@ -77,7 +78,10 @@ pub use root_input_scope::{
     DraftingProgramGarmentRootInputSource, DraftingProgramGarmentRootLogicalSupplier,
     DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
-    DraftingProgramGarmentRootLogicalSuppliersResult, DraftingProgramOperationInput,
+    DraftingProgramGarmentRootLogicalSuppliersResult,
+    DraftingProgramGarmentRootNumericSupplierError,
+    DraftingProgramGarmentRootNumericSupplierRefusal,
+    DraftingProgramGarmentRootNumericSuppliersResult, DraftingProgramOperationInput,
     DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
     DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
     DraftingProgramProfileInputParameter, DraftingProgramProfileInputRequest,

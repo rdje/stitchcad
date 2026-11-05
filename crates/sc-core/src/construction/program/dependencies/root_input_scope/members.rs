@@ -20,7 +20,8 @@ mod logical;
 pub use error::{DraftingProgramRootInputMemberError, DraftingProgramRootInputMemberRefusal};
 pub use logical::{
     AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentRootInputMembers,
-    BoundDraftingProgramGarmentRootLogicalSuppliers, BoundDraftingProgramProfileHeaders,
+    BoundDraftingProgramGarmentRootLogicalSuppliers,
+    BoundDraftingProgramGarmentRootNumericSuppliers, BoundDraftingProgramProfileHeaders,
     BoundDraftingProgramProfileParameters, BoundDraftingProgramRootLogicalSuppliers,
     BoundDraftingProgramRootNumericSuppliers, BoundDraftingProgramRuleSignatures,
     BoundDraftingProgramRuleSources, DraftingProgramGarmentRootInputMember,
@@ -28,7 +29,10 @@ pub use logical::{
     DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
     DraftingProgramGarmentRootLogicalSupplier, DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
-    DraftingProgramGarmentRootLogicalSuppliersResult, DraftingProgramOperationInput,
+    DraftingProgramGarmentRootLogicalSuppliersResult,
+    DraftingProgramGarmentRootNumericSupplierError,
+    DraftingProgramGarmentRootNumericSupplierRefusal,
+    DraftingProgramGarmentRootNumericSuppliersResult, DraftingProgramOperationInput,
     DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
     DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
     DraftingProgramProfileInputParameter, DraftingProgramProfileInputRequest,

@@ -21,7 +21,8 @@ pub use error::{
 };
 pub use numeric::{
     AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentRootInputMembers,
-    BoundDraftingProgramGarmentRootLogicalSuppliers, BoundDraftingProgramProfileHeaders,
+    BoundDraftingProgramGarmentRootLogicalSuppliers,
+    BoundDraftingProgramGarmentRootNumericSuppliers, BoundDraftingProgramProfileHeaders,
     BoundDraftingProgramProfileParameters, BoundDraftingProgramRootNumericSuppliers,
     BoundDraftingProgramRuleSignatures, BoundDraftingProgramRuleSources,
     DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
@@ -29,7 +30,10 @@ pub use numeric::{
     DraftingProgramGarmentRootInputSource, DraftingProgramGarmentRootLogicalSupplier,
     DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
-    DraftingProgramGarmentRootLogicalSuppliersResult, DraftingProgramOperationInput,
+    DraftingProgramGarmentRootLogicalSuppliersResult,
+    DraftingProgramGarmentRootNumericSupplierError,
+    DraftingProgramGarmentRootNumericSupplierRefusal,
+    DraftingProgramGarmentRootNumericSuppliersResult, DraftingProgramOperationInput,
     DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
     DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
     DraftingProgramProfileInputParameter, DraftingProgramProfileInputRequest,

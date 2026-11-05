@@ -8,6 +8,8 @@ use sc_core::{construction::*, design::*, recipe::*};
 mod garment_root_logical;
 #[path = "drafting_program_garment_root_members.rs"]
 mod garment_root_members;
+#[path = "drafting_program_garment_root_numeric.rs"]
+mod garment_root_numeric;
 #[path = "drafting_program_rule_signatures.rs"]
 mod signatures;
 #[path = "drafting_program_rule_sources.rs"]

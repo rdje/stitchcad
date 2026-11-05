@@ -19,12 +19,16 @@ mod signatures;
 pub use error::{DraftingProgramRuleSourceError, DraftingProgramRuleSourceRefusal};
 pub use signatures::{
     BoundDraftingProgramGarmentRootInputMembers, BoundDraftingProgramGarmentRootLogicalSuppliers,
-    BoundDraftingProgramRuleSignatures, DraftingProgramGarmentRootInputMember,
-    DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
-    DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
-    DraftingProgramGarmentRootLogicalSupplier, DraftingProgramGarmentRootLogicalSupplierError,
+    BoundDraftingProgramGarmentRootNumericSuppliers, BoundDraftingProgramRuleSignatures,
+    DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
+    DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
+    DraftingProgramGarmentRootInputSource, DraftingProgramGarmentRootLogicalSupplier,
+    DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
-    DraftingProgramGarmentRootLogicalSuppliersResult, DraftingProgramRuleSignature,
+    DraftingProgramGarmentRootLogicalSuppliersResult,
+    DraftingProgramGarmentRootNumericSupplierError,
+    DraftingProgramGarmentRootNumericSupplierRefusal,
+    DraftingProgramGarmentRootNumericSuppliersResult, DraftingProgramRuleSignature,
     DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal,
     DraftingProgramRuleSignaturesResult,
 };

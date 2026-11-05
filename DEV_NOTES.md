@@ -2,6 +2,29 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — original Root garment numeric Derived sources and acyclic owners
+
+0941 consumes original Root garment member/logical supplier proofs into numeric Derived relations.
+N fresh whole/numeric/result envelopes precede complete aggregate/proof charging,N-record
+reservation and actual canonical/source joins. Original declaration pointers choose existing
+FormulaDerivedInput/checked source/exact acyclic loans. The existing RootNumericSupplier relation
+is reused with genuine garment member indices;no extra metadata/value or mixed position is created.
+Inline and non-Derived fields remain unchanged;N0 adds no work or new demand. Exact prerequisite
+owners already certify source existence,kind and acyclicity;no fabricated replacement graph or
+impossible extra matching diagnostic is added. Refusals retain full original logical/member/
+cursor owners and first work/resource/arithmetic/allocator cause;private prefixes drop.
+Six native modes comprise five factory paths and one actual upstream Boolean-for-Length TargetKind
+refusal. Dedicated Length10 and ScalarLength20 share source500;separate metadata7101/7102 can also
+share actual Length10 while unused Scalar20 remains included in the whole-source proof. Original
+member indices5/6,canonical/source/graph loans,full fresh demand,N0,atomic7+2 versus8 shortage and
+fresh resource refusal pass without queries. The FormulaSource constructor is infallible;the
+fixture call was corrected. Fixture semantic data now groups source/metadata fields without new
+production defaults or widened limits. Affected Root member10/logical9/foreign-Root cases,three
+compiler guards,format and scoped strict lint pass. README/LIVE unchanged,G1still6/18 In Progress.
+Profile logical headers lead next;numeric Profile lengths need their authentic facet before whole
+input acceptance. Component/Closure/native/cohort and .check/.verify remain deferred.
+Promotion declined:local numeric and existing original-source/acyclic/member contracts own scope.
+
 ## _(2026-11-05 UTC)_ — retain complete closed rule evidence before numeric garment suppliers
 
 0940 retains the whole closed original rule-work/source/signature subtree and complete committed
