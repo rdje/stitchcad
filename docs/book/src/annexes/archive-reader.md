@@ -411,6 +411,15 @@ No old archive,producer,limit or historical approval claim changes.
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1088.md
 ```
 
+Part1089 retains the complete closed original rule-work/source/signature subtree and whole
+committed journals fromf0ca70d2. Nine exact Git spans preserve21449 decoded bytes;all220 live task
+identities/statuses and46 headings remain exact before numeric garment-supplier acceptance grows.
+Seven closed nodes point to whole original goals/proofs under unchanged archive and task bounds.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1089.md
+```
+
 ### Closed task goals and live navigation —0775
 
 Whole0774 continuity and the original completed walk/mirror/slash goals/proof links remain
