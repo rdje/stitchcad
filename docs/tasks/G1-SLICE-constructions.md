@@ -163,65 +163,27 @@ Retention: complete predecessor payload preserved by .5b.2b.
 
 - ID: `G1-SLICE.5b.2b`
   Status: `done`
-  Goal:0084 sourced declaration protocol;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1033md).
+  Goal:completed immutable source contract;[whole original goals/proofs](../history/stitchcad-devnotes-part1088.md).
 
 ## Completed declaration receipts — preserved from db19b90
 
+[Whole original evidence/navigation](../history/stitchcad-devnotes-part1088.md) remains byte-exact.
+
 ## Sourced declaration receipts — .5b.2b,2026-10-03 (UTC)
 
-- Closed named immutable source views: input metadata and canonical declaration IDs kept distinct;
-  existing length records borrowed by pointer; geometry creator/tag preserved, no resolution.
-  Recipe annotations/name/whole-name spans/ordinal come from actual normalized let positions only.
-  No state/value query in kind/origin inspection; generic metadata does not certify target records.
-- Seven public contracts and five actual negative construction/private/lifetime doctests verify
-  five canonical length domains, three general scalar domains/six kinds, all five LengthStates,
-  point/edge refs/eight reserved names, zero/absent/assertion recipe positions and boundary4096.
--19 actual compiled source/kind/origin/identity/context/privacy body assertion reds plus one
-  actual widened library API that compiles forbidden measurement input and fails its negative
-  construction contract; producer restored exactly, script rc=0. Normal strict608/50groups pass0.
-- Owned draft faults: assert(false) placeholders refused by strict lint, replaced by actual variant
-  assertions; custom messages then hid standard assertion signatures. Classifier correctly refused
-  those reds; default body messages restored, classifier unchanged. D130 five-domain generic input
-  was overbroad; distinct scalar type prevents measurement/Ease non-length metadata before commit.
-  Borrow-discard fault retargeted to actual cloned-record cache after the new type boundary made
-  its old replacement ill-typed; pointer identity catches the compiled clone, not compiler failure.
-- Reference structural/language16/publication9 terminal0:55 chapters/33 APIs/1137 source links/
-  1765 rendered links, warning-free. Reference evidence remains separate from product acceptance.
-- Exact cfd0748 task26lines/2390B/29b1b16a receipts,21lines/1781B/288041bd protocol and20lines/
-  1601B/04dd4b10 checklist retained in constructions. Oldest ledger11lines/974B/aad9b836 and
-  lesson11lines/932B/2d6e66b8 match HEAD; D130 eight-line/772B report5f6b8b11 retained in part53.
-- Archive221 logical/35 resident records and fresh reconstruction10open/119sealed/disjoint pass0;
-  tree10lanes/13trees/10siblings/zero gaps. Ledger/WASM/staged-gate final receipts follow.
-- WASM all three libraries compile, rc=0; native608/50groups includes all five construction/
-  privacy/lifetime negative contracts. Source/state/availability methods were not used for kind.
-  Final tree/archive/defect predecessor checks pass0; ledger9/13 pointer controls terminal0.
-  Staged doctrine gate follows; all current verification jobs observed terminal.
-- Staged make gate:13 checks/all green, rc=0; final diff check0. Metadata/source predicates and
-  closed API type boundary remain restored; pre-commit hook repeats the staged gate.
+[Whole original evidence/navigation](../history/stitchcad-devnotes-part1088.md) remains byte-exact.
 
 ## Completed declaration checklist — preserved from db19b90
 
+[Whole original evidence/navigation](../history/stitchcad-devnotes-part1088.md) remains byte-exact.
+
 ### G1-SLICE.5b.2b — immutable sourced declarations
 
-- [x] **REPRODUCE / ISSUE** — initial seven public draft contracts accept generic non-length
-  measurement/Ease metadata (D130), contradicting canonical length-target contracts; rc=0.
-- [x] **ROOT CAUSE (WHY + WHERE)** — generic origin/kind matrix overgeneralizes reference metadata
-  into canonical adapters. Current formula_declaration_contract →7 tests/0 failed, rc=0; five
-  negative construction/lifetime/private doctests pass in make check. Widening the actual scalar
-  API makes the forbidden measurement call compile and its negative contract fail, rc=101.
-- [x] **FIX** — distinct five length/three general scalar source domains, borrowed canonical
-  length records and typed refs; recipe metadata comes only from actual normalized let positions.
-- [x] **ADDRESSED (verified)** — declaration_mutations.py →19 actual compiled body assertion
-  reds plus one actual widened negative construction contract red; exact source restored, rc=0.
-  Seven normal public contracts preserve all identities/origins/kinds/refs/ordinals/spans/privacy.
-- [x] **NO REGRESSION** — strict make check →608 passes/50 groups, rc=0; full reference/structural,
-  language16/publication9 pass, rc=0. WASM and final recording-gate receipts follow in recipes.
-- [x] **LOCKSTEP** — declaration annex/source limits/examples/33 API rows, README and live/task/
-  resume records align;55 chapters/1137 source/1765 rendered links verified, rc=0. D130 fixed
-  before commit; exact prior task/ledger/lesson/report payloads retained, no ceilings raised.
-  promotion: declined (canonical single-source ownership, typed metadata and original-context rules).
+[Whole original evidence/navigation](../history/stitchcad-devnotes-part1088.md) remains byte-exact.
 
 ## Completed reserved diagnostic proposal protocol — preserved from 862c0d9
+
+[Whole original evidence/navigation](../history/stitchcad-devnotes-part1088.md) remains byte-exact.
 
 - ID: `G1-SLICE.5b.2c.1a`
   Status: `done`
@@ -249,70 +211,23 @@ Retention: complete predecessor payload preserved by .5b.2b.
 
 - ID: `G1-SLICE.5b.2c.1b`
   Status: `done`
-  Goal: apply the delegated D131 diagnostic decision to contract/reference and independent argument
-  controls before product namespace implementation. Acceptance: no fabricated indices, all eight
-  reserved names and every originating declaration domain covered; ordinary rebinding retains
-  both actual recipe ordinals. Director2026-10-03 delegates the choice and application to the
-  engineer; same-party author/applier disclosed, independent approval remains unclaimed.
-  Work unit: `STITCHCAD-G1-0086`; predecessor862c0d9 clean, no owned jobs or user edits.
-  Pre-code protocol: contract3.1/4.1/5.2, actual namespace/static_statement/preflight and all
-  existing static controls read. Keep formula_rebinding for reserved names; add a discriminated
-  reserved refusal carrying name/reserved kind-origin-context and attempted metadata locator.
-  Initial reference declarations carry their actual ordered-pair position, not a recipe index.
-  Detached recipe statements carry actual local spans but no invented ordinal. Whole preflight
-  supplies global attempted ordinal/spans and the real prior binding's ordinal/spans for repeated
-  lets. Reference metadata locators certify no canonical record/value identity; product sources
-  remain the immutable typed declarations and later registry validation. No state/value reads.
-  Independently authored all8 names×9 metadata origins and8×6 annotations, every real recipe
-  position/name span, actual repeated indices/assertion gaps; forbidden availability/execution
-  reads trapped. Actual argument/token/context faults must fail body assertions with source exact.
-  Repair canonical row/book/ADR, disclose reopening/reversal and approval scope; no grammar change.
-  Own exact completed .1a blocks/oldest ledgers/lesson/report retention within current bounds.
-  Verification:3624 exact argument cases/19 actual compiled assertion reds; full reference,
-  language16/publication9/ledger9/13 controls pass0. Commit: `STITCHCAD-G1-0086`.
+  Goal:completed immutable source contract;[whole original goals/proofs](../history/stitchcad-devnotes-part1088.md).
 
 ## Completed binding-source decision receipts — preserved from 1972f57
 
+[Whole original evidence/navigation](../history/stitchcad-devnotes-part1088.md) remains byte-exact.
+
 ## Delegated diagnostic source receipts — .5b.2c.1b,2026-10-03 (UTC)
 
-- reserved_diagnostic_review.py --mutations →3624 exact argument cases/19 actual compiled body
-  assertion reds, rc=0; actual producer unchanged. State/value/availability/execution read traps
-  cover direct namespace/detached/runtime-static/whole preflight. No canonical record IDs invented.
-- Invalid draft cm2/true fixtures refused by actual grammar; corrected to square/comparison forms
-  before acceptance. Two original guard fault anchors remain; whole execution fault anchor follows
-  the new private static composition, preserving actual assertion classification and scope.
-- Full structural/signature4032/namespace1139/whole196/review100 and all prior runtime controls
-  pass0; language16/publication9/ledger9/13 pointer controls terminal0. Book warning-free55
-  chapters/33 API rows/1140 source/1770 rendered links. Rust diff to HEAD empty, rc=0.
-- Exact .1a protocol14lines/1195B/3e442bf4, receipts19lines/1698B/2ebc780c and checklist19lines/
-  1667B/6b1d9137 retained in constructions. Older signature37lines/3281B/eb496c6e and whole
-  preflight20lines/1705B/98f57f67 retained with old anchor routes. No historical bytes rewritten.
-- Oldest ledger12lines/1076B/61590cec, lesson14lines/1110B/f1ad9ba4 and original D131 report
-  14lines/1255B/c94b9f9c sealed exactly to862c0d9 payloads; existing caps/windows unchanged.
-- Same author/applier under explicit delegation disclosed in ADR-0003; reopened by director or
-  independent reviewer on a concrete counterexample, approval unclaimed. Product namespace .2c.2
-  remains next; canonical source registry/localization/order/type integration retain their owners.
-  Final archive/census/staged doctrine receipts follow; no scoped verification job remains live.
-- Final archive226 logical/40 resident records and fresh defect10open/120unique sealed/no overlap,
-  tree10lanes/13trees/10siblings/zero gaps, rc=0. All sealed originals compare exactly to HEAD;
-  shell syntax/diff checks0. Staged doctrine receipt follows before commit.
-- Initial staged gate refuses ADR-0003 at17738B over16384B, rc=2. Split the complete D131
-  proposal/decision into decision_rebinding.md, retain ADR forwarder and index; shorten map
-  orientation inputs without dropping entry paths/owners. No cap or gate weakened; rerun follows.
-- Final staged gate →13 checks/all green, rc=0; bounded ADR14095B/new record4533B/map8163B.
-  New-record terminal blank removed after diff check; final staged diff check repeats before commit.
+[Whole original evidence/navigation](../history/stitchcad-devnotes-part1088.md) remains byte-exact.
 
 ### G1-SLICE.5f.1.c.join.outputs.contours.tracking
 
-- [x] ROOT CAUSE:Git interval census:17893B completed child-goal block;15 closed nodes,rc=0.
-  Whole original959 source intervals/body/hash/public reader exact;no old requirement text discarded.
-- [x] ADDRESSED:same Git comparison:every ID/status/child relation and all later acceptance bytes
-  identical,rc=0. Only closed goal details become pointers;current native join implementation unchanged.
-- [x] NO REGRESSION:`run_tree_coverage_census.sh`:10 lanes/13 trees/20 siblings/0 issues,rc=0;
-  `history_archive.py --root . verify`:1413 logical/46 working,rc=0;source5/output7 doctests and book0.
-  Full feature/integration verification remains G1-SLICE.5f.4/.5g/pre-push,not run for this retention.
+[Whole original evidence/navigation](../history/stitchcad-devnotes-part1088.md) remains byte-exact.
 
 ## Join physical-copy correspondence
+
+[Whole original evidence/navigation](../history/stitchcad-devnotes-part1088.md) remains byte-exact.
 
 - ID: `G1-SLICE.5f.1.c.join.outputs.copies.correspondence`
   Status: `done`
@@ -958,3 +873,11 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.signatures`
   Status: `pending`
   Goal:borrow complete stable original source parents and same inputs/cursor;reserve fresh whole/child work before complete signature/output result allocation. Reuse bind_signature for every original rule/policy,retain named matches and actual Root Derived output loans and typed first causes;no value/body/cohort acceptance.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.signatures.retention`
+  Status: `done`
+  Goal:retain whole closed construction/metadata evidence and committed journals before signature acceptance grows;preserve every original task identity/status and live heading route after exact Git/hash/public-reader proof under unchanged bounds.
+  - [x] ROOT CAUSE / ISSUE:committed collection19990L/1496001B leaves10 lines before fixed20000L ceiling;retain closed declaration/decision evidence before signature acceptance grows. All original heading routes must remain live.
+  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1088.md →4 exact Git spans,rc=0. Independent decode/hash/Git/public-reader proof preserves16787 decodedB and complete committed journals before two closed nodes become retrieval stubs. Every original task identity/status and heading remains exact.
+  - [x] NO REGRESSION / LOCKSTEP:target/history-proof-0935/independent1088.json proves public/source bytes and complete task/heading identity,rc=0. Old seals/caps/producers/protected stores unchanged;book reader/journals/resume align. README/LIVE unchanged,G1still6/18 In Progress. 
+    promotion: declined (existing retention contract owns this prerequisite). Initial lesson gate refused noncanonical decline syntax;corrected and wrapped under400B before commit. Commit:STITCHCAD-G1-0935.

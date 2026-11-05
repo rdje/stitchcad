@@ -402,6 +402,15 @@ task identity/status remains beside its complete retrieval pointer before rule-w
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1087.md
 ```
 
+Part1088 retains the whole closed sourced-declaration/binding-source evidence and complete
+committed journals fromacd379da. Four exact Git spans preserve16787 decoded bytes. Every original
+task identity/status and heading route remains live beside whole retained evidence/navigation.
+No old archive,producer,limit or historical approval claim changes.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1088.md
+```
+
 ### Closed task goals and live navigation —0775
 
 Whole0774 continuity and the original completed walk/mirror/slash goals/proof links remain

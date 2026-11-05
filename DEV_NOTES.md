@@ -2,57 +2,15 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
-## _(2026-11-05 UTC)_ — complete original rule/policy sources under stable work parents
+## _(2026-11-05 UTC)_ — retain closed source contracts before rule signature work
 
-0934 borrows actual complete work storage and the same unique input/cursor through disjoint
-parent fields. N requests/M Profile origins reserve N+M+1 whole/work/Profile passes before fresh
-full aggregate/proof content,full N-record reservation or any query. Existing bind_source freshly
-readmits each original work and each selected Profile header. Actual Root/snapshot/origin/Profile
-pin/inventory/payload/declaration/body/ID/family associations survive as original loans;local
-signatures and eventual Root outputs remain unaccepted. Refusals retain complete original input/
-cursor/work slices and first lending child causes;private successful prefixes drop. Dropping a
-result releases its borrow without restoring spent work. N0 performs no new work or demand claim.
-Seventeen focused modes pass with unsized body/Profile payloads and opaque metadata:exact mixed
-and repeated Profile origins,N0,atomic20+4 versus23 capacity,fresh whole/late child resources and
-matching,late Profile pin,all eight source mismatch classes and missing source. Equal-data foreign
-pin/payload records remain distinct;actual work/declaration/body/source pointers stay original.
-Mixed sources reserve24 total passes;all-Profile25;spent repeat makes no callback. The earlier
-work eight modes and affected Profile nineteen modes pass. Three compiler guards,format and
-scoped strict lint pass. Fixture pin-issue variant and unsized origin annotation corrected.
-README/LIVE unchanged,G1still6/18 In Progress. Complete local signature/Root Derived output loans
-must borrow stable actual source parents next;whole .check/.verify remain deferred.
-Promotion declined:local complete-source and existing lending rule APIs/book own this contract.
+0935 retains the complete closed sourced-declaration/binding-source evidence and whole committed
+journals fromacd379da in1088. Four exact Git spans/16787 decodedB and independent source/hash/
+public-reader bytes pass before compaction. Every task identity/status and every original heading
+remain exact;live heading routes point to whole retained navigation. Fixed bounds,old seals,
+producer code and protected proof stores remain unchanged. Signature work needs acceptance space;
+the original task collection had ten lines remaining. README/LIVE unchanged,G1still6/18 In
+Progress. No new Rust/product,broad verification or historical approval claim follows.
+Promotion declined:existing retention contract owns this prerequisite.
 
-## _(2026-11-05 UTC)_ — complete original rule/policy work admission
-
-0933 consumes complete Root/Profile inputs into stable original rule-work parents. Actual rule
-fields and checked direct origin rows determine requests in genuine mixed order. For N>0,the
-same cursor reserves N+1 fresh whole/child passes before full aggregate/proof charging and full
-N-record reservation. Existing prepare_rule_binding freshly charges every child and derives its
-required matching bound under that cursor's finite per-pass ceiling. No source/body/member/value
-query or signature/output association occurs;N0 adds no demand or work. Refusals keep original
-complete inputs/cursor,count,completed aggregate demand and actual child request/cause;private
-successful work prefixes drop. Explicit Profile origins remain intent until source acceptance.
-The independent eight-mode public fixture checks scrambled rows,Design/Profile/repeated pins,
-unknown eventual output,unaccepted mismatched pin intent,N0,atomic17+3 versus19 capacity,fresh
-whole refusal and late child resource/matching refusals. Actual operation/field/provider/pin loans
-and unchanged Profile/parameter calls pass. Existing three rule-work tests and affected Profile
-nineteen modes pass,as do three compiler guards,format and scoped strict Clippy. Initial export/
-provider method corrections completed;lint replaced fixture panic/indexing with a counted refusal/
-checked lookup. A colliding test filename was restored byte-exact from
-HEAD;the new fixture has a distinct program-level filename. No earlier test was lost.
-README/LIVE unchanged,G1still6/18 In Progress. Source binding must borrow stable work storage and
-same input/cursor through disjoint parent fields;signature/output and whole verification remain
-pending. Promotion declined:local complete-work and existing lending source APIs/book own scope.
-
-## _(2026-11-05 UTC)_ — retain complete Profile evidence before original rule work
-
-0932 retains all six closed Profile goal/evidence nodes and complete committed journals from
-5a25d643 in1087. Eight exact Git spans/12505 decodedB match independent source/hash and public
-reader bytes before compaction;all210 live task IDs/statuses survive. Fixed task ceilings,old
-seals,producer code and protected proof stores remain unchanged. The original task collection
-had ten lines remaining;retention opens acceptance space for the already-owned rule-work slice.
-README/LIVE remain unchanged,G1still6/18 In Progress;no new product or broad verification claim.
-Promotion declined:existing retention and original lending source APIs own these facts.
-
-[Whole earlier journal and navigation](docs/history/stitchcad-devnotes-part1087.md) retains exact committed bytes from5a25d643.
+[Whole earlier journal and navigation](docs/history/stitchcad-devnotes-part1088.md) retains exact committed bytes fromacd379da.
