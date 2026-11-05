@@ -2091,7 +2091,8 @@ whole-programme verification retain their separate task owners.
 
 The [fresh checked-expression producer](formula-checked-nodes.md#account-for-actual-retained-proof-buffers)
 now counts actual node certificates and ordered dependency records in a cumulative sink. Fresh [statement,source and graph producers](formula-checked-recipes.md#fresh-retained-statement-source-and-relation-records)
-now supply their actual held records too. Complete aggregate admission must compose these with
-program proof owners and the original garment/program/selection content. The owner join itself still
+now supply their actual held records too. The [complete mixed-proof producer](formula-checked-recipes.md#fresh-mixed-programme-proof-records)
+composes those actual source/order/graph/canonical/geometry records. Complete aggregate admission
+must still combine them with the original garment/program/selection content. The owner join itself still
 performs no content walk. The remaining composition and prospective work checks are not supplied
 by an expression-level demand or an earlier successful source proof.

@@ -22,10 +22,14 @@ retained contract and proof. Part1077 retains the closed semantic-selection requ
 the complete lesson journal and changelog from commit9567e5b0, including their earlier navigation.
 Part1078 retains the closed logical-source subtree from the same commit. The declared Git byte
 intervals and decoded payload hashes preserve those original documents; live stubs are navigation.
+Part1079 retains four completed0907–0910 task nodes and the complete committed lesson/ledger
+snapshots from5480fb92. All original task IDs/statuses remain live;the complete original contracts,
+check output and earlier journal navigation are retrievable from that immutable record.
 
 ```bash
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1077.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1078.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1079.md
 ```
 
 `HISTORY_ARCHIVE_ROOT` selects the project or a fixture below project `target/`. Destinations stay in

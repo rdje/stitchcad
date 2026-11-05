@@ -299,3 +299,5 @@ impl<'b, 'n, 'p, 'a, H: DesignMetadataHost, S: DraftingPlannedOutputProvider<H> 
         })
     }
 }
+
+mod retained_resources;

@@ -361,3 +361,5 @@ mod tests {
         );
     }
 }
+
+mod retained_resources;

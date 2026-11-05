@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — complete actual mixed-proof records
+
+0911 adds retained-record composition through the exact original proof chain. Initial/role/source
+proofs,mixed steps and actual operands,relation edges/offsets,canonical occurrences and geometry
+requests/suppliers participate once. Exact prior joins already bind shared initials/source parents;
+no identifier-only deduplication or pointer scan is introduced. Every actual vector is precharged,
+and exhaustive owner/variant/fixed-Copy guards expose future dynamic fields. Original source bodies,
+provider payloads and semantic requests remain separate components for the next whole admission.
+The existing real Offset supplier fixture independently expects23 held records,or4 with no mixed
+steps. Focused short fields,repeated composition,latches and unchanged provider traces pass alongside
+original supplier refusals. This covers Point/Other arguments;whole native/coupled checking remains
+with .5f.2.check/.verify. API example,format and scoped strict Clippy pass.
+The mandatory commit hit the task aggregate ceiling by202B. Required retention in the same leaf
+preserves four whole completed0907–0910 node intervals and full committed DEV/ledger snapshots in
+part1079. Six exact Git spans and independent on-disk/public-byte equality pass;all179 task IDs/
+statuses survive final compaction. No cap,old seal,code or producer changed in that repair.
+Promotion declined:actual resource API/book and existing lossless retention are canonical.
+G1still6/18 In Progress unchanged.
+
 ## _(2026-11-05 UTC)_ — actual statement/source/relation proof composition
 
 0910 composes checked-expression buffers through actual statement variants and the complete source

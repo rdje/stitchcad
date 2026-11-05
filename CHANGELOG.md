@@ -3,6 +3,16 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0911 — freshly account the complete held mixed-proof chain
+
+The original initial/role/source/order/graph/canonical/geometry proof records now compose once in a
+cumulative sink. Actual native operand/source locations and first refusals survive;prior policies,
+scratch and demands give no credit. Focused real supplier fixture23/4,repeated/latch/short quotas,
+API example,format and scoped strict Clippy pass. Whole source-content/work admission remains next;
+G1still6/18 unchanged,with whole native/coupled verification deferred. Required task containment
+retains four closed nodes and whole committed journals in1079;6 exact Git spans/public bytes and
+all179 task IDs/statuses survive. Caps and prior archives are unchanged.
+
 ## STITCHCAD-G1-0910 — freshly compose statement/source/relation proof records
 
 New cumulative producers count actual let/assert operand arrays,complete source proofs and relation

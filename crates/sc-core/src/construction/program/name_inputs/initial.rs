@@ -411,3 +411,5 @@ impl<'r, 'b, 'n, 'p, 'a, H: DesignMetadataHost, S: DraftingInitialInputProvider<
         })
     }
 }
+
+mod retained_resources;

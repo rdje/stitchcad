@@ -658,3 +658,43 @@ The focused public-factory checks include let/assertion operand order,a Derived/
 source population,an unused source with a real Derived edge,exact/short quotas,earlier latches,
 repeated composition and an empty relation. Complete mixed-proof/garment/program/request composition
 and aggregate occurrence/comparison/child-walk/result bounds remain the next stage.
+
+## Fresh mixed programme proof records
+
+`BoundDraftingProgramGeometry::charge_retained_resources` now composes the exact held proof chain
+in a cumulative sink. It charges actual initial/role association vectors and complete Root source
+proofs,then the mixed-order step vector and every held operand proof,the original graph relation,
+canonical-occurrence vector,and geometry request/supplier vectors. Exact earlier owner association
+proves that source/order initials and graph/source proof objects agree,so each shared proof
+component participates once in this chain. Every vector is precharged before its elements.
+
+The source component retains actual source IDs and zero-based source indexes. Scalar operands
+retain genuine one-based statement ordinals. Point,center-arc and slash/spread operand fields use
+the caller's containing scope/owner and their genuine one-based mixed positions,with distinct
+coordinate/argument field names. Semantic and other native step payloads hold fixed metadata or
+original source loans. Existing/fixed/planned geometry suppliers retain their original borrowed
+context/family records;their provider-owned bodies compose through the provider's resource walk.
+
+```rust
+use sc_core::{construction::*,design::*,ontology::EntityId};
+fn add_actual_mixed_proofs<H:DesignMetadataHost,S:DraftingInitialInputProvider<H> + ?Sized>(
+    proof:&BoundDraftingProgramGeometry<'_, '_, '_, '_, '_, '_, '_, '_, '_,H,S>,
+    sink:&mut dyn DesignResourceSink,scope:DesignResourceScope,owner:Option<EntityId>)
+    ->Result<(),DesignResourceLimitError> {
+    proof.charge_retained_resources(sink,scope,owner)
+}
+```
+
+Raw/normalized programme sources,name inputs,actual garment,provider payloads and semantic selection
+rows are separate content components. Old name/canonical/geometry limits and demands provide no
+fresh credit. Temporary namespace/checker/cycle workspace is not retained output. No source,
+geometry,currentness or member query,value read,clone or result allocation occurs. The caller
+finishes the meter;an earlier cumulative refusal survives the complete chain. Repeated composition
+counts a fresh logical occurrence. Exhaustive owner/variant guards and fixed-Copy payload guards
+require future owned fields to receive accounting.
+
+The focused existing supplier fixture independently expects23 held records for its Point/Line/
+Offset programme and4 when its mixed programme is empty. Exact/short/repeated/latch checks preserve
+real source/Point/mixed positions and provider traces. This is focused evidence for those fixtures;
+whole native/coupled acceptance remains deferred. The next semantic stage must combine these proof
+records with all original source bodies and selection rows,then admit complete prospective work.

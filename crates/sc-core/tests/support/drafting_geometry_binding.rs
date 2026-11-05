@@ -185,6 +185,118 @@ fn complete_geometry_binding_keeps_existing_fixed_unnamed_sources_and_original_r
                 assert!(std::ptr::eq(proof.work(), &admitted));
                 assert_eq!(proof.requests().len(), n);
                 assert_eq!(proof.suppliers().len(), n);
+                // Independent held-record count: one source owner + one certificate + two
+                // offsets, plus five mixed slots, four Point certificates and ten geometry
+                // request/supplier slots for the populated fixture. Old scratch is not held.
+                let records = if mode == 9 { 4 } else { 23 };
+                let trace = source.base.trace.get();
+                let calls = source.calls.get();
+                let scope = DesignResourceScope::CommandState;
+                let owner = Some(root.id());
+                let mut meter = DesignResourceMeter::new(limits(records, 1, 1)?);
+                proof.charge_retained_resources(&mut meter, scope, owner)?;
+                let demand = meter.finish()?;
+                assert_eq!(
+                    (
+                        demand.collection_entries(),
+                        demand.text_bytes(),
+                        demand.counter_bits()
+                    ),
+                    (records, 0, 0)
+                );
+                let mut repeated = DesignResourceMeter::new(limits(2 * records, 1, 1)?);
+                proof.charge_retained_resources(&mut repeated, scope, owner)?;
+                proof.charge_retained_resources(&mut repeated, scope, owner)?;
+                assert_eq!(repeated.finish()?.collection_entries(), 2 * records);
+                let cases = if mode == 9 {
+                    vec![(3, 2, 2, "checked.source_dependencies.offsets", owner, None)]
+                } else {
+                    vec![
+                        (
+                            1,
+                            1,
+                            1,
+                            "checked.sources.certificates",
+                            Some(id(70)),
+                            Some(0),
+                        ),
+                        (6, 2, 5, "checked.drafting.order_steps", owner, None),
+                        (
+                            9,
+                            7,
+                            3,
+                            "checked.drafting.point.x.certificates",
+                            owner,
+                            Some(2),
+                        ),
+                        (
+                            10,
+                            10,
+                            1,
+                            "checked.drafting.point.y.certificates",
+                            owner,
+                            Some(2),
+                        ),
+                        (
+                            12,
+                            11,
+                            2,
+                            "checked.source_dependencies.offsets",
+                            owner,
+                            None,
+                        ),
+                        (17, 13, 5, "checked.drafting.geometry_requests", owner, None),
+                        (
+                            22,
+                            18,
+                            5,
+                            "checked.drafting.geometry_suppliers",
+                            owner,
+                            None,
+                        ),
+                    ]
+                };
+                for (maximum, consumed, requested, field, owner, index) in cases {
+                    let mut meter = DesignResourceMeter::new(limits(maximum, 1, 1)?);
+                    let error = proof
+                        .charge_retained_resources(&mut meter, scope, owner)
+                        .expect_err("actual complete proof field");
+                    assert_eq!(
+                        error,
+                        DesignResourceLimitError::Count {
+                            unit: DesignResourceCount::CollectionEntries,
+                            maximum,
+                            consumed,
+                            requested,
+                            location: DesignResourceLocation {
+                                scope,
+                                owner,
+                                field,
+                                index
+                            },
+                        }
+                    );
+                    assert_eq!(meter.finish(), Err(error));
+                }
+                let mut meter = DesignResourceMeter::new(limits(records, 1, 1)?);
+                let earlier = meter
+                    .charge_text(
+                        "ab",
+                        DesignResourceLocation {
+                            scope,
+                            owner,
+                            field: "earlier.proof.text",
+                            index: None,
+                        },
+                    )
+                    .expect_err("prior cumulative refusal");
+                assert_eq!(
+                    proof.charge_retained_resources(&mut meter, scope, owner),
+                    Err(earlier)
+                );
+                assert_eq!(meter.finish(), Err(earlier));
+                assert_eq!(source.base.trace.get(), trace);
+                assert_eq!(source.calls.get(), calls);
                 if mode != 9 {
                     assert_eq!(
                         proof

@@ -347,3 +347,5 @@ impl<'b, 'n, 'p, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized
         Ok(DraftingProgramOutputPositions { work: self })
     }
 }
+
+mod retained_resources;
