@@ -2551,3 +2551,18 @@ retain its original member here;the pending Derived supplier/output/order stage 
 relationship before any complete semantic proof. External Profile Derived operations never become
 Root positions. Rule/signature/output,Profile sources,garment/native joins,source truth,physical
 execution and complete cohort acceptance remain separate.
+
+### Pending Derived supplier scopes
+
+The next Root supplier stage keeps two original representations distinct. A Root logical Derived
+member names a semantic LogicalDerivation operation;its actual canonical output and genuine
+strict earlier mixed supplier position must be joined. Self/future/missing/wrong-output suppliers
+must refuse before complete semantic acceptance.
+
+A numeric Derived member instead names its actual `FormulaSource` expression. Existing
+`FormulaDerivedInput` retains its original canonical declaration and exact source;its `position()`
+is a **canonical family position**. The checked-source and already-held acyclic graph owners
+provide that source proof scope. It receives no synthetic mixed position or logical-operation
+identity. The pending logical,numeric and composition tasks retain those respective original
+owners under the same finite child cursor. None of these supplier stages is implemented or
+verified yet;member-only success remains the boundary described above.

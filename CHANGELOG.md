@@ -3,6 +3,13 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0923 — clarify pending Root supplier scopes
+
+Pending logical suppliers require genuine semantic output/mixed order;numeric Derived retains
+its original formula-source/checked/acyclic scope with no invented mixed position. Explicit child
+ownership and book/resume pointers preserve that distinction for the next fresh context. Product
+code and G1still6/18 In Progress remain unchanged;PNT and deferred verification remain active.
+
 ## STITCHCAD-G1-0922 — bind complete actual Root operation-input members
 
 Complete original Root input counting/reservation and fresh source charging now precede actual

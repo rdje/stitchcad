@@ -914,4 +914,22 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish complete Root member class from still-pending Derived supplier/order,Profile/rule and family/cohort stages. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:the local source/member API/book owns this contract. Next .root-inputs.derived owns actual suppliers and strict order. Commit:STITCHCAD-G1-0922.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived`
   Status: `pending`
-  Goal:bind every actual Root Derived operation/formula supplier,original logical output and genuine strict earlier mixed position for Root operation inputs. Preserve source family and typed original causes;external Profile Derived IDs never become Root positions or values.
+  Goal:bind actual Root logical Derived operation/output suppliers with strict genuine mixed order,and numeric Derived inputs through their original formula-source/acyclic owners. Preserve source family/typed causes;formula sources receive no invented mixed position and external Profile Derived IDs never become Root suppliers.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.plan`
+  Status: `done`
+  Goal:clarify the two existing supplier scopes and persist a precise implementation decomposition before Derived integration. This is a source-contract plan,not supplier acceptance or feature verification;keep PNT active and the committed resume point recoverable for a fresh context.
+  - [x] ROOT CAUSE / ISSUE:the next Derived branch spans two original supplier scopes. FormulaSource retains id/expression;FormulaDerivedInput.position returns CanonicalInputPosition,not a mixed statement. Semantic Derived logical operations instead require actual output and genuine earlier mixed position. A single undifferentiated position goal risks invented numeric supplier positions.
+  - [x] ADDRESSED:sed of sources.rs1–40 and source_inputs.rs136–187/270–305 →actual source fields,canonical position type and original Derived/source joins,rc=0. Existing checked_sources.rs source(id) returns the actual original checked proof. Pending logical,numeric and composition children now preserve those distinct original
+    owners/scopes;no implementation or verification claim follows.
+  - [x] NO REGRESSION / LOCKSTEP:git diff --check →pass,rc=0. Product code remains at completed0922;MEM/index/DEV/ledger/book explain the pending split. README/LIVE reviewed unchanged,G1still6/18 In Progress. The session-health handoff keeps PNT active;next fresh context starts .derived.logical. Promotion declined:existing public
+    source/input/graph contracts own this distinction. Commit:STITCHCAD-G1-0923.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.logical`
+  Status: `pending`
+  Goal:reserve complete logical Derived source work before fresh scope accounting;join actual Root LogicalDerivation operations and exact output declarations,then genuine strict earlier mixed suppliers. Preserve actual owners,states and typed first causes;refuse self/future/missing/wrong-output suppliers without values or accepted prefix.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.numeric`
+  Status: `pending`
+  Goal:join actual dedicated-length/general-scalar Derived members to original FormulaDerivedInput,checked source and exact already-held acyclic graph owners. Preserve target/source/kind identity and complete fresh work bounds;invent no formula metadata,mixed position or executable result.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.compose`
+  Status: `pending`
+  Goal:compose complete logical and numeric Root supplier relations with exact original member/source/key owners and the same finite child cursor. Retain every original field,typed cause and separate supplier scope;Profile/rule/family/cohort and whole checking remain separate.

@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — precise pending Derived scopes and fresh-context pointer
+
+0923 separates pending Root logical semantic suppliers from numeric formula-source/graph joins.
+Public FormulaSource stores id/expression;FormulaDerivedInput.position is canonical family/index,
+not mixed order. Logical suppliers need actual output and genuine strict earlier mixed position;
+numeric suppliers retain exact source/checked/acyclic owners without a fabricated mixed position.
+No new implementation,source acceptance or verification follows from this plan. Focused diff
+check passes;mandatory hooks own documentation publication. PNT remains active with precise
+.logical/.numeric/.compose ownership. Session health warrants a fresh context after committed
+0922;resume at .derived.logical. README/LIVE unchanged,G1still6/18 In Progress.
+Promotion declined:existing public input/source/graph contracts own the distinction.
+
 ## _(2026-11-05 UTC)_ — complete fresh Root operation-input members
 
 0922 counts actual Root-owned declaration-button/logical/numeric fields before reserving all N
