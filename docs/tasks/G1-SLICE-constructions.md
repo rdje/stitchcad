@@ -945,7 +945,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
     retention contract). Commit:STITCHCAD-G1-0952.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bind actual original Closure buttonhole operation/canonical button and physical placement relations with authentic source facets,complete fresh work and original owner/instance roles. No separately authored hole length,guessed source or geometry/execution acceptance.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.retention`
@@ -955,3 +955,43 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.handoff`
   Status: `done`
   Goal:completed;[whole original protocol/proofs](../history/stitchcad-devnotes-part1092.md).
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.operations`
+  Status: `done`
+  Goal:fresh bounded original garment Closure-to-Root Buttonhole operation binding;retain actual
+  Closure/member indices,canonical source and typed Missing/Kind/button-origin causes. No value,
+  policy execution,physical placement,currentness or mixed-program ordering acceptance.
+  Plan:one fresh complete garment/provider walk;checked (E+8)^2 matching allowance before original
+  Closure/operation lookup. Exact Declaration/Profile origin equality,including variant,with no
+  invented consumer position. Public loans stay tied to the original admitted garment parent.
+  Focused tests:original parent/member/recipe pointers,both origin variants,missing/nonbutton
+  Closure,missing/wrong-family operation,changed target/variant,resource and matching priority.
+  Deferred aggregate integration belongs to .closures.operation-cohort;physical relations to
+  .closures.placements;whole .5f.2.check/.verify remain pending.
+  - [x] ROOT CAUSE / ISSUE:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core
+    --test drafting_context_binding_contract closure_buttonhole --no-run →E0599 missing
+    bind_closure_buttonhole and missing public limits/refusal types,rc=101. Existing Root
+    SemanticRecipe::resolve supplies original typed members;the admitted garment had no relation join.
+  - [x] FIX / ADDRESSED:the same test command without --no-run →test result:ok. 2 passed,rc=0.
+    Actual nonzero original Closure/operation indices and parent/recipe/member/source pointers,
+    Declaration/Profile equality and mismatch,Missing/Kind,complete content/matching priority pass.
+    One fresh whole walk and checked (E+8)^2 precede lookups;no clone,value or successful buffer.
+  - [x] NO REGRESSION / LOCKSTEP:cargo test -j1 -p sc-core --test drafting_context_binding_contract
+    garment_source:: →3 passed;cargo test -j1 -p sc-core --doc DraftingClosureButtonhole →3 passed;
+    --lib closure_buttonhole_matching_bound →1 passed;cargo clippy -j1 -p sc-core --lib -- -D warnings
+    →Finished;fmt --check/git diff --check pass;book_tool.py build →published,all rc=0. Book/journals/
+    LIVE/resume align,G1still6/18 In Progress;README scope unchanged. Aggregate/physical/native/cohort
+    and whole .check/.verify deferred to existing owners. No full verification claim.
+  Startup:cleanup recorded2026-11-05 remains current;policy body comparison found README/claim
+  neutral bodies unchanged and donor book exception already adopted locally. Deep source-chain
+  recovery exceeded the startup target;no unresolved source-contract ambiguity remains for this leaf.
+  promotion: declined (existing original semantic ownership and canonical origin contracts).
+  Commit:STITCHCAD-G1-0954.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.operation-cohort`
+  Status: `pending`
+  Goal:compose every original Closure Buttonhole relation through the same finite semantic cursor
+  after complete input/Pocket work;reserve all walks/records before matching and retain first cause.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements`
+  Status: `pending`
+  Goal:bind all original Closure instance First/Second placements under fresh whole work and actual
+  garment/copy/Piece/source proof;introduce only authentic missing facets before use.

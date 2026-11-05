@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0954 — bind original Closure Buttonhole operations
+
+A fresh bounded relation factory joins an actual garment Closure to its Root's typed Buttonhole
+operation and exact canonical button origin. Missing/nonbutton Closure,wrong operation family
+and changed Declaration/Profile origins retain original typed witnesses. Focused runtime2,
+API guards3,arithmetic guard,strict library lint and formatting pass. Whole Closure aggregation,
+placements,native/cohort and whole integration verification remain pending.
+
 ## STITCHCAD-G1-0953 — bind original Pocket sources from stable work parents
 
 The aggregate source stage borrows complete original input/work owners,atomically reserves N+1

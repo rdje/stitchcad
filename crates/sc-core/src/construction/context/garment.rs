@@ -278,3 +278,10 @@ impl<'a, H: DesignReferenceHost + DesignResourceSource, S: DraftingGarmentProvid
         })
     }
 }
+
+mod buttonhole;
+pub use buttonhole::{
+    BoundDraftingClosureButtonhole, DraftingClosureButtonholeError,
+    DraftingClosureButtonholeLimits, DraftingClosureButtonholeRefusal,
+    DraftingClosureButtonholeShape,
+};

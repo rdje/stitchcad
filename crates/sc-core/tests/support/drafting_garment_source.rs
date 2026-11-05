@@ -387,8 +387,8 @@ fn build_with_pocket_mode(
     })
     .map_err(|e| e.to_string())?)
 }
-struct Provider<'a> {
-    base: Source<'a>,
+pub(super) struct Provider<'a> {
+    pub(super) base: Source<'a>,
     garment: &'a DesignGarment<EmptyHost>,
     foreign_snapshot: DraftingSourceRecord<Snapshot>,
     wrong_snapshot: bool,
@@ -396,7 +396,7 @@ struct Provider<'a> {
     retained: Vec<u8>,
 }
 impl<'a> Provider<'a> {
-    fn new(
+    pub(super) fn new(
         root: &'a DesignInputs<EmptyHost>,
         garment: &'a DesignGarment<EmptyHost>,
         wrong_snapshot: bool,

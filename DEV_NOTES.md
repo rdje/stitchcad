@@ -2,6 +2,22 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — bounded original Closure Buttonhole relation
+
+0954 adds a lending factory on the admitted actual garment. Fresh whole garment/Root/provider
+content and checked (E+8)^2 matching admission precede Closure and typed Root operation lookup.
+The original canonical button must match the operation's complete NotionSize representation;
+matching ID bits alone cannot join Declaration to Profile. No result body,physical length or
+consumer programme position is invented. Refusals preserve original parent/request/policy and
+first typed source/member causes,including actual wrong-family operations and differing origins.
+
+The initial contract compile reports the missing API;the fixture's logical target was corrected
+to its existing typed target struct. Public reexports complete the construction facade. Focused
+runtime2,privacy/lifetime/default guards3,arithmetic overflow guard,strict library Clippy and
+formatting pass. Deferred owners:Closure operation-cohort/placements,native/cohort,.check/.verify.
+README scope and G1 6/18 In Progress stay unchanged;book/live detail now names the narrower proof.
+Promotion declined:existing canonical origin and original owner/resource contracts own this scope.
+
 ## _(2026-11-05 UTC)_ — complete original Pocket source joins
 
 0953 borrows original input/cursor and complete stable current-member records through disjoint

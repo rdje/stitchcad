@@ -544,3 +544,6 @@ impl<H: DesignMetadataHost> sc_core::construction::DraftingInitialInputProvider<
         Err(SourceError::Missing)
     }
 }
+
+#[path = "support/drafting_closure_buttonhole.rs"]
+mod closure_buttonhole;

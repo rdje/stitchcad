@@ -3709,3 +3709,44 @@ atomic shortage,no refunded work,fresh aggregate/late child resources and late p
 frame/snapshot refusals. The existing original import/Mirror/Join association contracts remain
 the source-factory guards. Complete aggregate recipe/cohort integration and `.5f.2.check`/
 `.verify`,source truth,placement geometry and physical execution remain separately owned.
+
+
+## Bind one original Closure Buttonhole operation
+
+`AdmittedDraftingGarmentSource::bind_closure_buttonhole(closure, limits)` binds one actual
+Closure to the original Root's semantic recipe. This is a bounded relation check, separate from
+complete programme/cohort acceptance and physical execution. It borrows the original admitted
+parent, actual Closure and canonical button/derivation view; it creates no second hole length.
+
+Select `DraftingClosureButtonholeLimits::new(content, matching_inspections)` explicitly. The
+factory freshly charges the entire actual garment, its Root and all provider-held content in
+one cumulative meter. Stored admission demand gives no credit. After that walk, E is the complete
+dynamic-entry population and checked `(E+8)^2` bounds two linear member scans and one fixed origin
+comparison. Overflow and insufficient matching allowance refuse before Closure or operation lookup.
+These are logical bounds, not CPU time, allocator capacity or string-comparison byte estimates.
+There is no successful result allocation, source lookup, currentness callback or value read.
+
+For example, a Closure with `button = Declaration(B)` and `hole.operation = H` succeeds only if
+its actual Root owns a `SemanticOperation::Buttonhole` at H whose original `button` is exactly
+`Declaration(B)`. `Profile(B)` is a different origin even though the ID bits match. Another
+Declaration ID also refuses. A vendor designation or selected size cannot substitute for that
+canonical relation. The same check accepts an exactly matching `Profile(B)` pair without resolving
+its selected profile, logical domain, uncertainty state or physical dimensions.
+
+`BoundDraftingClosureButtonhole` exposes the original `parent()`, `closure()`, zero-based garment
+`closure_index()`, canonical `source()` and `operation()`. The operation binding retains its actual
+semantic recipe, original member and zero-based semantic index. Neither index is a mixed programme
+position. `limits()`, fresh `demand()` and admitted `shape()` explain the selected work policy.
+The source's physical validation remains `ButtonholeValidation::DeferredToG3`.
+
+Failure order is complete resources, checked arithmetic, matching quota, missing Closure,
+nonbutton Closure, original typed operation lookup, then different button origin. Errors retain
+the original parent, request, policy and only fully completed demand/shape. Wrong-family errors
+loan the actual original semantic operation; button-origin errors retain both original sources.
+The concrete resource error is available through `Error::source()`; borrowed lookup causes stay
+in the typed refusal rather than being converted to a static or string-only cause.
+
+Focused public contracts exercise original owner/member/source pointer identity, both origin
+variants, exact matching boundaries and refusal priority. Whole Closure aggregation through the
+unique finite semantic cursor remains pending, as do physical First/Second placements, source
+association, policy execution, positive hole length and whole `.5f.2.check`/`.verify`.

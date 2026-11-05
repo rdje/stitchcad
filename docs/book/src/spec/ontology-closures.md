@@ -230,8 +230,11 @@ so G1 does not invent one. G3's garment/mutation proof remains owed by G3-GRADIN
 A [standalone typed Buttonhole operation](../annexes/semantic-recipes.md#standalone-buttonhole-operation)
 now retains the original button-size origin, explicit policy source and named numeric dependencies
 with complete constructor bounds and actual content accounting. It has no separate hole length.
-Ordered recipe/Root ownership and this Closure's actual operation dependency binding remain pending;
-the standalone record does not discharge those obligations.
+A [fresh bounded original relation check](../annexes/semantic-recipes.md#bind-one-original-closure-buttonhole-operation)
+now binds an actual Closure to its Root's typed Buttonhole operation and requires exactly the
+canonical button origin, including Declaration versus Profile representation. Complete programme
+aggregation, policy/source execution and physical placement proofs remain pending; the standalone
+record and this one relation check do not discharge them.
 
 For example, replacing an authored button-size declaration with a target-profile size binding
 changes the source observed by `buttonhole_length_source()` on the replacement Closure. Replacing

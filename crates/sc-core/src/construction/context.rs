@@ -199,7 +199,9 @@ pub use design_semantic::{
     DraftingDesignSemanticRequest, DraftingDesignSemanticScope, DraftingDesignSemanticScopeError,
 };
 pub use garment::{
-    AdmittedDraftingGarmentSource, DraftingClosureSizeRole, DraftingGarmentProvider,
+    AdmittedDraftingGarmentSource, BoundDraftingClosureButtonhole, DraftingClosureButtonholeError,
+    DraftingClosureButtonholeLimits, DraftingClosureButtonholeRefusal,
+    DraftingClosureButtonholeShape, DraftingClosureSizeRole, DraftingGarmentProvider,
     DraftingGarmentSemanticField, DraftingGarmentSemanticOwner, DraftingGarmentSemanticUse,
     DraftingGarmentSource, DraftingGarmentSourceError, DraftingGarmentSourceIssue,
 };
