@@ -19,15 +19,18 @@ mod error;
 mod logical;
 pub use error::{DraftingProgramRootInputMemberError, DraftingProgramRootInputMemberRefusal};
 pub use logical::{
-    BoundDraftingProgramProfileHeaders, BoundDraftingProgramRootLogicalSuppliers,
-    BoundDraftingProgramRootNumericSuppliers, DraftingProgramProfileHeaderError,
-    DraftingProgramProfileHeaderRefusal, DraftingProgramProfileHeadersResult,
-    DraftingProgramProfileInputHeader, DraftingProgramProfileInputRequest,
-    DraftingProgramRootInputBinding, DraftingProgramRootInputSupplier,
-    DraftingProgramRootLogicalSupplier, DraftingProgramRootLogicalSupplierError,
-    DraftingProgramRootLogicalSupplierRefusal, DraftingProgramRootLogicalSuppliersResult,
-    DraftingProgramRootNumericSupplier, DraftingProgramRootNumericSupplierError,
-    DraftingProgramRootNumericSupplierRefusal, DraftingProgramRootNumericSuppliersResult,
+    BoundDraftingProgramProfileHeaders, BoundDraftingProgramProfileParameters,
+    BoundDraftingProgramRootLogicalSuppliers, BoundDraftingProgramRootNumericSuppliers,
+    DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
+    DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
+    DraftingProgramProfileInputParameter, DraftingProgramProfileInputRequest,
+    DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal,
+    DraftingProgramProfileParametersResult, DraftingProgramRootInputBinding,
+    DraftingProgramRootInputSupplier, DraftingProgramRootLogicalSupplier,
+    DraftingProgramRootLogicalSupplierError, DraftingProgramRootLogicalSupplierRefusal,
+    DraftingProgramRootLogicalSuppliersResult, DraftingProgramRootNumericSupplier,
+    DraftingProgramRootNumericSupplierError, DraftingProgramRootNumericSupplierRefusal,
+    DraftingProgramRootNumericSuppliersResult,
 };
 
 /// Original kind-checked Root source view. It reads no value and accepts no Derived supplier/order.

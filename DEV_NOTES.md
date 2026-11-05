@@ -2,6 +2,23 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — complete Profile logical parameters under exact stable parents
+
+0929 borrows accepted headers and the same unique Root/cursor through disjoint parent fields.
+N>0 reserves N+1 whole/parameter passes before fresh aggregate content,fallible full N reservation
+and original parent-bound metadata/member/kind factories. Stable header storage stays caller-owned;
+source/domain/state/metadata remain original loans. No self-reference,body clone,selected value or
+external Profile Derived Root position is invented. N0 performs no new child work or demand claim.
+Ten public modes with an unsized opaque-metadata provider prove exact parents/metadata/members,
+repeated target/metadata with separate parents,Profile Derived80 versus distinct Root Unknown90,
+Unknown Notion at ordinal2/mixed3,empty work,atomic short budget,injected resource and typed late
+kind/parameter/pin/inventory/missing causes. Success/error release their borrow without resetting
+reservations;an exhausted repeated call makes no walk/query. Three compiler guards,affected header
+nine modes,format and scoped strict Clippy pass. One unused test import removed before lint green.
+README/LIVE unchanged,G1still6/18 In Progress. Input-class composition,rule/signature/output and
+family/cohort remain pending;whole checking and external Profile/G4 truth remain deferred.
+Promotion declined:local lending parameter/source APIs and book own the implemented contract.
+
 ## _(2026-11-05 UTC)_ — complete original Profile operation-input headers
 
 0928 consumes the complete Root member/supplier owner and counts actual Profile-origin Buttonhole

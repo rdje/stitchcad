@@ -4,6 +4,9 @@ use super::{
 };
 use sc_core::{command::DesignRevision, construction::*, design::*, ontology::*, recipe::*};
 use std::cell::Cell;
+#[path = "drafting_profile_parameters.rs"]
+mod parameters;
+use sc_core::value::*;
 fn id(n: u128) -> EntityId {
     EntityId::from_bits(n)
 }
@@ -16,6 +19,70 @@ struct Provider<'a> {
     body: DraftingSourceRecord<[u8; 4]>,
     calls: Cell<usize>,
     mode: u8,
+    parameter_mode: Cell<u8>,
+    parameter_calls: Cell<usize>,
+    metadata: Vec<DraftingSourceRecord<ParameterMapping>>,
+}
+struct ParameterMapping {
+    parameter: ProfileParameterRef,
+    target: LogicalInputTarget,
+    text: String,
+}
+impl<'a> Provider<'a> {
+    fn new(
+        garment: &'a DesignGarment<EmptyHost>,
+        other: &'a DesignInputs<EmptyHost>,
+        mode: u8,
+    ) -> TestResult<Self> {
+        let original = super::super::semantic_root::canonical()?;
+        let mut logicals = original.logicals().declarations().to_vec();
+        logicals.push(LogicalInputDeclaration::new(
+            LogicalInputDeclarationDefinition {
+                id: id(91),
+                source: id(1091),
+                kind: LogicalInputKind::NotionSize,
+                domain: vec![sc_core::name::MachineToken::new("hardware")?],
+                state: LogicalInputState::Unknown {
+                    observation: id(1191),
+                },
+            },
+            LogicalInputLimits::new(1, 0, 8, 2),
+        )?);
+        let inputs = CanonicalInputs::with_logicals(
+            original.lengths().to_vec(),
+            original.scalars().to_vec(),
+            LogicalInputs::new(logicals, LogicalInputInventoryLimits::new(2, 4))?,
+        )?;
+        let metadata = [
+            (702, 90, LogicalInputKind::PocketOpening),
+            (703, 91, LogicalInputKind::NotionSize),
+        ]
+        .into_iter()
+        .map(|(parameter, declaration, kind)| {
+            DraftingSourceRecord::new(ParameterMapping {
+                parameter: ProfileParameterRef::new(id(parameter)),
+                target: LogicalInputTarget {
+                    declaration: id(declaration),
+                    kind,
+                },
+                text: format!("private mapping {parameter}"),
+            })
+        })
+        .collect();
+        Ok(Self {
+            base: BaseProvider::new(garment),
+            other,
+            inputs,
+            selected: pin("original")?,
+            wrong_pin: pin("other")?,
+            body: DraftingSourceRecord::new([1, 2, 3, 4]),
+            calls: Cell::new(0),
+            mode,
+            parameter_mode: Cell::new(0),
+            parameter_calls: Cell::new(0),
+            metadata,
+        })
+    }
 }
 fn pin(profile: &str) -> TestResult<SelectedProfilePin> {
     Ok(SelectedProfilePin::new(SelectedProfilePinDefinition {
@@ -64,6 +131,26 @@ impl DraftingContextSource<EmptyHost> for Provider<'_> {
                 DesignResourceScope::SourceHost,
                 None,
                 None,
+            )?;
+        }
+        sink.charge_entries(
+            self.metadata.len(),
+            DesignResourceLocation {
+                scope: DesignResourceScope::SourceHost,
+                owner: None,
+                field: "profile.parameters",
+                index: None,
+            },
+        )?;
+        for (index, record) in self.metadata.iter().enumerate() {
+            sink.charge_text(
+                &record.data().text,
+                DesignResourceLocation {
+                    scope: DesignResourceScope::SourceHost,
+                    owner: None,
+                    field: "profile.parameter.text",
+                    index: Some(index),
+                },
             )?;
         }
         sink.charge_entries(
@@ -139,6 +226,72 @@ impl DraftingProfileProvider<EmptyHost> for Provider<'_> {
         })
     }
 }
+impl DraftingProfileLogicalProvider<EmptyHost> for Provider<'_> {
+    type Metadata = ParameterMapping;
+    fn profile_logical_source<'s>(
+        &'s self,
+        mut profile: DraftingProfileSource<'s, EmptyHost, Snapshot, [u8]>,
+        parameter: ProfileParameterRef,
+    ) -> Result<DraftingProfileLogicalResponse<'s, EmptyHost, Self>, SourceError> {
+        self.parameter_calls.set(self.parameter_calls.get() + 1);
+        let mode = self.parameter_mode.get();
+        let late = self.parameter_calls.get() == 2;
+        if mode == 5 {
+            return Err(SourceError::Missing);
+        }
+        let metadata = if mode == 4 && late {
+            self.metadata.get(1)
+        } else {
+            self.metadata
+                .iter()
+                .find(|record| record.data().parameter == parameter)
+        }
+        .ok_or(SourceError::Missing)?;
+        let mut declaration = self
+            .inputs
+            .logicals()
+            .declaration(metadata.data().target.declaration)
+            .ok_or(SourceError::Missing)?;
+        if mode == 3 && late {
+            declaration = self
+                .inputs
+                .logicals()
+                .declaration(id(91))
+                .ok_or(SourceError::Missing)?;
+        }
+        if mode == 6 && late {
+            profile.selected = &self.wrong_pin;
+        }
+        if mode == 7 && late {
+            profile.inputs = self.base.garment.inputs().inputs();
+            declaration = profile
+                .inputs
+                .logicals()
+                .declaration(metadata.data().target.declaration)
+                .ok_or(SourceError::Missing)?;
+        }
+        Ok(DraftingProfileLogicalSource {
+            profile,
+            parameter: &metadata.data().parameter,
+            declaration,
+            metadata,
+        })
+    }
+}
+trait ParameterProvider:
+    HeaderProvider
+    + DraftingInitialInputProvider<EmptyHost, Metadata = ()>
+    + DraftingProfileLogicalProvider<EmptyHost, Metadata = ParameterMapping>
+{
+}
+impl ParameterProvider for Provider<'_> {}
+type ParameterSourceView<'a> = dyn ParameterProvider<
+        Frame = Frame,
+        Snapshot = Snapshot,
+        Geometry = [u8],
+        Error = SourceError,
+        Profile = [u8],
+    > + 'a;
 trait HeaderProvider: super::SemanticProvider + DraftingProfileProvider<EmptyHost> {}
 impl HeaderProvider for Provider<'_> {}
 impl super::SemanticProvider for Provider<'_> {}
@@ -157,16 +310,7 @@ fn profile_input_headers_keep_original_fields_pins_sources_and_complete_fresh_st
         let count = if case == 1 { 0 } else { 2 };
         let garment = super::root_numeric_suppliers::fixture(false, false, count, case == 8)?;
         let other = super::root_numeric_suppliers::fixture(false, false, count, case == 8)?;
-        let source = Provider {
-            base: BaseProvider::new(&garment),
-            other: other.inputs(),
-            inputs: super::super::semantic_root::canonical()?,
-            selected: pin("original")?,
-            wrong_pin: pin("other")?,
-            body: DraftingSourceRecord::new([1, 2, 3, 4]),
-            calls: Cell::new(0),
-            mode: case,
-        };
+        let source = Provider::new(&garment, other.inputs(), case)?;
         let source_view: &SourceView<'_> = &source;
         let content = limits(100000, 100000, 100000)?;
         let context = scope(garment.inputs())?

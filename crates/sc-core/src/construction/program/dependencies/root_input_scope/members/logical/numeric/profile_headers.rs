@@ -16,7 +16,13 @@ use crate::{
 };
 use core::fmt;
 mod error;
+mod parameters;
 pub use error::{DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal};
+pub use parameters::{
+    BoundDraftingProgramProfileParameters, DraftingProgramProfileInputParameter,
+    DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal,
+    DraftingProgramProfileParametersResult,
+};
 
 /// Actual original Profile operation-input request and exact already-checked selection row.
 /// This preserves syntax/selection intent,not parameter membership or selected values.

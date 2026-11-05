@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0929 — bind complete original Profile parameters and members
+
+Borrowed stable headers and one unique Root/cursor now support complete fresh parameter/member/
+kind binding without self-reference or source copies. Original metadata,states and external Derived
+scope survive;typed late refusals expose no parameter prefix and dropping a result resets no work.
+Ten public modes,three compiler guards,affected header checks,format and scoped strict lint pass.
+Combined input/rule/family/cohort and whole verification remain pending;G1still6/18 unchanged.
+
 ## STITCHCAD-G1-0928 — bind complete original Profile operation-input headers
 
 Complete N+1 work reservation and fresh aggregate content precede original Profile input row/pin/

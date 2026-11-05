@@ -2709,7 +2709,7 @@ projection available from a refused supplier factory or private successful const
 Private fields and lifetime guards prevent changing the association or escaping its owner loan.
 
 This completes the Root operation-input membership and logical/numeric Derived-supplier class.
-Whole semantic binding still requires actual Profile parameter/member inputs,rule/signature/output joins,garment
+Whole semantic binding still requires complete operation-input composition,rule/signature/output joins,garment
 and native families,then the complete cohort. Whole/coupled checking and physical execution remain
 with their existing separate tasks. Root-class success certifies none of those remaining scopes.
 
@@ -2783,5 +2783,73 @@ cursor guards supplement them;whole/coupled checking remains deferred.
 
 Header success grants no parameter/member/kind association,G4 registry/schema/evidence validation,
 physical value,currentness revalidation,external Profile recipe/order or whole semantic acceptance.
-The next parameter factory must borrow these stable header parents and the same cursor through
-disjoint owner fields;it must not manufacture a self-referential owner or clone source bodies.
+The parameter factory below borrows these stable header parents and the same cursor through
+disjoint owner fields. It creates no self-referential owner and clones no source body.
+
+## Bind actual Profile logical parameters and members
+
+`BoundDraftingProgramProfileHeaders::bind_profile_input_parameters()` borrows the complete header
+owner mutably. It borrows the stable header records immutably and the same original Root/cursor
+mutably through disjoint parent fields. The caller keeps the header owner alive;the parameter
+result carries those loans. There is no self-referential struct,body clone or replacement parent.
+
+All N original header records participate once,including repeated parameter IDs,pins and metadata
+references. N=0 makes no new reservation,content walk,result allocation or parameter query,and its
+new demand is None. For N>0,the factory checks and reserves all N+1 passes/results before fresh
+complete original aggregate/proof accounting. One pass covers that whole admission;N passes cover
+the existing header-parent parameter factory's fresh Root/provider/request-pin walks and bounded
+header/parameter/member joins. Earlier demands provide no credit. The extra reserved result slot
+is a conservative bound;the completed vector contains exactly N parameter records.
+
+After successful content admission,the factory fallibly reserves the complete N-result vector.
+Each original header then calls its own `bind_logical_parameter` using the actual requested
+parameter and expected kind. That existing factory freshly accounts actual content before one
+parameter query,then checks the returned original Root,pin owner,inventory,Profile payload and
+snapshot against that exact header parent. Original parameter ID,canonical membership/kind and
+exact canonical declaration owner follow. No request ID is echoed as fabricated metadata.
+
+`BoundDraftingProgramProfileParameters` privately retains the unique borrowed Root/cursor through
+`root()`,the complete stable parent slice through `headers()`,completed fresh aggregate/proof
+`demand()` and all actual parameter `records()`. `child_pass_count()` reports zero or N+1.
+Each `DraftingProgramProfileInputParameter` preserves its original `header_index()`,actual
+`header()` and original `source()` proof. The latter lends its exact parent,original metadata/
+parameter/declaration fields,kind-checked Profile canonical binding and unchanged state/domain.
+
+For example,the focused fixture keeps these source relationships separate:
+
+| Original Profile request | Actual Profile member/state | Root relationship |
+| --- | --- | --- |
+| Parameter702,first logical input | Profile declaration90,Derived from external operation80 | Separate Root declaration90 remains Unknown |
+| Parameter702,another original input | The same Profile member and metadata record | Another exact header parent and consumer field |
+| Parameter703,Profile Buttonhole button | Profile declaration91,Unknown NotionSize | Consumer semantic ordinal2/mixed position3 stays original |
+
+The Profile Derived operation80 reference does not acquire the Root consumer's operation80
+position. Original owner identity and Profile scope remain explicit even when IDs coincide.
+This is canonical member/kind association,not external Profile recipe validation or a selected
+value. Unknown NotionSize remains Unknown;the factory chooses no hardware symbol or size.
+
+Two Profile parameters reserve three new passes. In the focused fixture,Root inputs/suppliers
+already reserved nine and headers reserved three,so successful parameters leave fifteen reserved.
+Including the Profile button gives three parameters:headers and parameters each reserve four,
+leaving seventeen with that fixture's same nine Root passes. Repeated requests consume separate
+records and child passes even when they share actual metadata and canonical declaration loans.
+
+`DraftingProgramProfileParameterError` retains the same unique borrowed `root()`,the complete
+original `headers()`,exact `parameter_count()`,only a completed fresh `demand()` and first typed
+`refusal()`. Whole-budget refusal is atomic and precedes callbacks. Resource and allocator errors
+preserve their concrete causes. A Parameter refusal carries the original header index and complete
+original `DraftingProfileLogicalError`,including its exact parent,request and returned source
+witnesses. Late kind,parameter,pin or inventory failure drops every private successful parameter
+record;the original complete header proof remains available through its caller-owned storage.
+
+Dropping success or error releases its borrow without resetting cursor reservations. A repeated
+call against exhausted capacity refuses before another resource walk or query. The cursor cannot
+be copied or detached through this proof's public API. Privacy,lifetime and Clone compiler guards
+check the lending boundary.
+
+Ten focused public-factory modes cover repeated external Derived members,Unknown NotionSize,N0,
+short remaining capacity,injected fresh resource refusal,late kind/parameter/pin/inventory causes,
+missing source and spent-cursor refusal. Actual metadata/member/header-parent pointers and first
+causes stay exact. Whole/coupled checking remains deferred;the combined Root/Profile operation-
+input view,rule/signature/output,garment/native families and complete cohort remain separate.
+No G4 schema/evidence,physical value,currentness revalidation or external Profile order is certified.

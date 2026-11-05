@@ -20,13 +20,15 @@ pub use error::{
     DraftingProgramRootLogicalSupplierError, DraftingProgramRootLogicalSupplierRefusal,
 };
 pub use numeric::{
-    BoundDraftingProgramProfileHeaders, BoundDraftingProgramRootNumericSuppliers,
-    DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
-    DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
-    DraftingProgramProfileInputRequest, DraftingProgramRootInputBinding,
-    DraftingProgramRootInputSupplier, DraftingProgramRootNumericSupplier,
-    DraftingProgramRootNumericSupplierError, DraftingProgramRootNumericSupplierRefusal,
-    DraftingProgramRootNumericSuppliersResult,
+    BoundDraftingProgramProfileHeaders, BoundDraftingProgramProfileParameters,
+    BoundDraftingProgramRootNumericSuppliers, DraftingProgramProfileHeaderError,
+    DraftingProgramProfileHeaderRefusal, DraftingProgramProfileHeadersResult,
+    DraftingProgramProfileInputHeader, DraftingProgramProfileInputParameter,
+    DraftingProgramProfileInputRequest, DraftingProgramProfileParameterError,
+    DraftingProgramProfileParameterRefusal, DraftingProgramProfileParametersResult,
+    DraftingProgramRootInputBinding, DraftingProgramRootInputSupplier,
+    DraftingProgramRootNumericSupplier, DraftingProgramRootNumericSupplierError,
+    DraftingProgramRootNumericSupplierRefusal, DraftingProgramRootNumericSuppliersResult,
 };
 
 /// One actual logical Derived consumer and its original Root supplier/output/order association.

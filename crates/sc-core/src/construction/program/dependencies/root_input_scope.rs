@@ -13,18 +13,21 @@ use crate::{
 use core::fmt;
 mod members;
 pub use members::{
-    BoundDraftingProgramProfileHeaders, BoundDraftingProgramRootInputMembers,
-    BoundDraftingProgramRootLogicalSuppliers, BoundDraftingProgramRootNumericSuppliers,
-    DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
-    DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
-    DraftingProgramProfileInputRequest, DraftingProgramRootInputBinding,
-    DraftingProgramRootInputMember, DraftingProgramRootInputMemberError,
-    DraftingProgramRootInputMemberRefusal, DraftingProgramRootInputMembersResult,
-    DraftingProgramRootInputSource, DraftingProgramRootInputSupplier,
-    DraftingProgramRootLogicalSupplier, DraftingProgramRootLogicalSupplierError,
-    DraftingProgramRootLogicalSupplierRefusal, DraftingProgramRootLogicalSuppliersResult,
-    DraftingProgramRootNumericSupplier, DraftingProgramRootNumericSupplierError,
-    DraftingProgramRootNumericSupplierRefusal, DraftingProgramRootNumericSuppliersResult,
+    BoundDraftingProgramProfileHeaders, BoundDraftingProgramProfileParameters,
+    BoundDraftingProgramRootInputMembers, BoundDraftingProgramRootLogicalSuppliers,
+    BoundDraftingProgramRootNumericSuppliers, DraftingProgramProfileHeaderError,
+    DraftingProgramProfileHeaderRefusal, DraftingProgramProfileHeadersResult,
+    DraftingProgramProfileInputHeader, DraftingProgramProfileInputParameter,
+    DraftingProgramProfileInputRequest, DraftingProgramProfileParameterError,
+    DraftingProgramProfileParameterRefusal, DraftingProgramProfileParametersResult,
+    DraftingProgramRootInputBinding, DraftingProgramRootInputMember,
+    DraftingProgramRootInputMemberError, DraftingProgramRootInputMemberRefusal,
+    DraftingProgramRootInputMembersResult, DraftingProgramRootInputSource,
+    DraftingProgramRootInputSupplier, DraftingProgramRootLogicalSupplier,
+    DraftingProgramRootLogicalSupplierError, DraftingProgramRootLogicalSupplierRefusal,
+    DraftingProgramRootLogicalSuppliersResult, DraftingProgramRootNumericSupplier,
+    DraftingProgramRootNumericSupplierError, DraftingProgramRootNumericSupplierRefusal,
+    DraftingProgramRootNumericSuppliersResult,
 };
 
 /// Exact owner-join result,retaining original consumer and supplied source-scope witnesses on

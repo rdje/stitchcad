@@ -933,8 +933,18 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish exact complete Profile headers from pending canonical parameter/member/kind/external Derived and rule/family/cohort acceptance. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:local headers and original Profile parent APIs/book own this contract. Commit:STITCHCAD-G1-0928.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.parameters`
-  Status: `pending`
+  Status: `done`
   Goal:bind every actual Profile logical parameter/kind/member under its original accepted header with complete fresh work. Borrow stable header storage and the same unique cursor through disjoint parent fields;do not construct a self-referential owner,clone source bodies or invent Profile Derived Root positions.
+  - [x] REPRODUCE / ISSUE:complete Profile headers still need actual parameter metadata/member/kind joins. Existing parameter proofs borrow their exact header parents;the aggregate stage must preserve stable parent storage and one unique cursor without self-reference,source copies or external Derived Root positions.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'parent:|bind_logical_parameter|let Self' context/profile/parameter.rs and profile_headers/parameters.rs →original parent-bound member factory and disjoint Root/header borrows,rc=0. Header storage stays caller-owned;the returned stage holds the unique Root/cursor borrow and immutable complete header slice.
+  - [x] FIX:reserve complete N+1 whole/parameter passes for N>0,freshly account original aggregate/proofs,then fallibly reserve N records and bind every original parameter under its actual header. Preserve header indices,metadata/member/state loans and first typed causes. N0 makes no new work. Dropping either result releases its borrow without
+    resetting prior or new reservations.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract profile_input_parameters →1 test/10 actual modes pass,rc=0. Unsized opaque-metadata provider preserves exact parent/metadata/member and repeated loans,external Profile Derived80 versus Root Unknown90,Unknown Notion at semantic2/mixed3,N0,atomic short
+    capacity,injected resource,late kind/parameter/pin/inventory and missing-source causes. Exhausted re-call makes no walk/query.
+  - [x] NO REGRESSION:cargo test -p sc-core --doc profile_headers::parameters →3 privacy/lifetime/Clone guards pass,rc=0. Affected profile_input_headers →1 test/9 modes pass;cargo fmt -p sc-core -- --check and scoped lib/harness strict Clippy pass,rc=0. One unused test import removed. Whole .5f.2.check/.verify remain deferred;external Profile
+    recipe/G4 truth is not accepted.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish complete Profile parameter/member class from pending original Root/Profile input composition and rule/family/cohort acceptance. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:local lending parameter and original Profile parent APIs/book own this contract. Commit:STITCHCAD-G1-0929.
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.compose`
   Status: `pending`
   Goal:compose complete original Root and Profile operation-input classes with exact parent/source/key loans and one finite cursor. Preserve every raw field,actual canonical state and external Derived scope;rule/signature/output,family/cohort and whole checking remain separate.
