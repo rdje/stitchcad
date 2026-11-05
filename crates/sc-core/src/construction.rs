@@ -496,3 +496,9 @@ pub use program::{
     DraftingProgramClosurePlacementWorkError, DraftingProgramClosurePlacementWorkRefusal,
     DraftingProgramClosurePlacementWorkResult,
 };
+
+pub use program::{
+    BoundDraftingProgramClosurePlacementSources, DraftingProgramClosurePlacementSource,
+    DraftingProgramClosurePlacementSourceError, DraftingProgramClosurePlacementSourceRefusal,
+    DraftingProgramClosurePlacementSourcesResult,
+};

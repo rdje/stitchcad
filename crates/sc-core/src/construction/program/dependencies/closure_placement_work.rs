@@ -87,6 +87,11 @@ pub struct BoundDraftingProgramClosurePlacementWork<
 impl<'s, 'a, P, H: DesignReferenceHost, S: DraftingComponentProvider<H> + ?Sized>
     BoundDraftingProgramClosurePlacementWork<'s, 'a, P, H, S>
 {
+    pub(super) fn parts(
+        &mut self,
+    ) -> (&mut P, &[DraftingProgramClosurePlacementWork<'s, 'a, H, S>]) {
+        (&mut self.parent, &self.records)
+    }
     /// Entire original numeric/logical garment input proof and same unique work cursor.
     #[must_use]
     pub const fn parent(&self) -> &P {
@@ -471,3 +476,10 @@ pub(super) fn prepare<
         result,
     }
 }
+
+pub(super) mod sources;
+pub use sources::{
+    BoundDraftingProgramClosurePlacementSources, DraftingProgramClosurePlacementSource,
+    DraftingProgramClosurePlacementSourceError, DraftingProgramClosurePlacementSourceRefusal,
+    DraftingProgramClosurePlacementSourcesResult,
+};

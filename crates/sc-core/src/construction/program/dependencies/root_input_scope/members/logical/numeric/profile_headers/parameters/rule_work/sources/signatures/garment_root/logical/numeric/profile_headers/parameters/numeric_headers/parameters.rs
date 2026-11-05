@@ -834,3 +834,180 @@ impl<
         outcome.finish(self)
     }
 }
+
+type ClosurePlacementSourcesResult<
+    'y,
+    'x,
+    'u,
+    't,
+    'z,
+    'q,
+    'h,
+    'v,
+    'w,
+    's,
+    'g,
+    'k,
+    'j,
+    'i,
+    'r,
+    'b,
+    'n,
+    'p,
+    'a,
+    H,
+    S,
+> = crate::construction::DraftingProgramClosurePlacementSourcesResult<
+    'y,
+    's,
+    'w,
+    'a,
+    crate::construction::BoundDraftingProgramClosureButtonholes<
+        's,
+        'a,
+        crate::construction::BoundDraftingProgramPocketSources<
+            'x,
+            's,
+            'a,
+            BoundDraftingProgramGarmentProfileNumericParameters<
+                'u,
+                't,
+                'z,
+                'q,
+                'h,
+                'v,
+                'w,
+                'a,
+                DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+                H,
+                S,
+            >,
+            H,
+            S,
+        >,
+        H,
+        S,
+    >,
+    DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+    H,
+    S,
+>;
+impl<
+        'x,
+        'u,
+        't,
+        'z,
+        'q,
+        'h,
+        'v,
+        'w,
+        's,
+        'g,
+        'k,
+        'j,
+        'i,
+        'r,
+        'b,
+        'n,
+        'p,
+        'a,
+        H: DesignReferenceHost + DesignResourceSource,
+        S: DraftingInitialInputProvider<H>
+            + DraftingGarmentProvider<H>
+            + DraftingProfileNumericProvider<H>
+            + DraftingProfileLogicalProvider<H>
+            + DraftingRuleProvider<H>
+            + crate::construction::DraftingComponentProvider<H>
+            + ?Sized,
+    >
+    crate::construction::BoundDraftingProgramClosurePlacementWork<
+        's,
+        'a,
+        crate::construction::BoundDraftingProgramClosureButtonholes<
+            's,
+            'a,
+            crate::construction::BoundDraftingProgramPocketSources<
+                'x,
+                's,
+                'a,
+                BoundDraftingProgramGarmentProfileNumericParameters<
+                    'u,
+                    't,
+                    'z,
+                    'q,
+                    'h,
+                    'v,
+                    'w,
+                    'a,
+                    DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+                    H,
+                    S,
+                >,
+                H,
+                S,
+            >,
+            H,
+            S,
+        >,
+        H,
+        S,
+    >
+{
+    /// Borrow the original operation/input/cursor parent and complete stable placement work
+    /// through disjoint fields. Atomically reserve N+1 aggregate/source passes before charging,
+    /// result reservation or existing original import/recipe association factories. N0 is idle.
+    /// Every source retains its actual work/role/member/copy/Piece/frame/snapshot/creator loans;
+    /// no physical geometry,current-reference,value or invented consumer position is accepted.
+    /// # Errors
+    /// Whole arithmetic,atomic shortage,resources,allocator,then first original work-bound source
+    /// cause. Original parents remain;dropping either outcome releases the borrow without refund.
+    pub fn bind_closure_placement_sources<'y>(
+        &'y mut self,
+    ) -> ClosurePlacementSourcesResult<
+        'y,
+        'x,
+        'u,
+        't,
+        'z,
+        'q,
+        'h,
+        'v,
+        'w,
+        's,
+        'g,
+        'k,
+        'j,
+        'i,
+        'r,
+        'b,
+        'n,
+        'p,
+        'a,
+        H,
+        S,
+    > {
+        let (parent, work) = self.parts();
+        let cursor = &mut parent
+            .parent_mut()
+            .parent_mut()
+            .logical
+            .root
+            .logical
+            .members
+            .owner
+            .inputs
+            .root
+            .logical
+            .members
+            .owner
+            .selections;
+        let inputs = cursor.inputs();
+        let outcome =
+            crate::construction::program::dependencies::closure_placement_work::sources::prepare(
+                cursor,
+                work,
+                |sink| inputs.charge_resources(sink),
+            );
+        outcome.finish(parent, work)
+    }
+}

@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0960 — bind complete original Closure placement sources
+
+The source class borrows exact stable role/member/current-work parents and the same finite cursor.
+N+1 whole reservation precedes fresh aggregate/source work;late typed refusals retain original
+work/index/raw source witnesses without a successful prefix or refunded work. Ten focused cases,
+original association4,API3,strict library/test lint,formatting and book build pass. Current references,
+aggregate recipe/native/cohort and whole integration verification remain pending.
+
 ## STITCHCAD-G1-0959 — compose complete original Closure placement work
 
 The consuming stage reserves2N+1 whole passes before aggregate/member/current-copy work. Every

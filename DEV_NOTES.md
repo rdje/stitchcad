@@ -2,6 +2,23 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — complete original Closure placement source joins
+
+0960 borrows disjoint original operation/input/cursor and stable complete placement-work fields.
+N+1 atomic reservation precedes fresh whole aggregate charging,result reservation and existing
+original bind_source factories. Every role preserves its actual work pointer,canonical notion,
+current copy/Piece and raw import/recipe/frame/snapshot/creator loans. First late typed causes
+retain original work/index/returned response;private prefixes drop. N0 is idle and releasing
+either outcome refunds no work. An internal result alias keeps the exact borrowing type readable.
+The copied unused continuation was removed after strict library Clippy refused it;no waiver.
+
+Ten focused cases cover actual imports,repeated/multiple roles,N0,whole shortage,aggregate/late
+resources,late provider refusal and Piece/frame/snapshot mismatches. Existing import/Mirror/Join
+association4,new API3,strict library/test-target lint,formatting and book build pass. Whole closed
+0959 owner/proof moves verbatim to existing evidence. Book/LIVE/resume align;README/G1 6/18 stay
+unchanged. Bounded current references,aggregate recipe/native/cohort and whole .check/.verify
+remain pending. Promotion declined:existing original-source and finite cursor contracts own scope.
+
 ## _(2026-11-05 UTC)_ — complete Closure placement members and current copy work
 
 0959 consumes complete prior operation/Pocket source proofs and reserves checked2N+1 aggregate/

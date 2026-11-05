@@ -3834,8 +3834,8 @@ only after their complete stages pass. Resource errors retain their concrete sta
 This proves only the requested original member relation. For example, a Closure whose Second
 notion is missing can still yield its valid First member; it cannot yield its Second member or
 claim complete currentness. The next stage joins the complete original placement class and its current CutCopy/Piece work.
-Original component sources, current anchor/full direction references and complete semantic cohort
-acceptance retain separate pending owners.
+The work/source stages below bind actual original component associations. Current anchor/full
+direction references and complete semantic cohort acceptance retain separate pending owners.
 The notion still reports `GeometricValidation::DeferredToG2`; hardware positions and orientation
 in reflected physical coordinates remain uncomputed.
 
@@ -3883,6 +3883,50 @@ reserved work, so a failed late child cannot reset the unique cursor.
 
 Focused contracts cover both roles, repeated Pieces, multiple instances, original parent/member/
 notion/copy/Piece loans, whole shortage, fresh aggregate and late child resources, a late missing
-notion and a missing original cut copy, empty scope and retries. Original component sources,
-bounded current anchor/full-direction references, complete native/semantic cohort and whole
-`.5f.2.check`/`.verify` remain pending. G2 still owns physical hardware placement and geometry.
+notion and a missing original cut copy, empty scope and retries. The following stage binds original component source associations. Bounded current anchor/full-
+direction references, complete native/semantic cohort and whole `.5f.2.check`/`.verify` remain pending. G2 still owns physical hardware placement and geometry.
+
+
+## Bind complete original Closure placement sources
+
+`BoundDraftingProgramClosurePlacementWork::bind_closure_placement_sources()` borrows the exact
+original operation/input/cursor parent and complete stable placement-work slice through disjoint
+fields. The resulting source loans point to the actual retained work records; no self-referential
+owner or copied source body is created. The original role, canonical notion and current copy/Piece
+remain inspectable through each record's `work()` parent.
+
+For N actual placement-work records, the stage atomically reserves N+1 passes before fresh complete
+original aggregate charging, complete N-result reservation or original `bind_source()` calls.
+Each existing child factory repeats fresh complete content/current-member/matching admission
+before querying one actual source. Earlier demand supplies no credit. An actually empty work
+class performs no new walk, source query, result allocation or reservation, even with unused
+import payloads and semantic operations still held.
+
+Each `DraftingProgramClosurePlacementSource` exposes its original `work_index()`, exact `work()`
+parent and complete `source()` association. The source's own work pointer is that stable record's
+actual current-component work. Imported sources borrow the original provider record and current
+Piece, with no creator position. Recipe sources retain the existing complete import/recipe/native
+association checks and genuine captured creator metadata. Both origins must match the actual
+current Piece and original frame/snapshot; an equal-looking Piece from another Root does not
+substitute. A requiring Root garment role is never assigned an invented mixed consumer position.
+
+`BoundDraftingProgramClosurePlacementSources::parent()` retains the entire original prior
+operation/Pocket source proof, while `work()` loans the complete stable physical-role work class.
+`records()` contains every source in original work order, including repeated copy/Piece targets.
+For nonempty work, `demand()` is the completed fresh aggregate demand and `child_pass_count()` is
+N+1. Empty work has no new demand and a zero pass count. Dropping either outcome releases its
+borrow without refunding reserved work.
+
+`DraftingProgramClosurePlacementSourceError` retains the original borrowed parent/work owners,
+source count, completed aggregate demand when available and first typed arithmetic/work/resource/
+allocator/source refusal. A child refusal retains its original `work_index()` and the complete
+`DraftingComponentSourceError`, including any actual mismatched raw response. Late provider or
+Piece/frame/snapshot failures drop private successful prefixes. Provider errors retain their
+standard error chain; mismatch evidence remains original typed data.
+
+The focused aggregate contract covers original import/body/work loans, repeated and multiple
+roles, empty work, whole shortage, fresh aggregate/late child resources, late provider refusal
+and Piece/frame/snapshot mismatches. Existing original import/Mirror/Join child association guards
+remain passing. Complete aggregate recipe/native cohort proof, bounded current anchor/full-
+direction references and whole `.5f.2.check`/`.verify` stay deferred. No value, physical placement,
+positive hole length or geometric truth is produced by this source association.

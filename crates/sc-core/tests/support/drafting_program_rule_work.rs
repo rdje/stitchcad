@@ -442,3 +442,6 @@ mod closure_buttonholes;
 
 #[path = "drafting_program_closure_placement_work.rs"]
 mod closure_placement_work;
+
+#[path = "drafting_program_closure_placement_sources.rs"]
+mod closure_placement_sources;

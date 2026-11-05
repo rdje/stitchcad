@@ -1,7 +1,7 @@
 //! Complete actual Closure placements retain original roles and freshly bounded copy/Piece work.
 use super::{id, limits, scope, Provider, TestResult};
 use sc_core::{construction::*, design::*, name::MachineToken, ontology::*, recipe::*, value::*};
-fn fixture(case: u8) -> TestResult<DesignGarment<super::EmptyHost>> {
+pub(super) fn fixture(case: u8) -> TestResult<DesignGarment<super::EmptyHost>> {
     let logicals = [
         (90, LogicalInputKind::PocketOpening),
         (91, LogicalInputKind::NotionSize),

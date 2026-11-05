@@ -64,8 +64,10 @@ The [bounded original member binder](../annexes/semantic-recipes.md#bind-one-ori
 now resolves an exact Closure/own-instance/First-or-Second request to its canonical notion record
 after fresh whole content and member-work admission. It preserves original loans and indices;
 the [complete placement-work stage](../annexes/semantic-recipes.md#bind-complete-original-closure-placement-work)
-now joins all roles to actual current copies/Pieces through the same finite cursor. Component source
-and bounded anchor/direction proofs remain pending;hardware geometry stays deferred to G2.
+now joins all roles to actual current copies/Pieces through the same finite cursor. The
+[complete original source stage](../annexes/semantic-recipes.md#bind-complete-original-closure-placement-sources)
+then binds stable work to authentic import/recipe component associations. Bounded anchor/direction
+proofs remain pending;hardware geometry stays deferred to G2.
 
 ## Complete notion-placement collection
 

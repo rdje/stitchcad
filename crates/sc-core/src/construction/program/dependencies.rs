@@ -146,3 +146,9 @@ pub use closure_placement_work::{
     DraftingProgramClosurePlacementWorkError, DraftingProgramClosurePlacementWorkRefusal,
     DraftingProgramClosurePlacementWorkResult,
 };
+
+pub use closure_placement_work::{
+    BoundDraftingProgramClosurePlacementSources, DraftingProgramClosurePlacementSource,
+    DraftingProgramClosurePlacementSourceError, DraftingProgramClosurePlacementSourceRefusal,
+    DraftingProgramClosurePlacementSourcesResult,
+};

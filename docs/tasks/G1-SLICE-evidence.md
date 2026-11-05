@@ -900,3 +900,23 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   before the construction working part grows beyond its1000-line transition boundary. Preserve
   original live task IDs/statuses and every original proof byte;no archive or runtime changes.
   Acceptance:whole original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-closure-cohort-prerequisite0955).
+
+## Completed original Closure placement work0959
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.work`
+  Status: `done`
+  Goal:compose complete original placement members and fresh current copy/Piece work through the
+  same finite cursor;reserve every walk/result before child work and retain first typed cause.
+  Plan:N=two roles per original instance;reserve 2N+1 aggregate/member/component passes before
+  fresh original-input charging,N-result reservation or either child factory. Reuse0958 exact
+  member loans and existing current-copy/Piece work with the target derived only from that notion.
+  N0 idle;whole/late resources,Missing targets and current-copy causes retain original fields/roles,
+  prior complete operation/source proof and unique spent cursor;no source or topology query.
+  Focused runtime originals/repeated Pieces,atomic shortage,late member/component/resource errors,
+  empty class and no refund;strict affected library/test lint and new API guards.
+  - [x] ROOT CAUSE / ISSUE:git grep -n bind_closure_placement_work efbd6856 -- crates/sc-core →empty,rc=1. Initial strict library Clippy →unused parts/result_large_err,rc=101;remove unused helper and box only refused member context.
+  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract closure_placement_work_keeps →test result:ok. 1 passed,rc=0;nine cases retain all roles/loans,2N+1,late causes,N0 and no refund.
+  - [x] NO REGRESSION / LOCKSTEP:the same target closure_ →7 passed;--doc BoundDraftingProgramClosurePlacementWork →3 passed;strict Clippy --lib/--test drafting_context_binding_contract →Finished;fmt --check/git diff --check pass;book_tool.py build →published,all rc=0.
+    Book/journals/LIVE/resume align,G1still6/18 In Progress;README unchanged. Whole0958 proof/0955 owner moved exact to evidence;fixed bounds unchanged. Source/current-reference/native/cohort and whole .check/.verify stay pending.
+  promotion: declined (existing original members,component work and finite cursor contracts).
+  Commit:STITCHCAD-G1-0959.

@@ -231,3 +231,9 @@ pub use dependencies::{
     DraftingProgramClosurePlacementWorkError, DraftingProgramClosurePlacementWorkRefusal,
     DraftingProgramClosurePlacementWorkResult,
 };
+
+pub use dependencies::{
+    BoundDraftingProgramClosurePlacementSources, DraftingProgramClosurePlacementSource,
+    DraftingProgramClosurePlacementSourceError, DraftingProgramClosurePlacementSourceRefusal,
+    DraftingProgramClosurePlacementSourcesResult,
+};
