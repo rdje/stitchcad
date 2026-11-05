@@ -904,57 +904,36 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Goal:completed Root input/supplier scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1085.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile`
   Status: `done`
-  Goal:bind complete actual Profile-owned operation inputs under exact direct selections and original admitted source pins/schema/content/snapshot,with fresh complete aggregate work. Preserve kind/domain/state and external Derived scope;no invented Root operation positions or numeric Profile port.
-
+  Goal:completed Profile scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1087.md).
 - ID: `G1-SLICE.5f.2.verify.compiler-termination`
   Status: `pending`
   Goal:P2 before pre-push verification,diagnose the isolated compose cargo-check rustc SIGKILL. Same-source focused native compilation subsequently succeeds. OS census shows24GB RAM and unrelated rustc RSS10158288KiB;recent logs show no kill cause. Preserve the unknown;do not blame memory or alter foreign jobs without evidence.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.retention`
   Status: `done`
-  Goal:retain the complete closed Root member/supplier subtree and committed journals before Profile header/parameter ownership grows. Preserve all task IDs/statuses and whole original evidence under fixed task ceilings;no old seal,cap or protected-store changes.
-  - [x] ROOT CAUSE / ISSUE:committed task collection19982L/1497245B leaves18 lines before fixed20000L ceiling. Closed Root subtree and whole journals must be retained before adding Profile header/parameter ownership;the source APIs require logical parameter proofs to borrow actual accepted header parents.
-  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1085.md →3 exact Git spans,rc=0. Independent decode/hash/Git/public-reader proof preserves17839 decodedB before compaction;all203 task IDs/statuses survive at that boundary,including9 closed Root nodes. Whole original goals/checks remain retrievable.
-  - [x] NO REGRESSION / LOCKSTEP:independent1085.json →public_exact true/source_intervals3/closed_nodes9,rc=0. Current task collection fits unchanged ceilings;all old seals/caps/producers/protected stores unchanged. Book reader/journals/resume align. README/LIVE unchanged,G1still6/18 In Progress. Promotion declined:existing retention and
-    source-parent API own these facts. Commit:STITCHCAD-G1-0927.
-
+  Goal:completed Profile scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1087.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.headers`
   Status: `done`
-  Goal:completed Profile source/header/member scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1086.md).
+  Goal:completed Profile scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1087.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.parameters`
   Status: `done`
-  Goal:completed Profile source/header/member scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1086.md).
+  Goal:completed Profile scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1087.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.compose`
   Status: `done`
-  Goal:compose complete original Root and Profile operation-input classes with exact parent/source/key loans and one finite cursor. Preserve every raw field,actual canonical state and external Derived scope;rule/signature/output,family/cohort and whole checking remain separate.
-
-  - [x] REPRODUCE / ISSUE:complete Root and Profile parameter classes need one actual operation-input projection that preserves interleaved local fields and Profile button-before-numeric policy order. Concatenating source classes would renumber the observed order;source/member/supplier scopes and one cursor must stay original.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'bindings|records|LogicalInput|ButtonholeInput' numeric/compose.rs and profile_headers/parameters/compose.rs →actual sorted complete source classes and original mixed/local fields,rc=0. The original admitted occurrence bound covers their disjoint total;the existing Root binding can borrow its actual
-    retained member without changing public getters.
-  - [x] FIX:operation_input_count derives the exact disjoint total;operation_inputs fuses a constant-storage linear merge by genuine consumer position/original local index. Typed Root/Profile variants keep all original source proofs;common operation/ordinal/position/location/field getters lend originals. No source
-    walk/query,allocation,reservation or new acceptance occurs. Root views now borrow original member records.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract complete_operation_inputs →1 pass across9 independent expected fields,rc=0. Interleaved Root/Profile inputs,Profile button before same-operation numeric input,semantic2/mixed3,Root6/Profile3/nineteen passes,all original field/operation/parent/acyclic
-    loans,nth/skip/fused reads and unchanged callbacks/cursor pass. Actual field loans are pointer-compared,not value-equalized.
-  - [x] NO REGRESSION:focused root_numeric_suppliers and profile_input_parameters →1/5 and1/10 modes pass,rc=0;Root-only/Profile-tail counts partition exactly. Cargo doc parameters::compose →1 lifetime guard and numeric::compose →2 private/lifetime guards pass,rc=0. Scoped strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Redundant
-    Iterator supertrait removed;whole .5f.2.check/.verify stay deferred.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book close complete Root/Profile operation-input class and own rule/policy work next. LIVE product notes now name scoped input binding;G1 gate snapshot stays6/18 In Progress. README unchanged. Rule/source/signature/output,family/cohort and physical execution remain separate. Promotion declined:local
-    original-input projection/source API/book owns this contract. Commit:STITCHCAD-G1-0931.
-
+  Goal:completed Profile scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1087.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.compose.retention`
   Status: `done`
-  Goal:retain complete closed Profile header/parameter goals and evidence plus committed journals before adding combined-input acceptance. Preserve whole source bytes,all task identities/statuses and fixed ceilings;no old seal,producer or protected-store changes.
-  - [x] REPRODUCE / ISSUE:unpublished1086 refuses generation decoded bound before any live compaction. Candidate16782B is preserved exactly under target/history-proof-0930;original headers/parameters and journals remain committed in45f39bcf. Fixed task ceilings also require retaining the two closed source/member nodes before combined-input acceptance.
-  - [x] ROOT CAUSE (WHY + WHERE):history_generations.py decode_group census →generation2 decoded3992084B with7916B room versus candidate16782B;only2 of8 generations used,rc=0. This is the active group's decoded-byte bound,not working-file/global capacity. Published v2_migration.py seal opens a fresh bounded active group while preserving every unsealed draft/indexed byte.
-  - [x] FIX:v2_migration.py seal target/history-capture-0930 --owner this leaf,then one v2_install.py install after OS-visible idle admission,rc=0. Generation3 opens under unchanged bounds;only root index/new descriptor differ. Independently verify installed cohort/backups before restoring1086;never rerun this old installer after restoration or later edits.
-  - [x] ADDRESSED:installed-seal.json →all1539 original logical records exact,all92 original physical files exact in backup,91 unchanged installed files;only root index/new generation3 differ,rc=0. Both OS-visible check_handoff.sh --idle-cua admissions pass. Candidate1086 restores byte-exact after installed proof;source/candidate/installed
-    identities remain separately captured.
-  - [x] NO REGRESSION:transition_receipts.py --record docs/history/stitchcad-devnotes-part1086.md →3 exact Git spans,rc=0. Independent source/decode/hash/public-reader proof preserves11698 decodedB and all207 task IDs/statuses before two closed nodes become stubs. Existing archive source/code/bounds stay unchanged;no new power-loss or product/Rust acceptance claim.
-  - [x] LOCKSTEP:MEM/index continue pending combined input work;DEV/ledger/archive-reader explain generation2 byte cause,guarded metadata-only seal and whole1086 retention. Task collection fits unchanged ceilings. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:existing published generation and retention contracts
-    own this routine transition. Commit:STITCHCAD-G1-0930.
-
+  Goal:completed Profile scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1087.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules`
   Status: `pending`
   Goal:bind every actual original rule/policy work/source/signature/canonical-output relationship under its explicit Design/Profile origin and the same complete input/cursor owners. Preserve original provider/body/metadata/source loans and first typed causes under fresh bounded work;no value or whole-cohort acceptance.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.work`
   Status: `pending`
   Goal:consume the complete Root/Profile input owner,derive every actual rule/policy header and its original checked origin row,and reserve complete fresh whole/child work before result allocation or Root lookup. Reuse prepare_rule_binding with derived explicit finite matching allowance;retain genuine operation/field/row/work owners without rule/signature/output acceptance.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.work.retention`
+  Status: `done`
+  Goal:retain complete closed Profile goals/evidence and committed journals before rule-work acceptance grows;verify exact Git/source/public bytes and all task identities/statuses before compaction under unchanged ceilings.
+  - [x] ROOT CAUSE / ISSUE:committed collection19990L/1496439B leaves10 lines before fixed20000L ceiling;retain closed Profile evidence before rule-work acceptance grows. Original source/parameter proofs need stable parents and the same unique cursor.
+  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1087.md →8 exact Git spans,rc=0. Independent decode/hash/Git/public-reader proof preserves12505 decodedB and all210 task IDs/statuses before six closed nodes become retrieval stubs. Whole committed journals and older navigation remain exact.
+  - [x] NO REGRESSION / LOCKSTEP:target/history-proof-0932/independent1087.json →public_exact true,source_intervals8,closed_nodes6,rc=0. Old seals/caps/producer/protected stores unchanged;book reader/journals/resume align. README/LIVE unchanged,G1still6/18 In Progress. Promotion declined:existing retention and original source APIs own these facts. Commit:STITCHCAD-G1-0932.

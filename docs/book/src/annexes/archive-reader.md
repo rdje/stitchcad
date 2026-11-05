@@ -394,6 +394,14 @@ This is a metadata-only generation seal and exact retention proof. Existing budg
 code remain unchanged;it adds no power-loss or product-runtime claim. Profile input composition
 remains separately owned after this prerequisite.
 
+Part1087 retains all six closed Profile input/source/composition goal/evidence nodes and whole
+committed journals from5a25d643. Eight exact Git intervals preserve12505 decoded bytes;every live
+task identity/status remains beside its complete retrieval pointer before rule-work admission.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1087.md
+```
+
 ### Closed task goals and live navigation —0775
 
 Whole0774 continuity and the original completed walk/mirror/slash goals/proof links remain
