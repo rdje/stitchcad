@@ -18,8 +18,11 @@ mod rule_work;
 pub use compose::DraftingProgramOperationInput;
 pub use error::{DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal};
 pub use rule_work::{
-    AdmittedDraftingProgramRuleWork, BoundDraftingProgramRuleSignatures,
-    BoundDraftingProgramRuleSources, DraftingProgramRuleSignature,
+    AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentRootInputMembers,
+    BoundDraftingProgramRuleSignatures, BoundDraftingProgramRuleSources,
+    DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
+    DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
+    DraftingProgramGarmentRootInputSource, DraftingProgramRuleSignature,
     DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal,
     DraftingProgramRuleSignaturesResult, DraftingProgramRuleSource, DraftingProgramRuleSourceError,
     DraftingProgramRuleSourceRefusal, DraftingProgramRuleSourcesResult, DraftingProgramRuleWork,

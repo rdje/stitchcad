@@ -4,6 +4,8 @@ use super::{
     TestResult,
 };
 use sc_core::{construction::*, design::*, recipe::*};
+#[path = "drafting_program_garment_root_members.rs"]
+mod garment_root_members;
 #[path = "drafting_program_rule_signatures.rs"]
 mod signatures;
 #[path = "drafting_program_rule_sources.rs"]

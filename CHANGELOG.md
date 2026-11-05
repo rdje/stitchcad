@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0938 — bind original Root Pocket/Closure input members
+
+Complete Root garment membership now preserves logical members,inline zipper intent and actual
+parameter-to-canonical Length provenance under fresh whole bounds and one cursor. Ten native
+modes,affected garment/Closure tests,three compiler guards,format and scoped strict lint pass.
+Original suppliers and Profile/physical relations remain separate. Root logical suppliers lead
+next;G1still6/18 In Progress unchanged.
+
 ## STITCHCAD-G1-0937 — bind complete original signatures and Root outputs
 
 Stable original source parents now supply complete named signatures and actual Root Derived

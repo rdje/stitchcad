@@ -48,6 +48,7 @@ fn build(
         opening,
         CanonicalInputs::new(vec![], vec![])?,
         SemanticRecipe::empty(),
+        vec![],
     )
 }
 pub(super) fn garment_with_semantics(
@@ -61,6 +62,23 @@ pub(super) fn garment_with_semantics(
         PocketOpening::Profile(ProfileParameterRef::new(id(700))),
         canonical,
         semantic_recipe,
+        vec![],
+    )
+}
+pub(super) fn garment_with_declarations(
+    canonical: CanonicalInputs,
+    parameters: Vec<DesignParameterDefinition>,
+    kinds: Vec<ClosureKind>,
+    opening: PocketOpening,
+) -> TestResult<DesignGarment<EmptyHost>> {
+    build_with_semantics(
+        false,
+        id(100),
+        kinds,
+        opening,
+        canonical,
+        SemanticRecipe::empty(),
+        parameters,
     )
 }
 fn build_with_semantics(
@@ -70,6 +88,7 @@ fn build_with_semantics(
     opening: PocketOpening,
     canonical: CanonicalInputs,
     semantic_recipe: SemanticRecipe,
+    parameter_definitions: Vec<DesignParameterDefinition>,
 ) -> TestResult<DesignGarment<EmptyHost>> {
     let mut ledger = IdentityLedger::new();
     let mut ids = DeterministicIdGenerator::new();
@@ -156,7 +175,7 @@ fn build_with_semantics(
     } else {
         plan
     };
-    let parameters = DesignParameters::new(vec![], &canonical)?;
+    let parameters = DesignParameters::new(parameter_definitions, &canonical)?;
     let materials = MaterialInventory::new(vec![], &canonical)?;
     let sources = DesignMetadata::new(EmptyHost, &canonical)?;
     let structure = DesignStructure::new(DesignStructureDefinition {

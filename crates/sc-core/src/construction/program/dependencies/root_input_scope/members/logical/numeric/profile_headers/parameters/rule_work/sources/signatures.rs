@@ -15,7 +15,13 @@ use crate::{
 };
 use core::fmt;
 mod error;
+mod garment_root;
 pub use error::{DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal};
+pub use garment_root::{
+    BoundDraftingProgramGarmentRootInputMembers, DraftingProgramGarmentRootInputMember,
+    DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
+    DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
+};
 /// One original source parent and its complete named signature/actual canonical output relation.
 pub struct DraftingProgramRuleSignature<
     'z,

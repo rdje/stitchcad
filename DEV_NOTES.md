@@ -2,6 +2,30 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — complete original Root Pocket/Closure input membership
+
+0938 consumes complete operation inputs/rules into bounded Root garment input membership. Actual
+Pocket/Closure fields select expected logical kinds,inline intent or parameter-to-canonical
+Length metadata under the existing Design Closure contract. Formula IDs name parameter metadata,
+not canonical or formula-source IDs. Inline fields retain original positive authored intent and
+create no registry/canonical member. Dedicated and general Length targets remain distinct;all
+canonical states stay unchanged. Root consumers retain actual garment locations without ordinal,
+mixed position or an end sentinel. Suppliers,Profile fields and physical relations remain separate.
+N>0 reserves complete N whole/member/result envelopes before full fresh aggregate/proof charging,
+full result reservation and original metadata/member lookups. First typed causes retain exact
+owners/fields/source/member/parameter witnesses;private prefixes drop. N0 adds no work or demand.
+Ten native modes check seven independent fields,repeated hook/bar member identity,separate field
+locations,inline7100 without registry,metadata7101→Length10/7102→ScalarLength20,unchanged Derived80,
+N0,atomic6 versus7 capacity,fresh resources before missing metadata,and first/late member/kind/
+metadata causes. Full fresh demand equals the separate original meter;no provider/value queries.
+The fixture loan comparison was corrected to the actual Copy cause API. Empty source dependencies
+retain one offset record even with zero sources;the fixture now explicitly allows that single
+record. Its source-cycle workspace remains zero. Strict lint simplified one fixture initializer.
+Affected populated-garment and all-Closure-kind tests,three compiler guards,format and scoped
+strict lint pass. Production limits unchanged. README/LIVE unchanged,G1still6/18 In Progress.
+Original Root Derived supplier joins lead next;whole .check/.verify remain deferred.
+Promotion declined:local member API and existing Closure/parameter/source contracts own scope.
+
 ## _(2026-11-05 UTC)_ — complete original signatures and actual Root output relations
 
 0937 borrows stable actual source storage and same unique complete inputs/cursor through disjoint

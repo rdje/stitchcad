@@ -902,5 +902,20 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Status: `pending`
   Goal:bind every actual Pocket/Closure logical/numeric input under its original Root/Profile source and exact direct selection. Preserve complete canonical state/domain/provenance and original Root Derived suppliers without a fabricated consumer position;component/physical relation joins remain with their own garment steps.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.root-members`
-  Status: `pending`
+  Status: `done`
   Goal:consume complete original operation input/rule proofs and same cursor;count all Root-owned Pocket opening,Closure notion-size/length fields and reserve complete fresh whole/member work before allocation or lookup. Bind actual original members/kinds and preserve field/owner/location/first causes;Profile/supplier/component/derivation joins follow separately.
+  - [x] REPRODUCE / ISSUE:complete operation proofs still need actual Root Pocket/Closure input fields. Formula zipper IDs name Design parameter metadata,not canonical IDs;inline length intent must not invent a registry member or computed value.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'FormulaLength|ExplicitLength|parameter.declaration|logical_source|numeric_source' design/closures.rs,design/parameters.rs and context/design_semantic.rs →actual original metadata-to-canonical contract and lending member factories,rc=0. Root fields have no authored mixed consumer position.
+  - [x] FIX:bind_garment_root_input_members consumes operation proofs,reserves complete N whole/member/result envelopes,freshly charges full aggregate/proofs,then reserves all N records before lookups. Original logical members,inline field loans and actual Length-kind parameter/target records survive without invented IDs or positions;N0 adds no work.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract garment_root_input_members →1 test/10 modes pass,rc=0. Seven independent original
+    fields,metadata7101→Length10/7102→ScalarLength20,repeated Root91,inline7100 without registry,N0,short6 versus7,fresh resources before missing metadata,first/late
+    type/member/metadata failures and Derived80 scope pass;fresh full demand exact/no queries.
+  - [x] NO REGRESSION:actual_populated_garment_source and all_constructible_closure_kinds →2 focused tests pass,rc=0. Cargo doc signatures::garment_root →3 private/non-Clone/lifetime guards pass;scoped strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Fixture loan comparison,one empty-graph offset record and vector initializer corrected before green;production limits unchanged.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book name scoped Root garment membership and original Derived suppliers next. README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local complete-member and existing Design Closure/parameter contracts own scope). Commit:STITCHCAD-G1-0938.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.root-suppliers`
+  Status: `pending`
+  Goal:bind every original Root garment Derived logical/numeric supplier under fresh complete work and original operation/source/acyclic owners. Root consumers keep genuine garment locations without an invented position;inline fields and non-Derived states remain unchanged.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.root-suppliers.logical`
+  Status: `pending`
+  Goal:consume complete actual Root garment members and same cursor;reserve complete fresh work/result slots for every Derived logical member. Bind actual original logical supplier and exact output ID/kind/member,retaining genuine supplier operation/ordinal/mixed position without imposing a fabricated Root consumer order. Preserve original typed first causes/no accepted prefix.

@@ -19,8 +19,11 @@ mod error;
 mod parameters;
 pub use error::{DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal};
 pub use parameters::{
-    AdmittedDraftingProgramRuleWork, BoundDraftingProgramProfileParameters,
-    BoundDraftingProgramRuleSignatures, BoundDraftingProgramRuleSources,
+    AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentRootInputMembers,
+    BoundDraftingProgramProfileParameters, BoundDraftingProgramRuleSignatures,
+    BoundDraftingProgramRuleSources, DraftingProgramGarmentRootInputMember,
+    DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
+    DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
     DraftingProgramOperationInput, DraftingProgramProfileInputParameter,
     DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal,
     DraftingProgramProfileParametersResult, DraftingProgramRuleSignature,

@@ -18,7 +18,10 @@ mod error;
 mod signatures;
 pub use error::{DraftingProgramRuleSourceError, DraftingProgramRuleSourceRefusal};
 pub use signatures::{
-    BoundDraftingProgramRuleSignatures, DraftingProgramRuleSignature,
+    BoundDraftingProgramGarmentRootInputMembers, BoundDraftingProgramRuleSignatures,
+    DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
+    DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
+    DraftingProgramGarmentRootInputSource, DraftingProgramRuleSignature,
     DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal,
     DraftingProgramRuleSignaturesResult,
 };

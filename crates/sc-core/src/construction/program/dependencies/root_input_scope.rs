@@ -13,10 +13,13 @@ use crate::{
 use core::fmt;
 mod members;
 pub use members::{
-    AdmittedDraftingProgramRuleWork, BoundDraftingProgramProfileHeaders,
-    BoundDraftingProgramProfileParameters, BoundDraftingProgramRootInputMembers,
-    BoundDraftingProgramRootLogicalSuppliers, BoundDraftingProgramRootNumericSuppliers,
-    BoundDraftingProgramRuleSignatures, BoundDraftingProgramRuleSources,
+    AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentRootInputMembers,
+    BoundDraftingProgramProfileHeaders, BoundDraftingProgramProfileParameters,
+    BoundDraftingProgramRootInputMembers, BoundDraftingProgramRootLogicalSuppliers,
+    BoundDraftingProgramRootNumericSuppliers, BoundDraftingProgramRuleSignatures,
+    BoundDraftingProgramRuleSources, DraftingProgramGarmentRootInputMember,
+    DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
+    DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
     DraftingProgramOperationInput, DraftingProgramProfileHeaderError,
     DraftingProgramProfileHeaderRefusal, DraftingProgramProfileHeadersResult,
     DraftingProgramProfileInputHeader, DraftingProgramProfileInputParameter,

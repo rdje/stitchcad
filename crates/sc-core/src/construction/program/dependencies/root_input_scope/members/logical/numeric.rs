@@ -21,9 +21,12 @@ pub use error::{
     DraftingProgramRootNumericSupplierError, DraftingProgramRootNumericSupplierRefusal,
 };
 pub use profile_headers::{
-    AdmittedDraftingProgramRuleWork, BoundDraftingProgramProfileHeaders,
-    BoundDraftingProgramProfileParameters, BoundDraftingProgramRuleSignatures,
-    BoundDraftingProgramRuleSources, DraftingProgramOperationInput,
+    AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentRootInputMembers,
+    BoundDraftingProgramProfileHeaders, BoundDraftingProgramProfileParameters,
+    BoundDraftingProgramRuleSignatures, BoundDraftingProgramRuleSources,
+    DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
+    DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
+    DraftingProgramGarmentRootInputSource, DraftingProgramOperationInput,
     DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
     DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
     DraftingProgramProfileInputParameter, DraftingProgramProfileInputRequest,

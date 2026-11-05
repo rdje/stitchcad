@@ -3075,3 +3075,71 @@ two logical signatures passed. Three compiler guards preserve privacy,non-Clone 
 source-parent lifetimes. This completes scoped original operation inputs and rule/signature/output
 joins under focused checks. Pocket/Closure and native-family joins,whole semantic cohort checking,
 body conformance,G4 truth and physical execution remain separately owned.
+
+## Bind every original Root-owned Pocket/Closure input member
+
+`BoundDraftingProgramRuleSignatures::bind_garment_root_input_members()` consumes the complete
+original operation-input/rule owner and retains its same unique finite cursor. It binds the
+Root-owned Pocket opening,Closure notion-size and inline/formula zipper-length input fields.
+`BoundDraftingProgramGarmentRootInputMembers::owner()` preserves the preceding proofs;
+`records()` contains every eligible original field once in garment/local order. Each
+`DraftingProgramGarmentRootInputMember::occurrence()` retains the actual garment,original
+Pocket/Closure member/index,typed field and Root selection location. Root records receive no
+semantic ordinal,mixed consumer position or synthetic end-of-program sentinel.
+
+`source()` preserves three distinct original source classes:
+
+| Source view | Original association retained | Scope |
+| --- | --- | --- |
+| `Logical` | Actual expected-kind Root member under the exact supplied Design scope | PocketOpening for Pocket fields;NotionSize for hook/bar/button fields |
+| `ExplicitLength` | Original inline parameter-ID field and authored positive length field | No invented canonical declaration or parameter-registry membership |
+| `FormulaLength` | Actual Design parameter record,current Length-kind metadata and exact canonical numeric member | Metadata ID remains distinct from dedicated/general canonical declaration ID |
+
+Formula zipper provenance follows the existing `DesignInputs::closure_declarations` contract.
+Its Formula ID names Design-parameter metadata,whose actual target supplies the canonical member.
+It is not a formula-source ID or a same-number canonical declaration ID. Dedicated Length and
+Scalar(Length) remain different target representations. The current metadata must be Length-kind;
+Boolean/Ratio metadata cannot satisfy a zipper length. The canonical state remains unchanged and
+is not evaluated. The word Formula grants no computed value or Derived-state certificate.
+
+For example,the focused fixture has seven original Root-owned fields:
+
+| Original Root field | Bound original source |
+| --- | --- |
+| Pocket0 opening | Root PocketOpening90 |
+| Closure0 hook | Root NotionSize91 |
+| Closure0 bar | The same actual Root91 member,another original field/location |
+| Closure1 button | Root NotionSize91,another original field |
+| Closure2 zipper length | Inline metadata-ID7100 and original15000µm field |
+| Closure3 zipper length | Metadata7101 → dedicated Length10 |
+| Closure4 zipper length | Metadata7102 → general Scalar(Length)20 |
+
+Metadata7100 intentionally has no parameter-registry member;its inline value remains original
+intent under the existing Closure constructor's positive-length contract. Metadata7101/7102 each
+borrow their actual registry record and canonical target. No value is copied from those targets,
+which are Unknown in this fixture. A separate case preserves Root90's Derived80 state without
+accepting its supplier at this membership stage. Hook and bar retain separate original records
+and locations even when their canonical member is pointer-identical.
+
+For N>0,the factory first counts all eligible original fields and atomically reserves N complete
+whole/member/result envelopes. It freshly charges the complete original aggregate/proof content,
+then fallibly reserves the complete N-record vector before any parameter/member lookup. One
+whole walk and all original bounded joins fit the selected N*(whole-demand,(E+8)²) envelope.
+Metadata-to-target and canonical member checks remain within those finite allowances. No cached
+demand supplies credit. `child_pass_count()` reports N and `demand()` only the completed full
+fresh aggregate demand. N0 adds no walk,allocation,lookup,reservation,query or demand claim.
+
+Refusals retain the original operation/cursor owner,complete member count when known,completed
+aggregate demand and first original garment/field/scope/member/metadata cause. Missing parameter
+metadata and non-Length metadata remain distinct. Actual wrong-kind members and original
+parameter/declaration witnesses remain available through typed variants. Private successful
+member prefixes drop. Capacity shortage leaves the cursor unchanged;later failure keeps the
+complete reservation spent. No Profile,rule,parameter-provider,currentness or value query occurs.
+Debug shows source classes/locations without printing authored lengths or private domain content.
+
+Ten focused modes cover all seven fields,N0,atomic quota shortage,fresh resources before a known
+missing parameter,first/late member and metadata refusals,repeated NotionSize identity,dedicated/
+general Length provenance and unchanged Derived scope. Full fresh demand equals the separately
+measured original aggregate. Three compiler guards preserve privacy,non-Clone ownership and
+owner lifetimes. Profile input binding,Root Derived suppliers,served/components,Closure operation
+relations,native families and the complete semantic cohort remain separately owned.
