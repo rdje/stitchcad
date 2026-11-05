@@ -3,6 +3,12 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0965 — save requested handoff-ready pause
+
+PNT pauses after a47d761f's verified RAM diagnostic correction. OS-visible handoff passes;
+no reference implementation or intensive job started. Resume only on request at.references.record,
+with cache-aware RAM admission. Producer reconciliation/full pre-push gates remain pending.
+
 ## STITCHCAD-G1-0964 — correct cache-inclusive RAM refusal (D380)
 
 Independent Activity Monitor/Apple category evidence corrects the top-based conclusion. A read-only,

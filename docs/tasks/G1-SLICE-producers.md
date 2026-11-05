@@ -992,3 +992,9 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   - [x] LOCKSTEP:book/MEMORY/index/DEV/changelog/D380 corrected;whole closed D372–D375 ledger moved unchanged to PLANNING evidence. README/LIVE reviewed,G1still6/18 In Progress;no Rust/full verification claim.
   promotion: declined (existing measurement-definition and explicit RAM admission policy;canonical book section updated).
   Commit:STITCHCAD-G1-0964.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.pause-20261105`
+  Status: `done`
+  Goal:honor director-requested next handoff-ready checkpoint after a47d761f;no reference implementation started.
+  Acceptance:bash scripts/check_handoff.sh --idle-cua →handoff:OK,rc=0;Git clean/brief empty before pause. MEMORY/index/changelog persist resume.record;README/LIVE/DEV/book reviewed unchanged,G1still6/18 In Progress. No pending CUA result or owned background job.
+  Commit:STITCHCAD-G1-0965.
