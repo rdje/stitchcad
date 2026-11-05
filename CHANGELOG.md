@@ -3,6 +3,15 @@
 Newest first:completed slices and focused validation. Earlier records retain their whole journals
 and navigation;the public reader lists every stable logical path.
 
+## STITCHCAD-G1-0926 — compose complete original Root input suppliers
+
+The complete Root input view now pairs every original member with its actual optional logical or
+numeric Derived supplier. Typed scopes,repeated fields and one original cursor survive without
+new source work. Five fixture modes include both supplier classes,iterator projections and exact
+pointers;two compiler guards,format and scoped strict lint pass. An isolated cargo-check SIGKILL
+has unknown cause and an owned pre-push diagnostic;later native/strict builds pass. Profile/rule/
+family/cohort and whole verification remain pending;G1still6/18 In Progress unchanged.
+
 ## STITCHCAD-G1-0925 — bind original Root numeric Derived suppliers
 
 Complete numeric Derived work reservation and fresh aggregate/proof accounting now precede actual

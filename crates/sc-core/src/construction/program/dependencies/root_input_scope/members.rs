@@ -20,6 +20,7 @@ mod logical;
 pub use error::{DraftingProgramRootInputMemberError, DraftingProgramRootInputMemberRefusal};
 pub use logical::{
     BoundDraftingProgramRootLogicalSuppliers, BoundDraftingProgramRootNumericSuppliers,
+    DraftingProgramRootInputBinding, DraftingProgramRootInputSupplier,
     DraftingProgramRootLogicalSupplier, DraftingProgramRootLogicalSupplierError,
     DraftingProgramRootLogicalSupplierRefusal, DraftingProgramRootLogicalSuppliersResult,
     DraftingProgramRootNumericSupplier, DraftingProgramRootNumericSupplierError,

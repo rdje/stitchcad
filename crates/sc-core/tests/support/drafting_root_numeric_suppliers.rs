@@ -4,7 +4,7 @@ use sc_core::{construction::*, design::*, name::MachineToken, ontology::*, recip
 fn id(n: u128) -> EntityId {
     EntityId::from_bits(n)
 }
-fn fixture(empty: bool) -> TestResult<DesignGarment<EmptyHost>> {
+fn fixture(empty: bool, combined: bool) -> TestResult<DesignGarment<EmptyHost>> {
     let canonical = CanonicalInputs::with_logicals(
         vec![LengthDeclaration::new(LengthDeclarationDefinition {
             id: id(10),
@@ -41,21 +41,43 @@ fn fixture(empty: bool) -> TestResult<DesignGarment<EmptyHost>> {
             )?)
         })
         .collect::<TestResult<Vec<_>>>()?,
-        LogicalInputs::new(
-            vec![LogicalInputDeclaration::new(
-                LogicalInputDeclarationDefinition {
-                    id: id(90),
-                    source: id(1090),
-                    kind: LogicalInputKind::PocketOpening,
-                    domain: vec![MachineToken::new("private_option")?],
-                    state: LogicalInputState::Unknown {
-                        observation: id(1190),
+        {
+            let first = LogicalInputs::new(
+                vec![LogicalInputDeclaration::new(
+                    LogicalInputDeclarationDefinition {
+                        id: id(90),
+                        source: id(1090),
+                        kind: LogicalInputKind::PocketOpening,
+                        domain: vec![MachineToken::new("private_option")?],
+                        state: if combined {
+                            LogicalInputState::Derived { operation: id(79) }
+                        } else {
+                            LogicalInputState::Unknown {
+                                observation: id(1190),
+                            }
+                        },
                     },
-                },
-                LogicalInputLimits::new(1, 0, 14, 2),
-            )?],
-            LogicalInputInventoryLimits::new(1, 1),
-        )?,
+                    LogicalInputLimits::new(1, 0, 14, 2),
+                )?],
+                LogicalInputInventoryLimits::new(1, 1),
+            )?;
+            if combined {
+                let mut declarations = first.declarations().to_vec();
+                declarations.push(LogicalInputDeclaration::new(
+                    LogicalInputDeclarationDefinition {
+                        id: id(91),
+                        source: id(1091),
+                        kind: LogicalInputKind::PocketOpening,
+                        domain: vec![MachineToken::new("other_option")?],
+                        state: LogicalInputState::Derived { operation: id(80) },
+                    },
+                    LogicalInputLimits::new(1, 0, 12, 2),
+                )?);
+                LogicalInputs::new(declarations, LogicalInputInventoryLimits::new(2, 4))?
+            } else {
+                first
+            }
+        },
     )?;
     let mut inputs = [
         CanonicalInputTarget::Length(id(10)),
@@ -96,7 +118,7 @@ fn fixture(empty: bool) -> TestResult<DesignGarment<EmptyHost>> {
         LogicalDerivationDefinition {
             id: id(80),
             output: LogicalInputTarget {
-                declaration: id(90),
+                declaration: id(if combined { 91 } else { 90 }),
                 kind: LogicalInputKind::PocketOpening,
             },
             rule: id(901),
@@ -125,8 +147,28 @@ fn fixture(empty: bool) -> TestResult<DesignGarment<EmptyHost>> {
             size_set: None,
         },
         SemanticRecipe::new(
-            vec![SemanticOperation::LogicalDerivation(semantic)],
-            SemanticRecipeLimits::new(1, 1),
+            {
+                let mut operations = vec![];
+                if combined {
+                    operations.push(SemanticOperation::LogicalDerivation(
+                        LogicalDerivationOperation::new(
+                            LogicalDerivationDefinition {
+                                id: id(79),
+                                output: LogicalInputTarget {
+                                    declaration: id(90),
+                                    kind: LogicalInputKind::PocketOpening,
+                                },
+                                rule: id(900),
+                                inputs: vec![],
+                            },
+                            LogicalDerivationLimits::new(0, 0, 0),
+                        )?,
+                    ));
+                }
+                operations.push(SemanticOperation::LogicalDerivation(semantic));
+                operations
+            },
+            SemanticRecipeLimits::new(2, 4),
         )?,
     )?;
     let structure = inputs.structure();
@@ -162,8 +204,8 @@ fn root_numeric_suppliers_retain_actual_source_graph_and_representation_without_
 ) -> TestResult {
     // Complete repeated/different families,empty numeric Derived,short remaining cursor,
     // and an actual fresh provider resource refusal after prior successful content admission.
-    for case in 0..4u8 {
-        let garment = fixture(case == 1)?;
+    for case in 0..5u8 {
+        let garment = fixture(case == 1, case == 4)?;
         let source = Provider::new(&garment);
         let source_view: &SourceView<'_> = &source;
         let content = limits(100000, 100000, 100000)?;
@@ -177,13 +219,14 @@ fn root_numeric_suppliers_retain_actual_source_graph_and_representation_without_
             .prepare_design_semantic_sources(content)
             .map_err(|e| e.to_string())?;
         let grainline = GrainlinePlacement::new(id(80000), id(90000))?;
-        let raw = DraftingProgramInputs::new(
-            context,
-            vec![
-                DraftingProgramStep::Semantic { ordinal: 1 },
-                DraftingProgramStep::Drafting(DraftingOperationInput::PlaceGrainline(&grainline)),
-            ],
-        );
+        let mut steps = vec![
+            DraftingProgramStep::Semantic { ordinal: 1 },
+            DraftingProgramStep::Drafting(DraftingOperationInput::PlaceGrainline(&grainline)),
+        ];
+        if case == 4 {
+            steps.push(DraftingProgramStep::Semantic { ordinal: 2 });
+        }
+        let raw = DraftingProgramInputs::new(context, steps);
         let pp = DraftingProgramLimits::new(content, 1000, 1000, 10000);
         let program = raw
             .admit(&pp)
@@ -241,19 +284,25 @@ fn root_numeric_suppliers_retain_actual_source_graph_and_representation_without_
             content_version: "content".into(),
         })?;
 
-        let rows = vec![
+        let mut rows = vec![
             DraftingSemanticSelectionRow::Rule {
                 ordinal: 1,
                 origin: DraftingRuleSelection::Design,
             },
             DraftingSemanticSelectionRow::Profile {
                 location: DraftingSemanticSelectionLocation::Semantic {
-                    ordinal: 1,
+                    ordinal: if case == 4 { 2 } else { 1 },
                     field: DraftingSemanticSelectionField::LogicalInput { index: 5 },
                 },
                 selected: &selected,
             },
         ];
+        if case == 4 {
+            rows.push(DraftingSemanticSelectionRow::Rule {
+                ordinal: 2,
+                origin: DraftingRuleSelection::Design,
+            });
+        }
         let raw_selections = DraftingSemanticSelectionInputs::new(rows);
         let selections = raw_selections
             .admit(DraftingSemanticSelectionLimits::new(content, 10000))
@@ -265,9 +314,15 @@ fn root_numeric_suppliers_retain_actual_source_graph_and_representation_without_
         actual.charge_resources(&mut meter)?;
         let demand = meter.finish()?;
 
-        let occurrences = 9;
-        let row_count = 2;
-        let passes = if case == 2 { 8 } else { 9 };
+        let occurrences = if case == 4 { 11 } else { 9 };
+        let row_count = if case == 4 { 3 } else { 2 };
+        let passes = if case == 2 {
+            8
+        } else if case == 4 {
+            10
+        } else {
+            9
+        };
         let per_pass = (demand.collection_entries() + 8) * (demand.collection_entries() + 8);
         let policy = DraftingProgramSemanticWorkLimits::new(
             DraftingProgramSemanticPopulationLimits::new(
@@ -298,7 +353,7 @@ fn root_numeric_suppliers_retain_actual_source_graph_and_representation_without_
             .bind_root_logical_suppliers()
             .map_err(|e| e.to_string())?;
         assert_eq!(logical.members().records().len(), 5);
-        assert!(logical.records().is_empty());
+        assert_eq!(logical.records().len(), usize::from(case == 4));
         source.walks.set(0);
         source.base.trace.set(0);
         source.alternate.trace.set(0);
@@ -306,7 +361,7 @@ fn root_numeric_suppliers_retain_actual_source_graph_and_representation_without_
             source.extra_charge.set(100001);
         }
         let result = logical.bind_root_numeric_suppliers();
-        if case == 0 || case == 1 {
+        if case == 0 || case == 1 || case == 4 {
             let proof = result.map_err(|e| e.to_string())?;
             let count = if case == 1 { 0 } else { 4 };
             assert_eq!(proof.records().len(), count);
@@ -323,7 +378,7 @@ fn root_numeric_suppliers_retain_actual_source_graph_and_representation_without_
                     .owner()
                     .selections()
                     .reserved_child_passes(),
-                5 + count
+                5 + count + usize::from(case == 4)
             );
             for (index, record) in proof.records().iter().copied().enumerate() {
                 assert_eq!(record.member_index(), index);
@@ -333,7 +388,10 @@ fn root_numeric_suppliers_retain_actual_source_graph_and_representation_without_
                     .records()
                     .get(index)
                     .ok_or("actual input member")?;
-                assert_eq!((original.ordinal(), original.position()), (1, 1));
+                assert_eq!(
+                    (original.ordinal(), original.position()),
+                    if case == 4 { (2, 3) } else { (1, 1) }
+                );
                 let DraftingProgramRootInputSource::Numeric(member) = original.source() else {
                     return Err("actual numeric member".into());
                 };
@@ -379,6 +437,77 @@ fn root_numeric_suppliers_retain_actual_source_graph_and_representation_without_
                     sources.proof()
                 ));
             }
+            assert_eq!(proof.bindings().len(), 5);
+            let passes_before = proof
+                .logical()
+                .members()
+                .owner()
+                .selections()
+                .reserved_child_passes();
+            let walks_before = source.walks.get();
+            for binding in proof.bindings() {
+                let index = binding.member_index();
+                let original = proof
+                    .logical()
+                    .members()
+                    .records()
+                    .get(index)
+                    .ok_or("complete original input")?;
+                assert_eq!(binding.member().location(), original.location());
+                assert!(core::ptr::eq(
+                    binding.member().operation(),
+                    original.operation()
+                ));
+                match binding.supplier() {
+                    Some(DraftingProgramRootInputSupplier::Numeric(record))
+                        if case != 1 && index < 4 =>
+                    {
+                        assert!(core::ptr::eq(
+                            record,
+                            proof
+                                .records()
+                                .get(index)
+                                .ok_or("original numeric relation")?
+                        ))
+                    }
+                    Some(DraftingProgramRootInputSupplier::Logical(record))
+                        if case == 4 && index == 4 =>
+                    {
+                        assert!(core::ptr::eq(
+                            record,
+                            proof
+                                .logical()
+                                .records()
+                                .first()
+                                .ok_or("original logical relation")?
+                        ));
+                        assert_eq!((record.ordinal(), record.position()), (1, 1));
+                        assert_eq!(
+                            (binding.member().ordinal(), binding.member().position()),
+                            (2, 3)
+                        );
+                    }
+                    None if case == 1 || index == 4 => {}
+                    _ => return Err("incorrect complete Root source class".into()),
+                }
+            }
+            let mut tail = proof.bindings().skip(4);
+            assert_eq!(tail.next().ok_or("last binding")?.member_index(), 4);
+            assert!(tail.next().is_none());
+            assert!(tail.next().is_none());
+            assert_eq!(source.walks.get(), walks_before);
+            assert_eq!(
+                proof
+                    .logical()
+                    .members()
+                    .owner()
+                    .selections()
+                    .reserved_child_passes(),
+                passes_before
+            );
+            let skipped = proof.bindings().nth(3).ok_or("fourth original member")?;
+            assert_eq!(skipped.member_index(), 3);
+            assert_eq!(skipped.supplier().is_some(), count > 0);
             if count > 0 {
                 let first = proof.records().first().ok_or("first relation")?;
                 let repeated = proof.records().get(3).ok_or("repeated relation")?;

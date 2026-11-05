@@ -2484,7 +2484,7 @@ The source scope's initial admission and cached demand grant no later fresh cred
 Root member stage must reserve its complete pass/result population and freshly charge that actual
 Root/provider scope under the original work policy **before lookups or result reservation**.
 This owner join itself accepts no operation-input member,Derived supplier/order,Profile source,
-value or whole semantic cohort. Root member binding and logical/numeric supplier binding are implemented below;final Root composition remains separate.
+value or whole semantic cohort. Root member binding and logical/numeric supplier binding are implemented below;the complete Root projection follows those stages.
 
 ## Bind all actual Root operation-input members
 
@@ -2669,5 +2669,46 @@ Focused public-factory checks cover dedicated/general Length distinction,Boolean
 repeated declaration/source pointers,exact canonical positions,held checked/acyclic identities,
 Unknown/Derived preservation,N=0,atomic short remaining budget and injected fresh provider resource refusal.
 Privacy,lifetime and unique cursor compiler guards supplement them. Whole/coupled verification
-remains deferred to its existing tasks;final Root composition and Profile/rule/family/cohort
-acceptance remain separate. No source-truth,evidence,value or physical execution is certified.
+remains deferred to its existing tasks;Profile/rule/family/cohort acceptance remains separate. No source-truth,evidence,value or physical execution is certified.
+
+## Read the complete Root input/supplier projection
+
+After successful member,logical-supplier and numeric-supplier factories,
+`BoundDraftingProgramRootNumericSuppliers::bindings()` exposes every complete original Root
+operation-input member once,in original mixed/local field order. The containing private pipeline
+already retains both complete supplier classes under the same original member/source/key owners
+and unique finite child cursor. This view does not run another acceptance pass.
+
+Each `DraftingProgramRootInputBinding` preserves its original `member_index()` and `member()`.
+The member keeps its actual operation,field,consumer ordinal/mixed position and original canonical
+source. Its optional `supplier()` has one of these precise meanings:
+
+| Actual original member state/family | Supplier view |
+| --- | --- |
+| Non-Derived logical or numeric | None;the original state remains unchanged |
+| Root logical Derived | Logical loan of the accepted actual operation/output/strict earlier mixed relation |
+| Root numeric Derived | Numeric loan of the original FormulaDerivedInput/checked expression/acyclic relation |
+
+`DraftingProgramRootInputSupplier` keeps the two Derived scopes in separate typed variants.
+The numeric variant has a canonical family position through its input,and no mixed supplier
+position. A logical supplier retains its genuine mixed position. No Profile input is silently
+substituted into this Root class;original Profile/rule obligations remain in the preceding owners.
+
+For example,the combined focused fixture has an actual logical supplier at semantic ordinal1 /
+mixed position1,a native step at position2,and the consuming semantic operation at ordinal2 /
+position3. Its five Root inputs retain four separate numeric supplier records,including a repeated
+dedicated Length,and one logical supplier record. All ten previously reserved child passes remain
+reserved after every projection read. The source and numeric graph are the same original objects;
+no values are read and no relation body or metadata is copied.
+
+The projection uses constant extra storage and visits the private sorted member/supplier sequences
+linearly. It performs no content walk,source/provider lookup,reservation or allocation,and grants
+no new content/work credit. Exact-size/fused iteration and `nth`/`skip` views retain the original
+indices and associations. A caller may read a prefix of this already complete owner;there is no
+projection available from a refused supplier factory or private successful construction prefix.
+Private fields and lifetime guards prevent changing the association or escaping its owner loan.
+
+This completes the Root operation-input membership and logical/numeric Derived-supplier class.
+Whole semantic binding still requires actual Profile inputs,rule/signature/output joins,garment
+and native families,then the complete cohort. Whole/coupled checking and physical execution remain
+with their existing separate tasks. Root-class success certifies none of those remaining scopes.

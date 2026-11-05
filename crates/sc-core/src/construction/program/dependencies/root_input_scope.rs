@@ -14,9 +14,10 @@ use core::fmt;
 mod members;
 pub use members::{
     BoundDraftingProgramRootInputMembers, BoundDraftingProgramRootLogicalSuppliers,
-    BoundDraftingProgramRootNumericSuppliers, DraftingProgramRootInputMember,
-    DraftingProgramRootInputMemberError, DraftingProgramRootInputMemberRefusal,
-    DraftingProgramRootInputMembersResult, DraftingProgramRootInputSource,
+    BoundDraftingProgramRootNumericSuppliers, DraftingProgramRootInputBinding,
+    DraftingProgramRootInputMember, DraftingProgramRootInputMemberError,
+    DraftingProgramRootInputMemberRefusal, DraftingProgramRootInputMembersResult,
+    DraftingProgramRootInputSource, DraftingProgramRootInputSupplier,
     DraftingProgramRootLogicalSupplier, DraftingProgramRootLogicalSupplierError,
     DraftingProgramRootLogicalSupplierRefusal, DraftingProgramRootLogicalSuppliersResult,
     DraftingProgramRootNumericSupplier, DraftingProgramRootNumericSupplierError,

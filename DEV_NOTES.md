@@ -2,6 +2,24 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — complete Root member/supplier projection
+
+0926 composes complete Root membership and both Derived supplier classes through bindings().
+The private consuming chain already retains one exact original member/key/source owner and cursor;
+a constant-storage linear borrowed projection reuses sorted disjoint supplier indices without
+new source walks,reservation,allocation,value access or acceptance. Typed variants keep logical
+operation/output/mixed order separate from numeric FormulaDerivedInput/checked/acyclic scope.
+Five real fixture modes include both supplier classes together:five original members,one earlier
+logical supplier,four numeric relations and ten reserved passes. Original pointers/fields and
+nth/skip/length/fused behavior pass with unchanged walks/cursor;Unknown and failure cases remain.
+Two compiler guards,format and scoped strict Clippy pass. Initial cargo-check rustc received
+SIGKILL;the same-source native test then builds/passes. OS evidence shows24GB RAM and an unrelated
+compiler RSS10158288KiB;recent logs establish no kill cause. It remains unknown,owned P2 before
+pre-push under .5f.2.verify.compiler-termination. No unrelated process was changed.
+README/LIVE unchanged,G1still6/18 In Progress. Root input membership/supplier class completes;
+actual Profile inputs,rule/signature/output,family/cohort and whole checks remain pending.
+Promotion declined:local projection/source API/book owns this scoped contract.
+
 ## _(2026-11-05 UTC)_ — original numeric Derived source and graph suppliers
 
 0925 consumes the complete logical supplier owner and reserves all N numeric Derived passes/results

@@ -876,7 +876,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Goal:completed0920–0923;[whole original scope/proofs](../history/stitchcad-devnotes-part1084.md).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs`
-  Status: `in_progress`
+  Status: `done`
   Goal:compose complete actual Root logical/numeric operation-input members under the original direct-key owner and finite child budget. Preserve original states,actual source scopes,typed causes and genuine Design Derived supplier/output/mixed-order joins without value reads or formula metadata. Profile inputs/rule signatures and final cohort stay separate.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.owners`
@@ -888,7 +888,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Goal:completed0920–0923;[whole original scope/proofs](../history/stitchcad-devnotes-part1084.md).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived`
-  Status: `in_progress`
+  Status: `done`
   Goal:bind actual Root logical Derived operation/output suppliers with strict genuine mixed order,and numeric Derived inputs through their original formula-source/acyclic owners. Preserve source family/typed causes;formula sources receive no invented mixed position and external Profile Derived IDs never become Root suppliers.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.plan`
@@ -923,8 +923,18 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
     contract. Commit:STITCHCAD-G1-0925.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.compose`
-  Status: `pending`
+  Status: `done`
   Goal:compose complete logical and numeric Root supplier relations with exact original member/source/key owners and the same finite child cursor. Retain every original field,typed cause and separate supplier scope;Profile/rule/family/cohort and whole checking remain separate.
+
+  - [x] REPRODUCE / ISSUE:complete logical and numeric factories retain the same actual members/cursor but callers need a complete per-field projection without mixing semantic-operation and formula-source supplier scopes. Repeated consumers must stay separate;no extra validation/source budget or accepted construction prefix may be introduced.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'member_index|members:|logical:' root_input_scope/members/logical.rs and its numeric.rs →both private complete supplier vectors retain original sorted member indices and one original consuming owner,rc=0. Their disjoint classes support a constant-storage linear borrowed projection with no new lookup or allocation.
+  - [x] FIX:bindings lends every original Root member once with typed optional Logical/Numeric relation loans. Preserve actual member index,operation/field/source and consumer positions;numeric source positions remain canonical. Original complete member/logical/numeric ownership and unique cursor stay unchanged. No new
+    source/value/whole-cohort acceptance follows from reading the view.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract root_numeric_suppliers →1 test/5 actual modes pass,rc=0. Combined fixture preserves five members,one earlier semantic1/mixed1 logical supplier,four numeric records,consumer semantic2/mixed3 and ten reserved passes. Pointer/field joins,nth/skip/fused length and
+    unchanged walks/cursor pass;empty and failure cases remain scoped.
+  - [x] NO REGRESSION:cargo test -p sc-core --doc numeric::compose →2 private/lifetime guards pass,rc=0. Scoped lib/harness strict Clippy and cargo fmt -p sc-core -- --check pass,rc=0. Initial cargo-check rustc SIGKILL is not a passing check;subsequent same-source native/strict builds pass. OS kill cause unknown,owned by
+    .5f.2.verify.compiler-termination before pre-push;whole .5f.2.check/.verify remain deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book name complete Root member/supplier class and next actual Profile input binding. README/LIVE reviewed unchanged,G1still6/18 In Progress. Profile/rule/family/cohort/source truth and physical execution remain separate. Promotion declined:local complete projection and original source APIs/book own the contract. Commit:STITCHCAD-G1-0926.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.logical.retention`
   Status: `done`
@@ -932,3 +942,11 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] ROOT CAUSE / ISSUE:task collection19965L/1498442B before new acceptance leaves insufficient fixed-byte headroom. Whole closed0920–0923 source blocks and committed journals must remain exact before live compaction;no archive prefix,cap or original heading route may change.
   - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1084.md →7 exact Git spans,rc=0. Independent decode/hash/Git intervals/public-reader bytes prove32002 decodedB before compaction;all200 task IDs/statuses remain exact at that boundary. Closed blocks alone become retrieval pointers.
   - [x] NO REGRESSION / LOCKSTEP:independent1084.json records source_intervals7/public_exact true/task_ids_statuses_exact200,rc=0. Task collection remains within unchanged20000L/1500000B ceilings;complete committed journals retained before live retirement. Book reader and0924 journals align;old seals,producers and protected evidence unchanged. Commit:STITCHCAD-G1-0924.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile`
+  Status: `pending`
+  Goal:bind complete actual Profile-owned operation inputs under exact direct selections and original admitted source pins/schema/content/snapshot,with fresh complete aggregate work. Preserve kind/domain/state and external Derived scope;no invented Root operation positions or numeric Profile port.
+
+- ID: `G1-SLICE.5f.2.verify.compiler-termination`
+  Status: `pending`
+  Goal:P2 before pre-push verification,diagnose the isolated compose cargo-check rustc SIGKILL. Same-source focused native compilation subsequently succeeds. OS census shows24GB RAM and unrelated rustc RSS10158288KiB;recent logs show no kill cause. Preserve the unknown;do not blame memory or alter foreign jobs without evidence.

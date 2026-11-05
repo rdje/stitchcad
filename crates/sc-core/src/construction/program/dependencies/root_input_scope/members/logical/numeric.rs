@@ -13,7 +13,9 @@ use crate::{
     value::{CanonicalNumericInputMember, LengthState, ScalarInputState},
 };
 use core::fmt;
+mod compose;
 mod error;
+pub use compose::{DraftingProgramRootInputBinding, DraftingProgramRootInputSupplier};
 pub use error::{
     DraftingProgramRootNumericSupplierError, DraftingProgramRootNumericSupplierRefusal,
 };
