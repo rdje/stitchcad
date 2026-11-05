@@ -420,6 +420,15 @@ Seven closed nodes point to whole original goals/proofs under unchanged archive 
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1089.md
 ```
 
+Part1090 retains the complete closed Root garment member/supplier and logical Profile header/
+parameter records and committed journals from26e26483. Nine exact Git spans preserve23040 decoded
+bytes;all225 task identities/statuses and46 headings remain exact before numeric Profile growth.
+Seven closed nodes point to whole original goals/proofs under unchanged archive and task bounds.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1090.md
+```
+
 ### Closed task goals and live navigation —0775
 
 Whole0774 continuity and the original completed walk/mirror/slash goals/proof links remain

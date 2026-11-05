@@ -3,34 +3,10 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
-## STITCHCAD-G1-0943 — bind original logical Profile garment parameters
+## STITCHCAD-G1-0944 — retain complete closed garment input evidence
 
-Stable original header parents now supply actual logical Profile metadata/member/kind loans under
-fresh whole work and one cursor. Ten native modes,affected operation-parameter10 modes,three
-compiler guards,format and scoped strict lint pass. External Derived scope remains Profile-owned.
-Authentic numeric Profile facet leads next;physical/cohort scope and G1six-of18 remain unchanged.
+Nine exact Git spans preserve23040 decodedB of whole closed Root/logical Profile goals/proofs
+and committed journals in1090. Independent source/hash/public-reader bytes,all225 task identities/
+statuses and46 headings remain exact before compaction. Fixed bounds and product frontier stay.
 
-## STITCHCAD-G1-0942 — bind original logical Profile garment headers
-
-Complete logical Profile garment headers now retain exact original fields,direct rows/pins and
-stable accepted source parents under fresh whole bounds and one cursor. Eleven native modes,
-affected prior Profile9 modes,three compiler guards,format and scoped strict lint pass. Parameter
-membership and numeric Profile lengths remain separate. Parameter borrowing leads next;
-G1six-of18 In Progress is unchanged.
-
-## STITCHCAD-G1-0941 — bind original Root garment numeric suppliers
-
-Parameter-bound numeric Derived fields now retain exact original canonical/checked-source/acyclic
-loans under fresh whole bounds and one cursor. Six native modes (five factory paths/one upstream
-kind refusal),affected Root cases,three compiler guards,format and strict scoped lint pass.
-Root supplier classes close;Profile garment headers lead next. Physical/cohort scope and
-G1six-of18 In Progress remain unchanged.
-
-## STITCHCAD-G1-0940 — retain complete closed original rule evidence
-
-Whole rule-work/source/signature goals/evidence and committed journals remain exact in1089.
-Nine exact Git spans,independent source/hash/public bytes and all220 task IDs/statuses pass before
-seven closed nodes become pointers;all46 headings remain exact. Fixed bounds/old seals unchanged.
-Numeric garment suppliers lead next;product behavior and G1six-of18 In Progress are unchanged.
-
-[Complete committed ledger and earlier navigation](docs/history/stitchcad-devnotes-part1089.md) retains exact source bytes fromf0ca70d2.
+[Whole earlier ledger and navigation](docs/history/stitchcad-devnotes-part1090.md) retains exact committed bytes from26e26483.
