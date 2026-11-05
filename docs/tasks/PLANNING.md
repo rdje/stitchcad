@@ -1177,16 +1177,14 @@ D303–D306:[whole closed ledger](../history/window27.md#stitchcad-devnotes-part
 
 D307–D369:[whole prior ledger](../history/window27.md#stitchcad-devnotes-part854md). D334/D223/D156 remain owned.
 
-## D372 — large book-search index warning
-
-Fixed0818;[whole cause/prior checkpoints](../history/window29.md#stitchcad-devnotes-part993md),[whole closure/proofs](../history/window29.md#stitchcad-devnotes-part994md).
-
-## D373/D374 — active journal documentation scope/storage drift
-Fixed0696;[whole original ledger/proofs](../history/window28.md#stitchcad-devnotes-part935md).
-
-## D375 — drafting chapters missing from the topic index
-Fixed0760;[whole cause/reproduction/fix](../history/window29.md#stitchcad-devnotes-part942md).
+D372–D375:[whole closed ledger](PLANNING-evidence.md#original-closed-d372d375-ledger-before-d380).
 
 D376/D377 fixed0816/0817;D378 fixed0825;[whole causes/proofs](../history/window30.md#stitchcad-devnotes-part1001md).
 
 D379 fixed0826;[whole source identity cause/proofs](../history/window30.md#stitchcad-devnotes-part1002md).
+
+## D380 — cache-inclusive occupancy mistaken for used RAM
+
+Owner:G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.memory-accounting;P1 before Rust admission.
+Top23G occupied was wrongly treated as >95% used RAM;Activity Monitor reported20.44/24GB with3.60GB reusable cache. Captures are not simultaneous;no exact UI/CLI parity claim.
+Fixed by explicit cache-adjusted estimate/pressure/headroom diagnostic,frozen independent subtraction and watched refusal/threshold controls. Book/resume/incorrect blocker corrected;original captures retained as history.

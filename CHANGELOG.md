@@ -3,6 +3,13 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0964 — correct cache-inclusive RAM refusal (D380)
+
+Independent Activity Monitor/Apple category evidence corrects the top-based conclusion. A read-only,
+cache-adjusted diagnostic names estimate semantics and explicit peak/pressure/86–88% admission.
+Frozen subtraction,old-metric RED,exact thresholds and invalid-input checks pass;existing probe
+runner watches the self-test. Incorrect resume blocker removed;Rust/full producer proof unclaimed.
+
 ## STITCHCAD-G1-0963 — record authorized run and tighter RAM ceiling
 
 Director authorizes continued work with88% hard host RAM ceiling. The new OS-visible reading

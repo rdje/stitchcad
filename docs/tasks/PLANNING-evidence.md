@@ -103,3 +103,16 @@ section — stays in the tree file, because it is live state rather than complet
   `CHANGELOG.md` and the derived Knowledge Map updated in this commit. This tree records no further
   work: the roadmap→tree mapping is complete and derived.
 
+
+## Original closed D372–D375 ledger before D380
+
+## D372 — large book-search index warning
+
+Fixed0818;[whole cause/prior checkpoints](../history/window29.md#stitchcad-devnotes-part993md),[whole closure/proofs](../history/window29.md#stitchcad-devnotes-part994md).
+
+## D373/D374 — active journal documentation scope/storage drift
+Fixed0696;[whole original ledger/proofs](../history/window28.md#stitchcad-devnotes-part935md).
+
+## D375 — drafting chapters missing from the topic index
+Fixed0760;[whole cause/reproduction/fix](../history/window29.md#stitchcad-devnotes-part942md).
+

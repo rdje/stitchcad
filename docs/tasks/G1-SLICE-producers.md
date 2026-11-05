@@ -974,3 +974,21 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Priority: P1 before the next push/full producer signoff;owner repo-local,D156.
   Goal:0865 owns pre-existing producer/file/effect drift found during book retirement. Reproduce with producer_census.py and validate_effect_plan/validate_file_plan;predecessor8152ce3b already lacks tracked drafting_dependencies/plan_sources.py in producers,8 effect records and11 Python file records for later platform,numerical and book-tool additions.
   Schedule:reconcile exact current roles and canonical audit owners after the requested book-policy slice,before any push;do not treat inventory as runtime locality proof. Existing live source/audit nodes remain;no other repository is written.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.memory-accounting`
+  Status: `done`
+  Goal:D380 correct cache-inclusive top interpretation before product work;add read-only,
+  cache-aware macOS diagnostic with explicit estimate semantics and fail-closed input checks.
+  Paths:scripts/macos_memory.py;producer entry/file ledgers;book build guide;resume/task records.
+  Acceptance:independent Activity Monitor/Apple definitions/Stats calculation distinguish occupied
+  from used memory;frozen raw fixture and malformed/pressure/threshold controls pass. No claim
+  of exact simultaneous Activity Monitor equivalence or control over other projects' processes.
+  Product reference implementation,producer reconciliation and full pre-push gates stay pending.
+  - [x] REPRODUCE / ISSUE:top -l1 -n0 →23G occupied;independent Activity Monitor20.44/24GB plus3.60GB cache;rc=0. Captures are not simultaneous;top did not earn the used-RAM claim.
+  - [x] ROOT CAUSE:published Stats VM-category calculation subtracts purgeable/file-backed cache;Apple defines separate categories. macos_memory.py --self-test →frozen cache discrimination OK,rc=0.
+  - [x] FIX:read-only explicit estimate/units/pressure/peak admission;python3 -I -B scripts/macos_memory.py --self-test →thresholds/refusals OK,rc=0;no workload dispatch or cache deletion.
+  - [x] ADDRESSED:actual used=occupied subtraction omission in memory →expected assertion RED,rc=0. Live21:34UTC --reserve-mib2048 →used75.919/projected84.253%,within-budget,rc=0.
+  - [x] NO REGRESSION:focused self-test/diff check pass,rc=0;watched probe hook/source/file rows added. Existing producer census still refuses known plan_sources.py omission;inventory-reconcile owns pre-push repair.
+  - [x] LOCKSTEP:book/MEMORY/index/DEV/changelog/D380 corrected;whole closed D372–D375 ledger moved unchanged to PLANNING evidence. README/LIVE reviewed,G1still6/18 In Progress;no Rust/full verification claim.
+  promotion: declined (existing measurement-definition and explicit RAM admission policy;canonical book section updated).
+  Commit:STITCHCAD-G1-0964.

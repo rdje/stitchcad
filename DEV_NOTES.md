@@ -2,6 +2,30 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — D380: occupied memory is not cache-adjusted used RAM
+
+0964 corrects the19:36UTC top-based refusal. The top23G observation was real;interpreting it as
+application/wired/compressed use above95% was wrong. Independent Activity Monitor reported20.44
+of24GB plus3.60GB reusable cache. Those captures are not simultaneous measurements or exact CLI
+calibration. Apple's category definitions and Stats' published VM-category arithmetic distinguish
+the metrics. A new read-only diagnostic names its cache-adjusted estimate,units and timestamp;
+it retains wired/compressed use,subtracts only purgeable/file-backed cache,and refuses bad data.
+
+Frozen raw counters independently derive1288197 used pages from1533628 occupied/245431 cached.
+Replacing the actual subtraction with the old occupied metric produces an assertion RED.
+Pressure,exact86/88 thresholds and malformed/oversized reserve controls pass. The initial invalid
+cache fixture was still physically valid;increased it beyond occupied pages and named failed arms.
+Live21:34UTC estimate75.919%,projected84.253% for2GiB:within budget. This is captured evidence,
+not a current baseline or exact Activity Monitor replica. Self-test joins existing producer probes.
+
+RAM authorization stays valid. Resume/task records remove the incorrect blocker;G1still6/18
+In Progress. Earlier top captures remain history. Existing inventory-reconciliation owner still
+blocks pre-push signoff:current census refuses the previously recorded plan_sources.py omission.
+The new diagnostic has explicit source/file ledger rows;no full producer or Rust verdict claimed.
+The first commit hook refused the added TOOLBOX row at its fixed byte ceiling. Removed that new
+row;the canonical book section and resume pointer retain the diagnostic route,without a cap change.
+Promotion:the book's RAM admission section owns the rule and explicitly named estimate semantics.
+
 ## _(2026-11-05 UTC)_ — bounded placement reference implementation contract
 
 0962 derives the next source-bound stage from existing bounded point/coverage producers and actual

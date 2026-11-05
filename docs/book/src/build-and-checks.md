@@ -15,6 +15,39 @@ learning routes and current API/status correctness. The focused contract lives i
 [Full-text book search](annexes/book-search.md) indexes complete chapters with compact result
 grouping and checks every chapter,text posting and result landing during publication.
 
+## macOS RAM admission
+
+Use `python3 -I -B scripts/macos_memory.py --reserve-mib 1024` before a job whose expected
+additional peak is 1024 MiB. Choose that reservation from the job, rather than treating this
+example as a universal compiler limit. During a running job, sample again frequently with
+`python3 -I -B scripts/macos_memory.py`. This read-only tool writes no project data and launches
+only the required host `vm_stat` and `sysctl` observations. It installs nothing.
+
+The metric is named `macos-cache-adjusted-estimate`. Its physical resident categories are
+active + inactive + speculative + wired + compressed; it subtracts purgeable and file-backed
+cache. Page size and installed RAM come from the host, with explicit bytes and timestamps.
+The calculation follows the [Stats reader](https://github.com/exelban/stats/blob/master/Modules/RAM/readers.swift).
+It is an estimate, not an exact simultaneous reproduction of Activity Monitor: the observations
+are sampled separately, and another process can allocate between them.
+
+Do not use `top`'s cache-inclusive occupied total as the percentage consumed by application,
+wired and compressed memory. Activity Monitor lists reusable cached files separately from
+Memory Used; [Apple defines those categories](https://support.apple.com/en-sa/guide/activity-monitor/actmntr1004/10.14/mac/15.0).
+Nor is `memory_pressure -Q`'s free percentage the complement of this used-RAM metric. Check the
+meaning of a counter before applying a threshold. D380 records the incorrect prior refusal.
+
+The director's 2026-11-05 hard ceiling is 88% across the host. Reduce or stop owned work at 86%,
+before that ceiling; never terminate another project's work. Admission requires normal pressure
+and projected usage, including the requested additional peak, below 86%. Exit 0 means within
+this measured budget, 1 means defer, and 2 means unavailable or malformed evidence. Unknown
+pressure, failed commands and invalid counters refuse measurement. A sample is not a guarantee
+about later host usage. This diagnostic neither starts nor stops jobs; the operator must monitor
+and stop the jobs it owns. Aim at 80% or less before restarting a job stopped for memory pressure.
+
+`--self-test` checks a frozen raw OS observation against independent cache subtraction, pressure
+refusals, exact 86/88 boundaries and malformed input. The existing CI-environment probe runner
+includes it. A live reading is timestamped evidence, never a hand-maintained current baseline.
+
 ## Local producer profile
 
 `scripts/local_environment.py` prepares the four destinations below for the listed Make targets.
