@@ -920,31 +920,22 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.headers`
   Status: `done`
-  Goal:consume exact complete Root input/supplier owner,count all actual Profile operation-input fields,and reserve N+1 fresh whole/header passes for N>0 before work. Fresh whole content precedes fallible full N header reservation and exact original selection-pin/source joins. Preserve all original field/row/header loans and first typed causes;N0 does no new work.
-  - [x] REPRODUCE / ISSUE:complete Profile-origin button/logical operation inputs need actual selected Profile header parents before parameter/member borrowing. A cached source demand or successful prefix cannot cover every original input;requested pins and provider-owned pins remain distinct originals.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'bind_profile_source|bind_logical_parameter|parent:' context/profile/binding.rs and parameter.rs →fresh header query/Root-label-snapshot checks and parameter proof borrowing its original header parent,rc=0. Complete direct coverage already retains exact original row indices;actual Profile input fields
-    determine their own count and expected kinds.
-  - [x] FIX:consume complete Root owner,count N Profile inputs and reserve N+1 whole/header passes for N>0 before work. Fresh aggregate content precedes full N result reservation and original row/pin/header joins. Preserve every original operation/field/consumer position/request and source header. N0 makes no new child work. Typed first
-    refusals retain Root/cursor and drop private successful header prefixes.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract profile_input_headers →1 test/9 actual modes pass,rc=0. Repeated logical fields,Profile Buttonhole,actual requested/source pin distinction,original inventory/body/snapshot,semantic2/mixed3,three or four stage passes,N0,short9+3 versus11 capacity,injected
-    resource,late pin,Root-before-pin,snapshot and missing source pass.
-  - [x] NO REGRESSION:cargo test -p sc-core --doc numeric::profile_headers →3 privacy/lifetime/Clone guards pass,rc=0. Affected root_numeric_suppliers →1 test/5 modes pass;cargo fmt -p sc-core -- --check and scoped lib/harness strict Clippy pass,rc=0. Fixture missing id helper and unused library import corrected before green. Whole
-    .5f.2.check/.verify remain deferred;parameter membership remains pending.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish exact complete Profile headers from pending canonical parameter/member/kind/external Derived and rule/family/cohort acceptance. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:local headers and original Profile parent APIs/book own this contract. Commit:STITCHCAD-G1-0928.
-
+  Goal:completed Profile source/header/member scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1086.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.parameters`
   Status: `done`
-  Goal:bind every actual Profile logical parameter/kind/member under its original accepted header with complete fresh work. Borrow stable header storage and the same unique cursor through disjoint parent fields;do not construct a self-referential owner,clone source bodies or invent Profile Derived Root positions.
-  - [x] REPRODUCE / ISSUE:complete Profile headers still need actual parameter metadata/member/kind joins. Existing parameter proofs borrow their exact header parents;the aggregate stage must preserve stable parent storage and one unique cursor without self-reference,source copies or external Derived Root positions.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'parent:|bind_logical_parameter|let Self' context/profile/parameter.rs and profile_headers/parameters.rs →original parent-bound member factory and disjoint Root/header borrows,rc=0. Header storage stays caller-owned;the returned stage holds the unique Root/cursor borrow and immutable complete header slice.
-  - [x] FIX:reserve complete N+1 whole/parameter passes for N>0,freshly account original aggregate/proofs,then fallibly reserve N records and bind every original parameter under its actual header. Preserve header indices,metadata/member/state loans and first typed causes. N0 makes no new work. Dropping either result releases its borrow without
-    resetting prior or new reservations.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract profile_input_parameters →1 test/10 actual modes pass,rc=0. Unsized opaque-metadata provider preserves exact parent/metadata/member and repeated loans,external Profile Derived80 versus Root Unknown90,Unknown Notion at semantic2/mixed3,N0,atomic short
-    capacity,injected resource,late kind/parameter/pin/inventory and missing-source causes. Exhausted re-call makes no walk/query.
-  - [x] NO REGRESSION:cargo test -p sc-core --doc profile_headers::parameters →3 privacy/lifetime/Clone guards pass,rc=0. Affected profile_input_headers →1 test/9 modes pass;cargo fmt -p sc-core -- --check and scoped lib/harness strict Clippy pass,rc=0. One unused test import removed. Whole .5f.2.check/.verify remain deferred;external Profile
-    recipe/G4 truth is not accepted.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish complete Profile parameter/member class from pending original Root/Profile input composition and rule/family/cohort acceptance. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:local lending parameter and original Profile parent APIs/book own this contract. Commit:STITCHCAD-G1-0929.
-
+  Goal:completed Profile source/header/member scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1086.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.compose`
-  Status: `pending`
+  Status: `in_progress`
   Goal:compose complete original Root and Profile operation-input classes with exact parent/source/key loans and one finite cursor. Preserve every raw field,actual canonical state and external Derived scope;rule/signature/output,family/cohort and whole checking remain separate.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.compose.retention`
+  Status: `done`
+  Goal:retain complete closed Profile header/parameter goals and evidence plus committed journals before adding combined-input acceptance. Preserve whole source bytes,all task identities/statuses and fixed ceilings;no old seal,producer or protected-store changes.
+  - [x] REPRODUCE / ISSUE:unpublished1086 refuses generation decoded bound before any live compaction. Candidate16782B is preserved exactly under target/history-proof-0930;original headers/parameters and journals remain committed in45f39bcf. Fixed task ceilings also require retaining the two closed source/member nodes before combined-input acceptance.
+  - [x] ROOT CAUSE (WHY + WHERE):history_generations.py decode_group census →generation2 decoded3992084B with7916B room versus candidate16782B;only2 of8 generations used,rc=0. This is the active group's decoded-byte bound,not working-file/global capacity. Published v2_migration.py seal opens a fresh bounded active group while preserving every unsealed draft/indexed byte.
+  - [x] FIX:v2_migration.py seal target/history-capture-0930 --owner this leaf,then one v2_install.py install after OS-visible idle admission,rc=0. Generation3 opens under unchanged bounds;only root index/new descriptor differ. Independently verify installed cohort/backups before restoring1086;never rerun this old installer after restoration or later edits.
+  - [x] ADDRESSED:installed-seal.json →all1539 original logical records exact,all92 original physical files exact in backup,91 unchanged installed files;only root index/new generation3 differ,rc=0. Both OS-visible check_handoff.sh --idle-cua admissions pass. Candidate1086 restores byte-exact after installed proof;source/candidate/installed
+    identities remain separately captured.
+  - [x] NO REGRESSION:transition_receipts.py --record docs/history/stitchcad-devnotes-part1086.md →3 exact Git spans,rc=0. Independent source/decode/hash/public-reader proof preserves11698 decodedB and all207 task IDs/statuses before two closed nodes become stubs. Existing archive source/code/bounds stay unchanged;no new power-loss or product/Rust acceptance claim.
+  - [x] LOCKSTEP:MEM/index continue pending combined input work;DEV/ledger/archive-reader explain generation2 byte cause,guarded metadata-only seal and whole1086 retention. Task collection fits unchanged ceilings. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:existing published generation and retention contracts
+    own this routine transition. Commit:STITCHCAD-G1-0930.

@@ -46,6 +46,10 @@ Part1085 retains the whole completed Root input/supplier subtree and complete co
 fromddfea0b1. Three exact Git intervals preserve all original goals and focused source/order/proof
 checks before Profile binding;the live tree retains each original task identity/status.
 
+Part1086 retains whole closed Profile header/parameter goals and proofs plus complete journals
+from45f39bcf. Three exact Git intervals preserve original lending/source/member evidence before
+combined input projection;each original task identity/status remains live beside its pointer.
+
 ```bash
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1077.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1078.md
@@ -56,6 +60,7 @@ bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1082.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1083.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1084.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1085.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1086.md
 ```
 
 `HISTORY_ARCHIVE_ROOT` selects the project or a fixture below project `target/`. Destinations stay in
@@ -364,6 +369,30 @@ under `target/history-proof-0883`. Never rerun install/recovery after restoratio
 This verifies retained bytes and existing process-interruption safeguards;it adds no power-loss
 claim. Profile parameter product work stays separately owned/in flight while this prerequisite
 is committed,and no product-code signoff is inferred from archive checks.
+
+### Generation2 decoded-byte boundary —0930
+
+The proposed part1086 was16782 resident record bytes;generation2 had3992084 decoded bytes and
+7916 bytes of headroom under its existing4000000-byte limit. Its working-file count remained below
+64. The new record was copied/hash-verified under `target/history-proof-0930` before removal from
+the unpublished live draft path;no live source goal or journal was compacted at that point.
+
+The published seal workflow prepared generation3 under the unchanged eight-generation envelope.
+It preserved every existing raw record and indexed file. Independent candidate/installed reader
+inventories matched all1539 original logical names,bytes,line counts and hashes. All92 original
+physical files remain exact in the protected transaction backup;91 installed files are unchanged.
+Only the root index and new empty generation3 descriptor differ. No payload was repacked or old
+window rewritten. OS-visible idle checks passed before preparation/installation.
+
+After installed and backup comparison,the candidate record was restored byte-exact. Its three
+Git intervals/public read match11698 decoded source bytes;all207 task IDs/statuses survive the
+subsequent two-node live compaction. Source/candidate/installed manifests remain under
+`target/history-proof-0930`;the guarded transaction remains under `target/history-capture-0930`.
+Never rerun that installer/recovery after draft restoration,later archive edits or commits.
+
+This is a metadata-only generation seal and exact retention proof. Existing budgets and producer
+code remain unchanged;it adds no power-loss or product-runtime claim. Profile input composition
+remains separately owned after this prerequisite.
 
 ### Closed task goals and live navigation —0775
 

@@ -2,54 +2,22 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
-## _(2026-11-05 UTC)_ — complete Profile logical parameters under exact stable parents
+## _(2026-11-05 UTC)_ — generation2 byte boundary and exact closed Profile retention
 
-0929 borrows accepted headers and the same unique Root/cursor through disjoint parent fields.
-N>0 reserves N+1 whole/parameter passes before fresh aggregate content,fallible full N reservation
-and original parent-bound metadata/member/kind factories. Stable header storage stays caller-owned;
-source/domain/state/metadata remain original loans. No self-reference,body clone,selected value or
-external Profile Derived Root position is invented. N0 performs no new child work or demand claim.
-Ten public modes with an unsized opaque-metadata provider prove exact parents/metadata/members,
-repeated target/metadata with separate parents,Profile Derived80 versus distinct Root Unknown90,
-Unknown Notion at ordinal2/mixed3,empty work,atomic short budget,injected resource and typed late
-kind/parameter/pin/inventory/missing causes. Success/error release their borrow without resetting
-reservations;an exhausted repeated call makes no walk/query. Three compiler guards,affected header
-nine modes,format and scoped strict Clippy pass. One unused test import removed before lint green.
-README/LIVE unchanged,G1still6/18 In Progress. Input-class composition,rule/signature/output and
-family/cohort remain pending;whole checking and external Profile/G4 truth remain deferred.
-Promotion declined:local lending parameter/source APIs and book own the implemented contract.
+0930's unpublished1086 draft hit generation2's decoded bound before compaction. It was16782B;
+generation2 held3992084B with7916B room,with only2 of8 allowed groups in use. Candidate bytes were
+copied/hashed into the protected proof store before removing that unpublished path. No live source
+goal/journal was compacted until a valid retained reader result existed.
+Published seal prepared generation3;one guarded install followed OS-visible idle admission. All
+1539 original logical records match before/candidate/installed by name,size,lines and SHA-256.
+All92 original physical files remain exact in backup;91 installed files are unchanged. Only root
+index/new generation3 descriptor differ. No payload is repacked,old window rewritten or cap raised.
+After installed proof,the draft restores byte-exact;three exact Git spans/11698 decodedB and public
+reader bytes pass. All207 task IDs/statuses survive the two-node compaction. Whole committed
+journals remain exact in1086. Source/candidate/installed proof and transaction stores are protected;
+never rerun the old installer/recovery after restored drafts,later archive edits or commits.
+README/LIVE unchanged,G1still6/18 In Progress. Combined Root/Profile input work is next;no new
+Rust/product or power-loss proof follows from this archive transition.
+Promotion declined:existing published generation/retention and book contracts own these facts.
 
-## _(2026-11-05 UTC)_ — complete original Profile operation-input headers
-
-0928 consumes the complete Root member/supplier owner and counts actual Profile-origin Buttonhole
-buttons and LogicalDerivation inputs. N>0 reserves N+1 whole/header passes before fresh complete
-aggregate content and fallible N-record reservation. Existing child source factories then freshly
-charge each Root/provider/request pin before query and exact Root/label/snapshot association.
-Original field/operation/consumer positions/row/request pins and actual provider headers survive;
-matching requests are not deduplicated. N0 makes no new child work or demand claim. Refusals keep
-original Root/cursor,complete count/demand and original child witnesses;private header prefixes drop.
-Nine public modes cover repeated logical fields,Profile button,actual requested/provider pin
-separation,original inventory/body/snapshot,semantic2/mixed3,N0,short atomic budget,injected fresh
-resource refusal,late pin mismatch,Root-before-pin,foreign snapshot and missing source. Three
-compiler guards,affected Root5 modes,format and scoped strict Clippy pass. Fixture id helper and
-unused import corrected before green. Stable owned header parents support the next borrowed
-parameter proofs;no parameter/member/kind/external Derived recipe or whole acceptance is claimed.
-README/LIVE unchanged,G1still6/18 In Progress. Whole verification remains deferred.
-Promotion declined:local header/source APIs and book own the implemented boundary.
-
-## _(2026-11-05 UTC)_ — retain completed Root proof before Profile source binding
-
-0927 retains the whole closed Root input/supplier subtree and complete journals fromddfea0b1
-in1085 before growing Profile ownership. Three exact Git spans/17839 decodedB,independent source/
-hash/public-reader bytes and all203 task IDs/statuses pass before compaction;nine closed nodes
-become retrieval pointers. No old seal,cap,producer or protected evidence changes.
-Actual Profile parameter proofs borrow their original accepted header parents. The next slices
-therefore own headers first,then parameter proofs borrowing stable header storage and the same
-unique cursor through disjoint fields. N>0 header binding needs N+1 reserved passes for one whole
-fresh admission plus N fresh child header calls;N0 does no child work. This is pending interface
-planning,not Profile source/member acceptance or a new Rust verification claim.
-README/LIVE unchanged,G1still6/18 In Progress;whole integration remains deferred. The compiler
-SIGKILL diagnostic retains its existing pre-push owner and unknown cause.
-Promotion declined:existing retention and source-parent API/book own these constraints.
-
-[Whole earlier journal and navigation](docs/history/stitchcad-devnotes-part1085.md) retains exact committed source bytes fromddfea0b1.
+[Whole earlier journal and navigation](docs/history/stitchcad-devnotes-part1086.md) retains exact committed source bytes from45f39bcf.

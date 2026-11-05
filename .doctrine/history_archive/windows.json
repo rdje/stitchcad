@@ -14,6 +14,13 @@
       "bytes": 486,
       "sha256": "5309b9e130c5d69f1a71bb5bd1ebedb537c74ba52a36135c9d1551dc155db470",
       "tree_sha256": "a03ceb3925fe5e248bd96e2052b24e12cb4a814ae8aba34d71c79a69b541979e"
+    },
+    {
+      "path": ".doctrine/history_archive/generation3.json",
+      "lines": 5,
+      "bytes": 61,
+      "sha256": "110a77675e5e5de37562bb9994ea8ef0b2c2c4ee358f1521845157c2e288f515",
+      "tree_sha256": "aa4e8dc9a76d0dc12877c03b7f80101aafdbee24a9c00c25fa394213495e015e"
     }
   ]
 }
