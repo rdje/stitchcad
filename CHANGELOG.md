@@ -3,6 +3,14 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0912 — freshly compose complete semantic source content
+
+Actual garment/Root/provider,record-only raw/normalized programme,extra names,selection rows/pins and
+held proofs now compose in one sink. The provider resource walk runs once;unused pin and ignored
+source failures preserve their original fields. Two focused fixtures,API examples,format and scoped
+strict Clippy pass;the original standalone full demand stays exact. Prospective aggregate admission
+and whole/coupled verification remain pending;G1still6/18 unchanged.
+
 ## STITCHCAD-G1-0911 — freshly account the complete held mixed-proof chain
 
 The original initial/role/source/order/graph/canonical/geometry proof records now compose once in a

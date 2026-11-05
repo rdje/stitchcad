@@ -2,9 +2,11 @@
 use super::{limits, root_with_recipe, scope, Source, TestResult};
 use sc_core::{
     construction::{
-        DraftingOperationInput, DraftingProgramInputs, DraftingProgramLimits, DraftingProgramStep,
-        DraftingProgramStepKind, NormalizedDraftingOperation, PointConstruction,
+        DraftingContextSource, DraftingOperationInput, DraftingProgramInputs,
+        DraftingProgramLimits, DraftingProgramStep, DraftingProgramStepKind,
+        NormalizedDraftingOperation, PointConstruction, PointCoordinate,
     },
+    design::*,
     ontology::EntityId,
     recipe::FormulaExpressionDocument,
 };
@@ -102,5 +104,63 @@ fn forward_nth_reverse_and_interleaved_views_keep_original_scalar_and_native_own
     assert_eq!(interleaved.len(), 0);
     assert!(interleaved.next().is_none() && interleaved.next_back().is_none());
     assert_eq!(source.trace.get(), 0);
+    // Independent record population:3 raw slots +2 normalized statement slots +3 scalar
+    // nodes +3 aligned native slots +2 Point nodes. Borrowed Root/provider data is separate.
+    let record_text = [PointCoordinate::X, PointCoordinate::Y]
+        .into_iter()
+        .map(|coordinate| {
+            let doc = point.coordinate(coordinate);
+            doc.source().len() + doc.canonical().as_str().len()
+        })
+        .sum::<usize>();
+    let mut records = DesignResourceMeter::new(limits(13, record_text, 1)?);
+    program.charge_record_resources(&mut records)?;
+    let record_demand = records.finish()?;
+    assert_eq!(
+        (
+            record_demand.collection_entries(),
+            record_demand.text_bytes(),
+            record_demand.counter_bits()
+        ),
+        (13, record_text, 0)
+    );
+    assert_eq!(source.trace.get(), 0);
+    let mut short = DesignResourceMeter::new(limits(12, record_text, 1)?);
+    let expected = DesignResourceLimitError::Count {
+        unit: DesignResourceCount::CollectionEntries,
+        maximum: 12,
+        consumed: 12,
+        requested: 1,
+        location: DesignResourceLocation {
+            scope: DesignResourceScope::CommandState,
+            owner: Some(EntityId::from_bits(100)),
+            field: "drafting.normalized.point.y.nodes",
+            index: Some(1),
+        },
+    };
+    assert_eq!(program.charge_record_resources(&mut short), Err(expected));
+    assert_eq!(short.finish(), Err(expected));
+    assert_eq!(source.trace.get(), 0);
+    // Preserve the original full producer's one Root/provider walk and complete demand.
+    let mut whole = DesignResourceMeter::new(limits(10000, 10000, 10000)?);
+    program.charge_resources(&mut whole)?;
+    let whole = whole.finish()?;
+    source.trace.set(0);
+    let mut containing = DesignResourceMeter::new(limits(10000, 10000, 10000)?);
+    charge_design_input_resources(&root, &mut containing)?;
+    source.charge_resources(&mut containing)?;
+    let containing = containing.finish()?;
+    assert_eq!(
+        (
+            whole.collection_entries(),
+            whole.text_bytes(),
+            whole.counter_bits()
+        ),
+        (
+            containing.collection_entries() + 13,
+            containing.text_bytes() + record_text,
+            containing.counter_bits()
+        )
+    );
     Ok(())
 }

@@ -696,5 +696,6 @@ require future owned fields to receive accounting.
 The focused existing supplier fixture independently expects23 held records for its Point/Line/
 Offset programme and4 when its mixed programme is empty. Exact/short/repeated/latch checks preserve
 real source/Point/mixed positions and provider traces. This is focused evidence for those fixtures;
-whole native/coupled acceptance remains deferred. The next semantic stage must combine these proof
-records with all original source bodies and selection rows,then admit complete prospective work.
+whole native/coupled acceptance remains deferred. The [complete semantic content producer](semantic-recipes.md#fresh-complete-semantic-content)
+now combines these records with original bodies and selection rows. Complete prospective work
+admission remains next.

@@ -2,7 +2,13 @@
 use super::{
     garment_source, limits, scope, EmptyHost, Frame, Snapshot, Source, SourceError, TestResult,
 };
-use sc_core::{command::DesignRevision, construction::*, design::*, recipe::*};
+use sc_core::{
+    command::DesignRevision,
+    construction::*,
+    design::*,
+    ontology::{SelectedProfilePin, SelectedProfilePinDefinition},
+    recipe::*,
+};
 use std::cell::Cell;
 
 struct Provider<'a> {
@@ -10,6 +16,8 @@ struct Provider<'a> {
     alternate: Source<'a>,
     garment: &'a DesignGarment<EmptyHost>,
     variant: Cell<u8>,
+    walks: Cell<usize>,
+    ignore_refusal: Cell<bool>,
 }
 impl<'a> Provider<'a> {
     fn new(garment: &'a DesignGarment<EmptyHost>) -> Self {
@@ -18,6 +26,8 @@ impl<'a> Provider<'a> {
             alternate: Source::new(garment.inputs()),
             garment,
             variant: Cell::new(0),
+            walks: Cell::new(0),
+            ignore_refusal: Cell::new(false),
         }
     }
 }
@@ -61,10 +71,18 @@ impl DraftingContextSource<EmptyHost> for Provider<'_> {
     ) -> Result<(), DesignResourceLimitError> {
         // Reset the legacy decimal event tracer at each setup accounting boundary. Only the
         // final join's callback-free interval is asserted; long setup chains are not one trace.
+        self.walks.set(self.walks.get() + 1);
         self.base.trace.set(0);
         self.alternate.trace.set(0);
-        self.base.charge_resources(sink)?;
-        self.alternate.charge_resources(sink)
+        let first = self.base.charge_resources(sink);
+        if self.ignore_refusal.get() {
+            let _ = first;
+            let _ = self.alternate.charge_resources(sink);
+            Ok(())
+        } else {
+            first?;
+            self.alternate.charge_resources(sink)
+        }
     }
 }
 impl DraftingGarmentProvider<EmptyHost> for Provider<'_> {
@@ -216,13 +234,28 @@ fn exact_semantic_owners_reject_foreign_records_before_callbacks() -> TestResult
     let geometry = geometry_work.bind_geometry().map_err(|e| e.to_string())?;
     // Local structural admission intentionally accepts nonexistent coordinates. This owner join
     // must not promote them to source coverage or reject them by running an unbounded scan.
-    let raw_selections =
-        DraftingSemanticSelectionInputs::new(vec![DraftingSemanticSelectionRow::Rule {
+    let pin_text = ["unused private profile é", "schema 2", "content 7"];
+    let [profile_id, schema_version, content_version] = pin_text;
+    let selected = SelectedProfilePin::new(SelectedProfilePinDefinition {
+        profile_id: profile_id.into(),
+        schema_version: schema_version.into(),
+        content_version: content_version.into(),
+    })?;
+    let raw_selections = DraftingSemanticSelectionInputs::new(vec![
+        DraftingSemanticSelectionRow::Rule {
             ordinal: usize::MAX,
             origin: DraftingRuleSelection::Design,
-        }]);
+        },
+        DraftingSemanticSelectionRow::Profile {
+            location: DraftingSemanticSelectionLocation::Pocket {
+                pocket: 99,
+                field: DraftingPocketSelectionField::Opening,
+            },
+            selected: &selected,
+        },
+    ]);
     let selections = raw_selections
-        .admit(DraftingSemanticSelectionLimits::new(content, 1))
+        .admit(DraftingSemanticSelectionLimits::new(content, 4))
         .map_err(|e| e.to_string())?;
     source.base.trace.set(0);
     source.alternate.trace.set(0);
@@ -237,7 +270,7 @@ fn exact_semantic_owners_reject_foreign_records_before_callbacks() -> TestResult
         joined.geometry().work().inputs().inputs().graph(),
         &graph
     ));
-    assert_eq!(joined.selections().inputs().rows().len(), 1);
+    assert_eq!(joined.selections().inputs().rows().len(), 2);
     for (candidate, expected) in [
         (&alternate_root, DraftingProgramSemanticOwnerIssue::Root),
         (
@@ -263,5 +296,101 @@ fn exact_semantic_owners_reject_foreign_records_before_callbacks() -> TestResult
     assert_eq!(source.base.trace.get(), 0);
     assert_eq!(source.alternate.trace.get(), 0);
     assert!(!format!("{joined:?}").contains("private"));
+    // Independently walk just the actual garment/provider component. Empty programme/name
+    // records own no entries; the two raw request rows and one graph sentinel add three.
+    let mut garment_meter = DesignResourceMeter::new(content);
+    actual_garment.charge_resources(&mut garment_meter)?;
+    let garment_demand = garment_meter.finish()?;
+    let entries = garment_demand.collection_entries() + 3;
+    let text =
+        garment_demand.text_bytes() + pin_text.iter().map(|value| value.len()).sum::<usize>();
+    let bits = garment_demand.counter_bits();
+    let policy = limits(entries, text, bits.max(1))?;
+    source.walks.set(0);
+    let mut whole = DesignResourceMeter::new(policy);
+    joined.charge_resources(&mut whole)?;
+    let demand = whole.finish()?;
+    assert_eq!(
+        (
+            demand.collection_entries(),
+            demand.text_bytes(),
+            demand.counter_bits()
+        ),
+        (entries, text, bits)
+    );
+    assert_eq!(source.walks.get(), 1);
+    assert_eq!(source.base.trace.get(), 2);
+    assert_eq!(source.alternate.trace.get(), 2);
+    let mut repeated = DesignResourceMeter::new(limits(2 * entries, 2 * text, (2 * bits).max(1))?);
+    source.walks.set(0);
+    joined.charge_resources(&mut repeated)?;
+    joined.charge_resources(&mut repeated)?;
+    let twice = repeated.finish()?;
+    assert_eq!(
+        (
+            twice.collection_entries(),
+            twice.text_bytes(),
+            twice.counter_bits()
+        ),
+        (2 * entries, 2 * text, 2 * bits)
+    );
+    assert_eq!(source.walks.get(), 2);
+    let mut short = DesignResourceMeter::new(limits(entries, text - 1, bits.max(1))?);
+    let expected = DesignResourceLimitError::Count {
+        unit: DesignResourceCount::TextBytes,
+        maximum: text - 1,
+        consumed: text - content_version.len(),
+        requested: content_version.len(),
+        location: DesignResourceLocation {
+            scope: DesignResourceScope::CommandState,
+            owner: Some(garment.inputs().id()),
+            field: "selected_profile.content_version",
+            index: Some(1),
+        },
+    };
+    assert_eq!(joined.charge_resources(&mut short), Err(expected));
+    assert_eq!(short.finish(), Err(expected));
+    let mut short = DesignResourceMeter::new(limits(entries - 1, text, bits.max(1))?);
+    let expected = DesignResourceLimitError::Count {
+        unit: DesignResourceCount::CollectionEntries,
+        maximum: entries - 1,
+        consumed: entries - 1,
+        requested: 1,
+        location: DesignResourceLocation {
+            scope: DesignResourceScope::CommandState,
+            owner: Some(garment.inputs().id()),
+            field: "checked.source_dependencies.offsets",
+            index: None,
+        },
+    };
+    assert_eq!(joined.charge_resources(&mut short), Err(expected));
+    assert_eq!(short.finish(), Err(expected));
+    // An ignored source-sink failure remains the actual first provider field cause.
+    let mut raw_meter = DesignResourceMeter::new(content);
+    charge_design_garment_resources(&garment, &mut raw_meter)?;
+    let raw_demand = raw_meter.finish()?;
+    let frame_text = source.base.frame.data().label.len();
+    let maximum = raw_demand.text_bytes() + frame_text - 1;
+    let expected = DesignResourceLimitError::Count {
+        unit: DesignResourceCount::TextBytes,
+        maximum,
+        consumed: raw_demand.text_bytes(),
+        requested: frame_text,
+        location: source.base.location("drafting.frame.label"),
+    };
+    source.ignore_refusal.set(true);
+    let mut short = DesignResourceMeter::new(limits(entries, maximum, bits.max(1))?);
+    assert_eq!(joined.charge_resources(&mut short), Err(expected));
+    assert_eq!(short.finish(), Err(expected));
+    source.ignore_refusal.set(false);
+    let mut earlier = DesignResourceMeter::new(policy);
+    let first = earlier
+        .charge_entries(entries + 1, source.base.location("earlier.content"))
+        .expect_err("earlier cumulative field");
+    source.walks.set(0);
+    assert_eq!(joined.charge_resources(&mut earlier), Err(first));
+    assert_eq!(earlier.finish(), Err(first));
+    assert_eq!(source.walks.get(), 0);
+    assert_eq!(joined.selections().inputs().rows().len(), 2);
     Ok(())
 }

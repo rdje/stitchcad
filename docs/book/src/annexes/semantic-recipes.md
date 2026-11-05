@@ -2094,5 +2094,50 @@ now counts actual node certificates and ordered dependency records in a cumulati
 now supply their actual held records too. The [complete mixed-proof producer](formula-checked-recipes.md#fresh-mixed-programme-proof-records)
 composes those actual source/order/graph/canonical/geometry records. Complete aggregate admission
 must still combine them with the original garment/program/selection content. The owner join itself still
-performs no content walk. The remaining composition and prospective work checks are not supplied
-by an expression-level demand or an earlier successful source proof.
+performs no content walk. The complete content producer below now composes these bodies and proof records freshly.
+Prospective work admission is still not supplied by an expression-level demand or an earlier
+successful source proof.
+
+## Fresh complete semantic content
+
+`DraftingProgramSemanticInputs::charge_resources(sink)` now freshly composes the original whole
+source content and held proof records after the exact owner join. It appends these components to
+one caller-owned cumulative sink,in order:
+
+1. Actual whole garment and nested input Root,then every provider-held source field.
+2. Original raw programme step/native records and all actual retained normalized source,scalar and
+   native arenas,then the extra initial/output-name records and their original fields.
+3. Every original semantic selection row and selected-pin string,including invalid or unused rows.
+4. The complete original source/order/graph/canonical/geometry held-proof record chain.
+
+The garment component performs the sole required provider resource walk. The programme component
+uses `NormalizedDraftingProgram::charge_record_resources`,which walks raw/normalized records without
+reentering Root or provider accounting. The original normalized programme `charge_resources` API
+still includes its own one Root/provider walk for callers using that complete standalone scope.
+Do not call that full standalone producer inside the already containing garment scope.
+
+```rust
+use sc_core::{construction::*,design::*};
+fn append_original_semantic_content<H:DesignReferenceHost+DesignResourceSource,
+    S:DraftingInitialInputProvider<H>+DraftingGarmentProvider<H>+?Sized>(
+    inputs:&DraftingProgramSemanticInputs<'_, '_, '_, '_, '_, '_, '_, '_, '_, '_,H,S>,
+    sink:&mut dyn DesignResourceSink)->Result<(),DesignResourceLimitError> {
+    inputs.charge_resources(sink)
+}
+```
+
+Earlier proof allowances,normalization estimates and stored demands provide no fresh credit.
+Every complete vector is precharged before its traversal. Original raw source text,opaque labels,
+Profile pin strings,unused records and represented counters remain owned by their actual producers.
+No source/garment/currentness/member/value query,selection match,clone,normalization or result
+allocation occurs. A provider that ignores a sink refusal cannot replace its original first field
+cause. The caller finishes the meter;the method returns no accepted partial demand.
+
+The focused joined-owner fixture independently composes a fresh garment/provider demand with its
+raw selection rows,pin text and retained graph sentinel. It checks one provider walk,exact and
+short unused-pin/proof quotas,repeated whole composition,earlier latches and an ignored provider
+failure. Invalid requested coordinates remain raw data. The normalized programme fixture checks
+its independent13-record raw/arena population without provider calls and preserves the original
+standalone full demand. These are content checks;prospective occurrence/comparison,child-walk and
+result allowances and actual source coverage remain the next admission stages. Whole/coupled
+verification remains deferred to the existing task owners.

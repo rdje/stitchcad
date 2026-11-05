@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — fresh complete semantic content
+
+0912 composes actual garment/Root/provider,raw/normalized programme records,extra names,original
+selection rows/pins and complete held proofs in one cumulative sink. The containing garment owns
+the sole provider walk. A new normalized record component avoids Root/provider reentry;the original
+complete normalized API retains its own Root/provider behavior and reuses the same arena producer.
+The joined unsized-source fixture independently rederives garment/provider content and adds its
+actual rows/pin text/graph sentinel. Exact and short pin/proof/provider fields,repeated composition,
+ignored sink refusal and earlier latch pass. Invalid selection coordinates remain raw. A separate
+populated normalized fixture has13 independently counted records and no callbacks;its original full
+demand equals containing Root/provider plus those records. API examples,format and scoped lint pass.
+Promotion declined:actual resource/API/book is canonical. Aggregate prospective work admission and
+whole/coupled verification remain owned and pending;G1still6/18 In Progress unchanged.
+
 ## _(2026-11-05 UTC)_ — complete actual mixed-proof records
 
 0911 adds retained-record composition through the exact original proof chain. Initial/role/source

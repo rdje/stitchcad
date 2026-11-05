@@ -3,8 +3,8 @@ use super::{NormalizedDraftingOperation, NormalizedDraftingProgram};
 use crate::{
     construction::DraftingContextSource,
     design::{
-        fixed_value, DesignResourceLimitError, DesignResourceLocation, DesignResourceScope,
-        DesignResourceSink, DesignResourceSource,
+        fixed_value, DesignMetadataHost, DesignResourceLimitError, DesignResourceLocation,
+        DesignResourceScope, DesignResourceSink, DesignResourceSource,
     },
     ontology::EntityId,
     recipe::FormulaNormalizedExpression,
@@ -64,14 +64,48 @@ impl<H: DesignResourceSource, S: DraftingContextSource<H> + ?Sized>
         &self,
         sink: &mut dyn DesignResourceSink,
     ) -> Result<(), DesignResourceLimitError> {
+        self.admitted.resource_inputs().charge_resources(sink)?;
+        self.charge_normalized_resources(sink)
+    }
+}
+impl<H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
+    NormalizedDraftingProgram<'_, '_, H, S>
+{
+    /// Append original raw step/native records and every actual retained normalized arena to one
+    /// cumulative sink, without reentering Root or provider accounting. The actual containing
+    /// garment/Root/provider must compose separately. Both raw and normalized complete vectors
+    /// are precharged;unused sources and repeated native inputs remain logical occurrences.
+    /// No lookup,currentness,value,normalization,clone,result allocation or prior-demand credit
+    /// occurs. The caller owns and finishes the meter. This supplies content,not work/admission.
+    /// # Errors
+    /// Original first raw/normalized field refusal or an earlier cumulative sink latch.
+    /// ```
+    /// use sc_core::{construction::*,design::*};
+    /// fn normalized_records<H:DesignMetadataHost,S:DraftingContextSource<H>+?Sized>(
+    ///     program:&NormalizedDraftingProgram<'_, '_,H,S>,sink:&mut dyn DesignResourceSink)
+    ///     ->Result<(),DesignResourceLimitError> {program.charge_record_resources(sink)}
+    /// ```
+    pub fn charge_record_resources(
+        &self,
+        sink: &mut dyn DesignResourceSink,
+    ) -> Result<(), DesignResourceLimitError> {
+        self.admitted
+            .resource_inputs()
+            .charge_record_resources(sink)?;
+        self.charge_normalized_resources(sink)
+    }
+    fn charge_normalized_resources(
+        &self,
+        sink: &mut dyn DesignResourceSink,
+    ) -> Result<(), DesignResourceLimitError> {
         let Self {
             admitted,
             sources,
             recipe,
             operations,
         } = self;
+        fixed_value(admitted);
         let inputs = admitted.resource_inputs();
-        inputs.charge_resources(sink)?;
         let root = inputs.context().scope().root().id();
         sources
             .resource_normalized()
