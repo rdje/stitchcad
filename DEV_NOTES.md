@@ -2,6 +2,15 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — correct the retained acceptance wrap
+
+0936 removes exactly one trailing space introduced by0935's final acceptance wrap. The diff check
+reported it,but the caller printed the unsuccessful result and continued to commit. Subsequent
+mutations/commit must depend on a consumed successful result. Exact non-whitespace bytes stay
+unchanged and git diff --check passes;retention evidence and historical records remain unchanged.
+README/LIVE/book reviewed unchanged,G1still6/18 In Progress;signature work remains next.
+Promotion declined:per-slice authoring correction;COMMIT.md already requires successful checks.
+
 ## _(2026-11-05 UTC)_ — retain closed source contracts before rule signature work
 
 0935 retains the complete closed sourced-declaration/binding-source evidence and whole committed

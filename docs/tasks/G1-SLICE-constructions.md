@@ -879,5 +879,12 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Goal:retain whole closed construction/metadata evidence and committed journals before signature acceptance grows;preserve every original task identity/status and live heading route after exact Git/hash/public-reader proof under unchanged bounds.
   - [x] ROOT CAUSE / ISSUE:committed collection19990L/1496001B leaves10 lines before fixed20000L ceiling;retain closed declaration/decision evidence before signature acceptance grows. All original heading routes must remain live.
   - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1088.md →4 exact Git spans,rc=0. Independent decode/hash/Git/public-reader proof preserves16787 decodedB and complete committed journals before two closed nodes become retrieval stubs. Every original task identity/status and heading remains exact.
-  - [x] NO REGRESSION / LOCKSTEP:target/history-proof-0935/independent1088.json proves public/source bytes and complete task/heading identity,rc=0. Old seals/caps/producers/protected stores unchanged;book reader/journals/resume align. README/LIVE unchanged,G1still6/18 In Progress. 
+  - [x] NO REGRESSION / LOCKSTEP:target/history-proof-0935/independent1088.json proves public/source bytes and complete task/heading identity,rc=0. Old seals/caps/producers/protected stores unchanged;book reader/journals/resume align. README/LIVE unchanged,G1still6/18 In Progress.
     promotion: declined (existing retention contract owns this prerequisite). Initial lesson gate refused noncanonical decline syntax;corrected and wrapped under400B before commit. Commit:STITCHCAD-G1-0935.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.signatures.retention.whitespace`
+  Status: `done`
+  Goal:remove the trailing space introduced by the0935 acceptance wrap and verify the exact follow-up diff before continuing signatures.
+  - [x] ROOT CAUSE / ISSUE:git diff --check returned2 for one trailing space during0935 wrap;the caller continued into commit instead of refusing. Original retention/source proof stays valid;the new acceptance line alone needs correction.
+  - [x] ADDRESSED / NO REGRESSION:remove exactly that trailing space;git diff --check and a before/after non-whitespace equality assertion pass,rc=0. No code or historical record changes. Before commit,tool exit must be consumed and successful rather than merely printed.
+  - [x] LOCKSTEP:MEM/index retain signature frontier;README/LIVE/book reviewed unchanged,G1still6/18 In Progress. Journals record this correction. promotion: declined (per-slice authoring fix;COMMIT.md already requires successful checks). Commit:STITCHCAD-G1-0936.
