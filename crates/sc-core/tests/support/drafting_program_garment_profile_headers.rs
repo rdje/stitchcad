@@ -2,7 +2,7 @@
 use super::{id, limits, scope, Provider, RuleSourceView, TestResult};
 use sc_core::{construction::*, design::*, name::MachineToken, ontology::*, recipe::*, value::*};
 use sc_units::Length;
-fn fixture(case: u8) -> TestResult<DesignGarment<super::EmptyHost>> {
+pub(super) fn fixture(case: u8) -> TestResult<DesignGarment<super::EmptyHost>> {
     let canonical = CanonicalInputs::with_logicals(
         vec![LengthDeclaration::new(LengthDeclarationDefinition {
             id: id(10),

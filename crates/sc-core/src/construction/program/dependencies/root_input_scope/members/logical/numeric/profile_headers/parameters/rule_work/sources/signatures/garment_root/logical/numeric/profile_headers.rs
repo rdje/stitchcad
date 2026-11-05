@@ -15,9 +15,17 @@ use crate::{
 };
 use core::fmt;
 mod error;
+mod parameters;
 pub use error::{
     DraftingProgramGarmentProfileLogicalHeaderError,
     DraftingProgramGarmentProfileLogicalHeaderRefusal,
+};
+pub use parameters::{
+    BoundDraftingProgramGarmentProfileLogicalParameters,
+    DraftingProgramGarmentProfileLogicalParameter,
+    DraftingProgramGarmentProfileLogicalParameterError,
+    DraftingProgramGarmentProfileLogicalParameterRefusal,
+    DraftingProgramGarmentProfileLogicalParametersResult,
 };
 /// One actual original Profile logical input field and its exact checked direct row/pin intent.
 pub struct DraftingProgramGarmentProfileLogicalRequest<'w, 'a, H: DesignMetadataHost> {

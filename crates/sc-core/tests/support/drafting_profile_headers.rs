@@ -301,7 +301,9 @@ impl DraftingProfileLogicalProvider<EmptyHost> for Provider<'_> {
             return Err(SourceError::Missing);
         }
         let metadata = if mode == 4 && late {
-            self.metadata.get(1)
+            self.metadata
+                .iter()
+                .find(|record| record.data().parameter != parameter)
         } else {
             self.metadata
                 .iter()
@@ -317,7 +319,13 @@ impl DraftingProfileLogicalProvider<EmptyHost> for Provider<'_> {
             declaration = self
                 .inputs
                 .logicals()
-                .declaration(id(91))
+                .declaration(id(
+                    if metadata.data().target.kind == LogicalInputKind::PocketOpening {
+                        91
+                    } else {
+                        90
+                    },
+                ))
                 .ok_or(SourceError::Missing)?;
         }
         if mode == 6 && late {

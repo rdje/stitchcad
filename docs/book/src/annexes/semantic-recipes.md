@@ -3321,3 +3321,52 @@ and header success without parameter membership. Actual garment/pin/inventory/bo
 complete demand and callback counts remain exact. The affected existing Profile-header test and
 three compiler guards pass under scoped strict lint. Logical parameters,numeric Profile facets,
 component/Closure/native joins,whole cohort checking and G4 truth remain separately owned.
+
+## Bind original logical Profile garment parameters and members
+
+`BoundDraftingProgramGarmentProfileLogicalHeaders::bind_garment_profile_logical_parameters()`
+borrows stable actual header storage and the same unique Root/cursor through disjoint parent
+fields. The caller keeps the header owner alive. `BoundDraftingProgramGarmentProfileLogicalParameters`
+exposes complete original `root()`,`headers()` and accepted `records()`. Every
+`DraftingProgramGarmentProfileLogicalParameter` retains its original `header_index()`,exact
+`header()` parent and original accepted logical parameter `source()`. The child proof borrows
+that same actual header,not a second header over equal-looking source data.
+
+Each existing `bind_logical_parameter` joins the requested parameter to its actual returned
+metadata field,original accepted Profile header and canonical expected-kind member. Original
+metadata and declaration records remain loans;domain/state/provenance are not cloned or selected.
+The preceding four-field fixture binds Pocket702 to Profile declaration90/PocketOpening and
+hook/bar/button703 to Profile declaration91/NotionSize. Repeated703 requests share the original
+metadata/member records while keeping separate actual header parents and original garment fields.
+Numeric zipper704 remains outside this logical class.
+
+Profile90's state is Derived80. It stays under its actual external Profile source. The distinct
+Root90 is Unknown and the fixture's Root semantic recipe is empty:that cannot turn the external
+reference into a missing Root operation,Root supplier position or checked Profile-internal recipe.
+Profile91 remains Unknown. Static association selects no domain member or hardware value and
+certifies no G4 evidence,source truth or physical execution.
+
+For N>0,the factory atomically reserves N+1 whole/parameter passes before fresh complete original
+aggregate/proof charging,fallible N-record reservation or metadata query. Each existing child
+freshly charges Root/provider/request-pin content before returned-header/parameter/member/kind
+checks. The four-field fixture already reserves eight passes;five parameter passes bring its
+total to thirteen. This stage makes four parameter queries and five resource walks,with no new
+Profile-header,rule,currentness or value query. Earlier demand gives no credit.
+
+N0 adds no walk,work,allocation,query,reservation or demand claim. `child_pass_count()` is zero
+for N0 and N+1 otherwise. `demand()` is only the completed fresh aggregate demand. A refused
+factory retains the same borrowed Root/cursor and complete actual `headers()`,complete
+`parameter_count()`,completed demand and first original lending parameter cause. That child error
+retains the actual header parent,request,returned metadata/member and typed canonical cause when
+available. Private successful prefixes drop. Capacity shortage leaves the cursor unchanged;
+later failure keeps the full stage spent. Dropping a result releases its borrow without resetting
+passes;an exhausted re-call refuses before another walk or callback.
+
+Ten focused modes cover actual parent/metadata/member loans,repeated distinct headers,external
+Derived and Unknown states,N0,atomic8+5 versus12 shortage,fresh resource refusal,late kind/
+parameter/pin/inventory mismatches,first missing source and last unregistered999 after three
+successful queries. The existing operation-parameter ten modes also pass after fixture fault
+injection was made independent of Pocket/Notion ordering. Three compiler guards and scoped strict
+lint preserve ownership. Logical Profile garment parameter membership is implemented with focused
+checks. Numeric Profile facets,complete input composition,component/Closure/native joins,whole
+cohort checking and G4 truth remain separately owned.

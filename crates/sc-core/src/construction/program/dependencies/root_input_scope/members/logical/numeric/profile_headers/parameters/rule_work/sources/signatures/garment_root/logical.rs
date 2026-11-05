@@ -23,11 +23,16 @@ pub use error::{
 };
 pub use numeric::{
     BoundDraftingProgramGarmentProfileLogicalHeaders,
+    BoundDraftingProgramGarmentProfileLogicalParameters,
     BoundDraftingProgramGarmentRootNumericSuppliers, DraftingProgramGarmentProfileLogicalHeader,
     DraftingProgramGarmentProfileLogicalHeaderError,
     DraftingProgramGarmentProfileLogicalHeaderRefusal,
-    DraftingProgramGarmentProfileLogicalHeadersResult, DraftingProgramGarmentProfileLogicalRequest,
-    DraftingProgramGarmentRootNumericSupplierError,
+    DraftingProgramGarmentProfileLogicalHeadersResult,
+    DraftingProgramGarmentProfileLogicalParameter,
+    DraftingProgramGarmentProfileLogicalParameterError,
+    DraftingProgramGarmentProfileLogicalParameterRefusal,
+    DraftingProgramGarmentProfileLogicalParametersResult,
+    DraftingProgramGarmentProfileLogicalRequest, DraftingProgramGarmentRootNumericSupplierError,
     DraftingProgramGarmentRootNumericSupplierRefusal,
     DraftingProgramGarmentRootNumericSuppliersResult,
 };

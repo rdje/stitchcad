@@ -922,8 +922,19 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] LOCKSTEP:MEM/index/DEV/ledger/book name complete scoped logical Profile garment headers and original parameter/member borrowing next. README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local header and existing direct-row/Profile source contracts own scope). Commit:STITCHCAD-G1-0942.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.logical.parameters`
-  Status: `pending`
+  Status: `done`
   Goal:borrow stable original logical Profile headers and same unique cursor through disjoint fields;reserve complete fresh whole/parameter work and bind every original parameter/member/expected kind. Preserve actual metadata/source loans and external Derived states without Root positions;no value/body/cohort acceptance.
+  - [x] REPRODUCE / ISSUE:accepted logical Profile garment headers still need actual parameter metadata/member/kind joins under their stable original parents. Repeated equal-data headers must not substitute,and external Derived80 cannot become a Root supplier because IDs match.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'bind_logical_parameter|parent:|binding:' context/profile/parameter.rs and garment_root/logical/numeric/profile_headers/parameters.rs →existing original-parent lending factory and disjoint Root/header storage,rc=0. Fresh complete work must precede metadata queries and complete result allocation.
+  - [x] FIX:bind_garment_profile_logical_parameters borrows actual stable headers and unique Root/cursor,reserves full N+1 whole/parameter passes,charges aggregate/proofs,reserves all N records,then reuses each original parent-bound member factory. Original metadata/state/source loans survive;N0 adds no work and private prefixes drop.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract garment_profile_logical_parameters →1 test/10 modes pass,rc=0. Actual repeated
+    parents/metadata/member,Profile90 Derived80 versus Root90 Unknown/empty Root recipe,N0,short8+5 versus12,fresh resources,late kind/parameter/pin/inventory and first/last
+    missing causes preserve originals;five walks/four queries/no header requery exact;spent repeat refuses.
+  - [x] NO REGRESSION:profile_input_parameters →1 test/10 modes pass,rc=0. Cargo doc garment_root::logical::numeric::profile_headers::parameters →3 private/non-Clone/lifetime
+    guards pass;scoped strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Fixture missing alias/import corrected;wrong-kind/parameter controls now choose the actual
+    opposite metadata/kind for both Pocket and Notion inputs;no production contract changed.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book name complete scoped logical Profile garment parameters and authentic numeric Profile facet next. README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local parameter and original lending Profile/member contracts own scope). Commit:STITCHCAD-G1-0943.
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric`
   Status: `pending`
   Goal:use an authentic numeric Profile metadata/member facet for every original Profile zipper-length input before full garment-input acceptance. Preserve actual canonical family/kind/state and source-owned metadata under exact selected Profile parents;do not coerce logical sources,infer Root declarations or claim Profile recipe/G4 truth.

@@ -3,6 +3,13 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0943 — bind original logical Profile garment parameters
+
+Stable original header parents now supply actual logical Profile metadata/member/kind loans under
+fresh whole work and one cursor. Ten native modes,affected operation-parameter10 modes,three
+compiler guards,format and scoped strict lint pass. External Derived scope remains Profile-owned.
+Authentic numeric Profile facet leads next;physical/cohort scope and G1six-of18 remain unchanged.
+
 ## STITCHCAD-G1-0942 — bind original logical Profile garment headers
 
 Complete logical Profile garment headers now retain exact original fields,direct rows/pins and

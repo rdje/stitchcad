@@ -2,6 +2,26 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — original logical Profile garment parameter/member loans
+
+0943 borrows stable actual garment headers and the same unique Root/cursor through disjoint
+parent fields. Complete N+1 whole/parameter reservation precedes fresh full aggregate/proof
+charging,N-record reservation and original parent-bound metadata/member/kind factories. Original
+header/metadata/member/domain/state loans survive;external Profile Derived references get no
+Root position or recipe interpretation. Private prefixes drop on first typed cause;N0 adds no
+work or demand and dropping either result restores no spent capacity.
+Ten modes pass with actual four-field parents,repeated703 metadata/member but distinct headers,
+Profile90Derived80 versus Root90Unknown/empty Root recipe,N0,atomic8+5 versus12 shortage,fresh
+resources,late kind/parameter/pin/inventory,first missing source and last unregistered999 after
+three earlier queries. Full demand,five walks/four parameter queries and zero new header/rule/
+currentness/value queries remain exact;spent repeat makes no new callback. Fixture controls now
+choose the opposite actual kind/parameter for both Pocket and Notion ordering;existing operation
+parameter ten modes remain green. Missing fixture alias/unused import corrected before green.
+Three compiler guards,format and scoped strict lint pass. README/LIVE unchanged,G1still6/18 In
+Progress. Authentic numeric Profile metadata/member scope leads next;numeric composition,
+component/Closure/native/cohort and whole .check/.verify remain pending.
+Promotion declined:local parameter and original lending Profile/member contracts own scope.
+
 ## _(2026-11-05 UTC)_ — original logical Profile garment headers and direct pin rows
 
 0942 consumes complete Root garment suppliers into stable logical Profile header parents. Actual
