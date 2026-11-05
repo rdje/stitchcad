@@ -3,6 +3,12 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0961 — save director-requested clean pause
+
+PNT pauses after committed source joins d539e866. OS-visible handoff census passes;brief empty
+and Git clean before this checkpoint. Resume only on request at bounded placement current
+references;existing bounded point/range primitives are named in the pause leaf. No product change.
+
 ## STITCHCAD-G1-0960 — bind complete original Closure placement sources
 
 The source class borrows exact stable role/member/current-work parents and the same finite cursor.

@@ -920,3 +920,20 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
     Book/journals/LIVE/resume align,G1still6/18 In Progress;README unchanged. Whole0958 proof/0955 owner moved exact to evidence;fixed bounds unchanged. Source/current-reference/native/cohort and whole .check/.verify stay pending.
   promotion: declined (existing original members,component work and finite cursor contracts).
   Commit:STITCHCAD-G1-0959.
+## Director-requested pause after complete Closure placement sources
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.pause`
+  Status: `done`
+  Goal:save the director-requested next handoff-ready checkpoint after product d539e866 without
+  activating current-reference policy/code or changing completed product proof claims.
+  - [x] CHECKPOINT:bash scripts/check_handoff.sh --idle-cua with OS-visible access →handoff:OK,
+    no project-owned background job,rc=0. Git clean atd539e866;brief0. All0960 source/lint/API/book
+    proofs remain those of that committed leaf;no broad verification or hosted verdict is added.
+  - [x] RESUME:PNT paused by director;resume only on request at .placements.references in
+    G1-SLICE-constructions.md. Readonly recovery found existing bounded resolve_unique_point /
+    resolve_range_coverage primitives (ontology/topology/unique_point.rs,ontology/range/coverage.rs)
+    and bounded ownership precedent ontology/seam_notch_context/validation/current.rs under
+    crates/sc-core/src/. Derive explicit complete work/retention limits before execution;no new
+    policy or resolver integration was activated. Native/cohort/.check/.verify remain pending.
+  - [x] LOCKSTEP:MEMORY/index/changelog save the pause;README/LIVE/book/DEV reviewed unchanged,
+    G1still6/18 In Progress. No new technical lesson or product behavior. Commit:STITCHCAD-G1-0961.
