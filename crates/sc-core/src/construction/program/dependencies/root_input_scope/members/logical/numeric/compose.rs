@@ -64,7 +64,7 @@ pub struct DraftingProgramRootInputBinding<
     S: DraftingContextSource<H> + ?Sized,
 > {
     member_index: usize,
-    member: DraftingProgramRootInputMember<'v, 'a, H, S>,
+    member: &'r DraftingProgramRootInputMember<'v, 'a, H, S>,
     supplier: Option<DraftingProgramRootInputSupplier<'r, 'v, 'w, 'a, H, S>>,
 }
 impl<'r, 'v, 'w, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
@@ -78,7 +78,7 @@ impl<'r, 'v, 'w, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized
     /// Actual original operation/field/consumer ordinal/mixed position and canonical source loan.
     #[must_use]
     pub const fn member(&self) -> DraftingProgramRootInputMember<'v, 'a, H, S> {
-        self.member
+        *self.member
     }
     /// Actual retained Derived supplier,or None for the member's original non-Derived state.
     #[must_use]
@@ -116,7 +116,6 @@ impl<'v, 'w, 'a, I: ?Sized, H: DesignMetadataHost, S: DraftingContextSource<H> +
             .members
             .records
             .iter()
-            .copied()
             .enumerate()
             .map(move |(member_index, member)| {
                 let supplier = if let Some(record) =

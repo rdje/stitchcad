@@ -10,6 +10,18 @@ pub(super) fn fixture(
     profile_inputs: usize,
     button: bool,
 ) -> TestResult<DesignGarment<EmptyHost>> {
+    build_fixture(empty, combined, profile_inputs, button, false)
+}
+pub(super) fn interleaved_fixture() -> TestResult<DesignGarment<EmptyHost>> {
+    build_fixture(false, false, 2, true, true)
+}
+fn build_fixture(
+    empty: bool,
+    combined: bool,
+    profile_inputs: usize,
+    button: bool,
+    interleaved: bool,
+) -> TestResult<DesignGarment<EmptyHost>> {
     let canonical = CanonicalInputs::with_logicals(
         vec![LengthDeclaration::new(LengthDeclarationDefinition {
             id: id(10),
@@ -121,6 +133,12 @@ pub(super) fn fixture(
             },
         });
     }
+    if interleaved {
+        let last = inputs.pop().ok_or("original last Profile input")?;
+        inputs.insert(1, last);
+        let previous = inputs.pop().ok_or("original previous Profile input")?;
+        inputs.insert(4, previous);
+    }
     let semantic = LogicalDerivationOperation::new(
         LogicalDerivationDefinition {
             id: id(80),
@@ -179,9 +197,16 @@ pub(super) fn fixture(
                             id: id(81),
                             button: NotionSize::Profile(ProfileParameterRef::new(id(703))),
                             policy: id(902),
-                            inputs: vec![],
+                            inputs: if interleaved {
+                                vec![ButtonholePolicyInput {
+                                    role: MachineToken::new("button_numeric")?,
+                                    target: CanonicalInputTarget::Length(id(10)),
+                                }]
+                            } else {
+                                vec![]
+                            },
                         },
-                        ButtonholeOperationLimits::new(0, 0, 0),
+                        ButtonholeOperationLimits::new(1, 14, 1),
                     )?));
                 }
                 operations

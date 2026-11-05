@@ -12,7 +12,9 @@ use crate::{
     },
 };
 use core::fmt;
+mod compose;
 mod error;
+pub use compose::DraftingProgramOperationInput;
 pub use error::{DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal};
 
 /// One actual original input/header parent and its complete original parameter/member/kind proof.

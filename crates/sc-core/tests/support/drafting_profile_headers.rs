@@ -4,6 +4,8 @@ use super::{
 };
 use sc_core::{command::DesignRevision, construction::*, design::*, ontology::*, recipe::*};
 use std::cell::Cell;
+#[path = "drafting_operation_inputs.rs"]
+mod operation_inputs;
 #[path = "drafting_profile_parameters.rs"]
 mod parameters;
 use sc_core::value::*;

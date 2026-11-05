@@ -2851,5 +2851,65 @@ Ten focused public-factory modes cover repeated external Derived members,Unknown
 short remaining capacity,injected fresh resource refusal,late kind/parameter/pin/inventory causes,
 missing source and spent-cursor refusal. Actual metadata/member/header-parent pointers and first
 causes stay exact. Whole/coupled checking remains deferred;the combined Root/Profile operation-
-input view,rule/signature/output,garment/native families and complete cohort remain separate.
+input view is implemented below;rule/signature/output,garment/native families and the complete cohort remain separate.
 No G4 schema/evidence,physical value,currentness revalidation or external Profile order is certified.
+
+## Read every complete Root/Profile operation input in original order
+
+`BoundDraftingProgramProfileParameters::operation_input_count()` reports the complete original
+Root+Profile operation-input population. `operation_inputs()` lends that complete population as a
+fused iterator in genuine mixed/local field order. The two accepted source classes partition the
+original finite input fields;matching IDs or shared metadata never collapse separate consumers.
+
+`DraftingProgramOperationInput` has two typed variants. Root carries the existing canonical member
+and its optional actual logical/numeric Derived supplier. Profile lends the exact accepted input/
+header/metadata/member record from the complete Profile parameter owner. Shared `operation()`,
+`ordinal()`,`position()`,`location()` and `field()` accessors preserve the actual Root consumer and
+its original coordinates and typed field loan. Supplier scopes remain in their respective variant.
+A Profile Derived operation reference never receives a Root supplier position from this view.
+
+The projection merges the two private sorted streams by actual mixed consumer position and
+original local input order. A Buttonhole button precedes its named numeric policy inputs within
+that same operation. The local comparison key is an internal schema-order aid;it is not exposed
+as a mixed,canonical or supplier position. Rule/policy/output headers and garment/native targets
+remain outside this operation-input class.
+
+For example,the focused fixture deliberately interleaves sources within one original logical
+operation,then follows a native step with a Profile button and Root numeric policy input:
+
+| Consumer ordinal / mixed position | Actual original field | Bound source |
+| --- | --- | --- |
+| 1 / 1 | Logical input0 | Root dedicated Length10 |
+| 1 / 1 | Logical input1 | Profile parameter702 |
+| 1 / 1 | Logical input2 | Root general scalar Length20 |
+| 1 / 1 | Logical input3 | Root Boolean30 |
+| 1 / 1 | Logical input4 | Profile parameter702,another original field |
+| 1 / 1 | Logical input5 | Root dedicated Length10,another original field |
+| 1 / 1 | Logical input6 | Root logical declaration90,Unknown |
+| 2 / 3 | Buttonhole button | Profile parameter703,Unknown NotionSize |
+| 2 / 3 | Numeric policy input0 | Root dedicated Length10 |
+
+All nine original field loans and consumer operations remain exact. The repeated Length10 inputs
+retain separate Root records and original numeric supplier associations. The repeated Profile702
+inputs retain separate header parents and original metadata/member loans. The Profile button is
+emitted before the Root numeric policy input at the same genuine mixed position3.
+
+In this fixture,Root membership/suppliers reserve eleven passes,Profile headers reserve four and
+Profile parameters reserve four. Projection reads leave all nineteen passes reserved. They add no
+source/Profile/parameter callback,resource walk,allocation,reservation or new acceptance pass.
+The merge uses constant extra storage and linear traversal;Root views borrow actual retained member
+records while preserving their existing public getters. `nth`,`skip`,full traversal and repeated
+end-of-stream reads keep the original associations. The separate count getter supplies the exact
+population;the combined iterator itself promises fused traversal.
+
+Focused tests compare an independent expected field/source sequence and each actual field loan
+against the original normalized program. Existing Root-only and Profile-tail cases check complete
+counts and source partitions. Original Root/member/supplier,Profile/header/metadata and numeric
+acyclic pointers stay attached to their original owners,with unchanged callbacks and cursor.
+A lifetime compiler guard prevents a combined view escaping its owner loan. Refused factories
+expose no such complete projection;prefix iteration reads an already complete accepted input class.
+
+This completes the scoped Root/Profile operation-input source/member/supplier classes. Original
+rule/policy work,source bodies,signatures and canonical outputs remain next,followed by garment/
+native families and complete semantic cohort acceptance. Whole/coupled checking and physical
+execution remain with their existing tasks. G4 truth and external Profile recipe/order are separate.

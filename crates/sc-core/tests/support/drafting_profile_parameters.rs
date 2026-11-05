@@ -202,6 +202,15 @@ fn profile_input_parameters_retain_actual_parent_metadata_members_states_and_cur
         if matches!(case, 0 | 8 | 9) {
             let proof = result.map_err(|e| e.to_string())?;
             assert_eq!(proof.records().len(), header_count);
+            assert_eq!(proof.operation_input_count(), 5 + header_count);
+            assert_eq!(proof.operation_inputs().count(), 5 + header_count);
+            assert_eq!(
+                proof
+                    .operation_inputs()
+                    .filter(|input| matches!(input, DraftingProgramOperationInput::Profile(_)))
+                    .count(),
+                header_count
+            );
             assert_eq!(proof.headers().len(), header_count);
             assert_eq!(
                 proof.demand(),

@@ -2,6 +2,25 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — complete original Root/Profile operation-input projection
+
+0931 adds exact operation_input_count and a fused constant-storage linear operation_inputs merge.
+Actual mixed/local fields choose order;typed Root and Profile variants preserve every original
+member/supplier or header/metadata/member proof. Shared consumer/field getters lend originals and
+change no source calls,resource walks,allocation,reservations or acceptance. Root bindings now
+borrow actual retained members internally while keeping public getters unchanged.
+The independent expected nine-field fixture interleaves Profile fields among Root inputs,then
+places a Profile button before a Root numeric input at semantic2/mixed3. All source/field/operation/
+parent/acyclic loans,nth/skip/fused reads and nineteen reserved passes remain exact. Root-only and
+Profile-tail counts pass in the existing ten-mode parameter test;the five-mode Root supplier test
+also passes. Three combined/Root compiler guards,format and scoped strict Clippy pass. Fixture
+field equality was corrected to pointer identity;redundant Iterator supertrait removed before lint.
+LIVE product notes now name scoped Root/Profile input binding;gate snapshot remains G1six of18 In
+Progress and README unchanged. Rule/policy work/source/signature/output and family/cohort remain
+pending;whole checking and external Profile/G4 truth remain deferred. Stable Rule work/source
+parents require their existing lending boundaries,so original work admission leads next.
+Promotion declined:local original-input/source API and book own the implemented scope.
+
 ## _(2026-11-05 UTC)_ — generation2 byte boundary and exact closed Profile retention
 
 0930's unpublished1086 draft hit generation2's decoded bound before compaction. It was16782B;

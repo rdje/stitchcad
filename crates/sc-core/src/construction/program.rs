@@ -25,7 +25,7 @@ pub use dependencies::{
     DraftingProgramGeometryRefusal, DraftingProgramGeometryRequest, DraftingProgramGeometryShape,
     DraftingProgramGeometrySupplier, DraftingProgramGeometryTarget,
     DraftingProgramGeometryWorkError, DraftingProgramGeometryWorkRefusal,
-    DraftingProgramNameDependency, DraftingProgramNativeGeometryUse,
+    DraftingProgramNameDependency, DraftingProgramNativeGeometryUse, DraftingProgramOperationInput,
     DraftingProgramPlannedGeometryIssue, DraftingProgramProfileHeaderError,
     DraftingProgramProfileHeaderRefusal, DraftingProgramProfileHeadersResult,
     DraftingProgramProfileInputHeader, DraftingProgramProfileInputParameter,
