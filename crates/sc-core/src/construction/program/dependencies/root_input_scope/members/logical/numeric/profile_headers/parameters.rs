@@ -18,13 +18,17 @@ mod rule_work;
 pub use compose::DraftingProgramOperationInput;
 pub use error::{DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal};
 pub use rule_work::{
-    AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentRootInputMembers,
-    BoundDraftingProgramGarmentRootLogicalSuppliers,
+    AdmittedDraftingProgramRuleWork, BoundDraftingProgramGarmentProfileLogicalHeaders,
+    BoundDraftingProgramGarmentRootInputMembers, BoundDraftingProgramGarmentRootLogicalSuppliers,
     BoundDraftingProgramGarmentRootNumericSuppliers, BoundDraftingProgramRuleSignatures,
-    BoundDraftingProgramRuleSources, DraftingProgramGarmentRootInputMember,
-    DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
-    DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
-    DraftingProgramGarmentRootLogicalSupplier, DraftingProgramGarmentRootLogicalSupplierError,
+    BoundDraftingProgramRuleSources, DraftingProgramGarmentProfileLogicalHeader,
+    DraftingProgramGarmentProfileLogicalHeaderError,
+    DraftingProgramGarmentProfileLogicalHeaderRefusal,
+    DraftingProgramGarmentProfileLogicalHeadersResult, DraftingProgramGarmentProfileLogicalRequest,
+    DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
+    DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
+    DraftingProgramGarmentRootInputSource, DraftingProgramGarmentRootLogicalSupplier,
+    DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
     DraftingProgramGarmentRootLogicalSuppliersResult,
     DraftingProgramGarmentRootNumericSupplierError,

@@ -18,12 +18,17 @@ mod error;
 mod sources;
 pub use error::{DraftingProgramRuleWorkError, DraftingProgramRuleWorkRefusal};
 pub use sources::{
-    BoundDraftingProgramGarmentRootInputMembers, BoundDraftingProgramGarmentRootLogicalSuppliers,
+    BoundDraftingProgramGarmentProfileLogicalHeaders, BoundDraftingProgramGarmentRootInputMembers,
+    BoundDraftingProgramGarmentRootLogicalSuppliers,
     BoundDraftingProgramGarmentRootNumericSuppliers, BoundDraftingProgramRuleSignatures,
-    BoundDraftingProgramRuleSources, DraftingProgramGarmentRootInputMember,
-    DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
-    DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
-    DraftingProgramGarmentRootLogicalSupplier, DraftingProgramGarmentRootLogicalSupplierError,
+    BoundDraftingProgramRuleSources, DraftingProgramGarmentProfileLogicalHeader,
+    DraftingProgramGarmentProfileLogicalHeaderError,
+    DraftingProgramGarmentProfileLogicalHeaderRefusal,
+    DraftingProgramGarmentProfileLogicalHeadersResult, DraftingProgramGarmentProfileLogicalRequest,
+    DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
+    DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
+    DraftingProgramGarmentRootInputSource, DraftingProgramGarmentRootLogicalSupplier,
+    DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
     DraftingProgramGarmentRootLogicalSuppliersResult,
     DraftingProgramGarmentRootNumericSupplierError,

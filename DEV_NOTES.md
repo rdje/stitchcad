@@ -2,6 +2,26 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — original logical Profile garment headers and direct pin rows
+
+0942 consumes complete Root garment suppliers into stable logical Profile header parents. Actual
+Pocket openings and Closure hook/bar/button fields select original direct rows/pins and expected
+logical kinds. N+1 fresh whole/header passes precede full aggregate/proof content,N-record
+reservation and existing header queries. Original garment/field/row/request/provider-pin/inventory/
+body/snapshot loans remain exact;Root consumers get no position. Header success supplies no
+parameter membership;numeric Profile lengths stay outside this logical class. N0 adds no work or
+demand even when a separate Profile zipper field remains. First typed causes retain original
+owners/request/source witnesses;private successful prefixes drop and spent work is never reset.
+Eleven modes pass:four logical fields with scrambled rows2/4/1/3,repeated parents,numeric704
+separate,numeric-only N0,atomic3+5 versus7 shortage,fresh resources,late pin/schema,Root-before-pin,
+snapshot/missing/request-pin causes and unregistered999 header success. Actual pointers,demand,
+five walks/four queries and zero parameter/rule/value queries remain exact. Three compiler guards
+and the prior Profile-header nine modes pass. Strict lint combined identical fixture quota branches
+before final native/lint green;production bounds/source contracts unchanged.
+README/LIVE unchanged,G1still6/18 In Progress. Stable parameter/member borrowing leads next;
+numeric Profile facets,physical/native/cohort and whole .check/.verify remain pending.
+Promotion declined:local header and existing direct-row/Profile source contracts own scope.
+
 ## _(2026-11-05 UTC)_ — original Root garment numeric Derived sources and acyclic owners
 
 0941 consumes original Root garment member/logical supplier proofs into numeric Derived relations.

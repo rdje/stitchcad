@@ -18,11 +18,16 @@ mod error;
 mod garment_root;
 pub use error::{DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal};
 pub use garment_root::{
-    BoundDraftingProgramGarmentRootInputMembers, BoundDraftingProgramGarmentRootLogicalSuppliers,
-    BoundDraftingProgramGarmentRootNumericSuppliers, DraftingProgramGarmentRootInputMember,
-    DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
-    DraftingProgramGarmentRootInputMembersResult, DraftingProgramGarmentRootInputSource,
-    DraftingProgramGarmentRootLogicalSupplier, DraftingProgramGarmentRootLogicalSupplierError,
+    BoundDraftingProgramGarmentProfileLogicalHeaders, BoundDraftingProgramGarmentRootInputMembers,
+    BoundDraftingProgramGarmentRootLogicalSuppliers,
+    BoundDraftingProgramGarmentRootNumericSuppliers, DraftingProgramGarmentProfileLogicalHeader,
+    DraftingProgramGarmentProfileLogicalHeaderError,
+    DraftingProgramGarmentProfileLogicalHeaderRefusal,
+    DraftingProgramGarmentProfileLogicalHeadersResult, DraftingProgramGarmentProfileLogicalRequest,
+    DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
+    DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
+    DraftingProgramGarmentRootInputSource, DraftingProgramGarmentRootLogicalSupplier,
+    DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
     DraftingProgramGarmentRootLogicalSuppliersResult,
     DraftingProgramGarmentRootNumericSupplierError,

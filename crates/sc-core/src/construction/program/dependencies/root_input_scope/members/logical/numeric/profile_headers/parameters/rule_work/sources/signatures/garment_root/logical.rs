@@ -22,7 +22,11 @@ pub use error::{
     DraftingProgramGarmentRootLogicalSupplierRefusal,
 };
 pub use numeric::{
-    BoundDraftingProgramGarmentRootNumericSuppliers,
+    BoundDraftingProgramGarmentProfileLogicalHeaders,
+    BoundDraftingProgramGarmentRootNumericSuppliers, DraftingProgramGarmentProfileLogicalHeader,
+    DraftingProgramGarmentProfileLogicalHeaderError,
+    DraftingProgramGarmentProfileLogicalHeaderRefusal,
+    DraftingProgramGarmentProfileLogicalHeadersResult, DraftingProgramGarmentProfileLogicalRequest,
     DraftingProgramGarmentRootNumericSupplierError,
     DraftingProgramGarmentRootNumericSupplierRefusal,
     DraftingProgramGarmentRootNumericSuppliersResult,

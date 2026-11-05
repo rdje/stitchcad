@@ -18,8 +18,12 @@ mod error;
 mod signatures;
 pub use error::{DraftingProgramRuleSourceError, DraftingProgramRuleSourceRefusal};
 pub use signatures::{
-    BoundDraftingProgramGarmentRootInputMembers, BoundDraftingProgramGarmentRootLogicalSuppliers,
+    BoundDraftingProgramGarmentProfileLogicalHeaders, BoundDraftingProgramGarmentRootInputMembers,
+    BoundDraftingProgramGarmentRootLogicalSuppliers,
     BoundDraftingProgramGarmentRootNumericSuppliers, BoundDraftingProgramRuleSignatures,
+    DraftingProgramGarmentProfileLogicalHeader, DraftingProgramGarmentProfileLogicalHeaderError,
+    DraftingProgramGarmentProfileLogicalHeaderRefusal,
+    DraftingProgramGarmentProfileLogicalHeadersResult, DraftingProgramGarmentProfileLogicalRequest,
     DraftingProgramGarmentRootInputMember, DraftingProgramGarmentRootInputMemberError,
     DraftingProgramGarmentRootInputMemberRefusal, DraftingProgramGarmentRootInputMembersResult,
     DraftingProgramGarmentRootInputSource, DraftingProgramGarmentRootLogicalSupplier,

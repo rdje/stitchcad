@@ -3261,3 +3261,63 @@ indices,full fresh demand and unchanged callbacks are checked. Three compiler gu
 privacy,non-Clone ownership and owner lifetime. Root logical and numeric supplier classes are now
 implemented with focused checks;Profile garment inputs,component/Closure/native joins,whole
 cohort checking,G4 truth and physical execution remain separately owned.
+
+## Bind original logical Profile garment headers
+
+`BoundDraftingProgramGarmentRootNumericSuppliers::bind_garment_profile_logical_headers()` consumes
+the complete original Root member/supplier owner and its same finite cursor. It binds source
+headers for every actual Profile Pocket opening and Closure hook/bar/button-size field.
+`BoundDraftingProgramGarmentProfileLogicalHeaders::root()` preserves those original Root proofs;
+`records()` owns stable `DraftingProgramGarmentProfileLogicalHeader` parents for later lending
+parameter/member checks. No source body,inventory or pin text is cloned.
+
+Each header's `request()` preserves its actual `occurrence()`,original direct `row_index()`,
+original requested `selected()` pin,parameter ID and expected logical kind. The occurrence retains
+the actual garment/member/index/typed field and Root location. No semantic ordinal or mixed
+consumer position is invented. A Pocket opening expects PocketOpening;a Closure notion-size
+field expects NotionSize. `source()` is the actual accepted Profile header under the original
+Root/pin-label/snapshot contract. Parameter existence and kind membership remain separate.
+
+Original row order need not match consumer order. The focused fixture scrambles five rows while
+its four logical headers remain in original garment/local order:
+
+| Actual logical Profile garment field | Parameter / expected kind | Original row index |
+| --- | --- | --- |
+| Pocket0 opening | 702 / PocketOpening | 2 |
+| Closure0 hook | 703 / NotionSize | 4 |
+| Closure0 bar | 703 / NotionSize | 1 |
+| Closure1 button | 703 / NotionSize | 3 |
+
+Row0 belongs to a separate Profile zipper-length704 field. It remains in the original checked
+request owner and is not bound through this logical class. Numeric Profile length needs its
+actual numeric facet. Repeated hook/bar requests retain separate stable header parents and field
+locations even when each provider response borrows the same original Profile body/inventory.
+Their original requested pin remains distinct from the provider-owned pin whose labels matched.
+
+For N>0,the factory atomically reserves N+1 whole/header passes before fresh full aggregate/proof
+charging,fallible complete N-record reservation or any query. One pass covers the fresh original
+aggregate and N cover the existing `bind_profile_source` calls,each with its own fresh Root/
+provider/request-pin walk before association checks. Earlier demand grants no credit. Original
+checked direct associations choose each actual row/pin;no default selection or same-ID source
+inference replaces it. The fixture's three Root-owned fields reserve three passes;four logical
+Profile headers add five,for eight total. The stage makes four Profile queries and five resource
+walks,with no parameter,rule,currentness or value query.
+
+N0 adds no walk,allocation,lookup,query,reservation or demand claim. The N0 fixture still has the
+separate numeric Profile zipper field:an empty logical class accepts no numeric source or whole
+Profile input cohort. `child_pass_count()` is zero for N0 and N+1 otherwise;`demand()` is the fresh
+complete aggregate only after that entire stage passed. Header association can succeed for an
+unregistered parameter999 because membership is intentionally checked by the next factory.
+
+A typed error preserves the original complete Root/cursor owner,complete header count when known,
+completed aggregate demand and first original source/request/field/row/pin witnesses. Wrong Root
+refuses before a simultaneous wrong pin. Late pin/schema mismatches retain the actual returned
+source. Private successful header prefixes drop. Capacity shortage leaves the cursor unchanged;
+later refusal keeps the whole stage reservation spent.
+
+Eleven focused modes cover repeated original parents,scrambled rows,numeric-only N0,atomic
+shortage,fresh resources,late pin/schema,Root/snapshot/missing-source causes,requested-pin mismatch
+and header success without parameter membership. Actual garment/pin/inventory/body/snapshot loans,
+complete demand and callback counts remain exact. The affected existing Profile-header test and
+three compiler guards pass under scoped strict lint. Logical parameters,numeric Profile facets,
+component/Closure/native joins,whole cohort checking and G4 truth remain separately owned.

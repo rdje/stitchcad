@@ -15,9 +15,16 @@ use crate::{
 };
 use core::fmt;
 mod error;
+mod profile_headers;
 pub use error::{
     DraftingProgramGarmentRootNumericSupplierError,
     DraftingProgramGarmentRootNumericSupplierRefusal,
+};
+pub use profile_headers::{
+    BoundDraftingProgramGarmentProfileLogicalHeaders, DraftingProgramGarmentProfileLogicalHeader,
+    DraftingProgramGarmentProfileLogicalHeaderError,
+    DraftingProgramGarmentProfileLogicalHeaderRefusal,
+    DraftingProgramGarmentProfileLogicalHeadersResult, DraftingProgramGarmentProfileLogicalRequest,
 };
 /// Complete numeric Derived garment-input class retaining original members/logical suppliers and
 /// the same unique cursor. Inline fields acquire no numeric formula or mixed supplier position.

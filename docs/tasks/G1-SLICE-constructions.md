@@ -909,11 +909,18 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] NO REGRESSION / LOCKSTEP:target/history-proof-0940/independent1089.json →public_exact true,source_intervals9,closed_nodes7,rc=0. Old seals/caps/producers/protected stores unchanged. Book reader/journals/resume align;README/LIVE unchanged,G1still6/18 In Progress. promotion: declined (existing retention contract owns this prerequisite). Commit:STITCHCAD-G1-0940.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bind complete actual Profile-owned Pocket/Closure inputs under original direct rows/pins and actual source/parameter/member/kind proofs. Preserve source-owned states and external Derived scope;numeric Profile lengths require an authentic numeric facet before acceptance,never a logical-port cast or same-ID Root inference.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.logical.headers`
-  Status: `pending`
+  Status: `done`
   Goal:consume complete Root garment suppliers and same cursor;count all actual Profile Pocket opening/Closure notion-size fields,reserve fresh N+1 whole/header work before allocation/query,then bind every original direct row/pin/source header. Retain stable original parents for parameter borrowing;no parameter/value/numeric-length acceptance yet.
+  - [x] REPRODUCE / ISSUE:complete Root garment suppliers still leave logical Profile garment source parents unbound. Exact original direct rows/pins and stable source-header storage must precede parameter membership;numeric Profile lengths cannot enter this logical class.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'PocketOpening|ClosureSize|bind_profile_source|associations' context/garment/occurrences.rs,root_input_scope/members/logical/numeric/profile_headers.rs and garment_root/logical/numeric/profile_headers.rs →actual original field/row/header contracts,rc=0. Header parents must remain stable for later borrowed parameter proofs.
+  - [x] FIX:bind_garment_profile_logical_headers counts actual Profile opening/notion fields,reserves full N+1 fresh whole/header passes,charges aggregate/proofs,reserves all N records,then reuses each exact original row/pin/header factory. Original garment/field/request/source loans survive;N0 adds no work,numeric fields stay separate and private prefixes drop.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract garment_profile_logical_headers →1 test/11 modes pass,rc=0. Four fields,row order2/4/1/3,repeated parents,numeric704 separate,N0,short3+5 versus7,fresh resources,late pin/schema,Root-before-pin,snapshot/missing/request-pin causes and unregistered999 header scope preserve originals;five walks/four queries exact.
+  - [x] NO REGRESSION:profile_input_headers →1 test/9 modes pass,rc=0. Cargo doc garment_root::logical::numeric::profile_headers →3 private/non-Clone/lifetime guards pass;scoped strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Duplicate fixture quota branches combined before green;no production bounds or source contract changed. Whole .check/.verify deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book name complete scoped logical Profile garment headers and original parameter/member borrowing next. README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local header and existing direct-row/Profile source contracts own scope). Commit:STITCHCAD-G1-0942.
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.logical.parameters`
   Status: `pending`
   Goal:borrow stable original logical Profile headers and same unique cursor through disjoint fields;reserve complete fresh whole/parameter work and bind every original parameter/member/expected kind. Preserve actual metadata/source loans and external Derived states without Root positions;no value/body/cohort acceptance.

@@ -4,6 +4,8 @@ use super::{
     TestResult,
 };
 use sc_core::{construction::*, design::*, recipe::*};
+#[path = "drafting_program_garment_profile_headers.rs"]
+mod garment_profile_headers;
 #[path = "drafting_program_garment_root_logical.rs"]
 mod garment_root_logical;
 #[path = "drafting_program_garment_root_members.rs"]

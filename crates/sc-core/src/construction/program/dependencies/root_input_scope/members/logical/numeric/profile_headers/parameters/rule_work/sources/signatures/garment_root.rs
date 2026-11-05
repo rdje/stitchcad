@@ -22,9 +22,13 @@ pub use error::{
     DraftingProgramGarmentRootInputMemberError, DraftingProgramGarmentRootInputMemberRefusal,
 };
 pub use logical::{
+    BoundDraftingProgramGarmentProfileLogicalHeaders,
     BoundDraftingProgramGarmentRootLogicalSuppliers,
-    BoundDraftingProgramGarmentRootNumericSuppliers, DraftingProgramGarmentRootLogicalSupplier,
-    DraftingProgramGarmentRootLogicalSupplierError,
+    BoundDraftingProgramGarmentRootNumericSuppliers, DraftingProgramGarmentProfileLogicalHeader,
+    DraftingProgramGarmentProfileLogicalHeaderError,
+    DraftingProgramGarmentProfileLogicalHeaderRefusal,
+    DraftingProgramGarmentProfileLogicalHeadersResult, DraftingProgramGarmentProfileLogicalRequest,
+    DraftingProgramGarmentRootLogicalSupplier, DraftingProgramGarmentRootLogicalSupplierError,
     DraftingProgramGarmentRootLogicalSupplierRefusal,
     DraftingProgramGarmentRootLogicalSuppliersResult,
     DraftingProgramGarmentRootNumericSupplierError,
