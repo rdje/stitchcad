@@ -67,9 +67,11 @@ pub use semantic_coverage::{
 };
 mod root_input_scope;
 pub use root_input_scope::{
-    BoundDraftingProgramRootInputMembers, DraftingProgramRootInputMember,
-    DraftingProgramRootInputMemberError, DraftingProgramRootInputMemberRefusal,
-    DraftingProgramRootInputMembersResult, DraftingProgramRootInputScope,
-    DraftingProgramRootInputScopeError, DraftingProgramRootInputScopeResult,
-    DraftingProgramRootInputSource,
+    BoundDraftingProgramRootInputMembers, BoundDraftingProgramRootLogicalSuppliers,
+    DraftingProgramRootInputMember, DraftingProgramRootInputMemberError,
+    DraftingProgramRootInputMemberRefusal, DraftingProgramRootInputMembersResult,
+    DraftingProgramRootInputScope, DraftingProgramRootInputScopeError,
+    DraftingProgramRootInputScopeResult, DraftingProgramRootInputSource,
+    DraftingProgramRootLogicalSupplier, DraftingProgramRootLogicalSupplierError,
+    DraftingProgramRootLogicalSupplierRefusal, DraftingProgramRootLogicalSuppliersResult,
 };

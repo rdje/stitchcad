@@ -2484,7 +2484,7 @@ The source scope's initial admission and cached demand grant no later fresh cred
 Root member stage must reserve its complete pass/result population and freshly charge that actual
 Root/provider scope under the original work policy **before lookups or result reservation**.
 This owner join itself accepts no operation-input member,Derived supplier/order,Profile source,
-value or whole semantic cohort. Root member binding is implemented below;the supplier stage remains pending.
+value or whole semantic cohort. Root member binding and logical supplier binding are implemented below;numeric supplier composition remains pending.
 
 ## Bind all actual Root operation-input members
 
@@ -2547,22 +2547,69 @@ garment construction checks pass. Private-field/lifetime guards,format and scope
 These are focused checks;whole/coupled verification remains deferred to its existing task owners.
 
 This layer binds members without reading a value. A self-referential Derived logical can therefore
-retain its original member here;the pending Derived supplier/output/order stage must refuse that
-relationship before any complete semantic proof. External Profile Derived operations never become
-Root positions. Rule/signature/output,Profile sources,garment/native joins,source truth,physical
-execution and complete cohort acceptance remain separate.
+retain its original member here;the logical supplier stage below refuses that relationship before
+any complete semantic proof. External Profile Derived operations never become Root positions.
+Rule/signature/output,Profile sources,garment/native joins,source truth,physical execution and
+complete cohort acceptance remain separate.
 
-### Pending Derived supplier scopes
+## Bind actual Root logical Derived suppliers
 
-The next Root supplier stage keeps two original representations distinct. A Root logical Derived
-member names a semantic LogicalDerivation operation;its actual canonical output and genuine
-strict earlier mixed supplier position must be joined. Self/future/missing/wrong-output suppliers
-must refuse before complete semantic acceptance.
+`BoundDraftingProgramRootInputMembers::bind_root_logical_suppliers()` consumes the complete member
+owner and binds every Root logical input whose actual canonical state is Derived. Each relation
+reuses the operation ID from that original state. Numeric inputs and logical states other than
+Derived stay in the retained member owner,without a supplier relation from this stage.
+
+The factory counts the complete logical Derived input population N,including repeated references.
+It reserves all N child passes/results on the original cursor before freshly charging the actual
+Root/provider scope under the original whole-content policy. Earlier scope/member demand grants
+no fresh credit. Full resource success precedes fallible reservation of the entire N-record vector
+and supplier lookup. Each pass bounds one actual Root semantic recipe lookup and one genuine
+mixed-step scan within the original (E+8)² comparison envelope. N=0 performs no child reservation,
+resource walk,record allocation or lookup;its new `demand()` is None.
+
+For each Derived input,in original member order,the factory:
+
+1. Resolves the actual Root semantic operation with required family LogicalDerivation.
+2. Matches its original output field to the consumer's actual canonical logical declaration ID
+   and kind. The input's original source binding already retains that exact canonical record.
+3. Finds that exact operation loan in the complete original normalized mixed program,and retains
+   its genuine semantic ordinal and mixed position.
+4. Requires the supplier's mixed position to be strictly earlier than the consumer's position.
+
+For example,an actual Root supplier at semantic ordinal1/mixed position1 may supply two original
+logical inputs of the operation at semantic ordinal2/mixed position3,with a native step between.
+Both inputs keep separate relations even when they name the same declaration. The same supplier
+at position3 cannot supply an input at position1,and an operation at position3 cannot supply its
+own input. A matching ID in an external Profile supplies neither a Root member nor a position.
+
+`BoundDraftingProgramRootLogicalSuppliers` privately retains the whole original member owner and
+same updated child cursor through `members()`. Its `records()` covers the complete logical Derived
+class. Each `DraftingProgramRootLogicalSupplier` exposes its original `member_index()`,actual
+`source()` scope/operation,original borrowed `output()`,genuine supplier `ordinal()` and `position()`.
+The indexed member retains the genuine consumer field,operation,ordinal,position and canonical
+source loan. No body,domain,state or selected value is copied into the relation.
+
+`DraftingProgramRootLogicalSupplierError` retains the complete preceding member owner through
+`owner()`,the complete `supplier_count()`,only a successfully completed fresh `demand()`,and the
+first typed `refusal()`. Whole child-capacity refusal is atomic and precedes any resource walk.
+Resource and allocator errors preserve their concrete causes. Lookup refuses with the original
+requested operation/family,exact scope and lending missing/kind cause. Output mismatch retains
+the actual supplier/output witness;Order retains that witness and its genuine ordinal/position.
+Every field refusal carries the original consumer member index. A later failure drops all private
+supplier records and exposes no successful supplier prefix;the preceding member proof remains.
+
+Focused real-owner fixtures check earlier/repeated suppliers,self/future refusal,missing and wrong
+operation family,wrong output identity/kind,insufficient remaining child capacity,empty logical
+Derived work and a late self failure after one valid private relation. Privacy,lifetime and unique
+cursor guards supplement the runtime checks. These are focused checks;whole/coupled verification
+remains deferred to the existing checking tasks.
+
+### Pending numeric Derived supplier scope
 
 A numeric Derived member instead names its actual `FormulaSource` expression. Existing
 `FormulaDerivedInput` retains its original canonical declaration and exact source;its `position()`
 is a **canonical family position**. The checked-source and already-held acyclic graph owners
 provide that source proof scope. It receives no synthetic mixed position or logical-operation
-identity. The pending logical,numeric and composition tasks retain those respective original
-owners under the same finite child cursor. None of these supplier stages is implemented or
-verified yet;member-only success remains the boundary described above.
+identity. Numeric supplier binding and final Root supplier composition remain pending under the
+same finite child cursor. Logical supplier success grants no numeric formula-source,Profile/rule,
+family/cohort,source-truth,value or whole semantic acceptance.

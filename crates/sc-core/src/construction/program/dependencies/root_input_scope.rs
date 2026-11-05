@@ -13,9 +13,12 @@ use crate::{
 use core::fmt;
 mod members;
 pub use members::{
-    BoundDraftingProgramRootInputMembers, DraftingProgramRootInputMember,
-    DraftingProgramRootInputMemberError, DraftingProgramRootInputMemberRefusal,
-    DraftingProgramRootInputMembersResult, DraftingProgramRootInputSource,
+    BoundDraftingProgramRootInputMembers, BoundDraftingProgramRootLogicalSuppliers,
+    DraftingProgramRootInputMember, DraftingProgramRootInputMemberError,
+    DraftingProgramRootInputMemberRefusal, DraftingProgramRootInputMembersResult,
+    DraftingProgramRootInputSource, DraftingProgramRootLogicalSupplier,
+    DraftingProgramRootLogicalSupplierError, DraftingProgramRootLogicalSupplierRefusal,
+    DraftingProgramRootLogicalSuppliersResult,
 };
 
 /// Exact owner-join result,retaining original consumer and supplied source-scope witnesses on

@@ -16,7 +16,13 @@ use crate::{
 };
 use core::fmt;
 mod error;
+mod logical;
 pub use error::{DraftingProgramRootInputMemberError, DraftingProgramRootInputMemberRefusal};
+pub use logical::{
+    BoundDraftingProgramRootLogicalSuppliers, DraftingProgramRootLogicalSupplier,
+    DraftingProgramRootLogicalSupplierError, DraftingProgramRootLogicalSupplierRefusal,
+    DraftingProgramRootLogicalSuppliersResult,
+};
 
 /// Original kind-checked Root source view. It reads no value and accepts no Derived supplier/order.
 pub enum DraftingProgramRootInputSource<

@@ -1,144 +1,15 @@
 # CHANGELOG.md
 
-Newest first:completed slices and their focused validation. Earlier ledgers and full historical
-indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
+Newest first:completed slices and focused validation. Earlier records retain their whole journals
+and navigation;the public reader lists every stable logical path.
 
-## STITCHCAD-G1-0923 — clarify pending Root supplier scopes
+## STITCHCAD-G1-0924 — bind actual Root logical Derived suppliers
 
-Pending logical suppliers require genuine semantic output/mixed order;numeric Derived retains
-its original formula-source/checked/acyclic scope with no invented mixed position. Explicit child
-ownership and book/resume pointers preserve that distinction for the next fresh context. Product
-code and G1still6/18 In Progress remain unchanged;PNT and deferred verification remain active.
+Complete logical Derived counting/reservation and fresh source accounting precede original Root
+supplier/output/strict mixed-order joins. Original members/cursor/loans and first typed refusals
+survive without accepted supplier prefixes or values. Ten real fixture modes,three compiler guards,
+format and scoped strict Clippy pass. Retention1084 preserves seven exact Git spans/full journals
+and all200 task identities/statuses before compaction. Numeric/Root composition and whole semantic
+verification remain pending;G1still6/18 In Progress unchanged.
 
-## STITCHCAD-G1-0922 — bind complete actual Root operation-input members
-
-Complete original Root input counting/reservation and fresh source charging now precede actual
-member joins. Original field/source loans,repeated references,states and genuine mixed positions
-survive;failure exposes no successful prefix. Seven real fixture modes plus focused empty/garment,
-compiler,format and strict lint checks pass. Derived supplier/order and remaining source/cohort
-acceptance stay pending;G1still6/18 In Progress unchanged.
-
-## STITCHCAD-G1-0921 — join exact original Root input source owners
-
-The actual checked key/work owner now consumes into an exact Design source-scope join. Root/
-provider/frame/snapshot mismatches retain original witnesses and unchanged child capacity.
-Focused unsized-owner checks,four compiler/API guards,format and scoped strict Clippy pass with
-zero join callbacks. Fresh member binding and Derived/source/cohort verification remain pending;
-G1still6/18 In Progress unchanged.
-
-## STITCHCAD-G1-0920 — attach numeric members to fresh original Root sources
-
-Actual numeric member views now retain the fresh original source scope and exact Root inventory.
-Shared typed lookup errors preserve original witnesses in a private boxed refusal;success allocates
-no workspace. Four focused fixtures,six compiler/API guards,format and scoped strict Clippy pass.
-Required retention1083 preserves4 Git intervals,all191 task IDs/statuses and46 heading routes with
-independent source/hash/public-byte checks. Aggregate inputs/Derived order and whole verification
-remain pending;G1still6/18 In Progress unchanged.
-
-## STITCHCAD-G1-0919 — bind genuine original numeric targets
-
-Canonical numeric targets now bind directly to actual inventory/member/position without invented
-formula metadata or value reads. Dedicated/general Length,exact scalar kind and typed lending
-causes stay distinct. Two focused fixture tests,three compiler/API guards,format and scoped strict
-Clippy pass. Root source attachment and aggregate source/order verification remain pending;
-G1still6/18 In Progress unchanged.
-
-## STITCHCAD-G1-0918 — retain closed evidence before genuine numeric binding
-
-Whole closed0916–0917 task/journal/ledger bytes remain exact in1082. Three Git spans and independent
-source/hash/public-byte checks pass;all189 task identities/statuses survive compaction under fixed
-ceilings. Product behavior and G1still6/18 In Progress stay unchanged;genuine numeric membership
-is selected next.
-
-## STITCHCAD-G1-0917 — check bounded actual direct selection keys
-
-Fresh complete work admission now precedes actual two-way key matching and private field/row
-associations. Original row indices and genuine mixed order survive;native context remains deferred.
-Focused real-owner cases,stable-sort oracle,API/compiler guards,format and scoped strict Clippy
-pass. Stale book progress prose is reconciled;whole prior lessons remain exact in1081. Source/
-family/cohort acceptance and coupled verification remain pending;G1still6/18 In Progress.
-
-## STITCHCAD-G1-0916 — classify original direct selection needs
-
-Genuine field views now distinguish explicit direct Profile/rule keys from other source fields
-and deferred native target contexts. Five focused fixture tests,format and scoped strict Clippy
-pass without callbacks or source/value acceptance. Actual key/family/cohort acceptance and whole
-verification remain pending;G1still6/18 unchanged. Required retention1081 preserves3 exact Git spans,
-full committed journals and all187 task IDs/statuses;independent hash/source/public bytes pass.
-
-## STITCHCAD-G1-0915 — project genuine original selection coordinates
-
-Original garment,semantic and native field views now project fixed typed request locations with
-actual indices/ordinals/mixed positions. Repeated raw loans remain separate consumers;Walk roles
-stay exact. Four focused fixture tests,format and scoped strict Clippy pass with no callbacks.
-Actual need/coverage/source binding and whole verification remain pending;G1still6/18 unchanged.
-
-## STITCHCAD-G1-0914 — admit finite aggregate child-work capacity
-
-Fresh whole content/populations precede checked P-pass content/matching/result quotas. A unique
-consuming cursor reserves full stages before work and refuses atomically with exact original
-witnesses. Focused runtime/arithmetic/compiler checks,format and scoped strict Clippy pass.
-Whole coverage/source/nested geometry and coupled verification remain pending;G1still6/18 unchanged.
-Required retention1080 preserves4 Git spans/full journals and all183 task IDs/statuses;independent
-hash/source/public-byte checks pass. Fixed caps and prior seals remain unchanged.
-
-## STITCHCAD-G1-0913 — admit fresh complete direct consumer populations
-
-The exact joined owner now freshly derives garment/semantic/native occurrences,all request rows,
-2OR coverage comparisons and O+R direct association slots before quotas. No row/source/child work
-is accepted. Focused source/quota and arithmetic tests,compiler/API guards,format and scoped strict
-Clippy pass. Finite child-work admission and whole verification remain pending;G1still6/18 unchanged.
-
-## STITCHCAD-G1-0912 — freshly compose complete semantic source content
-
-Actual garment/Root/provider,record-only raw/normalized programme,extra names,selection rows/pins and
-held proofs now compose in one sink. The provider resource walk runs once;unused pin and ignored
-source failures preserve their original fields. Two focused fixtures,API examples,format and scoped
-strict Clippy pass;the original standalone full demand stays exact. Prospective aggregate admission
-and whole/coupled verification remain pending;G1still6/18 unchanged.
-
-## STITCHCAD-G1-0911 — freshly account the complete held mixed-proof chain
-
-The original initial/role/source/order/graph/canonical/geometry proof records now compose once in a
-cumulative sink. Actual native operand/source locations and first refusals survive;prior policies,
-scratch and demands give no credit. Focused real supplier fixture23/4,repeated/latch/short quotas,
-API example,format and scoped strict Clippy pass. Whole source-content/work admission remains next;
-G1still6/18 unchanged,with whole native/coupled verification deferred. Required task containment
-retains four closed nodes and whole committed journals in1079;6 exact Git spans/public bytes and
-all179 task IDs/statuses survive. Caps and prior archives are unchanged.
-
-## STITCHCAD-G1-0910 — freshly compose statement/source/relation proof records
-
-New cumulative producers count actual let/assert operand arrays,complete source proofs and relation
-edges/offsets. Genuine ordinals/source IDs and first field causes survive;empty relations retain their
-terminal offset,and old acyclic scratch is excluded. Focused public-factory tests3,format and scoped
-strict Clippy pass. Complete mixed aggregate work remains pending;G1still6/18 unchanged.
-
-## STITCHCAD-G1-0909 — freshly account checked-expression proof buffers
-
-The cumulative resource producer charges actual certificate and ordered dependency vectors with
-original field locations. Focused exact/short/repeated/latch tests preserve source loans and avoid
-values,including untaken branches and a zero divisor. API example,format and scoped strict Clippy
-pass. Complete aggregate composition/work remains pending;G1still6/18 unchanged.
-
-## STITCHCAD-G1-0908 — join exact aggregate semantic owners
-
-New private owner join retains the exact garment/context,complete geometry proof chain and locally
-admitted request owner. Root/provider/frame/snapshot mismatches refuse before callbacks;invalid
-coordinates stay raw. Focused unsized-provider test,privacy/lifetime doctests,format and scoped strict
-Clippy pass. Fresh aggregate bounds/source coverage remain next;G1still6/18 In Progress.
-
-## STITCHCAD-G1-0907 — resume PNT and complete due artifact cleanup
-
-Fresh reviewed cleanup removes4 regenerable trees/159 files/18967760B with strict OS-visible idle admission. Immediate independent proof finds all selected paths absent,2254 skipped paths preserved and tracked bytes exact. Protected stores remain excluded;aggregate semantic binding resumes next. G1still6/18 unchanged.
-
-## STITCHCAD-G1-0906 — director-requested clean pause
-
-Paused PNT after completed d8f967f7 retention0905. Aggregate semantic ownership/work implementation has not started;resume only on request at .5f.2.dependencies.semantic.binding.work. OS-visible handoff check passes0;product scope and G1still6/18 unchanged.
-
-## STITCHCAD-G1-0905 — retain completed navigation before aggregate binding
-
-Whole closed request/source subtrees and complete committed journal/ledger retained1077/1078;all45 task IDs/statuses preserved. Four Git intervals and public bytes exact. Product behavior and G1still6/18 In Progress unchanged;aggregate work
-resumes next.
-
-[Complete committed ledger and its earlier navigation](docs/history/stitchcad-devnotes-part1077.md) retains exact source bytes from9567e5b0.
+[Complete committed ledger and its earlier navigation](docs/history/stitchcad-devnotes-part1084.md) retains exact source bytes frome1cd611e.

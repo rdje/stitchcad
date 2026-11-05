@@ -38,6 +38,10 @@ Part1083 retains whole completed0085 diagnostic receipts and closed0918–0919 t
 fromc35ecaf5. Four exact Git intervals preserve the full original evidence;all live task identities,
 statuses and historical heading routes remain. Existing closed headings now point to that record.
 
+Part1084 retains whole closed0920–0923 task intervals and complete journals frome1cd611e.
+Seven exact Git intervals preserve original source/member and planning evidence before logical
+supplier acceptance. Every original task identity/status remains live beside its retrieval pointer.
+
 ```bash
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1077.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1078.md
@@ -46,6 +50,7 @@ bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1080.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1081.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1082.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1083.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1084.md
 ```
 
 `HISTORY_ARCHIVE_ROOT` selects the project or a fixture below project `target/`. Destinations stay in

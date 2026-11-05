@@ -12,6 +12,8 @@ use sc_core::{
 use std::cell::Cell;
 #[path = "drafting_root_input_members.rs"]
 mod root_input_members;
+#[path = "drafting_root_logical_suppliers.rs"]
+mod root_logical_suppliers;
 
 struct Provider<'a> {
     base: Source<'a>,

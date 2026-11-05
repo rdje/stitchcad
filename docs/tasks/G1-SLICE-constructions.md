@@ -869,67 +869,55 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.numeric-source`
   Status: `done`
-  Goal:attach genuine numeric target membership to the actual freshly admitted Design semantic source scope,retaining original Root/context/policy/member witnesses and typed causes. Preserve all states without formula metadata or values;aggregate lookups and Derived supplier/order composition remain with the logical parent.
+  Goal:completed0920–0923;[whole original scope/proofs](../history/stitchcad-devnotes-part1084.md).
 
-  - [x] REPRODUCE / ISSUE:genuine numeric inventory membership must retain actual freshly admitted Root/provider source scope before aggregate semantic composition. Extending the shared lookup cause initially triggers Clippy result_large_err at128B;successful source loans must stay allocation-free without weakening typed refusal witnesses.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'numeric_source|LookupFailure|LookupCause::Numeric' context/design_semantic.rs and its lookup.rs →actual Root lookup,shared failure owner and typed numeric cause,rc=0. The additional lending numeric cause enlarges the old inline scope/request/cause record;boxing its private failure preserves all original loans and caller interfaces.
-  - [x] FIX:numeric_source reuses genuine numeric membership only against the fresh scope's actual Root inventory. Private Copy view retains scope/binding/member with no opaque Clone/Debug bound. Shared typed Numeric requests/causes preserve original other-family/kind witnesses. Only refused diagnostics box their private complete failure;successful member views allocate no workspace.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract design_semantic →4 pass,rc=0 after private error boxing. Actual Root/scope/member pointers,foreign equal-data separation,Unknown states,original numeric family/kind causes,source callbacks0 and all original fresh-content/ignored-sink/logical/operation refusals
-    pass. No metadata/value/source-order fact is invented.
-  - [x] NO REGRESSION:cargo test -p sc-core --doc context::design_semantic →6 API/private/lifetime guards pass,rc=0. cargo fmt -p sc-core -- --check and cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings pass,rc=0;the prior128B Result error lint is resolved without suppression. Whole .5f.2.check/.verify and
-    aggregate supplier/source acceptance remain deferred.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book explain fresh Root numeric scope,typed boxed refusals and remaining aggregate operation inputs/Derived order. Required retention preserves whole closed evidence and heading routes. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:local source API/book owns the contract. Commit:STITCHCAD-G1-0920.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.numeric-source.retention`
   Status: `done`
-  Goal:unblock numeric-source acceptance at the fixed task line ceiling by retaining the whole completed0085 diagnostic receipt block and closed0918–0919 task/journal evidence. Preserve every task identity/status and historical heading route,then compact only closed prose;no cap or old-seal changes.
-  - [x] ROOT CAUSE / ISSUE:committed0919 task collection19990L/1496739B leaves10 lines below fixed20000L ceiling;new numeric-source acceptance requires closed-evidence retention. Whole completed0085 receipts are still live alongside recent closed0918–0919 nodes;their historical headings must remain reachable.
-  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1083.md →4 exact Git spans,rc=0. Independent on-disk decode/hash/Git interval and public-byte equality pass before compaction. All191 task IDs/statuses and46 historical heading routes remain exact;completed prose alone becomes retrieval pointers.
-  - [x] NO REGRESSION / LOCKSTEP:independent1083.json →305 lines/25868 decodedB,36034 sealedB,4 source intervals/public_exact true,rc=0. Post-compaction19906L/1485927B fits unchanged ceilings;old seals,caps,producers and protected stores remain unchanged. Book reader and0920 journals align. Commit:STITCHCAD-G1-0920.
+  Goal:completed0920–0923;[whole original scope/proofs](../history/stitchcad-devnotes-part1084.md).
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs`
   Status: `in_progress`
   Goal:compose complete actual Root logical/numeric operation-input members under the original direct-key owner and finite child budget. Preserve original states,actual source scopes,typed causes and genuine Design Derived supplier/output/mixed-order joins without value reads or formula metadata. Profile inputs/rule signatures and final cohort stay separate.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.owners`
   Status: `done`
-  Goal:join the checked actual direct-selection owner and original admitted Design semantic source scope by exact Root/provider/frame/snapshot identity. Retain both original proof owners and the unique unchanged child cursor before Root input lookup;no cached scope demand or new source/work/Derived acceptance.
-  - [x] REPRODUCE / ISSUE:Root operation-input members must belong to the exact original fresh Design source scope,not another equal-ID Root/provider/frame/snapshot. The original checked selection owner also holds a unique finite child cursor that cannot be copied or reset during source association.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'pub fn root_input_scope|RootInputScopeResult' dependencies/root_input_scope.rs →actual held-context identity join and transparent result alias,rc=0. The checked garment/program context and supplied Design source scope expose original Root/provider/held-record loans;identity precedes any later member work.
-  - [x] FIX:consume and retain the actual checked key/work owner plus exact supplied source scope. Root/provider/frame/snapshot identity refusal order preserves every original owner and unchanged cursor. The private owner exposes readonly originals only;success allocates/calls/charges/reserves nothing and grants no fresh scope-demand credit or member/Derived acceptance.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract exact_semantic_owners →1 pass,rc=0. Unsized opaque-source fixture checks actual/equal-ID/other-provider/frame/snapshot/both cases with both valid row sets,all original pointers/associations/policies and unchanged2/0 or1/1 capacity/reservation states. Provider
-    walks and both record traces stay0 throughout each join.
-  - [x] NO REGRESSION:cargo test -p sc-core --doc dependencies::root_input_scope →4 API/private/lifetime/Clone guards pass,rc=0. cargo fmt -p sc-core -- --check and scoped lib/test strict Clippy pass,rc=0. Original long signature triggered type_complexity;transparent result alias resolves it without suppression or runtime/body changes. Whole .5f.2.check/.verify remain deferred.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish exact original owner association from pending fresh member work and Derived order. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:local owner API/book owns the contract. Next .root-inputs.members owns complete reserved/fresh Root membership. Commit:STITCHCAD-G1-0921.
+  Goal:completed0920–0923;[whole original scope/proofs](../history/stitchcad-devnotes-part1084.md).
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.members`
   Status: `done`
-  Goal:after exact source-scope join,reserve the complete Root input-result/pass population and freshly charge original Root/provider content before binding every actual Root logical/numeric operation-input member. Retain genuine original fields and source loans;Profile/rule and Derived supplier/order acceptance remain separate.
-  - [x] REPRODUCE / ISSUE:original Root declaration-button/logical/numeric operation-input fields need complete member association under actual source scopes and the same finite child cursor. A successful prefix,metadata-only target or earlier cached scope demand cannot establish the complete eligible Root class;Profile/rule/Derived obligations remain separate.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'fn request|bind_root_input_members|reserve_child_passes|charge_resources|try_reserve_exact' root_input_scope/members.rs →exhaustive original-field classification,complete count/reservation,fresh original source charge and whole vector reservation,rc=0. Existing exact-scope Root source factories retain
-    typed actual canonical member/field loans without values or formula metadata.
-  - [x] FIX:count all eligible original fields,atomically reserve N passes/results,freshly meter exact Root/provider content,then fallibly reserve N records and bind every original Root field. Preserve genuine operation/field/ordinal/mixed/source loans and all states;no deduplication or cached demand credit. N=0 performs no child work. All
-    partial records drop on failure;original owners,cursor and first typed causes survive.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract complete_root_operation_members →1 pass across7 actual fixture modes,rc=0. Four original inputs include two references to length10 and semantic ordinal2/mixed3;Unknown/Derived states and original scopes stay exact. Missing first/late wrong-kind
-    causes,short2-versus4 capacity before callbacks,Profile deferral and N0 pass;nonempty fresh resource walk1. Fixture constructor argument arities corrected from actual API signatures before green.
-  - [x] NO REGRESSION:focused exact_semantic_owners →1 pass and garment_source →3 pass;cargo test -p sc-core --doc root_input_scope::members →2 private/lifetime guards pass,rc=0 each. cargo fmt -p sc-core -- --check and scoped lib/harness strict Clippy pass,rc=0. Previous Root owner budget/state remains exact on empty work. Whole
-    .5f.2.check/.verify and Derived/source/cohort acceptance remain deferred.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish complete Root member class from still-pending Derived supplier/order,Profile/rule and family/cohort stages. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:the local source/member API/book owns this contract. Next .root-inputs.derived owns actual suppliers and strict order. Commit:STITCHCAD-G1-0922.
+  Goal:completed0920–0923;[whole original scope/proofs](../history/stitchcad-devnotes-part1084.md).
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bind actual Root logical Derived operation/output suppliers with strict genuine mixed order,and numeric Derived inputs through their original formula-source/acyclic owners. Preserve source family/typed causes;formula sources receive no invented mixed position and external Profile Derived IDs never become Root suppliers.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.plan`
   Status: `done`
-  Goal:clarify the two existing supplier scopes and persist a precise implementation decomposition before Derived integration. This is a source-contract plan,not supplier acceptance or feature verification;keep PNT active and the committed resume point recoverable for a fresh context.
-  - [x] ROOT CAUSE / ISSUE:the next Derived branch spans two original supplier scopes. FormulaSource retains id/expression;FormulaDerivedInput.position returns CanonicalInputPosition,not a mixed statement. Semantic Derived logical operations instead require actual output and genuine earlier mixed position. A single undifferentiated position goal risks invented numeric supplier positions.
-  - [x] ADDRESSED:sed of sources.rs1–40 and source_inputs.rs136–187/270–305 →actual source fields,canonical position type and original Derived/source joins,rc=0. Existing checked_sources.rs source(id) returns the actual original checked proof. Pending logical,numeric and composition children now preserve those distinct original
-    owners/scopes;no implementation or verification claim follows.
-  - [x] NO REGRESSION / LOCKSTEP:git diff --check →pass,rc=0. Product code remains at completed0922;MEM/index/DEV/ledger/book explain the pending split. README/LIVE reviewed unchanged,G1still6/18 In Progress. The session-health handoff keeps PNT active;next fresh context starts .derived.logical. Promotion declined:existing public
-    source/input/graph contracts own this distinction. Commit:STITCHCAD-G1-0923.
+  Goal:completed0920–0923;[whole original scope/proofs](../history/stitchcad-devnotes-part1084.md).
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.logical`
-  Status: `pending`
+  Status: `done`
   Goal:reserve complete logical Derived source work before fresh scope accounting;join actual Root LogicalDerivation operations and exact output declarations,then genuine strict earlier mixed suppliers. Preserve actual owners,states and typed first causes;refuse self/future/missing/wrong-output suppliers without values or accepted prefix.
+  - [x] REPRODUCE / ISSUE:completed0922 member-only self-reference is valid membership,not supplier acceptance. Actual logical Derived consumers require their original Root LogicalDerivation output and strict earlier genuine mixed position before any complete semantic proof;numeric formula positions remain separate.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'operation_source|LogicalInputState::Derived|program.steps' context/design_semantic.rs and root_input_scope/members/logical.rs →original kind-checked Root source,canonical state and complete mixed-step pointer join,rc=0. Complete normalized coverage preserves semantic recipe order;raw reordering correctly refuses SemanticOrder.
+  - [x] FIX:consume complete member owner,count/reserve all N logical Derived passes/results,freshly charge actual Root/provider content,then reserve every result and join original supplier/output/strict order. Retain original member index,scope,output field and genuine supplier ordinal/position. N0 does no child work;typed first causes retain
+    original owners/cursor and drop private supplier prefixes.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract root_logical_suppliers →1 test/10 real fixture modes pass,rc=0. Actual earlier/repeated loans,semantic1/mixed1 versus semantic2/mixed3,self/future/missing/wrong-family/output-ID/output-kind,short remaining cursor,N0 and late private-prefix refusal pass. No value or
+    Profile/numeric supplier is accepted.
+  - [x] NO REGRESSION:cargo test -p sc-core --doc root_input_scope::members::logical →3 privacy/lifetime/Clone guards pass,rc=0. Scoped lib/harness strict Clippy and cargo fmt -p sc-core -- --check pass,rc=0. Fixture uses checked get/first after indexing lint,actual13 occurrences and resource trace2 after a walk. Whole .5f.2.check/.verify remain deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish complete logical suppliers from pending numeric/Root composition,Profile/rule/family/cohort and whole acceptance. README/LIVE reviewed unchanged,G1still6/18 In Progress. Read-only external README/claim bodies identical;source book exemption already adopted locally. Promotion declined:local
+    supplier/source API/book owns the contract. Commit:STITCHCAD-G1-0924.
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.numeric`
   Status: `pending`
   Goal:join actual dedicated-length/general-scalar Derived members to original FormulaDerivedInput,checked source and exact already-held acyclic graph owners. Preserve target/source/kind identity and complete fresh work bounds;invent no formula metadata,mixed position or executable result.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.compose`
   Status: `pending`
   Goal:compose complete logical and numeric Root supplier relations with exact original member/source/key owners and the same finite child cursor. Retain every original field,typed cause and separate supplier scope;Profile/rule/family/cohort and whole checking remain separate.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived.logical.retention`
+  Status: `done`
+  Goal:retain whole closed0920–0923 source intervals and complete committed journals before adding logical supplier acceptance;preserve every task identity/status and original heading route under fixed task ceilings. No old seal,cap or protected evidence changes.
+  - [x] ROOT CAUSE / ISSUE:task collection19965L/1498442B before new acceptance leaves insufficient fixed-byte headroom. Whole closed0920–0923 source blocks and committed journals must remain exact before live compaction;no archive prefix,cap or original heading route may change.
+  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1084.md →7 exact Git spans,rc=0. Independent decode/hash/Git intervals/public-reader bytes prove32002 decodedB before compaction;all200 task IDs/statuses remain exact at that boundary. Closed blocks alone become retrieval pointers.
+  - [x] NO REGRESSION / LOCKSTEP:independent1084.json records source_intervals7/public_exact true/task_ids_statuses_exact200,rc=0. Task collection remains within unchanged20000L/1500000B ceilings;complete committed journals retained before live retirement. Book reader and0924 journals align;old seals,producers and protected evidence unchanged. Commit:STITCHCAD-G1-0924.
