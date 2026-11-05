@@ -716,11 +716,11 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:closed0901–0904 original selection primitives;[whole scope/proofs](../history/stitchcad-devnotes-part1077.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work`
-  Status: `in_progress`
+  Status: `done`
   Goal:join exact actual garment/context and existing program source/order/acyclic/canonical/geometry proof owners;freshly account all held fields/requests and checked aggregate occurrence,comparison,child-walk and result bounds before queries/reservation. Preserve first original causes.
   Children: `.owners` (exact garment/context and geometry proof join),`.bounds` (fresh complete content and prospective work),`.coverage` (actual direct/source-selection keys after preflight;native target needs/final unused rows remain with family/cohort binders).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.coverage`
-  Status: `in_progress`
+  Status: `done`
   Goal:after complete aggregate work,match explicit relative request coordinates to actual original garment/program/semantic/native occurrences and complete direct Profile/rule needs. Preserve actual owners/first causes;do not certify native target-internal Profile need until authentic target association or treat unconsumed rows as accepted.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical`
   Status: `pending`
@@ -938,9 +938,17 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] NO REGRESSION:cargo fmt -p sc-core -- --check and cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings →pass,rc=0. Original owner/field/source loans remain exact;no source selection or domain/state changes occur. Whole .5f.2.check/.verify and actual coverage/source acceptance remain deferred.
   - [x] LOCKSTEP:MEM/index/DEV/ledger/book explain actual direct need versus deferred target context and remaining key/source/unused-row acceptance. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:the local exhaustive syntax API/book owns the contract. Commit:STITCHCAD-G1-0916.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.coverage.check`
-  Status: `pending`
+  Status: `done`
   Goal:after fresh complete aggregate admission,match all explicit direct keys and required direct Profile/rule needs within admitted 2OR work. Retain exact owners,policy and first original causes with no partial acceptance;defer target-internal need and final unused-row acceptance to authentic family/cohort binders.
 
+  - [x] REPRODUCE / ISSUE:actual direct keys need bounded original row-to-field and field-to-row coverage after complete work admission. Invalid or unused direct coordinates cannot silently count as selection;native target contexts remain provisional. Relevant chapter progress prose also still called implemented primitives the next stage,misstating current reader-visible scope.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'check_direct_selections|try_reserve_exact|merge_fields' semantic_coverage.rs →factory228,reservations258/267,merge132,rc=0. Original admitted O/R/2OR/O+R bounds cover two actual-key scans and complete private association vectors;genuine semantic/native step positions must merge before first missing-key selection.
+  - [x] FIX:fresh complete aggregate admission,fallible O/R reservations,first unmatched original row,then first missing required field in garment/genuine mixed/local order. Retain actual row indices,all original fields and direct/deferred row kinds under one unique child cursor. No actual source/member/value or target-internal need is accepted;private partial vectors drop on failure.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract exact_semantic_owners →1 pass,rc=0. Actual unsized-source fixture covers eight row sets,first invalid row,missing opening,wrong position/role,unneeded field,original6 associations,row indices,typed fresh-content precedence and unchanged cursor refusal;provider
+    walk1,reservation callbacks0. No complete source/cohort claim follows.
+  - [x] NO REGRESSION:cargo test -p sc-core --lib semantic_selection_merge →1 stable-sort oracle pass;--doc dependencies::semantic_coverage →4 API/private/lifetime/Clone guards pass,rc=0 each. cargo fmt -p sc-core -- --check and scoped lib/test strict Clippy pass,rc=0. Whole .5f.2.check/.verify remain deferred;coupled logical/source integration is not claimed.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book reflect direct coverage and remaining logical/garment/native/cohort binding. Stale chapter progress prose is corrected;earlier full lesson journal remains exact in1081 after live-window compaction. README reviewed unchanged;LIVE product notes updated,G1still6/18 In Progress. Promotion declined:the
+    actual coverage API/book owns the contract. Commit:STITCHCAD-G1-0917.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.coverage.needs.retention`
   Status: `done`
   Goal:retain whole committed0914–0915 closed task/lesson/ledger intervals before0916 exceeds the fixed task collection ceiling. Preserve exact source bytes and all task identities/statuses,then replace only completed prose with immutable retrieval pointers. No cap,old seal,producer or protected store changes.

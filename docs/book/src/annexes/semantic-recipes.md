@@ -1084,7 +1084,7 @@ Cached demand and earlier limits never replace accounting;no metadata/value/sour
 This remains individual source/member/kind binding. Aggregate query/comparison work,currentness
 revalidation,semantic dependency graph,Profile schema/evidence truth,physical/value resolution
 and whole-program execution retain their separate owners. Original rule/policy source signatures
-are the next tracked source-port stage.
+are implemented in the following sections.
 
 ## Rule and policy source contract
 
@@ -1762,8 +1762,9 @@ occurs during either stream. An actual empty program yields no fields and remain
 The logical input fixture intentionally retains a self-referential Derived target as raw metadata;
 this view establishes no dependency-order acceptance. The future bounded binder must refuse that
 relation when composing a whole proof. API examples compile the generic getter and refuse private
-ordinal mutation or normalized-owner lifetime escape. Native target occurrences remain the next
-slice;complete request/work/source/cohort and coupled verification remain tracked.
+ordinal mutation or normalized-owner lifetime escape. Native target occurrences,explicit requests,
+fresh aggregate bounds and direct key coverage are implemented below. Actual source/cohort binding
+and coupled verification retain their separate owners.
 
 ## Original raw native semantic fields
 
@@ -1826,8 +1827,9 @@ complete semantic source/work/cohort and coupled verification remain tracked.
 `NormalizedDraftingProgram::native_semantic_dependencies()` now wraps every original raw native
 semantic field with the exact actual normalized program and genuine mixed step. It reuses the
 complete thirteen-family producer above. This completes the planned original occurrence-view
-stage;explicit source-selection requests,aggregate work and actual source/cohort binding remain
-pending. Original coverage/normalization does not supply namespace,kind,dependency-order,currentness
+stage. Explicit requests,fresh aggregate bounds and direct key coverage are implemented below;
+actual source/cohort binding remains pending. Original coverage/normalization supplies no new
+namespace,kind,dependency-order,currentness
 or executable acceptance.
 
 Each private `DraftingProgramNativeSemanticUse` retains `program()`,`step()` and `native()`.
@@ -1860,8 +1862,9 @@ complete request/work/source/family/cohort and whole/coupled verification remain
 ## Explicit semantic source-selection request contract (planned)
 
 Original occurrence views,raw selection records,record-only accounting and local admission are
-implemented below. Actual-scope/source coverage remains **planned**. Raw records hold authored intent and create no actual
-source,member,dependency,Profile value or whole binding proof.
+implemented below,along with fresh aggregate bounds and direct actual-key coverage. Authentic
+target-internal needs,source binding and complete cohort acceptance remain **planned**. Raw records
+hold authored intent and create no actual source,member,dependency,Profile value or whole binding proof.
 
 A request owner will retain one original ordered row vector. A Profile row supplies a fixed typed
 relative occurrence location and an original explicit `SelectedProfilePin` loan. A rule row supplies
@@ -1942,7 +1945,8 @@ physical compatibility,execution and coupled verification remain separate.
 `DraftingSemanticSelectionInputs::new(rows)` now owns the caller's exact original ordered
 `Vec<DraftingSemanticSelectionRow>` without validation,cloning,lookup or source selection. The raw
 owner,typed coordinates,record accounting and local admission are implemented with focused checks.
-Actual scope/coverage,source binding and aggregate work remain the next stages.
+Fresh aggregate work and direct actual-key coverage are implemented below;actual source/target/
+cohort binding remains separate.
 
 A Profile row holds its requested `DraftingSemanticSelectionLocation` and original explicit pin
 loan. A Rule row holds a requested semantic ordinal and explicit Design/Profile origin. All three
@@ -2011,7 +2015,8 @@ the unused final rule pin's original content-version field at row3,after31 bytes
 The exact caller scope/owner and original row index survive. Empty and nonempty walks preserve an
 earlier latched cause;an actual empty row vector contributes0/0/0. The generic API example compiles
 without a host/provider or source association. Local structural admission is implemented below;complete actual
-scope/target/source coverage,aggregate work and whole/coupled verification remain pending.
+target/source/cohort coverage and whole/coupled verification remain pending. Fresh aggregate work
+and direct key coverage are implemented below.
 
 ## Admit complete local semantic selection structure
 
@@ -2056,9 +2061,9 @@ square overflow. API examples compile the local factory and refuse default polic
 private proof mutation and raw-owner lifetime escape.
 
 Raw request records,record accounting,local structural admission and the exact aggregate owner
-join below are implemented with focused checks. The next aggregate work/coverage stage must
-freshly account the entire source universe plus requests and bound every child walk/comparison/
-result before lookup. Native family and final cohort stages still confirm target-internal Profile
+join below are implemented with focused checks. Fresh aggregate work/direct coverage below
+accounts the entire original source universe plus requests and bounds selected finite child work,
+comparisons and result slots before lookup. Native family and final cohort stages still confirm target-internal Profile
 needs and unconsumed rows. Whole `.5f.2.check` and coupled `.verify` remain deferred.
 
 ## Join original aggregate semantic owners
@@ -2083,7 +2088,8 @@ its held fields or outlive its original owners.
 
 This is owner association only. A locally admitted selection with a nonexistent coordinate stays
 inspectable data; this join supplies no coverage or semantic source approval. Fresh complete
-aggregate content/work admission comes next, before actual selection matching or child queries.
+aggregate content/work admission and direct key matching are implemented below;this owner join
+alone still permits no child query.
 Logical, garment and native source binding, complete cohort acceptance, physical execution and
 whole-programme verification retain their separate task owners.
 
@@ -2138,8 +2144,9 @@ original native slots,raw request rows/pin text and held order/graph records. It
 short unused-pin/proof quotas,repeated whole composition,earlier latches and an ignored provider
 failure. Invalid requested coordinates remain raw data. The normalized programme fixture checks
 its independent13-record raw/arena population without provider calls and preserves the original
-standalone full demand. These are content checks;prospective occurrence/comparison,child-walk and
-result allowances and actual source coverage remain the next admission stages. Whole/coupled
+standalone full demand. These are content checks. Prospective occurrence/comparison,selected finite
+child/result allowances and direct key matching are implemented below;actual source/cohort
+acceptance remains separate. Whole/coupled
 verification remains deferred to the existing task owners.
 
 ## Admit complete direct consumer and request populations
@@ -2344,5 +2351,54 @@ ordinals and original loans. The all13-native fixture has30 direct Notch/Walk re
 deferred target contexts,including the same Grainline loan at two positions. Provider traces remain
 zero. Static classification chooses no value,origin,pin or domain member and allocates no result.
 
-Actual bounded key coverage,missing/extra direct rows,authentic target-internal needs,source/member
-acceptance and final unused-row refusal remain with the following aggregate/family/cohort stages.
+The bounded direct-key factory below checks missing/extra direct rows. Authentic target-internal
+needs,source/member acceptance and final unused-row refusal remain with family/cohort stages.
+
+## Check bounded actual direct selection keys
+
+`DraftingProgramSemanticInputs::check_direct_selections(limits)` now freshly admits the complete
+original work policy before allocating or matching. It fallibly reserves exactly O logical field
+association slots and R row-classification slots within the already admitted O+R bound. The
+allocator may choose another physical capacity;the policy measures logical records,not bytes.
+
+First,every supplied row scans actual original fields in original row order. Its key must match a
+required direct field/rule origin or a genuine native target's potential Profile context. Invalid
+coordinates,wrong native roles and Profile rows for non-Profile fields refuse as
+`UnexpectedSelection { row,key }`. No row can silently stand in for another source choice.
+
+Then every original field is visited once:garment inventory/local order,followed by semantic and
+native fields merged by **genuine mixed position**,then original local field order. A required
+key without an explicit row refuses as `MissingSelection { location,key }`. Thus the first
+unmatched supplied row precedes the first missing direct need. Each direction scans at most O×R
+fixed keys,within the admitted 2×O×R bound. No string comparison,source/member query or value read
+occurs. Only the initial required provider resource walk runs.
+
+The private `CheckedDraftingProgramDirectSelections` retains the exact joined owner,original
+policy,fresh complete work admission and the unique consuming child cursor. Its
+`associations()` contains every original field,including fields with `NoDirectSelection`,with
+original location,need and optional original row index. Its `row_kinds()` retains original row
+order as `DirectRequirement` or `DeferredTargetContext`. Later source stages can use these indices
+without repeating the coverage scans. No mutable association table,cursor replacement,Clone or
+lifetime escape is exposed. Later stages reserve complete child costs through the same owner's
+`reserve_child_passes(n)` before work;refusal leaves that cursor unchanged.
+
+For the focused actual Pocket/Grainline fixture,the six associations include the Pocket opening
+at index3 and original native target at index5. With only the opening row,the former points to
+row0 and the latter has no context row. With target context first and opening second,the target
+points to row0 and the opening to row1. Row0 remains **deferred**,not consumed source acceptance. A target
+context alone still refuses the missing Pocket opening. Wrong position/target role,an unneeded
+served-field Profile row and an absent semantic rule coordinate refuse before source work.
+
+Errors retain exact original owner/policy and only completed fresh stage metadata. Original work
+causes and fallible reservation causes remain typed and chained. Private partial vectors are
+dropped on refusal;no accepted field/source prefix escapes. Content/work refusals precede invalid
+keys. Existing source fixtures verify original loans,one fresh provider walk and callback-free
+cursor reservations. A stable-sort oracle independently checks the semantic/native merge and
+local order,including empty component streams. Compiler/API guards cover private fields,owner
+lifetimes and cloning. These are focused checks;coupled semantic/source verification remains
+owned by `.5f.2.check` and `.verify` after the agreed feature set is implemented.
+
+This proof checks direct keys and required direct selections. It accepts no actual source,
+canonical member,rule body,Profile value,native target-internal need or complete semantic cohort.
+Deferred context rows still require authentic family need and final unused-row checks. Logical,
+garment,native and final cohort binders remain the next implementation stages.

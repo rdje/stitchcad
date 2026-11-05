@@ -723,5 +723,199 @@ fn exact_semantic_owners_reject_foreign_records_before_callbacks() -> TestResult
     assert_eq!(source.base.trace.get(), 2);
     assert_eq!(source.alternate.trace.get(), 2);
     assert_eq!(joined.selections().inputs().rows().len(), 2);
+    use DraftingProgramSelectionCoverageRefusal as C;
+    source.walks.set(0);
+    let error = joined
+        .check_direct_selections(&work_limits)
+        .expect_err("first raw invalid key");
+    assert!(matches!(
+        error.refusal(),
+        C::UnexpectedSelection {
+            row: 0,
+            key: DraftingSemanticSelectionKey::Rule {
+                ordinal: usize::MAX
+            }
+        }
+    ));
+    assert!(core::ptr::eq(error.inputs(), &joined));
+    assert!(core::ptr::eq(error.limits(), &work_limits));
+    assert_eq!(error.demand(), Some(demand));
+    assert_eq!(error.population_shape(), Some(shape));
+    assert_eq!(error.work_shape(), Some(work_shape));
+    assert_eq!(source.walks.get(), 1);
+    let error = joined
+        .check_direct_selections(&content_first)
+        .expect_err("whole work precedes invalid key");
+    assert!(matches!(error.refusal(),C::Work(cause) if matches!(cause.refusal(),W::Population(_))));
+    assert_eq!(error.demand(), None);
+    assert_eq!(error.population_shape(), None);
+    assert_eq!(error.work_shape(), None);
+    assert!(std::error::Error::source(&error).is_some());
+    let opening = DraftingSemanticSelectionLocation::Pocket {
+        pocket: 0,
+        field: DraftingPocketSelectionField::Opening,
+    };
+    let target = DraftingSemanticSelectionLocation::Native {
+        position: 1,
+        field: DraftingNativeSelectionField::Target(DraftingNativeSemanticTargetRole::Grainline),
+    };
+    let profile = |location| DraftingSemanticSelectionRow::Profile {
+        location,
+        selected: &selected,
+    };
+    let cases = [
+        vec![],
+        vec![profile(opening)],
+        vec![profile(target), profile(opening)],
+        vec![profile(DraftingSemanticSelectionLocation::Pocket {
+            pocket: 0,
+            field: DraftingPocketSelectionField::Served,
+        })],
+        vec![profile(DraftingSemanticSelectionLocation::Native {
+            position: 0,
+            field: DraftingNativeSelectionField::Target(
+                DraftingNativeSemanticTargetRole::Grainline,
+            ),
+        })],
+        vec![DraftingSemanticSelectionRow::Rule {
+            ordinal: 1,
+            origin: DraftingRuleSelection::Design,
+        }],
+        vec![profile(DraftingSemanticSelectionLocation::Native {
+            position: 1,
+            field: DraftingNativeSelectionField::Target(
+                DraftingNativeSemanticTargetRole::OffsetAllowance,
+            ),
+        })],
+        vec![profile(target)],
+    ];
+    for (case, rows) in cases.into_iter().enumerate() {
+        let row_count = rows.len();
+        let pin_count = rows
+            .iter()
+            .filter(|row| matches!(row, DraftingSemanticSelectionRow::Profile { .. }))
+            .count();
+        let expected_entries = garment_demand.collection_entries() + 4 + row_count;
+        let expected_text = garment_demand.text_bytes()
+            + pin_count * pin_text.iter().map(|value| value.len()).sum::<usize>();
+        let raw = DraftingSemanticSelectionInputs::new(rows);
+        let local = raw
+            .admit(DraftingSemanticSelectionLimits::new(content, 4))
+            .map_err(|e| e.to_string())?;
+        let actual = geometry
+            .semantic_inputs(&actual_garment, &local)
+            .map_err(|e| e.to_string())?;
+        let policy = DraftingProgramSemanticWorkLimits::new(
+            DraftingProgramSemanticPopulationLimits::new(
+                limits(expected_entries, expected_text, bits.max(1))?,
+                6,
+                12 * row_count,
+                6 + row_count,
+            ),
+            2,
+            DraftingProgramSemanticChildContentLimits::new(
+                2 * expected_entries as u128,
+                2 * expected_text as u128,
+                2 * u128::from(bits),
+            ),
+            2 * ((expected_entries + 8) * (expected_entries + 8)) as u128,
+            8 + row_count,
+        );
+        source.walks.set(0);
+        let result = actual.check_direct_selections(&policy);
+        assert_eq!(source.walks.get(), 1);
+        assert_eq!(source.base.trace.get(), 2);
+        assert_eq!(source.alternate.trace.get(), 2);
+        if matches!(case, 1 | 2) {
+            let mut proof = result.map_err(|e| e.to_string())?;
+            assert!(core::ptr::eq(proof.inputs(), &actual));
+            assert!(core::ptr::eq(proof.limits(), &policy));
+            assert_eq!(
+                (
+                    proof.work().demand().collection_entries(),
+                    proof.work().demand().text_bytes(),
+                    proof.work().demand().counter_bits()
+                ),
+                (expected_entries, expected_text, bits)
+            );
+            assert_eq!(proof.associations().len(), 6);
+            for (index, association) in proof.associations().iter().enumerate() {
+                let expected_row = match (case, index) {
+                    (1, 3) => Some(0),
+                    (2, 3) => Some(1),
+                    (2, 5) => Some(0),
+                    _ => None,
+                };
+                assert_eq!(association.row_index(), expected_row);
+            }
+            assert_eq!(
+                proof
+                    .associations()
+                    .get(3)
+                    .ok_or("actual opening association")?
+                    .location(),
+                opening
+            );
+            let native = proof
+                .associations()
+                .get(5)
+                .ok_or("actual target association")?;
+            assert_eq!(native.location(), target);
+            assert_eq!(
+                native.need(),
+                DraftingSemanticSelectionNeed::DeferredTargetProfile(target)
+            );
+            let expected_kinds = if case == 1 {
+                vec![DraftingProgramSelectionRowKind::DirectRequirement]
+            } else {
+                vec![
+                    DraftingProgramSelectionRowKind::DeferredTargetContext,
+                    DraftingProgramSelectionRowKind::DirectRequirement,
+                ]
+            };
+            assert_eq!(proof.row_kinds(), expected_kinds);
+            source.walks.set(0);
+            proof.reserve_child_passes(1).map_err(|e| e.to_string())?;
+            let error = proof
+                .reserve_child_passes(2)
+                .expect_err("same unique cursor after coverage");
+            assert!(matches!(
+                error.refusal(),
+                W::ChildPasses {
+                    allowed: 2,
+                    reserved: 1,
+                    requested: 2
+                }
+            ));
+            assert!(core::ptr::eq(error.inputs(), &actual));
+            assert!(core::ptr::eq(error.limits(), &policy));
+            assert_eq!(
+                (
+                    proof.remaining_child_passes(),
+                    proof.reserved_child_passes()
+                ),
+                (1, 1)
+            );
+            assert_eq!(source.walks.get(), 0);
+            assert!(!format!("{proof:?}").contains("private"));
+        } else {
+            let error = result.expect_err("no accepted coverage prefix");
+            match case {
+                0 | 7 => assert!(
+                    matches!(error.refusal(),C::MissingSelection {location,key:DraftingSemanticSelectionKey::Profile(actual)} if *location==opening && *actual==opening)
+                ),
+                _ => assert!(matches!(
+                    error.refusal(),
+                    C::UnexpectedSelection { row: 0, .. }
+                )),
+            }
+            assert!(core::ptr::eq(error.inputs(), &actual));
+            assert!(core::ptr::eq(error.limits(), &policy));
+            assert!(error.demand().is_some());
+            assert!(error.population_shape().is_some());
+            assert!(error.work_shape().is_some());
+            assert!(!format!("{error:?} {error}").contains("private"));
+        }
+    }
     Ok(())
 }

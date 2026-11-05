@@ -59,3 +59,9 @@ pub use semantic_work::{
     DraftingProgramSemanticWorkError, DraftingProgramSemanticWorkLimits,
     DraftingProgramSemanticWorkRefusal, DraftingProgramSemanticWorkShape,
 };
+mod semantic_coverage;
+pub use semantic_coverage::{
+    CheckedDraftingProgramDirectSelections, DraftingProgramSelectionAssociation,
+    DraftingProgramSelectionCoverageError, DraftingProgramSelectionCoverageRefusal,
+    DraftingProgramSelectionRowKind,
+};

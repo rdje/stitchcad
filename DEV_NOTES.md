@@ -3,6 +3,26 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — bounded actual direct selection-key coverage
+
+0917 freshly admits complete original work before fallible O/R association reservations and two
+bounded key scans. First unmatched original row precedes first missing requirement;garment order
+precedes semantic/native fields merged by genuine mixed position and original local field order.
+All original fields retain original optional row indices. Direct rows and potential native target
+contexts remain separate;the latter are not consumed source acceptance. Private partial vectors
+drop on refusal. The exact owner/policy,fresh metadata and unique child cursor survive success.
+The actual unsized Pocket/Grainline fixture covers eight row sets,missing/extra/wrong-coordinate/
+wrong-role fields,exact indices,earlier content failure and atomic later-stage reservation. One
+provider walk and zero reservation callbacks pass. Stable-sort merge oracle,API/private/lifetime/
+Clone guards,format and scoped strict Clippy pass. Coupled logical/source integration remains with
+whole .5f.2.check/.verify after the agreed source/family feature set;no source/cohort is accepted.
+Chapter progress paragraphs still calling implemented primitives the next stage were corrected.
+The bounded live journal keeps0916/0917;the complete earlier journal is byte-exact in1081. Git
+source hash and exact suffix comparison prove this trim preserves all prior bytes in retention.
+Promotion declined:the local coverage API/book and existing retention own these facts.
+README reviewed unchanged;LIVE product notes now include aggregate bounds/direct keys,G1still6/18
+In Progress. Original logical/rule/Profile/numeric source binding is next.
+
 ## _(2026-11-05 UTC)_ — original direct selection needs
 
 0916 exhaustively classifies genuine original fields as no direct selection,an explicit Profile/
@@ -21,143 +41,4 @@ all187 task IDs/statuses survive. Old seals,caps,producers and protected evidenc
 Promotion declined:local exhaustive classification/API/book and existing retention are canonical.
 README/LIVE reviewed unchanged,G1still6/18 In Progress;bounded actual key coverage is next.
 
-## _(2026-11-05 UTC)_ — genuine original selection coordinates
-
-0915 projects fixed typed coordinates from genuine original garment,semantic and native field
-views. Actual inventory/component/instance/size indices,semantic ordinals and native mixed
-positions stay distinct. Every field variant is exhaustive;coordinates alone grant no row
-coverage,Profile need,source or work allowance. No callback,allocation,clone or value is read.
-Independent fixture sequences cover every constructible Closure kind,both semantic families and
-all13 native families. One exact raw Grainline loan at positions11/16 remains two consumers;Walk
-pair/A/B/Profile roles and original owner loans stay exact. Four focused tests,format and scoped
-strict Clippy pass. The fixture's initial direct indexing was replaced with checked get before
-repeating the checks. Whole/coupled verification stays with .5f.2.check/.verify.
-Promotion declined:the local typed projection/API/book is canonical. README/LIVE reviewed
-unchanged,G1still6/18 In Progress;direct need classification and actual key matching are next.
-
-## _(2026-11-05 UTC)_ — finite aggregate child-work capacity
-
-0914 freshly admits the complete original content/population policy,then checks selected P-pass
-content,existing child matching and A+P result-slot envelopes before ordered child quotas. P is
-explicit finite capacity,not predicted source need. Existing Profile/rule/component child scopes
-fit whole demand under the provider's exhaustive immutable contract. Profile rule-source binding
-performs another Profile admission;multi-walk stages reserve every pass before starting.
-Cumulative content/matching totals use u128;single-child matching and physical record slots remain
-usize. A private non-Clone plan consumes into one nonresettable cursor. Insufficient reservations
-preserve original policy,owner,completed metadata and remaining capacity without callbacks.
-Focused tests cover every child quota,earlier original causes,overflow,zero capacity and cursor
-exhaustion. Compiler guards,format and scoped strict Clippy pass. An erroneous fixture getter was
-removed before green;no extra public accessor was introduced. Actual source/coverage/family joins,
-nested geometry and whole/coupled verification remain owned and pending.
-Required retention preserves whole committed0911–0913 intervals and full journals in1080. Four
-exact Git spans,independent payload/source hashes and public bytes pass before final compaction;
-all183 task IDs/statuses survive. Original0912 acceptance placement is retained byte-exact and its
-live node gains an unambiguous pointer. Caps,old seals and protected evidence remain unchanged.
-Promotion declined:the local API/book and existing retention procedure own these facts.
-README/LIVE reviewed unchanged,G1still6/18 In Progress;next is actual direct selection coverage.
-
-## _(2026-11-05 UTC)_ — fresh direct semantic populations
-
-0913 counts actual garment,ordered semantic/native fields and every raw row only after the whole
-fresh content producer succeeds. Checked occurrence sum,2OR comparisons and O+R association slots
-precede quotas. Private success/error objects borrow the exact original owner and policy;their
-owner type stays generic without requiring opaque source Debug/Clone. Error metadata describes
-only fully completed stages. No child allowance,source coverage,nested geometry or result follows.
-The joined fixture now includes one actual raw native request:5/0/1 fields and2 invalid rows give
-6/24/8. Independent content accounting includes its raw/normalized/order records. Exact and short
-quotas,original first pin cause,one provider walk and raw coordinates pass. Zero/overflow arithmetic,
-default/privacy/lifetime/API guards,format and scoped strict lint pass. Promotion declined:the
-resource/API/book contract is canonical. Finite child-work admission remains next;G1still6/18.
-
-## _(2026-11-05 UTC)_ — fresh complete semantic content
-
-0912 composes actual garment/Root/provider,raw/normalized programme records,extra names,original
-selection rows/pins and complete held proofs in one cumulative sink. The containing garment owns
-the sole provider walk. A new normalized record component avoids Root/provider reentry;the original
-complete normalized API retains its own Root/provider behavior and reuses the same arena producer.
-The joined unsized-source fixture independently rederives garment/provider content and adds its
-actual rows/pin text/graph sentinel. Exact and short pin/proof/provider fields,repeated composition,
-ignored sink refusal and earlier latch pass. Invalid selection coordinates remain raw. A separate
-populated normalized fixture has13 independently counted records and no callbacks;its original full
-demand equals containing Root/provider plus those records. API examples,format and scoped lint pass.
-Promotion declined:actual resource/API/book is canonical. Aggregate prospective work admission and
-whole/coupled verification remain owned and pending;G1still6/18 In Progress unchanged.
-
-## _(2026-11-05 UTC)_ — complete actual mixed-proof records
-
-0911 adds retained-record composition through the exact original proof chain. Initial/role/source
-proofs,mixed steps and actual operands,relation edges/offsets,canonical occurrences and geometry
-requests/suppliers participate once. Exact prior joins already bind shared initials/source parents;
-no identifier-only deduplication or pointer scan is introduced. Every actual vector is precharged,
-and exhaustive owner/variant/fixed-Copy guards expose future dynamic fields. Original source bodies,
-provider payloads and semantic requests remain separate components for the next whole admission.
-The existing real Offset supplier fixture independently expects23 held records,or4 with no mixed
-steps. Focused short fields,repeated composition,latches and unchanged provider traces pass alongside
-original supplier refusals. This covers Point/Other arguments;whole native/coupled checking remains
-with .5f.2.check/.verify. API example,format and scoped strict Clippy pass.
-The mandatory commit hit the task aggregate ceiling by202B. Required retention in the same leaf
-preserves four whole completed0907–0910 node intervals and full committed DEV/ledger snapshots in
-part1079. Six exact Git spans and independent on-disk/public-byte equality pass;all179 task IDs/
-statuses survive final compaction. No cap,old seal,code or producer changed in that repair.
-Promotion declined:actual resource API/book and existing lossless retention are canonical.
-G1still6/18 In Progress unchanged.
-
-## _(2026-11-05 UTC)_ — actual statement/source/relation proof composition
-
-0910 composes checked-expression buffers through actual statement variants and the complete source
-proof vector. Statement locations preserve real one-based ordinals;source operands preserve actual
-source IDs and zero-based source indexes. The relation component charges actual edge/offset arrays,
-including the empty graph's terminal sentinel. Its acyclic wrapper retains only a relation borrow
-and fixed metadata;old scratch totals are not held records. Borrowed bodies remain separately owned.
-Exhaustive schemas and fixed-Copy guards expose future dynamic fields. The focused public-factory
-fixture covers exact/short first causes,repeated components,empty owners,unused Derived sources,
-unchanged Unknown state and aggregate13 source/relation records without cycle scratch. All3 tests,
-format and scoped strict Clippy pass. No source/value/whole-programme approval follows.
-Promotion declined:the actual resource producer/API/book is canonical. Mixed proof records and
-complete fresh aggregate admission remain next;G1still6/18 In Progress unchanged.
-
-## _(2026-11-05 UTC)_ — fresh checked-expression proof records
-
-0909 adds an exhaustive cumulative producer for the actual certificate and dependency arrays.
-Successful record types are Copy and borrow their original normalized/declaration owners;their
-resource bodies compose separately. Earlier proof policies and demands supply no fresh credit.
-The producer charges both complete lengths in order without evaluating,allocating,resetting the
-sink or querying names. Fixed record guards expose future owned fields at compile time.
-Independent grammar trees exercise exact/short quotas,repeated names/composition,empty dependencies,
-earlier error latches,untaken branches and a zero divisor. Focused runtime/API/format/lint pass.
-Promotion declined:the existing resource-component contract and maintained API/book own this fact.
-Statement/source/graph and complete mixed aggregate composition remain next;G1still6/18 unchanged.
-
-## _(2026-11-05 UTC)_ — exact semantic owner association
-
-0908 joins the already existing complete geometry/canonical/source/order/acyclic owner to the actual
-admitted garment context and local selection proof. The private result borrows all original owners;
-first Root/provider/frame/snapshot mismatch retains every supplied witness. Wide provider pointers
-compare storage addresses,matching existing source-record identity semantics. No callback,content
-walk,allocation,value or actual selection coverage occurs. Invalid request coordinates remain raw.
-The focused fixture uses an unsized provider with opaque non-Clone/Debug records;foreign equal-ID
-Roots and equal-looking held records refuse in order. Setup fixes reset the inherited decimal trace
-between accounting boundaries and supply existing nonzero namespace/graph record allowances.
-Focused runtime and privacy/lifetime guards pass;format/scoped strict Clippy pass. Broad .5f.2.check
-and .verify stay deferred. Promotion declined:the maintained API/book/test is the canonical contract.
-G1still6/18 In Progress;next is fresh complete aggregate content and prospective work admission.
-
-## _(2026-11-05 UTC)_ — daily cleanup before resumed aggregate binding
-
-0907 resumes director-requested PNT from the clean0906 pause. The due cleanup freezes four generated
-candidates;review confirms rendered output,old staging snapshots,tool cache and empty temporary data.
-OS-visible apply passes strict idle admission. Immediate independent proof before launcher activation
-confirms four absent paths,all2254 skipped entries present and the complete tracked digest unchanged.
-Audit receipts stay in target/artifact_cleanup_audit/daily-20261105. No producer or guard changed.
-README/claim reference bodies match;containment differences reflect the existing book exemption.
-Promotion declined:the guarded cleanup procedure already owns these facts. G1still6/18 unchanged.
-
-## _(2026-11-04 UTC)_ — completed navigation retention before aggregate work
-
-0905 retains the closed request/source subtrees and complete committed lesson/ledger files from9567e5b0 in immutable1077/1078. Exact source intervals preserve prior navigation as well as proofs;all45 live task IDs/statuses remain.
-The request-only trim left little task headroom,so the same owned maintenance leaf retained the closed logical-source subtree too. No active work,old seal,cap,producer or protected recovery store changed.
-Transition checks prove3+1 exact Git spans;independent payload comparison and public reader agree byte for byte. Focused book/diff and mandatory commit checks cover this documentation-only change. Product aggregate binding and coupled
-verification remain pending.
-Promotion declined:existing whole-source retention and bounded live-navigation policy applies;the book explains retrieval. README/LIVE reviewed unchanged,G1still6/18 In Progress.
-
-[Complete committed lesson journal and its earlier navigation](docs/history/stitchcad-devnotes-part1077.md) retains exact source bytes from9567e5b0.
+[Whole earlier lesson journal and navigation](docs/history/stitchcad-devnotes-part1081.md) retains exact committed source bytes from3c8bae8f.
