@@ -3483,3 +3483,52 @@ for a Design source500 or validating a Profile recipe. Scalar20 remains Unknown.
 value,formula execution,currentness revalidation,G4 schema/evidence or physical zipper truth is
 read or granted. This individual factory is implemented with focused checks;complete numeric
 Profile garment headers/parameters,aggregate work and whole cohort verification remain pending.
+
+## Bind original numeric Profile garment headers
+
+`BoundDraftingProgramGarmentProfileLogicalParameters::bind_garment_profile_numeric_headers()`
+consumes the complete logical Profile parameter proof and retains its original Root proofs and
+unique work cursor. It selects every actual `ClosureLength::Profile` field. Pocket openings and
+notion sizes keep their completed logical proofs;inline and formula lengths keep their original
+Root proofs. The returned `BoundDraftingProgramGarmentProfileNumericHeaders` owns stable original
+numeric header records for subsequent metadata/member borrowing. `logical()` exposes the complete
+prior owner without cloning its source records or restoring spent work.
+
+Each `DraftingProgramGarmentProfileNumericHeader::request()` retains the genuine garment/Closure/
+field location,original checked row index,requested pin loan,Profile parameter and expected
+`ScalarInputKind::Length`. `source()` is the actual accepted Profile header under that original
+request. Header acceptance still grants no numeric parameter membership or selected length.
+
+The two-zipper fixture adds a second Profile length705. Original numeric fields occur in garment
+order704 then705 while their deliberately scrambled direct rows are:
+
+| Garment field | Profile parameter | Original row index |
+| --- | --- | --- |
+| Closure5 zipper length | 704 | 5 |
+| Closure6 zipper length | 705 | 0 |
+
+The four original logical fields retain their rows2/4/1/3. Both numeric requests can borrow the
+same actual provider pin,Profile body and canonical inventory;each still retains its distinct
+field and stable parent. The fixture's numeric metadata collection is empty:header success makes
+zero numeric metadata queries and cannot claim that either parameter exists.
+
+For N>0,the stage atomically reserves N+1 complete whole/header passes and result envelopes before
+fresh full aggregate/proof content charging,N-record reservation or header lookup. Each existing
+selected-source factory freshly walks complete Root/provider/request content again. The fixture's
+13 prior passes plus three numeric header passes require16 in total. An allowance15 refuses the
+whole three-pass request with13 still reserved,zero new walks and zero header queries. Success
+makes three walks/two header queries and no logical/numeric parameter,rule,currentness or value
+query. Prior demand supplies no credit.
+
+N0 adds no work,walk,result allocation,query or demand claim. In the empty numeric fixture,the
+last zipper length is an original inline Root field and the four logical Profile fields remain;
+all14 prior passes survive. `child_pass_count()` is zero for N0 and N+1 otherwise;`demand()` is
+`None` for N0 and the fresh complete aggregate demand for a nonempty accepted stage.
+
+`DraftingProgramGarmentProfileNumericHeaderError` retains the entire original logical/Root owner,
+complete count when available,completed aggregate demand when available,and first arithmetic,
+work,resource,allocator or typed source cause. A source refusal carries its original field/row/
+pin request and complete selected-source diagnostic. Earlier private numeric header prefixes drop.
+A foreign Root refuses before its wrong pin;late profile/schema/request-pin failures preserve the
+actual second field and original row0. No external Derived,physical or whole-cohort acceptance
+follows. Numeric metadata/member borrowing and complete garment input composition remain next.

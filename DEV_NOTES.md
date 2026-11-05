@@ -2,6 +2,25 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — original numeric Profile garment header parents
+
+0947 consumes complete logical Profile parameters into stable numeric zipper header parents while
+preserving every original prior proof and unique Root/cursor. Actual ClosureLength Profile fields
+supply genuine locations and exact checked direct rows/pins. N+1 fresh whole/header passes precede
+complete aggregate/proof charging,N-record reservation and original source header factories. N0
+adds no work or demand;first typed causes retain the complete logical/Root owner and actual
+request/source witnesses while private successful numeric prefixes drop. Metadata remains unbound.
+Ten modes pass with two original zipper fields704/705,scrambled rows5/0,shared actual source loans,
+empty numeric class with four prior logical fields,atomic13+3 versus15 shortage,fresh resources,
+late pin/schema/request-pin,Root-before-pin,snapshot and missing source. Three fresh walks/two
+queries and zero parameter/rule/value/currentness queries remain exact;prior header/parameter
+buffers stay original. The fixture's numeric metadata is empty,so header success proves no member.
+Initial generated delimiter and test pin-field enum names were corrected before green. Two affected
+logical tests/prior11+10 modes,three compiler guards,format and strict library/harness lint pass.
+README/LIVE unchanged,G1still6/18 In Progress. Original numeric parameter/member borrowing and
+complete garment input composition lead next;component/native/cohort and whole verification stay open.
+Promotion declined:local numeric header and original-owner/direct-row/Profile contracts own scope.
+
 ## _(2026-11-05 UTC)_ — original numeric Profile parameter/member/kind loans
 
 0946 adds bind_numeric_parameter to the exact selected Profile parent. Fresh full Root/provider/

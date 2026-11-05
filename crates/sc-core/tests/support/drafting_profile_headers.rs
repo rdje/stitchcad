@@ -30,6 +30,7 @@ struct Provider<'a> {
     rules: Vec<RuleRow>,
     extra_entries: Cell<usize>,
     mode: u8,
+    header_override: Cell<Option<u8>>,
     parameter_mode: Cell<u8>,
     parameter_calls: Cell<usize>,
     metadata: Vec<DraftingSourceRecord<ParameterMapping>>,
@@ -102,6 +103,7 @@ impl<'a> Provider<'a> {
             rules: vec![],
             extra_entries: Cell::new(0),
             mode,
+            header_override: Cell::new(None),
             parameter_mode: Cell::new(0),
             parameter_calls: Cell::new(0),
             metadata,
@@ -301,17 +303,18 @@ impl DraftingProfileProvider<EmptyHost> for Provider<'_> {
         _: &SelectedProfilePin,
     ) -> Result<DraftingProfileSource<'s, EmptyHost, Snapshot, [u8]>, SourceError> {
         self.calls.set(self.calls.get() + 1);
-        if self.mode == 7 {
+        let mode = self.header_override.get().unwrap_or(self.mode);
+        if mode == 7 {
             return Err(SourceError::Missing);
         }
         Ok(DraftingProfileSource {
-            root: if self.mode == 5 {
+            root: if mode == 5 {
                 self.other
             } else {
                 self.base.garment.inputs()
             },
-            selected: if self.mode == 5
-                || (self.mode == 3 && self.calls.get() == 2)
+            selected: if mode == 5
+                || (mode == 3 && self.calls.get() == 2)
                 || (self.rule_mode.get() == 4 && self.rule_calls.get() > 0)
             {
                 &self.wrong_pin
@@ -320,7 +323,7 @@ impl DraftingProfileProvider<EmptyHost> for Provider<'_> {
             },
             inputs: &self.inputs,
             profile: &self.body,
-            snapshot: if self.mode == 6 {
+            snapshot: if mode == 6 {
                 self.base.alternate.snapshot()
             } else {
                 self.base.snapshot()

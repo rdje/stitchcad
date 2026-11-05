@@ -922,8 +922,17 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] LOCKSTEP:MEM/index/DEV/ledger/book describe individual original numeric parameter binding and aggregate garment headers next. README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local numeric binding and existing original-parent/canonical/provider contracts own scope). Commit:STITCHCAD-G1-0946.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.headers`
-  Status: `pending`
+  Status: `done`
   Goal:consume complete original logical Profile garment parameters and same unique cursor;reserve complete fresh work and bind every original Profile zipper-length direct row/pin/source header into stable parents. Preserve prior logical/Root proofs and genuine garment locations;numeric metadata/member loans follow under those exact parents.
+  - [x] REPRODUCE / ISSUE:complete logical Profile/Root garment input owners still leave original Profile zipper header parents unbound. Numeric metadata needs stable original direct-row/pin/source parents before lending member proofs.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'ClosureLength|reserve_child_passes|associations|bind_profile_source' context/garment/occurrences.rs and garment_root/logical/numeric/profile_headers.rs →genuine original garment fields,checked rows and source factory contracts,rc=0. Logical parameters own the same unique Root/cursor and can be consumed without moving their borrowed header parents.
+  - [x] FIX:bind_garment_profile_numeric_headers consumes complete logical parameters,counts all actual Profile zipper lengths,reserves full N+1 fresh whole/header/result envelopes,charges aggregate/proofs,reserves all N records,then binds exact original rows/pins/headers. Stable original numeric parents and prior proofs survive;N0 adds no work and private prefixes drop.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract garment_profile_numeric_headers →1 test/10 modes pass,rc=0. Two original zipper fields704/705,row order5/0,shared source loans,N0,atomic13+3 versus15 shortage,fresh resources,late pin/schema/request-pin,Root-before-pin,snapshot/missing causes preserve originals;three walks/two queries/no metadata queries exact.
+  - [x] NO REGRESSION:garment_profile_logical →two affected tests/prior11+10 modes pass;cargo doc garment_root::logical::numeric::profile_headers::parameters::numeric_headers
+    →three private/non-Clone/lifetime guards pass;scoped strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Initial generated method delimiter and test pin-field enum
+    corrected before green;no production limits changed. Whole .check/.verify deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book describe numeric garment headers and original parameter/member/composition next. README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local numeric header and existing original-owner/direct-row/Profile contracts own scope). Commit:STITCHCAD-G1-0947.
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.parameters`
   Status: `pending`
   Goal:borrow stable numeric Profile garment headers and unique prior input owner;reserve complete fresh work and bind every original numeric metadata/member/Length-kind proof. Compose complete original Root/logical/numeric garment input classes without Root interpretation of external Derived states;retain first typed causes/no prefix.

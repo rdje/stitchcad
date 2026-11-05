@@ -361,3 +361,11 @@ impl<
         })
     }
 }
+
+mod numeric_headers;
+pub use numeric_headers::{
+    BoundDraftingProgramGarmentProfileNumericHeaders, DraftingProgramGarmentProfileNumericHeader,
+    DraftingProgramGarmentProfileNumericHeaderError,
+    DraftingProgramGarmentProfileNumericHeaderRefusal,
+    DraftingProgramGarmentProfileNumericHeadersResult, DraftingProgramGarmentProfileNumericRequest,
+};

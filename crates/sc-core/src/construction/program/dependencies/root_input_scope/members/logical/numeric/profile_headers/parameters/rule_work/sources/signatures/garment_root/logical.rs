@@ -24,6 +24,7 @@ pub use error::{
 pub use numeric::{
     BoundDraftingProgramGarmentProfileLogicalHeaders,
     BoundDraftingProgramGarmentProfileLogicalParameters,
+    BoundDraftingProgramGarmentProfileNumericHeaders,
     BoundDraftingProgramGarmentRootNumericSuppliers, DraftingProgramGarmentProfileLogicalHeader,
     DraftingProgramGarmentProfileLogicalHeaderError,
     DraftingProgramGarmentProfileLogicalHeaderRefusal,
@@ -32,7 +33,11 @@ pub use numeric::{
     DraftingProgramGarmentProfileLogicalParameterError,
     DraftingProgramGarmentProfileLogicalParameterRefusal,
     DraftingProgramGarmentProfileLogicalParametersResult,
-    DraftingProgramGarmentProfileLogicalRequest, DraftingProgramGarmentRootNumericSupplierError,
+    DraftingProgramGarmentProfileLogicalRequest, DraftingProgramGarmentProfileNumericHeader,
+    DraftingProgramGarmentProfileNumericHeaderError,
+    DraftingProgramGarmentProfileNumericHeaderRefusal,
+    DraftingProgramGarmentProfileNumericHeadersResult, DraftingProgramGarmentProfileNumericRequest,
+    DraftingProgramGarmentRootNumericSupplierError,
     DraftingProgramGarmentRootNumericSupplierRefusal,
     DraftingProgramGarmentRootNumericSuppliersResult,
 };

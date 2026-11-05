@@ -3,6 +3,13 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0947 — bind original numeric Profile garment headers
+
+Complete prior logical/Root proofs now own stable original zipper header parents under exact
+checked rows/pins and one cursor. Ten native modes,two affected logical tests,three compiler
+guards,format and scoped strict lint pass. Numeric parameter/member borrowing and complete
+input composition remain next;G1six-of18 and broader verification scope stay unchanged.
+
 ## STITCHCAD-G1-0946 — bind original numeric Profile metadata and members
 
 Exact selected parents now bind original numeric metadata,target representation/member and

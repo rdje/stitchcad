@@ -3,6 +3,12 @@ use super::{id, limits, scope, Provider, RuleSourceView, TestResult};
 use sc_core::{construction::*, design::*, name::MachineToken, ontology::*, recipe::*, value::*};
 use sc_units::Length;
 pub(super) fn fixture(case: u8) -> TestResult<DesignGarment<super::EmptyHost>> {
+    fixture_with_numeric(case, 0)
+}
+pub(super) fn numeric_fixture(empty: bool) -> TestResult<DesignGarment<super::EmptyHost>> {
+    fixture_with_numeric(0, if empty { 2 } else { 1 })
+}
+fn fixture_with_numeric(case: u8, numeric: u8) -> TestResult<DesignGarment<super::EmptyHost>> {
     let canonical = CanonicalInputs::with_logicals(
         vec![LengthDeclaration::new(LengthDeclarationDefinition {
             id: id(10),
@@ -70,7 +76,7 @@ pub(super) fn fixture(case: u8) -> TestResult<DesignGarment<super::EmptyHost>> {
     } else {
         NotionSize::Profile(ProfileParameterRef::new(id(703)))
     };
-    let kinds = vec![
+    let mut kinds = vec![
         ClosureKind::HookAndBar {
             hook: size,
             bar: size,
@@ -96,9 +102,21 @@ pub(super) fn fixture(case: u8) -> TestResult<DesignGarment<super::EmptyHost>> {
             length: ClosureLength::Formula(id(7102)),
         },
         ClosureKind::CentredZipper {
-            length: ClosureLength::Profile(ProfileParameterRef::new(id(704))),
+            length: if numeric == 2 {
+                ClosureLength::Explicit {
+                    parameter: id(7103),
+                    value: Length::from_micrometres(14000)?,
+                }
+            } else {
+                ClosureLength::Profile(ProfileParameterRef::new(id(704)))
+            },
         },
     ];
+    if numeric == 1 {
+        kinds.push(ClosureKind::CentredZipper {
+            length: ClosureLength::Profile(ProfileParameterRef::new(id(705))),
+        });
+    }
     let opening = if case == 1 {
         PocketOpening::Declaration(id(90))
     } else {
