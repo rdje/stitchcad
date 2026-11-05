@@ -862,93 +862,56 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Goal:completed original rule-work/source/signature scope;[whole goals/proofs](../history/stitchcad-devnotes-part1089.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs`
   Status: `done`
-  Goal:bind every actual Pocket/Closure logical/numeric input under its original Root/Profile source and exact direct selection. Preserve complete canonical state/domain/provenance and original Root Derived suppliers without a fabricated consumer position;component/physical relation joins remain with their own garment steps.
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.root-members`
   Status: `done`
-  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1090.md).
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.root-suppliers`
   Status: `done`
-  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1090.md).
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.root-suppliers.logical`
   Status: `done`
-  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1090.md).
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.root-suppliers.numeric`
   Status: `done`
-  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1090.md).
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.root-suppliers.numeric.retention`
   Status: `done`
-  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1090.md).
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile`
   Status: `done`
-  Goal:bind complete actual Profile-owned Pocket/Closure inputs under original direct rows/pins and actual source/parameter/member/kind proofs. Preserve source-owned states and external Derived scope;numeric Profile lengths require an authentic numeric facet before acceptance,never a logical-port cast or same-ID Root inference.
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.logical.headers`
   Status: `done`
-  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1090.md).
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.logical.parameters`
   Status: `done`
-  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1090.md).
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric`
   Status: `done`
-  Goal:use an authentic numeric Profile metadata/member facet for every original Profile zipper-length input before full garment-input acceptance. Preserve actual canonical family/kind/state and source-owned metadata under exact selected Profile parents;do not coerce logical sources,infer Root declarations or claim Profile recipe/G4 truth.
-
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.retention`
   Status: `done`
-  Goal:retain whole closed Root garment and logical Profile input goals/evidence plus committed journals before numeric Profile growth. Prove exact Git/hash/public bytes and unchanged task identities/statuses under fixed bounds before compaction.
-  - [x] ROOT CAUSE / ISSUE:git ls-tree/show at26e26483 →task collection19970L/1497819B,rc=0. Only2181B remain before fixed1500000B ceiling;retain complete closed garment input evidence before numeric Profile work grows.
-  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1090.md →9 exact Git spans,rc=0. Independent decode/hash/Git/public-reader proof preserves23040 decodedB and225 task IDs/statuses before seven closed nodes become retrieval stubs. All46 live headings remain exact.
-  - [x] NO REGRESSION / LOCKSTEP:target/history-proof-0944/independent1090.json →public_exact true,source_intervals9,closed_nodes7,rc=0. Whole journals and navigation retained;older seals/caps/producers/protected stores unchanged. Book/resume align;README/LIVE unchanged,G1still6/18 In Progress. promotion: declined (existing immutable retention contract owns scope). Commit:STITCHCAD-G1-0944.
-
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.port`
   Status: `done`
-  Goal:expose an authentic readonly numeric Profile metadata facet and raw response with original header,parameter,target and metadata loans. Preserve exact target family/kind without accepting membership/value/G4 truth;document exhaustive inherited resource obligations and compiler-checked loan boundaries.
-  - [x] REPRODUCE / ISSUE:Profile zipper fields require genuine numeric metadata;existing ProfileLogicalSource only carries logical declarations and cannot preserve actual numeric target representation.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'CanonicalInputTarget|resolve_numeric|ClosureLength::Profile' value/inventory.rs,value/inventory/numeric.rs and design/closures.rs →original numeric representation/member and unaccepted Profile length contracts,rc=0. Metadata parameter and canonical target identities remain distinct.
-  - [x] FIX:DraftingProfileNumericProvider returns original selected-header/parameter/target/metadata loans through a raw typed response. NumericMetadata may be unsized without Clone/Debug. The inherited exhaustive walk includes unused metadata/copies/caches;no allocation,value or binding grant occurs in the port.
-  - [x] ADDRESSED:cargo test -p sc-core --doc construction::context::profile::numeric_port →3 tests pass,rc=0. Unsized source/metadata view copies only original loans;escaping original lifetime and echoing a local request refuse compilation.
-  - [x] NO REGRESSION:cargo clippy -p sc-core --lib -- -D warnings,cargo fmt --all -- --check and git diff --check →pass,rc=0. Existing logical/source APIs unchanged;no whole cohort,physical or G4 verdict. Checked parameter acceptance remains the next owned leaf.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book describe raw numeric port and actual-member binding next;README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local raw port and existing canonical/provider contracts own scope). Commit:STITCHCAD-G1-0945.
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.binding`
   Status: `done`
-  Goal:bind original numeric Profile parameter metadata to exact accepted parent and actual canonical numeric member/expected kind after fresh complete content. Preserve typed original resource/provider/header/parameter/member/kind causes and source states;then own aggregate garment header/parameter/composition work.
-  - [x] REPRODUCE / ISSUE:raw numeric Profile metadata accepts inspectable wrong headers/targets;garment length membership needs actual selected-parent,representation and expected-kind proofs without Root inference.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'bind_logical_parameter|resolve_numeric|CanonicalNumericInputMember|ScalarInputKind' context/profile/parameter.rs,value/inventory/numeric.rs and value/scalar.rs →existing exact parent/content and actual numeric member contracts,rc=0. ScalarInputKind expresses the numeric request while the metadata target keeps its authored family/annotation.
-  - [x] FIX:bind_numeric_parameter freshly charges complete parent/provider/request,queries original numeric metadata,checks exact Root/pin/inventory/body/snapshot/parameter,then resolves actual numeric representation/annotation before expected kind. Private lending proof and typed first refusal retain exact parent,metadata/member/request/policy;no value,clone or partial grant.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract numeric_profile_parameter →1 test/16 modes pass,rc=0. Dedicated Derived500 versus same-ID Root
-    Unknown,general Length/Boolean Unknown,actual field/member pointers,all header axes,equal-data pin/body,parameter,family/annotation/expected-kind,absent target and two
-    fresh-resource-before-missing controls pass. One walk/at most one query exact.
-  - [x] NO REGRESSION:profile_input_parameters →prior10 modes pass;cargo doc construction::context::profile::numeric →5 tests incl.two private/lifetime binding guards pass;scoped
-    strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Fixture initializer/resource trace and fallible fixture lookups corrected before green;production contract
-    unchanged. Whole .check/.verify remains deferred.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book describe individual original numeric parameter binding and aggregate garment headers next. README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local numeric binding and existing original-parent/canonical/provider contracts own scope). Commit:STITCHCAD-G1-0946.
-
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.headers`
   Status: `done`
-  Goal:consume complete original logical Profile garment parameters and same unique cursor;reserve complete fresh work and bind every original Profile zipper-length direct row/pin/source header into stable parents. Preserve prior logical/Root proofs and genuine garment locations;numeric metadata/member loans follow under those exact parents.
-  - [x] REPRODUCE / ISSUE:complete logical Profile/Root garment input owners still leave original Profile zipper header parents unbound. Numeric metadata needs stable original direct-row/pin/source parents before lending member proofs.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'ClosureLength|reserve_child_passes|associations|bind_profile_source' context/garment/occurrences.rs and garment_root/logical/numeric/profile_headers.rs →genuine original garment fields,checked rows and source factory contracts,rc=0. Logical parameters own the same unique Root/cursor and can be consumed without moving their borrowed header parents.
-  - [x] FIX:bind_garment_profile_numeric_headers consumes complete logical parameters,counts all actual Profile zipper lengths,reserves full N+1 fresh whole/header/result envelopes,charges aggregate/proofs,reserves all N records,then binds exact original rows/pins/headers. Stable original numeric parents and prior proofs survive;N0 adds no work and private prefixes drop.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract garment_profile_numeric_headers →1 test/10 modes pass,rc=0. Two original zipper fields704/705,row order5/0,shared source loans,N0,atomic13+3 versus15 shortage,fresh resources,late pin/schema/request-pin,Root-before-pin,snapshot/missing causes preserve originals;three walks/two queries/no metadata queries exact.
-  - [x] NO REGRESSION:garment_profile_logical →two affected tests/prior11+10 modes pass;cargo doc garment_root::logical::numeric::profile_headers::parameters::numeric_headers
-    →three private/non-Clone/lifetime guards pass;scoped strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Initial generated method delimiter and test pin-field enum
-    corrected before green;no production limits changed. Whole .check/.verify deferred.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book describe numeric garment headers and original parameter/member/composition next. README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local numeric header and existing original-owner/direct-row/Profile contracts own scope). Commit:STITCHCAD-G1-0947.
-
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.parameters`
   Status: `done`
-  Goal:borrow stable numeric Profile garment headers and unique prior input owner;reserve complete fresh work and bind every original numeric metadata/member/Length-kind proof. Compose complete original Root/logical/numeric garment input classes without Root interpretation of external Derived states;retain first typed causes/no prefix.
-  - [x] REPRODUCE / ISSUE:stable numeric Profile garment headers still need original metadata/member/Length-kind proofs before all scoped garment input classes can compose. Header success must not grant missing parameter membership or Root interpretation of external Derived state. Earlier book pending-stage text must route completed numeric composition accurately.
-  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'bind_numeric_parameter|reserve_child_passes|logical:|headers:' context/profile/numeric.rs and numeric_headers.rs/parameters.rs →original lending member factory and separate stable header/logical-owner fields,rc=0. Borrow both fields without self-reference while retaining the same unique Root/cursor.
-  - [x] FIX:bind_garment_profile_numeric_parameters borrows original stable numeric headers/prior logical proofs,reserves complete N+1 fresh whole/parameter/result
-    envelopes,charges full aggregate/proofs,reserves all N records,then invokes exact parent-bound numeric factories. Actual metadata,target family/member/kind/state and all prior
-    input proofs survive;N0 adds no work,private prefixes drop and spent work never resets.
-  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract garment_profile_numeric_parameters →1 test/16 modes pass,rc=0. Dedicated Derived500/general Length
-    Unknown,shared target/distinct metadata,N0,atomic16+3 versus18,fresh resources,late kind/parameter/pin/inventory/body/snapshot/missing/annotation/family and first missing
-    controls preserve original loans;three walks/two queries/no header/logical requery exact;spent repeat refuses.
-  - [x] NO REGRESSION:numeric_profile_parameter →prior16 modes pass;cargo doc garment_root::logical::numeric::profile_headers::parameters::numeric_headers::parameters →three
-    private/non-Clone/lifetime guards pass;scoped strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Fixture generation corrected before compile;numeric fault controls
-    now select the actual opposite parameter for either order and preserve original logical inventory. Whole .check/.verify deferred.
-  - [x] LOCKSTEP:MEM/index/DEV/ledger/book close original scoped garment input classes and own garment relations next. README reviewed unchanged;LIVE product note now distinguishes completed input members from pending relations;G1still6/18 In Progress. promotion: declined (local numeric parameter and existing original-owner/canonical/provider contracts own scope). Commit:STITCHCAD-G1-0948.
-
+  Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations`
   Status: `pending`
   Goal:bind complete actual Pocket served/component and Closure derivation/operation relations under original input/cursor owners and complete source/member/component proofs. Preserve genuine garment locations without invented Root consumer positions;introduce authentic missing facets before use and retain first typed causes/no accepted prefix.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.retention`
+  Status: `done`
+  Goal:retain whole closed garment input goals/evidence and committed journals before relation work grows. Prove exact Git/hash/public bytes and unchanged task identities/statuses under fixed bounds before compaction.
+  - [x] ROOT CAUSE / ISSUE:git ls-files/local byte census at7191b646 →task collection19984L/1496802B,rc=0. Only16 lines remain before fixed20000L ceiling;retain closed garment input evidence before relation ownership/acceptance grows.
+  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1091.md →17 exact Git spans,rc=0. Independent decode/hash/Git/public-reader proof preserves24380 decodedB and231 task IDs/statuses before15 closed nodes become retrieval stubs. All46 live headings remain exact.
+  - [x] NO REGRESSION / LOCKSTEP:target/history-proof-0949/independent1091.json →public_exact true,source_intervals17,closed_nodes15,rc=0. Whole journals/navigation retained;old seals/caps/producers/protected stores unchanged. Book/resume align;README/LIVE unchanged,G1still6/18 In Progress. promotion: declined (existing immutable retention contract owns scope). Commit:STITCHCAD-G1-0949.

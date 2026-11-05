@@ -429,6 +429,15 @@ Seven closed nodes point to whole original goals/proofs under unchanged archive 
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1090.md
 ```
 
+Part1091 retains the whole closed garment input subtree and committed journals from7191b646.
+Seventeen exact Git spans preserve24380 decoded bytes;all231 task identities/statuses and46
+headings remain exact before relation ownership/proofs grow. Fifteen closed nodes point to whole
+original goals/proofs under unchanged archive and task bounds.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1091.md
+```
+
 ### Closed task goals and live navigation —0775
 
 Whole0774 continuity and the original completed walk/mirror/slash goals/proof links remain

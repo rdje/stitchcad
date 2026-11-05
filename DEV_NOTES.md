@@ -2,92 +2,15 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
-## _(2026-11-05 UTC)_ — original numeric Profile garment parameters and input composition
+## _(2026-11-05 UTC)_ — retain whole closed garment input evidence before relations
 
-0948 borrows stable numeric header parents and prior logical/Root proofs through disjoint fields.
-Complete N+1 fresh whole/parameter reservation precedes full aggregate/proof content,N-record
-reservation and original parent-bound numeric metadata/member/Length-kind factories. Actual target
-family,metadata/member/state loans and prior complete input classes compose under one cursor.
-No self-reference,body/value clone or Root interpretation of external Profile Derived is added.
-N0 adds no work or demand;first typed refusals retain original prior owner/whole headers/request/
-member witnesses while private prefixes drop. Dropping either result restores no spent capacity.
-Sixteen modes pass with dedicated Derived500 versus same-ID Root Unknown/empty source graph,
-general Length Unknown,shared canonical target/distinct metadata,N0,atomic16+3 versus18 shortage,
-fresh resources,late kind/parameter/pin/inventory/body/snapshot/missing/annotation/family and first
-missing. Full demand,three walks/two numeric queries and zero header/logical/rule/value queries
-stay exact;spent repeat refuses before callbacks. Fixture generation corrected before compile;
-fault controls now choose an actual opposite parameter for either order and retain the original
-logical inventory while adding numeric members. Prior individual numeric16 modes,three compiler
-guards,format and scoped strict library/harness lint pass. README unchanged;LIVE product note
-now separates complete input members from pending garment relations;G1remains6/18 In Progress.
-Pocket/component/Closure relations lead next;native/cohort and whole .check/.verify stay deferred.
-Promotion declined:local numeric parameter and original-owner/canonical/provider contracts own scope.
-
-## _(2026-11-05 UTC)_ — original numeric Profile garment header parents
-
-0947 consumes complete logical Profile parameters into stable numeric zipper header parents while
-preserving every original prior proof and unique Root/cursor. Actual ClosureLength Profile fields
-supply genuine locations and exact checked direct rows/pins. N+1 fresh whole/header passes precede
-complete aggregate/proof charging,N-record reservation and original source header factories. N0
-adds no work or demand;first typed causes retain the complete logical/Root owner and actual
-request/source witnesses while private successful numeric prefixes drop. Metadata remains unbound.
-Ten modes pass with two original zipper fields704/705,scrambled rows5/0,shared actual source loans,
-empty numeric class with four prior logical fields,atomic13+3 versus15 shortage,fresh resources,
-late pin/schema/request-pin,Root-before-pin,snapshot and missing source. Three fresh walks/two
-queries and zero parameter/rule/value/currentness queries remain exact;prior header/parameter
-buffers stay original. The fixture's numeric metadata is empty,so header success proves no member.
-Initial generated delimiter and test pin-field enum names were corrected before green. Two affected
-logical tests/prior11+10 modes,three compiler guards,format and strict library/harness lint pass.
-README/LIVE unchanged,G1still6/18 In Progress. Original numeric parameter/member borrowing and
-complete garment input composition lead next;component/native/cohort and whole verification stay open.
-Promotion declined:local numeric header and original-owner/direct-row/Profile contracts own scope.
-
-## _(2026-11-05 UTC)_ — original numeric Profile parameter/member/kind loans
-
-0946 adds bind_numeric_parameter to the exact selected Profile parent. Fresh full Root/provider/
-request charging precedes one numeric metadata query,original Root/pin/inventory/body/snapshot/
-parameter comparisons,canonical target representation/annotation resolution and actual expected
-ScalarInputKind. Original target/member/metadata/state loans remain intact. Dedicated Length
-and general Scalar Length keep their distinct families without geometry kinds or formula metadata.
-The private proof borrows its parent;typed refusal retains parent/request/limits/raw response and
-first original resource/provider/header/canonical/expected-kind cause. Fresh recharging adds no
-metadata query. No value,currentness,external supplier or G4/whole-program acceptance is granted.
-Sixteen native modes pass with dynamic provider,unsized body and non-Clone/non-Debug host/metadata.
-Actual dedicated Derived500 stays external while same-ID Root is Unknown;general Length/Boolean
-Unknown,equal-label pin/equal-byte body swaps,all header axes,wrong parameter/family/annotation/
-expected kind,absent canonical target and two fresh-resource-before-missing controls preserve exact
-witnesses and counts. An overbroad fixture initializer replacement and expected resource trace
-and fallible fixture lookups were corrected before green;production behavior required no change. Prior logical parameter ten
-modes,five numeric port/binding doc checks,format and strict library/harness lint pass.
-README/LIVE unchanged,G1still6/18 In Progress. Aggregate numeric garment headers/parameters and
-complete input composition lead next;component/native/cohort and whole .check/.verify remain open.
-Promotion declined:local numeric binding and original-parent/canonical/provider contracts own scope.
-
-## _(2026-11-05 UTC)_ — original raw numeric Profile metadata facet
-
-0945 exposes DraftingProfileNumericProvider with independent NumericMetadata and a raw
-DraftingProfileNumericSource carrying original selected-header/parameter/target/metadata loans.
-Actual CanonicalInputTarget remains a field loan,so dedicated Length and general Scalar targets
-keep their representations and metadata identity never becomes canonical identity. Every held
-numeric metadata record/text/copy/cache belongs in inherited exhaustive fresh provider accounting,
-including unused records. This is an honest readonly original-source contract,not accepted
-membership,expected-kind,content/work allowance,value,G4 evidence or Profile recipe truth.
-Three doc checks pass:unsized source/metadata loans copy without payload Clone/Debug,escaping
-records refuses,and an echoed request cannot become an original parameter field. Scoped strict
-library lint,format and diff checks pass. Existing logical/source APIs remain unchanged.
-README/LIVE unchanged,G1still6/18 In Progress. Checked original-parent/member/kind binding leads
-next;aggregate numeric garment composition and whole .check/.verify remain separately pending.
-Promotion declined:local raw port and existing canonical/provider contracts own scope.
-
-## _(2026-11-05 UTC)_ — retain closed garment input evidence before numeric Profile work
-
-0944 retains complete closed Root garment member/supplier and logical Profile header/parameter
-records plus committed journals from26e26483 in1090. Nine exact Git spans/23040 decodedB match
-independent source/hash/public-reader bytes before compaction. All225 task IDs/statuses and46
-headings remain exact while seven closed nodes become whole-evidence retrieval pointers. The
-committed collection had2181B remaining before its fixed1500000B ceiling;no limits,older seals,
-producers or protected stores change. README/LIVE unchanged,G1still6/18 In Progress. Authentic
-numeric Profile metadata/member work remains next;no broader verification follows from retention.
+0949 retains whole closed garment input goals/evidence and committed journals from7191b646 in1091.
+Seventeen exact Git spans/24380 decodedB match independent source/hash/public-reader bytes before
+compaction. All231 task IDs/statuses and46 headings stay exact while15 closed nodes become whole-
+evidence retrieval pointers. The committed collection had16 lines left before its fixed20000L
+ceiling;no bounds,older seals,producers or protected stores change. README/LIVE unchanged,G1still
+6/18 In Progress with scoped garment input members implemented under focused checks. Original
+Pocket/Closure relations remain next;no broader verification verdict follows from retention.
 Promotion declined:existing immutable retention and original source contracts own this prerequisite.
 
-[Whole earlier journal and navigation](docs/history/stitchcad-devnotes-part1090.md) retains exact committed bytes from26e26483.
+[Whole earlier journal and navigation](docs/history/stitchcad-devnotes-part1091.md) retains exact committed bytes from7191b646.
