@@ -2709,6 +2709,79 @@ projection available from a refused supplier factory or private successful const
 Private fields and lifetime guards prevent changing the association or escaping its owner loan.
 
 This completes the Root operation-input membership and logical/numeric Derived-supplier class.
-Whole semantic binding still requires actual Profile inputs,rule/signature/output joins,garment
+Whole semantic binding still requires actual Profile parameter/member inputs,rule/signature/output joins,garment
 and native families,then the complete cohort. Whole/coupled checking and physical execution remain
 with their existing separate tasks. Root-class success certifies none of those remaining scopes.
+
+## Bind every actual Profile operation-input header
+
+`BoundDraftingProgramRootNumericSuppliers::bind_profile_input_headers()` consumes the complete
+Root input/supplier owner and binds the selected Profile header for every actual Profile-owned
+operation input. Eligible fields are Profile-origin Buttonhole buttons and LogicalDerivation
+inputs whose original source is Profile. Their expected parameter/kind remains original syntax:
+NotionSize for a button,or the exact kind carried by the logical input. Rule/policy origins,
+garment/native fields and actual parameter membership stay with their separate stages.
+
+The factory counts all N original eligible fields without deduplicating matching parameter IDs or
+selected pins. N=0 performs no child reservation,content walk,result allocation or Profile query;
+its new demand is None. Other Profile/rule/native obligations are not certified empty by this.
+
+For N>0,the factory checks N+1 arithmetic and reserves **all N+1 child passes/results** on the
+same original cursor before fresh accounting,allocation or queries. One pass covers complete fresh
+aggregate/proof admission;the other N cover the existing header factory's N fresh
+Root/provider/request-pin walks and actual header joins. The extra reserved result slot is a
+conservative envelope,not a claim that an extra header exists. Earlier demands grant no credit.
+Each matching step remains within the original (E+8)² per-pass envelope;these logical bounds are
+not allocator bytes,CPU time or string-comparison runtime measurements.
+
+After complete aggregate content success,the factory fallibly reserves all N header records.
+For each original field in genuine mixed/local order,it reuses the actual direct-coverage row
+index and that row's original requested pin. The existing `bind_profile_source` factory freshly
+charges actual Root/provider/request content before one Profile query,then checks the actual
+Root,pin profile/schema/content labels and original snapshot in that order. No default/latest
+Profile or fallback source is introduced.
+
+`BoundDraftingProgramProfileHeaders` retains the complete original Root proof and unique cursor
+through `root()`. Its new `demand()` is the complete successful aggregate/proof demand,not the sum
+of child walks. `child_pass_count()` is zero for N0 and N+1 otherwise. `records()` retains every
+original input once,with stable owned header-parent storage for subsequent parameter proofs.
+
+Each `DraftingProgramProfileInputHeader` exposes its original `request()` and accepted `source()`
+parent. The private `DraftingProgramProfileInputRequest` keeps the original operation loan,
+semantic ordinal,mixed consumer position,location,typed field,selection row index,requested pin,
+parameter ID and expected kind. These fields accept no canonical Profile parameter by themselves.
+The header's `source()` keeps the actual provider-owned pin,Profile inventory,payload record and
+snapshot,which remain distinct from the requested pin and Root canonical inventory.
+
+For example,the focused fixture preserves these independent original inputs:
+
+| Original field | Consumer ordinal / mixed position | Request and expected kind |
+| --- | --- | --- |
+| Logical input5 | 1 / 1 | Profile parameter702,PocketOpening |
+| Logical input6,another role | 1 / 1 | The same parameter702 and pin,another original row |
+| Profile Buttonhole button | 2 / 3 | Profile parameter703,NotionSize |
+
+A native step at position2 keeps semantic ordinal2 distinct from mixed position3. Two logical
+Profile fields reserve three new passes;including the button reserves four. The requested pin may
+be a separate object with exactly matching labels;it never replaces the source's actual original
+pin. Profile canonical declarations retain their own Unknown/Derived states and inventory owner.
+Even a matching external Derived operation ID is not assigned a Root supplier position here.
+
+`DraftingProgramProfileHeaderError` retains the original complete Root proof/cursor through
+`owner()`,the full `header_count()`,only a completed fresh aggregate `demand()`,and first typed
+`refusal()`. Short remaining capacity refuses atomically before callbacks. Fresh content and
+allocator failures preserve their original causes. A child Source refusal preserves the actual
+original input request,selection row/pin and complete original `DraftingProfileSourceError`,
+including any returned foreign source. On a late failure,private successful header records drop;
+no accepted header prefix escapes and the original Root proof remains inspectable.
+
+Focused public-factory modes cover repeated inputs,N0,short remaining capacity,injected fresh
+resource failure,late pin mismatch,Root-before-pin refusal,foreign snapshot,missing source and
+Profile Buttonhole input. Actual requested/source pins,canonical inventory,payload/snapshot
+records,field/operation loans and cursor/callback counts stay exact. Privacy,lifetime and unique
+cursor guards supplement them;whole/coupled checking remains deferred.
+
+Header success grants no parameter/member/kind association,G4 registry/schema/evidence validation,
+physical value,currentness revalidation,external Profile recipe/order or whole semantic acceptance.
+The next parameter factory must borrow these stable header parents and the same cursor through
+disjoint owner fields;it must not manufacture a self-referential owner or clone source bodies.

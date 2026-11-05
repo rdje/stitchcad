@@ -2,6 +2,24 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — complete original Profile operation-input headers
+
+0928 consumes the complete Root member/supplier owner and counts actual Profile-origin Buttonhole
+buttons and LogicalDerivation inputs. N>0 reserves N+1 whole/header passes before fresh complete
+aggregate content and fallible N-record reservation. Existing child source factories then freshly
+charge each Root/provider/request pin before query and exact Root/label/snapshot association.
+Original field/operation/consumer positions/row/request pins and actual provider headers survive;
+matching requests are not deduplicated. N0 makes no new child work or demand claim. Refusals keep
+original Root/cursor,complete count/demand and original child witnesses;private header prefixes drop.
+Nine public modes cover repeated logical fields,Profile button,actual requested/provider pin
+separation,original inventory/body/snapshot,semantic2/mixed3,N0,short atomic budget,injected fresh
+resource refusal,late pin mismatch,Root-before-pin,foreign snapshot and missing source. Three
+compiler guards,affected Root5 modes,format and scoped strict Clippy pass. Fixture id helper and
+unused import corrected before green. Stable owned header parents support the next borrowed
+parameter proofs;no parameter/member/kind/external Derived recipe or whole acceptance is claimed.
+README/LIVE unchanged,G1still6/18 In Progress. Whole verification remains deferred.
+Promotion declined:local header/source APIs and book own the implemented boundary.
+
 ## _(2026-11-05 UTC)_ — retain completed Root proof before Profile source binding
 
 0927 retains the whole closed Root input/supplier subtree and complete journals fromddfea0b1

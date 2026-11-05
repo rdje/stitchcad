@@ -4,7 +4,12 @@ use sc_core::{construction::*, design::*, name::MachineToken, ontology::*, recip
 fn id(n: u128) -> EntityId {
     EntityId::from_bits(n)
 }
-fn fixture(empty: bool, combined: bool) -> TestResult<DesignGarment<EmptyHost>> {
+pub(super) fn fixture(
+    empty: bool,
+    combined: bool,
+    profile_inputs: usize,
+    button: bool,
+) -> TestResult<DesignGarment<EmptyHost>> {
     let canonical = CanonicalInputs::with_logicals(
         vec![LengthDeclaration::new(LengthDeclarationDefinition {
             id: id(10),
@@ -107,13 +112,15 @@ fn fixture(empty: bool, combined: bool) -> TestResult<DesignGarment<EmptyHost>> 
             kind: LogicalInputKind::PocketOpening,
         }),
     });
-    inputs.push(LogicalDerivationInput {
-        role: MachineToken::new("profile")?,
-        source: LogicalDerivationInputSource::Profile {
-            parameter: ProfileParameterRef::new(id(702)),
-            kind: LogicalInputKind::PocketOpening,
-        },
-    });
+    for index in 0..profile_inputs {
+        inputs.push(LogicalDerivationInput {
+            role: MachineToken::new(format!("profile_{index}"))?,
+            source: LogicalDerivationInputSource::Profile {
+                parameter: ProfileParameterRef::new(id(702)),
+                kind: LogicalInputKind::PocketOpening,
+            },
+        });
+    }
     let semantic = LogicalDerivationOperation::new(
         LogicalDerivationDefinition {
             id: id(80),
@@ -124,7 +131,7 @@ fn fixture(empty: bool, combined: bool) -> TestResult<DesignGarment<EmptyHost>> 
             rule: id(901),
             inputs,
         },
-        LogicalDerivationLimits::new(6, 100, 36),
+        LogicalDerivationLimits::new(7, 100, 49),
     )?;
     let sources = [(500, "1 mm"), (501, "1==1")]
         .into_iter()
@@ -166,6 +173,17 @@ fn fixture(empty: bool, combined: bool) -> TestResult<DesignGarment<EmptyHost>> 
                     ));
                 }
                 operations.push(SemanticOperation::LogicalDerivation(semantic));
+                if button {
+                    operations.push(SemanticOperation::Buttonhole(ButtonholeOperation::new(
+                        ButtonholeOperationDefinition {
+                            id: id(81),
+                            button: NotionSize::Profile(ProfileParameterRef::new(id(703))),
+                            policy: id(902),
+                            inputs: vec![],
+                        },
+                        ButtonholeOperationLimits::new(0, 0, 0),
+                    )?));
+                }
                 operations
             },
             SemanticRecipeLimits::new(2, 4),
@@ -205,7 +223,7 @@ fn root_numeric_suppliers_retain_actual_source_graph_and_representation_without_
     // Complete repeated/different families,empty numeric Derived,short remaining cursor,
     // and an actual fresh provider resource refusal after prior successful content admission.
     for case in 0..5u8 {
-        let garment = fixture(case == 1, case == 4)?;
+        let garment = fixture(case == 1, case == 4, 1, false)?;
         let source = Provider::new(&garment);
         let source_view: &SourceView<'_> = &source;
         let content = limits(100000, 100000, 100000)?;

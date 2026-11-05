@@ -20,7 +20,10 @@ pub use error::{
     DraftingProgramRootLogicalSupplierError, DraftingProgramRootLogicalSupplierRefusal,
 };
 pub use numeric::{
-    BoundDraftingProgramRootNumericSuppliers, DraftingProgramRootInputBinding,
+    BoundDraftingProgramProfileHeaders, BoundDraftingProgramRootNumericSuppliers,
+    DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
+    DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
+    DraftingProgramProfileInputRequest, DraftingProgramRootInputBinding,
     DraftingProgramRootInputSupplier, DraftingProgramRootNumericSupplier,
     DraftingProgramRootNumericSupplierError, DraftingProgramRootNumericSupplierRefusal,
     DraftingProgramRootNumericSuppliersResult,

@@ -919,8 +919,19 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
     source-parent API own these facts. Commit:STITCHCAD-G1-0927.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.headers`
-  Status: `pending`
+  Status: `done`
   Goal:consume exact complete Root input/supplier owner,count all actual Profile operation-input fields,and reserve N+1 fresh whole/header passes for N>0 before work. Fresh whole content precedes fallible full N header reservation and exact original selection-pin/source joins. Preserve all original field/row/header loans and first typed causes;N0 does no new work.
+  - [x] REPRODUCE / ISSUE:complete Profile-origin button/logical operation inputs need actual selected Profile header parents before parameter/member borrowing. A cached source demand or successful prefix cannot cover every original input;requested pins and provider-owned pins remain distinct originals.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'bind_profile_source|bind_logical_parameter|parent:' context/profile/binding.rs and parameter.rs →fresh header query/Root-label-snapshot checks and parameter proof borrowing its original header parent,rc=0. Complete direct coverage already retains exact original row indices;actual Profile input fields
+    determine their own count and expected kinds.
+  - [x] FIX:consume complete Root owner,count N Profile inputs and reserve N+1 whole/header passes for N>0 before work. Fresh aggregate content precedes full N result reservation and original row/pin/header joins. Preserve every original operation/field/consumer position/request and source header. N0 makes no new child work. Typed first
+    refusals retain Root/cursor and drop private successful header prefixes.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract profile_input_headers →1 test/9 actual modes pass,rc=0. Repeated logical fields,Profile Buttonhole,actual requested/source pin distinction,original inventory/body/snapshot,semantic2/mixed3,three or four stage passes,N0,short9+3 versus11 capacity,injected
+    resource,late pin,Root-before-pin,snapshot and missing source pass.
+  - [x] NO REGRESSION:cargo test -p sc-core --doc numeric::profile_headers →3 privacy/lifetime/Clone guards pass,rc=0. Affected root_numeric_suppliers →1 test/5 modes pass;cargo fmt -p sc-core -- --check and scoped lib/harness strict Clippy pass,rc=0. Fixture missing id helper and unused library import corrected before green. Whole
+    .5f.2.check/.verify remain deferred;parameter membership remains pending.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish exact complete Profile headers from pending canonical parameter/member/kind/external Derived and rule/family/cohort acceptance. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:local headers and original Profile parent APIs/book own this contract. Commit:STITCHCAD-G1-0928.
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.parameters`
   Status: `pending`
   Goal:bind every actual Profile logical parameter/kind/member under its original accepted header with complete fresh work. Borrow stable header storage and the same unique cursor through disjoint parent fields;do not construct a self-referential owner,clone source bodies or invent Profile Derived Root positions.

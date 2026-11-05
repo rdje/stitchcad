@@ -10,6 +10,8 @@ use sc_core::{
     recipe::*,
 };
 use std::cell::Cell;
+#[path = "drafting_profile_headers.rs"]
+mod profile_headers;
 #[path = "drafting_root_input_members.rs"]
 mod root_input_members;
 #[path = "drafting_root_logical_suppliers.rs"]

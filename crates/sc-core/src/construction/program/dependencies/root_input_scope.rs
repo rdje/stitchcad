@@ -13,8 +13,11 @@ use crate::{
 use core::fmt;
 mod members;
 pub use members::{
-    BoundDraftingProgramRootInputMembers, BoundDraftingProgramRootLogicalSuppliers,
-    BoundDraftingProgramRootNumericSuppliers, DraftingProgramRootInputBinding,
+    BoundDraftingProgramProfileHeaders, BoundDraftingProgramRootInputMembers,
+    BoundDraftingProgramRootLogicalSuppliers, BoundDraftingProgramRootNumericSuppliers,
+    DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
+    DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
+    DraftingProgramProfileInputRequest, DraftingProgramRootInputBinding,
     DraftingProgramRootInputMember, DraftingProgramRootInputMemberError,
     DraftingProgramRootInputMemberRefusal, DraftingProgramRootInputMembersResult,
     DraftingProgramRootInputSource, DraftingProgramRootInputSupplier,

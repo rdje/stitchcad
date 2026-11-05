@@ -15,9 +15,15 @@ use crate::{
 use core::fmt;
 mod compose;
 mod error;
+mod profile_headers;
 pub use compose::{DraftingProgramRootInputBinding, DraftingProgramRootInputSupplier};
 pub use error::{
     DraftingProgramRootNumericSupplierError, DraftingProgramRootNumericSupplierRefusal,
+};
+pub use profile_headers::{
+    BoundDraftingProgramProfileHeaders, DraftingProgramProfileHeaderError,
+    DraftingProgramProfileHeaderRefusal, DraftingProgramProfileHeadersResult,
+    DraftingProgramProfileInputHeader, DraftingProgramProfileInputRequest,
 };
 
 /// One original numeric Derived consumer and its actual source/checked/acyclic owners.
