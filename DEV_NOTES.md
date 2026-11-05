@@ -2,6 +2,24 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — complete Closure placement members and current copy work
+
+0959 consumes complete prior operation/Pocket source proofs and reserves checked2N+1 aggregate/
+member/component passes before fresh whole charging,N-result reservation and child factories.
+Original instance fields expand First then Second. Targets derive only from0958 canonical notions;
+existing component work supplies actual current CutPlan/Piece loans. No external component,value,
+current anchor/direction or geometry query runs. Both outcomes retain the exact prior proof and
+same cursor;private prefixes drop and into_parent refunds nothing. N0 is idle.
+
+The first strict library lint found an unused future helper and oversized refused variant.
+Removed the unused helper and boxed only refused member context,with no lint exemption. Public
+contracts cover nine success/shortage/aggregate/late-member/late-component/missing-notion/missing-
+copy/empty/multiple-instance cases. All7 affected Closure contracts and3 API guards pass,as do
+strict library/test-target Clippy,formatting and book build. Whole0958 acceptance/0955 owner move
+verbatim to existing evidence before growth. Book/LIVE/resume align;README/G1 6/18 unchanged.
+Original sources/current references,native/cohort and .check/.verify remain pending.
+Promotion declined:existing original-member/component-work and finite cursor contracts own scope.
+
 ## _(2026-11-05 UTC)_ — original Closure placement member relations
 
 0958 freshly charges complete actual garment/Root/provider content and admits checked (E+8)^2

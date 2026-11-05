@@ -63,7 +63,9 @@ kinds, not an implicit expansion or a default supplied by a placement.
 The [bounded original member binder](../annexes/semantic-recipes.md#bind-one-original-closure-placement-member)
 now resolves an exact Closure/own-instance/First-or-Second request to its canonical notion record
 after fresh whole content and member-work admission. It preserves original loans and indices;
-current copy/Piece,component source and anchor/direction proofs remain separate pending work.
+the [complete placement-work stage](../annexes/semantic-recipes.md#bind-complete-original-closure-placement-work)
+now joins all roles to actual current copies/Pieces through the same finite cursor. Component source
+and bounded anchor/direction proofs remain pending;hardware geometry stays deferred to G2.
 
 ## Complete notion-placement collection
 

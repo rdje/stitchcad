@@ -3595,7 +3595,7 @@ body/snapshot,missing parameter,representation,annotation and expected-kind erro
 original witnesses while earlier private accepted parameter prefixes drop.
 
 Original logical/numeric garment input binding is implemented with focused checks. The Pocket
-current-member,source and Closure operation stages below extend it;physical Closure joins,native
+current-member,source and Closure operation/placement work stages below extend it;Closure source/reference joins,native
 semantic targets and complete cohort acceptance remain pending. This input proof selects no value
 and grants no physical opening,
 zipper/buttonhole length,external evidence or G4 schema truth. Whole `.5f.2.check`/`.verify` remain
@@ -3833,7 +3833,56 @@ only after their complete stages pass. Resource errors retain their concrete sta
 
 This proves only the requested original member relation. For example, a Closure whose Second
 notion is missing can still yield its valid First member; it cannot yield its Second member or
-claim complete currentness. Current CutCopy/Piece association, original component sources,
-current anchor/full direction references and complete aggregation have separate pending owners.
+claim complete currentness. The next stage joins the complete original placement class and its current CutCopy/Piece work.
+Original component sources, current anchor/full direction references and complete semantic cohort
+acceptance retain separate pending owners.
 The notion still reports `GeometricValidation::DeferredToG2`; hardware positions and orientation
 in reflected physical coordinates remain uncomputed.
+
+
+## Bind complete original Closure placement work
+
+`BoundDraftingProgramClosureButtonholes::bind_closure_placement_work()` consumes the complete
+original Closure operation relation proof, preserving its prior Pocket source/input proofs and
+the same finite semantic cursor. Every physical instance contributes First then Second, in original
+Closure/instance order. The requiring garment occurrence stays the original instance field;
+`record.member().owner().role()` distinguishes its two exact original roles.
+
+For N actual placement roles, the stage checks and atomically reserves `2N+1` passes before fresh
+whole input charging, complete N-record reservation or child factories. One pass covers the
+aggregate walk; each role requires one fresh original member binding and one fresh current
+copy/Piece work admission. Both use the cursor's complete content/per-pass matching policy.
+Prior demands grant no credit. Overflow or shortage refuses the complete stage before work.
+
+The member is the preceding section's `BoundDraftingClosurePlacementMember`. The component target
+is derived only from that member's original canonical notion: its stored physical copy and original
+source Piece. The existing `prepare_component_binding()` then proves actual current CutPlan copy
+and expected Piece membership under a new whole resource/matching admission. It does not query an
+external component provider. A copy removed after the notion was authored refuses even if another
+copy of the same pattern Piece survives; no alternate copy or source Piece is selected.
+
+Each `DraftingProgramClosurePlacementWork` keeps its original `occurrence()`, exact `member()`
+relation and actual `work()` proof. The member's original Closure/instance/role/notion and the
+work's actual copy/Piece share the same admitted garment parent. Repeated Piece targets across
+roles or instances remain distinct records. These loans do not clone source bodies, resolve
+placement anchors/directions or supply original import/recipe provenance.
+
+`BoundDraftingProgramClosurePlacementWork::parent()` retains the complete prior operation/Pocket
+source proof; `records()` contains every original role once. For N>0, `demand()` records the fresh
+complete aggregate walk and `child_pass_count()` is `2N+1`. For an actually empty instance class,
+records are empty, demand is absent and the stage performs no new walk, lookup, allocation or pass
+reservation. Unused imports and semantic operations remain held with their original owners.
+
+A refused result retains the complete prior proof, original role count when arithmetic succeeds,
+completed aggregate demand when available and first typed work/resource/allocator/member/component
+cause. A member refusal preserves the original instance occurrence and exact requiring request;
+a component refusal additionally retains the successfully bound original member as diagnostic
+context. That diagnostic member is boxed to keep the refused variant compact. Earlier private
+successful records drop. `into_parent()` recovers either outcome's original parent without refunding
+reserved work, so a failed late child cannot reset the unique cursor.
+
+Focused contracts cover both roles, repeated Pieces, multiple instances, original parent/member/
+notion/copy/Piece loans, whole shortage, fresh aggregate and late child resources, a late missing
+notion and a missing original cut copy, empty scope and retries. Original component sources,
+bounded current anchor/full-direction references, complete native/semantic cohort and whole
+`.5f.2.check`/`.verify` remain pending. G2 still owns physical hardware placement and geometry.

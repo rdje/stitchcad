@@ -79,6 +79,9 @@ pub struct BoundDraftingProgramClosureButtonholes<
 impl<'s, 'a, P, H: DesignReferenceHost, S: DraftingGarmentProvider<H> + ?Sized>
     BoundDraftingProgramClosureButtonholes<'s, 'a, P, H, S>
 {
+    pub(in crate::construction::program::dependencies) fn parent_mut(&mut self) -> &mut P {
+        &mut self.parent
+    }
     /// Entire original numeric/logical garment input proof and same unique work cursor.
     #[must_use]
     pub const fn parent(&self) -> &P {

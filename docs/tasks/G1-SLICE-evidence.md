@@ -883,3 +883,20 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   authored owner;compare every original node exactly and allow only that explicit addition.
   promotion: declined (existing whole-record retention and original task graph contracts).
   Commit:STITCHCAD-G1-0957.
+
+## Completed original placement members0958
+
+  - [x] ROOT CAUSE / ISSUE:git grep -n bind_closure_placement_member 79ecdbbb -- crates/sc-core →empty,rc=1. Actual Closure/instance/notion inventories had no fresh bounded relation join.
+  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract closure_ →test result:ok. 6 passed,rc=0;member2 covers roles,original nonzero indices/reorder/multiple instances,Missing and work priority.
+  - [x] NO REGRESSION / LOCKSTEP:the same target profile_headers::rule_work::pocket →2 passed;--doc DraftingClosurePlacement →3 passed;--lib closure_placement_member_bound →1 passed;strict Clippy --lib and --test drafting_context_binding_contract →Finished,all rc=0.
+    fmt --check/git diff --check pass;book_tool.py build →published,rc=0. Book/journals/LIVE/resume align,G1still6/18 In Progress;README unchanged. Closed0957 owner/proof moved whole to evidence. Copy/source/reference/native/cohort/.check/.verify remain pending.
+  promotion: declined (existing original-member and strict Rust lint contracts).
+  Commit:STITCHCAD-G1-0958.
+## Completed operation cohort containment owner0955
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.operation-cohort.containment`
+  Status: `done`
+  Goal:move complete closed0952–0954 acceptance blocks byte-exact to the existing evidence sibling
+  before the construction working part grows beyond its1000-line transition boundary. Preserve
+  original live task IDs/statuses and every original proof byte;no archive or runtime changes.
+  Acceptance:whole original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-closure-cohort-prerequisite0955).

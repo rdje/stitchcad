@@ -268,6 +268,11 @@ fn build_with_placement_mode(
         &pieces,
         &ledger,
     )?;
+    let original_placement_plan = if placement_mode == 4 {
+        Some(plan.clone())
+    } else {
+        None
+    };
     let plan = if damaged {
         CutPlan::new(
             definitions
@@ -311,14 +316,24 @@ fn build_with_placement_mode(
         },
     })?;
     let structure = inputs.structure();
+    let notion_plan = original_placement_plan
+        .as_ref()
+        .unwrap_or(structure.cut_plan());
     let mut placements = vec![];
     let mut closures = vec![];
     for (index, kind) in kinds.into_iter().enumerate() {
         let offset = u128::try_from(index)? * 10;
         let pair = [id(20000 + offset), id(20001 + offset)];
-        for (copy, placement) in [id(10001), id(if damaged { 10005 } else { 10002 })]
-            .into_iter()
-            .zip(pair)
+        for (copy, placement) in [
+            id(10001),
+            id(if damaged && placement_mode != 4 {
+                10005
+            } else {
+                10002
+            }),
+        ]
+        .into_iter()
+        .zip(pair)
         {
             placements.push(NotionPlacement::new(
                 NotionPlacementDefinition {
@@ -333,7 +348,7 @@ fn build_with_placement_mode(
                         direction: Direction::Original,
                     },
                 },
-                structure.cut_plan(),
+                notion_plan,
                 structure.pieces().pieces().first().ok_or("actual Piece")?,
                 structure.topology(),
             )?);
@@ -354,7 +369,7 @@ fn build_with_placement_mode(
                 definition.id = identity;
                 placements.push(NotionPlacement::new(
                     definition,
-                    structure.cut_plan(),
+                    notion_plan,
                     structure.pieces().pieces().first().ok_or("actual Piece")?,
                     structure.topology(),
                 )?);
@@ -372,7 +387,7 @@ fn build_with_placement_mode(
                 instances,
             },
             &placements,
-            structure.cut_plan(),
+            notion_plan,
             structure.pieces().pieces(),
             structure.topology(),
         )?);
@@ -662,6 +677,28 @@ pub(super) fn garment_with_placement_members(
             formula_sources: FormulaSources::new(vec![], FormulaSourceLimits::new(0, 0, 0))?,
         },
         0,
+        mode,
+    )
+}
+
+pub(super) fn garment_with_placement_work(
+    canonical: CanonicalInputs,
+    semantic_recipe: SemanticRecipe,
+    kinds: Vec<ClosureKind>,
+    mode: u8,
+) -> TestResult<DesignGarment<EmptyHost>> {
+    build_with_placement_mode(
+        mode == 4,
+        id(100),
+        kinds,
+        PocketOpening::Declaration(id(90)),
+        SemanticFixture {
+            canonical,
+            semantic_recipe,
+            parameter_definitions: vec![],
+            formula_sources: FormulaSources::new(vec![], FormulaSourceLimits::new(0, 0, 0))?,
+        },
+        2,
         mode,
     )
 }

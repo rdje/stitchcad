@@ -490,3 +490,9 @@ pub use context::{
     DraftingClosurePlacementMemberError, DraftingClosurePlacementMemberRefusal,
     DraftingClosurePlacementOwner, DraftingClosurePlacementRequest, DraftingClosurePlacementShape,
 };
+
+pub use program::{
+    BoundDraftingProgramClosurePlacementWork, DraftingProgramClosurePlacementWork,
+    DraftingProgramClosurePlacementWorkError, DraftingProgramClosurePlacementWorkRefusal,
+    DraftingProgramClosurePlacementWorkResult,
+};

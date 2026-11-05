@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0959 — compose complete original Closure placement work
+
+The consuming stage reserves2N+1 whole passes before aggregate/member/current-copy work. Every
+original instance role retains canonical notion and actual current copy/Piece loans;typed late
+resources/missing targets/copies drop private prefixes and retain the same spent cursor. Nine
+focused cases,affected Closure7,API3,strict library/test lint,formatting and book build pass.
+Placement source/reference and whole native/cohort/integration proof remain pending.
+
 ## STITCHCAD-G1-0958 — bind original Closure instance and canonical notion members
 
 Fresh complete content and matching admission precede exact Closure/own-instance/First-or-Second/

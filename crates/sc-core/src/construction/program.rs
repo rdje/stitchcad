@@ -225,3 +225,9 @@ pub use dependencies::{
     DraftingProgramClosureButtonholeError, DraftingProgramClosureButtonholeRefusal,
     DraftingProgramClosureButtonholeResult,
 };
+
+pub use dependencies::{
+    BoundDraftingProgramClosurePlacementWork, DraftingProgramClosurePlacementWork,
+    DraftingProgramClosurePlacementWorkError, DraftingProgramClosurePlacementWorkRefusal,
+    DraftingProgramClosurePlacementWorkResult,
+};

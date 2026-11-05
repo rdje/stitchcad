@@ -736,3 +736,101 @@ impl<
         outcome.finish(self)
     }
 }
+
+impl<
+        'x,
+        'u,
+        't,
+        'z,
+        'q,
+        'h,
+        'v,
+        'w,
+        's,
+        'g,
+        'k,
+        'j,
+        'i,
+        'r,
+        'b,
+        'n,
+        'p,
+        'a,
+        H: DesignReferenceHost + DesignResourceSource,
+        S: DraftingInitialInputProvider<H>
+            + DraftingGarmentProvider<H>
+            + DraftingProfileNumericProvider<H>
+            + DraftingProfileLogicalProvider<H>
+            + DraftingRuleProvider<H>
+            + crate::construction::DraftingComponentProvider<H>
+            + ?Sized,
+    >
+    crate::construction::BoundDraftingProgramClosureButtonholes<
+        's,
+        'a,
+        crate::construction::BoundDraftingProgramPocketSources<
+            'x,
+            's,
+            'a,
+            BoundDraftingProgramGarmentProfileNumericParameters<
+                'u,
+                't,
+                'z,
+                'q,
+                'h,
+                'v,
+                'w,
+                'a,
+                DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+                H,
+                S,
+            >,
+            H,
+            S,
+        >,
+        H,
+        S,
+    >
+{
+    /// Consume complete original operation/Pocket source proofs and reserve 2N+1 placement passes
+    /// before aggregate charging,result reservation and each original member/current-copy factory.
+    /// Two roles per original instance remain separate;N0 is idle. Targets derive only from exact
+    /// original canonical notions. No source,value,current-reference or geometry query occurs.
+    /// # Errors
+    /// Whole arithmetic,atomic work shortage,resources,allocator,then first original member or
+    /// current copy/Piece cause. Both outcomes retain original prior proofs and the same cursor;
+    /// recovering a parent drops private prefixes without refunding reserved work.
+    pub fn bind_closure_placement_work(
+        mut self,
+    ) -> crate::construction::DraftingProgramClosurePlacementWorkResult<
+        's,
+        'w,
+        'a,
+        Self,
+        DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+        H,
+        S,
+    > {
+        let cursor = &mut self
+            .parent_mut()
+            .parent_mut()
+            .logical
+            .root
+            .logical
+            .members
+            .owner
+            .inputs
+            .root
+            .logical
+            .members
+            .owner
+            .selections;
+        let inputs = cursor.inputs();
+        let outcome = crate::construction::program::dependencies::closure_placement_work::prepare(
+            cursor,
+            inputs.garment(),
+            |sink| inputs.charge_resources(sink),
+        );
+        outcome.finish(self)
+    }
+}

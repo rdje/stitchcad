@@ -949,12 +949,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Goal:bind all original Closure instance First/Second placements under fresh whole work and actual
   garment/copy/Piece/source proof;introduce only authentic missing facets before use.
 
-- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.operation-cohort.containment`
-  Status: `done`
-  Goal:move complete closed0952–0954 acceptance blocks byte-exact to the existing evidence sibling
-  before the construction working part grows beyond its1000-line transition boundary. Preserve
-  original live task IDs/statuses and every original proof byte;no archive or runtime changes.
-  Acceptance:whole original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-closure-cohort-prerequisite0955).
+Completed operation-cohort containment owner: [the evidence sibling](G1-SLICE-evidence.md#completed-operation-cohort-containment-owner0955).
 
 Completed physical-relation retention owner/proof: [the evidence sibling](G1-SLICE-evidence.md#completed-physical-relation-retention0957).
 
@@ -974,16 +969,25 @@ Completed physical-relation retention owner/proof: [the evidence sibling](G1-SLI
   and typed test failures;now resolved with explicit unexpected-source counter assertions and strict
   affected-target Clippy. Initial get(0) corrections also changed to first();no lint exemptions.
 
-  - [x] ROOT CAUSE / ISSUE:git grep -n bind_closure_placement_member 79ecdbbb -- crates/sc-core →empty,rc=1. Actual Closure/instance/notion inventories had no fresh bounded relation join.
-  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract closure_ →test result:ok. 6 passed,rc=0;member2 covers roles,original nonzero indices/reorder/multiple instances,Missing and work priority.
-  - [x] NO REGRESSION / LOCKSTEP:the same target profile_headers::rule_work::pocket →2 passed;--doc DraftingClosurePlacement →3 passed;--lib closure_placement_member_bound →1 passed;strict Clippy --lib and --test drafting_context_binding_contract →Finished,all rc=0.
-    fmt --check/git diff --check pass;book_tool.py build →published,rc=0. Book/journals/LIVE/resume align,G1still6/18 In Progress;README unchanged. Closed0957 owner/proof moved whole to evidence. Copy/source/reference/native/cohort/.check/.verify remain pending.
-  promotion: declined (existing original-member and strict Rust lint contracts).
-  Commit:STITCHCAD-G1-0958.
+  Acceptance:whole original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-original-placement-members0958).
+
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.work`
-  Status: `pending`
+  Status: `done`
   Goal:compose complete original placement members and fresh current copy/Piece work through the
   same finite cursor;reserve every walk/result before child work and retain first typed cause.
+  Plan:N=two roles per original instance;reserve 2N+1 aggregate/member/component passes before
+  fresh original-input charging,N-result reservation or either child factory. Reuse0958 exact
+  member loans and existing current-copy/Piece work with the target derived only from that notion.
+  N0 idle;whole/late resources,Missing targets and current-copy causes retain original fields/roles,
+  prior complete operation/source proof and unique spent cursor;no source or topology query.
+  Focused runtime originals/repeated Pieces,atomic shortage,late member/component/resource errors,
+  empty class and no refund;strict affected library/test lint and new API guards.
+  - [x] ROOT CAUSE / ISSUE:git grep -n bind_closure_placement_work efbd6856 -- crates/sc-core →empty,rc=1. Initial strict library Clippy →unused parts/result_large_err,rc=101;remove unused helper and box only refused member context.
+  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract closure_placement_work_keeps →test result:ok. 1 passed,rc=0;nine cases retain all roles/loans,2N+1,late causes,N0 and no refund.
+  - [x] NO REGRESSION / LOCKSTEP:the same target closure_ →7 passed;--doc BoundDraftingProgramClosurePlacementWork →3 passed;strict Clippy --lib/--test drafting_context_binding_contract →Finished;fmt --check/git diff --check pass;book_tool.py build →published,all rc=0.
+    Book/journals/LIVE/resume align,G1still6/18 In Progress;README unchanged. Whole0958 proof/0955 owner moved exact to evidence;fixed bounds unchanged. Source/current-reference/native/cohort and whole .check/.verify stay pending.
+  promotion: declined (existing original members,component work and finite cursor contracts).
+  Commit:STITCHCAD-G1-0959.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.sources`
   Status: `pending`
   Goal:bind original placement component sources from complete stable work parents,retaining

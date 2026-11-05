@@ -139,3 +139,10 @@ pub use closure_buttonholes::{
     DraftingProgramClosureButtonholeError, DraftingProgramClosureButtonholeRefusal,
     DraftingProgramClosureButtonholeResult,
 };
+
+mod closure_placement_work;
+pub use closure_placement_work::{
+    BoundDraftingProgramClosurePlacementWork, DraftingProgramClosurePlacementWork,
+    DraftingProgramClosurePlacementWorkError, DraftingProgramClosurePlacementWorkRefusal,
+    DraftingProgramClosurePlacementWorkResult,
+};
