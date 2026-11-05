@@ -1,5 +1,9 @@
 //! Original Pocket/Closure fields with actual garment/member locations;no source admission.
 use crate::{
+    construction::{
+        DraftingClosureSelectionField, DraftingPocketSelectionField,
+        DraftingSemanticSelectionLocation,
+    },
     design::{fixed_value, DesignGarment, DesignMetadataHost, DesignReferenceHost},
     ontology::{
         ButtonholeDerivation, Closure, ClosureDefinition, ClosureInstance, ClosureKind,
@@ -148,6 +152,69 @@ impl<'a, H: DesignMetadataHost> DraftingGarmentSemanticUse<'a, H> {
     #[must_use]
     pub const fn field(self) -> DraftingGarmentSemanticField<'a> {
         self.field
+    }
+    /// Fixed coordinates of this genuine original field. Pocket/Closure inventory indices and
+    /// nested component/instance roles stay distinct;no mixed position is manufactured. This
+    /// syntax projection accepts no request row,Profile need,source or new work allowance.
+    #[must_use]
+    pub const fn selection_location(self) -> DraftingSemanticSelectionLocation {
+        use DraftingClosureSelectionField as C;
+        use DraftingGarmentSemanticField as F;
+        use DraftingPocketSelectionField as P;
+        // The private producer pairs each field with its actual member in the same inventory.
+        let index = match self.owner {
+            DraftingGarmentSemanticOwner::Pocket { index, pocket: _ }
+            | DraftingGarmentSemanticOwner::Closure { index, closure: _ } => index,
+        };
+        use DraftingSemanticSelectionLocation as L;
+        match self.field {
+            F::PocketServed(_) => L::Pocket {
+                pocket: index,
+                field: P::Served,
+            },
+            F::PocketPosition(_) => L::Pocket {
+                pocket: index,
+                field: P::Position,
+            },
+            F::PocketOrientation(_) => L::Pocket {
+                pocket: index,
+                field: P::Orientation,
+            },
+            F::PocketOpening(_) => L::Pocket {
+                pocket: index,
+                field: P::Opening,
+            },
+            F::PocketComponent {
+                index: component,
+                reference: _,
+            } => L::Pocket {
+                pocket: index,
+                field: P::Component { index: component },
+            },
+            F::ClosureLength(_) => L::Closure {
+                closure: index,
+                field: C::Length,
+            },
+            F::ClosureSize { role, source: _ } => L::Closure {
+                closure: index,
+                field: C::Size(role),
+            },
+            F::ClosureButtonhole(_) => L::Closure {
+                closure: index,
+                field: C::Buttonhole,
+            },
+            F::ClosureInstance {
+                index: instance,
+                instance: _,
+            } => L::Closure {
+                closure: index,
+                field: C::Instance { index: instance },
+            },
+            F::ClosureUnsupportedFly(_) => L::Closure {
+                closure: index,
+                field: C::UnsupportedFly,
+            },
+        }
     }
 }
 impl<H: DesignReferenceHost> DesignGarment<H> {

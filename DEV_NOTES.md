@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — genuine original selection coordinates
+
+0915 projects fixed typed coordinates from genuine original garment,semantic and native field
+views. Actual inventory/component/instance/size indices,semantic ordinals and native mixed
+positions stay distinct. Every field variant is exhaustive;coordinates alone grant no row
+coverage,Profile need,source or work allowance. No callback,allocation,clone or value is read.
+Independent fixture sequences cover every constructible Closure kind,both semantic families and
+all13 native families. One exact raw Grainline loan at positions11/16 remains two consumers;Walk
+pair/A/B/Profile roles and original owner loans stay exact. Four focused tests,format and scoped
+strict Clippy pass. The fixture's initial direct indexing was replaced with checked get before
+repeating the checks. Whole/coupled verification stays with .5f.2.check/.verify.
+Promotion declined:the local typed projection/API/book is canonical. README/LIVE reviewed
+unchanged,G1still6/18 In Progress;direct need classification and actual key matching are next.
+
 ## _(2026-11-05 UTC)_ — finite aggregate child-work capacity
 
 0914 freshly admits the complete original content/population policy,then checks selected P-pass

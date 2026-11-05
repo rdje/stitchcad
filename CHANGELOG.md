@@ -3,6 +3,13 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0915 — project genuine original selection coordinates
+
+Original garment,semantic and native field views now project fixed typed request locations with
+actual indices/ordinals/mixed positions. Repeated raw loans remain separate consumers;Walk roles
+stay exact. Four focused fixture tests,format and scoped strict Clippy pass with no callbacks.
+Actual need/coverage/source binding and whole verification remain pending;G1still6/18 unchanged.
+
 ## STITCHCAD-G1-0914 — admit finite aggregate child-work capacity
 
 Fresh whole content/populations precede checked P-pass content/matching/result quotas. A unique

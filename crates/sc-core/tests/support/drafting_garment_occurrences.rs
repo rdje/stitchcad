@@ -14,8 +14,21 @@ fn pocket_fields_keep_actual_garment_owner_nested_indices_and_source_buffers() -
     let pocket = garment.pockets().pockets().first().ok_or("actual Pocket")?;
     let definition = pocket.definition();
     let mut fields = garment.pocket_closure_dependencies();
-    for expected in 0..5 {
+    for (expected, field) in [
+        DraftingPocketSelectionField::Served,
+        DraftingPocketSelectionField::Position,
+        DraftingPocketSelectionField::Orientation,
+        DraftingPocketSelectionField::Opening,
+        DraftingPocketSelectionField::Component { index: 0 },
+    ]
+    .into_iter()
+    .enumerate()
+    {
         let use_ = fields.next().ok_or("complete Pocket fields")?;
+        assert_eq!(
+            use_.selection_location(),
+            DraftingSemanticSelectionLocation::Pocket { pocket: 0, field }
+        );
         assert!(core::ptr::eq(use_.garment(), &garment));
         assert!(
             matches!(use_.owner(),DraftingGarmentSemanticOwner::Pocket{index:0,pocket:actual} if core::ptr::eq(actual,pocket))
@@ -76,6 +89,31 @@ fn all_constructible_closure_kinds_keep_actual_sources_and_physical_instances() 
         },
     ];
     let garment = garment_with_closures(kinds)?;
+    use DraftingClosureSelectionField as C;
+    let expected_locations = [
+        (0, C::Length),
+        (0, C::Instance { index: 0 }),
+        (1, C::Length),
+        (1, C::Instance { index: 0 }),
+        (2, C::Length),
+        (2, C::Instance { index: 0 }),
+        (3, C::Size(DraftingClosureSizeRole::Hook)),
+        (3, C::Size(DraftingClosureSizeRole::Bar)),
+        (3, C::Instance { index: 0 }),
+        (4, C::Size(DraftingClosureSizeRole::Button)),
+        (4, C::Buttonhole),
+        (4, C::Instance { index: 0 }),
+    ];
+    let locations: Vec<_> = garment
+        .pocket_closure_dependencies()
+        .skip(5)
+        .map(|use_| use_.selection_location())
+        .collect();
+    assert_eq!(
+        locations,
+        expected_locations
+            .map(|(closure, field)| DraftingSemanticSelectionLocation::Closure { closure, field })
+    );
     let mut fields = garment.pocket_closure_dependencies().skip(5);
     for (index, closure) in garment.closures().closures().iter().enumerate() {
         let mut next = || -> TestResult<DraftingGarmentSemanticField<'_>> {

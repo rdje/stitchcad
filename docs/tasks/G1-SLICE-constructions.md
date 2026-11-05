@@ -720,7 +720,7 @@ retains all original goals,statuses and focused acceptance evidence.
   Goal:join exact actual garment/context and existing program source/order/acyclic/canonical/geometry proof owners;freshly account all held fields/requests and checked aggregate occurrence,comparison,child-walk and result bounds before queries/reservation. Preserve first original causes.
   Children: `.owners` (exact garment/context and geometry proof join),`.bounds` (fresh complete content and prospective work),`.coverage` (actual direct/source-selection keys after preflight;native target needs/final unused rows remain with family/cohort binders).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.coverage`
-  Status: `pending`
+  Status: `in_progress`
   Goal:after complete aggregate work,match explicit relative request coordinates to actual original garment/program/semantic/native occurrences and complete direct Profile/rule needs. Preserve actual owners/first causes;do not certify native target-internal Profile need until authentic target association or treat unconsumed rows as accepted.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical`
   Status: `pending`
@@ -936,3 +936,21 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] ROOT CAUSE / ISSUE:task collection after0913 holds1498932B against1500000B;fresh0914 evidence requires retention,not a cap increase. Original0912 acceptance also followed the0911 retention node;whole-source retention preserves that layout while unambiguous live pointers restore ownership navigation.
   - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1080.md →4 exact Git spans,rc=0. Independent on-disk decode/hash/Git interval and public-reader equality pass before final compaction;all183 original task IDs/statuses survive. Only completed0911–0913 prose is shortened.
   - [x] NO REGRESSION / LOCKSTEP:independent1080.json →210 lines/21969 decodedB,30774 sealedB,4 source intervals/public_exact true,rc=0. Task collection after compaction1491718B,below unchanged ceiling. Retrieval book and0914 journals align. No old seal,cap,producer or protected evidence changes. Commit:STITCHCAD-G1-0914.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.coverage.locations`
+  Status: `done`
+  Goal:project fixed typed selection coordinates from genuine original garment,semantic and native field views. Preserve actual inventory/nested indices,semantic ordinal and native mixed position,including repeated loans. This syntax projection grants no actual row coverage,Profile need,source or work allowance.
+  - [x] REPRODUCE / ISSUE:raw request coordinates must match genuine original fields before source coverage;scalar ordinal,semantic ordinal,mixed position and Root inventory indices belong to separate coordinate classes.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'pub const fn selection_location' in context/garment/occurrences.rs,program/semantic_occurrences.rs and program/native_semantic.rs →160/140/82,rc=0. Existing private field producers already retain actual garment/member,semantic ordinal or mixed step;the projection can use those original witnesses without lookup or invented position.
+  - [x] FIX:constant-work typed location projections exhaustively map every actual garment,semantic and native field. Struct-variant fields are explicitly classified;actual nested component/instance/size or Walk pair/A/B/Profile roles survive. Coordinates alone grant no accepted row,need,source or work credit.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract garment_occurrences →2 pass;original_semantic_fields_pin →1 pass;mixed_native_fields_keep →1 pass,rc=0 each. Independent typed sequences cover all constructible Closure kinds,both semantic families and all13 native families. The same actual Grainline loan at11/16
+    remains two consumers;all original field/owner loans and zero callback traces pass.
+  - [x] NO REGRESSION:cargo fmt -p sc-core -- --check and cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings →pass,rc=0. Initial fixture direct indexing triggered strict Clippy;checked get replaces it without a suppression before the repeated focused tests/lint pass. Existing unsupported Fly construction is
+    unchanged;whole .5f.2.check/.verify remain deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book explain genuine coordinates,raw-key limits and remaining actual need/coverage/source acceptance. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:local typed projection/API/book owns this fact. Commit:STITCHCAD-G1-0915.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.coverage.needs`
+  Status: `pending`
+  Goal:classify actual direct Profile/rule selection needs exhaustively from original fields,distinguishing Root/numeric/output fields and deferred authentic native target context. Preserve raw source domains and original occurrence owners;do not query sources or certify target-internal needs.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.coverage.check`
+  Status: `pending`
+  Goal:after fresh complete aggregate admission,match all explicit direct keys and required direct Profile/rule needs within admitted 2OR work. Retain exact owners,policy and first original causes with no partial acceptance;defer target-internal need and final unused-row acceptance to authentic family/cohort binders.

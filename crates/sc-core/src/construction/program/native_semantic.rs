@@ -1,7 +1,10 @@
 //! Original native semantic fields under the exact normalized program and genuine mixed step.
 use super::{DraftingProgramStepKind, DraftingProgramStepView, NormalizedDraftingProgram};
 use crate::{
-    construction::{DraftingContextSource, DraftingNativeSemanticUse},
+    construction::{
+        DraftingContextSource, DraftingNativeSelectionField, DraftingNativeSemanticField,
+        DraftingNativeSemanticUse, DraftingSemanticSelectionLocation,
+    },
     design::DesignMetadataHost,
 };
 use core::{fmt, iter::FusedIterator};
@@ -71,6 +74,33 @@ impl<'n, 'p, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
     #[must_use]
     pub const fn native(self) -> DraftingNativeSemanticUse<'a> {
         self.native
+    }
+    /// Fixed original native location at this genuine mixed position,including actual target,
+    /// Notch role or Walk pair/A/B/Profile role. Repeated raw loans in different mixed slots stay
+    /// distinct. This syntax projection proves no row coverage or target-internal Profile need.
+    #[must_use]
+    pub const fn selection_location(self) -> DraftingSemanticSelectionLocation {
+        use DraftingNativeSelectionField as N;
+        let field = match self.native.field() {
+            DraftingNativeSemanticField::Target { role, reference: _ } => N::Target(role),
+            DraftingNativeSemanticField::NotchProfile { role, reference: _ } => {
+                N::NotchProfile(role)
+            }
+            DraftingNativeSemanticField::WalkNotchProfile {
+                pair_index,
+                side,
+                role,
+                reference: _,
+            } => N::WalkNotchProfile {
+                pair_index,
+                side,
+                role,
+            },
+        };
+        DraftingSemanticSelectionLocation::Native {
+            position: self.position(),
+            field,
+        }
     }
 }
 impl<'p, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>

@@ -130,6 +130,20 @@ fn original_semantic_fields_pin_exact_program_owners_positions_ordinals_and_name
             assert_eq!(use_.position(), position);
             assert_eq!(use_.step().position(), position);
             assert_eq!(use_.ordinal(), ordinal);
+            use DraftingSemanticSelectionField as F;
+            let field = match (ordinal, index) {
+                (1, 0) => F::ButtonholeButton,
+                (1, 1) => F::ButtonholePolicy,
+                (1, index) => F::ButtonholeInput { index: index - 2 },
+                (2, 0) => F::LogicalOutput,
+                (2, 1) => F::LogicalRule,
+                (2, index) => F::LogicalInput { index: index - 2 },
+                _ => return Err("unexpected fixture semantic ordinal".into()),
+            };
+            assert_eq!(
+                use_.selection_location(),
+                DraftingSemanticSelectionLocation::Semantic { ordinal, field }
+            );
             assert!(
                 matches!(use_.step().kind(),DraftingProgramStepKind::Semantic{ordinal:actual,operation} if actual==ordinal && core::ptr::eq(operation,original))
             );

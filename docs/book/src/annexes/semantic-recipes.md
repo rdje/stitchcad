@@ -2269,3 +2269,39 @@ overflow precedes quota checks. Zero capacity,partial reservation,atomic refusal
 retain exact policy/input loans without callbacks. Integer boundary checks also cover aggregate
 counter totals beyond u64 and unused zero-capacity arithmetic. Compiler guards prevent Default,
 field replacement,lifetime escape and cursor cloning. Whole/coupled verification remains deferred.
+
+## Project genuine field coordinates for selection matching
+
+`selection_location()` is now available on `DraftingGarmentSemanticUse`,
+`DraftingProgramSemanticUse` and `DraftingProgramNativeSemanticUse`. Each genuine field view
+projects its fixed typed `DraftingSemanticSelectionLocation` in constant work. It allocates no
+buffer,queries no source and inspects no selected value. The original view still retains its
+actual owner;the returned coordinates alone contain no owner proof or new work allowance.
+
+Pocket and Closure coordinates use actual zero-based inventory indices and original component,
+instance or size roles. Root records gain no mixed-program position. Semantic coordinates use
+the genuine one-based **semantic ordinal**,even when intervening scalar/native steps give that
+operation another mixed position. Native coordinates use the genuine one-based **mixed position**
+and preserve target,Notch role,or Walk pair/A/B/Profile role. Reusing the same native input loan in
+two mixed slots produces distinct coordinates for those two consumers.
+
+```text
+Pocket inventory0 / component0
+Closure inventory3 / Hook size
+Semantic ordinal2 / logical input1   (mixed position4 remains separate)
+Native position12 / pair1 / sideB / ProductionWidth
+Native position11 / Grainline target
+Native position16 / Grainline target (same raw loan,another consumer)
+```
+
+The mapping exhaustively classifies every existing field variant. The focused fixtures compare
+typed coordinates against independent expected Pocket/Closure,semantic and all13-native-family
+sequences. They preserve all43 original native fields plus the repeated Grainline at another
+position,including every Walk pair/A/B/Profile field. Original owner/field loans stay exact and
+provider callback traces stay zero. The unsupported Fly constructor remains refused by its
+existing contract;this projection creates no such member.
+
+These are actual syntax coordinates for later bounded matching. They do not show that a supplied
+row exists,is required or is consumed. A policy/rule field location also does not manufacture its
+separate explicit rule-origin row. Direct Profile/rule need classification,whole direct coverage,
+authentic native target-internal needs and final unused-row acceptance remain subsequent stages.

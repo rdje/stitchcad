@@ -1,7 +1,9 @@
 //! Original typed semantic fields tied to actual normalized program/step owners.
 use super::{DraftingProgramStepKind, DraftingProgramStepView, NormalizedDraftingProgram};
 use crate::{
-    construction::DraftingContextSource,
+    construction::{
+        DraftingContextSource, DraftingSemanticSelectionField, DraftingSemanticSelectionLocation,
+    },
     design::{fixed_value, DesignMetadataHost},
     ontology::{EntityId, NotionSize},
     recipe::{
@@ -131,6 +133,26 @@ impl<'n, 'p, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
     #[must_use]
     pub const fn field(self) -> DraftingSemanticField<'a> {
         self.field
+    }
+    /// Fixed location of this original field using its genuine semantic ordinal,not its mixed
+    /// position. This syntax projection accepts no row,rule origin,Profile need,source or work.
+    #[must_use]
+    pub const fn selection_location(self) -> DraftingSemanticSelectionLocation {
+        use DraftingSemanticSelectionField as S;
+        let field = match self.field {
+            DraftingSemanticField::ButtonholeButton(_) => S::ButtonholeButton,
+            DraftingSemanticField::ButtonholePolicy(_) => S::ButtonholePolicy,
+            DraftingSemanticField::ButtonholeInput { index, input: _ } => {
+                S::ButtonholeInput { index }
+            }
+            DraftingSemanticField::LogicalOutput(_) => S::LogicalOutput,
+            DraftingSemanticField::LogicalRule(_) => S::LogicalRule,
+            DraftingSemanticField::LogicalInput { index, input: _ } => S::LogicalInput { index },
+        };
+        DraftingSemanticSelectionLocation::Semantic {
+            ordinal: self.ordinal,
+            field,
+        }
     }
 }
 impl<'p, 'a, H: DesignMetadataHost, S: DraftingContextSource<H> + ?Sized>
