@@ -2055,8 +2055,34 @@ and fresh empty-proof composition preserves an earlier sink latch. Checked arith
 square overflow. API examples compile the local factory and refuse default policy construction,
 private proof mutation and raw-owner lifetime escape.
 
-Raw request records,record accounting and local structural admission are implemented with focused
-checks. The next aggregate work/coverage stage must join actual garment/program/proof owners,
+Raw request records,record accounting,local structural admission and the exact aggregate owner
+join below are implemented with focused checks. The next aggregate work/coverage stage must
 freshly account the entire source universe plus requests and bound every child walk/comparison/
 result before lookup. Native family and final cohort stages still confirm target-internal Profile
 needs and unconsumed rows. Whole `.5f.2.check` and coupled `.verify` remain deferred.
+
+## Join original aggregate semantic owners
+
+`BoundDraftingProgramGeometry::semantic_inputs(garment, selections)` joins the actual admitted
+`AdmittedDraftingGarmentSource` and `AdmittedDraftingSemanticSelections` to the complete geometry
+proof. That geometry owner already retains its exact canonical, source, order and acyclic proof
+chain. The result, `DraftingProgramSemanticInputs`, borrows these original owners without copying
+requests, source records or proof buffers.
+
+The join compares the garment's held context with the programme's held context in this order:
+actual input Root, actual source provider, Cartesian frame record, immutable snapshot record.
+Equal entity IDs, revisions or record contents cannot substitute for those identities. The join
+uses the held records; it never calls the provider again to reselect a frame or snapshot. It
+performs no allocation, content walk, currentness check, member lookup or value read.
+
+`geometry()`, `garment()` and `selections()` expose the exact original proof loans. On failure,
+`DraftingProgramSemanticOwnerError` retains those same three supplied owners and the first
+`DraftingProgramSemanticOwnerIssue`: Root, Provider, Frame or Snapshot. Debug and display report
+the issue without authored names or opaque source payloads. The successful join cannot replace
+its held fields or outlive its original owners.
+
+This is owner association only. A locally admitted selection with a nonexistent coordinate stays
+inspectable data; this join supplies no coverage or semantic source approval. Fresh complete
+aggregate content/work admission comes next, before actual selection matching or child queries.
+Logical, garment and native source binding, complete cohort acceptance, physical execution and
+whole-programme verification retain their separate task owners.

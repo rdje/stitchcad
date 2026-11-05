@@ -129,9 +129,10 @@ pub use program::{
     DraftingProgramOrderError, DraftingProgramOrderLimits, DraftingProgramOrderProofKind,
     DraftingProgramOrderRefusal, DraftingProgramOrderShape, DraftingProgramOrderStep,
     DraftingProgramOrderWorkError, DraftingProgramOrderWorkRefusal, DraftingProgramOutputPositions,
-    DraftingProgramPlannedGeometryIssue, DraftingProgramShape, DraftingProgramSourceCheckError,
-    DraftingProgramStep, DraftingProgramStepKind, DraftingProgramStepView,
-    NormalizedDraftingOperation, NormalizedDraftingProgram,
+    DraftingProgramPlannedGeometryIssue, DraftingProgramSemanticInputs,
+    DraftingProgramSemanticOwnerError, DraftingProgramSemanticOwnerIssue, DraftingProgramShape,
+    DraftingProgramSourceCheckError, DraftingProgramStep, DraftingProgramStepKind,
+    DraftingProgramStepView, NormalizedDraftingOperation, NormalizedDraftingProgram,
 };
 pub use program::{DraftingProgramSemanticUse, DraftingSemanticField};
 pub use semantic_selection::{

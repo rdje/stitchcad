@@ -38,3 +38,9 @@ pub use geometry_bind::{
     DraftingProgramGeometryError, DraftingProgramGeometryRefusal, DraftingProgramGeometrySupplier,
     DraftingProgramPlannedGeometryIssue,
 };
+
+mod semantic_owners;
+pub use semantic_owners::{
+    DraftingProgramSemanticInputs, DraftingProgramSemanticOwnerError,
+    DraftingProgramSemanticOwnerIssue,
+};

@@ -716,9 +716,9 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:closed0901–0904 original selection primitives;[whole scope/proofs](../history/stitchcad-devnotes-part1077.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work`
-  Status: `pending`
+  Status: `in_progress`
   Goal:join exact actual garment/context and existing program source/order/acyclic/canonical/geometry proof owners;freshly account all held fields/requests and checked aggregate occurrence,comparison,child-walk and result bounds before queries/reservation. Preserve first original causes.
-  Children: `.coverage` (after aggregate preflight,actual direct/source-selection key joins;authentic native target needs/final unused rows remain with family/cohort binders).
+  Children: `.owners` (exact garment/context and geometry proof join),`.bounds` (fresh complete content and prospective work),`.coverage` (actual direct/source-selection keys after preflight;native target needs/final unused rows remain with family/cohort binders).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.coverage`
   Status: `pending`
   Goal:after complete aggregate work,match explicit relative request coordinates to actual original garment/program/semantic/native occurrences and complete direct Profile/rule needs. Preserve actual owners/first causes;do not certify native target-internal Profile need until authentic target association or treat unconsumed rows as accepted.
@@ -893,3 +893,17 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] FIX / ADDRESSED:cleanup.py apply same run --idle-cua with OS visibility →handoff OK;4 trees/159 files/18967760B removed,zero residue,tracked_change false,exit0. Independent-post.json →all4 paths absent,2254 skips present and frozen tracked hash exact before launcher,exit0.
   - [x] NO REGRESSION / LOCKSTEP:independent digest agrees with frozen plan;protected proof/store families outside selection. Policy reference review:README/claim neutral bodies exact;containment deltas only already-adopted director book exception. MEM/index/ledger/book/cleanup record
     align;README/LIVE unchanged,G1still6/18. Promotion declined:existing cleanup procedure. Commit:STITCHCAD-G1-0907.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.owners`
+  Status: `done`
+  Goal:join exact admitted garment/context,complete geometry/canonical/source/order/graph owner and locally admitted selection owner without queries,allocation or coverage claims. Refuse first Root/provider/frame/snapshot mismatch and retain all supplied owners. Test actual identity versus equal-looking inputs and no-callback behavior.
+  - [x] REPRODUCE / ISSUE:local selection and geometry proofs existed separately. cargo test -p sc-core --test drafting_context_binding_contract exact_semantic_owners before implementation →E0599 missing semantic_inputs/E0433 owner issue,exit101. The initial test placement also exposed a corrected harness doc-comment error.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'pub struct BoundDraftingProgramGeometry|pub struct AdmittedDraftingGarmentSource' in geometry_bind.rs/context/garment.rs →original owners at244/186,rc=0. geometry_work/geometry_bind retain the exact canonical/source/order/acyclic
+    chain;context/garment retains its actual source context. The new focused fixture shows these owners need a constant-work association before aggregate scans;source/core code and public tests own the evidence,not an inferred matching-ID join.
+  - [x] FIX:private DraftingProgramSemanticInputs joins complete geometry,actual admitted garment and local selections. Root/provider address/frame/snapshot identities refuse in that order;all supplied loans survive refusal. Source-record identity follows existing is_same_record;provider comparison ignores wide-pointer metadata.
+  - [x] ADDRESSED (verified):cargo test -p sc-core --test drafting_context_binding_contract exact_semantic_owners →1 passed,exit0. Unsized non-Clone/Debug provider fixture exercises equal-ID Root,foreign provider/equal-looking frames/snapshots,first frame cause,exact raw/proof loans and callback trace0;invalid ordinal remains raw.
+  - [x] NO REGRESSION:cargo test -p sc-core --doc semantic_owners →2 compile-fail guards pass,exit0;cargo fmt -p sc-core -- --check and cargo clippy -p sc-core --lib --test drafting_context_binding_contract -- -D warnings →pass,exit0. Setup tracer/allowance repairs precede final green. Whole .5f.2.check/.verify remain deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/LIVE/book reflect owner association and next fresh bounds;README reviewed unchanged. G1still6/18 In Progress. Promotion declined:the API/book/test owns this local contract. Commit:STITCHCAD-G1-0908.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.work.bounds`
+  Status: `pending`
+  Goal:freshly compose all actual garment/Root/provider,program/source/name and selection fields plus held proof records;derive checked occurrence/comparison/child-walk/result populations before source queries,reservation or actual key coverage. Earlier demand/policy grants no aggregate credit;preserve exact owner and first field cause.

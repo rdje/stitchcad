@@ -22,7 +22,8 @@ pub use dependencies::{
     DraftingProgramGeometrySupplier, DraftingProgramGeometryTarget,
     DraftingProgramGeometryWorkError, DraftingProgramGeometryWorkRefusal,
     DraftingProgramNameDependency, DraftingProgramNativeGeometryUse,
-    DraftingProgramPlannedGeometryIssue,
+    DraftingProgramPlannedGeometryIssue, DraftingProgramSemanticInputs,
+    DraftingProgramSemanticOwnerError, DraftingProgramSemanticOwnerIssue,
 };
 mod admission;
 mod limits;

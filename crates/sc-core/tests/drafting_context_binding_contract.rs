@@ -61,6 +61,8 @@ mod rule_sources;
 mod rule_work;
 #[path = "support/drafting_semantic_occurrences.rs"]
 mod semantic_occurrences;
+#[path = "support/drafting_semantic_owners.rs"]
+mod semantic_owners;
 #[path = "support/drafting_semantic_program.rs"]
 mod semantic_program;
 #[path = "support/drafting_semantic_root.rs"]

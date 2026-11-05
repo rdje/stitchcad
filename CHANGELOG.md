@@ -3,6 +3,13 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0908 — join exact aggregate semantic owners
+
+New private owner join retains the exact garment/context,complete geometry proof chain and locally
+admitted request owner. Root/provider/frame/snapshot mismatches refuse before callbacks;invalid
+coordinates stay raw. Focused unsized-provider test,privacy/lifetime doctests,format and scoped strict
+Clippy pass. Fresh aggregate bounds/source coverage remain next;G1still6/18 In Progress.
+
 ## STITCHCAD-G1-0907 — resume PNT and complete due artifact cleanup
 
 Fresh reviewed cleanup removes4 regenerable trees/159 files/18967760B with strict OS-visible idle admission. Immediate independent proof finds all selected paths absent,2254 skipped paths preserved and tracked bytes exact. Protected stores remain excluded;aggregate semantic binding resumes next. G1still6/18 unchanged.

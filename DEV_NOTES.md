@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — exact semantic owner association
+
+0908 joins the already existing complete geometry/canonical/source/order/acyclic owner to the actual
+admitted garment context and local selection proof. The private result borrows all original owners;
+first Root/provider/frame/snapshot mismatch retains every supplied witness. Wide provider pointers
+compare storage addresses,matching existing source-record identity semantics. No callback,content
+walk,allocation,value or actual selection coverage occurs. Invalid request coordinates remain raw.
+The focused fixture uses an unsized provider with opaque non-Clone/Debug records;foreign equal-ID
+Roots and equal-looking held records refuse in order. Setup fixes reset the inherited decimal trace
+between accounting boundaries and supply existing nonzero namespace/graph record allowances.
+Focused runtime and privacy/lifetime guards pass;format/scoped strict Clippy pass. Broad .5f.2.check
+and .verify stay deferred. Promotion declined:the maintained API/book/test is the canonical contract.
+G1still6/18 In Progress;next is fresh complete aggregate content and prospective work admission.
+
 ## _(2026-11-05 UTC)_ — daily cleanup before resumed aggregate binding
 
 0907 resumes director-requested PNT from the clean0906 pause. The due cleanup freezes four generated
