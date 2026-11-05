@@ -886,5 +886,22 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1083.md →4 exact Git spans,rc=0. Independent on-disk decode/hash/Git interval and public-byte equality pass before compaction. All191 task IDs/statuses and46 historical heading routes remain exact;completed prose alone becomes retrieval pointers.
   - [x] NO REGRESSION / LOCKSTEP:independent1083.json →305 lines/25868 decodedB,36034 sealedB,4 source intervals/public_exact true,rc=0. Post-compaction19906L/1485927B fits unchanged ceilings;old seals,caps,producers and protected stores remain unchanged. Book reader and0920 journals align. Commit:STITCHCAD-G1-0920.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs`
-  Status: `pending`
+  Status: `in_progress`
   Goal:compose complete actual Root logical/numeric operation-input members under the original direct-key owner and finite child budget. Preserve original states,actual source scopes,typed causes and genuine Design Derived supplier/output/mixed-order joins without value reads or formula metadata. Profile inputs/rule signatures and final cohort stay separate.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.owners`
+  Status: `done`
+  Goal:join the checked actual direct-selection owner and original admitted Design semantic source scope by exact Root/provider/frame/snapshot identity. Retain both original proof owners and the unique unchanged child cursor before Root input lookup;no cached scope demand or new source/work/Derived acceptance.
+  - [x] REPRODUCE / ISSUE:Root operation-input members must belong to the exact original fresh Design source scope,not another equal-ID Root/provider/frame/snapshot. The original checked selection owner also holds a unique finite child cursor that cannot be copied or reset during source association.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'pub fn root_input_scope|RootInputScopeResult' dependencies/root_input_scope.rs →actual held-context identity join and transparent result alias,rc=0. The checked garment/program context and supplied Design source scope expose original Root/provider/held-record loans;identity precedes any later member work.
+  - [x] FIX:consume and retain the actual checked key/work owner plus exact supplied source scope. Root/provider/frame/snapshot identity refusal order preserves every original owner and unchanged cursor. The private owner exposes readonly originals only;success allocates/calls/charges/reserves nothing and grants no fresh scope-demand credit or member/Derived acceptance.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract exact_semantic_owners →1 pass,rc=0. Unsized opaque-source fixture checks actual/equal-ID/other-provider/frame/snapshot/both cases with both valid row sets,all original pointers/associations/policies and unchanged2/0 or1/1 capacity/reservation states. Provider
+    walks and both record traces stay0 throughout each join.
+  - [x] NO REGRESSION:cargo test -p sc-core --doc dependencies::root_input_scope →4 API/private/lifetime/Clone guards pass,rc=0. cargo fmt -p sc-core -- --check and scoped lib/test strict Clippy pass,rc=0. Original long signature triggered type_complexity;transparent result alias resolves it without suppression or runtime/body changes. Whole .5f.2.check/.verify remain deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book distinguish exact original owner association from pending fresh member work and Derived order. README/LIVE reviewed unchanged,G1still6/18 In Progress. Promotion declined:local owner API/book owns the contract. Next .root-inputs.members owns complete reserved/fresh Root membership. Commit:STITCHCAD-G1-0921.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.members`
+  Status: `pending`
+  Goal:after exact source-scope join,reserve the complete Root input-result/pass population and freshly charge original Root/provider content before binding every actual Root logical/numeric operation-input member. Retain genuine original fields and source loans;Profile/rule and Derived supplier/order acceptance remain separate.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.root-inputs.derived`
+  Status: `pending`
+  Goal:bind every actual Root Derived operation/formula supplier,original logical output and genuine strict earlier mixed position for Root operation inputs. Preserve source family and typed original causes;external Profile Derived IDs never become Root positions or values.

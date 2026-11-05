@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — exact Root input source owners
+
+0921 joins the consumed original direct-key/work owner with an explicitly supplied admitted
+Design semantic source scope. Root,provider storage address,held frame and held snapshot match
+in that order. Every supplied owner,original policy/association and unique child cursor survives
+success/refusal without reset. Success makes no allocation,callback,content walk or reservation;
+previous scope demand grants no fresh lookup/member/Derived acceptance.
+The unsized opaque-source fixture checks original/equal-ID/other-provider/held-record cases under
+both valid row sets. All original pointers and2/0 or1/1 remaining/reserved states stay exact;
+provider/resource/query traces remain0 during joins. Four compiler/API guards,format and scoped
+strict Clippy pass. The long concrete return signature triggered type_complexity;one transparent
+result alias resolves it without suppression or runtime changes.
+Promotion declined:local exact-owner API/book is canonical. README/LIVE reviewed unchanged,
+G1still6/18 In Progress. Complete fresh Root member work is next;Derived/Profile/rule/family/
+cohort and whole .5f.2.check/.verify remain owned and pending.
+
 ## _(2026-11-05 UTC)_ — fresh actual Root numeric sources
 
 0920 attaches genuine numeric target membership to the existing freshly admitted actual Root/

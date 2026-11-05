@@ -3,6 +3,14 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0921 — join exact original Root input source owners
+
+The actual checked key/work owner now consumes into an exact Design source-scope join. Root/
+provider/frame/snapshot mismatches retain original witnesses and unchanged child capacity.
+Focused unsized-owner checks,four compiler/API guards,format and scoped strict Clippy pass with
+zero join callbacks. Fresh member binding and Derived/source/cohort verification remain pending;
+G1still6/18 In Progress unchanged.
+
 ## STITCHCAD-G1-0920 — attach numeric members to fresh original Root sources
 
 Actual numeric member views now retain the fresh original source scope and exact Root inventory.

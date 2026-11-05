@@ -65,3 +65,8 @@ pub use semantic_coverage::{
     DraftingProgramSelectionCoverageError, DraftingProgramSelectionCoverageRefusal,
     DraftingProgramSelectionRowKind,
 };
+mod root_input_scope;
+pub use root_input_scope::{
+    DraftingProgramRootInputScope, DraftingProgramRootInputScopeError,
+    DraftingProgramRootInputScopeResult,
+};

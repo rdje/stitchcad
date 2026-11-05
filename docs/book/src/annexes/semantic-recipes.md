@@ -2441,3 +2441,47 @@ kind refusals retain exact scope,original request and nested lending cause witho
 Existing fresh-content,ignored-sink and logical/operation refusal cases also pass. Scope lifetime,
 private fields and generic numeric API guards pass;the source view grants no aggregate matching
 budget,Profile numeric member or complete semantic cohort.
+
+## Join original Root input source owners
+
+`CheckedDraftingProgramDirectSelections::root_input_scope(scope)` now consumes the original
+checked consumer/key owner and joins an explicitly supplied `DraftingDesignSemanticScope`.
+The private `DraftingProgramRootInputScope` keeps both original owners and the same unique
+child-pass cursor. `inputs()` returns the actual joined semantic owner;`selections()` lends its
+original checked keys,policy,associations and work state;`scope()` returns the exact supplied
+Design source scope. No body or association vector is cloned.
+
+The source scope must hold the same actual Root,provider,frame record and snapshot record as the
+consumer's already joined garment/program context. These are identity comparisons,not equality
+of IDs,labels or payload values. Provider comparison uses the actual storage address,consistent
+with the existing owner joins. Refusal order is fixed:
+
+| Supplied original source scope | Result |
+| --- | --- |
+| All actual context owners agree | Join retains both original owners |
+| Equal-ID Root owned by another original object | Root mismatch |
+| Same Root with another provider object | Provider mismatch |
+| Same provider with another held frame record | Frame mismatch |
+| Same provider/frame with another held snapshot | Snapshot mismatch |
+| Both frame and snapshot differ | Frame mismatch first |
+
+This is a constant-work identity join. It walks no content,calls no provider,reselects no header,
+performs no member lookup and reserves no child pass or result vector. Success allocates no
+workspace. The caller's prior child reservations and remaining capacity survive unchanged;the
+focused fixture preserves one reserved and one remaining pass across a successful join. Refusal
+retains the consumed original direct-key/work proof,exact supplied source-scope loan and first
+`DraftingProgramSemanticOwnerIssue` in `DraftingProgramRootInputScopeError`. Only that refused
+diagnostic is boxed. No accepted Root input/source prefix is exposed.
+
+For example,the source scope may be prepared explicitly from the original context,and the direct
+keys checked under their complete whole-work policy. Joining those two owners then confirms
+that subsequent Root member work refers to exactly that context. An independently prepared scope
+over equal-looking data cannot replace any original owner. The result alias
+`DraftingProgramRootInputScopeResult` names the same success/error without changing its witnesses.
+Private-field,lifetime and Clone guards keep the owner and unique cursor intact.
+
+The source scope's initial admission and cached demand grant no later fresh credit. The following
+Root member stage must reserve its complete pass/result population and freshly charge that actual
+Root/provider scope under the original work policy **before lookups or result reservation**.
+This owner join itself accepts no operation-input member,Derived supplier/order,Profile source,
+value or whole semantic cohort. The actual member and supplier stages remain pending.

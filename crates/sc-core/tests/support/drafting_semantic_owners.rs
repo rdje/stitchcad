@@ -789,6 +789,36 @@ fn exact_semantic_owners_reject_foreign_records_before_callbacks() -> TestResult
         })],
         vec![profile(target)],
     ];
+    let root_scope = context
+        .prepare_design_semantic_sources(content)
+        .map_err(|e| e.to_string())?;
+    let foreign_scope = alternate_root
+        .context()
+        .prepare_design_semantic_sources(content)
+        .map_err(|e| e.to_string())?;
+    let provider_scope = alternate_provider
+        .context()
+        .prepare_design_semantic_sources(content)
+        .map_err(|e| e.to_string())?;
+    let frame_scope = alternate_frame
+        .context()
+        .prepare_design_semantic_sources(content)
+        .map_err(|e| e.to_string())?;
+    let snapshot_scope = alternate_snapshot
+        .context()
+        .prepare_design_semantic_sources(content)
+        .map_err(|e| e.to_string())?;
+    let both_scope = alternate_both
+        .context()
+        .prepare_design_semantic_sources(content)
+        .map_err(|e| e.to_string())?;
+    let reset_owner_trace = || {
+        for provider in [&source, &other_source, &foreign_root] {
+            provider.walks.set(0);
+            provider.base.trace.set(0);
+            provider.alternate.trace.set(0);
+        }
+    };
     for (case, rows) in cases.into_iter().enumerate() {
         let row_count = rows.len();
         let pin_count = rows
@@ -898,6 +928,61 @@ fn exact_semantic_owners_reject_foreign_records_before_callbacks() -> TestResult
             );
             assert_eq!(source.walks.get(), 0);
             assert!(!format!("{proof:?}").contains("private"));
+            for (candidate, expected) in [
+                (&foreign_scope, DraftingProgramSemanticOwnerIssue::Root),
+                (&provider_scope, DraftingProgramSemanticOwnerIssue::Provider),
+                (&frame_scope, DraftingProgramSemanticOwnerIssue::Frame),
+                (&snapshot_scope, DraftingProgramSemanticOwnerIssue::Snapshot),
+                (&both_scope, DraftingProgramSemanticOwnerIssue::Frame),
+            ] {
+                let checked = actual
+                    .check_direct_selections(&policy)
+                    .map_err(|e| e.to_string())?;
+                reset_owner_trace();
+                let error = checked
+                    .root_input_scope(candidate)
+                    .expect_err("actual held Root scope owner");
+                assert_eq!(error.issue(), expected);
+                assert!(core::ptr::eq(error.inputs(), &actual));
+                assert!(core::ptr::eq(error.scope(), candidate));
+                assert!(core::ptr::eq(error.selections().limits(), &policy));
+                assert_eq!(error.selections().associations().len(), 6);
+                assert_eq!(
+                    (
+                        error.selections().remaining_child_passes(),
+                        error.selections().reserved_child_passes()
+                    ),
+                    (2, 0)
+                );
+                for provider in [&source, &other_source, &foreign_root] {
+                    assert_eq!(provider.walks.get(), 0);
+                    assert_eq!(provider.base.trace.get(), 0);
+                    assert_eq!(provider.alternate.trace.get(), 0);
+                }
+                assert!(!format!("{error:?} {error}").contains("private"));
+            }
+            reset_owner_trace();
+            let owners = proof
+                .root_input_scope(&root_scope)
+                .map_err(|e| e.to_string())?;
+            assert!(core::ptr::eq(owners.scope(), &root_scope));
+            assert!(core::ptr::eq(owners.inputs(), &actual));
+            assert!(core::ptr::eq(owners.selections().limits(), &policy));
+            assert_eq!(
+                (
+                    owners.selections().remaining_child_passes(),
+                    owners.selections().reserved_child_passes()
+                ),
+                (1, 1)
+            );
+            assert_eq!(owners.selections().associations().len(), 6);
+            assert_eq!(owners.selections().row_kinds().len(), row_count);
+            for provider in [&source, &other_source, &foreign_root] {
+                assert_eq!(provider.walks.get(), 0);
+                assert_eq!(provider.base.trace.get(), 0);
+                assert_eq!(provider.alternate.trace.get(), 0);
+            }
+            assert!(!format!("{owners:?}").contains("private"));
         } else {
             let error = result.expect_err("no accepted coverage prefix");
             match case {
