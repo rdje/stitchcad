@@ -19,9 +19,11 @@ mod error;
 mod parameters;
 pub use error::{DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal};
 pub use parameters::{
-    BoundDraftingProgramProfileParameters, DraftingProgramOperationInput,
-    DraftingProgramProfileInputParameter, DraftingProgramProfileParameterError,
-    DraftingProgramProfileParameterRefusal, DraftingProgramProfileParametersResult,
+    AdmittedDraftingProgramRuleWork, BoundDraftingProgramProfileParameters,
+    DraftingProgramOperationInput, DraftingProgramProfileInputParameter,
+    DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal,
+    DraftingProgramProfileParametersResult, DraftingProgramRuleWork, DraftingProgramRuleWorkError,
+    DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest, DraftingProgramRuleWorkResult,
 };
 
 /// Actual original Profile operation-input request and exact already-checked selection row.

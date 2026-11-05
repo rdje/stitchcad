@@ -2913,3 +2913,57 @@ This completes the scoped Root/Profile operation-input source/member/supplier cl
 rule/policy work,source bodies,signatures and canonical outputs remain next,followed by garment/
 native families and complete semantic cohort acceptance. Whole/coupled checking and physical
 execution remain with their existing tasks. G4 truth and external Profile recipe/order are separate.
+
+## Admit every original rule/policy work request
+
+`BoundDraftingProgramProfileParameters::admit_rule_work()` consumes the complete original
+Root/Profile operation-input owner and admits all actual logical-rule and Buttonhole-policy work
+requests. `AdmittedDraftingProgramRuleWork::inputs()` retains that exact owner and its unique
+cursor. `records()` holds one stable `DraftingProgramRuleWork` per actual header in genuine mixed
+order;each record exposes its original `request()` and freshly admitted `work()` parent.
+
+The request preserves the actual Root operation,semantic ordinal,mixed position,typed rule/policy
+field,field location,original row index and explicit `DraftingRuleSelection`. Row order does not
+choose consumer order. No missing origin becomes Design and no shared Profile pin merges requests.
+For example,the focused fixture deliberately scrambles its five original selection rows:
+
+| Actual consumer ordinal / mixed position | Original rule field | Original row index | Explicit origin |
+| --- | --- | --- | --- |
+| 1 / 1 | Logical rule901 | 2 | Design |
+| 2 / 3 | Buttonhole policy902 | 0 | Profile,original requested pin |
+
+Both work records borrow their actual original Root operations. The checked direct association
+supplies the actual row;`request().origin()` preserves that row's original pin loan. Work admission
+does not query a Profile or rule source. Even a requested Profile with unmatched labels remains
+selection intent at this stage;the later source factory must validate its actual selected source.
+The provider may therefore have no rule body available and work admission can still succeed.
+An Unknown or otherwise invalid eventual logical output also remains unaccepted here.
+
+For N>0,the factory atomically reserves N+1 remaining child passes before new content work:
+one whole aggregate/proof admission plus N existing `prepare_rule_binding` calls. It freshly
+charges the complete joined owner before fallibly reserving the complete N-record result vector.
+Each child then freshly charges Root/provider/request-pin content,derives its own checked
+(Echild+8)² requirement and resolves the actual original operation. Content policy and the finite
+per-pass matching ceiling come from this same cursor's admitted policy/envelope. They are limits,
+not cached demand credit. A child cannot enlarge that allowance or reset earlier reservations.
+
+In this fixture,the complete Root/Profile input stages reserve seventeen passes. Two original
+rule requests reserve three more,for twenty total. Their admission performs three fresh resource
+walks and no Profile,parameter,rule,currentness or value query. Repeated Profile-origin rule
+requests remain distinct even when their requested pin is the same original object.
+
+N0 returns an empty work class with no new walk,allocation,child reservation or demand claim.
+`child_pass_count()` is zero for N0 and N+1 otherwise;`demand()` is the fresh complete aggregate
+demand only after that entire stage passed. Each original child work retains its own fresh demand
+and matching shape. `DraftingProgramRuleWorkError` preserves the complete original input owner,
+actual rule count when known,completed aggregate demand and first typed refusal. A child refusal
+also preserves its actual request and original `DraftingRuleWorkError`;successful private work
+prefixes drop. Insufficient capacity leaves the cursor unchanged;later refusals keep the complete
+stage reservation spent. No complete rule-work projection is exposed on failure.
+
+Eight focused modes cover original mixed origins,scrambled rows,repeated Profile pins,N0,atomic
+capacity shortage,fresh whole-content refusal and late child resource/matching refusals. Original
+operation/field/provider/row-pin loans remain exact;all source/parameter callbacks stay unchanged.
+Privacy,lifetime and non-Clone compiler guards preserve stable parents and unique ownership.
+This is complete rule-work admission. Actual rule/Profile source bodies,local signatures,canonical
+outputs,garment/native families and whole semantic acceptance remain separately owned.

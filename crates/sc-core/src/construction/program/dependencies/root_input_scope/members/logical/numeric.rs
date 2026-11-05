@@ -21,12 +21,14 @@ pub use error::{
     DraftingProgramRootNumericSupplierError, DraftingProgramRootNumericSupplierRefusal,
 };
 pub use profile_headers::{
-    BoundDraftingProgramProfileHeaders, BoundDraftingProgramProfileParameters,
-    DraftingProgramOperationInput, DraftingProgramProfileHeaderError,
-    DraftingProgramProfileHeaderRefusal, DraftingProgramProfileHeadersResult,
-    DraftingProgramProfileInputHeader, DraftingProgramProfileInputParameter,
-    DraftingProgramProfileInputRequest, DraftingProgramProfileParameterError,
-    DraftingProgramProfileParameterRefusal, DraftingProgramProfileParametersResult,
+    AdmittedDraftingProgramRuleWork, BoundDraftingProgramProfileHeaders,
+    BoundDraftingProgramProfileParameters, DraftingProgramOperationInput,
+    DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
+    DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
+    DraftingProgramProfileInputParameter, DraftingProgramProfileInputRequest,
+    DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal,
+    DraftingProgramProfileParametersResult, DraftingProgramRuleWork, DraftingProgramRuleWorkError,
+    DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest, DraftingProgramRuleWorkResult,
 };
 
 /// One original numeric Derived consumer and its actual source/checked/acyclic owners.

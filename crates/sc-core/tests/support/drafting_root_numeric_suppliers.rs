@@ -10,10 +10,13 @@ pub(super) fn fixture(
     profile_inputs: usize,
     button: bool,
 ) -> TestResult<DesignGarment<EmptyHost>> {
-    build_fixture(empty, combined, profile_inputs, button, false)
+    build_fixture(empty, combined, profile_inputs, button, false, true)
 }
 pub(super) fn interleaved_fixture() -> TestResult<DesignGarment<EmptyHost>> {
-    build_fixture(false, false, 2, true, true)
+    build_fixture(false, false, 2, true, true, true)
+}
+pub(super) fn without_semantics_fixture() -> TestResult<DesignGarment<EmptyHost>> {
+    build_fixture(true, false, 0, false, false, false)
 }
 fn build_fixture(
     empty: bool,
@@ -21,6 +24,7 @@ fn build_fixture(
     profile_inputs: usize,
     button: bool,
     interleaved: bool,
+    include_semantics: bool,
 ) -> TestResult<DesignGarment<EmptyHost>> {
     let canonical = CanonicalInputs::with_logicals(
         vec![LengthDeclaration::new(LengthDeclarationDefinition {
@@ -190,7 +194,9 @@ fn build_fixture(
                         )?,
                     ));
                 }
-                operations.push(SemanticOperation::LogicalDerivation(semantic));
+                if include_semantics {
+                    operations.push(SemanticOperation::LogicalDerivation(semantic));
+                }
                 if button {
                     operations.push(SemanticOperation::Buttonhole(ButtonholeOperation::new(
                         ButtonholeOperationDefinition {

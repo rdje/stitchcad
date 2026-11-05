@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0933 — admit every original rule/policy work request
+
+Complete original rule work now retains exact mixed/local fields,checked Design/Profile origins,
+original input owners and one finite cursor. Full fresh aggregate/child work precedes lookup and
+complete result reservation;source/signature/output acceptance remains separate. Eight-mode
+fixture,three existing rule-work tests,affected Profile19 modes,three compiler guards,format and
+scoped strict lint pass. Original sources lead next;G1still6/18 In Progress unchanged.
+
 ## STITCHCAD-G1-0932 — retain complete original Profile input evidence
 
 Whole closed Profile goals and committed journals remain exact in1087. Eight exact Git spans,

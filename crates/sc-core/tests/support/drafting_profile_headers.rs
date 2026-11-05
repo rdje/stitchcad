@@ -8,6 +8,8 @@ use std::cell::Cell;
 mod operation_inputs;
 #[path = "drafting_profile_parameters.rs"]
 mod parameters;
+#[path = "drafting_program_rule_work.rs"]
+mod rule_work;
 use sc_core::value::*;
 fn id(n: u128) -> EntityId {
     EntityId::from_bits(n)
@@ -20,6 +22,9 @@ struct Provider<'a> {
     wrong_pin: SelectedProfilePin,
     body: DraftingSourceRecord<[u8; 4]>,
     calls: Cell<usize>,
+    extra_after: Cell<Option<usize>>,
+    rule_calls: Cell<usize>,
+    extra_entries: Cell<usize>,
     mode: u8,
     parameter_mode: Cell<u8>,
     parameter_calls: Cell<usize>,
@@ -79,6 +84,9 @@ impl<'a> Provider<'a> {
             wrong_pin: pin("other")?,
             body: DraftingSourceRecord::new([1, 2, 3, 4]),
             calls: Cell::new(0),
+            extra_after: Cell::new(None),
+            rule_calls: Cell::new(0),
+            extra_entries: Cell::new(0),
             mode,
             parameter_mode: Cell::new(0),
             parameter_calls: Cell::new(0),
@@ -124,6 +132,21 @@ impl DraftingContextSource<EmptyHost> for Provider<'_> {
         sink: &mut dyn DesignResourceSink,
     ) -> Result<(), DesignResourceLimitError> {
         self.base.charge_resources(sink)?;
+        if self
+            .extra_after
+            .get()
+            .is_some_and(|after| self.base.walks.get() >= after)
+        {
+            sink.charge_entries(
+                self.extra_entries.get(),
+                DesignResourceLocation {
+                    scope: DesignResourceScope::SourceHost,
+                    owner: None,
+                    field: "rule.late-cache",
+                    index: None,
+                },
+            )?;
+        }
         charge_design_input_resources(self.other, sink)?;
         charge_canonical_input_resources(&self.inputs, sink)?;
         for selected in [&self.selected, &self.wrong_pin] {

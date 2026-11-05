@@ -14,8 +14,13 @@ use crate::{
 use core::fmt;
 mod compose;
 mod error;
+mod rule_work;
 pub use compose::DraftingProgramOperationInput;
 pub use error::{DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal};
+pub use rule_work::{
+    AdmittedDraftingProgramRuleWork, DraftingProgramRuleWork, DraftingProgramRuleWorkError,
+    DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest, DraftingProgramRuleWorkResult,
+};
 
 /// One actual original input/header parent and its complete original parameter/member/kind proof.
 /// Profile-owned states and external Derived operation references remain under that Profile source.

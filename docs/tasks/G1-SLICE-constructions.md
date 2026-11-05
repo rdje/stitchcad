@@ -928,8 +928,15 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Status: `pending`
   Goal:bind every actual original rule/policy work/source/signature/canonical-output relationship under its explicit Design/Profile origin and the same complete input/cursor owners. Preserve original provider/body/metadata/source loans and first typed causes under fresh bounded work;no value or whole-cohort acceptance.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.work`
-  Status: `pending`
+  Status: `done`
   Goal:consume the complete Root/Profile input owner,derive every actual rule/policy header and its original checked origin row,and reserve complete fresh whole/child work before result allocation or Root lookup. Reuse prepare_rule_binding with derived explicit finite matching allowance;retain genuine operation/field/row/work owners without rule/signature/output acceptance.
+
+  - [x] REPRODUCE / ISSUE:complete Root/Profile inputs still need every original rule/policy work parent under explicit checked origins before source/body borrowing. Concatenated or inferred origin rows would lose actual consumer order and pin identity.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'prepare_rule_binding|per_pass_matching_bound|Rule' context/rule/work.rs,dependencies/semantic_work.rs and semantic_coverage.rs →existing fresh child admission,finite native matching ceiling and original checked row associations,rc=0. Original source binders must borrow stable original work parents.
+  - [x] FIX:admit_rule_work consumes complete inputs,counts actual rule fields,reserves N+1 whole/child passes for N>0,freshly charges full aggregate/proofs,then reserves all N records. Each original row/origin feeds prepare_rule_binding under same content/per-pass policy. Actual operation/field/ordinal/mixed/row/pin/work loans survive;N0 does no new work.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract complete_rule_work →1 test/8 modes pass,rc=0. Scrambled Design/Profile rows,repeated pins,unaccepted mismatched pin intent,N0,short17+3 versus19,fresh whole refusal and late child resource/matching refusals preserve originals,no queries/prefix and one cursor.
+  - [x] NO REGRESSION:focused rule_work:: →4 tests pass;profile_input_ →2 tests/19 modes pass,rc=0. Three new compiler guards,scoped strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Initial export/method signature corrections completed;colliding test filename restored byte-exact and new fixture given distinct name. Whole .check/.verify remain deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book name complete scoped rule-work admission and original source parents next. README/LIVE unchanged,G1still6/18 In Progress. Promotion declined:local complete-work and existing lending source APIs/book own this contract. Commit:STITCHCAD-G1-0933.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.work.retention`
   Status: `done`
@@ -937,3 +944,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] ROOT CAUSE / ISSUE:committed collection19990L/1496439B leaves10 lines before fixed20000L ceiling;retain closed Profile evidence before rule-work acceptance grows. Original source/parameter proofs need stable parents and the same unique cursor.
   - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1087.md →8 exact Git spans,rc=0. Independent decode/hash/Git/public-reader proof preserves12505 decodedB and all210 task IDs/statuses before six closed nodes become retrieval stubs. Whole committed journals and older navigation remain exact.
   - [x] NO REGRESSION / LOCKSTEP:target/history-proof-0932/independent1087.json →public_exact true,source_intervals8,closed_nodes6,rc=0. Old seals/caps/producer/protected stores unchanged;book reader/journals/resume align. README/LIVE unchanged,G1still6/18 In Progress. Promotion declined:existing retention and original source APIs own these facts. Commit:STITCHCAD-G1-0932.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.sources`
+  Status: `pending`
+  Goal:borrow stable original complete work records and same unique inputs/cursor through disjoint parent fields;reserve whole admission plus every actual child work/Profile walk before complete source allocation. Reuse bind_source for every original explicit Design/Profile origin,preserving actual body/declaration/source loans and typed first causes;no signature/output acceptance.
