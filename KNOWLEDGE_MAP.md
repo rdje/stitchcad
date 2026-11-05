@@ -9,7 +9,7 @@
 - docs/book/src/SUMMARY.md;G0-CONTRACT/G1-SLICE.4d.1
 - docs/book/src/spec/formula-language.md;G0-CONTRACT.9/G1-SLICE.5;TOOLBOX.md;docs/book/src/spec/interchange-dialects.md;G0-CONTRACT.10/G2-2D;docs/book/src/spec/feature-matrix.md;G0-CONTRACT.4
 - docs/book/src/spec/glossary/;docs/tasks/artifacts/glossary/run_glossary_census.sh;G0-CONTRACT.1
-- .doctrine/live_document_size/;scripts/check_live_doc_size.sh;SPINE.4;docs/tasks/artifacts/;make probes;ROADMAP.md;.github/workflows/rust.yml;scripts/ci_environment.py
+- .doctrine/live_document_size/;scripts/check_live_doc_size.sh;SPINE.4;docs/tasks/artifacts/;scripts/ci_environment.py
 
 ## Active task-trees
 
@@ -89,6 +89,7 @@
 - [product-work-takes-the-frontier](docs/decisions/decision_product-work-takes-the-frontier.md)
 - [profile-bindings-stay-symbolic-at-g1](docs/decisions/decision_profile-bindings-stay-symbolic-at-g1.md)
 - [property-tests-dependency-free-recorded-seed](docs/decisions/decision_property-tests-dependency-free-recorded-seed.md)
+- [ram-trend](docs/decisions/decision_ram-trend.md)
 - [range-resolution-preserves-entire-interval](docs/decisions/decision_range-resolution-preserves-entire-interval.md)
 - [rebinding](docs/decisions/decision_rebinding.md)
 - [recipe-bytes](docs/decisions/decision_recipe-bytes.md)

@@ -577,6 +577,18 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   Status: `in_progress`
   Goal:at the derived cadence,run full make check/gate/wasm/probes from one clean commit,then push
   this project's main normally and observe the exact SHA's hosted jobs and steps.
-  Plan:one Cargo worker;cache-adjusted RAM watchdog stops only this gate at86%/88%. Logs stay under
+  Plan:two Cargo workers;log the RAM trend and flag a sustained rise above90%. Logs stay under
   target/prepush-0967/. A refusal gets its own child leaf and fresh full gates from the repair commit.
   Deferred semantic acceptance(.5f.2.check/.verify and G1 integration) is not claimed by this gate.
+- ID: `G1-SLICE.5f.2.prepush-400.ram-observe`
+  Status: `done`
+  Goal:adopt the director's 2026-11-06 RAM rule in the tool,book and records during the gate.
+  Paths:scripts/macos_memory.py;docs/book/src/build-and-checks.md;docs/decisions/decision_ram-trend.md.
+  - [x] REPRODUCE / ISSUE:old macos_memory.py exited1 with defer/hard-ceiling verdicts at86/88%,so my admission loop stalled Rust at88.848 used;the same old tool reads57.781 within-budget,rc=0 minutes later.
+  - [x] ROOT CAUSE (WHY + WHERE):scripts/macos_memory.py estimate() encoded admission thresholds now retired by the director;git grep hard-ceiling →tool,book and task records only,rc=0.
+  - [x] FIX:tool reports used/pressure and above_flag_line at90 with no verdict or reservation;exit0 measured,2 refused. Book,decision record,MEMORY and .record text follow.
+  - [x] ADDRESSED:macos_memory.py --self-test →exact flag line and refusals OK,rc=0;live sample rc=0 above_flag_line false. Mutant >= to > →AssertionError,rc=1.
+  - [x] NO REGRESSION:gate.py reads only used_percent/pressure_level,both retained;memory.log keeps sampling,rc=0. No crate changed,so the running clippy/test stays valid for this commit.
+  - [x] LOCKSTEP:book/decision/MEMORY/changelog/.record align;README/LIVE reviewed unchanged,G1still6/18 In Progress.
+  promotion: declined (the decision record in this commit owns the rule).
+  Commit:STITCHCAD-G1-0968.

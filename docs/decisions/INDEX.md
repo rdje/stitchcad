@@ -9,6 +9,7 @@ Records carry an `answers:` line so a question can find them — that is what ma
 
 | Record | Type | One-line hook |
 | --- | --- | --- |
+| [`decision_ram-trend.md`](decision_ram-trend.md) | `decision` | watch the RAM trend; no percentage stops work; flag only a sustained rise above 90% |
 | [`decision_tangent-resources.md`](decision_tangent-resources.md) | `decision` | bounded adaptive tangent certification with explicit bit/work budgets and separate resource refusals |
 | [`decision_history-generations.md`](decision_history-generations.md) | `decision` | finite self-contained generations; measured budget authority, original byte retention and explicit cutover proof |
 | [`decision_design-host.md`](decision_design-host.md) | `decision` | immutable higher metadata through a core port; exact canonical object membership, actual host semantics and staged Design composition |

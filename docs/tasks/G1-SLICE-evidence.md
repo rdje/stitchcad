@@ -970,10 +970,7 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   Status: `pending`
   Goal:implement one original source-bound notion current-reference view using the0962 protocol;
   explicit fresh resources/query/retention/ownership quotas,raw bounded point/range causes and G2 deferral.
-  Admission:director authorizes the run2026-11-05 with88% hard host RAM ceiling. D380 corrects
-  the prior cache-inclusive top-based refusal;it did not establish used-RAM percentage. Use the
-  cache-adjusted diagnostic/explicit expected-peak reservation before single-worker work;
-  reduce at86%,stop before88%. No owned intensive job was started during the incorrect refusal.
+  RAM:observe the trend per decision_ram-trend.md;no percentage admission.
   Focused checks:legacy-consumer parity on curated intact/split/reverse/merge,choices/offset gaps,
   deleted interior/foreign ownership,original loans and complete quota/arithmetic/refusal priority.
 

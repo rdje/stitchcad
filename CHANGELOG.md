@@ -3,6 +3,11 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0968 — watch the RAM trend instead of stopping at a percentage
+
+Director rule2026-11-06:observe the trend and flag only a sustained rise above90%. macos_memory.py drops its
+86/88 admission verdicts and reports a flag line;book and records follow. Self-test and mutant control pass.
+
 ## STITCHCAD-G1-0967 — own the due pre-push gate
 
 A new leaf owns the full check/gate/wasm/probes run,normal push and hosted-job observation for the

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only cache-adjusted macOS RAM estimate; never a process launcher or exact UI replica."""
+"""Read-only cache-adjusted macOS RAM sample for trend watching; never a process launcher or UI replica."""
 import argparse
 from datetime import datetime, timezone
 import json
@@ -12,9 +12,11 @@ FIELDS = (
     'Pages active', 'Pages inactive', 'Pages speculative', 'Pages wired down',
     'Pages occupied by compressor', 'Pages purgeable', 'File-backed pages',
 )
+# Director 2026-11-06: above this line and still rising is worth flagging; nothing stops at it.
+FLAG_PERCENT = 90
 
 
-def estimate(text, physical, pressure, reserve_mib=0):
+def estimate(text, physical, pressure):
     """Use Stats' published category arithmetic, not top's cache-inclusive occupancy.
 
     Independent source: https://github.com/exelban/stats/blob/master/Modules/RAM/readers.swift
@@ -28,9 +30,8 @@ def estimate(text, physical, pressure, reserve_mib=0):
     page_size = int(header[1])
     if page_size <= 0 or page_size & (page_size - 1):
         raise ValueError('invalid page size')
-    if (not 0 < physical < 2**64 or physical % page_size or pressure not in (1, 2, 4)
-            or not 0 <= reserve_mib <= physical // (1024 * 1024)):
-        raise ValueError('invalid physical size, pressure or reserve')
+    if not 0 < physical < 2**64 or physical % page_size or pressure not in (1, 2, 4):
+        raise ValueError('invalid physical size or pressure')
     counts = {}
     for field in FIELDS:
         matches = re.findall(r'^' + re.escape(field) + r':\s*([0-9]+)\.\s*$', text, re.M)
@@ -44,22 +45,11 @@ def estimate(text, physical, pressure, reserve_mib=0):
     used = occupied - cached
     if not 0 <= cached <= occupied <= physical or not 0 <= used <= physical:
         raise ValueError('inconsistent memory observation')
-    projected = used + reserve_mib * 1024 * 1024
-    if pressure != 1:
-        admission = 'defer-pressure'
-    elif used * 100 >= physical * 88:
-        admission = 'hard-ceiling'
-    elif projected * 100 >= physical * 86:
-        admission = 'defer-headroom'
-    else:
-        admission = 'within-budget'
     return {
         'metric': 'macos-cache-adjusted-estimate', 'physical_bytes': physical,
         'used_bytes': used, 'used_percent': round(100 * used / physical, 3),
         'cached_bytes': cached, 'occupied_bytes': occupied, 'page_size': page_size,
-        'pressure_level': pressure, 'reserve_mib': reserve_mib,
-        'projected_percent': round(100 * projected / physical, 3),
-        'admission': admission,
+        'pressure_level': pressure, 'above_flag_line': used * 100 >= physical * FLAG_PERCENT,
     }
 
 
@@ -70,13 +60,13 @@ def _read_command(argv):
     return result.stdout
 
 
-def sample(reserve_mib):
+def sample():
     if sys.platform != 'darwin':
         raise ValueError('macOS host required')
     physical = int(_read_command(['/usr/sbin/sysctl', '-n', 'hw.memsize']).strip())
     pressure = int(_read_command([
         '/usr/sbin/sysctl', '-n', 'kern.memorystatus_vm_pressure_level']).strip())
-    result = estimate(_read_command(['/usr/bin/vm_stat']), physical, pressure, reserve_mib)
+    result = estimate(_read_command(['/usr/bin/vm_stat']), physical, pressure)
     result['observed_utc'] = datetime.now(timezone.utc).isoformat()
     return result
 
@@ -92,49 +82,45 @@ def self_test():
     assert result['used_bytes'] == 1288197 * 16384
     assert result['occupied_bytes'] > total * 97 // 100
     assert result['used_bytes'] < total * 82 // 100
-    assert result['admission'] == 'within-budget'
-    assert estimate(raw, total, 2)['admission'] == 'defer-pressure'
-    assert estimate(raw, total, 4)['admission'] == 'defer-pressure'
-    assert estimate(raw, total, 1, 1024)['admission'] == 'defer-headroom'
+    assert result['above_flag_line'] is False
+    # Pressure is reported context; it never turns a reading into a verdict.
+    assert estimate(raw, total, 4)['above_flag_line'] is False
+    assert estimate(raw, total, 4)['pressure_level'] == 4
     def boundary(pages):
         return 'Mach Virtual Memory Statistics: (page size of 4096 bytes)\n' + '\n'.join(
             name + ': ' + str(pages if i == 0 else 0) + '.' for i, name in enumerate(FIELDS))
-    assert estimate(boundary(85), 409600, 1)['admission'] == 'within-budget'
-    assert estimate(boundary(86), 409600, 1)['admission'] == 'defer-headroom'
-    assert estimate(boundary(88), 409600, 1)['admission'] == 'hard-ceiling'
-    for index, (text, size, pressure, reserve) in enumerate((
-        ('', total, 1, 0), (raw + '\nPages active: 1.', total, 1, 0),
-        (raw.replace('332861.', '-1.'), total, 1, 0),
-        (raw.replace('16384 bytes', '16383 bytes'), total, 1, 0),
-        (raw.replace('332861.', '999999999.'), total, 1, 0),
-        (raw.replace('245403.', '1550000.'), total, 1, 0),
-        (raw, 0, 1, 0), (raw, total, 0, 0), (raw, total, 1, -1),
-        (raw, total, 1, 10**100),
+    assert estimate(boundary(89), 409600, 1)['above_flag_line'] is False
+    assert estimate(boundary(90), 409600, 1)['above_flag_line'] is True
+    for index, (text, size, pressure) in enumerate((
+        ('', total, 1), (raw + '\nPages active: 1.', total, 1),
+        (raw.replace('332861.', '-1.'), total, 1),
+        (raw.replace('16384 bytes', '16383 bytes'), total, 1),
+        (raw.replace('332861.', '999999999.'), total, 1),
+        (raw.replace('245403.', '1550000.'), total, 1),
+        (raw, 0, 1), (raw, total, 0),
     )):
         try:
-            estimate(text, size, pressure, reserve)
+            estimate(text, size, pressure)
         except ValueError:
             continue
         raise AssertionError(('invalid memory observation accepted', index))
-    print('macos-memory: frozen cache discrimination, pressure, exact thresholds and refusals OK')
+    print('macos-memory: frozen cache discrimination, pressure context, exact flag line and refusals OK')
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--self-test', action='store_true')
-    parser.add_argument('--reserve-mib', type=int, default=0,
-                        help='expected additional job peak; projected usage must stay below 86%%')
     args = parser.parse_args()
     if args.self_test:
         self_test()
         return 0
     try:
-        result = sample(args.reserve_mib)
+        result = sample()
     except (ValueError, OSError, subprocess.SubprocessError) as error:
         print('macos-memory: measurement refused: ' + str(error), file=sys.stderr)
         return 2
     print(json.dumps(result, sort_keys=True))
-    return 0 if result['admission'] == 'within-budget' else 1
+    return 0
 
 
 if __name__ == '__main__':
