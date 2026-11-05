@@ -496,3 +496,152 @@ impl<
         outcome.finish(parent)
     }
 }
+
+// The authentic parent/input specialization stays readable at the public borrowing factory.
+// Its target is the public generic source result;callers retain the same inferred original type.
+type PocketSourcesResult<
+    'x,
+    'u,
+    't,
+    'z,
+    'q,
+    'h,
+    'v,
+    'w,
+    's,
+    'g,
+    'k,
+    'j,
+    'i,
+    'r,
+    'b,
+    'n,
+    'p,
+    'a,
+    H,
+    S,
+> = crate::construction::DraftingProgramPocketSourcesResult<
+    'x,
+    's,
+    'w,
+    'a,
+    BoundDraftingProgramGarmentProfileNumericParameters<
+        'u,
+        't,
+        'z,
+        'q,
+        'h,
+        'v,
+        'w,
+        'a,
+        DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+        H,
+        S,
+    >,
+    DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+    H,
+    S,
+>;
+
+impl<
+        'u,
+        't,
+        'z,
+        'q,
+        'h,
+        'v,
+        'w,
+        's,
+        'g,
+        'k,
+        'j,
+        'i,
+        'r,
+        'b,
+        'n,
+        'p,
+        'a,
+        H: DesignReferenceHost + DesignResourceSource,
+        S: DraftingInitialInputProvider<H>
+            + DraftingGarmentProvider<H>
+            + DraftingProfileNumericProvider<H>
+            + DraftingProfileLogicalProvider<H>
+            + DraftingRuleProvider<H>
+            + crate::construction::DraftingComponentProvider<H>
+            + ?Sized,
+    >
+    crate::construction::BoundDraftingProgramPocketWork<
+        's,
+        'a,
+        BoundDraftingProgramGarmentProfileNumericParameters<
+            'u,
+            't,
+            'z,
+            'q,
+            'h,
+            'v,
+            'w,
+            'a,
+            DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+            H,
+            S,
+        >,
+        H,
+        S,
+    >
+{
+    /// Borrow actual stable current-member records and the same unique input/cursor through
+    /// disjoint fields. Reserve N+1 fresh whole/source passes before aggregate charging,result
+    /// reservation or original bind_source factories. N0 adds no walk,query,allocation or demand.
+    /// Source loans preserve their actual work parents,frame/snapshot and captured recipe creator
+    /// positions;no Root consumer position,body clone,selected value or physical proof is invented.
+    /// # Errors
+    /// First complete arithmetic,atomic cursor shortage,fresh resources,allocator or original
+    /// work-bound source cause. All original work/input owners remain;private prefixes drop and
+    /// dropping either result releases the borrow without refunding reserved work.
+    pub fn bind_pocket_sources<'x>(
+        &'x mut self,
+    ) -> PocketSourcesResult<
+        'x,
+        'u,
+        't,
+        'z,
+        'q,
+        'h,
+        'v,
+        'w,
+        's,
+        'g,
+        'k,
+        'j,
+        'i,
+        'r,
+        'b,
+        'n,
+        'p,
+        'a,
+        H,
+        S,
+    > {
+        let (parent, work) = self.parts();
+        let cursor = &mut parent
+            .logical
+            .root
+            .logical
+            .members
+            .owner
+            .inputs
+            .root
+            .logical
+            .members
+            .owner
+            .selections;
+        let inputs = cursor.inputs();
+        let outcome = crate::construction::program::dependencies::pocket_work::sources::prepare(
+            cursor,
+            work,
+            |sink| inputs.charge_resources(sink),
+        );
+        outcome.finish(parent, work)
+    }
+}

@@ -126,3 +126,9 @@ pub use pocket_work::{
     BoundDraftingProgramPocketWork, DraftingProgramPocketWork, DraftingProgramPocketWorkError,
     DraftingProgramPocketWorkRefusal, DraftingProgramPocketWorkResult,
 };
+
+pub use pocket_work::{
+    BoundDraftingProgramPocketSources, DraftingProgramPocketSource,
+    DraftingProgramPocketSourceError, DraftingProgramPocketSourceRefusal,
+    DraftingProgramPocketSourcesResult,
+};

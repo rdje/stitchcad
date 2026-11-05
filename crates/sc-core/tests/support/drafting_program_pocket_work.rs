@@ -2,12 +2,45 @@
 use super::{id, limits, scope, EmptyHost, Provider, SourceError, TestResult};
 use sc_core::{construction::*, design::*, ontology::*, recipe::*};
 impl DraftingComponentProvider<EmptyHost> for Provider<'_> {
-    type Imported = [u8];
+    type Imported = Vec<u8>;
     fn component_source(
         &self,
-        _: PocketPieceRef,
+        target: PocketPieceRef,
     ) -> Result<DraftingComponentResponse<'_, EmptyHost, Self>, SourceError> {
-        panic!("current-member work must not query a source");
+        let Some(original) = &self.component_import else {
+            panic!("current-member work must not query a source")
+        };
+        self.component_calls.set(self.component_calls.get() + 1);
+        let late = self.component_calls.get() == 2;
+        let mode = self.component_mode.get();
+        if late && mode == 1 {
+            return Err(SourceError::Missing);
+        }
+        let root = if late && mode == 2 {
+            self.other.structure()
+        } else {
+            self.base.garment.inputs().structure()
+        };
+        let piece = root
+            .pieces()
+            .piece(target.piece)
+            .ok_or(SourceError::Missing)?;
+        Ok(DraftingComponentSource {
+            origin: DraftingComponentOrigin::Imported(DraftingImportedComponentSource {
+                piece,
+                source: original,
+            }),
+            frame: if late && mode == 3 {
+                self.base.alternate.frame()
+            } else {
+                self.base.frame()
+            },
+            snapshot: if late && mode == 4 {
+                self.base.alternate.snapshot()
+            } else {
+                self.base.snapshot()
+            },
+        })
     }
 }
 #[test]

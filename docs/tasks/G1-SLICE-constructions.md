@@ -915,8 +915,24 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Goal:completed;[whole original protocol/proofs](../history/stitchcad-devnotes-part1092.md).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.pocket-sources`
-  Status: `pending`
-  Goal:borrow the complete stable original Pocket work parents and bind actual imported/recipe sources with the same finite cursor,original field locations and first typed causes. Preserve authentic source frame/snapshot/creator proof;no fabricated Root consumer position or complete cohort claim.
+  Status: `done`
+  Goal:borrow the complete stable original Pocket work parents and bind actual imported/recipe sources with the same finite cursor,original field locations and first typed causes.
+  Preserve authentic source frame/snapshot/creator proof;no fabricated Root consumer position or complete cohort claim.
+  Plan:borrow the input parent and stable work slice through disjoint fields;reserve N+1 fresh aggregate/source passes atomically before whole charging,result reservation or existing
+  bind_source factories. N0 is idle. Typed late child refusals retain the original work/index/source witnesses and no successful prefix. Focused aggregate/import controls plus existing
+  original Mirror/Join child association guards precede closure;whole cohort/.check/.verify stay deferred.
+
+  - [x] ROOT CAUSE / ISSUE:cargo clippy -j1 -p sc-core --lib -- -D warnings →type_complexity at parameters.rs558;after a result alias →Finished dev profile,rc=0.
+    Existing component/source.rs bind_source checks actual current work,header and captured recipe association. The aggregate work proof exposed only its immutable input parent;
+    the new factory splits its disjoint input/cursor and stable work fields without a source-factory contract change or lint waiver.
+  - [x] FIX / ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract profile_headers::rule_work::pocket →test result:
+    ok. 2 passed,rc=0. Seven current-member plus10 source cases retain original parents/imports,whole N+1 cursor reservation,N0,repeated targets,no refunds and first late typed
+    work/provider/Piece/frame/snapshot causes with no accepted prefix.
+  - [x] NO REGRESSION / LOCKSTEP:the same target component_binding:: →4 original import/Mirror/Join guards passed;garment_profile_numeric →2 passed;cargo test -j1 -p sc-core --doc
+    BoundDraftingProgramPocketSources →3 private/clone/lifetime guards passed;cargo clippy -j1 -p sc-core --lib -- -D warnings →Finished;fmt --check/git diff --check pass,all rc=0.
+    Book/journals/resume/LIVE align,G1still6/18 In Progress. Whole recipe/cohort .check/.verify and Closure/native/physical work remain deferred. Commit:STITCHCAD-G1-0953.
+  promotion: declined (existing source association and bounded cursor contracts).
+  Commit-integrity correction:the initial hook refused the RCA's missing command/result signature and a wrapped decline token. Explicit invocation/rc and a whole-line decline now meet the existing checker contract;product/runtime checks are unchanged.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.pocket-sources.retention`
   Status: `done`

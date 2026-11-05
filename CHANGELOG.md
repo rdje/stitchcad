@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0953 — bind original Pocket sources from stable work parents
+
+The aggregate source stage borrows complete original input/work owners,atomically reserves N+1
+fresh passes and reuses original import/recipe association factories. Typed late refusals keep
+actual work/index/raw source witnesses;empty scope and repeated targets stay explicit. Focused
+member/source2 tests cover17 cases;original association4,numeric2,new API guards3,strict library
+lint and formatting pass. Closure/native/cohort and whole integration verification remain pending.
+
 ## STITCHCAD-G1-0952 — retain closed protocols before Pocket source binding
 
 Nine exact Git intervals retain complete closed syntax/normalization/serializer and Pocket work/

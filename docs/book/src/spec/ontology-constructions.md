@@ -426,7 +426,9 @@ retain actual Piece, recipe/native identity parents or an explicit imported-sour
 its `bind_source` factory separately associates the actual source, frame, snapshot and creator.
 The [program Pocket work stage](../annexes/semantic-recipes.md#bind-original-pocket-current-copy-and-piece-work)
 joins all original served/component current-member requests after the garment input proofs.
-Complete program source composition, held history, placement geometry and execution remain separate.
+The [program source stage](../annexes/semantic-recipes.md#bind-original-pocket-sources-from-stable-work-parents)
+borrows those stable work records and binds every original source under the same finite cursor.
+Complete Closure/native/cohort composition,held history,placement geometry and execution remain separate.
 
 `Pocket::new` requires actual copies/unique Piece ids, unique component copies, a live owned anchor
 and complete owned orientation with unique ends. `validate_current()` repeats target/placement checks:

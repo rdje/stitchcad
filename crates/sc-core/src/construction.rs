@@ -470,3 +470,9 @@ pub use program::{
     BoundDraftingProgramPocketWork, DraftingProgramPocketWork, DraftingProgramPocketWorkError,
     DraftingProgramPocketWorkRefusal, DraftingProgramPocketWorkResult,
 };
+
+pub use program::{
+    BoundDraftingProgramPocketSources, DraftingProgramPocketSource,
+    DraftingProgramPocketSourceError, DraftingProgramPocketSourceRefusal,
+    DraftingProgramPocketSourcesResult,
+};

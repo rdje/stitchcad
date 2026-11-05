@@ -79,6 +79,9 @@ pub struct BoundDraftingProgramPocketWork<
 impl<'s, 'a, P, H: DesignReferenceHost, S: DraftingComponentProvider<H> + ?Sized>
     BoundDraftingProgramPocketWork<'s, 'a, P, H, S>
 {
+    pub(super) fn parts(&mut self) -> (&mut P, &[DraftingProgramPocketWork<'s, 'a, H, S>]) {
+        (&mut self.parent, &self.records)
+    }
     /// Entire original numeric/logical garment input proof and same unique work cursor.
     #[must_use]
     pub const fn parent(&self) -> &P {
@@ -396,3 +399,10 @@ pub(super) fn prepare<
         result,
     }
 }
+
+pub(super) mod sources;
+pub use sources::{
+    BoundDraftingProgramPocketSources, DraftingProgramPocketSource,
+    DraftingProgramPocketSourceError, DraftingProgramPocketSourceRefusal,
+    DraftingProgramPocketSourcesResult,
+};

@@ -3595,8 +3595,9 @@ body/snapshot,missing parameter,representation,annotation and expected-kind erro
 original witnesses while earlier private accepted parameter prefixes drop.
 
 Original logical/numeric garment input binding is implemented with focused checks. The Pocket
-current-member stage below extends it;Pocket source relations,Closure derivation/operation joins,
-native semantic targets and complete cohort acceptance remain pending. This input proof selects no value and grants no physical opening,
+current-member and source stages below extend it;Closure derivation/operation joins,native
+semantic targets and complete cohort acceptance remain pending. This input proof selects no value
+and grants no physical opening,
 zipper/buttonhole length,external evidence or G4 schema truth. Whole `.5f.2.check`/`.verify` remain
 separate deferred verification tasks.
 
@@ -3646,10 +3647,65 @@ allocator or current-member cause. Child errors retain the exact requiring occur
 original `DraftingComponentWorkError`,including the actual child parent and target. An atomic
 work shortage leaves prior reservations unchanged;later failures retain all newly reserved work.
 
-This stage checks current copy/Piece membership under complete bounds. Actual import/recipe
-source association is the next aggregate stage and will borrow these stable work records.
-Placement anchors/orientation intervals,physical contours,opening execution,Closure relations,
+This stage checks current copy/Piece membership under complete bounds. The source association
+stage below borrows these stable work records. Placement anchors/orientation intervals,physical contours,opening execution,Closure relations,
 native families and whole-cohort acceptance remain separate. No source,currentness,geometry
 or value query is made here. Focused runtime checks cover seven current-member/work cases;the
 new private-field,non-cloning and lifetime guards pass. Complete `.5f.2.check`/`.verify` remains
 deferred.
+
+## Bind original Pocket sources from stable work parents
+
+`BoundDraftingProgramPocketWork::bind_pocket_sources()` borrows the original input parent and
+complete stable work slice through disjoint fields. Keep that work owner alive while inspecting
+the returned `BoundDraftingProgramPocketSources`. Its `parent()` is the same complete input
+proof/cursor;`work()` is the same original current-member slice,including repeated targets.
+No self-referential result owner or copied input/source body is created.
+
+For an already constructed garment input proof:
+
+```text
+let mut pockets = parameters.bind_pocket_component_work()?;
+let sources = pockets.bind_pocket_sources()?;
+for record in sources.records() {
+    inspect(record.work().occurrence().selection_location(),
+            record.source().source(), record.source().creator_position());
+}
+```
+
+Each `DraftingProgramPocketSource` retains its original `work_index()`,exact `work()` parent
+and complete `source()` child binding. The child is the existing
+`BoundDraftingComponentSource`:its work pointer is the stable original current-member record's
+work;its raw imported/recipe origin,frame,snapshot and creator metadata remain original loans.
+An imported source has no creator position. A recipe source retains its captured program and
+the genuine unique mixed creator position checked by the existing component factory. Neither
+origin invents a mixed consumer position for the requiring Root Pocket field.
+
+For N>0 the source stage atomically reserves N+1 fresh aggregate/source passes before a new
+complete aggregate walk,N-result reservation or source query. Each child `bind_source()`
+freshly rechecks complete garment/provider content,current membership and matching bounds
+before its one original query. The prior work demand supplies no admission credit.
+
+The focused one-Pocket fixture already used19 input passes and3 current-member passes. Its
+two source fields require3 more:25 total. Allowance24 refuses the whole three-pass request
+with22 still reserved and zero new walks/queries. Repeated targets in two Pockets remain four
+source requests;their exact original field/work positions survive. The stage selects no value
+and makes no additional currentness or geometry query.
+
+N0 adds no walk,query,allocation,reservation or demand claim,even when an unused import payload
+remains held. `child_pass_count()` is zero for N0 and N+1 otherwise;`demand()` is absent for N0
+and records the fresh complete aggregate demand for an accepted nonempty stage. Dropping either
+outcome releases the borrow without refunding the unique cursor's reserved passes.
+
+`DraftingProgramPocketSourceError` retains the complete borrowed input/work parents,original
+source count,completed aggregate demand when available,and first arithmetic,work,resource,
+allocator or original child source cause. A child refusal keeps its actual `work_index()` and
+the entire `DraftingComponentSourceError`,including its stable work parent and any original
+mismatched raw response. Earlier private source prefixes drop. Provider errors retain their
+standard error chain;source mismatch evidence remains typed data.
+
+Focused aggregate checks cover original import loans,stable parents,empty/repeated targets,
+atomic shortage,no refunded work,fresh aggregate/late child resources and late provider/Piece/
+frame/snapshot refusals. The existing original import/Mirror/Join association contracts remain
+the source-factory guards. Complete aggregate recipe/cohort integration and `.5f.2.check`/
+`.verify`,source truth,placement geometry and physical execution remain separately owned.

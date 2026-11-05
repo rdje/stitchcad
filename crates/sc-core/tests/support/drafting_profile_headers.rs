@@ -39,6 +39,9 @@ struct Provider<'a> {
     numeric_late: bool,
     numeric_calls: Cell<usize>,
     numeric_body: Option<DraftingSourceRecord<[u8; 4]>>,
+    component_import: Option<DraftingSourceRecord<Vec<u8>>>,
+    component_calls: Cell<usize>,
+    component_mode: Cell<u8>,
 }
 struct RuleRow {
     declaration: SemanticRuleDeclaration,
@@ -113,6 +116,9 @@ impl<'a> Provider<'a> {
             numeric_late: false,
             numeric_calls: Cell::new(0),
             numeric_body: None,
+            component_import: None,
+            component_calls: Cell::new(0),
+            component_mode: Cell::new(0),
         })
     }
 }
@@ -165,6 +171,17 @@ impl DraftingContextSource<EmptyHost> for Provider<'_> {
                     scope: DesignResourceScope::SourceHost,
                     owner: None,
                     field: "rule.late-cache",
+                    index: None,
+                },
+            )?;
+        }
+        if let Some(source) = &self.component_import {
+            sink.charge_entries(
+                source.data().len(),
+                DesignResourceLocation {
+                    scope: DesignResourceScope::SourceHost,
+                    owner: None,
+                    field: "component.original-import",
                     index: None,
                 },
             )?;

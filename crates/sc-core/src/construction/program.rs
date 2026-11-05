@@ -213,3 +213,9 @@ pub use dependencies::{
     BoundDraftingProgramPocketWork, DraftingProgramPocketWork, DraftingProgramPocketWorkError,
     DraftingProgramPocketWorkRefusal, DraftingProgramPocketWorkResult,
 };
+
+pub use dependencies::{
+    BoundDraftingProgramPocketSources, DraftingProgramPocketSource,
+    DraftingProgramPocketSourceError, DraftingProgramPocketSourceRefusal,
+    DraftingProgramPocketSourcesResult,
+};
