@@ -2,6 +2,27 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — complete original rule/policy sources under stable work parents
+
+0934 borrows actual complete work storage and the same unique input/cursor through disjoint
+parent fields. N requests/M Profile origins reserve N+M+1 whole/work/Profile passes before fresh
+full aggregate/proof content,full N-record reservation or any query. Existing bind_source freshly
+readmits each original work and each selected Profile header. Actual Root/snapshot/origin/Profile
+pin/inventory/payload/declaration/body/ID/family associations survive as original loans;local
+signatures and eventual Root outputs remain unaccepted. Refusals retain complete original input/
+cursor/work slices and first lending child causes;private successful prefixes drop. Dropping a
+result releases its borrow without restoring spent work. N0 performs no new work or demand claim.
+Seventeen focused modes pass with unsized body/Profile payloads and opaque metadata:exact mixed
+and repeated Profile origins,N0,atomic20+4 versus23 capacity,fresh whole/late child resources and
+matching,late Profile pin,all eight source mismatch classes and missing source. Equal-data foreign
+pin/payload records remain distinct;actual work/declaration/body/source pointers stay original.
+Mixed sources reserve24 total passes;all-Profile25;spent repeat makes no callback. The earlier
+work eight modes and affected Profile nineteen modes pass. Three compiler guards,format and
+scoped strict lint pass. Fixture pin-issue variant and unsized origin annotation corrected.
+README/LIVE unchanged,G1still6/18 In Progress. Complete local signature/Root Derived output loans
+must borrow stable actual source parents next;whole .check/.verify remain deferred.
+Promotion declined:local complete-source and existing lending rule APIs/book own this contract.
+
 ## _(2026-11-05 UTC)_ — complete original rule/policy work admission
 
 0933 consumes complete Root/Profile inputs into stable original rule-work parents. Actual rule

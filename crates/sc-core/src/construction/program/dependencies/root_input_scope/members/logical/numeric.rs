@@ -22,12 +22,14 @@ pub use error::{
 };
 pub use profile_headers::{
     AdmittedDraftingProgramRuleWork, BoundDraftingProgramProfileHeaders,
-    BoundDraftingProgramProfileParameters, DraftingProgramOperationInput,
-    DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
-    DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
-    DraftingProgramProfileInputParameter, DraftingProgramProfileInputRequest,
-    DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal,
-    DraftingProgramProfileParametersResult, DraftingProgramRuleWork, DraftingProgramRuleWorkError,
+    BoundDraftingProgramProfileParameters, BoundDraftingProgramRuleSources,
+    DraftingProgramOperationInput, DraftingProgramProfileHeaderError,
+    DraftingProgramProfileHeaderRefusal, DraftingProgramProfileHeadersResult,
+    DraftingProgramProfileInputHeader, DraftingProgramProfileInputParameter,
+    DraftingProgramProfileInputRequest, DraftingProgramProfileParameterError,
+    DraftingProgramProfileParameterRefusal, DraftingProgramProfileParametersResult,
+    DraftingProgramRuleSource, DraftingProgramRuleSourceError, DraftingProgramRuleSourceRefusal,
+    DraftingProgramRuleSourcesResult, DraftingProgramRuleWork, DraftingProgramRuleWorkError,
     DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest, DraftingProgramRuleWorkResult,
 };
 

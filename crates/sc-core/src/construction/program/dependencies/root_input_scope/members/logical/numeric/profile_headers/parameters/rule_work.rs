@@ -15,7 +15,12 @@ use crate::{
 };
 use core::fmt;
 mod error;
+mod sources;
 pub use error::{DraftingProgramRuleWorkError, DraftingProgramRuleWorkRefusal};
+pub use sources::{
+    BoundDraftingProgramRuleSources, DraftingProgramRuleSource, DraftingProgramRuleSourceError,
+    DraftingProgramRuleSourceRefusal, DraftingProgramRuleSourcesResult,
+};
 
 /// One actual original rule/policy field and its exact checked explicit origin row.
 /// This is selection intent,not accepted rule or Profile source association.

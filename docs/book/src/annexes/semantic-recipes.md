@@ -2967,3 +2967,53 @@ operation/field/provider/row-pin loans remain exact;all source/parameter callbac
 Privacy,lifetime and non-Clone compiler guards preserve stable parents and unique ownership.
 This is complete rule-work admission. Actual rule/Profile source bodies,local signatures,canonical
 outputs,garment/native families and whole semantic acceptance remain separately owned.
+
+## Bind every original rule/policy source under its actual work parent
+
+`AdmittedDraftingProgramRuleWork::bind_rule_sources()` borrows the actual stable work-record
+storage and the same unique complete input/cursor owner through disjoint parent fields. The caller
+keeps that work owner alive. `BoundDraftingProgramRuleSources` holds the borrowed `inputs()`,
+complete original `works()` slice and complete accepted source `records()`. Each
+`DraftingProgramRuleSource` exposes its original `work_index()`,exact program `work()` parent and
+accepted child `source()`. The latter borrows that same original child's work,not a rebuilt copy.
+No self-reference,body clone,source default or independently recomputed owner is introduced.
+
+Before new source work,N actual requests and M Profile-origin requests determine checked
+N+M+1 passes for N>0. One pass covers fresh whole aggregate/proof admission,N cover each existing
+child's repeated work admission,and M cover the existing fresh Profile header factories. The
+cursor reserves that complete stage atomically before the fresh full aggregate walk,fallible
+N-record reservation or any query. Each child reuses `bind_source()` with its original explicit
+origin and finite work policy. Profile source association therefore keeps its own fresh admission;
+a previous input Profile header is not substituted merely because its pin labels match.
+
+For the preceding mixed-origin example,the input stages reserve seventeen passes and rule work
+reserves three. Source binding reserves four more:one whole walk,two work walks and one Profile
+walk. The total is twenty-four. There are two readonly rule queries,one Profile query and no
+parameter,currentness or value query. With both requests Profile-origin,source binding reserves
+five passes and makes two Profile queries;total reservation becomes twenty-five. Repeated selected
+pins remain separate original requests with separate complete source obligations.
+
+Source association checks actual containing Root and snapshot,explicit Design/Profile origin,
+actual accepted Profile pin/inventory/payload parents,and rule ID/family. The provider-owned pin
+is distinct from the original requested pin even when all labels agree. A second equal-data
+provider pin cannot replace that accepted parent. Likewise,equal payload bytes do not make two
+original source records interchangeable. Original declaration and unsized opaque body loans remain
+in the accepted source;local named signatures and logical outputs are not accepted by this stage.
+For example,the focused logical rule has an empty named signature while its operation has seven
+inputs,and its output is Unknown. Source association succeeds without upgrading either obligation.
+
+N0 adds no walk,allocation,query,reservation or demand claim. `child_pass_count()` reports the
+complete stage reservation and `demand()` only the completed fresh aggregate demand. An error
+retains the same borrowed complete inputs/cursor and work slice,complete `source_count()`,fresh
+aggregate demand when completed and first typed refusal. A child refusal names its original work
+index and original lending `DraftingRuleSourceError`,including returned mismatched sources when
+available. Private successful source prefixes drop. Dropping either result releases its borrow;
+it never resets spent passes. A repeated call on an exhausted cursor refuses before callbacks.
+
+Seventeen focused modes cover mixed/repeated origins,N0,atomic capacity shortage,fresh whole
+and late child resource/matching refusals,late Profile pin mismatch,missing provider source and
+all eight original source-association mismatch classes. Original work/declaration/body/pin/
+inventory/snapshot loans and no accepted prefix are checked. Three compiler guards preserve
+privacy,non-Clone ownership and the work-parent lifetime. Local signature/output binding follows
+under stable source parents;body conformance,external Profile order,G4 truth,garment/native families,
+whole semantic checking and physical execution remain separate obligations.

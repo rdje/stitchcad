@@ -4,14 +4,69 @@ use super::{
     TestResult,
 };
 use sc_core::{construction::*, design::*, recipe::*};
+#[path = "drafting_program_rule_sources.rs"]
+mod sources;
 impl DraftingRuleProvider<EmptyHost> for Provider<'_> {
     type RuleBody = [u8];
     fn rule_source<'s>(
         &'s self,
-        _: DraftingRuleRequest<'_>,
+        request: DraftingRuleRequest<'_>,
     ) -> Result<DraftingRuleResponse<'s, EmptyHost, Self>, SourceError> {
         self.rule_calls.set(self.rule_calls.get() + 1);
-        Err(SourceError::Missing)
+        let mode = self.rule_mode.get();
+        let late = self.rule_calls.get() == 2;
+        if mode == 13 && late {
+            return Err(SourceError::Missing);
+        }
+        let row = if late && mode == 11 {
+            self.rules.get(2)
+        } else if late && mode == 12 {
+            self.rules.get(3)
+        } else {
+            self.rules
+                .iter()
+                .find(|r| r.declaration.id() == request.rule)
+        }
+        .ok_or(SourceError::Missing)?;
+        let root = if late && mode == 5 {
+            self.other
+        } else {
+            self.base.garment.inputs()
+        };
+        let snapshot = if late && mode == 7 {
+            self.base.alternate.snapshot()
+        } else {
+            self.base.snapshot()
+        };
+        let origin: DraftingRuleOrigin<'s, EmptyHost, Snapshot, [u8]> =
+            if matches!(request.origin, DraftingRuleSelection::Design) || (late && mode == 6) {
+                DraftingRuleOrigin::Design { root, snapshot }
+            } else {
+                DraftingRuleOrigin::Profile(DraftingProfileSource {
+                    root,
+                    snapshot,
+                    selected: if late && mode == 9 {
+                        &self.wrong_pin
+                    } else {
+                        &self.selected
+                    },
+                    inputs: if late && mode == 8 {
+                        self.other.inputs()
+                    } else {
+                        &self.inputs
+                    },
+                    profile: if late && mode == 10 {
+                        &row.body
+                    } else {
+                        &self.body
+                    },
+                })
+            };
+        Ok(DraftingRuleSource {
+            declaration: &row.declaration,
+            body: &row.body,
+            origin,
+        })
     }
 }
 trait RuleProvider: ParameterProvider + DraftingRuleProvider<EmptyHost, RuleBody = [u8]> {}

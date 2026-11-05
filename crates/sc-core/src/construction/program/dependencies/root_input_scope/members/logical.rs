@@ -22,16 +22,18 @@ pub use error::{
 pub use numeric::{
     AdmittedDraftingProgramRuleWork, BoundDraftingProgramProfileHeaders,
     BoundDraftingProgramProfileParameters, BoundDraftingProgramRootNumericSuppliers,
-    DraftingProgramOperationInput, DraftingProgramProfileHeaderError,
-    DraftingProgramProfileHeaderRefusal, DraftingProgramProfileHeadersResult,
-    DraftingProgramProfileInputHeader, DraftingProgramProfileInputParameter,
-    DraftingProgramProfileInputRequest, DraftingProgramProfileParameterError,
-    DraftingProgramProfileParameterRefusal, DraftingProgramProfileParametersResult,
-    DraftingProgramRootInputBinding, DraftingProgramRootInputSupplier,
-    DraftingProgramRootNumericSupplier, DraftingProgramRootNumericSupplierError,
-    DraftingProgramRootNumericSupplierRefusal, DraftingProgramRootNumericSuppliersResult,
-    DraftingProgramRuleWork, DraftingProgramRuleWorkError, DraftingProgramRuleWorkRefusal,
-    DraftingProgramRuleWorkRequest, DraftingProgramRuleWorkResult,
+    BoundDraftingProgramRuleSources, DraftingProgramOperationInput,
+    DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
+    DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
+    DraftingProgramProfileInputParameter, DraftingProgramProfileInputRequest,
+    DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal,
+    DraftingProgramProfileParametersResult, DraftingProgramRootInputBinding,
+    DraftingProgramRootInputSupplier, DraftingProgramRootNumericSupplier,
+    DraftingProgramRootNumericSupplierError, DraftingProgramRootNumericSupplierRefusal,
+    DraftingProgramRootNumericSuppliersResult, DraftingProgramRuleSource,
+    DraftingProgramRuleSourceError, DraftingProgramRuleSourceRefusal,
+    DraftingProgramRuleSourcesResult, DraftingProgramRuleWork, DraftingProgramRuleWorkError,
+    DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest, DraftingProgramRuleWorkResult,
 };
 
 /// One actual logical Derived consumer and its original Root supplier/output/order association.

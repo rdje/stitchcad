@@ -946,5 +946,15 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] NO REGRESSION / LOCKSTEP:target/history-proof-0932/independent1087.json →public_exact true,source_intervals8,closed_nodes6,rc=0. Old seals/caps/producer/protected stores unchanged;book reader/journals/resume align. README/LIVE unchanged,G1still6/18 In Progress. Promotion declined:existing retention and original source APIs own these facts. Commit:STITCHCAD-G1-0932.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.sources`
-  Status: `pending`
+  Status: `done`
   Goal:borrow stable original complete work records and same unique inputs/cursor through disjoint parent fields;reserve whole admission plus every actual child work/Profile walk before complete source allocation. Reuse bind_source for every original explicit Design/Profile origin,preserving actual body/declaration/source loans and typed first causes;no signature/output acceptance.
+  - [x] REPRODUCE / ISSUE:complete rule work still needs original rule/policy source association. Existing bind_source borrows actual work storage and repeats fresh work plus an additional Profile walk for Profile origins;one guessed pass per source would underreserve.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'bind_source|prepare_rule_binding|bind_profile_source|work:' context/rule/source.rs →original lending parents and explicit one/two-walk child contracts,rc=0. Stable original work slices and unique complete inputs/cursor must be borrowed through disjoint fields.
+  - [x] FIX:bind_rule_sources borrows caller-owned work parents/inputs,reserves full N+M+1 whole/work/Profile passes for N>0,freshly charges aggregate/proofs,reserves all N records,then reuses every original bind_source. Actual parent/body/declaration/source fields and first causes survive;N0 adds no work and private successful prefixes drop.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract complete_rule_sources →1 test/17 modes pass,rc=0. Mixed/repeated origins,N0,short20+4 versus23,fresh whole/late work resources/matching,late Profile pin,all8 source mismatch classes and provider Missing preserve originals;spent repeat refuses before callbacks. Total mixed24/all-Profile25 passes exact.
+  - [x] NO REGRESSION:complete_rule_work →1/8 modes and profile_input_ →2/19 modes pass,rc=0. Cargo doc rule_work::sources →3 private/non-Clone/lifetime guards pass;scoped strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Fixture enum/unsized annotation corrected before green;whole .check/.verify deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book name complete scoped original sources and stable source-parent signature/output binding next. README/LIVE unchanged,G1still6/18 In Progress. Promotion declined:local complete-source and existing lending rule APIs/book own scope. Commit:STITCHCAD-G1-0934.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.signatures`
+  Status: `pending`
+  Goal:borrow complete stable original source parents and same inputs/cursor;reserve fresh whole/child work before complete signature/output result allocation. Reuse bind_signature for every original rule/policy,retain named matches and actual Root Derived output loans and typed first causes;no value/body/cohort acceptance.

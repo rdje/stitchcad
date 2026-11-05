@@ -24,11 +24,17 @@ struct Provider<'a> {
     calls: Cell<usize>,
     extra_after: Cell<Option<usize>>,
     rule_calls: Cell<usize>,
+    rule_mode: Cell<u8>,
+    rules: Vec<RuleRow>,
     extra_entries: Cell<usize>,
     mode: u8,
     parameter_mode: Cell<u8>,
     parameter_calls: Cell<usize>,
     metadata: Vec<DraftingSourceRecord<ParameterMapping>>,
+}
+struct RuleRow {
+    declaration: SemanticRuleDeclaration,
+    body: DraftingSourceRecord<[u8; 4]>,
 }
 struct ParameterMapping {
     parameter: ProfileParameterRef,
@@ -86,6 +92,8 @@ impl<'a> Provider<'a> {
             calls: Cell::new(0),
             extra_after: Cell::new(None),
             rule_calls: Cell::new(0),
+            rule_mode: Cell::new(0),
+            rules: vec![],
             extra_entries: Cell::new(0),
             mode,
             parameter_mode: Cell::new(0),
@@ -149,6 +157,31 @@ impl DraftingContextSource<EmptyHost> for Provider<'_> {
         }
         charge_design_input_resources(self.other, sink)?;
         charge_canonical_input_resources(&self.inputs, sink)?;
+        sink.charge_entries(
+            self.rules.len(),
+            DesignResourceLocation {
+                scope: DesignResourceScope::SourceHost,
+                owner: None,
+                field: "rule.records",
+                index: None,
+            },
+        )?;
+        for (index, row) in self.rules.iter().enumerate() {
+            charge_semantic_rule_resources(
+                &row.declaration,
+                sink,
+                DesignResourceScope::SourceHost,
+            )?;
+            sink.charge_entries(
+                row.body.data().len(),
+                DesignResourceLocation {
+                    scope: DesignResourceScope::SourceHost,
+                    owner: Some(row.declaration.id()),
+                    field: "rule.body",
+                    index: Some(index),
+                },
+            )?;
+        }
         for selected in [&self.selected, &self.wrong_pin] {
             charge_selected_profile_pin_resources(
                 selected,
@@ -236,7 +269,10 @@ impl DraftingProfileProvider<EmptyHost> for Provider<'_> {
             } else {
                 self.base.garment.inputs()
             },
-            selected: if self.mode == 5 || (self.mode == 3 && self.calls.get() == 2) {
+            selected: if self.mode == 5
+                || (self.mode == 3 && self.calls.get() == 2)
+                || (self.rule_mode.get() == 4 && self.rule_calls.get() > 0)
+            {
                 &self.wrong_pin
             } else {
                 &self.selected

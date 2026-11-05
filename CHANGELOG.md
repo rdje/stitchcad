@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0934 — bind every original rule/policy source
+
+Complete original sources now borrow stable work parents and the same input/cursor. Fresh full
+N+M+1 work covers aggregate,child work and actual Profile walks before full results or queries.
+Original declaration/body/source loans and first typed causes survive without accepted prefixes.
+Seventeen source modes,affected work8/Profile19 modes,three compiler guards,format and strict
+scoped lint pass. Signatures/Root outputs lead next;G1still6/18 In Progress unchanged.
+
 ## STITCHCAD-G1-0933 — admit every original rule/policy work request
 
 Complete original rule work now retains exact mixed/local fields,checked Design/Profile origins,
