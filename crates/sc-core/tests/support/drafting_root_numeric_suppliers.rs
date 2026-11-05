@@ -10,13 +10,16 @@ pub(super) fn fixture(
     profile_inputs: usize,
     button: bool,
 ) -> TestResult<DesignGarment<EmptyHost>> {
-    build_fixture(empty, combined, profile_inputs, button, false, true)
+    build_fixture(empty, combined, profile_inputs, button, false, true, 0)
 }
 pub(super) fn interleaved_fixture() -> TestResult<DesignGarment<EmptyHost>> {
-    build_fixture(false, false, 2, true, true, true)
+    build_fixture(false, false, 2, true, true, true, 0)
 }
 pub(super) fn without_semantics_fixture() -> TestResult<DesignGarment<EmptyHost>> {
-    build_fixture(true, false, 0, false, false, false)
+    build_fixture(true, false, 0, false, false, false, 0)
+}
+pub(super) fn signature_fixture(output_mode: u8) -> TestResult<DesignGarment<EmptyHost>> {
+    build_fixture(false, true, 2, true, false, true, output_mode)
 }
 fn build_fixture(
     empty: bool,
@@ -25,6 +28,7 @@ fn build_fixture(
     button: bool,
     interleaved: bool,
     include_semantics: bool,
+    output_mode: u8,
 ) -> TestResult<DesignGarment<EmptyHost>> {
     let canonical = CanonicalInputs::with_logicals(
         vec![LengthDeclaration::new(LengthDeclarationDefinition {
@@ -84,16 +88,30 @@ fn build_fixture(
             )?;
             if combined {
                 let mut declarations = first.declarations().to_vec();
-                declarations.push(LogicalInputDeclaration::new(
-                    LogicalInputDeclarationDefinition {
-                        id: id(91),
-                        source: id(1091),
-                        kind: LogicalInputKind::PocketOpening,
-                        domain: vec![MachineToken::new("other_option")?],
-                        state: LogicalInputState::Derived { operation: id(80) },
-                    },
-                    LogicalInputLimits::new(1, 0, 12, 2),
-                )?);
+                if output_mode != 4 {
+                    declarations.push(LogicalInputDeclaration::new(
+                        LogicalInputDeclarationDefinition {
+                            id: id(91),
+                            source: id(1091),
+                            kind: if output_mode == 5 {
+                                LogicalInputKind::NotionSize
+                            } else {
+                                LogicalInputKind::PocketOpening
+                            },
+                            domain: vec![MachineToken::new("other_option")?],
+                            state: if output_mode == 6 {
+                                LogicalInputState::Unknown {
+                                    observation: id(1191),
+                                }
+                            } else {
+                                LogicalInputState::Derived {
+                                    operation: id(if output_mode == 7 { 79 } else { 80 }),
+                                }
+                            },
+                        },
+                        LogicalInputLimits::new(1, 0, 12, 2),
+                    )?);
+                }
                 LogicalInputs::new(declarations, LogicalInputInventoryLimits::new(2, 4))?
             } else {
                 first
@@ -217,7 +235,10 @@ fn build_fixture(
                 }
                 operations
             },
-            SemanticRecipeLimits::new(2, 4),
+            SemanticRecipeLimits::new(
+                if combined && button { 3 } else { 2 },
+                if combined && button { 9 } else { 4 },
+            ),
         )?,
     )?;
     let structure = inputs.structure();

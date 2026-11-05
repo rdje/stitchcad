@@ -15,7 +15,13 @@ use crate::{
 };
 use core::fmt;
 mod error;
+mod signatures;
 pub use error::{DraftingProgramRuleSourceError, DraftingProgramRuleSourceRefusal};
+pub use signatures::{
+    BoundDraftingProgramRuleSignatures, DraftingProgramRuleSignature,
+    DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal,
+    DraftingProgramRuleSignaturesResult,
+};
 /// One actual original work parent and accepted original rule/policy declaration/body/source.
 pub struct DraftingProgramRuleSource<
     'q,

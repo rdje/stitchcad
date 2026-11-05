@@ -18,8 +18,11 @@ mod error;
 mod sources;
 pub use error::{DraftingProgramRuleWorkError, DraftingProgramRuleWorkRefusal};
 pub use sources::{
-    BoundDraftingProgramRuleSources, DraftingProgramRuleSource, DraftingProgramRuleSourceError,
-    DraftingProgramRuleSourceRefusal, DraftingProgramRuleSourcesResult,
+    BoundDraftingProgramRuleSignatures, BoundDraftingProgramRuleSources,
+    DraftingProgramRuleSignature, DraftingProgramRuleSignatureError,
+    DraftingProgramRuleSignatureRefusal, DraftingProgramRuleSignaturesResult,
+    DraftingProgramRuleSource, DraftingProgramRuleSourceError, DraftingProgramRuleSourceRefusal,
+    DraftingProgramRuleSourcesResult,
 };
 
 /// One actual original rule/policy field and its exact checked explicit origin row.

@@ -18,10 +18,13 @@ mod rule_work;
 pub use compose::DraftingProgramOperationInput;
 pub use error::{DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal};
 pub use rule_work::{
-    AdmittedDraftingProgramRuleWork, BoundDraftingProgramRuleSources, DraftingProgramRuleSource,
-    DraftingProgramRuleSourceError, DraftingProgramRuleSourceRefusal,
-    DraftingProgramRuleSourcesResult, DraftingProgramRuleWork, DraftingProgramRuleWorkError,
-    DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest, DraftingProgramRuleWorkResult,
+    AdmittedDraftingProgramRuleWork, BoundDraftingProgramRuleSignatures,
+    BoundDraftingProgramRuleSources, DraftingProgramRuleSignature,
+    DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal,
+    DraftingProgramRuleSignaturesResult, DraftingProgramRuleSource, DraftingProgramRuleSourceError,
+    DraftingProgramRuleSourceRefusal, DraftingProgramRuleSourcesResult, DraftingProgramRuleWork,
+    DraftingProgramRuleWorkError, DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest,
+    DraftingProgramRuleWorkResult,
 };
 
 /// One actual original input/header parent and its complete original parameter/member/kind proof.

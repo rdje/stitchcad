@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0937 — bind complete original signatures and Root outputs
+
+Stable original source parents now supply complete named signatures and actual Root Derived
+output relations under fresh aggregate/child work and one cursor. Fifteen native modes,affected
+source17/Root numeric5 modes,three compiler guards,format and scoped strict lint pass. No value
+or body/cohort acceptance follows. LIVE product notes advance;G1gate stays6/18 In Progress.
+Pocket/Closure Root input members lead next.
+
 ## STITCHCAD-G1-0936 — correct one retained acceptance-line space
 
 Removed one trailing space introduced by the prior wrap. Exact non-whitespace bytes and diff

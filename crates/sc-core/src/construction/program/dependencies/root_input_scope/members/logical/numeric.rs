@@ -22,15 +22,18 @@ pub use error::{
 };
 pub use profile_headers::{
     AdmittedDraftingProgramRuleWork, BoundDraftingProgramProfileHeaders,
-    BoundDraftingProgramProfileParameters, BoundDraftingProgramRuleSources,
-    DraftingProgramOperationInput, DraftingProgramProfileHeaderError,
-    DraftingProgramProfileHeaderRefusal, DraftingProgramProfileHeadersResult,
-    DraftingProgramProfileInputHeader, DraftingProgramProfileInputParameter,
-    DraftingProgramProfileInputRequest, DraftingProgramProfileParameterError,
-    DraftingProgramProfileParameterRefusal, DraftingProgramProfileParametersResult,
-    DraftingProgramRuleSource, DraftingProgramRuleSourceError, DraftingProgramRuleSourceRefusal,
-    DraftingProgramRuleSourcesResult, DraftingProgramRuleWork, DraftingProgramRuleWorkError,
-    DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest, DraftingProgramRuleWorkResult,
+    BoundDraftingProgramProfileParameters, BoundDraftingProgramRuleSignatures,
+    BoundDraftingProgramRuleSources, DraftingProgramOperationInput,
+    DraftingProgramProfileHeaderError, DraftingProgramProfileHeaderRefusal,
+    DraftingProgramProfileHeadersResult, DraftingProgramProfileInputHeader,
+    DraftingProgramProfileInputParameter, DraftingProgramProfileInputRequest,
+    DraftingProgramProfileParameterError, DraftingProgramProfileParameterRefusal,
+    DraftingProgramProfileParametersResult, DraftingProgramRuleSignature,
+    DraftingProgramRuleSignatureError, DraftingProgramRuleSignatureRefusal,
+    DraftingProgramRuleSignaturesResult, DraftingProgramRuleSource, DraftingProgramRuleSourceError,
+    DraftingProgramRuleSourceRefusal, DraftingProgramRuleSourcesResult, DraftingProgramRuleWork,
+    DraftingProgramRuleWorkError, DraftingProgramRuleWorkRefusal, DraftingProgramRuleWorkRequest,
+    DraftingProgramRuleWorkResult,
 };
 
 /// One original numeric Derived consumer and its actual source/checked/acyclic owners.

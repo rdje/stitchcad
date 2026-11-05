@@ -3017,3 +3017,61 @@ inventory/snapshot loans and no accepted prefix are checked. Three compiler guar
 privacy,non-Clone ownership and the work-parent lifetime. Local signature/output binding follows
 under stable source parents;body conformance,external Profile order,G4 truth,garment/native families,
 whole semantic checking and physical execution remain separate obligations.
+
+## Bind complete original signatures and actual Root outputs
+
+`BoundDraftingProgramRuleSources::bind_rule_signatures()` borrows stable actual source records
+and the same complete input/cursor owner through disjoint fields. The caller retains the source
+owner. `BoundDraftingProgramRuleSignatures` exposes original `inputs()`,complete `sources()` and
+complete accepted `records()`. Each `DraftingProgramRuleSignature` names its original
+`source_index()`,exact program `source()` parent and accepted child `signature()`. That signature
+borrows this same original child's source parent and preserves every original named match/output.
+
+For N>0,the factory atomically reserves N+1 whole/signature passes before fresh full aggregate/
+proof content,fallible complete N-record reservation or any local signature/output join. Every
+existing child `bind_signature()` then freshly admits original work under its existing finite
+policy before result/count/role/kind and actual canonical output checks. It makes no new Profile,
+parameter,rule,currentness or value query. No body,domain or state is cloned or upgraded.
+N0 adds no walk,allocation,reservation,query or demand claim.
+
+The focused chain separates original Root suppliers,Root outputs and external Profile members:
+
+| Original consumer ordinal / mixed position | Actual operation | Accepted Root output |
+| --- | --- | --- |
+| 1 / 1 | Logical supplier79,empty named inputs | declaration90,PocketOpening,Derived79 |
+| 2 / 3 | Logical consumer80,seven named inputs | declaration91,PocketOpening,Derived80 |
+| 3 / 4 | Buttonhole81,empty named policy inputs | None;no authored physical hole length |
+
+The middle operation reads Root declaration90 from the strictly earlier supplier,plus four
+numeric and two Profile input occurrences. Its original seven requirements are in reversed order;
+all original input index i / requirement index6−i pairs remain pointer-identical to their actual
+operation and rule declarations. Dedicated Length,general Scalar(Length),Boolean and logical
+representations remain distinct. Invalid input indices return None. Empty supplier/policy named
+signatures remain valid,without removing their output or canonical button obligations.
+
+The same-ID external Profile declaration90 remains Derived80 under its actual Profile source.
+It cannot replace Root declaration90,whose supplier is79. The Profile button separately resolves
+to Unknown NotionSize91,while the Root logical output91 is PocketOpening/Derived80. Original
+source owners and kinds decide each relationship;matching IDs create no cross-owner association.
+No domain member,Profile-internal recipe order or physical Buttonhole result is evaluated.
+
+This chain reserves eighteen input passes,four rule-work passes,five source passes and four
+signature passes,for thirty-one total. Signature admission adds four fresh resource walks and
+leaves all source/parameter callbacks unchanged. The named-match getters inspect already-complete
+local metadata;their repeated requirement scans retain the existing caller-work boundary.
+
+`child_pass_count()` reports zero for N0 and N+1 otherwise. `demand()` is only the completed fresh
+aggregate demand. `DraftingProgramRuleSignatureError` retains complete original inputs/cursor,
+stable original source parents,complete `signature_count()`,completed aggregate demand and first
+typed refusal. A child cause retains its actual source index and original lending signature error,
+including actual Root output witnesses. Private successful signature prefixes drop. Capacity
+shortage changes no reservation;later refusal keeps the full stage spent. Dropping a result
+releases its borrow without resetting the cursor;exhausted re-calls refuse before resource work.
+
+Fifteen focused modes cover complete reversed matches/actual outputs,N0,atomic quota shortage,
+fresh whole and late child resources/matching,late local kind/role/result/count mismatches,
+missing/wrong-kind/non-Derived/other-operation Root outputs,and a final policy count refusal after
+two logical signatures passed. Three compiler guards preserve privacy,non-Clone ownership and
+source-parent lifetimes. This completes scoped original operation inputs and rule/signature/output
+joins under focused checks. Pocket/Closure and native-family joins,whole semantic cohort checking,
+body conformance,G4 truth and physical execution remain separately owned.

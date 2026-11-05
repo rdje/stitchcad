@@ -561,10 +561,10 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:after complete aggregate work,match explicit relative request coordinates to actual original garment/program/semantic/native occurrences and complete direct Profile/rule needs. Preserve actual owners/first causes;do not certify native target-internal Profile need until authentic target association or treat unconsumed rows as accepted.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical`
-  Status: `in_progress`
-  Goal:bind complete actual logical/Profile/numeric inputs,original rule/signature/output and Design Derived supplier order under aggregate preflight. Preserve domains/states and external Profile Derived source scope;never select values or reinterpret Profile operation IDs as Root positions.
+  Status: `done`
+  Goal:bind complete actual operation logical/Profile/numeric inputs,original rule/signature/output and Design Derived supplier order under aggregate preflight. Preserve domains/states and external Profile Derived source scope;never select values or reinterpret Profile operation IDs as Root positions.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bind actual Pocket opening/served/components and complete Closure size/derivation/operation relations with original members,source owners and complete component proofs. Root consumer locations have no invented position;no physical opening/hole-length execution or source truth claim.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.native`
   Status: `pending`
@@ -701,7 +701,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Status: `done`
   Goal:retain closed request/source subtrees plus complete committed DEV/CHANGELOG snapshots before aggregate-work growth. Preserve every closed task ID/status and old source/navigation bytes in immutable Git-backed records;replace only completed live material with bounded pointers. No caps,code,producer or recovery-store changes.
   Scope:source9567e5b0 request/source intervals and entire completed lesson/ledger files;verify hashes/extents/Git bytes and public reader before compacting live navigation. Keep MEM current and book retrieval routes accurate;resume .binding.work after required containment.
-  - [x] REPRODUCE / ROOT CAUSE:committed task roots19935L/1495966B and DEV391L approached fixed ceilings;ordinary aggregate-work evidence would exhaust the remaining task bytes. Completed navigation and proof must survive compaction.
+  - [x] REPRODUCE / ROOT CAUSE:git ls-tree/git show census9567e5b0 →task roots19935L/1495966B and DEV391L,rc=0;these approached fixed ceilings;ordinary aggregate-work evidence would exhaust the remaining task bytes. Completed navigation and proof must survive compaction.
   - [x] FIX:1077 retains complete closed request subtree plus whole committed DEV/ledger;1078 retains whole closed logical-source subtree. All45 IDs/statuses preserved;active tasks,caps,old seals,code and protected recovery stores unchanged.
   - [x] ADDRESSED:guarded `transition_receipts.py --record docs/history/stitchcad-devnotes-part1077.md`:3 exact Git spans;1078:1 exact Git span,rc=0 each. Independent decode/Git equality and public `history_archive.sh read` byte equality pass,rc=0.
   - [x] CENSUS:1077 decoded49368B/sealed67507B;1078 decoded13114B. All5+40 closed IDs/statuses occur once in live navigation. No capture/install/recovery or broad inventory verdict claimed.
@@ -840,7 +840,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Status: `done`
   Goal:completed Profile scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1087.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules`
-  Status: `pending`
+  Status: `done`
   Goal:bind every actual original rule/policy work/source/signature/canonical-output relationship under its explicit Design/Profile origin and the same complete input/cursor owners. Preserve original provider/body/metadata/source loans and first typed causes under fresh bounded work;no value or whole-cohort acceptance.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.work`
   Status: `done`
@@ -871,8 +871,17 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] LOCKSTEP:MEM/index/DEV/ledger/book name complete scoped original sources and stable source-parent signature/output binding next. README/LIVE unchanged,G1still6/18 In Progress. Promotion declined:local complete-source and existing lending rule APIs/book own scope. Commit:STITCHCAD-G1-0934.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.signatures`
-  Status: `pending`
+  Status: `done`
   Goal:borrow complete stable original source parents and same inputs/cursor;reserve fresh whole/child work before complete signature/output result allocation. Reuse bind_signature for every original rule/policy,retain named matches and actual Root Derived output loans and typed first causes;no value/body/cohort acceptance.
+
+  - [x] REPRODUCE / ISSUE:complete sources still need all local signatures and actual Root Derived outputs under stable original parents. Fresh complete work must precede named joins/output causes,including failures after earlier signatures passed.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'bind_signature|prepare_rule_binding|parent:|OutputNotDerived' context/rule/signature.rs →existing one-walk lending signature factory and actual Root output relation,rc=0. Stable source storage and same unique complete inputs/cursor must be borrowed through disjoint fields.
+  - [x] FIX:bind_rule_signatures reserves full N+1 whole/signature passes for N>0,freshly charges aggregate/proofs,reserves all N records,then reuses every original bind_signature. Original source/work/operation/named pair/output loans and first causes survive;N0 adds no work and private successful prefixes drop.
+  - [x] ADDRESSED:cargo test -p sc-core --test drafting_context_binding_contract complete_rule_signatures →1 test/15 modes pass,rc=0. Root79→90/80→91,seven reversed pairs,Profile90 external Derived80,Buttonhole None,N0,short27+4 versus30,fresh whole/late child resources/matching,local/output refusals and late policy count preserve originals;spent repeat makes no callback.
+  - [x] NO REGRESSION:complete_rule_sources →1/17 modes and root_numeric_suppliers →1/5 modes pass,rc=0. Cargo doc sources::signatures →3 private/non-Clone/lifetime guards
+    pass;scoped strict lib/harness Clippy,fmt and git diff --check pass,rc=0. Error-adapter lifetime arity corrected before green. Historical0905 Git census rechecked;known D15
+    first-box gate needed its original citation,now explicit. Whole .check/.verify remain deferred.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book close scoped operation inputs/rules and own Pocket/Closure input joins next. LIVE product notes name rule/signature/output joins;G1 gate stays6/18 In Progress. README unchanged. promotion: declined (local complete-signature and original lending APIs/book own scope). Commit:STITCHCAD-G1-0937.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.signatures.retention`
   Status: `done`
@@ -885,6 +894,13 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.rules.signatures.retention.whitespace`
   Status: `done`
   Goal:remove the trailing space introduced by the0935 acceptance wrap and verify the exact follow-up diff before continuing signatures.
-  - [x] ROOT CAUSE / ISSUE:git diff --check returned2 for one trailing space during0935 wrap;the caller continued into commit instead of refusing. Original retention/source proof stays valid;the new acceptance line alone needs correction.
+  - [x] ROOT CAUSE / ISSUE:git diff --check →one trailing space,rc=2 during0935 wrap;the caller continued into commit instead of refusing. Original retention/source proof stays valid;the new acceptance line alone needs correction.
   - [x] ADDRESSED / NO REGRESSION:remove exactly that trailing space;git diff --check and a before/after non-whitespace equality assertion pass,rc=0. No code or historical record changes. Before commit,tool exit must be consumed and successful rather than merely printed.
   - [x] LOCKSTEP:MEM/index retain signature frontier;README/LIVE/book reviewed unchanged,G1still6/18 In Progress. Journals record this correction. promotion: declined (per-slice authoring fix;COMMIT.md already requires successful checks). Commit:STITCHCAD-G1-0936.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs`
+  Status: `pending`
+  Goal:bind every actual Pocket/Closure logical/numeric input under its original Root/Profile source and exact direct selection. Preserve complete canonical state/domain/provenance and original Root Derived suppliers without a fabricated consumer position;component/physical relation joins remain with their own garment steps.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.root-members`
+  Status: `pending`
+  Goal:consume complete original operation input/rule proofs and same cursor;count all Root-owned Pocket opening,Closure notion-size/length fields and reserve complete fresh whole/member work before allocation or lookup. Bind actual original members/kinds and preserve field/owner/location/first causes;Profile/supplier/component/derivation joins follow separately.

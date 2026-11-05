@@ -4,6 +4,8 @@ use super::{
     TestResult,
 };
 use sc_core::{construction::*, design::*, recipe::*};
+#[path = "drafting_program_rule_signatures.rs"]
+mod signatures;
 #[path = "drafting_program_rule_sources.rs"]
 mod sources;
 impl DraftingRuleProvider<EmptyHost> for Provider<'_> {
