@@ -206,7 +206,8 @@ pub use garment::{
 pub use profile::{
     BoundDraftingProfileLogicalSource, BoundDraftingProfileSource, DraftingProfileLogicalError,
     DraftingProfileLogicalIssue, DraftingProfileLogicalProvider, DraftingProfileLogicalRefusal,
-    DraftingProfileLogicalResponse, DraftingProfileLogicalSource, DraftingProfileProvider,
+    DraftingProfileLogicalResponse, DraftingProfileLogicalSource, DraftingProfileNumericProvider,
+    DraftingProfileNumericResponse, DraftingProfileNumericSource, DraftingProfileProvider,
     DraftingProfileSource, DraftingProfileSourceError, DraftingProfileSourceIssue,
     DraftingProfileSourceRefusal,
 };

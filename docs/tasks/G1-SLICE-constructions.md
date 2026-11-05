@@ -888,7 +888,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Status: `done`
   Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1090.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric`
-  Status: `pending`
+  Status: `in_progress`
   Goal:use an authentic numeric Profile metadata/member facet for every original Profile zipper-length input before full garment-input acceptance. Preserve actual canonical family/kind/state and source-owned metadata under exact selected Profile parents;do not coerce logical sources,infer Root declarations or claim Profile recipe/G4 truth.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.retention`
@@ -897,3 +897,16 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] ROOT CAUSE / ISSUE:git ls-tree/show at26e26483 →task collection19970L/1497819B,rc=0. Only2181B remain before fixed1500000B ceiling;retain complete closed garment input evidence before numeric Profile work grows.
   - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1090.md →9 exact Git spans,rc=0. Independent decode/hash/Git/public-reader proof preserves23040 decodedB and225 task IDs/statuses before seven closed nodes become retrieval stubs. All46 live headings remain exact.
   - [x] NO REGRESSION / LOCKSTEP:target/history-proof-0944/independent1090.json →public_exact true,source_intervals9,closed_nodes7,rc=0. Whole journals and navigation retained;older seals/caps/producers/protected stores unchanged. Book/resume align;README/LIVE unchanged,G1still6/18 In Progress. promotion: declined (existing immutable retention contract owns scope). Commit:STITCHCAD-G1-0944.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.port`
+  Status: `done`
+  Goal:expose an authentic readonly numeric Profile metadata facet and raw response with original header,parameter,target and metadata loans. Preserve exact target family/kind without accepting membership/value/G4 truth;document exhaustive inherited resource obligations and compiler-checked loan boundaries.
+  - [x] REPRODUCE / ISSUE:Profile zipper fields require genuine numeric metadata;existing ProfileLogicalSource only carries logical declarations and cannot preserve actual numeric target representation.
+  - [x] ROOT CAUSE (WHY + WHERE):rg -n 'CanonicalInputTarget|resolve_numeric|ClosureLength::Profile' value/inventory.rs,value/inventory/numeric.rs and design/closures.rs →original numeric representation/member and unaccepted Profile length contracts,rc=0. Metadata parameter and canonical target identities remain distinct.
+  - [x] FIX:DraftingProfileNumericProvider returns original selected-header/parameter/target/metadata loans through a raw typed response. NumericMetadata may be unsized without Clone/Debug. The inherited exhaustive walk includes unused metadata/copies/caches;no allocation,value or binding grant occurs in the port.
+  - [x] ADDRESSED:cargo test -p sc-core --doc construction::context::profile::numeric_port →3 tests pass,rc=0. Unsized source/metadata view copies only original loans;escaping original lifetime and echoing a local request refuse compilation.
+  - [x] NO REGRESSION:cargo clippy -p sc-core --lib -- -D warnings,cargo fmt --all -- --check and git diff --check →pass,rc=0. Existing logical/source APIs unchanged;no whole cohort,physical or G4 verdict. Checked parameter acceptance remains the next owned leaf.
+  - [x] LOCKSTEP:MEM/index/DEV/ledger/book describe raw numeric port and actual-member binding next;README/LIVE reviewed unchanged,G1still6/18 In Progress. promotion: declined (local raw port and existing canonical/provider contracts own scope). Commit:STITCHCAD-G1-0945.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.inputs.profile.numeric.binding`
+  Status: `pending`
+  Goal:bind original numeric Profile parameter metadata to exact accepted parent and actual canonical numeric member/expected kind after fresh complete content. Preserve typed original resource/provider/header/parameter/member/kind causes and source states;then own aggregate garment header/parameter/composition work.

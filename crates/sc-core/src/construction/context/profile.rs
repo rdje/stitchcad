@@ -1,4 +1,4 @@
-//! Raw original selected Profile and logical-parameter source loans;no binding or G4 resolution.
+//! Original selected Profile and logical/numeric metadata loans;no G4 resolution.
 use super::{DraftingContextSource, DraftingSourceRecord};
 use crate::{
     design::{DesignInputs, DesignMetadataHost},
@@ -184,10 +184,14 @@ pub type DraftingProfileLogicalResponse<'a, H, S> = DraftingProfileLogicalSource
     <S as DraftingProfileLogicalProvider<H>>::Metadata,
 >;
 mod binding;
+mod numeric_port;
 mod parameter;
 pub use binding::{
     BoundDraftingProfileSource, DraftingProfileSourceError, DraftingProfileSourceIssue,
     DraftingProfileSourceRefusal,
+};
+pub use numeric_port::{
+    DraftingProfileNumericProvider, DraftingProfileNumericResponse, DraftingProfileNumericSource,
 };
 pub use parameter::{
     BoundDraftingProfileLogicalSource, DraftingProfileLogicalError, DraftingProfileLogicalIssue,

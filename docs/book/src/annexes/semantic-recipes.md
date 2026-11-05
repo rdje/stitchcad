@@ -3370,3 +3370,50 @@ injection was made independent of Pocket/Notion ordering. Three compiler guards 
 lint preserve ownership. Logical Profile garment parameter membership is implemented with focused
 checks. Numeric Profile facets,complete input composition,component/Closure/native joins,whole
 cohort checking and G4 truth remain separately owned.
+
+## Original numeric Profile metadata port
+
+`DraftingProfileNumericProvider` extends the selected-Profile source port with
+`profile_numeric_source(profile, parameter)`. It exposes numeric metadata independently of logical
+parameter lookup. Its `NumericMetadata` associated type may be unsized and requires neither
+`Clone` nor `Debug`. Integrations retain the original immutable record and implement exhaustive
+resource accounting for every held numeric metadata record,text,copy and cache,including unused
+parameters,before lookup. The callback loads no body and reads no parameter value.
+
+`DraftingProfileNumericSource` is a raw response. Its four fields are loans:
+
+| Field | Original source |
+| --- | --- |
+| `profile` | Actual selected Root/pin/Profile inventory/body/snapshot header |
+| `parameter` | Profile parameter reference held in original metadata |
+| `target` | Exact canonical target field held in that same metadata |
+| `metadata` | Complete immutable `DraftingSourceRecord<NumericMetadata>` |
+
+For example,Profile parameter704 may name dedicated `CanonicalInputTarget::Length(id10)`,or
+`CanonicalInputTarget::Scalar { declaration: id20, kind: ScalarInputKind::Length }`. Both describe
+a length dimension,but their actual canonical families remain distinct. A missing dedicated
+Length10 must not fall back to a same-ID general Scalar or Design declaration. Metadata parameter
+identity704 remains distinct from canonical target identity10 or20.
+
+A provider implementation returns its actual fields:
+
+```text
+let metadata = original_profile.numeric_parameters.find(requested_parameter)?;
+DraftingProfileNumericSource {
+    profile: original_header,
+    parameter: &metadata.data().parameter,
+    target: &metadata.data().target,
+    metadata,
+}
+```
+
+The pseudocode leaves collection layout and typed missing-source errors to the integration.
+Returning an echoed request as a reference to a local parameter does not compile. Response loans
+cannot outlive their original records. Public construction deliberately permits inspectable wrong
+headers or absent targets;it does not manufacture a checked source. A separate binding must check
+the exact accepted parent,parameter identity,actual inventory membership and expected numeric kind
+after fresh complete content admission. Aggregate garment work remains separately bounded.
+
+Original Known/Unknown/Derived states and provenance remain in the Profile canonical inventory.
+This port grants no value resolution,external formula supplier,G4 schema/evidence or physical
+zipper-length truth. Logical Profile input acceptance does not accept this numeric class.

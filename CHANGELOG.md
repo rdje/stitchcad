@@ -3,6 +3,12 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0945 — expose original numeric Profile metadata loans
+
+Raw numeric Profile sources preserve actual header,parameter,target and metadata loans through
+an independent provider facet. Three compiler checks,format and strict library lint pass.
+Checked parent/member/kind acceptance and aggregate garment composition remain pending.
+
 ## STITCHCAD-G1-0944 — retain complete closed garment input evidence
 
 Nine exact Git spans preserve23040 decodedB of whole closed Root/logical Profile goals/proofs
