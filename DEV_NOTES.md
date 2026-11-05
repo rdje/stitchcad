@@ -2,6 +2,14 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — preserve closed acceptance before cohort growth
+
+0955 moves complete closed0952–0954 acceptance blocks verbatim into the existing evidence sibling
+before the working construction part grows beyond its transition boundary. Original Git payload
+and unique-live-ID assertions pass;retrieval links replace only moved proof text. No new sibling,
+archive,ceiling,code or product/book claim changes. Operation-cohort remains next.
+Promotion declined:existing complete evidence split contract.
+
 ## _(2026-11-05 UTC)_ — bounded original Closure Buttonhole relation
 
 0954 adds a lending factory on the admitted actual garment. Fresh whole garment/Root/provider

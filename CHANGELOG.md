@@ -3,6 +3,12 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0955 — split closed acceptance before Closure cohort growth
+
+Complete0952–0954 acceptance blocks move byte-exact to the existing evidence sibling;original
+live task identities/statuses and all proof/correction notes remain. Git-backed transfer assertions
+and diff checks pass. Product behavior,book,progress and fixed bounds remain unchanged.
+
 ## STITCHCAD-G1-0954 — bind original Closure Buttonhole operations
 
 A fresh bounded relation factory joins an actual garment Closure to its Root's typed Buttonhole

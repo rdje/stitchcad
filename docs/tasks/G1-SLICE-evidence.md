@@ -916,3 +916,47 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 - Staged doctrine gate:13 checks/all green, terminal0; diff check0. Final status/exclusion prose
   has no pending D124 promise; standalone100/seven/three recognition controls and publication9
   rechecked0 after final prose sync. Pre-commit hook repeats the staged gate.
+
+## Completed original Pocket source joins0953
+
+  - [x] ROOT CAUSE / ISSUE:cargo clippy -j1 -p sc-core --lib -- -D warnings →type_complexity at parameters.rs558;after a result alias →Finished dev profile,rc=0.
+    Existing component/source.rs bind_source checks actual current work,header and captured recipe association. The aggregate work proof exposed only its immutable input parent;
+    the new factory splits its disjoint input/cursor and stable work fields without a source-factory contract change or lint waiver.
+  - [x] FIX / ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract profile_headers::rule_work::pocket →test result:
+    ok. 2 passed,rc=0. Seven current-member plus10 source cases retain original parents/imports,whole N+1 cursor reservation,N0,repeated targets,no refunds and first late typed
+    work/provider/Piece/frame/snapshot causes with no accepted prefix.
+  - [x] NO REGRESSION / LOCKSTEP:the same target component_binding:: →4 original import/Mirror/Join guards passed;garment_profile_numeric →2 passed;cargo test -j1 -p sc-core --doc
+    BoundDraftingProgramPocketSources →3 private/clone/lifetime guards passed;cargo clippy -j1 -p sc-core --lib -- -D warnings →Finished;fmt --check/git diff --check pass,all rc=0.
+    Book/journals/resume/LIVE align,G1still6/18 In Progress. Whole recipe/cohort .check/.verify and Closure/native/physical work remain deferred. Commit:STITCHCAD-G1-0953.
+  promotion: declined (existing source association and bounded cursor contracts).
+  Commit-integrity correction:the initial hook refused the RCA's missing command/result signature and a wrapped decline token. Explicit invocation/rc and a whole-line decline now meet the existing checker contract;product/runtime checks are unchanged.
+
+## Completed whole protocol retention0952
+
+  - [x] ROOT CAUSE / ISSUE:git-backed byte/line census atfa5ca25a →task collection19982L/1491586B,rc=0;only18 lines remain before fixed20000L ceiling. Complete original closed protocols are the retained intervals;historical predecessor mirrors stay unchanged.
+  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1092.md →9 exact Git spans,rc=0. Independent Git/hash/base64/public-reader proof preserves26117 decodedB before7 whole protocol retrieval stubs. Original task identity/status occurrences and headings remain exact.
+  - [x] NO REGRESSION / LOCKSTEP:history_archive.sh verify-retention →archive: OK,rc=0;target/history-proof-0952/capture2/independent-after.json records public_exact/original_graph_exact/original_headings_exact
+    true. Book/journals/resume align;README/LIVE unchanged,G1still6/18 In Progress. No older seal,producer,bound or protected store changes. promotion: declined (existing whole-record
+    retention contract). Commit:STITCHCAD-G1-0952.
+
+## Completed original Closure operation join0954
+
+  - [x] ROOT CAUSE / ISSUE:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core
+    --test drafting_context_binding_contract closure_buttonhole --no-run →E0599 missing
+    bind_closure_buttonhole and missing public limits/refusal types,rc=101. Existing Root
+    SemanticRecipe::resolve supplies original typed members;the admitted garment had no relation join.
+  - [x] FIX / ADDRESSED:the same test command without --no-run →test result:ok. 2 passed,rc=0.
+    Actual nonzero original Closure/operation indices and parent/recipe/member/source pointers,
+    Declaration/Profile equality and mismatch,Missing/Kind,complete content/matching priority pass.
+    One fresh whole walk and checked (E+8)^2 precede lookups;no clone,value or successful buffer.
+  - [x] NO REGRESSION / LOCKSTEP:cargo test -j1 -p sc-core --test drafting_context_binding_contract
+    garment_source:: →3 passed;cargo test -j1 -p sc-core --doc DraftingClosureButtonhole →3 passed;
+    --lib closure_buttonhole_matching_bound →1 passed;cargo clippy -j1 -p sc-core --lib -- -D warnings
+    →Finished;fmt --check/git diff --check pass;book_tool.py build →published,all rc=0. Book/journals/
+    LIVE/resume align,G1still6/18 In Progress;README scope unchanged. Aggregate/physical/native/cohort
+    and whole .check/.verify deferred to existing owners. No full verification claim.
+  Startup:cleanup recorded2026-11-05 remains current;policy body comparison found README/claim
+  neutral bodies unchanged and donor book exception already adopted locally. Deep source-chain
+  recovery exceeded the startup target;no unresolved source-contract ambiguity remains for this leaf.
+  promotion: declined (existing original semantic ownership and canonical origin contracts).
+  Commit:STITCHCAD-G1-0954.
