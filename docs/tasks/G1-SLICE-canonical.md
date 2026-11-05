@@ -334,45 +334,7 @@ Current ordered-recipe work follows the protocol below.
 
 - ID: `G1-SLICE.5a.3e.2`
   Status: `done`
-  Goal: complete immutable ordered formula syntax, including empty/multiline recipes.
-  Scoped sources: README/roadmap ADR-0003, formula contract4.3/5, full grammar/examples, lexer/
-  statement/expression parser and actual curated single-statement reference. Clean1ac495b, no jobs
-  or user changes; no new authority decision required for this syntax-only public interface.
-  Plan: private FormulaRecipe owns an ordered Vec of immutable borrowed FormulaStatement values;
-  immutable slice access/Clone/opaque Debug and private construction/source/view lifetime docs.
-  Reuse the same statement header/operand parser, lexing original complete source. A top-level
-  let/assert after the valid header is the next boundary; headers consume their required tokens
-  before any boundary recognition. Nested keywords remain invalid expressions. Grammar statement*
-  requires no newline or punctuation separator: newline/header/operator whitespace is permitted,
-  numeric-unit gap stays exactly one ASCII space. No token rejoining or recursive arena traversal.
-  Standalone statement API still consumes the whole source and rejects a second statement. All
-  statement/header/node/refusal spans refer to original whole recipe source; missing operands end
-  at the next keyword or final EOF. Statement indices in recipe errors are1-based, including the
-  first malformed statement. Global ASCII preflight has no known index (None), never a guess.
-  Fixed MAX_STATEMENTS4096: a recognized4097th statement keyword is formula_domain with bound4096/
-  measured4097 and exact keyword span before parsing that excess statement. Other nonstatement
-  trailing input remains formula_parse. Whole-source ASCII preflight retains precedence.
-  No partial accepted recipe on any failure; error payload has index/global span/typed nested
-  header or expression refusal and omits customer content. No canonical context is fabricated,
-  input conversion/static names/types/numeric/tolerance evaluation/storage remain .3f/.5 owners.
-  Authored boundary fixtures independently specify complete source and ordered original statements;
-  actual recursive reference checks each authored statement after header trapping, not a claimed
-  complete reference recipe parser. Product tests consume the same original whole sources and
-  authored ranges/roles/bytes; cover all21 worked statements composed into one ordered recipe.
-  Empty/all ASCII whitespace, multiline headers/operands, same-line adjacent statements, malformed
-  headers/nested keywords/incomplete operands/trailing junk/unit gaps and no normalization covered.
-  Public tests verify max4096 and first4097 even with malformed excess body, ordinal/global errors
-  on later statements, opacity/Clone/lifetimes, each expression limit and large grouping/name data
-  on64KiB stack. Actual boundary/header/index/limit/span/whole-input/privacy faults must compile
-  and fail assertions; exclusive runner/finally restores exact source, failed-body classifier only.
-  Run focused/native/release/WASM, structural/language/publication and record/census checks.
-  Extend existing statement annex with recipe inspection and progressive status/API/index routes;
-  retain exact completed proof/oldest ledger payloads, no ceiling rises or new Knowledge Map sprawl.
-  Verification: eight contracts/nine sources/14 statements/18 identities/all21 worked statements,
-  new15/prior15 actual assertion reds/exact restore/native550/release17/WASM3; D108 repaired.
-  D108 P2 owned here before repair: delimiter offset copied an extra heading byte in new archive;
-  original HEAD is authoritative. Exact split/comparison and watched ledger/archive proof required.
-  Commit: `STITCHCAD-G1-0066`
+  Goal:completed;[whole original protocol/proofs](../history/stitchcad-devnotes-part1092.md).
 
 ## Ordered-recipe closure — preserved during G1-0067
 
@@ -429,36 +391,7 @@ Current coupled syntax review follows the protocol below.
 
 - ID: `G1-SLICE.5a.3e.3`
   Status: `done`
-  Goal: complete scoped syntax/diagnostic obligation map before closing .3e.
-  Sources: full grammar/contract/worked examples/ADR-0003 and D84/D95/D103; actual lexer/statement/
-  ordered/expression implementations and public tests, independent authored fixtures/reference.
-  Clean415d577; no jobs/user edits. Production code should remain byte-identical unless a defect
-  reproduces. Review flags D109 future canonical assert/recipe byte gap (.3f.1 before implementation)
-  and D110 impossible unconditional canonical/statement diagnostic context (.3e.3 fix now).
-  Map grammar1/header/keywords/bindable kinds/tolerance classes/statement order/empty forms,
-  boundaries/assertion grouping/full-source spans/typed errors/known1-based indices/ASCII precedence,
-  immutability/lifetimes/privacy/Clone and256/4096/16 independent limits to actual product evidence.
-  Keep literal conversion/recipe serialization/.3f.1 and static names/types/binding/evaluation/.5
-  owners explicit; .5a.4 decomposes later evaluator tasks before implementation. No numerical runtime,
-  browser, geometry, storage, project hash, command/API/MCP or production signoff claim.
-  Add independently authored zero-gap boundary sources and lexical keyword-prefix refusals; actual
-  reference token/statement API checks original authored chunks, not a whole-reference-recipe claim.
-  Product checks all ASCII whitespace, token-distinguishable keyword adjacency, reserved header
-  positions, nested/trailing text and typed later-statement header/operand/EOF refusal matrix.
-  Combined maximum4096 assertions each with two256-node expressions and16 if levels on64KiB
-  stack proves there is no hidden aggregate node/depth budget. Independent recursive reference checks
-  the bounded256-node/16-depth authored expression shape before product uses it. Existing all21 worked
-  statements/25 canonical expression bytes retain their scope; no evaluation reclassification.
-  Falsify only new coupled tests with actual spacing-boundary/later-index/nested-rule/bound faults;
-  compiled assertion reds/failed-body classifier/exclusive finally exact source restoration.
-  Strict native/release/WASM, structural/language/publication and ledger/archive/censuses; retain
-  completed proof/oldest ledger payloads exactly via delimiter splitting and independent comparisons.
-  Update statement annex proof map and diagnostic context, progressive/current links and live docs.
-  Verification: statement9/recipe11, native553/45groups, release20/WASM3; five new compiled
-  assertion reds/exact restore; source bytes exact415d577. Reference fixtures9/14/18 and4/8/10,
-  maxshape256/16,12 header/four prefix refusals; book language16/publication9 with51 chapters/21 APIs/
-  1058 source/1636 rendered links pass0. D110 fixed; D109 next .3f.1 before serializer code.
-  Commit: `STITCHCAD-G1-0067`.
+  Goal:completed;[whole original protocol/proofs](../history/stitchcad-devnotes-part1092.md).
 
 ### Coupled review recording receipts
 

@@ -301,71 +301,7 @@ owned next, not treated as closed. This review commits independently before its 
 ## Whole statement/recipe normalization protocol
 - ID: `G1-SLICE.5a.3f.1b`
   Status: `done`
-  Clean839f2c1; no jobs/user changes. Relevant grammar1/4/4.1, contract2/4.2/4.3/5.2, D84/D95/D103/
-  D109 decisions, statement/ordered/expression normalized/literal APIs and public tests reviewed.
-  Implement private normalized statement/recipe owners retaining original source/header/global spans,
-  exact names/declared kinds/symbolic tolerance and every expression child via shared normalize_literals.
-  Normalized owners outlive syntax allocations but not source; immutable views cannot detach arenas;
-  Clone/flat drop/opaque Debug preserve established privacy and stack contracts. No new dependencies.
-  Standalone literal error adds operand role; recipe adds known1-based ordinal and nested original
-  literal rule/span/diagnostic with Error source chain. No partial accepted normalized object on failure.
-  Normalize both assertion operands/all branches/call arguments/source order; no static name/type/
-  duplicate checks, i64 binding narrowing, tolerance resolution, numerical evaluation or geometry.
-  Canonical statement/recipe serializer .1c and review .3f.2 remain future; existing expression bytes
-  are explicit inspection in tests, not an invented production recipe serializer.
-  Independent authored16 statement/nine recipe byte fixtures and actual reference syntax supply
-  operand identity; independent Fraction/Decimal fixtures exercise whole-operand canonical inputs.
-  Tests original borrowed names/literals/global spans, lifetime/private constructors/views, all three
-  expression roles/later ordinal/typed width/length refusal/source chain and earliest source refusal;
-  syntax remains usable after failure. Check nested untaken inputs/unknown calls/wide/raw-angle identity,
-  empty/order/duplicate/forward syntax and fixed256/4096/16 flat bounds on64KiB stack.
-  Actual production constructor/header/operand/ordinal/order/context/iteration faults must compile
-  and fail explicit public assertions; exclusive runner classifies failed bodies and restores exact
-  source before any probe/build. Standing structural suite watches fixture/reference/anchor controls.
-  Strict native/release/WASM plus scoped reference/book/API publication and ledger/archive/censuses.
-  Keep all previous literal/normalized/canonical/lexer/parser implementation sources exact, except
-  statement/ordered composition; preserve old closure/oldest ledgers exactly and maintain live caps.
-  Verification: final results below; all terminal rc=0 after restoration.
-  Commit: `STITCHCAD-G1-0069`.
-Initial public run: five pass/two fail because new refusal fixtures used10.000001 m against the
-10m geometry bound. Tool census located literal.rs maximum from sc_units::MAX_LENGTH_UM=1000000000
-(1km), independently confirmed by existing literal fixture .5um refusal. Fixtures now exceed1km;
-production conversion and both distinct normative limits are unchanged. This is a new-test fixture
-repair, not a product scalar-domain change or an earned mutation red.
-Initial strict clippy refused result_large_err at ordered.rs normalize_literals: unboxed recipe
-context made the Err variant128 bytes. Box the nested standalone literal-context error only on
-failure; getters/source chain preserve typed information, error becomes Clone rather than Copy.
-No lint allowance, successful-path allocation or numerical contract is introduced by this repair.
-Initial fault run observed15 actual compiled assertion reds, then correctly refused counting fault16:
-missing literal Error source triggered an expect-only panic. Finally restored all three sources.
-Public cause/type presence now has explicit assertions before extraction; rerun all17 actual faults
-before claiming the final proof. Classifier rules stay unchanged; the initial incomplete run is not
-17-fault verification and neither compilation nor expect-only failure is counted.
-
-Final verification (all observed terminal0): `cargo test -p sc-core --test
-formula_normalized_recipe_contract` passes eight public contracts,16 authored statement bytes/nine
-whole sources and100 independently produced Decimal/Fraction rows through all three operand roles
-(300 controls). Complete4096×2×256-node parse/normalize/clone/drop on64KiB stack passes; six
-private/lifetime compile-fail and two runnable API docs pass. Existing expression byte inspection
-in tests is not a product recipe serializer or independent whole-recipe parser.
-`python3 -B docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py` final exclusive
-rerun observes all17 actual compiled assertion reds and restores all three sources byte-exact;
-restored public eight pass. Explicit cause/type assertions supersede the initial incomplete run.
-`make check`:569 tests/46 groups, fmt and strict clippy; release public eight and `make wasm` three
-libraries pass. WASM is cross-compilation, not browser execution or performance certification.
-Structural/reference suite, formula-language16 and publication9 pass:52 chapters/23 scoped API
-rows/1073 source/1663 rendered links. Shared six lexer/expression/parser/literal/normalized/canonical
-sources equal839f2c1 byte-exact; preceding full closure and two oldest sealed ledger payloads exact.
-Tree10 lanes/13trees/nine siblings/zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16,
-fixture20/four/five all pass0. Ledger9 arms/13 actual pointer verdicts; archive28 arms/186 CLI
-controls/177 logical reads and retention177 records/52 working Markdown/8763 decoded lines/
-677590 decoded bytes/333912 resident bytes pass0. Fresh reconstructed defects10open/99unique
-sealed/zero duplicate/overlap. No numerical/type/name/tolerance/binding/evaluation authority added;
-private constructors, flat storage and input-only scope documented in the new book annex.
-Initial staged gate refused the new product-code status row at348 bytes against its320-byte ceiling;
-`target/g1-0069-gate.log` identifies LIVE-DOC-SIZE as the sole failed check (make rc=2). Tighten
-that summary, retaining detailed per-family facts in the task tree/book; no containment ceiling rises.
-Final staged `make gate` → === all doctrines green ===, observed terminal rc=0; all jobs terminal.
+  Goal:completed;[whole original protocol/proofs](../history/stitchcad-devnotes-part1092.md).
 
 ## Complete input closure — preserved during G1-0070
 
@@ -405,43 +341,7 @@ normalize/clone/drop contract passes. The API converts inputs; type/binding/eval
 ## Whole recipe identity serializer protocol
 - ID: `G1-SLICE.5a.3f.1c`
   Status: `done`
-  Clean c4d6252; prior turn completed .1b. No jobs/user edits; cleanup not due until18:56UTC.
-  Read roadmap4/7.8/G1, grammar4/4.1, contract/current formula-status and input/statement annexes,
-  D103/D109 byte decisions, all normalized owners and public expression identity/reference fixtures.
-  Implement distinct privately constructed owned FormulaCanonicalStatement/FormulaCanonicalRecipe
-  from normalized owners only, with exact bind/assert/recipe/empty bytes, one ASCII space/no newline.
-  Immutable as_str, owned into_string, byte Eq/Clone and opaque Debug omit names/values. No Hash or
-  cross-domain equality/reader/project schema; .7 owns typed persisted fields/digest framing.
-  Reuse existing expression canonical_form and public header/view accessors; append statements with
-  flat authored iteration, including both assertion operands and every duplicate/forward declaration.
-  Keep shared lexer/parser/expression/literal/normalized/canonical/statement/ordered implementation
-  bytes exact c4d6252. No new limits, literal conversion, type/name checks, binding, tolerance resolution,
-  numerical execution, dependencies or public constructor for arbitrary canonical text.
-  Independent authored16 statements/nine complete recipe fixtures plus existing55 expressions and
-  100 Decimal/Fraction literal rows prove whole serialization. Direct typed collision witnesses,
-  every annotated kind/tolerance, exact bytes/ASCII/order/empty/alias equality/distinct semantics,
-  source/arena independence/Clone/extraction/privacy, all structural bounds on64KiB stack and very
-  long names/grouping need explicit public assertions. Actual4 normative examples must match product.
-  Add private-construction and cross-type equality compile-fail docs, runnable public examples;
-  source failures cannot produce a canonical whole object. No independent whole-recipe parser claim.
-  Exclusive compiled constructor/role/name/kind/tolerance/operand/envelope/empty/order/separator/
-  newline/Debug/extraction faults must fail actual public assertions; classify failed bodies, never
-  compiler or expect-only noise; exact finally restoration precedes normal/probe/build verification.
-  Watch actual mutation anchors/classifier through structural suite. Strict native, release public
-  family, WASM three libraries, scoped reference/language/publication and ledger/archive/censuses.
-  Update progressive examples/annex/index/API status/live/frontier; preserve original closure and
-  oldest sealed ledger payloads exactly. Split completed closure before growth past1000 lines;
-  maintain unchanged containment ceilings. Current .3f.2 coupled review remains separate.
-  Verification: final receipts below; all terminal0 after restoration.
-  Commit: `STITCHCAD-G1-0070`.
-Initial public run: nine pass/one fixture-reader failure. The actual multiline normative example
-was reduced to its final line because the newly authored test cleared its accumulator on every
-line after the first example. Move clearing to the expected-byte boundary; assert no trailing
-source remains. Production bytes and normative examples are unchanged; this is test development,
-not a production defect or an earned mutation red.
-Initial strict check refused a panic! arm in the new fixture escape reader under the existing
-workspace panic lint. Use closed ASCII replacements plus an explicit residual-backslash assertion;
-no lint allowance or product behavior changes. Re-run strict checks after this test helper repair.
+  Goal:completed;[whole original protocol/proofs](../history/stitchcad-devnotes-part1092.md).
 
 ## Complete recipe input predecessors — preserved during G1-0070
 - ID: `G1-SLICE.5a.3f.1a`

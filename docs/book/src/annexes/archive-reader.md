@@ -438,6 +438,15 @@ original goals/proofs under unchanged archive and task bounds.
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1091.md
 ```
 
+Part1092 retains complete closed syntax/normalization/serializer and Pocket work/retention/handoff
+protocols plus whole committed journals fromfa5ca25a. Nine exact Git intervals preserve26117 decoded
+bytes before seven narrative retrieval stubs. Original task identity/status occurrences and all
+headings remain unchanged,including explicitly preserved historical predecessor mirrors.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1092.md
+```
+
 ### Closed task goals and live navigation —0775
 
 Whole0774 continuity and the original completed walk/mirror/slash goals/proof links remain

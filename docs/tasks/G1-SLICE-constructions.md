@@ -912,26 +912,21 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.pocket-work`
   Status: `done`
-  Goal:retain the complete original numeric/logical garment input owner and unique aggregate cursor while binding every original Pocket served/component field through prepare_component_binding.
-  Count N first,reserve N+1 full passes atomically,then fresh aggregate charging,complete result reservation and original child factories. N0 adds no work;first typed error retains the parent and drops private prefixes.
-  No source/geometry/value query or invented mixed position.
-  - [x] ROOT CAUSE / ISSUE:git show fe836a5d:crates/sc-core/src/construction/context/component/work.rs and the original numeric garment parameter parent show an existing bounded
-    single-target factory and the original input-only join. The new aggregate stage must preserve actual fields/current members under that cursor. Initial fixture E0038 and
-    identity/MissingCopy setup refusals were diagnosed and corrected without changing product contracts.
-  - [x] FIX / ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract
-    pocket_component_work_keeps_original_members_complete_cursor_and_first_typed_cause →test result: ok. 1 passed,rc=0. Seven cases cover original field/member pointers,duplicate
-    targets,N0,atomic shortage/no refunds,fresh aggregate/late child resources and original late MissingCopy;no accepted prefix or source query.
-  - [x] NO REGRESSION / LOCKSTEP:the same test target with garment_profile_numeric →2 passed;cargo clippy -j1 -p sc-core --lib -- -D warnings →Finished;cargo test -j1 -p sc-core --doc
-    BoundDraftingProgramPocketWork →3 compile-fail guards passed;cargo fmt --all -- --check and git diff --check pass,all rc=0. Book/journals/resume/LIVE align;G1 remains6/18 In
-    Progress. Whole .check/.verify and source/Closure/native/cohort work remain deferred. promotion: declined (existing original-source and bounded-cursor contracts own scope).
-    Commit:STITCHCAD-G1-0951.
-  Owned doc defect:the Pocket overview called source ports/accounting pending despite existing prepare_component_binding/bind_source factories. Corrected links distinguish this
-  current-member stage from pending aggregate source/placement/Closure work. Initial RAM blocker cleared by the director's quiet window;no memory-intensive job overlapped another owned
-  job.
+  Goal:completed;[whole original protocol/proofs](../history/stitchcad-devnotes-part1092.md).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.pocket-sources`
   Status: `pending`
   Goal:borrow the complete stable original Pocket work parents and bind actual imported/recipe sources with the same finite cursor,original field locations and first typed causes. Preserve authentic source frame/snapshot/creator proof;no fabricated Root consumer position or complete cohort claim.
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.pocket-sources.retention`
+  Status: `done`
+  Goal:retain complete closed syntax/normalization/serializer protocols,current Pocket work and relation retention/handoff evidence plus committed journals from fa5ca25a before source-binding growth.
+  Preserve exact Git/hash/public bytes,all original live task identities/statuses and headings under unchanged collection/archive bounds. Retire narrative only after independent source/retrieval proof.
+  - [x] ROOT CAUSE / ISSUE:git-backed byte/line census atfa5ca25a →task collection19982L/1491586B,rc=0;only18 lines remain before fixed20000L ceiling. Complete original closed protocols are the retained intervals;historical predecessor mirrors stay unchanged.
+  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1092.md →9 exact Git spans,rc=0. Independent Git/hash/base64/public-reader proof preserves26117 decodedB before7 whole protocol retrieval stubs. Original task identity/status occurrences and headings remain exact.
+  - [x] NO REGRESSION / LOCKSTEP:history_archive.sh verify-retention →archive: OK,rc=0;target/history-proof-0952/capture2/independent-after.json records public_exact/original_graph_exact/original_headings_exact
+    true. Book/journals/resume align;README/LIVE unchanged,G1still6/18 In Progress. No older seal,producer,bound or protected store changes. promotion: declined (existing whole-record
+    retention contract). Commit:STITCHCAD-G1-0952.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures`
   Status: `pending`
@@ -939,14 +934,8 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.retention`
   Status: `done`
-  Goal:retain whole closed garment input goals/evidence and committed journals before relation work grows. Prove exact Git/hash/public bytes and unchanged task identities/statuses under fixed bounds before compaction.
-  - [x] ROOT CAUSE / ISSUE:git ls-files/local byte census at7191b646 →task collection19984L/1496802B,rc=0. Only16 lines remain before fixed20000L ceiling;retain closed garment input evidence before relation ownership/acceptance grows.
-  - [x] ADDRESSED:transition_receipts.py --record docs/history/stitchcad-devnotes-part1091.md →17 exact Git spans,rc=0. Independent decode/hash/Git/public-reader proof preserves24380 decodedB and231 task IDs/statuses before15 closed nodes become retrieval stubs. All46 live headings remain exact.
-  - [x] NO REGRESSION / LOCKSTEP:target/history-proof-0949/independent1091.json →public_exact true,source_intervals17,closed_nodes15,rc=0. Whole journals/navigation retained;old seals/caps/producers/protected stores unchanged. Book/resume align;README/LIVE unchanged,G1still6/18 In Progress. promotion: declined (existing immutable retention contract owns scope). Commit:STITCHCAD-G1-0949.
+  Goal:completed;[whole original protocol/proofs](../history/stitchcad-devnotes-part1092.md).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.handoff`
   Status: `done`
-  Goal:record the director's explicit context-reset pause after completed input/retention commits;leave a clean committed resume pointer and no relation implementation or background producer stranded.
-  - [x] ROOT CAUSE / ISSUE:director explicitly answered Pause here for reset after0949 committed. Stop PNT at this clean slice boundary;persist the pause and next action instead of starting relation implementation.
-  - [x] ADDRESSED:git status --short/log/brief census →clean5413ce16,brief0B,rc=0 before handoff docs. MEMORY now records explicit pause and next original Pocket served/component work using existing bounded factories;relations remain unimplemented and whole .check/.verify deferred.
-  - [x] NO REGRESSION / LOCKSTEP:OS-visible scripts/check_handoff.sh --idle-cua →handoff: OK,no project-owned background job,rc=0. Journals/resume/task align;README/LIVE/book reviewed unchanged,G1still6/18 In Progress. promotion: declined (existing clean-handoff and director-pause contracts own scope). Commit:STITCHCAD-G1-0950.
+  Goal:completed;[whole original protocol/proofs](../history/stitchcad-devnotes-part1092.md).
