@@ -6,12 +6,14 @@ use super::{
 use crate::ontology::{SeamSideId, SelectedProfilePin};
 use core::fmt;
 mod admission;
+mod needs;
 mod resources;
 pub use admission::{
     AdmittedDraftingSemanticSelections, DraftingSemanticSelectionAdmissionError,
     DraftingSemanticSelectionLimits, DraftingSemanticSelectionRefusal,
     DraftingSemanticSelectionShape,
 };
+pub use needs::DraftingSemanticSelectionNeed;
 /// Requested original Pocket field;locations are data,not member/source proofs.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DraftingPocketSelectionField {

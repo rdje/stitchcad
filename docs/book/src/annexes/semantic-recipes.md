@@ -2303,5 +2303,46 @@ existing contract;this projection creates no such member.
 
 These are actual syntax coordinates for later bounded matching. They do not show that a supplied
 row exists,is required or is consumed. A policy/rule field location also does not manufacture its
-separate explicit rule-origin row. Direct Profile/rule need classification,whole direct coverage,
-authentic native target-internal needs and final unused-row acceptance remain subsequent stages.
+separate explicit rule-origin row. Direct Profile/rule need classification below leaves whole
+direct coverage,authentic native target-internal needs and final unused-row acceptance separate.
+
+## Classify original direct selection needs
+
+`selection_need()` on those same three genuine field views returns
+`DraftingSemanticSelectionNeed`. It exhaustively inspects original field/source variants in
+constant work,without resolving a declaration,querying a provider or reading a selected value.
+The returned enum is public syntax data,not a private accepted coverage or source certificate.
+
+| Result | Meaning for the actual original field |
+| --- | --- |
+| `NoDirectSelection` | No direct Profile pin or rule-origin row belongs to this field;its other source obligations remain |
+| `Required(Profile(location))` | The original direct Profile variant requires the exact field's explicit pin row |
+| `Required(Rule { ordinal })` | The actual rule/policy header requires an explicit Design or Profile origin row |
+| `DeferredTargetProfile(location)` | A native target's authentic association must establish its internal Profile needs |
+
+Pocket Profile openings,Closure Profile lengths and Profile hardware sizes require their exact
+Profile keys. Declaration openings/sizes and explicit/formula zipper lengths do not acquire a
+Profile pin. Served/component references,attachment geometry,Closure instances and buttonhole
+derivation relations retain their existing source obligations without direct Profile rows here.
+No numeric Profile source is accepted merely by requiring its explicit pin.
+
+For semantic operations,a Profile button and each original Profile logical input require their
+field keys. Root logical/numeric inputs,policy numeric inputs and the Root logical output need no
+direct Profile row at those fields. Every actual policy/rule header separately requires its genuine
+semantic ordinal's Rule key. Missing origin never means Design,and a Profile row for a policy/rule
+field cannot replace that explicit origin selection.
+
+Native Notch and Walk Profile fields require their complete original field keys,including pair,
+A/B side and sample/production roles. Every native canonical target instead defers its internal
+need. A supplied target-context row does not create a Profile field or count as consumed;an authentic
+target/family binder must establish need and source support before final cohort acceptance.
+
+The focused garment fixtures distinguish declaration/Profile openings,all three zipper-length
+origins and declaration/Profile hardware sizes. Semantic fixtures distinguish declaration/Profile
+buttons,logical/Profile/numeric inputs and both mandatory rule headers while retaining genuine
+ordinals and original loans. The all13-native fixture has30 direct Notch/Walk requirements and14
+deferred target contexts,including the same Grainline loan at two positions. Provider traces remain
+zero. Static classification chooses no value,origin,pin or domain member and allocates no result.
+
+Actual bounded key coverage,missing/extra direct rows,authentic target-internal needs,source/member
+acceptance and final unused-row refusal remain with the following aggregate/family/cohort stages.

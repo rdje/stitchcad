@@ -3,6 +3,14 @@
 Newest first:completed slices and their focused validation. Earlier ledgers and full historical
 indexes remain byte-exact in the sealed records named below;the public reader lists every logical path.
 
+## STITCHCAD-G1-0916 — classify original direct selection needs
+
+Genuine field views now distinguish explicit direct Profile/rule keys from other source fields
+and deferred native target contexts. Five focused fixture tests,format and scoped strict Clippy
+pass without callbacks or source/value acceptance. Actual key/family/cohort acceptance and whole
+verification remain pending;G1still6/18 unchanged. Required retention1081 preserves3 exact Git spans,
+full committed journals and all187 task IDs/statuses;independent hash/source/public bytes pass.
+
 ## STITCHCAD-G1-0915 — project genuine original selection coordinates
 
 Original garment,semantic and native field views now project fixed typed request locations with

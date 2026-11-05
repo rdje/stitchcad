@@ -15,17 +15,31 @@ pub(super) fn garment_with_piece(
     damaged: bool,
     identity: EntityId,
 ) -> TestResult<DesignGarment<EmptyHost>> {
-    build(damaged, identity, vec![])
+    build(
+        damaged,
+        identity,
+        vec![],
+        PocketOpening::Profile(ProfileParameterRef::new(id(700))),
+    )
 }
 pub(super) fn garment_with_closures(
     kinds: Vec<ClosureKind>,
 ) -> TestResult<DesignGarment<EmptyHost>> {
-    build(false, id(100), kinds)
+    build(
+        false,
+        id(100),
+        kinds,
+        PocketOpening::Profile(ProfileParameterRef::new(id(700))),
+    )
+}
+pub(super) fn garment_with_opening(opening: PocketOpening) -> TestResult<DesignGarment<EmptyHost>> {
+    build(false, id(100), vec![], opening)
 }
 fn build(
     damaged: bool,
     identity: EntityId,
     kinds: Vec<ClosureKind>,
+    opening: PocketOpening,
 ) -> TestResult<DesignGarment<EmptyHost>> {
     let mut ledger = IdentityLedger::new();
     let mut ids = DeterministicIdGenerator::new();
@@ -85,7 +99,7 @@ fn build(
                 range: EdgeRange::whole(edge),
                 direction: Direction::Original,
             },
-            opening: PocketOpening::Profile(ProfileParameterRef::new(id(700))),
+            opening,
             components: vec![PocketPieceRef {
                 copy: id(10002),
                 piece: identity,

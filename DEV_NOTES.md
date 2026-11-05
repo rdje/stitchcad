@@ -3,6 +3,24 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-11-05 UTC)_ — original direct selection needs
+
+0916 exhaustively classifies genuine original fields as no direct selection,an explicit Profile/
+rule key,or unresolved native target Profile context. Declaration versus Profile opening/length/
+size/button/input variants remain distinct. Every rule header requires explicit origin;native
+Notch/Walk direct fields preserve all roles. Native targets cannot consume a row until authentic
+association establishes internal need. Classification queries no provider/member and reads no
+selected value,domain or state. Its public enum is syntax data,not an accepted coverage proof.
+Five focused fixture tests cover both opening/button origins,all zipper origins,hardware origins,
+logical/Profile/numeric inputs and both rule headers. All13 native families retain30 direct keys
+and14 deferred targets,including repeated raw loans;original owners and zero callback traces pass.
+Format and scoped strict Clippy pass;whole .5f.2.check/.verify remain deferred.
+Required containment retains whole committed0914–0915 nodes and full journals in1081. Three exact
+Git spans,independent payload/source/hash and public-byte equality pass before final compaction;
+all187 task IDs/statuses survive. Old seals,caps,producers and protected evidence stay unchanged.
+Promotion declined:local exhaustive classification/API/book and existing retention are canonical.
+README/LIVE reviewed unchanged,G1still6/18 In Progress;bounded actual key coverage is next.
+
 ## _(2026-11-05 UTC)_ — genuine original selection coordinates
 
 0915 projects fixed typed coordinates from genuine original garment,semantic and native field

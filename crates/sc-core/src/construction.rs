@@ -147,8 +147,8 @@ pub use semantic_selection::{
     DraftingNativeSelectionField, DraftingPocketSelectionField,
     DraftingSemanticSelectionAdmissionError, DraftingSemanticSelectionField,
     DraftingSemanticSelectionInputs, DraftingSemanticSelectionKey, DraftingSemanticSelectionLimits,
-    DraftingSemanticSelectionLocation, DraftingSemanticSelectionRefusal,
-    DraftingSemanticSelectionRow, DraftingSemanticSelectionShape,
+    DraftingSemanticSelectionLocation, DraftingSemanticSelectionNeed,
+    DraftingSemanticSelectionRefusal, DraftingSemanticSelectionRow, DraftingSemanticSelectionShape,
 };
 mod bezier;
 pub use arc::{

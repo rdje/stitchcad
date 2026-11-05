@@ -1,6 +1,6 @@
 //! Exact original Pocket/Closure fields and locations,without source or mixed-order acceptance.
 use super::{
-    garment_source::{garment, garment_with_closures},
+    garment_source::{garment, garment_with_closures, garment_with_opening},
     TestResult,
 };
 use sc_core::{construction::*, ontology::*};
@@ -29,6 +29,17 @@ fn pocket_fields_keep_actual_garment_owner_nested_indices_and_source_buffers() -
             use_.selection_location(),
             DraftingSemanticSelectionLocation::Pocket { pocket: 0, field }
         );
+        let expected_need = if expected == 3 {
+            DraftingSemanticSelectionNeed::Required(DraftingSemanticSelectionKey::Profile(
+                DraftingSemanticSelectionLocation::Pocket {
+                    pocket: 0,
+                    field: DraftingPocketSelectionField::Opening,
+                },
+            ))
+        } else {
+            DraftingSemanticSelectionNeed::NoDirectSelection
+        };
+        assert_eq!(use_.selection_need(), expected_need);
         assert!(core::ptr::eq(use_.garment(), &garment));
         assert!(
             matches!(use_.owner(),DraftingGarmentSemanticOwner::Pocket{index:0,pocket:actual} if core::ptr::eq(actual,pocket))
@@ -62,6 +73,20 @@ fn pocket_fields_keep_actual_garment_owner_nested_indices_and_source_buffers() -
     }
     assert!(fields.next().is_none());
     assert!(fields.next().is_none());
+    Ok(())
+}
+#[test]
+fn declaration_opening_keeps_root_source_without_profile_selection() -> TestResult {
+    let garment = garment_with_opening(PocketOpening::Declaration(id(700)))?;
+    let uses: Vec<_> = garment.pocket_closure_dependencies().collect();
+    assert_eq!(uses.len(), 5);
+    for use_ in uses {
+        assert_eq!(
+            use_.selection_need(),
+            DraftingSemanticSelectionNeed::NoDirectSelection
+        );
+        assert!(core::ptr::eq(use_.garment(), &garment));
+    }
     Ok(())
 }
 #[test]
@@ -114,6 +139,24 @@ fn all_constructible_closure_kinds_keep_actual_sources_and_physical_instances() 
         expected_locations
             .map(|(closure, field)| DraftingSemanticSelectionLocation::Closure { closure, field })
     );
+    let needs: Vec<_> = garment
+        .pocket_closure_dependencies()
+        .skip(5)
+        .map(|use_| use_.selection_need())
+        .collect();
+    let expected_needs = expected_locations.map(|(closure, field)| {
+        if matches!(
+            (closure, field),
+            (2, C::Length) | (4, C::Size(DraftingClosureSizeRole::Button))
+        ) {
+            DraftingSemanticSelectionNeed::Required(DraftingSemanticSelectionKey::Profile(
+                DraftingSemanticSelectionLocation::Closure { closure, field },
+            ))
+        } else {
+            DraftingSemanticSelectionNeed::NoDirectSelection
+        }
+    });
+    assert_eq!(needs, expected_needs);
     let mut fields = garment.pocket_closure_dependencies().skip(5);
     for (index, closure) in garment.closures().closures().iter().enumerate() {
         let mut next = || -> TestResult<DraftingGarmentSemanticField<'_>> {

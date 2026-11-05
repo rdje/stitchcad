@@ -134,6 +134,47 @@ fn mixed_native_fields_keep_exact_program_step_and_every_original_raw_loan() -> 
                     )
                     .collect::<Vec<_>>()
             );
+            let needs: Vec<_> = program
+                .native_semantic_dependencies()
+                .map(|use_| use_.selection_need())
+                .collect();
+            let expected_needs = locations
+                .iter()
+                .copied()
+                .map(|location| {
+                    if matches!(
+                        location,
+                        DraftingSemanticSelectionLocation::Native {
+                            field: N::Target(_),
+                            ..
+                        }
+                    ) {
+                        DraftingSemanticSelectionNeed::DeferredTargetProfile(location)
+                    } else {
+                        DraftingSemanticSelectionNeed::Required(
+                            DraftingSemanticSelectionKey::Profile(location),
+                        )
+                    }
+                })
+                .collect::<Vec<_>>();
+            assert_eq!(needs, expected_needs);
+            assert_eq!(
+                needs
+                    .iter()
+                    .filter(|need| matches!(need, DraftingSemanticSelectionNeed::Required(_)))
+                    .count(),
+                30
+            );
+            assert_eq!(
+                needs
+                    .iter()
+                    .filter(|need| matches!(
+                        need,
+                        DraftingSemanticSelectionNeed::DeferredTargetProfile(_)
+                    ))
+                    .count(),
+                14
+            );
             let mut uses = program.native_semantic_dependencies();
             let mut count = 0;
             for (input, (position, expected_count)) in native.iter().copied().zip([

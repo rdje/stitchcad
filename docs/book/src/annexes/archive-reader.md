@@ -28,12 +28,16 @@ check output and earlier journal navigation are retrievable from that immutable 
 Part1080 retains the whole completed0911–0913 task intervals and complete lesson/ledger snapshots
 from75d08d59. Its four exact Git intervals also preserve the earlier0912 acceptance placement;
 the live content node now has its own direct pointer. Every task identity/status remains live.
+Part1081 retains whole completed0914–0915 task intervals and complete journals from3c8bae8f.
+Its three exact Git intervals preserve the finite child-work and coordinate-projection evidence;
+the live tree keeps every original identity/status beside its retrieval pointer.
 
 ```bash
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1077.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1078.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1079.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1080.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1081.md
 ```
 
 `HISTORY_ARCHIVE_ROOT` selects the project or a fixture below project `target/`. Destinations stay in
