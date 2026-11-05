@@ -3,6 +3,14 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0956 — compose complete original Closure Buttonhole relations
+
+The consuming aggregate stage preserves complete Pocket source/input proofs and the same finite
+cursor. N+1 atomic reservation precedes fresh whole charging,result reservation and original child
+relations. Seven focused cases retain repeated targets,empty scope,late typed failures and no
+prefix/refund. Prior source contract,three API guards,strict lint and formatting pass. Physical/
+native/cohort and whole integration verification stay pending;G1 remains6/18 In Progress.
+
 ## STITCHCAD-G1-0955 — split closed acceptance before Closure cohort growth
 
 Complete0952–0954 acceptance blocks move byte-exact to the existing evidence sibling;original

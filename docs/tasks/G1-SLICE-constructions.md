@@ -957,7 +957,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Acceptance:complete original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-original-closure-operation-join0954).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.operation-cohort`
-  Status: `in_progress`
+  Status: `done`
   Goal:compose every original Closure Buttonhole relation through the same finite semantic cursor
   after complete input/Pocket work;reserve all walks/records before matching and retain first cause.
   Plan:consume complete original Pocket source proof;reserve N+1 aggregate/relation passes atomically
@@ -966,6 +966,19 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   both outcomes retain original prior proof and unchanged/spent cursor with no prefix or refund.
   Focused contract:two repeated operation targets,late missing/origin/resource failures,whole
   shortage,empty relation class and same-cursor retry;private/clone/lifetime API guards.
+  - [x] ROOT CAUSE / ISSUE:git grep -n bind_closure_buttonholes 335bbc96 -- crates/sc-core →empty,rc=1.
+    The completed source proof had no aggregate relation factory/cursor continuation;0954 supplies
+    original typed child relations. The new consuming stage borrows its exact disjoint prior cursor.
+  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test
+    drafting_context_binding_contract closure_cohort →test result:ok. 1 passed,rc=0;seven cases cover
+    repeated targets,original loans,N0,atomic shortage,late resources/Missing/origin,no prefix/refund.
+  - [x] NO REGRESSION / LOCKSTEP:the same target pocket_sources_keep →1 passed;--doc
+    BoundDraftingProgramClosureButtonholes →3 passed;cargo clippy -j1 -p sc-core --lib -- -D warnings
+    →Finished;fmt --check/git diff --check pass,all rc=0. Book/journals/LIVE/resume align,G1still6/18
+    In Progress;README scope unchanged. Original0955 proof moved whole to evidence;bounds unchanged.
+    Physical/native/cohort and whole .check/.verify stay pending;book_tool.py build →published,rc=0.
+  promotion: declined (existing original owner and finite nonresettable cursor contracts).
+  Commit:STITCHCAD-G1-0956.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements`
   Status: `pending`
   Goal:bind all original Closure instance First/Second placements under fresh whole work and actual
@@ -976,13 +989,4 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Goal:move complete closed0952–0954 acceptance blocks byte-exact to the existing evidence sibling
   before the construction working part grows beyond its1000-line transition boundary. Preserve
   original live task IDs/statuses and every original proof byte;no archive or runtime changes.
-  - [x] ROOT CAUSE / ISSUE:wc -l docs/tasks/G1-SLICE-constructions.md →1003L before split,rc=0;
-    the registered tasks_collection requires a completed-evidence split after1000L before growth.
-  - [x] ADDRESSED:Python original-Git payload/unique-live-ID assertions →closed acceptance transfer:
-    exact original Git payloads retained;live IDs unique,rc=0. Whole0952/0953/0954 boxes and their
-    promotion/commit/correction notes now live verbatim in the existing evidence sibling.
-  - [x] NO REGRESSION / LOCKSTEP:git diff --check →empty,rc=0. Working/evidence978/962L immediately
-    after transfer;fixed collection/per-part bounds unchanged. Product/book/README/LIVE/resume
-    reviewed unchanged,G1still6/18 In Progress. Journals record the prerequisite;next operation-cohort.
-  promotion: declined (existing complete evidence split contract).
-  Commit:STITCHCAD-G1-0955.
+  Acceptance:whole original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-closure-cohort-prerequisite0955).

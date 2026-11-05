@@ -219,3 +219,9 @@ pub use dependencies::{
     DraftingProgramPocketSourceError, DraftingProgramPocketSourceRefusal,
     DraftingProgramPocketSourcesResult,
 };
+
+pub use dependencies::{
+    BoundDraftingProgramClosureButtonholes, DraftingProgramClosureButtonhole,
+    DraftingProgramClosureButtonholeError, DraftingProgramClosureButtonholeRefusal,
+    DraftingProgramClosureButtonholeResult,
+};

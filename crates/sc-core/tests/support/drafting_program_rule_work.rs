@@ -436,3 +436,6 @@ fn complete_rule_work_retains_original_operations_origins_and_fresh_finite_curso
     }
     Ok(())
 }
+
+#[path = "drafting_program_closure_buttonholes.rs"]
+mod closure_buttonholes;

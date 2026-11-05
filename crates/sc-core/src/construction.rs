@@ -478,3 +478,9 @@ pub use program::{
     DraftingProgramPocketSourceError, DraftingProgramPocketSourceRefusal,
     DraftingProgramPocketSourcesResult,
 };
+
+pub use program::{
+    BoundDraftingProgramClosureButtonholes, DraftingProgramClosureButtonhole,
+    DraftingProgramClosureButtonholeError, DraftingProgramClosureButtonholeRefusal,
+    DraftingProgramClosureButtonholeResult,
+};

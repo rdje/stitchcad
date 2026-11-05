@@ -960,3 +960,15 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   recovery exceeded the startup target;no unresolved source-contract ambiguity remains for this leaf.
   promotion: declined (existing original semantic ownership and canonical origin contracts).
   Commit:STITCHCAD-G1-0954.
+## Completed Closure cohort prerequisite0955
+
+  - [x] ROOT CAUSE / ISSUE:wc -l docs/tasks/G1-SLICE-constructions.md →1003L before split,rc=0;
+    the registered tasks_collection requires a completed-evidence split after1000L before growth.
+  - [x] ADDRESSED:Python original-Git payload/unique-live-ID assertions →closed acceptance transfer:
+    exact original Git payloads retained;live IDs unique,rc=0. Whole0952/0953/0954 boxes and their
+    promotion/commit/correction notes now live verbatim in the existing evidence sibling.
+  - [x] NO REGRESSION / LOCKSTEP:git diff --check →empty,rc=0. Working/evidence978/962L immediately
+    after transfer;fixed collection/per-part bounds unchanged. Product/book/README/LIVE/resume
+    reviewed unchanged,G1still6/18 In Progress. Journals record the prerequisite;next operation-cohort.
+  promotion: declined (existing complete evidence split contract).
+  Commit:STITCHCAD-G1-0955.

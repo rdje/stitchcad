@@ -3595,7 +3595,7 @@ body/snapshot,missing parameter,representation,annotation and expected-kind erro
 original witnesses while earlier private accepted parameter prefixes drop.
 
 Original logical/numeric garment input binding is implemented with focused checks. The Pocket
-current-member and source stages below extend it;Closure derivation/operation joins,native
+current-member,source and Closure operation stages below extend it;physical Closure joins,native
 semantic targets and complete cohort acceptance remain pending. This input proof selects no value
 and grants no physical opening,
 zipper/buttonhole length,external evidence or G4 schema truth. Whole `.5f.2.check`/`.verify` remain
@@ -3747,6 +3747,52 @@ The concrete resource error is available through `Error::source()`; borrowed loo
 in the typed refusal rather than being converted to a static or string-only cause.
 
 Focused public contracts exercise original owner/member/source pointer identity, both origin
-variants, exact matching boundaries and refusal priority. Whole Closure aggregation through the
-unique finite semantic cursor remains pending, as do physical First/Second placements, source
-association, policy execution, positive hole length and whole `.5f.2.check`/`.verify`.
+variants, exact matching boundaries and refusal priority. The aggregate below joins all original Closure operation relations through the unique cursor.
+Physical First/Second placements, source association, policy execution, positive hole length and
+whole `.5f.2.check`/`.verify` remain pending.
+
+
+## Bind the complete original Closure Buttonhole class
+
+`BoundDraftingProgramPocketSources::bind_closure_buttonholes()` consumes the complete original
+Pocket source proof and joins every actual Closure Buttonhole field in garment inventory order.
+It preserves that prior proof, its original stable Pocket work/source loans and the same unique
+semantic work cursor. No Root garment field is assigned an invented programme position.
+
+For N actual Buttonhole Closure fields, the stage atomically reserves N+1 passes before a fresh
+complete original input-resource walk, complete N-record reservation or any child relation factory.
+Each child repeats the fresh whole garment/Root/provider content check and bounded original lookup
+from the preceding section. The stage uses the existing cursor's complete content and per-pass
+matching allowance; earlier demands or successful stages grant no new work credit.
+
+Two distinct Closures may refer to one original Buttonhole operation. Both requiring fields remain
+separate records and preserve their own original Closure indices, derivation loans and canonical
+button origins. Matching operation IDs never collapse occurrences or bypass a later button mismatch.
+For example, if a later Closure requests a missing operation or changes its button declaration,
+the whole stage refuses after retaining that later field and its original typed child error.
+A successful earlier relation remains private and is dropped.
+
+`BoundDraftingProgramClosureButtonholes::parent()` borrows the complete original prior source
+proof; `records()` holds every original `DraftingProgramClosureButtonhole`. Each record exposes
+its actual garment `occurrence()` and bounded `relation()`, including the original admitted garment,
+Closure, canonical source and Root operation/member/index. `demand()` reports the completed fresh
+aggregate walk, and `child_pass_count()` reports N+1. These are logical policy records, not measured
+execution cost or physical validation.
+
+An actually empty relation class performs no content walk, lookup, result allocation or pass
+reservation, even if nonbutton Closures and unused semantic operations remain held. Its records are
+empty, pass count is zero and demand is absent. This accepts only the empty Buttonhole-relation
+class; other Closure fields and semantic operations retain their separate proof obligations.
+
+`DraftingProgramClosureButtonholeError` retains the complete original prior proof, original count
+when arithmetic succeeded, completed aggregate demand when available and first work/resource/
+allocator/relation cause. Child causes carry the exact requiring garment field and original
+`DraftingClosureButtonholeError`. `into_parent()` on either outcome recovers the prior proof without
+refunding spent passes. A shortage reserves nothing; any later refusal retains the whole stage's
+reservation. Retrying through that same cursor cannot reset it.
+
+The focused public contract covers repeated operation targets, original parent/work/source and
+Closure/member loans, whole shortage, fresh aggregate and late child resource errors, late missing
+operation/button mismatch, empty scope and retry without refund. Physical instance placements,
+native-family and complete semantic cohort composition, and whole `.5f.2.check`/`.verify` remain
+pending. No policy is executed and no hole length or geometric currentness is certified.

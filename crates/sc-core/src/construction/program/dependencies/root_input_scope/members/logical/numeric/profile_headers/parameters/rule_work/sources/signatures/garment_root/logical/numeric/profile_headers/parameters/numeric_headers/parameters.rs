@@ -645,3 +645,94 @@ impl<
         outcome.finish(parent, work)
     }
 }
+
+impl<
+        'x,
+        'u,
+        't,
+        'z,
+        'q,
+        'h,
+        'v,
+        'w,
+        's,
+        'g,
+        'k,
+        'j,
+        'i,
+        'r,
+        'b,
+        'n,
+        'p,
+        'a,
+        H: DesignReferenceHost + DesignResourceSource,
+        S: DraftingInitialInputProvider<H>
+            + DraftingGarmentProvider<H>
+            + DraftingProfileNumericProvider<H>
+            + DraftingProfileLogicalProvider<H>
+            + DraftingRuleProvider<H>
+            + crate::construction::DraftingComponentProvider<H>
+            + ?Sized,
+    >
+    crate::construction::BoundDraftingProgramPocketSources<
+        'x,
+        's,
+        'a,
+        BoundDraftingProgramGarmentProfileNumericParameters<
+            'u,
+            't,
+            'z,
+            'q,
+            'h,
+            'v,
+            'w,
+            'a,
+            DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+            H,
+            S,
+        >,
+        H,
+        S,
+    >
+{
+    /// Consume the complete original Pocket source proof and reserve N+1 Closure relation passes
+    /// before fresh aggregate charging,result reservation or existing original Buttonhole factories.
+    /// N0 adds no walk,lookup,allocation or reservation. Original garment locations and canonical
+    /// source/member loans remain unchanged;no physical length,placement or mixed order is proved.
+    /// # Errors
+    /// Whole arithmetic,atomic work shortage,complete resources,allocator,then first original
+    /// Closure/member/button-origin cause. Both outcomes retain the prior proof and same cursor;
+    /// accepted private prefixes drop and recovering the parent refunds no reserved work.
+    pub fn bind_closure_buttonholes(
+        mut self,
+    ) -> crate::construction::DraftingProgramClosureButtonholeResult<
+        's,
+        'w,
+        'a,
+        Self,
+        DraftingProgramSemanticInputs<'s, 'g, 'k, 'j, 'i, 'r, 'b, 'n, 'p, 'a, H, S>,
+        H,
+        S,
+    > {
+        let cursor = &mut self
+            .parent_mut()
+            .logical
+            .root
+            .logical
+            .members
+            .owner
+            .inputs
+            .root
+            .logical
+            .members
+            .owner
+            .selections;
+        let inputs = cursor.inputs();
+        let outcome = crate::construction::program::dependencies::closure_buttonholes::prepare(
+            cursor,
+            inputs.garment(),
+            |sink| inputs.charge_resources(sink),
+        );
+        outcome.finish(self)
+    }
+}

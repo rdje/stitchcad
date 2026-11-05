@@ -132,3 +132,10 @@ pub use pocket_work::{
     DraftingProgramPocketSourceError, DraftingProgramPocketSourceRefusal,
     DraftingProgramPocketSourcesResult,
 };
+
+mod closure_buttonholes;
+pub use closure_buttonholes::{
+    BoundDraftingProgramClosureButtonholes, DraftingProgramClosureButtonhole,
+    DraftingProgramClosureButtonholeError, DraftingProgramClosureButtonholeRefusal,
+    DraftingProgramClosureButtonholeResult,
+};

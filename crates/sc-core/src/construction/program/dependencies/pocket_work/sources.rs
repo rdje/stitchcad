@@ -82,6 +82,9 @@ pub struct BoundDraftingProgramPocketSources<
 impl<'x, 's, 'a, P, H: DesignReferenceHost, S: DraftingComponentProvider<H> + ?Sized>
     BoundDraftingProgramPocketSources<'x, 's, 'a, P, H, S>
 {
+    pub(in crate::construction::program::dependencies) fn parent_mut(&mut self) -> &mut P {
+        self.parent
+    }
     /// Complete original input proof and same unique cursor with all prior/new reservations.
     #[must_use]
     pub const fn parent(&self) -> &P {

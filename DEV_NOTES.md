@@ -2,6 +2,21 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-05 UTC)_ — complete original Closure operation relation class
+
+0956 consumes the exact prior Pocket source proof and borrows its existing cursor through an
+internal continuation. N+1 complete pass reservation precedes fresh whole aggregate charging,
+N-record reservation and0954 original relation factories. Every requiring Closure/Buttonhole
+field stays separate,including repeated operation targets. Both outcomes retain the original
+prior proof;private successful prefixes drop and into_parent refunds no work. N0 is idle.
+
+A focused public contract covers seven success/shortage/aggregate/late-resource/Missing/origin/
+empty cases,actual parent/work/source/Closure/member loans and retries on the same cursor. The
+prior Pocket source contract,three new API guards,strict library Clippy and formatting pass.
+Whole0955 prerequisite proof moves verbatim to the existing evidence sibling before working-part
+growth. Book/live/resume align;README scope/G1 6/18 unchanged;physical/native/cohort/.check/.verify
+remain pending. Promotion declined:existing original-owner and finite cursor contracts own scope.
+
 ## _(2026-11-05 UTC)_ — preserve closed acceptance before cohort growth
 
 0955 moves complete closed0952–0954 acceptance blocks verbatim into the existing evidence sibling
