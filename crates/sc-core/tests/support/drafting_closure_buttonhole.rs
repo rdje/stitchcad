@@ -94,10 +94,18 @@ fn closure_buttonhole_binds_exact_original_root_member_and_canonical_origin() ->
         assert!(std::ptr::eq(proof.parent(), &admitted));
         assert!(std::ptr::eq(
             proof.closure(),
-            &garment.closures().closures()[1]
+            garment
+                .closures()
+                .closures()
+                .get(1)
+                .ok_or("actual Closure member")?
         ));
         assert_eq!(proof.closure_index(), 1);
-        let original = garment.closures().closures()[1]
+        let original = garment
+            .closures()
+            .closures()
+            .get(1)
+            .ok_or("actual Closure member")?
             .buttonhole_length_source()
             .ok_or("button pair")?;
         assert!(std::ptr::eq(
@@ -115,7 +123,12 @@ fn closure_buttonhole_binds_exact_original_root_member_and_canonical_origin() ->
         ));
         assert!(std::ptr::eq(
             bound.operation(),
-            &garment.inputs().semantic_recipe().operations()[1]
+            garment
+                .inputs()
+                .semantic_recipe()
+                .operations()
+                .get(1)
+                .ok_or("actual operation member")?
         ));
         assert_eq!(bound.index(), 1);
         assert_eq!(
@@ -220,7 +233,12 @@ fn closure_buttonhole_preserves_first_original_relation_and_fresh_resource_cause
             ) => {
                 assert!(std::ptr::eq(
                     *actual,
-                    &garment.inputs().semantic_recipe().operations()[0]
+                    garment
+                        .inputs()
+                        .semantic_recipe()
+                        .operations()
+                        .first()
+                        .ok_or("actual operation member")?
                 ));
                 assert_eq!(*expected, SemanticOperationKind::Buttonhole);
             }
@@ -228,12 +246,24 @@ fn closure_buttonhole_preserves_first_original_relation_and_fresh_resource_cause
                 assert_eq!(*source.button_size(), button);
                 assert!(std::ptr::eq(
                     operation.operation(),
-                    &garment.inputs().semantic_recipe().operations()[0]
+                    garment
+                        .inputs()
+                        .semantic_recipe()
+                        .operations()
+                        .first()
+                        .ok_or("actual operation member")?
                 ));
             }
             (4, DraftingClosureButtonholeRefusal::NotButtonhole { index, closure }) => {
                 assert_eq!(*index, 0);
-                assert!(std::ptr::eq(*closure, &garment.closures().closures()[0]));
+                assert!(std::ptr::eq(
+                    *closure,
+                    garment
+                        .closures()
+                        .closures()
+                        .first()
+                        .ok_or("actual Closure member")?
+                ));
             }
             (5, DraftingClosureButtonholeRefusal::MissingClosure) => {}
             _ => return Err(format!("unexpected mode {mode}: {error:?}").into()),

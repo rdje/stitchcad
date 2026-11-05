@@ -3,6 +3,15 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0958 — bind original Closure instance and canonical notion members
+
+Fresh complete content and matching admission precede exact Closure/own-instance/First-or-Second/
+canonical notion joins. Original loans and indices survive reorder/multiple instances;typed missing
+and quota refusals preserve their first causes. Focused Closure6/Pocket2,API3,arithmetic1,strict
+library/affected-target lint,formatting and book build pass. Owned test panic/indexing lint defects
+are fixed with checked loans,typed failures and explicit query detection. Copy/source/reference
+and complete native/cohort integration remain pending;G1stays6/18 In Progress.
+
 ## STITCHCAD-G1-0957 — retain complete closed protocols before physical relations
 
 Eight exact Git intervals retain whole closed original factory/acceptance and recent relation

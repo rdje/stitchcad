@@ -945,7 +945,7 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Goal:completed;[whole original protocol/proof](../history/stitchcad-devnotes-part1093.md).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bind all original Closure instance First/Second placements under fresh whole work and actual
   garment/copy/Piece/source proof;introduce only authentic missing facets before use.
 
@@ -956,24 +956,39 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   original live task IDs/statuses and every original proof byte;no archive or runtime changes.
   Acceptance:whole original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-closure-cohort-prerequisite0955).
 
-- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.retention`
+Completed physical-relation retention owner/proof: [the evidence sibling](G1-SLICE-evidence.md#completed-physical-relation-retention0957).
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.members`
   Status: `done`
-  Goal:retain whole closed factory/acceptance and recent relation protocols plus committed journals
-  before physical-relation planning exceeds fixed working/aggregate bounds. Preserve exact original
-  Git/public bytes,all live task identities/statuses/headings and unchanged archive/collection limits.
-  - [x] ROOT CAUSE / ISSUE:Git-backed task census atfb02c244 →19911L/1482588B,rc=0;only89 lines
-    remain below fixed20000L before physical relation planning. Closed whole units,not arbitrary
-    narrative samples,are retained;existing live IDs/statuses/headings remain.
-  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/history_archive/transition_receipts.py --record
-    docs/history/stitchcad-devnotes-part1093.md →8 exact Git spans,rc=0. Independent original
-    Git/hash/base64/public-reader proof preserves37279 decodedB before complete protocol stubs.
-  - [x] NO REGRESSION / LOCKSTEP:bash scripts/history_archive.sh verify-retention →archive:OK,rc=0;
-    target/history-proof-0957/independent-final.json records exact original graph/headings/public
-    bytes and only the new authored owner. Book/journals/resume align;README/LIVE unchanged,
-    G1still6/18 In Progress. task_source_contract.py →3 tests OK;book_tool.py build →published;
-    git diff --check pass,all rc=0. No old seal,producer,cap or protected recovery-store changes.
-  Diagnostic corrections:strict base64 decode first refused line breaks before retirement;join
-  encoded lines before strict decode. The first graph control then correctly exposed the new
-  authored owner;compare every original node exactly and allow only that explicit addition.
-  promotion: declined (existing whole-record retention and original task graph contracts).
-  Commit:STITCHCAD-G1-0957.
+  Goal:fresh bounded original Closure/instance First-or-Second/canonical notion member relation.
+  Preserve exact original parent,Closure/instance/notion indices and field loans;no copied placement,
+  invented programme position,copy/Piece/source/current-reference or physical geometry acceptance.
+  Plan:one fresh whole garment/Root/provider walk and checked (E+8)^2 before three original member
+  scans. Explicit request/policy;retain first content/arithmetic/work/Missing cause and partial
+  diagnostic witnesses only. Focused role/original-loan/reorder/missing and refusal-priority checks.
+
+  Defect owned by .placements.members:strict affected-target Clippy refuses17 diagnostics:four
+  panic branches in preceding Pocket fixtures and13 indexing diagnostics in new operation/cohort/
+  placement tests. Reproduce:cargo clippy -j1 -p sc-core --test drafting_context_binding_contract
+  -- -D warnings,rc=101. Library-only lint did not cover that target. Fix now with checked loans
+  and typed test failures;now resolved with explicit unexpected-source counter assertions and strict
+  affected-target Clippy. Initial get(0) corrections also changed to first();no lint exemptions.
+
+  - [x] ROOT CAUSE / ISSUE:git grep -n bind_closure_placement_member 79ecdbbb -- crates/sc-core →empty,rc=1. Actual Closure/instance/notion inventories had no fresh bounded relation join.
+  - [x] ADDRESSED:python3 -I -B scripts/local_environment.py -- cargo test -j1 -p sc-core --test drafting_context_binding_contract closure_ →test result:ok. 6 passed,rc=0;member2 covers roles,original nonzero indices/reorder/multiple instances,Missing and work priority.
+  - [x] NO REGRESSION / LOCKSTEP:the same target profile_headers::rule_work::pocket →2 passed;--doc DraftingClosurePlacement →3 passed;--lib closure_placement_member_bound →1 passed;strict Clippy --lib and --test drafting_context_binding_contract →Finished,all rc=0.
+    fmt --check/git diff --check pass;book_tool.py build →published,rc=0. Book/journals/LIVE/resume align,G1still6/18 In Progress;README unchanged. Closed0957 owner/proof moved whole to evidence. Copy/source/reference/native/cohort/.check/.verify remain pending.
+  promotion: declined (existing original-member and strict Rust lint contracts).
+  Commit:STITCHCAD-G1-0958.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.work`
+  Status: `pending`
+  Goal:compose complete original placement members and fresh current copy/Piece work through the
+  same finite cursor;reserve every walk/result before child work and retain first typed cause.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.sources`
+  Status: `pending`
+  Goal:bind original placement component sources from complete stable work parents,retaining
+  authentic original provider/frame/snapshot/creator associations with whole finite reservations.
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references`
+  Status: `pending`
+  Goal:bind current original placement anchor/full direction under explicit complete resolver-work
+  bounds after member/source joins;retain original topology/repair causes and G2 physical deferral.

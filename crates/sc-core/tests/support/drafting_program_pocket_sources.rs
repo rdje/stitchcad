@@ -360,10 +360,18 @@ fn pocket_sources_keep_stable_parents_original_imports_whole_cursor_and_late_cau
                         ) => {
                             assert!(cause.returned().is_some());
                         }
-                        _ => panic!("original child refusal {:?}", cause.refusal()),
+                        _ => {
+                            return Err(
+                                format!("original child refusal {:?}", cause.refusal()).into()
+                            )
+                        }
                     }
                 }
-                _ => panic!("original source-stage refusal {:?}", error.refusal()),
+                _ => {
+                    return Err(
+                        format!("original source-stage refusal {:?}", error.refusal()).into(),
+                    )
+                }
             }
             drop(error);
         } else {

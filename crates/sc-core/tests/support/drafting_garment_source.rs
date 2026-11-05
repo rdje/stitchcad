@@ -183,6 +183,17 @@ fn build_with_pocket_mode(
     data: SemanticFixture,
     pocket_mode: u8,
 ) -> TestResult<DesignGarment<EmptyHost>> {
+    build_with_placement_mode(damaged, identity, kinds, opening, data, pocket_mode, 0)
+}
+fn build_with_placement_mode(
+    damaged: bool,
+    identity: EntityId,
+    kinds: Vec<ClosureKind>,
+    opening: PocketOpening,
+    data: SemanticFixture,
+    pocket_mode: u8,
+    placement_mode: u8,
+) -> TestResult<DesignGarment<EmptyHost>> {
     let SemanticFixture {
         canonical,
         semantic_recipe,
@@ -327,21 +338,50 @@ fn build_with_pocket_mode(
                 structure.topology(),
             )?);
         }
+        let mut instances = vec![ClosureInstance {
+            id: id(20003 + offset),
+            first: pair[0],
+            second: pair[1],
+        }];
+        if placement_mode == 3 {
+            let extra = [id(21000 + offset), id(21001 + offset)];
+            for (original, identity) in pair.into_iter().zip(extra) {
+                let mut definition = *placements
+                    .iter()
+                    .find(|p| p.id() == original)
+                    .ok_or("original notion")?
+                    .definition();
+                definition.id = identity;
+                placements.push(NotionPlacement::new(
+                    definition,
+                    structure.cut_plan(),
+                    structure.pieces().pieces().first().ok_or("actual Piece")?,
+                    structure.topology(),
+                )?);
+            }
+            instances.push(ClosureInstance {
+                id: id(22000 + offset),
+                first: extra[0],
+                second: extra[1],
+            });
+        }
         closures.push(Closure::new(
             ClosureDefinition {
                 id: id(20002 + offset),
                 kind,
-                instances: vec![ClosureInstance {
-                    id: id(20003 + offset),
-                    first: pair[0],
-                    second: pair[1],
-                }],
+                instances,
             },
             &placements,
             structure.cut_plan(),
             structure.pieces().pieces(),
             structure.topology(),
         )?);
+    }
+    if placement_mode == 1 {
+        placements.retain(|p| p.id() != id(20011));
+    }
+    if placement_mode == 2 {
+        placements.reverse();
     }
     let graph = SewingGraph::new(
         SewingGraphDefinition {
@@ -604,4 +644,24 @@ fn complete_original_content_refuses_before_snapshot_and_preserves_ignored_sink_
         assert!(!format!("{error:?}").contains("private"));
     }
     Ok(())
+}
+
+pub(super) fn garment_with_placement_members(
+    kinds: Vec<ClosureKind>,
+    mode: u8,
+) -> TestResult<DesignGarment<EmptyHost>> {
+    build_with_placement_mode(
+        false,
+        id(100),
+        kinds,
+        PocketOpening::Profile(ProfileParameterRef::new(id(700))),
+        SemanticFixture {
+            canonical: CanonicalInputs::new(vec![], vec![])?,
+            semantic_recipe: SemanticRecipe::empty(),
+            parameter_definitions: vec![],
+            formula_sources: FormulaSources::new(vec![], FormulaSourceLimits::new(0, 0, 0))?,
+        },
+        0,
+        mode,
+    )
 }

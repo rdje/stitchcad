@@ -547,3 +547,6 @@ impl<H: DesignMetadataHost> sc_core::construction::DraftingInitialInputProvider<
 
 #[path = "support/drafting_closure_buttonhole.rs"]
 mod closure_buttonhole;
+
+#[path = "support/drafting_closure_placement.rs"]
+mod closure_placement;

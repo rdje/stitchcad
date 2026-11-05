@@ -7,10 +7,11 @@ impl DraftingComponentProvider<EmptyHost> for Provider<'_> {
         &self,
         target: PocketPieceRef,
     ) -> Result<DraftingComponentResponse<'_, EmptyHost, Self>, SourceError> {
-        let Some(original) = &self.component_import else {
-            panic!("current-member work must not query a source")
-        };
         self.component_calls.set(self.component_calls.get() + 1);
+        let Some(original) = &self.component_import else {
+            // Every unexpected query remains observable and returns a typed refusal.
+            return Err(SourceError::Rejected);
+        };
         let late = self.component_calls.get() == 2;
         let mode = self.component_mode.get();
         if late && mode == 1 {
@@ -278,6 +279,11 @@ fn pocket_component_work_keeps_original_members_complete_cursor_and_first_typed_
         }
         let result = inputs.bind_pocket_component_work();
         assert_eq!(
+            source.component_calls.get(),
+            0,
+            "current-member work must not query a component source"
+        );
+        assert_eq!(
             (
                 source.calls.get(),
                 source.parameter_calls.get(),
@@ -353,7 +359,9 @@ fn pocket_component_work_keeps_original_members_complete_cursor_and_first_typed_
                         ));
                     }
                 }
-                _ => panic!("original first typed cause: {:?}", error.refusal()),
+                _ => {
+                    return Err(format!("original first typed cause: {:?}", error.refusal()).into())
+                }
             }
             let parent = error.into_parent();
             assert_eq!(parent.records().as_ptr(), original_parameters);

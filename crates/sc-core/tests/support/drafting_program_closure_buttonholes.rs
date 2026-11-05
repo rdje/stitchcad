@@ -282,11 +282,20 @@ fn closure_cohort_keeps_complete_original_relations_first_late_causes_and_same_c
                 assert_eq!(relation.closure_index(), index + 1);
                 assert!(std::ptr::eq(
                     relation.closure(),
-                    &garment.closures().closures()[index + 1]
+                    garment
+                        .closures()
+                        .closures()
+                        .get(index + 1)
+                        .ok_or("actual requiring Closure")?
                 ));
                 assert!(std::ptr::eq(
                     relation.operation().operation(),
-                    &garment.inputs().semantic_recipe().operations()[0]
+                    garment
+                        .inputs()
+                        .semantic_recipe()
+                        .operations()
+                        .first()
+                        .ok_or("actual operation member")?
                 ));
                 assert_eq!(
                     record.occurrence().selection_location(),

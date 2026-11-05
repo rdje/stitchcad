@@ -3796,3 +3796,44 @@ Closure/member loans, whole shortage, fresh aggregate and late child resource er
 operation/button mismatch, empty scope and retry without refund. Physical instance placements,
 native-family and complete semantic cohort composition, and whole `.5f.2.check`/`.verify` remain
 pending. No policy is executed and no hole length or geometric currentness is certified.
+
+
+## Bind one original Closure placement member
+
+`AdmittedDraftingGarmentSource::bind_closure_placement_member(request, limits)` joins one original
+Closure, one of its own stable physical instances and the canonical notion selected by its
+First/Second role. `DraftingClosurePlacementRequest` carries the requiring Closure ID, instance ID
+and `ClosurePlacementRole`; no caller supplies a replacement notion body or a collection position.
+
+Select `DraftingClosurePlacementLimits::new(content, matching_inspections)` explicitly. The factory
+freshly charges the complete actual garment, Root and provider content, including unused members.
+It then admits checked `(E+8)^2` member inspections, where E is the complete dynamic-entry count,
+before three original linear member scans and fixed role selection. Stored parent demand grants
+no credit. The bound is logical work, not CPU time, allocator capacity or geometry resolution.
+There is no successful result allocation, source/currentness/value query or anchor/direction walk.
+
+The factory searches the actual Closure inventory, then only that Closure's instance list, then
+the garment's original canonical notion inventory. An instance in another Closure cannot satisfy
+the request. Reordering notions changes their reported inventory indices while stable targets and
+borrowed original objects stay intact. Multiple instances preserve their original local positions;
+First and Second remain distinct even when they attach to two copies of the same pattern Piece.
+
+`BoundDraftingClosurePlacementMember::parent()` retains the exact admitted garment. `owner()`
+borrows the original Closure, its zero-based inventory index, original instance, local instance
+index and exact role. `owner().target()` reads that instance's original target identity.
+`notion()` borrows the actual canonical record, and `notion_index()` names its actual authored
+position. `limits()`, fresh `demand()` and admitted `shape()` explain the selected work policy.
+No index is a mixed programme position and no placement definition is copied into the proof.
+
+Failures retain the exact parent, original request and selected policy. Complete resources,
+checked arithmetic and matching quota precede MissingClosure, MissingInstance and MissingNotion
+in that order. MissingInstance loans the actual requiring Closure; MissingNotion retains the
+actual original Closure/instance/role owner and its unchanged target. Demand/shape are present
+only after their complete stages pass. Resource errors retain their concrete standard error cause.
+
+This proves only the requested original member relation. For example, a Closure whose Second
+notion is missing can still yield its valid First member; it cannot yield its Second member or
+claim complete currentness. Current CutCopy/Piece association, original component sources,
+current anchor/full direction references and complete aggregation have separate pending owners.
+The notion still reports `GeometricValidation::DeferredToG2`; hardware positions and orientation
+in reflected physical coordinates remain uncomputed.

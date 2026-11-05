@@ -223,3 +223,9 @@ pub use rule::{
     DraftingRuleSourceError, DraftingRuleSourceIssue, DraftingRuleSourceRefusal,
     DraftingRuleWorkError, DraftingRuleWorkRefusal,
 };
+
+pub use garment::{
+    BoundDraftingClosurePlacementMember, DraftingClosurePlacementLimits,
+    DraftingClosurePlacementMemberError, DraftingClosurePlacementMemberRefusal,
+    DraftingClosurePlacementOwner, DraftingClosurePlacementRequest, DraftingClosurePlacementShape,
+};

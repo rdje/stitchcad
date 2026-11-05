@@ -859,3 +859,27 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 ## Completed Closure cohort prerequisite0955
 
 [Whole original protocol/proof](../history/stitchcad-devnotes-part1093.md) remains byte-exact.
+
+## Completed physical relation retention0957
+
+- ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.retention`
+  Status: `done`
+  Goal:retain whole closed factory/acceptance and recent relation protocols plus committed journals
+  before physical-relation planning exceeds fixed working/aggregate bounds. Preserve exact original
+  Git/public bytes,all live task identities/statuses/headings and unchanged archive/collection limits.
+  - [x] ROOT CAUSE / ISSUE:Git-backed task census atfb02c244 →19911L/1482588B,rc=0;only89 lines
+    remain below fixed20000L before physical relation planning. Closed whole units,not arbitrary
+    narrative samples,are retained;existing live IDs/statuses/headings remain.
+  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/history_archive/transition_receipts.py --record
+    docs/history/stitchcad-devnotes-part1093.md →8 exact Git spans,rc=0. Independent original
+    Git/hash/base64/public-reader proof preserves37279 decodedB before complete protocol stubs.
+  - [x] NO REGRESSION / LOCKSTEP:bash scripts/history_archive.sh verify-retention →archive:OK,rc=0;
+    target/history-proof-0957/independent-final.json records exact original graph/headings/public
+    bytes and only the new authored owner. Book/journals/resume align;README/LIVE unchanged,
+    G1still6/18 In Progress. task_source_contract.py →3 tests OK;book_tool.py build →published;
+    git diff --check pass,all rc=0. No old seal,producer,cap or protected recovery-store changes.
+  Diagnostic corrections:strict base64 decode first refused line breaks before retirement;join
+  encoded lines before strict decode. The first graph control then correctly exposed the new
+  authored owner;compare every original node exactly and allow only that explicit addition.
+  promotion: declined (existing whole-record retention and original task graph contracts).
+  Commit:STITCHCAD-G1-0957.

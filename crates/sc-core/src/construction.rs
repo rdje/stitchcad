@@ -484,3 +484,9 @@ pub use program::{
     DraftingProgramClosureButtonholeError, DraftingProgramClosureButtonholeRefusal,
     DraftingProgramClosureButtonholeResult,
 };
+
+pub use context::{
+    BoundDraftingClosurePlacementMember, DraftingClosurePlacementLimits,
+    DraftingClosurePlacementMemberError, DraftingClosurePlacementMemberRefusal,
+    DraftingClosurePlacementOwner, DraftingClosurePlacementRequest, DraftingClosurePlacementShape,
+};

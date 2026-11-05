@@ -60,6 +60,11 @@ kinds, not an implicit expansion or a default supplied by a placement.
 | `BornUnresolved` | Birth point requires unique resolution; its existing error contract is retained |
 | `MissingCopy` | Original physical-copy target is absent; a peer is never substituted |
 
+The [bounded original member binder](../annexes/semantic-recipes.md#bind-one-original-closure-placement-member)
+now resolves an exact Closure/own-instance/First-or-Second request to its canonical notion record
+after fresh whole content and member-work admission. It preserves original loans and indices;
+current copy/Piece,component source and anchor/direction proofs remain separate pending work.
+
 ## Complete notion-placement collection
 
 `NotionPlacementInventory::new` owns exact placements in authored order and refuses duplicate ids

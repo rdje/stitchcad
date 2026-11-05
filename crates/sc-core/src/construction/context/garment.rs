@@ -285,3 +285,10 @@ pub use buttonhole::{
     DraftingClosureButtonholeLimits, DraftingClosureButtonholeRefusal,
     DraftingClosureButtonholeShape,
 };
+
+mod placement;
+pub use placement::{
+    BoundDraftingClosurePlacementMember, DraftingClosurePlacementLimits,
+    DraftingClosurePlacementMemberError, DraftingClosurePlacementMemberRefusal,
+    DraftingClosurePlacementOwner, DraftingClosurePlacementRequest, DraftingClosurePlacementShape,
+};
