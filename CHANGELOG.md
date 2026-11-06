@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0988 — projects save,migrate and autosave;G1-05 is the first clause met
+
+A project is now a manifest with a schema plus its files. Older schemas migrate all or nothing with backups,newer ones are refused untouched,
+and unknown content survives. A process killed while saving and autosaving always reopens whole. The gauge reads 19 of 66.
+
 ## STITCHCAD-G1-0987 — the project store engine:a save is all or nothing
 
 `sc-store` saves several files as one commit,so after a crash at any step a project holds exactly its old files or exactly its new ones.

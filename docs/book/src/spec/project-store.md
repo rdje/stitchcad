@@ -4,10 +4,12 @@ A project is a directory of text files you can read, diff and keep in version co
 files safe: if the machine crashes in the middle of a save, the project holds exactly its old files or exactly
 its new ones, never a mix. It is the `sc-store` crate.
 
-**What works today.** You can save several files as one commit and reopen after a crash, on a real directory or
-in memory, and read and write the canonical text form. **What does not exist yet:** the project layer with its
-schema version, migrations and autosave; saving a `Design`; IndexedDB in the browser; the SQLite catalog of
-roadmap §4.5. The browser run, leaf `.12`, connects the browser side.
+**What works today.** You can save a project as one commit and reopen it after a crash, on a real directory or in
+memory. Older projects migrate all or nothing, newer ones are refused untouched, unknown fields and files survive,
+and autosave keeps unsaved work beside the project. **What does not exist yet:** saving a `Design`, since a project
+holds files and fields but nothing writes the garment model into them; IndexedDB in the browser, which the browser
+run, leaf `.12`, connects; and the SQLite catalog of roadmap §4.5. Schema 1 is the first schema, so no real
+migration exists yet, and the migration tests use their own.
 
 ## The vocabulary
 
@@ -31,7 +33,18 @@ roadmap §4.5. The browser run, leaf `.12`, connects the browser side.
 | `MemoryRepository` | A project held in memory, for tests and for the browser build |
 | `FilePath` | A file's place in a project: relative, `/`-separated, and valid on every supported system |
 | `Value` | One value in a canonical text file |
-| `.sc-store` | The directory inside a project that holds a commit in progress. Empty after a finished commit |
+| `.sc-store` | The directory inside a project that holds a commit in progress, the waiting autosave and migration backups |
+| `project.json` | A project's manifest: its `schema` field, plus any other fields |
+| `schema` | The manifest field holding the schema a project is written in |
+| `Project` | A project in memory: manifest fields and files, including any this version does not understand |
+| `ProjectStore` | A project's manifest and files on any backend, with migrations and autosave |
+| `ProjectError` | Why a project could not be loaded or saved. Nothing is half-written |
+| `Schema` | The schema a store reads and writes, and how older projects reach it |
+| `Migration` | One step from a schema to the next |
+| `Loaded` | A loaded project, the schema it was migrated from, and whether an autosave is waiting |
+| `Autosave` | Whether an autosave is waiting when a project loads |
+| `Current` | An autosave made since the project's last save |
+| `Stale` | An autosave made from a different saved state, so restoring it would lose that state's changes |
 
 ## A save is all or nothing
 
@@ -157,6 +170,123 @@ These are refused, each with its line and column:
 - lists and objects nested more than 64 levels;
 - text after the value.
 
+## A project
+
+A project is its manifest, `project.json`, plus every other file in the directory. Loading then saving keeps what
+this version does not understand: an unknown field, or a file written by another tool.
+
+```rust
+use sc_store::{Commit, FilePath, MemoryRepository, Project, ProjectStore, Repository, Value};
+
+let path = |text: &str| FilePath::new(text).expect("a valid path");
+let mut project = Project::new();
+project.set_field("name", Value::Text("skirt".to_owned()));
+project.set_file(path("recipes/skirt.txt"), "waist = 74 cm\n").expect("a project file");
+
+let (mut store, _) = ProjectStore::open(MemoryRepository::new()).expect("opens");
+assert_eq!(store.save(&project).expect("saves"), Commit::Applied(2));
+
+// Saving the same state again writes nothing, and reopening gives an equal project.
+assert_eq!(store.save(&project).expect("saves"), Commit::Unchanged);
+assert_eq!(store.load().expect("loads").project, project);
+
+let mut disk = store.into_repository();
+assert_eq!(disk.read(&path("project.json")).expect("reads"),
+    Some(b"{\n  \"name\": \"skirt\",\n  \"schema\": 1\n}\n".to_vec()));
+
+// Another tool adds a field and a file. Both survive this version's load and save.
+disk.write(&path("project.json"), br#"{"name": "skirt", "other_tool": [1], "schema": 1}"#).expect("writes");
+disk.write(&path("extensions/other.bin"), &[0, 255]).expect("writes");
+let (mut store, _) = ProjectStore::open(disk).expect("opens");
+let mut project = store.load().expect("loads").project;
+project.set_field("name", Value::Text("renamed".to_owned()));
+store.save(&project).expect("saves");
+let disk = store.into_repository();
+assert!(String::from_utf8_lossy(&disk.read(&path("project.json")).expect("reads").expect("exists")).contains("other_tool"));
+assert_eq!(disk.read(&path("extensions/other.bin")).expect("reads"), Some(vec![0, 255]));
+```
+
+## Schemas and migrations
+
+A project written by a newer StitchCAD is refused and left untouched, because this version cannot know what it
+would lose. An older one migrates when it loads. The steps run in memory, and the result is saved in one commit
+that also keeps the originals under `.sc-store/backups`. So a failed step changes nothing, and a crash leaves
+the old project or the migrated one.
+
+```rust
+use sc_store::{FilePath, MemoryRepository, Migration, Project, ProjectStore, Repository, Schema, Value};
+
+let path = |text: &str| FilePath::new(text).expect("a valid path");
+let mut project = Project::new();
+project.set_field("name", Value::Text("skirt".to_owned()));
+let (mut store, _) = ProjectStore::open(MemoryRepository::new()).expect("opens");
+store.save(&project).expect("saves");
+let disk = store.into_repository();
+
+// Schema 2 renames a field.
+fn rename(project: &mut Project) -> Result<(), String> {
+    let name = project.remove_field("name").ok_or("no name to rename")?;
+    project.set_field("title", name);
+    Ok(())
+}
+let schema = Schema::new(2, vec![Migration { from: 1, apply: rename }]);
+let (mut store, _) = ProjectStore::open_with(disk.clone(), schema).expect("opens");
+let loaded = store.load().expect("migrates");
+assert_eq!(loaded.migrated_from, Some(1));
+assert_eq!(loaded.project.field("title"), Some(&Value::Text("skirt".to_owned())));
+let migrated = store.into_repository();
+assert!(migrated.read(&path(".sc-store/backups/schema-1/project.json")).expect("reads").is_some());
+
+// A step that fails names itself, and the project stays exactly as it was.
+fn refuse(_project: &mut Project) -> Result<(), String> {
+    Err("the recipe uses a removed operation".to_owned())
+}
+let schema = Schema::new(2, vec![Migration { from: 1, apply: refuse }]);
+let (mut store, _) = ProjectStore::open_with(disk.clone(), schema).expect("opens");
+let error = store.load().expect_err("the step fails");
+assert_eq!(error.to_string(),
+    "migrating from schema 1 to 2 failed: the recipe uses a removed operation. Nothing was changed");
+assert_eq!(store.into_repository(), disk);
+
+// This version reads schema 1, so the migrated project is too new for it, and stays untouched.
+let (mut store, _) = ProjectStore::open(migrated.clone()).expect("opens");
+let error = store.load().expect_err("too new");
+assert_eq!(error.to_string(),
+    "a newer StitchCAD wrote this project (schema 2); this version reads up to schema 1. Nothing was changed");
+assert_eq!(store.into_repository(), migrated);
+```
+
+## Autosave
+
+An autosave keeps unsaved work beside the project and leaves the project itself as it was. It is written by the
+same kind of commit, so it is always whole, and a later autosave replaces it whole. A save clears it in the same
+commit. Nothing here reads a clock: an autosave records which saved state it came from, and `Stale` means the
+project has since changed some other way.
+
+```rust
+use sc_store::{Autosave, FilePath, MemoryRepository, Project, ProjectStore};
+
+let path = |text: &str| FilePath::new(text).expect("a valid path");
+let saved = Project::new();
+let (mut store, _) = ProjectStore::open(MemoryRepository::new()).expect("opens");
+store.save(&saved).expect("saves");
+
+let mut work = saved.clone();
+work.set_file(path("notes.txt"), "unsaved work\n").expect("a project file");
+store.autosave(&work).expect("autosaves");
+
+// After a crash, the project is the last save, and the work is offered back.
+let (mut store, _) = ProjectStore::open(store.into_repository()).expect("opens");
+let loaded = store.load().expect("loads");
+assert_eq!(loaded.project, saved);
+assert_eq!(loaded.autosave, Autosave::Current);
+let restored = store.restore_autosave().expect("restores");
+assert_eq!(restored, work);
+
+store.save(&restored).expect("saves");
+assert_eq!(store.load().expect("loads").autosave, Autosave::None);
+```
+
 ## What this does not protect against
 
 - **Two writers.** Nothing stops two processes from opening the same project at once. Open each project once.
@@ -173,4 +303,8 @@ Run `cargo test -p sc-store`. The tests:
 - crash recovery itself at every step of every one of those crashes;
 - run the same crash points on a real directory;
 - kill a real process 30 times during repeated saves to a real directory, and fail if no kill landed inside a save;
+- do the same to a process saving and autosaving a whole project, then require the project and any autosave to reopen
+  whole, and fail if no kill landed inside a save or left an autosave to check;
+- crash every step of a migration, a save and an autosave;
+- fail a migration step and require byte-identical files.
 - round-trip 5,000 seeded random values through the text form, requiring a stable form.

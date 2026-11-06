@@ -313,6 +313,12 @@ impl<R: Repository> Store<R> {
             .collect())
     }
 
+    // Every file, the store's own included.
+    pub(crate) fn all_files(&mut self) -> Result<Vec<FilePath>, StoreError> {
+        self.finish_unfinished()?;
+        Ok(self.repository.list()?)
+    }
+
     /// The backend, to flush or close it.
     #[must_use]
     pub fn into_repository(self) -> R {

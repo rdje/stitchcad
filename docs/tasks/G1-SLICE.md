@@ -965,6 +965,18 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   - [x] HONEST:power loss is untested,two writers are not stopped,damage outside a commit in progress is unchecked. The chapter says all three.
   promotion: declined (no new lesson).
   Commit:STITCHCAD-G1-0987.
+- ID: `G1-SLICE.7.project`
+  Status: `done`
+  Goal:the project layer of `.7`:manifest and schema,migrations with backups,unknown-content preservation and autosave. First clause counted:G1-05.
+  Paths:crates/sc-store/**,scripts/check_roadmap_lock.sh,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,docs/book/src/spec/project-store.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-05 needs recovery on a project,not only on loose files. WHERE sc-store had commits and no manifest,schema,migration or autosave;git grep -c ProjectStore f9a6c6cb -- crates →0,rc=1.
+  - [x] ADDRESSED:cargo test -p sc-store --test project --test project_kill rc=0:18 tests,and 30 real SIGKILLs of a process saving and autosaving,3 runs at 23-24 interrupted,7 left an autosave,all whole.
+  - [x] ADDRESSED:every crash point of a migration,a save and an autosave ends old or new. A failed step and a newer schema leave identical bytes. An unknown field and file survive a save.
+  - [x] NO REGRESSION:bash scripts/gauge.sh →19 of 66,rc=0. Lock self-test rc=0,now with the printed gauge lines and the flip check run through the project's own stores. Clippy strict rc=0.
+  - [x] ONE-TIME,NOT WATCHED:project_mutants.py →15 of 15 planted project bugs red,target/prepush-0967/project_mutants.log.
+  - [x] MEASURED FIRST:my first kill test failed on none left an autosave,because a fixed window rarely outlasted a save. The child now reports finished commits and the parent kills at chosen points.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-0988.
 - ID: `G1-SLICE.8`
   Status: `done`
   Goal: `sc-constraints` kernel (§6.1/§6.2) — typed constraint AST, finite-domain propagation +

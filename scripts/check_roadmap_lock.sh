@@ -204,6 +204,17 @@ def book_rule(book, rows):
         if row is None or len(row) < 3 or row[1] != str(met) or row[2] != str(total):
             shown = "absent" if row is None else "%s of %s" % (row[1], row[2] if len(row) > 2 else "?")
             problems.append("book: %s's gate row says %s;the clause tables say %d of %d" % (gate, shown, met, total))
+    # The chapter's printed gauge output has to match too, since a reader copies it.
+    table = counts(rows)
+    for line in (book or "").splitlines():
+        printed = re.fullmatch(r"(G\d): (\d+) of (\d+) clauses met", line)
+        if printed and table.get(printed.group(1)) != (int(printed.group(2)), int(printed.group(3))):
+            problems.append("book: the printed gauge line %r disagrees with the clause tables" % line)
+        total = re.fullmatch(r"gauge: (\d+) of (\d+) clauses met through G6", line)
+        if total:
+            wanted = tuple(sum(pair[side] for pair in table.values()) for side in (0, 1))
+            if (int(total.group(1)), int(total.group(2))) != wanted:
+                problems.append("book: the printed gauge total %r disagrees with the clause tables" % line)
     frontier = earliest_open(rows)
     for key, row in rows.items():
         if gate_of(key) != frontier:
@@ -303,7 +314,9 @@ def touches_report(sha):
 
 
 def run_shell(check):
-    return subprocess.run(["bash", "-c", check], capture_output=True, text=True).returncode
+    # The project's own build stores, as the exit review uses, so a check never touches the user's.
+    command = ["python3", "-I", "-B", "scripts/local_environment.py", "--", "bash", "-c", check]
+    return subprocess.run(command, capture_output=True, text=True).returncode
 
 
 def judge(message, tree, parent, changed, run, epoch):
@@ -384,6 +397,9 @@ def self_test():
     arm("book gate absent", book_rule(book_ok.replace("| G2 | 0 | 1 |\n", ""), rows), "G2's gate row says absent")
     arm("book clause state wrong", book_rule(book_ok.replace("not met", "met"), rows), "must state `not met`")
     arm("book clause absent", book_rule(book_ok.replace("| `G1-01` | asks | not met | x | y |\n", ""), rows), "must state")
+    arm("printed gauge agrees", book_rule(book_ok + "G1: 0 of 1 clauses met\ngauge: 1 of 3 clauses met through G6\n", rows), None)
+    arm("printed gauge line wrong", book_rule(book_ok + "G1: 1 of 1 clauses met\n", rows), "printed gauge line")
+    arm("printed gauge total wrong", book_rule(book_ok + "gauge: 9 of 3 clauses met through G6\n", rows), "printed gauge total")
     arm("source with book passes", source_rule("s", ["crates/a/src/x.rs", "docs/book/src/y.md"]), None)
     arm("source without book refused", source_rule("s", ["crates/a/src/x.rs"]), "with no book change")
     arm("source with a stated reason passes", source_rule("s\n\nBook: none — a private rename\n", ["crates/a/src/x.rs"]), None)

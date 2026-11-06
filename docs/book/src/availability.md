@@ -12,7 +12,7 @@ real product path passes its check. Commits and leaves do not move it.
 | Gate | Exit clauses met | Exit clauses | What it proves |
 | --- | --- | --- | --- |
 | G0 | 18 | 19 | The product and its semantics are specified. The evaluation-seat clause stays open by ruling |
-| G1 | 0 | 7 | The architecture runs for real in a browser |
+| G1 | 1 | 7 | The architecture runs for real in a browser |
 | G2 | 0 | 8 | A reference skirt is drafted and exported correctly |
 | G3 | 0 | 11 | Every garment the roadmap names drafts, grades and exports |
 | G4 | 0 | 8 | Factory profiles work, including what is still unknown |
@@ -24,13 +24,13 @@ Run it yourself:
 ```text
 $ bash scripts/gauge.sh
 G0: 18 of 19 clauses met
-G1: 0 of 7 clauses met
+G1: 1 of 7 clauses met
 G2: 0 of 8 clauses met
 G3: 0 of 11 clauses met
 G4: 0 of 8 clauses met
 G5: 0 of 6 clauses met
 G6: 0 of 7 clauses met
-gauge: 18 of 66 clauses met through G6
+gauge: 19 of 66 clauses met through G6
 ```
 
 A count here comes from the clause tables, and a clause counts as met only when its check runs a real
@@ -49,7 +49,7 @@ G1 is the earliest open gate. This is where each of its seven clauses stands:
 | `G1-02` | A real browser run: load, evaluate a recipe, one CSP constraint, save and reopen, render, export | not met | Evaluate works for scalar recipes, with numeric checks on one native and browser pair. A constraint solves as a library, and no browser run calls it yet | `.12` |
 | `G1-03` | Canvas-hosting spike for ADR-0002 | not met | Not started | `.13` |
 | `G1-04` | Command bus with revision checks and undo | not met | Working as a library; no real path drives it yet | `.6` |
-| `G1-05` | Crash-consistent save and recovery | not met | [Atomic multi-file commits](spec/project-store.md) survive a crash at every step and a killed process. The project layer is still to come | `.7` |
+| `G1-05` | Crash-consistent save and recovery | met | [A project](spec/project-store.md) survives a crash at every step of a save, a migration and an autosave, and a killed process, on a real directory. Power loss is not tested, and the browser side comes with the browser run | `.7` |
 | `G1-06` | License-compatible solver builds on all targets | not met | [The kernel](spec/constraints.md) builds natively and for the browser with no dependencies. The license census and the named profiles are still to come | `.15` |
 | `G1-07` | Browser capability matrix with tested versions and limitations | not met | Not started | `.12` |
 
@@ -77,7 +77,7 @@ store, `.7`, which is under way.
 | sc-core | Identities/references, profile pins, structural garment/[Material](spec/material-inputs.md) metadata, physical copies, owned inputs/parameters/recipe source, formula syntax/normalization/identity/static proofs, numeric/read APIs and typed requests/authorization |
 | sc-measure | Owned measurement/table/Ease records, membership/axes/breaks, garment/MTM inputs and immutable profile intent |
 | sc-constraints | [Typed profile constraints and a deterministic solver](spec/constraints.md): which values fit, or which facts and rules conflict |
-| sc-store | [Canonical text files and crash-consistent multi-file commits](spec/project-store.md) on a directory or in memory |
+| sc-store | [Projects saved as crash-consistent commits of canonical text](spec/project-store.md), with migrations and autosave, on a directory or in memory |
 
 These APIs can inspect authored content and refuse invalid current references. Unknown/derived scalar
 inputs refuse numeric fallbacks. Some complete structural inventories can still contain unresolved
