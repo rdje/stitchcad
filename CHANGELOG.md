@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0981 — the handoff census waits for a passing reader (D391)
+
+The census now blocks only on a process present on every look across about a minute;a terminal's status-bar read no longer fails a
+probe run. No process name is exempted,and a real held file still blocks. No product code changes.
+
 ## STITCHCAD-G1-0980 — bring six stale checks back to what they watch (D390)
 
 The pre-push probes found them:ci_environment had not run whole since0564. No check is removed or loosened;0974's late chapter read is

@@ -671,6 +671,18 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] LOCKSTEP:DEV_NOTES,changelog,D390,LIVE row and MEMORY align;README and book reviewed unchanged,G1 still6/18 In Progress.
   promotion: declined (the producer contract itself owns activation order;this repairs values).
   Commit:STITCHCAD-G1-0980.
+- ID: `G1-SLICE.5f.2.prepush-400.census-patience`
+  Status: `done`
+  Goal:fix D391;a passing reader of the checkout must not fail a two-hour probe run. A holder that stays still blocks;no process name is exempted.
+  Paths:scripts/handoff_census.py;docs/tasks/artifacts/handoff/contract.py;docs/book/src/annexes/formula-irrational-platform.md.
+  - [x] REPRODUCE / ISSUE:make probes at471510f5 →28 suites pass,formula_structure rc=1,irrational_platform.py census BLOCKED PID68006 repo handle,11 handles. The PID was gone when inspected;the line named no command.
+  - [x] ROOT CAUSE (WHY + WHERE):repo_handle_watch.py 45 →iTerm pidinfo --git-state on the checkout,4 holders,up to10 pack handles,rc=0. handoff_census.py main took one snapshot;census_race_control.py 540 →one look blocked71/467,rc=0. chrome_outlive.py 8 →0 survivors,rc=0,my first guess refuted.
+  - [x] FIX:settled_census looks every3s,at most20 looks;only the same PID on every complete look blocks;a clear look is final;a dying descriptor or undecodable ps output is retried,every other refusal stays immediate. census() is unchanged.
+  - [x] ADDRESSED:contract.py →49 fixtures,30 reds,rc=0. --real →held file blocks,rc=0. census_race_control.py 540 →settled blocked0 refused0 of467,rc=0,a one-time measurement,not watched. reader_lifetime.py 300 under compile →96 readers,max0.9s. irrational_platform.py alone rc=0.
+  - [x] NO REGRESSION:run_handoff_probes.sh rc=0;python_map_handoff_fixture_contract.py and platform_runtime_contract.py rc=0;git diff --quiet -- crates rc=0. Whole make probes reruns from this commit in the parent gate.
+  - [x] LOCKSTEP:DEV_NOTES,changelog,D391 and LIVE row align;the platform annex states the rule;README reviewed unchanged,G1 still6/18 In Progress.
+  promotion: declined (the census contract now holds the rule).
+  Commit:STITCHCAD-G1-0981.
 - ID: `G1-SLICE.5f.2.exit-distance`
   Status: `done`
   Goal:D387 director decision on input-check depth versus a thin executing path to the G1 exit.

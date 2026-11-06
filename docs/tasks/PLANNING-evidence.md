@@ -175,3 +175,9 @@ Neither was checked against ROADMAP.md §11 or G1-SLICE.md's exit table. Fixed09
 Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole at0564,so six checks drifted unseen:a new script
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
+
+## D391 — one look blamed a passing reader
+
+Owner:G1-SLICE.5f.2.prepush-400.census-patience. The handoff census took one snapshot,so iTerm's status-bar read of the checkout,or a
+process dying under lsof,could fail a two-hour probe run at its last step. Measured on this machine:one look blocked71 and refused4 of467.
+Fixed0981:only the same process on every look across about a minute blocks. No name is exempted and a real held file still blocks.

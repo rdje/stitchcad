@@ -119,6 +119,7 @@ case('unnamed NEXUS',lsof=BASE_LSOF+'f4\ntNEXUS\nn\n')
 
 
 def verify(ns):
+    assert issubclass(ns['Unresolved'], ns['Refusal']), 'an unresolved look is a refusal'
     for name,ps,lsof,expected,advisory,idle,refusal,status_ps,status_lsof,deny in CASES:
         calls=[]
         def run(command, **kwargs):
@@ -152,10 +153,79 @@ def verify(ns):
             assert str(error)==expected,('exact diagnostic',str(error),expected)
         else:
             raise AssertionError('unresolved metadata admitted')
+    # A holder blocks only if the same PID is on every complete look;a clear look is final;a failed look is retried.
+    held = BASE_LSOF + file(200)
+    other = BASE_LSOF + file(201)
+    both = BASE_LSOF + file(200) + file(201)
+    dying = 'p100\nf3\nn' + R + '/private.txt\n'
+    gap, looks_allowed = ns['LOOK_GAP_SECONDS'], ns['LOOKS']
+    assert gap * (looks_allowed - 1) < 100, ('the wait must stay inside the probe command timeout', gap, looks_allowed)
+    undecodable = UnicodeDecodeError('utf-8', b'x', 0, 1, 'fixture')
+    for name, looks, expected, pauses in (
+        ('clear first look', (BASE_LSOF,), (), 0),
+        ('holder gone on the second look', (held, BASE_LSOF), (), 1),
+        ('holder replaced by a new reader', (held, other), (), 1),
+        ('holder leaves after several looks', (held,) * 7 + (BASE_LSOF,), (), 7),
+        ('readers overlap and each leaves', (held, both, other), (), 2),
+        ('holder stays through every look', (held,) * looks_allowed, (200,), looks_allowed - 1),
+        ('one of two holders stays', (both,) + (held,) * (looks_allowed - 1), (200,), looks_allowed - 1),
+        ('dying descriptor then clear', (dying, BASE_LSOF), (), 1),
+        ('undecodable output then clear', (undecodable, BASE_LSOF), (), 1),
+        ('dying descriptor among holder looks', (held, dying) + (held,) * (looks_allowed - 2), (200,), looks_allowed - 1),
+        ('holder first seen on the last look still blocks', (dying,) * (looks_allowed - 1) + (held,), (200,), looks_allowed - 1),
+    ):
+        answers, waited = list(looks), []
+        def run(command, **kwargs):
+            if command[0] == 'ps':
+                return SimpleNamespace(returncode=0, stdout=BASE_PS)
+            answer = answers.pop(0) if answers else BASE_LSOF
+            if isinstance(answer, UnicodeError):
+                raise answer
+            return SimpleNamespace(returncode=0, stdout=answer)
+        try:
+            outcome = ns['settled_census'](R, 100, 999, False, run, waited.append)
+        except (ns['Refusal'], UnicodeError) as error:
+            raise AssertionError((name, 'refused', str(error)))
+        assert outcome, (name, 'no verdict')
+        assert tuple(b[0] for b in outcome[0]) == expected, (name, 'blocking', outcome[0], expected)
+        assert waited == [gap] * pauses and not answers, (name, 'looks', waited, answers)
+    # A look that fails on every try refuses;no other refusal is retried.
+    for name, failure, wanted in (('dying descriptor on every look', dying, ns['Unresolved']),
+                                  ('undecodable on every look', undecodable, UnicodeError)):
+        waited = []
+        def stuck(command, **kwargs):
+            if command[0] == 'ps':
+                return SimpleNamespace(returncode=0, stdout=BASE_PS)
+            if isinstance(failure, UnicodeError):
+                raise failure
+            return SimpleNamespace(returncode=0, stdout=failure)
+        try:
+            outcome = ns['settled_census'](R, 100, 999, False, stuck, waited.append)
+        except wanted:
+            assert waited == [gap] * (looks_allowed - 1), (name, 'looks', waited)
+        else:
+            raise AssertionError((name, 'admitted', outcome))
+    looked = []
+    def failing(command, **kwargs):
+        looked.append(command[0])
+        return SimpleNamespace(returncode=1 if len(looked) > 2 and command[0] == 'lsof' else 0,
+                               stdout=BASE_PS if command[0] == 'ps' else held)
+    try:
+        outcome = ns['settled_census'](R, 100, 999, False, failing, lambda seconds: None)
+    except ns['Refusal'] as error:
+        assert 'lsof unavailable' in str(error) and looked == ['ps', 'lsof', 'ps', 'lsof'], (str(error), looked)
+    else:
+        raise AssertionError(('later look evidence failure admitted', outcome))
+
+
+def main_is_census(ns):
+    # The entry itself must use the two-look census:its body names the only census it calls.
+    names = ns['main'].__code__.co_names
+    assert 'settled_census' in names and 'census' not in names, ('main census', names)
 
 
 source_plan()
-ns=runpy.run_path(str(SOURCE));verify(ns)
+ns=runpy.run_path(str(SOURCE));verify(ns);main_is_census(ns)
 FAULTS=[
  ('nonzero evidence','if result.returncode != 0:','if False:'),
  ('empty evidence','if not result.stdout.strip():','if False:'),
@@ -174,12 +244,25 @@ FAULTS=[
  ('diagnostic descriptor','% (pid, fd, marker)','% (pid, "0", marker)'),
  ('exact revoked marker',"value == '(revoked)'","value.startswith('(revoked)')"),
  ('truncation proof','if not named or complete != seen:','if False:'),
+ ('later look taken','        suspects = {item[0] for item in blocking}\n','        return blocking, advisory\n'),
+ ('same holder on every look','blocking = [item for item in blocking if item[0] in suspects]','pass'),
+ ('pause before looking','pause(LOOK_GAP_SECONDS)','pass'),
+ ('clear look is final','if not blocking or look == LOOKS - 1:','if look == LOOKS - 1:'),
+ ('last look gives a verdict','if not blocking or look == LOOKS - 1:','if not blocking:'),
+ ('failed look retried','except (Unresolved, UnicodeError):','except ZeroDivisionError:'),
+ ('undecodable look retried','except (Unresolved, UnicodeError):','except Unresolved:'),
+ ('dying descriptor retried','except (Unresolved, UnicodeError):','except UnicodeError:'),
+ ('only a failed look retried','except (Unresolved, UnicodeError):','except (Refusal, UnicodeError):'),
+ ('failed last look refuses','            if look == LOOKS - 1:\n                raise\n            continue','            continue'),
+ ('unresolved is a refusal','class Unresolved(Refusal):','class Unresolved(Exception):'),
+ ('type unavailable is unresolved',"raise Unresolved('lsof type unavailable","raise Refusal('lsof type unavailable"),
+ ('main takes both looks','= settled_census(root, os.getpid()','= census(root, os.getpid()'),
 ]
 for name,old,new in FAULTS:
     assert RAW.decode().count(old)==1,(name,'fault target')
     altered={'__name__':'handoff_fault'}
     exec(compile(RAW.decode().replace(old,new),str(SOURCE),'exec'),altered)
-    try:verify(altered)
+    try:verify(altered);main_is_census(altered)
     except AssertionError:pass
     else:raise AssertionError('actual guard fault escaped: '+name)
 source_plan()

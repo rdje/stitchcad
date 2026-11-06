@@ -2,6 +2,14 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-06 UTC)_ — D391: the census looked once
+
+Probes failed on a process that was gone when I went to look,and the line had no command in it. I guessed a Chrome helper;eight
+launches left nothing behind. A sampler named it:iTerm's status bar reads the checkout about every ten seconds. Then my two-second
+second look failed too,and the log showed why:under an lsof hammer one reader lived past 21s. Measured with ps alone it never passed
+0.9s,so the hammer made that tail,but contention is real and the wait now covers it. The same log also found a dying descriptor and
+an undecodable ps line. Earlier full runs passed partly by luck:one look blocks about 15% of the time on this machine.
+
 ## _(2026-11-06 UTC)_ — D390: six checks outlived what they watch
 
 The suite stopped at one missing inventory row;running its47 steps independently showed five more. Most were values:a

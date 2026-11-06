@@ -166,7 +166,7 @@ def handoff_readonly():
         Path.mkdir, Path.write_text, subprocess.run, subprocess.Popen = original
         sys.argv = argv
         os.environ.clear(); os.environ.update(saved)
-    print('handoff readonly: actual49/17, imported --real ignored; pure verify; no store inspection/activation/writes/children')
+    print('handoff readonly: actual49/30, imported --real ignored; pure verify; no store inspection/activation/writes/children')
 
 
 def handoff_capture(script=None):

@@ -117,6 +117,9 @@ python3 -I -B docs/tasks/artifacts/formula_structure/irrational_platform.py
 ```
 
 The actual capture requires a clear project process census;finish other project jobs first.
+The census looks every three seconds for about a minute and blames only a process present on every
+look,so a terminal's passing read of the repository does not fail the capture. A file held open
+throughout still blocks it.
 Installed OS/browser launchers are read-only external tool dependencies. Project sources,
 generated workspaces,dependency stores,profiles,captures and scratch stay on the repository
 volume with repository-relative persisted paths. The final adapter passes strict affected

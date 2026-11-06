@@ -6,10 +6,18 @@ from pathlib import Path
 import re
 import subprocess
 import sys
+import time
+
+LOOK_GAP_SECONDS = 3
+LOOKS = 20
 
 
 class Refusal(Exception):
     """A complete process census could not be established."""
+
+
+class Unresolved(Refusal):
+    """One descriptor had no type,usually a process dying under lsof. A later complete look decides."""
 
 
 @dataclass(frozen=True)
@@ -75,7 +83,7 @@ def parse_handles(text, root):
                 # lsof omits unavailable fields. Its Darwin "(revoked)" marker
                 # reports an ENOENT lookup, not a proved harmless descriptor.
                 marker = ' (revoked)' if value == '(revoked)' else ''
-                raise Refusal('lsof type unavailable for PID %d FD %s%s; '
+                raise Unresolved('lsof type unavailable for PID %d FD %s%s; '
                               'handle identity unresolved' % (pid, fd, marker))
             if not value and kind not in ('PIPE', 'NPOLICY', 'NEXUS'):
                 raise Refusal('unnamed filesystem/unknown lsof handle')
@@ -153,6 +161,25 @@ def census(root, caller, uid, idle_cua=False, run=subprocess.run):
     return blocking, advisory
 
 
+def settled_census(root, caller, uid, idle_cua=False, run=subprocess.run, pause=time.sleep):
+    """A job stays through every look;a passing reader of the checkout does not. No name is exempted."""
+    suspects = None
+    for look in range(LOOKS):
+        if look:
+            pause(LOOK_GAP_SECONDS)
+        try:
+            blocking, advisory = census(root, caller, uid, idle_cua, run)
+        except (Unresolved, UnicodeError):
+            if look == LOOKS - 1:
+                raise
+            continue
+        if suspects is not None:
+            blocking = [item for item in blocking if item[0] in suspects]
+        if not blocking or look == LOOKS - 1:
+            return blocking, advisory
+        suspects = {item[0] for item in blocking}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--all', action='store_true', help='list advisory PIDs')
@@ -161,7 +188,7 @@ def main():
     args = parser.parse_args()
     root = str(Path(__file__).resolve().parent.parent)
     try:
-        blocking, advisory = census(root, os.getpid(), os.getuid(), args.idle_cua)
+        blocking, advisory = settled_census(root, os.getpid(), os.getuid(), args.idle_cua)
     except (Refusal, OSError, UnicodeError) as error:
         print('handoff: REFUSED — ' + str(error), file=sys.stderr)
         return 2
