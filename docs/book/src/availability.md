@@ -1,6 +1,6 @@
 # What you can use today
 
-StitchCAD currently provides seven Rust libraries and [a headless command line](spec/command-line.md). They
+StitchCAD currently provides eight Rust libraries and [a headless command line](spec/command-line.md). They
 implement numerical and structural foundations; they do not yet generate a garment pattern or provide an
 end-user application.
 G0 contract review is mostly complete, and G1's seven exit clauses are met with stated limits. Human closure of both is
@@ -85,8 +85,8 @@ A feature means the roadmap's next requirement, built by its existing task-tree 
 this book gives, with this table and the book's examples changing in the same commit. It refuses what it
 does not support yet with a plain error. The constraint kernel `.8`, the project store `.7`, the headless
 command line `.10`, the runtime profiles `.11`, the license census `.15`, the browser run `.12` and the canvas spike `.13`
-are done, and the G1 exit review `.16` passed. The geometry kernel `G2-2D.1`, the offset engine `G2-2D.2` and its corpus `G2-2D.3` are
-done. The next one is the canonicalizer, `G2-2D.4`.
+are done, and the G1 exit review `.16` passed. The geometry kernel `G2-2D.1`, the offset engine `G2-2D.2`, its corpus `G2-2D.3` and the
+canonicalizer `G2-2D.4` are done. The next one is the DXF writer, `G2-2D.5`.
 
 ## Implemented foundations
 
@@ -96,6 +96,7 @@ done. The next one is the canonicalizer, `G2-2D.4`.
 | sc-core | Identities/references, profile pins, structural garment/[Material](spec/material-inputs.md) metadata, physical copies, owned inputs/parameters/recipe source, formula syntax/normalization/identity/static proofs, numeric/read APIs and typed requests/authorization |
 | sc-measure | Owned measurement/table/Ease records, membership/axes/breaks, garment/MTM inputs and immutable profile intent |
 | sc-constraints | [Typed profile constraints and a deterministic solver](spec/constraints.md): which values fit, or which facts and rules conflict |
+| sc-artifacts | [One written form for a drawn pattern](spec/canonical-artifacts.md), and comparison by meaning. No file formats yet |
 | sc-geometry | [Lines, arcs and cubic Béziers with exact predicates](spec/geometry.md), and [seam allowances](spec/offsets.md) |
 | sc-viewport | [Exact screen and world coordinates, picking and snapping](spec/viewport.md), independent of any renderer |
 | sc-store | [Projects saved as crash-consistent commits of canonical text](spec/project-store.md), with migrations and autosave, on a directory or in memory |

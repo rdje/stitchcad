@@ -37,6 +37,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "sc-artifacts"
+version = "0.1.0"
+dependencies = [
+ "sc-geometry",
+ "sc-store",
+]
+
+[[package]]
 name = "sc-cli"
 version = "0.1.0"
 dependencies = [

@@ -1,0 +1,14 @@
+[package]
+name = "sc-artifacts"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "StitchCAD artifacts: the canonical drawn pattern, and the files made from it."
+
+[lints]
+workspace = true
+
+[dependencies]
+sc-geometry = { path = "../sc-geometry", version = "0.1.0" }
+sc-store = { path = "../sc-store", version = "0.1.0" }

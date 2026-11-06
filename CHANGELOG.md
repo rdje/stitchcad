@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0999 — the canonicalizer:one written form for a drawn pattern
+
+`sc-artifacts` holds a pattern in one byte form,with no clock in it,and compares two by meaning first,so a reformat reads as formatting and a moved notch names its piece and field. A frozen golden pins the bytes. DXF and PDF come next and read this form.
+
 ## STITCHCAD-G1-0998 — seam allowances:the offset engine passes its pathology corpus;G2-05 is met
 
 Per-edge widths,folds and five corner treatments,with loops removed and the result checked before it is returned. 37 corpus cases cover acute tips,loops and seam-length error,judged by checks sharing no code with the engine. The corner shapes are an engineer's,unreviewed by a sewing expert. The gauge reads 26 of 66.

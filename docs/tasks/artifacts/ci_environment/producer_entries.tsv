@@ -5,6 +5,7 @@ path	kind	owner	review
 .github/workflows/rust.yml	profile	G1-SLICE.5b.4c.h2.b.v	Explicit CI prepare/install/verify contract already observed at 8f87a10; local standalone audit separate.
 Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 Makefile	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+crates/sc-artifacts/Cargo.toml	platform	G2-2D.4	Declarative public build/output contract; destination audit pending.
 crates/sc-cli/Cargo.toml	platform	G1-SLICE.10	Declarative public build/output contract; destination audit pending.
 crates/sc-constraints/Cargo.toml	platform	G1-SLICE.8	Declarative public build/output contract; destination audit pending.
 crates/sc-core/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
