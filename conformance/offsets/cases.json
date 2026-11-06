@@ -1,0 +1,3119 @@
+{
+  "cases": [
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              120711,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              120711,
+              -50000
+            ],
+            [
+              120711,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              120711,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 45 degrees under miter, where an unbounded join would spike",
+      "name": "tip-45-miter",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "slant",
+          "width": 10000
+        },
+        {
+          "corner": "slant",
+          "width": 10000
+        },
+        {
+          "corner": "slant",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              120711,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              120711,
+              -50000
+            ],
+            [
+              120711,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              120711,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 45 degrees under slant, where an unbounded join would spike",
+      "name": "tip-45-slant",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "trim",
+          "width": 10000
+        },
+        {
+          "corner": "trim",
+          "width": 10000
+        },
+        {
+          "corner": "trim",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              120711,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              120711,
+              -50000
+            ],
+            [
+              120711,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              120711,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 45 degrees under trim, where an unbounded join would spike",
+      "name": "tip-45-trim",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "step",
+          "width": 10000
+        },
+        {
+          "corner": "step",
+          "width": 10000
+        },
+        {
+          "corner": "step",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              120711,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              120711,
+              -50000
+            ],
+            [
+              120711,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              120711,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 45 degrees under step, where an unbounded join would spike",
+      "name": "tip-45-step",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "envelope",
+          "width": 10000
+        },
+        {
+          "corner": "envelope",
+          "width": 10000
+        },
+        {
+          "corner": "envelope",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              120711,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              120711,
+              -50000
+            ],
+            [
+              120711,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              120711,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 45 degrees under envelope, where an unbounded join would spike",
+      "name": "tip-45-envelope",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              186603,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              186603,
+              -50000
+            ],
+            [
+              186603,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              186603,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 30 degrees under miter, where an unbounded join would spike",
+      "name": "tip-30-miter",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "slant",
+          "width": 10000
+        },
+        {
+          "corner": "slant",
+          "width": 10000
+        },
+        {
+          "corner": "slant",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              186603,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              186603,
+              -50000
+            ],
+            [
+              186603,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              186603,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 30 degrees under slant, where an unbounded join would spike",
+      "name": "tip-30-slant",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "trim",
+          "width": 10000
+        },
+        {
+          "corner": "trim",
+          "width": 10000
+        },
+        {
+          "corner": "trim",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              186603,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              186603,
+              -50000
+            ],
+            [
+              186603,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              186603,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 30 degrees under trim, where an unbounded join would spike",
+      "name": "tip-30-trim",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "step",
+          "width": 10000
+        },
+        {
+          "corner": "step",
+          "width": 10000
+        },
+        {
+          "corner": "step",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              186603,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              186603,
+              -50000
+            ],
+            [
+              186603,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              186603,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 30 degrees under step, where an unbounded join would spike",
+      "name": "tip-30-step",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "envelope",
+          "width": 10000
+        },
+        {
+          "corner": "envelope",
+          "width": 10000
+        },
+        {
+          "corner": "envelope",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              186603,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              186603,
+              -50000
+            ],
+            [
+              186603,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              186603,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 30 degrees under envelope, where an unbounded join would spike",
+      "name": "tip-30-envelope",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              379787,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              379787,
+              -50000
+            ],
+            [
+              379787,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              379787,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 15 degrees under miter, where an unbounded join would spike",
+      "name": "tip-15-miter",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "slant",
+          "width": 10000
+        },
+        {
+          "corner": "slant",
+          "width": 10000
+        },
+        {
+          "corner": "slant",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              379787,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              379787,
+              -50000
+            ],
+            [
+              379787,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              379787,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 15 degrees under slant, where an unbounded join would spike",
+      "name": "tip-15-slant",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "trim",
+          "width": 10000
+        },
+        {
+          "corner": "trim",
+          "width": 10000
+        },
+        {
+          "corner": "trim",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              379787,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              379787,
+              -50000
+            ],
+            [
+              379787,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              379787,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 15 degrees under trim, where an unbounded join would spike",
+      "name": "tip-15-trim",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "step",
+          "width": 10000
+        },
+        {
+          "corner": "step",
+          "width": 10000
+        },
+        {
+          "corner": "step",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              379787,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              379787,
+              -50000
+            ],
+            [
+              379787,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              379787,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 15 degrees under step, where an unbounded join would spike",
+      "name": "tip-15-step",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "envelope",
+          "width": 10000
+        },
+        {
+          "corner": "envelope",
+          "width": 10000
+        },
+        {
+          "corner": "envelope",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              379787,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              379787,
+              -50000
+            ],
+            [
+              379787,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              379787,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 15 degrees under envelope, where an unbounded join would spike",
+      "name": "tip-15-envelope",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              1143005,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1143005,
+              -50000
+            ],
+            [
+              1143005,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1143005,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 5 degrees under miter, where an unbounded join would spike",
+      "name": "tip-5-miter",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "slant",
+          "width": 10000
+        },
+        {
+          "corner": "slant",
+          "width": 10000
+        },
+        {
+          "corner": "slant",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              1143005,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1143005,
+              -50000
+            ],
+            [
+              1143005,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1143005,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 5 degrees under slant, where an unbounded join would spike",
+      "name": "tip-5-slant",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "trim",
+          "width": 10000
+        },
+        {
+          "corner": "trim",
+          "width": 10000
+        },
+        {
+          "corner": "trim",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              1143005,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1143005,
+              -50000
+            ],
+            [
+              1143005,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1143005,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 5 degrees under trim, where an unbounded join would spike",
+      "name": "tip-5-trim",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "step",
+          "width": 10000
+        },
+        {
+          "corner": "step",
+          "width": 10000
+        },
+        {
+          "corner": "step",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              1143005,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1143005,
+              -50000
+            ],
+            [
+              1143005,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1143005,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 5 degrees under step, where an unbounded join would spike",
+      "name": "tip-5-step",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "envelope",
+          "width": 10000
+        },
+        {
+          "corner": "envelope",
+          "width": 10000
+        },
+        {
+          "corner": "envelope",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              1143005,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1143005,
+              -50000
+            ],
+            [
+              1143005,
+              50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1143005,
+              50000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a tip of 5 degrees under envelope, where an unbounded join would spike",
+      "name": "tip-5-envelope",
+      "pass_means": "clean, no crossing, and no join reaches past the miter limit",
+      "reach_limit": true,
+      "tags": [
+        "acute"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              200000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              200000,
+              0
+            ],
+            [
+              200000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              200000,
+              100000
+            ],
+            [
+              100000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              100000
+            ],
+            [
+              100000,
+              200000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              200000
+            ],
+            [
+              0,
+              200000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              200000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a concave corner, where raw offsets cross",
+      "expect_points": [
+        [
+          110000,
+          110000
+        ]
+      ],
+      "name": "concave-right-angle",
+      "pass_means": "clean, with the inner corner exactly where the two offset lines meet",
+      "tags": [
+        "loops"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              100000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              100000
+            ],
+            [
+              52000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              52000,
+              100000
+            ],
+            [
+              50000,
+              20000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              50000,
+              20000
+            ],
+            [
+              48000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              48000,
+              100000
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a sharp concave notch, whose raw offsets cross far from the corner",
+      "name": "concave-sharp",
+      "pass_means": "clean",
+      "tags": [
+        "loops"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 20000
+        },
+        {
+          "corner": "miter",
+          "width": 20000
+        },
+        {
+          "corner": "miter",
+          "width": 20000
+        },
+        {
+          "corner": "miter",
+          "width": 20000
+        },
+        {
+          "corner": "miter",
+          "width": 20000
+        },
+        {
+          "corner": "miter",
+          "width": 20000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              40000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "arc",
+          "points": [
+            [
+              40000,
+              0
+            ],
+            [
+              50000,
+              10000
+            ],
+            [
+              60000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              60000,
+              0
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              100000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              100000
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a concave curve tighter than its allowance, whose raw offset folds over itself",
+      "expect_swallowed": [
+        1
+      ],
+      "name": "scoop-tighter-than-allowance",
+      "pass_means": "clean, with the curve reported as swallowed rather than a fold exported",
+      "tags": [
+        "loops"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        }
+      ],
+      "clearance": false,
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              40000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              40000,
+              0
+            ],
+            [
+              40000,
+              80000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              40000,
+              80000
+            ],
+            [
+              45000,
+              80000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              45000,
+              80000
+            ],
+            [
+              45000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              45000,
+              0
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              100000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              100000
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a slot narrower than two allowances, which the true offset fills",
+      "expect_swallowed": [
+        2
+      ],
+      "name": "slot-narrower-than-two-allowances",
+      "pass_means": "clean, with the slot's far edge reported as swallowed",
+      "tags": [
+        "loops"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 20000
+        },
+        {
+          "corner": "miter",
+          "width": 20000
+        },
+        {
+          "corner": "miter",
+          "width": 20000
+        },
+        {
+          "corner": "miter",
+          "width": 20000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "arc",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              70711,
+              70711
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "arc",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              -70711,
+              70711
+            ],
+            [
+              -100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "arc",
+          "points": [
+            [
+              -100000,
+              0
+            ],
+            [
+              -70711,
+              -70711
+            ],
+            [
+              0,
+              -100000
+            ]
+          ]
+        },
+        {
+          "kind": "arc",
+          "points": [
+            [
+              0,
+              -100000
+            ],
+            [
+              70711,
+              -70711
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "four arcs whose offset length has an exact answer",
+      "length_bound_um": 200,
+      "name": "circle-seam-length",
+      "net_length_um": 628319,
+      "offset_length_um": 753982,
+      "pass_means": "offset length within the bound of 2π(r+w), and net length within it of 2πr",
+      "tags": [
+        "seam-length"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 20000
+        },
+        {
+          "corner": "miter",
+          "width": 20000
+        },
+        {
+          "corner": "miter",
+          "width": 20000
+        },
+        {
+          "corner": "miter",
+          "width": 20000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "arc",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              70711,
+              70711
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "arc",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              -70711,
+              70711
+            ],
+            [
+              -100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "arc",
+          "points": [
+            [
+              -100000,
+              0
+            ],
+            [
+              -70711,
+              -70711
+            ],
+            [
+              0,
+              -100000
+            ]
+          ]
+        },
+        {
+          "kind": "arc",
+          "points": [
+            [
+              0,
+              -100000
+            ],
+            [
+              70711,
+              -70711
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "the same circle at the 100 micrometre polyline tolerance",
+      "length_bound_um": 2000,
+      "name": "circle-seam-length-coarse",
+      "net_length_um": 628319,
+      "offset_length_um": 753982,
+      "pass_means": "the error stays bounded at the coarser tolerance",
+      "tags": [
+        "seam-length"
+      ],
+      "tolerance": 100
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              30000,
+              0
+            ],
+            [
+              170000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "arc",
+          "points": [
+            [
+              170000,
+              0
+            ],
+            [
+              191213,
+              8787
+            ],
+            [
+              200000,
+              30000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              200000,
+              30000
+            ],
+            [
+              200000,
+              70000
+            ]
+          ]
+        },
+        {
+          "kind": "arc",
+          "points": [
+            [
+              200000,
+              70000
+            ],
+            [
+              191213,
+              91213
+            ],
+            [
+              170000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              170000,
+              100000
+            ],
+            [
+              30000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "arc",
+          "points": [
+            [
+              30000,
+              100000
+            ],
+            [
+              8787,
+              91213
+            ],
+            [
+              0,
+              70000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              70000
+            ],
+            [
+              0,
+              30000
+            ]
+          ]
+        },
+        {
+          "kind": "arc",
+          "points": [
+            [
+              0,
+              30000
+            ],
+            [
+              8787,
+              8787
+            ],
+            [
+              30000,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "lines and arcs meeting tangentially, summed along many edges, where a per-edge error would accumulate",
+      "length_bound_um": 200,
+      "name": "rounded-rectangle-seam-length",
+      "net_length_um": 548496,
+      "offset_length_um": 611327,
+      "pass_means": "both lengths within the bound of their exact answers",
+      "tags": [
+        "seam-length"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "cubic",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              150000,
+              5
+            ],
+            [
+              200000,
+              40000
+            ],
+            [
+              200000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              200000,
+              100000
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a curve leaving a line at a sliver of an angle, where a miter is ill-conditioned",
+      "name": "near-tangent-join",
+      "pass_means": "clean, and every corner stays on the allowance",
+      "tags": [
+        "near-tangent"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              200000,
+              -20
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              200000,
+              -20
+            ],
+            [
+              200000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              200000,
+              100000
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a concave join at a sliver of an angle, where the offset lines nearly coincide",
+      "name": "near-tangent-concave",
+      "pass_means": "clean",
+      "tags": [
+        "near-tangent"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "slant",
+          "width": 5000
+        },
+        {
+          "corner": "slant",
+          "width": 5000
+        },
+        {
+          "corner": "slant",
+          "width": 5000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "cubic",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              30000,
+              2000
+            ],
+            [
+              70000,
+              20000
+            ],
+            [
+              100000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "cubic",
+          "points": [
+            [
+              100000,
+              100000
+            ],
+            [
+              70000,
+              40000
+            ],
+            [
+              30000,
+              60000
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "two Béziers meeting at a sharp point on the outside",
+      "name": "outer-cusp",
+      "pass_means": "clean",
+      "tags": [
+        "cusp"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 5000
+        },
+        {
+          "corner": "miter",
+          "width": 5000
+        },
+        {
+          "corner": "miter",
+          "width": 5000
+        },
+        {
+          "corner": "miter",
+          "width": 5000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              -50000
+            ],
+            [
+              100000,
+              -50000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              -50000
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "cubic",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              0,
+              100000
+            ],
+            [
+              100000,
+              100000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -50000
+            ]
+          ]
+        }
+      ],
+      "exercises": "a single Bézier with a true cusp, pointing outward, where the polyline turns sharply inside one curve",
+      "max_y_at_most": 86000,
+      "name": "true-cusp-inside-one-curve",
+      "pass_means": "clean, with the offset's tip near the cusp and no spike from mitering that turn",
+      "tags": [
+        "cusp"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 3000
+        },
+        {
+          "corner": "miter",
+          "width": 3000
+        },
+        {
+          "corner": "miter",
+          "width": 3000
+        },
+        {
+          "corner": "miter",
+          "width": 3000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "cubic",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              200000,
+              150000
+            ],
+            [
+              -100000,
+              150000
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              100000,
+              -100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              -100000
+            ],
+            [
+              0,
+              -100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              -100000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a Bézier with crossed handles that stays simple, with a tight bend inside",
+      "may_refuse": true,
+      "name": "looped-handles-no-loop",
+      "pass_means": "clean, or a named refusal",
+      "tags": [
+        "cusp"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 30000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 30000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              100000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              100000
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "each edge a different width, meeting where their lines cross",
+      "expect_points": [
+        [
+          -30000,
+          -10000
+        ],
+        [
+          130000,
+          -10000
+        ],
+        [
+          130000,
+          110000
+        ],
+        [
+          -30000,
+          110000
+        ]
+      ],
+      "name": "variable-widths",
+      "pass_means": "clean, with the exact corners",
+      "tags": [
+        "variable"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 0
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              100000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              100000
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a fold edge beside allowances",
+      "min_x": 0,
+      "name": "fold-has-no-allowance",
+      "pass_means": "clean, with nothing past the fold line",
+      "tags": [
+        "variable"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 0
+        },
+        {
+          "corner": "envelope",
+          "width": 30000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "miter",
+          "width": 10000
+        },
+        {
+          "corner": "trim",
+          "width": 10000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -620000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              -620000
+            ],
+            [
+              285000,
+              -620000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              285000,
+              -620000
+            ],
+            [
+              255000,
+              -200000
+            ]
+          ]
+        },
+        {
+          "kind": "cubic",
+          "points": [
+            [
+              255000,
+              -200000
+            ],
+            [
+              255000,
+              -100000
+            ],
+            [
+              235000,
+              -30000
+            ],
+            [
+              225000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              225000,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "the reference skirt's front quadrant with its own allowances from §7",
+      "max_y": 10000,
+      "min_x": 0,
+      "min_y": -650000,
+      "name": "reference-skirt-front",
+      "pass_means": "clean, with the hem's 3 cm and the waist's 1 cm exactly placed, and nothing past the fold",
+      "tags": [
+        "fixture"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              100000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              100000
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a boundary running the wrong way",
+      "expect_refusal": "not_counterclockwise",
+      "name": "refused-clockwise",
+      "pass_means": "refused by name, so nothing is exported inside out",
+      "tags": [
+        "refusal"
+      ],
+      "tolerance": 10
+    },
+    {
+      "allowances": [
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        },
+        {
+          "corner": "miter",
+          "width": 1000
+        }
+      ],
+      "curves": [
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              100000,
+              0
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              0
+            ],
+            [
+              100000,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100000,
+              100000
+            ],
+            [
+              40000,
+              -20000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              40000,
+              -20000
+            ],
+            [
+              0,
+              100000
+            ]
+          ]
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              0,
+              100000
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "exercises": "a net boundary crossing itself, with positive area so only the crossing check can catch it",
+      "expect_refusal": "net_crossing",
+      "name": "refused-net-crossing",
+      "pass_means": "refused by name",
+      "tags": [
+        "refusal"
+      ],
+      "tolerance": 10
+    }
+  ],
+  "format": 1
+}

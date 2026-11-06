@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0998 — seam allowances:the offset engine passes its pathology corpus;G2-05 is met
+
+Per-edge widths,folds and five corner treatments,with loops removed and the result checked before it is returned. 37 corpus cases cover acute tips,loops and seam-length error,judged by checks sharing no code with the engine. The corner shapes are an engineer's,unreviewed by a sewing expert. The gauge reads 26 of 66.
+
 ## STITCHCAD-G1-0997 — sc-geometry:the 2D kernel,with exact predicates
 
 Lines,arcs and cubic Béziers in whole micrometres. Orientation and crossings are exact,so a near tie cannot flip,and each is compared with arbitrary precision over hundreds of thousands of seeds. Boundaries close exactly,and report winding and self-crossings. NURBS is refused by name. Offsets come next.

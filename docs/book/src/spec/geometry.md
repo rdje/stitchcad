@@ -4,9 +4,9 @@ Every pattern piece is built from three kinds of curve: straight lines, circular
 factory file formats carry. The `sc-geometry` crate holds them in whole micrometres and answers exactly which way a
 point lies from a line, where two segments cross, and whether a boundary closes and crosses itself.
 
-**What works today.** Curves, exact predicates, flattening to a polyline within a stated tolerance, lengths, and
-boundaries with winding and self-crossings. **What does not exist yet:** offsets and seam allowances, which come next;
-anything drawing a piece from a recipe; and NURBS, which the roadmap defers and this refuses by name.
+**What works today.** Curves, exact predicates, flattening to a polyline within a stated tolerance, lengths, boundaries with winding
+and self-crossings, and [seam allowances](offsets.md). **What does not exist yet:** anything drawing a piece from a recipe, and NURBS,
+which the roadmap defers and this refuses by name.
 
 ## Why whole numbers
 

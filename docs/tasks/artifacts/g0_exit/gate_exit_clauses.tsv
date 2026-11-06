@@ -15,7 +15,7 @@ G2-01	exit	reference skirt drafted through CLI	-	-	unbuilt	-	-	G2-2D.8
 G2-02	exit	minimal 2D viewer/editor	-	-	unbuilt	-	-	G2-2D.9
 G2-03	exit	canonical DXF	-	-	unbuilt	-	-	G2-2D.5
 G2-04	exit	printed scale-square	-	-	director	one scan or photo of the printed square beside a ruler,asked for at the end of G2	the exporter and its numeric and independent-renderer checks come first	G2-2D.7
-G2-05	exit	offsets pass the pathology corpus	-	-	unbuilt	-	-	G2-2D.3
+G2-05	exit	offsets pass the pathology corpus	conformance/offsets/cases.json	cargo test -p sc-geometry --test offset_corpus	instrument	-	judged by checks sharing no code with the engine;corner shapes are unreviewed by a sewing expert;curved results are polylines	G2-2D.3
 G2-06	exit	native save/load preserves semantics	-	-	unbuilt	-	-	G2-2D.10
 G2-07	exit	mutation tests	-	-	unbuilt	-	-	G2-2D.11
 G2-08	exit	LLM agent given only MCP,CLI serializer then golden-matches	-	-	unbuilt	-	-	G2-2D.13

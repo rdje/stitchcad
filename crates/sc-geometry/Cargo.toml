@@ -12,3 +12,5 @@ workspace = true
 [dev-dependencies]
 # The tests' independent oracle, which shares no arithmetic with the kernel.
 num-bigint = "=0.4.6"
+# Reads the conformance corpus, which is canonical text.
+sc-store = { path = "../sc-store", version = "0.1.0" }
