@@ -65,6 +65,7 @@
   - [SizeSet profile transformations](spec/size-set-transformations.md)
   - [Measurement and size standards](spec/standards.md)
   - [The reference skirt](spec/reference-skirt.md)
+  - [Constraint kernel](spec/constraints.md)
 - [Formula syntax API](annexes/formula-syntax.md)
   - [Canonical formula rational values](annexes/formula-rationals.md)
   - [Trig certificate feasibility](annexes/formula-trig-certificates.md)

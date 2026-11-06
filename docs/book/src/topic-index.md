@@ -113,6 +113,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [The model and its numbers](spec/glossary/model-and-numbers.md)
 - [The recipe and the piece](spec/glossary/recipe-and-pieces.md)
 - [The reference skirt](spec/reference-skirt.md)
+- [Constraint kernel](spec/constraints.md)
 - [The supported envelope](spec/feature-matrix.md)
 - [Uncertainty and numeric refusals](spec/measurement-inputs.md)
 - [Units and tolerances](spec/units-and-tolerances.md)

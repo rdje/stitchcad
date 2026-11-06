@@ -37,6 +37,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "sc-constraints"
+version = "0.1.0"
+
+[[package]]
 name = "sc-core"
 version = "0.1.0"
 dependencies = [

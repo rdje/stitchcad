@@ -953,7 +953,7 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Verification: `pending`
   Commit: `pending`
 - ID: `G1-SLICE.8`
-  Status: `pending`
+  Status: `done`
   Goal: `sc-constraints` kernel (§6.1/§6.2) — typed constraint AST, finite-domain propagation +
   search with declared variable/value ordering, the four distinguished outcomes (satisfied /
   proven-unsatisfiable / unknown / numerically-failed), and the non-default `csp-z3` differential
@@ -961,8 +961,21 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Acceptance: determinism proven by repeated runs over the same input (fixed search order, no
   randomness, no wall-clock); `cargo build --features csp-z3` is a CI-only path and the default
   release artifact contains no Z3 dependency (verified by a dependency census).
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-constraints/**,docs/book/src/spec/constraints.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,
+  docs/book/src/topic-index.md,Cargo.lock,Makefile,.github/workflows/rust.yml,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
+  Scope:the engine. G4-PROFILES.2/.3/.4 add profile files,production solving over profiles and the campaign at scale,and call this kernel.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY the browser run needs one CSP constraint and §6.1 requires a deterministic solver. WHERE no such crate;git ls-files crates/sc-constraints | wc -l →0,rc=0.
+  - [x] ADDRESSED:cargo test -p sc-constraints →14 contract,4 doctests,1 differential over 4000 seeds,rc=0. Outcome compared across repeated solves per seed;search uses no randomness or clock.
+  - [x] ADDRESSED:cargo tree -p sc-constraints -e all --prefix none →the crate alone,rc=0;cargo clippy --all-targets --all-features -D warnings rc=0;cargo build wasm32 rc=0;cargo fmt --check rc=0.
+  - [x] NO REGRESSION:BOOK-CENSUSES rc=0;gauge 18 of 66 unchanged,since no clause is met by a library alone. No other crate changed:git diff --stat -- crates/sc-core crates/sc-units crates/sc-measure empty.
+  - [x] ONE-TIME,NOT WATCHED:mutants.py on these sources,differing only in the chapter path →19 of 19 plausible solver bugs red. It did not stay in the tree.
+  - [ ] DEFERRED:the Z3 oracle compiled and never ran. Local use was refused by the harness safety check,not worked around. Owner G1-SLICE.8.z3-first-run.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-0986.
+- ID: `G1-SLICE.8.z3-first-run`
+  Status: `pending`
+  Goal:observe the csp-z3 job at the next push and fix any divergence;then remove the chapter's has-not-run-yet paragraph.
+  Acceptance:hosted rust job's Z3 step green on the exact SHA,or each divergence logged and fixed.
 - ID: `G1-SLICE.9`
   Status: `pending`
   Goal: `sc-api` + `sc-mcp` (§7.8, §10) — versioned experimental command API over jsonrpsee

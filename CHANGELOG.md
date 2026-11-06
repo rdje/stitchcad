@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0986 — the constraint kernel:typed rules and a deterministic solver
+
+`sc-constraints` answers which values fit a profile's rules,or names the facts and rules in conflict,in sentences,with no dependencies,on native and in the browser build.
+4000 seeded problems agree with plain enumeration. The Z3 comparison compiles and has not run;its first run is the next push. No exit clause is met by a library alone.
+
 ## STITCHCAD-G1-0985 — six G0 clauses now check what they ask (D392)
 
 Six clauses counted as met if a file existed or held one phrase. Each now checks its substance,reading the roadmap where it lists what is

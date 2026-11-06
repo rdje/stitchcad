@@ -1,6 +1,6 @@
 # What you can use today
 
-StitchCAD currently provides three Rust libraries. They implement numerical and structural
+StitchCAD currently provides four Rust libraries. They implement numerical and structural
 foundations; they do not yet generate a garment pattern or provide an end-user application.
 G0 contract review is mostly complete with human closure unapproved. G1 remains in progress.
 
@@ -46,11 +46,11 @@ G1 is the earliest open gate. This is where each of its seven clauses stands:
 | Clause | What the roadmap asks | Met | Where it stands | Owning leaf |
 | --- | --- | --- | --- | --- |
 | `G1-01` | Three runtime profiles compile | not met | The libraries build for the browser target; the named profiles do not exist yet | `.11` |
-| `G1-02` | A real browser run: load, evaluate a recipe, one CSP constraint, save and reopen, render, export | not met | Only evaluate works, for scalar recipes, with numeric checks on one native and browser pair | `.12` |
+| `G1-02` | A real browser run: load, evaluate a recipe, one CSP constraint, save and reopen, render, export | not met | Evaluate works for scalar recipes, with numeric checks on one native and browser pair. A constraint solves as a library, and no browser run calls it yet | `.12` |
 | `G1-03` | Canvas-hosting spike for ADR-0002 | not met | Not started | `.13` |
 | `G1-04` | Command bus with revision checks and undo | not met | Working as a library; no real path drives it yet | `.6` |
 | `G1-05` | Crash-consistent save and recovery | not met | No code yet | `.7` |
-| `G1-06` | License-compatible solver builds on all targets | not met | No solver code yet | `.15` |
+| `G1-06` | License-compatible solver builds on all targets | not met | [The kernel](spec/constraints.md) builds natively and for the browser with no dependencies. The license census and the named profiles are still to come | `.15` |
 | `G1-07` | Browser capability matrix with tested versions and limitations | not met | Not started | `.12` |
 
 Drafting the reference skirt itself is the G2 gate. It needs the geometry kernel and drafting execution,
@@ -66,8 +66,8 @@ checks stay and keep passing.
 
 A feature means the roadmap's next requirement, built by its existing task-tree owner to the contract
 this book gives, with this table and the book's examples changing in the same commit. It refuses what it
-does not support yet with a plain error. The next one is the constraint kernel, `.8`, which the browser
-run needs, followed by the project store, `.7`.
+does not support yet with a plain error. The constraint kernel, `.8`, is done. The next one is the project
+store, `.7`.
 
 ## Implemented foundations
 
@@ -76,6 +76,7 @@ run needs, followed by the project store, `.7`.
 | sc-units | Fixed-point units, explicit conversions, rounding and typed tolerances/errors |
 | sc-core | Identities/references, profile pins, structural garment/[Material](spec/material-inputs.md) metadata, physical copies, owned inputs/parameters/recipe source, formula syntax/normalization/identity/static proofs, numeric/read APIs and typed requests/authorization |
 | sc-measure | Owned measurement/table/Ease records, membership/axes/breaks, garment/MTM inputs and immutable profile intent |
+| sc-constraints | [Typed profile constraints and a deterministic solver](spec/constraints.md): which values fit, or which facts and rules conflict |
 
 These APIs can inspect authored content and refuse invalid current references. Unknown/derived scalar
 inputs refuse numeric fallbacks. Some complete structural inventories can still contain unresolved
