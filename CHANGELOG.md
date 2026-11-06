@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0997 — sc-geometry:the 2D kernel,with exact predicates
+
+Lines,arcs and cubic Béziers in whole micrometres. Orientation and crossings are exact,so a near tie cannot flip,and each is compared with arbitrary precision over hundreds of thousands of seeds. Boundaries close exactly,and report winding and self-crossings. NURBS is refused by name. Offsets come next.
+
 ## STITCHCAD-G1-0996 — the G1 exit review passes;the frontier moves to G2
 
 The review ran every clause's check and printed 7 met,0 not met. Each clause keeps its stated limits,and the director's closure stays open,because the review's author cannot approve it. Work now moves to the geometry kernel.

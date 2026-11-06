@@ -1189,7 +1189,7 @@ D382–D386 fixed0970–0975;[whole records](PLANNING-evidence.md#d382--changelo
 
 D387–D388 decided/fixed0977–0978;[whole records](PLANNING-evidence.md#d387--no-census-watches-distance-to-the-gate). D390 fixed0980;[whole record](PLANNING-evidence.md#d390--checks-outlived-what-they-watch). D391 fixed0981;[whole record](PLANNING-evidence.md#d391--one-look-blamed-a-passing-reader).
 
-D392 fixed0985;[record](PLANNING-evidence.md#d392--weak-g0-checks). D393 fixed0989;[record](PLANNING-evidence.md#d393--recorded-a-pass-from-a-tail-line).
+D392 fixed0985;[record](PLANNING-evidence.md#d392--weak-g0-checks). D393 fixed0989;[record](PLANNING-evidence.md#d393--recorded-a-pass-from-a-tail-line). D394 fixed0997;[record](PLANNING-evidence.md#d394--the-frontier-pointer).
 
 ## D389 — worked-examples status line was stale
 

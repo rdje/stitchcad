@@ -902,7 +902,9 @@ def continuity_refusals():
         frontier = re.search(r'^- Next ([A-Za-z0-9_.-]+)', (ROOT / 'MEMORY.md').read_text(), re.M)[1]
         suffix = frontier[len(frontier.split('.', 1)[0]):]
         anchor = '`' + suffix + '`'
-        assert index.count(anchor) == 1
+        # Only the frontier family's row: another family's frontier may share this suffix, as every gate's `.1` does.
+        family_row = next(line for line in index.splitlines() if line.startswith('| [`' + frontier.split('.', 1)[0] + '`]'))
+        assert family_row.count(anchor) == 1
         cases = [
             (record, lambda data: data + b'corrupt', 'fixture sealed record changed'),
             (prior, lambda data: data + b'corrupt', ('fixture prior archive bytes changed', prior)),
@@ -912,7 +914,7 @@ def continuity_refusals():
             *[(tree, lambda data, mode=mode: nodes(data, mode), reason) for mode, reason in (
                 ('remove', 'fixture predecessor task graph changed'), ('reorder', 'fixture predecessor task graph changed'),
                 ('duplicate', 'fixture duplicate task node'))],
-            ('docs/TASK_TREE.md', lambda data: data.replace(anchor.encode(), ('`' + suffix + '.fault`').encode(), 1),
+            ('docs/TASK_TREE.md', lambda data: data.replace(family_row.encode(), family_row.replace(anchor, '`' + suffix + '.fault`', 1).encode(), 1),
              'fixture next frontier pointers disagree'),
         ]
         for path, change, reason in cases:

@@ -70,6 +70,7 @@
   - [Command line](spec/command-line.md)
   - [Runtime profiles](spec/runtime-profiles.md)
   - [Browser capabilities](spec/browser-capabilities.md)
+  - [Geometry kernel](spec/geometry.md)
   - [Viewport](spec/viewport.md)
   - [Canvas hosting](spec/canvas-hosting.md)
 - [Formula syntax API](annexes/formula-syntax.md)

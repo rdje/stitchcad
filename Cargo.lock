@@ -60,6 +60,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "sc-geometry"
+version = "0.1.0"
+dependencies = [
+ "num-bigint",
+]
+
+[[package]]
 name = "sc-measure"
 version = "0.1.0"
 dependencies = [

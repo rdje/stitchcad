@@ -8,6 +8,7 @@ Makefile	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract
 crates/sc-cli/Cargo.toml	platform	G1-SLICE.10	Declarative public build/output contract; destination audit pending.
 crates/sc-constraints/Cargo.toml	platform	G1-SLICE.8	Declarative public build/output contract; destination audit pending.
 crates/sc-core/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+crates/sc-geometry/Cargo.toml	platform	G2-2D.1	Declarative public build/output contract; destination audit pending.
 crates/sc-measure/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 crates/sc-store/Cargo.toml	platform	G1-SLICE.7.engine	Declarative public build/output contract; destination audit pending.
 crates/sc-units/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.

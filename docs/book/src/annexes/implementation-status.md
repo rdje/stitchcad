@@ -10,6 +10,7 @@ requires the named contracts and later proof owners.
 | --- | --- | --- | --- |
 | Owned source metadata | §3.1/§4.4; G1 | sc-core/sc-measure; G1-SLICE.6.4.2.d.4.3 | [Actual sources and exact set pins](../spec/design-inputs.md); focused ownership checks; full Design follows |
 | Canvas hosting | §5; G1 | spikes/canvas-host; G1-SLICE.13 | [The measurement and the verdict](../spec/canvas-hosting.md), for macOS only |
+| Geometry kernel | §4.2; G2 | sc-geometry; G2-2D.1 | [Curves, exact predicates and boundaries](../spec/geometry.md); offsets come next |
 | Viewport math | §7.3; G1 | sc-viewport; G1-SLICE.13.viewport | [Coordinates, picking and snapping](../spec/viewport.md); no renderer yet |
 | Browser run | §7.3; G1 | sc-viewer; G1-SLICE.12 | [The capability matrix and what ran](../spec/browser-capabilities.md) |
 | Runtime profiles | §7.3; G1 | sc-viewer; G1-SLICE.11 | [Three profiles and what each leaves out](../spec/runtime-profiles.md) |

@@ -1,6 +1,6 @@
 # What you can use today
 
-StitchCAD currently provides six Rust libraries and [a headless command line](spec/command-line.md). They
+StitchCAD currently provides seven Rust libraries and [a headless command line](spec/command-line.md). They
 implement numerical and structural foundations; they do not yet generate a garment pattern or provide an
 end-user application.
 G0 contract review is mostly complete, and G1's seven exit clauses are met with stated limits. Human closure of both is
@@ -51,7 +51,7 @@ G2 is the earliest open gate: the first correct pattern. None of it exists yet, 
 | `G2-02` | A minimal 2D viewer and editor over the same commands | not met | [The canvas verdict](spec/canvas-hosting.md) says what to draw with. No shell exists | `G2-2D.9` |
 | `G2-03` | Canonical DXF and a dimensionally correct PDF | not met | No writer exists | `G2-2D.5` |
 | `G2-04` | A printed scale square verified on paper | not met | Needs a person to measure one, after the exporter and its checks exist | `G2-2D.7` |
-| `G2-05` | Offsets pass the pathology corpus | not met | No offset engine exists | `G2-2D.3` |
+| `G2-05` | Offsets pass the pathology corpus | not met | [The geometry kernel](spec/geometry.md) exists. The offset engine and its corpus come next | `G2-2D.3` |
 | `G2-06` | Native save and load preserve semantics | not met | [The store](spec/project-store.md) is crash-consistent and holds inputs and a recipe, not pieces | `G2-2D.10` |
 | `G2-07` | Mutation tests fail for the right reasons | not met | Not started | `G2-2D.11` |
 | `G2-08` | An agent given only MCP and the docs produces a semantically equal instance | not met | No MCP exists | `G2-2D.13` |
@@ -85,7 +85,8 @@ A feature means the roadmap's next requirement, built by its existing task-tree 
 this book gives, with this table and the book's examples changing in the same commit. It refuses what it
 does not support yet with a plain error. The constraint kernel `.8`, the project store `.7`, the headless
 command line `.10`, the runtime profiles `.11`, the license census `.15`, the browser run `.12` and the canvas spike `.13`
-are done, and the G1 exit review `.16` passed. The next one is the geometry kernel, `G2-2D.1`.
+are done, and the G1 exit review `.16` passed. The geometry kernel, `G2-2D.1`, is done. The next one is the offset
+engine, `G2-2D.2`.
 
 ## Implemented foundations
 
@@ -95,6 +96,7 @@ are done, and the G1 exit review `.16` passed. The next one is the geometry kern
 | sc-core | Identities/references, profile pins, structural garment/[Material](spec/material-inputs.md) metadata, physical copies, owned inputs/parameters/recipe source, formula syntax/normalization/identity/static proofs, numeric/read APIs and typed requests/authorization |
 | sc-measure | Owned measurement/table/Ease records, membership/axes/breaks, garment/MTM inputs and immutable profile intent |
 | sc-constraints | [Typed profile constraints and a deterministic solver](spec/constraints.md): which values fit, or which facts and rules conflict |
+| sc-geometry | [Lines, arcs and cubic Béziers with exact predicates](spec/geometry.md): closure, winding and self-crossings, with no offsets yet |
 | sc-viewport | [Exact screen and world coordinates, picking and snapping](spec/viewport.md), independent of any renderer |
 | sc-store | [Projects saved as crash-consistent commits of canonical text](spec/project-store.md), with migrations and autosave, on a directory or in memory |
 

@@ -176,6 +176,11 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D394 — the frontier pointer
+
+python_cleanup_fixture_contract.py reads MEMORY.md's `- Next` line. From 0987 to 0996 I wrote it with a trailing period,which the pattern captures,so the pointer disagreed with the tree and the contract would have failed at the next push.
+Fixed by writing a comma,the form the line had before. The same contract also required the frontier's `.1` to appear once in the task index,true only while the frontier was a G1 leaf;it now reads the frontier family's own row. Found when I ran it for G2's first leaf,rc=1 before,rc=0 after.
+
 ## D393 — recorded a pass from a tail line
 
 0988's leaf said strict clippy rc=0. It had failed:one is_multiple_of lint in tests/project_kill.rs. My command piped clippy through tail -1,which showed a line about the
