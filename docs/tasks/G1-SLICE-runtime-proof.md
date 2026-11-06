@@ -574,12 +574,17 @@ or `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part195
 The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
 
 - ID: `G1-SLICE.5f.2.prepush-400`
-  Status: `in_progress`
+  Status: `done`
   Goal:at the derived cadence,run full make check/gate/wasm/probes from one clean commit,then push
   this project's main normally and observe the exact SHA's hosted jobs and steps.
   Plan:two Cargo workers;log the RAM trend and flag a sustained rise above90%. Logs stay under
   target/prepush-0967/. A refusal gets its own child leaf and fresh full gates from the repair commit.
   Deferred semantic acceptance(.5f.2.check/.verify and G1 integration) is not claimed by this gate.
+  - [x] LOCAL:fmt,clippy,test,wasm rc=0 at8620b30b,crates unchanged through224a9805;gate rc=0 peak59.6;probes29 suites rc=0 peak85.96 at224a9805. No SITUATION line.
+  - [x] PUSH:git push origin main 79bd6f6a..224a9805 rc=0;origin/main equals HEAD. 418 commits.
+  - [x] HOSTED:224a9805 run42272745421 doctrines success,run42272745576 rust success;every step of both jobs success,including Linux BOOK-CENSUSES and Test.
+  - [x] DISCLOSED:0979 changed prose,no code fence,in a compiled chapter. Hosted Test is the first full run over it and passed.
+  Commit:STITCHCAD-G1-0982.
 - ID: `G1-SLICE.5f.2.cleanup-20261106`
   Status: `done`
   Goal:the overdue daily cleanup through the guarded tool,after probes and before fresh repair gates.

@@ -127,3 +127,55 @@ and pointed feature work back at its sources:
 Unchanged: the doctrine hooks, task tree, book synchronization, one focused check per feature, and the
 400-commit full gate. Existing checks keep passing; this holds new input-check work, not the gates.
 
+## Director ruling — 2026-11-06: stay on the roadmap
+
+The director's words, verbatim:
+
+> Once we settle on the roadmap yoy'll then need to always make sure that, that roadmap, the codebase and
+> the mdbook always stay in sync, in lockstep!!
+
+> Look, you have the original roadmap. Not sure why you drift away and worked on 650 commits for almost
+> nothing, right ? What can I say. Do whatever you can to come back on track.
+>
+> You have to handle this yourself with a sota, signoff and production-grade mindset "- Measuring the
+> printed pattern on paper for G2.
+> - Getting evaluation seats on commercial CAD. G0 warns these take months, and I'll check where that
+> stands after the probes."
+>
+> Before we reach G7, we need to prove G0-6 are worth the review. We need to be really close to a finished
+> product.
+>
+> From now on, please stay on track. If you need more enforcement, build them but we definitely need to
+> stick to the plan, the roadmap.
+>
+> Can you do this ?
+
+> I can't have access to "Getting evaluation seats on commercial CAD".
+
+> So we will have to implement STITCAD without that! that's just another constraint
+
+> Regarding "What this costs: without a seat, nothing can show that commercial CAD systems open our files,
+> so StitchCAD can't claim that. Factories use those systems, so this will be the biggest gap left at G7,
+> and I won't play it down.", you drifted from the roadmap for 650 commits, so right now commercial CAD is
+> not out biggest concern. We are not their yet. First let's implement all the things described in out
+> roadmap first, we will worry about a commercial CAD when the project will be feature complete.
+
+> Please stay focus until we complete G6. G0 -> G1 -> G2 -> G3 -> G4 -> G5 -> G6. Not sure things will be
+> executed in this order though.
+
+How this applies:
+
+- The plan is `ROADMAP.md`, its task-tree counterpart and the book, at v0.4. No parallel plan exists.
+- Gates close in order. Every commit advances a named clause of the earliest open gate that needs it. Work
+  on a later gate starts early only when an earlier gate's clause depends on it, and the commit says so.
+  G7 and the V-tracks wait.
+- No commercial CAD seat is available. This is a fixed constraint. Commercial CAD is parked until StitchCAD
+  is feature complete; nothing is planned around it. G0's evaluation-seat clause stays open under the
+  2026-09-30 ruling, and G6's import-filter clause stays not met.
+- G2's printed-square clause stays not met until a person measures one. The exporter and its numeric and
+  independent-renderer checks come first, and one scan or photo is requested at the end of G2.
+- Enforcement exists to hold this. Whether a commit really advances the clause it names stays the author's
+  judgment, so the measure is exit clauses met, not commits or leaves.
+
+The bullets are the engineer's reading, given to the director on 2026-11-06.
+

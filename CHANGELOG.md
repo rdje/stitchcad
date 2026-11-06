@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0982 — the 400-commit gate closes;the director's roadmap ruling is recorded
+
+Local gates and all 29 probe suites passed,and 418 commits reached main at224a9805,with every hosted step green on that SHA.
+The ruling that work stays on the roadmap through G6,with commercial CAD parked,is recorded word for word. No product code changes.
+
 ## STITCHCAD-G1-0981 — the handoff census waits for a passing reader (D391)
 
 The census now blocks only on a process present on every look across about a minute;a terminal's status-bar read no longer fails a
