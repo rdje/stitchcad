@@ -693,3 +693,7 @@ Then `.13` canvas spike,`.14` dev shell,`.9` API and MCP,`.16` exit review. `.6`
   Goal:D388 retire 0977's six parallel leaves;they restated .5f.3b,.8,.7,.12,.10 and .11 with weaker acceptance. Each returns to its owner.
   Also corrects availability's exit table to the roadmap's seven clauses and records the ruling in the roadmap's clarifications.
   Commit:STITCHCAD-G1-0978.
+- ID: `G1-SLICE.thin-path.book-hold`
+  Status: `done`
+  Goal:semantic-recipes' three planned-binder sentences called held work next;they now state the hold. D389 logged for examples.md.
+  Commit:STITCHCAD-G1-0979.

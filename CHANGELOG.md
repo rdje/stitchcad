@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0979 — state the input-check hold in the semantic recipe chapter (D389)
+
+Three sentences still called held binder work the next implementation;they now state the hold. Prose only,no code fence moved.
+D389 logs the worked-examples status line,which no product test has settled either way.
+
 ## STITCHCAD-G1-0978 — return feature work to the roadmap's owners (D388)
 
 Director 2026-11-06 adopted the feature characterization and pointed it back at the roadmap,task tree and book.

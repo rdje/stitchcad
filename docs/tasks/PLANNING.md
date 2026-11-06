@@ -1190,3 +1190,9 @@ D381 fixed0966;[whole record](PLANNING-evidence.md#d381--dependency-plan-probe-i
 D382–D386 fixed0970–0975;[whole records](PLANNING-evidence.md#d382--changelog-pointer-rule-outlived-the-live-index).
 
 D387–D388 decided/fixed0977–0978;[whole records](PLANNING-evidence.md#d387--no-census-watches-distance-to-the-gate).
+
+## D389 — worked-examples status line is unproven
+
+Owner:G1-SLICE.5g.1;P2. spec/formula-language/examples.md says the libraries do not compute its Value column,yet scalar recipe
+execution exists. git grep front_dart_centre crates/sc-core/tests →0,so no product test has run those bindings either way.
+Settle it by running the chapter's scalar bindings;the geometry rows zip_notch_param and dart_apex_depth stay with G2 geometry.

@@ -1556,7 +1556,7 @@ Buttonhole length,G4 truth and execution remain separate. Coupled verification s
 ## Whole semantic consumer binding contract (planned)
 
 The source primitives above are implemented with focused checks. The aggregate semantic consumer
-binder described here is **planned**. This contract owns the next implementation slices;it grants
+binder described here is **planned**. This contract is on hold under the director's 2026-11-06 input-check ruling and resumes when a feature or feedback needs it;it grants
 no new public proof,selected logical value,whole-program acceptance or physical execution.
 Roadmap §2 requires replayable recipe semantics and explicit uncertainty;§8.2 makes dependency
 closure specific to the requested artifact. Complete static checking preserves all occurrences
@@ -2424,7 +2424,7 @@ owned by `.5f.2.check` and `.verify` after the agreed feature set is implemented
 This proof checks direct keys and required direct selections. It accepts no actual source,
 canonical member,rule body,Profile value,native target-internal need or complete semantic cohort.
 Deferred context rows still require authentic family need and final unused-row checks. Logical,
-garment,native and final cohort binders remain the next implementation stages.
+garment,native and final cohort binders remain planned and are on hold under the same ruling.
 
 ### Genuine numeric target membership before semantic composition
 
@@ -3933,7 +3933,7 @@ positive hole length or geometric truth is produced by this source association.
 
 ## Planned bounded Closure placement references
 
-This is the execution contract for the next implementation, not an available validation API.
+This is the execution contract for a later implementation, not an available validation API. It is on hold under the director's 2026-11-06 input-check ruling and resumes when a feature or feedback needs it.
 The source stage above currently stops before anchor or full-direction resolution. The owner is
 `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references`.
 
