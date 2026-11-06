@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1000 — the DXF writer,for the one named target
+
+`write_dxf` writes `dxf-aama-named`:R12,named layers,polylines only,one block per piece,with a complete record that states what the named layers lose. No file holds a date. Nothing but a reader in this repository has read one,and no CAD system has opened one.
+
 ## STITCHCAD-G1-0999 — the canonicalizer:one written form for a drawn pattern
 
 `sc-artifacts` holds a pattern in one byte form,with no clock in it,and compares two by meaning first,so a reformat reads as formatting and a moved notch names its piece and field. A frozen golden pins the bytes. DXF and PDF come next and read this form.

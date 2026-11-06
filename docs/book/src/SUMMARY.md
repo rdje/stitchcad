@@ -73,6 +73,7 @@
   - [Geometry kernel](spec/geometry.md)
   - [Seam allowances and offsets](spec/offsets.md)
   - [Canonical artifacts](spec/canonical-artifacts.md)
+  - [DXF output](spec/dxf-output.md)
   - [Viewport](spec/viewport.md)
   - [Canvas hosting](spec/canvas-hosting.md)
 - [Formula syntax API](annexes/formula-syntax.md)
