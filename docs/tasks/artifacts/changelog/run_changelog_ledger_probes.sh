@@ -309,7 +309,7 @@ else bad COVERAGE-RED "the actual coverage mutation was not the sole refusal" "$
 
 # ---------------------------------------------------------------- POINTER has teeth
 D="$WORK/pointer"; mkroot "$D"
-sed 's/#stitchcad-changelog-part1md/#stitchcad-changelog-partXmd/g' "$ROOT/CHANGELOG.md" > "$D/CHANGELOG.md"
+grep -v 'stitchcad-devnotes-part954.md' "$ROOT/CHANGELOG.md" > "$D/CHANGELOG.md"
 arm POINTER-RED POINTER "$D" "$REAL_ORDER" "$DEFAULT_EXEMPT"
 
 echo

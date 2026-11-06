@@ -589,6 +589,18 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] LOCKSTEP:record overwritten;README/LIVE/book reviewed unchanged,G1still6/18 In Progress.
   promotion: declined (no new lesson;guarded procedure unchanged).
   Commit:STITCHCAD-G1-0969.
+- ID: `G1-SLICE.5f.2.prepush-400.ledger-pointer`
+  Status: `done`
+  Goal:fix D382;restore the live route to the sealed changelog index and the rule that proves it.
+  Paths:docs/tasks/artifacts/changelog/changelog_pointers.py;docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh;CHANGELOG.md.
+  - [x] REPRODUCE / ISSUE:make probes at d688014b →REAL POINTER FAIL,all segments unpointed;COVERAGE-RED not sole refusal,rc=1. Other arms green.
+  - [x] ROOT CAUSE (WHY + WHERE):git show fa49b82c -- CHANGELOG.md →index rows deleted,rc=0;0779 retired them into record954 while changelog_pointers.py still read only live rows,and only make probes runs this.
+  - [x] FIX:live table row links record954;the rule follows that one declared record through the same parser. Any other linked record confers nothing. POINTER-RED now removes that row.
+  - [x] ADDRESSED:run_changelog_ledger_probes.sh →11 pass/0 fail,17 pointer contracts,rc=0. Independent grep of list vs read 954 →306=306,diff rc=0.
+  - [x] NO REGRESSION:ledger_pointer_mutations.py →5 actual reds incl. sealed index not followed,bytes restored,rc=0. producer_census_contract.py →116 effects/257 files,rc=0.
+  - [x] LOCKSTEP:book archive reader,DEV_NOTES,changelog,D382 and LIVE defect row align;README reviewed unchanged,G1still6/18 In Progress.
+  promotion: declined (lesson is in DEV_NOTES;recurrence guard is owned by .api-declarations).
+  Commit:STITCHCAD-G1-0970.
 - ID: `G1-SLICE.5f.2.prepush-400.ram-observe`
   Status: `done`
   Goal:adopt the director's 2026-11-06 RAM rule in the tool,book and records during the gate.

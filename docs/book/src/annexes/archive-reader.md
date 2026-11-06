@@ -473,6 +473,12 @@ body and public-reader readback verify retention for the committed shortened nav
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md
 ```
 
+The live `CHANGELOG.md` keeps one table row linking that record, and the ledger's POINTER rule follows
+that one declared record through the same parser it uses for live rows. Every sealed changelog part
+must be named and every named part must exist. Linking any other record confers no pointers, so a
+lesson link cannot stand in for the index, and removing the row refuses. A later rollover that moves
+the index must move this declaration with it.
+
 
 Part1093 retains complete closed original recipe-factory and acceptance protocols,original early
 bootstrap acceptance,recent Pocket/Closure relation plans and proofs,and the complete committed

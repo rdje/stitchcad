@@ -3,6 +3,15 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+| Sealed index | Retrieval |
+| --- | --- |
+| [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
+
+## STITCHCAD-G1-0970 — restore the sealed changelog index route (D382)
+
+The live changelog links record954 again and the POINTER rule follows only that record. Ledger probes11/0,
+17 pointer contracts and5 mutation reds pass;306 parts match by independent grep. Other pre-push repairs follow.
+
 ## STITCHCAD-G1-0969 — run the overdue daily artifact cleanup
 
 Guarded cleanup removed182 regenerable paths,374871872B,with zero residue and all2254 skipped paths intact.

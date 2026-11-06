@@ -1185,8 +1185,10 @@ D379 fixed0826;[whole source identity cause/proofs](../history/window30.md#stitc
 
 D380 fixed0964;[whole record](PLANNING-evidence.md#d380--cache-inclusive-occupancy-mistaken-for-used-ram).
 
-## D381 — dependency-plan probe inherited ambient Rust stores
+D381 fixed0966;[whole record](PLANNING-evidence.md#d381--dependency-plan-probe-inherited-ambient-rust-stores).
 
-Owner:G1-SLICE.5b.4c.h2.b.p.inventory-reconcile;P1 before push. plan_sources.py passed ambient CARGO_HOME/RUSTUP_HOME
-to Cargo when run without the launcher;only its scratch was guarded. Fixed0966:shared enter_producer before reads/children.
-Fake-Cargo capture now receives target/cargo-home;linked output refuses rc=2;real probe rc=0. D156 runtime signoff stays open.
+## D382 — changelog pointer rule outlived the live index
+
+Owner:G1-SLICE.5f.2.prepush-400.ledger-pointer;P1 before push. 0779 moved the index into record954,but
+the POINTER rule kept reading live table rows only and stayed red until the next make probes. Fixed0970:a live row
+links record954 and the rule follows only that record;306 listed parts equal306 sealed rows by independent grep.

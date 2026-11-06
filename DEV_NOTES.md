@@ -2,6 +2,15 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-06 UTC)_ — D382: moving an index moves the rule's input
+
+0970 repairs a check that had been red since0779 without anyone seeing it. That slice retired the changelog's
+index into record954 to stay under its ceiling,and its book section said the live file pointed there;a later
+prose edit dropped the link,and the rule still read live rows. Only make probes runs that rule,so the failure
+waited for the next push. The new row is a real link,and the rule follows one declared record rather than any
+linked record,so an ordinary lesson link cannot satisfy it. Removing the row refuses,and a not-followed mutant
+goes red through a new contract case that an always-failing arm could not have distinguished.
+
 ## _(2026-11-06 UTC)_ — D381: an inventory row is not the producer guard
 
 0966 reconciles the producer census before the due push. 370 maintained sources had369 rows;8 effect and

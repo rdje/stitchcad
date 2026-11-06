@@ -103,6 +103,7 @@ CASES = [
     ('valid pointer plus invalid target', '| [Earlier](docs/history/window2.md#stitchcad-changelog-part24md) |\n| [%s](introduction.md) |\n' % record, False),
     ('fenced pseudo-index', '```markdown\n| [%s](docs/history/window2.md#stitchcad-changelog-part24md) |\n```\n' % record, False),
     ('commented pseudo-index', '<!--\n| [%s](docs/history/window2.md#stitchcad-changelog-part24md) |\n-->\n' % record, False),
+    ('sealed index names absent segments', '| [Earlier](docs/history/window2.md#stitchcad-changelog-part24md) |\n| [Sealed](docs/history/stitchcad-devnotes-part954.md) |\n', False),
 ]
 if '--mask-first' in sys.argv:
     CASES = [CASES[6]] + CASES[:6] + CASES[7:]

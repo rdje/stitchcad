@@ -25,6 +25,9 @@ CASES = [
     ('code fence mistaken for an index', helper, [
         ('if opening:', 'if False:'),
     ]),
+    ('sealed index not followed', helper, [
+        ('if name == SEALED_INDEX:', 'if False:'),
+    ]),
 ]
 PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
 CONTRACT = shell.with_name('ledger_pointer_contract.py')
@@ -50,7 +53,8 @@ SOURCES = (Path(__file__), shell, helper, CONTRACT, PROFILE_SOURCE,
            ROOT / 'scripts/history_archive.sh', ROOT / 'scripts/history_archive.py')
 FILES = tuple(WORK / ('mutation-%d.log' % index) for index in range(1, len(CASES) + 1))
 EXPECTED = ('catalog target, short label', 'missing catalog',
-            'valid changelog plus unknown lesson', 'fenced pseudo-index')
+            'valid changelog plus unknown lesson', 'fenced pseudo-index',
+            'sealed index names absent segments')
 
 
 def backing_inputs():
@@ -139,4 +143,4 @@ for path, content in original.items():
 environment = producer_plan()
 subprocess.run(['python3', '-I', '-B', 'docs/tasks/artifacts/changelog/ledger_pointer_contract.py'],
                cwd=ROOT, env=environment, check=True)
-print('ledger pointer mutations: four syntax-checked actual reds; sources restored byte-identically')
+print('ledger pointer mutations: %d syntax-checked actual reds; sources restored byte-identically' % len(CASES))
