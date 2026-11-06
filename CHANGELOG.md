@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0994 — sc-viewport:exact coordinates,picking and snapping
+
+The viewport math every renderer will share. Views are exact fractions,so 1,000 zoom round trips return to exactly the same view,and picks and snaps compare exact distances. G1-03 stays not met until the renderers are measured.
+
 ## STITCHCAD-G1-0993 — the browser run:six steps in real Chrome,equal to native;G1-02 and G1-07 are met
 
 Two Chrome processes load a project,evaluate a recipe,solve a constraint,save to IndexedDB,reopen,render and export,and every result equals the native program's. A fresh profile must fail,and does.

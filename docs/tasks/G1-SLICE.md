@@ -1104,6 +1104,15 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   `spike_rule.tsv` is what ships until a re-spike.
   Verification: `pending`
   Commit: `pending`
+- ID: `G1-SLICE.13.viewport`
+  Status: `done`
+  Goal:the part of `.13` every topology shares,and roadmap §4.3's sc-viewport:exact screen and world math,picking,snapping and ADR-0002's declared corpus.
+  Paths:crates/sc-viewport/**,Cargo.lock,Makefile,.github/workflows/rust.yml,docs/book/src/spec/viewport.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,docs/book/src/topic-index.md,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY the spike's correctness gates need answers no renderer can bend. WHERE no such crate;git ls-files crates/sc-viewport | wc -l →0,rc=0.
+  - [x] ADDRESSED:cargo test -p sc-viewport exit status →rc=0:200 of 200 picks and snaps name their declared entity,snaps checked again by brute force,half a pixel across the ladder,1000 round trips return exactly.
+  - [x] NO REGRESSION:clippy -p sc-viewport --all-targets -D warnings →rc=0;fmt →rc=0;wasm32 build →rc=0;BOOK-CENSUSES →rc=0;gauge unchanged,G1-03 not met.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-0994.
 - ID: `G1-SLICE.14`
   Status: `pending`
   Goal: the egui/iced dev shell for Stages 1–4 internal tools (ADR-0002's dev-shell ruling) —

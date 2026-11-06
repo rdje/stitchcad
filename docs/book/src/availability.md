@@ -1,6 +1,6 @@
 # What you can use today
 
-StitchCAD currently provides five Rust libraries and [a headless command line](spec/command-line.md). They
+StitchCAD currently provides six Rust libraries and [a headless command line](spec/command-line.md). They
 implement numerical and structural foundations; they do not yet generate a garment pattern or provide an
 end-user application.
 G0 contract review is mostly complete with human closure unapproved. G1 remains in progress.
@@ -48,7 +48,7 @@ G1 is the earliest open gate. This is where each of its seven clauses stands:
 | --- | --- | --- | --- | --- |
 | `G1-01` | Three runtime profiles compile | met | [All three build](spec/runtime-profiles.md), each with its own command. The headless one pulls in no viewport or GUI, and the browser artifact asks its host for nothing. Compiling is all this proves | `.11` |
 | `G1-02` | A real browser run: load, evaluate a recipe, one CSP constraint, save and reopen, render, export | met | [Real Chrome runs all six steps](spec/browser-capabilities.md) across two browser processes, and its results equal the native program's. The drawing is a schematic, because drafting is G2 | `.12` |
-| `G1-03` | Canvas-hosting spike for ADR-0002 | not met | Not started | `.13` |
+| `G1-03` | Canvas-hosting spike for ADR-0002 | not met | [The viewport math it measures against](spec/viewport.md) is done. The renderers and the measurements are under way | `.13` |
 | `G1-04` | Command bus with revision checks and undo | met | [The command line](spec/command-line.md) drives it for real: measurement edits, a refused stale revision, undo and redo. The bus's other commands are still library only | `.6` |
 | `G1-05` | Crash-consistent save and recovery | met | [A project](spec/project-store.md) survives a crash at every step of a save, a migration and an autosave, and a killed process, on a real directory. Power loss is not tested, and the browser side comes with the browser run | `.7` |
 | `G1-06` | License-compatible solver builds on all targets | met | [The kernel](spec/constraints.md) builds natively and for the browser with no dependencies, and is in the headless and browser profiles. [The license census](build-and-checks.md#the-license-census) finds no copyleft. Windows is not built anywhere yet | `.15` |
@@ -79,6 +79,7 @@ next one is the canvas-hosting spike, `.13`.
 | sc-core | Identities/references, profile pins, structural garment/[Material](spec/material-inputs.md) metadata, physical copies, owned inputs/parameters/recipe source, formula syntax/normalization/identity/static proofs, numeric/read APIs and typed requests/authorization |
 | sc-measure | Owned measurement/table/Ease records, membership/axes/breaks, garment/MTM inputs and immutable profile intent |
 | sc-constraints | [Typed profile constraints and a deterministic solver](spec/constraints.md): which values fit, or which facts and rules conflict |
+| sc-viewport | [Exact screen and world coordinates, picking and snapping](spec/viewport.md), independent of any renderer |
 | sc-store | [Projects saved as crash-consistent commits of canonical text](spec/project-store.md), with migrations and autosave, on a directory or in memory |
 
 These APIs can inspect authored content and refuse invalid current references. Unknown/derived scalar

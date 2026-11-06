@@ -15,7 +15,7 @@ help:
 	@echo "make hooks           - install the git hooks (core.hooksPath=.githooks)"
 	@echo "make bootstrap       - first-time project bootstrap"
 	@echo "make update-scaffold - pull the latest bedrock spine (set URL=<bedrock-repo>)"
-	@echo "make wasm            - the wasm-viewer smoketest: build sc-units + sc-core + sc-measure + sc-constraints + sc-store for wasm32-unknown-unknown"
+	@echo "make wasm            - the wasm-viewer smoketest: build sc-units + sc-core + sc-measure + sc-constraints + sc-store + sc-viewport for wasm32-unknown-unknown"
 	@echo "make push-due        - has the 400-commit push cadence been reached?"
 	@echo "make probes          - run every probe suite under docs/tasks/artifacts/ (scratch on this volume)"
 
@@ -43,8 +43,8 @@ test:
 # clause is a real cross-compilation, not a host `cargo check`. Run this before claiming a crate is
 # browser-capable.
 wasm:
-	$(LOCAL_RUN) cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core -p sc-measure -p sc-constraints -p sc-store -p sc-viewer
-	@echo "wasm-viewer smoketest: sc-units + sc-core + sc-measure + sc-constraints + sc-store + sc-viewer build for wasm32-unknown-unknown"
+	$(LOCAL_RUN) cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core -p sc-measure -p sc-constraints -p sc-store -p sc-viewport -p sc-viewer
+	@echo "wasm-viewer smoketest: sc-units + sc-core + sc-measure + sc-constraints + sc-store + sc-viewport + sc-viewer build for wasm32-unknown-unknown"
 
 # ROADMAP.md §7.3: one command per runtime profile, and what each leaves out is in the book's runtime profiles chapter.
 profile-native-full:

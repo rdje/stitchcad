@@ -70,6 +70,7 @@
   - [Command line](spec/command-line.md)
   - [Runtime profiles](spec/runtime-profiles.md)
   - [Browser capabilities](spec/browser-capabilities.md)
+  - [Viewport](spec/viewport.md)
 - [Formula syntax API](annexes/formula-syntax.md)
   - [Canonical formula rational values](annexes/formula-rationals.md)
   - [Trig certificate feasibility](annexes/formula-trig-certificates.md)
