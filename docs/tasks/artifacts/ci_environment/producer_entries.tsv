@@ -244,6 +244,7 @@ scripts/check_memory_architecture.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell 
 scripts/check_no_background_jobs.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_push_due.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_readme_stability.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_roadmap_lock.sh	delegate	G1-SLICE.16.lock	Whole shell source/heredoc body retained;reads Git,runs named clause checks and writes nothing itself.
 scripts/check_routing_evidence.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_table_arity.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_table_code_pipes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.

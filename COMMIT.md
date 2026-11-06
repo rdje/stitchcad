@@ -96,6 +96,14 @@ apply to code changes.
 9. In the completion message, report: the commit ID, the exact commit message, the tracked
    files in the commit, the current `LIVE_STATUS.md` snapshot, and whether it changed.
 
+## Roadmap lock
+
+Every commit message carries `Clause: <row>` naming the exit clause it advances, from the tables in
+`docs/tasks/artifacts/g0_exit/`. A clause of a later gate than the earliest open one also needs
+`Depends: <open earlier row>`. `Clause: none` needs `Repair: Dnnn` or `Director: <date>`. When `crates/*/src`
+changes without the book, add `Book: none — <why>`. The `commit-msg` hook refuses anything else and hosted CI
+replays it; rules and examples are in `scripts/check_roadmap_lock.sh` and the book's build chapter.
+
 ## Pre-commit safety rules
 
 - Do not add `git_message_brief.txt` to git.
@@ -159,6 +167,8 @@ cat > git_message_brief.txt <<'EOF'
 
 - <brief bullet 1>
 - <brief bullet 2>
+
+Clause: <row>
 EOF
 
 # 2) run the focused check selected for this leaf (record invocation/result there)

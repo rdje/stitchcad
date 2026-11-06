@@ -43,7 +43,8 @@ The project slot currently registers five: `FRESH-ACCEPTANCE-EVIDENCE` (a staged
 ticked, evidence-backed acceptance boxes), `LIVE-DOC-SIZE` (classified documents respect their bounds;the director-exempt book has structural checks only) and `TABLE-CODE-PIPE` (no raw pipe inside a code span in a staged table row — a renderer splits the
 cell there and drops the rightmost one silently, which the inherited `TABLE-ARITY-RATCHET` cannot see because
 it treats a code span as protective; settled against a rendered page by `SPINE.15`, defect D22/D47).
-`BOOK-CENSUSES` runs the book's censuses at each commit.
+`BOOK-CENSUSES` runs the book's censuses at each commit. `ROADMAP-LOCK` (`scripts/check_roadmap_lock.sh`) runs from the
+`commit-msg` hook and hosted replay: a commit names the roadmap clause it advances, and roadmap, tree and book agree.
 `ARCHIVE-RETENTION` additionally verifies retained window bytes, complete logical membership and
 independent resident/decoded bounds; committed windows cannot change or disappear. The
 authoritative list is the registry inside `scripts/check_doctrines.project.sh`.

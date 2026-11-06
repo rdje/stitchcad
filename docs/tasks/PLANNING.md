@@ -1189,7 +1189,7 @@ D381 fixed0966;[whole record](PLANNING-evidence.md#d381--dependency-plan-probe-i
 
 D382–D386 fixed0970–0975;[whole records](PLANNING-evidence.md#d382--changelog-pointer-rule-outlived-the-live-index).
 
-D387–D388 decided/fixed0977–0978;[whole records](PLANNING-evidence.md#d387--no-census-watches-distance-to-the-gate). D390 fixed0980;[whole record](PLANNING-evidence.md#d390--checks-outlived-what-they-watch). D391 fixed0981;[whole record](PLANNING-evidence.md#d391--one-look-blamed-a-passing-reader).
+D387–D388 decided/fixed0977–0978;[whole records](PLANNING-evidence.md#d387--no-census-watches-distance-to-the-gate). D390 fixed0980;[whole record](PLANNING-evidence.md#d390--checks-outlived-what-they-watch). D391 fixed0981;[whole record](PLANNING-evidence.md#d391--one-look-blamed-a-passing-reader). D392 owned .16.g0-checks;[record](PLANNING-evidence.md#d392--weak-g0-checks).
 
 ## D389 — worked-examples status line is unproven
 

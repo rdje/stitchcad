@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0984 — commits must name the roadmap clause they advance
+
+The commit hook and hosted CI now refuse a commit with no clause,work on a later gate with no stated dependency,a held leaf,and a book or
+tree that disagrees with the clause tables. Fifty commits with no clause met stop until a report to the director says why.
+
 ## STITCHCAD-G1-0983 — the gauge counts exit clauses through G6
 
 `bash scripts/gauge.sh` closes each gate's clause rows against the roadmap's text and prints 18 of 66 clauses met,with G1 at 0 of 7.

@@ -7,6 +7,7 @@
 - [Working with agents](learn/agents-and-workflows.md)
 - [Made-to-measure input charts](spec/mtm-input-charts.md)
 - [What you can use today](availability.md)
+  - [Reports on distance to the product](distance-reports.md)
 - [Glossary](spec/glossary.md)
   - [Measurements, ease and sizes](spec/glossary/measurements-and-fit.md)
   - [The recipe and the piece](spec/glossary/recipe-and-pieces.md)

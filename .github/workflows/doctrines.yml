@@ -18,6 +18,12 @@ jobs:
         run: chmod +x scripts/*.sh knowledge-map/scripts/*.sh .githooks/pre-commit .githooks/commit-msg || true
       - name: Run the doctrine enforcer
         run: scripts/check_doctrines.sh
+      - name: Prove the roadmap lock's arms
+        run: bash scripts/check_roadmap_lock.sh --self-test
+      - name: Replay the roadmap lock over every commit since it landed
+        run: bash scripts/check_roadmap_lock.sh --replay
+      - name: Close every gate against the roadmap
+        run: bash scripts/gauge.sh
       - name: Verify project handoff census guards
         run: bash docs/tasks/artifacts/handoff/run_handoff_probes.sh
       - name: Verify exact seam oracle producers and gate guards

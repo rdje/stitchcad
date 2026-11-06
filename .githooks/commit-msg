@@ -22,4 +22,9 @@ if grep -v '^#' "$1" | grep -iEq "$AGENT_TRAILER_RE"; then
   echo "  A commit message ends with its own last line. Remove the trailer and commit again." >&2
   exit 1
 fi
+# ROADMAP-LOCK: the commit names the roadmap clause it advances (scripts/check_roadmap_lock.sh). A scaffold copy
+# without the script skips this; hosted CI replays the lock, so deleting the script here fails there.
+if [ -f scripts/check_roadmap_lock.sh ]; then
+  bash scripts/check_roadmap_lock.sh "$1" || exit 1
+fi
 exit 0

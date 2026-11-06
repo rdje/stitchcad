@@ -727,6 +727,19 @@ Then `.13` canvas spike,`.14` dev shell,`.9` API and MCP,`.16` exit review. `.6`
   - [x] NO REGRESSION:run_g0_exit_review_probes.sh →16 pass / 0 fail,rc=0,including G0's real 18/1/19 and GATE-DROPPED,GATE-GROWS,GATE-OWNER;G6 closure caught my draft missing a fragment.
   promotion: declined (no new lesson;recorded in the ruling).
   Commit:STITCHCAD-G1-0983.
+- ID: `G1-SLICE.16.lock`
+  Status: `done`
+  Goal:the director asked for enforcement that holds work to the roadmap. Refuse a commit that names no clause,or breaks agreement between roadmap,tree and book.
+  Paths:scripts/check_roadmap_lock.sh,.githooks/commit-msg,.github/workflows/doctrines.yml,.github/workflows/rust.yml,docs/tasks/artifacts/ci_environment/producer_entries.tsv,
+  docs/book/src/build-and-checks.md,docs/book/src/distance-reports.md,docs/book/src/SUMMARY.md,docs/book/src/topic-index.md,COMMIT.md,DOCTRINE_ENFORCEMENT.md.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY 650 commits took the next open leaf with no clause named. WHERE .githooks/commit-msg checked subject shape and trailers only;git grep -c Clause: .githooks/commit-msg →0,rc=1.
+  - [x] ADDRESSED:bash scripts/check_roadmap_lock.sh --self-test →46 arms,0 failed,rc=0. git commit with no clause →ROADMAP-LOCK clause,rc=1;nine message shapes on the staged tree,including held .5f.2.check,refused or passed as ruled.
+  - [x] NO REGRESSION:bash scripts/gauge.sh →18 of 66,rc=0;producer census →373 source entries,rc=0;BOOK-CENSUSES rc=0. First real hook run read an empty tree,from --cached after the pattern;fixed,and two real-tree arms now watch it. Whether a commit truly advances its clause stays judgment;the gauge shows that.
+  promotion: declined (no new lesson;recorded in the ruling).
+  Commit:STITCHCAD-G1-0984.
+- ID: `G1-SLICE.16.g0-checks`
+  Status: `pending`
+  Goal:D392. Each weak G0 row gets a check of what its clause asks,where such a check can exist.
 - ID: `G1-SLICE.thin-path`
   Status: `done`
   Goal:D388 retire 0977's six parallel leaves;they restated .5f.3b,.8,.7,.12,.10 and .11 with weaker acceptance. Each returns to its owner.

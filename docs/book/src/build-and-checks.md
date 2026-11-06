@@ -630,6 +630,48 @@ inside the glossary probes, which also refuse a lost gate registration:
 bash scripts/check_book_censuses.sh --self-test
 ```
 
+## Commits stay on the roadmap
+
+Every commit names the roadmap clause it advances. The director asked for this on 2026-11-06, after about
+650 commits took the next open task instead of the next clause. Each clause has an id in
+[the distance table](availability.md). The message carries one of these lines:
+
+```text
+Clause: G1-02                 the clause this commit advances
+Clause: G2-01                 a clause of a later gate, which also needs:
+Depends: G1-02                the open earlier clause that needs this work
+Clause: none                  no clause at all, which also needs one of:
+Repair: D392                  a logged defect this repairs
+Director: 2026-11-06          a recorded ruling this carries out
+```
+
+When Rust source under a crate's `src` directory changes and the book does not, the message must also say
+why, as `Book: none — a private rename`. A refusal names what is wrong:
+
+```text
+ROADMAP-LOCK: clause: no `Clause:` line. Name the row this advances, or `Clause: none` with `Repair: Dnnn` or `Director: <date>`
+ROADMAP-LOCK: clause: G2-01 belongs to G2 while G1 is the earliest open gate; a `Depends:` line must name the open earlier clause that needs it
+ROADMAP-LOCK: leaf: G1-SLICE.5f.2.check is `blocked`; the director's hold or its named blocker has to lift first
+ROADMAP-LOCK: book: clause G1-05 must state `met` in docs/book/src/availability.md
+ROADMAP-LOCK: flip: G1-05 only looks at files: test -f crates/sc-store/src/lib.rs
+ROADMAP-LOCK: stop: 50 commits since the last met clause or report. Record what stands in the way in docs/book/src/distance-reports.md, which the director reads, then continue
+```
+
+A clause counts as met only when its row's check runs and passes in the commit that claims it, and
+a check that only looks for a file or a word is refused. If 50 commits pass with no rise, the next one
+stops until [a report](distance-reports.md) says why. New leaves in a gate's tree may go no deeper than an
+owner and three levels below it.
+
+Hosted CI replays all of this over every commit since the lock landed, so skipping the local hook does not
+skip the rule. To see each rule fire:
+
+```bash
+bash scripts/check_roadmap_lock.sh --self-test
+```
+
+The lock cannot tell whether a commit really advances the clause it names. That stays the author's
+judgment, which is why the gauge counts clauses met rather than commits.
+
 ## Formula documentation currency
 
 The publication probes watch current scope in nine formula annexes against public expression,
@@ -653,6 +695,8 @@ Every API name and example name this chapter uses in code style, with its meanin
 
 | Name | Meaning |
 | --- | --- |
+| `blocked` | A task-tree leaf status: it cannot proceed until its named blocker or a hold lifts. |
+| `met` | An exit clause whose check runs a real product path and passes. |
 | `ExampleName` | Placeholder name used by the refusal example in this chapter. |
 | `above_flag_line` | `macos_memory.py` output field: true when the reading is at or above the 90% line. It stops nothing. |
 | `pressure_level` | `macos_memory.py` output field: the kernel's memory-pressure reading, reported as context only. |

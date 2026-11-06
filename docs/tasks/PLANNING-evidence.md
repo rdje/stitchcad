@@ -176,6 +176,12 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D392 — weak G0 checks
+
+Found 2026-11-06 reading the exit review while building the gauge. G0-04,05,06,08,13 and 17 pass on test -f or grep -q of one phrase,so
+a chapter could be emptied and its clause would stay met. Six of the 18 met clauses prove less than the count suggests. The review's own header discloses this;this entry owns the repair.
+Owner:G1-SLICE.16.g0-checks. Each row gets a check of what the clause asks,where such a check can exist.
+
 ## D391 — one look blamed a passing reader
 
 Owner:G1-SLICE.5f.2.prepush-400.census-patience. The handoff census took one snapshot,so iTerm's status-bar read of the checkout,or a
