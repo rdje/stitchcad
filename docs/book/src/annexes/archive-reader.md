@@ -490,3 +490,13 @@ retirement;older sealed records and fixed resource bounds remain unchanged.
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1093.md
 python3 -I -B docs/tasks/artifacts/history_archive/transition_receipts.py --record docs/history/stitchcad-devnotes-part1093.md
 ```
+
+Part1094 retains 67 closed formula, measurement and name task leaves whole, freeing 885 lines under
+the unchanged 20000-line task-collection ceiling. Each live leaf keeps its ID, status, `Paths:` and
+`Children:` fields with a link to the record, so nothing that parses the task tree changes. Its 43
+declared Git intervals decode to 93132 exact source bytes from `cda4e19c`.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1094.md
+python3 -I -B docs/tasks/artifacts/history_archive/transition_receipts.py --record docs/history/stitchcad-devnotes-part1094.md
+```

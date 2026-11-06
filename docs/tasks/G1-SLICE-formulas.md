@@ -13,27 +13,7 @@ exact committed text; the current frontier and verification/commit journal remai
 
 - ID: `G1-SLICE.5a.1`
   Status: `done`
-  Goal: borrowed ASCII lexical stream for the normative machine-form formula syntax; explicit
-  lexical kind, original text and byte span, with typed first-error refusal and fused termination.
-  Pre-code protocol: sc_core::recipe owns the syntax front-end. Immutable FormulaLexeme and
-  FormulaSourceSpan retain exact source text/positions; FormulaLexer scans borrowed input without
-  cloning names/numbers or interpreting values. Classify three keywords using one shared private
-  name-module classifier; preserve all existing MachineToken public constructor/error behavior.
-  ASCII preflight reports the first full offending Unicode scalar before producing tokens. General
-  ASCII whitespace is ignored between tokens but span gaps remain; the later parser enforces the
-  literal's exact single-space unit separator. Identifier spelling uses the same allocation-free
-  lower-snake predicate as MachineToken. Number tokens retain digits/optional nonempty fraction,
-  with no numeric conversion/rounding/implicit unit. Punctuation/operators include longest paired
-  comparisons; malformed identifiers, decimal fraction, lone ! and unsupported characters refuse.
-  After first error/end, iterator remains ended. Debug of lexer reveals scope/position, not source.
-  Lexical success certifies only tokens: adjacent atoms, comments assembled from slash operators,
-  unsupported calls/exponents/units, type/name errors and recipe bounds retain parser/checker owners.
-  Own native/WASM tests, borrowing/privacy docs, every current worked example's machine-token scan,
-  actual guard mutations, book/public-status map/index, canonical ADR clause-link fix D73, bounded
-  live/evidence seals and commit. No evaluation, canonical formula identity or app/MCP claimed.
-  Verification: 13 lexical contracts/two privacy-lifetime docs; nine actual assertion reds/exact restore;
-  454 strict native tests, WASM/book; publication nine, formula 15 and ledger nine probes green.
-  Commit: `STITCHCAD-G1-0037` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.1` — borrowed lexical syntax with explicit parser boundaries
 
@@ -70,29 +50,7 @@ exact committed text; the current frontier and verification/commit journal remai
 
 - ID: `G1-SLICE.5a.2a`
   Status: `done`
-  Goal: repair D75 reference-oracle traversal of all call arguments and conditional-depth refusal.
-  Reproduce: repo-local copied-book diagnostic replaces only dart_count's expression, keeping value 1;
-  abs(1 + 128 zero terms) has 258 semantic nodes and abs-wrapped 17-level if has depth 17. Both
-  `FORMULA_BOOK=target/formula-structural-diagnostic/<case>/src run_formula_language_census.sh`
-  return rc=0, measured seven nodes/zero depth, zero mismatches. Expression bounds falsely certify.
-  Pre-edit protocol: explicit child traversal includes call argument lists and every static if branch.
-  Count expression nodes/depth iteratively without recursive walker stack; grouping/exponent payloads
-  retain original semantic-node definition. Refuse max_if_depth with formula_domain before inference/
-  evaluation, measured depth and unchanged bound. Existing per-expression node refusal stays strict.
-  Add paired controls just below/at bounds and actual over-bound forms, including ifs inside ordinary
-  calls and untaken branches. Count/depth probes independently construct fixture sizes and verify exact
-  typed domain signatures, not failure on unrelated values/vocabulary/margins. Actual guard mutations
-  distinguish both child walkers and early depth refusal, restoring original bytes. Register durable
-  root-cause diagnostic/toolbox; update live/book/roadmap-owned limits and scope, retain lexer behavior.
-  D77 milestone prerequisite: sibling-owner census rejects a valid .md#fragment link as orphan;
-  recognize optional fragments without admitting different target names; add paired green/red probes.
-  D76 malformed reference names/unit gap is owned next by .2b.1 before product parser implementation.
-  This fixes the reference instrument, not the product evaluator or a declaration of G1 completion.
-  Preserve completed lexical contract/checklist exactly if main task health needs partition; roll live
-  ledgers at health without changing caps. Focused checks, full reference suite and commit before .2b.
-  Verification: 16 structural controls/refusals plus two copied-book refusals; four actual guard reds
-  and exact restoration; tree nine, reference language 15, full 25 suites green.
-  Commit: `STITCHCAD-G1-0038` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.2a` — complete reference structural bounds and owned evidence links
 
@@ -132,29 +90,7 @@ exact committed text; the current frontier and verification/commit journal remai
 
 - ID: `G1-SLICE.5a.2b.1`
   Status: `done`
-  Goal: fix D76 reference machine identifier/keyword-position and literal unit-gap parity before
-  using it as an independent product parser oracle; explicit pre-code protocol and mutation controls.
-  Pre-code protocol: repair the actual reference tokenizer/parser without changing language or Rust
-  behavior. Whole-source ASCII preflight precedes tokens; validate captured lower-snake words without
-  trimming/normalization. Keep let/assert/if recognized only in their grammar positions: no bare-name,
-  ordinary-call or declaration-name use. Share a private reference identifier check across those paths.
-  Retain original source positions through filtering; a numeric token immediately followed by a known
-  unit requires the exact gap " ", including zero-gap/tabs/multiple-space refusals. General ASCII
-  whitespace matches the lexer; units remain the canonical table's closed set. Do not transform an
-  invalid gap into a valid literal during assert splitting. Existing supported if form remains intact.
-  Diagnostic widening found zero-argument calls accepted as ASTs although args requires an expression;
-  refuse before returning a call. Add that observation to D76 and cover nonempty/trailing-comma controls.
-  Tests load actual reference definitions with canonical unit/binding contexts; positive names/reserved
-  inputs, three keyword roles/declarations, all seven unit gaps, ASCII/whitespace, malformed numbers,
-  empty calls and current worked examples. Cross-check unchanged Rust token/name contracts. Add paired
-  copied-book controls and actual guard mutations, with exact restoration and no overlapping gates.
-  Extend the existing structural suite with input controls so registered suite count remains 25.
-  Reference checks are not product parsing, complete name/type/evaluation proof or command diagnostics.
-  Keep remaining .2b.2 AST, .5a.3 canonical literal/recipe and later checker owners explicit; sync expert
-  annex/live records; preserve completed .2a contract/checklist at health; rollover exact old ledgers.
-  Verification: 130 input controls/three copied-book refusals; nine actual guard reds/exact restore;
-  existing structural 16+2, language 15 and unchanged Rust name/lexer 20 green.
-  Commit: `STITCHCAD-G1-0039` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.2b.1` — reference machine-input parity
 
@@ -185,40 +121,7 @@ exact committed text; the current frontier and verification/commit journal remai
 
 - ID: `G1-SLICE.5a.2b.2`
   Status: `done`
-  Goal: immutable borrowed expression syntax with normative precedence/if and precise refusals.
-  Pre-code protocol: read full formula contract/grammar/examples, ADR-0003, roadmap 4.1/4.2/10/G1,
-  existing lexer/name contracts and book availability/annex. Syntax success grants no value, current
-  name, call vocabulary, dimension, binding, statement, canonical identity or evaluation certificate.
-  FormulaExpression privately owns a flat semantic-node arena borrowing number/name spellings; only
-  read-only root/child views and argument iteration are exposed. No forgeable/cross-tree node indices.
-  Literal units use the seven closed tokens and original exact one-space gap; retain decimal text
-  without conversion/rounding. Grouping extends spans but creates no node; exponent 2 is square payload.
-  Iterative operator/value/delimiter stacks enforce comparison/add/mul/unary/power precedence, left
-  associativity, square tighter than unary minus, exactly one comparison per grammatical expr, and
-  square-only power. Parenthesized comparisons remain independently syntactic; type checking is later.
-  Ordinary calls require at least one argument; if requires exactly three. Keywords cannot be names.
-  Unknown well-spelled call names remain syntax until the later closed vocabulary/name checker.
-  Stream existing lexer, preserving ASCII preflight/errors. Reject adjacent atoms, comments, assignments,
-  missing operands/delimiters, empty/trailing arguments, invalid gaps and chained comparison precisely.
-  Reserve each semantic node on encounter and refuse measured 257 > 256; conditional frames refuse
-  measured 17 > 16, including calls and every branch. Flat arena/drop and explicit stacks avoid input
-  recursion; parentheses do not gain an invented language cap. Workspace is linear in source size,
-  semantic arena bounded; command-layer input-byte/work budgets remain roadmap 10 owned future work.
-  Parse errors carry source span/refused rule; limit errors carry typed limit/bound/measured size with
-  formula_domain, unsupported exponent formula_unsupported, syntax/lexical errors formula_parse.
-  Debug/error output omits customer source. Statement/canonical context is unavailable at this low-level
-  syntax API and remains later wrapper responsibility; never fabricate a canonical expression.
-  Native contracts independently enumerate precedence/spans/roles/unit forms/refusals; all current
-  book expressions scanned with syntax-only verdicts. Exact node/depth boundaries, hidden branches,
-  long prefix/ordinary-call/grouping inputs and small-thread stack tests cover arbitrary source shapes.
-  Privacy/lifetime doctests and actual production guard mutations require assertion reds/exact restore.
-  Compare independent reference shape controls with current product trees; strict Rust/WASM plus
-  scoped book/reference/ledger/archive/censuses. No new dependencies; no need for web/library lookup.
-  Update progressive availability and expert annex/API map with exact scope; glossary/index routes
-  retained. Seal oldest history/lessons at health, preserve predecessor evidence, commit before .3.
-  Verification: product 15 contracts/three privacy-lifetime docs; eleven actual assertion reds;
-  reference twelve shape/count/depth fixtures; restored strict 472 tests/WASM green.
-  Commit: `STITCHCAD-G1-0040` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.2b.2` — immutable production expression syntax
 
@@ -255,27 +158,7 @@ Further syntax work remains owned by the parent frontier.
 
 - ID: `G1-SLICE.5a.3a`
   Status: `done`
-  Goal: investigate/repair D78 total public rounding at extreme i128 magnitudes before conversion.
-  Pre-code protocol: round.rs public i128 numerator/denominator has no narrowing precondition;
-  units chapter 1/2/9, numerical ADR and library docs require UnitError rather than panic/wrap.
-  Suspected path: n=i128::MIN, d=1 yields unsigned q=2^127; casting q to i128 gives MIN and
-  negating it overflows before the existing i64 try_from can refuse. Build a repo-local actual
-  public-interface diagnostic first, catch unwinds and compare positive/negative extremes/control.
-  Confirmed actual public probe: MIN/1 unwinds, MAX/1 and MIN/-1 return typed Overflow; controls
-  succeed, rc=0. Scoped history: eb83f01 G0-CONTRACT.18 introduced the only round.rs revision.
-  Preserve half-away quotient/remainder behavior; checked magnitude-to-i64/sign
-  reconstruction must allow exactly |i64::MIN| for negative results and refuse every wider magnitude.
-  No float, saturation, changed rounding/tie rule or narrower caller precondition. Cover i128 MIN/MAX,
-  both signs, denominator MIN/zero, i64 endpoints and just-outside values; real guard mutations must
-  discriminate magnitude bounds/sign/negative endpoint/ties and restore original source bytes.
-  Strict Rust/WASM, scoped book/reference/ledger/archive/censuses and staged doctrines; report root
-  and measured public behavior. No canonical literal/evaluation claim. D79 reference literal identity
-  is already independently reproduced and scheduled next by .3b; do not use it as canonical oracle yet.
-  Preserve completed AST protocol/checklist and oldest live ledgers at health, sync numerical annex
-  and live resume/status; commit before reference repair/product normalization.
-  Verification: four public contracts/36 Fraction rows; five actual assertion reds/exact restoration;
-  strict 476 tests, release four and three-library WASM green.
-  Commit: `STITCHCAD-G1-0041` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.3a` — total extreme-magnitude public rounding
 
@@ -313,22 +196,7 @@ Current work remains in the parent frontier.
 
 - ID: `G1-SLICE.5a.3b.1`
   Status: `done`
-  Goal: exact once-rounded count/ratio/unit reference literal nodes, D79; repair D80/D81 doc drift.
-  Pre-code protocol: grammar 2/2.1/4 canonical kind:integer; units 2 direct conversion/half-away.
-  Diagnostic first: actual parser/evaluator at named sub-quantum/tie/precision/unit cases, including
-  bare ratio, compare independently authored quantum oracle and canonical respellings. Only literal
-  input is quantized here; operator evaluation remains separate .3b.2 and may not be used to sign off
-  exact-arithmetic identity. Counts stay counts, bare decimals/pct stay ratios, all seven units retain
-  exact chapter factors; no new float, implicit kind conversion, angle modulo or literal folding.
-  Finalize paired cases before source edit; L1 compares the actual integer node rather than rounding
-  its display to conceal a fraction. Keep curated reference scope, not arbitrary-input product safety.
-  Own tracked diagnostic/contracts/fixtures and real reference guard mutations with exact restoration;
-  run input/structural/language/publication checks and doctrine gate. Preserve predecessor evidence
-  byte-identically. Numerical canonical/binding domains and stored angles remain .3b.3 prerequisites.
-  D80: units heading 2.2 occurs twice after G1-0041; public rounding becomes 2.3, display stays 2.2.
-  D81: LIVE_STATUS G1 still names completed .5a.2b.1; update to actual current frontier in this slice.
-  Verification: 60 rows/360 controls, six actual reds/exact restore; reference/language/book green.
-  Commit: `STITCHCAD-G1-0042` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.3b.1` — reference literal quantum and canonical identity
 
@@ -364,23 +232,7 @@ Current work remains in the parent.
 
 - ID: `G1-SLICE.5a.3b.2`
   Status: `done`
-  Goal: repair reproduced D82 exact reference arithmetic against formula contract 4.2 before oracle use.
-  Pre-code protocol: complete formula contract/grammar/ADR exact + - * /, square and rational selector;
-  canonical integer inputs (.3b.1) precede expression arithmetic. Current actual diagnostic returns
-  2 for 1 um / 2 + 1 um / 2, and zero for ratio 0.000001 squared. evaluate square/product/quotient
-  and param_at explicitly call rnd before binding. Remove only these premature rounding steps and
-  return exact reduced Fraction in result-kind internal units. Keep +/-, comparisons, lazy branches,
-  dimension signatures, direct ratio scaling, zero division, explicit round_to quantization and
-  irrational nearest-quantum results. Binding rounding remains census L2; no product evaluator/API.
-  Own explicit exact result fixtures, independent Fraction parameter controls/reassociation/binding
-  tie proof, read-only selector model controls, lazy/nonzero/irrational/round_to controls and actual
-  arithmetic guard mutation/restoration. Do not invent arbitrary curve geometry for reference edges.
-  Rational/domain/binding enforcement D83 stays next .3b.3. Clarify explicit round_to vs implicit
-  arithmetic rounding in the book without adding/removing any declared language operation.
-  Run restored structural/input/literal/language/publication/recording checks and stage doctrine gate;
-  preserve prior exact protocol/evidence and oldest live ledgers at health before growth.
-  Verification: 24 rows/100 independent Fraction cases/162 controls, nine actual reds/exact restore; focused checks green.
-  Commit: `STITCHCAD-G1-0043` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.3b.2` — exact reference arithmetic
 
@@ -413,22 +265,7 @@ Current work remains in the parent.
 
 - ID: `G1-SLICE.5a.3b.3a.1`
   Status: `done`
-  Goal: repair D85 direction truncation, D86 microdegree/radian scaling and D87 exact tan pole refusal.
-  Pre-code protocol: units 1.2/formula 4.2 and grammar 6/6.1 require microdegree inputs, nearest internal
-  quantum for irrational results, normalized dir, and typed refusal outside a mathematical domain.
-  Actual diagnostic: arc_length(360 deg,1 um) → 6283185, not rounded6; dir((0,0),(1,6)) → 80537677,
-  nearest80537678. Trig source treats to_true(angle) as degrees though it returns microdegrees; dir
-  normalizes int(Decimal) without rnd. tan odd-quarter turns are undefined, independent of rounding.
-  Shared exact microdegree-to-radian helper divides by 180*1000000 before applying pi; no change to
-  arithmetic internal units or modulo sweep. Round dir before normalization; refuse exact rational
-  tan poles using microdegree modulo180deg, with formula_domain quantity/operation context.
-  Own independently expected quarter/half/full/signed/multi-turn and fractional angle controls,
-  Decimal precision/model scope, dir/atan2 agreement, preserved arithmetic/literal contracts and actual
-  guard mutations/exact restoration. Clarify tan domain in grammar, details only in expert annex.
-  D84 director ruling preserves formula sign/turns; .3c owns verification. D83 width/domains stay pending.
-  Verify focused reference/language/book/recording/doctrines; commit before rational-bound repair.
-  Verification: 42 rows/72 controls, independent math42, seven actual reds/exact restore; focused gates green.
-  Commit: `STITCHCAD-G1-0044` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.3b.3a.1` — reference angular conversion and domain guards
 
@@ -459,28 +296,7 @@ Current work remains in the parent.
 
 - ID: `G1-SLICE.5a.3b.3a.2`
   Status: `done`
-  Goal: D83 exact rational limit refusal at actual literal/value boundaries, before product oracle use.
-  Pre-code protocol: contract 4.2/4.3/5.2 max_rational_bits=128 on reduced exact numerator/denominator;
-  see currently only measures and L8 only reddens book census after evaluation. Introduce measured
-  typed formula_domain on the first value wider than128, with unchanged bound and named operation.
-  Test 127/128/129 bit numerators/denominators, reduced fractions, converted input before quantum
-  rounding, positive/negative values, zero and trailing-zero spellings. Preserve .3b.1 input rounding
-  after exact conversion; a long sub-quantum literal must not hide an oversized converted fraction.
-  Actual evaluation checks result-kind internal Fractions at every completed numeric node, including
-  literals/names/unary/+/-/square/products/quotients/selectors; only taken branches compute values.
-  Do not bound unreduced raw products or intermediate representation temporaries: the declared value
-  is the reduced rational. Literal normalization checks converted exact value before its input round;
-  static node/depth/statement bounds are distinct from runtime rational width on computed values.
-  Own actual reference diagnostic/contracts/guard mutations/restoration, including angle contract
-  observations under the recorded D84 ruling without changing angle semantics; fix the earlier 100-zero
-  literal control to demand width refusal and keep a separate reducible long-zero positive control.
-  D88 is additionally owned here: the new width guard masks a removed tan pole guard because the
-  angle contract checks only formula_domain. Require the mathematical pole reason, distinct from
-  atan2 zero-vector refusal, and rerun existing mutation suites with exact restoration.
-  No scalar-domain or complete angle implementation is claimed; .3b/.3c own those prerequisites next.
-  Verify focused reference/language/book/ledger/archive/censuses and doctrine; preserve completed text.
-  Verification: 61 Fraction controls/twelve actual reds; existing six/nine/seven reds and exact restoration.
-  Commit: `STITCHCAD-G1-0045` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.3b.3a.2` — reduced rational refusal and discriminating domain reasons
 
@@ -512,19 +328,7 @@ Current work remains in the parent.
 
 - ID: `G1-SLICE.5a.3b.3b.1a`
   Status: `done`
-  Goal: close D89: every public Length + and - preserves the constructor’s ±MAX_LENGTH_UM invariant.
-  Pre-code protocol: units1.1/9 and private Length fields require checked, non-saturating results.
-  Trait Output becomes Result<Length,UnitError>; delegate to existing checked_add/checked_sub instead
-  of constructing Self. UnitError shape is unchanged here; .1b owns missing operation context D90.
-  Public tests first reproduce actual old-operator values, then verify inclusive endpoints, signed
-  crossings, zero/cancellation/ordinary values, refusal identity and no unwinding. Curated independent
-  i128 pair oracle decides expected sum/difference, never a second Length implementation. Real source
-  mutations must compile and fail assertions, restore bytes; no probe/build overlap during mutation.
-  Update crate docs with ? migration and the book’s exact public contract/proof boundary. Update
-  live/task records, preserve completed reference history/ledgers unchanged; strict Rust/release/WASM,
-  focused publication/censuses/recording gates before commit. No formula evaluator/MCP signoff.
-  Verification: four public contracts/six compiled reds/exact restore; strict native480/release4/WASM green.
-  Commit: `STITCHCAD-G1-0046` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.3b.3b.1a` — fallible public length operators
 
@@ -558,25 +362,7 @@ Current work remains in the parent.
 
 - ID: `G1-SLICE.5a.3b.3b.1b`
   Status: `done`
-  Goal: D90 typed/display domain failures retain actual operation, including forwarding constructors
-  and checked arithmetic; update every in-repo construction/match site without changing numeric limits.
-  Pre-code protocol: units1.1/9 and UnitError’s own contract require operation plus kind/value/limit.
-  D92 is also owned here: generic display says zero range width exceeds1 and invents unit conversion
-  as its cause. Render neutral outside-domain wording with no unsupported cause; own signed/zero
-  message controls and actual rendering mutation, preserving all numeric fields and other variants.
-  Add static operation field to DomainExceeded and render it. Length/Area private checked construction
-  accepts caller context; direct public constructors name themselves; conversion/arithmetic callers
-  retain their operation. Ratio::scale forwards its context. Other error variants retain existing labels.
-  Core range/topology bridges name resolve_range/resolve; their invalid-rational arms are totality guards,
-  unreachable through validated journals, so private tests check those arms without claiming geometry.
-  Public tests require direct/forwarded signed context, add/sub/mul, Ratio scale and unchanged refusals;
-  inclusive endpoints and D89 Result semantics remain.
-  First prove pre-fix displayed operation absence with actual public calls; add compiled actual field/
-  forwarding/display mutations and restore exact sources. Update existing full-variant test matches,
-  public API migration and numeric annex; preserve prior evidence/ledgers. Strict native/release/WASM,
-  focused book/reference/censuses/recording gates before commit. D91 context, D83/D84 remain later.
-  Verification: public5/private3/fourteen compiled reds; restored strict488/release5/WASM and focused gates.
-  Commit: `STITCHCAD-G1-0047` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.3b.3b.1b` — actual-operation and truthful domain errors
 
@@ -604,25 +390,7 @@ Current work remains in the parent.
 
 - ID: `G1-SLICE.5a.3b.3b.1c`
   Status: `done`
-  Goal: D91 formula-vocabulary census honors explicit foreign-code context; preserve actual formula
-  operator refusals and add Rust-positive/formula-negative controls before normalization oracle use.
-  Pre-code protocol: read L6a/b/d populations and line-local code-span extraction, existing fifteen
-  end-to-end probes and expert annex. Formula characters stay closed; ? is never globally permitted.
-  Outside the three normative formula parts only, allow an exact immediate inline annotation
-  <!-- stitchcad-inline: rust --> before one backtick span. Skip that single declared foreign span,
-  never adjacent unannotated spans, a whole line/chapter or formula positions in the normative parts.
-  Refuse unknown/malformed/detached annotations and any foreign annotation inside formula parts.
-  New scratch-book controls must reproduce predecessor Rust-positive failure, verify Rust ? accepted,
-  unannotated/formula ? and adjacent bad operator still refused, malformed context and normative
-  exemption refused. Add real census mutations removing/overbroadening exemption; prove actual
-  contract assertion reds/restoration. Keep reference evaluator/parser/numeric contracts unchanged.
-  D93 annex mutation-count drift is also owned here; derive twelve actual cases and re-run their reds.
-  Repair the stale D34 task index cell to match this verified frontier; D34’s derived-pointer task
-  remains owned by PLANNING.5. Synchronize book authoring annex and live records; preserve preceding
-  task protocol/checklist/journal and oldest ledgers byte-exact. Run focused language/structural/
-  publication/ledger/archive/censuses and staged gate before commit; no new Rust product claim.
-  Verification: thirteen independent copied-book verdicts/five actual reds/exact restore; focused gates.
-  Commit: `STITCHCAD-G1-0048` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.5a.3b.3b.1c` — inline code language context
 
@@ -649,30 +417,7 @@ Current work remains in the parent.
 
 - ID: `G1-SLICE.5a.3b.3b.2`
   Status: `done`
-  Goal: D83 reference signed length/area and nonnegative count domains at completed value boundaries;
-  align exact Fraction tests with production invariants after .1a/.1b, no extra arithmetic rounding.
-  Pre-code protocol: units1.1 declares signed length±10^9/area±10^18; formula2 declares Count
-  never negative, formula4.2 retains exact arithmetic and grammar5 forbids Count unary negation.
-  Read length/area bounds from the actual units table and confirm the nonnegative Count contract;
-  no duplicate hardcoded numeric limit or scalar use of the geometry-only piece-box10m bound.
-  Add typed scalar check to every completed numeric node, after existing rational-width refusal;
-  canonical literals check their rounded input value during parsing, including untaken branches.
-  Exact expression fractions are checked before binding rounding. Count fractions remain exact and
-  nonnegative until binding; ratio/angle have no extra scalar bound here (i64 storage is .3).
-  Test independent Fraction endpoints/signs/just-outside values, input half-quantum boundaries,
-  literal/name/operator/call/selector/tolerance paths, lazy branches and unchanged opaque refs.
-  First reproduce actual predecessor length acceptance; require specific operation/kind/bounds/
-  measured value and token for refusals, not just any domain error. Mutate actual guards and restore
-  bytes with no overlapping build/probe. Update width fixtures whose huge lengths are now invalid:
-  retain 128-bit refusal controls using unrestricted ratio/count values or tiny valid fractions,
-  never exempt domain checks to keep old fixtures green. Re-run twelve width/six literal/nine
-  arithmetic/seven angular/five inline mutations and focused structural/language/book checks.
-  D94 is also owned here: extract table-only context loading from arithmetic test execution so
-  unrelated failures cannot contaminate scalar/rational/angular mutation evidence; prove quiet load.
-  Update normative boundary explanation/expert annex and live records; preserve prior task/ledger
-  payloads exactly. D83 remains open for i64 .3; no production evaluator or geometry/MCP claim.
-  Verification: scalar57/eleven actual reds; rational61/twelve reds; restored focused checks.
-  Commit: `STITCHCAD-G1-0049` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ## Scalar-domain acceptance — preserved from 86b81a9
 
@@ -706,25 +451,7 @@ Current work remains in the parent.
 
 - ID: `G1-SLICE.5a.3b.3b.3a`
   Status: `done`
-  Goal: actual reference let binding rounds once and refuses stored numeric integers outside i64.
-  Pre-code protocol: formula2/4.2 and units1/1.2 declare signed64 stored length/area/ratio/angle/count.
-  Completed exact nodes retain128-bit rational width and scalar domains; no i64 cap on temporaries.
-  Binding rounds half away once, checks inclusive -2^63..2^63-1 plus existing scalar domain, and
-  returns the stored value. Count stays nonnegative. Boolean remains a boolean; no opaque geometry
-  numeric reclassification. L2 consumes that actual bound integer without its own second round.
-  Independent Fraction/Decimal controls must reproduce predecessor let retaining fractions or storing
-  oversize values; verify both endpoints, half-quantum edges, negative Count refusal, sign/turn
-  preservation, exact unbound temporaries/cancellation, atomic refusal and actual replay behavior.
-  Mutate real binding/round/limit/census-consumption guards, require assertion reds and exact restore;
-  re-run scalar/width/literal/arithmetic/angular/inline controls without exempting boundaries.
-  Adopt the received D95 ruling in a decision/book/roadmap; full canonical proof remains .3b.
-  Compact curated Knowledge Map orientation before adding its derived decision row; no cap changes.
-  Preserve prior
-  task/ledger payloads and synchronize normative binding explanation/expert annex/live pointers.
-  Focused reference/language/publication/ledger/archive/censuses and staged gate before commit.
-  No Rust evaluator, caller environment mutation, full DAG/geometry/MCP or release claim.
-  Verification: binding80/twelve actual reds; focused checks and gate in parent.
-  Commit: `STITCHCAD-G1-0050`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ## Numeric binding acceptance — preserved from 9b3b9b3
 
@@ -760,182 +487,102 @@ Current canonical verification remains in [G1-SLICE](G1-SLICE.md).
 
 - ID: `G1-SLICE.5a.3b`
   Status: `done`
-  Goal: repair D79 reference literal/canonical identity before independent product normalization proof.
   Children: .3b.1 literal quantum/identity, .3b.2 exact arithmetic audit/repair, .3b.3 numeric domain
-  and stored-angle audit. Each child diagnoses actual behavior before finalizing its protocol.
-  Original reproduction: two 0.00004 cm literals evaluate 4/5 um and bind 1 while their canonical-zero
-  respelling evaluates 0. Correct the literal input boundary first; evaluator findings remain owned.
-  Verification: completed scoped reference review below; independent controls/actual reds pass.
-  Commit: `STITCHCAD-G1-0057`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.1`
   Status: `done`
-  Contract/checklist: [preserved literal evidence](G1-SLICE-formulas.md#literal-identity-contract-and-evidence--preserved-from-6f26ca3).
-  Verification: 60 rows/360 controls/six actual reds; focused reference/book/recording checks green.
-  Commit: `STITCHCAD-G1-0042`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.2`
   Status: `done`
-  Contract/checklist: [preserved arithmetic evidence](G1-SLICE-formulas.md#exact-arithmetic-contract-and-evidence--preserved-from-f70edf7).
-  Verification: 24 rows/100 Fraction cases/162 controls/nine actual reds; focused gates green.
-  Commit: `STITCHCAD-G1-0043`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3`
   Status: `done`
-  Goal: repair D83 numeric domains and resolve D84 angle contract before product normalization.
   Children: .3b.3a exact rational bit limit; .3b.3b scalar domains/storage bounds; .3b.3c signed-angle contract verification.
-  .3a is independent of binding/direction semantics; D84 now preserves formula sign/turns.
-  Verification: completed scoped reference review below; independent controls/actual reds pass.
-  Commit: `STITCHCAD-G1-0057`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3a`
   Status: `done`
-  Goal: trustworthy reference angle conversions then rational-value bounds before scalar repair.
   Children: .3a.1 D85/D86/D87 angle conversion/rounding/pole guards; .3a.2 D83 rational bit limit.
-  The diagnostic exposed wrong degree scaling, so fix that before trusting angle audit/width controls.
-  Verification: angular42/72/math42/seven reds plus rational61/twelve reds; focused checks green.
-  Commit: `STITCHCAD-G1-0044` and `STITCHCAD-G1-0045`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3a.1`
   Status: `done`
-  Contract/checklist: [preserved angular evidence](G1-SLICE-formulas.md#angular-contract-and-evidence--preserved-from-1c95ea4).
-  Verification: 42 rows/72 controls/math42/seven actual reds; focused gates green, D84 ruling recorded.
-  Commit: `STITCHCAD-G1-0044`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3a.2`
   Status: `done`
-  Contract/checklist: [preserved rational evidence](G1-SLICE-formulas.md#rational-contract-and-evidence--preserved-from-b8ed62d).
-  Verification: 61 Fraction controls/twelve actual reds; focused gates green, D88 refusal reasons repaired.
-  Commit: `STITCHCAD-G1-0045`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b`
   Status: `done`
-  Goal: D83 declared length/area/count domains,128-bit canonical literals and i64 numeric bindings with typed operations;
-  finalize boundary checks from complete contracts, not a caller narrowing precondition. D84 signed-angle
-  verification remains separate; scalar repair can proceed under the recorded ruling.
   Children: .3b.1a D89 public operators; .3b.1b D90 operation context; .3b.1c D91 code-language context;
-  .3b.2 reference scalar domains;
-  .3b.3 reference128-bit canonical literals/i64 numeric bindings. Each prerequisite is independently committed.
-  Verification: complete scoped D83 review below; four independent families/47 actual reds.
-  Commit: children complete through `STITCHCAD-G1-0054`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b.1a`
   Status: `done`
-  Goal: fallible public Length operators preserve the declared domain.
-  Verification: [preserved contract/checklist](G1-SLICE-formulas.md#length-operator-contract-and-evidence--preserved-from-f432d68).
-  Commit: `STITCHCAD-G1-0046`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b.1b`
   Status: `done`
-  Goal: actual-operation and truthful domain errors.
-  Verification: [preserved contract/checklist](G1-SLICE-formulas.md#domain-context-contract-and-evidence--preserved-from-d91df0a).
-  Commit: `STITCHCAD-G1-0047`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b.1c`
   Status: `done`
-  Goal: inline documentation language context stays local.
-  Verification: [preserved contract/checklist](G1-SLICE-formulas.md#inline-context-contract-and-evidence--preserved-from-0a6e9b0).
-  Commit: `STITCHCAD-G1-0048`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b.2`
   Status: `done`
-  Goal: exact scalar domains and isolated numeric setup.
-  Verification: [complete contract](G1-SLICE-formulas.md#scalar-domain-contract--completed-in-g1-0049)
-  and current acceptance below: scalar57/eleven reds; rational61/twelve reds; focused checks.
-  Commit: `STITCHCAD-G1-0049` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b.3`
   Status: `done`
-  Goal: D83 bounded i64 bindings; D95 canonical literals and exact temporaries retain128-bit width.
   Children: .3a numeric binding storage, .3b D95 signed literal ruling/canonical input, .3c review.
-  D95 director ruling received: exact canonical literals retain128-bit width; bound numeric values fit i64.
-  Verification: complete scoped D83 review below; four independent families/47 actual reds.
-  Commit: children complete through `STITCHCAD-G1-0054`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b.3a`
   Status: `done`
-  Goal: once-rounded numeric binding storage; exact wide temporaries retain their boundary.
-  Contract/evidence: [numeric binding protocol](G1-SLICE-formulas.md#numeric-binding-protocol--completed-in-g1-0050).
-  Verification: binding80/twelve compiled actual reds; focused checks/current acceptance below.
-  Commit: `STITCHCAD-G1-0050`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b.3b`
   Status: `done`
-  Goal: D95 exact canonical literal width, quantum/scalar boundary and unary/kind identity.
-  Protocol: [completed canonical pre-code plan](../history/stitchcad-devnotes-part572.md#canonical-literal-pre-code-protocol--completed-in-g1-0051).
-  Verification: canonical146/twelve compiled actual reds; focused checks/current acceptance below.
-  Commit: `STITCHCAD-G1-0051`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b.3c`
   Status: `done`
-  Goal: review all D83 numeric obligations after binding/canonical proof; close only after complete review.
   Children: .1 triggered archive capacity, .1v observed CI, .2 complete numeric boundary review.
-  Verification: complete scoped D83 review below; four independent families/47 actual reds.
-  Commit: children complete through `STITCHCAD-G1-0054`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b.3c.1`
   Status: `done`
-  Goal: retain63 exact raw records in window2; repair D96 blocking ledger targets.
-  Protocol: [second-window pre-code plan](../history/stitchcad-devnotes-part572.md#second-window-pre-code-protocol--completed-in-g1-0052).
-  Verification:63 source files/127 isolated logical files exact; archive controls/ledger13/four reds;
-  full native488/WASM3/book/probes25 pass, rc=0. [Local proof](../history/stitchcad-devnotes-part572.md#second-window-local-proof--preserved-from-f876913).
-  Commit: `STITCHCAD-G1-0052`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b.3c.1v`
   Status: `done`
-  Goal: observe exact .1 head SHA doctrine/Rust CI job/step verdicts; only close capacity on success.
-  Verification: pushed f876913; both completed jobs/all steps successful; CLI140 and newest
-  committed catalog refusal pass. [Observed jobs](../history/stitchcad-devnotes-part572.md#second-window-ci-evidence--preserved-from-a5159ba);
-  capacity prerequisite complete.
-  Commit: `STITCHCAD-G1-0053`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3b.3c.2`
   Status: `done`
-  Goal: complete scoped D83 boundaries; correct D97 goal and D98 verdict attribution.
-  Protocol: [completed review plan](../history/stitchcad-devnotes-part572.md#numeric-boundary-review-protocol--completed-in-g1-0054).
-  Verification:61/57/80/146 independent controls;12/11/12/12 actual reds/exact restoration;
-  prerequisite source identity/language16. Complete current acceptance below; D84 separate.
-  Commit: `STITCHCAD-G1-0054`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3c`
   Status: `done`
-  Goal: apply D84 director ruling: preserve signed/multi-turn formula values, normalize entity directions.
-  Verify binding/equality and signed inverse-trig contracts with full/signed/multi-turn examples;
-  reference signed controls and complete .3 review pass. Decision: `decision_angles.md`.
   Children: .1 six-kind book replay prerequisite; .2 signed inverse-trig/binding/equality repair;
-  .3 complete angle/reference review. D84 closes only after the full contract is verified.
-  Verification: completed scoped reference review below; independent controls/actual reds pass.
-  Commit: children complete through `STITCHCAD-G1-0057`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3c.1`
   Status: `done`
-  Goal: actual book replay must accept every declared bindable kind before signed-angle replay proof.
-  Protocol: [original pre-code plan](../history/stitchcad-devnotes-part572.md#six-kind-replay-protocol--completed-in-g1-0055).
-  Verification:19 independent actual consumer/format/declaration verdicts; nine compiled actual
-  assertion reds/exact restoration; binding80/twelve existing reds. D99 closed, no new literals.
-  Commit: `STITCHCAD-G1-0055`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3c.2`
   Status: `done`
-  Goal: D84 signed principal atan/atan2, raw once-rounded angle binding/equality and full signed/multi-turn
-  sweeps; keep dir explicitly normalized. Finalize principal branch/rounded range and independent
-  controls before changing actual reference; no arbitrary-input transcendental certificate.
-  Protocol: [original pre-code plan](../history/stitchcad-devnotes-part572.md#signed-angle-protocol--completed-in-g1-0056).
-  Verification:90 independent controls/fifteen compiled actual reds/exact restoration;
-  existing angular72/math42/seven reds, binding80/twelve reds and replay19/nine reds pass.
-  Commit: `STITCHCAD-G1-0056`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.5a.3b.3c.3`
   Status: `done`
-  Goal: complete D84/reference obligation review, align all current contract/status pointers and close
-  .5a.3b only after .1/.2 verified; correct D100 stale children label and retain its original bytes.
-  Product literal normalization stays separately owned by .5a.3c.
-  Protocol: [original review plan](../history/stitchcad-devnotes-part572.md#complete-reference-review-protocol--completed-in-g1-0057).
-  Verification: signed90/15 actual reds; angular72/math42/seven reds; six source bytes equal c099aee.
-  D84/D100 close for received contract/scoped reference; production remains separate.
-  Commit: `STITCHCAD-G1-0057`.
-
-[Current product frontier](G1-SLICE.md#current-frontier).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ## Normalized arena proof — preserved from b41418d
 

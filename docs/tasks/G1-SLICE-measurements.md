@@ -8,76 +8,15 @@ Historical verification/commit tables remain in the parent and [evidence sibling
 
 - ID: `G1-SLICE.4a.1`
   Status: `done`
-  Goal: core immutable length-valued declaration with canonical authored state/source references:
-  known with required evidence ids, assumed with assumption id, unknown with observation id,
-  preference with provenance id, derived with formula id and no independently entered result.
-  Acceptance: required state provenance is unrepresentable as absent; empty/duplicate known evidence
-  refused; unknown/derived cannot produce a numeric fallback; explicit values retain Length units.
-  Pre-code design: common declaration lives in sc-core, so sc-measure can depend on identity/value
-  without core depending on the higher measurement crate. Formula inputs later read a core contract;
-  .5/.6 validate declaration and dependency registries; G4 validates scoped evidence and artifact
-  policy. Declared state is authored content, not independent proof of factual truth or exportability.
-  Signed Length/explicit zero stay unchanged; per-measurement procedure/domain constraints are not
-  invented here. No generic text-valued parameter API, cached formula output or global export gate.
-  Record this boundary before code. Own bounded book vocabulary/examples and live/history/map updates.
-  D64 owned now: ontology introduction still says other object types follow after .3c completed;
-  fix intro and stale module-inventory tail; verify scope against committed .3c review.
-  Impact: book/module status misreports implementation.
-  Containment: relocate completed signoff/.13 checklists unchanged; partition completed construction
-  child contracts/checklists into a bounded linked sibling if the existing evidence file approaches
-  its ceiling. All committed payloads compare unchanged; current checklist remains first in parent.
-  Verification: eight contracts + three privacy/state doc-tests; four independent actual red mutations;
-  restored strict Rust 298 tests, WASM/book, focused censuses, ledger and staged doctrines green.
-  Commit: `STITCHCAD-G1-0024`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.4a.2a`
   Status: `done`
-  Goal: core immutable MachineToken, shared by measurement metadata and the future recipe namespace.
-  Pre-code design: formalize the specified ASCII lower-snake syntax as [a-z][a-z0-9]* with optional
-  underscore-separated nonempty alphanumeric segments. Reject the three grammar keywords let/assert/if;
-  reserved built-in parameter names remain legal references, while metadata .2b and recipe .5 reject
-  rebinding them. No Unicode normalization, automatic renaming, token→user-label conversion or text value.
-  Acceptance: accepted tokens retain exact bytes/order; malformed ASCII/Unicode/separators/keywords
-  refuse explicitly; immutable representation/private-field proof; no body/POM or state conversion.
-  Own core API/tests, grammar/input-book vocabulary, existing length-input decision promotion and docs.
-  Containment: move the completed .4a.1 contract/checklist unchanged to a linked measurement sibling
-  before the parent exceeds its health target; retain the current checklist first.
-  Verification: six contracts + private-field doc-test; four real regression mutations red;
-  restored strict Rust 305 tests, WASM/book, focused censuses/ledger and staged doctrines green.
-  Commit: `STITCHCAD-G1-0025`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 - ID: `G1-SLICE.4a.2b`
   Status: `done`
-  Goal: introduce sc-measure with immutable Measurement, landmark and documented-procedure records;
-  validate current record/declaration registries and preserve entered unit plus canonical state/source.
-  Pre-code design: metadata references two landmark identities (same identity allowed for a girth
-  location), procedure identity and canonical LengthDeclaration. Landmark and procedure record kinds
-  must match body/garment; no source standard vocabulary/procedure content is invented. Procedure
-  documentation is required nonblank content on the canonical procedure record; metadata carries only
-  the procedure id. This proves documented content exists, without inferring physical repeatability or
-  source truth (Design/G4). Names must be nonblank;
-  Tokens use the shared core type, and reserved formula inputs cannot be rebound. Context duplicates refuse
-  before lookup across all three record inventories, never pick the first. Measurement identity
-  cannot collide with a supplied context record. Global Design identity/source registries remain .6. Current same-id replacements are inspected; old input stays
-  immutable. No subject/domain constraints are fabricated from the standards not read in-repo.
-  Own new crate/Cargo.lock, local and CI WASM integration, README standard-command/status scope and book.
-  D66 owned here: README reports only G0 work and the workspace header asks to retire the removed
-  starter; both misreport delivered foundations.
-  Repair status/header while preserving G0 closure-unapproved and no-application facts.
-  Acceptance: all metadata fields/canonical queries and typed missing/foreign/ambiguous refusals tested;
-  strict Rust/WASM/book/focused and full milestone gates pass. CI verdict remains .2c's obligation.
-  Verification: sixteen contracts + three privacy docs; six actual guard mutations red; restored
-  strict Rust 325 tests, three-crate WASM/book, full 22 probe suites and staged doctrines green.
-  Exceptional push/observed CI belongs to .4a.2c; no remote success is claimed here.
-  Commit: `STITCHCAD-G1-0026`
-
-  API before code: MeasurementContext borrows declarations/landmarks/procedures with typed identity
-  maps. Landmark and MeasurementProcedure use private validated definitions (nonblank names and
-  procedure documentation); kinds are explicit Body/Garment. Measurement holds entered Unit, token,
-  kind, two landmark ids, procedure and declaration id. Current context queries borrow canonical
-  targets, reject removed/mismatched/ambiguous targets, and preserve authored metadata/state. Target
-  queries prove only the named target; validate_current checks the whole measurement. Shared core
-  token exposes reserved-input classification for metadata and later recipe binding.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ## Completed acceptance checklists
 
@@ -155,13 +94,7 @@ Historical verification/commit tables remain in the parent and [evidence sibling
 
 - ID: `G1-SLICE.4a.2c`
   Status: `done`
-  Goal: observe exceptional runtime/CI integration push at job/step level; independently sign off
-  measurement metadata against ontology, close .4a.2 and hand to table .4a.3.
-  Acceptance: CI rust/doctrine jobs completed success, exact revision recorded; all metadata fields
-  accounted for without claiming source truth, procedure repeatability or release approval.
-  Verification: GitHub jobs 110566989457 (check) / 110566988221 (enforce), all steps
-  completed success at bf29b031033ad7ce198db0a02a5c1d205d5594aa; field review and local book/gates green.
-  Commit: `STITCHCAD-G1-0027`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.4a.2c` — observed CI and scoped metadata review
 
@@ -189,32 +122,7 @@ Historical verification/commit tables remain in the parent and [evidence sibling
 
 - ID: `G1-SLICE.4a.3`
   Status: `done`
-  Goal: MeasurementTable stable identity/name and unique measurement id/token inventory with current
-  metadata queries; complete measurement-family signoff against ontology .2.1 and book contracts.
-  Acceptance: ambiguity/missing targets/current reassignment refused; immutable input; focused and
-  milestone gates prove all measurement content without certifying source truth or release readiness.
-  Pre-code contract: TableDefinition holds id/name and authored ordered MeasurementBinding entries.
-  Each binding pins measurement id, exact token, body/POM kind and canonical declaration id; captures
-  may derive from existing immutable metadata. No values/state/source/procedure prose copied into tables.
-  Empty draft tables legal (no normative nonempty rule); names nonblank, binding ids/tokens unique.
-  TableContext borrows current Measurement inventory plus existing MeasurementContext; rejects duplicate
-  metadata ids and cross-kind target identity collisions before lookup. Token uniqueness is table-scoped,
-  not imposed over unrelated tables' canonical inventory. Table id cannot reuse a supplied record id.
-  Current lookup first selects saved binding by exact token or id, then resolves its measurement id;
-  removed ids never select peers by token. Kind/token/declaration reassignment returns typed expected/
-  actual evidence; same-id canonical declaration state/source changes remain visible. Display labels,
-  entered units and procedure/landmark metadata are current canonical content, with all target checks
-  retained. Target query validates selected binding/current metadata; validate_current checks all entries.
-  Explicit validated table replacement may rebind and leaves original unchanged. Immutable fields/private
-  representation; errors implement Display/Error with structural source. No global Design revision,
-  source/evidence truth, formula/profile evaluation, physical repeatability or release proof claimed.
-  Own runtime metadata/book/API vocabulary, independent real guard mutations, field-by-field .4a
-  structural signoff, focused checks and milestone checks. Previously closed metadata signoff records
-  relocate unchanged to the measurements sibling; normal live rollovers if health requires them.
-  Verification: 16 contracts + privacy, eight real red guard assertions, restored 342 strict tests;
-  three-crate WASM/book/glossary/formula green. Milestone full probes and staged gate recorded
-  below. Canonical field review closes .4a structurally; .4b per-POM Ease follows.
-  Commit: `STITCHCAD-G1-0028`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.4a.3` — named tables with stable current bindings
 
@@ -252,23 +160,7 @@ Return to the [active frontier](G1-SLICE.md#current-frontier).
 
 - ID: `G1-SLICE.4b.1`
   Status: `done`
-  Goal: immutable individual Ease mappings over saved body/POM bindings and one canonical signed
-  LengthDeclaration; FitIntent ordered Close < Semi < Loose, explicit compression provenance.
-  Pre-code protocol: retain measurement id/token/kind/scalar expectations, resolve current metadata
-  by id, require Body then Garment and all current landmark/procedure targets. Reject mapping-id
-  collisions and amount-id aliasing either measurement scalar. Reuse the borrowed unambiguous
-  inventory; matching tokens across distinct measurement namespaces remain legal here.
-  The canonical amount owns numeric state/source; mapping provenance owns fit/correspondence intent.
-  Compression is Forbidden or Declared with a provenance id, never inferred from fit class. Accept
-  unknown/derived drafts without numeric fallback; enforce permission on every present/current or
-  externally evaluated signed amount. No body-plus-ease computation, fitted thresholds, source truth,
-  v1-envelope expansion or physical/release certificate. Explicit replacements preserve old mappings.
-  Acceptance: current reassignment/removal/invalid metadata refuse; negative known/assumed/preference
-  without declaration refuses; declared negatives/zero/positives preserved; unresolved states remain
-  queryable and numeric queries refuse. Typed errors retain mapping/side/target and underlying cause.
-  Verification: 13 contracts + privacy, seven real guard reds, strict 356 tests/WASM/book; current
-  binding/source/uncertainty and compression permission verified locally.
-  Commit: `STITCHCAD-G1-0029`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.4b.1` — individual canonical Ease intent
 
@@ -299,24 +191,7 @@ Return to the [active frontier](G1-SLICE.md#current-frontier).
 
 - ID: `G1-SLICE.4b.2`
   Status: `done`
-  Goal: ordered immutable Ease set with unique mapping identity/token/POM and per-POM lookup;
-  explicit table-membership/current binding contract and current inventory validation.
-  Pre-code protocol: EaseSetDefinition has stable id, body/garment table ids (one mixed table legal),
-  and authored EaseBinding entries: set-scoped token, Ease id, saved body/POM four-field bindings and
-  amount id. Namespaces are unique by token, mapping id and POM id; shared body/amount sources legal.
-  EaseSetContext borrows canonical tables/Ease records and existing MeasurementTableContext; reject
-  duplicate and cross-kind record identities before lookup. Set identity cannot alias supplied records.
-  Queries select saved id/POM/token, resolve current Ease by id, compare body/POM/amount expectations,
-  require both measurements in their named current tables and validate current Ease. Current fit,
-  provenance/compression and canonical amount/state/source edits visible; retarget requires explicit
-  replacement. Empty drafts legal with existing table references; unselected bad entries do not block
-  selected lookup, full validation checks all mappings. No fabricated coverage, arithmetic or release
-  proof. Own package-status defect D69 repair, existing D34 stale census correction and normal seals.
-  Acceptance: unique per-POM mappings, shared body sources legal, current ambiguity/missing members
-  refused, lookup order independent, no default mapping or numeric fallback.
-  Verification: 14 contracts + privacy, ten real guard assertion reds; strict 371 tests/WASM/book;
-  current canonical bindings, selected membership and namespace checks pass locally.
-  Commit: `STITCHCAD-G1-0030`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.4b.2` — unique current per-POM sets
 
@@ -363,20 +238,7 @@ Return to the [active frontier](G1-SLICE.md#current-frontier).
 
 - ID: `G1-SLICE.4c.1`
   Status: `done`
-  Goal: immutable membership foundation: SizeSetReference(id, Count revision), SizeSystem, validated
-  human SizeLabel, stable SizeMember ids, authored ordered members and exactly one base member.
-  Pre-code protocol: SizeMembershipDefinition has reference/system/member list/base id. It contains
-  no chart, breaks, quantities, axes or physical defaults; .4c.2/.3/.4 supply those distinct contracts.
-  Reject empty members, repeated member/set ids, exact duplicate labels and absent base; nonblank
-  labels preserve exact Unicode/spacing/case and carry no machine-token or numerical semantics.
-  Id/label queries are order-independent; inventory order is never sorted. Revision successor retains
-  identity and checks Count overflow, without pretending to enforce command-registry currentness.
-  Acceptance: custom single member/base supported, author order preserved, blank labels/duplicate ids/
-  labels/missing base refused, same labels in different sets carry distinct identity; immutable/private
-  content, structured diagnostics and overflow refusal. Canonical charts/axes/evidence remain deferred.
-  Verification: 12 contracts + three privacy/quantity docs, seven real assertion reds; restored
-  strict 386 tests/book/glossary; WASM and staged gate below. D70 ruling remains pending for axes.
-  Commit: `STITCHCAD-G1-0032`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.4c.1` — size membership without inferred order or measurements
 
@@ -410,25 +272,7 @@ Return to the [active frontier](G1-SLICE.md#current-frontier).
 
 - ID: `G1-SLICE.4c.3a`
   Status: `done`
-  Goal: immutable garment-chart observation for one member and design POM, with current member/set
-  revision, logical POM and measured-input bindings, named table memberships and mapping provenance.
-  Pre-code protocol: SizeChartObservationDefinition holds id, pinned membership reference/member id,
-  design/chart table ids, saved POM/measurement four-field bindings and correspondence provenance id.
-  Context borrows membership/current tables/MeasurementTableContext, rejecting duplicate/cross-kind
-  identities (including member/set identities). Both measurements must be Garment; Body/MTM inputs
-  belong to .3c and are never silently interchanged. Current queries pin set id/revision, resolve member
-  id, table ids and measured ids, reject token/kind/scalar retargeting and validate required metadata.
-  Value/state/source/entered unit borrowed from the canonical measurement, no numeric/state cache.
-  Same input may also be a Design-table POM (base-size authored data); no duplicated scalar imposed.
-  This is an authored chart-to-POM correspondence, not a regenerated geometry measurement or proof
-  of physical quantity equivalence. G3/G4 validate that correspondence/source/evidence; later generated
-  results remain distinct measurements. No axis, default, inferred label, completeness or path-ready claim.
-  Acceptance: missing/revised member, tables, bindings and metadata refuse with scoped errors; current
-  scalar/metadata edits visible; unknown/derived numeric queries refuse; selected targets borrowed;
-  immutable replacement leaves originals unchanged. Own book/API/live docs, evidence retention/seals.
-  Verification: 16 contracts/privacy, eight actual assertion reds, restored strict 403 tests/WASM/book;
-  glossary/uncertainty/tree/ledger and staged doctrine gate green. Completed membership preserved exactly.
-  Commit: `STITCHCAD-G1-0033`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.4c.3a` — current authored garment chart observations
 
@@ -461,48 +305,13 @@ Return to the [active frontier](G1-SLICE.md#current-frontier).
 
 - ID: `G1-SLICE.4b.3`
   Status: `done`
-  Goal: re-derive ontology .2.2 field coverage, reference/currentness and compression boundaries;
-  review book and milestone checks before closing .4b structurally.
-  Review protocol: map each ontology .2.2 field to current immutable API and test; review per-POM
-  set/current tables, no numeric fallback and negative permission including evaluated-result boundary.
-  Run current sc-measure contracts/docs, full 23-suite milestone probes and warning-free book; staged
-  doctrines. Existing 371-test strict/WASM evidence is for unchanged b4e0bc7 code, no remote CI claim.
-  Own bounded review docs, preserve completed set contract/checklist unchanged, update pointers/logs
-  and normal byte-identical rolling seals. Close .4b structurally only after all owned checks pass.
-
-  Verification: 65 current sc-measure tests/docs, full 23-suite milestone, warning-free book,
-  current code unchanged from b4e0bc7 strict 371/WASM proof; staged gate below.
-  Commit: `STITCHCAD-G1-0031`
-
-Return to the [active frontier](G1-SLICE.md#current-frontier).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ## Garment chart collection evidence — preserved from e299771
 
 - ID: `G1-SLICE.4c.3b`
   Status: `done`
-  Goal: canonical per-member/POM chart collection with unique observations and declared coverage,
-  current correspondence/table validation, explicit completeness errors and ordered-member lookup.
-  Pre-code protocol: SizeChartDefinition pins id, membership reference, Design table, ordered target
-  POM bindings and ordered SizeChartBinding entries. Bindings capture observation/reference/member/
-  table/measurement targets, never values/state/provenance copies. Context borrows canonical observations
-  and SizeChartContext; refuse duplicate/cross-kind ids. Current queries compare saved targets and
-  borrow the selected current observation, source/state and provenance; no peer or label substitution.
-  Construction/current validation permits incomplete drafts but checks every authored reference.
-  Completeness explicitly requires a nonempty target inventory equal to every current garment POM
-  in the Design table, plus exactly one observation for every member/POM cell. Validate the full named
-  Design table for this claim; omitted POMs cannot certify a deliberately narrowed chart as complete.
-  Refuse duplicate observation/POM/token/cell, undeclared POMs, wrong domains, stale refs or Design-table
-  mismatches. Selected member row returns observations in declared POM order; members retain membership
-  order. Selected queries do not certify unrelated rows. Unknown/derived values do not break structural
-  coverage but numeric queries refuse. Shared canonical measurement inputs need distinct member-pinned
-  observations/provenance; sharing one canonical observation across chart collections is explicit.
-  No interpolation, measurements inferred from labels, axis model, path readiness or physical proof.
-  Acceptance: draft/full coverage distinction, current targets/provenance, exact missing member/POM
-  errors, borrowed values, immutable replacement, shared inputs and identity/domain guards. Own book/
-  API/live docs, exact completed evidence relocation and normal history seals; real production mutations.
-  Verification: 18 contracts/privacy, 14 actual assertion reds; exact restore, strict 422 tests/WASM/
-  book, glossary/uncertainty/tree/feature/ledger and staged doctrines green. Draft/full boundaries explicit.
-  Commit: `STITCHCAD-G1-0034`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.4c.3b` — exact current Design/member/POM chart coverage
 
@@ -647,32 +456,7 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
 
 - ID: `G1-SLICE.4c.3c`
   Status: `done`
-  Goal: typed MTM body-input chart correspondence for custom single-member ranges, current body/Ease
-  mappings and provenance; preserve body versus garment observation distinction and path-1 semantics.
-  Pre-code protocol: immutable MtmChartDefinition pins id, membership reference/member, expected
-  EaseSetDefinition (reference target snapshot: set/table ids and ordered mapping bindings only),
-  and chart correspondence provenance. MtmChartContext borrows membership/current Ease sets and
-  EaseSetContext; reject duplicate/cross-kind identities including set/member ids. Require Custom
-  membership of exactly one, with the authored member equal to its existing sole/base member.
-  Resolve the saved canonical set id and compare every expected set/table/ordered mapping target;
-  current fit/compression/provenance/source/state remain borrowed. Selected POM queries use current
-  EaseSet membership/target checks; body and signed amount declarations/values remain distinct from
-  garment metadata, with no body-as-POM result or automatic addition/evaluation. Unknown/derived
-  source drafts stay inspectable and numeric queries preserve their required observation/evaluation.
-  Constructor/current validation checks all authored mappings but permits empty/incomplete drafts.
-  Completeness requires nonempty mappings and coverage of every current Design-table garment POM,
-  with the full Design table validated; no narrowed mapping subset may certify itself complete.
-  Direct grade-rule input refuses explicitly for this authored MTM chart, independent of numeric
-  readiness. No breaks field/default or axis representation; composite/path execution belongs .3d/G3.
-  Acceptance: member/system/reference guards, missing/stale/current mapping and table failures,
-  canonical borrowing/state/provenance edits, body/Ease numeric refusal, explicit immutable replacement,
-  full POM coverage and grade refusal. Own book/API/live docs, exact evidence relocation and rolling
-  seals where health milestones require them; real production mutations and focused integration checks.
-  Book publication: apply the director's incremental teaching requirement to this chapter now;
-  put low-level API/reference/currentness/verification detail in a linked expert annex.
-  Verification: 15 contracts/two privacy-role docs, twelve real reds; 439 strict tests/WASM/book;
-  glossary/uncertainty/feature/tree/ledger and staged doctrines.
-  Commit: `STITCHCAD-G1-0035` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.4c.3c` — canonical MTM body/Ease inputs
 
@@ -700,36 +484,7 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
 
 - ID: `G1-SLICE.4d.1`
   Status: `done`
-  Goal: apply the director's 2026-10-02 book requirement: roadmap, code and book in lockstep;
-  incremental learning path for students/newcomers, direct expert navigation, glossary and index,
-  detailed contracts/verification in annexes. Preserve canonical anchors and normative requirements.
-  Reproduce D71: introduction.md says "project is in gate G0" while LIVE_STATUS/sc-measure report G1
-  runtime libraries. Impact: readers cannot distinguish built capabilities from future contracts.
-  Priority: next safe leaf after MTM commit; correct landing/status and review the current chapter
-  inventory against roadmap/code/task owners. No app, MCP server, geometry or release claim before proof.
-  Acceptance: bounded newcomer progression, expert annex/reference links, complete topic index plus
-  existing verified glossary; source/rendered-link checks, status/requirement map and owned remaining
-  chapter migrations when too large for one safe leaf. D71 fixed and verified before closing.
-  Pre-edit publication protocol: new learning chapters progressively introduce recipe, measurements,
-  pieces, sizes and agents using declared examples; plain availability page distinguishes existing
-  libraries from future application/geometry/MCP/release. Existing detailed contracts enter the Annexes
-  navigation section at their unchanged source URLs/anchors; glossary remains independently reachable.
-  Topic index covers the entire registered chapter population, with expert links for current APIs.
-  Add a scoped roadmap/code/book status map and standard-library publication checker with actual
-  copied-fixture refusal probes for orphaned/missing chapters, missing index coverage, invalid source/
-  rendered links and status/API mismatch. Fixtures and generated HTML remain on this repo volume.
-  Adopt directive in a decision and roadmap principle/disposition; compact map input at unchanged cap.
-  Correct D71 landing and measurement-input status; preserve earlier checklists/journals unchanged,
-  D72 milestone blocker: archive resident-limit RED uses the live archive plus 22 fixed records;
-  486538 + 3520000 decoded bytes exceeds 4000000, so decoded-limit refusal preempts its intended
-  resident predicate. Fix this small fixture defect here before closing publication verification:
-  use a fixed minimal valid archive, paired passing/overflow resident cases, no reader/bound changes.
-  Keep ROADMAP within its original baseline by moving its exact D32 explanation into the existing
-  canonical decision and leaving a concise disposition link; no registry/ceiling changes.
-  Roll live records by exact predecessor bytes if required. Focused checks plus full probe milestone.
-  Verification: 47 chapters/14 scoped public APIs, all source/rendered links; nine publication probes,
-  28 archive arms and full 24 suites green; glossary/ledger/censuses and staged doctrines.
-  Commit: `STITCHCAD-G1-0036` (this recording commit).
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1094.md).
 
 ### `G1-SLICE.4d.1` — progressive publication and scoped lockstep
 

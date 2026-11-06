@@ -625,6 +625,16 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] LOCKSTEP:DEV_NOTES,changelog,D384 and LIVE defect row align;README reviewed unchanged,G1still6/18 In Progress.
   promotion: declined (lesson is in DEV_NOTES;publication refusals already name each class).
   Commit:STITCHCAD-G1-0972.
+- ID: `G1-SLICE.5f.2.prepush-400.task-retention`
+  Status: `done`
+  Goal:retire whole closed leaves through the existing archive before the fixed task collection ceiling blocks the gate repairs.
+  Paths:docs/history/stitchcad-devnotes-part1094.md;docs/tasks/G1-SLICE-formulas.md;docs/tasks/G1-SLICE-measurements.md;docs/tasks/G1-SLICE-names.md.
+  - [x] ROOT CAUSE / ISSUE:commit attempt →LIVE-DOC-SIZE tasks_collection aggregate 20003 lines exceed the ceiling 20000,rc=1. Closed whole leaves retire;no ceiling is raised.
+  - [x] ADDRESSED:transition_receipts.py --record part1094 →43 exact Git spans,rc=0;independent verify.py →93132 decoded bytes exact against cda4e19c,67 stubs for 67 leaves,rc=0. Collection now 19098 lines.
+  - [x] NO REGRESSION:verify.py →1623 leaf IDs,statuses,Paths,Children and all headings identical in34 files,rc=0;verify-retention →archive OK,1548 records,rc=0;task_source_contract.py →3 tests OK,rc=0.
+  - [x] LOCKSTEP:book archive reader and changelog align;README/LIVE/DEV reviewed unchanged,G1still6/18 In Progress.
+  promotion: declined (existing retention procedure;no new lesson).
+  Commit:STITCHCAD-G1-0973.
 - ID: `G1-SLICE.5f.2.prepush-400.ram-observe`
   Status: `done`
   Goal:adopt the director's 2026-11-06 RAM rule in the tool,book and records during the gate.

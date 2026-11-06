@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0973 — retire closed task leaves under the fixed ceiling
+
+67 closed leaves move whole into record1094,freeing885 lines below the unchanged20000-line task ceiling. All1623 leaf
+identities,statuses and parsed fields stay live;43 Git intervals match exactly. Pre-push repairs continue.
+
 ## STITCHCAD-G1-0972 — restore book publication and the G0-19 clause (D384)
 
 Two chapters gain topic-index rows;my 0971 marker and 0968 out-of-tree link are corrected;G0-19 builds before it
