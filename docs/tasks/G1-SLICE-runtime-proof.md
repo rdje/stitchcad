@@ -660,11 +660,12 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   promotion: declined (decision_machine-tokens-declared-where-used.md owns the rule and this commit extends it).
   Commit:STITCHCAD-G1-0975.
 - ID: `G1-SLICE.5f.2.exit-distance`
-  Status: `pending`
-  Goal:D387 director decision:continue input admission depth-first,or re-sequence to a thin executing path to the G1 exit.
+  Status: `done`
+  Goal:D387 director decision on input-check depth versus a thin executing path to the G1 exit.
   Measured at8f660fa2:654 commits since6/18 (13b12b84,2026-10-26);134239 source and121655 test lines;1730 public types;module depth20.
-  git grep →0 solver and0 persistence files;render only in test oracles. Leaves .5f.3 and .7-.16 stay pending. Drift census 39 spine/1002 product passes throughout.
-  Frontier stays .references.record unless the director rules;this leaf changes no order by itself.
+  git grep →0 solver and0 persistence files;render only in test oracles. Drift census 39 spine/1002 product passed throughout.
+  Decided 2026-11-06:input checks on hold,all in on features;decision_product-work-takes-the-frontier.md holds the ruling.
+  Commit:STITCHCAD-G1-0977.
 - ID: `G1-SLICE.5f.2.prepush-400.ram-observe`
   Status: `done`
   Goal:adopt the director's 2026-11-06 RAM rule in the tool,book and records during the gate.
@@ -677,3 +678,33 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] LOCKSTEP:book/decision/MEMORY/changelog/.record align;README/LIVE reviewed unchanged,G1still6/18 In Progress.
   promotion: declined (the decision record in this commit owns the rule).
   Commit:STITCHCAD-G1-0968.
+
+## Thin executing path
+
+Director ruling 2026-11-06. The G1 exit path runs for real on the smallest product that can do it, and
+widens only after it runs. Unsupported input refuses plainly;each child gets one focused check.
+
+- ID: `G1-SLICE.thin-path`
+  Status: `in_progress`
+  Goal:one simple recipe through evaluate,one constraint,save and reopen,render and export,natively then in a browser.
+  Children:`.execute`,`.constraint`,`.store`,`.render`,`.cli`,`.browser`;order may change once real code shows a better one.
+  Acceptance:the recorded end-to-end run G1-SLICE.12 asks for;this does not replace the roadmap owners it advances.
+- ID: `G1-SLICE.thin-path.execute`
+  Status: `pending`
+  Goal:execute a minimal drafting program to real coordinates;other operations refuse. Advances .5f.3 without waiting on the held .5f.2 leaves.
+- ID: `G1-SLICE.thin-path.constraint`
+  Status: `pending`
+  Goal:the sc-constraints crate resolves one finite-domain constraint with its four outcomes. Advances .8.
+- ID: `G1-SLICE.thin-path.store`
+  Status: `pending`
+  Goal:the sc-store crate saves that project as canonical text and reopens it unchanged,with an atomic commit. Advances .7.
+- ID: `G1-SLICE.thin-path.render`
+  Status: `pending`
+  Goal:render the executed result and export one file format a person can open. Advances .12.
+- ID: `G1-SLICE.thin-path.cli`
+  Status: `pending`
+  Goal:the sc-cli crate replays that session headlessly with identical bytes on a second run. Advances .10.
+- ID: `G1-SLICE.thin-path.browser`
+  Status: `pending`
+  Goal:the same path runs in a real browser,with its limitations written down. Advances .11 and .12.
+

@@ -967,7 +967,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   Commit:STITCHCAD-G1-0962.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.record`
-  Status: `pending`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:implement one original source-bound notion current-reference view using the0962 protocol;
   explicit fresh resources/query/retention/ownership quotas,raw bounded point/range causes and G2 deferral.
   RAM:observe the trend per decision_ram-trend.md;no percentage admission.
@@ -975,7 +976,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   deleted interior/foreign ownership,original loans and complete quota/arithmetic/refusal priority.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references.cohort`
-  Status: `pending`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:compose every original source record/role after.record;complete result/child workspace
   admission,N+1 atomic cursor passes,N0 idle,late first causes/no accepted prefix or refund.
   Deferred verification:actual native-family/semantic cohort plus whole.5f.2.check/.verify remain

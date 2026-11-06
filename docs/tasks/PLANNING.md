@@ -1191,5 +1191,5 @@ D382–D386 fixed0970–0975;[whole records](PLANNING-evidence.md#d382--changelo
 
 ## D387 — no census watches distance to the gate
 
-Owner:G1-SLICE.5f.2.exit-distance;open,director decision. The drift census counts product commits,so654 commits at G1 6/18
-all pass it. They add input admission;no drafting operation executes,and no solver,store,renderer or export code exists.
+Decided by the director2026-11-06:input checks on hold,all in on features;frontier G1-SLICE.thin-path. The drift census counts
+product commits,so654 commits at G1 6/18 passed it while no drafting operation,solver,store,renderer or export existed.

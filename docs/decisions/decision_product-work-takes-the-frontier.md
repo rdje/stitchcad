@@ -94,3 +94,28 @@ progress stated separately. A G1-labelled maintenance commit does not advance fe
 
 Authority: director message in the 2026-10-25 session; adoption owned by
 `G1-SLICE.5b.4c.h2.b.p.o.a25.2`, with deferred fixture calibration owned by .f.fixture-verification.
+
+## Director ruling — 2026-11-06: input checks on hold
+
+The director's words:
+
+> we can't guarantee 100% input check. We have to do as much check as we can, but we can't spend all of
+> time checking input. More checks on input shall be added based on needs. We can go back and add more
+> input checks after receiving feedback from downstream consumers or users or the when STITCHCAD is
+> feature complete. Until then please put an hold on input checks and go all in on product work,
+> feature implementation.
+
+How this applies until feature completeness or real feedback reopens it:
+
+- New admission, quota, source-binding or refusal layers are not taken as their own slices. The
+  `G1-SLICE.5f.2` dependency, check and verify leaves are `blocked` on this ruling; the work already
+  done stays in the tree, compiled and tested, and nothing is removed.
+- A new input check is added when a feature cannot work correctly without it, or when feedback from a
+  downstream consumer or user names it. It is part of that feature's slice, not a campaign.
+- A feature refuses what it does not support yet with a plain error. That is feature behavior, and it
+  needs only what that feature's one focused check requires.
+- The frontier is `G1-SLICE.thin-path`: the G1 exit path running for real, widened only after it runs.
+
+Unchanged: the doctrine hooks, task tree, book synchronization, one focused check per feature, and the
+400-commit full gate. Existing checks keep passing; this holds new input-check work, not the gates.
+

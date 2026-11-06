@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0977 — hold input checks and open the thin executing path (D387)
+
+Director ruling2026-11-06:input checks on hold,all in on feature implementation;more checks come from real need.
+16 leaves are blocked on the ruling;nothing is removed. G1-SLICE.thin-path is the new frontier after the due push.
+
 ## STITCHCAD-G1-0976 — record the measured distance to the G1 exit (D387)
 
 Availability now states each G1 exit requirement's real state,and a tracked leaf holds the open director decision.

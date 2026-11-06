@@ -452,7 +452,8 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0851 complete mixed name/kind order;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1027md).
 - ID: `G1-SLICE.5f.2.dependencies`
-  Status: `in_progress`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:all original formula/geometry/semantic dependencies,source frame/current registry/output provenance;canonical Pocket kind/domain/state and Buttonhole button-size dependency,no separately authored hole length or approximation.
 - ID: `G1-SLICE.5f.2.dependencies.plan`
   Status: `done`
@@ -509,10 +510,12 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:0866 independent task/history guards;[whole scope/proofs](../history/window30.md#stitchcad-devnotes-part1039md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic`
-  Status: `in_progress`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:actual Root-bound garment/native semantic sources,including Pocket opening kind/domain/state/component recipe and Buttonhole canonical button/derivation;no empty substitute or authored hole length.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding`
-  Status: `in_progress`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:bind complete original semantic consumers and dependencies after actual source primitives. Preserve logical kind/domain/state,Profile ownership,component source/creator loans and genuine order/context under fresh complete bounds;no value selection,physical execution or accepted prefix.
   Children: `.contract` (source/consumer boundaries),`.occurrences` (original typed fields/locations),`.requests` (complete explicit source selection),`.work` (fresh aggregate bounds),`.logical` (actual logical/rule sources/order),`.garment` (Pocket/Closure/component joins),`.native` (all13 target families),`.bind` (complete cohort);then .5f.2.check/.verify.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.contract`
@@ -564,13 +567,16 @@ retains all original goals,statuses and focused acceptance evidence.
   Status: `done`
   Goal:bind complete actual operation logical/Profile/numeric inputs,original rule/signature/output and Design Derived supplier order under aggregate preflight. Preserve domains/states and external Profile Derived source scope;never select values or reinterpret Profile operation IDs as Root positions.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment`
-  Status: `in_progress`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:bind actual Pocket opening/served/components and complete Closure size/derivation/operation relations with original members,source owners and complete component proofs. Root consumer locations have no invented position;no physical opening/hole-length execution or source truth claim.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.native`
-  Status: `pending`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:bind original semantic targets across all13 actual native families using genuine canonical source/family proofs and complete held-field bounds. Account semantic-reached geometry separately;introduce authentic missing facets before use,typed unsupported instead of empty/id-only records.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.bind`
-  Status: `pending`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:compose every original semantic occurrence and successful bounded source/family join into one private complete cohort tied to exact original owners. Bound all child walks/buffers before work,retain typed first causes and refuse without accepted prefix;whole .5f.2.check/.verify remain separate.
 - ID: `G1-SLICE.5f.2.dependencies.semantic.sources`
   Status: `done`
@@ -713,7 +719,8 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] CHECKPOINT:`bash scripts/check_handoff.sh --idle-cua` with OS-visible access:handoff OK/no project jobs,rc=0;d8f967f7 clean,brief0,342 ahead. Four exact Git spans/public bytes/book and mandatory retention0905 gates remain the completed proofs;no aggregate/coupled verdict.
   - [x] RESUME:0906 PNT paused by director2026-11-04;resume only on request at .dependencies.semantic.binding.work. MEM/index/ledger record pause. README/LIVE/book/DEV reviewed unchanged;no new technical lesson or product behavior. Commit:STITCHCAD-G1-0906.
 - ID: `G1-SLICE.5f.2.check`
-  Status: `pending`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:whole owner/static-order/context/argument proof;complete logical bounds before child work,actual first causes and source fields,no accepted prefix or manufactured geometry/currentness/evidence.
 - ID: `G1-SLICE.5f.2.pause-20261102`
   Status: `done`
@@ -721,7 +728,8 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   - [x] CHECKPOINT: 0859 OS-visible `bash scripts/check_handoff.sh --idle-cua`:handoff OK/no project jobs,rc=0;9f2fca2c clean,brief0,295 ahead. Native8/strict/fmt/Rustdoc3/book proofs remain those of0858.
   - [x] RESUME: 0859 PNT paused by director;resume only on request at .dependencies.geometry.native.mixed. MEM/index/changelog updated;README/LIVE/book/DEV reviewed unchanged,no new technical lesson or product claim.
 - ID: `G1-SLICE.5f.2.verify`
-  Status: `pending`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:after the agreed integration set,verify coupled source/order/frame/currentness/argument/semantic/resource and allocator refusals,original causes and public proof lifetimes;actual geometry/selector execution stays .5f.3/.4.geometry/G2/G3.
 
 - ID: `G1-SLICE.5f.2.cleanup-20261105`
@@ -821,7 +829,8 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Status: `done`
   Goal:completed Profile scope;[whole original goals/proofs](../history/stitchcad-devnotes-part1087.md).
 - ID: `G1-SLICE.5f.2.verify.compiler-termination`
-  Status: `pending`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:P2 before pre-push verification,diagnose the isolated compose cargo-check rustc SIGKILL. Same-source focused native compilation subsequently succeeds. OS census shows24GB RAM and unrelated rustc RSS10158288KiB;recent logs show no kill cause. Preserve the unknown;do not blame memory or alter foreign jobs without evidence.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.logical.profile.retention`
@@ -906,7 +915,8 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Status: `done`
   Goal:completed original garment input scope;[whole goals/proofs](../history/stitchcad-devnotes-part1091.md).
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations`
-  Status: `in_progress`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:bind complete actual Pocket served/component and Closure derivation/operation relations under original input/cursor owners and complete source/member/component proofs. Preserve genuine garment locations without invented Root consumer positions;introduce authentic missing facets before use and retain first typed causes/no accepted prefix.
   Children: `.pocket-work` (complete current served/component members),`.pocket-sources` (stable original source parents),`.closures` (original derivation/placement relations);then native/cohort and whole .5f.2.check/.verify.
 
@@ -925,7 +935,8 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Acceptance:complete original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-whole-protocol-retention0952).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures`
-  Status: `in_progress`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:bind actual original Closure buttonhole operation/canonical button and physical placement relations with authentic source facets,complete fresh work and original owner/instance roles. No separately authored hole length,guessed source or geometry/execution acceptance.
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.retention`
@@ -945,7 +956,8 @@ Whole closed source goals/proofs/navigation remain exact in [part1078](../histor
   Goal:completed;[whole original protocol/proof](../history/stitchcad-devnotes-part1093.md).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements`
-  Status: `in_progress`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:bind all original Closure instance First/Second placements under fresh whole work and actual
   garment/copy/Piece/source proof;introduce only authentic missing facets before use.
 
@@ -986,7 +998,8 @@ Completed original placement-work owner/proof: [the evidence sibling](G1-SLICE-e
   Acceptance:whole original proof in [the evidence sibling](G1-SLICE-evidence.md#completed-original-closure-placement-sources0960).
 
 - ID: `G1-SLICE.5f.2.dependencies.semantic.binding.garment.relations.closures.placements.references`
-  Status: `in_progress`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal:bind current original placement anchor/full direction under explicit complete resolver-work
   bounds after member/source joins;retain original topology/repair causes and G2 physical deferral.
   Children: `.plan` (bounded execution/retention contract),`.record` (one original source-bound

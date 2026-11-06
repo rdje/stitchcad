@@ -928,7 +928,8 @@ retains every original goal,status,child relation and focused acceptance proof.
 Closed search checkpoint:[whole seven-node subtree](G1-SLICE-constructions.md#native-declaration-search-checkpoint).
 
 - ID: `G1-SLICE.5f.2`
-  Status: `in_progress`
+  Status: `blocked`
+  Blocked:director2026-11-06 input-check hold;resume on need.
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.
   Acceptance: every argument sees only prior/always-visible names, output provenance/identity,
   Pocket logical opening kind/domain/state and component dependencies, Buttonhole dependency on

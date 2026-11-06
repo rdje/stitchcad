@@ -23,8 +23,12 @@ save and reopen, render, and export. This is where each part stands on 2026-11-0
 
 Since the G1 row reached 6/18 on 2026-10-26, about 650 commits have mostly widened how exactly inputs
 are admitted. That work is real, but it has not moved the exit: a recipe still cannot produce a
-pattern. Whether to continue depth-first or take a thin executing path first is an open director
-decision, tracked as `G1-SLICE.5f.2.exit-distance`.
+pattern.
+
+The director ruled on 2026-11-06 that input checks are on hold, and that work goes all in on features.
+More checks come later, as downstream consumers, users or feature completeness show the need. Existing
+checks stay and keep passing. Next comes `G1-SLICE.thin-path`: one simple recipe running through this
+whole table for real, then widening from there.
 
 ## Implemented foundations
 
