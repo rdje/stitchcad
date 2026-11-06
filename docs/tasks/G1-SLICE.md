@@ -937,7 +937,7 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Status: `done`
   Goal:0478 full publication45/final inputs; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part633md).
 - ID: `G1-SLICE.7`
-  Status: `pending`
+  Status: `in_progress`
   Goal: `sc-store` (§4.5) — canonical-text project directory (stable key order, declared float
   formatting, ULID ids, no wall-clock), schema version + migrations, recoverable-unknown-extension
   preservation, crash-consistent atomic multi-file commits, autosave/recovery, and the repository
@@ -952,6 +952,19 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   byte-identical.
   Verification: `pending`
   Commit: `pending`
+- ID: `G1-SLICE.7.engine`
+  Status: `done`
+  Goal:the storage engine under `.7`:canonical text,repository trait,native and memory backends,atomic multi-file commits and recovery.
+  Paths:crates/sc-store/**,docs/book/src/spec/project-store.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,
+  docs/book/src/topic-index.md,Cargo.lock,Makefile,.github/workflows/rust.yml,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-05 and the browser run need saves that survive a crash. WHERE no such crate;git ls-files crates/sc-store | wc -l →0,rc=0.
+  - [x] ADDRESSED:cargo test -p sc-store rc=0:10 crash-point tests,6 on a real directory,7 text,2 path,1 digest,3 doctests. 10 crash points,30 crashes during recovery,30 real SIGKILLs with 12 inside a save.
+  - [x] ADDRESSED:clippy --all-targets --all-features -D warnings rc=0;fmt --check rc=0;wasm32 build rc=0;no dependencies. Native write,rename,remove sync file and directory;links are refused.
+  - [x] NO REGRESSION:BOOK-CENSUSES rc=0;gauge18 of66 unchanged,no other crate changed. Python json.dumps(sort_keys,indent=2,ensure_ascii=False) reproduced the canonical bytes.
+  - [x] ONE-TIME,NOT WATCHED:store_mutants.py →18 of 18 planted storage bugs red,target/prepush-0967/store_mutants.log. One escape was my own harmless mutant,rewritten to plant the bug I meant.
+  - [x] HONEST:power loss is untested,two writers are not stopped,damage outside a commit in progress is unchecked. The chapter says all three.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-0987.
 - ID: `G1-SLICE.8`
   Status: `done`
   Goal: `sc-constraints` kernel (§6.1/§6.2) — typed constraint AST, finite-domain propagation +

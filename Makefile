@@ -15,7 +15,7 @@ help:
 	@echo "make hooks           - install the git hooks (core.hooksPath=.githooks)"
 	@echo "make bootstrap       - first-time project bootstrap"
 	@echo "make update-scaffold - pull the latest bedrock spine (set URL=<bedrock-repo>)"
-	@echo "make wasm            - the wasm-viewer smoketest: build sc-units + sc-core + sc-measure + sc-constraints for wasm32-unknown-unknown"
+	@echo "make wasm            - the wasm-viewer smoketest: build sc-units + sc-core + sc-measure + sc-constraints + sc-store for wasm32-unknown-unknown"
 	@echo "make push-due        - has the 400-commit push cadence been reached?"
 	@echo "make probes          - run every probe suite under docs/tasks/artifacts/ (scratch on this volume)"
 
@@ -43,8 +43,8 @@ test:
 # clause is a real cross-compilation, not a host `cargo check`. Run this before claiming a crate is
 # browser-capable.
 wasm:
-	$(LOCAL_RUN) cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core -p sc-measure -p sc-constraints
-	@echo "wasm-viewer smoketest: sc-units + sc-core + sc-measure + sc-constraints build for wasm32-unknown-unknown"
+	$(LOCAL_RUN) cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core -p sc-measure -p sc-constraints -p sc-store
+	@echo "wasm-viewer smoketest: sc-units + sc-core + sc-measure + sc-constraints + sc-store build for wasm32-unknown-unknown"
 
 # Derive the 400-commit cadence; earlier pushes require an explicit director request.
 # Reports and never fails the build: exit 1 means "a push is due", not "an error occurred".

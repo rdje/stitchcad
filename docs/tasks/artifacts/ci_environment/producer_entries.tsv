@@ -8,6 +8,7 @@ Makefile	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract
 crates/sc-constraints/Cargo.toml	platform	G1-SLICE.8	Declarative public build/output contract; destination audit pending.
 crates/sc-core/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 crates/sc-measure/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+crates/sc-store/Cargo.toml	platform	G1-SLICE.7.engine	Declarative public build/output contract; destination audit pending.
 crates/sc-units/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 docs/book/book.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 docs/tasks/artifacts/artifact_cleanup/cleanup.py	output	G1-SLICE.5b.4c.h2.b.p	Complete audit/full tracked-source/child plans; strict process evidence and unique deletion links; original policy/census/JSON/argv verified.

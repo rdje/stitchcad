@@ -57,5 +57,9 @@ dependencies = [
 ]
 
 [[package]]
+name = "sc-store"
+version = "0.1.0"
+
+[[package]]
 name = "sc-units"
 version = "0.1.0"

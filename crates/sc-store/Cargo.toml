@@ -1,0 +1,10 @@
+[package]
+name = "sc-store"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "StitchCAD persistence: canonical text files and crash-consistent multi-file commits. Pure Rust, no dependencies."
+
+[lints]
+workspace = true

@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0987 — the project store engine:a save is all or nothing
+
+`sc-store` saves several files as one commit,so after a crash at any step a project holds exactly its old files or exactly its new ones.
+Tests crash every step,crash recovery at every step,and kill a real process. Canonical text gives one byte form for any value. The project layer is next.
+
 ## STITCHCAD-G1-0986 — the constraint kernel:typed rules and a deterministic solver
 
 `sc-constraints` answers which values fit a profile's rules,or names the facts and rules in conflict,in sentences,with no dependencies,on native and in the browser build.
