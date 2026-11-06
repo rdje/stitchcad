@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0978 — return feature work to the roadmap's owners (D388)
+
+Director 2026-11-06 adopted the feature characterization and pointed it back at the roadmap,task tree and book.
+0977's six parallel leaves are gone;`.8` is next by the roadmap's clause order. The book table now shows the seven G1 exit clauses.
+
 ## STITCHCAD-G1-0977 — hold input checks and open the thin executing path (D387)
 
 Director ruling2026-11-06:input checks on hold,all in on feature implementation;more checks come from real need.

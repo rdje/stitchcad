@@ -1189,7 +1189,4 @@ D381 fixed0966;[whole record](PLANNING-evidence.md#d381--dependency-plan-probe-i
 
 D382–D386 fixed0970–0975;[whole records](PLANNING-evidence.md#d382--changelog-pointer-rule-outlived-the-live-index).
 
-## D387 — no census watches distance to the gate
-
-Decided by the director2026-11-06:input checks on hold,all in on features;frontier G1-SLICE.thin-path. The drift census counts
-product commits,so654 commits at G1 6/18 passed it while no drafting operation,solver,store,renderer or export existed.
+D387–D388 decided/fixed0977–0978;[whole records](PLANNING-evidence.md#d387--no-census-watches-distance-to-the-gate).

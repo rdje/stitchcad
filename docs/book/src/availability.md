@@ -6,20 +6,20 @@ G0 contract review is mostly complete with human closure unapproved. G1 remains 
 
 ## Distance to the G1 exit
 
-G1's exit asks for a real browser run: load a project, evaluate a recipe, resolve one CSP constraint,
-save and reopen, render, and export. This is where each part stands on 2026-11-06:
+The roadmap's G1 exit has seven clauses. This is where each one stands on 2026-11-06:
 
-| G1 exit requirement | State today | Owning leaf |
+| G1 exit clause | State today | Owning leaf |
 | --- | --- | --- |
-| Scalar formula recipes execute | Working, with numeric checks on one native and browser pair | `.5` |
-| Drafting operations execute | Not started; inputs are validated, and no geometry is produced | `.5f.3` |
-| Command bus with revision checks and undo | Working as a library | `.6` |
-| Project store, save and reopen | No code yet | `.7` |
-| One CSP constraint resolves | No solver code yet | `.8` |
-| Headless deterministic replay | No code yet | `.10` |
-| Real browser spike end to end | Not started | `.12` |
+| Three runtime profiles compile | The libraries build for the browser target; the named profiles do not exist yet | `.11` |
+| A real browser run: load, evaluate a recipe, one CSP constraint, save and reopen, render, export | Only evaluate works, for scalar recipes, with numeric checks on one native and browser pair | `.12` |
 | Canvas-hosting spike for ADR-0002 | Not started | `.13` |
-| License census for the solver | Not started | `.15` |
+| Command bus with revision checks and undo | Working as a library | `.6` |
+| Crash-consistent save and recovery | No code yet | `.7` |
+| License-compatible solver builds on all targets | No solver code yet | `.15` |
+| Browser capability matrix with tested versions and limitations | Not started | `.12` |
+
+Drafting the reference skirt itself is the G2 gate. It needs the geometry kernel and drafting execution,
+which this table does not include.
 
 Since the G1 row reached 6/18 on 2026-10-26, about 650 commits have mostly widened how exactly inputs
 are admitted. That work is real, but it has not moved the exit: a recipe still cannot produce a
@@ -27,8 +27,12 @@ pattern.
 
 The director ruled on 2026-11-06 that input checks are on hold, and that work goes all in on features.
 More checks come later, as downstream consumers, users or feature completeness show the need. Existing
-checks stay and keep passing. Next comes `G1-SLICE.thin-path`: one simple recipe running through this
-whole table for real, then widening from there.
+checks stay and keep passing.
+
+A feature means the roadmap's next requirement, built by its existing task-tree owner to the contract
+this book gives, with this table and the book's examples changing in the same commit. It refuses what it
+does not support yet with a plain error. The next one is the constraint kernel, `.8`, which the browser
+run needs, followed by the project store, `.7`.
 
 ## Implemented foundations
 

@@ -158,3 +158,14 @@ reds and14 executed examples. Fault anchors are still only exercised by probes;p
 Owner:G1-SLICE.5f.2.prepush-400.api-declarations;P1 before push. C1 passed at0655 and reached794 undeclared name/chapter
 pairs,invisible because make probes runs once per400 commits. Fixed0975:29 declaration tables and BOOK-CENSUSES at
 every commit. It cannot judge a meaning's truth;rendered checks stay in the pre-push publication suite.
+
+## D387 — no census watches distance to the gate
+
+Decided by the director2026-11-06:input checks on hold,all in on features. The drift census counts product commits,so654
+commits at G1 6/18 passed it while no drafting operation,solver,store,renderer or export existed.
+
+## D388 — parallel plan beside the roadmap
+
+Owner:G1-SLICE.thin-path;found by the director2026-11-06. 0977 opened six leaves restating owners the tree already had,with
+weaker acceptance;0976's book table replaced the roadmap's seven clauses with my own list,skipping `.11` and adding `.5f.3` and `.10`.
+Neither was checked against ROADMAP.md §11 or G1-SLICE.md's exit table. Fixed0978:owners restored,table matches the clauses.

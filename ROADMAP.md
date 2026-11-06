@@ -5,17 +5,16 @@
 > v0.3, v0.4, … under the same rules: already-locked decisions are not
 > reopened implicitly (only by explicit, argued challenge), and every
 > change is appended to the Disposition Log in Appendix A with its source.
-> Version history is preserved in git; earlier revisions remain available.
+> Version history is preserved in git.
 > The roadmap remains DRAFT until the G0 exit criteria are met.
 > v0.1 was directionally validated by all three reviewers; v0.2 integrates
 > their findings. v0.3 amends one gate exit (§11 G3) on the engineer's proposal
 > under the director's delegation, closing defect D32 — envelope garments no
-> exit criterion proved; it is logged in Appendix A with its source. Changes are
+> exit criterion proved; it is logged in Appendix A with its source.
 > v0.4 replaces the MCP transport schedule restriction with per-profile
 > admission evidence, under the director's instruction. Changes are
-> marked conceptually via the Disposition Log
-> in the Appendix; no timestamps or deadlines exist anywhere in this
-> document — gates are functionality-defined only.
+> marked conceptually via the Disposition Log in the Appendix; no timestamps
+> or deadlines exist anywhere in this document — gates are functionality-defined only.
 >
 > Language: this document is English-only, as decided.
 
@@ -935,26 +934,25 @@ No calendar. Gates are per-capability: V-tracks never block the 2D release.
 - i18n: one message system chosen at G0; locale-aware diagnostics; RTL
   geometry-invariance; shipping staged (GPT R24; Grok §6.4).
 - Agent authority scoped from G1; stdio-first MCP (GPT R25; Grok §5.2/§7).
-- Z3 disposition (post-review decision, owner-approved): custom deterministic
-  finite-domain solver as sole production CSP (native + WASM); Z3 demoted to
-  non-shipped CI differential oracle (`csp-z3`). Eliminates the WASM/heaviness
-  concern raised by Grok §3.4 and GPT R15 for the CSP specifically.
+- Z3 disposition (post-review, owner-approved): custom deterministic finite-domain
+  solver is sole production CSP (native + WASM); Z3 is a non-shipped CI differential
+  oracle (`csp-z3`), ending Grok §3.4 and GPT R15's CSP WASM/heaviness concern.
 
 **Deliberately NOT adopted (with reason):**
 - Multi-size-in-one-DXF+".rul" as single universal package: split into named,
   separately validated modes (all reviewers; GRAFIS-documented divergence).
 - "import/export DXF round-trip as THE signoff harness": kept as regression
   tool only; real importers + physical checks are the signoff oracle (GPT R12).
-- Marker making: remains an explicit non-goal (all reviewers concurred).
+- Marker making: stays a non-goal (all reviewers concurred).
 - Full formula-language spec content: deferred to G0 execution (ADR-0003
-  names its scope now).
+  names its scope).
 
 **Amended after review (v0.3), with source:**
 - §11 G3 adds whole-§3.2 envelope coverage, replacing the domain-complexity
   note as a substitute for proof. The engineer's proposal under the director's
   delegation closes D32: collar, trousers, buttons and pockets lacked proving
-  exits. Four `(proposed)` matrix cells become gates; locked scope is unchanged.
-  Exact prior disposition, proposal and reasoning are preserved in
+  exits. Four `(proposed)` matrix cells become gates; locked scope unchanged.
+  Prior disposition, proposal, reasoning:
   `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md`.
   The proposal author applied it under governance §6.1; its evidence is derived
   by instruments and that author may not approve it (self-application decision).
@@ -970,12 +968,14 @@ No calendar. Gates are per-capability: V-tracks never block the 2D release.
   local stdio/HTTP, remote HTTP and private bridges; authority, opt-in,
   human-only approval, injection handling and actor trace remain. Source:
   `docs/decisions/decision_mcp-transports.md`; owner `G1-SLICE.9.transport.policy`.
-  Full prior application/admission receipt: `docs/history/stitchcad-devnotes-part485.md`.
+  Full prior receipt: `docs/history/stitchcad-devnotes-part485.md`.
 **Director clarification within v0.4; scope/exits unchanged:**
 - D239/§9: immutable candidate keeps a stable approval binding; detached
   human/scope/date records bind its identity without editing it. Director
-  accepted the engineer's recommendation. Source: `docs/decisions/decision_release-package-identity-and-scope.md`;
+  accepted the engineer's recommendation. `docs/decisions/decision_release-package-identity-and-scope.md`;
   owner `G1-SLICE.6.2.2.c.2.5.2`.
+- D387: new input checks await feedback or feature completeness; features follow
+  these gates. G1-SLICE.thin-path, `docs/decisions/decision_product-work-takes-the-frontier.md`.
 
 ---
 

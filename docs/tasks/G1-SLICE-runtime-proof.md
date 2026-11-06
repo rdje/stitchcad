@@ -679,32 +679,17 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   promotion: declined (the decision record in this commit owns the rule).
   Commit:STITCHCAD-G1-0968.
 
-## Thin executing path
+## Feature order toward the G1 exit
 
-Director ruling 2026-11-06. The G1 exit path runs for real on the smallest product that can do it, and
-widens only after it runs. Unsupported input refuses plainly;each child gets one focused check.
+Director 2026-11-06. A feature is the roadmap's next requirement,built by its existing owner to the book's contract,with the
+book's status and examples changing in the same commit. The owners are in the exit table in G1-SLICE.md;this section only orders them.
+
+Order:`.8` constraint kernel,`.7` store,`.10` headless replay,`.11` profiles,`.15` license census,`.12` browser run with render and export.
+Then `.13` canvas spike,`.14` dev shell,`.9` API and MCP,`.16` exit review. `.6` widens when one of these needs it.
+`.5f.3b` follows G2-2D.1,which supplies geometry. The first recipe comes from the book's reference skirt §4. Order may change once code shows a better one.
 
 - ID: `G1-SLICE.thin-path`
-  Status: `in_progress`
-  Goal:one simple recipe through evaluate,one constraint,save and reopen,render and export,natively then in a browser.
-  Children:`.execute`,`.constraint`,`.store`,`.render`,`.cli`,`.browser`;order may change once real code shows a better one.
-  Acceptance:the recorded end-to-end run G1-SLICE.12 asks for;this does not replace the roadmap owners it advances.
-- ID: `G1-SLICE.thin-path.execute`
-  Status: `pending`
-  Goal:execute a minimal drafting program to real coordinates;other operations refuse. Advances .5f.3 without waiting on the held .5f.2 leaves.
-- ID: `G1-SLICE.thin-path.constraint`
-  Status: `pending`
-  Goal:the sc-constraints crate resolves one finite-domain constraint with its four outcomes. Advances .8.
-- ID: `G1-SLICE.thin-path.store`
-  Status: `pending`
-  Goal:the sc-store crate saves that project as canonical text and reopens it unchanged,with an atomic commit. Advances .7.
-- ID: `G1-SLICE.thin-path.render`
-  Status: `pending`
-  Goal:render the executed result and export one file format a person can open. Advances .12.
-- ID: `G1-SLICE.thin-path.cli`
-  Status: `pending`
-  Goal:the sc-cli crate replays that session headlessly with identical bytes on a second run. Advances .10.
-- ID: `G1-SLICE.thin-path.browser`
-  Status: `pending`
-  Goal:the same path runs in a real browser,with its limitations written down. Advances .11 and .12.
-
+  Status: `done`
+  Goal:D388 retire 0977's six parallel leaves;they restated .5f.3b,.8,.7,.12,.10 and .11 with weaker acceptance. Each returns to its owner.
+  Also corrects availability's exit table to the roadmap's seven clauses and records the ruling in the roadmap's clarifications.
+  Commit:STITCHCAD-G1-0978.

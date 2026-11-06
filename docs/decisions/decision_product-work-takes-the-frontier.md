@@ -114,7 +114,15 @@ How this applies until feature completeness or real feedback reopens it:
   downstream consumer or user names it. It is part of that feature's slice, not a campaign.
 - A feature refuses what it does not support yet with a plain error. That is feature behavior, and it
   needs only what that feature's one focused check requires.
-- The frontier is `G1-SLICE.thin-path`: the G1 exit path running for real, widened only after it runs.
+- A feature is the roadmap's next requirement, built by its existing task-tree owner to the contract
+  the book gives, with the book's status and examples changing in the same commit. It opens no parallel
+  plan. The order toward the G1 exit is in `docs/tasks/G1-SLICE-runtime-proof.md`.
+
+The refusal and new-check bullets above are the engineer's characterization. The director adopted them
+and pointed feature work back at its sources:
+
+> Let's use your characterisation of what a feature work entails. But don't we have a roadmap and their
+> task-tree counterpart? and the mdbook ?
 
 Unchanged: the doctrine hooks, task tree, book synchronization, one focused check per feature, and the
 400-commit full gate. Existing checks keep passing; this holds new input-check work, not the gates.
