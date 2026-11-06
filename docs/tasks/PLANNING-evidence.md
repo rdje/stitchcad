@@ -176,6 +176,12 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D393 — recorded a pass from a tail line
+
+0988's leaf said strict clippy rc=0. It had failed:one is_multiple_of lint in tests/project_kill.rs. My command piped clippy through tail -1,which showed a line about the
+failed build,and I wrote the record without reading it. The failure surfaced in the same reply,when I reread that output. Hosted CI and the pre-push gate would have refused it.
+Fixed0989:the lint,and the leaf's claim corrected in place. Rule from here:a recorded rc comes from the command's own exit status,captured to a retained log,never from what a pipe shows.
+
 ## D392 — weak G0 checks
 
 Found 2026-11-06 reading the exit review while building the gauge. G0-04,05,06,08,13 and 17 pass on test -f or grep -q of one phrase,so

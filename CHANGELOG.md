@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0989 — strict clippy passes on the store;a false record corrected (D393)
+
+0988's leaf recorded a clippy pass that was really a failure,hidden by reading it through tail. The lint is fixed and the record corrected. No behavior changes.
+
 ## STITCHCAD-G1-0988 — projects save,migrate and autosave;G1-05 is the first clause met
 
 A project is now a manifest with a schema plus its files. Older schemas migrate all or nothing with backups,newer ones are refused untouched,

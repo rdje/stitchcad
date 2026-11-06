@@ -1183,13 +1183,13 @@ D376/D377 fixed0816/0817;D378 fixed0825;[whole causes/proofs](../history/window3
 
 D379 fixed0826;[whole source identity cause/proofs](../history/window30.md#stitchcad-devnotes-part1002md).
 
-D380 fixed0964;[whole record](PLANNING-evidence.md#d380--cache-inclusive-occupancy-mistaken-for-used-ram).
-
-D381 fixed0966;[whole record](PLANNING-evidence.md#d381--dependency-plan-probe-inherited-ambient-rust-stores).
+D380 fixed0964;[whole record](PLANNING-evidence.md#d380--cache-inclusive-occupancy-mistaken-for-used-ram). D381 fixed0966;[whole record](PLANNING-evidence.md#d381--dependency-plan-probe-inherited-ambient-rust-stores).
 
 D382–D386 fixed0970–0975;[whole records](PLANNING-evidence.md#d382--changelog-pointer-rule-outlived-the-live-index).
 
-D387–D388 decided/fixed0977–0978;[whole records](PLANNING-evidence.md#d387--no-census-watches-distance-to-the-gate). D390 fixed0980;[whole record](PLANNING-evidence.md#d390--checks-outlived-what-they-watch). D391 fixed0981;[whole record](PLANNING-evidence.md#d391--one-look-blamed-a-passing-reader). D392 fixed0985;[record](PLANNING-evidence.md#d392--weak-g0-checks).
+D387–D388 decided/fixed0977–0978;[whole records](PLANNING-evidence.md#d387--no-census-watches-distance-to-the-gate). D390 fixed0980;[whole record](PLANNING-evidence.md#d390--checks-outlived-what-they-watch). D391 fixed0981;[whole record](PLANNING-evidence.md#d391--one-look-blamed-a-passing-reader).
+
+D392 fixed0985;[record](PLANNING-evidence.md#d392--weak-g0-checks). D393 fixed0989;[record](PLANNING-evidence.md#d393--recorded-a-pass-from-a-tail-line).
 
 ## D389 — worked-examples status line is unproven
 

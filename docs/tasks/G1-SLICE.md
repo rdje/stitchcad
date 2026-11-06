@@ -972,11 +972,20 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   - [x] ROOT CAUSE (WHY + WHERE):WHY G1-05 needs recovery on a project,not only on loose files. WHERE sc-store had commits and no manifest,schema,migration or autosave;git grep -c ProjectStore f9a6c6cb -- crates →0,rc=1.
   - [x] ADDRESSED:cargo test -p sc-store --test project --test project_kill rc=0:18 tests,and 30 real SIGKILLs of a process saving and autosaving,3 runs at 23-24 interrupted,7 left an autosave,all whole.
   - [x] ADDRESSED:every crash point of a migration,a save and an autosave ends old or new. A failed step and a newer schema leave identical bytes. An unknown field and file survive a save.
-  - [x] NO REGRESSION:bash scripts/gauge.sh →19 of 66,rc=0. Lock self-test rc=0,now with the printed gauge lines and the flip check run through the project's own stores. Clippy strict rc=0.
+  - [x] NO REGRESSION:bash scripts/gauge.sh →19 of 66,rc=0. Lock self-test rc=0,now with the printed gauge lines and the flip check run through the project's own stores. Corrected by D393:this box first claimed strict clippy rc=0 from a tail line;clippy had failed at 0988 and passes from 0989.
   - [x] ONE-TIME,NOT WATCHED:project_mutants.py →15 of 15 planted project bugs red,target/prepush-0967/project_mutants.log.
   - [x] MEASURED FIRST:my first kill test failed on none left an autosave,because a fixed window rarely outlasted a save. The child now reports finished commits and the parent kills at chosen points.
   promotion: declined (no new lesson).
   Commit:STITCHCAD-G1-0988.
+- ID: `G1-SLICE.7.project.lint`
+  Status: `done`
+  Goal:D393. Strict clippy failed at 0988,and that leaf recorded a pass.
+  Paths:crates/sc-store/tests/project_kill.rs,docs/tasks/G1-SLICE.md,docs/tasks/PLANNING.md,docs/tasks/PLANNING-evidence.md.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY the rc came from tail -1 instead of the exit status. WHERE clippy on crates/sc-store/tests/project_kill.rs:64,manual is_multiple_of;retained run target/prepush-0967/clippy-store.log rc=101.
+  - [x] ADDRESSED:cargo clippy -p sc-store --all-targets --all-features -D warnings,exit status captured to a retained log →rc=0. The false claim is corrected in place.
+  - [x] NO REGRESSION:cargo test -p sc-store --test project_kill exit status →rc=0;gauge unchanged at 19 of 66.
+  promotion: declined (a rule for how I record,held in D393).
+  Commit:STITCHCAD-G1-0989.
 - ID: `G1-SLICE.8`
   Status: `done`
   Goal: `sc-constraints` kernel (§6.1/§6.2) — typed constraint AST, finite-domain propagation +

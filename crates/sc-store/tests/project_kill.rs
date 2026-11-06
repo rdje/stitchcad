@@ -61,7 +61,7 @@ fn child(directory: &str) -> ! {
         fs::write(progress_file(&directory), finished.to_string()).expect("records progress");
         tag += 1;
         // A save, then an autosave, so about half of the kills find an autosave waiting.
-        if finished % 2 == 0 {
+        if finished.is_multiple_of(2) {
             store.save(&tagged(tag)).expect("the save works");
         } else {
             store.autosave(&tagged(tag)).expect("the autosave works");
