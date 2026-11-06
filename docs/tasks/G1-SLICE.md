@@ -1141,12 +1141,17 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Evidence:G1-SLICE-runtime-proof.md,Feature evidence toward the G1 exit.
   Commit:STITCHCAD-G1-0992.
 - ID: `G1-SLICE.16`
-  Status: `pending`
+  Status: `done`
   Goal: G1 exit review — every exit clause cited against its artifact, the capability matrix
   published, the frontier handed to `G2-2D`.
   Acceptance: each clause is `met` with a re-runnable check or `not met` with a named blocker.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:docs/tasks/G1-SLICE.md,docs/TASK_TREE.md,docs/tasks/G2-2D.md,MEMORY.md,LIVE_STATUS.md,CHANGELOG.md,docs/book/src/availability.md.
+  - [x] REVIEW:GATE_REVIEW_GATE=G1 run_g0_exit_review.sh,which ran every check →G1 EXIT:7 met / 0 not met / 7 clauses,every clause met,rc=0. bash scripts/gauge.sh --checks →25 of 66,rc=0.
+  - [x] LIMITS CARRIED:G1-01 compile only;G1-02 and G1-07 one Chrome on one machine,a schematic drawing;G1-03 macOS only;G1-04 measurement edits only;G1-05 no power-loss test;G1-06 no Windows build. Each is in its row and the book.
+  - [x] LEFT OPEN,NOT NEEDED BY ANY G1 CLAUSE:`.9` serves G2-08 and `.14` serves G2-02,so each runs when that clause needs it. `.5` and `.6` keep their open child leaves,which are not on the frontier:the director's 2026-11-06 hold covers the input checks,and a feature or feedback reopens one.
+  - [x] FRONTIER:handed to G2-2D. No human approved this review. Governance §6.1 withholds approval from its author,so the director's closure stays open,the same as G0's.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-0996.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.i.k`
   Status: `done`

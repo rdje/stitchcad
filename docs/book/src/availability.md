@@ -3,7 +3,8 @@
 StitchCAD currently provides six Rust libraries and [a headless command line](spec/command-line.md). They
 implement numerical and structural foundations; they do not yet generate a garment pattern or provide an
 end-user application.
-G0 contract review is mostly complete with human closure unapproved. G1 remains in progress.
+G0 contract review is mostly complete, and G1's seven exit clauses are met with stated limits. Human closure of both is
+unapproved. G2 is in progress.
 
 ## Distance to the finished product
 
@@ -84,7 +85,7 @@ A feature means the roadmap's next requirement, built by its existing task-tree 
 this book gives, with this table and the book's examples changing in the same commit. It refuses what it
 does not support yet with a plain error. The constraint kernel `.8`, the project store `.7`, the headless
 command line `.10`, the runtime profiles `.11`, the license census `.15`, the browser run `.12` and the canvas spike `.13`
-are done. Next come the G1 exit review, `.16`, and then the geometry kernel, `G2-2D.1`.
+are done, and the G1 exit review `.16` passed. The next one is the geometry kernel, `G2-2D.1`.
 
 ## Implemented foundations
 
