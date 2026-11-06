@@ -2,6 +2,14 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-06 UTC)_ — D385: a set -e suite shows you one failure at a time
+
+Running the80 formula_structure steps independently found9 failures at once,where the suite itself reported one.
+0836 moved namespace collision logic into check_declaration:five namespace and four ordered-name anchors vanished or
+doubled. Their unique-anchor assertion did its job,but only probes run it. Re-anchoring on behaviour rather than text
+is proved by the full compiled runs,where every fault still reaches a real assertion. Separately,a fixed count of4
+book examples had quietly stopped the contract;deriving it means the10 newer examples now compile and run too.
+
 ## _(2026-11-06 UTC)_ — D384: the commit gate does not render the book
 
 0968 and 0971 both passed the commit gate with a book the publication check refuses. An HTML comment at the start

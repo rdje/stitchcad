@@ -1189,8 +1189,10 @@ D381 fixed0966;[whole record](PLANNING-evidence.md#d381--dependency-plan-probe-i
 
 D382 fixed0970;D383 fixed0971;[whole records](PLANNING-evidence.md#d382--changelog-pointer-rule-outlived-the-live-index).
 
-## D384 — book publication drift hidden until pre-push
+D384 fixed0972;[whole record](PLANNING-evidence.md#d384--book-publication-drift-hidden-until-pre-push).
 
-Owner:G1-SLICE.5f.2.prepush-400.book-publication;P1 before push. Two chapters lacked index rows since0871/0874;
-my 0968 link and 0971 marker broke publication while the doctrine gate stayed green;G0-19 tested output before
-building it. Fixed0972:publication suite50/0,G0-19 met. Recurrence guard stays with .api-declarations.
+## D385 — refactor outran its fault tools
+
+Owner:G1-SLICE.5f.2.prepush-400.mutation-anchors;P1 before push. 0836 moved namespace collision logic,stranding9 fault
+anchors;a fixed example count of4 broke as the book reached14. Both sat behind a set -e stop. Fixed0974:17+18 compiled
+reds and14 executed examples. Fault anchors are still only exercised by probes;pre-push remains their proving ground.

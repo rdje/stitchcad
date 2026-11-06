@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0974 — re-anchor faults stranded by a refactor (D385)
+
+Nine namespace and ordered-name fault anchors follow the0836 move;every fault still fails a compiled assertion(17+18).
+The recipe contract now compiles and runs all14 book examples,not a stale4. Glossary declarations follow.
+
 ## STITCHCAD-G1-0973 — retire closed task leaves under the fixed ceiling
 
 67 closed leaves move whole into record1094,freeing885 lines below the unchanged20000-line task ceiling. All1623 leaf

@@ -528,7 +528,7 @@ D197 all3 families and D198 stale inventory dependency are verified.
 Recipe/statement owner compiler entries guard their source/output plans before reads or writes;
 the recipe entry also plans this book's example source. Both preserve prepared Cargo/Rustc stores
 and consume public current-artifact metadata. Ten real documentation guards require only the
-expected E0451/E0515 codes; four recipe chapter examples compile and execute against that artifact.
+expected E0451/E0515 codes; every recipe chapter example, 14 today, compiles and executes against that artifact.
 
 The coupled static entry validates20 helper/reference/Rust/fixture/chapter inputs and its output
 before helper loading or fixture reads. Both modes preserve shared populations, prepared stores

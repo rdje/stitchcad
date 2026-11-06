@@ -621,7 +621,7 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] ROOT CAUSE (WHY + WHERE):0871/0874 added chapters without an index row;a line-start HTML comment opens a raw block,so the span parsed as a tag;a book link left the source tree;G0-19 tested the output before building it. mdbook build →rc=0.
   - [x] FIX:two index rows;marker moved inside the sentence;decision cited as a path;G0-19 builds first,then tests the chapter folder.
   - [x] ADDRESSED:run_book_publication_probes.sh →50 pass/0 fail,14 search cases,rc=0;its malformed-generic control refuses the same class. Formula census 0 mismatch,rc=0. Review:G0-19 MET,rc=0.
-  - [x] NO REGRESSION:g0 review now lists only G0-02 (owned by .api-declarations) and G0-12 (human act,director ruling) as unmet,rc=1 until G0-02 lands.
+  - [x] NO REGRESSION:g0 review now lists only G0-02 (owned by .api-declarations) and G0-12 (human act,director ruling) as unmet;it exits0 and prints GATE FAILS until G0-02 lands (corrected at0974 from a mistaken rc=1).
   - [x] LOCKSTEP:DEV_NOTES,changelog,D384 and LIVE defect row align;README reviewed unchanged,G1still6/18 In Progress.
   promotion: declined (lesson is in DEV_NOTES;publication refusals already name each class).
   Commit:STITCHCAD-G1-0972.
@@ -635,6 +635,18 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] LOCKSTEP:book archive reader and changelog align;README/LIVE/DEV reviewed unchanged,G1still6/18 In Progress.
   promotion: declined (existing retention procedure;no new lesson).
   Commit:STITCHCAD-G1-0973.
+- ID: `G1-SLICE.5f.2.prepush-400.mutation-anchors`
+  Status: `done`
+  Goal:fix D385;re-anchor mutation faults made stale by0836 and repair the recipe example population.
+  Paths:docs/tasks/artifacts/formula_structure/namespace_mutations.py;docs/tasks/artifacts/formula_structure/ordered_name_mutations.py;docs/tasks/artifacts/formula_structure/recipe_owner_contract.py.
+  - [x] REPRODUCE / ISSUE:running all80 formula_structure steps independently →9 failed;the set -e suite and ci_environment had shown only the first. namespace_mutations --classifier-only →anchor assertion,rc=1.
+  - [x] ROOT CAUSE (WHY + WHERE):git log namespace.rs →8df6a2c0 (0836) moved collision logic into check_declaration,rc=0;so5+4 anchors vanished or doubled. 10 later book examples broke a fixed count of4;6 more stale copies;my concurrent reads blocked a census.
+  - [x] FIX:each fault re-anchored on the same behaviour in its current file;example population derives from the book with a floor of14;6 stale copies moved to quarantine,bytes kept.
+  - [x] ADDRESSED:namespace_mutations →17 compiled reds;ordered_name_mutations →18 compiled reds,sources restored,rc=0. recipe_owner_contract →14 examples compiled and run,rc=0. signed/scalar/binding/replay contracts rc=0;origin15 reds,rc=0.
+  - [x] NO REGRESSION:irrational_platform.py with OS-visible access →31 checks,native+Chrome,rc=0. git diff --quiet -- crates →rc=0 after every fault run. The whole suite reruns in the parent's fresh gate.
+  - [x] LOCKSTEP:book example count,DEV_NOTES,changelog,D385 and LIVE defect row align;README reviewed unchanged,G1still6/18 In Progress.
+  promotion: declined (lesson is in DEV_NOTES;fault tools keep their own unique-anchor assertion).
+  Commit:STITCHCAD-G1-0974.
 - ID: `G1-SLICE.5f.2.prepush-400.ram-observe`
   Status: `done`
   Goal:adopt the director's 2026-11-06 RAM rule in the tool,book and records during the gate.

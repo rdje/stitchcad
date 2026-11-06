@@ -140,3 +140,9 @@ links record954 and the rule follows only that record;306 listed parts equal306 
 Owner:G1-SLICE.5f.2.prepush-400.probe-reporting;P1 before push. The recipe kept one bit,and a set -e suite that
 stops prints no failure line:formula_structure skipped its later steps behind a stale copied chapter. Fixed0971:
 failing paths are named;recovery documented. The fail-closed copied-book guard is intentionally unchanged.
+
+## D384 — book publication drift hidden until pre-push
+
+Owner:G1-SLICE.5f.2.prepush-400.book-publication;P1 before push. Two chapters lacked index rows since0871/0874;
+my 0968 link and 0971 marker broke publication while the doctrine gate stayed green;G0-19 tested output before
+building it. Fixed0972:publication suite50/0,G0-19 met. Recurrence guard stays with .api-declarations.

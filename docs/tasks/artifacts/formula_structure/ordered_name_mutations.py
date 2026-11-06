@@ -36,26 +36,26 @@ CASES = (('skipped first statement',
   'let statement_index = self.position + 1;',
   'let statement_index = self.position + 2;'),
  ('header collision ignored',
-  'crates/sc-core/src/recipe/namespace/ordered.rs',
-  'self.namespace.entries.get(attempted.name())',
-  'self.namespace.entries.get("absent_collision_key")'),
+  'crates/sc-core/src/recipe/namespace.rs',
+  'self.entries.get(attempted.name()).copied()',
+  'self.entries.get("absent_collision_key").copied()'),
  ('recipe collision misclassified',
-  'crates/sc-core/src/recipe/namespace/ordered.rs',
+  'crates/sc-core/src/recipe/namespace.rs',
   'FormulaNamespaceError::RecipeRebinding {',
   'FormulaNamespaceError::AmbiguousName {'),
  ('earlier binding lost',
-  'crates/sc-core/src/recipe/namespace/ordered.rs',
+  'crates/sc-core/src/recipe/namespace.rs',
   'FormulaNamespaceError::RecipeRebinding {\n'
-  '                            sources: Box::new([*prior, attempted]),\n'
-  '                        }',
+  '                    sources: Box::new([prior, attempted]),\n'
+  '                }',
   'FormulaNamespaceError::RecipeRebinding {\n'
-  '                            sources: Box::new([attempted, attempted]),\n'
-  '                        }'),
+  '                    sources: Box::new([attempted, attempted]),\n'
+  '                }'),
  ('reserved source changed',
-  'crates/sc-core/src/recipe/namespace/ordered.rs',
-  'FormulaNamespaceError::ReservedBinding {\n                            reserved,',
+  'crates/sc-core/src/recipe/namespace.rs',
+  'FormulaNamespaceError::ReservedBinding {\n                    reserved,',
   'FormulaNamespaceError::ReservedBinding {\n'
-  '                            reserved: super::FormulaReservedName::SizeIndex,'),
+  '                    reserved: FormulaReservedName::SizeIndex,'),
  ('wrong metadata binding',
   'crates/sc-core/src/recipe/namespace/ordered.rs',
   'if let Some(declaration) = FormulaDeclaration::recipe(self.recipe, statement_index) {',
