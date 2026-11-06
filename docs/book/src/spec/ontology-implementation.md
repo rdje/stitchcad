@@ -118,7 +118,7 @@ leaves the Piece ambiguous. An older blocked report stays tied to its unchanged 
 This report covers structural references only. Explicitly empty drafts have no blocker in this scope;
 that supplies no complete Design, sewing/garment source, geometry, construction, physical or release
 proof. The existing ledger verdict retains its narrower contract. See
-[the public source](../../../../crates/sc-core/src/design/topology.rs).
+[the public source](https://github.com/rdje/stitchcad/blob/main/crates/sc-core/src/design/topology.rs).
 
 **Owned structural state (`G1-SLICE.6.4.2.b`).** `sc_core::design::DesignStructure::new(definition)`
 owns the explicit Design identity, exact DesignRevision, CanonicalInputs, PieceInventory, CutPlan and

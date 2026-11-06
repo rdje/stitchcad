@@ -492,3 +492,70 @@ Current-source projection and prior-recipe visibility remain G1 `.5f.2`/`.5f.3` 
 replay/publication remains `.5f.4.geometry`;G3 `.2` owns real walk/true garment validation,and
 G1 `.5g` owns broad integration. Focused declaration checks pass;those deferred checks have not
 passed by implication. This checkpoint grants no full-envelope or independent approval.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `Absent` | Variant of `TruingOutsideIntent`: No outside output fragment for this field;admission checks the actual outcome/domain. |
+| `admit` | Admission method: checks complete populations against explicit limits before reading fields, then returns the admitted view or the first refusal. |
+| `AdmittedTruingCurveManifest` | Type: Authentic complete local priority/source proposal;not feasible geometry or a chosen assignment. |
+| `AdmittedTruingDirections` | Type: Authentic complete selected/outside orientation requests,not achieved maps or contour placement. |
+| `Assignments` | Refusal cause: the whole raw assignment population exceeds the selected policy before any row is read. |
+| `BoundExactTruingPieceSource` | Type: Authentic bounded exact-held source;no geometric fit,currentness or replacement certificate. |
+| `ChoiceCountOverflow` | Variant of TruingCurveRefusal: Complete choice sum cannot be represented. |
+| `Choices` | Variant of TruingCurveRefusal: Whole raw directed-choice population exceeds policy. |
+| `CombinationOverflow` | Variant of TruingCurveRefusal: Complete nonempty Cartesian product cannot be represented. |
+| `Combinations` | Variant of TruingCurveRefusal: Whole raw Cartesian product exceeds policy. |
+| `cut_on_fold` | Original Piece field stating whether the boundary includes exactly one declared fold edge. |
+| `Duplicate` | Refusal cause: an original selector, tag or requested id repeats in original request order. |
+| `EmptyGroup` | Refusal cause: a group that needs explicit content has none; no content or geometry is inferred. |
+| `FoldNotRetained` | Refusal cause: the exact original fold edge is not an unchanged use on the proposed outer contour. |
+| `FoldStatus` | Refusal cause: the requested fold presence contradicts the original Piece's authoritative cutting state. |
+| `GeneratedOccurrences` | Variant of TruingContourRefusal: Actual complete generated contour-use count exceeds policy. |
+| `Groups` | Refusal cause: the whole raw group population exceeds the selected policy before child lengths are read. |
+| `Holes` | Refusal cause: the complete hole population exceeds the selected policy before any child-hole scan. |
+| `Inactive` | Refusal cause: the supplied tag is defined but canonically inactive. |
+| `Missing` | Refusal cause: refitting omitted a positive actual outside portion. |
+| `NoExactOccurrence` | Variant of TruingPieceSourceRefusal: No contour field literally names the selected held edge. This is not a currentness verdict. |
+| `Occurrences` | Refusal cause: the complete occurrence population exceeds the selected policy before any edge field is read. |
+| `Operation` | Refusal cause: the raw manifest or catalogue is owned by another operation than the one selected. |
+| `Output` | Refusal cause: the tag or use names no actual candidate output on the required contour. |
+| `OutputNotBoundary` | Refusal cause: the actual output has no use on the proposed outer boundary. |
+| `OutputNotFoldSource` | Refusal cause: the output's attributed held source is not the exact original fold edge. |
+| `Outputs` | Refusal cause: the whole actual output-candidate population exceeds the selected policy. |
+| `Refit` | Variant of `TruingOutcomeIntent`: Require refitting with a complete exact selected-source candidate partition. Coverage neither proves physical change nor chooses a deterministic fitted curve. |
+| `require_fold` | Method binding explicit result-fold intent to the actual construction, after checking complete populations. |
+| `RequiredTruingEvidence` | Type: Authentic complete original lock proposal and evidence requests,not execution readiness. |
+| `RequiredTruingFold` | Type: Authentic original-state/outer fold request;not a new Piece,geometric axis or accepted evidence. |
+| `RequiredTruingLineage` | Type: Authentic explicit identity/reference requests,not accepted mappings,global liveness or authority. |
+| `RetireOriginal` | Variant of `TruingSourceIdentityIntent`: Require retirement with actual history/correspondence and mapped-or-visible repairs. This request grants no global retirement authority or current-source proof. |
+| `ReverseSource` | Variant of `TruingParameterDirection`: Output start/end correspond to source to/from;no interior or affine map is certified. |
+| `SameAsSource` | Variant of `TruingParameterDirection`: Output start/end correspond to source from/to;actual correspondence still needs evidence. |
+| `SelectedOutputs` | Variant of TruingCurveRefusal: Whole selected output population exceeds policy. |
+| `SelectedRole` | Variant of TruingOutsideRoleRefusal: Outside tag is already assigned to a selected-domain candidate. |
+| `SelfSource` | Refusal cause: the source is supplied by this same creating operation. |
+| `SourceRange` | Variant of TruingOutsideRoleRefusal: A supplied role has no positive outside range in this actual source frame. |
+| `TruingCurveAlternative` | Type: Authentic original directed curve-source field,not evaluated geometry or accepted correspondence. |
+| `TruingCurveAlternatives` | Type: Raw selected-output role and ordered positive directed curve sources;not evaluated geometry. |
+| `TruingCurveGroup` | Type: Authentic raw selected-role group and original priority position,not an independently bound curve. |
+| `TruingCurveManifest` | Type: Original operation,explicit selection rule and ordered selected-role curve groups. |
+| `TruingDirectionalOutput` | Type: Authentic actual original direction request and source attribution,not a geometric map. |
+| `TruingDirectionAssignment` | Type: Original persistent tag and explicit requested source-relative parameter direction. |
+| `TruingDirectionManifest` | Type: Original operation and ordered explicit assignments;no direction or complete coverage is inferred. |
+| `TruingFoldIntent` | Enum: Explicit preservation of original cut-on-fold state and result fold attribution;no default. |
+| `TruingOutsideIntent` | Enum: Explicit absence or persistent role;absence is not inferred and no role is invented. |
+| `TruingOutsideOutput` | Type: Authentic fixed outside portion and original role field;its logical edge remains unissued. |
+| `TruingOutsideRoles` | Type: Two explicit outside fields,not a copied source range or a complete replacement Piece. |
+| `TruingParameterDirection` | Enum: Requested output start/end orientation relative to the attributed ascending source range. This is distinct from Piece traversal,physical-copy reflection and sewing direction. |
+| `TruingPieceContours` | Type: Authentic complete contour declaration,not a canonical Piece,identity issuance or geometric proof. All non-contour Piece metadata and original fold declarations remain available through source(). |
+| `TruingPieceOccurrence` | Type: Authentic original field and its whole bounded exact-source context. |
+| `TruingPieceOccurrenceLocation` | Enum: Original location;indices identify held fields,not persistent output identities. |
+| `TruingPlacedContourEdge` | Type: Authentic generated location,directed logical edge and actual original/source attribution. |
+| `TruingSourceIdentityIntent` | Enum: Explicit requested disposition of the entire original held edge,not just the selected subrange. |
+| `Undefined` | Refusal cause: the supplied tag names no actual catalogue definition. |
+| `UnknownOutput` | Refusal cause: the tag names no output in the actual complete candidate context. |
+| `UnknownSelectedOutput` | Variant of TruingCurveRefusal: Tag names no actual selected-domain output;outside/catalogue roles do not substitute. |
+| `WorkspaceOverflow` | Refusal cause: the checked complete workspace bound cannot be represented. |

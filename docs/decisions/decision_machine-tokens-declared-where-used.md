@@ -135,3 +135,13 @@ four stale controls without weakening C1. D298 removes obsolete secondary resume
 Full glossary41 probes pass:29 declaration faults (D1557/D21810/D25012),two signal cases and the
 original real/index/structure/ownership/reference/safety/coverage/arity/missing-input controls.
 All140 original C1 pairs are repaired;the current census310/9/158/0 passes. No full CI claim follows.
+
+## Commit-time declaration guard0975
+
+answers: "why did 794 undeclared names accumulate after the census had passed?" · "what stops that recurring?"
+
+The census only ran inside make probes,once per400 commits. It passed at0655,failed by0700 and reached794
+token/chapter pairs,694 distinct names,across29 chapters. Each chapter now ends with a declaration table:640 names
+quote their rustdoc and the rest state their chapter meaning,with shared refusal names worded for how that chapter
+uses them. No exemption was added and no spelling changed. BOOK-CENSUSES now runs this census at every commit.
+

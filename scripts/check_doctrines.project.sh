@@ -20,6 +20,7 @@
 # | `TABLE-CODE-PIPE` | a staged `.md` table row carries no raw pipe inside a code span — a renderer splits the cell there and drops the rightmost one silently, which the inherited arity checker cannot see because it treats a code span as protective (defects D22 settled by a rendered page, D47 owned here) | `scripts/check_table_code_pipes.sh` |
 #
 # | `ARCHIVE-RETENTION` | complete self-contained retained bytes, stable logical identities, immutable windows and independent resident/decoded pressure | `scripts/check_archive_retention.sh` |
+# | `BOOK-CENSUSES` | the glossary and formula-language censuses pass, every chapter has a topic-index row and no chapter links outside the book source | `scripts/check_book_censuses.sh` |
 #
 # Adding a doctrine: write `scripts/check_<name>.sh` (cheap, deterministic, self-describing, with
 # `--self-test` arms including a control seen RED), append its row above, and register it in
@@ -33,6 +34,7 @@ PROJECT_DOCTRINES=(
   "LIVE-DOC-SIZE|scripts/check_live_doc_size.sh"
   "TABLE-CODE-PIPE|scripts/check_table_code_pipes.sh"
   "ARCHIVE-RETENTION|scripts/check_archive_retention.sh"
+  "BOOK-CENSUSES|scripts/check_book_censuses.sh"
 )
 
 fails=0

@@ -344,3 +344,33 @@ verification remain G3/full `.5f.4` work;this contract closes none of those gate
 The [native join reference](drafting-join-contracts.md) retains the complete original source,
 inventory,exact-splice,metadata and population contracts,with their maintained examples.
 Actual geometry,currentness,copy/contour/lineage effects and atomic publication remain separate.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `AdmittedWalkSeamEdit` | Type: Complete admitted original edit;actual source binding follows through this stage only. |
+| `affected_copies` | Method returning every plan copy of this Piece, in original plan order, including the counterpart when shared. |
+| `alignment` | Accessor borrowing the actual `GrainAlignment` field, preserving its original angle intent. |
+| `allocated_ease` | Illustrative ease amount allocated between two span sides in this example formula. |
+| `bind_allowance` | Method or function: Associate the actual provided descriptor by identity and original source edge. The returned view borrows both original owners. |
+| `bind_grainline` | Method or function: Bind the actual supplied record and inspect every original reference role for self-supply. Optional print references stay optional; repeated sources remain distinct role occurrences. |
+| `bind_source` | Method binding the admitted edit to the actual graph span, selected copy and target Piece. |
+| `BoundGrainlinePlacement` | Type: Authentic original placement/semantic-source association; neither values nor mark geometry. |
+| `BoundOffsetConstruction` | Type: Authentic association of the supplied input and descriptor, without registry/currentness proof. |
+| `check_argument` | Method or function: Check the actual whole amount against its explicit mode's required kind before any value. |
+| `copy` | Field of a span side: the id of its physical copy. |
+| `counterpart_side` | Method or function: Actual other side;shared Piece/copy constraints may prevent it remaining geometrically fixed. |
+| `dependencies` | Private view borrowing the original declaration and exposing its actual underlying fields, in variant order. |
+| `EPSgeo` | The specification's geometric tolerance `eps_geo`; its value is not changed by this operation. |
+| `normalized` | Method that first measures the original documents, then returns the actual complete normalized owner. |
+| `references` | Accessor returning the actual directed source occurrences, in original role order. |
+| `rotation` | Constructor retaining an explicit rotation amount, which must be an Angle document; the spatial input also requires a pivot. |
+| `separation` | Constructor retaining an explicit separation amount, which must be a distance document; no direction or value is inferred. |
+| `SlashSpreadNormalizationLimits` | Type: Explicit complete node and conservative `1 + 2N` formula normalization allowances. Original input/parser/checker/runtime/allocator/CPU and whole geometry usage are separate. |
+| `source_side` | Method returning the actual original selected span-side field, including its physical-copy id. |
+| `TruingFitProvider` | Type: Required quantitative length-fit source;the actual tolerance remains borrowed and unchanged. Source-registry membership,derivation truth and fit/error-budget evidence remain separate. |
+| `WalkBalanceNotch` | Type: One requested balance notch,without a client-supplied new identity or resolved profile values. |
+| `WalkBalancePair` | Type: Both explicitly requested sides of one balance pair;equal parameters are not correspondence proof. |

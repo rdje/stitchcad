@@ -517,6 +517,15 @@ This is current reference coverage, not geometric contour validity. Logical open
 kind/domain/state/dependencies still belong to recipe/Design validation; opening execution is G3,
 profile resolution G4 and physical geometry G2. Existing Pocket deferral queries stay unchanged.
 Global identity joins with the rest of Design remain separate. See
-[the public source](../../../../crates/sc-core/src/ontology/pocket_inventory.rs).
+[the public source](https://github.com/rdje/stitchcad/blob/main/crates/sc-core/src/ontology/pocket_inventory.rs).
 
 Layer/Hem components still require complete Design acceptance.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `bind_source` | Factory separately associating the actual source, frame, snapshot and creator. |
+| `prepare_component_binding` | Method or function: Freshly charge all actual garment/provider fields,derive checked (E+8)² and refuse work shortage before current copy/expected-Piece scans. |

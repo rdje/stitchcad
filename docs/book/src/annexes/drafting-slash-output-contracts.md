@@ -573,3 +573,56 @@ and outcome requirements are in the companion;full verification and later geomet
 remain deferred.
 
 [Piece metadata,fold and copy reconciliation](drafting-slash-piece-contracts.md) continues this native declaration path.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `ActiveEdgeOutputRole` | Type: Authentic original membership tag and its actual definition,without cloned metadata. |
+| `ActiveOffsetRole` | Published offset name for `ActiveEdgeOutputRole`; an alias of the same Rust type. |
+| `admit` | Admission method: checks complete populations against explicit limits before reading fields, then returns the admitted view or the first refusal. |
+| `AdmittedEdgeOutputRoleCatalog` | Type: Complete structural catalogue admission,not issuance history,global namespace or geometric truth. |
+| `Ambiguous` | Match kind: more than one candidate contains the original parameter, and none is silently selected. |
+| `AnchorOutsidePiece` | Variant of `AnchorError`: The anchor resolves outside every surviving edge interval of the named piece. |
+| `BoundSlashSpreadEdgeRoles` | Type: Authentic operation/catalogue association,not geometric role matching,issuance or currentness. |
+| `EdgeOutputRoleCatalog` | Type: Owned unadmitted declared-role inventory and explicit canonical active membership. All issued definitions,including inactive ones,belong here. |
+| `EdgeOutputRoleCatalogLimits` | Type: Explicit complete catalogue allowances,without default admission or prior-allocation guarantees. |
+| `EdgeOutputRoleDefinition` | Type: One explicit local machine key/tag declaration,not a curve classifier or allocated identity. |
+| `Gap` | Outcome or refusal for an uncovered positive interval: no candidate or declared domain contains this source position. |
+| `Lower` | Variant of SlashSpreadCutEnd: The original cut range's lower parameter bound. |
+| `Moving` | Variant of SlashSpreadSourceMotion: Apply this operation's explicit rotation or directed separation to the moving bank. |
+| `MovingToStationary` | Variant of SlashSpreadBridgeDirection: From the transformed moving-bank endpoint to its stationary counterpart. |
+| `release_readiness` | Method or function: The identity contract's release rule: Blocked while any registered reference is unresolved, Releasable when none is. |
+| `Removed` | Variant of SlashSpreadFullnessIntent: Intend removed fullness;this neither closes a Dart nor copies its canonical intake. |
+| `require_boundary` | Method or function: Associate all explicit boundary/domain/coverage requests with this actual complete context. Fixed field comparison allocates nothing and scans no source,consumer or geometry. |
+| `RequiredSlashSpreadBoundary` | Type: Authentic policy-matched requests,not geometric validity or publication readiness. |
+| `retire` | Method or function: Withdraws a registration — the consumer lets the reference go (the object holding it was itself deleted, or a repair retires it). |
+| `SlashSpreadBoundaryEvidenceRequest` | Enum: Explicit policy-specific evidence sources,not accepted incidence,closure or trim geometry. |
+| `SlashSpreadBoundaryPolicy` | Enum: Required treatment request for the changed cut banks,without a default connector or loop choice. |
+| `SlashSpreadBridgeEndpoint` | Enum: Declared bridge endpoint in the candidate edge's own frame,not a computed output Param. |
+| `SlashSpreadConstruction` | Type: Authored slash/spread spatial inputs and their actual explicit amount component. Rotation has a required pivot;separation has a required directed movement axis. |
+| `SlashSpreadContourEdge` | Enum: An explicitly directed new logical output or retained original edge identity. |
+| `SlashSpreadContourLimits` | Type: Explicit complete group/candidate/source/use allowances;no default or prior-storage guarantee. |
+| `SlashSpreadContourLocation` | Enum: Original location of one contour occurrence;positions are diagnostics,not persistent identities. |
+| `SlashSpreadContours` | Type: Owned raw ordered cyclic cut lists and construction uses;no coordinates or source metadata copy. |
+| `SlashSpreadContourUse` | Type: Authentic original contour occurrence and its actual output or retained-reference association. |
+| `SlashSpreadEdgeCandidate` | Type: One explicit persistent edge tag with original provenance,not a computed or issued output. |
+| `SlashSpreadEdgeManifest` | Type: Owned raw edge candidates and operation identity;no contour completeness or geometric result. |
+| `SlashSpreadEdgeManifestLimits` | Type: Explicit complete candidate and catalogue allowances for this admission stage. |
+| `SlashSpreadEdgeOrigin` | Enum: Raw original-source or connector provenance;actual geometry/ownership/closure remains unproved. |
+| `SlashSpreadGlobalSourceIntent` | Enum: Explicit global source treatment,independent of membership in one proposed Piece. |
+| `SlashSpreadReferenceQueryLimits` | Type: Complete candidate/source/use allowances for each metadata query,without a default. |
+| `SlashSpreadRegisteredSourceRequest` | Type: Private authentic original-request/source/registration association with unchanged split choice. |
+| `SlashSpreadRegistrationDisposition` | Type: Original exact owner/anchor and explicit treatment request;no split choice is invented here. |
+| `SlashSpreadRegistrationIntent` | Enum: Explicit requested treatment of an actual registered reference,not an achieved repair. |
+| `SlashSpreadRegistrationPlan` | Type: Every actual registered source consumer needs one request;unregistered held objects stay separate. |
+| `SlashSpreadSourceDisposition` | Type: One original source identity and its explicit global treatment request. |
+| `SlashSpreadSourcePlan` | Type: Raw complete source-identity requests in authored order;empty construction accepts no result. |
+| `SourcePosition` | Query refusal: the original parameter lies outside the selected or declared source domains. |
+| `Stationary` | Variant of SlashSpreadSourceMotion: Retain the stationary bank's original geometry. |
+| `StationaryToMoving` | Variant of SlashSpreadBridgeDirection: From the stationary endpoint to its transformed moving-bank counterpart. |
+| `Unchanged` | Variant of SlashSpreadFullnessIntent: Intend no fullness change;zero amount or full turns alone do not prove this effect. |
+| `Unique` | Match kind: exactly one candidate domain contains the parameter, without proving a unique geometric point. |
+| `Upper` | Variant of SlashSpreadCutEnd: The original cut range's upper parameter bound. |

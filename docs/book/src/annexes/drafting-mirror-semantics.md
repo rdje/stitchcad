@@ -106,3 +106,11 @@ The next native output family is walk,with explicit mark sharing/coalescing and 
 identity policy. Ordered Design/registry/history integration remains .5f.2,selector/parameter/error
 budget integration .5f.3,and actual geometry-backed replay .5f.4.geometry/G2/G3. Broader typed-v1
 integration and the mandatory pre-push gate retain their own milestone;this result does not close G1.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `d2126ec598a13922eb23dc580b350233e12642aa` | Git commit pinned as this chapter's evidence source. |

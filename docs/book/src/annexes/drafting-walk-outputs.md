@@ -295,3 +295,11 @@ proofs. The original paired requests remain intact until a supported complete at
 
 The [native walk declaration checkpoint](drafting-walk-identities.md#native-walk-declaration-checkpoint)
 records the completed metadata boundary and the separate actual execution obligations.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `CutPlanError` | Enum: Structural cut-plan refusal; no missing copy is silently manufactured. |

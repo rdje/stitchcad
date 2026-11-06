@@ -500,3 +500,12 @@ declared Git intervals decode to 93132 exact source bytes from `cda4e19c`.
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1094.md
 python3 -I -B docs/tasks/artifacts/history_archive/transition_receipts.py --record docs/history/stitchcad-devnotes-part1094.md
 ```
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `cda4e19c` | Git commit that the sealed task-leaf intervals were taken from. |
+| `list` | `history_archive.sh` command that enumerates every logical record. |

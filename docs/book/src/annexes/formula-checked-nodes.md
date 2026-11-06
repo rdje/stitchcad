@@ -118,3 +118,11 @@ verification remains deferred to the existing integration/pre-push owners.
 No runtime result, approval, geometry, statement execution or complete recipe acceptance follows
 from node inspection alone. The [execution sequence](formula-execution-plan.md) documents the separate
 actual scalar worker and remaining integration slices.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `DesignResourceLocation` | Type: Producer-declared static field path and original authored position, without copied private text. |

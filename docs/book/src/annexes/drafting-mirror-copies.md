@@ -302,3 +302,11 @@ actual current Design/global reservation,unrelated Piece-content authorization,p
 pairing,neighbour/sewing effects,reflection geometry and atomic publication remain execution work.
 
 [Semantic and sewing requirements](drafting-mirror-semantics.md) continue this actual complete context.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `CutPlanError` | Enum: Structural cut-plan refusal; no missing copy is silently manufactured. |

@@ -699,3 +699,37 @@ real source/Point/mixed positions and provider traces. This is focused evidence 
 whole native/coupled acceptance remains deferred. The [complete semantic content producer](semantic-recipes.md#fresh-complete-semantic-content)
 now combines these records with original bodies and selection rows. Complete prospective work
 admission remains next.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `anchor` | Example name: a planned point in the seven-step recipe. |
+| `BoundDraftingProgramCanonicalInputs` | Type: Complete original mixed canonical associations under exact source/order/acyclic owners. No public constructor or mutable slots permit an accepted prefix or replacement declaration. |
+| `BoundDraftingProgramInitials` | Type: Whole original initial-vector association,borrowing the complete prior role proof. Values,namespace collisions,ordered visibility and whole dependency acceptance remain separate. |
+| `CheckedDraftingProgramSources` | Type: Complete original Root source kind/canonical-consumer proof under actual bound initial names. Original declarations and normalized sources stay borrowed;the namespace allocation is not borrowed by this owner. |
+| `derived_count` | Example name: a derived Count used by the mixed-kind recipe example. |
+| `derived_length` | Example name: a derived Length used by the mixed-kind recipe example. |
+| `DesignResourceScope` | Enum: Original top-level model scope of a resource charge; no model data or authority is carried. |
+| `DesignResourceSink` | Trait: Restricted charging capability: a producer receives this trait object, never replaceable meter state. Implementations are sealed; there is no policy setter, reset, model replacement or approval method. |
+| `DraftingGeometryStepRequest` | Type: Actual strictly earlier native creating step and original requested reference, including unnamed outputs. Private construction certifies creator classification only, not a valid geometry source. |
+| `DraftingNativeGeometryUse` | Type: One genuine direct field of an actual raw native input, without containing-programme approval. Its private construction pins the original input, field order and typed selector together. |
+| `DraftingProgramCanonicalError` | Type: Complete original selected dependency owners and policy on refusal; no accepted prefix. |
+| `DraftingProgramCanonicalJoinFailure` | Type: Original native canonical cause and actual consumer occurrence, kept together on refusal. |
+| `DraftingProgramCanonicalOccurrence` | Type: One original occurrence and its canonical association when the actual declaration has one. None retains Recipe/Reserved/Point/Edge metadata; it grants no geometry source acceptance. |
+| `DraftingProgramDependencyInputs` | Type: Exact selected source/order/acyclic owners,without cloned graph,metadata or proof buffers. |
+| `DraftingProgramDependencyOwnerError` | Type: Every actual provided proof survives a refused join;no accepted source/order/graph prefix. |
+| `DraftingProgramFormulaGeometryUse` | Type: One original Point/Edge name occurrence, with its actual checked source or mixed consumer. Private construction prevents replacing its declaration, span, reference or containing slot. |
+| `DraftingProgramGeometryOccurrence` | Enum: Original formula or native geometry occurrence. This enum alone grants no source association. |
+| `DraftingProgramGeometryRequest` | Type: One original occurrence and its complete creator classification. A refusal stays beside its original consumer/reference; iteration may continue, without certifying an accepted prefix. |
+| `DraftingProgramNameDependency` | Type: One original dependency occurrence pinned to its genuine complete mixed consumer proof. Header occurrences retain their actual annotation span;they have no fabricated AST node. |
+| `DraftingProgramNativeGeometryUse` | Type: One original native field pinned to its actual complete checked mixed consumer. Private construction keeps the genuine programme position and original typed field together. |
+| `DraftingProgramOrderStep` | Type: Privately numbered genuine mixed step and its complete original argument proof. |
+| `DraftingProgramSourceCheckError` | Type: Original native source-check cause and actual containing inputs/normalization owner. The native allocator cause remains inline;the wrapper allocates no diagnostic box. |
+| `private_count` | Example name: an Unknown Count borrowed from this Root. |
+| `private_edge` | Example name: an existing edge that keeps its original persistent reference. |
+| `private_length` | Example name: an Unknown dedicated Length borrowed from this Root. |
+| `private_missing` | Example name deliberately absent from the Root, used to exercise a refusal. |
+| `private_point` | Example name: an existing point that keeps its original persistent reference. |

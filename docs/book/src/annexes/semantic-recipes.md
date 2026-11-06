@@ -4005,3 +4005,191 @@ exact limit boundaries, arithmetic overflow and quota priority separately. Compl
 must cover late refusal, original loans/roles, repeated targets, N0, whole shortage and no refund.
 Native-family/semantic cohort composition and whole `.5f.2.check`/`.verify` remain separate pending
 verification tasks. Planning and existing source checks certify none of this unimplemented work.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `AdmittedDraftingComponentWork` | Type: Actual current CutPlan copy and expected Piece after fresh whole garment/provider content and prospective matching bounds. No original source,creator,frame/history,geometry or execution is accepted. |
+| `AdmittedDraftingGarmentSource` | Type: Original Root-bound garment and snapshot under a fresh complete logical content allowance. |
+| `AdmittedDraftingProgramSemanticPopulation` | Type: Privately admitted fresh content and complete direct consumer/request population policy. I remains the exact original joined owner type. |
+| `AdmittedDraftingProgramSemanticWork` | Type: Fresh complete populations and admitted finite selected child-work capacity. This budget approves no actual source,coverage,nested geometry,value,physical result or complete cohort. |
+| `AdmittedDraftingRuleWork` | Type: Actual original Root operation after fresh whole content and prospective matching bounds. It retains the exact selection intent,not an accepted Profile/rule/body/signature association. |
+| `AdmittedDraftingSemanticSelections` | Type: Complete local content/work and unique structural keys over the actual original request owner. This admits no actual coordinate/source need,member,Profile body,order,value or whole scope. |
+| `bind_logical_parameter` | Method or function: Freshly charge complete Root/provider/request content before one parameter query. |
+| `bind_profile_source` | Method or function: Charge complete Root,all held provider data,then requested pin strings before one readonly Profile lookup. |
+| `BoundDraftingClosureButtonhole` | Type: Actual original Closure and typed Root operation with exactly the canonical button origin. No value, logical domain, policy signature, mixed order, current placement or length is proved. |
+| `BoundDraftingClosurePlacementMember` | Type: Exact original requiring Closure/instance/role and canonical actual notion member. Current copy/Piece/source/anchor/direction and physical hardware geometry remain separate. |
+| `BoundDraftingComponentSource` | Type: Complete original import or recipe/creator association with the current copy/Piece and actual frame/snapshot records. A recipe retains its captured context and genuine unique mixed position. |
+| `BoundDraftingProfileLogicalSource` | Type: Actual original logical parameter metadata and kind-checked canonical member under one exact selected Profile parent and fresh content policy. Domain/state/provenance stay in the original source. |
+| `BoundDraftingProfileNumericSource` | Type: Actual original numeric parameter metadata and kind-checked canonical member under one exact selected Profile parent and fresh content policy. Domain/state/provenance stay in the original source. |
+| `BoundDraftingProfileSource` | Type: Original selected Profile under exact containing Root/requested labels/snapshot and fresh complete Root/provider/request content. |
+| `BoundDraftingProgramGarmentProfileLogicalParameters` | Type: Complete actual logical Profile garment parameters borrowing stable original header storage and the same unique Root/cursor through disjoint fields. No self-reference or body/value clone. |
+| `BoundDraftingProgramGarmentProfileNumericHeaders` | Type: Complete actual Profile zipper header class,with all prior original logical/Root input owners. Numeric parameter/member,external Derived and whole cohort acceptance stay separate. |
+| `BoundDraftingProgramGarmentProfileNumericParameters` | Type: Complete actual numeric Profile garment parameters borrowing stable original header storage and the same unique Root/cursor through disjoint fields. No self-reference or body/value clone. |
+| `BoundDraftingProgramPocketSources` | Type: Complete original Pocket source class,borrowing disjoint original input/cursor and work fields. No source body is copied and no self-referential result owner is created. |
+| `BoundDraftingProgramPocketWork` | Type: Complete Pocket current-member class, owning the exact prior input proof and unique cursor. P is the original input-proof type, inferred from the consuming factory. Its original loans survive unchanged. |
+| `BoundDraftingProgramProfileHeaders` | Type: Complete actual Profile operation-input header class,retaining original Root proof and cursor. Profile parameter/member,external Derived recipe,rule/family/cohort and execution stay separate. |
+| `BoundDraftingProgramProfileParameters` | Type: Complete actual Profile operation-input parameter class. Stable original header storage stays with its caller-owned parent. |
+| `BoundDraftingProgramRootInputMembers` | Type: Complete Root-owned operation-input members only. Profile inputs/rule signatures/outputs, Derived supplier/order,garment/native source fields and whole cohort remain separate stages. |
+| `BoundDraftingProgramRootLogicalSuppliers` | Type: Complete logical Derived supplier class only. Numeric Derived,Profile/rule/signature and whole-cohort acceptance remain separate. No values,domain selections or evidence are produced. |
+| `BoundDraftingProgramRootNumericSuppliers` | Type: Complete numeric Derived supplier class after complete logical supplier binding. Original members and the same finite cursor survive;Profile/rule/cohort/execution remain separate. |
+| `BoundDraftingProgramRuleSignatures` | Type: Complete original local signatures/outputs with complete input proofs and one cursor. Original source storage stays caller-owned;no self-reference,body clone,value or whole cohort acceptance. |
+| `BoundDraftingProgramRuleSources` | Type: Complete original rule source class borrowing stable work storage and the same unique inputs/ cursor through disjoint fields. This accepts no local signature,canonical output or body truth. |
+| `button` | Field: Existing canonical button-size origin, retained exactly as Declaration or Profile. |
+| `Buttonhole` | Semantic operation and rule family for a physical buttonhole, derived from its canonical button origin and explicit policy. |
+| `ButtonholeOperation` | Type: Immutable standalone original Buttonhole operation. The button origin is its sole hardware-size dependency; there is no authored/cached hole length or executed result. |
+| `ButtonholeOperationDefinition` | Type: Editable original semantic recipe operation. Policy identity and roles are explicitly authored; core supplies no physical formula, clearance, vendor-code dimensions or default dependency. |
+| `ButtonholeOperationError` | Type: Original operation identity, explicit policy and first complete shape/role refusal. |
+| `ButtonholePolicyRequirement` | Type: Original named numeric Buttonhole policy requirement, separate from its mandatory button. |
+| `Canonical` | Refusal cause retaining the actual canonical validation or inventory-join failure, including its original witnesses. |
+| `CanonicalNumericInputKind` | Enum: Exact numeric canonical representation required by a local rule input. |
+| `charge_record_resources` | Method appending only the original step records and native inputs to the resource sink, without re-entering the holding recipe. |
+| `charge_resources` | Method charging every actual field to the cumulative first-failure-latching resource sink; stored demand grants no credit. |
+| `charge_semantic_rule_resources` | Method or function: Charge the complete original signature vector before original role text in declaration order. Caller supplies its actual containing scope; owner is the actual rule/policy identity. |
+| `CheckedDraftingProgramDirectSelections` | Type: Complete direct key coverage under exact original owners and one fresh aggregate budget. Native context rows are only potential intent. |
+| `Clone` | Rust standard trait for explicit duplication; these immutable records deliberately do not implement it. |
+| `CommandState` | Variant of `DesignResourceScope`: Typed command inputs, reports and retained execution records, separate from model content. |
+| `component_source` | Provider query returning the original component source for an explicit Pocket Piece reference. |
+| `Debug` | Rust standard formatting trait; these immutable records deliberately do not implement it. |
+| `Declaration` | Variant of `NotionSize`, `PocketOpening`: Recipe/Design declaration, without an inferred vendor designation. |
+| `DeclaredJoinPieceIdentity` | Type: Authentic local canonical Piece-id declaration,not an issued/fresh/current result or authority. |
+| `DeferredTargetContext` | Variant of DraftingProgramSelectionRowKind: Matches an actual native target;its internal need is not established or consumed yet. |
+| `DesignResourceScope` | Enum: Original top-level model scope of a resource charge; no model data or authority is carried. |
+| `DirectRequirement` | Variant of DraftingProgramSelectionRowKind: Matches an actual required direct Profile field or explicit rule/policy origin. |
+| `DraftingClosureButtonholeError` | Type: Exact admitted original parent, request/policy and first typed refusal; no accepted prefix. |
+| `DraftingClosurePlacementRequest` | Type: Exact authored requiring member/role request; numeric positions are never substituted for IDs. |
+| `DraftingComponentCreator` | Enum: Actual native Piece identity declaration and its complete original source/role parents. These are existing Mirror/Join factory results,not numeric geometry roles or invented native positions. |
+| `DraftingComponentOrigin` | Enum: Explicit raw original provenance,without deriving a recipe from geometry or inventing import history. |
+| `DraftingComponentProvider` | Trait: Readonly original component source facet over actual garment/context data. |
+| `DraftingComponentRecipeSource` | Type: Raw original recipe/program owner,actual Piece and genuine native Piece identity declaration. Public construction accepts foreign/mismatched data for later typed binding. |
+| `DraftingComponentResponse` | Type alias: Raw original response using one provider's actual context/frame/snapshot/imported payload types. Original program context loans may be shortened to this source borrow without cloning data. |
+| `DraftingComponentSource` | Type: Raw component origin with original frame/snapshot records. All fields await actual Root/Piece, recipe/native creator membership,frame and snapshot checks under complete content/work limits. |
+| `DraftingComponentSourceError` | Type: Boxed original work,fresh admission,complete raw response and first cause;no accepted prefix. |
+| `DraftingComponentWorkError` | Type: Exact original parent/target/policy with the first original content,work or member cause. |
+| `DraftingContextSource` | Trait: Readonly port into actual containing Design, Cartesian-frame and geometry-snapshot sources. |
+| `DraftingDesignLogicalSource` | Type: Actual original kind-checked logical member pinned to its complete fresh Root/source scope. Domain/state/provenance stay in the canonical owner;no selected value or evidence is created. |
+| `DraftingDesignNumericSource` | Type: Actual original numeric member pinned to the exact freshly admitted Root/provider scope. Original representation,kind,state and provenance stay in their canonical owner. |
+| `DraftingDesignSemanticScope` | Type: Fresh actual Root/provider content scope for individual original numeric/logical/operation loans. It retains the existing immutable context's Root/snapshot association; it performs no new currentness query. |
+| `DraftingGarmentSemanticField` | Enum: One original Pocket/Closure field. Public view construction supplies no owner/source proof. |
+| `DraftingGarmentSemanticUse` | Type: Actual original garment/member/field occurrence. This grants no content/work allowance, currentness,source association or executable proof. Root records have no invented mixed position. |
+| `DraftingImportedComponentSource` | Type: Raw explicit imported primitive and its actual original source record. The payload is supplied by the integration; no importer,format,history,geometry or Root membership is inferred here. |
+| `DraftingNativeSemanticField` | Enum: Actual borrowed native semantic field. This public view alone binds no source or owner. |
+| `DraftingNativeSemanticTargetRole` | Enum: Actual semantic target role,without a registry/kind/value or source certificate. |
+| `DraftingNativeSemanticUse` | Type: Original native input and its actual semantic target/Profile field. No synthetic mixed position, canonical/source/currentness,Profile pin,value,resource allowance or executable proof is supplied. |
+| `DraftingNotchProfileRole` | Enum: Original symbolic Notch Profile field;sample/production remain separate occurrences. |
+| `DraftingOperationInput` | Enum: A view of one actual native input,without copying its documents,targets or dependencies. Eleven schemas retain their own operation id. |
+| `DraftingProfileLogicalError` | Type: Original selected parent,request/policy,returned source when present,and exact typed cause. |
+| `DraftingProfileLogicalProvider` | Trait: Readonly actual logical-parameter metadata facet under an original selected Profile source. The header identifies the already-held Profile,not an accepted parameter. |
+| `DraftingProfileLogicalSource` | Type: Original raw logical parameter metadata and actual canonical declaration under a Profile source. The parameter ref and declaration must be loans exposed by that original metadata record. |
+| `DraftingProfileNumericError` | Type: Original selected parent,request/policy,returned source when present,and exact typed cause. |
+| `DraftingProfileNumericProvider` | Trait: Readonly original numeric parameter metadata facet under an already-held selected Profile. Responses loan actual metadata fields;the request does not manufacture an association. |
+| `DraftingProfileNumericSource` | Type: Raw original Profile numeric parameter-to-target metadata,independent of the logical facet. `parameter` and `target` loan actual fields of `metadata`. |
+| `DraftingProfileProvider` | Trait: Readonly original selected-Profile facet under the immutable containing context contract. |
+| `DraftingProfileSource` | Type: Original raw selected Profile source under its actual containing Design/snapshot. All fields loan original immutable source data. The canonical inventory belongs to this Profile source. |
+| `DraftingProfileSourceError` | Type: Actual context/request/policy,returned source when present,and original typed cause. |
+| `DraftingProgramClosureButtonhole` | Type: One actual Closure Buttonhole field and its complete freshly bounded typed original operation/button origin join. The original garment field has no invented semantic ordinal or mixed programme position. |
+| `DraftingProgramClosureButtonholeError` | Type: Entire exact prior input proof/cursor and first refusal. Successful private prefixes drop. |
+| `DraftingProgramClosurePlacementSource` | Type: One complete original field/work parent and its associated actual source/header/creator loans. |
+| `DraftingProgramClosurePlacementSourceError` | Type: Entire original borrowed input/work owners and first refusal;private accepted prefixes drop. |
+| `DraftingProgramClosurePlacementWork` | Type: One actual placement-role field and its complete freshly bounded current copy/Piece join. The original garment field has no invented semantic ordinal or mixed programme position. |
+| `DraftingProgramDependencyInputs` | Type: Exact selected source/order/acyclic owners,without cloned graph,metadata or proof buffers. |
+| `DraftingProgramGarmentProfileLogicalHeader` | Type: One exact original garment input/request and its stable accepted original Profile header parent. |
+| `DraftingProgramGarmentProfileLogicalParameter` | Type: One genuine original garment/request/header parent and its original parameter/member/kind proof. External Profile Derived references remain under that actual Profile source,without Root order. |
+| `DraftingProgramGarmentProfileNumericHeaderError` | Type: Every original consumer/source/key owner and unique cursor,complete stage metadata and first typed cause. Private partial Profile header vectors are discarded;only the refused diagnostic boxes. |
+| `DraftingProgramGarmentProfileNumericParameter` | Type: One genuine original garment/request/header parent and its original parameter/member/kind proof. External Profile Derived references remain under that actual Profile source,without Root order. |
+| `DraftingProgramGarmentProfileNumericParameterError` | Type: Exact original borrowed Root/cursor and stable complete header parents,with the first typed refusal and only a completed fresh demand. Private parameter prefixes never escape. |
+| `DraftingProgramGarmentRootLogicalSupplier` | Type: One original Root garment logical Derived member and its actual original supplier/output. |
+| `DraftingProgramGarmentRootLogicalSupplierError` | Type: Every original consumer/source/key owner and unique cursor,complete stage metadata and first typed cause. Private partial supplier vectors are discarded;only the refused diagnostic boxes. |
+| `DraftingProgramInputs` | Type: Raw mixed source owner pinning an actual context, both Root recipes and every native input. |
+| `DraftingProgramNativeSemanticUse` | Type: Actual normalized program/step and original raw native semantic field. This proves original coverage/normalization provenance only;source/order/kind/work/currentness and values stay separate. |
+| `DraftingProgramOperationInput` | Enum: One actual original operation-input field under its accepted Root or Profile source class. The containing factory chain supplies completeness. |
+| `DraftingProgramPocketSource` | Type: One complete original field/work parent and its associated actual source/header/creator loans. |
+| `DraftingProgramPocketSourceError` | Type: Entire original borrowed input/work owners and first refusal;private accepted prefixes drop. |
+| `DraftingProgramPocketWork` | Type: One actual served/component field and its complete freshly bounded current copy/Piece join. The original garment field has no invented semantic ordinal or mixed programme position. |
+| `DraftingProgramPocketWorkError` | Type: Entire exact prior input proof/cursor and first refusal. Successful private prefixes drop. |
+| `DraftingProgramProfileHeaderError` | Type: Every original consumer/source/key owner and unique cursor,complete stage metadata and first typed cause. Private partial Profile header vectors are discarded;only the refused diagnostic boxes. |
+| `DraftingProgramProfileInputHeader` | Type: One exact original input request and its actual accepted selected-Profile header parent. This owns stable header storage;it accepts no Profile logical parameter or external recipe. |
+| `DraftingProgramProfileInputParameter` | Type: One actual original input/header parent and its complete original parameter/member/kind proof. Profile-owned states and external Derived operation references remain under that Profile source. |
+| `DraftingProgramProfileInputRequest` | Type: Actual original Profile operation-input request and exact already-checked selection row. This preserves syntax/selection intent,not parameter membership or selected values. |
+| `DraftingProgramProfileParameterError` | Type: Exact original borrowed Root/cursor and stable complete header parents,with the first typed refusal and only a completed fresh demand. Private parameter prefixes never escape. |
+| `DraftingProgramRootInputBinding` | Type: One complete original Root operation-input member and its supplier when actually Derived. Private fields keep the member index,source family and actual previously accepted relation aligned. |
+| `DraftingProgramRootInputMember` | Type: One original semantic operation-input field and its actual Root member. The containing private layer retains the exact normalized/source/selection owners;this record supplies no whole proof. |
+| `DraftingProgramRootInputMemberError` | Type: Every original consumer/source/key owner and unique cursor,complete stage metadata and first typed cause. Private partial member vectors are discarded;only the refused diagnostic boxes. |
+| `DraftingProgramRootInputScope` | Type: Exact original consumer/direct-selection and fresh Design source-scope owners. The successful join consumes and retains the unique original child cursor without resetting or reserving it. |
+| `DraftingProgramRootInputScopeError` | Type: Every original supplied owner and first Root/provider/frame/snapshot mismatch. |
+| `DraftingProgramRootInputScopeResult` | Type alias: Exact owner-join result,retaining original consumer and supplied source-scope witnesses on either branch. The alias supplies no constructor,copy,source or fresh-work acceptance. |
+| `DraftingProgramRootInputSupplier` | Enum: Original logical or numeric Derived relation. The two supplier scopes remain distinct; non-Derived members have no supplier. This is a loan,not another source/order validation. |
+| `DraftingProgramRootLogicalSupplier` | Type: One actual logical Derived consumer and its original Root supplier/output/order association. Its containing owner retains the actual input record;repeated consumers are separate records. |
+| `DraftingProgramRootLogicalSupplierError` | Type: Every original consumer/source/key owner and unique cursor,complete stage metadata and first typed cause. Private partial supplier vectors are discarded;only the refused diagnostic boxes. |
+| `DraftingProgramRootNumericSupplier` | Type: One original numeric Derived consumer and its actual source/checked/acyclic owners. Canonical family position remains in input();no mixed supplier position is invented. |
+| `DraftingProgramRootNumericSupplierError` | Type: Every original consumer/source/key owner and unique cursor,complete stage metadata and first typed cause. Private partial numeric supplier vectors are discarded;only the refused diagnostic boxes. |
+| `DraftingProgramRuleSignature` | Type: One original source parent and its complete named signature/actual canonical output relation. |
+| `DraftingProgramRuleSignatureError` | Type: Exact original borrowed Root/cursor and stable complete source parents,with the first typed refusal and only a completed fresh demand. Private signature prefixes never escape. |
+| `DraftingProgramRuleSource` | Type: One actual original work parent and accepted original rule/policy declaration/body/source. |
+| `DraftingProgramRuleWork` | Type: One original rule/policy request and its freshly admitted original Root operation work parent. |
+| `DraftingProgramRuleWorkError` | Type: Every original consumer/source/key owner and unique cursor,complete stage metadata and first typed cause. Private partial rule-work vectors are discarded;only the refused diagnostic boxes. |
+| `DraftingProgramSemanticInputs` | Type: Exact actual garment/context, complete geometry proof chain and local selection owners. |
+| `DraftingProgramSemanticOwnerError` | Type: All supplied original owners and the first mismatch; no successful semantic prefix. |
+| `DraftingProgramSemanticOwnerIssue` | Enum: First actual held context mismatch, in Root/provider/frame/snapshot order. |
+| `DraftingProgramSemanticPopulationLimits` | Type: Explicit fresh content, original occurrence and direct association-work policy. Child factories, nested geometry and final source result buffers require separate bounds. |
+| `DraftingProgramSemanticPopulationShape` | Type: Actual complete original populations and conservative direct coverage/association bounds. |
+| `DraftingProgramSemanticUse` | Type: Actual original semantic operation/field at its genuine normalized program step. Complete original coverage has been admitted;namespace,kinds,sources,dependency order and values have not. |
+| `DraftingProgramSemanticWorkBudget` | Type: Unique consuming child-pass reservation cursor tied to its original fresh scope and policy. It executes no factory or query. Callers reserve every stage's complete passes before running that stage. |
+| `DraftingProgramSemanticWorkLimits` | Type: Explicit fresh population policy and finite selected child-pass/matching/result capacity. Pass capacity is authored policy,not a claim about how many child stages a source will need. |
+| `DraftingProgramStepView` | Type: Actual normalized step loan with a private genuine one-based combined-program position. Each original recipe ordinal and the actual member/native owners remain separate fields. |
+| `DraftingRuleInputMatch` | Type: Private exact local name/kind match with both original owners,records and authored indices. This is only a local metadata fact;it grants no actual canonical input/source/value binding. |
+| `DraftingRuleOrigin` | Enum: Raw original containing source. Every variant exposes actual Root and snapshot loans. Profile origins also preserve actual selected pin,canonical inventory and Profile body loans. |
+| `DraftingRuleProvider` | Trait: Readonly original rule/policy facet over the actual immutable context and Profile source ports. Design-only integrations may refuse unsupported Profile selections through their original typed cause. |
+| `DraftingRuleResponse` | Type alias: Original raw response using one provider's actual snapshot,Profile and rule-body payload types. This transparent alias changes no ownership,lifetime,error or acceptance semantics. |
+| `DraftingRuleSelection` | Enum: Exact requested rule origin; a Profile pin is an intent,not a replacement source record. |
+| `DraftingRuleSignatureError` | Type: Exact original source parent,fresh work metadata,original output loan and first typed refusal. |
+| `DraftingRuleSignatureIssue` | Enum: First original complete signature issue;original records stay in the error's source parent. |
+| `DraftingRuleSource` | Type: Raw original declaration/body association under its actual containing source. This carrier copies only loans;no Clone/Debug/size bound is imposed on host,snapshot,Profile or body payload. |
+| `DraftingRuleSourceError` | Type: Exact original work parent,fresh admission,expected Profile/returned rule and first refusal. |
+| `DraftingRuleSourceIssue` | Enum: First original rule-source header,origin or identity/family mismatch;witnesses stay in the error. |
+| `DraftingRuleWorkError` | Type: Exact original context/request/selection/policy and first refusal;no accepted prefix exists. |
+| `DraftingSemanticField` | Enum: Original typed semantic source/output field,without association,selected value or work credit. |
+| `DraftingSemanticSelectionLocation` | Enum: Fixed typed relative coordinates for source-selection intent. Zero/missing/wrong-kind data is retained;only a later actual-scope factory can join it to genuine owners/positions/fields. |
+| `DraftingSemanticSelectionNeed` | Enum: Original field syntax's direct need or unresolved native target context. Public construction supplies no actual consumer,request coverage,source,Profile member or work proof. |
+| `DraftingSourceRecord` | Type: An owned original source record whose borrowed identity survives zero-sized/empty payloads. |
+| `EntityId` | Type: The identity of a semantic entity: a ULID, 128 bits, lexicographically sortable by creation time. |
+| `Imported` | Component source origin for an explicitly imported Piece, as opposed to one produced by a recipe. |
+| `JoinPiecesAtSeam` | Type: Deliberate join intent with explicit pattern-Piece identities in canonical seam A/B roles. The two-distinct-Piece variant is explicit. |
+| `Kind` | Variant of `DraftingRuleSourceIssue`, `LogicalInputLookupError`: Actual declaration family differs from the original operation's family. |
+| `kind` | Field of a raw logical target: its expected logical role, separate from membership. |
+| `LogicalDerivationDefinition` | Type: Editable actual logical recipe declaration, not rule-language syntax or an evaluated selection. A later original-source binder checks the rule's existence/kind/signature and every actual source. |
+| `LogicalDerivationError` | Type: Original operation identity and selected constructor limits with the first typed refusal. |
+| `LogicalDerivationInput` | Type: One exact named rule-input reference; no duplicated domain,uncertainty state or cached result. |
+| `LogicalDerivationOperation` | Type: Immutable standalone original logical operation with no selected value,default rule or copied domain/state. |
+| `LogicalInputBinding` | Type: Privately bound original inventory member and exact logical kind, without a value read. Equal definitions in a different actual inventory cannot replace this owner or record. |
+| `LogicalInputKind` | Enum: Logical source role; neither variant is a scalar formula kind or a physical specification. |
+| `LogicalInputLookupError` | Enum: First lookup refusal; a kind mismatch retains the actual original record loan. |
+| `LogicalInputs` | Type: Immutable standalone original logical owner. Existing records keep their original domains, state/provenance and authored order. |
+| `MirrorPieceCopy` | Type: Input declaration for creating a reflected copy of a named existing Piece. This explicitly requests copying rather than replacing the source. It supplies no new Piece identity or edge/point tags. |
+| `Mismatch` | Refusal cause: the first returned header, parameter or owner association that differs from the original request. |
+| `nth` | Rust iterator method; these views keep the original records and getters when it is used. |
+| `numeric_source` | Method or function: Loan the actual Root numeric target's original representation,kind and member position. Complete fresh Root/provider content already belongs to this exact scope. Success allocates no workspace. |
+| `NumericMetadata` | Associated type of the numeric source provider; may be unsized and is only ever lent. |
+| `option_a` | Neutral example domain value; it carries no physical meaning. |
+| `output_a` | Neutral example domain value of a Root output. |
+| `policy_a` | Neutral example rule role; it supplies no physical rule. |
+| `prepare_component_binding` | Method or function: Freshly charge all actual garment/provider fields,derive checked (E+8)² and refuse work shortage before current copy/expected-Piece scans. |
+| `prepare_rule_binding` | Method or function: Freshly walk complete Root/provider/request-pin content,derive checked (E+8)² and refuse inspection shortage before original Root operation lookup. |
+| `private_width` | Example name: a 13-byte native point source field. |
+| `rule_source` | Provider query: takes an exact rule id and expected operation family, and returns the original rule source. |
+| `RuleBody` | Associated type of the rule provider: the actual opaque rule body payload. |
+| `Scalar` | Canonical numeric input kind: a general scalar declaration of an exact kind, distinct from a dedicated length. |
+| `scalar_statements` | Count of scalar statements in this work-bound formula. |
+| `ScalarInputKind` | Enum: Declared scalar kind, available even when observation or evaluation is required. |
+| `selected` | Field of a Profile source: the actual selected profile, schema and content pin. |
+| `SemanticOperationBinding` | Type: Private original owner/member association. This semantic index is not a scalar ordinal,native step or mixed-program position. Binding reads no value or source and cannot replace its owner. |
+| `SemanticRecipe` | Type: Immutable original ordered owner of the implemented semantic operation declarations. Scalar recipe statements and native inputs retain their separate actual owners. |
+| `SemanticRuleDeclaration` | Type: Immutable original typed signature, without original body, Root/Profile/snapshot association, membership, source truth, value, execution or whole-program acceptance. Caller-owned buffers are moved unchanged. |
+| `SemanticRuleDefinition` | Type: Editable declaration identity and complete signature, separate from original body/source data. |
+| `SemanticRuleInput` | Type: Original named logical-rule input requirement, in declaration order. |
+| `SemanticRuleSignature` | Enum: Original complete signature. Neither family supplies a body, domain selection or result value. |
+| `skip` | Rust iterator method; these views keep the original records and getters when it is used. |
+| `snapshot` | Field of a source record: the actual immutable containing snapshot, not an id or version string. |

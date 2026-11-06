@@ -647,6 +647,18 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] LOCKSTEP:book example count,DEV_NOTES,changelog,D385 and LIVE defect row align;README reviewed unchanged,G1still6/18 In Progress.
   promotion: declined (lesson is in DEV_NOTES;fault tools keep their own unique-anchor assertion).
   Commit:STITCHCAD-G1-0974.
+- ID: `G1-SLICE.5f.2.prepush-400.api-declarations`
+  Status: `done`
+  Goal:fix D386;declare every name the book uses in code style and run the book censuses at each commit.
+  Paths:scripts/check_book_censuses.sh;scripts/check_doctrines.project.sh;docs/tasks/artifacts/glossary/run_glossary_probes.sh;docs/book/src/build-and-checks.md.
+  - [x] REPRODUCE / ISSUE:run_glossary_census.sh at d688014b →794 failures,rc=1;32 glossary arms and G0-02 red. git archive history census →0 at5acc96a6,77 at0700,445 at0800,684 at0900.
+  - [x] ROOT CAUSE (WHY + WHERE):grep glossary scripts/check_doctrines.sh →no match,rc=1;the census ran only in make probes,so chapters added after0655 never met it. Two book .rs links also pointed at a dead relative path.
+  - [x] FIX:29 chapters gain a declaration table,795 rows from rustdoc or reviewed chapter meaning;no exemption or spelling change. BOOK-CENSUSES runs both censuses plus index and link rules. Two links now use the repository URL.
+  - [x] ADDRESSED:glossary census 0 failures,rc=0. Glossary suite 43 pass/0 fail incl. real declaration faults;--self-test 6 arms,4 refusals seen,rc=0. Independent classify.py:640 of694 names matched code sites.
+  - [x] NO REGRESSION:publication 50/0,14 search cases;G0 review 18 met/1 human;table-render,uncertainty,tree probes rc=0;live-doc-size OK,rc=0 after dropping my TOOLBOX row at its ceiling. Gate cost 4.5s per commit.
+  - [x] LOCKSTEP:book,decision,DOCTRINE_ENFORCEMENT,registry,DEV_NOTES,changelog,D386 and LIVE row align;README reviewed unchanged,G1still6/18 In Progress.
+  promotion: declined (decision_machine-tokens-declared-where-used.md owns the rule and this commit extends it).
+  Commit:STITCHCAD-G1-0975.
 - ID: `G1-SLICE.5f.2.prepush-400.ram-observe`
   Status: `done`
   Goal:adopt the director's 2026-11-06 RAM rule in the tool,book and records during the gate.

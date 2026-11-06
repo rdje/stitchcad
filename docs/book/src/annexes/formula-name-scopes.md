@@ -597,3 +597,25 @@ unresolved candidate. Actual Offset candidate/lineage/source/mapping proof is st
 Point and notch catalogues retain their existing distinct domains. Offset lineage proof extends
 the shared Edge metadata contract;matching an Offset creator remains metadata and supplies no
 geometric approval.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `ActiveOffsetRole` | Published offset name for `ActiveEdgeOutputRole`; an alias of the same Rust type. |
+| `AdmittedDraftingProgramNameWork` | Type: Private bounded actual name/program owner;no association,namespace,kind or source-truth grant. The actual host is immutable and its selected-row iterator was counted without consuming items. |
+| `DesignFormulaDeclarationSource` | Trait: Readonly,allocation-free selected measurement/Ease declaration inventory for bounded checking. This supplements the existing allocating `DesignFormulaHost` factory. |
+| `DraftingGeometryNameSource` | Enum: Actual original source of a planned point/edge name,not an anonymous supplied output reference. Fixed schemas use their own published output method. |
+| `DraftingProgramNameLimits` | Type: Explicit complete held-content and prospective mixed namespace allowances,without defaults. |
+| `DraftingProgramOutputPositions` | Type: All original output-name occurrences tied to their actual mixed native steps. Fixed schemas match actual owner identity. Variable-role catalogues retain only matching authored creator candidates. |
+| `FormulaInitialDeclaration` | Type: Authored input or prior-operation metadata admitted to an initial namespace. Recipe bindings and language-owned reserved sources cannot seed a recipe's inputs. |
+| `FormulaNameCursor` | Type: Metadata staging cursor over one actual normalized recipe in its authored order. Only initial names and earlier let annotations are visible. |
+| `FormulaNameScope` | Type: Readonly initial/prior metadata loan. Copying this view copies only the map borrow. Expression proofs retain actual expression/declaration owners,not this map allocation. |
+| `front_waist` | Example global declaration name, deliberately spelled differently from a local catalogue key. |
+| `local_offset` | Example local catalogue role key in this byte-count example. |
+| `nth` | Rust iterator method; these views keep the original records and getters when it is used. |
+| `offset_fragment` | Example output name in this byte-count example. |
+| `OffsetRoleCatalog` | Published offset name for `EdgeOutputRoleCatalog`; an alias of the same Rust type. |
+| `waist_corner` | Example local catalogue role key, deliberately spelled differently from its global name. |

@@ -399,3 +399,36 @@ domain. Actual current identity application,mapped geometry and atomic execution
 existing G1/G2/G3/bus owners.
 
 Continue with the [whole-Piece declarations](drafting-truing-piece.md) for complete original-source placement and identity requests.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `admit` | Admission method: checks complete populations against explicit limits before reading fields, then returns the admitted view or the first refusal. |
+| `AdmittedEdgeOutputRoleCatalog` | Type: Complete structural catalogue admission,not issuance history,global namespace or geometric truth. |
+| `AdmittedTruingEdges` | Type: Whole local edge-candidate admission,not executed coordinates or a complete refitted Piece. |
+| `AfterEnd` | Variant of TruingSourceDomainRefusal: Original upper bound follows the actual selected held domain. |
+| `BeforeStart` | Variant of TruingSourceDomainRefusal: Original lower bound precedes the actual selected held domain. |
+| `bind_source_coverage` | Method or function: Require an exact nonoverlapping partition of the actual selected held source domain. Whole N quota,then W quota precede source scans/index allocation. Required W is N additional logical entries. |
+| `BoundTruingCopyInventory` | Type: Authentic complete copy/pattern association;no independent counterpart or fitted curve is inferred. |
+| `BoundTruingEdgeRoles` | Type: Authentic actual truing/edge-role association,not a complete refit manifest or an issued edge. |
+| `BoundTruingSourceDomain` | Type: Complete original candidate membership in the actual held domain,not coverage/currentness/fit. |
+| `CoveredTruingSourceDomain` | Type: Authentic complete partition of the selected held domain;no output/currentness/fit certificate. |
+| `Edge` | Refusal cause: the exact held edge creator or tag differs from the selected original span side. |
+| `EdgeOutputRoleCatalogLimits` | Type: Explicit complete catalogue allowances,without default admission or prior-allocation guarantees. |
+| `Gap` | Outcome or refusal for an uncovered positive interval: no candidate or declared domain contains this source position. |
+| `Refit` | Variant of `TruingOutcomeIntent`: Require refitting with a complete exact selected-source candidate partition. Coverage neither proves physical change nor chooses a deterministic fitted curve. |
+| `RequiredTruingEvidence` | Type: Authentic complete original lock proposal and evidence requests,not execution readiness. |
+| `RequiredTruingLocks` | Type: Authentic bounded lock requests,not fitted positions,current repairs or editing authority. |
+| `RequiredTruingOutcome` | Type: Authentic explicit outcome request,not an achieved unchanged/refitted or publishable result. |
+| `Stops` | Refusal cause: the complete original stop population exceeds the selected policy. |
+| `TruingEdgeCandidate` | Type: Original unadmitted edge-role/source-range declaration;neither field supplies geometry evidence. |
+| `TruingEdgeManifest` | Type: Original readonly candidate proposal. Empty is explicit presence metadata,not a complete refit/no-op. |
+| `TruingEndpointRequirement` | Type: Authentic endpoint and complete lock context,not an evaluated position. |
+| `TruingEvidenceRequirement` | Type: Authentic distinct scope and actual original source field with complete truing proposal context. |
+| `TruingOutcomeIntent` | Enum: Required outcome,never inferred from empty candidates,coverage or fitted geometry. |
+| `TruingOutputEdge` | Type: Actual original candidate and edge-role attribution;logical output is a declaration,not issuance. |
+| `TruingSourceCoverageLimits` | Type: Explicit complete candidate and source-order index allowances;no defaults or allocation-byte claim. |
+| `TruingStopRequirement` | Type: Authentic original stop requirement,including counterpart-side stops. |

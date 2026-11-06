@@ -672,3 +672,44 @@ a snapshot mismatch keeps both actual records. Debug omits authored and opaque s
 Logical domains and states,operation existence/kinds,component recipes,canonical Buttonhole sizing,
 semantic work quotas,current-validation workspace and complete dependency acceptance remain later
 stages. No source-content proof certifies values,physical feasibility or whole-programme execution.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `AdmittedDraftingGarmentSource` | Type: Original Root-bound garment and snapshot under a fresh complete logical content allowance. |
+| `bind_existing_geometry` | Method or function: Query one existing typed output and bind its exact original sources to this held context. Checks reference, actual frame record, then actual snapshot record before exposing a binding. |
+| `BoundDraftingProgramInitials` | Type: Whole original initial-vector association,borrowing the complete prior role proof. Values,namespace collisions,ordered visibility and whole dependency acceptance remain separate. |
+| `BoundDraftingProgramOutputRoles` | Type: Complete actual planned role/input/catalogue/context association;no namespace or geometry grant. Sources borrow the original provider and position owner;there is no self-reference or copied namespace. |
+| `charge_design_garment_resources` | Method or function: Charge every actual implemented garment root field in schema order, without resetting the sink. Shared logical references are fixed; owned snapshots and vectors count at their actual owners. |
+| `charge_design_revision_resources` | Method or function: Charge an actual retained revision's magnitude without copying or formatting its counter. External immutable source providers use this for their snapshot revision and any retained copies. |
+| `charge_resources` | Method charging every actual field to the cumulative first-failure-latching resource sink; stored demand grants no credit. |
+| `Drafting` | Variant of DraftingProgramStep, DraftingProgramStepKind: Actual native argument arena owner, or original no-argument input family. |
+| `DraftingContext` | Type: Actual-root binding under complete context-content limits and the immutable source contract. |
+| `DraftingGarmentProvider` | Trait: Readonly facet borrowing an actual already-held garment under the original context. |
+| `DraftingGarmentSource` | Type: Raw original garment and its containing snapshot. Public construction grants no Root binding, resource allowance, currentness, declaration/domain or operation-execution certificate. |
+| `DraftingGarmentSourceError` | Type: Boxed original context/raw garment/policy/first-refusal witnesses keep the Result compact. Only a refused semantic diagnostic allocates; no admitted prefix or result vector is created. |
+| `DraftingGeometryBinding` | Type: Borrowed existing output after exact reference and original frame/snapshot record binding. This retains the original opaque source under the immutable provider contract. |
+| `DraftingGeometryBindingIssue` | Enum: First original field that prevents binding a raw existing-output response to its context. |
+| `DraftingGeometrySource` | Type: Raw source-port response borrowing the actual records, not an accepted geometry binding. |
+| `DraftingGeometryStepRequest` | Type: Actual strictly earlier native creating step and original requested reference, including unnamed outputs. Private construction certifies creator classification only, not a valid geometry source. |
+| `DraftingInitialBinding` | Enum: Original complete initial occurrence after actual scalar/source or existing-geometry binding. No scalar state or geometry value is read;metadata records remain under the immutable port. |
+| `DraftingInitialError` | Type: Complete initial refusal pins original role bindings,all original inputs and selected policy. |
+| `DraftingInitialInputProvider` | Trait: Readonly actual initial-input metadata facet of the immutable containing drafting source. Core supplies the actual Root canonical join after complete content/work bounds. |
+| `DraftingInitialInputSource` | Type: Raw source response retaining an actual canonical join and original metadata/snapshot records. |
+| `DraftingOperationInput` | Enum: A view of one actual native input,without copying its documents,targets or dependencies. Eleven schemas retain their own operation id. |
+| `DraftingOutputRoleError` | Type: Complete refusal pins the original bounded positions,input owner and selected policy. |
+| `DraftingPlannedOutput` | Enum: Authentic original variable-output field from its existing published family factory. Every variant retains the actual admitted manifest/source/copy/identity parents and original active catalogue membership. |
+| `DraftingPlannedOutputProvider` | Trait: Readonly actual planned-family field facet of the immutable containing drafting source. |
+| `DraftingPlannedOutputSource` | Type: Raw planned-output response with authentic family field and original actual context records. Public construction proves no containing Root/input/catalogue/frame/snapshot association. |
+| `DraftingProgramShape` | Type: Complete immutable factory-derived prospective shape after whole admission. Private metadata is not caller totals, a normalized owner, a kind proof or an executable program. |
+| `DraftingProgramStepView` | Type: Actual normalized step loan with a private genuine one-based combined-program position. Each original recipe ordinal and the actual member/native owners remain separate fields. |
+| `DraftingSourceRecord` | Type: An owned original source record whose borrowed identity survives zero-sized/empty payloads. |
+| `FormulaNormalizedStatement` | Type: Privately constructed normalized statement, owning arenas and borrowing original source. |
+| `is_same_record` | Method or function: Whether both borrows hold this same original live record, independently of payload equality. Compare the record's nonzero storage address, not slice lengths or trait-object metadata. |
+| `NormalizedDraftingOperation` | Enum: Actual normalized argument owners, or an original family with no scalar argument documents. No variant certifies namespace, kind, source/current-output dependency or geometry acceptance. |
+| `NormalizedDraftingProgram` | Type: Complete actual source, whole-recipe and native argument arena owner after whole input admission. Arenas borrow original source documents; there are no self-references or fabricated spans. |
+| `ordinal` | Field of a program step: its requested one-based ordinal, kept separate from its mixed position. |
+| `Other` | Variant of `NormalizedDraftingOperation`: Original input without scalar argument documents; no other local admission is implied. |

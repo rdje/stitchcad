@@ -599,6 +599,37 @@ with every write and child intercepted. Actual omission faults refuse a book inp
 or restored compiler dispatch. Simulated driver output proves dispatch; native coupled runs supply
 the separate shared-case and actual fault proof.
 
+## Book rules at every commit
+
+The commit gate runs `scripts/check_book_censuses.sh`. It refuses a commit when a chapter uses a name
+in code style that nothing declares, when a formula span breaks the grammar, when a registered chapter
+has no topic-index row, or when a chapter links outside the book's source tree. A refusal names the
+exact fault:
+
+```text
+  x `ExampleName` is used by docs/book/src/annexes/logical-inputs.md but no glossary entry owns it
+BOOK-CENSUSES: annexes/semantic-recipes.md has no topic-index.md row
+BOOK-CENSUSES: annexes/logical-inputs.md links outside the book source: ../../../decisions/x.md
+```
+
+To clear the first refusal, add the name to the chapter's own declaration table, at the end of the
+chapter, with what it means:
+
+```text
+| Name | Meaning |
+| --- | --- |
+| `ExampleName` | Placeholder for a name this chapter uses. |
+```
+
+Cite a file outside the book by its path in code style, or link it through the repository URL. The
+gate cannot tell whether a stated meaning is correct, and it does not render the book, so malformed
+HTML and rendered anchors remain checks of the pre-push publication suite. Its six self-test arms run
+inside the glossary probes, which also refuse a lost gate registration:
+
+```bash
+bash scripts/check_book_censuses.sh --self-test
+```
+
 ## Formula documentation currency
 
 The publication probes watch current scope in nine formula annexes against public expression,
@@ -615,3 +646,16 @@ job. Ten independent producers must match twelve frozen fixtures;missing or unre
 failed children and mismatches refuse. Nine finite gate controls also check CI/Make wiring and
 original pipeline exit status. Scratch stays under target/seam_oracle_watch on the repository
 volume. This local gate proof grants no unobserved hosted CI verdict;that verdict follows a push.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `ExampleName` | Placeholder name used by the refusal example in this chapter. |
+| `above_flag_line` | `macos_memory.py` output field: true when the reading is at or above the 90% line. It stops nothing. |
+| `pressure_level` | `macos_memory.py` output field: the kernel's memory-pressure reading, reported as context only. |
+| `sysctl` | macOS command that reads the physical RAM size and memory-pressure level. |
+| `top` | macOS process viewer; its cache-inclusive occupied total is not the used-RAM percentage. |
+| `vm_stat` | macOS command that reports the page counters `macos_memory.py` reads. |

@@ -469,3 +469,48 @@ has its own native output reference.
 
 [Shared edge-role metadata and slash binding](drafting-slash-output-contracts.md#shared-edge-roles-and-slash-operation-binding)
 also live in that reference. These retained anchors preserve earlier chapter links.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `ActiveOffsetRole` | Published offset name for `ActiveEdgeOutputRole`; an alias of the same Rust type. |
+| `admit` | Admission method: checks complete populations against explicit limits before reading fields, then returns the admitted view or the first refusal. |
+| `AdmittedOffsetCandidates` | Type: Complete immutable metadata admission,not stable-role replay reconciliation or a G2 certificate. |
+| `AdmittedOffsetRoleCatalog` | Published offset name for `AdmittedEdgeOutputRoleCatalog`; an alias of the same Rust type. |
+| `Ambiguous` | Match kind: more than one candidate contains the original parameter, and none is silently selected. |
+| `bind_declaration` | Method or function: Admit complete N/2N roles/workspaces and J journal entries before record lookup/allocation. Match one actual operation record,Declared kind,count,then all explicit tags. |
+| `BoundOffsetConstruction` | Type: Authentic association of the supplied input and descriptor, without registry/currentness proof. |
+| `declare_edges` | Method or function: Records a drafting operation creating `count` edges (tags `0..count` of one operation id). |
+| `DeclaredAffinePrimitive` | Variant of `OffsetMappingEvidenceRequest`: Requesting the old structural primitive cannot satisfy a normal correspondence obligation. |
+| `DeclaredOffsetCandidates` | Type: Complete actual declaration association,not liveness,global ownership,role continuity or geometry. |
+| `EdgeOutputRoleDefinition` | Type: One explicit local machine key/tag declaration,not a curve classifier or allocated identity. |
+| `Empty` | Variant of OffsetCandidateRefusal: This candidate manifest requires a nonempty result;total collapse is not one fabricated edge. |
+| `Fragments` | Variant of OffsetCandidateRefusal: Complete population exceeds the selected allowance. |
+| `fragments` | Method exposing the original candidate fields, in source order. |
+| `Gap` | Outcome or refusal for an uncovered positive interval: no candidate or declared domain contains this source position. |
+| `LocalTag` | Type: A local, persistent tag distinguishing the sub-entities one creating operation produced. |
+| `main` | Example edge-role name; no implicit role of this name exists. |
+| `MAX_EDGES_PER_OPERATION` | Constant: The most edges one operation may create — the declared domain of `IdentityLedger::declare_edges` and `IdentityLedger::offset`, enforced at the boundary so no downstream code re-checks it. |
+| `NormalOffset` | Variant of `OffsetMappingEvidenceRequest`: Actual G2 evidence must bind original/current geometry,normal correspondence and both lengths. |
+| `Offset` | Variant of `TopologyEdit`: An edge was fragmented by offsetting into `fragments`, in source-parameter order; the source is gone. Coverage may be partial — a trimmed-away position is an unmapped orphan, not an error. |
+| `OffsetCandidateFragment` | Type: One declared logical output role and positive original-source domain,not a computed curve. |
+| `OffsetCandidateLimits` | Type: Explicit complete candidate allowance;earlier Vec allocation and later execution are separate. |
+| `OffsetCandidateMatch` | Type: An authentic original occurrence from this complete source query,not a geometric resolution. |
+| `OffsetDeclarationLimits` | Type: Explicit complete binding allowances;earlier ledger/input storage and later execution are separate. |
+| `OffsetInterval` | Type: A source-parameter interval an offset fragment corresponds to, as the caller declares it. |
+| `OffsetMappingErrorAllocation` | Type: Raw explicit ceilings;constructor retains negative inputs for typed validation at binding. |
+| `OffsetMappingEvidenceRequest` | Enum: Required evidence-source identities,not supplied evidence or registry/currentness proof. |
+| `OffsetMappingRequirement` | Type: Raw explicit evidence/budget requirement,without default policy or evidence acceptance. |
+| `OffsetRoleCatalog` | Published offset name for `EdgeOutputRoleCatalog`; an alias of the same Rust type. |
+| `OffsetRoleCatalogLimits` | Published offset name for `EdgeOutputRoleCatalogLimits`; an alias of the same Rust type. |
+| `OffsetRolePresenceLimits` | Type: Explicit whole candidate/catalogue populations for this association stage. |
+| `OffsetRoleTransitionLimits` | Published offset name for the edge-role transition limits; an alias of the same Rust type. |
+| `outputs` | Method returning private output views, in original candidate order. |
+| `RequiredOffsetMapping` | Type: Admitted requirement arithmetic on an authentic match;no mapped Param or evidence certificate. |
+| `source_parameter` | Original normalized parameter on the source edge in this affine fold formula. |
+| `Tolerance` | A tolerance: a class, a limit, and the requirement the limit was derived from. |
+| `trimmed_end` | Example edge-role name, active alongside `main` in this example. |
+| `Unique` | Match kind: exactly one candidate domain contains the parameter, without proving a unique geometric point. |

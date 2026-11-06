@@ -303,3 +303,17 @@ replay of trim/fullness/fold/copy/semantic effects remains .5f.4.geometry after 
 Actual command authority,repair coordination and atomic publication retain their Design/bus owners.
 Storage/app/platform/full-project checks keep their separate owners. This component checkpoint
 grants neither whole G1/G0 closure nor release approval.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `admit` | Admission method: checks complete populations against explicit limits before reading fields, then returns the admitted view or the first refusal. |
+| `AdmittedSlashSpreadEdges` | Type: Admitted role/provenance metadata,not a complete boundary or accepted geometry/currentness proof. |
+| `BoundSlashSpreadPieceMetadata` | Type: Authentic borrowed source metadata and declared result fold;not a new Piece or achieved effect. |
+| `RequiredSlashSpreadEffect` | Type: Authentic original effect/input and complete copy context;not an achieved effect certificate. |
+| `RequiredSlashSpreadOutcome` | Type: Authentic explicit structural outcome requirement;no achieved no-op/effect/readiness verdict. |
+| `SlashSpreadFoldIntent` | Enum: Explicit preservation of the source's cut-on-fold state and attribution of its result fold. |
+| `SlashSpreadOutcomeIntent` | Enum: Required structural outcome;zero candidates never selects a mode implicitly. |

@@ -535,3 +535,61 @@ Ordered namespace/frame/dependency integration remains G1 .5f.2;selectors/budget
 geometry/effect/replay integration .5f.4.geometry/.5g and G2/G3. G1's running-spike and G2 entry
 requirements remain unchanged. This closes the native declaration family without claiming release
 support or independent approval;the [operation inventory](drafting-operation-contracts.md) records that boundary.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `BoundJoinCandidatePlan` | Type: Authentic complete candidate copy plan/counts,not deep original/result Piece-field preservation. |
+| `BoundJoinInventoryFields` | Type: Authentic whole body resource admission only,not original/result semantic field matching. |
+| `CandidateField` | Variant of JoinCompanionRepairRefusal: Actual candidate original member does not retain its hand and name that exact new companion. |
+| `Canonical` | Refusal cause retaining the actual canonical validation or inventory-join failure, including its original witnesses. |
+| `CompanionNotConsumed` | Variant of JoinCompanionRepairRefusal: Old companion still has actual retained copies and cannot be silently replaced. |
+| `CompanionNotSource` | Variant of JoinCompanionRepairRefusal: Old companion is not one of the actual A/B source Pieces being joined. |
+| `CutPlanError` | Enum: Structural cut-plan refusal; no missing copy is silently manufactured. |
+| `Duplicate` | Refusal cause: an original selector, tag or requested id repeats in original request order. |
+| `expected` | Constructor argument guarding the whole original Mirroring field; it is not a replacement. |
+| `Holes` | Refusal cause: the complete hole population exceeds the selected policy before any child-hole scan. |
+| `JoinCandidatePlanError` | Type: Actual whole supplied candidate inventory/plan,original correspondence,policy and first cause. |
+| `JoinCompanionRepair` | Type: One authentic original/current companion-field request and its unaccepted evidence source. |
+| `JoinCompanionRepairError` | Type: Whole original requests,actual field/inventory parents,policy and original first cause survive. |
+| `JoinCompanionRepairManifest` | Type: Original operation and explicit ordered requests;empty means no companion exceptions requested. |
+| `JoinConsumerEvidenceKind` | Enum: Distinct mandatory scopes;equal or zero source ids never merge or discharge obligations. |
+| `JoinConsumerRequirement` | Type: One authentic mandatory scope/source-field loan with its whole original/candidate context. |
+| `JoinEffectEvidenceKind` | Enum: Four mandatory effect scopes;shared source ids never merge or discharge obligations. |
+| `JoinEffectRequirement` | Type: One authentic effect scope/source-field loan with the whole original/final native context. |
+| `JoinInventoryFieldError` | Type: Whole actual candidate-plan/original context,policy and first resource cause;no accepted prefix. |
+| `JoinOriginalPiece` | Type: One authentic original and its exact retained candidate,or explicit fully consumed absence. |
+| `JoinOriginalPieceError` | Type: Actual whole resource/repair parents and first original/candidate field cause;no accepted prefix. |
+| `JoinOriginalPieceField` | Enum: First original Piece field differing from its permitted candidate value. |
+| `JoinResultPieceError` | Type: Actual whole original match/request/resource contexts and first joined-field cause survive. |
+| `JoinResultPieceField` | Enum: First actual joined Piece field differing from the explicit native request. |
+| `JoinSourceIdentity` | Type: One authentic original global edge request,with every original field/frame still inspectable. |
+| `JoinSourceIdentityError` | Type: Actual whole manifest/consumer contexts,original limits and first refusal;no accepted prefix. |
+| `JoinSourceIdentityIntent` | Enum: Requested fate of the entire original global EdgeRef,not just its selected Piece-local range. |
+| `JoinSourceIdentityManifest` | Type: Complete operation/global identity-history source and explicit original-edge disposition rows. |
+| `LabelField` | Enum: Label field named by an incomplete-label diagnostic. |
+| `MatchedJoinOriginalPieces` | Type: Complete exact original-field matching,not joined-result/consumer/physical acceptance. |
+| `MatchedJoinPieceInventory` | Type: Complete actual candidate copy/Piece-field reconciliation,not full join acceptance. |
+| `MissingResult` | Refusal cause: the candidate plan lacks an explicitly requested result copy. |
+| `MissingRetained` | Variant of JoinCandidatePlanRefusal: Candidate plan lacks an actual original RetainOriginal copy. |
+| `NotPairMember` | Variant of JoinCompanionRepairRefusal: Actual original field is not a separately identified PairMember. |
+| `Occurrences` | Refusal cause: the complete occurrence population exceeds the selected policy before any edge field is read. |
+| `Operation` | Refusal cause: the raw manifest or catalogue is owned by another operation than the one selected. |
+| `Pieces` | Refusal cause: the whole supplied or inventory Piece population exceeds the selected policy. |
+| `PrintedLabel` | Type: Complete label view, using the cut plan's authoritative quantity, mirroring and fold state. |
+| `Repairs` | Variant of JoinCompanionRepairRefusal: Whole raw requests exceed policy. |
+| `RequiredJoinCompanionRepairs` | Type: Authentic explicit counterpart requirements;not complete original preservation or repair approval. |
+| `RequiredJoinConsumers` | Type: Authentic complete inventory/source request association,not accepted consumer coverage or repair. |
+| `RequiredJoinEffects` | Type: Authentic complete original/final requirement context,not execution or publication readiness. |
+| `RequiredJoinSourceIdentities` | Type: Authentic complete global-edge disposition/history requirements,not approved identity effects. |
+| `ResultField` | Refusal cause: the actual candidate result copy differs from its explicit id, Piece or orientation request. |
+| `ResultIdentity` | Variant of JoinCompanionRepairRefusal: Explicit new companion is not the actual declared joined result Piece. |
+| `ResultPairing` | Variant of JoinCompanionRepairRefusal: Authored result mirroring does not explicitly reciprocate this member with opposite hand. |
+| `RetainedField` | Variant of JoinCandidatePlanRefusal: Candidate retained copy changes original id/Piece/orientation definition. |
+| `SourceField` | Refusal cause: the expected whole original field differs from the actual original field. |
+| `SourceNotRetained` | Variant of JoinCompanionRepairRefusal: This request requires an actual retained original member,not a fully consumed source. |
+| `Sources` | Refusal cause: the whole original source population exceeds the selected policy. |
+| `TextBytes` | Refusal cause: the complete UTF-8 label and reason bytes exceed the selected policy. |

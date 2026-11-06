@@ -496,3 +496,82 @@ This completes native original/result fold bookkeeping. Canonical cut/print bind
 correspondence,marks and other consumers,currentness,actual geometry,retirement and atomic
 authority remain separate requirements. Final printed fold state must derive from that complete
 canonical reconciliation,not a second authored flag.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `Active` | Refusal cause: the complete active-occurrence population exceeds the selected policy. |
+| `admit` | Admission method: checks complete populations against explicit limits before reading fields, then returns the admitted view or the first refusal. |
+| `AdmittedEdgeOutputRoleCatalog` | Type: Complete structural catalogue admission,not issuance history,global namespace or geometric truth. |
+| `AdmittedJoinDirections` | Type: Authentic complete candidate orientation requests,not achieved maps or contour placement. |
+| `AdmittedJoinEdges` | Type: Whole local Edge-role/source attribution,not coverage,executed geometry or an issued Piece. |
+| `Assignments` | Refusal cause: the whole raw assignment population exceeds the selected policy before any row is read. |
+| `bank_a` | Example catalogue definition name for join bank A. |
+| `bank_b` | Example catalogue definition name for join bank B. |
+| `BoundJoinCutBanks` | Type: Authentic complete A/B held bank association,not a geometric or current join certificate. |
+| `BoundJoinEdgeRoles` | Type: Authentic complete actual operation/Edge catalogue association,not an output or issued identity. |
+| `BoundJoinSourcePieces` | Type: Authentic complete bounded original sources,not a currentness/topology/namespace certificate. |
+| `ConsumedBank` | Variant of JoinCutCoverageRefusal: A cut candidate has positive intersection with this side's selected bank domain. |
+| `Copy` | Variant of JoinPieceIdentityRefusal: An original physical copy already owns this identity. |
+| `CoveredJoinCutSources` | Type: Complete original surviving cut partitions,not a complete joined Piece or currentness proof. |
+| `CutUses` | Variant of JoinFoldRefusal: Complete actual cut uses exceed policy. |
+| `DeclaredJoinFoldSources` | Type: Complete native original fold actions;omission/correspondence/state/copy/consumer truth outstanding. |
+| `DeclaredJoinPieceIdentity` | Type: Authentic local canonical Piece-id declaration,not an issued/fresh/current result or authority. |
+| `Definitions` | Refusal cause: the whole definition population, including inactive and unrelated roles, exceeds the selected policy. |
+| `Duplicate` | Refusal cause: an original selector, tag or requested id repeats in original request order. |
+| `DuplicateSource` | Refusal cause: one original source selector repeats across the raw rows or groups. |
+| `DuplicateTag` | Refusal cause: an explicit persistent tag repeats in original declaration order. |
+| `expected` | Constructor argument guarding the original persistent field; it is not a replacement source. |
+| `Gap` | Outcome or refusal for an uncovered positive interval: no candidate or declared domain contains this source position. |
+| `HoleOverflow` | Refusal cause: the complete hole count cannot be represented. |
+| `Holes` | Refusal cause: the complete hole population exceeds the selected policy before any child-hole scan. |
+| `inactive` | Example catalogue definition name for a role that is defined but not active. |
+| `InactiveRole` | Refusal cause: the candidate names an issued role that is canonically inactive. |
+| `InventoryPiece` | Variant of JoinPieceIdentityRefusal: A supplied original inventory Piece already owns this identity. |
+| `JoinCutBank` | Type: One authentic cut bank with its whole A/B context and actual original directed field/range. |
+| `JoinCutCoverageError` | Type: Whole actual attributed manifest,policy and first original failure;no accepted prefix escapes. |
+| `JoinDirectionalOutput` | Type: Authentic actual original direction request and source attribution,not a geometric map. |
+| `JoinDirectionError` | Type: Actual complete raw manifest,cut-coverage/source parents,policy and first cause. |
+| `JoinEdgeManifestError` | Type: Whole original manifest,identity/context,policy and first cause survive every refusal. |
+| `JoinFoldError` | Type: Whole original construction/source context,raw request,policy and first refusal remain borrowed. |
+| `JoinFoldIntent` | Enum: Explicit desired result cutting state;no inferred axis,source preservation or default. |
+| `JoinFoldRequirement` | Type: Explicit operation,result fold choice and required geometric correspondence evidence source. |
+| `JoinFoldSourceAction` | Type: One authentic original action,actual fold occurrence/Piece/copy and unchanged evidence field. |
+| `JoinFoldSourceError` | Type: Whole original manifest,result/source parents,policy and first cause remain borrowed. |
+| `JoinFoldSourceManifest` | Type: Explicit operation and complete ordered guarded original fold actions. |
+| `JoinIdentityStopOrigin` | Enum: Actual original stop list containing a refused known landmark reference. |
+| `JoinOutputEdge` | Type: Actual whole-owner/candidate/role/original-occurrence association;logical output is not issuance. |
+| `JoinParameterDirection` | Enum: Requested output start/end orientation relative to the attributed ascending source range. This is distinct from Piece traversal,physical-copy reflection and sewing direction. |
+| `JoinSourceOccurrence` | Type: One authentic original source field with actual Piece/copy/held-range context. |
+| `KeyBytes` | Refusal cause: the complete machine-key bytes exceed the selected policy. |
+| `MissingOccurrence` | Refusal cause: this original A/B Piece has no field at the requested family and location. |
+| `OccurrenceOverflow` | Refusal cause: the complete occurrence count cannot be represented. |
+| `Occurrences` | Refusal cause: the complete occurrence population exceeds the selected policy before any edge field is read. |
+| `Operation` | Refusal cause: the raw manifest or catalogue is owned by another operation than the one selected. |
+| `Output` | Refusal cause: the tag or use names no actual candidate output on the required contour. |
+| `OutputNotBoundary` | Refusal cause: the actual output has no use on the proposed outer boundary. |
+| `Outputs` | Refusal cause: the whole actual output-candidate population exceeds the selected policy. |
+| `RequiredJoinFold` | Type: Authentic explicit desired result fold/outer attribution;source actions and geometric proof pending. |
+| `ResultMaterial` | Identity refusal: the selected result metadata already requires this identity as its Material. |
+| `ResultNoFold` | Variant of JoinFoldSourceRefusal: Retain requires an actual explicitly requested result fold,not NoFold. |
+| `RetainedSpan` | Variant of JoinPieceIdentityRefusal: The retained original ease-source span already owns this identity. |
+| `ReverseSource` | Variant of `JoinParameterDirection`: Output start/end correspond to source to/from;no interior or affine map is certified. |
+| `SameAsSource` | Variant of `JoinParameterDirection`: Output start/end correspond to source from/to;actual correspondence still needs evidence. |
+| `SelfCompanion` | Identity refusal: a requested separate result pair member cannot be its own companion. |
+| `SourceEdge` | Refusal cause: the candidate or range belongs to another original persistent source edge. |
+| `SourceField` | Refusal cause: the expected whole original field differs from the actual original field. |
+| `SourceMaterial` | Identity refusal: a supplied inventory Piece already requires this identity as its assigned Material. |
+| `SourceOccurrences` | Refusal cause: the whole original occurrence population, including noncut fields, exceeds the selected policy. |
+| `SourceOperation` | Identity refusal: an actual original A/B edge-producing operation already owns this identity. |
+| `Sources` | Refusal cause: the whole original source population exceeds the selected policy. |
+| `SourceSide` | Refusal cause: the candidate belongs to another original A/B source role, even for equal edge references. |
+| `Span` | Identity refusal: the actual selected span already owns this identity. |
+| `Stop` | Variant of JoinPieceIdentityRefusal: An actual selected/retained stop requires this identity as its landmark. |
+| `StopOverflow` | Variant of JoinPieceIdentityRefusal: Checked complete stop sum cannot be represented. |
+| `Stops` | Refusal cause: the complete original stop population exceeds the selected policy. |
+| `UndefinedRole` | Refusal cause: the candidate has no definition in the actual complete catalogue. |
+| `UnknownOutput` | Refusal cause: the tag names no output in the actual complete candidate context. |
+| `WorkspaceOverflow` | Refusal cause: the checked complete workspace bound cannot be represented. |

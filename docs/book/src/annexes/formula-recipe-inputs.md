@@ -611,3 +611,11 @@ python3 -I -B docs/tasks/artifacts/formula_structure/whole_phase_contract.py --m
 
 The in-memory mutation mode requires actual body assertion failures and exact unchanged source;
 it writes no source/diagnostics and starts no child. This review grants no execution approval.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `FormulaRecipeShape` | Type: Exact complete syntax population cached by the original successful recipe document factory. Counts include all statements, both assertion operands and every conditional branch. |

@@ -479,3 +479,79 @@ other consumers,currentness,geometry,retirement and atomic authority remain requ
 Continue with [explicit result fold attribution](drafting-join-contracts.md#request-explicit-result-fold-attribution)
 against these same whole construction/cut/source parents,then
 [reconcile every original fold declaration](drafting-join-contracts.md#reconcile-every-original-fold-declaration).
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `AdditionalUse` | Variant of JoinConstructionTargetCoverageRefusal: SourceMappedOnly forbids this actual unmapped occurrence,even when its tag repeats a mapped use. |
+| `Adjacency` | Variant of JoinCutConnectivityRefusal: Consecutive or closing uses violate required original source-vertex/bank-endpoint gluing. |
+| `Assignments` | Refusal cause: the whole raw assignment population exceeds the selected policy before any row is read. |
+| `BankSourceInvariant` | Variant of JoinCutConnectivityRefusal: Authentic bank no longer lends its actual original cut field/loop. This is an internal invariant failure requiring diagnosis,not an unsupported caller variant. |
+| `CoveredJoinConstructionGroups` | Type: Authentic ordered whole retained source-field partitions;no target/geometry/omission authority. |
+| `DeclaredJoinConstructionGroups` | Type: Complete actual Retain-source role grouping,not whole-field/target occurrence mapping proof. |
+| `DeclaredJoinConstructionSources` | Type: Complete explicit source action requests,not retained target maps or accepted omission evidence. |
+| `DeclaredJoinConstructionTargets` | Type: Authentic distinct actual target occurrence per retained reference;leftover uses remain unchecked. |
+| `DeclaredJoinConstructionUses` | Type: Authentic ordered proposed construction uses,not complete source-field reconciliation or geometry. |
+| `DeclaredJoinCutContours` | Type: Complete authentic cut-use declarations only;not connected/valid/canonical result geometry. |
+| `DeclaredLoopInvariant` | Variant of JoinCutConnectivityRefusal: A privately admitted nonempty loop is unexpectedly empty;diagnose rather than skip it. |
+| `DuplicateSource` | Refusal cause: one original source selector repeats across the raw rows or groups. |
+| `DuplicateTag` | Refusal cause: an explicit persistent tag repeats in original declaration order. |
+| `DuplicateUse` | Variant of JoinConstructionTargetRefusal: Two retained references cannot consume one actual result occurrence. |
+| `EmptyBoundary` | Refusal cause: a proposed outer boundary has no explicit edge use. |
+| `EmptyGroup` | Refusal cause: a group that needs explicit content has none; no content or geometry is inferred. |
+| `EmptyHole` | Refusal cause: a proposed target hole declaration has no explicit edge use. |
+| `Gap` | Outcome or refusal for an uncovered positive interval: no candidate or declared domain contains this source position. |
+| `GroupReferenceCount` | Variant of JoinConstructionTargetRefusal: One ordered target selector is required per reference in this actual source group. |
+| `Groups` | Refusal cause: the whole raw group population exceeds the selected policy before child lengths are read. |
+| `Holes` | Refusal cause: the complete hole population exceeds the selected policy before any child-hole scan. |
+| `JoinAdditionalConstructionIntent` | Enum: Explicit additional construction content policy;an evidence id is a request,not accepted truth. |
+| `JoinConstructionCoverageError` | Type: Actual whole grouping parent,policy and original first refusal;no partial certificate escapes. |
+| `JoinConstructionGroupError` | Type: Whole raw groups,actual source-action/use context,limits and first cause survive refusal. |
+| `JoinConstructionGroupManifest` | Type: Original explicit operation and ordered retained-source output reference groups. |
+| `JoinConstructionGroupOutput` | Type: One authentic original reference,actual source action and directional candidate attribution. |
+| `JoinConstructionManifest` | Type: Explicit operation and complete proposed construction list. Empty/repeated lists are retained; declaration presence is neither accepted original-source omission nor a no-op/result certificate. |
+| `JoinConstructionOutputGroup` | Type: One authentic original group and actual guarded Retain-source action. |
+| `JoinConstructionSourceAction` | Type: One authentic original assignment,source field and action request;not evidence acceptance. |
+| `JoinConstructionSourceError` | Type: Whole raw actions,actual proposed-use/source context,policy and first cause survive refusal. |
+| `JoinConstructionSourceIntent` | Enum: Explicit original-field intent;neither variant performs an effect or supplies accepted evidence. |
+| `JoinConstructionSourceManifest` | Type: Explicit original operation and ordered complete construction-field action requests. |
+| `JoinConstructionTargetError` | Type: Original proposal,whole covered source/use context,policy and first cause remain borrowed. |
+| `JoinConstructionTargetManifest` | Type: Explicit operation,ordered retained-source target assignments and additional-content intent. |
+| `JoinConstructionUseError` | Type: Whole original manifest,actual cut-path context,policy and first cause survive refusal. |
+| `JoinCutConnectivityError` | Type: Whole authentic cut-use parent,policy,cause and actual use views survive every refusal. |
+| `JoinCutContourError` | Type: Whole original proposal,actual directions/context,policy and first cause survive refusal. |
+| `JoinCutContourManifest` | Type: Original explicit operation,boundary and independently ordered hole-use lists. A raw list is neither an admitted use set nor a connected,CCW/simple canonical Piece. |
+| `JoinCutHole` | Type: One authentic original hole header and its explicit use group,not a geometric containment proof. |
+| `JoinMappedConstructionTarget` | Type: One actual original row/reference,retained source group/output and distinct result occurrence. |
+| `JoinParameterDirection` | Enum: Requested output start/end orientation relative to the attributed ascending source range. This is distinct from Piece traversal,physical-copy reflection and sewing direction. |
+| `JoinPlacedConstructionUse` | Type: One authentic original construction use with its actual direction/candidate/source attribution. |
+| `JoinPlacedCutUse` | Type: Authentic one original cut-use field and its complete direction/source association. |
+| `Mappings` | Variant of JoinConstructionTargetCoverageRefusal: Complete actual mappings exceed policy. |
+| `MissingUse` | Variant of JoinConstructionTargetRefusal: Original target ordinal names no actual proposed construction occurrence. |
+| `NonCutOutput` | Variant of JoinCutContourRefusal: Actual candidate is attributed to construction/fold rather than an original cut field. |
+| `OmittedSource` | Variant of JoinConstructionGroupRefusal: Selected source action explicitly requests Omit,not Retain. |
+| `Operation` | Refusal cause: the raw manifest or catalogue is owned by another operation than the one selected. |
+| `Output` | Refusal cause: the tag or use names no actual candidate output on the required contour. |
+| `Outputs` | Refusal cause: the whole actual output-candidate population exceeds the selected policy. |
+| `ReferenceCount` | Variant of JoinConstructionTargetRefusal: Complete target selectors must equal complete covered retained references. |
+| `ReferenceOverflow` | Refusal cause: the complete nested reference count cannot be represented. |
+| `RequiredJoinConstructionTargets` | Type: Whole native proposed-use reconciliation with explicit outstanding additional/omission obligations. |
+| `RequiredJoinCutConnectivity` | Type: Authentic required source-path gluing,not geometric correspondence/closure or a valid Piece. |
+| `Retain` | Variant of `JoinConstructionSourceIntent`: Require complete explicit retained output mapping for this original occurrence later. |
+| `SourceCountOverflow` | Refusal cause: the complete original source-field count cannot be represented. |
+| `SourceEdge` | Refusal cause: the candidate or range belongs to another original persistent source edge. |
+| `SourceField` | Refusal cause: the expected whole original field differs from the actual original field. |
+| `SourceMappedOnly` | Variant of `JoinAdditionalConstructionIntent`: Every proposed occurrence must be assigned a retained source reference at the later whole scan. |
+| `SourceOccurrences` | Refusal cause: the whole original occurrence population, including noncut fields, exceeds the selected policy. |
+| `Sources` | Refusal cause: the whole original source population exceeds the selected policy. |
+| `SourceSide` | Refusal cause: the candidate belongs to another original A/B source role, even for equal edge references. |
+| `Traversal` | Variant of JoinConstructionTargetRefusal: Actual proposed traversal differs from the original field/output orientation requirement. |
+| `UnknownOutput` | Refusal cause: the tag names no output in the actual complete candidate context. |
+| `UseCountOverflow` | Variant of JoinCutContourRefusal: Whole U cannot be represented after complete H admission. |
+| `Uses` | Refusal cause: the complete contour-use population exceeds the selected policy before any source port is read. |
+| `uses` | Method returning all proposed uses in original order; the iterator can also run in reverse. |
+| `UseSourceInvariant` | Variant of JoinCutConnectivityRefusal: Authentic cut use no longer lends its actual original cut field/loop;diagnose the invariant. |
+| `WorkspaceOverflow` | Refusal cause: the checked complete workspace bound cannot be represented. |

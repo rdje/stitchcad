@@ -807,3 +807,33 @@ documents original membership/kind loans and complete constructor limits. The
 [canonical Design attachment](logical-inputs.md#attach-to-the-original-canonical-design) now includes
 all-family identity checks and actual/prospective resource walks. Profile/source binding and
 semantic operation acceptance retain their separate stages.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `admit_geometry_work` | Method or function: Freshly charge all original programme/name/provider-held content in one meter, then count every Root/mixed formula and native geometry use without classifying creators. |
+| `AdmittedDraftingProgramOrderWork` | Type: Complete additional order-checker bounds under the actual original normalized owners. This grants no checked kind/order/dependency,metadata advance,value or executable prefix. |
+| `anchor` | Example name: a planned point in the seven-step recipe. |
+| `BoundDraftingProgramGeometry` | Type: Complete original geometry associations, borrowing admitted work and every actual supplier. Private fields prevent publication of a prefix or replacement occurrence. |
+| `CARGO_HOME` | Cargo's package-store environment variable; project producers replace an ambient value with the store under `target/`. |
+| `charge_design_garment_resources` | Method or function: Charge every actual implemented garment root field in schema order, without resetting the sink. Shared logical references are fixed; owned snapshots and vectors count at their actual owners. |
+| `CheckedDraftingProgramOrder` | Type: Complete original mixed name/header and scalar/native argument-kind proof. The original initial map is consumed;the final cursor map is dropped without cloning/extraction. |
+| `DesignFormulaDeclarationSource` | Trait: Readonly,allocation-free selected measurement/Ease declaration inventory for bounded checking. This supplements the existing allocating `DesignFormulaHost` factory. |
+| `DraftingGeometryStepProvider` | Trait: Readonly authentic planned-family source facet for an actual strictly earlier creating step and reference, including outputs with no global name. This supplements the named-output port. |
+| `DraftingInitialInputProvider` | Trait: Readonly actual initial-input metadata facet of the immutable containing drafting source. Core supplies the actual Root canonical join after complete content/work bounds. |
+| `DraftingProgramGeometryError` | Type: Complete original admitted work and first binding refusal; no partial result can escape. |
+| `DraftingProgramInitialNamespace` | Type: Private initial map derived from the exact containing Root and complete bound extra inputs. A readonly scope borrows its allocation. |
+| `DraftingProgramInitialNamespaceError` | Type: Original current-input,host or namespace cause,with complete prior initial associations. |
+| `DraftingProgramOrderError` | Type: Original complete bound sources and selected policy survive;the local map/proof prefix does not. |
+| `DraftingProgramOrderLimits` | Type: Explicit additional mixed-order checker proof allowances,without defaults. All actual scalar operands and native arguments count,including every branch/repetition. |
+| `DraftingProgramOrderStep` | Type: Privately numbered genuine mixed step and its complete original argument proof. |
+| `DraftingProgramOrderWorkError` | Type: Original private initial map,complete input/policy and first order-work refusal. |
+| `future_edge` | Example name: a center-arc output edge declared after the uses that precede it. |
+| `later` | Example binding name that stays unbound in the initial scope. |
+| `planned_geometry` | Provider query answering one variable geometry request; its response is checked against the actual plan. |
+| `RUSTUP_HOME` | Rustup's toolchain-store environment variable; project producers replace an ambient value with the store under `target/`. |
+| `second` | Example name: a length bound from `x(anchor)`. |
+| `width` | Example name: a length bound to `1 mm`. |

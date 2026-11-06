@@ -288,6 +288,19 @@ else
   bad MISSING "an absent glossary did not refuse (exit=$rc)" "$out"
 fi
 
+# ---------------------------------------------------------------- BOOK-CENSUSES: the per-commit guard (D386)
+if grep -q '"BOOK-CENSUSES|scripts/check_book_censuses.sh"' "$ROOT/scripts/check_doctrines.project.sh"; then
+  ok GATE-REGISTERED "the census runs at every commit through BOOK-CENSUSES"
+else
+  bad GATE-REGISTERED "BOOK-CENSUSES is no longer registered, so drift would wait for the next push"
+fi
+out="$(bash "$ROOT/scripts/check_book_censuses.sh" --self-test 2>&1)"; rc=$?
+if [ "$rc" -eq 0 ]; then
+  ok GATE-ARMS "$(tail -1 <<<"$out")"
+else
+  bad GATE-ARMS "a BOOK-CENSUSES arm stopped firing (exit=$rc)" "$out"
+fi
+
 echo
 printf 'probes: %d pass / %d fail\n' "$pass" "$fail"
 [ "$fail" -eq 0 ] || exit 1

@@ -560,3 +560,18 @@ integration remains owned work.
 
 [Offset,grainline,slash/spread and mirror-copy inputs](drafting-edit-inputs.md) have a bounded
 companion reference,including exact source/ownership,resource and execution boundaries.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `CenterArcConstruction` | Type: Authored center-based arc with original scalar documents and one persistent logical edge role. No endpoint PointRefs are declared or inferred. This type cannot be mistaken for an arc through points. |
+| `CommandState` | Variant of `DesignResourceScope`: Typed command inputs, reports and retained execution records, separate from model content. |
+| `DraftingNativeGeometryUse` | Type: One genuine direct field of an actual raw native input, without containing-programme approval. Its private construction pins the original input, field order and typed selector together. |
+| `DraftingOperationFamily` | Enum: Closed v1 input families;this tag says nothing about geometric or program acceptance. |
+| `DraftingProgramInputs` | Type: Raw mixed source owner pinning an actual context, both Root recipes and every native input. |
+| `LineConstructionError` | Type: A definite local self-dependency in the actual supplied line declaration. No global prior-order, current registry or geometric diagnostic is fabricated. |
+| `PointConstructionCheckError` | Type: Actual normalized point owner and first static argument failure, without partial accepted proof. |
+| `PointConstructionNormalizationLimits` | Type: Explicit complete normalization populations; no runtime or allocator-byte allowance is inferred. |

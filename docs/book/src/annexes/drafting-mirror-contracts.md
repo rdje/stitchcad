@@ -435,3 +435,16 @@ See [the complete output contract](drafting-mirror-outputs.md#original-edge-cand
 
 See [the complete output contract](drafting-mirror-outputs.md#complete-source-edge-coverage).
 
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `AlongRange` | Variant of `MirrorAxis`: Axis along an explicitly selected directed range;no tangent/chord is guessed for a curve. |
+| `EdgeOutputRoleCatalog` | Type: Owned unadmitted declared-role inventory and explicit canonical active membership. All issued definitions,including inactive ones,belong here. |
+| `EdgeOutputRoleCatalogLimits` | Type: Explicit complete catalogue allowances,without default admission or prior-allocation guarantees. |
+| `L` | Example label text: a one-byte authored size field in a UTF-8 byte-count example. |
+| `MirrorAxis` | Enum: Deliberately authored reflection-axis mode,not inferred from selected geometry. Actual nondegeneracy,straightness,common frame and current sources remain G2/program checks. |
+| `Mirroring` | Existing cut-plan enum for how cut pieces are mirrored; it supplies no drafting reflection result. |
+| `MirrorPieceSourceLimits` | Type: Explicit complete source population limits, without a default allowance. |

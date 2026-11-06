@@ -594,3 +594,11 @@ composition](command-resource-accounting.md#actual-current-private-retained-comp
 The coupled native resource checks above pass. Raw ingress, allocation peaks and host algorithm time
 retain separate boundaries; logical demand supplies no dishonest-host security, readiness, physical
 or release certificate. Broader command/deeper/full verification remains separately owned.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `charge_semantic_rule_resources` | Method or function: Charge the complete original signature vector before original role text in declaration order. Caller supplies its actual containing scope; owner is the actual rule/policy identity. |

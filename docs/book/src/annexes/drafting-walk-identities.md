@@ -350,3 +350,21 @@ suitability,visible repair,authoring authority and atomic bus/undo publication a
 This is not full CI,platform verification or a physical/geometry certificate. Broader typed-v1
 integration remains separately owned. A complete native declaration does not authorize an edit,
 prove global identity freshness or discharge any of the ten mandatory evidence scopes.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `AdmittedWalkNotchFields` | Type: Complete exact field-policy agreement with actual parents;no immutable Notch or applied effect. |
+| `AdmittedWalkNotchIdentities` | Type: Complete identity-proposal metadata with authentic original parents,not applied semantic effects. |
+| `Propose` | Variant of WalkNotchIdentityIntent: Propose an explicit host identity for this present role,subject to all global checks. |
+| `RequiredWalkNotchEvidence` | Type: Authentic complete actual walk proposal and all evidence requests,not execution readiness. |
+| `Retain` | Variant of WalkNotchIdentityIntent: Retain the explicit supplied semantic identity and actual prior canonical object. |
+| `WalkNotchContextSources` | Type: Four explicit current ownership,identity history,canonical Notch and visible-repair sources. |
+| `WalkNotchEffectSources` | Type: Six explicit correspondence,differential,ease,profile,all-copy and authority evidence sources. |
+| `WalkNotchEvidencePolicy` | Type: All ten mandatory original evidence-source fields,without optional/defaulted scopes. |
+| `WalkNotchFieldIntent` | Type: Original per-role sharing and identity-field choices,not an accepted semantic result. |
+| `WalkNotchFieldManifest` | Type: Whole ordered sharing/field proposal for all present semantic identity roles. |
+| `WalkNotchIdentityManifest` | Type: Complete ordered identity proposal,not an applied edit or a new-id-bearing client request. |

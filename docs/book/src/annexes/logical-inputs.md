@@ -326,3 +326,28 @@ authored Count sentinel and confirm it does not appear in binding/member/error/r
 Compiler/API guards prevent private owner replacement and lifetime escape. Root context/source
 composition,Profile numeric sources and complete semantic supplier/order acceptance remain
 separate;this membership primitive certifies none of them.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `CanonicalNumericInputBinding` | Type: Actual original numeric target-to-inventory association. No formula name,origin,metadata input ID,selected value,Root/Profile source,Derived supplier or work allowance is manufactured. |
+| `CanonicalNumericInputError` | Type: Original requested target,actual immutable inventory and typed lending refusal. |
+| `DesignResourceSink` | Trait: Restricted charging capability: a producer receives this trait object, never replaceable meter state. Implementations are sealed; there is no policy setter, reset, model replacement or approval method. |
+| `LogicalInputBinding` | Type: Privately bound original inventory member and exact logical kind, without a value read. Equal definitions in a different actual inventory cannot replace this owner or record. |
+| `LogicalInputDeclaration` | Type: Immutable structurally validated finite logical declaration. This certifies no canonical Root membership, actual Profile pin, evidence truth, operation binding, physical scope or readiness. |
+| `LogicalInputDeclarationDefinition` | Type: Editable logical declaration. Domain members and any selection are original machine identifiers, not localized labels, vendor-code normalization, scalar strings or generated geometry. |
+| `LogicalInputDeclarationError` | Type: Original declaration identity and first exact refusal; no partial declaration is returned. |
+| `LogicalInputInventoryError` | Type: Original explicit selected policy and first whole-population/ownership refusal. |
+| `LogicalInputKind` | Enum: Logical source role; neither variant is a scalar formula kind or a physical specification. |
+| `LogicalInputs` | Type: Immutable standalone original logical owner. Existing records keep their original domains, state/provenance and authored order. |
+| `MissingLength` | Variant of `CanonicalInputsError`: Replacement names no existing dedicated length; general Length-kind scalars remain distinct. |
+| `MissingScalar` | Refusal cause: the requested general scalar is absent; a dedicated length cannot substitute for it. |
+| `option_a` | Neutral example domain value; it carries no physical meaning. |
+| `option_b` | Neutral example domain value; it carries no physical meaning. |
+| `refusal` | Public error field holding the original first typed cause. |
+| `ScalarKind` | Variant of CanonicalNumericInputRefusal: Original actual scalar member has another declared kind. The original record is retained. |
+| `small` | Neutral example domain value used in this byte-count example. |
+| `with_length_declaration` | Method or function: Return a detached copy with one existing dedicated length replaced at its original position. The replacement's identity selects that original record. |

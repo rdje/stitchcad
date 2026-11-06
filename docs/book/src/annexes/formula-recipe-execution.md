@@ -501,3 +501,20 @@ native resources,wide native success/storage refusal,real source suspension with
 and paired source/foreign-owner failures. The common fixture builds only real canonical/source/
 namespace/dependency/acyclic proofs;it supplies no computed values. Actual Design policy
 selection and independent combined24-row tangent acceptance are available.
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `Admission` | Variant of DesignFormulaReplayError, `FormulaScalarRecipeReplayError`: Current complete held-input admission refused before native preparation or values. |
+| `Execution` | Variant of `FormulaScalarRecipeReplayError`, `FormulaScalarSourceRecipeReplayError`: Fresh execution failed at its original allocation, operand, binding or assertion. |
+| `false` | Boolean literal, lowercase, with no numeric coercion. |
+| `FormulaCanonicalBindings` | Type: Owned canonical stored bindings from a complete accepted scalar recipe. Preserves binding order, names, stored kinds/values and approximation contributions. |
+| `FormulaScalarRecipeReplayError` | Enum: Original replay stage failure; no successful statement or read prefix is published. Borrowed proof/source/provider witnesses remain in their actual typed cause. |
+| `FormulaScalarSourceRecipeReplayError` | Enum: Original fresh paired-replay stage failure; no partial recipe or source result is accepted. |
+| `Preparation` | Variant of `FormulaScalarRecipeReplayError`: Complete fresh capability/source preparation failed before values. |
+| `RecipeAdmission` | Variant of `FormulaScalarSourceRecipeReplayError`: Complete recipe proof and original logical allowances failed admission. |
+| `RecipePreparation` | Variant of `FormulaScalarSourceRecipeReplayError`: Fresh complete recipe capability/source preparation failed before values. |
+| `SourcePreparation` | Variant of `FormulaScalarSourceRecipeReplayError`: Fresh complete source graph preparation failed before values. |

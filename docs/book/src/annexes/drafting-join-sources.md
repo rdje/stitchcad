@@ -428,3 +428,64 @@ See the [candidate inventory contract](drafting-join-inventory.md#bind-the-compl
 ## Admit whole original and candidate Piece fields
 
 See the [candidate inventory contract](drafting-join-inventory.md#admit-whole-original-and-candidate-piece-fields).
+
+## Names used in this chapter
+
+Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
+
+| Name | Meaning |
+| --- | --- |
+| `AFrom` | Variant of JoinSpliceEnd: Pair containing A's lower source parameter. |
+| `Assignments` | Refusal cause: the whole raw assignment population exceeds the selected policy before any row is read. |
+| `ATo` | Variant of JoinSpliceEnd: Pair containing A's upper source parameter. |
+| `Authored` | Variant of CopyOrientation, JoinPieceFieldIntent: Borrow this explicitly authored value without normalization or copied provenance. |
+| `bind_cut_population` | Method or function: Bind the single explicit result population under existing canonical positive/even-pair rules. Constant work/space,no scan,allocation,identity issuance or source/candidate mutation. |
+| `bind_metadata` | Method binding selected actual A/B or authored field values under complete selected-text admission. |
+| `bind_source` | Method binding the actual named span, then both A/B copies and their required Pieces. |
+| `BoundJoinPieceMetadata` | Type: Authentic complete selected result fields;not a born Piece,print view or compatibility proof. |
+| `BoundJoinSide` | Type: One authentic A/B role from a complete bound join,without copied metadata or selected defaults. |
+| `Copies` | Refusal cause: the whole original or candidate copy population exceeds the selected policy. |
+| `DeclaredJoinCopySources` | Type: Complete guarded original-copy action requests;exact selected pairing/physical effects pending. |
+| `DeclaredJoinResultCopies` | Type: Authentic complete explicit result copy requests;no source consumption,pairing or canonical plan. |
+| `Duplicate` | Refusal cause: an original selector, tag or requested id repeats in original request order. |
+| `DuplicateCopy` | Variant of `CutPlanError`: Two physical copies have the same identity. |
+| `DuplicateSide` | Variant of JoinCopyPairRefusal: Two actual source copies of the same A/B Piece target one result. |
+| `expected` | Constructor argument guarding the original whole source definition; it is not a replacement copy. |
+| `ForeignPiece` | Variant of JoinCopySourceRefusal: Only physical copies of actual original A/B Pieces may contribute to this join. |
+| `FromSide` | Variant of JoinPieceFieldIntent: Borrow the actual original field from this canonical A/B role. |
+| `JoinCopyPair` | Type: One authentic explicit requested result and its distinct actual A/B original source actions. |
+| `JoinCopyPairError` | Type: Whole original source/result/selected context,policy and first cause survive refusal. |
+| `JoinCopySourceAction` | Type: One authentic original guarded action,actual physical copy/role and actual requested result. |
+| `JoinCopySourceError` | Type: Whole original proposal/result/source parents,policy and original first refusal. |
+| `JoinCopySourceManifest` | Type: Original operation and complete ordered original physical-copy actions. |
+| `JoinCutPopulation` | Type: One caller-authored quantity/mirroring declaration,without inherited source quantities. Raw construction retains invalid values for contextual admission;no copy is allocated. |
+| `JoinExactSpliceRequirement` | Type: Exact nondeforming domain:require actually zero allocated ease,exact coincidence of both complete selected banks after placement,and valid complete joined topology. |
+| `JoinPieceMetadataPolicy` | Type: Four required independent field choices;quantity/mirroring/fold indicators remain separate. |
+| `JoinResultCopyError` | Type: Whole original proposal/fold/construction/inventory context,policy and actual first cause. |
+| `JoinResultCopyManifest` | Type: Original operation and explicitly identified result-copy requests;no expansion or id synthesis. |
+| `JoinResultCopyRequest` | Type: One authentic explicit result physical-copy request,not a born current CutCopy. |
+| `Mirroring` | Canonical mirroring field: mode, hand and companion, chosen explicitly for the result. |
+| `MissingSide` | Variant of JoinCopyPairRefusal: An actual result lacks an original A/B source;requested result order,A before B. |
+| `Operation` | Refusal cause: the raw manifest or catalogue is owned by another operation than the one selected. |
+| `OperationIdentity` | Variant of JoinResultCopyRefusal: New copy id equals the actual join operation. |
+| `OriginalCopyIdentity` | Variant of JoinResultCopyRefusal: New copy id equals an actual original physical copy,including consumed candidates. |
+| `OriginalPieceIdentity` | Variant of JoinResultCopyRefusal: New copy id equals an actual original Piece,including unrelated members. |
+| `Pieces` | Refusal cause: the whole supplied or inventory Piece population exceeds the selected policy. |
+| `Reflect` | Variant of JoinMovingOrientation: Require an orientation-reversing rigid transform of the authored moving Piece. |
+| `require_exact_splice` | Method or function: Bind exact nondeforming requirements to this actual complete original inventory. Constant work/space,no scan,allocation,lookup,provider call or geometry evaluation. |
+| `RequiredJoinCopyCorrespondence` | Type: Exact complete native physical-copy pairs;canonical inventory and all physical/effect truth pending. |
+| `RequiredJoinExactSplice` | Type: Actual whole inventory and required policy,not an accepted geometric splice. |
+| `ResultInvariant` | Internal-fault refusal: closed result membership no longer matches its staging state; this calls for diagnosis, not recovery. |
+| `ResultPieceIdentity` | Variant of JoinResultCopyRefusal: New copy id equals the actual declared result Piece. |
+| `Results` | Refusal cause: the whole requested result population exceeds the selected policy. |
+| `SelectedResultMismatch` | Variant of JoinCopyPairRefusal: Actual selected A/B actions request different result copies;they cannot be silently paired. |
+| `SelectedRetained` | Variant of JoinCopyPairRefusal: Actual selected A/B physical copy cannot be retained by an executed join. |
+| `source_copies` | Iterator over all provided-plan copies of this role's Piece, in authored order. |
+| `SourceField` | Refusal cause: the expected whole original field differs from the actual original field. |
+| `SourceInvariant` | Internal-fault refusal: closed original ownership lost an expected source slot; this calls for diagnosis, not recovery. |
+| `SourceInventory` | Variant of JoinCopyInventoryRefusal: The source join was not bound from this exact inventory's complete borrowed slice. |
+| `TextOverflow` | Refusal cause: the complete label and reason byte count cannot be represented. |
+| `UnexplainedMaterial` | Refusal cause: the selected unresolved material lacks a nonblank reason. |
+| `UnknownResult` | Variant of JoinCopySourceRefusal: JoinTo names no actual explicit result-copy request. |
+| `WorkspaceOverflow` | Refusal cause: the checked complete workspace bound cannot be represented. |
+| `ZeroQuantity` | Refusal cause: the canonical Piece quantity must be positive. |

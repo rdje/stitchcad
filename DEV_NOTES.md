@@ -2,6 +2,14 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-06 UTC)_ — D386: a rule that runs once per push reports months at once
+
+The glossary census passed at0655 and sat at794 failures by this push,because nothing between pushes ran it. Each
+chapter now carries its own declaration table,generated from the rustdoc of the item it names and reviewed by reading
+every row;names shared by many refusal enums got a chapter-level meaning instead of an arbitrary first match. Rustdoc
+links were stripped because they do not resolve in the book. The new gate takes4.5s per commit. Running my stricter
+link rule against the real tree found two dead links publication cannot see,since it only inspects .md targets.
+
 ## _(2026-11-06 UTC)_ — D385: a set -e suite shows you one failure at a time
 
 Running the80 formula_structure steps independently found9 failures at once,where the suite itself reported one.

@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0975 — declare every book name and check at each commit (D386)
+
+29 chapters gain a declaration table covering all795 undeclared names;glossary suite43/0 and G0 engineering clauses pass.
+A new BOOK-CENSUSES doctrine runs the book censuses at each commit,so this drift cannot wait for a push again.
+
 ## STITCHCAD-G1-0974 — re-anchor faults stranded by a refactor (D385)
 
 Nine namespace and ordered-name fault anchors follow the0836 move;every fault still fails a compiled assertion(17+18).
