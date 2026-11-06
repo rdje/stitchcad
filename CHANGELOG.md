@@ -3,6 +3,11 @@
 Newest first:completed slices and focused validation. Whole earlier journals/navigation remain
 retained under stable logical paths through the public reader.
 
+## STITCHCAD-G1-0969 — run the overdue daily artifact cleanup
+
+Guarded cleanup removed182 regenerable paths,374871872B,with zero residue and all2254 skipped paths intact.
+No tracked product content changed. Pre-push repairs continue from this clean point.
+
 ## STITCHCAD-G1-0968 — watch the RAM trend instead of stopping at a percentage
 
 Director rule2026-11-06:observe the trend and flag only a sustained rise above90%. macos_memory.py drops its

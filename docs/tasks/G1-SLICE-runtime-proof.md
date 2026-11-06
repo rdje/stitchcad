@@ -580,6 +580,15 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   Plan:two Cargo workers;log the RAM trend and flag a sustained rise above90%. Logs stay under
   target/prepush-0967/. A refusal gets its own child leaf and fresh full gates from the repair commit.
   Deferred semantic acceptance(.5f.2.check/.verify and G1 integration) is not claimed by this gate.
+- ID: `G1-SLICE.5f.2.cleanup-20261106`
+  Status: `done`
+  Goal:the overdue daily cleanup through the guarded tool,after probes and before fresh repair gates.
+  Paths:docs/ARTIFACT_CLEANUP.md.
+  - [x] APPLY:cleanup.py apply --idle-cua →removed_bytes374871872,residue0,rc=0. Earlier refusals deleted nothing:sandbox lsof rc=2;my own repo redirect rc=1.
+  - [x] RESIDUE:independent read-only census before launcher →0 of182 selected present,0 of2254 skipped missing.
+  - [x] LOCKSTEP:record overwritten;README/LIVE/book reviewed unchanged,G1still6/18 In Progress.
+  promotion: declined (no new lesson;guarded procedure unchanged).
+  Commit:STITCHCAD-G1-0969.
 - ID: `G1-SLICE.5f.2.prepush-400.ram-observe`
   Status: `done`
   Goal:adopt the director's 2026-11-06 RAM rule in the tool,book and records during the gate.
