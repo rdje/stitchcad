@@ -1,5 +1,6 @@
 //! Replays a session: every change goes through the command bus, with revision checks and undo.
 use crate::design::{build, declaration, Identities, Input};
+use crate::outline::svg;
 use sc_constraints::{
     Binding, Catalog, Domain, Expr, Limits, Outcome, Problem, Rule, TemplatePart, Value as Fact,
     Variable, AST_VERSION,
@@ -21,7 +22,7 @@ use sc_core::{
     },
 };
 use sc_measure::DesignSources;
-use sc_store::{Project, ProjectStore, Repository, Value};
+use sc_store::{Project, ProjectError, ProjectStore, Repository, Value};
 use sc_units::Length;
 use std::collections::BTreeMap;
 use std::num::{NonZeroU64, NonZeroUsize};
@@ -142,8 +143,11 @@ struct Session<R: Repository> {
     redo: Vec<CommandMutationGroup>,
     next_id: u128,
     store: ProjectStore<R>,
-    manifest: BTreeMap<String, Value>,
+    // What the project holds beyond what this session authors, so a save keeps unknown fields and files.
+    base: Project,
+    design_text: String,
     recipe: String,
+    drawing: Option<String>,
 }
 
 impl<R: Repository> Session<R> {
@@ -302,6 +306,76 @@ impl<R: Repository> Session<R> {
         Ok(Value::List(bindings(canonical.as_str())))
     }
 
+    // Each point names two lengths, a recipe binding or an input, or `zero`.
+    fn render(&mut self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "render", message);
+        let mut known: BTreeMap<String, i64> = self
+            .inputs
+            .iter()
+            .map(|input| (input.token.clone(), input.value.as_micrometres()))
+            .collect();
+        known.insert("zero".to_owned(), 0);
+        if let Value::List(bindings) = self.evaluate(step)? {
+            for binding in &bindings {
+                let Some(binding) = binding.as_object() else {
+                    continue;
+                };
+                let (Some(name), Some(kind), Some(value)) = (
+                    binding.get("name").and_then(Value::as_text),
+                    binding.get("kind").and_then(Value::as_text),
+                    binding.get("value").and_then(Value::as_text),
+                ) else {
+                    continue;
+                };
+                if let ("length", Ok(number)) = (kind, value.parse::<i64>()) {
+                    known.insert(name.to_owned(), number);
+                }
+            }
+        }
+        let listed = fields
+            .get("outline")
+            .and_then(Value::as_list)
+            .ok_or_else(|| fail("render needs an outline".to_owned()))?;
+        let mut points = Vec::new();
+        for point in listed {
+            let names = point.as_list().unwrap_or(&[]);
+            let [x, y] = names else {
+                return Err(fail("each outline point names two lengths".to_owned()));
+            };
+            let read = |name: &Value| -> Result<i64, Failure> {
+                let name = name
+                    .as_text()
+                    .ok_or_else(|| fail("a point's lengths are named as text".to_owned()))?;
+                known
+                    .get(name)
+                    .copied()
+                    .ok_or_else(|| fail(format!("no length is named {name}")))
+            };
+            points.push((read(x)?, read(y)?));
+        }
+        let drawing = svg(&points).map_err(fail)?;
+        self.drawing = Some(drawing.clone());
+        Ok(Value::Text(drawing))
+    }
+
+    fn export(&mut self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "export", message);
+        let target = fields
+            .get("path")
+            .and_then(Value::as_text)
+            .ok_or_else(|| fail("export needs a path".to_owned()))?;
+        let path = sc_store::FilePath::new(target).map_err(|error| fail(error.to_string()))?;
+        let drawing = self
+            .drawing
+            .clone()
+            .ok_or_else(|| fail("export needs a render first".to_owned()))?;
+        let digest = sc_store::sha256_hex(drawing.as_bytes());
+        self.base
+            .set_file(path, drawing)
+            .map_err(|error| fail(error.to_string()))?;
+        Ok(Value::Text(digest))
+    }
+
     fn save(&mut self, step: usize) -> Result<Value, Failure> {
         let project = self
             .project()
@@ -310,15 +384,14 @@ impl<R: Repository> Session<R> {
             .store
             .save(&project)
             .map_err(|error| Failure::at(step, "save", error.to_string()))?;
+        self.base = project;
         Ok(Value::Text(format!("{commit:?}").to_lowercase()))
     }
 
     // What a project holds today: the inputs and the recipe, the Design's authored content so far.
     fn project(&self) -> Result<Project, String> {
-        let mut project = Project::new();
-        for (key, value) in &self.manifest {
-            project.set_field(key, value.clone());
-        }
+        let mut project = self.base.clone();
+        project.set_field("design", Value::Text(self.design_text.clone()));
         project.set_field("revision", Value::Text(self.revision_text()));
         // Saved separately from the revision: undo can move the Design below the highest one issued.
         let maximum = self
@@ -379,6 +452,7 @@ impl<R: Repository> Session<R> {
             DesignRevision::from_counter(counter("maximum_issued_revision").map_err(fail)?);
         let sequence = DesignRevision::from_counter(counter("audit_sequence").map_err(fail)?);
         self.next_id = counter("identities_issued").map_err(fail)?;
+        self.base = saved.project.clone();
         // Undo does not cross a reopen yet, but revisions and audit numbers carry on and are never reissued.
         let garment = build(self.design, revision, &self.inputs, &self.recipe).map_err(fail)?;
         self.bus = new_bus(garment, self.design, self.actor, self.identities).map_err(fail)?;
@@ -547,10 +621,14 @@ pub fn replay<R: Repository>(session: &Value, repository: R) -> Result<Value, Fa
     let garment =
         build(design, DesignRevision::initial(), &inputs, &recipe).map_err(Failure::session)?;
     let bus = new_bus(garment, design, actor, identities).map_err(Failure::session)?;
-    let (store, _) =
+    let (mut store, _) =
         ProjectStore::open(repository).map_err(|error| Failure::session(error.to_string()))?;
-    let mut manifest = BTreeMap::new();
-    manifest.insert("design".to_owned(), Value::Text(design_text.to_owned()));
+    // A project already here keeps whatever this session does not author.
+    let base = match store.load() {
+        Ok(loaded) => loaded.project,
+        Err(ProjectError::NoProject) => Project::new(),
+        Err(error) => return Err(Failure::session(error.to_string())),
+    };
     let mut state = Session {
         identities,
         design,
@@ -561,8 +639,10 @@ pub fn replay<R: Repository>(session: &Value, repository: R) -> Result<Value, Fa
         redo: Vec::new(),
         next_id: 1 << 32,
         store,
-        manifest,
+        base,
+        design_text: design_text.to_owned(),
         recipe,
+        drawing: None,
     };
     let mut transcript = Vec::new();
     for (step, item) in steps.iter().enumerate() {
@@ -601,6 +681,8 @@ pub fn replay<R: Repository>(session: &Value, repository: R) -> Result<Value, Fa
             "undo" => state.history(step, CommandHistoryDirection::Undo)?,
             "redo" => state.history(step, CommandHistoryDirection::Redo)?,
             "solve" => solve(step, &state.inputs, item)?,
+            "render" => state.render(step, item)?,
+            "export" => state.export(step, item)?,
             "save" => state.save(step)?,
             "reopen" => state.reopen(step)?,
             other => {

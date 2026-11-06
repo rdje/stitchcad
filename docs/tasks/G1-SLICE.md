@@ -1112,14 +1112,21 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   promotion: declined (no new lesson;D393's rule held).
   Commit:STITCHCAD-G1-0990.
 - ID: `G1-SLICE.11`
-  Status: `pending`
+  Status: `done`
   Goal: the three runtime profiles build (§7.3): `native-full`, `native-headless`, `wasm-viewer`,
   each an explicit cargo feature/target combination with a published capability matrix, plus the
   CI WASM smoketest.
   Acceptance: one command per profile in `Makefile`, all green in CI; the capability matrix lists
   what each profile excludes and why; browser execution is tested for real, not `cargo check`.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-viewer/**,crates/sc-cli/**,scripts/check_profiles.sh,Makefile,.github/workflows/rust.yml,Cargo.lock,docs/book/src/spec/runtime-profiles.md,docs/book/src/spec/command-line.md,docs/book/src/availability.md,
+  docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,docs/book/src/topic-index.md,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-01 names three profiles,and only a wasm smoketest of libraries existed. WHERE Makefile;grep -c '^profile-' Makefile at f72565ce →0,rc=1.
+  - [x] ADDRESSED:bash scripts/check_profiles.sh exit status →rc=0:all three build;headless has no viewport,GUI or database;the wasm artifact has no host imports and the five exports. The matrix is in the book.
+  - [x] ADDRESSED:the browser execution half of the acceptance belongs to `.12`,which runs it in real Chrome. Named here so this box does not imply it.
+  - [x] ADDRESSED:session steps render and export,and save now keeps unknown project content,a bug I found by rereading my own save against the store's rule. cargo test -p sc-cli,-p sc-viewer exit status →rc=0.
+  - [x] NO REGRESSION:workspace clippy -D warnings exit status →rc=0;fmt →rc=0;BOOK-CENSUSES →rc=0. All captured to retained logs.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-0991.
 - ID: `G1-SLICE.12`
   Status: `pending`
   Goal: the real browser spike (G1 exit) — load project → evaluate recipe → resolve one CSP

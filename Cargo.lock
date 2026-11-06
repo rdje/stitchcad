@@ -74,3 +74,11 @@ version = "0.1.0"
 [[package]]
 name = "sc-units"
 version = "0.1.0"
+
+[[package]]
+name = "sc-viewer"
+version = "0.1.0"
+dependencies = [
+ "sc-cli",
+ "sc-store",
+]

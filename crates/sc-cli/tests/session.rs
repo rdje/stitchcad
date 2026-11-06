@@ -48,6 +48,7 @@ fn the_reference_skirt_evaluates_to_the_books_values() {
     // In micrometres, from the reference skirt chapter §4 and the formula examples §2.
     for (name, wanted) in [
         ("garment_waist", "length:740000"),
+        ("waist_side", "length:225000"),
         ("garment_hip", "length:1020000"),
         ("quarter_waist", "length:185000"),
         ("quarter_hip", "length:255000"),
@@ -131,6 +132,61 @@ fn a_replay_is_byte_identical_and_so_is_the_project_it_saves() {
         .expect("reads")
         .expect("saved");
     assert!(String::from_utf8_lossy(&manifest).contains("\"schema\": 1"));
+}
+
+#[test]
+fn a_render_draws_the_evaluated_values_and_an_export_lands_in_the_saved_project() {
+    let value = parse(SKIRT).expect("valid");
+    let mut disk = MemoryRepository::new();
+    let transcript = replay(&value, &mut disk).expect("runs");
+    let steps = transcript.as_list().expect("a transcript");
+    // The edit was redone before the save, so the waist is 78.0 cm and the book's hip values stand.
+    let drawing = steps[11].as_object().expect("a record")["result"]
+        .as_text()
+        .expect("text");
+    assert_eq!(
+        drawing,
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"285.000mm\" height=\"620.000mm\" viewBox=\"0 0 285000 620000\">\n<polygon points=\"0,0 225000,0 255000,200000 285000,620000 0,620000\" fill=\"none\" stroke=\"black\" stroke-width=\"500\"/>\n</svg>\n"
+    );
+    let saved = disk
+        .read(&FilePath::new("exports/front-quadrant.svg").expect("a path"))
+        .expect("reads")
+        .expect("exported");
+    assert_eq!(String::from_utf8_lossy(&saved), drawing);
+    let digest = steps[12].as_object().expect("a record")["result"]
+        .as_text()
+        .expect("text");
+    assert_eq!(digest, sc_store::sha256_hex(&saved));
+}
+
+#[test]
+fn a_save_keeps_files_and_fields_the_session_does_not_author() {
+    let mut disk = MemoryRepository::new();
+    disk.write(
+        &FilePath::new("project.json").expect("a path"),
+        b"{\"other_tool\": [1], \"schema\": 1}",
+    )
+    .expect("writes");
+    disk.write(
+        &FilePath::new("extensions/other.bin").expect("a path"),
+        &[0, 255],
+    )
+    .expect("writes");
+    replay(&session(r#"[{"do":"save"}]"#), &mut disk).expect("runs");
+    assert_eq!(
+        disk.read(&FilePath::new("extensions/other.bin").expect("a path"))
+            .expect("reads"),
+        Some(vec![0, 255])
+    );
+    let manifest = disk
+        .read(&FilePath::new("project.json").expect("a path"))
+        .expect("reads")
+        .expect("saved");
+    assert!(
+        String::from_utf8_lossy(&manifest).contains("other_tool"),
+        "{}",
+        String::from_utf8_lossy(&manifest)
+    );
 }
 
 #[test]
@@ -234,6 +290,35 @@ fn failures_are_structured_and_name_the_step() {
             0,
         ),
         (r#"[{"do":"reopen"}]"#, "reopen", 0),
+        (r#"[{"do":"render"}]"#, "render", 0),
+        (
+            r#"[{"do":"render","outline":[["zero","zero"]]}]"#,
+            "render",
+            0,
+        ),
+        (r#"[{"do":"render","outline":[["zero"]]}]"#, "render", 0),
+        (
+            r#"[{"do":"render","outline":[["nope","zero"],["zero","zero"],["zero","zero"]]}]"#,
+            "render",
+            0,
+        ),
+        (
+            r#"[{"do":"render","outline":[["zero","zero"],["zero","zero"],["zero","zero"]]}]"#,
+            "render",
+            0,
+        ),
+        (r#"[{"do":"export","path":"x.svg"}]"#, "export", 0),
+        (r#"[{"do":"export"}]"#, "export", 0),
+        (
+            r#"[{"do":"render","outline":[["doubled","zero"],["doubled","doubled"],["zero","doubled"]]},{"do":"export","path":"../x"}]"#,
+            "export",
+            1,
+        ),
+        (
+            r#"[{"do":"render","outline":[["doubled","zero"],["doubled","doubled"],["zero","doubled"]]},{"do":"export","path":"project.json"}]"#,
+            "export",
+            1,
+        ),
         (r#"[{}]"#, "session", 0),
     ] {
         let failure = run(&session(steps)).expect_err(steps);

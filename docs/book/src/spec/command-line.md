@@ -6,8 +6,9 @@ other front end will use. The same session always prints the same bytes and save
 `sc-cli` crate, the `native-headless` front end of roadmap §7.3.
 
 **What works today.** A session supplies named lengths and a scalar recipe. The program builds a real Design from
-them, runs the steps below, and prints a transcript. **What does not exist yet:** geometry, so a session draws no
-Piece and exports no pattern, which is G2's job; any edit but a measurement change; `sc-api` and MCP, leaf `.9`.
+them, runs the steps below, and prints a transcript. **What does not exist yet:** geometry, so `render` draws straight
+lines between points the session names rather than a drafted Piece, which is G2's job; any edit but a measurement
+change; `sc-api` and MCP, leaf `.9`.
 
 ```text
 $ stitchcad replay session.json project-directory
@@ -30,7 +31,9 @@ $ stitchcad replay session.json project-directory
 | `undo` | Returns the Design to its state before the last change, under a fresh authority check |
 | `redo` | Reapplies the last change undone |
 | `solve` | Checks one constraint: the input named by `token` may be at most `at_most_um`, using [the constraint kernel](constraints.md) |
-| `save` | Saves the project as one [crash-consistent commit](project-store.md) |
+| `render` | Draws an outline as SVG. `outline` lists points, each naming two lengths: a binding, an input, or `zero` |
+| `export` | Adds the last drawing to the project at `path`, and reports its digest. The next `save` writes it |
+| `save` | Saves the project as one [crash-consistent commit](project-store.md), keeping files and fields it did not write |
 | `reopen` | Rebuilds the Design from the saved project |
 
 ## An edit, an undo, and a saved project
@@ -139,6 +142,35 @@ assert_eq!(revision(5), "3"); // 2 was already issued, so the next edit is 3
 
 **Undo does not cross a reopen yet.** A reopened Design starts with empty undo and redo stacks.
 
+## A drawing and a file
+
+`render` draws from the evaluated values, in the page's frame: x to the right and y down, in whole micrometres, so
+nothing rounds. The same values always give the same bytes. **This is a schematic, not a pattern.** It joins points with
+straight lines, with no dart, curve or allowance.
+
+```rust
+use sc_cli::replay;
+use sc_store::{parse, FilePath, MemoryRepository, Repository};
+
+let session = parse(r#"{
+  "format": 1,
+  "design": "01ARZ3NDEKTSV4RRFFQ69G5FAV",
+  "inputs": [{"token": "width", "um": 100000}, {"token": "depth", "um": 50000}],
+  "recipe": "let half: length = width / 2\n",
+  "steps": [
+    {"do": "render", "outline": [["zero", "zero"], ["half", "zero"], ["width", "depth"], ["zero", "depth"]]},
+    {"do": "export", "path": "exports/outline.svg"},
+    {"do": "save"}
+  ]
+}"#).expect("valid text");
+
+let mut disk = MemoryRepository::new();
+replay(&session, &mut disk).expect("the session runs");
+let saved = disk.read(&FilePath::new("exports/outline.svg").expect("a path")).expect("reads").expect("exported");
+assert_eq!(String::from_utf8_lossy(&saved),
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100.000mm\" height=\"50.000mm\" viewBox=\"0 0 100000 50000\">\n<polygon points=\"0,0 50000,0 100000,50000 0,50000\" fill=\"none\" stroke=\"black\" stroke-width=\"500\"/>\n</svg>\n");
+```
+
 ## When something goes wrong
 
 The program prints one canonical text object and exits nonzero. `failed` is a stable code, `message` is the reason,
@@ -154,6 +186,8 @@ and `step` is the step's position, absent when the session never reached one.
 | `nothing_to_change` | Undo or redo with nothing to move |
 | `recipe` | The recipe failed to parse, check or run |
 | `solve` | The constraint could not be built |
+| `render` | The outline could not be drawn |
+| `export` | The drawing could not be added to the project |
 | `save` | The project could not be saved |
 | `reopen` | The project could not be reopened |
 
@@ -190,3 +224,6 @@ point, so they wait for G2.
 | `value` | A binding's value in the internal unit of its kind |
 | `revision` | The Design's revision after a step |
 | `reopen` | The step that rebuilds the Design from the saved project |
+| `outline` | A `render` step's points |
+| `zero` | A length of nothing, for an outline point on an axis |
+| `path` | Where an `export` step puts the drawing in the project |

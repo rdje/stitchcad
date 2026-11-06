@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "design": "01ARZ3NDEKTSV4RRFFQ69G5FAV",
+  "inputs": [
+    {"token": "waist_girth", "um": 740000},
+    {"token": "hip_girth", "um": 980000},
+    {"token": "waist_to_hip", "um": 200000},
+    {"token": "waist_to_hem", "um": 620000},
+    {"token": "ease_waist", "um": 0},
+    {"token": "ease_hip", "um": 40000},
+    {"token": "ss_suppress", "um": 30000},
+    {"token": "a_line_flare", "um": 30000}
+  ],
+  "recipe": "let garment_waist: length = waist_girth + ease_waist\nlet garment_hip: length = hip_girth + ease_hip\nlet quarter_waist: length = garment_waist / 4\nlet quarter_hip: length = garment_hip / 4\nlet waist_side: length = quarter_hip - ss_suppress\nlet quarter_hem_width: length = quarter_hip + a_line_flare\n",
+  "steps": [
+    {"do": "evaluate"},
+    {"do": "solve", "token": "waist_girth", "at_most_um": 800000},
+    {"do": "change", "token": "waist_girth", "um": 780000},
+    {"do": "evaluate"},
+    {"do": "save"}
+  ]
+}

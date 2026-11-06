@@ -4,7 +4,7 @@
 # or `director` (needs a person or a physical act this repository cannot perform; `blocker` names it).
 # A feature's commit changes its row from `unbuilt` to `instrument`, with a check that runs the real product path.
 #id	source	key	deliverable	check	authority	blocker	note	owner
-G1-01	exit	three runtime profiles compile	-	-	unbuilt	-	the libraries build for the browser target;the named profiles do not exist yet	G1-SLICE.11
+G1-01	exit	three runtime profiles compile	docs/book/src/spec/runtime-profiles.md	bash scripts/check_profiles.sh	instrument	-	compiling is all this proves;native-full holds what exists today,and its matrix row names what does not	G1-SLICE.11
 G1-02	exit	intended browser target runs a real	-	-	unbuilt	-	only evaluate works,for scalar recipes	G1-SLICE.12
 G1-03	exit	canvas-hosting spike	-	-	unbuilt	-	-	G1-SLICE.13
 G1-04	exit	command bus live	crates/sc-cli	cargo test -p sc-cli --test session	instrument	-	the real program drives measurement edits,a refused stale revision,undo and redo;the other commands are library only	G1-SLICE.6

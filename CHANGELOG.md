@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0991 — three runtime profiles build;a session can draw and export;G1-01 is met
+
+`native-full`,`native-headless` and `wasm-viewer` each have one command and a stated list of what they leave out. Sessions gain `render`,a schematic from evaluated values,and `export`.
+A save now keeps files and fields it did not write. The gauge reads 21 of 66.
+
 ## STITCHCAD-G1-0990 — a headless command line drives the real command bus;G1-04 is met
 
 `stitchcad replay` runs a recorded session:the reference skirt's recipe gives the book's values,an edit changes them,undo and redo restore them,a stale revision is refused,

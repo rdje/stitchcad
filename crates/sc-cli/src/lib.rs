@@ -3,6 +3,7 @@
 #![warn(missing_docs)]
 
 mod design;
+mod outline;
 mod session;
 
 pub use session::{replay, Failure};

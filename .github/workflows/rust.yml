@@ -28,7 +28,7 @@ jobs:
         run: cargo test --all
       - name: WASM smoketest (wasm-viewer profile foundations)
         run: |
-          cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core -p sc-measure -p sc-constraints -p sc-store
+          cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core -p sc-measure -p sc-constraints -p sc-store -p sc-viewer
           ls -l target/wasm32-unknown-unknown/debug/*.rlib
       - name: Dependency census (the constraint kernel ships alone, with no Z3)
         run: test "$(cargo tree -p sc-constraints -e all --prefix none | wc -l)" -eq 1

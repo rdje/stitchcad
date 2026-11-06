@@ -43,8 +43,18 @@ test:
 # clause is a real cross-compilation, not a host `cargo check`. Run this before claiming a crate is
 # browser-capable.
 wasm:
-	$(LOCAL_RUN) cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core -p sc-measure -p sc-constraints -p sc-store
-	@echo "wasm-viewer smoketest: sc-units + sc-core + sc-measure + sc-constraints + sc-store build for wasm32-unknown-unknown"
+	$(LOCAL_RUN) cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core -p sc-measure -p sc-constraints -p sc-store -p sc-viewer
+	@echo "wasm-viewer smoketest: sc-units + sc-core + sc-measure + sc-constraints + sc-store + sc-viewer build for wasm32-unknown-unknown"
+
+# ROADMAP.md §7.3: one command per runtime profile, and what each leaves out is in the book's runtime profiles chapter.
+profile-native-full:
+	$(LOCAL_RUN) cargo build --workspace
+
+profile-native-headless:
+	$(LOCAL_RUN) cargo build -p sc-cli
+
+profile-wasm-viewer:
+	$(LOCAL_RUN) cargo build --target wasm32-unknown-unknown -p sc-viewer
 
 # Derive the 400-commit cadence; earlier pushes require an explicit director request.
 # Reports and never fails the build: exit 1 means "a push is due", not "an error occurred".

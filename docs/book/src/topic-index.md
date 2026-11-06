@@ -116,6 +116,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Constraint kernel](spec/constraints.md)
 - [Project store](spec/project-store.md)
 - [Command line](spec/command-line.md)
+- [Runtime profiles](spec/runtime-profiles.md)
 - [The supported envelope](spec/feature-matrix.md)
 - [Uncertainty and numeric refusals](spec/measurement-inputs.md)
 - [Units and tolerances](spec/units-and-tolerances.md)

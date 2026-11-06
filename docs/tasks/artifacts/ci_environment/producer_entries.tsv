@@ -11,6 +11,7 @@ crates/sc-core/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public buil
 crates/sc-measure/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 crates/sc-store/Cargo.toml	platform	G1-SLICE.7.engine	Declarative public build/output contract; destination audit pending.
 crates/sc-units/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+crates/sc-viewer/Cargo.toml	platform	G1-SLICE.11	Declarative public build/output contract; destination audit pending.
 docs/book/book.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 docs/tasks/artifacts/artifact_cleanup/cleanup.py	output	G1-SLICE.5b.4c.h2.b.p	Complete audit/full tracked-source/child plans; strict process evidence and unique deletion links; original policy/census/JSON/argv verified.
 docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py	output	G1-SLICE.5b.4c.h2.b.p	Complete input/fixture/store plans, safe owned marker/tree teardown and protected setup; original15/11 and valid borrowed/linked inputs verified.
@@ -248,6 +249,7 @@ scripts/check_memory_architecture.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell 
 scripts/check_no_background_jobs.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_push_due.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_readme_stability.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_profiles.sh	delegate	G1-SLICE.11	Whole shell source/heredoc body retained;builds through the project stores and writes logs under target only.
 scripts/check_roadmap_lock.sh	delegate	G1-SLICE.16.lock	Whole shell source/heredoc body retained;reads Git,runs named clause checks and writes nothing itself.
 scripts/check_routing_evidence.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_table_arity.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
