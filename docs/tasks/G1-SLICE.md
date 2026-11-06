@@ -1088,7 +1088,7 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   promotion: declined (no new lesson).
   Commit:STITCHCAD-G1-0993.
 - ID: `G1-SLICE.13`
-  Status: `pending`
+  Status: `done`
   Goal: the canvas-hosting spike that settles ADR-0002 against the protocol written at
   `G0-CONTRACT.11` — zoom/pan, snapping, picking, annotations on a realistic pattern set, native
   AND browser, across the three topologies.
@@ -1102,8 +1102,16 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   overruling it does so by a recorded decision naming the rows it overrules (R6); ADR-0002's canvas half
   moves from `proposed` to `active` citing that output; and where R5 escalates, the fallback named in
   `spike_rule.tsv` is what ships until a re-spike.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:spikes/canvas-host/**,crates/sc-viewer/**,Cargo.lock,docs/tasks/artifacts/canvas_spike/**,docs/decisions/decision_adr-0002-ui-stack-and-canvas-spike-protocol.md,docs/book/src/spec/canvas-hosting.md,docs/book/src/spec/viewport.md,
+  docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,docs/book/src/topic-index.md,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-03 asks for evidence,and ADR-0002's canvas half was `proposed`. WHERE docs/tasks/artifacts/canvas_spike/results.tsv held no rows;its verdict printed PENDING,rc=0.
+  - [x] ADDRESSED:run_canvas_spike.sh browser and native →5 rows,each 200 of 200 picks and snaps,worst error 0.1262 px read back from drawn pixels,drift 0,p95 1 to 6 ms,peak 263 to 653 MB. No deviation from the declared corpus.
+  - [x] ADDRESSED:run_spike_verdict.sh →two renderers:browser=webgpu-webview,native=native-wgpu-composited,0 refusals,rc=0. The rule decided,and ADR-0002 states the cost it requires.
+  - [x] MEASURED THREE TIMES OVER:my first numbers were wrong. One-pixel reads let Chrome raster only that pixel;summed RSS counted shared pages,1312 MB against 711 MB;native timed the display at 120 Hz. Each is fixed and stated in results.tsv's block.
+  - [x] NO REGRESSION:run_spike_verdict_probes.sh exit status →rc=0,now with a REAL arm;gauge25 of66;workspace clippy →rc=0;sc-viewer tests →rc=0;BOOK-CENSUSES →rc=0. Hosted CI re-checks the verdict from the recording,not the measurement.
+  - [x] LIMIT:macOS only. The gate names three OSes,and no Windows or Linux machine with a display exists here,so capability there is unproven and R1 reopens on a refusal. Every candidate had time to spare on this M4 Pro.
+  promotion: declined (no new lesson;the measuring traps are in results.tsv).
+  Commit:STITCHCAD-G1-0995.
 - ID: `G1-SLICE.13.viewport`
   Status: `done`
   Goal:the part of `.13` every topology shares,and roadmap §4.3's sc-viewport:exact screen and world math,picking,snapping and ADR-0002's declared corpus.

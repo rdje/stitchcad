@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0995 — the canvas spike's verdict:WebGPU in the browser,native wgpu on the desktop;G1 reaches 7 of 7
+
+All five declared topology and profile pairs were measured on the declared corpus,with position read back from drawn pixels. The protocol's own instrument gave the verdict,for macOS only:no Windows or Linux machine with a display exists here. The gauge reads 25 of 66.
+
 ## STITCHCAD-G1-0994 — sc-viewport:exact coordinates,picking and snapping
 
 The viewport math every renderer will share. Views are exact fractions,so 1,000 zoom round trips return to exactly the same view,and picks and snaps compare exact distances. G1-03 stays not met until the renderers are measured.

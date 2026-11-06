@@ -16,7 +16,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Adopted policy set | Done | README/claim policies and non-book containment enforced. Director2026-11-04 removes all book size/growth limits;structural checks remain |
 | Defect census | In Progress | D156 audits deferred;D223/D263 owned;D285 reopen owned;D250/D293–D299/D303–D333/D335–D386 fixed;D334 P2 scheduled;D300 scope corrected;D302 recurrence fixed0767;D387 ruled2026-11-06:input checks on hold;D390 fixed0980;D391 fixed0981;D301 paired P1 owned |
 | G0 — product & semantic contract | Mostly Done | Contract reviewed; D239 detached-approval boundary adopted and checked. Evaluation-seat exception remains; human closure **unapproved**. Exit census18 met/1 not met |
-| G1 — executable architecture slice | In Progress | Exit6/7 clauses;12/18 leaves. Kernel,store,CLI,profiles,licenses,browser run done;canvas spike next. Inputs/numeric/schemas;audit/undo/progress/cancel;scalar execution reviewed. Local0645/0654 and hosted224a9805 scoped |
+| G1 — executable architecture slice | In Progress | Exit7/7 clauses,each with stated limits;13/18 leaves. Canvas verdict scoped to macOS. Exit review .16,then G2. Inputs/numeric/schemas;audit/undo/progress/cancel;scalar execution reviewed. Local0645/0654 and hosted224a9805 scoped |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
 | G4 — profiles & uncertainty | Not Started | 14 activities; input admission, CSP/oracle, evidence, policy matrix, HPGL, minimal Profile Editor |

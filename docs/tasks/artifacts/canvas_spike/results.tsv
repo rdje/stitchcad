@@ -1,8 +1,20 @@
-# docs/tasks/artifacts/canvas_spike/results.tsv — the measurements G1-SLICE.13 records.
-# EMPTY ON PURPOSE. Until rows exist, run_spike_verdict.sh prints PENDING and ADR-0002's canvas half
-# stays `proposed`: a verdict without measurements is exactly what the protocol exists to prevent.
-# One row per applicable (topology, profile) pair in spike_topologies.tsv; every `hard=yes` metric in
-# spike_gates.tsv must carry a value, a recorded metric may be `-`. Reference hardware, OS versions and
-# the corpus script's identity go in the comment block G1 adds below this one, because a verdict is
-# scoped to them.
+# docs/tasks/artifacts/canvas_spike/results.tsv — the measurements G1-SLICE.13 records. A verdict is scoped to what is below.
+# Measured by bash docs/tasks/artifacts/canvas_spike/run_canvas_spike.sh browser, and the same with native.
+# Hardware: Mac mini, Apple M4 Pro, 24 GB. OS: macOS 27.0.1. Browser: Google Chrome 156.0.8078.80, headless, adapter apple metal-3.
+# Native webview: the system WKWebView through wry 0.53.5 and tao 0.34.8. Native GPU: wgpu 27.0.1 on Metal.
+# Corpus: crates/sc-viewport corpus(7), the declared 16 pieces of 400 vertices, 14 annotations each, 200 pick and 200 snap probes. No deviation.
+# Canvas: 1600 by 1000 pixels, 4x multisampled for the GPU renderers. 600 frames of scripted zoom and pan through the ladder.
+# capable means it ran here. WINDOWS AND LINUX WERE NOT RUN: no machine for either exists in this setup, so the decision record's
+# three-OS capability gate is unproven for all five rows. Hosted Linux has no display or GPU. R1 reopens if either OS refuses a topology.
+# frame_p95_ms: time until one frame's whole picture can be read back, which no real frame needs, so it overestimates all of them.
+# Waiting for the display is excluded. WKWebView's timer has 1 ms steps, so its two rows move between 3 and 6 ms across runs; Chrome's has 0.1 ms.
+# peak_mb: physical footprint from top in a visit with no read-backs, which adds up the browser's processes. Webview rows add WebKit's helpers.
+# unproven_deps: a judgment. 0 the platform canvas; 1 WebGPU in a browser, wry for a webview; 2 both; 3 wgpu, tao and wry composing a surface with a webview.
+# fidelity_max_px: where a marker's pixels actually landed, by centroid, against the exact position, over 9 zooms and 5 points.
+# Two runs agreed within those steps. These rows are the second run. One machine and one sample each: not a performance claim about any other machine.
 #topology	profile	capable	pick_correct	snap_exact	fidelity_max_px	fidelity_drift_px	frame_p95_ms	peak_mb	unproven_deps	frame_median_ms	cold_start_ms	bundle_kb
+dom-canvas	native	yes	yes	yes	0.0069	0	3	264	1	1	37	6861
+webgpu-webview	native	yes	yes	yes	0.1256	0	6	263	2	2	49	6861
+native-wgpu-composited	native	yes	yes	yes	0.1256	0	1.51	272	3	1.47	37.6	6861
+dom-canvas	browser	yes	yes	yes	0.1262	0	1.8	618	0	1.6	324	2087
+webgpu-webview	browser	yes	yes	yes	0.1256	0	1	653	1	0.7	203.4	2087

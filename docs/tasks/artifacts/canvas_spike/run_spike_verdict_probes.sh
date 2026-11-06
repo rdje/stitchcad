@@ -54,8 +54,17 @@ row() { printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t-\t-\t-\n' \
 
 echo "canvas-spike probes — docs/tasks/artifacts/canvas_spike/run_spike_verdict.sh"
 
-# ---------------------------------------------------------------- PENDING (the real plane)
+# ---------------------------------------------------------------- REAL (the recorded measurement)
 out="$(run "$PLANE")"; rc=$?
+if [ "$rc" -eq 0 ] && grep -q 'two renderers: browser=webgpu-webview, native=native-wgpu-composited / 0 refusal' <<<"$out"; then
+  ok REAL "the recorded measurement gives its verdict: $(grep -o 'spike verdict: .*' <<<"$out" | cut -c1-70)"
+else
+  bad REAL "the recorded measurement did not give its verdict (exit=$rc)" "$out"
+fi
+
+# ---------------------------------------------------------------- PENDING (no rows yet)
+D="$(plane pending)"; printf '%s\n' "$HDR" > "$D/results.tsv"
+out="$(run "$D")"; rc=$?
 if [ "$rc" -eq 0 ] && grep -q 'PENDING' <<<"$out" && grep -q '0 refusal(s)' <<<"$out"; then
   ok PENDING "no measurements yet is a stated verdict, not a failure: $(grep -o 'spike verdict: .*' <<<"$out" | cut -c1-70)"
 else

@@ -4,8 +4,8 @@
 - **Date:** `2026-09-30` (absolute); the roadmap reserved canvas hosting to a G1 spike, and §11's G0 exit
   clause requires the ADR recorded, so what is recorded here is a decision *structure* plus the protocol
   whose evidence completes it
-- **Status:** `active` for the chrome, the dev shell and the TypeScript ban; **`proposed` for canvas
-  hosting**, which `G1-SLICE.13` settles by measurement and moves to `active` citing its own data
+- **Status:** `active` for the chrome, the dev shell and the TypeScript ban; **`active` for canvas hosting on
+  macOS only**, settled by `G1-SLICE.13` from `results.tsv`. Windows and Linux are unmeasured, so see "The measurement" below
 - **Owner / source:** leaf `G0-CONTRACT.11`, from roadmap §5 ADR-0002, §7.3 (the three runtime profiles)
   and §11 G1; consumed by `G1-SLICE.13` (the spike) and `G1-SLICE.14` (the dev shell)
 
@@ -99,6 +99,22 @@ harness.
 6. **R6 the verdict is derived** — `docs/tasks/artifacts/canvas_spike/run_spike_verdict.sh` reads the
    results and prints the verdict and the rule that produced it. A human may overrule only by a recorded
    decision that names the rows it overrules, which is governance §6.1's shape applied to a measurement.
+
+## The measurement
+
+`G1-SLICE.13` ran the protocol on 2026-11-06, on a Mac mini with an Apple M4 Pro on macOS 27.0.1, against the declared corpus
+with no deviation. `bash docs/tasks/artifacts/canvas_spike/run_spike_verdict.sh` prints:
+
+> spike verdict: 5 row(s) / 2 profile(s) / two renderers: browser=webgpu-webview, native=native-wgpu-composited / 0 refusal(s)
+
+The cost R4 requires this record to state: two renderers and two conformance surfaces. wgpu implements WebGPU, and the two
+experiments shared one shader and drawing design, so the divergence is smaller than two independent renderers. G5 confirms
+that in a real viewport.
+
+**The capability gate is not fully met, and this record does not pretend otherwise.** The gate asks that a topology runs on all
+three desktop OSes. Only macOS was run, because no Windows or Linux machine with a display exists in this setup. Under R1, a
+refusal on either OS reopens that row's eligibility. Every row passed every gate with time to spare on fast hardware, so the
+rule chose by speed among candidates that could all do the job.
 
 ## What the spike does not decide
 

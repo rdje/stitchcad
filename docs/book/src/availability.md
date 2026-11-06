@@ -13,7 +13,7 @@ real product path passes its check. Commits and leaves do not move it.
 | Gate | Exit clauses met | Exit clauses | What it proves |
 | --- | --- | --- | --- |
 | G0 | 18 | 19 | The product and its semantics are specified. The evaluation-seat clause stays open by ruling |
-| G1 | 6 | 7 | The architecture runs for real in a browser |
+| G1 | 7 | 7 | The architecture runs for real in a browser |
 | G2 | 0 | 8 | A reference skirt is drafted and exported correctly |
 | G3 | 0 | 11 | Every garment the roadmap names drafts, grades and exports |
 | G4 | 0 | 8 | Factory profiles work, including what is still unknown |
@@ -25,13 +25,13 @@ Run it yourself:
 ```text
 $ bash scripts/gauge.sh
 G0: 18 of 19 clauses met
-G1: 6 of 7 clauses met
+G1: 7 of 7 clauses met
 G2: 0 of 8 clauses met
 G3: 0 of 11 clauses met
 G4: 0 of 8 clauses met
 G5: 0 of 6 clauses met
 G6: 0 of 7 clauses met
-gauge: 24 of 66 clauses met through G6
+gauge: 25 of 66 clauses met through G6
 ```
 
 A count here comes from the clause tables, and a clause counts as met only when its check runs a real
@@ -40,15 +40,30 @@ product path and passes. `bash scripts/gauge.sh --checks` runs those checks agai
 Commercial CAD is parked until StitchCAD is feature complete, so G6's import-filter clause stays not met.
 G2's printed square stays not met until a person measures one. Both are the director's to close.
 
+## Distance to the G2 exit
+
+G2 is the earliest open gate: the first correct pattern. None of it exists yet, because G1 only proved the architecture runs.
+
+| Clause | What the roadmap asks | Met | Where it stands | Owning leaf |
+| --- | --- | --- | --- | --- |
+| `G2-01` | The reference skirt drafted through the command line, with deterministic replay | not met | [The command line](spec/command-line.md) replays deterministically and computes the skirt's values. It draws no geometry | `G2-2D.8` |
+| `G2-02` | A minimal 2D viewer and editor over the same commands | not met | [The canvas verdict](spec/canvas-hosting.md) says what to draw with. No shell exists | `G2-2D.9` |
+| `G2-03` | Canonical DXF and a dimensionally correct PDF | not met | No writer exists | `G2-2D.5` |
+| `G2-04` | A printed scale square verified on paper | not met | Needs a person to measure one, after the exporter and its checks exist | `G2-2D.7` |
+| `G2-05` | Offsets pass the pathology corpus | not met | No offset engine exists | `G2-2D.3` |
+| `G2-06` | Native save and load preserve semantics | not met | [The store](spec/project-store.md) is crash-consistent and holds inputs and a recipe, not pieces | `G2-2D.10` |
+| `G2-07` | Mutation tests fail for the right reasons | not met | Not started | `G2-2D.11` |
+| `G2-08` | An agent given only MCP and the docs produces a semantically equal instance | not met | No MCP exists | `G2-2D.13` |
+
 ## Distance to the G1 exit
 
-G1 is the earliest open gate. This is where each of its seven clauses stands:
+Every G1 clause counts as met, each with its stated limits. This is where they stand:
 
 | Clause | What the roadmap asks | Met | Where it stands | Owning leaf |
 | --- | --- | --- | --- | --- |
 | `G1-01` | Three runtime profiles compile | met | [All three build](spec/runtime-profiles.md), each with its own command. The headless one pulls in no viewport or GUI, and the browser artifact asks its host for nothing. Compiling is all this proves | `.11` |
 | `G1-02` | A real browser run: load, evaluate a recipe, one CSP constraint, save and reopen, render, export | met | [Real Chrome runs all six steps](spec/browser-capabilities.md) across two browser processes, and its results equal the native program's. The drawing is a schematic, because drafting is G2 | `.12` |
-| `G1-03` | Canvas-hosting spike for ADR-0002 | not met | [The viewport math it measures against](spec/viewport.md) is done. The renderers and the measurements are under way | `.13` |
+| `G1-03` | Canvas-hosting spike for ADR-0002 | met | [Measured on the declared corpus](spec/canvas-hosting.md): WebGPU in the browser and native wgpu on the desktop. The verdict holds for macOS only, because no Windows or Linux machine with a display exists here | `.13` |
 | `G1-04` | Command bus with revision checks and undo | met | [The command line](spec/command-line.md) drives it for real: measurement edits, a refused stale revision, undo and redo. The bus's other commands are still library only | `.6` |
 | `G1-05` | Crash-consistent save and recovery | met | [A project](spec/project-store.md) survives a crash at every step of a save, a migration and an autosave, and a killed process, on a real directory. Power loss is not tested, and the browser side comes with the browser run | `.7` |
 | `G1-06` | License-compatible solver builds on all targets | met | [The kernel](spec/constraints.md) builds natively and for the browser with no dependencies, and is in the headless and browser profiles. [The license census](build-and-checks.md#the-license-census) finds no copyleft. Windows is not built anywhere yet | `.15` |
@@ -68,8 +83,8 @@ checks stay and keep passing.
 A feature means the roadmap's next requirement, built by its existing task-tree owner to the contract
 this book gives, with this table and the book's examples changing in the same commit. It refuses what it
 does not support yet with a plain error. The constraint kernel `.8`, the project store `.7`, the headless
-command line `.10`, the runtime profiles `.11`, the license census `.15` and the browser run `.12` are done. The
-next one is the canvas-hosting spike, `.13`.
+command line `.10`, the runtime profiles `.11`, the license census `.15`, the browser run `.12` and the canvas spike `.13`
+are done. Next come the G1 exit review, `.16`, and then the geometry kernel, `G2-2D.1`.
 
 ## Implemented foundations
 

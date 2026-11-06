@@ -1,0 +1,17 @@
+[package]
+name = "canvas-host"
+version = "0.0.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+publish = false
+description = "G1-SLICE.13: hosts ADR-0002's native topologies for measurement. An experiment, not product code."
+
+# Its own workspace, so these dependencies stay out of the product's lockfile and license census until a topology wins.
+[workspace]
+
+[dependencies]
+pollster = "0.4"
+sc-viewport = { path = "../../crates/sc-viewport" }
+tao = "0.34"
+wgpu = "27"
+wry = "0.53"

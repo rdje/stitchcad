@@ -2,8 +2,8 @@
 
 The `sc-viewport` crate maps between a pattern's coordinates and the screen, and answers what is under the pointer. It
 draws nothing, so every renderer shares the same answers. **What works today:** the mapping, picking, snapping, and the
-synthetic corpus [ADR-0002's canvas spike](../annexes/implementation-status.md) measures against. **What does not exist
-yet:** any renderer in the product. The spike's renderers are experiments, and a real viewport comes with the dev shell.
+synthetic corpus [the canvas-hosting spike](canvas-hosting.md) measured against. **What does not exist yet:** any renderer
+in the product. The spike's renderers are experiments, and a real viewport comes with the dev shell.
 
 ## The mapping cannot drift
 

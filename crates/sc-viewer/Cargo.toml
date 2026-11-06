@@ -28,3 +28,4 @@ missing_debug_implementations = "warn"
 [dependencies]
 sc-cli = { path = "../sc-cli", version = "0.1.0" }
 sc-store = { path = "../sc-store", version = "0.1.0" }
+sc-viewport = { path = "../sc-viewport", version = "0.1.0" }
