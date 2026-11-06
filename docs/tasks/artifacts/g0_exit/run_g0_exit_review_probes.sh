@@ -24,6 +24,12 @@
 #   MALFORMED          a row with the wrong cell count → refusal
 #   CONTROL            an unrelated comment edit → the identical verdict
 #   MISSING            an absent data plane REFUSES (exit 2) instead of reporting a gate
+#   GATE-REAL          G1 to G6 each close against the roadmap, read from the shared table
+#   GATE-DROPPED       a G1 row removed → refusal naming the fragment
+#   GATE-GROWS         the roadmap's G3 envelope list gains a clause → refusal
+#   GATE-OWNER         a row names an owner the tree does not have → refusal
+#   GATE-UNKNOWN       a gate this review does not cover → refusal, exit 2
+#   GAUGE              scripts/gauge.sh prints every gate and a total matching the tables
 #
 # Usage:  bash docs/tasks/artifacts/g0_exit/run_g0_exit_review_probes.sh
 #         TMPDIR=<dir> bash …   (`make probes` pins it to the repository volume)
@@ -191,6 +197,74 @@ if [ "$rc" -eq 2 ] && grep -q 'REFUSED' <<<"$out"; then
   ok MISSING "an absent data plane refuses with exit=2 instead of reporting a gate"
 else
   bad MISSING "a missing data plane did not refuse (exit=$rc)" "$out"
+fi
+
+# ---------------------------------------------------------------- the other gates
+GATES="$ROOT/docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv"
+gate_plane() {
+  local d="$WORK/$1"; rm -rf "$d"; mkdir -p "$d"
+  cp "$GATES" "$d/clauses.tsv"
+  cp "$ROOT/ROADMAP.md" "$d/ROADMAP.md"
+  printf '%s' "$d"
+}
+gate_run() { GATE_REVIEW_GATE="$2" G0_EXIT_SKIP_CHECKS=1 G0_EXIT_CLAUSES="$1/clauses.tsv" G0_EXIT_ROADMAP="$1/ROADMAP.md" bash "$TOOL" 2>&1; }
+
+P="$(gate_plane real)"; closed=0
+for gate in G1 G2 G3 G4 G5 G6; do
+  out="$(gate_run "$P" "$gate")"; rc=$?
+  if [ "$rc" -eq 0 ] && grep -Eq "^$gate EXIT: [0-9]+ met / [0-9]+ not met / [0-9]+ clauses" <<<"$out"; then
+    closed=$((closed+1))
+  else
+    bad GATE-REAL "$gate did not close against the roadmap (exit=$rc)" "$out"
+  fi
+done
+[ "$closed" -eq 6 ] && ok GATE-REAL "G1 to G6 each close against the roadmap"
+
+P="$(gate_plane dropped)"
+droprow "$P/clauses.tsv" $'G1-03\texit\tcanvas-hosting spike' || bad GATE-DROPPED "the mutation did not apply" ""
+out="$(gate_run "$P" G1)"; rc=$?
+if [ "$rc" -eq 1 ] && grep -q 'is dispositioned by no row' <<<"$out"; then
+  ok GATE-DROPPED "a G1 clause nobody reviews is refused, naming the fragment (exit=$rc)"
+else
+  bad GATE-DROPPED "a dropped G1 clause was accepted (exit=$rc)" "$out"
+fi
+
+P="$(gate_plane grows)"
+mutate "$P/ROADMAP.md" 'bodice and set-in sleeve above;' \
+  'bodice and set-in sleeve above; a fabricated cape;' \
+  || bad GATE-GROWS "the mutation did not apply" ""
+out="$(gate_run "$P" G3)"; rc=$?
+if [ "$rc" -eq 1 ] && grep -q 'a fabricated cape…) is dispositioned by no row' <<<"$out"; then
+  ok GATE-GROWS "a clause G3's envelope list grows reddens the review (exit=$rc)"
+else
+  bad GATE-GROWS "a new G3 clause was ignored (exit=$rc)" "$out"
+fi
+
+P="$(gate_plane owner)"
+mutate "$P/clauses.tsv" $'\tG1-SLICE.13\n' $'\tG1-SLICE.nowhere\n' || bad GATE-OWNER "the mutation did not apply" ""
+out="$(gate_run "$P" G1)"; rc=$?
+if [ "$rc" -eq 1 ] && grep -q "names owner 'G1-SLICE.nowhere', which is not a task-tree leaf" <<<"$out"; then
+  ok GATE-OWNER "a clause whose owner the tree does not have is refused (exit=$rc)"
+else
+  bad GATE-OWNER "an ownerless clause was accepted (exit=$rc)" "$out"
+fi
+
+out="$(GATE_REVIEW_GATE=G7 bash "$TOOL" 2>&1)"; rc=$?
+if [ "$rc" -eq 2 ] && grep -q 'REFUSED — G7 is not a gate this review covers' <<<"$out"; then
+  ok GATE-UNKNOWN "a gate the review does not cover refuses with exit=2"
+else
+  bad GATE-UNKNOWN "an uncovered gate did not refuse (exit=$rc)" "$out"
+fi
+
+out="$(bash "$ROOT/scripts/gauge.sh" 2>&1)"; rc=$?
+total="$(awk -F'\t' '!/^#/ && NF==9' "$GATES" | wc -l)"
+g0_total="$(awk -F'\t' '!/^#/ && NF==8' "$PLANE" | wc -l)"
+wanted=$(( total + g0_total ))
+if [ "$rc" -eq 0 ] && [ "$(grep -c '^G[0-6]: [0-9]* of [0-9]* clauses met$' <<<"$out")" -eq 7 ] \
+   && grep -Eq "^gauge: [0-9]+ of $wanted clauses met through G6$" <<<"$out"; then
+  ok GAUGE "$(tail -1 <<<"$out")"
+else
+  bad GAUGE "the gauge disagrees with the tables (exit=$rc, wanted $wanted)" "$out"
 fi
 
 echo

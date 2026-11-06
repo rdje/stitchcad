@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0983 — the gauge counts exit clauses through G6
+
+`bash scripts/gauge.sh` closes each gate's clause rows against the roadmap's text and prints 18 of 66 clauses met,with G1 at 0 of 7.
+The availability chapter shows the same counts. A clause counts as met only when its check runs a real product path and passes.
+
 ## STITCHCAD-G1-0982 — the 400-commit gate closes;the director's roadmap ruling is recorded
 
 Local gates and all 29 probe suites passed,and 418 commits reached main at224a9805,with every hosted step green on that SHA.

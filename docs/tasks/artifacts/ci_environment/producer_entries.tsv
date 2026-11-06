@@ -251,6 +251,7 @@ scripts/check_task_acceptance.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell sour
 scripts/check_task_tree_ownership.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_waiver_routing.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/ci_environment.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inventory instrument; ordinary source and fixture guards reviewed, final integration audit pending.
+scripts/gauge.sh	delegate	G1-SLICE.16.gauge	Whole shell source retained;it runs the review,which owns its stores and runs no child when closing clauses alone.
 scripts/handoff_census.py	reference	G1-SLICE.5b.4c.h2.b.v	AST inventory has no direct candidate output/native dispatcher; delegated runtime behavior still reviewed separately.
 scripts/history_archive.py	output	G1-SLICE.5b.4c.h2.b.p	Archive materialization closes source/directory/file authority; readonly metadata is scoped and D224 absence requires successful evidence.
 scripts/history_archive.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.

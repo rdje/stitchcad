@@ -4,19 +4,54 @@ StitchCAD currently provides three Rust libraries. They implement numerical and 
 foundations; they do not yet generate a garment pattern or provide an end-user application.
 G0 contract review is mostly complete with human closure unapproved. G1 remains in progress.
 
+## Distance to the finished product
+
+The roadmap's seven gates to a declared product end at G6. This table counts one thing: exit clauses whose
+real product path passes its check. Commits and leaves do not move it.
+
+| Gate | Exit clauses met | Exit clauses | What it proves |
+| --- | --- | --- | --- |
+| G0 | 18 | 19 | The product and its semantics are specified. The evaluation-seat clause stays open by ruling |
+| G1 | 0 | 7 | The architecture runs for real in a browser |
+| G2 | 0 | 8 | A reference skirt is drafted and exported correctly |
+| G3 | 0 | 11 | Every garment the roadmap names drafts, grades and exports |
+| G4 | 0 | 8 | Factory profiles work, including what is still unknown |
+| G5 | 0 | 6 | The native and browser applications exist |
+| G6 | 0 | 7 | The conformance lab shows it holds up outside this repository |
+
+Run it yourself:
+
+```text
+$ bash scripts/gauge.sh
+G0: 18 of 19 clauses met
+G1: 0 of 7 clauses met
+G2: 0 of 8 clauses met
+G3: 0 of 11 clauses met
+G4: 0 of 8 clauses met
+G5: 0 of 6 clauses met
+G6: 0 of 7 clauses met
+gauge: 18 of 66 clauses met through G6
+```
+
+A count here comes from the clause tables, and a clause counts as met only when its check runs a real
+product path and passes. `bash scripts/gauge.sh --checks` runs those checks again.
+
+Commercial CAD is parked until StitchCAD is feature complete, so G6's import-filter clause stays not met.
+G2's printed square stays not met until a person measures one. Both are the director's to close.
+
 ## Distance to the G1 exit
 
-The roadmap's G1 exit has seven clauses. This is where each one stands on 2026-11-06:
+G1 is the earliest open gate. This is where each of its seven clauses stands:
 
-| G1 exit clause | State today | Owning leaf |
-| --- | --- | --- |
-| Three runtime profiles compile | The libraries build for the browser target; the named profiles do not exist yet | `.11` |
-| A real browser run: load, evaluate a recipe, one CSP constraint, save and reopen, render, export | Only evaluate works, for scalar recipes, with numeric checks on one native and browser pair | `.12` |
-| Canvas-hosting spike for ADR-0002 | Not started | `.13` |
-| Command bus with revision checks and undo | Working as a library | `.6` |
-| Crash-consistent save and recovery | No code yet | `.7` |
-| License-compatible solver builds on all targets | No solver code yet | `.15` |
-| Browser capability matrix with tested versions and limitations | Not started | `.12` |
+| Clause | What the roadmap asks | Met | Where it stands | Owning leaf |
+| --- | --- | --- | --- | --- |
+| `G1-01` | Three runtime profiles compile | not met | The libraries build for the browser target; the named profiles do not exist yet | `.11` |
+| `G1-02` | A real browser run: load, evaluate a recipe, one CSP constraint, save and reopen, render, export | not met | Only evaluate works, for scalar recipes, with numeric checks on one native and browser pair | `.12` |
+| `G1-03` | Canvas-hosting spike for ADR-0002 | not met | Not started | `.13` |
+| `G1-04` | Command bus with revision checks and undo | not met | Working as a library; no real path drives it yet | `.6` |
+| `G1-05` | Crash-consistent save and recovery | not met | No code yet | `.7` |
+| `G1-06` | License-compatible solver builds on all targets | not met | No solver code yet | `.15` |
+| `G1-07` | Browser capability matrix with tested versions and limitations | not met | Not started | `.12` |
 
 Drafting the reference skirt itself is the G2 gate. It needs the geometry kernel and drafting execution,
 which this table does not include.

@@ -1,0 +1,53 @@
+# docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv — the exit clauses of G1 to G6, read by the gate review.
+# Same columns as g0_exit_clauses.tsv, plus `owner`, the task-tree leaf that delivers the clause.
+# `authority` is `instrument` (the check decides), `unbuilt` (no working product path yet, so not met),
+# or `director` (needs a person or a physical act this repository cannot perform; `blocker` names it).
+# A feature's commit changes its row from `unbuilt` to `instrument`, with a check that runs the real product path.
+#id	source	key	deliverable	check	authority	blocker	note	owner
+G1-01	exit	three runtime profiles compile	-	-	unbuilt	-	the libraries build for the browser target;the named profiles do not exist yet	G1-SLICE.11
+G1-02	exit	intended browser target runs a real	-	-	unbuilt	-	only evaluate works,for scalar recipes	G1-SLICE.12
+G1-03	exit	canvas-hosting spike	-	-	unbuilt	-	-	G1-SLICE.13
+G1-04	exit	command bus live	-	-	unbuilt	-	works as a library with tests;live means a real path drives it	G1-SLICE.6
+G1-05	exit	crash-consistent save/recovery	-	-	unbuilt	-	-	G1-SLICE.7
+G1-06	exit	license-compatible solver builds	-	-	unbuilt	-	-	G1-SLICE.15
+G1-07	exit	capability matrix	-	-	unbuilt	-	-	G1-SLICE.12
+G2-01	exit	reference skirt drafted through CLI	-	-	unbuilt	-	-	G2-2D.8
+G2-02	exit	minimal 2D viewer/editor	-	-	unbuilt	-	-	G2-2D.9
+G2-03	exit	canonical DXF	-	-	unbuilt	-	-	G2-2D.5
+G2-04	exit	printed scale-square	-	-	director	one scan or photo of the printed square beside a ruler,asked for at the end of G2	the exporter and its numeric and independent-renderer checks come first	G2-2D.7
+G2-05	exit	offsets pass the pathology corpus	-	-	unbuilt	-	-	G2-2D.3
+G2-06	exit	native save/load preserves semantics	-	-	unbuilt	-	-	G2-2D.10
+G2-07	exit	mutation tests	-	-	unbuilt	-	-	G2-2D.11
+G2-08	exit	LLM agent given only MCP,CLI serializer then golden-matches	-	-	unbuilt	-	-	G2-2D.13
+G3-01	exit	bodice + set-in sleeve,the darted bodice and set-in sleeve above	-	-	unbuilt	-	-	G3-GRADING.4
+G3-02	exit	darts, folds, walking/truing	-	-	unbuilt	-	-	G3-GRADING.2
+G3-03	exit	stable references survive	-	-	unbuilt	-	-	G3-GRADING.3
+G3-04	exit	both instantiation paths	-	-	unbuilt	-	-	G3-GRADING.11
+G3-05	exit	re-imported into an independent engine	-	-	unbuilt	-	-	G3-GRADING.8
+G3-06	exit	extreme sizes reconstructed	-	-	unbuilt	-	-	G3-GRADING.9
+G3-07	exit	grading modes	-	-	unbuilt	-	-	G3-GRADING.10
+G3-08	exit	offset + grading golden suites	-	-	unbuilt	-	-	G3-GRADING.12
+G3-09	exit	every garment	-	-	unbuilt	-	-	G3-GRADING.14
+G3-10	exit	a classic collar	-	-	unbuilt	-	-	G3-GRADING.15
+G3-11	exit	trousers carrying	-	-	unbuilt	-	-	G3-GRADING.5
+G4-01	exit	typed constraint AST,differential-oracle campaign	-	-	unbuilt	-	the kernel exists;the profile layer and the campaign at scale do not	G4-PROFILES.3
+G4-02	exit	minimal guided Profile Editor	-	-	unbuilt	-	-	G4-PROFILES.9
+G4-03	exit	artifact policy matrix	-	-	unbuilt	-	-	G4-PROFILES.7
+G4-04	exit	per-claim evidence store	-	-	unbuilt	-	-	G4-PROFILES.6
+G4-05	exit	profile composition	-	-	unbuilt	-	-	G4-PROFILES.8
+G4-06	exit	HPGL writer	-	-	unbuilt	-	-	G4-PROFILES.10
+G4-07	exit	private-vs-public	-	-	unbuilt	-	-	G4-PROFILES.11
+G4-08	exit	usability gate	-	-	director	a non-programmer sewing expert for one session	-	G4-PROFILES.12
+G5-01	exit	Tauri native	-	-	unbuilt	-	-	G5-SHELLS.1
+G5-02	exit	full UX spec	-	-	unbuilt	-	-	G5-SHELLS.8
+G5-03	exit	workflow parity table	-	-	unbuilt	-	-	G5-SHELLS.9
+G5-04	exit	supported OS/browser matrix	-	-	unbuilt	-	-	G5-SHELLS.11
+G5-05	exit	i18n first complete	-	-	unbuilt	-	-	G5-SHELLS.12
+G5-06	exit	minimum tech pack	-	-	unbuilt	-	-	G5-SHELLS.13
+G6-01	exit	real import-filter validation,manual repair documented	-	-	director	commercial CAD is parked until StitchCAD is feature complete,by the director's ruling of 2026-11-06	-	G6-CONFORMANCE.2
+G6-02	exit	physical plotter	-	-	director	a physical plotter and a printed pattern	-	G6-CONFORMANCE.4
+G6-03	exit	factory pilot loop	-	-	director	a factory willing to run a pilot	-	G6-CONFORMANCE.5
+G6-04	exit	foreign-DXF import-diff	-	-	unbuilt	-	-	G6-CONFORMANCE.3
+G6-05	exit	recovery/migrations	-	-	unbuilt	-	-	G6-CONFORMANCE.6
+G6-06	exit	cross-platform regression matrix	-	-	unbuilt	-	-	G6-CONFORMANCE.7
+G6-07	exit	fuzzing at depth	-	-	unbuilt	-	-	G6-CONFORMANCE.8

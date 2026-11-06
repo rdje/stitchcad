@@ -717,6 +717,16 @@ Order:`.8` constraint kernel,`.7` store,`.10` headless replay,`.11` profiles,`.1
 Then `.13` canvas spike,`.14` dev shell,`.9` API and MCP,`.16` exit review. `.6` widens when one of these needs it.
 `.5f.3b` follows G2-2D.1,which supplies geometry. The first recipe comes from the book's reference skirt §4. Order may change once code shows a better one.
 
+- ID: `G1-SLICE.16.gauge`
+  Status: `done`
+  Goal:the director asked that work stay on the roadmap. Count exit clauses met through G6,closing each gate's rows against the roadmap's own text.
+  Paths:docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh,docs/tasks/artifacts/g0_exit/run_g0_exit_review_probes.sh,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,
+  scripts/gauge.sh,docs/tasks/artifacts/ci_environment/producer_entries.tsv,docs/book/src/availability.md.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY only G0 had a clause census,so 650 commits showed no distance. WHERE run_g0_exit_review.sh read one heading;git grep -c GATE_REVIEW_GATE before →0,rc=1.
+  - [x] ADDRESSED:bash scripts/gauge.sh →G0 18/19,G1 0/7,G2 0/8,G3 0/11,G4 0/8,G5 0/6,G6 0/7,total 18 of 66,rc=0. A clause is met only as `instrument`.
+  - [x] NO REGRESSION:run_g0_exit_review_probes.sh →16 pass / 0 fail,rc=0,including G0's real 18/1/19 and GATE-DROPPED,GATE-GROWS,GATE-OWNER;G6 closure caught my draft missing a fragment.
+  promotion: declined (no new lesson;recorded in the ruling).
+  Commit:STITCHCAD-G1-0983.
 - ID: `G1-SLICE.thin-path`
   Status: `done`
   Goal:D388 retire 0977's six parallel leaves;they restated .5f.3b,.8,.7,.12,.10 and .11 with weaker acceptance. Each returns to its owner.
