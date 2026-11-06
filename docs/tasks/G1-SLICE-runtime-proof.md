@@ -659,6 +659,12 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] LOCKSTEP:book,decision,DOCTRINE_ENFORCEMENT,registry,DEV_NOTES,changelog,D386 and LIVE row align;README reviewed unchanged,G1still6/18 In Progress.
   promotion: declined (decision_machine-tokens-declared-where-used.md owns the rule and this commit extends it).
   Commit:STITCHCAD-G1-0975.
+- ID: `G1-SLICE.5f.2.exit-distance`
+  Status: `pending`
+  Goal:D387 director decision:continue input admission depth-first,or re-sequence to a thin executing path to the G1 exit.
+  Measured at8f660fa2:654 commits since6/18 (13b12b84,2026-10-26);134239 source and121655 test lines;1730 public types;module depth20.
+  git grep →0 solver and0 persistence files;render only in test oracles. Leaves .5f.3 and .7-.16 stay pending. Drift census 39 spine/1002 product passes throughout.
+  Frontier stays .references.record unless the director rules;this leaf changes no order by itself.
 - ID: `G1-SLICE.5f.2.prepush-400.ram-observe`
   Status: `done`
   Goal:adopt the director's 2026-11-06 RAM rule in the tool,book and records during the gate.

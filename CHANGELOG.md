@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0976 — record the measured distance to the G1 exit (D387)
+
+Availability now states each G1 exit requirement's real state,and a tracked leaf holds the open director decision.
+654 commits at6/18 passed the drift census because it counts commits,not distance to the gate. No order changes yet.
+
 ## STITCHCAD-G1-0975 — declare every book name and check at each commit (D386)
 
 29 chapters gain a declaration table covering all795 undeclared names;glossary suite43/0 and G0 engineering clauses pass.

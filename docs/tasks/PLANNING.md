@@ -1187,14 +1187,9 @@ D380 fixed0964;[whole record](PLANNING-evidence.md#d380--cache-inclusive-occupan
 
 D381 fixed0966;[whole record](PLANNING-evidence.md#d381--dependency-plan-probe-inherited-ambient-rust-stores).
 
-D382 fixed0970;D383 fixed0971;[whole records](PLANNING-evidence.md#d382--changelog-pointer-rule-outlived-the-live-index).
+D382–D386 fixed0970–0975;[whole records](PLANNING-evidence.md#d382--changelog-pointer-rule-outlived-the-live-index).
 
-D384 fixed0972;[whole record](PLANNING-evidence.md#d384--book-publication-drift-hidden-until-pre-push).
+## D387 — no census watches distance to the gate
 
-D385 fixed0974;[whole record](PLANNING-evidence.md#d385--refactor-outran-its-fault-tools).
-
-## D386 — book censuses ran only before a push
-
-Owner:G1-SLICE.5f.2.prepush-400.api-declarations;P1 before push. C1 passed at0655 and reached794 undeclared name/chapter
-pairs,invisible because make probes runs once per400 commits. Fixed0975:29 declaration tables and BOOK-CENSUSES at
-every commit. It cannot judge a meaning's truth;rendered checks stay in the pre-push publication suite.
+Owner:G1-SLICE.5f.2.exit-distance;open,director decision. The drift census counts product commits,so654 commits at G1 6/18
+all pass it. They add input admission;no drafting operation executes,and no solver,store,renderer or export code exists.

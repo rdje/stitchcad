@@ -4,6 +4,28 @@ StitchCAD currently provides three Rust libraries. They implement numerical and 
 foundations; they do not yet generate a garment pattern or provide an end-user application.
 G0 contract review is mostly complete with human closure unapproved. G1 remains in progress.
 
+## Distance to the G1 exit
+
+G1's exit asks for a real browser run: load a project, evaluate a recipe, resolve one CSP constraint,
+save and reopen, render, and export. This is where each part stands on 2026-11-06:
+
+| G1 exit requirement | State today | Owning leaf |
+| --- | --- | --- |
+| Scalar formula recipes execute | Working, with numeric checks on one native and browser pair | `.5` |
+| Drafting operations execute | Not started; inputs are validated, and no geometry is produced | `.5f.3` |
+| Command bus with revision checks and undo | Working as a library | `.6` |
+| Project store, save and reopen | No code yet | `.7` |
+| One CSP constraint resolves | No solver code yet | `.8` |
+| Headless deterministic replay | No code yet | `.10` |
+| Real browser spike end to end | Not started | `.12` |
+| Canvas-hosting spike for ADR-0002 | Not started | `.13` |
+| License census for the solver | Not started | `.15` |
+
+Since the G1 row reached 6/18 on 2026-10-26, about 650 commits have mostly widened how exactly inputs
+are admitted. That work is real, but it has not moved the exit: a recipe still cannot produce a
+pattern. Whether to continue depth-first or take a thin executing path first is an open director
+decision, tracked as `G1-SLICE.5f.2.exit-distance`.
+
 ## Implemented foundations
 
 | Library | Available behavior |
