@@ -1041,8 +1041,8 @@ metadata-field loan;the compiled E0515 control refuses returning its stack addre
 contract requires the parameter→declaration association exposed by that original metadata.
 Core checks its returned header,parameter ID and actual canonical member/kind under that contract.
 The query allocates/clones no data,loads no body and reads no parameter value.
-<!-- stitchcad-inline: rust -->`DraftingProfileLogicalResponse<'a,H,S>` names that same raw response using the provider's actual
-associated snapshot,Profile and metadata types;the alias grants no additional source proof.
+The alias <!-- stitchcad-inline: rust -->`DraftingProfileLogicalResponse<'a,H,S>` names that same raw response using the provider's actual
+associated snapshot,Profile and metadata types and grants no additional source proof.
 
 All held metadata vectors,text,source copies/caches and counters,including unused records,must be
 part of inherited exhaustive provider accounting. `BoundDraftingProfileSource::bind_logical_parameter`

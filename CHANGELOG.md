@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0972 — restore book publication and the G0-19 clause (D384)
+
+Two chapters gain topic-index rows;my 0971 marker and 0968 out-of-tree link are corrected;G0-19 builds before it
+tests. Publication suite50/0 and14 search cases pass. Glossary and mutation-anchor repairs follow.
+
 ## STITCHCAD-G1-0971 — name every failing probe suite (D383)
 
 make probes now lists failing suite paths,so a set -e suite that stops silently cannot hide behind one status bit.

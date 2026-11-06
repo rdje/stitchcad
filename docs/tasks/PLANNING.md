@@ -1187,14 +1187,10 @@ D380 fixed0964;[whole record](PLANNING-evidence.md#d380--cache-inclusive-occupan
 
 D381 fixed0966;[whole record](PLANNING-evidence.md#d381--dependency-plan-probe-inherited-ambient-rust-stores).
 
-## D382 — changelog pointer rule outlived the live index
+D382 fixed0970;D383 fixed0971;[whole records](PLANNING-evidence.md#d382--changelog-pointer-rule-outlived-the-live-index).
 
-Owner:G1-SLICE.5f.2.prepush-400.ledger-pointer;P1 before push. 0779 moved the index into record954,but
-the POINTER rule kept reading live table rows only and stayed red until the next make probes. Fixed0970:a live row
-links record954 and the rule follows only that record;306 listed parts equal306 sealed rows by independent grep.
+## D384 — book publication drift hidden until pre-push
 
-## D383 — make probes could hide a silently stopped suite
-
-Owner:G1-SLICE.5f.2.prepush-400.probe-reporting;P1 before push. The recipe kept one bit,and a set -e suite that
-stops prints no failure line:formula_structure skipped its later steps behind a stale copied chapter. Fixed0971:
-failing paths are named;recovery documented. The fail-closed copied-book guard is intentionally unchanged.
+Owner:G1-SLICE.5f.2.prepush-400.book-publication;P1 before push. Two chapters lacked index rows since0871/0874;
+my 0968 link and 0971 marker broke publication while the doctrine gate stayed green;G0-19 tested output before
+building it. Fixed0972:publication suite50/0,G0-19 met. Recurrence guard stays with .api-declarations.

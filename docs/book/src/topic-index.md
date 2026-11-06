@@ -134,6 +134,8 @@ and verification material are in the annexes, at their preserved chapter URLs.
 
 - [Drafting operation contracts](annexes/drafting-operation-contracts.md)
 - [Drafting context sources](annexes/drafting-context-sources.md)
+- [Logical inputs and source membership](annexes/logical-inputs.md)
+- [Semantic recipe sources](annexes/semantic-recipes.md)
 - [Native editing operation inputs](annexes/drafting-edit-inputs.md)
 - [Native Piece join contracts](annexes/drafting-join-contracts.md)
 - [Native join result topology](annexes/drafting-join-topology.md)

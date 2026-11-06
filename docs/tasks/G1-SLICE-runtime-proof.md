@@ -613,6 +613,18 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] LOCKSTEP:book,DEV_NOTES,changelog,D383 and LIVE defect row align;README reviewed unchanged,G1still6/18 In Progress.
   promotion: declined (lesson is in DEV_NOTES;existing guard contract unchanged).
   Commit:STITCHCAD-G1-0971.
+- ID: `G1-SLICE.5f.2.prepush-400.book-publication`
+  Status: `done`
+  Goal:fix D384;restore the publication suite and the G0-19 book clause.
+  Paths:docs/book/src/topic-index.md;docs/book/src/build-and-checks.md;docs/book/src/annexes/semantic-recipes.md;docs/tasks/artifacts/g0_exit/g0_exit_clauses.tsv.
+  - [x] REPRODUCE / ISSUE:book_publication.py at d688014b →INDEX_COVERAGE logical-inputs,semantic-recipes;after that fix BOOK_BUILD_WARNING then SOURCE_LINK,both my own 0971/0968 edits. G0-19 →exit=1 on a cleaned tree.
+  - [x] ROOT CAUSE (WHY + WHERE):0871/0874 added chapters without an index row;a line-start HTML comment opens a raw block,so the span parsed as a tag;a book link left the source tree;G0-19 tested the output before building it. mdbook build →rc=0.
+  - [x] FIX:two index rows;marker moved inside the sentence;decision cited as a path;G0-19 builds first,then tests the chapter folder.
+  - [x] ADDRESSED:run_book_publication_probes.sh →50 pass/0 fail,14 search cases,rc=0;its malformed-generic control refuses the same class. Formula census 0 mismatch,rc=0. Review:G0-19 MET,rc=0.
+  - [x] NO REGRESSION:g0 review now lists only G0-02 (owned by .api-declarations) and G0-12 (human act,director ruling) as unmet,rc=1 until G0-02 lands.
+  - [x] LOCKSTEP:DEV_NOTES,changelog,D384 and LIVE defect row align;README reviewed unchanged,G1still6/18 In Progress.
+  promotion: declined (lesson is in DEV_NOTES;publication refusals already name each class).
+  Commit:STITCHCAD-G1-0972.
 - ID: `G1-SLICE.5f.2.prepush-400.ram-observe`
   Status: `done`
   Goal:adopt the director's 2026-11-06 RAM rule in the tool,book and records during the gate.

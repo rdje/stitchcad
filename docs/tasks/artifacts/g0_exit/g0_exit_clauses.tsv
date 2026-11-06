@@ -37,4 +37,4 @@ G0-15	clause	-	docs/book/src/spec/i18n-architecture.md	bash docs/tasks/artifacts
 G0-16	clause	-	docs/book/src/spec/command-layer.md	bash docs/tasks/artifacts/command_layer/run_command_layer_census.sh	instrument	-	-
 G0-17	clause	-	.github/workflows/	bash -c 'test -f .github/workflows/doctrines.yml && test -f .github/workflows/rust.yml'	instrument	-	-
 G0-18	clause	-	crates/sc-units, crates/sc-core	make wasm	instrument	-	-
-G0-19	clause	-	docs/book/src/spec/	bash -c 'test -d docs/book/book/spec && mdbook build docs/book >/dev/null 2>&1'	instrument	-	-
+G0-19	clause	-	docs/book/src/spec/	bash -c 'mdbook build docs/book >/dev/null 2>&1 && test -d docs/book/book/spec'	instrument	-	-

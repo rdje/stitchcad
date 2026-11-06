@@ -20,7 +20,7 @@ grouping and checks every chapter,text posting and result landing during publica
 The rule is to watch the trend, not to wait for headroom. No percentage stops or defers a job.
 Start the job, sample while it runs, and compare successive readings. When usage has crossed 90%
 and is still rising, tell the director; otherwise carry on
-([decision record](../../decisions/decision_ram-trend.md)).
+(`docs/decisions/decision_ram-trend.md`).
 
 ```bash
 python3 -I -B scripts/macos_memory.py

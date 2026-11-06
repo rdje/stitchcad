@@ -2,6 +2,14 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-06 UTC)_ — D384: the commit gate does not render the book
+
+0968 and 0971 both passed the commit gate with a book the publication check refuses. An HTML comment at the start
+of a line opens a raw block in CommonMark,so my rust marker turned the span after it into a malformed tag;moving
+the marker inside the sentence keeps it inline. A link out of the source tree fails the same way. Two chapters
+had also lacked topic-index rows since0871/0874. G0-19 tested for the rendered folder before building it,which
+only passed because an earlier build had left one behind;a cleanup or fresh clone showed the ordering bug.
+
 ## _(2026-11-06 UTC)_ — D383: count suites by exit status,not by failure lines
 
 I first read the probes log as four failing suites by counting failure marks. A fifth had also failed:a set -e
