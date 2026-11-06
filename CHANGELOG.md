@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0971 — name every failing probe suite (D383)
+
+make probes now lists failing suite paths,so a set -e suite that stops silently cannot hide behind one status bit.
+The L6b span gets its rust marker and stale copied-book fixtures are cleared;the formula language suite passes16/0.
+
 ## STITCHCAD-G1-0970 — restore the sealed changelog index route (D382)
 
 The live changelog links record954 again and the POINTER rule follows only that record. Ledger probes11/0,

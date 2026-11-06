@@ -2,6 +2,14 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-06 UTC)_ — D383: count suites by exit status,not by failure lines
+
+I first read the probes log as four failing suites by counting failure marks. A fifth had also failed:a set -e
+suite stopped at its first step,so its later steps never ran and it printed no mark at all. The recipe's one rc bit
+could not say which. It now names failing paths. The stop itself came from copied-book fixtures,which keep their
+last copy and refuse entries the current book lacks;a chapter removed in0826 stayed in11 copies until the next
+full run. That guard is right to refuse,so the repair moves the stale files aside and documents the recovery.
+
 ## _(2026-11-06 UTC)_ — D382: moving an index moves the rule's input
 
 0970 repairs a check that had been red since0779 without anyone seeing it. That slice retired the changelog's

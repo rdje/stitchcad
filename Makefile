@@ -69,11 +69,11 @@ update-scaffold:
 # throwaway repositories and logs leave the project (defect D16). The path is derived from
 # $(CURDIR) at run time and never hardcoded, so the repository stays relocatable.
 probes:
-	@$(LOCAL_RUN) bash -c 'rc=0; found=0; \
+	@$(LOCAL_RUN) bash -c 'failed=""; found=0; \
 	for p in $$(find docs/tasks/artifacts -type f -name "run_*probe*.sh" | sort); do \
 	  found=$$((found+1)); echo "== $$p"; \
-	  bash "$$p" || rc=1; \
+	  bash "$$p" || failed="$$failed $$p"; \
 	done; \
 	if [ "$$found" -eq 0 ]; then echo "make probes: no probe suites found under docs/tasks/artifacts/"; exit 1; fi; \
-	if [ "$$rc" -ne 0 ]; then echo "make probes: FAILED (at least one suite reported failures)"; exit 1; fi; \
+	if [ -n "$$failed" ]; then echo "make probes: FAILED:$$failed"; exit 1; fi; \
 	echo "make probes: $$found suite(s) green (scratch under $$TMPDIR)"'

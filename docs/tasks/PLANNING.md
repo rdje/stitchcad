@@ -1192,3 +1192,9 @@ D381 fixed0966;[whole record](PLANNING-evidence.md#d381--dependency-plan-probe-i
 Owner:G1-SLICE.5f.2.prepush-400.ledger-pointer;P1 before push. 0779 moved the index into record954,but
 the POINTER rule kept reading live table rows only and stayed red until the next make probes. Fixed0970:a live row
 links record954 and the rule follows only that record;306 listed parts equal306 sealed rows by independent grep.
+
+## D383 — make probes could hide a silently stopped suite
+
+Owner:G1-SLICE.5f.2.prepush-400.probe-reporting;P1 before push. The recipe kept one bit,and a set -e suite that
+stops prints no failure line:formula_structure skipped its later steps behind a stale copied chapter. Fixed0971:
+failing paths are named;recovery documented. The fail-closed copied-book guard is intentionally unchanged.

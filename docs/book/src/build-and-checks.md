@@ -132,7 +132,7 @@ Use scripts/run_make.sh;Python/Rustup are read-only host tools.
 | `test` | All native workspace tests, including documentation tests |
 | `wasm` | Build sc-units, sc-core and sc-measure for wasm32-unknown-unknown |
 | `book` | Guarded local mdBook build; warnings refuse; output docs/book/book/ |
-| `probes` | Run every diagnostic probe suite; report any failure |
+| `probes` | Run every diagnostic probe suite; name every failing suite |
 | `gate` | Run the doctrine registry, including project checks |
 | `toolchain` | Install the selected channel/components locally without self-update |
 | `hooks` | Activate this repository's Git hooks |
@@ -154,6 +154,19 @@ then inspect the exact commit's CI jobs and every step; local checks supply no r
 Cadence controls run in the existing environment probe suite:19 verdicts and four actual checker-body
 faults. Boundary/failure counts are simulated; two integrations use real Git counts, including a
 historical comparison containing formerly exceptional paths. No source or Git metadata is mutated.
+
+`make probes` ends by naming every failing suite by path. Read that line, not a count of failure
+marks in the log: a suite running under `set -e` can stop at its first failing step and print no
+mark, while everything after that step silently never runs. For example:
+
+```text
+make probes: FAILED: docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+```
+
+Copied-book fixtures under `target/` keep their last copy and refuse any entry the current book
+lacks, reporting `unexpected copied-book fixture entry`. After a chapter is removed or renamed, the
+next full run refuses until that stale copied file is moved out of the fixture. The refusal is
+deliberate: a fixture never deletes a file it cannot account for.
 
 A refusal exits2 without executing a child; a running child retains its exit status.
 For example, CARGO_HOME=crates/cache refuses as a source-tree store, while an ambient external

@@ -601,6 +601,18 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] LOCKSTEP:book archive reader,DEV_NOTES,changelog,D382 and LIVE defect row align;README reviewed unchanged,G1still6/18 In Progress.
   promotion: declined (lesson is in DEV_NOTES;recurrence guard is owned by .api-declarations).
   Commit:STITCHCAD-G1-0970.
+- ID: `G1-SLICE.5f.2.prepush-400.probe-reporting`
+  Status: `done`
+  Goal:fix D383;make probes names each failing suite;repair the L6b span and the stale copied-book fixtures.
+  Paths:Makefile;docs/book/src/annexes/semantic-recipes.md;docs/book/src/build-and-checks.md.
+  - [x] REPRODUCE / ISSUE:probes at d688014b →formula_language 13/3,and formula_structure.py rc=2 under set -e skipped that suite's later steps with no failure line;the summary said only at least one suite.
+  - [x] ROOT CAUSE (WHY + WHERE):Makefile kept one rc bit. Fixtures keep their book copy,so chapter checking-policy.md removed at2b5948e6 stayed in11 copies,census rc=0 listing them;guard refuses by design. Span lacked the rust marker.
+  - [x] FIX:recipe collects failing suite paths;span carries stitchcad-inline rust;11 stale files moved to target quarantine,bytes kept;book states the recovery. The fail-closed guard is unchanged.
+  - [x] ADDRESSED:formula language census 0 mismatch,rc=0;its suite 16 pass/0 fail,rc=0. make_probes_control.py over the actual recipe text:set -e failure named rc=1,passing suite unnamed,empty refused,rc=0.
+  - [x] NO REGRESSION:make_probes_control.py →mixed rc=1,all-pass rc=0,empty rc=1,so the recipe's old exit behaviour holds. Per-suite statuses belong to the parent's fresh full run,not claimed here.
+  - [x] LOCKSTEP:book,DEV_NOTES,changelog,D383 and LIVE defect row align;README reviewed unchanged,G1still6/18 In Progress.
+  promotion: declined (lesson is in DEV_NOTES;existing guard contract unchanged).
+  Commit:STITCHCAD-G1-0971.
 - ID: `G1-SLICE.5f.2.prepush-400.ram-observe`
   Status: `done`
   Goal:adopt the director's 2026-11-06 RAM rule in the tool,book and records during the gate.
