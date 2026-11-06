@@ -20,8 +20,8 @@ wasm-viewer: target/wasm32-unknown-unknown/debug/sc_viewer.wasm builds, with no 
 profiles: 3 built
 ```
 
-**Compiling is not running.** The browser's own capability matrix, with what actually ran in which browser, comes
-with the browser run, leaf `.12`.
+**Compiling is not running.** [The browser capabilities chapter](browser-capabilities.md) says what actually ran, in
+which browser, and what has not.
 
 ## How the browser side talks to Rust
 

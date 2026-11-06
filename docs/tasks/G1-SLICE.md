@@ -953,40 +953,6 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Verification:engine and project children below;a project reopens equal,two saves are byte-identical,forced interruption and failed migration are tested.
   Scope:a project holds what exists to save,inputs and recipe. Pieces and the rest of the ontology arrive with G2-2D.10. The browser backend arrives with `.12`. SQLite arrives with G4.
   Commit:STITCHCAD-G1-0987,0988,0990.
-- ID: `G1-SLICE.7.engine`
-  Status: `done`
-  Goal:the storage engine under `.7`:canonical text,repository trait,native and memory backends,atomic multi-file commits and recovery.
-  Paths:crates/sc-store/**,docs/book/src/spec/project-store.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,
-  docs/book/src/topic-index.md,Cargo.lock,Makefile,.github/workflows/rust.yml,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-05 and the browser run need saves that survive a crash. WHERE no such crate;git ls-files crates/sc-store | wc -l →0,rc=0.
-  - [x] ADDRESSED:cargo test -p sc-store rc=0:10 crash-point tests,6 on a real directory,7 text,2 path,1 digest,3 doctests. 10 crash points,30 crashes during recovery,30 real SIGKILLs with 12 inside a save.
-  - [x] ADDRESSED:clippy --all-targets --all-features -D warnings rc=0;fmt --check rc=0;wasm32 build rc=0;no dependencies. Native write,rename,remove sync file and directory;links are refused.
-  - [x] NO REGRESSION:BOOK-CENSUSES rc=0;gauge18 of66 unchanged,no other crate changed. Python json.dumps(sort_keys,indent=2,ensure_ascii=False) reproduced the canonical bytes.
-  - [x] ONE-TIME,NOT WATCHED:store_mutants.py →18 of 18 planted storage bugs red,target/prepush-0967/store_mutants.log. One escape was my own harmless mutant,rewritten to plant the bug I meant.
-  - [x] HONEST:power loss is untested,two writers are not stopped,damage outside a commit in progress is unchecked. The chapter says all three.
-  promotion: declined (no new lesson).
-  Commit:STITCHCAD-G1-0987.
-- ID: `G1-SLICE.7.project`
-  Status: `done`
-  Goal:the project layer of `.7`:manifest and schema,migrations with backups,unknown-content preservation and autosave. First clause counted:G1-05.
-  Paths:crates/sc-store/**,scripts/check_roadmap_lock.sh,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,docs/book/src/spec/project-store.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-05 needs recovery on a project,not only on loose files. WHERE sc-store had commits and no manifest,schema,migration or autosave;git grep -c ProjectStore f9a6c6cb -- crates →0,rc=1.
-  - [x] ADDRESSED:cargo test -p sc-store --test project --test project_kill rc=0:18 tests,and 30 real SIGKILLs of a process saving and autosaving,3 runs at 23-24 interrupted,7 left an autosave,all whole.
-  - [x] ADDRESSED:every crash point of a migration,a save and an autosave ends old or new. A failed step and a newer schema leave identical bytes. An unknown field and file survive a save.
-  - [x] NO REGRESSION:bash scripts/gauge.sh →19 of 66,rc=0. Lock self-test rc=0,now with the printed gauge lines and the flip check run through the project's own stores. Corrected by D393:this box first claimed strict clippy rc=0 from a tail line;clippy had failed at 0988 and passes from 0989.
-  - [x] ONE-TIME,NOT WATCHED:project_mutants.py →15 of 15 planted project bugs red,target/prepush-0967/project_mutants.log.
-  - [x] MEASURED FIRST:my first kill test failed on none left an autosave,because a fixed window rarely outlasted a save. The child now reports finished commits and the parent kills at chosen points.
-  promotion: declined (no new lesson).
-  Commit:STITCHCAD-G1-0988.
-- ID: `G1-SLICE.7.project.lint`
-  Status: `done`
-  Goal:D393. Strict clippy failed at 0988,and that leaf recorded a pass.
-  Paths:crates/sc-store/tests/project_kill.rs,docs/tasks/G1-SLICE.md,docs/tasks/PLANNING.md,docs/tasks/PLANNING-evidence.md.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY the rc came from tail -1 instead of the exit status. WHERE clippy on crates/sc-store/tests/project_kill.rs:64,manual is_multiple_of;retained run target/prepush-0967/clippy-store.log rc=101.
-  - [x] ADDRESSED:cargo clippy -p sc-store --all-targets --all-features -D warnings,exit status captured to a retained log →rc=0. The false claim is corrected in place.
-  - [x] NO REGRESSION:cargo test -p sc-store --test project_kill exit status →rc=0;gauge unchanged at 19 of 66.
-  promotion: declined (a rule for how I record,held in D393).
-  Commit:STITCHCAD-G1-0989.
 - ID: `G1-SLICE.8`
   Status: `done`
   Goal: `sc-constraints` kernel (§6.1/§6.2) — typed constraint AST, finite-domain propagation +
@@ -996,16 +962,7 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Acceptance: determinism proven by repeated runs over the same input (fixed search order, no
   randomness, no wall-clock); `cargo build --features csp-z3` is a CI-only path and the default
   release artifact contains no Z3 dependency (verified by a dependency census).
-  Paths:crates/sc-constraints/**,docs/book/src/spec/constraints.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,
-  docs/book/src/topic-index.md,Cargo.lock,Makefile,.github/workflows/rust.yml,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
-  Scope:the engine. G4-PROFILES.2/.3/.4 add profile files,production solving over profiles and the campaign at scale,and call this kernel.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY the browser run needs one CSP constraint and §6.1 requires a deterministic solver. WHERE no such crate;git ls-files crates/sc-constraints | wc -l →0,rc=0.
-  - [x] ADDRESSED:cargo test -p sc-constraints →14 contract,4 doctests,1 differential over 4000 seeds,rc=0. Outcome compared across repeated solves per seed;search uses no randomness or clock.
-  - [x] ADDRESSED:cargo tree -p sc-constraints -e all --prefix none →the crate alone,rc=0;cargo clippy --all-targets --all-features -D warnings rc=0;cargo build wasm32 rc=0;cargo fmt --check rc=0.
-  - [x] NO REGRESSION:BOOK-CENSUSES rc=0;gauge 18 of 66 unchanged,since no clause is met by a library alone. No other crate changed:git diff --stat -- crates/sc-core crates/sc-units crates/sc-measure empty.
-  - [x] ONE-TIME,NOT WATCHED:mutants.py on these sources,differing only in the chapter path →19 of 19 plausible solver bugs red. It did not stay in the tree.
-  - [ ] DEFERRED:the Z3 oracle compiled and never ran. Local use was refused by the harness safety check,not worked around. Owner G1-SLICE.8.z3-first-run.
-  promotion: declined (no new lesson).
+  Evidence:G1-SLICE-runtime-proof.md,Feature evidence toward the G1 exit.
   Commit:STITCHCAD-G1-0986.
 - ID: `G1-SLICE.8.z3-first-run`
   Status: `pending`
@@ -1101,15 +1058,7 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   the same project state and the same serialized bytes (§4.4; prerequisite for the G2 exit).
   Acceptance: a recorded session replays byte-identically on a second run; failures exit nonzero
   with structured diagnostics; no wall-clock or locale leaks into output.
-  Paths:crates/sc-cli/**,crates/sc-core/src/command/bus.rs,crates/sc-core/src/command/bus/execution.rs,crates/sc-core/src/command.rs,Cargo.lock,docs/book/src/spec/command-line.md,docs/book/src/spec/command-layer.md,
-  docs/book/src/spec/formula-language/examples.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,docs/book/src/topic-index.md,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-04 asks for a live bus,and only tests drove it. WHERE no program;git ls-files crates/sc-cli | wc -l →0,rc=0.
-  - [x] ADDRESSED:cargo test -p sc-cli exit status →rc=0:the real program replays a recorded session byte-identically under a foreign locale and time zone,edits change results,undo and redo restore them,a stale revision is refused.
-  - [x] ADDRESSED:D285:reopen resumed revision and audit order;edit,edit,undo,save,reopen,edit issues 3,not 2. My first draft reset to 0;I found that by reading the transcript,and CONTROL below removes the fix.
-  - [x] ADDRESSED:D389:23 book values computed from a real Design,and the four closure assertions hold;examples.md corrected.
-  - [x] NO REGRESSION:cargo test -p sc-core --test command_history_contract →rc=0;workspace clippy -D warnings →rc=0;fmt →rc=0;gauge20 of66;all exit statuses captured to retained logs.
-  - [x] CONTROL:one-time,not watched:with the resume_issuance call removed,a_reopened_design_never_reissues fails →rc=101.
-  promotion: declined (no new lesson;D393's rule held).
+  Evidence:G1-SLICE-runtime-proof.md,Feature evidence toward the G1 exit.
   Commit:STITCHCAD-G1-0990.
 - ID: `G1-SLICE.11`
   Status: `done`
@@ -1118,25 +1067,26 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   CI WASM smoketest.
   Acceptance: one command per profile in `Makefile`, all green in CI; the capability matrix lists
   what each profile excludes and why; browser execution is tested for real, not `cargo check`.
-  Paths:crates/sc-viewer/**,crates/sc-cli/**,scripts/check_profiles.sh,Makefile,.github/workflows/rust.yml,Cargo.lock,docs/book/src/spec/runtime-profiles.md,docs/book/src/spec/command-line.md,docs/book/src/availability.md,
-  docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,docs/book/src/topic-index.md,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-01 names three profiles,and only a wasm smoketest of libraries existed. WHERE Makefile;grep -c '^profile-' Makefile at f72565ce →0,rc=1.
-  - [x] ADDRESSED:bash scripts/check_profiles.sh exit status →rc=0:all three build;headless has no viewport,GUI or database;the wasm artifact has no host imports and the five exports. The matrix is in the book.
-  - [x] ADDRESSED:the browser execution half of the acceptance belongs to `.12`,which runs it in real Chrome. Named here so this box does not imply it.
-  - [x] ADDRESSED:session steps render and export,and save now keeps unknown project content,a bug I found by rereading my own save against the store's rule. cargo test -p sc-cli,-p sc-viewer exit status →rc=0.
-  - [x] NO REGRESSION:workspace clippy -D warnings exit status →rc=0;fmt →rc=0;BOOK-CENSUSES →rc=0. All captured to retained logs.
-  promotion: declined (no new lesson).
+  Evidence:G1-SLICE-runtime-proof.md,Feature evidence toward the G1 exit.
   Commit:STITCHCAD-G1-0991.
 - ID: `G1-SLICE.12`
-  Status: `pending`
+  Status: `done`
   Goal: the real browser spike (G1 exit) — load project → evaluate recipe → resolve one CSP
   constraint → persist/reopen → render → export, in the intended browser target, with the WASM
   capability matrix (tested versions + limitations) as its output.
   Acceptance: a recorded run (commands + observed output) demonstrates all six steps in a
   browser; limitations are written down (startup size, COOP/COEP, WebGPU baseline) and routed to
   G5 where they belong.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:docs/tasks/artifacts/browser_run/**,docs/book/src/spec/browser-capabilities.md,docs/book/src/spec/runtime-profiles.md,docs/book/src/spec/project-store.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md,
+  docs/book/src/SUMMARY.md,docs/book/src/topic-index.md,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-02 demands a real run,not a compile. WHERE wasm was only ever built or used for numeric checks;git ls-files docs/tasks/artifacts/browser_run | wc -l →0,rc=0.
+  - [x] ADDRESSED:run_browser_run.sh exit status →rc=0,in Google Chrome 156.0.8078.80 on Darwin arm64:load,evaluate,constraint,save and reopen across two processes,render on a real canvas,export through a Blob. Output in the chapter.
+  - [x] ADDRESSED:both visits' transcripts,the saved image and the exported bytes equal the native program's exactly. A third Chrome on a fresh profile fails its reopen,so IndexedDB carried the project.
+  - [x] ADDRESSED:run_capability_matrix_check.sh exit status →rc=0:the chapter's version and sizes equal docs/tasks/artifacts/browser_run/recorded-run.json;startup size,COOP/COEP and WebGPU each have rows,and every untested row names G5-SHELLS.11.
+  - [x] NO REGRESSION:gauge24 of66;BOOK-CENSUSES →rc=0;producer census →rc=0. No crate changed in this slice.
+  - [x] HONEST:one Chrome on one machine. Nobody looked at the picture:a test counted dark pixels. The export link was built,not clicked. The hosted Linux Chrome run has not happened yet;it is the next push's gauge step.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-0993.
 - ID: `G1-SLICE.13`
   Status: `pending`
   Goal: the canvas-hosting spike that settles ADR-0002 against the protocol written at
@@ -1171,13 +1121,7 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Acceptance: a re-runnable census command (dependency list + license fields) whose output is
   recorded in the leaf; any GPL/LGPL dependency is either absent or quarantined behind a
   non-default, non-shipped feature with the reason recorded.
-  Paths:scripts/check_licenses.sh,docs/book/src/build-and-checks.md,docs/book/src/availability.md,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-06 asks that the solver's license holds. WHERE no census ran;git ls-files scripts/check_licenses.sh | wc -l →0,rc=0.
-  - [x] ADDRESSED:bash scripts/check_licenses.sh →license census:11 packages,4 third-party,0 refused;solver builds natively and for wasm32,alone,and is in both profiles,rc=0. Output in the build chapter.
-  - [x] CONTROL:one-time:a planted GPL-3.0 license field in a copy of the metadata →refused:num-traits is under GPL-3.0,which nobody has reviewed,rc=1. Without that the census would prove nothing.
-  - [x] NO REGRESSION:gauge22 of66,rc=0;BOOK-CENSUSES rc=0. No crate changed.
-  - [x] HONEST:a license field is the crate's own claim;LICENSE files are unread. Windows is not built anywhere.
-  promotion: declined (no new lesson).
+  Evidence:G1-SLICE-runtime-proof.md,Feature evidence toward the G1 exit.
   Commit:STITCHCAD-G1-0992.
 - ID: `G1-SLICE.16`
   Status: `pending`

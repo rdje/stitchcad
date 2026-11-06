@@ -6,10 +6,11 @@ its new ones, never a mix. It is the `sc-store` crate.
 
 **What works today.** You can save a project as one commit and reopen it after a crash, on a real directory or in
 memory. Older projects migrate all or nothing, newer ones are refused untouched, unknown fields and files survive,
-and autosave keeps unsaved work beside the project. **What does not exist yet:** saving a `Design`, since a project
-holds files and fields but nothing writes the garment model into them; IndexedDB in the browser, which the browser
-run, leaf `.12`, connects; and the SQLite catalog of roadmap §4.5. Schema 1 is the first schema, so no real
-migration exists yet, and the migration tests use their own.
+and autosave keeps unsaved work beside the project. In a browser, the project is `MemoryRepository`'s one image, saved
+to IndexedDB in one transaction, as [the browser run](browser-capabilities.md) shows. **What does not exist yet:** saving a
+whole `Design`, since a project holds its inputs and recipe but not the rest of the garment model, which arrives with
+G2; and the SQLite catalog of roadmap §4.5. Schema 1 is the first schema, so no real migration exists yet, and the
+migration tests use their own.
 
 ## The vocabulary
 

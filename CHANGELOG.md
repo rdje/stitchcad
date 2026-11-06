@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0993 — the browser run:six steps in real Chrome,equal to native;G1-02 and G1-07 are met
+
+Two Chrome processes load a project,evaluate a recipe,solve a constraint,save to IndexedDB,reopen,render and export,and every result equals the native program's. A fresh profile must fail,and does.
+The book has a capability matrix from the recorded run. The drawing is a schematic because drafting is G2. The gauge reads 24 of 66.
+
 ## STITCHCAD-G1-0992 — the license census finds no copyleft;G1-06 is met
 
 `bash scripts/check_licenses.sh` reads every package's license from `cargo metadata`,refuses copyleft and anything unreviewed,and proves the solver builds alone for both targets. The gauge reads 22 of 66.

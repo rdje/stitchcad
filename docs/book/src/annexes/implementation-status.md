@@ -9,6 +9,7 @@ requires the named contracts and later proof owners.
 | Family | Roadmap | Public source and verification | Book contract |
 | --- | --- | --- | --- |
 | Owned source metadata | §3.1/§4.4; G1 | sc-core/sc-measure; G1-SLICE.6.4.2.d.4.3 | [Actual sources and exact set pins](../spec/design-inputs.md); focused ownership checks; full Design follows |
+| Browser run | §7.3; G1 | sc-viewer; G1-SLICE.12 | [The capability matrix and what ran](../spec/browser-capabilities.md) |
 | Runtime profiles | §7.3; G1 | sc-viewer; G1-SLICE.11 | [Three profiles and what each leaves out](../spec/runtime-profiles.md) |
 | Command line | §4.4/§7.3; G1 | sc-cli; G1-SLICE.10 | [Session replay over the bus](../spec/command-line.md); geometry and any edit but a measurement change are still to come |
 | Project store | §4.5; G1 | sc-store; G1-SLICE.7 | [Projects, commits, recovery, migrations and autosave](../spec/project-store.md); saving a Design, IndexedDB and SQLite are still to come |

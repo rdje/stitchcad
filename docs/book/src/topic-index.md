@@ -117,6 +117,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Project store](spec/project-store.md)
 - [Command line](spec/command-line.md)
 - [Runtime profiles](spec/runtime-profiles.md)
+- [Browser capabilities](spec/browser-capabilities.md)
 - [The supported envelope](spec/feature-matrix.md)
 - [Uncertainty and numeric refusals](spec/measurement-inputs.md)
 - [Units and tolerances](spec/units-and-tolerances.md)
