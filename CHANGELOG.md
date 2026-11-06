@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0980 — bring six stale checks back to what they watch (D390)
+
+The pre-push probes found them:ci_environment had not run whole since0564. No check is removed or loosened;0974's late chapter read is
+corrected by pinning the example count. No product code,book or README text changes.
+
 ## STITCHCAD-G1-0979 — state the input-check hold in the semantic recipe chapter (D389)
 
 Three sentences still called held binder work the next implementation;they now state the hold. Prose only,no code fence moved.

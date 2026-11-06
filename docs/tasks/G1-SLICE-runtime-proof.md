@@ -659,6 +659,18 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] LOCKSTEP:book,decision,DOCTRINE_ENFORCEMENT,registry,DEV_NOTES,changelog,D386 and LIVE row align;README reviewed unchanged,G1still6/18 In Progress.
   promotion: declined (decision_machine-tokens-declared-where-used.md owns the rule and this commit extends it).
   Commit:STITCHCAD-G1-0975.
+- ID: `G1-SLICE.5f.2.prepush-400.stale-contracts`
+  Status: `done`
+  Goal:fix D390;six ci_environment checks went red because later commits changed what they watch. No check is removed or loosened.
+  Paths:docs/tasks/artifacts/ci_environment/;docs/tasks/artifacts/formula_structure/recipe_owner_contract.py;MEMORY.md.
+  - [x] REPRODUCE / ISSUE:make probes at5f14c2b5 →28 suites pass,ci_environment rc=1 at producer_census_contract. run_suite_steps.py over its47 steps →5 more red,rc=1 each,hidden behind set -e.
+  - [x] ROOT CAUSE (WHY + WHERE):git show 8f660fa2:docs/tasks/artifacts/ci_environment/producer_entries.tsv | grep -c check_book_censuses →0,rc=1;0975 added it unlisted,and the suite last ran whole at0564. Same cause:0974 moved4 faults and read early;0970 ledger case;0655/0676 links;0962 MEMORY line.
+  - [x] FIX:inventory row;fixtures take current values,with 0970's additions declared on top of the approved0342 baseline;recipe_owner_contract pins EXAMPLE_COUNT and plans before its first read;MEMORY regains `- Next G1-SLICE.8`.
+  - [x] ADDRESSED:python_producer_contract rc=0,1155 reds;recipe_fixture rc=0;cleanup_fixture rc=0;ledger_fixture rc=0;ledger_mutation rc=0. recipe_count_control.py →real rc=0,14 examples;EXAMPLE_COUNT=13 rc=1 naming it;restored byte-exact.
+  - [x] NO REGRESSION:ci_environment other42 steps rc=0 at0980's content before the last fixture edits. git diff --quiet -- crates rc=0;-- docs/book README.md rc=0. Whole make probes reruns from this commit in the parent gate.
+  - [x] LOCKSTEP:DEV_NOTES,changelog,D390,LIVE row and MEMORY align;README and book reviewed unchanged,G1 still6/18 In Progress.
+  promotion: declined (the producer contract itself owns activation order;this repairs values).
+  Commit:STITCHCAD-G1-0980.
 - ID: `G1-SLICE.5f.2.exit-distance`
   Status: `done`
   Goal:D387 director decision on input-check depth versus a thin executing path to the G1 exit.

@@ -539,7 +539,7 @@ def mixed_fixture(entry_path, *, classifier_only=False, coupled=False):
                    ROOT / 'crates/sc-core/src/recipe/namespace/ordered.rs')
         contract = ROOT / 'crates/sc-core/tests/formula_ordered_names_contract.rs'
         work = ROOT / 'target/ordered_name_mutations'
-        bindings, contexts = (1,) * 16 + (0,) * 2, ('',) * 18
+        bindings, contexts = (1,) * 3 + (0,) * 4 + (1,) * 9 + (0,) * 2, ('',) * 18
         base = ['cargo', 'test', '-p', 'sc-core', '--test', 'formula_ordered_names_contract']
         calls = (base,) * 19
         files = tuple(work / ('fault-%d.log' % i) for i in range(1, 19)) + (work / 'restored.log',)
@@ -1429,7 +1429,7 @@ def capture_compiler_entry(text, entry_path, owner):
                      for line in source.read_text().splitlines() if line.startswith('///'))
     guards = fenced_blocks(docs, 'compile_fail')
     examples = fenced_blocks(book.read_text(), 'rust') if owner == 'recipe' else []
-    assert len(guards) == 5 and len(examples) == (4 if owner == 'recipe' else 0), 'D156 compiler fixture population'
+    assert len(guards) == 5 and len(examples) == (14 if owner == 'recipe' else 0), 'D156 compiler fixture population'
     work = ROOT / f'target/{owner}_owner_contract'
     GOOD['directory'](ROOT, work.relative_to(ROOT).as_posix(), create=True)
     base = 'target/scratch/python_producer_contract/compiler-stores'
@@ -1605,7 +1605,7 @@ def compiler_file_refusals(text, entry_path, owner):
             victim = root / 'victim'
             victim.write_bytes(b'unchanged isolated compiler alias victim')
             first = output / 'artifacts.json'
-            last = output / ('example_4' if owner == 'recipe' else 'guard_5')
+            last = output / ('example_14' if owner == 'recipe' else 'guard_5')
             if case in ('first-link', 'last-link', 'guard-binary-link'):
                 destination = first if case == 'first-link' else last if case == 'last-link' else output / 'guard_1'
                 destination.symlink_to(victim)
@@ -3908,7 +3908,7 @@ def main():
         ])
         faults.extend(('planned file omitted %d' % index, 'output_files=OUTPUT_FILES',
                        'output_files=OUTPUT_FILES[:%d] + OUTPUT_FILES[%d:]' % (index, index + 1),
-                       'D156 compiler file plan changed') for index in range(29 if owner == 'recipe' else 17))
+                       'D156 compiler file plan changed') for index in range(59 if owner == 'recipe' else 17))
         faults.extend(('planned source omitted %d' % index, 'sources=SOURCES',
                        'sources=SOURCES[:%d] + SOURCES[%d:]' % (index, index + 1),
                        'D156 compiler planned inputs changed') for index in range(2 if owner == 'recipe' else 1))

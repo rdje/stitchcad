@@ -169,3 +169,9 @@ commits at G1 6/18 passed it while no drafting operation,solver,store,renderer o
 Owner:G1-SLICE.thin-path;found by the director2026-11-06. 0977 opened six leaves restating owners the tree already had,with
 weaker acceptance;0976's book table replaced the roadmap's seven clauses with my own list,skipping `.11` and adding `.5f.3` and `.10`.
 Neither was checked against ROADMAP.md §11 or G1-SLICE.md's exit table. Fixed0978:owners restored,table matches the clauses.
+
+## D390 — checks outlived what they watch
+
+Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole at0564,so six checks drifted unseen:a new script
+without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
+read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.

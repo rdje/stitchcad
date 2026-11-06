@@ -82,7 +82,8 @@ def before_control():
 
 
 NAMES = ('catalog target, short label', 'missing catalog',
-         'valid changelog plus unknown lesson', 'fenced pseudo-index')
+         'valid changelog plus unknown lesson', 'fenced pseudo-index',
+         'sealed index names absent segments')
 
 
 def response(index, kind=None):
@@ -111,7 +112,7 @@ def capture(label, script, *, bad=None, syntax_failure=False, write_failure=Fals
     entry, shell, helper, profile_source = (root / path.relative_to(ROOT) for path in (ENTRY, SHELL, HELPER, PROFILE_SOURCE))
     work = root / 'target/ledger_pointer_mutations'
     inputs = {root / path.relative_to(ROOT) for path in (*CORE, *ARCHIVES)}
-    files = {work / ('mutation-%d.log' % index) for index in range(1, 5)}
+    files = {work / ('mutation-%d.log' % index) for index in range(1, 6)}
     mutable = {shell, helper}
     real = runpy.run_path(str(profile_source))
     original_sources = {path: path.read_bytes() for path in mutable}
@@ -212,7 +213,7 @@ def capture(label, script, *, bad=None, syntax_failure=False, write_failure=Fals
         with contextlib.redirect_stdout(io.StringIO()):
             exec(compile(script, str(entry), 'exec'), dict(__file__=str(entry), __name__='ledger_mutation_capture'))
         assert not bad and not syntax_failure and not write_failure, 'ledger mutation refusal missing'
-        assert len(children) == 9 and len(activated) == 1
+        assert len(children) == 11 and len(activated) == 1
         print('ledger mutation capture:', len(plans), 'complete plans;', len(effects), 'effect calls;', len(children), 'prepared children; sources exact')
     finally:
         runpy.run_path, Path.mkdir, Path.read_bytes, Path.write_text, Path.write_bytes, subprocess.run = originals
@@ -315,7 +316,7 @@ def physical_controls():
     for label in labels:
         root = mirror('physical-' + label, archives=True)
         entry, shell, helper, profile, contract = (root / path.relative_to(ROOT) for path in (ENTRY, SHELL, HELPER, PROFILE_SOURCE, CONTRACT))
-        work = root / 'target/ledger_pointer_mutations'; last = work / 'mutation-4.log'
+        work = root / 'target/ledger_pointer_mutations'; last = work / 'mutation-5.log'
         selected = root / ARCHIVES[-1].relative_to(ROOT)
         PROFILE['prepare_producer'](ROOT, sources=(*CORE, *ARCHIVES, Path(__file__)),
                                    directories=(work.parent,), output_files=(last, profile, shell, helper, contract, selected))
@@ -364,6 +365,8 @@ def original_body_controls():
     current_cases = next(node for node in current.body if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == 'CASES' for target in node.targets))
     approved = ast.parse(subprocess.check_output(['git', 'show', '55ed18e9a33a801c1f7fd9f2dc5376682e7a35a9:' + ENTRY.relative_to(ROOT).as_posix()], text=True))
     approved_cases = next(node for node in approved.body if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == 'CASES' for target in node.targets))
+    # 0970 approved exactly one later mutation; the four before it stay the approved cohort.
+    assert current_cases.value.elts.pop().elts[0].value == 'sealed index not followed', 'ledger later approved mutation changed'
     assert ast.dump(current_cases, include_attributes=False) == ast.dump(approved_cases, include_attributes=False), 'ledger approved current mutation cases changed'
     # The public helper now assigns the resolved name before filtering changelog membership.
     # Project only that approved route-assignment edit; every remaining original node is compared.
@@ -396,6 +399,10 @@ def original_body_controls():
 
         def visit_Call(self, node):
             self.generic_visit(node)
+            # 0970 made the closing message count its cases; project only that approved wording.
+            if (isinstance(node.func, ast.Name) and node.func.id == 'print' and isinstance(node.args[0], ast.BinOp) and
+                    getattr(node.args[0].left, 'value', '').startswith('ledger pointer mutations: %d')):
+                node.args[0] = ast.Constant('ledger pointer mutations: four syntax-checked actual reds; sources restored byte-identically')
             node.keywords = [keyword for keyword in node.keywords if keyword.arg != 'env']
             return node
 
@@ -407,12 +414,12 @@ def real_controls():
     identities = {path: hashlib.sha256(path.read_bytes()).digest() for path in (*CORE, *ARCHIVES)}
     PROFILE['plan_producer'](ROOT, sources=(*CORE, *ARCHIVES, Path(__file__)), mutable_sources=(SHELL, HELPER))
     result = subprocess.run([sys.executable, '-I', '-B', str(ENTRY)], cwd=ROOT, env=dict(os.environ), capture_output=True, text=True)
-    assert result.returncode == 0 and result.stdout.count('actual contract assertion red') == 4, result
-    assert 'ledger pointer mutations: four syntax-checked actual reds; sources restored byte-identically' in result.stdout
-    assert 'ledger pointer contracts: 16 independent actual verdicts / 0 fail' in result.stdout
+    assert result.returncode == 0 and result.stdout.count('actual contract assertion red') == 5, result
+    assert 'ledger pointer mutations: 5 syntax-checked actual reds; sources restored byte-identically' in result.stdout
+    assert 'ledger pointer contracts: 17 independent actual verdicts / 0 fail' in result.stdout
     assert all(hashlib.sha256(path.read_bytes()).digest() == digest for path, digest in identities.items())
     assert not (ROOT / 'target/scratch/ledger_pointer_contract').exists()
-    print('ledger mutation real: four current expected case/site/verdict reds, native16 restored baseline; all core/archive bytes exact; zero contract residue')
+    print('ledger mutation real: five current expected case/site/verdict reds, native17 restored baseline; all core/archive bytes exact; zero contract residue')
 
 
 def continuity_controls():

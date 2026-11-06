@@ -12,15 +12,15 @@ BOOK = ROOT / 'docs/book/src/annexes/formula-checked-recipes.md'
 SOURCES = (SOURCE, BOOK)
 WORK = ROOT / 'target/recipe_owner_contract'
 EXPECTED = ('E0451', 'E0515', 'E0451', 'E0515', 'E0515')
-# Every Rust example the chapter holds is compiled and executed;the floor refuses a lost example.
-EXAMPLE_FLOOR = 14
-EXAMPLES = re.findall(r'(?m)^```rust\n(.*?)^```$', BOOK.read_text(), re.S)
+# Every Rust example the chapter holds is compiled and executed. The output plan precedes the first
+# read, so the count is pinned here and checked below;a new chapter example updates this number.
+EXAMPLE_COUNT = 14
 OUTPUT_FILES = (
     WORK / 'artifacts.json', WORK / 'build.log',
     *(WORK / ('guard_%d%s' % (index, suffix))
       for index in range(1, len(EXPECTED) + 1) for suffix in ('.rs', '.log', '')),
     *(WORK / ('example_%d%s' % (index, suffix))
-      for index in range(1, len(EXAMPLES) + 1) for suffix in ('.rs', '.log', '')),
+      for index in range(1, EXAMPLE_COUNT + 1) for suffix in ('.rs', '.log', '')),
 )
 PROFILE = runpy.run_path(str(ROOT / 'scripts/local_environment.py'))
 PROFILE['enter_producer'](
@@ -87,7 +87,7 @@ for index, (block, expected) in enumerate(zip(blocks, EXPECTED), 1):
 print('recipe-owner contracts: five actual privacy/recipe/record compiler guards; unrelated errors refused; rc=0')
 
 examples = re.findall(r'(?m)^```rust\n(.*?)^```$', BOOK.read_text(), re.S)
-assert examples == EXAMPLES and len(examples) >= EXAMPLE_FLOOR, 'whole recipe book example population'
+assert len(examples) == EXAMPLE_COUNT, ('whole recipe book example population:update EXAMPLE_COUNT', len(examples))
 for index, code in enumerate(examples, 1):
     source = WORK / ('example_%d.rs' % index)
     binary = WORK / ('example_%d' % index)

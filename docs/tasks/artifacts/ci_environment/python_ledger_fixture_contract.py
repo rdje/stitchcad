@@ -82,8 +82,8 @@ def capture(label, script, *, masked=False, reader_failure=False):
     root = mirror(label, archive=True)
     entry, profile_source, shell = (root / path.relative_to(ROOT) for path in (ENTRY, PROFILE_SOURCE, SHELL))
     work = root / 'target/scratch/ledger_pointer_contract'
-    dirs = {work.parent, work, *(work / str(index) / suffix for index in range(16) for suffix in ('', 'docs', 'docs/history'))}
-    files = {work / str(index) / suffix for index in range(16) for suffix in (
+    dirs = {work.parent, work, *(work / str(index) / suffix for index in range(17) for suffix in ('', 'docs', 'docs/history'))}
+    files = {work / str(index) / suffix for index in range(17) for suffix in (
         'docs/history/stitchcad-changelog-part24.md', 'CHANGELOG.md', 'order.txt', 'verdict.log')}
     inputs = {root / path.relative_to(ROOT) for path in (*CORE, *ARCHIVES)}
     real = runpy.run_path(str(profile_source))
@@ -173,7 +173,7 @@ def capture(label, script, *, masked=False, reader_failure=False):
             text = (fixture / 'CHANGELOG.md').read_text()
             # Authored label-independent expected positives; simulated shell output proves dispatch only.
             positive = any(token in text for token in ('[Earlier](docs/history/', '[other.md](docs/history/window2.md#stitchcad-changelog-part24md)', '[stitchcad-changelog-part24.md](docs/history/window2.md#stitchcad-changelog-part24md)'))
-            positive = positive and not any(token in text for token in ('introduction.md', '```', '<!--', 'stitchcad-devnotes-part99999.md'))
+            positive = positive and not any(token in text for token in ('introduction.md', '```', '<!--', 'stitchcad-devnotes-part99999.md', 'stitchcad-devnotes-part954.md'))
             children.append(command)
             return subprocess.CompletedProcess(command, 0, 'POINTER PASS controlled\n' if positive else 'POINTER FAIL controlled\n', '')
         return originals[6](command, *args, **kwargs)
@@ -193,7 +193,7 @@ def capture(label, script, *, masked=False, reader_failure=False):
         else:
             assert not reader_failure
         assert not work.exists(), 'ledger fixture reader failure left residue'
-        assert len(activated) == 1 and len(children) == (1 if reader_failure else 17)
+        assert len(activated) == 1 and len(children) == (1 if reader_failure else 18)
         assert all(path.read_bytes() == data for path, data in FROZEN.items())
         print('ledger capture:', 'reader failure' if reader_failure else 'masked' if masked else 'default', len(plans), 'plans;', len(effects), 'effect calls;', len(children), 'guarded children; sources/residue exact')
     finally:
@@ -310,7 +310,10 @@ def original_body_controls():
     current_cases = next(node for node in current.body if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == 'CASES' for target in node.targets))
     extended = ast.parse(subprocess.check_output(['git', 'show', '55ed18e9a33a801c1f7fd9f2dc5376682e7a35a9:' + ENTRY.relative_to(ROOT).as_posix()], text=True))
     extended_cases = next(node for node in extended.body if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == 'CASES' for target in node.targets))
-    assert len(current_cases.value.elts) == 16 and ast.dump(current_cases, include_attributes=False) == ast.dump(extended_cases, include_attributes=False), 'ledger current sixteen-case population changed'
+    # 0970 approved exactly one later case; everything before it stays the approved population.
+    assert len(current_cases.value.elts) == 17, 'ledger current seventeen-case population changed'
+    assert current_cases.value.elts.pop().elts[0].value == 'sealed index names absent segments', 'ledger later approved case changed'
+    assert ast.dump(current_cases, include_attributes=False) == ast.dump(extended_cases, include_attributes=False), 'ledger approved sixteen-case population changed'
     current_cases.value.elts[4:7] = []
     assert ast.dump(current_cases, include_attributes=False) == ast.dump(cases, include_attributes=False), 'ledger original thirteen cases changed'
     mask = next(node for node in old.body if isinstance(node, ast.If) and isinstance(node.test, ast.Compare))
@@ -362,10 +365,10 @@ def real_controls():
         PROFILE['plan_producer'](ROOT, sources=(*CORE, *ARCHIVES, Path(__file__)))
         result = subprocess.run([sys.executable, '-I', '-B', str(ENTRY), *arguments], cwd=ROOT,
                                 env=dict(os.environ), capture_output=True, text=True)
-        assert result.returncode == 0 and 'ledger pointer contracts: 16 independent actual verdicts / 0 fail' in result.stdout, result
+        assert result.returncode == 0 and 'ledger pointer contracts: 17 independent actual verdicts / 0 fail' in result.stdout, result
         assert not (ROOT / 'target/scratch/ledger_pointer_contract').exists()
         assert all(hashlib.sha256(path.read_bytes()).digest() == digest for path, digest in identities.items())
-    print('ledger real consumers: default/masked sixteen actual verdicts each; all core/backing inputs exact; zero workspace residue')
+    print('ledger real consumers: default/masked seventeen actual verdicts each; all core/backing inputs exact; zero workspace residue')
 
 
 def continuity_controls():

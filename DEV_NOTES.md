@@ -2,6 +2,14 @@
 
 Detailed technical notes — root cause, implementation, validation — per slice.
 
+## _(2026-11-06 UTC)_ — D390: six checks outlived what they watch
+
+The suite stopped at one missing inventory row;running its47 steps independently showed five more. Most were values:a
+ledger case count,a fault's new file,two chapters linked since0655. One reversed my own D385 note above:deriving the
+example count made the script read the book before it activates,and the producer contract forbids that. My first repair
+split the entry in two,which the same contract also refuses,and rightly:a plan must be whole before any read. So the
+count is pinned again,now with a message saying what to update. A pinned count costs one edit;a late plan costs the rule.
+
 ## _(2026-11-06 UTC)_ — D386: a rule that runs once per push reports months at once
 
 The glossary census passed at0655 and sat at794 failures by this push,because nothing between pushes ran it. Each
