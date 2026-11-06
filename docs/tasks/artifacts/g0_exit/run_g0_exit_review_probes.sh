@@ -30,6 +30,8 @@
 #   GATE-OWNER         a row names an owner the tree does not have → refusal
 #   GATE-UNKNOWN       a gate this review does not cover → refusal, exit 2
 #   GAUGE              scripts/gauge.sh prints every gate and a total matching the tables
+#   CLAUSE-<row>       each of D392's six checks refuses the fault its clause exists to catch
+#   CLAUSE-HOLLOW      a section emptied of its words is refused though its heading stays
 #
 # Usage:  bash docs/tasks/artifacts/g0_exit/run_g0_exit_review_probes.sh
 #         TMPDIR=<dir> bash …   (`make probes` pins it to the repository volume)
@@ -265,6 +267,50 @@ if [ "$rc" -eq 0 ] && [ "$(grep -c '^G[0-6]: [0-9]* of [0-9]* clauses met$' <<<"
   ok GAUGE "$(tail -1 <<<"$out")"
 else
   bad GAUGE "the gauge disagrees with the tables (exit=$rc, wanted $wanted)" "$out"
+fi
+
+# ---------------------------------------------------------------- D392's clause checks
+CHECKS="$ROOT/docs/tasks/artifacts/g0_exit/run_g0_clause_checks.sh"
+clause_root() {
+  local d="$WORK/clause-$1"; rm -rf "$d"; mkdir -p "$d"
+  git archive HEAD ROADMAP.md Cargo.toml Cargo.lock crates .github/workflows \
+    docs/book/src/spec/ontology.md docs/book/src/spec/instantiation-paths.md docs/book/src/spec/size-sets.md \
+    docs/book/src/governance.md docs/decisions/decision_size-set-ownership.md \
+    docs/decisions/decision_adr-0001-license-and-solver.md | tar -x -C "$d"
+  printf '%s' "$d"
+}
+clause_arm() {  # <row> <file> <old> <new> <fault the check must name>
+  local d; d="$(clause_root "$1")"
+  mutate "$d/$2" "$3" "$4" || { bad "CLAUSE-$1" "the mutation did not apply" ""; return; }
+  out="$(G0_CLAUSE_ROOT="$d" bash "$CHECKS" "$1" 2>&1)"; rc=$?
+  if [ "$rc" -eq 1 ] && grep -qF "$5" <<<"$out"; then
+    ok "CLAUSE-$1" "refused: $5"
+  else
+    bad "CLAUSE-$1" "the fault was accepted (exit=$rc)" "$out"
+  fi
+}
+clause_arm G0-04 ROADMAP.md '- **Ease**:' '- **Cape**: a fabricated object.
+- **Ease**:' 'has no section for Cape'
+clause_arm G0-05 docs/book/src/spec/instantiation-paths.md '## 6. The equivalence contract' '## 6. Renamed' 'no section for equivalence contract'
+clause_arm G0-06 docs/decisions/decision_size-set-ownership.md '- **Status:** `active`' '- **Status:** `superseded`' 'decision is not active'
+clause_arm G0-08 docs/decisions/decision_adr-0001-license-and-solver.md '- **Status:** `active`' '- **Status:** `superseded`' 'ADR-0001 is not active'
+clause_arm G0-13 docs/book/src/governance.md '## 1. Two review paths' '## 1. Renamed' 'no section for Two review paths'
+clause_arm G0-17 .github/workflows/rust.yml ' -- -D warnings' '' 'clippy at deny-warnings'
+
+d="$(clause_root hollow)"
+python3 - "$d/docs/book/src/spec/instantiation-paths.md" <<'PY'
+import pathlib, re, sys
+p = pathlib.Path(sys.argv[1])
+s = p.read_text(encoding="utf-8")
+s, n = re.subn(r"(^## 3\. Path 2 — grade-rule instantiation\n).*?(?=^#)", r"\1\nTo be written.\n\n", s, flags=re.M | re.S)
+assert n == 1
+p.write_text(s, encoding="utf-8")
+PY
+out="$(G0_CLAUSE_ROOT="$d" bash "$CHECKS" G0-05 2>&1)"; rc=$?
+if [ "$rc" -eq 1 ] && grep -q 'section for grade-rule instantiation has under 25 words' <<<"$out"; then
+  ok CLAUSE-HOLLOW "a section emptied of its words is refused though its heading stays"
+else
+  bad CLAUSE-HOLLOW "a hollow section was accepted (exit=$rc)" "$out"
 fi
 
 echo

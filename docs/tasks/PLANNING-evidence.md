@@ -180,7 +180,7 @@ read a chapter before activation,which the producer contract forbids. Fixed0980 
 
 Found 2026-11-06 reading the exit review while building the gauge. G0-04,05,06,08,13 and 17 pass on test -f or grep -q of one phrase,so
 a chapter could be emptied and its clause would stay met. Six of the 18 met clauses prove less than the count suggests. The review's own header discloses this;this entry owns the repair.
-Owner:G1-SLICE.16.g0-checks. Each row gets a check of what the clause asks,where such a check can exist.
+Fixed0985,leaf G1-SLICE.16.g0-checks:each row now checks what its clause asks,and G0's verdict stays 18 met,1 not met. These read structure and size,so they still cannot tell whether a specification's words are right.
 
 ## D391 — one look blamed a passing reader
 

@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0985 — six G0 clauses now check what they ask (D392)
+
+Six clauses counted as met if a file existed or held one phrase. Each now checks its substance,reading the roadmap where it lists what is
+required,so an emptied chapter or a dropped CI gate fails its clause. G0 stays at 18 of 19. No product code changes.
+
 ## STITCHCAD-G1-0984 — commits must name the roadmap clause they advance
 
 The commit hook and hosted CI now refuse a commit with no clause,work on a later gate with no stated dependency,a held leaf,and a book or

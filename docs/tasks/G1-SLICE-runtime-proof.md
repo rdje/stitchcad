@@ -738,8 +738,16 @@ Then `.13` canvas spike,`.14` dev shell,`.9` API and MCP,`.16` exit review. `.6`
   promotion: declined (no new lesson;recorded in the ruling).
   Commit:STITCHCAD-G1-0984.
 - ID: `G1-SLICE.16.g0-checks`
-  Status: `pending`
+  Status: `done`
   Goal:D392. Each weak G0 row gets a check of what its clause asks,where such a check can exist.
+  Paths:docs/tasks/artifacts/g0_exit/run_g0_clause_checks.sh,docs/tasks/artifacts/g0_exit/g0_exit_clauses.tsv,docs/tasks/artifacts/g0_exit/run_g0_exit_review_probes.sh,
+  docs/tasks/artifacts/ci_environment/producer_entries.tsv.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY six rows checked a file or one phrase,so an emptied chapter stayed met. WHERE g0_exit_clauses.tsv G0-04,05,06,08,13,17;git show HEAD:<table> | grep -cE '^G0-(04|05|06|08|13|17).*test -f' →6,rc=0.
+  - [x] ADDRESSED:run_g0_clause_checks.sh G0-04,05,06,08,13,17 each rc=0 on the real tree. G0-04 reads its object list from roadmap §3.1;G0-08 censuses 7 packages' licenses.
+  - [x] NO REGRESSION:run_g0_exit_review_probes.sh →23 pass / 0 fail,rc=0,real review still 18/1/19. A renamed section,inactive decision,dropped clippy gate,hollow section and new roadmap object each refuse.
+  - [x] HONEST:the first draft blamed Corner,Truing,Walking and SizeSet. Reading showed my check was wrong,not the chapter:those are specified inside sections,and SizeSet is an enum. No G0 verdict changed.
+  promotion: declined (no new lesson;D392 records it).
+  Commit:STITCHCAD-G1-0985.
 - ID: `G1-SLICE.thin-path`
   Status: `done`
   Goal:D388 retire 0977's six parallel leaves;they restated .5f.3b,.8,.7,.12,.10 and .11 with weaker acceptance. Each returns to its owner.

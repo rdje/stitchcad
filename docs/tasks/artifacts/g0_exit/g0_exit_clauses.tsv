@@ -22,19 +22,19 @@
 G0-01	exit	feature matrix	docs/book/src/spec/feature-matrix.md	bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh	instrument	-	-
 G0-02	exit	glossary of	docs/book/src/spec/glossary.md	bash docs/tasks/artifacts/glossary/run_glossary_census.sh	instrument	-	-
 G0-03	exit	units & tolerance	docs/book/src/spec/units-and-tolerances.md	test -f docs/book/src/spec/units-and-tolerances.md && cargo test -q -p sc-units	instrument	-	-
-G0-04	exit	garment ontology	docs/book/src/spec/ontology.md	test -f docs/book/src/spec/ontology.md && grep -q 'persistent-identity contract' docs/book/src/spec/ontology.md	instrument	-	-
-G0-05	exit	instantiation paths	docs/book/src/spec/instantiation-paths.md	test -f docs/book/src/spec/instantiation-paths.md && grep -q 'extreme-size' docs/book/src/spec/instantiation-paths.md	instrument	-	-
-G0-06	exit	size-set ownership	docs/decisions/decision_size-set-ownership.md	test -f docs/decisions/decision_size-set-ownership.md && test -f docs/book/src/spec/size-sets.md	instrument	-	-
+G0-04	exit	garment ontology	docs/book/src/spec/ontology.md	bash docs/tasks/artifacts/g0_exit/run_g0_clause_checks.sh G0-04	instrument	-	-
+G0-05	exit	instantiation paths	docs/book/src/spec/instantiation-paths.md	bash docs/tasks/artifacts/g0_exit/run_g0_clause_checks.sh G0-05	instrument	-	-
+G0-06	exit	size-set ownership	docs/decisions/decision_size-set-ownership.md	bash docs/tasks/artifacts/g0_exit/run_g0_clause_checks.sh G0-06	instrument	-	-
 G0-07	exit	release contract	docs/book/src/spec/release-contract.md	bash docs/tasks/artifacts/release_contract/run_release_contract_census.sh	instrument	-	-
-G0-08	exit	ADR-0001	docs/decisions/decision_adr-0001-license-and-solver.md	test -f docs/decisions/decision_adr-0001-license-and-solver.md && grep -q 'MIT OR Apache-2.0' Cargo.toml	instrument	-	-
+G0-08	exit	ADR-0001	docs/decisions/decision_adr-0001-license-and-solver.md	bash docs/tasks/artifacts/g0_exit/run_g0_clause_checks.sh G0-08	instrument	-	-
 G0-09	exit	ADR-0003	docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md	bash docs/tasks/artifacts/formula_language/run_formula_language_census.sh	instrument	-	-
 G0-10	exit	ADR-0004	docs/decisions/decision_adr-0004-interchange-dialects.md	bash docs/tasks/artifacts/interchange/run_interchange_census.sh	instrument	-	-
 G0-11	exit	standards identified	docs/book/src/spec/standards.md	bash docs/tasks/artifacts/standards/run_standards_census.sh	instrument	-	-
 G0-12	exit	procurement	docs/book/src/governance.md	-	director	no evaluation seat is being procured and no searcher exists; the director's ruling of 2026-09-30 accepts this	accepted open by ruling: no target system reads our artifacts back, so the interchange claims stay `cited-from-roadmap` and G6's receiver validation falls to the roadmap's partner-run fallback or does not happen
-G0-13	exit	governance model,review paths	docs/book/src/governance.md	test -f docs/book/src/governance.md && grep -q 'Two review paths' docs/book/src/governance.md && grep -q 'vacant' docs/book/src/governance.md	instrument	-	met as drafted: the model exists, both review paths are defined and the project owner is the director, acting; the domain seat is vacant and governance §8.1 records the four things no acting holder may do (ruling of 2026-09-30)
+G0-13	exit	governance model,review paths	docs/book/src/governance.md	bash docs/tasks/artifacts/g0_exit/run_g0_clause_checks.sh G0-13	instrument	-	met as drafted: the model exists, both review paths are defined and the project owner is the director, acting; the domain seat is vacant and governance §8.1 records the four things no acting holder may do (ruling of 2026-09-30)
 G0-14	exit	reference skirt	docs/book/src/spec/reference-skirt.md	bash docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh	instrument	-	-
 G0-15	clause	-	docs/book/src/spec/i18n-architecture.md	bash docs/tasks/artifacts/i18n/run_i18n_census.sh	instrument	-	-
 G0-16	clause	-	docs/book/src/spec/command-layer.md	bash docs/tasks/artifacts/command_layer/run_command_layer_census.sh	instrument	-	-
-G0-17	clause	-	.github/workflows/	bash -c 'test -f .github/workflows/doctrines.yml && test -f .github/workflows/rust.yml'	instrument	-	-
+G0-17	clause	-	.github/workflows/	bash docs/tasks/artifacts/g0_exit/run_g0_clause_checks.sh G0-17	instrument	-	-
 G0-18	clause	-	crates/sc-units, crates/sc-core	make wasm	instrument	-	-
 G0-19	clause	-	docs/book/src/spec/	bash -c 'mdbook build docs/book >/dev/null 2>&1 && test -d docs/book/book/spec'	instrument	-	-
