@@ -1,7 +1,8 @@
 # What you can use today
 
-StitchCAD currently provides five Rust libraries. They implement numerical and structural
-foundations; they do not yet generate a garment pattern or provide an end-user application.
+StitchCAD currently provides five Rust libraries and [a headless command line](spec/command-line.md). They
+implement numerical and structural foundations; they do not yet generate a garment pattern or provide an
+end-user application.
 G0 contract review is mostly complete with human closure unapproved. G1 remains in progress.
 
 ## Distance to the finished product
@@ -12,7 +13,7 @@ real product path passes its check. Commits and leaves do not move it.
 | Gate | Exit clauses met | Exit clauses | What it proves |
 | --- | --- | --- | --- |
 | G0 | 18 | 19 | The product and its semantics are specified. The evaluation-seat clause stays open by ruling |
-| G1 | 1 | 7 | The architecture runs for real in a browser |
+| G1 | 2 | 7 | The architecture runs for real in a browser |
 | G2 | 0 | 8 | A reference skirt is drafted and exported correctly |
 | G3 | 0 | 11 | Every garment the roadmap names drafts, grades and exports |
 | G4 | 0 | 8 | Factory profiles work, including what is still unknown |
@@ -24,13 +25,13 @@ Run it yourself:
 ```text
 $ bash scripts/gauge.sh
 G0: 18 of 19 clauses met
-G1: 1 of 7 clauses met
+G1: 2 of 7 clauses met
 G2: 0 of 8 clauses met
 G3: 0 of 11 clauses met
 G4: 0 of 8 clauses met
 G5: 0 of 6 clauses met
 G6: 0 of 7 clauses met
-gauge: 19 of 66 clauses met through G6
+gauge: 20 of 66 clauses met through G6
 ```
 
 A count here comes from the clause tables, and a clause counts as met only when its check runs a real
@@ -46,9 +47,9 @@ G1 is the earliest open gate. This is where each of its seven clauses stands:
 | Clause | What the roadmap asks | Met | Where it stands | Owning leaf |
 | --- | --- | --- | --- | --- |
 | `G1-01` | Three runtime profiles compile | not met | The libraries build for the browser target; the named profiles do not exist yet | `.11` |
-| `G1-02` | A real browser run: load, evaluate a recipe, one CSP constraint, save and reopen, render, export | not met | Evaluate works for scalar recipes, with numeric checks on one native and browser pair. A constraint solves as a library, and no browser run calls it yet | `.12` |
+| `G1-02` | A real browser run: load, evaluate a recipe, one CSP constraint, save and reopen, render, export | not met | [The command line](spec/command-line.md) runs evaluate, one constraint, save and reopen natively. No browser run calls them yet, and nothing renders or exports | `.12` |
 | `G1-03` | Canvas-hosting spike for ADR-0002 | not met | Not started | `.13` |
-| `G1-04` | Command bus with revision checks and undo | not met | Working as a library; no real path drives it yet | `.6` |
+| `G1-04` | Command bus with revision checks and undo | met | [The command line](spec/command-line.md) drives it for real: measurement edits, a refused stale revision, undo and redo. The bus's other commands are still library only | `.6` |
 | `G1-05` | Crash-consistent save and recovery | met | [A project](spec/project-store.md) survives a crash at every step of a save, a migration and an autosave, and a killed process, on a real directory. Power loss is not tested, and the browser side comes with the browser run | `.7` |
 | `G1-06` | License-compatible solver builds on all targets | not met | [The kernel](spec/constraints.md) builds natively and for the browser with no dependencies. The license census and the named profiles are still to come | `.15` |
 | `G1-07` | Browser capability matrix with tested versions and limitations | not met | Not started | `.12` |
@@ -66,8 +67,8 @@ checks stay and keep passing.
 
 A feature means the roadmap's next requirement, built by its existing task-tree owner to the contract
 this book gives, with this table and the book's examples changing in the same commit. It refuses what it
-does not support yet with a plain error. The constraint kernel, `.8`, is done. The next one is the project
-store, `.7`, which is under way.
+does not support yet with a plain error. The constraint kernel `.8`, the project store `.7` and the headless
+command line `.10` are done. The next one is the runtime profiles, `.11`.
 
 ## Implemented foundations
 

@@ -336,6 +336,22 @@ A mutation is offered in two phases, because a patternmaker must see the result 
 - **Imported files are data, never instructions** (§7.8): no command is constructed from file content
   without an actor, and an agent may not launder a file's contents into a mutation.
 
+## 5a. Reading the Design, and resuming after a reopen
+
+`CommandBus::state` lends the current Design for reading; a command is still the only way to change it.
+`maximum_issued_revision` is the highest revision issued so far, which undo never lowers, and `audit_sequence` is how
+far the audit order has reached. After a reopen, `resume_issuance` continues from those saved numbers, so a reopened
+Design never reissues one. It refuses with `CommandResumeError` on a bus with no journal, on a bus that has already
+issued something, and when the saved maximum is behind the Design. [The command line](command-line.md#reopening-keeps-the-revision-count)
+shows it working. Undo stacks are not saved yet, so undo does not cross a reopen.
+
+| Name | What it is |
+| --- | --- |
+| `maximum_issued_revision` | The highest revision the bus has issued. Undo never lowers it |
+| `audit_sequence` | How far the bus's audit order has reached |
+| `resume_issuance` | Continues both numbers after a reopen. It runs once, before anything else on the bus |
+| `CommandResumeError` | Why resuming was refused |
+
 ## 6. Structured errors and progress
 
 - **Errors are structured**: a stable token, typed arguments with units, and the clause that was broken —

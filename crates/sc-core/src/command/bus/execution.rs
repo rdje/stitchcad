@@ -20,6 +20,16 @@ use std::{collections::TryReserveError, time::SystemTime};
 #[derive(Clone, Debug, Default, PartialEq, Eq, PartialOrd, Ord)]
 pub struct CommandAuditSequence(DesignRevision);
 impl CommandAuditSequence {
+    /// The sequence at a stated count, to resume after a reopen.
+    #[must_use]
+    pub const fn from_revision(count: DesignRevision) -> Self {
+        Self(count)
+    }
+    /// The count as a revision-shaped number, to save it.
+    #[must_use]
+    pub const fn as_revision(&self) -> &DesignRevision {
+        &self.0
+    }
     pub(super) fn successor_resource_bits(&self) -> Option<u64> {
         let Self(revision) = self;
         revision.successor_resource_bits()
@@ -452,9 +462,82 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
         Ok(bus)
     }
 }
+/// Why a reopened bus could not resume its issued revisions and audit sequence.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum CommandResumeError {
+    /// This bus keeps no edit journal, so it issues nothing to resume.
+    NoJournal,
+    /// This bus has already issued something, and resuming would rewind it.
+    AlreadyIssuing,
+    /// The Design's revision is past the stated maximum, so the saved numbers disagree.
+    BehindCurrent {
+        /// The Design's revision.
+        current: DesignRevision,
+        /// The stated maximum.
+        maximum: DesignRevision,
+    },
+}
+impl fmt::Display for CommandResumeError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            Self::NoJournal => {
+                f.write_str("this bus keeps no edit journal, so it issues nothing to resume")
+            }
+            Self::AlreadyIssuing => {
+                f.write_str("this bus has already issued a revision, and resuming would rewind it")
+            }
+            Self::BehindCurrent { current, maximum } => write!(
+                f,
+                "the Design is at revision {current}, past the saved maximum of {maximum}"
+            ),
+        }
+    }
+}
+impl std::error::Error for CommandResumeError {}
+
+impl<H, A> CommandBus<H, A> {
+    /// The highest revision issued so far. Undo moves the Design back and never lowers this.
+    #[must_use]
+    pub fn maximum_issued_revision(&self) -> Option<&DesignRevision> {
+        self.journal
+            .as_ref()
+            .map(|journal| &journal.maximum_revision)
+    }
+    /// How many effects this bus's audit order has reached.
+    #[must_use]
+    pub fn audit_sequence(&self) -> Option<&CommandAuditSequence> {
+        self.journal.as_ref().map(|journal| &journal.sequence)
+    }
+}
+
 impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAuthoritySource>
     CommandBus<H, A>
 {
+    /// Continue issuing after a reopen, so a reopened Design never reissues a revision or audit number it
+    /// used before. Call it once, before anything else on a newly opened bus.
+    /// # Errors
+    /// There is no journal, this bus has already issued something, or the maximum is behind the Design.
+    pub fn resume_issuance(
+        &mut self,
+        maximum_issued: DesignRevision,
+        sequence: CommandAuditSequence,
+    ) -> Result<(), CommandResumeError> {
+        let current = self.state.inputs().revision().clone();
+        let journal = self.journal.as_mut().ok_or(CommandResumeError::NoJournal)?;
+        if !journal.entries.is_empty() || journal.sequence != CommandAuditSequence::default() {
+            return Err(CommandResumeError::AlreadyIssuing);
+        }
+        if maximum_issued < current {
+            return Err(CommandResumeError::BehindCurrent {
+                current,
+                maximum: maximum_issued,
+            });
+        }
+        journal.maximum_revision = maximum_issued;
+        journal.sequence = sequence;
+        Ok(())
+    }
+
     /// Whether all three installed policies, implemented handler and finite edit capacity are present.
     /// This does not certify current authority, revision, journal room or candidate validity.
     #[must_use]

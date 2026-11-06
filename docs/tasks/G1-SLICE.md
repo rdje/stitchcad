@@ -937,7 +937,7 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Status: `done`
   Goal:0478 full publication45/final inputs; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part633md).
 - ID: `G1-SLICE.7`
-  Status: `in_progress`
+  Status: `done`
   Goal: `sc-store` (§4.5) — canonical-text project directory (stable key order, declared float
   formatting, ULID ids, no wall-clock), schema version + migrations, recoverable-unknown-extension
   preservation, crash-consistent atomic multi-file commits, autosave/recovery, and the repository
@@ -950,8 +950,9 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Acceptance: forced-interruption and failed-migration recovery are tested, not asserted; a
   saved project reopens to a semantically equal instance; two saves of the same state are
   byte-identical.
-  Verification: `pending`
-  Commit: `pending`
+  Verification:engine and project children below;a project reopens equal,two saves are byte-identical,forced interruption and failed migration are tested.
+  Scope:a project holds what exists to save,inputs and recipe. Pieces and the rest of the ontology arrive with G2-2D.10. The browser backend arrives with `.12`. SQLite arrives with G4.
+  Commit:STITCHCAD-G1-0987,0988,0990.
 - ID: `G1-SLICE.7.engine`
   Status: `done`
   Goal:the storage engine under `.7`:canonical text,repository trait,native and memory backends,atomic multi-file commits and recovery.
@@ -1095,13 +1096,21 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Status: `pending`
   Goal: private-bridge; end-to-end caller/relay/target scope, lifecycle and §7.1 admission tests.
 - ID: `G1-SLICE.10`
-  Status: `pending`
+  Status: `done`
   Goal: `sc-cli` — headless command replay that is deterministic: the same command script produces
   the same project state and the same serialized bytes (§4.4; prerequisite for the G2 exit).
   Acceptance: a recorded session replays byte-identically on a second run; failures exit nonzero
   with structured diagnostics; no wall-clock or locale leaks into output.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-cli/**,crates/sc-core/src/command/bus.rs,crates/sc-core/src/command/bus/execution.rs,crates/sc-core/src/command.rs,Cargo.lock,docs/book/src/spec/command-line.md,docs/book/src/spec/command-layer.md,
+  docs/book/src/spec/formula-language/examples.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,docs/book/src/topic-index.md,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-04 asks for a live bus,and only tests drove it. WHERE no program;git ls-files crates/sc-cli | wc -l →0,rc=0.
+  - [x] ADDRESSED:cargo test -p sc-cli exit status →rc=0:the real program replays a recorded session byte-identically under a foreign locale and time zone,edits change results,undo and redo restore them,a stale revision is refused.
+  - [x] ADDRESSED:D285:reopen resumed revision and audit order;edit,edit,undo,save,reopen,edit issues 3,not 2. My first draft reset to 0;I found that by reading the transcript,and CONTROL below removes the fix.
+  - [x] ADDRESSED:D389:23 book values computed from a real Design,and the four closure assertions hold;examples.md corrected.
+  - [x] NO REGRESSION:cargo test -p sc-core --test command_history_contract →rc=0;workspace clippy -D warnings →rc=0;fmt →rc=0;gauge20 of66;all exit statuses captured to retained logs.
+  - [x] CONTROL:one-time,not watched:with the resume_issuance call removed,a_reopened_design_never_reissues fails →rc=101.
+  promotion: declined (no new lesson;D393's rule held).
+  Commit:STITCHCAD-G1-0990.
 - ID: `G1-SLICE.11`
   Status: `pending`
   Goal: the three runtime profiles build (§7.3): `native-full`, `native-headless`, `wasm-viewer`,

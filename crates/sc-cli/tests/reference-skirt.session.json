@@ -1,0 +1,35 @@
+{
+  "format": 1,
+  "design": "01ARZ3NDEKTSV4RRFFQ69G5FAV",
+  "inputs": [
+    {"token": "waist_girth", "um": 740000},
+    {"token": "hip_girth", "um": 980000},
+    {"token": "waist_to_hip", "um": 200000},
+    {"token": "waist_to_hem", "um": 620000},
+    {"token": "ease_waist", "um": 0},
+    {"token": "ease_hip", "um": 40000},
+    {"token": "ss_suppress", "um": 30000},
+    {"token": "dart_len_front", "um": 120000},
+    {"token": "a_line_flare", "um": 30000},
+    {"token": "wb_width", "um": 40000},
+    {"token": "wb_extension", "um": 30000},
+    {"token": "sa_cb", "um": 15000},
+    {"token": "sa_waist", "um": 10000},
+    {"token": "sa_wb_bottom", "um": 10000},
+    {"token": "dart_intake_max", "um": 50000}
+  ],
+  "recipe": "let garment_waist: length = waist_girth + ease_waist\nlet garment_hip: length = hip_girth + ease_hip\nlet quarter_waist: length = garment_waist / 4\nlet quarter_hip: length = garment_hip / 4\nlet suppression: length = quarter_hip - quarter_waist\nlet dart_intake: length = suppression - ss_suppress\nlet side_seam_total: length = 4 * ss_suppress\nlet dart_total: length = 4 * dart_intake\nlet front_dart_centre: length = (quarter_hip - ss_suppress) / 2\nlet back_dart_centre: length = (quarter_hip - ss_suppress) / 2\nlet quarter_hem_width: length = quarter_hip + a_line_flare\nlet garment_hem: length = 4 * quarter_hem_width\nlet hip_to_hem_drop: length = waist_to_hem - waist_to_hip\nlet side_seam_length: length = hypot(hip_to_hem_drop, a_line_flare)\nlet waistband_pattern_length: length = garment_waist + 2 * sa_cb + wb_extension\nlet waistband_cut_width: length = 2 * wb_width + sa_waist + sa_wb_bottom\nlet waistband_fold_position: length = waistband_cut_width / 2\nlet waistband_finished_length: length = waistband_pattern_length - 2 * sa_cb\nlet wb_interfacing_width: length = wb_width\nlet wb_interfacing_length: length = waistband_finished_length\nassert allocation_balance: eps_num = 4 * (ss_suppress + dart_intake) == garment_hip - garment_waist\nassert waist_closure: eps_num = (quarter_hip - ss_suppress) - dart_intake == quarter_waist\nassert waistband_length_closure: eps_num = waistband_pattern_length - 2 * sa_cb - wb_extension == garment_waist\nassert waistband_width_closure: eps_num = waistband_cut_width - sa_waist - sa_wb_bottom == 2 * wb_width\nlet dart_leg_angle: angle = atan2(dart_intake / 2, dart_len_front)\nlet dart_intake_share: ratio = dart_intake / suppression\nlet dart_count: count = if(dart_intake > dart_intake_max, 2, 1)\n",
+  "steps": [
+    {"do": "evaluate"},
+    {"do": "solve", "token": "waist_girth", "at_most_um": 800000},
+    {"do": "change", "token": "waist_girth", "um": 780000},
+    {"do": "evaluate"},
+    {"do": "undo"},
+    {"do": "evaluate"},
+    {"do": "redo"},
+    {"do": "save"},
+    {"do": "save"},
+    {"do": "reopen"},
+    {"do": "evaluate"}
+  ]
+}

@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0990 — a headless command line drives the real command bus;G1-04 is met
+
+`stitchcad replay` runs a recorded session:the reference skirt's recipe gives the book's values,an edit changes them,undo and redo restore them,a stale revision is refused,
+and the same session prints the same bytes. Reopening never reissues a revision (D285). The worked examples' status is corrected (D389). The gauge reads 20 of 66.
+
 ## STITCHCAD-G1-0989 — strict clippy passes on the store;a false record corrected (D393)
 
 0988's leaf recorded a clippy pass that was really a failure,hidden by reading it through tail. The lint is fixed and the record corrected. No behavior changes.

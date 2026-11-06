@@ -67,6 +67,7 @@
   - [The reference skirt](spec/reference-skirt.md)
   - [Constraint kernel](spec/constraints.md)
   - [Project store](spec/project-store.md)
+  - [Command line](spec/command-line.md)
 - [Formula syntax API](annexes/formula-syntax.md)
   - [Canonical formula rational values](annexes/formula-rationals.md)
   - [Trig certificate feasibility](annexes/formula-trig-certificates.md)

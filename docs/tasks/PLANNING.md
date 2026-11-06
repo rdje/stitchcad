@@ -15,7 +15,7 @@ D292 fixed0445; [whole ontology-clause closure](../history/window23.md#stitchcad
 D290/D291 fixed0442; [whole native reserve/setup closure ledger](../history/stitchcad-devnotes-part597.md).
 D289 fixed0441; [whole native source-copy diagnosis/fix/privacy proof](../history/stitchcad-devnotes-part593.md).
 D287/D288 fixed0440; [whole native bypass/fix and package metadata proof](../history/stitchcad-devnotes-part592.md).
-D285 runtime fixed0437; persistence/reopen issuance/order remains owned/pending in G1-SLICE.7; [whole D285/D286 diagnosis and runtime/claim closure](../history/stitchcad-devnotes-part591.md).
+D285 runtime fixed0437; persistence/reopen issuance/order fixed0990 in G1-SLICE.10; [whole D285/D286 diagnosis and runtime/claim closure](../history/stitchcad-devnotes-part591.md).
 D283/D284 fixed; [whole correction/proofs](../history/stitchcad-devnotes-part581.md).
 ## Goal
 
@@ -1191,8 +1191,7 @@ D387–D388 decided/fixed0977–0978;[whole records](PLANNING-evidence.md#d387--
 
 D392 fixed0985;[record](PLANNING-evidence.md#d392--weak-g0-checks). D393 fixed0989;[record](PLANNING-evidence.md#d393--recorded-a-pass-from-a-tail-line).
 
-## D389 — worked-examples status line is unproven
+## D389 — worked-examples status line was stale
 
-Owner:G1-SLICE.5g.1;P2. spec/formula-language/examples.md says the libraries do not compute its Value column,yet scalar recipe
-execution exists. git grep front_dart_centre crates/sc-core/tests →0,so no product test has run those bindings either way.
-Settle it by running the chapter's scalar bindings;the geometry rows zip_notch_param and dart_apex_depth stay with G2 geometry.
+Fixed0990. crates/sc-cli/tests/session.rs computes the chapter's scalar bindings from a real Design and compares 23 values with the book;the
+four closure assertions hold. The status line now says so. Geometry rows zip_notch_param and dart_apex_depth stay with G2;refusals stay with G1-SLICE.5g.1.

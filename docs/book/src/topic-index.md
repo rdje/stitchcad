@@ -115,6 +115,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [The reference skirt](spec/reference-skirt.md)
 - [Constraint kernel](spec/constraints.md)
 - [Project store](spec/project-store.md)
+- [Command line](spec/command-line.md)
 - [The supported envelope](spec/feature-matrix.md)
 - [Uncertainty and numeric refusals](spec/measurement-inputs.md)
 - [Units and tolerances](spec/units-and-tolerances.md)

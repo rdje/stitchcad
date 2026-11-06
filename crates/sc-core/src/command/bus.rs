@@ -43,7 +43,7 @@ pub use resource::{
 mod execution;
 pub use execution::{
     CommandAuditEntry, CommandAuditSequence, CommandGroupCommit, CommandGroupCommitError,
-    CommandGroupCommitResult, CommandRevisionChange,
+    CommandGroupCommitResult, CommandResumeError, CommandRevisionChange,
 };
 mod history;
 pub use history::{
@@ -397,6 +397,12 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
             model_limits: None,
             retained_limits: None,
         })
+    }
+
+    /// The current Design, for reading. The only way to change it is a command through this bus.
+    #[must_use]
+    pub const fn state(&self) -> &DesignGarment<H> {
+        &self.state
     }
 
     /// Implemented `execute` entry-point subset, separate from `commit_group` and the full catalog.

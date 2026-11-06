@@ -6,9 +6,11 @@
 > [grammar](grammar.md), never typed twice. A row that disagrees with the fixture is a refusal, so
 > the two chapters cannot drift into describing two garments (the D27 defect class).
 
-The Rust libraries currently parse and normalize all21 worked statements and produce their exact
-ordered identity. They do not yet compute this chapter's Value column or execute its semantic
-refusals. Three refusal examples fail syntax parsing now; ten await static validation/evaluation.
+The Rust libraries parse and normalize all21 worked statements and produce their exact ordered identity.
+[The command line](../command-line.md) computes the scalar rows of this chapter's Value column from a real
+Design, and its test compares them with this table. `zip_notch_param` and `dart_apex_depth` need a constructed
+edge and point, so they wait for G2. The libraries do not yet execute the semantic refusals: three refusal
+examples fail syntax parsing now; ten await static validation/evaluation.
 The [coupled input review](../../annexes/formula-recipe-inputs.md#coupled-input-and-identity-review)
 shows the complete proof and remaining owners.
 

@@ -9,6 +9,7 @@ requires the named contracts and later proof owners.
 | Family | Roadmap | Public source and verification | Book contract |
 | --- | --- | --- | --- |
 | Owned source metadata | §3.1/§4.4; G1 | sc-core/sc-measure; G1-SLICE.6.4.2.d.4.3 | [Actual sources and exact set pins](../spec/design-inputs.md); focused ownership checks; full Design follows |
+| Command line | §4.4/§7.3; G1 | sc-cli; G1-SLICE.10 | [Session replay over the bus](../spec/command-line.md); geometry and any edit but a measurement change are still to come |
 | Project store | §4.5; G1 | sc-store; G1-SLICE.7 | [Projects, commits, recovery, migrations and autosave](../spec/project-store.md); saving a Design, IndexedDB and SQLite are still to come |
 | Constraint kernel | §6.1/§6.2; G1 | sc-constraints; G1-SLICE.8 | [Typed rules and the solver](../spec/constraints.md); profile files, composition and the Profile Editor belong to G4 |
 | Units/tolerances | §4.2; G0/G1 | sc-units; G1-SLICE.2/.5a.3c.1 | [Numerical contract](../spec/units-and-tolerances.md), [wide rounding](numeric-rounding.md) |

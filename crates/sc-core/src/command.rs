@@ -57,7 +57,7 @@ pub use bus::{
     CommandGroupPreviewStep, CommandHistoryAuditEntry, CommandHistoryChange, CommandHistoryError,
     CommandHistoryResult, CommandIdentityError, CommandLengthChange, CommandMaterialChange,
     CommandMaterialPreview, CommandMeasurementPreview, CommandNotchPreview, CommandPieceList,
-    CommandPreview, CommandPreviewError, CommandResult, CommandRevisionChange,
+    CommandPreview, CommandPreviewError, CommandResult, CommandResumeError, CommandRevisionChange,
 };
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{
