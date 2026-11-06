@@ -244,6 +244,7 @@ scripts/check_gap_claims.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/he
 scripts/check_handoff.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_lesson_promotion.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_live_doc_currency.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_licenses.sh	delegate	G1-SLICE.15	Whole shell source/heredoc body retained;reads cargo metadata and writes logs under target only.
 scripts/check_live_doc_size.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_memory_architecture.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_no_background_jobs.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.

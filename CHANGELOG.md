@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-0992 — the license census finds no copyleft;G1-06 is met
+
+`bash scripts/check_licenses.sh` reads every package's license from `cargo metadata`,refuses copyleft and anything unreviewed,and proves the solver builds alone for both targets. The gauge reads 22 of 66.
+
 ## STITCHCAD-G1-0991 — three runtime profiles build;a session can draw and export;G1-01 is met
 
 `native-full`,`native-headless` and `wasm-viewer` each have one command and a stated list of what they leave out. Sessions gain `render`,a schematic from evaluated values,and `export`.

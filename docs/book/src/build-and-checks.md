@@ -630,6 +630,25 @@ inside the glossary probes, which also refuse a lost gate registration:
 bash scripts/check_book_censuses.sh --self-test
 ```
 
+## The license census
+
+ADR-0001 settled that the core is `MIT OR Apache-2.0` and that nothing copyleft ships in it. This reads each
+package's own license field from `cargo metadata`, including test dependencies, so the list cannot go stale.
+
+```text
+$ bash scripts/check_licenses.sh
+autocfg 1.5.1: Apache-2.0 OR MIT
+num-bigint 0.4.6: MIT OR Apache-2.0
+num-integer 0.1.46: MIT OR Apache-2.0
+num-traits 0.2.19: MIT OR Apache-2.0
+license census: 11 packages, 4 third-party, 0 refused
+solver: builds natively and for wasm32-unknown-unknown, alone, and is in the headless and browser profiles
+```
+
+It refuses a package with no license field, a license outside its short permissive list, and a workspace crate not
+under the workspace license. A new license stops the census until a person reads it. The field is the crate's own
+claim: this does not read LICENSE files. The Z3 oracle does not appear because nothing links it.
+
 ## Commits stay on the roadmap
 
 Every commit names the roadmap clause it advances. The director asked for this on 2026-11-06, after about

@@ -1164,15 +1164,21 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Verification: `pending`
   Commit: `pending`
 - ID: `G1-SLICE.15`
-  Status: `pending`
+  Status: `done`
   Goal: the license census (G1 exit: "license-compatible solver builds on all targets") — every
   dependency's license recorded, copyleft excluded from the shipped tree per ADR-0001, solver
   builds on all three profiles.
   Acceptance: a re-runnable census command (dependency list + license fields) whose output is
   recorded in the leaf; any GPL/LGPL dependency is either absent or quarantined behind a
   non-default, non-shipped feature with the reason recorded.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:scripts/check_licenses.sh,docs/book/src/build-and-checks.md,docs/book/src/availability.md,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-06 asks that the solver's license holds. WHERE no census ran;git ls-files scripts/check_licenses.sh | wc -l →0,rc=0.
+  - [x] ADDRESSED:bash scripts/check_licenses.sh →license census:11 packages,4 third-party,0 refused;solver builds natively and for wasm32,alone,and is in both profiles,rc=0. Output in the build chapter.
+  - [x] CONTROL:one-time:a planted GPL-3.0 license field in a copy of the metadata →refused:num-traits is under GPL-3.0,which nobody has reviewed,rc=1. Without that the census would prove nothing.
+  - [x] NO REGRESSION:gauge22 of66,rc=0;BOOK-CENSUSES rc=0. No crate changed.
+  - [x] HONEST:a license field is the crate's own claim;LICENSE files are unread. Windows is not built anywhere.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-0992.
 - ID: `G1-SLICE.16`
   Status: `pending`
   Goal: G1 exit review — every exit clause cited against its artifact, the capability matrix

@@ -9,7 +9,7 @@ G1-02	exit	intended browser target runs a real	-	-	unbuilt	-	only evaluate works
 G1-03	exit	canvas-hosting spike	-	-	unbuilt	-	-	G1-SLICE.13
 G1-04	exit	command bus live	crates/sc-cli	cargo test -p sc-cli --test session	instrument	-	the real program drives measurement edits,a refused stale revision,undo and redo;the other commands are library only	G1-SLICE.6
 G1-05	exit	crash-consistent save/recovery	crates/sc-store	cargo test -p sc-store --test project_kill --test project --test crash	instrument	-	shown on a real project directory and in memory;power loss is not tested;the browser side comes with G1-SLICE.12	G1-SLICE.7
-G1-06	exit	license-compatible solver builds	-	-	unbuilt	-	-	G1-SLICE.15
+G1-06	exit	license-compatible solver builds	scripts/check_licenses.sh	bash scripts/check_licenses.sh	instrument	-	this machine natively and wasm32 here;hosted CI adds Linux;Windows is not built anywhere yet;a license field is a crate's own claim	G1-SLICE.15
 G1-07	exit	capability matrix	-	-	unbuilt	-	-	G1-SLICE.12
 G2-01	exit	reference skirt drafted through CLI	-	-	unbuilt	-	-	G2-2D.8
 G2-02	exit	minimal 2D viewer/editor	-	-	unbuilt	-	-	G2-2D.9
