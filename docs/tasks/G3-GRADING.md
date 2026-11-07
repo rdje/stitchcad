@@ -182,13 +182,20 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit: `pending`
 
 - ID: `G3-GRADING.6`
-  Status: `pending`
+  Status: `done`
   Goal: instantiation path A — measurement-driven regeneration: re-evaluate the construction recipe
   per size / per body (§3.3), MTM-ready.
   Acceptance: a size set evaluates to a graded family with no hand edits; regeneration is
   deterministic; per-size diagnostics name the formulas that drove each point.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-cli/**,crates/sc-api/src/lib.rs,crates/sc-viewer/src/shell.rs,conformance/reference-*/session.json,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-04 needs regeneration as a thing the product does,and only a test changed measurements one at a time. WHERE nothing named a size set or drew one:git grep -c regenerate 29e0d7fa -- crates/sc-cli/src/ →rc=1.
+  - [x] ADDRESSED,FAMILY:a draft's sizes,and a regenerate step drawing each with its own fits and closures,changing nothing in the Design. cargo test -p sc-cli --test family →rc=0:the sample is the golden to the byte for three garments,and five digests differ.
+  - [x] ADDRESSED,DIAGNOSTICS:each size names for every boundary point the length,value,formula and inputs behind each axis.
+  - [x] ADDRESSED,MEASURED:each size is measured from its drawing against what it asked for,which the instantiation chapter calls the check that matters,and each session's table is held to its chapter.
+  - [x] NOT SHOWN,STATED:MTM-ready means a size is any set of inputs,and no body has been drafted this way. The steps are an engineer's and from no standard. Nobody has fitted any size. Size sets here are the draft's,and the core's SizeSet stays unbound.
+  - [x] NO REGRESSION:skirt,bodice and trousers goldens byte-identical with labels now written {size};gauge.sh --checks →rc=0;cargo test -p sc-artifacts -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1018.
 
 - ID: `G3-GRADING.7`
   Status: `pending`

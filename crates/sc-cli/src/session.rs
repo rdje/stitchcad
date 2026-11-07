@@ -508,6 +508,101 @@ impl<R: Repository> Session<R> {
         Ok(Value::Object(result))
     }
 
+    // Every size of the set, each a fresh evaluation of the recipe with nothing inherited from another. It changes nothing in the Design.
+    fn regenerate(
+        &mut self,
+        step: usize,
+        fields: &BTreeMap<String, Value>,
+    ) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "regenerate", message);
+        let document = self
+            .document()
+            .ok_or_else(|| fail("there is nothing drafted to size yet".to_owned()))?;
+        let sizes = crate::family::sizes_of(&document).map_err(fail)?;
+        let mut reports = Vec::with_capacity(sizes.list.len());
+        let mut family = Vec::with_capacity(sizes.list.len());
+        for size in &sizes.list {
+            let at_size = |message: String| fail(format!("size {}: {message}", size.name));
+            let inputs = crate::family::inputs_at(&self.inputs, size).map_err(fail)?;
+            let mut described = document.clone();
+            described.insert("size".to_owned(), Value::Text(size.name.clone()));
+            let solved = self
+                .solved(step, &inputs, Some(&described))
+                .map_err(|failure| at_size(failure.message))?;
+            let evaluated = self
+                .evaluated(step, &solved)
+                .map_err(|failure| at_size(failure.message))?;
+            let known = known_lengths(&solved, &evaluated);
+            let pattern =
+                crate::draft::draft(&known, &described, &self.design_text, &self.revision_text())
+                    .map_err(at_size)?;
+            let walked = sc_artifacts::walk(&pattern)
+                .map_err(|error| at_size(format!("the seam {}: {}", error.seam, error.message)))?;
+            let closures = sc_artifacts::closure_reports(&pattern);
+            let text = sc_artifacts::to_canonical_text(&pattern);
+            let mut report = BTreeMap::new();
+            report.insert("size".to_owned(), Value::Text(size.name.clone()));
+            report.insert(
+                "canonical_sha256".to_owned(),
+                Value::Text(sc_store::sha256_hex(text.as_bytes())),
+            );
+            report.insert(
+                "walk".to_owned(),
+                Value::List(
+                    walked
+                        .iter()
+                        .map(sc_artifacts::WalkReport::to_value)
+                        .collect(),
+                ),
+            );
+            report.insert(
+                "closures".to_owned(),
+                Value::List(
+                    closures
+                        .iter()
+                        .map(sc_artifacts::ClosureReport::to_value)
+                        .collect(),
+                ),
+            );
+            report.insert(
+                "fits".to_owned(),
+                Value::List(
+                    pattern
+                        .fits
+                        .iter()
+                        .map(sc_artifacts::Fit::to_value)
+                        .collect(),
+                ),
+            );
+            let formulas = crate::family::formulas(&self.recipe, &solved);
+            report.insert(
+                "points".to_owned(),
+                Value::List(crate::family::points_of(&described, &known, &formulas)),
+            );
+            reports.push(Value::Object(report));
+            let mut member = BTreeMap::new();
+            member.insert("size".to_owned(), Value::Text(size.name.clone()));
+            member.insert(
+                "pattern".to_owned(),
+                sc_store::parse(&text).map_err(|error| at_size(error.to_string()))?,
+            );
+            family.push(Value::Object(member));
+        }
+        if let Some(target) = fields.get("path").and_then(Value::as_text) {
+            let mut whole = BTreeMap::new();
+            whole.insert("sample".to_owned(), Value::Text(sizes.sample.clone()));
+            whole.insert("sizes".to_owned(), Value::List(family));
+            let path = sc_store::FilePath::new(target).map_err(|error| fail(error.to_string()))?;
+            self.base
+                .set_file(path, Value::Object(whole).to_text())
+                .map_err(|error| fail(error.to_string()))?;
+        }
+        let mut result = BTreeMap::new();
+        result.insert("sample".to_owned(), Value::Text(sizes.sample));
+        result.insert("sizes".to_owned(), Value::List(reports));
+        Ok(Value::Object(result))
+    }
+
     // A person or an agent says where an orphaned reference goes, or that it is gone. Nothing else ever does.
     fn repair_reference(
         &mut self,
@@ -1364,7 +1459,7 @@ fn solve(
 }
 
 /// The steps a session can take. Anything else is refused by name.
-pub const STEPS: [&str; 19] = [
+pub const STEPS: [&str; 20] = [
     "evaluate",
     "preview",
     "closures",
@@ -1374,6 +1469,7 @@ pub const STEPS: [&str; 19] = [
     "edit_edge",
     "references",
     "repair_reference",
+    "regenerate",
     "change",
     "undo",
     "redo",
@@ -1457,7 +1553,9 @@ fn required(step: &str) -> Option<CommandAuthority> {
         }
         "preview" => Some(CommandAuthority::Propose),
         "save" => Some(CommandAuthority::Commit),
-        "draft" | "export_pattern" | "render" | "export" => Some(CommandAuthority::Generate),
+        "draft" | "export_pattern" | "render" | "export" | "regenerate" => {
+            Some(CommandAuthority::Generate)
+        }
         _ => None,
     }
 }
@@ -1591,6 +1689,7 @@ impl<R: Repository> Running<R> {
             "true_seam" => state.true_seam(step, item)?,
             "edit_edge" => state.edit_edge(step, item)?,
             "references" => state.references(step)?,
+            "regenerate" => state.regenerate(step, item)?,
             "repair_reference" => state.repair_reference(step, item)?,
             "change" => {
                 let token = item

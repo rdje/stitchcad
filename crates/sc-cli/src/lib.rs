@@ -4,6 +4,7 @@
 
 mod design;
 mod draft;
+mod family;
 
 #[doc = include_str!("../../../docs/book/src/spec/closures.md")]
 mod closures_examples {}
@@ -19,6 +20,9 @@ mod bodice_examples {}
 
 #[doc = include_str!("../../../docs/book/src/spec/reference-trousers.md")]
 mod trousers_examples {}
+
+#[doc = include_str!("../../../docs/book/src/spec/grading.md")]
+mod grading_examples {}
 mod outline;
 mod session;
 

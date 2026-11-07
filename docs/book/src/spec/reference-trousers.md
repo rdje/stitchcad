@@ -259,7 +259,7 @@ Everything else is finished rather than sewn to another piece. A test holds this
 
 ## 12. Sizes
 
-One step moves each measurement by the amount below. A test draws each size from the base by changing the measurements, then checks that it closes and walks. That is a re-draft for each size, and not grading, and a label on any of them still says M.
+One step moves each measurement by the amount below. A test draws each size from the base by changing the measurements, then checks that it closes and walks. That is a re-draft for each size, and not grading. [`regenerate`](grading.md) draws the whole set the session declares, and a label there says its own size.
 
 | Size | Steps from M |
 | --- | --- |
@@ -324,6 +324,7 @@ The bag's mouth is straight and the seam it is sewn to has a slight curve, so th
 | `hole` | Where its hole is |
 | `toward` | Which way a hole runs |
 | `assert` | A closure check in the recipe |
+| `regenerate` | The step that draws every size |
 | `dart` | A piece's waist dart |
 | `single` | One mark |
 | `double` | Two marks |

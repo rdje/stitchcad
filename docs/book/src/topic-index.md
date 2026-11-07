@@ -78,6 +78,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Typed artifact requests](spec/artifact-requests.md)
 - [Typed evaluation requests](spec/evaluation-requests.md)
 - [Instantiation paths](spec/instantiation-paths.md)
+- [Grading a garment](spec/grading.md)
 - [Interchange and the envelope](spec/glossary/interchange-and-envelope.md)
 - [Interchange dialects](spec/interchange-dialects.md)
 - [Internationalization](spec/i18n-architecture.md)

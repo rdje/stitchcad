@@ -376,8 +376,12 @@ fn text_in_the_data_stays_data() {
     let mut server = Server::start(&directory, &[]);
     server.call("start_design", &opening()).expect("starts");
     let draft = drawing().replace(
-        "skirt_front, size M, cut 1, shell, colorway not specified",
+        "skirt_front, size {size}, cut 1, shell, colorway not specified",
         injected,
+    );
+    assert!(
+        draft.contains(injected),
+        "the label this test replaces is still there"
     );
     server.call("draft_pattern", &draft).expect("draws");
     let described = server.call("describe_pattern", "{}").expect("describes");

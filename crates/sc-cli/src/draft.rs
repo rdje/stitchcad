@@ -508,7 +508,8 @@ fn seat_notch(cut: &mut Vec<Point>, mark: &mut Mark) -> Result<(), String> {
     Ok(())
 }
 
-fn labels(lengths: &Lengths, fields: &Fields) -> Result<Vec<Text>, String> {
+// A label is written with `{size}` where the size goes, so that it says the size it is on.
+fn labels(lengths: &Lengths, fields: &Fields, size: &str) -> Result<Vec<Text>, String> {
     let Some(listed) = fields.get("labels").and_then(Value::as_list) else {
         return Ok(Vec::new());
     };
@@ -521,7 +522,7 @@ fn labels(lengths: &Lengths, fields: &Fields) -> Result<Vec<Text>, String> {
                 text: required(item, "text")?
                     .as_text()
                     .ok_or("a label's text must be text")?
-                    .to_owned(),
+                    .replace("{size}", size),
             })
         })
         .collect()
@@ -1821,7 +1822,7 @@ fn draw(
             }
             DrawnPiece {
                 quantity,
-                ..mirror(original, &name, labels(lengths, fields)?)?
+                ..mirror(original, &name, labels(lengths, fields, &size)?)?
             }
         } else {
             let moved_corners = moves.get(&name).map_or(&[][..], Vec::as_slice);
@@ -1867,7 +1868,7 @@ fn draw(
                 grain: *grain,
                 internal,
                 marks: notches,
-                labels: labels(lengths, fields)?,
+                labels: labels(lengths, fields, &size)?,
                 closures,
                 grade_points,
             }

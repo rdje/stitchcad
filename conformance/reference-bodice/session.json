@@ -413,7 +413,7 @@
                 "front_label_x",
                 "front_label_y"
               ],
-              "text": "bodice_front, size M, cut 1, shell, colorway not specified"
+              "text": "bodice_front, size {size}, cut 1, shell, colorway not specified"
             },
             {
               "at": [
@@ -573,7 +573,7 @@
                 "back_label_x",
                 "back_label_y"
               ],
-              "text": "bodice_back_right, size M, cut 1, shell, colorway not specified"
+              "text": "bodice_back_right, size {size}, cut 1, shell, colorway not specified"
             }
           ],
           "name": "bodice_back_right",
@@ -616,7 +616,7 @@
                 "back_label_x",
                 "back_label_y"
               ],
-              "text": "bodice_back_left, size M, cut 1, shell, colorway not specified"
+              "text": "bodice_back_left, size {size}, cut 1, shell, colorway not specified"
             }
           ],
           "mirror_of": "bodice_back_right",
@@ -705,7 +705,7 @@
                 "sleeve_label_x",
                 "sleeve_label_y"
               ],
-              "text": "sleeve_right, size M, cut 1, shell, colorway not specified"
+              "text": "sleeve_right, size {size}, cut 1, shell, colorway not specified"
             }
           ],
           "name": "sleeve_right",
@@ -748,7 +748,7 @@
                 "sleeve_label_x",
                 "sleeve_label_y"
               ],
-              "text": "sleeve_left, size M, cut 1, shell, colorway not specified"
+              "text": "sleeve_left, size {size}, cut 1, shell, colorway not specified"
             }
           ],
           "mirror_of": "sleeve_right",
@@ -836,7 +836,7 @@
                 "collar_label_x",
                 "collar_label_y"
               ],
-              "text": "collar_right, size M, cut 2, shell, colorway not specified"
+              "text": "collar_right, size {size}, cut 2, shell, colorway not specified"
             }
           ],
           "name": "collar_right",
@@ -861,7 +861,7 @@
                 "collar_label_x",
                 "collar_label_y"
               ],
-              "text": "collar_left, size M, cut 2, shell, colorway not specified"
+              "text": "collar_left, size {size}, cut 2, shell, colorway not specified"
             }
           ],
           "mirror_of": "collar_right",
@@ -1353,6 +1353,94 @@
         }
       ],
       "size": "M",
+      "sizes": {
+        "list": [
+          {
+            "inputs": {
+              "across_back": 340000,
+              "across_chest": 320000,
+              "apex_from_cf": 85000,
+              "bust_girth": 860000,
+              "collar_fall": 36000,
+              "collar_stand": 28000,
+              "nape_to_waist": 400000,
+              "neck_girth": 350000,
+              "scye_depth": 210000,
+              "shoulder_length": 119000,
+              "sleeve_length": 580000,
+              "upper_arm_girth": 260000,
+              "waist_girth": 660000,
+              "waist_to_apex": 160000,
+              "wrist_girth": 150000
+            },
+            "name": "XS"
+          },
+          {
+            "inputs": {
+              "across_back": 350000,
+              "across_chest": 330000,
+              "apex_from_cf": 87500,
+              "bust_girth": 900000,
+              "collar_fall": 38000,
+              "collar_stand": 29000,
+              "nape_to_waist": 405000,
+              "neck_girth": 360000,
+              "scye_depth": 215000,
+              "shoulder_length": 122000,
+              "sleeve_length": 585000,
+              "upper_arm_girth": 275000,
+              "waist_girth": 700000,
+              "waist_to_apex": 165000,
+              "wrist_girth": 155000
+            },
+            "name": "S"
+          },
+          {
+            "name": "M"
+          },
+          {
+            "inputs": {
+              "across_back": 370000,
+              "across_chest": 350000,
+              "apex_from_cf": 92500,
+              "bust_girth": 980000,
+              "collar_fall": 42000,
+              "collar_stand": 31000,
+              "nape_to_waist": 415000,
+              "neck_girth": 380000,
+              "scye_depth": 225000,
+              "shoulder_length": 128000,
+              "sleeve_length": 595000,
+              "upper_arm_girth": 305000,
+              "waist_girth": 780000,
+              "waist_to_apex": 175000,
+              "wrist_girth": 165000
+            },
+            "name": "L"
+          },
+          {
+            "inputs": {
+              "across_back": 380000,
+              "across_chest": 360000,
+              "apex_from_cf": 95000,
+              "bust_girth": 1020000,
+              "collar_fall": 44000,
+              "collar_stand": 32000,
+              "nape_to_waist": 420000,
+              "neck_girth": 390000,
+              "scye_depth": 230000,
+              "shoulder_length": 131000,
+              "sleeve_length": 600000,
+              "upper_arm_girth": 320000,
+              "waist_girth": 820000,
+              "waist_to_apex": 180000,
+              "wrist_girth": 170000
+            },
+            "name": "XL"
+          }
+        ],
+        "sample": "M"
+      },
       "style": "reference-bodice"
     },
     {

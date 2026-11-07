@@ -273,7 +273,7 @@ Everything else is finished rather than sewn to another piece. A test holds this
 
 ## 11. Sizes
 
-One step moves each measurement by the amount below. A test draws each size from the base by changing the measurements, then checks that it closes and walks. That is a re-draft for each size, and not grading, and a label on any of them still says M.
+One step moves each measurement by the amount below. A test draws each size from the base by changing the measurements, then checks that it closes and walks. That is a re-draft for each size, and not grading. [`regenerate`](grading.md) draws the whole set the session declares, and a label there says its own size.
 
 | Size | Steps from M |
 | --- | --- |
@@ -340,6 +340,7 @@ The cap is one cubic on each side, which is a smoother shape than a patternmaker
 | `INTCUT` | The file's layer for internal lines |
 | `CUT` | The file's layer for the cut line |
 | `assert` | A closure check in the recipe |
+| `regenerate` | The step that draws every size |
 | `waist_dart` | The dart at a bodice piece's waist |
 | `bust_dart` | The dart from the front's side seam toward the bust point |
 | `single` | One mark |

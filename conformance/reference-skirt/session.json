@@ -175,7 +175,7 @@
                 "grain_x",
                 "-label_y"
               ],
-              "text": "skirt_front, size M, cut 1, shell, colorway not specified"
+              "text": "skirt_front, size {size}, cut 1, shell, colorway not specified"
             },
             {
               "at": [
@@ -296,7 +296,7 @@
                 "grain_x",
                 "-label_y"
               ],
-              "text": "skirt_back_right, size M, cut 1, shell, colorway not specified, R"
+              "text": "skirt_back_right, size {size}, cut 1, shell, colorway not specified, R"
             }
           ],
           "name": "skirt_back_right",
@@ -331,7 +331,7 @@
                 "-grain_x",
                 "-label_y"
               ],
-              "text": "skirt_back_left, size M, cut 1, shell, colorway not specified, L"
+              "text": "skirt_back_left, size {size}, cut 1, shell, colorway not specified, L"
             }
           ],
           "mirror_of": "skirt_back_right",
@@ -407,7 +407,7 @@
                 "band_label_x",
                 "band_label_y"
               ],
-              "text": "waistband, size M, cut 1, shell, colorway not specified"
+              "text": "waistband, size {size}, cut 1, shell, colorway not specified"
             }
           ],
           "name": "waistband",
@@ -518,7 +518,7 @@
                 "interfacing_grain_left",
                 "interfacing_label_y"
               ],
-              "text": "waistband_interfacing, size M, cut 1, interfacing, colorway not specified"
+              "text": "waistband_interfacing, size {size}, cut 1, interfacing, colorway not specified"
             }
           ],
           "name": "waistband_interfacing",
@@ -728,6 +728,46 @@
         }
       ],
       "size": "M",
+      "sizes": {
+        "list": [
+          {
+            "inputs": {
+              "hip_girth": 900000,
+              "waist_girth": 660000,
+              "waist_to_hem": 600000
+            },
+            "name": "XS"
+          },
+          {
+            "inputs": {
+              "hip_girth": 940000,
+              "waist_girth": 700000,
+              "waist_to_hem": 610000
+            },
+            "name": "S"
+          },
+          {
+            "name": "M"
+          },
+          {
+            "inputs": {
+              "hip_girth": 1020000,
+              "waist_girth": 780000,
+              "waist_to_hem": 630000
+            },
+            "name": "L"
+          },
+          {
+            "inputs": {
+              "hip_girth": 1060000,
+              "waist_girth": 820000,
+              "waist_to_hem": 640000
+            },
+            "name": "XL"
+          }
+        ],
+        "sample": "M"
+      },
       "style": "reference_skirt"
     },
     {

@@ -327,7 +327,7 @@
                 "front_grain_x",
                 "-front_label_y"
               ],
-              "text": "trouser_front_right, size M, cut 1, shell, colorway not specified"
+              "text": "trouser_front_right, size {size}, cut 1, shell, colorway not specified"
             }
           ],
           "name": "trouser_front_right",
@@ -374,7 +374,7 @@
                 "front_grain_x",
                 "-front_label_y"
               ],
-              "text": "trouser_front_left, size M, cut 1, shell, colorway not specified"
+              "text": "trouser_front_left, size {size}, cut 1, shell, colorway not specified"
             }
           ],
           "mirror_of": "trouser_front_right",
@@ -498,7 +498,7 @@
                 "back_grain_x",
                 "-front_label_y"
               ],
-              "text": "trouser_back_right, size M, cut 1, shell, colorway not specified"
+              "text": "trouser_back_right, size {size}, cut 1, shell, colorway not specified"
             }
           ],
           "name": "trouser_back_right",
@@ -553,7 +553,7 @@
                 "back_grain_x",
                 "-front_label_y"
               ],
-              "text": "trouser_back_left, size M, cut 1, shell, colorway not specified"
+              "text": "trouser_back_left, size {size}, cut 1, shell, colorway not specified"
             }
           ],
           "mirror_of": "trouser_back_right",
@@ -629,7 +629,7 @@
                 "band_label_x",
                 "band_label_y"
               ],
-              "text": "waistband, size M, cut 1, shell, colorway not specified, fold on the line"
+              "text": "waistband, size {size}, cut 1, shell, colorway not specified, fold on the line"
             }
           ],
           "name": "waistband",
@@ -721,7 +721,7 @@
                 "bag_label_x",
                 "-bag_label_y"
               ],
-              "text": "pocket_bag_right, size M, cut 2, shell, colorway not specified"
+              "text": "pocket_bag_right, size {size}, cut 2, shell, colorway not specified"
             }
           ],
           "name": "pocket_bag_right",
@@ -738,7 +738,7 @@
                 "bag_label_x",
                 "-bag_label_y"
               ],
-              "text": "pocket_bag_left, size M, cut 2, shell, colorway not specified"
+              "text": "pocket_bag_left, size {size}, cut 2, shell, colorway not specified"
             }
           ],
           "mirror_of": "pocket_bag_right",
@@ -1123,6 +1123,66 @@
         }
       ],
       "size": "M",
+      "sizes": {
+        "list": [
+          {
+            "inputs": {
+              "crotch_depth": 260000,
+              "hem_back": 230000,
+              "hem_front": 190000,
+              "hip_girth": 900000,
+              "thigh_girth": 540000,
+              "waist_girth": 660000,
+              "waist_to_hem": 1000000,
+              "waist_to_hip": 190000
+            },
+            "name": "XS"
+          },
+          {
+            "inputs": {
+              "crotch_depth": 265000,
+              "hem_back": 235000,
+              "hem_front": 195000,
+              "hip_girth": 940000,
+              "thigh_girth": 560000,
+              "waist_girth": 700000,
+              "waist_to_hem": 1010000,
+              "waist_to_hip": 195000
+            },
+            "name": "S"
+          },
+          {
+            "name": "M"
+          },
+          {
+            "inputs": {
+              "crotch_depth": 275000,
+              "hem_back": 245000,
+              "hem_front": 205000,
+              "hip_girth": 1020000,
+              "thigh_girth": 600000,
+              "waist_girth": 780000,
+              "waist_to_hem": 1030000,
+              "waist_to_hip": 205000
+            },
+            "name": "L"
+          },
+          {
+            "inputs": {
+              "crotch_depth": 280000,
+              "hem_back": 250000,
+              "hem_front": 210000,
+              "hip_girth": 1060000,
+              "thigh_girth": 620000,
+              "waist_girth": 820000,
+              "waist_to_hem": 1040000,
+              "waist_to_hip": 210000
+            },
+            "name": "XL"
+          }
+        ],
+        "sample": "M"
+      },
       "style": "reference-trousers"
     },
     {

@@ -14,6 +14,7 @@ requires the named contracts and later proof owners.
 | Physical evaluation | §13 | G2-2D.7/.15 | [What to print, sew and measure](../spec/physical-evaluation.md). Nothing has been performed |
 | Conformance matrix | §13 | G2-2D.12 | [Each claim beside its check, and what is unclaimed](../spec/conformance-matrix.md) |
 | Mutation tests | §11 G2, §13 | sc-artifacts; G2-2D.11 | [Each fault caught by the check that names it](../spec/mutation-tests.md) |
+| Grading a garment | §3.3; G3 | sc-cli; G3-GRADING.6 | [A size set, and every size regenerated from the recipe with what drove each point](../spec/grading.md) |
 | Reference trousers | §3.2; G3 | sc-artifacts, sc-cli; G3-GRADING.5 | [Trousers with a fitted inseam, an in-seam pocket as an object, and a buttonhole derived from its button, at five sizes](../spec/reference-trousers.md) |
 | Reference bodice and sleeve | §3.2; G3 | sc-artifacts, sc-cli; G3-GRADING.4 | [A darted bodice and set-in sleeve, a cap fitted to its armhole by a declared ease, notch types, five sizes](../spec/reference-bodice.md) |
 | References that survive an edit | §4.1; G3 | sc-core, sc-geometry, sc-artifacts, sc-cli; G3-GRADING.3 | [Named edges, carriers that hold them, six edits, repair tasks that block a release](../spec/stable-references.md) |

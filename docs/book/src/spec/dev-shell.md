@@ -52,6 +52,7 @@ This table is every step a session can take, and how the shell reaches it. A tes
 | `closures` | Not offered yet: the viewer shows a dart's legs and not what closing it does |
 | `walk` | Not offered yet: the viewer draws no seams |
 | `plant_balance_notch` | Not offered yet: the viewer draws no seams |
+| `regenerate` | Not offered yet: the viewer draws one size |
 | `edit_edge` | Not offered yet: the viewer does not name a piece's edges |
 | `references` | Not offered yet: the viewer does not name a piece's edges |
 | `repair_reference` | Not offered yet: the viewer does not name a piece's edges |

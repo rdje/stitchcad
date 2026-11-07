@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1018 — every size of a garment,regenerated from its recipe with what drove each point
+
+A draft names its size set,and regenerate draws each size afresh,with its own fits and closures,changing nothing in the Design. For every point of a boundary it names the formula and inputs behind each axis.
+The sample is the golden to the byte,and each size is measured from its drawing against what it asked for. G3-04 advances.
+
 ## STITCHCAD-G1-1017 — trousers,with a pocket that is an object and a buttonhole that has no length of its own
 
 The last garment the roadmap names. A fit drops the back's crotch point so the inseam meets. A pocket is listed with its place,direction,opening and pieces,and holds its edge by reference. A hole's length is its button plus a policy,and a draft that gives one is refused.

@@ -3,7 +3,8 @@
 > **Status:** normative specification, gate **G0** (roadmap §3.3, §15 item 6, ADR-0004). Implemented by
 > `sc-grading` at gate **G3** (leaves `G3-GRADING.1`–`.14`). Terms are defined in the
 > [glossary](glossary.md); the objects this chapter moves are specified in the [ontology](ontology.md);
-> every number it quotes comes from the [reference skirt](reference-skirt.md).
+> every number it quotes comes from the [reference skirt](reference-skirt.md). What can be done today is in
+> [Grading a garment](grading.md): path 1 works, and path 2 does not exist yet.
 
 A StitchCAD design can become a sized garment two ways, and **both are required**: by re-evaluating its
 recipe for a body or a size (**regeneration**), or by moving the points of a base-size instance by a rule
