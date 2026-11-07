@@ -19,7 +19,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | G1 — executable architecture slice | Mostly Done | Exit reviewed7/7 clauses,each with stated limits;human closure unapproved. Canvas verdict scoped to macOS. Inputs/numeric/schemas;audit/undo/progress/cancel;scalar execution reviewed. Local0645/0654 and hosted224a9805 scoped |
 | G2 — correct 2D slice | In Progress | Exit7/8 clauses;exit review done. Only a printed square on paper remains,asked of the director |
 | G3 — construction & grading | In Review | Exit10/11 clauses. Every garment drafts,grades and exports. G3-05 is parked with commercial CAD,and the reference blocks wait on a book |
-| G4 — profiles & uncertainty | Not Started | 14 activities; input admission, CSP/oracle, evidence, policy matrix, HPGL, minimal Profile Editor |
+| G4 — profiles & uncertainty | In Progress | The file is read and checked;next typed rules,solving,evidence,policy matrix,HPGL,minimal Profile Editor |
 | G5 — shells & validated 2D UX | Not Started | 14 leaves: Tauri + WASM shells, UX panels, parity table, native UI suite, i18n pack, tech pack |
 | G6 — conformance lab & reliability | Not Started | 10 leaves: DXF import + loss report, receiver validation, plotter, pilot loop, reliability matrix, fuzzing |
 | G7 — scoped production declaration | Not Started | 7 leaves: independent review, envelope statement, semver policy, upgrade/rollback, channels, governance |

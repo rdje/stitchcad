@@ -71,6 +71,7 @@
   - [The reference bodice and sleeve](spec/reference-bodice.md)
   - [The reference trousers](spec/reference-trousers.md)
   - [Constraint kernel](spec/constraints.md)
+  - [Factory profiles](spec/factory-profiles.md)
   - [Project store](spec/project-store.md)
   - [Command line](spec/command-line.md)
   - [Runtime profiles](spec/runtime-profiles.md)

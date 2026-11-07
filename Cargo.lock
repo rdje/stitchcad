@@ -115,6 +115,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "sc-profiles"
+version = "0.1.0"
+dependencies = [
+ "sc-constraints",
+ "sc-store",
+]
+
+[[package]]
 name = "sc-store"
 version = "0.1.0"
 

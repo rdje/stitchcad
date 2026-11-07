@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1027 — a factory profile file is read and checked,and every mistake in it names the field to fix
+
+The roadmap's example validates,and a test reads it out of the roadmap itself. An unknown holds no value and its default only ever gets offered. The content version moves when the content does,and only then. Nothing reads a profile yet.
+
 ## STITCHCAD-G1-1026 — the G3 exit review reads 10 met and 1 not met,and every garment the roadmap names is proved
 
 The skirt,bodice,sleeve,collar and trousers each draft at every size,grade and export in every form,and the matrix names the leaf that proved each. The one clause not met is an independent engine,parked with commercial CAD.

@@ -47,7 +47,7 @@ G4 is the earliest open gate that software can close. [G3](#distance-to-the-g3-e
 
 | Clause | What it asks | State | Today | Leaf |
 | --- | --- | --- | --- | --- |
-| `G4-01` | Typed constraints and solving, with explained failures and a differential oracle | not met | [Constraints](spec/constraints.md) solve one kind of thing, and not a profile | `G4-PROFILES.3` |
+| `G4-01` | Typed constraints and solving, with explained failures and a differential oracle | not met | [Constraints](spec/constraints.md) solve one kind of thing. [A profile file](spec/factory-profiles.md) is read and checked, and holds no rules yet | `G4-PROFILES.3` |
 | `G4-02` | A minimal guided profile editor | not met | Not started | `G4-PROFILES.9` |
 | `G4-03` | The artifact policy matrix, enforced | not met | Not started | `G4-PROFILES.7` |
 | `G4-04` | A per-claim evidence store | not met | Not started | `G4-PROFILES.6` |

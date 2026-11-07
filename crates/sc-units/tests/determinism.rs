@@ -166,9 +166,10 @@ fn it_holds_at_the_places_a_series_is_most_likely_to_go_wrong() {
 }
 
 // Crates that lie on the path from a design to a written file. `sc-constraints` is not one: it uses hash maps for membership, and nothing it writes comes from their order.
-const OUTPUT_PATH: [&str; 8] = [
+const OUTPUT_PATH: [&str; 9] = [
     "sc-artifacts",
     "sc-grading",
+    "sc-profiles",
     "sc-cli",
     "sc-geometry",
     "sc-store",

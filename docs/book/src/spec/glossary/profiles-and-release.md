@@ -5,7 +5,7 @@
 > it never restates the rule. A ⚠ marks a **safety-relevant** term: one whose mistranslation or
 > misreading causes a wrong cut or a factory rejection. Most of these terms are specified by the
 > [release and approval](../release-contract.md) chapter, and the profile-side ones by roadmap §8 until
-> `G4-PROFILES` writes them.
+> `G4-PROFILES` writes them, which has begun with [Factory profiles](../factory-profiles.md).
 
 | Term | What it means | Canonical object | Also called | Machine token |
 | --- | --- | --- | --- | --- |

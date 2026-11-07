@@ -5,7 +5,7 @@ plotter accepts only these formats. The constraint kernel takes those parameters
 question: which values fit? It is the `sc-constraints` crate, the first of the three passes in roadmap §6.1.
 
 **What works today.** You can build a problem in Rust, solve it, and read the result in sentences, on native
-and in the browser build. **What does not exist yet:** reading a profile file, composing several profiles by
+and in the browser build. **What does not exist yet:** turning a [profile file](factory-profiles.md) into a problem, composing several profiles by
 precedence, working out which unknowns matter to one artifact, and the Profile Editor. Those belong to G4, and
 this kernel is what they will call.
 

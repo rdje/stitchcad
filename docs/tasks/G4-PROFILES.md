@@ -3,7 +3,7 @@
 ## Metadata
 
 - Tree ID: `G4-PROFILES`
-- Status: `proposed`
+- Status: `active`
 - Roadmap lane: `ROADMAP.md` §11 gate **G4 — Profiles & uncertainty workflow** (sources: §6
   constraint machinery, §7.5 HPGL, §7.6 i18n copy, §8 Factory Profiles, §2.8 no-code by design,
   §12 domain review)
@@ -59,23 +59,30 @@ a known-good real-plotter fixture.
 ## Task Tree
 
 - ID: `G4-PROFILES`
-  Status: `proposed`
+  Status: `active`
   Goal: profiles, uncertainty and their export consequences are one enforced mechanism.
   Children: `.1` … `.14`
 
 - ID: `G4-PROFILES.1`
-  Status: `pending`
+  Status: `done`
   Goal: `sc-profiles` — the Factory Profile schema v2 (§8): parameters with type, domain, value or
   default, state (known / assumed / unknown), evidence refs, artifact effect, transformation stage;
   schema version distinct from content version; validation that rejects unresolved identifiers.
   Acceptance: the §8 example profile validates; an unknown parameter name or dangling evidence ref is
   a validation error naming the field; a profile's content version changes only when its content does.
-  Dependency: .1.resource-admission binds actual variable input before schema/API/editor exposure.
-  Verification: `pending`
-  Commit: `pending`
+  Dependency: .1.resource-admission binds actual variable input before schema/API/editor exposure. On hold with it.
+  Verification: `done` — the roadmap's own example block is read out of ROADMAP.md,validates and equals the fixture byte for byte.
+  Commit: `STITCHCAD-G1-1027`
+
+  - [x] ROOT CAUSE (WHY + WHERE): WHY nothing could say what a factory accepts: G4-01 row says "not a profile" and no crate existed.
+    WHERE `ROADMAP.md:260` names `sc-profiles/`;`ls crates | grep -c sc-profiles` printed 0 before this rc=0.
+  - [x] ADDRESSED: `cargo test -p sc-profiles --test schema` prints 12 passed: 25 mistakes each refused by code and field,the example equal to its fixture rc=0.
+  - [x] NO REGRESSION: `cargo test -p sc-units -p sc-geometry -p sc-artifacts -p sc-grading -p sc-profiles -p sc-constraints -p sc-cli -p sc-api -p sc-mcp -p sc-viewer --no-fail-fast` rc=0;`clippy --workspace --all-targets -- -D warnings` rc=0;`fmt --check` rc=0;doctests rc=0;`scripts/check_book_censuses.sh` rc=0;`scripts/gauge.sh --checks` rc=0.
+    No export path reads a profile,so no output changed.
 
 - ID: `G4-PROFILES.1.resource-admission`
   Status: `pending`
+  Hold: on hold by the director's ruling of 2026-11-06 on input checks,`docs/decisions/decision_product-work-takes-the-frontier.md`. It comes back on feedback from users or at feature complete,and until then it does not gate `.1`,`.9` or `.13`.
   Goal: before exposing profile schema/API/editor/transform handlers to untrusted variable input,
   install explicit finite admission over actual pins, resolution-intent declarations, evidence vectors,
   label mappings/text and candidate payloads. Derive all owned dimensions from actual contracts;
@@ -233,7 +240,8 @@ a known-good real-plotter fixture.
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G4-PROFILES.1` | `pending` | gated on `G3-GRADING` |
+| 1 | `G4-PROFILES.2` | `pending` | typed rules in a profile,on the kernel's AST |
+| 2 | `G4-PROFILES.3` | `pending` | solving over a profile,which closes `G4-01` with `.4` |
 
 ## Decisions
 

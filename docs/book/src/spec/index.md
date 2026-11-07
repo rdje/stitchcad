@@ -46,6 +46,7 @@ libraries from future workflows. Existing chapter URLs and numbered clause ancho
 | [Reference trousers](reference-trousers.md) | A crotch curve, an inseam two pieces share, a pocket that is an object, and a buttonhole whose length comes from its button |
 | [Grading a garment](grading.md) | A garment's size set, and every size of it drawn from the recipe, with what drove each point |
 | [Grade rules](grade-rules.md) | A table of rules in either convention, what it promises, and the `.rul` file |
+| [Factory profiles](factory-profiles.md) | The file that says what one factory accepts and what is known about it, with every mistake named by its field |
 | [Notch types](notch-types.md) | What a single, double and drill mark mean, and how each dialect carries them |
 
 Each change updates its task-owned implementation and affected book contracts in the same commit.
