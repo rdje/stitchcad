@@ -1,6 +1,7 @@
 path	kind	owner	review
 .githooks/commit-msg	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 .githooks/pre-commit	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+.github/workflows/determinism.yml	platform	G2-2D.12	Declarative public build/output contract;runs the determinism tests on three operating systems and writes nothing outside the runner.
 .github/workflows/doctrines.yml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 .github/workflows/rust.yml	profile	G1-SLICE.5b.4c.h2.b.v	Explicit CI prepare/install/verify contract already observed at 8f87a10; local standalone audit separate.
 Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
@@ -244,6 +245,7 @@ rust-toolchain.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/outp
 scripts/bootstrap.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/dev_shell.sh	delegate	G2-2D.9	Whole shell source retained;writes under target/dev_shell and serves that directory on 127.0.0.1 until stopped.
 scripts/check_archive_retention.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_build_fingerprints.sh	delegate	G2-2D.12	Whole shell source/heredoc body retained;reads and,with --clear,removes only fingerprints and libraries under target/.
 scripts/check_book_censuses.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_docpaths.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_doctrines.project.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.

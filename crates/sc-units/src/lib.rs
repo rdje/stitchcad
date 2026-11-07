@@ -60,6 +60,7 @@
 pub mod angle;
 pub mod error;
 pub mod length;
+pub mod pure;
 pub mod ratio;
 pub mod round;
 pub mod tolerance;

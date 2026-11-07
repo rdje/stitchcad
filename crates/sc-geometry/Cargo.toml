@@ -9,6 +9,9 @@ description = "StitchCAD 2D kernel: lines, arcs and cubic Béziers in whole micr
 [lints]
 workspace = true
 
+[dependencies]
+sc-units = { path = "../sc-units", version = "0.1.0" }
+
 [dev-dependencies]
 # The tests' independent oracle, which shares no arithmetic with the kernel.
 num-bigint = "=0.4.6"

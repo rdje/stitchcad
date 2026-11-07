@@ -18,6 +18,11 @@ REVIEW=docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh
 MODE="${1:-}"
 case "$MODE" in ''|--checks) ;; *) echo "gauge: usage: gauge.sh [--checks]" >&2; exit 2 ;; esac
 
+# A check run against a library built from a copy of the source says nothing about the source (D400).
+if [ "$MODE" = --checks ]; then
+  bash scripts/check_build_fingerprints.sh || exit 1
+fi
+
 status=0
 total_met=0
 total_all=0

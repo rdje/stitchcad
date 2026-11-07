@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1007 — the conformance matrix,and a determinism policy with teeth
+
+Every claim sits beside the check that would fail if it were false,and a test holds the page to the repository. What has no check is listed as unclaimed. Nothing has reached layer 4 or 5.
+The geometry kernel no longer calls platform math (D401),and a census refuses any new call,with no golden moved. A build watching a copy of its own source was found and cleared (D400). A three-OS job exists and has not run yet.
+
 ## STITCHCAD-G1-1006 — mutation tests,each fault caught by the check that names it
 
 31 faults injected on purpose into the reference skirt,each required to be caught by the check whose code names it. The unmodified skirt raises nothing.

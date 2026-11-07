@@ -82,13 +82,13 @@ impl Angle {
     /// The sine of this angle, evaluated in `f64` (boundary only).
     #[must_use]
     pub fn sin(self) -> f64 {
-        self.as_radians_f64().sin()
+        crate::pure::sin(self.as_radians_f64())
     }
 
     /// The cosine of this angle, evaluated in `f64` (boundary only).
     #[must_use]
     pub fn cos(self) -> f64 {
-        self.as_radians_f64().cos()
+        crate::pure::cos(self.as_radians_f64())
     }
 
     /// The smallest turn between two angles, in `[0, 180°]`.

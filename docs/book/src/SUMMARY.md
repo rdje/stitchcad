@@ -79,6 +79,7 @@
   - [Canvas hosting](spec/canvas-hosting.md)
   - [The dev shell](spec/dev-shell.md)
   - [The mutation tests](spec/mutation-tests.md)
+  - [The conformance matrix](spec/conformance-matrix.md)
 - [Formula syntax API](annexes/formula-syntax.md)
   - [Canonical formula rational values](annexes/formula-rationals.md)
   - [Trig certificate feasibility](annexes/formula-trig-certificates.md)

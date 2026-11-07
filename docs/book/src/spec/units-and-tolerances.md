@@ -50,7 +50,8 @@ Microdegrees rather than radians because the domain speaks in degrees and fracti
 deviation, dart intake angles, notch directions, bias at 45° — and because a rational number of degrees
 is stored **exactly**, while π-based storage would make the commonest angles approximate. Formula trigonometric
 results must equal the correctly rounded true value in internal units (§2); ordinary platform libm
-is not sufficient proof. An angle *value* is never stored as a float.
+is not sufficient proof. An angle *value* is never stored as a float. The geometry kernel's own trigonometry, which is
+approximation inside the T2 class and promises no correct rounding, is `sc_units::pure`: it uses no platform math either, and [the determinism policy](conformance-matrix.md) enforces that.
 
 Direction fields on entities SHALL be normalized to `[0, 360 000 000)` µ° and compared as normalized
 directions. Formula angles and sweep fields SHALL preserve sign and complete turns; formula bindings

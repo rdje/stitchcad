@@ -1,6 +1,7 @@
 //! The three curves the roadmap's interchange diet allows, and nothing else.
 use crate::predicate::{Point, PointError};
 use core::fmt;
+use sc_units::pure;
 
 /// The chordal tolerance used when a caller states none: 100 micrometres, the fixture's polyline bound.
 pub const DEFAULT_TOLERANCE: i64 = 100;
@@ -288,7 +289,7 @@ fn flatten_arc(from: Point, through: Point, to: Point, tolerance: i64, out: &mut
         out.push(to);
         return;
     };
-    let angle = |p: Point| ((p.y() as f64) - centre_y).atan2((p.x() as f64) - centre_x);
+    let angle = |p: Point| pure::atan2((p.y() as f64) - centre_y, (p.x() as f64) - centre_x);
     let (start, middle, end) = (angle(from), angle(through), angle(to));
     let two_pi = core::f64::consts::TAU;
     let ccw = (middle - start).rem_euclid(two_pi) < (end - start).rem_euclid(two_pi);
@@ -299,13 +300,14 @@ fn flatten_arc(from: Point, through: Point, to: Point, tolerance: i64, out: &mut
     };
     // The sagitta of a chord spanning angle θ is r(1 − cos(θ/2)).
     let bound = (tolerance as f64 / radius).min(1.0);
-    let step = 2.0 * (1.0 - bound).acos();
+    let step = 2.0 * pure::acos(1.0 - bound);
     let pieces = (sweep.abs() / step.max(1e-6)).ceil().clamp(1.0, 1024.0) as u32;
     for piece in 1..pieces {
         let theta = start + sweep * f64::from(piece) / f64::from(pieces);
+        let (sine, cosine) = pure::sin_cos(theta);
         out.push(Point::clamped(
-            (centre_x + radius * theta.cos()).round() as i64,
-            (centre_y + radius * theta.sin()).round() as i64,
+            (centre_x + radius * cosine).round() as i64,
+            (centre_y + radius * sine).round() as i64,
         ));
     }
     out.push(to);
@@ -322,5 +324,9 @@ fn circle(a: Point, b: Point, c: Point) -> Option<(f64, f64, f64)> {
     let d = 2.0 * (cross as f64);
     let (bb, cc) = (bx * bx + by * by, cx * cx + cy * cy);
     let (ux, uy) = ((cy * bb - by * cc) / d, (bx * cc - cx * bb) / d);
-    Some(((a.x() as f64) + ux, (a.y() as f64) + uy, ux.hypot(uy)))
+    Some((
+        (a.x() as f64) + ux,
+        (a.y() as f64) + uy,
+        pure::hypot(ux, uy),
+    ))
 }

@@ -6,3 +6,5 @@ docs/tasks/G1-SLICE-garment.md -text -filter -ident -working-tree-encoding
 # A sealed source can end with a blank line; retain its bytes without weakening ordinary source checks.
 docs/history/*.md -text -filter -ident -working-tree-encoding whitespace=-blank-at-eof
 docs/history/**/*.md -text -filter -ident -working-tree-encoding whitespace=-blank-at-eof
+# Golden files and fixtures are compared byte for byte, so no checkout may change their line endings.
+conformance/** -text

@@ -176,6 +176,16 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D401 — platform math in the geometry
+
+The units chapter says ordinary platform libm is not sufficient,and the recipe obeys it. I wrote the geometry kernel with hypot,atan2,sin,cos and acos anyway,so a golden file could have failed on another operating system and nowhere else. Found reading ahead for the determinism policy. Replaced by sc_units::pure,built only from IEEE-exact operations.
+No golden moved,and a census now refuses any new call.
+
+## D400 — a build watching a copy of its source
+
+Cargo hashes a workspace package by its relative path,so a fault harness that copied the workspace and built with the shared target directory overwrote the real sc-units library and fingerprint on 2026-10-30,and cargo then watched the copy. Edits to sc-units rebuilt nothing,with no warning.
+Found when a new module was reported missing from its own crate. The copy's sources are byte-identical to HEAD,so earlier results stand. Ten fingerprints cleared. scripts/check_build_fingerprints.sh now runs before the gauge's checks. Hosted CI builds clean and cannot have this.
+
 ## D399 — a closure blind to the geometry
 
 The session's waist_closure said `(quarter_hip - ss_suppress) - dart_intake == quarter_waist`,which re-derives the arithmetic. The drawing uses `waist_side`,so building that point wrongly left the closure true:

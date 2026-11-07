@@ -282,11 +282,16 @@ fn extent(points: &[Point]) -> (i64, i64) {
     )
 }
 
+// `sqrt` is correctly rounded on every platform, and `hypot` is not.
+#[allow(clippy::cast_precision_loss)]
+fn distance_between(a: Point, b: Point) -> f64 {
+    let (x, y) = ((b.x() - a.x()) as f64, (b.y() - a.y()) as f64);
+    (x * x + y * y).sqrt()
+}
+
 #[allow(clippy::cast_precision_loss, clippy::cast_possible_truncation)]
 fn length_between(a: Point, b: Point) -> i64 {
-    ((b.x() - a.x()) as f64)
-        .hypot((b.y() - a.y()) as f64)
-        .round() as i64
+    distance_between(a, b).round() as i64
 }
 
 fn judge_piece(
@@ -450,7 +455,7 @@ fn length_of(points: &[Point]) -> f64 {
     points
         .windows(2)
         .map(|pair| match pair {
-            [a, b] => ((b.x() - a.x()) as f64).hypot((b.y() - a.y()) as f64),
+            [a, b] => distance_between(*a, *b),
             _ => 0.0,
         })
         .sum()
@@ -467,10 +472,11 @@ fn notch_parameters(piece: &DrawnPiece, along: &[Point], reach: f64) -> Vec<i64>
             let [a, b] = pair else { continue };
             let (ax, ay) = (a.x() as f64, a.y() as f64);
             let (dx, dy) = (b.x() as f64 - ax, b.y() as f64 - ay);
-            let length = dx.hypot(dy);
+            let length = (dx * dx + dy * dy).sqrt();
             if length > 0.0 {
                 let t = (((px - ax) * dx + (py - ay) * dy) / (length * length)).clamp(0.0, 1.0);
-                let away = (px - ax - t * dx).hypot(py - ay - t * dy);
+                let (ox, oy) = (px - ax - t * dx, py - ay - t * dy);
+                let away = (ox * ox + oy * oy).sqrt();
                 if away < best {
                     best = away;
                     parameter = walked + t * length;

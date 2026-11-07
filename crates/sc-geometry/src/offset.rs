@@ -8,6 +8,7 @@ use crate::curve::{distance, Curve};
 use crate::outline::{Outline, Winding};
 use crate::predicate::{segment_crossing, Point, SegmentCrossing};
 use core::fmt;
+use sc_units::pure;
 use std::collections::BTreeMap;
 
 /// How the allowance turns a corner between two edges. Where two edges name different treatments, the corner takes the more
@@ -145,7 +146,7 @@ fn vector(a: Point, b: Point) -> (f64, f64) {
 }
 
 fn unit(v: (f64, f64)) -> (f64, f64) {
-    let length = v.0.hypot(v.1);
+    let length = pure::hypot(v.0, v.1);
     if length == 0.0 {
         (0.0, 0.0)
     } else {
@@ -239,13 +240,14 @@ fn offset_polyline(net: &[Point], width: i64, tolerance: i64) -> Vec<Point> {
                     // The chord over this arc stays within the tolerance of a circle of the allowance's radius.
                     let radius = width as f64;
                     let bound = ((tolerance.max(1)) as f64 / radius).min(1.0);
-                    let step = (2.0 * (1.0 - bound).acos()).max(1e-3);
-                    let sweep = turn.atan2(cosine);
+                    let step = (2.0 * pure::acos(1.0 - bound)).max(1e-3);
+                    let sweep = pure::atan2(turn, cosine);
                     let pieces = (sweep / step).ceil().clamp(1.0, 256.0) as u32;
-                    let start = n0.1.atan2(n0.0);
+                    let start = pure::atan2(n0.1, n0.0);
                     for piece in 1..pieces {
                         let angle = start + sweep * f64::from(piece) / f64::from(pieces);
-                        out.push(moved(*joint, (radius * angle.cos(), radius * angle.sin())));
+                        let (sine, cosine) = pure::sin_cos(angle);
+                        out.push(moved(*joint, (radius * cosine, radius * sine)));
                     }
                 }
                 out.push(b);
@@ -311,7 +313,7 @@ fn join(a: &Edge, b: &Edge, corner: Point) -> Joined {
         Corner::Trim => {
             let Some(point) = meet else { return slant() };
             let (dx, dy) = (point.0 - corner.x() as f64, point.1 - corner.y() as f64);
-            let reach = dx.hypot(dy);
+            let reach = pure::hypot(dx, dy);
             if reach <= wider {
                 return replace_both(vec![rounded(point)]);
             }
@@ -353,7 +355,10 @@ fn join(a: &Edge, b: &Edge, corner: Point) -> Joined {
     // No treatment may reach further than a miter's limit: past it, an acute corner gets a straight cut.
     let limit = wider * MITER_LIMIT as f64;
     let reach_of = |point: &Point| {
-        (point.x() as f64 - corner.x() as f64).hypot(point.y() as f64 - corner.y() as f64)
+        pure::hypot(
+            point.x() as f64 - corner.x() as f64,
+            point.y() as f64 - corner.y() as f64,
+        )
     };
     if joined.points.iter().any(|point| reach_of(point) > limit) {
         return slant();
@@ -417,7 +422,7 @@ fn fold_over_first(
 #[allow(clippy::cast_precision_loss)]
 fn clockwise_turn(from: Point, at: Point, to: Point) -> f64 {
     let (a, b) = (vector(from, at), vector(at, to));
-    -(a.0 * b.1 - a.1 * b.0).atan2(a.0 * b.0 + a.1 * b.1)
+    -pure::atan2(a.0 * b.1 - a.1 * b.0, a.0 * b.0 + a.1 * b.1)
 }
 
 // Exact duplicates, points on a straight run, zero-area spikes and pinched-off loops all go. Repeats until nothing changes.
@@ -667,7 +672,7 @@ fn walk_outside(closed: &[Point]) -> Vec<Point> {
             options.iter().copied().min_by(|left, right| {
                 let angle = |p: Point| {
                     let v = vector(current, p);
-                    v.1.atan2(v.0).rem_euclid(core::f64::consts::TAU)
+                    pure::atan2(v.1, v.0).rem_euclid(core::f64::consts::TAU)
                 };
                 angle(*left).total_cmp(&angle(*right))
             })
@@ -705,7 +710,7 @@ fn point_to_polyline(net: &[Point], point: Point) -> (f64, bool) {
         } else {
             (((px - ax) * dx + (py - ay) * dy) / length).clamp(0.0, 1.0)
         };
-        let here = (px - (ax + t * dx)).hypot(py - (ay + t * dy));
+        let here = pure::hypot(px - (ax + t * dx), py - (ay + t * dy));
         if here < best.0 {
             best = (here, (at == 0 && t <= 0.0) || (at == last && t >= 1.0));
         }

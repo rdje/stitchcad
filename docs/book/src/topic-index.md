@@ -127,6 +127,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Canvas hosting](spec/canvas-hosting.md)
 - [The dev shell](spec/dev-shell.md)
 - [The mutation tests](spec/mutation-tests.md)
+- [The conformance matrix](spec/conformance-matrix.md)
 - [The supported envelope](spec/feature-matrix.md)
 - [Uncertainty and numeric refusals](spec/measurement-inputs.md)
 - [Units and tolerances](spec/units-and-tolerances.md)
