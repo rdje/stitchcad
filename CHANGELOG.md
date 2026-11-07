@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1024 — a reader written separately from the format,which agrees and is not an engine
+
+No independent engine is available,so G3-05 stays open with the director. A separate agent wrote a reader from the format's description alone,and every corner at every size lands within 10 µm of the recipe.
+It reads and adds,and rebuilds no curve,so it is the nearest thing and not the thing.
+
 ## STITCHCAD-G1-1023 — every size frozen beside the offset corpus,with the suite proved by a mutation
 
 One command runs the offset corpus and every size of three garments by both paths. A micrometre injected into a copy of the offset engine or the rules turns it red,and the suite has to pass unmutated first.

@@ -2,7 +2,7 @@
 
 The [instantiation chapter](instantiation-paths.md) says what a table of grade rules means. This chapter is the table itself: what it holds, the two ways of writing its deltas, what it promises beyond them, and the `.rul` file a factory's system reads.
 
-**What works today.** A table with a stable name for each point, in either convention, read and written exactly. A stack point, honoured. A contour declared fixed, honoured by a conflict. Smoothing, refused rather than ignored. The `.rul` file, written and read. **What does not exist yet:** any receiver reading a file written here, which is `G3-GRADING.8`. Fairing a contour. An alternate grade reference.
+**What works today.** A table with a stable name for each point, in either convention, read and written exactly. A stack point, honoured. A contour declared fixed, honoured by a conflict. Smoothing, refused rather than ignored. The `.rul` file, written and read. **What does not exist yet:** any receiver reading a file written here, which `G3-GRADING.8` leaves open. Fairing a contour. An alternate grade reference.
 
 ```rust
 use sc_grading::{from_rul, to_rul, Attributes, Convention, GradeTable, Provenance, Rule, ZeroState};
@@ -88,6 +88,19 @@ Reading takes metric or English, and any of the separators the format allows. It
 $ cargo test -p sc-grading --test table
 ```
 
+## Read by something else
+
+A file only this project can read is no evidence, and [the gate](../availability.md) asks for an independent engine. **None is available.** Commercial CAD is parked by the director until the product is feature complete, and a search found no open reader of this format. So that clause stays open, and this is the nearest thing to it there is: **a reader written separately, by another agent, from the format's description and the two files alone,** without ever seeing this project's code. `bash docs/tasks/artifacts/grading/independent_reader/run_independent_reader.sh` runs it on all three garments and compares where it says each corner lands, at every size, with where the recipe puts that corner. A comparison that cannot fail proves nothing, so each garment is also compared with one row tampered with by 20 µm, and that has to be caught.
+
+| It found | How that is classified |
+| --- | --- |
+| Every corner at every size agrees within 10 µm, which is the two rounded values a file adds: 0 µm on the skirt, 4 µm on the trousers and 9 µm on the bodice, over 310 corners and sizes | Agreement, at the file's own quantum |
+| A rule wraps across lines, four pairs to a line, which the description does not say. It read them by counting | A documented ambiguity. The published example does the same |
+| On the skirt, six rules have no identifier anywhere in the drawing | This project's convention: they are for where a label sits, which is not a point a file can name. A receiver has nothing to attach them to |
+| It chose to refuse non-metric units and anything after `END`, and took the first number of `# n, alt` | The reader's own choices |
+
+**This is not an engine.** It reads and adds, and it rebuilds no curve and cuts nothing. It shows that a careful reader of the description gets the same numbers, and it cannot show what a factory's system would do. The reader is kept verbatim, because editing it would make it not independent. Its author was the same model as the author of the writer, so a misunderstanding they share would not show.
+
 **What this does not show.** That any receiver reads these files as intended. One file here was not written by this project, an example published in that guide, and it reads as its author wrote it, which is a fair test of the reader and no test of the writer. Only the sample pages of the standard were read, and the guide is a third party's reading of it. Two decimal places hold a delta to 5 µm, which is a loss the record states and the importer class has to allow.
 
 ## Names used in this chapter
@@ -119,6 +132,8 @@ $ cargo test -p sc-grading --test table
 | `from` | Where a contour starts |
 | `to` | Where it stops |
 | `DELTA` | The one type of rule |
+| `bash docs/tasks/artifacts/grading/independent_reader/run_independent_reader.sh` | Runs a separately written reader on the frozen files |
+| `# n, alt` | An identifier with an alternate reference |
 | `ASTM/D13 Proposal 1 Version: D 6673-10` | A file's first line |
 | `AUTHOR:` | A header line |
 | `PRODUCT:` | A header line |

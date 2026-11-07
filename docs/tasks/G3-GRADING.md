@@ -216,14 +216,20 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1019.
 
 - ID: `G3-GRADING.8`
-  Status: `pending`
+  Status: `in_progress`:no independent engine is available. Commercial CAD is parked by the director 2026-11-06 until feature complete,and no open reader was found. G3-05 stays not met,with the director.
   Goal: `.rul` with grade-point identifiers re-imported into an **independent** engine (G3 exit) —
   the oracle is not our own writer.
   Acceptance: the independent engine is named with its version; the reconstructed points are compared
   against ours within a declared tolerance; divergences are classified (our bug / their convention /
   documented ambiguity) and recorded.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:docs/tasks/artifacts/grading/independent_reader/**,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY a file only this project reads is no evidence. WHERE every reader so far was this project's own:git ls-tree ab3cab25 docs/tasks/artifacts/grading/independent_reader →empty,rc=0.
+  - [x] ADDRESSED,READER:a separate agent wrote a reader from the format's description and two files,and never saw this code. bash docs/tasks/artifacts/grading/independent_reader/run_independent_reader.sh →rc=0:310 corners and sizes across three garments within 10 µm of the recipe,and a row tampered by 20 µm is caught.
+  - [x] ADDRESSED,CLASSIFIED:what it found is classified in the chapter:agreement at the file's quantum;a documented ambiguity over wrapped rules;six rules with no identifier,which are this project's convention for labels.
+  - [x] NOT SHOWN,STATED:this is not an engine. It reads and adds,and it rebuilds no curve. Its author is the same model as the writer's,so a shared misunderstanding would not show.
+  - [x] NO REGRESSION:no code changed;gauge.sh --checks →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1024.
 
 - ID: `G3-GRADING.9`
   Status: `done`
