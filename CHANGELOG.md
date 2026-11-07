@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1001 — the PDF writer:true scale,with a scale square,never rescaled
+
+`write_pdf` writes on A0 or tiled across A3 or A4 sheets,with registration marks,sheet order and overlap. A drawing that does not fit is refused rather than shrunk. It writes PDF directly with no dependency,because the library comparison the roadmap asks for could not be run here,and the chapter says so.
+
 ## STITCHCAD-G1-1000 — the DXF writer,for the one named target
 
 `write_dxf` writes `dxf-aama-named`:R12,named layers,polylines only,one block per piece,with a complete record that states what the named layers lose. No file holds a date. Nothing but a reader in this repository has read one,and no CAD system has opened one.

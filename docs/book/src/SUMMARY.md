@@ -74,6 +74,7 @@
   - [Seam allowances and offsets](spec/offsets.md)
   - [Canonical artifacts](spec/canonical-artifacts.md)
   - [DXF output](spec/dxf-output.md)
+  - [PDF output](spec/pdf-output.md)
   - [Viewport](spec/viewport.md)
   - [Canvas hosting](spec/canvas-hosting.md)
 - [Formula syntax API](annexes/formula-syntax.md)

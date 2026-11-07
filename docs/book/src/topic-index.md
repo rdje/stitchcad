@@ -122,6 +122,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Seam allowances and offsets](spec/offsets.md)
 - [Canonical artifacts](spec/canonical-artifacts.md)
 - [DXF output](spec/dxf-output.md)
+- [PDF output](spec/pdf-output.md)
 - [Viewport](spec/viewport.md)
 - [Canvas hosting](spec/canvas-hosting.md)
 - [The supported envelope](spec/feature-matrix.md)

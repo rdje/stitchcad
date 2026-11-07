@@ -49,7 +49,7 @@ G2 is the earliest open gate: the first correct pattern. None of it exists yet, 
 | --- | --- | --- | --- | --- |
 | `G2-01` | The reference skirt drafted through the command line, with deterministic replay | not met | [The command line](spec/command-line.md) replays deterministically and computes the skirt's values. It draws no geometry | `G2-2D.8` |
 | `G2-02` | A minimal 2D viewer and editor over the same commands | not met | [The canvas verdict](spec/canvas-hosting.md) says what to draw with. No shell exists | `G2-2D.9` |
-| `G2-03` | Canonical DXF and a dimensionally correct PDF | not met | [The DXF writer](spec/dxf-output.md) exists, read only by a reader in this repository. Its reference skirt golden and the PDF writer are still to come | `G2-2D.5` |
+| `G2-03` | Canonical DXF and a dimensionally correct PDF | not met | [The DXF writer](spec/dxf-output.md) and [the PDF writer](spec/pdf-output.md) exist, each read only by a reader in this repository. The reference skirt's goldens are still to come | `G2-2D.5` |
 | `G2-04` | A printed scale square verified on paper | not met | Needs a person to measure one, after the exporter and its checks exist | `G2-2D.7` |
 | `G2-05` | Offsets pass the pathology corpus | met | [The offset engine](spec/offsets.md) passes 37 cases, covering acute tips, loops and seam-length error, judged by checks that share no code with it. The corner shapes are unreviewed by a sewing expert | `G2-2D.3` |
 | `G2-06` | Native save and load preserve semantics | not met | [The store](spec/project-store.md) is crash-consistent and holds inputs and a recipe, not pieces | `G2-2D.10` |
@@ -86,7 +86,8 @@ this book gives, with this table and the book's examples changing in the same co
 does not support yet with a plain error. The constraint kernel `.8`, the project store `.7`, the headless
 command line `.10`, the runtime profiles `.11`, the license census `.15`, the browser run `.12` and the canvas spike `.13`
 are done, and the G1 exit review `.16` passed. The geometry kernel `G2-2D.1`, the offset engine `G2-2D.2`, its corpus `G2-2D.3` and the
-canonicalizer `G2-2D.4` are done, and the DXF writer `G2-2D.5` is written. The next one is the PDF writer, `G2-2D.6`.
+canonicalizer `G2-2D.4` are done, and the DXF and PDF writers `G2-2D.5` and `G2-2D.6` are written. The next one is drafting the reference skirt
+through the command line, `G2-2D.8`.
 
 ## Implemented foundations
 
@@ -96,7 +97,7 @@ canonicalizer `G2-2D.4` are done, and the DXF writer `G2-2D.5` is written. The n
 | sc-core | Identities/references, profile pins, structural garment/[Material](spec/material-inputs.md) metadata, physical copies, owned inputs/parameters/recipe source, formula syntax/normalization/identity/static proofs, numeric/read APIs and typed requests/authorization |
 | sc-measure | Owned measurement/table/Ease records, membership/axes/breaks, garment/MTM inputs and immutable profile intent |
 | sc-constraints | [Typed profile constraints and a deterministic solver](spec/constraints.md): which values fit, or which facts and rules conflict |
-| sc-artifacts | [One written form for a drawn pattern](spec/canonical-artifacts.md), comparison by meaning, and [DXF](spec/dxf-output.md) in one named mode. PDF is next |
+| sc-artifacts | [One written form for a drawn pattern](spec/canonical-artifacts.md), comparison by meaning, [DXF](spec/dxf-output.md) in one named mode, and true-scale [PDF](spec/pdf-output.md) |
 | sc-geometry | [Lines, arcs and cubic Béziers with exact predicates](spec/geometry.md), and [seam allowances](spec/offsets.md) |
 | sc-viewport | [Exact screen and world coordinates, picking and snapping](spec/viewport.md), independent of any renderer |
 | sc-store | [Projects saved as crash-consistent commits of canonical text](spec/project-store.md), with migrations and autosave, on a directory or in memory |
