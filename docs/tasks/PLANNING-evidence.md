@@ -176,6 +176,11 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D397 — a corner that knew its direction
+
+Where both edges at a corner named `Envelope`,the join folded over whichever came second,so a piece and its mirror got different corners,4142 micrometres apart at a 45 degree tip. The corpus had four such cases and passed them,because it judged cleanliness and clearance and never symmetry.
+The mirror test in tests/metamorphic.rs found it on its first run. Fixed: two meeting edges both naming it have no fold between them,so they miter,as a mitred hem corner does.
+
 ## D396 — an export of a stale drawing
 
 `export_pattern` wrote whatever the last `draft` drew. A session that drafted,changed a measurement and exported got the old geometry with the old revision on it,with no complaint. The skirt's own session never did that,so no test ran it;I saw it while reading `change` to build the shell.

@@ -7,9 +7,9 @@ its new ones, never a mix. It is the `sc-store` crate.
 **What works today.** You can save a project as one commit and reopen it after a crash, on a real directory or in
 memory. Older projects migrate all or nothing, newer ones are refused untouched, unknown fields and files survive,
 and autosave keeps unsaved work beside the project. In a browser, the project is `MemoryRepository`'s one image, saved
-to IndexedDB in one transaction, as [the browser run](browser-capabilities.md) shows. **What does not exist yet:** saving a
-whole `Design`, since a project holds its inputs and recipe but not the rest of the garment model, which arrives with
-G2; and the SQLite catalog of roadmap §4.5. Schema 1 is the first schema, so no real migration exists yet, and the
+to IndexedDB in one transaction, as [the browser run](browser-capabilities.md) shows. A drafted garment's project holds what it is made
+from, below. **What does not exist yet:** the parts of a `Design` no command edits yet, such as the sewing graph, which arrive with
+G3; undo across a reopen; and the SQLite catalog of roadmap §4.5. Schema 1 is the first schema, so no real migration exists yet, and the
 migration tests use their own.
 
 ## The vocabulary
@@ -206,6 +206,26 @@ let disk = store.into_repository();
 assert!(String::from_utf8_lossy(&disk.read(&path("project.json")).expect("reads").expect("exists")).contains("other_tool"));
 assert_eq!(disk.read(&path("extensions/other.bin")).expect("reads"), Some(vec![0, 255]));
 ```
+
+## What a drafted garment saves
+
+| File | What it holds |
+| --- | --- |
+| `inputs.json` | Every measurement and allowance, in whole micrometres |
+| `recipe.formula` | The construction recipe, in its own text |
+| `draft.json` | How to draw each piece, by the names of those lengths |
+
+**The drawing itself is not saved,** because derived data is never authoritative: reopening draws it again, and it comes out to the same bytes. So two designs whose pieces have identical contours and different recipes stay two designs. One whose width follows an input moves when that input changes, and one that states the same number does not. A file a factory receives cannot show that difference, and the project can.
+
+Saving what was loaded writes nothing and leaves every byte, in any locale and time zone. Revisions carry on across a reopen, and none is issued twice. Undo history does not cross one, and an `undo` right after a reopen says there is nothing to undo.
+
+```text
+$ cargo test -p sc-cli --test save_load
+```
+
+Beyond that, this runs the reference skirt through the real program: save, load and save to the same bytes on a real directory under another locale; a reopened project drawing the frozen goldens; and the same edit before and after a reopen giving the same pieces.
+
+The [offset chapter](offsets.md) holds the transforms, and a written length means the same in any unit: rewriting the skirt's `5 mm` as `0.5 cm`, or `25.4 mm` as `1 in`, changes no byte.
 
 ## Schemas and migrations
 

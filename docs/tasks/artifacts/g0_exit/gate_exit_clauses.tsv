@@ -16,7 +16,7 @@ G2-02	exit	minimal 2D viewer/editor	crates/sc-viewer/shell/shell.html	cargo test
 G2-03	exit	canonical DXF	conformance/goldens/reference-skirt/reference-skirt.dxf	cargo test -p sc-artifacts --test dxf --test pdf && bash docs/tasks/artifacts/printed_square/run_printed_square.sh	instrument	-	the PDF measured by renderers nobody here wrote,within a pixel;the DXF read only by readers in this repository,no CAD system and no third-party library;nothing printed	G2-2D.5
 G2-04	exit	printed scale-square	-	-	director	one scan or photo of the printed square beside a ruler,asked for at the end of G2	the exporter and its numeric and independent-renderer checks come first	G2-2D.7
 G2-05	exit	offsets pass the pathology corpus	conformance/offsets/cases.json	cargo test -p sc-geometry --test offset_corpus	instrument	-	judged by checks sharing no code with the engine;corner shapes are unreviewed by a sewing expert;curved results are polylines	G2-2D.3
-G2-06	exit	native save/load preserves semantics	-	-	unbuilt	-	-	G2-2D.10
+G2-06	exit	native save/load preserves semantics	crates/sc-cli/tests/save_load.rs	cargo test -p sc-cli --test save_load && cargo test -p sc-geometry --test metamorphic	instrument	-	the real program on a real directory,and every corpus case moved,turned and mirrored;undo history does not cross a reopen;a file edited on disk outside a commit is not detected yet;the sewing graph has nothing to save until G3	G2-2D.10
 G2-07	exit	mutation tests	-	-	unbuilt	-	-	G2-2D.11
 G2-08	exit	LLM agent given only MCP,CLI serializer then golden-matches	-	-	unbuilt	-	-	G2-2D.13
 G3-01	exit	bodice + set-in sleeve,the darted bodice and set-in sleeve above	-	-	unbuilt	-	-	G3-GRADING.4

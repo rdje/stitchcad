@@ -150,6 +150,8 @@ struct Session<R: Repository> {
     recipe: String,
     drawing: Option<String>,
     pattern: Option<sc_artifacts::Pattern>,
+    // How to draw it, which is authored and saved. The drawing itself is derived and never is.
+    drafted: Option<BTreeMap<String, Value>>,
 }
 
 impl<R: Repository> Session<R> {
@@ -338,11 +340,27 @@ impl<R: Repository> Session<R> {
         Ok(known)
     }
 
+    // A step naming its pieces draws those. One naming none draws what the project saved, which is what `reopen` restored.
     fn draft(&mut self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
         let fail = |message: String| Failure::at(step, "draft", message);
         let known = self.lengths(step)?;
-        let pattern = crate::draft::draft(&known, fields, &self.design_text, &self.revision_text())
-            .map_err(fail)?;
+        let description = if fields.contains_key("pieces") {
+            let mut own = fields.clone();
+            own.remove("do");
+            own
+        } else {
+            self.drafted.clone().ok_or_else(|| {
+                fail("a draft names its pieces, and this project has saved none".to_owned())
+            })?
+        };
+        let pattern = crate::draft::draft(
+            &known,
+            &description,
+            &self.design_text,
+            &self.revision_text(),
+        )
+        .map_err(fail)?;
+        self.drafted = Some(description);
         let text = sc_artifacts::to_canonical_text(&pattern);
         let digest = sc_store::sha256_hex(text.as_bytes());
         let pieces = pattern
@@ -530,6 +548,14 @@ impl<R: Repository> Session<R> {
         project
             .set_file(path("recipe.formula")?, self.recipe.clone())
             .map_err(|error| error.to_string())?;
+        if let Some(drafted) = &self.drafted {
+            project
+                .set_file(
+                    path("draft.json")?,
+                    Value::Object(drafted.clone()).to_text(),
+                )
+                .map_err(|error| error.to_string())?;
+        }
         Ok(project)
     }
 
@@ -552,6 +578,20 @@ impl<R: Repository> Session<R> {
             .file(&path("recipe.formula").map_err(fail)?)
             .ok_or_else(|| fail("the project has no recipe.formula".to_owned()))?;
         self.recipe = String::from_utf8_lossy(recipe).into_owned();
+        // A project saved before anything was drafted has no description, and a draft then says so.
+        self.drafted = match saved.project.file(&path("draft.json").map_err(fail)?) {
+            Some(bytes) => {
+                let text = String::from_utf8_lossy(bytes).into_owned();
+                let parsed = sc_store::parse(&text).map_err(|error| fail(error.to_string()))?;
+                Some(
+                    parsed
+                        .as_object()
+                        .ok_or_else(|| fail("draft.json must hold an object".to_owned()))?
+                        .clone(),
+                )
+            }
+            None => None,
+        };
         let counter = |name: &str| -> Result<u128, String> {
             saved
                 .project
@@ -786,6 +826,7 @@ impl<R: Repository> Running<R> {
             recipe,
             drawing: None,
             pattern: None,
+            drafted: None,
         };
         Ok(Self { state, next: 0 })
     }

@@ -57,7 +57,7 @@ want them changed. They are one enum and one function.
 | `Slant` | A straight cut between the two offset edges' ends |
 | `Trim` | A miter with its tip cut off square, as far from the net corner as the wider allowance, to reduce bulk |
 | `Step` | The first offset edge runs on by the second edge's width, then turns square until it meets the second offset edge |
-| `Envelope` | The edge naming it is a fold line, and its neighbour's offset mirrors across it, the way a hem folds up over a side seam |
+| `Envelope` | The edge naming it is a fold line, and its neighbour's offset mirrors across it, the way a hem folds up over a side seam. Two meeting edges both naming it have no fold between them, so they miter, as a mitred hem corner does |
 
 Where two edges name different treatments, the corner takes the more specific: envelope, then step, then trim, then slant, then miter. So the
 fixture's hem, enveloped, governs its corners with the mitered side seams.
@@ -120,6 +120,20 @@ the net piece, and an independent distance for clearance. A test hands those che
 On those, 3,993 give a valid result and 7 refuse with `BoundExceeded`, because a neighbour's corner cut really does leave an edge short of its width. A wrong result
 or a panic fails the test.
 
+`cargo test -p sc-geometry --test metamorphic` moves, turns and mirrors every case the corpus expects to offset, then compares the result with the original result moved the same way:
+
+| Transform | Compared with | Allowed difference, and why |
+| --- | --- | --- |
+| Mirror twice | The original boundary | None. It is exact, tighter than T1 asks |
+| Move | The offset moved | None on straight edges. Twice T2 on curves, because a curve is flattened again, and two approximations each within T2 of one curve can be that far apart |
+| Quarter turn | The offset turned | 2 µm on straight edges, and twice T2 on curves |
+| Any other turn | The offset turned | Twice T2, plus what rounding the net's own points does at its sharpest corner |
+| Mirror | The offset mirrored | As a quarter turn, except for `Step` |
+
+`Step` is directional by its definition: the first edge runs on past the corner, and a mirror reverses which edge is first. So a mirrored piece's step would land on the other side, which is why a mirrored piece mirrors the finished cut line and is not drafted again. T1 and T2 are [the units chapter's classes](units-and-tolerances.md).
+
+This found a real fault. A corner where both edges named `Envelope` folded over whichever came second, so a piece and its mirror got different corners, 4 mm apart at a 45 degree tip. It now miters. Of 36 cases moved a long way, three came back with a chord moved, 11 µm at most, all on curves.
+
 **What this does not cover.** It is measured on polylines within the tolerance, so a chord's error is included in the bound and not separated out. Lengths
 have exact answers only for lines and arcs. The treatments' shapes are untested on cloth. Curved results are polylines, so an exporter that wants a Bézier
 back has to fit one. Its loop search compares every pair of segments, so its work grows with the square of their number.
@@ -139,3 +153,4 @@ back has to fit one. Its loop search compares every pair of segments, so its wor
 | `variable` | Corpus cases with differing widths |
 | `fixture` | The corpus case built from the reference skirt |
 | `refusal` | Corpus cases that must be refused |
+| `Step` | The corner treatment that runs the first edge on past the corner |

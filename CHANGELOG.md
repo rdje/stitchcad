@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1005 — a project holds how to draw the garment,and reopens to the same bytes
+
+A project now saves how each piece is drawn,and never the drawing. Save,load,save leaves every byte on a real directory,and two designs with identical contours stay distinct.
+Every corpus case is moved,turned and mirrored against a derived bound. The mirror test found D397 on its first run. Undo history does not cross a reopen. G2-06 met,30 of 66.
+
 ## STITCHCAD-G1-1004 — a viewer and editor over the same commands
 
 `bash scripts/dev_shell.sh` draws the reference skirt in your browser with WebGPU. Wheel,drag,click an edge,edit any measurement,undo,redo,save,reopen,export.

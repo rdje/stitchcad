@@ -8,8 +8,7 @@ other front end will use. The same session always prints the same bytes and save
 **What works today.** A session supplies named lengths and a scalar recipe. The program builds a real Design from
 them, runs the steps below, and prints a transcript. It drafts a real garment: `conformance/reference-skirt/session.json`
 is the whole [reference skirt](reference-skirt.md), and it exports the same canonical form, DXF and PDF on every run.
-[The dev shell](dev-shell.md) drives these same steps from a page. **What does not exist yet:** any edit but a measurement change; a pattern saved in the project, which is `G2-2D.10`, so
-reopening a project keeps its inputs and recipe and a session drafts again; a piece named by anything but evaluated
+[The dev shell](dev-shell.md) drives these same steps from a page. **What does not exist yet:** any edit but a measurement change; a piece named by anything but evaluated
 lengths and curves written in the session, which is G3; `sc-api` and MCP, leaf `.9`.
 
 ```text
@@ -37,7 +36,7 @@ $ stitchcad replay session.json project-directory
 | `export` | Adds the last drawing to the project at `path`, and reports its digest. The next `save` writes it |
 | `save` | Saves the project as one [crash-consistent commit](project-store.md), keeping files and fields it did not write |
 | `reopen` | Rebuilds the Design from the saved project |
-| `draft` | Draws the pattern's pieces from the evaluated lengths, below. It changes nothing in the Design, and any later change clears the drawing |
+| `draft` | Draws the pattern's pieces from the evaluated lengths, below. It changes nothing in the Design, and any later change clears the drawing. With no `pieces`, it draws what the project saved |
 | `export_pattern` | Adds the drafted pattern to the project at `path` in `canonical`, `dxf` or `pdf`, with a record beside it, and reports the digest. The next `save` writes them |
 
 ## An edit, an undo, and a saved project

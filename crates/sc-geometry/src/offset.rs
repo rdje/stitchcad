@@ -342,13 +342,13 @@ fn join(a: &Edge, b: &Edge, corner: Point) -> Joined {
                 None => slant(),
             }
         }
-        Corner::Envelope => {
-            if b.corner == Corner::Envelope {
-                fold_over_second(a_end, b_start, corner, u, v)
-            } else {
-                fold_over_first(a_end, b_start, corner, u, v)
-            }
-        }
+        // The edge naming it is the fold. Two meeting at a corner have no fold between them, as at a mitred hem corner, so they miter,
+        // and either way the join does not depend on which way the boundary happens to run.
+        Corner::Envelope => match (a.corner == Corner::Envelope, b.corner == Corner::Envelope) {
+            (true, true) => meet.map_or_else(slant, |point| replace_both(vec![rounded(point)])),
+            (false, _) => fold_over_second(a_end, b_start, corner, u, v),
+            (true, false) => fold_over_first(a_end, b_start, corner, u, v),
+        },
     };
     // No treatment may reach further than a miter's limit: past it, an acute corner gets a straight cut.
     let limit = wider * MITER_LIMIT as f64;

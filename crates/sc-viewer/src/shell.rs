@@ -229,7 +229,7 @@ pub struct Shell {
     running: Running<Shared>,
     disk: Shared,
     opening: BTreeMap<String, Value>,
-    draft_step: Value,
+    draft_step: Option<Value>,
     recorded: Vec<Value>,
     bindings: Value,
     scene: Scene,
@@ -276,7 +276,7 @@ impl Shell {
             running,
             disk,
             opening,
-            draft_step,
+            draft_step: Some(draft_step),
             recorded: Vec::new(),
             bindings: Value::List(Vec::new()),
             scene: Scene::default(),
@@ -300,9 +300,13 @@ impl Shell {
         Ok(record)
     }
 
+    // The first draft names its pieces, and the session keeps them, so every later one is the same plain step a project can replay.
     fn redraw(&mut self) -> Result<(), Failure> {
-        let draft = self.draft_step.clone();
-        self.issue(&draft)?;
+        if let Some(first) = self.draft_step.take() {
+            self.issue(&first)?;
+        } else {
+            self.issue(&step_named("draft"))?;
+        }
         let record = self.issue(&step_named("evaluate"))?;
         self.bindings = record
             .as_object()

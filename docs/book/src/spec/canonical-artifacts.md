@@ -5,7 +5,7 @@ every file made from it inherits that. The `sc-artifacts` crate holds this form,
 changed notch cannot hide and a reformatted file cannot alarm. It is the canonicalizer the roadmap asks for before any writer.
 
 **What works today.** The written form, reading it back, and comparing two patterns. [The command line](command-line.md) drafts real pieces into it, and [the DXF](dxf-output.md) and [PDF](pdf-output.md) writers read it.
-**What does not exist yet:** a pattern saved in a project in this form, which is `G2-2D.10`.
+A project does not hold this form: it holds [how to draw the pattern](project-store.md), because the drawing is derived.
 
 ```rust
 use sc_artifacts::{compare, to_canonical_text, Comparison, DrawnPiece, Line, Pattern};
