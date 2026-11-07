@@ -1,0 +1,392 @@
+999
+dxf-aama-named base_plus_rules unit=millimetre writer=stitchcad-dxf-1
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1009
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+LAYER
+ 70
+6
+  0
+LAYER
+  2
+CUT
+ 70
+0
+ 62
+1
+  6
+CONTINUOUS
+  0
+LAYER
+  2
+DRAW
+ 70
+0
+ 62
+7
+  6
+CONTINUOUS
+  0
+LAYER
+  2
+DRILL
+ 70
+0
+ 62
+6
+  6
+CONTINUOUS
+  0
+LAYER
+  2
+INTCUT
+ 70
+0
+ 62
+4
+  6
+CONTINUOUS
+  0
+LAYER
+  2
+NOTCH
+ 70
+0
+ 62
+3
+  6
+CONTINUOUS
+  0
+LAYER
+  2
+TEXT
+ 70
+0
+ 62
+2
+  6
+CONTINUOUS
+  0
+ENDTAB
+  0
+ENDSEC
+  0
+SECTION
+  2
+BLOCKS
+  0
+BLOCK
+  8
+0
+  2
+square_M
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+square_M
+  0
+POLYLINE
+  8
+CUT
+ 66
+1
+ 70
+1
+  0
+VERTEX
+  8
+CUT
+ 10
+10.000
+ 20
+10.000
+ 30
+0.0
+  0
+VERTEX
+  8
+CUT
+ 10
+90.000
+ 20
+10.000
+ 30
+0.0
+  0
+VERTEX
+  8
+CUT
+ 10
+90.000
+ 20
+90.000
+ 30
+0.0
+  0
+VERTEX
+  8
+CUT
+ 10
+10.000
+ 20
+90.000
+ 30
+0.0
+  0
+SEQEND
+  8
+CUT
+  0
+POLYLINE
+  8
+DRAW
+ 66
+1
+ 70
+1
+  0
+VERTEX
+  8
+DRAW
+ 10
+0.000
+ 20
+0.000
+ 30
+0.0
+  0
+VERTEX
+  8
+DRAW
+ 10
+100.000
+ 20
+0.000
+ 30
+0.0
+  0
+VERTEX
+  8
+DRAW
+ 10
+100.000
+ 20
+100.000
+ 30
+0.0
+  0
+VERTEX
+  8
+DRAW
+ 10
+0.000
+ 20
+100.000
+ 30
+0.0
+  0
+SEQEND
+  8
+DRAW
+  0
+LINE
+  8
+DRAW
+ 10
+20.000
+ 20
+20.000
+ 30
+0.0
+ 11
+20.000
+ 21
+80.000
+ 31
+0.0
+  0
+LINE
+  8
+NOTCH
+ 10
+50.000
+ 20
+0.000
+ 30
+0.0
+ 11
+50.000
+ 21
+5.000
+ 31
+0.0
+  0
+LINE
+  8
+NOTCH
+ 10
+100.000
+ 20
+46.000
+ 30
+0.0
+ 11
+95.000
+ 21
+46.000
+ 31
+0.0
+  0
+LINE
+  8
+NOTCH
+ 10
+100.000
+ 20
+54.000
+ 30
+0.0
+ 11
+95.000
+ 21
+54.000
+ 31
+0.0
+  0
+POLYLINE
+  8
+DRILL
+ 66
+1
+ 70
+1
+  0
+VERTEX
+  8
+DRILL
+ 10
+49.000
+ 20
+50.000
+ 30
+0.0
+ 42
+1.000000
+  0
+VERTEX
+  8
+DRILL
+ 10
+51.000
+ 20
+50.000
+ 30
+0.0
+ 42
+1.000000
+  0
+SEQEND
+  8
+DRILL
+  0
+TEXT
+  8
+TEXT
+ 10
+20.000
+ 20
+20.000
+ 30
+0.0
+ 40
+3.000
+  1
+Piece Name: square
+  0
+TEXT
+  8
+TEXT
+ 10
+20.000
+ 20
+15.000
+ 30
+0.0
+ 40
+3.000
+  1
+Size: M
+  0
+TEXT
+  8
+TEXT
+ 10
+20.000
+ 20
+10.000
+ 30
+0.0
+ 40
+3.000
+  1
+Quantity: 1,0
+  0
+TEXT
+  8
+TEXT
+ 10
+20.000
+ 20
+5.000
+ 30
+0.0
+ 40
+3.000
+  1
+Style Name: notches
+  0
+ENDBLK
+  8
+0
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+INSERT
+  8
+0
+  2
+square_M
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+ENDSEC
+  0
+EOF

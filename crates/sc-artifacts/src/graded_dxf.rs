@@ -6,7 +6,7 @@ use crate::dxf::{
 use crate::pattern::{DrawnPiece, Line, Mark, MarkKind, Pattern};
 use sc_geometry::Point;
 use sc_store::Value;
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 
 /// How grading travels.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -51,7 +51,6 @@ impl GradingMode {
             ],
             Self::EmbeddedRules => &[
                 "the_file_holds_identifiers_and_the_deltas_are_in_a_table_it_names",
-                "turn_points_and_curve_points_are_not_written_on_their_own_layers",
                 "rules_only_on_the_points_listed_and_between_them_a_receiver_interpolates",
                 "stack_points_fixed_contours_and_declared_zeros_are_not_carried",
                 "the_recipe_is_not_carried",
@@ -64,6 +63,26 @@ impl GradingMode {
                 "the_recipe_is_not_carried",
                 "coordinates_are_held_to_two_decimal_places",
             ],
+        }
+    }
+}
+
+/// How a notch reaches a numbered file. Which one a receiver wants is its profile's to say, so this is asked for by name.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum NotchEncoding {
+    /// A line on the internal layer, which anything can read. The default, because a receiver's reading of a coded point is unknown.
+    Drawn,
+    /// A point on the notch layer, with its depth and its angle.
+    Coded,
+}
+
+impl NotchEncoding {
+    /// Its name.
+    #[must_use]
+    pub const fn token(self) -> &'static str {
+        match self {
+            Self::Drawn => "drawn",
+            Self::Coded => "coded",
         }
     }
 }
@@ -99,7 +118,13 @@ pub struct GradedArtifact {
     pub record: String,
 }
 
-fn record(mode: GradingMode, pattern: &Pattern, flattening: Flattening, unit: &str) -> String {
+fn record(
+    mode: GradingMode,
+    pattern: &Pattern,
+    flattening: Flattening,
+    unit: &str,
+    notches: NotchEncoding,
+) -> String {
     let text_value = |value: &str| Value::Text(value.to_owned());
     let mut axes = BTreeMap::new();
     axes.insert(
@@ -124,6 +149,7 @@ fn record(mode: GradingMode, pattern: &Pattern, flattening: Flattening, unit: &s
     axes.insert("grading_mode".to_owned(), text_value(mode.token()));
     axes.insert("entity_policy".to_owned(), text_value("polyline_only"));
     let mut fields = BTreeMap::new();
+    fields.insert("notch_encoding".to_owned(), text_value(notches.token()));
     fields.insert("target".to_owned(), text_value(mode.target()));
     fields.insert("axes".to_owned(), Value::Object(axes));
     fields.insert("unit".to_owned(), text_value(unit));
@@ -380,12 +406,16 @@ pub fn write_base_plus_rules(
             pattern,
             flattening,
             "millimetre",
+            NotchEncoding::Drawn,
         ),
     })
 }
 
-const NUMBERED: [(&str, &str); 9] = [
+const NUMBERED: [(&str, &str); 11] = [
+    ("0", "7"),
     ("1", "1"),
+    ("2", "1"),
+    ("3", "1"),
     ("4", "3"),
     ("5", "5"),
     ("7", "7"),
@@ -393,7 +423,6 @@ const NUMBERED: [(&str, &str); 9] = [
     ("13", "6"),
     ("14", "2"),
     ("15", "2"),
-    ("0", "7"),
 ];
 
 fn style_text(out: &mut String, pattern: &Pattern, sample: &str, table: &str) {
@@ -454,21 +483,84 @@ fn line_numbered(out: &mut String, layer: &str, from: Point, to: Point) {
     pair(out, 31, "0.0");
 }
 
+fn point_numbered(out: &mut String, layer: &str, at: Point) {
+    pair(out, 0, "POINT");
+    pair(out, 8, layer);
+    pair(out, 10, &millimetres_to_two(at.x()));
+    pair(out, 20, &millimetres_to_two(at.y()));
+    pair(out, 30, "0.0");
+}
+
+// The convention says a drill hole's coordinates are a point: its layer cannot hold a polyline.
 fn drill_numbered(out: &mut String, at: Point) {
-    pair(out, 0, "POLYLINE");
-    pair(out, 8, "13");
-    pair(out, 66, "1");
-    pair(out, 70, "1");
-    for x in [at.x() - 1_000, at.x() + 1_000] {
-        pair(out, 0, "VERTEX");
-        pair(out, 8, "13");
-        pair(out, 10, &millimetres_to_two(x));
-        pair(out, 20, &millimetres_to_two(at.y()));
-        pair(out, 30, "0.0");
-        pair(out, 42, "1.000000");
+    point_numbered(out, "13", at);
+}
+
+// A coded notch is a point on the boundary, with its depth as Z and its angle counter-clockwise from X. It has no width, so it is a slit, and a V needs a width only a profile can give.
+#[allow(clippy::cast_precision_loss, clippy::cast_possible_truncation)]
+fn coded_notch(out: &mut String, mark: &Mark) {
+    let (dx, dy) = (
+        (mark.toward.x() - mark.at.x()) as f64,
+        (mark.toward.y() - mark.at.y()) as f64,
+    );
+    let depth = sc_units::pure::hypot(dx, dy).round() as i64;
+    let mut angle = sc_units::pure::atan2(dy, dx).to_degrees();
+    if angle < 0.0 {
+        angle += 360.0;
     }
-    pair(out, 0, "SEQEND");
-    pair(out, 8, "13");
+    pair(out, 0, "POINT");
+    pair(out, 8, "4");
+    pair(out, 10, &millimetres_to_two(mark.at.x()));
+    pair(out, 20, &millimetres_to_two(mark.at.y()));
+    pair(out, 30, &millimetres_to_two(depth));
+    pair(out, 50, &format!("{angle:.3}"));
+}
+
+// A notch in a numbered file, as it was asked for: drawn on the internal layer, or coded as a point on its own.
+fn notch_numbered(out: &mut String, mark: &Mark, notches: NotchEncoding) {
+    match notches {
+        NotchEncoding::Drawn => line_numbered(out, "8", mark.at, mark.toward),
+        NotchEncoding::Coded => coded_notch(out, mark),
+    }
+}
+
+// The convention's layers 2 and 3 hold every turn point and curve point of the lines on layers 1, 8 and 14. A vertex that turns by more than this is a turn, and a line's two ends are too.
+#[allow(clippy::cast_precision_loss, clippy::cast_possible_truncation)]
+fn turn_and_curve_points(out: &mut String, closed: &[&[Point]], open: &[Line]) {
+    const TURNS_FROM: f64 = 0.5;
+    let mut turn = BTreeSet::new();
+    let mut curve = BTreeSet::new();
+    for line in closed {
+        let count = line.len();
+        for index in 0..count {
+            let (Some(a), Some(b), Some(c)) = (
+                line.get((index + count - 1) % count),
+                line.get(index),
+                line.get((index + 1) % count),
+            ) else {
+                continue;
+            };
+            let (ux, uy) = ((b.x() - a.x()) as f64, (b.y() - a.y()) as f64);
+            let (vx, vy) = ((c.x() - b.x()) as f64, (c.y() - b.y()) as f64);
+            let bend = sc_units::pure::atan2((ux * vy - uy * vx).abs(), ux * vx + uy * vy);
+            if bend >= TURNS_FROM {
+                turn.insert(*b);
+            } else {
+                curve.insert(*b);
+            }
+        }
+    }
+    for item in open {
+        turn.insert(item.from);
+        turn.insert(item.to);
+    }
+    for at in &turn {
+        point_numbered(out, "2", *at);
+        curve.remove(at);
+    }
+    for at in &curve {
+        point_numbered(out, "3", *at);
+    }
 }
 
 /// The sample on numbered layers, with an identifier at each point. **The standard has no place in this file for a delta,** so a receiver also needs the table its style text names.
@@ -482,6 +574,7 @@ pub fn write_embedded_rules(
     points: &[RulePoint],
     (sample, table): (&str, &str),
     flattening: Flattening,
+    notches: NotchEncoding,
 ) -> Result<GradedArtifact, DxfError> {
     let mut pieces: Vec<&DrawnPiece> = pattern.pieces.iter().collect();
     pieces.sort_by(|a, b| a.name.cmp(&b.name));
@@ -517,13 +610,14 @@ pub fn write_embedded_rules(
             true,
         );
         line_numbered(&mut out, "7", piece.grain.from, piece.grain.to);
+        turn_and_curve_points(&mut out, &[&piece.sew, &piece.cut], &sorted_lines(piece));
         for item in sorted_lines(piece) {
             polyline_numbered(&mut out, "8", &[item.from, item.to], false);
         }
         for mark in sorted_marks(piece) {
             match mark.kind {
                 MarkKind::VNotch | MarkKind::SlitNotch => {
-                    line_numbered(&mut out, "4", mark.at, mark.toward);
+                    notch_numbered(&mut out, &mark, notches);
                 }
                 MarkKind::Drill => drill_numbered(&mut out, mark.at),
             }
@@ -579,6 +673,7 @@ pub fn write_embedded_rules(
             pattern,
             flattening,
             "millimetre_two_places",
+            notches,
         ),
     })
 }
@@ -608,6 +703,7 @@ pub fn write_all_contours(
     paired: &[Paired],
     sizes: &[(String, Vec<NestPiece>)],
     flattening: Flattening,
+    notches: NotchEncoding,
 ) -> Result<GradedArtifact, DxfError> {
     let mut out = String::new();
     header(
@@ -679,12 +775,13 @@ pub fn write_all_contours(
                     &crate::canonical::from_lowest(&drawn.cut),
                     true,
                 );
+                turn_and_curve_points(&mut out, &[&nest.net, &drawn.cut], &sorted_lines(drawn));
                 for item in sorted_lines(drawn) {
                     polyline_numbered(&mut out, "8", &[item.from, item.to], false);
                 }
                 for mark in sorted_marks(drawn) {
                     if matches!(mark.kind, MarkKind::VNotch | MarkKind::SlitNotch) {
-                        line_numbered(&mut out, "4", mark.at, mark.toward);
+                        notch_numbered(&mut out, &mark, notches);
                     }
                 }
                 let mut labels = drawn.labels.clone();
@@ -710,6 +807,7 @@ pub fn write_all_contours(
             sample,
             flattening,
             "millimetre_two_places",
+            notches,
         ),
     })
 }

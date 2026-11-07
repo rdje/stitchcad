@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1025 — what a notch means and how a file says it,in both dialects,with a documented default
+
+Single,double and drill each have a meaning and a representation,frozen per dialect. A numbered file draws a notch or codes it as a point,and it is drawn unless asked,since no import system is known.
+Reading the convention found my numbered files broke its own rule on layer 13,now fixed. No receiver has read any of it.
+
 ## STITCHCAD-G1-1024 — a reader written separately from the format,which agrees and is not an engine
 
 No independent engine is available,so G3-05 stays open with the director. A separate agent wrote a reader from the format's description alone,and every corner at every size lands within 10 µm of the recipe.

@@ -176,6 +176,11 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D406 — polylines where the convention says points
+
+The numbered files from 1022 put a drill hole on layer 13 as a polyline,and the convention says layers 5,6,7,9,10 and 13 cannot hold one. Layers 2 and 3,which it says hold every turn and curve point,were unwritten,and a drawn notch sat on layer 4,which is for coded points. Owner:G3-GRADING.13. Found reading the standard's pages for notches,after 1022.
+Fixed1025:drill holes and turn and curve points are points,and a drawn notch is on layer 8. A test holds the layer rule. No receiver had read those files.
+
 ## D405 — a schema that refused a seam
 
 `draft_pattern` advertised additionalProperties false with only style,size and pieces,while a draft also takes seams,balance_notches and trues. The server does not validate,so every test and agent session passed;a client that validates would have refused a seam. Owner:G3-GRADING.4. Found reading the schema to add fits.

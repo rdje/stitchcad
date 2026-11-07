@@ -151,18 +151,20 @@ R13 DXF.
 | `POLYLINE` | both releases | every boundary, internal line, grainline and mirror axis — one entity family for all of it |
 | `VERTEX` | both releases | a `POLYLINE`'s vertex, with a **bulge** where an arc ends there, so a circular arc is carried exactly and never tessellated (units §4) |
 | `LINE` | both releases | a single straight segment where a receiver expects one: a grainline, a mirror axis |
+| `POINT` | the numbered target | a drill hole on layer 13, a coded notch on layer 4, and a turn or curve point on layers 2 and 3, because the convention says those layers hold points. [Notch types](notch-types.md) gives each |
 | `TEXT` | both releases | SST, PST and label data — single-line, because a multi-line entity's layout is the receiver's to decide |
 | `INSERT` | both releases | one per piece, referencing that piece's `BLOCK` (§5) |
 | `BLOCK` | both releases | the piece container (§5), never nested |
 | `ARC` | never | a standalone arc is refused although its geometry is exact as a bulge: a receiver accepting only `POLYLINE` is the case the entity policy exists for, and two families for one boundary is two ways to disagree |
-| `CIRCLE` | never | the same reason; a notch hole is a closed `POLYLINE` of bulged vertices |
+| `CIRCLE` | never | the same reason; on the named target a drill hole is a closed `POLYLINE` of bulged vertices |
 | `LWPOLYLINE` | never | a later release's lightweight form, and a receiver's acceptance of it is not established (§12) |
 | `SPLINE` | never | a NURBS-class entity, which the envelope defers ([envelope §3](feature-matrix.md), `env_nurbs`) |
 | `MTEXT` | never | multi-line text layout is receiver-dependent, so a label is one `TEXT` per line |
 | `HATCH` | never | a fill is presentation, and an artifact carries cut and sew geometry |
 
-The written set is the same for both releases, so one geometry writer serves both targets and the
-difference between them is the layer naming and the metadata blocks, not the entities.
+The written set is the same for both releases but for `POINT`, which the numbered target needs because
+the convention says layers 5, 6, 7, 9, 10 and 13 cannot hold a polyline. Otherwise the difference between
+them is the layer naming and the metadata blocks, not the entities.
 
 - **The entity policy is polyline-only**, which is an axis value (§1) and not an implementation
   convenience: a Bézier is tessellated at the declared bound (§7), an arc is carried exactly as a

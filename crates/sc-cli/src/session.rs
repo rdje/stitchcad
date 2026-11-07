@@ -976,6 +976,21 @@ impl<R: Repository> Session<R> {
             .and_then(Value::as_text)
             .ok_or_else(|| fail("export_graded needs a path, without its extension".to_owned()))?
             .to_owned();
+        // Which a receiver wants is a profile's to say. Until one does, a notch is drawn, because anything can read that.
+        let notches = match fields.get("notch_encoding").and_then(Value::as_text) {
+            None | Some("drawn") => sc_artifacts::NotchEncoding::Drawn,
+            Some("coded") if mode == sc_artifacts::GradingMode::BasePlusRules => {
+                return Err(fail(
+                    "a coded notch is a point on the numbered convention's notch layer, and a named file has no such layer".to_owned(),
+                ))
+            }
+            Some("coded") => sc_artifacts::NotchEncoding::Coded,
+            Some(other) => {
+                return Err(fail(format!(
+                    "no notch encoding is named {other}: it is drawn or coded"
+                )))
+            }
+        };
         let sizes = crate::family::sizes_of(&document).map_err(fail)?;
         let at_sizes = self.lengths_at_sizes(step, &document, &sizes)?;
         let table =
@@ -1027,6 +1042,7 @@ impl<R: Repository> Session<R> {
                 &points,
                 (table.sample(), table.name()),
                 flattening,
+                notches,
             ),
             sc_artifacts::GradingMode::AllContours => {
                 let counts = crate::draft::curve_counts(&document, &at_sizes).map_err(fail)?;
@@ -1047,7 +1063,7 @@ impl<R: Repository> Session<R> {
                             .map_err(|message| fail(format!("size {size}: {message}")))?,
                     ));
                 }
-                sc_artifacts::write_all_contours(&sample, &paired, &nests, flattening)
+                sc_artifacts::write_all_contours(&sample, &paired, &nests, flattening, notches)
             }
         }
         .map_err(|error| fail(error.to_string()))?;

@@ -62,6 +62,7 @@
   - [Instantiation paths](spec/instantiation-paths.md)
   - [Grading a garment](spec/grading.md)
   - [Grade rules](spec/grade-rules.md)
+  - [Notch types](spec/notch-types.md)
   - [Size sets](spec/size-sets.md)
   - [Size axes and member coordinates](spec/size-axes.md)
   - [SizeSet profile transformations](spec/size-set-transformations.md)

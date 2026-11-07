@@ -13,6 +13,8 @@ mod judge;
 mod mutation_tests_examples {}
 #[doc = include_str!("../../../docs/book/src/spec/dxf-output.md")]
 mod dxf_examples {}
+#[doc = include_str!("../../../docs/book/src/spec/notch-types.md")]
+mod notch_examples {}
 mod pattern;
 mod pdf;
 mod seams;
@@ -25,7 +27,7 @@ pub use compare::{compare, Comparison, Difference};
 pub use dxf::{write_dxf, DxfArtifact, DxfError, Flattening, LineSemantics, TARGET, WRITER};
 pub use graded_dxf::{
     write_all_contours, write_base_plus_rules, write_embedded_rules, GradedArtifact, GradingMode,
-    NestPiece, Paired, RulePoint,
+    NestPiece, NotchEncoding, Paired, RulePoint,
 };
 pub use judge::{
     judge_dxf, judge_inputs, judge_pattern, judge_pdf_square, Expectations, Finding,

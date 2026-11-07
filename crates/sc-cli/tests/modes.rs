@@ -86,6 +86,7 @@ type At = (i64, i64);
 struct Block {
     lines: BTreeMap<String, Vec<Vec<At>>>,
     straight: BTreeMap<String, Vec<(At, At)>>,
+    points: BTreeMap<String, Vec<At>>,
     texts: Vec<(String, (i64, i64), String)>,
 }
 
@@ -136,6 +137,27 @@ fn read(text: &str) -> Read {
         if code == 0 && value == "BLOCK" {
             let name = pairs[index + 2].1.to_owned();
             out.blocks.push((name, Block::default()));
+        }
+        if code == 0 && value == "POINT" {
+            let mut cursor = index + 1;
+            let (mut layer, mut x, mut y) = ("", 0, 0);
+            while pairs[cursor].0 != 0 {
+                match pairs[cursor].0 {
+                    8 => layer = pairs[cursor].1,
+                    10 => x = micrometres(pairs[cursor].1),
+                    20 => y = micrometres(pairs[cursor].1),
+                    _ => {}
+                }
+                cursor += 1;
+            }
+            let block = &mut out.blocks.last_mut().expect("a block").1;
+            block
+                .points
+                .entry(layer.to_owned())
+                .or_default()
+                .push((x, y));
+            index = cursor;
+            continue;
         }
         if code == 0 && matches!(value, "POLYLINE" | "LINE" | "TEXT") {
             let mut fields: BTreeMap<i32, Vec<&str>> = BTreeMap::new();
@@ -229,7 +251,12 @@ fn identifiers_sit_on_points(read: &Read, within: i64, boundary_layer: &str) {
                 .any(|(from, to)| close(*from, *at, within) || close(*to, *at, within));
             let at_a_drill = block.lines.get(layer).into_iter().flatten().any(|hole| {
                 hole.len() == 2 && close(((hole[0].0 + hole[1].0) / 2, hole[0].1), *at, within)
-            });
+            }) || block
+                .points
+                .get(layer)
+                .into_iter()
+                .flatten()
+                .any(|point| close(*point, *at, within));
             assert!(
                 on_a_vertex || on_a_line || at_a_drill,
                 "{name}: {value} at {at:?} on {layer} is on nothing"
@@ -350,6 +377,24 @@ fn embedded_rules_is_numbered_layers_with_style_text_and_two_places() {
         for (name, block) in &got.blocks {
             assert!(block.lines.contains_key("1"), "{name}");
             assert!(block.lines.contains_key("14"), "{name}");
+            // The convention's own restriction: these layers cannot hold a polyline.
+            for layer in ["5", "6", "7", "9", "10", "13"] {
+                assert!(
+                    !block.lines.contains_key(layer),
+                    "{name}: a polyline on layer {layer}"
+                );
+            }
+            // Layers 2 and 3 hold every turn point and curve point of the boundary between them.
+            let (turn, curve) = (&block.points["2"], block.points.get("3"));
+            for vertex in &block.lines["1"][0] {
+                assert!(
+                    turn.iter().any(|point| close(*point, *vertex, 10))
+                        || curve.is_some_and(|curve| curve
+                            .iter()
+                            .any(|point| close(*point, *vertex, 10))),
+                    "{name}: {vertex:?} is on neither"
+                );
+            }
         }
     }
 }
@@ -473,14 +518,17 @@ fn all_contours_is_every_size_in_order_with_the_same_points_and_only_the_sample_
                         "{piece} at {size}: layer {layer}"
                     );
                 }
-                // Notches are not repeated, as the standard says.
-                assert_eq!(
-                    here.straight.contains_key("4"),
-                    carries_more && here.straight.contains_key("4")
-                );
-                if !carries_more {
-                    assert!(!here.straight.contains_key("4"), "{piece} at {size}");
+                // Notches, turn points and curve points are not repeated, as the standard says.
+                for layer in ["2", "3", "4"] {
+                    assert!(
+                        carries_more || !here.points.contains_key(layer),
+                        "{piece} at {size}: layer {layer}"
+                    );
                 }
+                assert!(
+                    carries_more || !here.lines.contains_key("8"),
+                    "{piece} at {size}"
+                );
             }
         }
         // No rules travel in this mode, and nothing beside it says otherwise.

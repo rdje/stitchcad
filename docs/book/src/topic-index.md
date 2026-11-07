@@ -80,6 +80,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Instantiation paths](spec/instantiation-paths.md)
 - [Grading a garment](spec/grading.md)
 - [Grade rules](spec/grade-rules.md)
+- [Notch types](spec/notch-types.md)
 - [Interchange and the envelope](spec/glossary/interchange-and-envelope.md)
 - [Interchange dialects](spec/interchange-dialects.md)
 - [Internationalization](spec/i18n-architecture.md)

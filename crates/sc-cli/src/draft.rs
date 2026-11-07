@@ -259,7 +259,7 @@ fn notch_type(item: &Fields, name: &str) -> Result<NotchType, String> {
         Some("double") => Ok(NotchType::Double),
         Some("drill") => Ok(NotchType::Drill),
         Some(other) => Err(format!(
-            "the notch {name} is of type {other}, and a notch is single, double or drill until the export types of G4"
+            "the notch {name} is of type {other}, and that is env_notch_type: a notch is single, double or drill until the export types of G4"
         )),
     }
 }

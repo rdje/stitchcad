@@ -158,7 +158,7 @@ A verdict is `holds`, `fails`, or `no_limit`. **A limit belongs to a factory,** 
 
 ## The three modes
 
-`export_graded` takes a `mode`, `semantics` and a `path`, and writes one mode's files beside its record. **No mode serves every receiver,** there is no universal one, and asking for one is refused. Which a receiver wants is its own to say, and none has said.
+`export_graded` takes a `mode`, `semantics` and a `path`, and writes one mode's files beside its record. [`notch_encoding`](notch-types.md) says how a numbered file carries a notch, and it is `drawn` unless it says `coded`. **No mode serves every receiver,** there is no universal one, and asking for one is refused. Which a receiver wants is its own to say, and none has said.
 
 | `mode` | Target | What it writes |
 | --- | --- | --- |
@@ -181,7 +181,6 @@ Each record states what that mode loses, in these words:
 | `stack_points_fixed_contours_and_declared_zeros_are_not_carried` | `base_plus_rules`, `embedded_rules` |
 | `the_recipe_is_not_carried` | All three |
 | `the_file_holds_identifiers_and_the_deltas_are_in_a_table_it_names` | `embedded_rules` |
-| `turn_points_and_curve_points_are_not_written_on_their_own_layers` | `embedded_rules` |
 | `coordinates_are_held_to_two_decimal_places` | `embedded_rules`, `all_contours` |
 | `no_rules_so_a_receiver_can_make_no_size_outside_the_nest` | `all_contours` |
 | `only_the_sample_carries_notches_and_labels` | `all_contours` |
@@ -247,6 +246,9 @@ A refreeze is a decision, and the test prints the lines to review rather than ta
 | `export_graded` | The step that writes one grading mode |
 | `mode` | Which of the three |
 | `semantics` | Which line a receiver reads first |
+| `notch_encoding` | How a numbered file carries a notch |
+| `drawn` | As a line |
+| `coded` | As a point |
 | `base_plus_rules` | Named layers and a `.rul` file |
 | `embedded_rules` | Numbered layers, identifiers at the points, and a `.rul` file |
 | `all_contours` | Every size's own contour, and no rules |
@@ -262,7 +264,6 @@ A refreeze is a decision, and the test prints the lines to review rather than ta
 | `stack_points_fixed_contours_and_declared_zeros_are_not_carried` | A loss |
 | `the_recipe_is_not_carried` | A loss |
 | `the_file_holds_identifiers_and_the_deltas_are_in_a_table_it_names` | A loss |
-| `turn_points_and_curve_points_are_not_written_on_their_own_layers` | A loss |
 | `coordinates_are_held_to_two_decimal_places` | A loss |
 | `no_rules_so_a_receiver_can_make_no_size_outside_the_nest` | A loss |
 | `only_the_sample_carries_notches_and_labels` | A loss |

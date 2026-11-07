@@ -298,14 +298,21 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1023.
 
 - ID: `G3-GRADING.13`
-  Status: `pending`
+  Status: `done`
   Goal: the full typed notch set (§15.12: single/double + drill at v1; V/I/T/U/castle by G4 export) —
   semantic mark with physical representation resolved at export.
   Acceptance: each notch type has a semantic definition, an export representation per dialect and a
   golden; encoding (coded point + direction/depth/type vs drawn geometry) is a profile-resolved
   parameter with a documented default.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-artifacts/**,crates/sc-cli/**,crates/sc-api/src/lib.rs,conformance/goldens/**,scripts/check_golden_suites.sh,docs/book/src/**,docs/tasks/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY a notch's meaning and how a file says it are separate questions,and a file only had one answer. WHERE no encoding existed:git grep -c notch_encoding 398140d9 -- crates/sc-artifacts/src/graded_dxf.rs →rc=1.
+  - [x] ADDRESSED,TYPES:single,double and drill each have a meaning and a representation in both dialects,each frozen in conformance/goldens/notches/. cargo test -p sc-artifacts --test notch_types →rc=0:every angle round the circle.
+  - [x] ADDRESSED,ENCODING:drawn or coded,named by the caller until a profile exists,with drawn the documented default,because the guide says so when the import system is unknown,and none is known here. The record says which. A later type says env_notch_type.
+  - [x] ALSO FOUND:D406,my numbered files broke the convention's own rule. Layer 13 cannot hold a polyline,and layers 2 and 3 were unwritten. Drill holes are now points,and turn and curve points are written. Thirty digests refrozen,and nothing about what they mean changed.
+  - [x] NOT SHOWN,STATED:no receiver has read a coded point or drawn lines on layer 8. Group codes 30 and 50 come from a third party's guide. A notch has no width.
+  - [x] NO REGRESSION:single-size goldens and the families byte-identical;cargo test -p sc-cli --test modes --test graded_goldens →rc=0;gauge.sh --checks →rc=0;cargo test -p sc-units -p sc-geometry -p sc-artifacts -p sc-grading -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1025.
 
 - ID: `G3-GRADING.14`
   Status: `pending`
