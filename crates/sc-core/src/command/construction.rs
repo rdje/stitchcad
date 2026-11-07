@@ -70,6 +70,26 @@ impl CloseDart {
     }
 }
 
+/// Replace how the garment's pieces are drawn. The core holds this text and does not read it: the drafting layer does, so that an edit has a revision, an actor and an undo.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct ChangeDrafting {
+    document: String,
+}
+
+impl ChangeDrafting {
+    /// The whole new document, as the drafting layer writes it.
+    #[must_use]
+    pub const fn new(document: String) -> Self {
+        Self { document }
+    }
+
+    /// The document this installs.
+    #[must_use]
+    pub fn document(&self) -> &str {
+        &self.document
+    }
+}
+
 /// Fields for a new semantic notch, without a client-supplied identity for the new entity.
 /// Anchor ownership/currentness and profile bindings are checked against actual records later.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

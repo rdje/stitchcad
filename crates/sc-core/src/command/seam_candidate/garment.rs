@@ -255,6 +255,7 @@ impl<H: DesignResourceSource + Clone + PartialEq> CommandSeamSplitGarmentAdmissi
             layers,
             hems,
             constructions,
+            drafting,
         } = original.definition();
         let DesignSewingDefinition {
             inputs,
@@ -275,6 +276,7 @@ impl<H: DesignResourceSource + Clone + PartialEq> CommandSeamSplitGarmentAdmissi
             layers: layers.clone(),
             hems: hems.clone(),
             constructions: constructions.clone(),
+            drafting: drafting.clone(),
         })
         .map_err(|issue| Error::Garment(Box::new(issue)))?;
         for (field, unchanged) in [

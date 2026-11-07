@@ -208,6 +208,7 @@ fn fixture() -> DesignGarment<DesignSources> {
         hems: HemInventory::new(vec![]).expect("explicit empty Hems"),
         constructions: ConstructionInventory::new(vec![], vec![], vec![], vec![], vec![], vec![])
             .expect("explicit empty constructions"),
+        drafting: String::new(),
     })
     .expect("actual complete garment owner")
 }
@@ -495,6 +496,7 @@ fn actual_empty_draft_keeps_its_retained_canonical_recipe_and_zero_other_dynamic
         hems: HemInventory::new(vec![]).expect("empty Hems"),
         constructions: ConstructionInventory::new(vec![], vec![], vec![], vec![], vec![], vec![])
             .expect("empty constructions"),
+        drafting: String::new(),
     })
     .expect("actual complete empty draft");
     let original = garment.clone();

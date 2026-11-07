@@ -1,5 +1,7 @@
 //! One written form for one pattern: stable order and exact numbers, with no clock anywhere in it.
-use crate::pattern::{Closure, ClosureKind, DrawnPiece, Line, Mark, MarkKind, Pattern, Text};
+use crate::pattern::{
+    Closure, ClosureKind, DrawnPiece, Line, Mark, MarkKind, Pattern, Seam, SeamSide, Text,
+};
 use core::fmt;
 use sc_geometry::Point;
 use sc_store::{parse, Value};
@@ -104,6 +106,23 @@ fn piece_value(piece: &DrawnPiece) -> Value {
     object(fields)
 }
 
+fn side_value(side: &SeamSide) -> Value {
+    object(vec![
+        ("piece", text(&side.piece)),
+        ("from", point(side.from)),
+        ("to", point(side.to)),
+    ])
+}
+
+fn seam_value(seam: &Seam) -> Value {
+    object(vec![
+        ("name", text(&seam.name)),
+        ("a", side_value(&seam.a)),
+        ("b", side_value(&seam.b)),
+        ("ease", Value::Int(seam.ease)),
+    ])
+}
+
 fn closure_kind_name(kind: ClosureKind) -> &'static str {
     match kind {
         ClosureKind::Dart => "dart",
@@ -132,7 +151,7 @@ fn closure_value(closure: &Closure) -> Value {
 pub fn to_canonical_text(pattern: &Pattern) -> String {
     let mut pieces: Vec<&DrawnPiece> = pattern.pieces.iter().collect();
     pieces.sort_by(|a, b| (&a.name, &a.size).cmp(&(&b.name, &b.size)));
-    object(vec![
+    let mut fields = vec![
         ("format", Value::Int(FORMAT)),
         ("style", text(&pattern.style)),
         ("design", text(&pattern.design)),
@@ -141,8 +160,14 @@ pub fn to_canonical_text(pattern: &Pattern) -> String {
             "pieces",
             Value::List(pieces.into_iter().map(piece_value).collect()),
         ),
-    ])
-    .to_text()
+    ];
+    // A pattern with no sewing graph writes no field, so a form written before there was one still reads the same.
+    if !pattern.seams.is_empty() {
+        let mut seams = pattern.seams.clone();
+        seams.sort();
+        fields.push(("seams", Value::List(seams.iter().map(seam_value).collect())));
+    }
+    object(fields).to_text()
 }
 
 /// Why a text is not a canonical pattern.
@@ -298,6 +323,33 @@ fn read_piece(value: &Value) -> Result<DrawnPiece, CanonicalError> {
     })
 }
 
+fn read_side(value: &Value) -> Result<SeamSide, CanonicalError> {
+    let Some(fields) = value.as_object() else {
+        return fail("a seam's side must be an object");
+    };
+    Ok(SeamSide {
+        piece: read_text(fields, "piece")?,
+        from: read_point(field(fields, "from")?)?,
+        to: read_point(field(fields, "to")?)?,
+    })
+}
+
+fn read_seam(value: &Value) -> Result<Seam, CanonicalError> {
+    let Some(fields) = value.as_object() else {
+        return fail("a seam must be an object");
+    };
+    Ok(Seam {
+        name: read_text(fields, "name")?,
+        a: read_side(field(fields, "a")?)?,
+        b: read_side(field(fields, "b")?)?,
+        ease: field(fields, "ease")?
+            .as_int()
+            .ok_or_else(|| CanonicalError {
+                message: "a seam's ease must be a whole number".to_owned(),
+            })?,
+    })
+}
+
 /// A pattern from its canonical text.
 ///
 /// # Errors
@@ -320,5 +372,13 @@ pub fn from_canonical_text(source: &str) -> Result<Pattern, CanonicalError> {
             .iter()
             .map(read_piece)
             .collect::<Result<_, _>>()?,
+        seams: if fields.contains_key("seams") {
+            read_list(fields, "seams")?
+                .iter()
+                .map(read_seam)
+                .collect::<Result<_, _>>()?
+        } else {
+            Vec::new()
+        },
     })
 }

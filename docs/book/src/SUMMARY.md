@@ -78,6 +78,7 @@
   - [Viewport](spec/viewport.md)
   - [Canvas hosting](spec/canvas-hosting.md)
   - [Closures](spec/closures.md)
+  - [Walking and truing](spec/walking-and-truing.md)
   - [The dev shell](spec/dev-shell.md)
   - [The API and MCP server](spec/api-and-mcp.md)
   - [The mutation tests](spec/mutation-tests.md)

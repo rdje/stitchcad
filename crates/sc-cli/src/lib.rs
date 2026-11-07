@@ -7,6 +7,9 @@ mod draft;
 
 #[doc = include_str!("../../../docs/book/src/spec/closures.md")]
 mod closures_examples {}
+
+#[doc = include_str!("../../../docs/book/src/spec/walking-and-truing.md")]
+mod walking_examples {}
 mod outline;
 mod session;
 

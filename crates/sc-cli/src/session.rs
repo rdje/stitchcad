@@ -8,12 +8,12 @@ use sc_constraints::{
 };
 use sc_core::{
     command::{
-        ChangeMeasurement, CommandActorClaim, CommandAuditSequence, CommandAuthority,
-        CommandAuthoritySnapshot, CommandAuthoritySource, CommandBus, CommandGrant,
-        CommandGrantStatus, CommandGroupId, CommandHistoryDirection, CommandHistoryRequest,
-        CommandId, CommandIdempotencyKey, CommandMutation, CommandMutationContext,
-        CommandMutationGroup, CommandOperationLimits, CommandScope, DesignRevision,
-        MutationPayload,
+        ChangeDrafting, ChangeMeasurement, CommandActorClaim, CommandAuditSequence,
+        CommandAuthority, CommandAuthoritySnapshot, CommandAuthoritySource, CommandBus,
+        CommandGrant, CommandGrantStatus, CommandGroupId, CommandHistoryDirection,
+        CommandHistoryRequest, CommandId, CommandIdempotencyKey, CommandMutation,
+        CommandMutationContext, CommandMutationGroup, CommandOperationLimits, CommandScope,
+        DesignRevision, MutationPayload,
     },
     design::{DesignInputs, DesignResourceLimits},
     ontology::EntityId,
@@ -150,8 +150,6 @@ struct Session<R: Repository> {
     recipe: String,
     drawing: Option<String>,
     pattern: Option<sc_artifacts::Pattern>,
-    // How to draw it, which is authored and saved. The drawing itself is derived and never is.
-    drafted: Option<BTreeMap<String, Value>>,
     authorities: Vec<CommandAuthority>,
     // Every step that changed anything, and who took it.
     trace: Vec<Value>,
@@ -304,6 +302,124 @@ impl<R: Repository> Session<R> {
         ))
     }
 
+    fn walk(&self, step: usize) -> Result<Value, Failure> {
+        let pattern = self
+            .pattern
+            .as_ref()
+            .ok_or_else(|| Failure::at(step, "walk", "a walk needs a draft first".to_owned()))?;
+        let reports = sc_artifacts::walk(pattern).map_err(|error| {
+            Failure::at(
+                step,
+                "walk",
+                format!("the seam {}: {}", error.seam, error.message),
+            )
+        })?;
+        Ok(Value::List(
+            reports
+                .iter()
+                .map(sc_artifacts::WalkReport::to_value)
+                .collect(),
+        ))
+    }
+
+    // Adds an entry to one of the document's lists, as one edit.
+    fn document_with(
+        &self,
+        step: usize,
+        list: &str,
+        entry: Value,
+    ) -> Result<BTreeMap<String, Value>, Failure> {
+        let mut document = self.document().ok_or_else(|| {
+            Failure::at(
+                step,
+                "draft",
+                "there is nothing drafted to edit yet".to_owned(),
+            )
+        })?;
+        let mut items = document
+            .get(list)
+            .and_then(Value::as_list)
+            .map(<[Value]>::to_vec)
+            .unwrap_or_default();
+        items.push(entry);
+        document.insert(list.to_owned(), Value::List(items));
+        Ok(document)
+    }
+
+    fn plant_balance_notch(
+        &mut self,
+        step: usize,
+        fields: &BTreeMap<String, Value>,
+    ) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "plant_balance_notch", message);
+        let mut entry = fields.clone();
+        entry.remove("do");
+        let document = self.document_with(step, "balance_notches", Value::Object(entry))?;
+        let known = self.lengths(step)?;
+        crate::draft::draft(&known, &document, &self.design_text, &self.revision_text())
+            .map_err(fail)?;
+        self.commit_document(step, Value::Object(document).to_text())?;
+        Ok(Value::Text(self.revision_text()))
+    }
+
+    // Truing never moves a thing it was not asked to. The caller says which side and how far it will accept, the differential before and after are reported, and anything left is
+    // what the seam declares as ease.
+    fn true_seam(
+        &mut self,
+        step: usize,
+        fields: &BTreeMap<String, Value>,
+    ) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "true_seam", message);
+        let name = fields
+            .get("seam")
+            .and_then(Value::as_text)
+            .ok_or_else(|| fail("a true names its seam".to_owned()))?
+            .to_owned();
+        let limit = fields
+            .get("limit_um")
+            .and_then(Value::as_int)
+            .ok_or_else(|| fail("a true says how far it may move, as limit_um".to_owned()))?;
+        let known = self.lengths(step)?;
+        let before_document = self
+            .document()
+            .ok_or_else(|| fail("there is nothing drafted to true yet".to_owned()))?;
+        let before = crate::draft::draft(
+            &known,
+            &before_document,
+            &self.design_text,
+            &self.revision_text(),
+        )
+        .map_err(fail)?;
+        let mut entry = fields.clone();
+        entry.remove("do");
+        entry.remove("limit_um");
+        let document = self.document_with(step, "trues", Value::Object(entry))?;
+        let after =
+            crate::draft::draft(&known, &document, &self.design_text, &self.revision_text())
+                .map_err(fail)?;
+        let report =
+            |pattern: &sc_artifacts::Pattern| -> Result<sc_artifacts::WalkReport, Failure> {
+                sc_artifacts::walk(pattern)
+                    .map_err(|error| fail(format!("the seam {}: {}", error.seam, error.message)))?
+                    .into_iter()
+                    .find(|item| item.seam == name)
+                    .ok_or_else(|| fail(format!("no seam is named {name}")))
+            };
+        let (was, now) = (report(&before)?, report(&after)?);
+        let moved = was.unexplained.abs();
+        if moved > limit {
+            return Err(fail(format!(
+                "truing {name} would move an end by {moved}, past the limit of {limit}"
+            )));
+        }
+        self.commit_document(step, Value::Object(document).to_text())?;
+        let mut result = BTreeMap::new();
+        result.insert("moved_um".to_owned(), Value::Int(moved));
+        result.insert("before".to_owned(), was.to_value());
+        result.insert("after".to_owned(), now.to_value());
+        Ok(Value::Object(result))
+    }
+
     // What a change would do, computed on a copy, leaving the Design, its revision and its history exactly as they are.
     fn preview(&self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
         let fail = |message: String| Failure::at(step, "preview", message);
@@ -325,7 +441,8 @@ impl<R: Repository> Session<R> {
                 Failure::at(step, "unknown_input", format!("no input is named {token}"))
             })?;
         input.value = value;
-        let garment = build(self.design, self.revision(), &inputs, &self.recipe).map_err(fail)?;
+        let garment =
+            build(self.design, self.revision(), &inputs, &self.recipe, "").map_err(fail)?;
         let before = self.evaluate(step)?;
         let after = evaluate_design(garment.inputs(), step)?;
         let (Value::List(old), Value::List(new)) = (&before, &after) else {
@@ -374,7 +491,72 @@ impl<R: Repository> Session<R> {
         Ok(known)
     }
 
-    // A step naming its pieces draws those. One naming none draws what the project saved, which is what `reopen` restored.
+    // How to draw it, held by the Design, so an edit to it has a revision, an actor and an undo. The drawing itself is derived and is never saved.
+    fn document(&self) -> Option<BTreeMap<String, Value>> {
+        let text = &self.bus.state().definition().drafting;
+        if text.is_empty() {
+            return None;
+        }
+        sc_store::parse(text).ok()?.as_object().cloned()
+    }
+
+    // The first drawing starts the design's own history: it is part of creating the design, so it takes no revision, and what came before it cannot be undone past it.
+    fn install_document(&mut self, step: usize, text: &str) -> Result<(), Failure> {
+        let fail = |message: String| Failure::at(step, "draft", message);
+        let maximum = self
+            .bus
+            .maximum_issued_revision()
+            .ok_or_else(|| fail("this bus has no journal".to_owned()))?
+            .clone();
+        let sequence = self
+            .bus
+            .audit_sequence()
+            .ok_or_else(|| fail("this bus has no journal".to_owned()))?
+            .clone();
+        let garment = build(
+            self.design,
+            self.revision(),
+            &self.inputs,
+            &self.recipe,
+            text,
+        )
+        .map_err(fail)?;
+        let authorities = self.authorities.clone();
+        self.bus = new_bus(
+            garment,
+            self.design,
+            self.actor,
+            self.identities,
+            &authorities,
+        )
+        .map_err(fail)?;
+        self.bus
+            .resume_issuance(maximum, sequence)
+            .map_err(|error| fail(error.to_string()))?;
+        self.undo.clear();
+        self.redo.clear();
+        Ok(())
+    }
+
+    // A later edit to how the garment is drawn is a command like any other.
+    fn commit_document(&mut self, step: usize, text: String) -> Result<(), Failure> {
+        let group_id = CommandGroupId::from_entity_id(self.fresh_id());
+        let revision = self.revision();
+        let context = self.context(group_id, revision);
+        let payload = MutationPayload::ChangeDrafting(ChangeDrafting::new(text));
+        let group =
+            CommandMutationGroup::new(group_id, vec![CommandMutation::new(context, payload)])
+                .map_err(|error| Failure::at(step, "refused", error.to_string()))?;
+        self.bus
+            .commit_group(&group)
+            .map_err(|error| Failure::at(step, "refused", error.to_string()))?;
+        self.undo.push(group);
+        self.redo.clear();
+        self.pattern = None;
+        Ok(())
+    }
+
+    // A step naming its pieces draws those, and they become how the design is drawn. One naming none draws what the design holds.
     fn draft(&mut self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
         let fail = |message: String| Failure::at(step, "draft", message);
         let known = self.lengths(step)?;
@@ -383,10 +565,24 @@ impl<R: Repository> Session<R> {
             own.remove("do");
             own
         } else {
-            self.drafted.clone().ok_or_else(|| {
+            self.document().ok_or_else(|| {
                 fail("a draft names its pieces, and this project has saved none".to_owned())
             })?
         };
+        // Refused here, before anything changes, if it cannot be drawn.
+        crate::draft::draft(
+            &known,
+            &description,
+            &self.design_text,
+            &self.revision_text(),
+        )
+        .map_err(fail)?;
+        let text = Value::Object(description.clone()).to_text();
+        if self.bus.state().definition().drafting.is_empty() {
+            self.install_document(step, &text)?;
+        } else if self.bus.state().definition().drafting != text {
+            self.commit_document(step, text)?;
+        }
         let pattern = crate::draft::draft(
             &known,
             &description,
@@ -394,7 +590,6 @@ impl<R: Repository> Session<R> {
             &self.revision_text(),
         )
         .map_err(fail)?;
-        self.drafted = Some(description);
         let text = sc_artifacts::to_canonical_text(&pattern);
         let digest = sc_store::sha256_hex(text.as_bytes());
         let pieces = pattern
@@ -582,12 +777,10 @@ impl<R: Repository> Session<R> {
         project
             .set_file(path("recipe.formula")?, self.recipe.clone())
             .map_err(|error| error.to_string())?;
-        if let Some(drafted) = &self.drafted {
+        let drafting = &self.bus.state().definition().drafting;
+        if !drafting.is_empty() {
             project
-                .set_file(
-                    path("draft.json")?,
-                    Value::Object(drafted.clone()).to_text(),
-                )
+                .set_file(path("draft.json")?, drafting.clone())
                 .map_err(|error| error.to_string())?;
         }
         Ok(project)
@@ -613,18 +806,16 @@ impl<R: Repository> Session<R> {
             .ok_or_else(|| fail("the project has no recipe.formula".to_owned()))?;
         self.recipe = String::from_utf8_lossy(recipe).into_owned();
         // A project saved before anything was drafted has no description, and a draft then says so.
-        self.drafted = match saved.project.file(&path("draft.json").map_err(fail)?) {
+        let drafting = match saved.project.file(&path("draft.json").map_err(fail)?) {
             Some(bytes) => {
                 let text = String::from_utf8_lossy(bytes).into_owned();
                 let parsed = sc_store::parse(&text).map_err(|error| fail(error.to_string()))?;
-                Some(
-                    parsed
-                        .as_object()
-                        .ok_or_else(|| fail("draft.json must hold an object".to_owned()))?
-                        .clone(),
-                )
+                if parsed.as_object().is_none() {
+                    return Err(fail("draft.json must hold an object".to_owned()));
+                }
+                text
             }
-            None => None,
+            None => String::new(),
         };
         let counter = |name: &str| -> Result<u128, String> {
             saved
@@ -641,7 +832,8 @@ impl<R: Repository> Session<R> {
         self.next_id = counter("identities_issued").map_err(fail)?;
         self.base = saved.project.clone();
         // Undo does not cross a reopen yet, but revisions and audit numbers carry on and are never reissued.
-        let garment = build(self.design, revision, &self.inputs, &self.recipe).map_err(fail)?;
+        let garment =
+            build(self.design, revision, &self.inputs, &self.recipe, &drafting).map_err(fail)?;
         let authorities = self.authorities.clone();
         self.bus = new_bus(
             garment,
@@ -834,10 +1026,13 @@ fn solve(
 }
 
 /// The steps a session can take. Anything else is refused by name.
-pub const STEPS: [&str; 13] = [
+pub const STEPS: [&str; 16] = [
     "evaluate",
     "preview",
     "closures",
+    "walk",
+    "plant_balance_notch",
+    "true_seam",
     "change",
     "undo",
     "redo",
@@ -879,7 +1074,7 @@ impl Caller {
 fn required(step: &str) -> Option<CommandAuthority> {
     match step {
         // Loading writes nothing. It discards unsaved work, and only a caller who may commit can have made any.
-        "evaluate" | "solve" | "reopen" | "closures" => Some(CommandAuthority::Inspect),
+        "evaluate" | "solve" | "reopen" | "closures" | "walk" => Some(CommandAuthority::Inspect),
         "preview" => Some(CommandAuthority::Propose),
         "save" => Some(CommandAuthority::Commit),
         "draft" | "export_pattern" | "render" | "export" => Some(CommandAuthority::Generate),
@@ -945,8 +1140,8 @@ impl<R: Repository> Running<R> {
         } else {
             CommandActorClaim::Human(identities.nth(21))
         };
-        let garment =
-            build(design, DesignRevision::initial(), &inputs, &recipe).map_err(Failure::session)?;
+        let garment = build(design, DesignRevision::initial(), &inputs, &recipe, "")
+            .map_err(Failure::session)?;
         let bus = new_bus(garment, design, actor, identities, &caller.authorities)
             .map_err(Failure::session)?;
         let (mut store, _) =
@@ -972,7 +1167,6 @@ impl<R: Repository> Running<R> {
             recipe,
             drawing: None,
             pattern: None,
-            drafted: None,
             authorities: caller.authorities.clone(),
             trace: Vec::new(),
         };
@@ -1011,6 +1205,9 @@ impl<R: Repository> Running<R> {
             "evaluate" => state.evaluate(step)?,
             "preview" => state.preview(step, item)?,
             "closures" => state.closures(step)?,
+            "walk" => state.walk(step)?,
+            "plant_balance_notch" => state.plant_balance_notch(step, item)?,
+            "true_seam" => state.true_seam(step, item)?,
             "change" => {
                 let token = item
                     .get("token")
@@ -1153,7 +1350,8 @@ mod tests {
             token: "a".to_owned(),
             value: Length::ZERO,
         }];
-        let garment = build(design, DesignRevision::from_counter(5), &inputs, "").expect("builds");
+        let garment =
+            build(design, DesignRevision::from_counter(5), &inputs, "", "").expect("builds");
         (
             garment,
             design,

@@ -8,7 +8,10 @@ use crate::{
 pub(super) const fn handler_available(command: CommandId) -> bool {
     matches!(
         command,
-        CommandId::ChangeMeasurement | CommandId::AssignMaterial | CommandId::AddNotch
+        CommandId::ChangeMeasurement
+            | CommandId::AssignMaterial
+            | CommandId::AddNotch
+            | CommandId::ChangeDrafting
     )
 }
 
@@ -49,6 +52,7 @@ impl<H: DesignResourceSource + Clone + PartialEq> PreparationBase<'_, H> {
             }
             MutationPayload::AssignMaterial(assignment) => self.prepare_material(assignment),
             MutationPayload::AddNotch(addition) => self.prepare_notch(*addition, identities),
+            MutationPayload::ChangeDrafting(change) => self.prepare_drafting(change),
             _ => Err(CommandPreviewError::Command(Box::new(
                 CommandBusError::HandlerUnavailable { command },
             ))),

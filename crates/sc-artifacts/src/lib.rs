@@ -14,6 +14,7 @@ mod mutation_tests_examples {}
 mod dxf_examples {}
 mod pattern;
 mod pdf;
+mod seams;
 #[doc = include_str!("../../../docs/book/src/spec/pdf-output.md")]
 mod pdf_examples {}
 
@@ -25,7 +26,10 @@ pub use judge::{
     judge_dxf, judge_inputs, judge_pattern, judge_pdf_square, Expectations, Finding,
     PieceExpectation, Span, SpanSide,
 };
-pub use pattern::{Closure, ClosureKind, DrawnPiece, Line, Mark, MarkKind, Pattern, Text};
+pub use pattern::{
+    Closure, ClosureKind, DrawnPiece, Line, Mark, MarkKind, Pattern, Seam, SeamSide, Text,
+};
 pub use pdf::{
     write_pdf, PageLayout, PdfArtifact, PdfError, Sheet, PDF_TARGET, PDF_WRITER, SCALE_SQUARE,
 };
+pub use seams::{stretch, stretch_length, walk, WalkError, WalkReport};

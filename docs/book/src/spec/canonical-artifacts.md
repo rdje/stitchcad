@@ -25,7 +25,8 @@ let piece = |name: &str, cut: Vec<_>| DrawnPiece {
     closures: vec![],
     labels: vec![],
 };
-let pattern = |pieces| Pattern { style: "skirt".to_owned(), design: "01ARZ3NDEKTSV4RRFFQ69G5FAV".to_owned(), revision: "1".to_owned(), pieces };
+let pattern = |pieces| Pattern { seams: vec![],
+        style: "skirt".to_owned(), design: "01ARZ3NDEKTSV4RRFFQ69G5FAV".to_owned(), revision: "1".to_owned(), pieces };
 
 // Authoring order does not change the form.
 let (front, back) = (piece("front", square(100_000)), piece("back", square(100_000)));

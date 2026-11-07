@@ -18,7 +18,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | G0 — product & semantic contract | Mostly Done | Contract reviewed; D239 detached-approval boundary adopted and checked. Evaluation-seat exception remains; human closure **unapproved**. Exit census18 met/1 not met |
 | G1 — executable architecture slice | Mostly Done | Exit reviewed7/7 clauses,each with stated limits;human closure unapproved. Canvas verdict scoped to macOS. Inputs/numeric/schemas;audit/undo/progress/cancel;scalar execution reviewed. Local0645/0654 and hosted224a9805 scoped |
 | G2 — correct 2D slice | In Progress | Exit7/8 clauses;exit review done. Only a printed square on paper remains,asked of the director |
-| G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
+| G3 — construction & grading | In Progress | Exit1/11 clauses. Closures,seams,walking and truing work as commands with undo;references under edit next, then the bodice and sleeve |
 | G4 — profiles & uncertainty | Not Started | 14 activities; input admission, CSP/oracle, evidence, policy matrix, HPGL, minimal Profile Editor |
 | G5 — shells & validated 2D UX | Not Started | 14 leaves: Tauri + WASM shells, UX panels, parity table, native UI suite, i18n pack, tech pack |
 | G6 — conformance lab & reliability | Not Started | 10 leaves: DXF import + loss report, receiver validation, plotter, pilot loop, reliability matrix, fuzzing |

@@ -68,14 +68,21 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1012.
 
 - ID: `G3-GRADING.2`
-  Status: `pending`
+  Status: `done`
   Goal: `walk` and `true` as first-class editing operations on the SewingGraph (§3.1) — a sleeve cap
   walked around an armscye, balance notches planted, seam lengths trued with the ease declared.
   Acceptance: walking reports the length differential per span and attributes it to declared ease or
   to a defect; truing never silently changes a piece's semantics; both operations are bus commands
   with undo.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-core/**,crates/sc-measure/tests/**,crates/sc-artifacts/**,crates/sc-cli/**,crates/sc-api/src/lib.rs,crates/sc-viewer/src/shell.rs,crates/sc-mcp/tests/agent_gate.rs,conformance/reference-skirt/**,conformance/goldens/reference-skirt/**,Cargo.lock,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-02 asks for walk and true as operations. WHERE the sewing graph existed only in the judge's fixture table,and the drafting description sat outside the Design,so no edit to it had a revision or an undo;git grep -c ChangeDrafting 4f4cd2b5 -- crates →0,rc=1.
+  - [x] ADDRESSED,WALK:cargo test -p sc-cli --test walk exit status →rc=0:13 tests. A difference is declared_ease only when somebody declared it,else defect with the amount. A dart on a seam is sewn away first. All seven of the reference skirt's seams walk to a match.
+  - [x] ADDRESSED,BUS:the drafting document is now part of the Design,and ChangeDrafting is a real bus command,with a revision,an actor,an audit entry and an undo from the bus's snapshots. A caller without commit is refused by the bus. cargo test -p sc-core -p sc-measure →rc=0:every existing core and bus suite holds with the new field and command.
+  - [x] TRUING:moves a straight end only,within a limit the caller must state,leaves declared ease,reports before and after,and is refused past its limit with nothing changed. It is an operation in the document,so a changed measurement is trued again when drawn.
+  - [x] NOT SHOWN,STATED:no garment has a real eased seam yet,which is `.4`. A side names its ends by position,which `.3` replaces. A balance notch does not account for a closure before it. Nobody who sews has reviewed any of it.
+  - [x] NO REGRESSION:gauge.sh --checks →rc=0;cargo test -p sc-artifacts -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1013.
 
 - ID: `G3-GRADING.3`
   Status: `pending`

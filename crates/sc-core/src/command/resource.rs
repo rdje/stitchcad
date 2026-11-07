@@ -49,6 +49,12 @@ pub fn charge_command_mutation_group_resources(
             MutationPayload::SplitSeamSpan(intent) => fixed(intent),
             MutationPayload::CloseDart(intent) => fixed(intent),
             MutationPayload::AddNotch(intent) => fixed(intent),
+            MutationPayload::ChangeDrafting(change) => {
+                sink.charge_text(
+                    change.document(),
+                    location(owner, "requests.mutations.drafting", Some(index)),
+                )?;
+            }
             MutationPayload::ChangeMeasurement(change) => {
                 let (measurement, replacement) = change.resource_parts();
                 fixed(&measurement);

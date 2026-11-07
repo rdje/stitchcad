@@ -96,6 +96,30 @@ pub struct DrawnPiece {
     pub closures: Vec<Closure>,
 }
 
+/// One side of a seam: a stretch of a piece's sew line, in the direction the seam is walked.
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
+pub struct SeamSide {
+    /// The piece.
+    pub piece: String,
+    /// Where the seam starts on it.
+    pub from: Point,
+    /// Where it ends.
+    pub to: Point,
+}
+
+/// Two stretches sewn together, with the ease declared between them.
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
+pub struct Seam {
+    /// The seam's name.
+    pub name: String,
+    /// One side.
+    pub a: SeamSide,
+    /// The other side.
+    pub b: SeamSide,
+    /// Side A's length less side B's that is intended, in micrometres. Negative means side B is the longer.
+    pub ease: i64,
+}
+
 /// A whole drawn pattern at one size.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct Pattern {
@@ -107,4 +131,6 @@ pub struct Pattern {
     pub revision: String,
     /// The pieces.
     pub pieces: Vec<DrawnPiece>,
+    /// The sewing graph: which stretches are sewn to which, and with what ease.
+    pub seams: Vec<Seam>,
 }

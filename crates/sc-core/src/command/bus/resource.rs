@@ -132,6 +132,16 @@ fn charge_preview(
                 )?;
             }
         }
+        CommandPreview::Drafting(report) => {
+            let site = containing.unwrap_or(Site {
+                owner: report.design,
+                index: None,
+            });
+            sink.charge_counter_bits(
+                report.revision.resource_bits(),
+                site.location("reports.drafting.revision"),
+            )?;
+        }
         CommandPreview::Notch(report) => {
             let (design, revision, notch) = report.resource_parts();
             let site = containing.unwrap_or(Site {

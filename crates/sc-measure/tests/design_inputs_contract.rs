@@ -2253,6 +2253,7 @@ fn construction_and_garment_ownership_rechecks_whole_root_before_empty_scope() {
             vec![],
         )
         .expect("empty constructions"),
+        drafting: String::new(),
     })
     .expect("whole immutable owner before controlled drift");
     assert!(garment.validate_current().is_ok());

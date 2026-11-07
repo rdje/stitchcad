@@ -29,6 +29,9 @@ pub struct DesignGarmentDefinition<H> {
     pub hems: HemInventory,
     /// Distinct original Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance objects.
     pub constructions: ConstructionInventory,
+    /// How to draw the garment's pieces, as the drafting layer reads it. The core holds this as authored text and does not interpret it, so an edit to it has a revision, an
+    /// actor and an undo like any other, and the two models of a piece stay apart until they are bound. Empty when nothing has been drafted.
+    pub drafting: String,
 }
 /// Actual original ownership location; referenced Piece/copy/parameter/Profile/operation ids are uses.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

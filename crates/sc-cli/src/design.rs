@@ -104,6 +104,7 @@ pub fn build(
     revision: DesignRevision,
     inputs: &[Input],
     recipe: &str,
+    drafting: &str,
 ) -> Result<DesignGarment<DesignSources>, String> {
     let identities = Identities::new(design);
     let (landmark, procedure, table) = (identities.nth(10), identities.nth(11), identities.nth(12));
@@ -259,6 +260,7 @@ pub fn build(
         hems: HemInventory::new(vec![]).map_err(text)?,
         constructions: ConstructionInventory::new(vec![], vec![], vec![], vec![], vec![], vec![])
             .map_err(text)?,
+        drafting: drafting.to_owned(),
     })
     .map_err(text)
 }

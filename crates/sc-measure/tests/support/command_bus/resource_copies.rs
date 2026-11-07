@@ -137,6 +137,7 @@ pub(super) fn owner(copies: Rc<Cell<usize>>) -> (DesignGarment<CountedSources>, 
         layers: garment.layers.clone(),
         hems: garment.hems.clone(),
         constructions: garment.constructions.clone(),
+        drafting: String::new(),
     })
     .expect("actual original garment components");
     (owner, addition)

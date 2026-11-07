@@ -109,6 +109,7 @@ impl CommandOperationLimits {
                     (1, 0, 0, evidence)
                 }
                 MutationPayload::AddNotch(_) => (1, 0, 0, 0),
+                MutationPayload::ChangeDrafting(change) => (1, 1, change.document().len(), 0),
                 MutationPayload::AssignMaterial(assignment) => {
                     let targets = assignment.pieces().pieces().len();
                     match assignment.material() {

@@ -1,5 +1,7 @@
 //! Canonical mutation intents; concrete payloads determine their own command identity.
-use super::{AddNotch, CloseDart, CommandId, CommandMutationContext, SplitSeamSpan};
+use super::{
+    AddNotch, ChangeDrafting, CloseDart, CommandId, CommandMutationContext, SplitSeamSpan,
+};
 use crate::{
     ontology::{EntityId, MaterialAssignment},
     value::LengthDeclaration,
@@ -195,6 +197,8 @@ pub enum MutationPayload {
     AssignMaterial(AssignMaterial),
     /// Execute the closure referenced by an actual canonical dart.
     CloseDart(CloseDart),
+    /// Replace how the garment's pieces are drawn.
+    ChangeDrafting(ChangeDrafting),
     /// Create a semantic notch using a bus-supplied fresh identity.
     AddNotch(AddNotch),
 }
@@ -209,6 +213,7 @@ impl MutationPayload {
             Self::AssignMaterial(_) => CommandId::AssignMaterial,
             Self::CloseDart(_) => CommandId::CloseDart,
             Self::AddNotch(_) => CommandId::AddNotch,
+            Self::ChangeDrafting(_) => CommandId::ChangeDrafting,
         }
     }
 }

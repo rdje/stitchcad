@@ -82,6 +82,7 @@ pub(super) fn unchanged_noncanonical_context_at_revision<H: DesignReferenceHost 
         layers,
         hems,
         constructions,
+        drafting: _,
     } = before.definition();
     let original = (pockets, notions, closures, layers, hems, constructions);
     let DesignGarmentDefinition {
@@ -92,6 +93,7 @@ pub(super) fn unchanged_noncanonical_context_at_revision<H: DesignReferenceHost 
         layers,
         hems,
         constructions,
+        drafting: _,
     } = after.definition();
     if original != (pockets, notions, closures, layers, hems, constructions) {
         return Err(CommandDifferenceError::GarmentContext);

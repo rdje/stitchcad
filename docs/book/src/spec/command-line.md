@@ -29,6 +29,9 @@ $ stitchcad replay session.json project-directory
 | --- | --- |
 | `evaluate` | Runs the recipe against the current Design and lists every binding |
 | `closures` | What closing each [closure](closures.md) of the drawing does |
+| `walk` | [Walks each seam](walking-and-truing.md), naming what explains any difference |
+| `plant_balance_notch` | Plants a notch on both sides of a seam, as one edit |
+| `true_seam` | Makes a seam's sides match within a stated limit, as one edit |
 | `preview` | What one input's new value would change, computed on a copy: `token` and `um`. The Design, its revision and its history stay as they are |
 | `change` | Replaces one input's value through the bus, at a new revision. `token`, `um`, and optionally `expect_revision` |
 | `undo` | Returns the Design to its state before the last change, under a fresh authority check |
@@ -212,7 +215,7 @@ point, so they wait for G2.
 
 ## Drafting a garment
 
-A `draft` step names the `style`, the `size` and the `pieces`. The `style` is whatever name the design goes by. Every position is a pair of length names: a binding, an input, or `zero`, with a leading `-` to negate one. So the
+A `draft` step names the `style`, the `size` and the `pieces`, and may name the `seams` between them, as [walking and truing](walking-and-truing.md) describes. The `style` is whatever name the design goes by. Every position is a pair of length names: a binding, an input, or `zero`, with a leading `-` to negate one. So the
 numbers stay in the recipe and a changed measurement moves every piece. A step that names a length that does not exist stops the session.
 
 | Piece field | What it holds |
@@ -354,3 +357,7 @@ Exporting also writes `<path>.record.json`, which the writer's own chapter descr
 | `pivot` | The point a slash and spread turns about |
 | `slash_to` | Where the slash meets the boundary |
 | `spread` | How far the slash opens there |
+| `walk` | The step that walks each seam |
+| `plant_balance_notch` | The step that plants a notch on both sides of a seam |
+| `true_seam` | The step that makes a seam's sides match |
+| `seams` | A draft's list of seams |

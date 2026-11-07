@@ -97,7 +97,10 @@ fn inspect_only_preview_reports_actual_changes_in_selection_order_without_public
             bus.is_preview_available(command),
             matches!(
                 command,
-                CommandId::ChangeMeasurement | CommandId::AssignMaterial | CommandId::AddNotch
+                CommandId::ChangeMeasurement
+                    | CommandId::AssignMaterial
+                    | CommandId::AddNotch
+                    | CommandId::ChangeDrafting
             )
         );
         assert_eq!(

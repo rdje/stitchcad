@@ -130,6 +130,8 @@ fn each_session_golden_matches_within_the_declared_tolerance() {
                 piece.closures.clear();
             }
             pattern.style = String::new();
+            // Added at G3 too. The judge above walks the fixture's own table of seams over these lines.
+            pattern.seams.clear();
             to_canonical_text(&pattern)
         };
         match compare(

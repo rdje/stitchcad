@@ -199,6 +199,18 @@ fn compare_patterns(
     top("style", &a.style, &b.style);
     top("design", &a.design, &b.design);
     top("revision", &a.revision, &b.revision);
+    let sorted = |pattern: &Pattern| {
+        let mut seams = pattern.seams.clone();
+        seams.sort();
+        seams
+    };
+    if sorted(a) != sorted(b) {
+        out.push(Difference {
+            piece: String::new(),
+            field: "seams",
+            detail: format!("{:?} against {:?}", sorted(a), sorted(b)),
+        });
+    }
     for piece in &a.pieces {
         match b
             .pieces

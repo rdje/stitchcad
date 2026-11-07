@@ -118,7 +118,17 @@ fn charge_garment_projected<H: DesignResourceSource>(
         layers,
         hems,
         constructions,
+        drafting,
     } = garment.resource_definition();
+    sink.charge_text(
+        drafting,
+        DesignResourceLocation {
+            scope: DesignResourceScope::Garment,
+            owner: None,
+            field: "drafting",
+            index: None,
+        },
+    )?;
     charge_sewing_projected(sewing, projection, sink)?;
     charge_pocket_inventory_resources(pockets, sink)?;
     charge_notion_placement_inventory_resources(notions, sink)?;

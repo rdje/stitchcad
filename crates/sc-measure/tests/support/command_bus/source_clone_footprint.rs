@@ -132,6 +132,7 @@ fn owner() -> DesignGarment<CacheHost> {
         layers: old.layers.clone(),
         hems: old.hems.clone(),
         constructions: old.constructions.clone(),
+        drafting: String::new(),
     })
     .expect("actual complete model");
     owner

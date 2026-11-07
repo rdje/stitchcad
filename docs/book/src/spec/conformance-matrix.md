@@ -43,6 +43,7 @@ Nothing in this project has reached layer 4 or 5 yet.
 | A project reopens to the same bytes, with its intent | `G2-06` | 1 | The frozen goldens, and two designs that diverge | `cargo test -p sc-cli --test save_load` |
 | A scoped caller cannot exceed its authority, and an agent cannot approve | — | 1 | The real server through real pipes, where the bus itself refuses | `cargo test -p sc-mcp --test admission` |
 | An agent with only MCP and the docs drafts the skirt | `G2-08` | 3 | Two recorded sessions, replayed by the command line, read by the judge, and compared with the golden | `cargo test -p sc-mcp --test agent_gate` |
+| Darts, folds and seams work as operations, with undo | `G3-02` | 1 | Lengths worked out by hand, a closed dart landing on itself, and a seam re-walked after truing | `cargo test -p sc-cli --test walk` |
 | A fault is caught for the right reason | `G2-07` | 1 | Each injected fault's named code | `cargo test -p sc-cli --test mutants` |
 
 ## What is unclaimed
@@ -99,3 +100,4 @@ The same design gives the same bytes on every platform, compiler, locale and tim
 | `G2-06` | A row of [the gauge](../availability.md) |
 | `G2-07` | A row of [the gauge](../availability.md) |
 | `G2-08` | A row of [the gauge](../availability.md) |
+| `G3-02` | A row of [the gauge](../availability.md) |

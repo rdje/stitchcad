@@ -439,6 +439,7 @@ fn build_with_placement_mode(
         layers: LayerInventory::new(vec![], vec![], vec![])?,
         hems: HemInventory::new(vec![])?,
         constructions: ConstructionInventory::new(vec![], vec![], vec![], vec![], vec![], vec![])?,
+        drafting: String::new(),
     })
     .map_err(|e| e.to_string())?)
 }

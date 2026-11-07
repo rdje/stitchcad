@@ -1790,5 +1790,189 @@
     }
   ],
   "revision": "0",
+  "seams": [
+    {
+      "a": {
+        "from": [
+          0,
+          0
+        ],
+        "piece": "skirt_back_right",
+        "to": [
+          0,
+          -620000
+        ]
+      },
+      "b": {
+        "from": [
+          0,
+          0
+        ],
+        "piece": "skirt_back_left",
+        "to": [
+          0,
+          -620000
+        ]
+      },
+      "ease": 0,
+      "name": "cb"
+    },
+    {
+      "a": {
+        "from": [
+          285000,
+          -620000
+        ],
+        "piece": "skirt_front",
+        "to": [
+          225000,
+          0
+        ]
+      },
+      "b": {
+        "from": [
+          -285000,
+          -620000
+        ],
+        "piece": "skirt_back_left",
+        "to": [
+          -225000,
+          0
+        ]
+      },
+      "ease": 0,
+      "name": "ss_left"
+    },
+    {
+      "a": {
+        "from": [
+          285000,
+          -620000
+        ],
+        "piece": "skirt_front",
+        "to": [
+          225000,
+          0
+        ]
+      },
+      "b": {
+        "from": [
+          285000,
+          -620000
+        ],
+        "piece": "skirt_back_right",
+        "to": [
+          225000,
+          0
+        ]
+      },
+      "ease": 0,
+      "name": "ss_right"
+    },
+    {
+      "a": {
+        "from": [
+          0,
+          0
+        ],
+        "piece": "skirt_back_left",
+        "to": [
+          -225000,
+          0
+        ]
+      },
+      "b": {
+        "from": [
+          15000,
+          10000
+        ],
+        "piece": "waistband",
+        "to": [
+          200000,
+          10000
+        ]
+      },
+      "ease": 0,
+      "name": "waist_back_left"
+    },
+    {
+      "a": {
+        "from": [
+          0,
+          0
+        ],
+        "piece": "skirt_back_right",
+        "to": [
+          225000,
+          0
+        ]
+      },
+      "b": {
+        "from": [
+          570000,
+          10000
+        ],
+        "piece": "waistband",
+        "to": [
+          755000,
+          10000
+        ]
+      },
+      "ease": 0,
+      "name": "waist_back_right"
+    },
+    {
+      "a": {
+        "from": [
+          225000,
+          0
+        ],
+        "piece": "skirt_front",
+        "to": [
+          0,
+          0
+        ]
+      },
+      "b": {
+        "from": [
+          200000,
+          10000
+        ],
+        "piece": "waistband",
+        "to": [
+          385000,
+          10000
+        ]
+      },
+      "ease": 0,
+      "name": "waist_front_left"
+    },
+    {
+      "a": {
+        "from": [
+          0,
+          0
+        ],
+        "piece": "skirt_front",
+        "to": [
+          225000,
+          0
+        ]
+      },
+      "b": {
+        "from": [
+          385000,
+          10000
+        ],
+        "piece": "waistband",
+        "to": [
+          570000,
+          10000
+        ]
+      },
+      "ease": 0,
+      "name": "waist_front_right"
+    }
+  ],
   "style": "reference_skirt"
 }

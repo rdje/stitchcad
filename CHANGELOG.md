@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1013 — walking and truing as commands,on a drafting document the Design owns
+
+The sewing graph is now data. `walk` says whether a difference between two sides is declared ease or a defect,balance notches are planted on both sides,and `true_seam` makes them match within a limit the caller states.
+How a garment is drawn is now part of the Design,and editing it is `ChangeDrafting` on the bus,with a revision,an actor,an audit entry and an undo. All seven of the skirt's seams walk to a match. G3-02 met,33 of 66.
+
 ## STITCHCAD-G1-1012 — closures with their meaning,and slash and spread from the recipe
 
 A dart,tuck,pleat or gather is now an object carrying its intake,measured from the drawn line and checked against what it declares. Closing a dart removes exactly its intake,and its far leg lands on its near one. Slash and spread is done again from the recipe at every draft.

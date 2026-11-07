@@ -51,15 +51,15 @@ pub use bus::{
     charge_command_group_commit_result_resources, charge_command_group_preview_resources,
     charge_command_history_audit_entry_resources, charge_command_history_result_resources,
     charge_command_preview_resources, CommandAuditEntry, CommandAuditSequence, CommandBus,
-    CommandBusError, CommandControlError, CommandDifferenceError, CommandGroupCommit,
-    CommandGroupCommitError, CommandGroupCommitResult, CommandGroupDifference,
+    CommandBusError, CommandControlError, CommandDifferenceError, CommandDraftingPreview,
+    CommandGroupCommit, CommandGroupCommitError, CommandGroupCommitResult, CommandGroupDifference,
     CommandGroupDiscardedStep, CommandGroupPreview, CommandGroupPreviewError,
     CommandGroupPreviewStep, CommandHistoryAuditEntry, CommandHistoryChange, CommandHistoryError,
     CommandHistoryResult, CommandIdentityError, CommandLengthChange, CommandMaterialChange,
     CommandMaterialPreview, CommandMeasurementPreview, CommandNotchPreview, CommandPieceList,
     CommandPreview, CommandPreviewError, CommandResult, CommandResumeError, CommandRevisionChange,
 };
-pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
+pub use construction::{AddNotch, ChangeDrafting, CloseDart, SplitSeamSpan};
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,
     DesignRevision,
@@ -239,6 +239,8 @@ pub enum CommandId {
     CloseDart,
     /// Add a notch to an edge parameter.
     AddNotch,
+    /// Replace how the garment's pieces are drawn, as one reversible authored edit.
+    ChangeDrafting,
     /// Evaluate the recipe for one size.
     EvaluateInstance,
     /// Instantiate one size through grading.
@@ -261,7 +263,7 @@ pub enum CommandId {
 
 impl CommandId {
     /// Every declared command, not a list of available execution handlers.
-    pub const ALL: [Self; 17] = [
+    pub const ALL: [Self; 18] = [
         Self::GetPieceList,
         Self::WalkSeamSpan,
         Self::GetUncertaintyClosure,
@@ -270,6 +272,7 @@ impl CommandId {
         Self::SplitSeamSpan,
         Self::CloseDart,
         Self::AddNotch,
+        Self::ChangeDrafting,
         Self::EvaluateInstance,
         Self::GradeSize,
         Self::ResolveProfile,
@@ -293,6 +296,7 @@ impl CommandId {
             Self::SplitSeamSpan => "SplitSeamSpan",
             Self::CloseDart => "CloseDart",
             Self::AddNotch => "AddNotch",
+            Self::ChangeDrafting => "ChangeDrafting",
             Self::EvaluateInstance => "EvaluateInstance",
             Self::GradeSize => "GradeSize",
             Self::ResolveProfile => "ResolveProfile",
@@ -324,7 +328,8 @@ impl CommandId {
             | Self::AssignMaterial
             | Self::SplitSeamSpan
             | Self::CloseDart
-            | Self::AddNotch => CommandClass::Mutation,
+            | Self::AddNotch
+            | Self::ChangeDrafting => CommandClass::Mutation,
             Self::EvaluateInstance | Self::GradeSize | Self::ResolveProfile => {
                 CommandClass::Evaluation
             }

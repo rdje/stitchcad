@@ -62,6 +62,7 @@ pub(super) fn between<H: DesignReferenceHost + PartialEq>(
                 piece_ids.extend(report.changes().iter().map(CommandMaterialChange::piece))
             }
             CommandPreview::Notch(report) => notches.push(report.notch().clone()),
+            CommandPreview::Drafting(_) => {}
         }
     }
     let mut lengths = Vec::new();

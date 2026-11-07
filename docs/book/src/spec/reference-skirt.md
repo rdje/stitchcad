@@ -400,11 +400,11 @@ naming the expert who reviews them.
 | Two runs give identical bytes | The real program under two time zones and a foreign locale, all files | Windows and Linux, at the first hosted run |
 | Closures hold or report | 18 inputs each changed by −2, −0.4, +0.4 and +2 cm, with the waist re-derived from the drawing, plus a deliberately wrong recipe | — |
 | Dart intake conserved | [Each dart reports](closures.md) that closing it removes exactly 4.0 cm, leaving 18.5 cm, and its far leg lands on its near one | Truing the waist across a closed dart is `G3-GRADING.2` |
-| `walk` within the numerical class | §8's four spans walked over the drawn lines, in the test | The `walk` command and the graph as data are G3 |
+| `walk` within the numerical class | [The `walk` command](walking-and-truing.md) over §8's spans, which are data in the design: the side seams, the CB, and the waist in four parts | — |
 | No self-intersection | All pairs of segments on every cut and net line, at each width in that sweep | — |
 | Allowances included and excluded | The net line's coordinates do not move when the cut layer swaps, read out of both files | The Factory Profile that chooses is G4 |
 | Fold, label, internal line | Read out of the written DXF, not only the model | — |
-| Interfacing | No allowance on any edge, no fold, no label saying so | "In no span" needs the graph as data, G3 |
+| Interfacing | No allowance on any edge, no fold, no label saying so, and in no seam | — |
 | Package completeness | 5 pieces, the side-seam and zipper notches, and [each named fault](mutation-tests.md) | Zipper, hook and bar, and the notions list have no model yet, G3 |
 
 ### The drawing, pinned

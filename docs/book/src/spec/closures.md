@@ -2,7 +2,7 @@
 
 A dart is not two lines. It takes up a stated amount of cloth, and that amount has to survive being closed. So a dart, tuck, pleat or gather is an object on a piece, carrying what it takes up, and a piece's closures are what a seam's length accounts for.
 
-**What works today.** All four, measured from the drawn line. Closing a dart. Slash and spread as a recipe operation. [The reference skirt's](reference-skirt.md) darts are these objects. **What does not exist yet:** truing the waist across a closed dart, which is `G3-GRADING.2`, and a garment using a tuck, pleat or gather.
+**What works today.** All four, measured from the drawn line. Closing a dart. Slash and spread as a recipe operation. [The reference skirt's](reference-skirt.md) darts are these objects. **What does not exist yet:** truing the waist across a closed dart, and a garment using a tuck, pleat or gather. [Truing a seam](walking-and-truing.md) works, and a seam sees a closure as sewn away.
 
 **Two models exist for now.** This is executed in the drafting layer that [the session](command-line.md) drives. The core's own `Dart`, `Tuck`, `Pleat` and `Gather` describe the same things structurally and hold no coordinates, so `CloseDart` on the bus still answers that it has no handler. A later leaf has to bind them, and until then a closure here is not one of those.
 
@@ -65,7 +65,7 @@ A slash runs from a `pivot` on the boundary to a point `slash_to` on the boundar
 $ cargo test -p sc-cli --test closures
 ```
 
-**What this does not show.** That these shapes sew well: nobody who sews has reviewed them. Truing: slash and spread leaves the waist with a corner at the pivot, and a patternmaker would true it, which is the next leaf. That a tuck's or pleat's fold direction means anything yet, because nothing reads it.
+**What this does not show.** That these shapes sew well: nobody who sews has reviewed them. Truing across a slash: slash and spread leaves the waist with a corner at the pivot, and a patternmaker would true it. That a tuck's or pleat's fold direction means anything yet, because nothing reads it.
 
 ## Names used in this chapter
 
@@ -76,7 +76,6 @@ $ cargo test -p sc-cli --test closures
 | `Pleat` | The core's structural pleat |
 | `Gather` | The core's structural gather |
 | `CloseDart` | The bus's command for closing a dart, which has no handler yet |
-| `G3-GRADING.2` | The leaf for walking and truing |
 | `near` | A dart's near leg's top |
 | `far` | A dart's far leg's top |
 | `apex` | A dart's apex |

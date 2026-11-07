@@ -231,6 +231,7 @@ pub(super) fn definition() -> DesignGarmentDefinition<DesignSources> {
         layers,
         hems,
         constructions,
+        drafting: String::new(),
     }
 }
 

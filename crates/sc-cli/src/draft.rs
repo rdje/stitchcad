@@ -1,5 +1,8 @@
 //! Drafts pieces from a session's description and the recipe's evaluated values: boundaries, allowances, marks and labels.
-use sc_artifacts::{along, Closure, ClosureKind, DrawnPiece, Line, Mark, MarkKind, Pattern, Text};
+use sc_artifacts::{
+    along, stretch, stretch_length, walk, Closure, ClosureKind, DrawnPiece, Line, Mark, MarkKind,
+    Pattern, Seam, SeamSide, Text,
+};
 use sc_geometry::{Allowance, Corner, Curve, Outline, Point};
 use sc_store::Value;
 use sc_units::pure;
@@ -57,6 +60,7 @@ fn corner_named(name: &str) -> Result<Corner, String> {
 fn boundary(
     lengths: &Lengths,
     fields: &Fields,
+    moved_corners: &[(Point, Point)],
 ) -> Result<(Outline, Vec<Allowance>, Vec<Spread>), String> {
     let start = point(lengths, required(fields, "start")?)?;
     let edges = required(fields, "edges")?
@@ -101,6 +105,34 @@ fn boundary(
                 .ok_or("a slash and spread must be an object")?;
             let spread = slash_spread(lengths, item, &mut curves, &mut allowances)?;
             spreads.push(spread);
+        }
+    }
+    // A trued seam moves one corner along its straight edge, and both edges meeting there follow it.
+    for (old, new) in moved_corners {
+        for curve in &mut curves {
+            let at = |point: Point| if point == *old { *new } else { point };
+            *curve = match *curve {
+                Curve::Line { from, to } => Curve::Line {
+                    from: at(from),
+                    to: at(to),
+                },
+                Curve::Arc { from, through, to } => Curve::Arc {
+                    from: at(from),
+                    through,
+                    to: at(to),
+                },
+                Curve::Cubic {
+                    from,
+                    first,
+                    second,
+                    to,
+                } => Curve::Cubic {
+                    from: at(from),
+                    first,
+                    second,
+                    to: at(to),
+                },
+            };
         }
     }
     Ok((
@@ -646,12 +678,287 @@ fn mirror(source: &DrawnPiece, name: &str, labels: Vec<Text>) -> Result<DrawnPie
     })
 }
 
-/// A drawn pattern from a session's description. Each piece names its boundary by evaluated lengths, or mirrors another piece.
+/// A drawn pattern from a session's description. Each piece names its boundary by evaluated lengths, or mirrors another piece. A seam a description says to true is
+/// worked out from a first drawing and applied to the second, so it is done again whenever a measurement moves.
 pub fn draft(
     lengths: &Lengths,
     description: &Fields,
     design: &str,
     revision: &str,
+) -> Result<Pattern, String> {
+    let first = draw(lengths, description, design, revision, &BTreeMap::new())?;
+    let listed = description
+        .get("trues")
+        .and_then(Value::as_list)
+        .unwrap_or(&[]);
+    if listed.is_empty() {
+        return Ok(first);
+    }
+    let mut moves: Moves = BTreeMap::new();
+    for item in listed {
+        let item = item.as_object().ok_or("a true must be an object")?;
+        let (piece, old, new) = trued_corner(item, &first)?;
+        moves.entry(piece).or_default().push((old, new));
+    }
+    draw(lengths, description, design, revision, &moves)
+}
+
+// Which corner truing a seam moves, and where to. Side A or B is lengthened or shortened along the straight edge ending at its `to`, by what the seam's walk says it is out.
+fn trued_corner(item: &Fields, first: &Pattern) -> Result<(String, Point, Point), String> {
+    let name = required(item, "seam")?
+        .as_text()
+        .ok_or("a true names its seam")?;
+    let which = required(item, "side")?
+        .as_text()
+        .ok_or("a true names its side, a or b")?;
+    let seam = first
+        .seams
+        .iter()
+        .find(|seam| seam.name == name)
+        .ok_or_else(|| format!("no seam is named {name}"))?;
+    let report = walk(first).map_err(|error| format!("{}: {}", error.seam, error.message))?;
+    let out = report
+        .iter()
+        .find(|item| item.seam == name)
+        .ok_or_else(|| format!("no seam is named {name}"))?
+        .unexplained;
+    let (side, change) = match which {
+        "a" => (&seam.a, -out),
+        "b" => (&seam.b, out),
+        other => return Err(format!("a seam has sides a and b, and no side {other}")),
+    };
+    let piece = first
+        .pieces
+        .iter()
+        .find(|piece| piece.name == side.piece)
+        .ok_or_else(|| format!("no piece is named {}", side.piece))?;
+    let walked = stretch(&piece.sew, side.from, side.to).ok_or_else(|| {
+        format!(
+            "the seam {name} has an end off the sew line of {}",
+            side.piece
+        )
+    })?;
+    let [.., before, end] = walked.as_slice() else {
+        return Err(format!("the seam {name} is too short to true"));
+    };
+    let (dx, dy) = (ratio(end.x() - before.x()), ratio(end.y() - before.y()));
+    let reach = pure::hypot(dx, dy);
+    if ratio(change.abs()) >= reach {
+        return Err(format!(
+            "the seam {name} is out by {out}, and {}'s last straight run is only {} long",
+            side.piece,
+            whole(reach)
+        ));
+    }
+    let moved = Point::new(
+        end.x() + whole(dx / reach * ratio(change)),
+        end.y() + whole(dy / reach * ratio(change)),
+    )
+    .map_err(|error| error.to_string())?;
+    Ok((side.piece.clone(), *end, moved))
+}
+
+fn seam_side(lengths: &Lengths, value: &Value, moves: &Moves) -> Result<SeamSide, String> {
+    let fields = value.as_object().ok_or("a seam's side must be an object")?;
+    let piece = required(fields, "piece")?
+        .as_text()
+        .ok_or("a seam's side names its piece")?
+        .to_owned();
+    let follow = |at: Point| {
+        moves
+            .get(&piece)
+            .and_then(|listed| listed.iter().find(|(old, _)| *old == at))
+            .map_or(at, |(_, new)| *new)
+    };
+    Ok(SeamSide {
+        from: follow(point(lengths, required(fields, "from")?)?),
+        to: follow(point(lengths, required(fields, "to")?)?),
+        piece,
+    })
+}
+
+fn seams_of(lengths: &Lengths, description: &Fields, moves: &Moves) -> Result<Vec<Seam>, String> {
+    description
+        .get("seams")
+        .and_then(Value::as_list)
+        .unwrap_or(&[])
+        .iter()
+        .map(|item| {
+            let item = item.as_object().ok_or("a seam must be an object")?;
+            let ease = match item.get("ease") {
+                None => 0,
+                Some(value) => length(
+                    lengths,
+                    value.as_text().ok_or("a seam's ease names a length")?,
+                )?,
+            };
+            Ok(Seam {
+                name: required(item, "name")?
+                    .as_text()
+                    .ok_or("a seam's name is text")?
+                    .to_owned(),
+                a: seam_side(lengths, required(item, "a")?, moves)?,
+                b: seam_side(lengths, required(item, "b")?, moves)?,
+                ease,
+            })
+        })
+        .collect()
+}
+
+// The point a distance along a polyline.
+fn point_along(points: &[Point], distance: f64) -> Result<Point, String> {
+    let mut walked = 0.0;
+    for pair in points.windows(2) {
+        let [a, b] = pair else { continue };
+        let (dx, dy) = (ratio(b.x() - a.x()), ratio(b.y() - a.y()));
+        let length = pure::hypot(dx, dy);
+        if length > 0.0 && walked + length >= distance {
+            let t = (distance - walked) / length;
+            return Point::new(a.x() + whole(dx * t), a.y() + whole(dy * t))
+                .map_err(|error| error.to_string());
+        }
+        walked += length;
+    }
+    points
+        .last()
+        .copied()
+        .ok_or_else(|| "an empty stretch".to_owned())
+}
+
+// One balance notch on one side of a seam: at this distance along the sew line, marked on the cut line, aiming back at the sew line.
+fn plant(
+    piece: &mut DrawnPiece,
+    side: &SeamSide,
+    distance: f64,
+    depth: i64,
+    seam: &str,
+) -> Result<(), String> {
+    let walked = stretch(&piece.sew, side.from, side.to).ok_or_else(|| {
+        format!(
+            "the seam {seam} has an end off the sew line of {}",
+            piece.name
+        )
+    })?;
+    let on_sew = point_along(&walked, distance)?;
+    let mut best: Option<(f64, f64, f64)> = None;
+    for (index, a) in piece.cut.iter().enumerate() {
+        let Some(b) = piece.cut.get((index + 1) % piece.cut.len()) else {
+            continue;
+        };
+        let (dx, dy) = (ratio(b.x() - a.x()), ratio(b.y() - a.y()));
+        let reach = dx * dx + dy * dy;
+        if reach == 0.0 {
+            continue;
+        }
+        let t = ((ratio(on_sew.x() - a.x()) * dx + ratio(on_sew.y() - a.y()) * dy) / reach)
+            .clamp(0.0, 1.0);
+        let (x, y) = (ratio(a.x()) + dx * t, ratio(a.y()) + dy * t);
+        let away = pure::hypot(ratio(on_sew.x()) - x, ratio(on_sew.y()) - y);
+        if best.is_none_or(|(least, ..)| away < least) {
+            best = Some((away, x, y));
+        }
+    }
+    let (away, x, y) = best.ok_or("a piece with no cut line")?;
+    let at = Point::new(whole(x), whole(y)).map_err(|error| error.to_string())?;
+    // On a piece with no allowance here, the notch aims in along the seam's own normal, so it still has a direction.
+    let (ax, ay) = if away > 0.5 {
+        (
+            (ratio(on_sew.x()) - x) / away,
+            (ratio(on_sew.y()) - y) / away,
+        )
+    } else {
+        let centre = piece.sew.first().copied().unwrap_or(at);
+        let (cx, cy) = (ratio(centre.x()) - x, ratio(centre.y()) - y);
+        let far = pure::hypot(cx, cy).max(1.0);
+        (cx / far, cy / far)
+    };
+    let toward = Point::new(
+        at.x() + whole(ax * ratio(depth)),
+        at.y() + whole(ay * ratio(depth)),
+    )
+    .map_err(|error| error.to_string())?;
+    let mut mark = Mark {
+        kind: MarkKind::VNotch,
+        at,
+        toward,
+    };
+    seat_notch(&mut piece.cut, &mut mark)?;
+    piece.marks.push(mark);
+    Ok(())
+}
+
+// Balance notches, planted at a distance along side A and at the same share of side B, so the ease between them is spread evenly and the notch means the same on both.
+fn balance_notches(
+    lengths: &Lengths,
+    description: &Fields,
+    pieces: &mut [DrawnPiece],
+    seams: &[Seam],
+) -> Result<(), String> {
+    for item in description
+        .get("balance_notches")
+        .and_then(Value::as_list)
+        .unwrap_or(&[])
+    {
+        let item = item
+            .as_object()
+            .ok_or("a balance notch must be an object")?;
+        let name = required(item, "seam")?
+            .as_text()
+            .ok_or("a balance notch names its seam")?;
+        let seam = seams
+            .iter()
+            .find(|seam| seam.name == name)
+            .ok_or_else(|| format!("no seam is named {name}"))?;
+        let at = length(
+            lengths,
+            required(item, "at")?.as_text().ok_or("at names a length")?,
+        )?;
+        let depth = length(
+            lengths,
+            required(item, "depth")?
+                .as_text()
+                .ok_or("depth names a length")?,
+        )?;
+        let side_line = |side: &SeamSide| -> Result<f64, String> {
+            let piece = pieces
+                .iter()
+                .find(|piece| piece.name == side.piece)
+                .ok_or_else(|| format!("no piece is named {}", side.piece))?;
+            let walked = stretch(&piece.sew, side.from, side.to).ok_or_else(|| {
+                format!(
+                    "the seam {name} has an end off the sew line of {}",
+                    side.piece
+                )
+            })?;
+            Ok(stretch_length(&walked))
+        };
+        let (a_length, b_length) = (side_line(&seam.a)?, side_line(&seam.b)?);
+        if at <= 0 || ratio(at) >= a_length {
+            return Err(format!(
+                "a balance notch at {at} is not along the seam {name}, which is {} long",
+                whole(a_length)
+            ));
+        }
+        let share = ratio(at) / a_length;
+        for (side, distance) in [(&seam.a, ratio(at)), (&seam.b, share * b_length)] {
+            let piece = pieces
+                .iter_mut()
+                .find(|piece| piece.name == side.piece)
+                .ok_or_else(|| format!("no piece is named {}", side.piece))?;
+            plant(piece, side, distance, depth, name)?;
+        }
+    }
+    Ok(())
+}
+
+type Moves = BTreeMap<String, Vec<(Point, Point)>>;
+
+fn draw(
+    lengths: &Lengths,
+    description: &Fields,
+    design: &str,
+    revision: &str,
+    moves: &Moves,
 ) -> Result<Pattern, String> {
     let text_of = |fields: &Fields, name: &str| -> Result<String, String> {
         Ok(required(fields, name)?
@@ -682,8 +989,9 @@ pub fn draft(
                 ..mirror(original, &name, labels(lengths, fields)?)?
             }
         } else {
-            let (net, allowances, spreads) =
-                boundary(lengths, fields).map_err(|error| format!("{name}: {error}"))?;
+            let moved_corners = moves.get(&name).map_or(&[][..], Vec::as_slice);
+            let (net, allowances, spreads) = boundary(lengths, fields, moved_corners)
+                .map_err(|error| format!("{name}: {error}"))?;
             let offset = net
                 .offset(&allowances, TOLERANCE)
                 .map_err(|error| format!("{name}: {error}"))?;
@@ -728,10 +1036,13 @@ pub fn draft(
         };
         pieces.push(piece);
     }
+    let seams = seams_of(lengths, description, moves)?;
+    balance_notches(lengths, description, &mut pieces, &seams)?;
     Ok(Pattern {
         style,
         design: design.to_owned(),
         revision: revision.to_owned(),
         pieces,
+        seams,
     })
 }

@@ -18,7 +18,9 @@ pub use identity::CommandIdentityError;
 mod notch;
 pub use notch::CommandNotchPreview;
 mod difference;
+mod drafting;
 pub use difference::CommandDifferenceError;
+pub use drafting::CommandDraftingPreview;
 mod measurement;
 pub use measurement::{CommandLengthChange, CommandMeasurementPreview};
 mod preparation;
@@ -57,6 +59,8 @@ pub enum CommandPreview {
     Measurement(CommandMeasurementPreview),
     /// Exact changed Piece assignments in original selection order.
     Material(CommandMaterialPreview),
+    /// A replaced drafting document.
+    Drafting(CommandDraftingPreview),
     /// Exact proposed added semantic Notch with tentative staged identity.
     Notch(CommandNotchPreview),
 }

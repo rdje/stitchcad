@@ -62,6 +62,7 @@ The roadmap names five of them (§4.4) and all five are carried here.
 | `SplitSeamSpan` | `mutation` | `commit` | `yes` | one group, however many references move | splits a sewing correspondence at explicit cuts on both sides, preserving reference obligations |
 | `CloseDart` | `mutation` | `commit` | `yes` | one group: centre, two legs, intake, truing | closes a dart, conserving its intake (ontology §4.3) |
 | `AddNotch` | `mutation` | `commit` | `yes` | one group | adds a notch at an edge and a parameter (ontology §4.5) |
+| `ChangeDrafting` | `mutation` | `commit` | `yes` | one group | replaces how the garment's pieces are drawn ([walking and truing](walking-and-truing.md)) |
 | `EvaluateInstance` | `evaluation` | `generate` | `discarded` | `not applicable` | evaluates the recipe for one size |
 | `GradeSize` | `evaluation` | `generate` | `discarded` | `not applicable` | instantiation path B for one size ([paths §3](instantiation-paths.md)) |
 | `ResolveProfile` | `evaluation` | `generate` | `discarded` | `not applicable` | resolves a Factory Profile's parameters against its constraints |

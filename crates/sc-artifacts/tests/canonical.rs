@@ -71,6 +71,7 @@ fn back() -> DrawnPiece {
 
 fn pattern(pieces: Vec<DrawnPiece>) -> Pattern {
     Pattern {
+        seams: vec![],
         style: "skirt".to_owned(),
         design: "01ARZ3NDEKTSV4RRFFQ69G5FAV".to_owned(),
         revision: "3".to_owned(),
