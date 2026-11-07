@@ -45,11 +45,11 @@ chapter is inside that family or explicitly outside it.
 
 | Feature | Disposition | Why | Proven at | Diagnostic |
 | --- | --- | --- | --- | --- |
-| A-line skirt, waist dart, CB zipper | supported | the [reference fixture](reference-skirt.md) **is** this garment, specified to the millimetre | G2 drafting, export and print; G3 closures | — |
-| darted bodice | supported | roadmap §3.2 and the G3 exit criteria both name it | G3 | — |
-| set-in sleeve with declared cap ease | supported | roadmap §3.2; G3's exit requires ease to be intentional, not an invariant violation | G3 | — |
-| classic collar | supported | roadmap §3.2 names it, and §11 G3's envelope-coverage criterion proves it at `G3-GRADING.15` | G3 | — |
-| trousers | supported | roadmap §3.2 names it, and §11 G3's envelope-coverage criterion proves it at `G3-GRADING.5` | G3 | — |
+| A-line skirt, waist dart, CB zipper | supported | the [reference fixture](reference-skirt.md) **is** this garment, specified to the millimetre; `G2-2D.8` drafted it, and `G3-GRADING.6` and `G3-GRADING.7` grade it | G2 drafting, export and print; G3 closures and grading | — |
+| darted bodice | supported | roadmap §3.2 and the G3 exit criteria both name it; `G3-GRADING.4` drafted it in [the reference bodice](reference-bodice.md), and it grades and exports | G3 | — |
+| set-in sleeve with declared cap ease | supported | roadmap §3.2; G3's exit requires ease to be intentional, not an invariant violation; `G3-GRADING.4` fits a cap to its armhole in [the reference bodice](reference-bodice.md) | G3 | — |
+| classic collar | supported | roadmap §3.2 names it, and §11 G3's envelope-coverage criterion proves it at `G3-GRADING.15`, in [the reference bodice](reference-bodice.md) | G3 | — |
+| trousers | supported | roadmap §3.2 names it, and §11 G3's envelope-coverage criterion proves it at `G3-GRADING.5`, in [the reference trousers](reference-trousers.md) | G3 | — |
 | woven fabrics, stable | supported | roadmap §3.2 bounds the envelope to woven garments; the fixture's material is a stable woven | G2 | — |
 | knit or stretch blocks | rejected | roadmap §3.2 names it as unsupported: stretch changes what ease means | G2 | `env_knit_stretch` |
 | leather and non-textile sheets | rejected | roadmap §3.2 names it; the offset and allowance model assumes textile behaviour | G2 | `env_material_leather` |
@@ -119,9 +119,9 @@ callee-before-argument precedence. Requests from other interfaces retain their o
 | lining | deferred | ontology §4.7/§10; modelled lining implemented; execution refuses env_lining; G7 owns limitation | G7 | `env_lining` |
 | zipper, centred | supported | ontology §4.7/§10; structural instances/size origins implemented; G2 proves the 18.0 cm fixture zip | G2 | — |
 | hook and bar | supported | ontology §4.7/§10; structural instances/size origins implemented; G2 proves the fixture closure | G2 | — |
-| button and buttonhole | supported | ontology §4.7/§10; canonical buttonhole source implemented; G3 proves physical derivation, G5 notions | G3 derivation; G5 notions | — |
+| button and buttonhole | supported | ontology §4.7/§10; canonical buttonhole source implemented; `G3-GRADING.5` proves physical derivation, in [the reference trousers](reference-trousers.md), G5 notions | G3 derivation; G5 notions | — |
 | fly construction | deferred | ontology §4.7/§10; execution refuses env_fly with closure/trousers-gap context; G7 owns limitation | G7 | `env_fly` |
-| pocket | supported | ontology §4.7/§10; structural copy/source composition and placement implemented; G3 proves physical pocket construction | G3 | — |
+| pocket | supported | ontology §4.7/§10; structural copy/source composition and placement implemented; `G3-GRADING.5` proves physical pocket construction, in [the reference trousers](reference-trousers.md) | G3 | — |
 | notions matched to geometry | supported | roadmap §7.5 puts notions in the tech pack; roadmap §9 makes completeness a release check | G5, G7 | — |
 
 ## 6. Measurements, sizes and instantiation

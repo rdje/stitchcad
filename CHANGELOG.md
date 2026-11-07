@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1026 — the G3 exit review reads 10 met and 1 not met,and every garment the roadmap names is proved
+
+The skirt,bodice,sleeve,collar and trousers each draft at every size,grade and export in every form,and the matrix names the leaf that proved each. The one clause not met is an independent engine,parked with commercial CAD.
+Nobody has cut any of them. The frontier moves to G4. 42 of 66.
+
 ## STITCHCAD-G1-1025 — what a notch means and how a file says it,in both dialects,with a documented default
 
 Single,double and drill each have a meaning and a representation,frozen per dialect. A numbered file draws a notch or codes it as a point,and it is drawn unless asked,since no import system is known.

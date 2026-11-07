@@ -166,8 +166,7 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1016.
 
 - ID: `G3-GRADING.16`
-  Status: `pending` (created by `G0-CONTRACT.9`, which named the drafting system ADR-0003 requires and
-  would otherwise have left the blocks with no owner — a decision with no owner is a wish)
+  Status: `blocked`:no source has been procured,and the leaf says a block with none is recorded not met and not drafted from recollection. The procurement seat is the director,acting. Created by `G0-CONTRACT.9`.
   Goal: ship the **reference block set**: the blocks of the named system (Aldrich's metric pattern cutting,
   `docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md`) transcribed into
   construction recipes — skirt, darted bodice, set-in sleeve, classic collar and trousers — each a recipe in
@@ -315,7 +314,7 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1025.
 
 - ID: `G3-GRADING.14`
-  Status: `pending`
+  Status: `done`
   Goal: G3 exit review — every clause cited against evidence, **including the envelope-coverage criterion**
   (each §3.2 garment named with the leaf that drafted, graded and exported it), the equivalence bounds
   published, the frontier handed to `G4-PROFILES`.
@@ -324,14 +323,22 @@ interchange that an independent engine can re-import, extreme sizes included.
   the review is not signed by the party that proposed the criterion — governance §6.1 rule 2 withholds
   approval of a decision's evidence from its author, so a self-applied envelope amendment is certified by
   somebody else or stays unapproved (`decision_self-application-under-delegation.md`).
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-cli/tests/envelope.rs,docs/book/src/**,docs/tasks/**,docs/TASK_TREE.md,MEMORY.md,LIVE_STATUS.md,CHANGELOG.md.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-09 asks that no garment of §3.2 goes unproved. WHERE nothing held the matrix to its garments:git ls-tree 267f4fd6 crates/sc-cli/tests/envelope.rs →empty,rc=0.
+  - [x] ADDRESSED,ENVELOPE:the skirt,bodice,sleeve,collar and trousers each draft at every size,grade and export in every form,and the matrix names each one's leaf. cargo test -p sc-cli --test envelope →rc=0.
+  - [x] REVIEW:GATE_REVIEW_GATE=G3 run_g0_exit_review.sh,which ran every check →G3 EXIT:10 met / 1 not met / 11 clauses,rc=0. The one not met is G3-05,an independent engine,with authority director and a named blocker.
+  - [x] BOUNDS PUBLISHED:the two paths differ by 4.5 mm on the bodice and 1.3 mm on the trousers between corners,and not at all on the skirt;a table in Grading a garment,held to the report by a test.
+  - [x] LIMITS CARRIED:nobody has cut any garment. All constants assumed. No receiver has read any file. Sizes are an engineer's. Drafting-layer closures,pockets,buttons and sizes are not bound to the core's. The reference blocks wait on a book.
+  - [x] FRONTIER:handed to G4-PROFILES,because a director-authority row does not hold it. No human approved this review. Governance §6.1 withholds approval from its author,so the director's closure stays open.
+  - [x] NO REGRESSION:gauge.sh --checks →rc=0;cargo test -p sc-units -p sc-geometry -p sc-artifacts -p sc-grading -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1026.
 
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G3-GRADING.1` | `pending` | gated on `G2-2D` |
+| — | `G3-GRADING.14` | `done` | the review is done:the frontier is `G4-PROFILES`,and what is left needs the director |
 
 ## Decisions
 
