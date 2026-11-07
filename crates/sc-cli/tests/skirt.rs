@@ -606,11 +606,28 @@ fn every_notch_is_a_vertex_of_the_cut_line_and_points_into_the_piece() {
     }
     assert_eq!(seen, 10);
     // A notch named well off the cut line is a wrong notch, and it says so rather than moving a long way.
-    let broken = SESSION.replace(
-        "let hip_notch_x: length = quarter_hip + sa_side",
-        "let hip_notch_x: length = quarter_hip + sa_side - 1 mm",
+    let broken = SESSION
+        .replace(
+            "let hip_notch_x: length = quarter_hip + sa_side",
+            "let hip_notch_x: length = quarter_hip + sa_side - 1 mm",
+        )
+        .replace(
+            r#"{
+              "aim": [
+                "sa_side",
+                "zero"
+              ],
+              "at": "1",
+              "depth": "notch_depth",
+              "edge": "side_lower",
+              "name": "hip"
+            }"#,
+            r#"[["hip_notch_x", "-waist_to_hip"], ["hip_notch_end", "-waist_to_hip"]]"#,
+        );
+    assert!(
+        broken.contains(r#"[["hip_notch_x""#),
+        "the front's notch is written as two points"
     );
-    assert_ne!(broken, SESSION);
     let failure = replay(&parse(&broken).expect("valid"), MemoryRepository::new())
         .expect_err("off the line")
         .to_value();

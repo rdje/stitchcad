@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1014 — references that survive an edit,through the core's own journal
+
+A drafted edge has a name and an identity in the ledger,and a notch,a grade point or a seam's end holds it. A split,merge,reverse,trim or mirror keeps each on the same cloth,and a delete makes it a repair task naming the edit.
+A DXF or PDF is refused while one is open,and nothing is ever moved for you. The reference skirt holds its notches and seams this way with its goldens unmoved. G3-03 met,34 of 66.
+
 ## STITCHCAD-G1-1013 — walking and truing as commands,on a drafting document the Design owns
 
 The sewing graph is now data. `walk` says whether a difference between two sides is declared ease or a defect,balance notches are planted on both sides,and `true_seam` makes them match within a limit the caller states.

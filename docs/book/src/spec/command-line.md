@@ -32,6 +32,9 @@ $ stitchcad replay session.json project-directory
 | `walk` | [Walks each seam](walking-and-truing.md), naming what explains any difference |
 | `plant_balance_notch` | Plants a notch on both sides of a seam, as one edit |
 | `true_seam` | Makes a seam's sides match within a stated limit, as one edit |
+| `edit_edge` | [Edits a named edge](stable-references.md), as one edit |
+| `references` | Lists what holds an edge, where it lands now, and any repair tasks |
+| `repair_reference` | Says where an orphaned reference goes, as one edit |
 | `preview` | What one input's new value would change, computed on a copy: `token` and `um`. The Design, its revision and its history stay as they are |
 | `change` | Replaces one input's value through the bus, at a new revision. `token`, `um`, and optionally `expect_revision` |
 | `undo` | Returns the Design to its state before the last change, under a fresh authority check |
@@ -361,3 +364,6 @@ Exporting also writes `<path>.record.json`, which the writer's own chapter descr
 | `plant_balance_notch` | The step that plants a notch on both sides of a seam |
 | `true_seam` | The step that makes a seam's sides match |
 | `seams` | A draft's list of seams |
+| `edit_edge` | The step that edits a named edge |
+| `references` | The step that lists what holds an edge |
+| `repair_reference` | The step that closes a repair task |

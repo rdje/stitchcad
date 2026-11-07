@@ -23,9 +23,10 @@ let piece = |name: &str, cut: Vec<_>| DrawnPiece {
     internal: vec![],
     marks: vec![],
     closures: vec![],
+    grade_points: vec![],
     labels: vec![],
 };
-let pattern = |pieces| Pattern { seams: vec![],
+let pattern = |pieces| Pattern { seams: vec![], repairs: vec![],
         style: "skirt".to_owned(), design: "01ARZ3NDEKTSV4RRFFQ69G5FAV".to_owned(), revision: "1".to_owned(), pieces };
 
 // Authoring order does not change the form.

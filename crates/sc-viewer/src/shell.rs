@@ -12,7 +12,7 @@ use std::collections::BTreeMap;
 use std::rc::Rc;
 
 /// How the shell reaches each step a session can take. The book prints this table, and a test holds the two together.
-pub const COVERAGE: [(&str, &str); 16] = [
+pub const COVERAGE: [(&str, &str); 19] = [
     (
         "evaluate",
         "On opening and after every edit, for the values panel",
@@ -31,6 +31,18 @@ pub const COVERAGE: [(&str, &str); 16] = [
         "Not offered yet: the viewer draws no seams",
     ),
     ("true_seam", "Not offered yet: the viewer draws no seams"),
+    (
+        "edit_edge",
+        "Not offered yet: the viewer does not name a piece's edges",
+    ),
+    (
+        "references",
+        "Not offered yet: the viewer does not name a piece's edges",
+    ),
+    (
+        "repair_reference",
+        "Not offered yet: the viewer does not name a piece's edges",
+    ),
     ("change", "A measurement field"),
     ("undo", "The Undo button"),
     ("redo", "The Redo button"),

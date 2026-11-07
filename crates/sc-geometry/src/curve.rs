@@ -250,6 +250,69 @@ impl Curve {
         out
     }
 
+    /// The two parts of this curve, cut where a walk along it has gone `distance`. A cut at or past an end gives nothing, because a part with no length is no part.
+    #[must_use]
+    #[allow(clippy::cast_precision_loss, clippy::cast_possible_truncation)]
+    pub fn split_at_length(self, distance: i64, tolerance: i64) -> Option<(Self, Self)> {
+        let total = self.length(tolerance);
+        if distance <= 0 || distance >= total {
+            return None;
+        }
+        let share = distance as f64 / total as f64;
+        match self {
+            Self::Line { from, to } => {
+                let at = Point::clamped(
+                    from.x() + ((to.x() - from.x()) as f64 * share).round() as i64,
+                    from.y() + ((to.y() - from.y()) as f64 * share).round() as i64,
+                );
+                (at != from && at != to)
+                    .then_some((Self::Line { from, to: at }, Self::Line { from: at, to }))
+            }
+            Self::Arc { from, through, to } => {
+                let (centre_x, centre_y, radius, start, sweep) = arc_sweep(from, through, to)?;
+                let on = |theta: f64| {
+                    let (sine, cosine) = pure::sin_cos(theta);
+                    Point::clamped(
+                        (centre_x + radius * cosine).round() as i64,
+                        (centre_y + radius * sine).round() as i64,
+                    )
+                };
+                let at = on(start + sweep * share);
+                Some((
+                    Self::Arc {
+                        from,
+                        through: on(start + sweep * share / 2.0),
+                        to: at,
+                    },
+                    Self::Arc {
+                        from: at,
+                        through: on(start + sweep * (1.0 + share) / 2.0),
+                        to,
+                    },
+                ))
+            }
+            Self::Cubic {
+                from,
+                first,
+                second,
+                to,
+            } => {
+                let points = [from, first, second, to];
+                // The curve's own parameter is not its length, so it is found by halving. Forty halvings is far finer than a micrometre on a garment.
+                let (mut low, mut high) = (0.0, 1.0);
+                for _ in 0..40 {
+                    let middle = f64::midpoint(low, high);
+                    if cut_cubic(points, middle).0.length(tolerance) < distance {
+                        low = middle;
+                    } else {
+                        high = middle;
+                    }
+                }
+                Some(cut_cubic(points, f64::midpoint(low, high)))
+            }
+        }
+    }
+
     /// The curve's length, to within the tolerance's effect on a polyline, rounded to a micrometre.
     #[must_use]
     pub fn length(self, tolerance: i64) -> i64 {
@@ -278,17 +341,41 @@ fn flatten_cubic(points: [Point; 4], tolerance: i64, depth: u32, out: &mut Vec<P
 
 // An arc is split by halving its chord and projecting back onto the circle, in floating point only for that projection,
 // whose result is then rounded to the micrometre grid. A straight or doubled-back arc becomes straight lines.
-#[allow(
-    clippy::cast_precision_loss,
-    clippy::cast_possible_truncation,
-    clippy::cast_sign_loss
-)]
-fn flatten_arc(from: Point, through: Point, to: Point, tolerance: i64, out: &mut Vec<Point>) {
-    let Some((centre_x, centre_y, radius)) = circle(from, through, to) else {
-        out.push(through);
-        out.push(to);
-        return;
-    };
+// A cubic cut in two at a parameter, by de Casteljau's construction.
+#[allow(clippy::cast_precision_loss, clippy::cast_possible_truncation)]
+fn cut_cubic(points: [Point; 4], at: f64) -> (Curve, Curve) {
+    let [a, b, c, d] = points;
+    let mix = |p: (f64, f64), q: (f64, f64)| (p.0 + (q.0 - p.0) * at, p.1 + (q.1 - p.1) * at);
+    let raw = |p: Point| (p.x() as f64, p.y() as f64);
+    let (ab, bc, cd) = (
+        mix(raw(a), raw(b)),
+        mix(raw(b), raw(c)),
+        mix(raw(c), raw(d)),
+    );
+    let (abc, bcd) = (mix(ab, bc), mix(bc, cd));
+    let middle = mix(abc, bcd);
+    let whole = |p: (f64, f64)| Point::clamped(p.0.round() as i64, p.1.round() as i64);
+    let joint = whole(middle);
+    (
+        Curve::Cubic {
+            from: a,
+            first: whole(ab),
+            second: whole(abc),
+            to: joint,
+        },
+        Curve::Cubic {
+            from: joint,
+            first: whole(bcd),
+            second: whole(cd),
+            to: d,
+        },
+    )
+}
+
+// An arc's circle, the angle it starts at, and the signed angle it sweeps. Three points in a line have none.
+#[allow(clippy::cast_precision_loss)]
+fn arc_sweep(from: Point, through: Point, to: Point) -> Option<(f64, f64, f64, f64, f64)> {
+    let (centre_x, centre_y, radius) = circle(from, through, to)?;
     let angle = |p: Point| pure::atan2((p.y() as f64) - centre_y, (p.x() as f64) - centre_x);
     let (start, middle, end) = (angle(from), angle(through), angle(to));
     let two_pi = core::f64::consts::TAU;
@@ -297,6 +384,20 @@ fn flatten_arc(from: Point, through: Point, to: Point, tolerance: i64, out: &mut
         (end - start).rem_euclid(two_pi)
     } else {
         -(start - end).rem_euclid(two_pi)
+    };
+    Some((centre_x, centre_y, radius, start, sweep))
+}
+
+#[allow(
+    clippy::cast_precision_loss,
+    clippy::cast_possible_truncation,
+    clippy::cast_sign_loss
+)]
+fn flatten_arc(from: Point, through: Point, to: Point, tolerance: i64, out: &mut Vec<Point>) {
+    let Some((centre_x, centre_y, radius, start, sweep)) = arc_sweep(from, through, to) else {
+        out.push(through);
+        out.push(to);
+        return;
     };
     // The sagitta of a chord spanning angle θ is r(1 − cos(θ/2)).
     let bound = (tolerance as f64 / radius).min(1.0);

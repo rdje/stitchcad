@@ -12,6 +12,7 @@ fn p(x: i64, y: i64) -> Point {
 
 fn front() -> DrawnPiece {
     DrawnPiece {
+        grade_points: Vec::new(),
         name: "front".to_owned(),
         size: "M".to_owned(),
         quantity: 2,
@@ -64,6 +65,7 @@ fn front() -> DrawnPiece {
 
 fn back() -> DrawnPiece {
     DrawnPiece {
+        grade_points: Vec::new(),
         name: "back".to_owned(),
         ..front()
     }
@@ -71,6 +73,7 @@ fn back() -> DrawnPiece {
 
 fn pattern(pieces: Vec<DrawnPiece>) -> Pattern {
     Pattern {
+        repairs: Vec::new(),
         seams: vec![],
         style: "skirt".to_owned(),
         design: "01ARZ3NDEKTSV4RRFFQ69G5FAV".to_owned(),

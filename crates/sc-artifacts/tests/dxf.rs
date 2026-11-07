@@ -23,6 +23,7 @@ const FLAT: Flattening = Flattening {
 
 fn front() -> DrawnPiece {
     DrawnPiece {
+        grade_points: Vec::new(),
         name: "front".to_owned(),
         size: "M".to_owned(),
         quantity: 2,
@@ -63,6 +64,7 @@ fn front() -> DrawnPiece {
 
 fn pattern() -> Pattern {
     Pattern {
+        repairs: Vec::new(),
         seams: vec![],
         style: "skirt".to_owned(),
         design: "01ARZ3NDEKTSV4RRFFQ69G5FAV".to_owned(),
@@ -70,6 +72,7 @@ fn pattern() -> Pattern {
         pieces: vec![
             front(),
             DrawnPiece {
+                grade_points: Vec::new(),
                 name: "back".to_owned(),
                 ..front()
             },

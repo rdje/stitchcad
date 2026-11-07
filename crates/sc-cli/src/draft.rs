@@ -1,12 +1,15 @@
 //! Drafts pieces from a session's description and the recipe's evaluated values: boundaries, allowances, marks and labels.
 use sc_artifacts::{
-    along, stretch, stretch_length, walk, Closure, ClosureKind, DrawnPiece, Line, Mark, MarkKind,
-    Pattern, Seam, SeamSide, Text,
+    along, stretch, stretch_length, walk, Closure, ClosureKind, DrawnPiece, GradePoint, Line, Mark,
+    MarkKind, Pattern, Repair, Seam, SeamSide, Text,
 };
-use sc_geometry::{Allowance, Corner, Curve, Outline, Point};
+use sc_geometry::{Corner, Curve, Outline, Point};
 use sc_store::Value;
 use sc_units::pure;
 use std::collections::BTreeMap;
+
+mod edges;
+use edges::{Answer, Edges, Held, Located};
 
 /// The geometric tolerance for internal drafting, in micrometres: the 10 µm class of the units chapter.
 pub const TOLERANCE: i64 = 10;
@@ -57,59 +60,27 @@ fn corner_named(name: &str) -> Result<Corner, String> {
     }
 }
 
+// The boundary: its edges, what has been edited on them, its spreads, and where truing moved a corner, in that order.
 fn boundary(
     lengths: &Lengths,
     fields: &Fields,
+    piece: &str,
     moved_corners: &[(Point, Point)],
-) -> Result<(Outline, Vec<Allowance>, Vec<Spread>), String> {
-    let start = point(lengths, required(fields, "start")?)?;
-    let edges = required(fields, "edges")?
-        .as_list()
-        .ok_or("edges must be a list")?;
-    let mut curves = Vec::with_capacity(edges.len());
-    let mut allowances = Vec::with_capacity(edges.len());
-    let mut from = start;
-    for edge in edges {
-        let edge = edge.as_object().ok_or("an edge must be an object")?;
-        let to = point(lengths, required(edge, "to")?)?;
-        let curve = match (edge.get("first"), edge.get("second")) {
-            (Some(first), Some(second)) => Curve::Cubic {
-                from,
-                first: point(lengths, first)?,
-                second: point(lengths, second)?,
-                to,
-            },
-            (None, None) => Curve::Line { from, to },
-            _ => return Err("a curved edge names both control points".to_owned()),
-        };
-        curves.push(curve);
-        let width = length(
-            lengths,
-            required(edge, "width")?
-                .as_text()
-                .ok_or("an edge's width is named as text")?,
-        )?;
-        let corner = corner_named(
-            required(edge, "corner")?
-                .as_text()
-                .ok_or("an edge's corner is named as text")?,
-        )?;
-        allowances.push(Allowance { width, corner });
-        from = to;
-    }
+) -> Result<(Edges, Vec<Spread>), String> {
+    let mut edges = Edges::describe(lengths, fields)?;
+    edges.edit_all(lengths, fields, piece)?;
     let mut spreads = Vec::new();
     if let Some(listed) = fields.get("slash_spreads").and_then(Value::as_list) {
         for item in listed {
             let item = item
                 .as_object()
                 .ok_or("a slash and spread must be an object")?;
-            let spread = slash_spread(lengths, item, &mut curves, &mut allowances)?;
-            spreads.push(spread);
+            spreads.push(slash_spread(lengths, item, &mut edges)?);
         }
     }
     // A trued seam moves one corner along its straight edge, and both edges meeting there follow it.
     for (old, new) in moved_corners {
-        for curve in &mut curves {
+        for curve in &mut edges.curves {
             let at = |point: Point| if point == *old { *new } else { point };
             *curve = match *curve {
                 Curve::Line { from, to } => Curve::Line {
@@ -135,11 +106,7 @@ fn boundary(
             };
         }
     }
-    Ok((
-        Outline::new(curves).map_err(|error| error.to_string())?,
-        allowances,
-        spreads,
-    ))
+    Ok((edges, spreads))
 }
 
 fn lines(lengths: &Lengths, fields: &Fields, name: &str) -> Result<Vec<Line>, String> {
@@ -158,21 +125,230 @@ fn lines(lengths: &Lengths, fields: &Fields, name: &str) -> Result<Vec<Line>, St
         .collect()
 }
 
-fn marks(lengths: &Lengths, fields: &Fields) -> Result<Vec<Mark>, String> {
-    let Some(listed) = fields.get("notches").and_then(Value::as_list) else {
-        return Ok(Vec::new());
-    };
-    listed
-        .iter()
-        .map(|item| match item.as_list() {
-            Some([at, toward]) => Ok(Mark {
+// What each reference in a drawing came to: an answer for every one, and a repair task for each that has none.
+#[derive(Default)]
+struct Book {
+    repairs: Vec<Repair>,
+    references: Vec<Value>,
+}
+
+impl Book {
+    fn settle(
+        &mut self,
+        piece: &str,
+        carrier: &str,
+        held: &Held,
+        answer: Answer,
+        mirrored: bool,
+    ) -> Result<Option<Located>, String> {
+        let mut fields = BTreeMap::new();
+        fields.insert("piece".to_owned(), Value::Text(piece.to_owned()));
+        fields.insert("carrier".to_owned(), Value::Text(carrier.to_owned()));
+        fields.insert("holds".to_owned(), Value::Text(held.words()));
+        match answer {
+            Answer::Here(mut located) => {
+                if mirrored {
+                    located.point = mirrored_point(located.point)?;
+                }
+                // A mirror runs its boundary the other way, so a directed consumer has to be told that as well.
+                let reversed =
+                    (located.direction == sc_core::ontology::Direction::Reversed) != mirrored;
+                fields.insert("now".to_owned(), Value::Text(located.now.clone()));
+                fields.insert(
+                    "direction".to_owned(),
+                    Value::Text(if reversed { "reversed" } else { "original" }.to_owned()),
+                );
+                fields.insert(
+                    "point".to_owned(),
+                    Value::List(vec![
+                        Value::Int(located.point.x()),
+                        Value::Int(located.point.y()),
+                    ]),
+                );
+                self.references.push(Value::Object(fields));
+                Ok(Some(located))
+            }
+            Answer::Repair {
+                orphaned_by,
+                candidates,
+            } => {
+                fields.insert("now".to_owned(), Value::Text("unresolved".to_owned()));
+                self.references.push(Value::Object(fields));
+                self.repairs.push(Repair {
+                    piece: piece.to_owned(),
+                    carrier: carrier.to_owned(),
+                    reference: held.words(),
+                    orphaned_by,
+                    candidates,
+                });
+                Ok(None)
+            }
+        }
+    }
+
+    fn is_open(&self, seam: &str) -> bool {
+        let start = format!("seam {seam},");
+        self.repairs
+            .iter()
+            .any(|repair| repair.carrier.starts_with(&start))
+    }
+
+    // Something that hangs off a seam waits while that seam has nowhere to go, and says so.
+    fn waiting(&mut self, what: &str, seam: &str) {
+        self.repairs.push(Repair {
+            piece: String::new(),
+            carrier: format!("{what} on seam {seam}"),
+            reference: format!("the seam {seam}"),
+            orphaned_by: format!("the seam {seam}, which is itself waiting for a repair"),
+            candidates: Vec::new(),
+        });
+    }
+}
+
+fn named_item<'a>(item: &'a Fields, what: &str, seen: &mut Vec<String>) -> Result<&'a str, String> {
+    let name = required(item, "name")
+        .map_err(|_| format!("a {what} that holds an edge needs a name"))?
+        .as_text()
+        .ok_or_else(|| format!("a {what}'s name is text"))?;
+    if seen.iter().any(|other| other == name) {
+        return Err(format!("two {what}s are named {name}"));
+    }
+    seen.push(name.to_owned());
+    Ok(name)
+}
+
+// A notch from a piece's description. One written as two points is where a session put it, and it is refused if the cut line is no longer there.
+// One written as an edge and a place on it is a reference: it lands where the ledger says, or it is a repair task.
+fn notches_of(
+    lengths: &Lengths,
+    fields: &Fields,
+    edges: &Edges,
+    piece: &str,
+    cut: &mut Vec<Point>,
+    moved: &dyn Fn(Point) -> Result<Point, String>,
+    book: &mut Book,
+) -> Result<Vec<Mark>, String> {
+    let listed = fields
+        .get("notches")
+        .and_then(Value::as_list)
+        .unwrap_or(&[]);
+    let mut seen = Vec::new();
+    let mut held = Vec::new();
+    for item in listed {
+        if let Some(item) = item.as_object() {
+            let name = named_item(item, "notch", &mut seen)?;
+            held.push((
+                name,
+                item,
+                edges.held(lengths, item, &format!("the notch {name}"))?,
+            ));
+        }
+    }
+    let places: Vec<Held> = held.iter().map(|(_, _, place)| place.clone()).collect();
+    let trimmed = edges.trimmed(cut, &places)?;
+    let mut held = held.into_iter();
+    let mut out = Vec::with_capacity(listed.len());
+    for item in listed {
+        let mut mark = if let Some(points) = item.as_list() {
+            let [at, toward] = points else {
+                return Err("a notch names where it is and a point it aims at".to_owned());
+            };
+            Mark {
                 kind: MarkKind::VNotch,
-                at: point(lengths, at)?,
-                toward: point(lengths, toward)?,
-            }),
-            _ => Err("a notch names where it is and a point it aims at".to_owned()),
-        })
-        .collect()
+                at: moved(point(lengths, at)?)?,
+                toward: moved(point(lengths, toward)?)?,
+            }
+        } else {
+            let (name, item, place) = held
+                .next()
+                .ok_or("a notch must be two points or an object")?;
+            let answer = edges.answer_on_cut(&trimmed, &place)?;
+            let Some(located) =
+                book.settle(piece, &format!("notch {name}"), &place, answer, false)?
+            else {
+                continue;
+            };
+            let depth = length(
+                lengths,
+                required(item, "depth")?
+                    .as_text()
+                    .ok_or("a notch's depth names a length")?,
+            )?;
+            // Square to the edge, as far as its allowance, unless the notch states its own line, which it must at a corner that has two squares.
+            let (reach_x, reach_y) = match item.get("aim") {
+                Some(aim) => {
+                    let names = aim.as_list().ok_or("a notch's aim names two lengths")?;
+                    let [x, y] = names else {
+                        return Err("a notch's aim names two lengths".to_owned());
+                    };
+                    let read = |name: &Value| {
+                        length(
+                            lengths,
+                            name.as_text().ok_or("an aim's lengths are named as text")?,
+                        )
+                    };
+                    (ratio(read(x)?), ratio(read(y)?))
+                }
+                None => (
+                    located.outward.0 * ratio(located.width),
+                    located.outward.1 * ratio(located.width),
+                ),
+            };
+            let reach = pure::hypot(reach_x, reach_y);
+            let (unit_x, unit_y) = if reach > 0.0 {
+                (reach_x / reach, reach_y / reach)
+            } else {
+                located.outward
+            };
+            let at = Point::new(
+                located.point.x() + whole(reach_x),
+                located.point.y() + whole(reach_y),
+            )
+            .map_err(|error| error.to_string())?;
+            Mark {
+                kind: MarkKind::VNotch,
+                at,
+                toward: Point::new(
+                    at.x() - whole(unit_x * ratio(depth)),
+                    at.y() - whole(unit_y * ratio(depth)),
+                )
+                .map_err(|error| error.to_string())?,
+            }
+        };
+        seat_notch(cut, &mut mark)?;
+        out.push(mark);
+    }
+    Ok(out)
+}
+
+fn grade_points_of(
+    lengths: &Lengths,
+    fields: &Fields,
+    edges: &Edges,
+    piece: &str,
+    book: &mut Book,
+) -> Result<Vec<GradePoint>, String> {
+    let mut seen = Vec::new();
+    let mut out = Vec::new();
+    for item in fields
+        .get("grade_points")
+        .and_then(Value::as_list)
+        .unwrap_or(&[])
+    {
+        let item = item.as_object().ok_or("a grade point must be an object")?;
+        let name = named_item(item, "grade point", &mut seen)?;
+        let place = edges.held(lengths, item, &format!("the grade point {name}"))?;
+        let answer = edges.answer(&place)?;
+        if let Some(located) =
+            book.settle(piece, &format!("grade point {name}"), &place, answer, false)?
+        {
+            out.push(GradePoint {
+                name: name.to_owned(),
+                at: located.point,
+            });
+        }
+    }
+    Ok(out)
 }
 
 // A notch is a vertex of the cut line, so no writer can lose it between two chords. A session names it by straight arithmetic from the net
@@ -486,17 +662,12 @@ fn turned_curve(curve: Curve, turn: &Spread) -> Result<Curve, String> {
 }
 
 // Makes a corner of a point on the boundary, splitting a straight edge if it lies along one. Curved edges are refused rather than split where nobody asked.
-fn corner_at(
-    at: Point,
-    curves: &mut Vec<Curve>,
-    allowances: &mut Vec<Allowance>,
-    what: &str,
-) -> Result<usize, String> {
-    if let Some(index) = curves.iter().position(|curve| curve.from() == at) {
+fn corner_at(at: Point, edges: &mut Edges, what: &str) -> Result<usize, String> {
+    if let Some(index) = edges.curves.iter().position(|curve| curve.from() == at) {
         return Ok(index);
     }
-    for index in 0..curves.len() {
-        let Some(&Curve::Line { from, to }) = curves.get(index) else {
+    for index in 0..edges.curves.len() {
+        let Some(&Curve::Line { from, to }) = edges.curves.get(index) else {
             continue;
         };
         let cross = i128::from(to.x() - from.x()) * i128::from(at.y() - from.y())
@@ -506,12 +677,17 @@ fn corner_at(
         let whole_length =
             i128::from(to.x() - from.x()).pow(2) + i128::from(to.y() - from.y()).pow(2);
         if cross == 0 && between > 0 && between < whole_length {
-            let allowance = *allowances.get(index).ok_or("an edge has no allowance")?;
-            curves.splice(
+            let allowance = *edges
+                .allowances
+                .get(index)
+                .ok_or("an edge has no allowance")?;
+            let owner = edges.owners.get(index).copied().flatten();
+            edges.curves.splice(
                 index..=index,
                 [Curve::Line { from, to: at }, Curve::Line { from: at, to }],
             );
-            allowances.insert(index, allowance);
+            edges.allowances.insert(index, allowance);
+            edges.owners.insert(index, owner);
             return Ok(index + 1);
         }
     }
@@ -524,12 +700,16 @@ fn corner_at(
 
 // Slash and spread, as the recipe's own operation: the part of the boundary from the slash's end round to the pivot turns about the pivot, opening the slash by the spread. It is
 // done again from the recipe at every draft, so a changed measurement moves it, and nothing about it is stored as geometry.
-fn slash_spread(
-    lengths: &Lengths,
-    item: &Fields,
-    curves: &mut Vec<Curve>,
-    allowances: &mut Vec<Allowance>,
-) -> Result<Spread, String> {
+// How much cloth a sense of turning adds, and what the boundary comes to with it.
+type Opened = (
+    i128,
+    Vec<Curve>,
+    Vec<sc_geometry::Allowance>,
+    Vec<Option<usize>>,
+    Spread,
+);
+
+fn slash_spread(lengths: &Lengths, item: &Fields, edges: &mut Edges) -> Result<Spread, String> {
     let name = required(item, "name")?
         .as_text()
         .ok_or("a slash's name is text")?
@@ -550,8 +730,10 @@ fn slash_spread(
             whole(reach)
         ));
     }
-    let start = corner_at(end, curves, allowances, &format!("the end of {what}"))?;
-    corner_at(pivot, curves, allowances, &format!("the pivot of {what}"))?;
+    let start = corner_at(end, edges, &format!("the end of {what}"))?;
+    corner_at(pivot, edges, &format!("the pivot of {what}"))?;
+    let (curves, allowances, owners) =
+        (&mut edges.curves, &mut edges.allowances, &mut edges.owners);
     // Splitting the pivot's edge can move the slash's end, so it is found again.
     let start = curves
         .iter()
@@ -564,7 +746,7 @@ fn slash_spread(
     let half = ratio(opening) / 2.0;
     let angle = 2.0 * pure::atan2(half, (reach * reach - half * half).sqrt());
     // Turning the part the other way would close the slash, so each sense is tried and the one that adds cloth is kept.
-    let mut best: Option<(i128, Vec<Curve>, Vec<Allowance>, Spread)> = None;
+    let mut best: Option<Opened> = None;
     let chain: Vec<usize> = {
         let mut indices = Vec::new();
         let mut at = start;
@@ -590,6 +772,7 @@ fn slash_spread(
         };
         let mut next_curves = Vec::with_capacity(curves.len() + 1);
         let mut next_allowances = Vec::with_capacity(curves.len() + 1);
+        let mut next_owners = Vec::with_capacity(curves.len() + 1);
         let before = (start + curves.len() - 1) % curves.len();
         for (index, curve) in curves.iter().enumerate() {
             let allowance = *allowances.get(index).ok_or("an edge has no allowance")?;
@@ -599,6 +782,8 @@ fn slash_spread(
                     to: turn.turned(end)?,
                 });
                 next_allowances.push(*allowances.get(before).ok_or("an edge has no allowance")?);
+                // The opening is new cloth, and no edge's frame runs through it.
+                next_owners.push(None);
             }
             next_curves.push(if chain.contains(&index) {
                 turned_curve(*curve, &turn)?
@@ -606,6 +791,7 @@ fn slash_spread(
                 *curve
             });
             next_allowances.push(allowance);
+            next_owners.push(owners.get(index).copied().flatten());
         }
         let Ok(outline) = Outline::new(next_curves.clone()) else {
             continue;
@@ -615,13 +801,14 @@ fn slash_spread(
         }
         let area = outline.doubled_area(TOLERANCE);
         if best.as_ref().is_none_or(|(most, ..)| area > *most) {
-            best = Some((area, next_curves, next_allowances, turn));
+            best = Some((area, next_curves, next_allowances, next_owners, turn));
         }
     }
-    let (_, next_curves, next_allowances, turn) =
+    let (_, next_curves, next_allowances, next_owners, turn) =
         best.ok_or_else(|| format!("{what} cannot open without the piece crossing itself"))?;
     *curves = next_curves;
     *allowances = next_allowances;
+    *owners = next_owners;
     Ok(turn)
 }
 
@@ -661,6 +848,16 @@ fn mirror(source: &DrawnPiece, name: &str, labels: Vec<Text>) -> Result<DrawnPie
             })
             .collect::<Result<_, String>>()?,
         labels,
+        grade_points: source
+            .grade_points
+            .iter()
+            .map(|item| {
+                Ok(GradePoint {
+                    name: item.name.clone(),
+                    at: mirrored_point(item.at)?,
+                })
+            })
+            .collect::<Result<_, String>>()?,
         closures: source
             .closures
             .iter()
@@ -686,6 +883,30 @@ pub fn draft(
     design: &str,
     revision: &str,
 ) -> Result<Pattern, String> {
+    drawing(lengths, description, design, revision).map(|drawn| drawn.pattern)
+}
+
+/// What each reference in a drawing came to, and every repair task that leaves.
+///
+/// # Errors
+///
+/// What `draft` refuses.
+pub fn references(
+    lengths: &Lengths,
+    description: &Fields,
+    design: &str,
+    revision: &str,
+) -> Result<(Vec<Value>, Vec<Repair>), String> {
+    drawing(lengths, description, design, revision)
+        .map(|drawn| (drawn.references, drawn.pattern.repairs))
+}
+
+fn drawing(
+    lengths: &Lengths,
+    description: &Fields,
+    design: &str,
+    revision: &str,
+) -> Result<Drawing, String> {
     let first = draw(lengths, description, design, revision, &BTreeMap::new())?;
     let listed = description
         .get("trues")
@@ -695,12 +916,26 @@ pub fn draft(
         return Ok(first);
     }
     let mut moves: Moves = BTreeMap::new();
+    let mut waiting = Vec::new();
     for item in listed {
         let item = item.as_object().ok_or("a true must be an object")?;
-        let (piece, old, new) = trued_corner(item, &first)?;
+        if let Some(seam) = item.get("seam").and_then(Value::as_text) {
+            if first.open_seams.iter().any(|open| open == seam) {
+                waiting.push(seam.to_owned());
+                continue;
+            }
+        }
+        let (piece, old, new) = trued_corner(item, &first.pattern)?;
         moves.entry(piece).or_default().push((old, new));
     }
-    draw(lengths, description, design, revision, &moves)
+    let mut drawn = draw(lengths, description, design, revision, &moves)?;
+    for seam in waiting {
+        let mut book = Book::default();
+        book.waiting("a true", &seam);
+        drawn.pattern.repairs.append(&mut book.repairs);
+    }
+    drawn.pattern.repairs.sort();
+    Ok(drawn)
 }
 
 // Which corner truing a seam moves, and where to. Side A or B is lengthened or shortened along the straight edge ending at its `to`, by what the seam's walk says it is out.
@@ -758,51 +993,121 @@ fn trued_corner(item: &Fields, first: &Pattern) -> Result<(String, Point, Point)
     Ok((side.piece.clone(), *end, moved))
 }
 
-fn seam_side(lengths: &Lengths, value: &Value, moves: &Moves) -> Result<SeamSide, String> {
+type Tables = BTreeMap<String, (Edges, bool)>;
+
+// One end of a side: where a session put it, or a reference that lands or becomes a repair task.
+fn seam_end(
+    lengths: &Lengths,
+    tables: &Tables,
+    piece: &str,
+    value: &Value,
+    moves: &Moves,
+    carrier: &str,
+    book: &mut Book,
+) -> Result<Option<Point>, String> {
+    let Some(fields) = value.as_object() else {
+        let at = point(lengths, value)?;
+        return Ok(Some(
+            moves
+                .get(piece)
+                .and_then(|listed| listed.iter().find(|(old, _)| *old == at))
+                .map_or(at, |(_, new)| *new),
+        ));
+    };
+    let (edges, mirrored) = tables
+        .get(piece)
+        .ok_or_else(|| format!("no piece is named {piece}"))?;
+    let place = edges.held(lengths, fields, carrier)?;
+    let answer = edges.answer(&place)?;
+    Ok(book
+        .settle(piece, carrier, &place, answer, *mirrored)?
+        .map(|located| located.point))
+}
+
+fn seam_side(
+    lengths: &Lengths,
+    tables: &Tables,
+    value: &Value,
+    moves: &Moves,
+    carrier: &str,
+    book: &mut Book,
+) -> Result<Option<SeamSide>, String> {
     let fields = value.as_object().ok_or("a seam's side must be an object")?;
     let piece = required(fields, "piece")?
         .as_text()
         .ok_or("a seam's side names its piece")?
         .to_owned();
-    let follow = |at: Point| {
-        moves
-            .get(&piece)
-            .and_then(|listed| listed.iter().find(|(old, _)| *old == at))
-            .map_or(at, |(_, new)| *new)
-    };
-    Ok(SeamSide {
-        from: follow(point(lengths, required(fields, "from")?)?),
-        to: follow(point(lengths, required(fields, "to")?)?),
-        piece,
+    let from = seam_end(
+        lengths,
+        tables,
+        &piece,
+        required(fields, "from")?,
+        moves,
+        &format!("{carrier}, from"),
+        book,
+    )?;
+    let to = seam_end(
+        lengths,
+        tables,
+        &piece,
+        required(fields, "to")?,
+        moves,
+        &format!("{carrier}, to"),
+        book,
+    )?;
+    Ok(match (from, to) {
+        (Some(from), Some(to)) => Some(SeamSide { piece, from, to }),
+        _ => None,
     })
 }
 
-fn seams_of(lengths: &Lengths, description: &Fields, moves: &Moves) -> Result<Vec<Seam>, String> {
-    description
+fn seams_of(
+    lengths: &Lengths,
+    description: &Fields,
+    tables: &Tables,
+    moves: &Moves,
+    book: &mut Book,
+) -> Result<Vec<Seam>, String> {
+    let mut seams = Vec::new();
+    for item in description
         .get("seams")
         .and_then(Value::as_list)
         .unwrap_or(&[])
-        .iter()
-        .map(|item| {
-            let item = item.as_object().ok_or("a seam must be an object")?;
-            let ease = match item.get("ease") {
-                None => 0,
-                Some(value) => length(
-                    lengths,
-                    value.as_text().ok_or("a seam's ease names a length")?,
-                )?,
-            };
-            Ok(Seam {
-                name: required(item, "name")?
-                    .as_text()
-                    .ok_or("a seam's name is text")?
-                    .to_owned(),
-                a: seam_side(lengths, required(item, "a")?, moves)?,
-                b: seam_side(lengths, required(item, "b")?, moves)?,
-                ease,
-            })
-        })
-        .collect()
+    {
+        let item = item.as_object().ok_or("a seam must be an object")?;
+        let ease = match item.get("ease") {
+            None => 0,
+            Some(value) => length(
+                lengths,
+                value.as_text().ok_or("a seam's ease names a length")?,
+            )?,
+        };
+        let name = required(item, "name")?
+            .as_text()
+            .ok_or("a seam's name is text")?
+            .to_owned();
+        let a = seam_side(
+            lengths,
+            tables,
+            required(item, "a")?,
+            moves,
+            &format!("seam {name}, side a"),
+            book,
+        )?;
+        let b = seam_side(
+            lengths,
+            tables,
+            required(item, "b")?,
+            moves,
+            &format!("seam {name}, side b"),
+            book,
+        )?;
+        // A seam with an end that has nowhere to go is not drawn at some other length. It is out of the graph until it is repaired.
+        if let (Some(a), Some(b)) = (a, b) {
+            seams.push(Seam { name, a, b, ease });
+        }
+    }
+    Ok(seams)
 }
 
 // The point a distance along a polyline.
@@ -893,6 +1198,7 @@ fn balance_notches(
     description: &Fields,
     pieces: &mut [DrawnPiece],
     seams: &[Seam],
+    book: &mut Book,
 ) -> Result<(), String> {
     for item in description
         .get("balance_notches")
@@ -905,6 +1211,10 @@ fn balance_notches(
         let name = required(item, "seam")?
             .as_text()
             .ok_or("a balance notch names its seam")?;
+        if book.is_open(name) {
+            book.waiting("a balance notch", name);
+            continue;
+        }
         let seam = seams
             .iter()
             .find(|seam| seam.name == name)
@@ -953,13 +1263,20 @@ fn balance_notches(
 
 type Moves = BTreeMap<String, Vec<(Point, Point)>>;
 
+// A drawing, and what each reference in it came to.
+struct Drawing {
+    pattern: Pattern,
+    references: Vec<Value>,
+    open_seams: Vec<String>,
+}
+
 fn draw(
     lengths: &Lengths,
     description: &Fields,
     design: &str,
     revision: &str,
     moves: &Moves,
-) -> Result<Pattern, String> {
+) -> Result<Drawing, String> {
     let text_of = |fields: &Fields, name: &str| -> Result<String, String> {
         Ok(required(fields, name)?
             .as_text()
@@ -972,6 +1289,8 @@ fn draw(
         .as_list()
         .ok_or("pieces must be a list")?;
     let mut pieces: Vec<DrawnPiece> = Vec::with_capacity(listed.len());
+    let mut tables: Tables = BTreeMap::new();
+    let mut book = Book::default();
     for item in listed {
         let fields = item.as_object().ok_or("a piece must be an object")?;
         let name = text_of(fields, "name")?;
@@ -984,16 +1303,23 @@ fn draw(
                 .iter()
                 .find(|piece| piece.name == source)
                 .ok_or_else(|| format!("no piece before {name} is named {source}"))?;
+            if let Some((edges, mirrored)) = tables.get(source) {
+                let copy = (edges.clone(), !*mirrored);
+                tables.insert(name.clone(), copy);
+            }
             DrawnPiece {
                 quantity,
                 ..mirror(original, &name, labels(lengths, fields)?)?
             }
         } else {
             let moved_corners = moves.get(&name).map_or(&[][..], Vec::as_slice);
-            let (net, allowances, spreads) = boundary(lengths, fields, moved_corners)
+            let (edges, spreads) = boundary(lengths, fields, &name, moved_corners)
+                .map_err(|error| format!("{name}: {error}"))?;
+            let net = Outline::new(edges.curves.clone())
+                .map_err(|error| error.to_string())
                 .map_err(|error| format!("{name}: {error}"))?;
             let offset = net
-                .offset(&allowances, TOLERANCE)
+                .offset(&edges.allowances, TOLERANCE)
                 .map_err(|error| format!("{name}: {error}"))?;
             let moved = |at: Point| {
                 spreads
@@ -1005,12 +1331,10 @@ fn draw(
                 return Err(format!("{name} needs one grainline"));
             };
             let mut cut = offset.points().to_vec();
-            let mut notches = marks(lengths, fields)?;
-            for mark in &mut notches {
-                mark.at = moved(mark.at)?;
-                mark.toward = moved(mark.toward)?;
-                seat_notch(&mut cut, mark).map_err(|error| format!("{name}: {error}"))?;
-            }
+            let notches = notches_of(lengths, fields, &edges, &name, &mut cut, &moved, &mut book)
+                .map_err(|error| format!("{name}: {error}"))?;
+            let grade_points = grade_points_of(lengths, fields, &edges, &name, &mut book)
+                .map_err(|error| format!("{name}: {error}"))?;
             let sew = net.polyline(TOLERANCE);
             let mut internal = Vec::new();
             for line in lines(lengths, fields, "internal")? {
@@ -1021,6 +1345,7 @@ fn draw(
             }
             let closures = closures(lengths, fields, &sew, &mut internal)
                 .map_err(|error| format!("{name}: {error}"))?;
+            tables.insert(name.clone(), (edges, false));
             DrawnPiece {
                 name,
                 size: size.clone(),
@@ -1032,17 +1357,34 @@ fn draw(
                 marks: notches,
                 labels: labels(lengths, fields)?,
                 closures,
+                grade_points,
             }
         };
         pieces.push(piece);
     }
-    let seams = seams_of(lengths, description, moves)?;
-    balance_notches(lengths, description, &mut pieces, &seams)?;
-    Ok(Pattern {
-        style,
-        design: design.to_owned(),
-        revision: revision.to_owned(),
-        pieces,
-        seams,
+    let seams = seams_of(lengths, description, &tables, moves, &mut book)?;
+    balance_notches(lengths, description, &mut pieces, &seams, &mut book)?;
+    let open_seams = description
+        .get("seams")
+        .and_then(Value::as_list)
+        .unwrap_or(&[])
+        .iter()
+        .filter_map(|item| item.as_object()?.get("name")?.as_text())
+        .filter(|name| book.is_open(name))
+        .map(str::to_owned)
+        .collect();
+    // In the order the canonical form writes them, so that what is read back is what was drawn.
+    book.repairs.sort();
+    Ok(Drawing {
+        pattern: Pattern {
+            style,
+            design: design.to_owned(),
+            revision: revision.to_owned(),
+            pieces,
+            seams,
+            repairs: book.repairs,
+        },
+        references: book.references,
+        open_seams,
     })
 }

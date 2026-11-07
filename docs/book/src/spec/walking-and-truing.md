@@ -2,7 +2,7 @@
 
 A patternmaker walks one seam along another to see whether they meet, and trues them when they do not. Here both are operations a person or an agent asks for, on a sewing graph that is data in the design, and a difference between two sides is either ease somebody declared or a defect nobody did.
 
-**What works today.** Seams between stretches of sew lines, with declared ease. `walk`, which reports each one. Balance notches planted on both sides. `true_seam`, which makes the sides match within a stated limit. [The reference skirt's](reference-skirt.md) seven seams are declared and each walks to a match. **What does not exist yet:** a seam reference that survives an edit to its edge, which is `G3-GRADING.3`, because a side still names its ends by position. Truing a curved end. The sewing graph in the viewer.
+**What works today.** Seams between stretches of sew lines, with declared ease. `walk`, which reports each one. Balance notches planted on both sides. `true_seam`, which makes the sides match within a stated limit. [The reference skirt's](reference-skirt.md) seven seams are declared and each walks to a match. A seam's end can [hold an edge](stable-references.md), which survives an edit to it. **What does not exist yet:** truing a curved end. The sewing graph in the viewer.
 
 ```rust
 use sc_cli::Running;
@@ -33,7 +33,7 @@ assert_eq!(report["finding"].as_text(), Some("declared_ease"));
 
 ## A seam
 
-A draft's `seams` list names each seam and its two sides. A side is a stretch of a piece's sew line, from one point to another, walked the shorter way round. `ease` names a length, side A less side B, and a seam that gives none declares zero.
+A draft's `seams` list names each seam and its two sides. A side is a stretch of a piece's sew line, from one end to another, walked the shorter way round. An end is a place on a named edge, or a point. `ease` names a length, side A less side B, and a seam that gives none declares zero.
 
 | Field | What it holds |
 | --- | --- |
@@ -65,7 +65,7 @@ A sleeve cap 2 cm longer than its armscye with 2 cm declared is `declared_ease`:
 
 `true_seam` takes a `seam`, a `side` and a `limit_um`, and moves the end of that side's last straight run along itself until what is unexplained is gone. What the seam declares as ease stays. So 3 cm of difference with 2 cm declared moves the end by 1 cm.
 
-**It never moves a thing it was not asked to.** The caller says which side and how far it will accept, a true past that limit is refused and changes nothing, and it reports the walk before and after. A last run too short to take the change is refused by name. It is an operation in the design and not an edit to its geometry, so a new measurement is trued again when it is drawn.
+**It never moves a thing it was not asked to.** The caller says which side and how far it will accept, a true past that limit is refused and changes nothing, and it reports the walk before and after. A last run too short to take the change is refused by name, and so is an end held on an edge that is not a corner of a piece that can move, such as one in the middle of an edge or on a mirror, because a true that changed nothing is not a true. An end written as a point is its own place, so truing one moves that point along the line, and no corner. It is an operation in the design and not an edit to its geometry, so a new measurement is trued again when it is drawn.
 
 ## They are commands
 
@@ -87,7 +87,6 @@ $ cargo test -p sc-cli --test walk
 | `plant_balance_notch` | The step that plants a notch on both sides of a seam |
 | `true_seam` | The step that makes a seam's sides match |
 | `ChangeDrafting` | The bus command that replaces how a garment is drawn |
-| `G3-GRADING.3` | The leaf for references that survive an edit |
 | `G3-GRADING.4` | The leaf for the bodice and sleeve |
 | `seams` | A draft's list of seams |
 | `name` | A seam's name |

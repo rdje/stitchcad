@@ -412,12 +412,194 @@ impl<R: Repository> Session<R> {
                 "truing {name} would move an end by {moved}, past the limit of {limit}"
             )));
         }
+        // An end in the middle of an edge, or on a mirror, is not a corner this piece can move, and a true that changed nothing is not a true.
+        if now.finding == "defect" {
+            return Err(fail(format!(
+                "truing {name} leaves it out by {}, because the end of that side is not a corner of a piece that can move",
+                now.unexplained
+            )));
+        }
         self.commit_document(step, Value::Object(document).to_text())?;
         let mut result = BTreeMap::new();
         result.insert("moved_um".to_owned(), Value::Int(moved));
         result.insert("before".to_owned(), was.to_value());
         result.insert("after".to_owned(), now.to_value());
         Ok(Value::Object(result))
+    }
+
+    // A changed document, drawn first so that what cannot be drawn changes nothing, then committed as one edit.
+    fn commit_edited(
+        &mut self,
+        step: usize,
+        word: &'static str,
+        document: BTreeMap<String, Value>,
+    ) -> Result<Value, Failure> {
+        let known = self.lengths(step)?;
+        let pattern =
+            crate::draft::draft(&known, &document, &self.design_text, &self.revision_text())
+                .map_err(|message| Failure::at(step, word, message))?;
+        self.commit_document(step, Value::Object(document).to_text())?;
+        let mut result = BTreeMap::new();
+        result.insert("revision".to_owned(), Value::Text(self.revision_text()));
+        result.insert(
+            "repairs".to_owned(),
+            Value::List(
+                pattern
+                    .repairs
+                    .iter()
+                    .map(sc_artifacts::Repair::to_value)
+                    .collect(),
+            ),
+        );
+        Ok(Value::Object(result))
+    }
+
+    // An edit to an edge is an entry in its piece's description, done again at every draft, so it follows a changed measurement. What it orphans is reported, and it changes nothing else.
+    fn edit_edge(
+        &mut self,
+        step: usize,
+        fields: &BTreeMap<String, Value>,
+    ) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "edit_edge", message);
+        let mut entry = fields.clone();
+        entry.remove("do");
+        let name = entry
+            .remove("piece")
+            .and_then(|value| value.as_text().map(str::to_owned))
+            .ok_or_else(|| fail("an edit names its piece".to_owned()))?;
+        let mut document = self
+            .document()
+            .ok_or_else(|| fail("there is nothing drafted to edit yet".to_owned()))?;
+        let piece = piece_in(&mut document, &name)
+            .ok_or_else(|| fail(format!("no piece is named {name}")))?;
+        if piece.contains_key("mirror_of") {
+            return Err(fail(format!(
+                "{name} is a mirror, so an edit to it is made on the piece it mirrors"
+            )));
+        }
+        let mut edits = piece
+            .get("edits")
+            .and_then(Value::as_list)
+            .map(<[Value]>::to_vec)
+            .unwrap_or_default();
+        edits.push(Value::Object(entry));
+        piece.insert("edits".to_owned(), Value::List(edits));
+        self.commit_edited(step, "edit_edge", document)
+    }
+
+    fn references(&self, step: usize) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "references", message);
+        let known = self.lengths(step)?;
+        let document = self
+            .document()
+            .ok_or_else(|| fail("there is nothing drafted to look at yet".to_owned()))?;
+        let (references, repairs) =
+            crate::draft::references(&known, &document, &self.design_text, &self.revision_text())
+                .map_err(fail)?;
+        let mut result = BTreeMap::new();
+        result.insert("references".to_owned(), Value::List(references));
+        result.insert(
+            "repairs".to_owned(),
+            Value::List(repairs.iter().map(sc_artifacts::Repair::to_value).collect()),
+        );
+        Ok(Value::Object(result))
+    }
+
+    // A person or an agent says where an orphaned reference goes, or that it is gone. Nothing else ever does.
+    fn repair_reference(
+        &mut self,
+        step: usize,
+        fields: &BTreeMap<String, Value>,
+    ) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "repair_reference", message);
+        let mut document = self
+            .document()
+            .ok_or_else(|| fail("there is nothing drafted to repair yet".to_owned()))?;
+        let retire = matches!(fields.get("retire"), Some(Value::Bool(true)));
+        if let Some(seam) = fields.get("seam").and_then(Value::as_text) {
+            let Some(Value::List(seams)) = document.get_mut("seams") else {
+                return Err(fail(format!("no seam is named {seam}")));
+            };
+            let position = seams
+                .iter()
+                .position(|item| {
+                    item.as_object()
+                        .and_then(|item| item.get("name"))
+                        .and_then(Value::as_text)
+                        == Some(seam)
+                })
+                .ok_or_else(|| fail(format!("no seam is named {seam}")))?;
+            if retire {
+                seams.remove(position);
+            } else {
+                let side = fields.get("side").and_then(Value::as_text);
+                let end = fields.get("end").and_then(Value::as_text);
+                let (Some(side @ ("a" | "b")), Some(end @ ("from" | "to"))) = (side, end) else {
+                    return Err(fail(
+                        "repairing a seam says which side, a or b, and which end, from or to"
+                            .to_owned(),
+                    ));
+                };
+                let target = seams
+                    .get_mut(position)
+                    .and_then(object_of)
+                    .and_then(|item| item.get_mut(side))
+                    .and_then(object_of)
+                    .ok_or_else(|| fail(format!("{seam} has no side {side}")))?;
+                let held = match target.get_mut(end) {
+                    Some(Value::Object(held)) => held,
+                    Some(other) => {
+                        *other = Value::Object(BTreeMap::new());
+                        object_of(other).ok_or_else(|| fail("no such end".to_owned()))?
+                    }
+                    None => return Err(fail(format!("{seam} has no end {end}"))),
+                };
+                repoint(held, fields);
+            }
+        } else {
+            let name = fields
+                .get("piece")
+                .and_then(Value::as_text)
+                .ok_or_else(|| {
+                    fail("a repair names a seam, or a piece and what is on it".to_owned())
+                })?;
+            let (list, carrier) = match (
+                fields.get("notch").and_then(Value::as_text),
+                fields.get("grade_point").and_then(Value::as_text),
+            ) {
+                (Some(notch), None) => ("notches", notch),
+                (None, Some(point)) => ("grade_points", point),
+                _ => {
+                    return Err(fail(
+                        "a repair on a piece names one notch or one grade_point".to_owned(),
+                    ))
+                }
+            };
+            let piece = piece_in(&mut document, name)
+                .ok_or_else(|| fail(format!("no piece is named {name}")))?;
+            let Some(Value::List(items)) = piece.get_mut(list) else {
+                return Err(fail(format!("{name} has nothing named {carrier}")));
+            };
+            let position = items
+                .iter()
+                .position(|item| {
+                    item.as_object()
+                        .and_then(|item| item.get("name"))
+                        .and_then(Value::as_text)
+                        == Some(carrier)
+                })
+                .ok_or_else(|| fail(format!("{name} has nothing named {carrier}")))?;
+            if retire {
+                items.remove(position);
+            } else {
+                let held = items
+                    .get_mut(position)
+                    .and_then(object_of)
+                    .ok_or_else(|| fail(format!("{name} has nothing named {carrier}")))?;
+                repoint(held, fields);
+            }
+        }
+        self.commit_edited(step, "repair_reference", document)
     }
 
     // What a change would do, computed on a copy, leaving the Design, its revision and its history exactly as they are.
@@ -623,6 +805,18 @@ impl<R: Repository> Session<R> {
             .get("path")
             .and_then(Value::as_text)
             .ok_or_else(|| fail("export_pattern needs a path".to_owned()))?;
+        // The canonical form is how a drawing is inspected, and it lists what is open. A cutting file is a release, and a notch nobody placed would be missing from it without a word.
+        if format != "canonical" && !pattern.repairs.is_empty() {
+            let open: Vec<&str> = pattern
+                .repairs
+                .iter()
+                .map(|repair| repair.carrier.as_str())
+                .collect();
+            return Err(fail(format!(
+                "this drawing has references that need repair before it can be released: {}",
+                open.join("; ")
+            )));
+        }
         let (bytes, record): (Vec<u8>, Option<String>) = match format {
             "canonical" => (sc_artifacts::to_canonical_text(pattern).into_bytes(), None),
             "dxf" => {
@@ -1026,13 +1220,16 @@ fn solve(
 }
 
 /// The steps a session can take. Anything else is refused by name.
-pub const STEPS: [&str; 16] = [
+pub const STEPS: [&str; 19] = [
     "evaluate",
     "preview",
     "closures",
     "walk",
     "plant_balance_notch",
     "true_seam",
+    "edit_edge",
+    "references",
+    "repair_reference",
     "change",
     "undo",
     "redo",
@@ -1070,11 +1267,50 @@ impl Caller {
     }
 }
 
+fn object_of(value: &mut Value) -> Option<&mut BTreeMap<String, Value>> {
+    match value {
+        Value::Object(fields) => Some(fields),
+        _ => None,
+    }
+}
+
+fn piece_in<'a>(
+    document: &'a mut BTreeMap<String, Value>,
+    name: &str,
+) -> Option<&'a mut BTreeMap<String, Value>> {
+    let Some(Value::List(pieces)) = document.get_mut("pieces") else {
+        return None;
+    };
+    pieces
+        .iter_mut()
+        .filter_map(object_of)
+        .find(|piece| piece.get("name").and_then(Value::as_text) == Some(name))
+}
+
+// A choice at a split keeps what the reference holds. Anything else replaces it with what the caller stated.
+fn repoint(held: &mut BTreeMap<String, Value>, fields: &BTreeMap<String, Value>) {
+    if let Some(choose) = fields.get("choose") {
+        held.insert("choose".to_owned(), choose.clone());
+        return;
+    }
+    held.remove("choose");
+    for name in ["at", "along"] {
+        held.remove(name);
+    }
+    for name in ["edge", "at", "along"] {
+        if let Some(value) = fields.get(name) {
+            held.insert(name.to_owned(), value.clone());
+        }
+    }
+}
+
 // What each step needs. `change`, `undo` and `redo` are also refused by the bus itself, whose grant is built from the same list.
 fn required(step: &str) -> Option<CommandAuthority> {
     match step {
         // Loading writes nothing. It discards unsaved work, and only a caller who may commit can have made any.
-        "evaluate" | "solve" | "reopen" | "closures" | "walk" => Some(CommandAuthority::Inspect),
+        "evaluate" | "solve" | "reopen" | "closures" | "walk" | "references" => {
+            Some(CommandAuthority::Inspect)
+        }
         "preview" => Some(CommandAuthority::Propose),
         "save" => Some(CommandAuthority::Commit),
         "draft" | "export_pattern" | "render" | "export" => Some(CommandAuthority::Generate),
@@ -1208,6 +1444,9 @@ impl<R: Repository> Running<R> {
             "walk" => state.walk(step)?,
             "plant_balance_notch" => state.plant_balance_notch(step, item)?,
             "true_seam" => state.true_seam(step, item)?,
+            "edit_edge" => state.edit_edge(step, item)?,
+            "references" => state.references(step)?,
+            "repair_reference" => state.repair_reference(step, item)?,
             "change" => {
                 let token = item
                     .get("token")

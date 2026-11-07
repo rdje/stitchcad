@@ -163,6 +163,17 @@ fn compare_piece(
             format!("{:?} against {:?}", closures(a), closures(b)),
         );
     }
+    let grade_points = |piece: &DrawnPiece| {
+        let mut listed = piece.grade_points.clone();
+        listed.sort();
+        listed
+    };
+    if grade_points(a) != grade_points(b) {
+        report(
+            "grade_points",
+            format!("{:?} against {:?}", grade_points(a), grade_points(b)),
+        );
+    }
     let label_text = |piece: &DrawnPiece| {
         let mut texts: Vec<String> = piece
             .labels
@@ -209,6 +220,18 @@ fn compare_patterns(
             piece: String::new(),
             field: "seams",
             detail: format!("{:?} against {:?}", sorted(a), sorted(b)),
+        });
+    }
+    let open = |pattern: &Pattern| {
+        let mut repairs = pattern.repairs.clone();
+        repairs.sort();
+        repairs
+    };
+    if open(a) != open(b) {
+        out.push(Difference {
+            piece: String::new(),
+            field: "repairs",
+            detail: format!("{:?} against {:?}", open(a), open(b)),
         });
     }
     for piece in &a.pieces {

@@ -1,5 +1,7 @@
 //! A drawn pattern: what an exporter needs, in whole micrometres, with nothing about how it was drafted.
 use sc_geometry::Point;
+use sc_store::Value;
+use std::collections::BTreeMap;
 
 /// A straight internal line: a dart leg, a fold or a grainline.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord)]
@@ -94,6 +96,52 @@ pub struct DrawnPiece {
     pub labels: Vec<Text>,
     /// Darts, tucks, pleats and gathers, which a seam's length accounts for.
     pub closures: Vec<Closure>,
+    /// The points a grading engine moves, each by name.
+    pub grade_points: Vec<GradePoint>,
+}
+
+/// A named point on a piece's sew line, which a grade rule moves.
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
+pub struct GradePoint {
+    /// Its name on this piece.
+    pub name: String,
+    /// Where it is.
+    pub at: Point,
+}
+
+/// A reference an edit left with nowhere to go. It is shown and it blocks a release, and nothing moves it onto another edge for you.
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
+pub struct Repair {
+    /// The piece it is on.
+    pub piece: String,
+    /// What holds the reference: a notch, a grade point, or one end of a seam.
+    pub carrier: String,
+    /// What it holds, as written: an edge and a fraction of it.
+    pub reference: String,
+    /// The edit that orphaned it, in words.
+    pub orphaned_by: String,
+    /// Where it might go instead, which is empty when nothing can be suggested honestly.
+    pub candidates: Vec<String>,
+}
+
+impl Repair {
+    /// The task as a value.
+    #[must_use]
+    pub fn to_value(&self) -> Value {
+        let mut fields = BTreeMap::new();
+        fields.insert("piece".to_owned(), Value::Text(self.piece.clone()));
+        fields.insert("carrier".to_owned(), Value::Text(self.carrier.clone()));
+        fields.insert("reference".to_owned(), Value::Text(self.reference.clone()));
+        fields.insert(
+            "orphaned_by".to_owned(),
+            Value::Text(self.orphaned_by.clone()),
+        );
+        fields.insert(
+            "candidates".to_owned(),
+            Value::List(self.candidates.iter().cloned().map(Value::Text).collect()),
+        );
+        Value::Object(fields)
+    }
 }
 
 /// One side of a seam: a stretch of a piece's sew line, in the direction the seam is walked.
@@ -133,4 +181,6 @@ pub struct Pattern {
     pub pieces: Vec<DrawnPiece>,
     /// The sewing graph: which stretches are sewn to which, and with what ease.
     pub seams: Vec<Seam>,
+    /// References an edit orphaned. While any is open the drawing can be inspected and cannot be released.
+    pub repairs: Vec<Repair>,
 }

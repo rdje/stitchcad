@@ -105,6 +105,7 @@
           "edges": [
             {
               "corner": "miter",
+              "name": "cf",
               "to": [
                 "zero",
                 "-waist_to_hem"
@@ -113,6 +114,7 @@
             },
             {
               "corner": "envelope",
+              "name": "hem",
               "to": [
                 "quarter_hem_width",
                 "-waist_to_hem"
@@ -121,6 +123,7 @@
             },
             {
               "corner": "miter",
+              "name": "side_lower",
               "to": [
                 "quarter_hip",
                 "-waist_to_hip"
@@ -133,6 +136,7 @@
                 "quarter_hip",
                 "-waist_curve_lower_y"
               ],
+              "name": "side_upper",
               "second": [
                 "waist_curve_upper_x",
                 "-waist_curve_upper_y"
@@ -145,6 +149,7 @@
             },
             {
               "corner": "trim",
+              "name": "waist",
               "to": [
                 "zero",
                 "zero"
@@ -182,16 +187,16 @@
           ],
           "name": "skirt_front",
           "notches": [
-            [
-              [
-                "hip_notch_x",
-                "-waist_to_hip"
+            {
+              "aim": [
+                "sa_side",
+                "zero"
               ],
-              [
-                "hip_notch_end",
-                "-waist_to_hip"
-              ]
-            ]
+              "at": "1",
+              "depth": "notch_depth",
+              "edge": "side_lower",
+              "name": "hip"
+            }
           ],
           "quantity": 1,
           "start": [
@@ -221,6 +226,7 @@
           "edges": [
             {
               "corner": "trim",
+              "name": "cb",
               "to": [
                 "zero",
                 "-waist_to_hem"
@@ -229,6 +235,7 @@
             },
             {
               "corner": "envelope",
+              "name": "hem",
               "to": [
                 "quarter_hem_width",
                 "-waist_to_hem"
@@ -237,6 +244,7 @@
             },
             {
               "corner": "miter",
+              "name": "side_lower",
               "to": [
                 "quarter_hip",
                 "-waist_to_hip"
@@ -249,6 +257,7 @@
                 "quarter_hip",
                 "-waist_curve_lower_y"
               ],
+              "name": "side_upper",
               "second": [
                 "waist_curve_upper_x",
                 "-waist_curve_upper_y"
@@ -261,6 +270,7 @@
             },
             {
               "corner": "trim",
+              "name": "waist",
               "to": [
                 "zero",
                 "zero"
@@ -291,26 +301,22 @@
           ],
           "name": "skirt_back_right",
           "notches": [
-            [
-              [
-                "hip_notch_x",
-                "-waist_to_hip"
+            {
+              "aim": [
+                "sa_side",
+                "zero"
               ],
-              [
-                "hip_notch_end",
-                "-waist_to_hip"
-              ]
-            ],
-            [
-              [
-                "-sa_cb",
-                "-zip_len"
-              ],
-              [
-                "-cb_notch_x",
-                "-zip_len"
-              ]
-            ]
+              "at": "1",
+              "depth": "notch_depth",
+              "edge": "side_lower",
+              "name": "hip"
+            },
+            {
+              "along": "zip_len",
+              "depth": "notch_depth",
+              "edge": "cb",
+              "name": "zip"
+            }
           ],
           "quantity": 1,
           "start": [
@@ -336,6 +342,7 @@
           "edges": [
             {
               "corner": "miter",
+              "name": "band_lower",
               "to": [
                 "band_right",
                 "sa_waist"
@@ -344,6 +351,7 @@
             },
             {
               "corner": "miter",
+              "name": "band_right",
               "to": [
                 "band_right",
                 "band_top"
@@ -352,6 +360,7 @@
             },
             {
               "corner": "miter",
+              "name": "band_upper",
               "to": [
                 "sa_cb",
                 "band_top"
@@ -360,6 +369,7 @@
             },
             {
               "corner": "miter",
+              "name": "band_left",
               "to": [
                 "sa_cb",
                 "sa_waist"
@@ -402,56 +412,48 @@
           ],
           "name": "waistband",
           "notches": [
-            [
-              [
-                "sa_cb",
-                "zero"
-              ],
-              [
-                "sa_cb",
-                "notch_depth"
-              ]
-            ],
-            [
-              [
+            {
+              "at": "0",
+              "depth": "notch_depth",
+              "edge": "band_lower",
+              "name": "cb_right"
+            },
+            {
+              "along": [
                 "band_quarter_1",
-                "zero"
+                "-sa_cb"
               ],
-              [
-                "band_quarter_1",
-                "notch_depth"
-              ]
-            ],
-            [
-              [
+              "depth": "notch_depth",
+              "edge": "band_lower",
+              "name": "quarter_1"
+            },
+            {
+              "along": [
                 "band_quarter_2",
-                "zero"
+                "-sa_cb"
               ],
-              [
-                "band_quarter_2",
-                "notch_depth"
-              ]
-            ],
-            [
-              [
+              "depth": "notch_depth",
+              "edge": "band_lower",
+              "name": "quarter_2"
+            },
+            {
+              "along": [
                 "band_quarter_3",
-                "zero"
+                "-sa_cb"
               ],
-              [
-                "band_quarter_3",
-                "notch_depth"
-              ]
-            ],
-            [
-              [
+              "depth": "notch_depth",
+              "edge": "band_lower",
+              "name": "quarter_3"
+            },
+            {
+              "along": [
                 "band_cb_left",
-                "zero"
+                "-sa_cb"
               ],
-              [
-                "band_cb_left",
-                "notch_depth"
-              ]
-            ]
+              "depth": "notch_depth",
+              "edge": "band_lower",
+              "name": "cb_left"
+            }
           ],
           "quantity": 1,
           "start": [
@@ -463,6 +465,7 @@
           "edges": [
             {
               "corner": "miter",
+              "name": "ifc_lower",
               "to": [
                 "wb_interfacing_length",
                 "zero"
@@ -471,6 +474,7 @@
             },
             {
               "corner": "miter",
+              "name": "ifc_right",
               "to": [
                 "wb_interfacing_length",
                 "wb_interfacing_width"
@@ -479,6 +483,7 @@
             },
             {
               "corner": "miter",
+              "name": "ifc_upper",
               "to": [
                 "zero",
                 "wb_interfacing_width"
@@ -487,6 +492,7 @@
             },
             {
               "corner": "miter",
+              "name": "ifc_left",
               "to": [
                 "zero",
                 "zero"
@@ -526,176 +532,197 @@
       "seams": [
         {
           "a": {
-            "from": [
-              "quarter_hem_width",
-              "-waist_to_hem"
-            ],
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
             "piece": "skirt_front",
-            "to": [
-              "waist_side",
-              "zero"
-            ]
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
           },
           "b": {
-            "from": [
-              "quarter_hem_width",
-              "-waist_to_hem"
-            ],
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
             "piece": "skirt_back_right",
-            "to": [
-              "waist_side",
-              "zero"
-            ]
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
           },
           "name": "ss_right"
         },
         {
           "a": {
-            "from": [
-              "quarter_hem_width",
-              "-waist_to_hem"
-            ],
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
             "piece": "skirt_front",
-            "to": [
-              "waist_side",
-              "zero"
-            ]
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
           },
           "b": {
-            "from": [
-              "-quarter_hem_width",
-              "-waist_to_hem"
-            ],
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
             "piece": "skirt_back_left",
-            "to": [
-              "-waist_side",
-              "zero"
-            ]
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
           },
           "name": "ss_left"
         },
         {
           "a": {
-            "from": [
-              "zero",
-              "zero"
-            ],
+            "from": {
+              "at": "0",
+              "edge": "cb"
+            },
             "piece": "skirt_back_right",
-            "to": [
-              "zero",
-              "-waist_to_hem"
-            ]
+            "to": {
+              "at": "1",
+              "edge": "cb"
+            }
           },
           "b": {
-            "from": [
-              "zero",
-              "zero"
-            ],
+            "from": {
+              "at": "0",
+              "edge": "cb"
+            },
             "piece": "skirt_back_left",
-            "to": [
-              "zero",
-              "-waist_to_hem"
-            ]
+            "to": {
+              "at": "1",
+              "edge": "cb"
+            }
           },
           "name": "cb"
         },
         {
           "a": {
-            "from": [
-              "zero",
-              "zero"
-            ],
+            "from": {
+              "at": "1",
+              "edge": "waist"
+            },
             "piece": "skirt_back_left",
-            "to": [
-              "-waist_side",
-              "zero"
-            ]
+            "to": {
+              "at": "0",
+              "edge": "waist"
+            }
           },
           "b": {
-            "from": [
-              "sa_cb",
-              "sa_waist"
-            ],
+            "from": {
+              "at": "0",
+              "edge": "band_lower"
+            },
             "piece": "waistband",
-            "to": [
-              "band_quarter_1",
-              "sa_waist"
-            ]
+            "to": {
+              "along": [
+                "band_quarter_1",
+                "-sa_cb"
+              ],
+              "edge": "band_lower"
+            }
           },
           "name": "waist_back_left"
         },
         {
           "a": {
-            "from": [
-              "waist_side",
-              "zero"
-            ],
+            "from": {
+              "at": "0",
+              "edge": "waist"
+            },
             "piece": "skirt_front",
-            "to": [
-              "zero",
-              "zero"
-            ]
+            "to": {
+              "at": "1",
+              "edge": "waist"
+            }
           },
           "b": {
-            "from": [
-              "band_quarter_1",
-              "sa_waist"
-            ],
+            "from": {
+              "along": [
+                "band_quarter_1",
+                "-sa_cb"
+              ],
+              "edge": "band_lower"
+            },
             "piece": "waistband",
-            "to": [
-              "band_quarter_2",
-              "sa_waist"
-            ]
+            "to": {
+              "along": [
+                "band_quarter_2",
+                "-sa_cb"
+              ],
+              "edge": "band_lower"
+            }
           },
           "name": "waist_front_left"
         },
         {
           "a": {
-            "from": [
-              "zero",
-              "zero"
-            ],
+            "from": {
+              "at": "1",
+              "edge": "waist"
+            },
             "piece": "skirt_front",
-            "to": [
-              "waist_side",
-              "zero"
-            ]
+            "to": {
+              "at": "0",
+              "edge": "waist"
+            }
           },
           "b": {
-            "from": [
-              "band_quarter_2",
-              "sa_waist"
-            ],
+            "from": {
+              "along": [
+                "band_quarter_2",
+                "-sa_cb"
+              ],
+              "edge": "band_lower"
+            },
             "piece": "waistband",
-            "to": [
-              "band_quarter_3",
-              "sa_waist"
-            ]
+            "to": {
+              "along": [
+                "band_quarter_3",
+                "-sa_cb"
+              ],
+              "edge": "band_lower"
+            }
           },
           "name": "waist_front_right"
         },
         {
           "a": {
-            "from": [
-              "zero",
-              "zero"
-            ],
+            "from": {
+              "at": "1",
+              "edge": "waist"
+            },
             "piece": "skirt_back_right",
-            "to": [
-              "waist_side",
-              "zero"
-            ]
+            "to": {
+              "at": "0",
+              "edge": "waist"
+            }
           },
           "b": {
-            "from": [
-              "band_quarter_3",
-              "sa_waist"
-            ],
+            "from": {
+              "along": [
+                "band_quarter_3",
+                "-sa_cb"
+              ],
+              "edge": "band_lower"
+            },
             "piece": "waistband",
-            "to": [
-              "band_cb_left",
-              "sa_waist"
-            ]
+            "to": {
+              "along": [
+                "band_cb_left",
+                "-sa_cb"
+              ],
+              "edge": "band_lower"
+            }
           },
           "name": "waist_back_right"
         }

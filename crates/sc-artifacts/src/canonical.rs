@@ -1,6 +1,7 @@
 //! One written form for one pattern: stable order and exact numbers, with no clock anywhere in it.
 use crate::pattern::{
-    Closure, ClosureKind, DrawnPiece, Line, Mark, MarkKind, Pattern, Seam, SeamSide, Text,
+    Closure, ClosureKind, DrawnPiece, GradePoint, Line, Mark, MarkKind, Pattern, Repair, Seam,
+    SeamSide, Text,
 };
 use core::fmt;
 use sc_geometry::Point;
@@ -103,6 +104,19 @@ fn piece_value(piece: &DrawnPiece) -> Value {
             Value::List(closures.iter().map(closure_value).collect()),
         ));
     }
+    let mut grade_points = piece.grade_points.clone();
+    grade_points.sort();
+    if !grade_points.is_empty() {
+        fields.push((
+            "grade_points",
+            Value::List(
+                grade_points
+                    .iter()
+                    .map(|item| object(vec![("name", text(&item.name)), ("at", point(item.at))]))
+                    .collect(),
+            ),
+        ));
+    }
     object(fields)
 }
 
@@ -162,6 +176,14 @@ pub fn to_canonical_text(pattern: &Pattern) -> String {
         ),
     ];
     // A pattern with no sewing graph writes no field, so a form written before there was one still reads the same.
+    if !pattern.repairs.is_empty() {
+        let mut repairs = pattern.repairs.clone();
+        repairs.sort();
+        fields.push((
+            "repairs",
+            Value::List(repairs.iter().map(Repair::to_value).collect()),
+        ));
+    }
     if !pattern.seams.is_empty() {
         let mut seams = pattern.seams.clone();
         seams.sort();
@@ -306,8 +328,21 @@ fn read_piece(value: &Value) -> Result<DrawnPiece, CanonicalError> {
             });
         }
     }
+    let mut grade_points = Vec::new();
+    if fields.contains_key("grade_points") {
+        for item in read_list(fields, "grade_points")? {
+            let Some(item) = item.as_object() else {
+                return fail("a grade point must be an object");
+            };
+            grade_points.push(GradePoint {
+                name: read_text(item, "name")?,
+                at: read_point(field(item, "at")?)?,
+            });
+        }
+    }
     Ok(DrawnPiece {
         closures,
+        grade_points,
         name: read_text(fields, "name")?,
         size: read_text(fields, "size")?,
         quantity,
@@ -380,5 +415,33 @@ pub fn from_canonical_text(source: &str) -> Result<Pattern, CanonicalError> {
         } else {
             Vec::new()
         },
+        repairs: if fields.contains_key("repairs") {
+            read_list(fields, "repairs")?
+                .iter()
+                .map(read_repair)
+                .collect::<Result<_, _>>()?
+        } else {
+            Vec::new()
+        },
+    })
+}
+
+fn read_repair(item: &Value) -> Result<Repair, CanonicalError> {
+    let Some(item) = item.as_object() else {
+        return fail("a repair must be an object");
+    };
+    let mut candidates = Vec::new();
+    for candidate in read_list(item, "candidates")? {
+        let Some(candidate) = candidate.as_text() else {
+            return fail("a repair's candidate must be text");
+        };
+        candidates.push(candidate.to_owned());
+    }
+    Ok(Repair {
+        piece: read_text(item, "piece")?,
+        carrier: read_text(item, "carrier")?,
+        reference: read_text(item, "reference")?,
+        orphaned_by: read_text(item, "orphaned_by")?,
+        candidates,
     })
 }

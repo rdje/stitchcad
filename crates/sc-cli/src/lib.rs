@@ -10,6 +10,9 @@ mod closures_examples {}
 
 #[doc = include_str!("../../../docs/book/src/spec/walking-and-truing.md")]
 mod walking_examples {}
+
+#[doc = include_str!("../../../docs/book/src/spec/stable-references.md")]
+mod references_examples {}
 mod outline;
 mod session;
 

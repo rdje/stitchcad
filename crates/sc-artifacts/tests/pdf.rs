@@ -18,6 +18,7 @@ fn p(x: i64, y: i64) -> Point {
 
 fn rectangle(name: &str, width: i64, height: i64) -> DrawnPiece {
     DrawnPiece {
+        grade_points: Vec::new(),
         name: name.to_owned(),
         size: "M".to_owned(),
         quantity: 1,
@@ -41,6 +42,7 @@ fn rectangle(name: &str, width: i64, height: i64) -> DrawnPiece {
 
 fn pattern(pieces: Vec<DrawnPiece>) -> Pattern {
     Pattern {
+        repairs: Vec::new(),
         seams: vec![],
         style: "skirt".to_owned(),
         design: "01ARZ3NDEKTSV4RRFFQ69G5FAV".to_owned(),

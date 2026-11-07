@@ -14,6 +14,7 @@ requires the named contracts and later proof owners.
 | Physical evaluation | §13 | G2-2D.7/.15 | [What to print, sew and measure](../spec/physical-evaluation.md). Nothing has been performed |
 | Conformance matrix | §13 | G2-2D.12 | [Each claim beside its check, and what is unclaimed](../spec/conformance-matrix.md) |
 | Mutation tests | §11 G2, §13 | sc-artifacts; G2-2D.11 | [Each fault caught by the check that names it](../spec/mutation-tests.md) |
+| References that survive an edit | §4.1; G3 | sc-core, sc-geometry, sc-artifacts, sc-cli; G3-GRADING.3 | [Named edges, carriers that hold them, six edits, repair tasks that block a release](../spec/stable-references.md) |
 | Walking and truing | §3.1; G3 | sc-artifacts, sc-cli, sc-core; G3-GRADING.2 | [Seams with declared ease, walked and trued as commands](../spec/walking-and-truing.md) |
 | Closures | §3.1; G3 | sc-artifacts, sc-cli; G3-GRADING.1 | [Darts, tucks, pleats, gathers, and slash and spread](../spec/closures.md) |
 | API and MCP | §7.8; G1 | sc-api, sc-mcp; G1-SLICE.9 | [Local stdio, scoped authority and admission tests](../spec/api-and-mcp.md) |

@@ -176,6 +176,11 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D404 — a true that moved nothing
+
+A reference holds a fraction of its edge and `true_seam` moves corners,so a true on a reference mid-edge or on a mirror would move nothing and report success. Owner:G3-GRADING.3. Found while binding seam ends to edges,and it never shipped:the form is new in 1014.
+I first wrote that positions did this too. The test said otherwise:a position moves itself along the line and the walk reports it,so that stands,with a test,and the first reading was wrong. Fixed1014:a true that leaves the seam a defect is refused by name with nothing changed;a test holds it.
+
 ## D403 — no colorway on my labels
 
 §6 says a piece's label holds its fabric and colorway. My session wrote the fabric and no colorway,and my judge did not check,because I wrote both from the same reading. An independent agent's first session wrote it and said the fixture names none. The labels now say so,the judge requires it,and the goldens are refrozen.

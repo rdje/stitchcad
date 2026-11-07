@@ -85,14 +85,22 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1013.
 
 - ID: `G3-GRADING.3`
-  Status: `pending`
+  Status: `done`
   Goal: the identity contract under edit (§4.1) — referenced-edge split, merge, reverse, delete and
   offset-fragmentation either preserve references or produce a visible unresolved-reference repair
   task; no silent reassignment.
   Acceptance: a property test enumerates the edit operations and asserts reference survival or a
   repair task for each; notches, grade points and seam spans are the reference carriers tested.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-geometry/src/curve.rs,crates/sc-artifacts/**,crates/sc-cli/**,crates/sc-api/src/lib.rs,crates/sc-viewer/src/shell.rs,conformance/reference-skirt/session.json,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-03 asks that references survive an edit. WHERE the core's journal had the whole contract and nothing drawn used it:a drafted notch or seam end named a position in crates/sc-cli/src/draft.rs;git grep -c IdentityLedger 9e231ddd -- crates/sc-cli/src/draft.rs →0,rc=1.
+  - [x] ADDRESSED,DRAFTING:every drafted edge is declared in the core's IdentityLedger,an edit changes the journal and the drawing together,and where a reference lands is the fold's answer. cargo test -p sc-cli --test references →rc=0:split,merge,reverse,delete,trim,mirror and measurement each against notches,grade points and seam ends,with stated seeds.
+  - [x] ADDRESSED,RELEASE:a repair task is shown by name,with the edit and candidates,and a DXF or PDF is refused while one is open;the canonical form lists them. A deleted edge's stand-in is a new identity nothing lands on.
+  - [x] ADDRESSED,TRIM:an allowance trimming part of an edge is the contract's fifth row,using the ledger's offset and the engine's own cut line,so a notch there is a task and not moved to where the cut line happens to be.
+  - [x] ALSO FOUND:a reference holds a fraction and a true moves corners,so a true on a reference mid-edge or on a mirror would move nothing and say it had;refused by name,D404,before it shipped. Positions in older sessions keep working and are stated not to be references.
+  - [x] NOT SHOWN,STATED:a closure's ends are still positions. Grade rules are `.7`. Nobody who sews has reviewed a notch's place. The core's structural Piece stays unbound.
+  - [x] NO REGRESSION:gauge.sh --checks →rc=0;cargo test -p sc-geometry -p sc-artifacts -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1014.
 
 - ID: `G3-GRADING.4`
   Status: `pending`

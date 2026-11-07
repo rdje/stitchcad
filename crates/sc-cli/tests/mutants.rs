@@ -84,9 +84,22 @@ fn piece<'a>(session: &'a mut Value, name: &str) -> &'a mut BTreeMap<String, Val
     panic!("no piece {name}");
 }
 
+// With the seams that name it, because a seam whose end holds an edge of a piece that is not there cannot be drawn at all, and this is about what the judge finds.
 fn drop_piece(session: &mut Value, name: &str) {
     pieces(session)
         .retain(|item| item.as_object().expect("a piece")["name"].as_text() != Some(name));
+    let on = |seam: &Value, side: &str| {
+        seam.as_object().expect("a seam")[side]
+            .as_object()
+            .expect("a side")["piece"]
+            .as_text()
+            == Some(name)
+    };
+    for step in list_of(fields_of(session), "steps") {
+        if step.as_object().expect("a step")["do"].as_text() == Some("draft") {
+            list_of(fields_of(step), "seams").retain(|seam| !on(seam, "a") && !on(seam, "b"));
+        }
+    }
 }
 
 fn points(text: &str) -> Value {
