@@ -22,7 +22,7 @@ G2-08	exit	LLM agent given only MCP,CLI serializer then golden-matches	conforman
 G3-01	exit	bodice + set-in sleeve,the darted bodice and set-in sleeve above	crates/sc-cli/tests/bodice.rs	cargo test -p sc-cli --test bodice	instrument	-	an engineer's constants,all assumed;nobody has cut it in cloth;five sizes are re-drafted,not graded	G3-GRADING.4
 G3-02	exit	darts, folds, walking/truing	crates/sc-cli/tests/walk.rs	cargo test -p sc-cli --test closures --test walk	instrument	-	executed in the drafting layer,and the core's structural closures stay unconnected;no garment yet has an eased seam or a tuck,pleat or gather;truing moves a straight end only	G3-GRADING.2
 G3-03	exit	stable references survive	crates/sc-cli/tests/references.rs	cargo test -p sc-cli --test references	instrument	-	uses the core's journal and answers;a dart's ends are still positions,and one left off the sew line is refused by name	G3-GRADING.3
-G3-04	exit	both instantiation paths	-	-	unbuilt	-	-	G3-GRADING.11
+G3-04	exit	both instantiation paths	crates/sc-cli/tests/equivalence.rs	cargo test -p sc-cli --test family --test rules --test equivalence	instrument	-	findings stand and are reported,not reconciled;T4 and T5 have no bound,because no receiver or profile has declared one	G3-GRADING.11
 G3-05	exit	re-imported into an independent engine	-	-	unbuilt	-	-	G3-GRADING.8
 G3-06	exit	extreme sizes reconstructed	-	-	unbuilt	-	-	G3-GRADING.9
 G3-07	exit	grading modes	-	-	unbuilt	-	-	G3-GRADING.10

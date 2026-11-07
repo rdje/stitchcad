@@ -603,6 +603,31 @@ impl<R: Repository> Session<R> {
         Ok(Value::Object(result))
     }
 
+    // Every length a session can name, at each size, each evaluated from the recipe with its closures holding.
+    fn lengths_at_sizes(
+        &self,
+        step: usize,
+        document: &BTreeMap<String, Value>,
+        sizes: &crate::family::Sizes,
+    ) -> Result<Vec<SizedLengths>, Failure> {
+        let fail = |message: String| Failure::at(step, "grade", message);
+        let mut at_sizes = Vec::with_capacity(sizes.list.len());
+        for size in &sizes.list {
+            let at_size = |message: String| fail(format!("size {}: {message}", size.name));
+            let inputs = crate::family::inputs_at(&self.inputs, size).map_err(fail)?;
+            let mut described = document.clone();
+            described.insert("size".to_owned(), Value::Text(size.name.clone()));
+            let solved = self
+                .solved(step, &inputs, Some(&described))
+                .map_err(|failure| at_size(failure.message))?;
+            let evaluated = self
+                .evaluated(step, &solved)
+                .map_err(|failure| at_size(failure.message))?;
+            at_sizes.push((size.name.clone(), known_lengths(&solved, &evaluated)));
+        }
+        Ok(at_sizes)
+    }
+
     // What a table worked out from each size's own drawing says, or one a project holds. It changes nothing in the Design.
     fn grade_table(
         &self,
@@ -626,20 +651,7 @@ impl<R: Repository> Session<R> {
             read(core::str::from_utf8(bytes).map_err(|_| fail(format!("{target} is not text")))?)?
         } else {
             let sizes = crate::family::sizes_of(document).map_err(fail)?;
-            let mut at_sizes = Vec::with_capacity(sizes.list.len());
-            for size in &sizes.list {
-                let at_size = |message: String| fail(format!("size {}: {message}", size.name));
-                let inputs = crate::family::inputs_at(&self.inputs, size).map_err(fail)?;
-                let mut described = document.clone();
-                described.insert("size".to_owned(), Value::Text(size.name.clone()));
-                let solved = self
-                    .solved(step, &inputs, Some(&described))
-                    .map_err(|failure| at_size(failure.message))?;
-                let evaluated = self
-                    .evaluated(step, &solved)
-                    .map_err(|failure| at_size(failure.message))?;
-                at_sizes.push((size.name.clone(), known_lengths(&solved, &evaluated)));
-            }
+            let at_sizes = self.lengths_at_sizes(step, document, &sizes)?;
             crate::draft::derive_table(document, &at_sizes, &sizes.sample).map_err(fail)?
         };
         match fields.get("convention").and_then(Value::as_text) {
@@ -668,6 +680,16 @@ impl<R: Repository> Session<R> {
         let mut reports = Vec::with_capacity(table.sizes().len());
         let mut family = Vec::with_capacity(table.sizes().len());
         let mut conflicts = Vec::new();
+        // What the recipe itself draws at each size, when the draft says what its sizes are.
+        let by_recipe: BTreeMap<String, BTreeMap<String, i64>> =
+            match crate::family::sizes_of(&document) {
+                Ok(sizes) => self
+                    .lengths_at_sizes(step, &document, &sizes)?
+                    .into_iter()
+                    .collect(),
+                Err(_) => BTreeMap::new(),
+            };
+        let (mut quantities, mut findings, mut not_compared) = (Vec::new(), Vec::new(), Vec::new());
         for size in table.sizes() {
             let at_size = |message: String| fail(format!("size {size}: {message}"));
             let rebuilt = crate::draft::reconstruct(
@@ -680,6 +702,30 @@ impl<R: Repository> Session<R> {
             .map_err(at_size)?;
             let walked = sc_artifacts::walk(&rebuilt.pattern)
                 .map_err(|error| at_size(format!("the seam {}: {}", error.seam, error.message)))?;
+            if let Some(at_size_lengths) = by_recipe.get(size) {
+                let mut described = document.clone();
+                described.insert("size".to_owned(), Value::Text(size.clone()));
+                let regenerated = crate::draft::draft(
+                    at_size_lengths,
+                    &described,
+                    &self.design_text,
+                    &self.revision_text(),
+                )
+                .map_err(at_size)?;
+                let (all, found) = crate::draft::compare_size(
+                    size,
+                    &table,
+                    &document,
+                    (&known, at_size_lengths),
+                    &regenerated,
+                    &rebuilt,
+                )
+                .map_err(at_size)?;
+                quantities.extend(all);
+                findings.extend(found);
+            } else {
+                not_compared.push(Value::Text(size.clone()));
+            }
             let text = sc_artifacts::to_canonical_text(&rebuilt.pattern);
             let words =
                 |listed: &[String]| Value::List(listed.iter().cloned().map(Value::Text).collect());
@@ -724,6 +770,16 @@ impl<R: Repository> Session<R> {
         let asked_for_files = ["path", "rules_path", "rul"]
             .iter()
             .any(|name| fields.contains_key(*name));
+        let count = |listed: &[Value]| Value::Int(i64::try_from(listed.len()).unwrap_or(i64::MAX));
+        let mut equivalence = BTreeMap::new();
+        equivalence.insert(
+            "provenance".to_owned(),
+            Value::Text(table.provenance().token().to_owned()),
+        );
+        equivalence.insert("classes".to_owned(), crate::draft::classes());
+        equivalence.insert("compared".to_owned(), count(&quantities));
+        equivalence.insert("not_compared".to_owned(), Value::List(not_compared));
+        equivalence.insert("findings".to_owned(), Value::List(findings));
         if asked_for_files {
             if let Some(first) = conflicts.first() {
                 return Err(fail(format!(
@@ -742,6 +798,12 @@ impl<R: Repository> Session<R> {
             let mut whole = BTreeMap::new();
             whole.insert("sample".to_owned(), Value::Text(table.sample().to_owned()));
             whole.insert("sizes".to_owned(), Value::List(family));
+            write(&mut self.base, target, Value::Object(whole).to_text())?;
+        }
+        // Written whether or not anything differs, since a report that only appears when something is wrong says nothing when it is absent.
+        if let Some(target) = fields.get("equivalence_path").and_then(Value::as_text) {
+            let mut whole = equivalence.clone();
+            whole.insert("quantities".to_owned(), Value::List(quantities));
             write(&mut self.base, target, Value::Object(whole).to_text())?;
         }
         if let Some(target) = fields.get("rules_path").and_then(Value::as_text) {
@@ -771,6 +833,7 @@ impl<R: Repository> Session<R> {
             Value::Int(i64::try_from(table.rules().len()).unwrap_or(i64::MAX)),
         );
         result.insert("sizes".to_owned(), Value::List(reports));
+        result.insert("equivalence".to_owned(), Value::Object(equivalence));
         Ok(Value::Object(result))
     }
 
@@ -1410,6 +1473,9 @@ impl<R: Repository> Session<R> {
         Ok(Value::Text(self.revision_text()))
     }
 }
+
+// A size, and every length a session can name there.
+type SizedLengths = (String, BTreeMap<String, i64>);
 
 // The recipe with its asserts taken out. A statement ends where the next one starts.
 fn without_asserts(recipe: &str) -> String {

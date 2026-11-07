@@ -245,13 +245,20 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit: `pending`
 
 - ID: `G3-GRADING.11`
-  Status: `pending`
+  Status: `done`
   Goal: path-equivalence validation (§3.3) — the declared tolerances within which regeneration and
   grade rules must agree, and the report when they do not.
   Acceptance: the tolerance is derived from a stated downstream requirement (not chosen to pass);
   the equivalence report is a first-class output of the grading command.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-cli/**,crates/sc-api/src/lib.rs,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-04 needs the two paths compared,and until now only a test measured the gap. WHERE grade reported no comparison:git grep -c equivalence 32077fae -- crates/sc-cli/src/session.rs →rc=1.
+  - [x] ADDRESSED,REPORT:grade always reports equivalence;each quantity names both values,the difference,its class and verdict,and a finding names its owner and where the table came from. cargo test -p sc-cli --test equivalence →rc=0:a wrong corner injected into a received table is found by name,size and amount.
+  - [x] ADDRESSED,CLASSES:T1 is one quantum,T2 the tightest consumer,which is a walk,and seam is twice that,each with where the number comes from in the report. T4 and T5 have no bound,because a receiver's and a factory's are theirs. These do not all pass,and the armhole is a finding at every size but the sample.
+  - [x] ADDRESSED,LOCKSTEP:the book's table of differences is read against what the report measures,so it cannot go stale.
+  - [x] NOT SHOWN,STATED:a finding says the two paths differ by more than this project can call the same. It does not say a garment is unusable,which only a factory's tolerance can say,and none exists.
+  - [x] NO REGRESSION:gauge.sh --checks →rc=0;cargo test -p sc-units -p sc-geometry -p sc-artifacts -p sc-grading -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1020.
 
 - ID: `G3-GRADING.12`
   Status: `pending`

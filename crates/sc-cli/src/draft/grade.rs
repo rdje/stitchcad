@@ -214,7 +214,7 @@ pub fn points(lengths: &Lengths, description: &Fields) -> Result<BTreeMap<String
     Ok(found)
 }
 
-fn piece_of(key: &str) -> &str {
+pub(super) fn piece_of(key: &str) -> &str {
     key.split('/').next().unwrap_or(key)
 }
 

@@ -2,7 +2,7 @@
 
 A pattern at one size is not yet a product. The [instantiation chapter](instantiation-paths.md) says what the two ways of getting a garment's other sizes mean, and why neither replaces the other. This chapter is what you can do today.
 
-**What works today.** A draft can name its size set. `regenerate` draws every size of it, each a fresh evaluation of the recipe with nothing inherited from another, and says what drove every point. `grade` moves the sample by a [table of rules](grade-rules.md) and rebuilds each size with the recipe left out of it. **What does not exist yet:** a report comparing the two paths as a first-class output, which is `G3-GRADING.11`, and any receiver reading the result, which is `G3-GRADING.8`.
+**What works today.** A draft can name its size set. `regenerate` draws every size of it, each a fresh evaluation of the recipe with nothing inherited from another, and says what drove every point. `grade` moves the sample by a [table of rules](grade-rules.md) and rebuilds each size with the recipe left out of it. Both are compared, quantity by quantity. **What does not exist yet:** any receiver reading the result, which is `G3-GRADING.8`.
 
 ```rust
 use sc_cli::Running;
@@ -114,6 +114,29 @@ A draft with a true in it is refused, because a true is worked out from the draw
 
 So walking a size that came from a rule can find a defect that regenerating that size does not, and that is the right answer: it is what a factory's system would do with those rules. More grade points along a curve would bring it down, and a table here has none yet.
 
+## Comparing the two paths
+
+`grade` always reports `equivalence`, comparing what the rules gave against what the recipe draws at that size. **Neither wins, and nothing is reconciled.** The [instantiation chapter](instantiation-paths.md) says why, and this is what you get.
+
+| Field | What it holds |
+| --- | --- |
+| `provenance` | Where the table came from, because a table worked out here and one received are different evidence |
+| `classes` | Each tolerance class used, its bound, and where that number comes from |
+| `compared` | How many quantities were compared |
+| `not_compared` | Any size of the table the draft's own set does not have, so the recipe cannot speak to it |
+| `findings` | Each quantity beyond its class |
+
+With `equivalence_path` it writes all of that with every quantity in `quantities`, whether or not anything differs, because a report that only appears when something is wrong says nothing when it is absent. Each one names its `quantity` and `size`, `by_recipe`, `by_rule`, `difference_um`, its `class` and its `verdict`, which is `holds` or `finding`. A finding also names its `owner`.
+
+| Quantity | Judged at | Because |
+| --- | --- | --- |
+| A point a rule moves | `T1`, 1 µm | Both paths compute an integer, so anything else is a bug in the table or in the rebuild |
+| A sew line | `T2`, 10 µm | The tightest thing that uses this geometry is a seam's walk |
+| What a seam has beyond what it declares | `seam`, 20 µm | Twice `T2`: what a walk can tell apart |
+| What a closure takes up | `seam`, 20 µm | It is taken out of a seam's length |
+
+**These are not chosen to pass, and they do not all pass.** On the bodice the armhole is a finding at every size but the sample. `T4` and `T5` are listed with no bound, because a receiver's tolerance and a factory's are theirs to declare, and none has. So a finding here says the two paths differ by more than this project can call the same. It does not say the garment is unusable, and only a factory's tolerance can say that. A test reads the table above against what the report measures.
+
 **What this does not show.** That these sizes fit anybody: they are what the recipe gives at those measurements, and a size chart nobody has fitted is a set of numbers. The steps are an engineer's and come from no standard. A test does measure each size from its drawing against what it asked for, which is what stops a family that closes on paper being wrong in the cloth, and it does that for three garments and only for the measurements named there.
 
 ## Names used in this chapter
@@ -159,3 +182,25 @@ So walking a size that came from a rule can find a defect that regenerating that
 | `unmatched` | Rules for points this design does not have |
 | `notes` | What was only approximated |
 | `conflicts` | Contours that were not to change, and did |
+| `equivalence` | The two paths compared |
+| `equivalence_path` | Where to write the whole report |
+| `provenance` | Where a table came from |
+| `classes` | The tolerance classes used |
+| `compared` | How many quantities |
+| `not_compared` | Sizes the recipe cannot speak to |
+| `findings` | Quantities beyond their class |
+| `quantities` | All of them |
+| `quantity` | What was compared |
+| `by_recipe` | What regenerating gave |
+| `by_rule` | What the rules gave |
+| `difference_um` | The difference, in micrometres |
+| `class` | What it is judged against |
+| `verdict` | `holds` or `finding` |
+| `holds` | It is within its class |
+| `finding` | It is not |
+| `owner` | Who a finding belongs to |
+| `T1` | The numerical class |
+| `T2` | The geometric class |
+| `T4` | The importer's class |
+| `T5` | The factory's class |
+| `seam` | Twice `T2` |
