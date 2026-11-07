@@ -594,6 +594,15 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   - [x] LOCKSTEP:record overwritten;README/LIVE/book reviewed unchanged,G1still6/18 In Progress.
   promotion: declined (no new lesson;guarded procedure unchanged).
   Commit:STITCHCAD-G1-0969.
+- ID: `G1-SLICE.5f.2.cleanup-20261107`
+  Status: `done`
+  Goal:the daily cleanup through the guarded tool,while the tree was clean between slices.
+  Paths:docs/ARTIFACT_CLEANUP.md.
+  - [x] APPLY:cleanup.py apply --idle-cua →removed_bytes1431802334,residue0,tracked_change false,rc=0.
+  - [x] RESIDUE:independent read-only census after apply →0 of1170 selected present,0 of2969 skipped missing.
+  - [x] LOCKSTEP:record overwritten;README/LIVE/book reviewed unchanged,gauge31 of66.
+  promotion: declined (no new lesson;guarded procedure unchanged).
+  Commit:STITCHCAD-G1-1008.
 - ID: `G1-SLICE.5f.2.prepush-400.ledger-pointer`
   Status: `done`
   Goal:fix D382;restore the live route to the sealed changelog index and the rule that proves it.
