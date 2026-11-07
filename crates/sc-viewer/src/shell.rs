@@ -12,10 +12,14 @@ use std::collections::BTreeMap;
 use std::rc::Rc;
 
 /// How the shell reaches each step a session can take. The book prints this table, and a test holds the two together.
-pub const COVERAGE: [(&str, &str); 11] = [
+pub const COVERAGE: [(&str, &str); 12] = [
     (
         "evaluate",
         "On opening and after every edit, for the values panel",
+    ),
+    (
+        "preview",
+        "Not offered: an edit here is applied and can be undone",
     ),
     ("change", "A measurement field"),
     ("undo", "The Undo button"),

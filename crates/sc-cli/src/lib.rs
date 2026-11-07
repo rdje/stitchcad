@@ -7,4 +7,5 @@ mod draft;
 mod outline;
 mod session;
 
-pub use session::{replay, Failure, Running, STEPS};
+pub use sc_core::command::CommandAuthority;
+pub use session::{replay, Caller, Failure, Running, STEPS};

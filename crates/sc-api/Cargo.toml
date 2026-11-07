@@ -1,0 +1,15 @@
+[package]
+name = "sc-api"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "StitchCAD's experimental command API: curated workflows over the command bus, with scoped authority and an actor trace."
+
+[lints]
+workspace = true
+
+[dependencies]
+sc-geometry = { path = "../sc-geometry", version = "0.1.0" }
+sc-cli = { path = "../sc-cli", version = "0.1.0" }
+sc-store = { path = "../sc-store", version = "0.1.0" }

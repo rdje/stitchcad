@@ -969,7 +969,7 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Goal:observe the csp-z3 job at the next push and fix any divergence;then remove the chapter's has-not-run-yet paragraph.
   Acceptance:hosted rust job's Z3 step green on the exact SHA,or each divergence logged and fixed.
 - ID: `G1-SLICE.9`
-  Status: `pending`
+  Status: `done`
   Goal: `sc-api` + `sc-mcp` (§7.8, §10) — versioned experimental command API over jsonrpsee
   (HTTP/WebSocket native, stdio for MCP), in-process Rust API distinct from the wire format,
   curated MCP tool set (workflows, not one tool per getter), scoped agent authority
@@ -983,8 +983,15 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   current-state/provenance and actionable diagnostics. Evaluate discovery, invalid-input recovery,
   interruption/resume and parity using independent artifact checks (§7.8); API/MCP control is not a
   measured stitching-expertise claim. Existing human-only release approval remains §10's contract.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-api/**,crates/sc-mcp/**,crates/sc-cli/src/**,crates/sc-viewer/src/shell.rs,docs/tasks/artifacts/ci_environment/producer_entries.tsv,Cargo.lock,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G2-08 needs an agent with only MCP and docs. WHERE no API or MCP existed,and every session ran as a local human with fixed authority;git grep -c 'sc-mcp' f5c04137 -- crates →0,rc=1.
+  - [x] ADDRESSED:cargo test -p sc-mcp --test admission exit status →rc=0:11 tests on the real program through real pipes:each of §7.8's admission questions,the protocol,and the tool list against the bus's own steps. A caller without commit is refused by the bus itself.
+  - [x] WHAT IT DOES:sc-api holds 18 workflows with no transport. Caller gives a session its actor and authorities,built into the core's grant. preview commits nothing. trace names initiator and principal on each mutation. A recording replays through the command line to the same bytes.
+  - [x] DIFFERS FROM THE PLAN,STATED:no jsonrpsee or rmcp. Stdio is one JSON message to a line,which needs neither,and a network profile is where they would earn their place. Only local-stdio is enabled,which the acceptance allows;HTTP and bridge wait for their threat models.
+  - [x] NOT SHOWN:no real agent has used it,which is G2-2D.13. Resource limits are not bounded. "Stays data" holds for this server,which acts on nothing it reads,and says nothing about what an LLM does with a sentence.
+  - [x] NO REGRESSION:gauge.sh --checks →rc=0;cargo test -p sc-api -p sc-mcp -p sc-cli -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0;producer census →rc=0;licenses →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1009.
 - ID: `G1-SLICE.9.doc`
   Status: `proposed`
   Goal: director2026-10-24 DBIQNP rustdoc adoption and mdBook-link requirements; no pivot.

@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1009 — the API and MCP server,over local stdio
+
+`stitchcad-mcp` offers 18 workflows over MCP on the same bus,with scoped authority the bus itself enforces,an actor trace,and a recording the command line replays to the same bytes. An agent cannot hold approval.
+All of §7.8's admission questions for local stdio have tests through real pipes. jsonrpsee and rmcp are not used,because stdio needs neither. No real agent has used it yet.
+
 ## STITCHCAD-G1-1007 — the conformance matrix,and a determinism policy with teeth
 
 Every claim sits beside the check that would fail if it were false,and a test holds the page to the repository. What has no check is listed as unclaimed. Nothing has reached layer 4 or 5.

@@ -28,6 +28,7 @@ $ stitchcad replay session.json project-directory
 | Step | What it does |
 | --- | --- |
 | `evaluate` | Runs the recipe against the current Design and lists every binding |
+| `preview` | What one input's new value would change, computed on a copy: `token` and `um`. The Design, its revision and its history stay as they are |
 | `change` | Replaces one input's value through the bus, at a new revision. `token`, `um`, and optionally `expect_revision` |
 | `undo` | Returns the Design to its state before the last change, under a fresh authority check |
 | `redo` | Reapplies the last change undone |

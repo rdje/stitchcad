@@ -41,6 +41,7 @@ Nothing in this project has reached layer 4 or 5 yet.
 | Offsets pass the pathology corpus | `G2-05` | 1 | Checks sharing no code with the engine | `cargo test -p sc-geometry --test offset_corpus` |
 | Moving, turning and mirroring a piece does what it should | `G2-06` | 1 | The same offset, transformed | `cargo test -p sc-geometry --test metamorphic` |
 | A project reopens to the same bytes, with its intent | `G2-06` | 1 | The frozen goldens, and two designs that diverge | `cargo test -p sc-cli --test save_load` |
+| A scoped caller cannot exceed its authority, and an agent cannot approve | — | 1 | The real server through real pipes, where the bus itself refuses | `cargo test -p sc-mcp --test admission` |
 | A fault is caught for the right reason | `G2-07` | 1 | Each injected fault's named code | `cargo test -p sc-cli --test mutants` |
 
 ## What is unclaimed
@@ -48,7 +49,7 @@ Nothing in this project has reached layer 4 or 5 yet.
 | Claim | Clause | Why it has no check yet | What would give it one |
 | --- | --- | --- | --- |
 | A printed scale square measures true on paper | `G2-04` | Only a person with a ruler can do it, and this measures pixels so far | One scan or photo beside a ruler, at the end of G2 |
-| An agent given only MCP and the docs can draft this | `G2-08` | No MCP exists yet | `G2-2D.13` |
+| An agent given only MCP and the docs can draft this | `G2-08` | [The server](api-and-mcp.md) exists, and no agent session has run | `G2-2D.13` |
 | A CAD system opens these DXF files | — | No seat exists, and the director has parked this until StitchCAD is feature complete | A real receiver, at G6 |
 | The garment fits and sews | — | Nothing has been cut. Nobody who sews has reviewed the corner shapes or the waist curve | A domain reviewer and a toile |
 | The canvas verdict holds on Windows and Linux | — | Only macOS was measured | A machine with a display |

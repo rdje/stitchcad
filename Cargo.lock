@@ -37,6 +37,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "sc-api"
+version = "0.1.0"
+dependencies = [
+ "sc-cli",
+ "sc-geometry",
+ "sc-store",
+]
+
+[[package]]
 name = "sc-artifacts"
 version = "0.1.0"
 dependencies = [
@@ -76,6 +85,16 @@ dependencies = [
  "num-bigint",
  "sc-store",
  "sc-units",
+]
+
+[[package]]
+name = "sc-mcp"
+version = "0.1.0"
+dependencies = [
+ "sc-api",
+ "sc-artifacts",
+ "sc-cli",
+ "sc-store",
 ]
 
 [[package]]

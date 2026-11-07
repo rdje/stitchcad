@@ -15,7 +15,7 @@ use sc_core::{
         CommandMutationGroup, CommandOperationLimits, CommandScope, DesignRevision,
         MutationPayload,
     },
-    design::DesignResourceLimits,
+    design::{DesignInputs, DesignResourceLimits},
     ontology::EntityId,
     recipe::{
         FormulaCheckedStatementKind, FormulaRecipeExecutionLimits, FormulaScalarExecutionContext,
@@ -152,6 +152,9 @@ struct Session<R: Repository> {
     pattern: Option<sc_artifacts::Pattern>,
     // How to draw it, which is authored and saved. The drawing itself is derived and never is.
     drafted: Option<BTreeMap<String, Value>>,
+    authorities: Vec<CommandAuthority>,
+    // Every step that changed anything, and who took it.
+    trace: Vec<Value>,
 }
 
 impl<R: Repository> Session<R> {
@@ -264,52 +267,70 @@ impl<R: Repository> Session<R> {
         self.revision().to_string()
     }
 
-    fn evaluate(&self, step: usize) -> Result<Value, Failure> {
-        let fail = |code, error: String| Failure::at(step, code, error);
-        let root = self.bus.state().inputs();
-        let scope = root
-            .prepare_formula_scope(limits())
-            .map_err(|error| fail("recipe", error.to_string()))?;
-        let normalized = scope
-            .normalize_recipe()
-            .map_err(|error| fail("recipe", error.to_string()))?;
-        let checked = normalized
-            .check_kinds()
-            .map_err(|error| fail("recipe", error.to_string()))?;
-        let proof = checked.proof();
-        let statements = proof.statements().len();
-        let dependencies = proof.dependencies().count();
-        let nodes: usize = proof
-            .statements()
-            .iter()
-            .map(|statement| match statement.kind() {
-                FormulaCheckedStatementKind::Let { expression } => expression.node_count(),
-                FormulaCheckedStatementKind::Assert { left, right } => {
-                    left.node_count() + right.node_count()
-                }
-            })
-            .sum();
-        let plan = proof
-            .admit_execution(FormulaRecipeExecutionLimits::new(
-                statements,
-                nodes,
-                2 * nodes + dependencies,
-                statements,
-            ))
-            .map_err(|error| fail("recipe", error.to_string()))?
-            .prepare_scalar(root.inputs())
-            .map_err(|error| fail("recipe", error.to_string()))?;
-        let context = FormulaScalarExecutionContext::new(
-            FormulaToleranceContext::empty(),
-            FormulaSizeContext::empty(),
+    fn record_trace(&mut self, what: &str, step: usize) {
+        let mut record = BTreeMap::new();
+        record.insert("do".to_owned(), Value::Text(what.to_owned()));
+        record.insert(
+            "step".to_owned(),
+            Value::Int(i64::try_from(step).unwrap_or(i64::MAX)),
         );
-        let result = plan
-            .replay(context)
-            .map_err(|error| fail("recipe", error.to_string()))?;
-        let canonical = result
-            .canonical_bindings(1 << 20)
-            .map_err(|error| fail("recipe", error.to_string()))?;
-        Ok(Value::List(bindings(canonical.as_str())))
+        record.insert("revision".to_owned(), Value::Text(self.revision_text()));
+        record.insert(
+            "initiator".to_owned(),
+            Value::Text(self.actor.initiator().to_string()),
+        );
+        record.insert(
+            "principal".to_owned(),
+            Value::Text(self.actor.principal().to_string()),
+        );
+        let kind = match self.actor {
+            CommandActorClaim::Human(_) => "human",
+            CommandActorClaim::Agent { .. } => "agent",
+        };
+        record.insert("actor".to_owned(), Value::Text(kind.to_owned()));
+        self.trace.push(Value::Object(record));
+    }
+
+    // What a change would do, computed on a copy, leaving the Design, its revision and its history exactly as they are.
+    fn preview(&self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "preview", message);
+        let token = fields
+            .get("token")
+            .and_then(Value::as_text)
+            .ok_or_else(|| fail("preview needs a token".to_owned()))?;
+        let value = fields
+            .get("um")
+            .and_then(Value::as_int)
+            .ok_or_else(|| fail("preview needs um".to_owned()))?;
+        let value = Length::from_micrometres(value)
+            .map_err(|error| Failure::at(step, "invalid_value", error.to_string()))?;
+        let mut inputs = self.inputs.clone();
+        let input = inputs
+            .iter_mut()
+            .find(|input| input.token == token)
+            .ok_or_else(|| {
+                Failure::at(step, "unknown_input", format!("no input is named {token}"))
+            })?;
+        input.value = value;
+        let garment = build(self.design, self.revision(), &inputs, &self.recipe).map_err(fail)?;
+        let before = self.evaluate(step)?;
+        let after = evaluate_design(garment.inputs(), step)?;
+        let (Value::List(old), Value::List(new)) = (&before, &after) else {
+            return Err(fail("a recipe evaluates to a list".to_owned()));
+        };
+        let changed: Vec<Value> = new
+            .iter()
+            .filter(|binding| !old.contains(binding))
+            .cloned()
+            .collect();
+        let mut result = BTreeMap::new();
+        result.insert("changed".to_owned(), Value::List(changed));
+        result.insert("committed".to_owned(), Value::Bool(false));
+        Ok(Value::Object(result))
+    }
+
+    fn evaluate(&self, step: usize) -> Result<Value, Failure> {
+        evaluate_design(self.bus.state().inputs(), step)
     }
 
     // Every length a session can name: the inputs, the recipe's bindings, and `zero`.
@@ -608,7 +629,15 @@ impl<R: Repository> Session<R> {
         self.base = saved.project.clone();
         // Undo does not cross a reopen yet, but revisions and audit numbers carry on and are never reissued.
         let garment = build(self.design, revision, &self.inputs, &self.recipe).map_err(fail)?;
-        self.bus = new_bus(garment, self.design, self.actor, self.identities).map_err(fail)?;
+        let authorities = self.authorities.clone();
+        self.bus = new_bus(
+            garment,
+            self.design,
+            self.actor,
+            self.identities,
+            &authorities,
+        )
+        .map_err(fail)?;
         self.bus
             .resume_issuance(maximum, CommandAuditSequence::from_revision(sequence))
             .map_err(|error| fail(error.to_string()))?;
@@ -616,6 +645,54 @@ impl<R: Repository> Session<R> {
         self.redo.clear();
         Ok(Value::Text(self.revision_text()))
     }
+}
+
+// Runs the recipe against one Design's inputs, whichever Design that is.
+fn evaluate_design(root: &DesignInputs<DesignSources>, step: usize) -> Result<Value, Failure> {
+    let fail = |code, error: String| Failure::at(step, code, error);
+    let scope = root
+        .prepare_formula_scope(limits())
+        .map_err(|error| fail("recipe", error.to_string()))?;
+    let normalized = scope
+        .normalize_recipe()
+        .map_err(|error| fail("recipe", error.to_string()))?;
+    let checked = normalized
+        .check_kinds()
+        .map_err(|error| fail("recipe", error.to_string()))?;
+    let proof = checked.proof();
+    let statements = proof.statements().len();
+    let dependencies = proof.dependencies().count();
+    let nodes: usize = proof
+        .statements()
+        .iter()
+        .map(|statement| match statement.kind() {
+            FormulaCheckedStatementKind::Let { expression } => expression.node_count(),
+            FormulaCheckedStatementKind::Assert { left, right } => {
+                left.node_count() + right.node_count()
+            }
+        })
+        .sum();
+    let plan = proof
+        .admit_execution(FormulaRecipeExecutionLimits::new(
+            statements,
+            nodes,
+            2 * nodes + dependencies,
+            statements,
+        ))
+        .map_err(|error| fail("recipe", error.to_string()))?
+        .prepare_scalar(root.inputs())
+        .map_err(|error| fail("recipe", error.to_string()))?;
+    let context = FormulaScalarExecutionContext::new(
+        FormulaToleranceContext::empty(),
+        FormulaSizeContext::empty(),
+    );
+    let result = plan
+        .replay(context)
+        .map_err(|error| fail("recipe", error.to_string()))?;
+    let canonical = result
+        .canonical_bindings(1 << 20)
+        .map_err(|error| fail("recipe", error.to_string()))?;
+    Ok(Value::List(bindings(canonical.as_str())))
 }
 
 fn limits() -> DesignResourceLimits {
@@ -627,6 +704,7 @@ fn new_bus(
     design: EntityId,
     actor: CommandActorClaim,
     identities: Identities,
+    authorities: &[CommandAuthority],
 ) -> Result<CommandBus<DesignSources, LocalOperator>, String> {
     let scope = CommandScope::new(
         design,
@@ -638,7 +716,7 @@ fn new_bus(
     let grant = CommandGrant::new(
         identities.nth(20),
         actor,
-        vec![CommandAuthority::Inspect, CommandAuthority::Commit],
+        authorities.to_vec(),
         scope,
         CommandGrantStatus::Active,
     )
@@ -743,8 +821,9 @@ fn solve(
 }
 
 /// The steps a session can take. Anything else is refused by name.
-pub const STEPS: [&str; 11] = [
+pub const STEPS: [&str; 12] = [
     "evaluate",
+    "preview",
     "change",
     "undo",
     "redo",
@@ -756,6 +835,43 @@ pub const STEPS: [&str; 11] = [
     "save",
     "reopen",
 ];
+
+/// Who is driving a session, and what they may do. `replay` is a local human holding what a recorded session needs.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct Caller {
+    /// Whether this is an agent acting for its human principal, which the bus records on every command.
+    pub agent: bool,
+    /// What this caller may do. An agent can never hold `Approve`: the core refuses to build that grant.
+    pub authorities: Vec<CommandAuthority>,
+}
+
+impl Caller {
+    /// A local human, as the command line runs: everything a session's steps can need.
+    #[must_use]
+    pub fn local_human() -> Self {
+        Self {
+            agent: false,
+            authorities: vec![
+                CommandAuthority::Inspect,
+                CommandAuthority::Propose,
+                CommandAuthority::Commit,
+                CommandAuthority::Generate,
+            ],
+        }
+    }
+}
+
+// What each step needs. `change`, `undo` and `redo` are also refused by the bus itself, whose grant is built from the same list.
+fn required(step: &str) -> Option<CommandAuthority> {
+    match step {
+        // Loading writes nothing. It discards unsaved work, and only a caller who may commit can have made any.
+        "evaluate" | "solve" | "reopen" => Some(CommandAuthority::Inspect),
+        "preview" => Some(CommandAuthority::Propose),
+        "save" => Some(CommandAuthority::Commit),
+        "draft" | "export_pattern" | "render" | "export" => Some(CommandAuthority::Generate),
+        _ => None,
+    }
+}
 
 /// A session opened to be driven one step at a time, which is what `replay` does with a file's steps. A front end
 /// drives this and nothing else, so it has no way to change a Design that a session file does not also have.
@@ -779,6 +895,14 @@ impl<R: Repository> Running<R> {
     /// # Errors
     /// The session is malformed, or the project cannot be read.
     pub fn open(session: &Value, repository: R) -> Result<Self, Failure> {
+        Self::open_as(session, repository, &Caller::local_human())
+    }
+
+    /// Opens a session for this caller, whose authority every later step is held to.
+    ///
+    /// # Errors
+    /// The session is malformed, the project cannot be read, or the caller asks for what it cannot hold.
+    pub fn open_as(session: &Value, repository: R, caller: &Caller) -> Result<Self, Failure> {
         let fields = session
             .as_object()
             .ok_or_else(|| Failure::session("a session must be an object"))?;
@@ -799,10 +923,18 @@ impl<R: Repository> Running<R> {
             .ok_or_else(|| Failure::session("recipe must be text"))?
             .to_owned();
         let identities = Identities::new(design);
-        let actor = CommandActorClaim::Human(identities.nth(21));
+        let actor = if caller.agent {
+            CommandActorClaim::Agent {
+                identity: identities.nth(22),
+                principal: identities.nth(21),
+            }
+        } else {
+            CommandActorClaim::Human(identities.nth(21))
+        };
         let garment =
             build(design, DesignRevision::initial(), &inputs, &recipe).map_err(Failure::session)?;
-        let bus = new_bus(garment, design, actor, identities).map_err(Failure::session)?;
+        let bus = new_bus(garment, design, actor, identities, &caller.authorities)
+            .map_err(Failure::session)?;
         let (mut store, _) =
             ProjectStore::open(repository).map_err(|error| Failure::session(error.to_string()))?;
         // A project already here keeps whatever this session does not author.
@@ -827,6 +959,8 @@ impl<R: Repository> Running<R> {
             drawing: None,
             pattern: None,
             drafted: None,
+            authorities: caller.authorities.clone(),
+            trace: Vec::new(),
         };
         Ok(Self { state, next: 0 })
     }
@@ -838,6 +972,20 @@ impl<R: Repository> Running<R> {
     pub fn step(&mut self, item: &Value) -> Result<Value, Failure> {
         let step = self.next;
         let state = &mut self.state;
+        let verb = item
+            .as_object()
+            .and_then(|fields| fields.get("do"))
+            .and_then(Value::as_text)
+            .unwrap_or("");
+        if let Some(needed) = required(verb) {
+            if !state.authorities.contains(&needed) {
+                return Err(Failure::at(
+                    step,
+                    "unauthorized",
+                    format!("{verb} needs the {} authority", needed.token()),
+                ));
+            }
+        }
         let item = item
             .as_object()
             .ok_or_else(|| Failure::at(step, "session", "a step must be an object"))?;
@@ -847,6 +995,7 @@ impl<R: Repository> Running<R> {
             .ok_or_else(|| Failure::at(step, "session", "a step needs a do field"))?;
         let result = match what {
             "evaluate" => state.evaluate(step)?,
+            "preview" => state.preview(step, item)?,
             "change" => {
                 let token = item
                     .get("token")
@@ -896,7 +1045,25 @@ impl<R: Repository> Running<R> {
             Value::Int(i64::try_from(step).unwrap_or(i64::MAX)),
         );
         self.next += 1;
+        if matches!(
+            what,
+            "change" | "undo" | "redo" | "save" | "reopen" | "draft" | "export_pattern"
+        ) {
+            self.state.record_trace(what, step);
+        }
         Ok(Value::Object(record))
+    }
+
+    /// Every step that changed anything so far, and who took it.
+    #[must_use]
+    pub fn trace(&self) -> Value {
+        Value::List(self.state.trace.clone())
+    }
+
+    /// Whether the project holds a file at this path, saved or waiting for the next save.
+    #[must_use]
+    pub fn has_file(&self, path: &str) -> bool {
+        sc_store::FilePath::new(path).is_ok_and(|path| self.state.base.file(&path).is_some())
     }
 
     /// The drafted pattern, or `None` when nothing has been drafted since the Design last changed.
@@ -987,7 +1154,14 @@ mod tests {
     #[test]
     fn resuming_refuses_what_would_rewind_or_disagree() {
         let (garment, design, actor, identities) = parts();
-        let mut bus = new_bus(garment, design, actor, identities).expect("a bus");
+        let mut bus = new_bus(
+            garment,
+            design,
+            actor,
+            identities,
+            &[CommandAuthority::Inspect, CommandAuthority::Commit],
+        )
+        .expect("a bus");
         assert_eq!(
             bus.maximum_issued_revision(),
             Some(&DesignRevision::from_counter(5))

@@ -48,6 +48,7 @@ This table is every step a session can take, and how the shell reaches it. A tes
 | Step | How the shell reaches it |
 | --- | --- |
 | `evaluate` | On opening and after every edit, for the values panel |
+| `preview` | Not offered: an edit here is applied and can be undone |
 | `change` | A measurement field |
 | `undo` | The Undo button |
 | `redo` | The Redo button |

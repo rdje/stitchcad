@@ -14,6 +14,8 @@ crates/sc-geometry/Cargo.toml	platform	G2-2D.1	Declarative public build/output c
 crates/sc-measure/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 crates/sc-store/Cargo.toml	platform	G1-SLICE.7.engine	Declarative public build/output contract; destination audit pending.
 crates/sc-units/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+crates/sc-api/Cargo.toml	platform	G1-SLICE.9	Declarative public build/output contract; destination audit pending.
+crates/sc-mcp/Cargo.toml	platform	G1-SLICE.9	Declarative public build/output contract; destination audit pending.
 crates/sc-viewer/Cargo.toml	platform	G1-SLICE.11	Declarative public build/output contract; destination audit pending.
 crates/sc-viewport/Cargo.toml	platform	G1-SLICE.13.viewport	Declarative public build/output contract; destination audit pending.
 docs/book/book.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.

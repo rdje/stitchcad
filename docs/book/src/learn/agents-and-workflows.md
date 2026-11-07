@@ -2,7 +2,7 @@
 
 An external agent should be able to inspect a StitchCAD instance, understand its capabilities, author
 a design, inspect diagnostics and prepare checked outputs through the application API and MCP server.
-That is a project requirement. The API, command bus and MCP server are not implemented yet.
+That is a project requirement, and [the API and MCP server](../spec/api-and-mcp.md) now do this for a drafted garment, over local stdio. Network connections are not built.
 
 ## One workflow, several front-ends
 
@@ -13,7 +13,7 @@ caller reason about changes without interpreting screenshots or relying on hidde
 For example, an agent preparing a skirt should be able to inspect its measurement inputs, identify
 an unresolved hip measurement, explain what observation is missing, preview a proposed change and
 commit that change under its permitted authority. It should then inspect the resulting diagnostics.
-This is an illustrative future workflow, not a command sequence available in the current libraries.
+[`preview_change` and `change_measurement`](../spec/api-and-mcp.md) do exactly this today. What an unresolved measurement means is richer in the model than these tools show yet.
 
 ## Control needs observable results
 
@@ -27,7 +27,7 @@ these behaviors; fluent sewing advice alone does not establish technical control
 Inspection, proposing, committing and generating are separate permissions. Human approval is a
 separate capability: an agent can prepare evidence but cannot approve its own garment, factory
 compatibility claim or production release. [Core authorization](../spec/command-scopes.md#core-authorization)
-rejects agent approval; authenticated adapters and actual release handlers remain planned.
+rejects agent approval, and [the server](../spec/api-and-mcp.md) cannot be started otherwise. Authenticated network adapters and actual release handlers remain planned.
 
 There is no current MCP connection to configure. Check [availability](../availability.md) for the
 implementation frontier. Experts can use the [command-layer contract](../spec/command-layer.md),
