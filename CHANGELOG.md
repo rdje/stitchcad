@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1003 — the PDF measured by renderers nobody here wrote
+
+xpdf 4.06 and macOS CoreGraphics render the skirt's PDF. 34 measurements are within a pixel on A0,A3 and A4,including 800 mm on A0 and both tiled overlaps. A 0.1% scale error and a 0.3 mm tile shift each fail it.
+This measures pixels,not paper:a person with a ruler is still G2-04. The DXF has still only been read by readers here. G2-03 met,28 of 66.
+
 ## STITCHCAD-G1-1002 — the reference skirt drafts through the command line
 
 `conformance/reference-skirt/session.json` drafts all five pieces,with the book's numbers,and exports canonical text,DXF and PDF on A0,A3 and A4. Two runs of the real program give identical bytes,and the goldens are frozen.

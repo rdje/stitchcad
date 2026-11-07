@@ -1,0 +1,35 @@
+renderer	measurement	dpi	wanted_mm	measured_mm	error_mm	pixel_mm	within_a_pixel
+pdftoppm version 4.06 [www.xpdfreader.com]	A0 square across, 50 mm up	300	100.000	99.991	-0.009	0.085	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A0 square across, 75 mm up	300	100.000	99.991	-0.009	0.085	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A0 square up, 25 mm in	300	100.000	99.991	-0.009	0.085	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A0 square up, 75 mm in	300	100.000	99.991	-0.009	0.085	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A0 waistband, cut length	300	800.000	799.973	-0.027	0.085	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A0 waistband, cut width	300	100.000	100.034	+0.034	0.085	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A0 front, hem to waist on the cut line	300	660.000	659.966	-0.034	0.085	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A3 square across, 50 mm up	600	100.000	99.970	-0.030	0.042	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A3 square across, 75 mm up	600	100.000	99.970	-0.030	0.042	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A3 square up, 25 mm in	600	100.000	99.970	-0.030	0.042	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A3 square up, 75 mm in	600	100.000	99.970	-0.030	0.042	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A4 square across, 50 mm up	600	100.000	99.970	-0.030	0.042	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A4 square across, 75 mm up	600	100.000	99.970	-0.030	0.042	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A4 square up, 25 mm in	600	100.000	99.991	-0.009	0.042	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A4 square up, 75 mm in	600	100.000	99.991	-0.009	0.042	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A4 sideways overlap, worst of 564 crossings	600	180.000	180.015	+0.015	0.042	yes
+pdftoppm version 4.06 [www.xpdfreader.com]	A4 upward overlap, worst sideways drift of 240 crossings	600	0.000	0.010	+0.010	0.042	yes
+macOS CoreGraphics	A0 square across, 50 mm up	300	100.000	99.966	-0.034	0.085	yes
+macOS CoreGraphics	A0 square across, 75 mm up	300	100.000	99.966	-0.034	0.085	yes
+macOS CoreGraphics	A0 square up, 25 mm in	300	100.000	99.966	-0.034	0.085	yes
+macOS CoreGraphics	A0 square up, 75 mm in	300	100.000	99.966	-0.034	0.085	yes
+macOS CoreGraphics	A0 waistband, cut length	300	800.000	799.972	-0.028	0.085	yes
+macOS CoreGraphics	A0 waistband, cut width	300	100.000	100.000	-0.000	0.085	yes
+macOS CoreGraphics	A0 front, hem to waist on the cut line	300	660.000	659.967	-0.033	0.085	yes
+macOS CoreGraphics	A3 square across, 50 mm up	600	100.000	99.978	-0.022	0.042	yes
+macOS CoreGraphics	A3 square across, 75 mm up	600	100.000	99.978	-0.022	0.042	yes
+macOS CoreGraphics	A3 square up, 25 mm in	600	100.000	99.978	-0.022	0.042	yes
+macOS CoreGraphics	A3 square up, 75 mm in	600	100.000	99.978	-0.022	0.042	yes
+macOS CoreGraphics	A4 square across, 50 mm up	600	100.000	99.978	-0.022	0.042	yes
+macOS CoreGraphics	A4 square across, 75 mm up	600	100.000	99.978	-0.022	0.042	yes
+macOS CoreGraphics	A4 square up, 25 mm in	600	100.000	99.978	-0.022	0.042	yes
+macOS CoreGraphics	A4 square up, 75 mm in	600	100.000	99.978	-0.022	0.042	yes
+macOS CoreGraphics	A4 sideways overlap, worst of 564 crossings	600	180.000	180.005	+0.005	0.042	yes
+macOS CoreGraphics	A4 upward overlap, worst sideways drift of 240 crossings	600	0.000	0.008	+0.008	0.042	yes

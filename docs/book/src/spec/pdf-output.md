@@ -3,7 +3,7 @@
 `write_pdf` writes a drawn pattern at true scale for review and printing, on one A0 sheet or tiled across A3 or A4 sheets. Every file has a printed scale square of 100 mm, to check with a ruler. **A drawing is never
 rescaled.** A sheet may turn on its side, which changes nothing about scale, and the record says so. A drawing that fits neither way is refused, and tiling it is the way out, because a rescaled print is a pattern nobody drafted, and it would still look right.
 
-**What works today.** The writer, tiling, its record and a reader in the tests. **What does not exist yet:** a print anyone has measured. That is [the printed-square check](interchange-dialects.md), G2's one step that needs a person with a ruler.
+**What works today.** The writer, tiling, its record, a reader in the tests, and measurements by two renderers this project did not write. **What does not exist yet:** a print anyone has measured. That is [the printed-square check](interchange-dialects.md), G2's one step that needs a person with a ruler.
 
 ```rust
 use sc_artifacts::{write_pdf, DrawnPiece, Line, PageLayout, Pattern, PdfError, Sheet};
@@ -57,7 +57,24 @@ So this writes PDF directly, in about 300 lines with no dependency, because what
 
 Run `cargo test -p sc-artifacts --test pdf`. A reader in the test, sharing no code with the writer, checks the cross-reference table points at each object exactly and each stream's stated length, then measures the scale square and a piece out of the file. It requires two runs to give one byte string, and tiled sheets to shift by exactly their usable width less the overlap.
 
-No viewer or printer has been part of this check yet. That comes with the printed-square leaf.
+## Measured by engines nobody here wrote
+
+That reader shares the writer's idea of what a PDF means, so the file also has to come out right from an engine that does not. `bash docs/tasks/artifacts/printed_square/run_printed_square.sh` drafts the reference skirt, renders it with `pdftoppm` and with the CoreGraphics engine in macOS, finds the drawn lines in the pixels, and measures between them. `pdfinfo` reads the sheet counts and page sizes.
+
+| Measured | Wanted | xpdf 4.06 | macOS CoreGraphics | One pixel |
+| --- | --- | --- | --- | --- |
+| Scale square on A0 | 100 mm | 99.991 | 99.966 | 0.085 |
+| Scale square on A3 | 100 mm | 99.970 | 99.978 | 0.042 |
+| Scale square on A4 | 100 mm | 99.970 to 99.991 | 99.978 | 0.042 |
+| Waistband, cut length, on A0 | 800 mm | 799.973 | 799.972 | 0.085 |
+| Waistband, cut width, on A0 | 100 mm | 100.034 | 100.000 | 0.085 |
+| Front, hem to waist, on A0 | 660 mm | 659.966 | 659.967 | 0.085 |
+| A4 neighbours, sideways over 564 crossings | 180 mm | 180.015 | 180.005 | 0.042 |
+| A4 neighbours, upward drift over 240 crossings | 0 mm | 0.010 | 0.008 | 0.042 |
+
+Every one is within a pixel, and the error does not grow with distance, so no scale error is hiding under it. The recorded table is `conformance/printed-square/renderer-measurements.tsv`. Each run also draws squares of 99 and 100.2 mm in a small file of its own and requires both to fail. Making the writer 0.1% too large, or shifting its sheets by 0.3 mm, made this check fail, and neither was left in.
+
+**This measures pixels, not paper.** A printer has its own error, which only a ruler shows, and the units chapter keeps those two checks apart. **Hosted Linux has not run it yet.** It installs poppler for that, so it will be a third engine at the next push.
 
 ## Names used in this chapter
 
@@ -66,3 +83,5 @@ No viewer or printer has been part of this check yet. That comes with the printe
 | `write_pdf` | Writes a pattern at true scale, with its record |
 | `pdf-writer` | A PDF library the roadmap names as a candidate |
 | `printpdf` | A PDF library the roadmap names as a candidate |
+| `pdftoppm` | A PDF renderer from xpdf or poppler |
+| `pdfinfo` | A PDF reader from xpdf or poppler |
