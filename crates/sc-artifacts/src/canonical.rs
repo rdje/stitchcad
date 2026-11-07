@@ -1,7 +1,7 @@
 //! One written form for one pattern: stable order and exact numbers, with no clock anywhere in it.
 use crate::pattern::{
-    Closure, ClosureKind, DrawnPiece, Fit, GradePoint, Line, Mark, MarkKind, Pattern, Repair, Seam,
-    SeamSide, Text,
+    ButtonPair, Closure, ClosureKind, DrawnPiece, Fit, GradePoint, Line, Mark, MarkKind, Pattern,
+    Pocket, Repair, Seam, SeamSide, Text,
 };
 use core::fmt;
 use sc_geometry::Point;
@@ -182,6 +182,22 @@ pub fn to_canonical_text(pattern: &Pattern) -> String {
         fields.push((
             "repairs",
             Value::List(repairs.iter().map(Repair::to_value).collect()),
+        ));
+    }
+    if !pattern.pockets.is_empty() {
+        let mut pockets = pattern.pockets.clone();
+        pockets.sort();
+        fields.push((
+            "pockets",
+            Value::List(pockets.iter().map(Pocket::to_value).collect()),
+        ));
+    }
+    if !pattern.buttons.is_empty() {
+        let mut buttons = pattern.buttons.clone();
+        buttons.sort();
+        fields.push((
+            "buttons",
+            Value::List(buttons.iter().map(ButtonPair::to_value).collect()),
         ));
     }
     if !pattern.fits.is_empty() {
@@ -423,6 +439,22 @@ pub fn from_canonical_text(source: &str) -> Result<Pattern, CanonicalError> {
         } else {
             Vec::new()
         },
+        pockets: if fields.contains_key("pockets") {
+            read_list(fields, "pockets")?
+                .iter()
+                .map(read_pocket)
+                .collect::<Result<_, _>>()?
+        } else {
+            Vec::new()
+        },
+        buttons: if fields.contains_key("buttons") {
+            read_list(fields, "buttons")?
+                .iter()
+                .map(read_button)
+                .collect::<Result<_, _>>()?
+        } else {
+            Vec::new()
+        },
         fits: if fields.contains_key("fits") {
             read_list(fields, "fits")?
                 .iter()
@@ -439,6 +471,59 @@ pub fn from_canonical_text(source: &str) -> Result<Pattern, CanonicalError> {
         } else {
             Vec::new()
         },
+    })
+}
+
+fn read_at(item: &BTreeMap<String, Value>, name: &str) -> Result<Point, CanonicalError> {
+    let Some([x, y]) = item.get(name).and_then(Value::as_list) else {
+        return fail("a position is two numbers");
+    };
+    let (Some(x), Some(y)) = (x.as_int(), y.as_int()) else {
+        return fail("a position is two numbers");
+    };
+    Point::new(x, y).map_err(|error| CanonicalError {
+        message: error.to_string(),
+    })
+}
+
+fn read_pocket(item: &Value) -> Result<Pocket, CanonicalError> {
+    let Some(item) = item.as_object() else {
+        return fail("a pocket must be an object");
+    };
+    let mut pieces = Vec::new();
+    for piece in read_list(item, "pieces")? {
+        let Some(piece) = piece.as_text() else {
+            return fail("a pocket's piece must be text");
+        };
+        pieces.push(piece.to_owned());
+    }
+    Ok(Pocket {
+        name: read_text(item, "name")?,
+        piece: read_text(item, "piece")?,
+        from: read_at(item, "from")?,
+        to: read_at(item, "to")?,
+        opening: read_text(item, "opening")?,
+        pieces,
+    })
+}
+
+fn read_button(item: &Value) -> Result<ButtonPair, CanonicalError> {
+    let Some(item) = item.as_object() else {
+        return fail("a button must be an object");
+    };
+    let number = |name: &str| match item.get(name).and_then(Value::as_int) {
+        Some(value) => Ok(value),
+        None => fail("a button's sizes are numbers"),
+    };
+    Ok(ButtonPair {
+        name: read_text(item, "name")?,
+        size: number("size")?,
+        hole_length: number("hole_length")?,
+        button_piece: read_text(item, "button_piece")?,
+        button_at: read_at(item, "button_at")?,
+        hole_piece: read_text(item, "hole_piece")?,
+        hole_from: read_at(item, "hole_from")?,
+        hole_to: read_at(item, "hole_to")?,
     })
 }
 

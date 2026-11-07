@@ -62,6 +62,7 @@ An edge in a draft's `edges` list may carry a `name`, and a name is what a refer
 | Notch | An object in a piece's `notches` | A mark on the cut line, square to the edge unless it says otherwise |
 | Grade point | An object in a piece's `grade_points` | A named point on the sew line, which grading will move |
 | Seam end | The `from` or `to` of a seam's side | Where a stretch of a [seam](walking-and-truing.md) begins or stops |
+| Pocket | An object in a draft's `pockets` | Where a [pocket's](reference-trousers.md) opening starts and stops |
 
 A notch and a grade point each need a `name`, so that a repair task can say which. A notch also names its `depth`, and it may give an `aim`, two lengths for where it reaches from the sew line to the cut line. An edge gives a corner two different squares, so a notch at a corner states one.
 
@@ -149,6 +150,7 @@ A notch written as two points, and a seam end written as a point, still work, be
 | `name` | What an edge, notch or grade point is called |
 | `notches` | A piece's list of notches |
 | `grade_points` | A piece's list of grade points |
+| `pockets` | A draft's list of pockets |
 | `from` | Where a seam's side starts |
 | `to` | Where a seam's side stops |
 | `depth` | How deep a notch is |

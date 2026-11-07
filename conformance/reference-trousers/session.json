@@ -1,0 +1,1149 @@
+{
+  "design": "01ARZ3NDEKTSV4RRFFQ69G5FAV",
+  "format": 1,
+  "inputs": [
+    {
+      "token": "waist_girth",
+      "um": 740000
+    },
+    {
+      "token": "hip_girth",
+      "um": 980000
+    },
+    {
+      "token": "waist_to_hip",
+      "um": 200000
+    },
+    {
+      "token": "crotch_depth",
+      "um": 270000
+    },
+    {
+      "token": "waist_to_hem",
+      "um": 1020000
+    },
+    {
+      "token": "thigh_girth",
+      "um": 580000
+    },
+    {
+      "token": "ease_waist",
+      "um": 10000
+    },
+    {
+      "token": "ease_hip",
+      "um": 40000
+    },
+    {
+      "token": "ease_thigh",
+      "um": 40000
+    },
+    {
+      "token": "front_shift",
+      "um": 10000
+    },
+    {
+      "token": "side_suppress",
+      "um": 20000
+    },
+    {
+      "token": "cf_in",
+      "um": 10000
+    },
+    {
+      "token": "cb_in",
+      "um": 30000
+    },
+    {
+      "token": "back_rise",
+      "um": 25000
+    },
+    {
+      "token": "side_taper",
+      "um": 40000
+    },
+    {
+      "token": "hem_front",
+      "um": 200000
+    },
+    {
+      "token": "hem_back",
+      "um": 240000
+    },
+    {
+      "token": "front_dart_len",
+      "um": 90000
+    },
+    {
+      "token": "back_dart_len",
+      "um": 120000
+    },
+    {
+      "token": "wb_width",
+      "um": 40000
+    },
+    {
+      "token": "wb_extension",
+      "um": 35000
+    },
+    {
+      "token": "pocket_from_waist",
+      "um": 30000
+    },
+    {
+      "token": "pocket_opening",
+      "um": 160000
+    },
+    {
+      "token": "bag_width",
+      "um": 170000
+    },
+    {
+      "token": "bag_depth",
+      "um": 60000
+    },
+    {
+      "token": "zip_len",
+      "um": 180000
+    },
+    {
+      "token": "notch_depth",
+      "um": 5000
+    },
+    {
+      "token": "button_diameter",
+      "um": 18000
+    },
+    {
+      "token": "button_thickness",
+      "um": 3000
+    },
+    {
+      "token": "hole_clearance",
+      "um": 2000
+    },
+    {
+      "token": "hole_from_end",
+      "um": 12000
+    },
+    {
+      "token": "sa_side",
+      "um": 15000
+    },
+    {
+      "token": "sa_inseam",
+      "um": 15000
+    },
+    {
+      "token": "sa_rise",
+      "um": 10000
+    },
+    {
+      "token": "sa_cb",
+      "um": 20000
+    },
+    {
+      "token": "sa_waist",
+      "um": 10000
+    },
+    {
+      "token": "sa_hem",
+      "um": 40000
+    },
+    {
+      "token": "sa_band",
+      "um": 10000
+    },
+    {
+      "token": "sa_bag",
+      "um": 10000
+    },
+    {
+      "token": "back_crotch_drop",
+      "um": 6000
+    }
+  ],
+  "recipe": "let garment_waist: length = waist_girth + ease_waist\nlet garment_hip: length = hip_girth + ease_hip\nlet garment_thigh: length = thigh_girth + ease_thigh\nlet quarter_waist: length = garment_waist / 4\nlet quarter_hip: length = garment_hip / 4\nlet front_hip_x: length = quarter_hip - front_shift\nlet back_hip_x: length = quarter_hip + front_shift\nlet front_extension: length = garment_hip / 16\nlet back_extension: length = garment_hip / 8\nlet front_crotch_x: length = 0 mm - front_extension\nlet back_crotch_x: length = 0 mm - back_extension\nlet crotch_drop_low: length = 0 mm\nlet crotch_drop_high: length = 40 mm\nlet back_crotch_y: length = crotch_depth + back_crotch_drop\nlet front_waist_side: length = front_hip_x - side_suppress\nlet back_waist_side: length = back_hip_x - side_suppress\nlet front_waist_run: length = front_waist_side - cf_in\nlet back_waist_run: length = back_waist_side - cb_in\nlet back_waist_length: length = hypot(back_waist_run, back_rise)\nlet front_dart: length = front_waist_run - quarter_waist\nlet back_dart: length = back_waist_length - quarter_waist\nlet front_dart_x: length = cf_in + front_waist_run / 2\nlet front_dart_near: length = front_dart_x - front_dart / 2\nlet front_dart_far: length = front_dart_x + front_dart / 2\nlet back_dart_centre: length = back_waist_length / 2\nlet back_dart_near_share: ratio = (back_dart_centre - back_dart / 2) / back_waist_length\nlet back_dart_far_share: ratio = (back_dart_centre + back_dart / 2) / back_waist_length\nlet back_dart_near_x: length = back_waist_side - back_waist_run * back_dart_near_share\nlet back_dart_near_y: length = back_rise * back_dart_near_share\nlet back_dart_far_x: length = back_waist_side - back_waist_run * back_dart_far_share\nlet back_dart_far_y: length = back_rise * back_dart_far_share\nlet back_dart_tip_x: length = (back_dart_near_x + back_dart_far_x) / 2 - back_rise * back_dart_len / back_waist_length\nlet back_dart_tip_y: length = back_waist_run * back_dart_len / back_waist_length - (back_dart_near_y + back_dart_far_y) / 2\nlet front_side_hem_x: length = front_hip_x - side_taper\nlet back_side_hem_x: length = back_hip_x - side_taper\nlet front_inner_hem_x: length = front_side_hem_x - hem_front\nlet back_inner_hem_x: length = back_side_hem_x - hem_back\nlet side_upper_first_x: length = side_suppress / 8\nlet side_upper_first_y: length = waist_to_hip / 2\nlet side_upper_second_x: length = side_suppress * 2 / 3\nlet side_upper_second_y: length = waist_to_hip / 6\nlet front_side_first_x: length = front_hip_x - side_upper_first_x\nlet front_side_second_x: length = front_hip_x - side_upper_second_x\nlet back_side_first_x: length = back_hip_x - side_upper_first_x\nlet back_side_second_x: length = back_hip_x - side_upper_second_x\nlet front_crotch_first_y: length = (waist_to_hip + crotch_depth) / 2 + 5 mm\nlet front_crotch_second_x: length = front_crotch_x * 2 / 5\nlet back_crotch_first_x: length = 0 mm - 7 mm\nlet back_crotch_first_y: length = (waist_to_hip + back_crotch_y) / 2 + 5 mm\nlet back_crotch_second_x: length = back_crotch_x * 3 / 5\nlet thigh_front_width: length = front_hip_x + front_extension\nlet thigh_back_width: length = back_hip_x + back_extension\nlet thigh_width: length = thigh_front_width + thigh_back_width\nlet front_grain_x: length = (front_side_hem_x + front_inner_hem_x) / 2\nlet back_grain_x: length = (back_side_hem_x + back_inner_hem_x) / 2\nlet grain_high_y: length = crotch_depth + 40 mm\nlet grain_low_y: length = waist_to_hem - 40 mm\nlet front_label_y: length = crotch_depth + 80 mm\nlet front_label_lower_y: length = front_label_y + 16 mm\nlet band_length: length = garment_waist + wb_extension\nlet band_height: length = 2 * wb_width\nlet band_side_1: length = quarter_waist\nlet band_cf: length = 2 * quarter_waist\nlet band_side_2: length = 3 * quarter_waist\nlet band_grain_left: length = 40 mm\nlet band_grain_right: length = band_length - 40 mm\nlet band_grain_y: length = wb_width / 2\nlet band_label_x: length = 60 mm\nlet band_label_y: length = wb_width + 15 mm\nlet hole_length: length = button_diameter + button_thickness + hole_clearance\nlet hole_y: length = wb_width / 2\nlet hole_end_x: length = hole_from_end + hole_length\nlet button_x: length = garment_waist + hole_from_end\nlet pocket_end: length = pocket_from_waist + pocket_opening\nlet bag_height: length = pocket_opening + bag_depth\nlet bag_first_y: length = bag_height + bag_depth\nlet bag_second_x: length = bag_width + 10 mm\nlet bag_grain_x: length = bag_width / 2\nlet bag_grain_high_y: length = 15 mm\nlet bag_grain_low_y: length = pocket_opening\nlet bag_label_x: length = 20 mm\nlet bag_label_y: length = 40 mm\nassert hip_allocation: eps_num = 2 * (front_hip_x + back_hip_x) == garment_hip\nassert front_waist_closure: eps_num = front_waist_run - front_dart == quarter_waist\nassert back_waist_closure: eps_geo = hypot(back_waist_run, back_rise) - back_dart == quarter_waist\nassert band_closure: eps_num = band_length - wb_extension == garment_waist\nassert thigh_clears: eps_num = min(thigh_width, garment_thigh) == garment_thigh\nassert button_on_extension: eps_num = min(button_x + button_diameter, band_length) == button_x + button_diameter\n",
+  "steps": [
+    {
+      "do": "evaluate"
+    },
+    {
+      "buttons": [
+        {
+          "button": {
+            "at": [
+              "button_x",
+              "hole_y"
+            ],
+            "piece": "waistband"
+          },
+          "hole": {
+            "at": [
+              "hole_from_end",
+              "hole_y"
+            ],
+            "piece": "waistband",
+            "toward": [
+              "band_length",
+              "hole_y"
+            ]
+          },
+          "name": "band_button",
+          "policy": [
+            "button_thickness",
+            "hole_clearance"
+          ],
+          "size": "button_diameter"
+        }
+      ],
+      "do": "draft",
+      "fits": [
+        {
+          "between": [
+            "crotch_drop_low",
+            "crotch_drop_high"
+          ],
+          "seam": "inseam_right",
+          "vary": "back_crotch_drop"
+        }
+      ],
+      "pieces": [
+        {
+          "darts": [
+            {
+              "apex": [
+                "front_dart_x",
+                "-front_dart_len"
+              ],
+              "far": [
+                "front_dart_far",
+                "zero"
+              ],
+              "intake": "front_dart",
+              "name": "dart",
+              "near": [
+                "front_dart_near",
+                "zero"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "corner": "miter",
+              "name": "rise",
+              "to": [
+                "zero",
+                "-waist_to_hip"
+              ],
+              "width": "sa_rise"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "zero",
+                "-front_crotch_first_y"
+              ],
+              "name": "crotch",
+              "second": [
+                "front_crotch_second_x",
+                "-crotch_depth"
+              ],
+              "to": [
+                "front_crotch_x",
+                "-crotch_depth"
+              ],
+              "width": "sa_rise"
+            },
+            {
+              "corner": "miter",
+              "name": "inseam",
+              "to": [
+                "front_inner_hem_x",
+                "-waist_to_hem"
+              ],
+              "width": "sa_inseam"
+            },
+            {
+              "corner": "envelope",
+              "name": "hem",
+              "to": [
+                "front_side_hem_x",
+                "-waist_to_hem"
+              ],
+              "width": "sa_hem"
+            },
+            {
+              "corner": "miter",
+              "name": "side_lower",
+              "to": [
+                "front_hip_x",
+                "-waist_to_hip"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "front_side_first_x",
+                "-side_upper_first_y"
+              ],
+              "name": "side_upper",
+              "second": [
+                "front_side_second_x",
+                "-side_upper_second_y"
+              ],
+              "to": [
+                "front_waist_side",
+                "zero"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "trim",
+              "name": "waist",
+              "to": [
+                "cf_in",
+                "zero"
+              ],
+              "width": "sa_waist"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "front_grain_x",
+                "-grain_high_y"
+              ],
+              [
+                "front_grain_x",
+                "-grain_low_y"
+              ]
+            ]
+          ],
+          "labels": [
+            {
+              "at": [
+                "front_grain_x",
+                "-front_label_y"
+              ],
+              "text": "trouser_front_right, size M, cut 1, shell, colorway not specified"
+            }
+          ],
+          "name": "trouser_front_right",
+          "notches": [
+            {
+              "aim": [
+                "sa_side",
+                "zero"
+              ],
+              "at": "1",
+              "depth": "notch_depth",
+              "edge": "side_lower",
+              "name": "hip"
+            },
+            {
+              "before_end": "pocket_from_waist",
+              "depth": "notch_depth",
+              "edge": "side_upper",
+              "name": "pocket_top"
+            },
+            {
+              "before_end": "pocket_end",
+              "depth": "notch_depth",
+              "edge": "side_upper",
+              "name": "pocket_bottom"
+            },
+            {
+              "at": "1/2",
+              "depth": "notch_depth",
+              "edge": "inseam",
+              "name": "knee"
+            }
+          ],
+          "quantity": 1,
+          "start": [
+            "cf_in",
+            "zero"
+          ]
+        },
+        {
+          "labels": [
+            {
+              "at": [
+                "front_grain_x",
+                "-front_label_y"
+              ],
+              "text": "trouser_front_left, size M, cut 1, shell, colorway not specified"
+            }
+          ],
+          "mirror_of": "trouser_front_right",
+          "name": "trouser_front_left",
+          "quantity": 1
+        },
+        {
+          "darts": [
+            {
+              "apex": [
+                "back_dart_tip_x",
+                "-back_dart_tip_y"
+              ],
+              "far": [
+                "back_dart_far_x",
+                "back_dart_far_y"
+              ],
+              "name": "dart",
+              "near": [
+                "back_dart_near_x",
+                "back_dart_near_y"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "corner": "miter",
+              "name": "rise",
+              "to": [
+                "zero",
+                "-waist_to_hip"
+              ],
+              "width": "sa_cb"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "back_crotch_first_x",
+                "-back_crotch_first_y"
+              ],
+              "name": "crotch",
+              "second": [
+                "back_crotch_second_x",
+                "-back_crotch_y"
+              ],
+              "to": [
+                "back_crotch_x",
+                "-back_crotch_y"
+              ],
+              "width": "sa_rise"
+            },
+            {
+              "corner": "miter",
+              "name": "inseam",
+              "to": [
+                "back_inner_hem_x",
+                "-waist_to_hem"
+              ],
+              "width": "sa_inseam"
+            },
+            {
+              "corner": "envelope",
+              "name": "hem",
+              "to": [
+                "back_side_hem_x",
+                "-waist_to_hem"
+              ],
+              "width": "sa_hem"
+            },
+            {
+              "corner": "miter",
+              "name": "side_lower",
+              "to": [
+                "back_hip_x",
+                "-waist_to_hip"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "back_side_first_x",
+                "-side_upper_first_y"
+              ],
+              "name": "side_upper",
+              "second": [
+                "back_side_second_x",
+                "-side_upper_second_y"
+              ],
+              "to": [
+                "back_waist_side",
+                "zero"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "trim",
+              "name": "waist",
+              "to": [
+                "cb_in",
+                "back_rise"
+              ],
+              "width": "sa_waist"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "back_grain_x",
+                "-grain_high_y"
+              ],
+              [
+                "back_grain_x",
+                "-grain_low_y"
+              ]
+            ]
+          ],
+          "labels": [
+            {
+              "at": [
+                "back_grain_x",
+                "-front_label_y"
+              ],
+              "text": "trouser_back_right, size M, cut 1, shell, colorway not specified"
+            }
+          ],
+          "name": "trouser_back_right",
+          "notches": [
+            {
+              "aim": [
+                "sa_side",
+                "zero"
+              ],
+              "at": "1",
+              "depth": "notch_depth",
+              "edge": "side_lower",
+              "name": "hip"
+            },
+            {
+              "before_end": "pocket_from_waist",
+              "depth": "notch_depth",
+              "edge": "side_upper",
+              "name": "pocket_top"
+            },
+            {
+              "before_end": "pocket_end",
+              "depth": "notch_depth",
+              "edge": "side_upper",
+              "name": "pocket_bottom"
+            },
+            {
+              "along": "zip_len",
+              "depth": "notch_depth",
+              "edge": "rise",
+              "name": "zip",
+              "spacing": "notch_depth",
+              "type": "double"
+            },
+            {
+              "at": "1/2",
+              "depth": "notch_depth",
+              "edge": "inseam",
+              "name": "knee"
+            }
+          ],
+          "quantity": 1,
+          "start": [
+            "cb_in",
+            "back_rise"
+          ]
+        },
+        {
+          "labels": [
+            {
+              "at": [
+                "back_grain_x",
+                "-front_label_y"
+              ],
+              "text": "trouser_back_left, size M, cut 1, shell, colorway not specified"
+            }
+          ],
+          "mirror_of": "trouser_back_right",
+          "name": "trouser_back_left",
+          "quantity": 1
+        },
+        {
+          "edges": [
+            {
+              "corner": "miter",
+              "name": "band_lower",
+              "to": [
+                "band_length",
+                "zero"
+              ],
+              "width": "sa_waist"
+            },
+            {
+              "corner": "miter",
+              "name": "band_right",
+              "to": [
+                "band_length",
+                "band_height"
+              ],
+              "width": "sa_band"
+            },
+            {
+              "corner": "miter",
+              "name": "band_upper",
+              "to": [
+                "zero",
+                "band_height"
+              ],
+              "width": "sa_band"
+            },
+            {
+              "corner": "miter",
+              "name": "band_left",
+              "to": [
+                "zero",
+                "zero"
+              ],
+              "width": "sa_band"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "band_grain_left",
+                "band_grain_y"
+              ],
+              [
+                "band_grain_right",
+                "band_grain_y"
+              ]
+            ]
+          ],
+          "internal": [
+            [
+              [
+                "zero",
+                "wb_width"
+              ],
+              [
+                "band_length",
+                "wb_width"
+              ]
+            ]
+          ],
+          "labels": [
+            {
+              "at": [
+                "band_label_x",
+                "band_label_y"
+              ],
+              "text": "waistband, size M, cut 1, shell, colorway not specified, fold on the line"
+            }
+          ],
+          "name": "waistband",
+          "notches": [
+            {
+              "along": "band_side_1",
+              "depth": "notch_depth",
+              "edge": "band_lower",
+              "name": "side_left"
+            },
+            {
+              "along": "band_cf",
+              "depth": "notch_depth",
+              "edge": "band_lower",
+              "name": "cf"
+            },
+            {
+              "along": "band_side_2",
+              "depth": "notch_depth",
+              "edge": "band_lower",
+              "name": "side_right"
+            },
+            {
+              "along": "garment_waist",
+              "depth": "notch_depth",
+              "edge": "band_lower",
+              "name": "cb"
+            }
+          ],
+          "quantity": 1,
+          "start": [
+            "zero",
+            "zero"
+          ]
+        },
+        {
+          "edges": [
+            {
+              "corner": "miter",
+              "name": "mouth",
+              "to": [
+                "zero",
+                "-pocket_opening"
+              ],
+              "width": "sa_bag"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "zero",
+                "-bag_first_y"
+              ],
+              "name": "bag_lower",
+              "second": [
+                "bag_second_x",
+                "-bag_height"
+              ],
+              "to": [
+                "bag_width",
+                "zero"
+              ],
+              "width": "sa_bag"
+            },
+            {
+              "corner": "miter",
+              "name": "bag_top",
+              "to": [
+                "zero",
+                "zero"
+              ],
+              "width": "sa_bag"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "bag_grain_x",
+                "-bag_grain_high_y"
+              ],
+              [
+                "bag_grain_x",
+                "-bag_grain_low_y"
+              ]
+            ]
+          ],
+          "labels": [
+            {
+              "at": [
+                "bag_label_x",
+                "-bag_label_y"
+              ],
+              "text": "pocket_bag_right, size M, cut 2, shell, colorway not specified"
+            }
+          ],
+          "name": "pocket_bag_right",
+          "quantity": 2,
+          "start": [
+            "zero",
+            "zero"
+          ]
+        },
+        {
+          "labels": [
+            {
+              "at": [
+                "bag_label_x",
+                "-bag_label_y"
+              ],
+              "text": "pocket_bag_left, size M, cut 2, shell, colorway not specified"
+            }
+          ],
+          "mirror_of": "pocket_bag_right",
+          "name": "pocket_bag_left",
+          "quantity": 2
+        }
+      ],
+      "pockets": [
+        {
+          "before_end": "pocket_from_waist",
+          "edge": "side_upper",
+          "length": "pocket_opening",
+          "name": "side_pocket_right",
+          "opening": "in_seam",
+          "piece": "trouser_front_right",
+          "pieces": [
+            "pocket_bag_right"
+          ]
+        },
+        {
+          "before_end": "pocket_from_waist",
+          "edge": "side_upper",
+          "length": "pocket_opening",
+          "name": "side_pocket_left",
+          "opening": "in_seam",
+          "piece": "trouser_front_left",
+          "pieces": [
+            "pocket_bag_left"
+          ]
+        }
+      ],
+      "seams": [
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
+            "piece": "trouser_front_right",
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
+            "piece": "trouser_back_right",
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
+          },
+          "name": "side_right"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "inseam"
+            },
+            "piece": "trouser_front_right",
+            "to": {
+              "at": "1",
+              "edge": "inseam"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "inseam"
+            },
+            "piece": "trouser_back_right",
+            "to": {
+              "at": "1",
+              "edge": "inseam"
+            }
+          },
+          "name": "inseam_right"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "mouth"
+            },
+            "piece": "pocket_bag_right",
+            "to": {
+              "at": "1",
+              "edge": "mouth"
+            }
+          },
+          "b": {
+            "from": {
+              "before_end": "pocket_from_waist",
+              "edge": "side_upper"
+            },
+            "piece": "trouser_front_right",
+            "to": {
+              "before_end": "pocket_end",
+              "edge": "side_upper"
+            }
+          },
+          "name": "pocket_front_right"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "mouth"
+            },
+            "piece": "pocket_bag_right",
+            "to": {
+              "at": "1",
+              "edge": "mouth"
+            }
+          },
+          "b": {
+            "from": {
+              "before_end": "pocket_from_waist",
+              "edge": "side_upper"
+            },
+            "piece": "trouser_back_right",
+            "to": {
+              "before_end": "pocket_end",
+              "edge": "side_upper"
+            }
+          },
+          "name": "pocket_back_right"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
+            "piece": "trouser_front_left",
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
+            "piece": "trouser_back_left",
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
+          },
+          "name": "side_left"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "inseam"
+            },
+            "piece": "trouser_front_left",
+            "to": {
+              "at": "1",
+              "edge": "inseam"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "inseam"
+            },
+            "piece": "trouser_back_left",
+            "to": {
+              "at": "1",
+              "edge": "inseam"
+            }
+          },
+          "name": "inseam_left"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "mouth"
+            },
+            "piece": "pocket_bag_left",
+            "to": {
+              "at": "1",
+              "edge": "mouth"
+            }
+          },
+          "b": {
+            "from": {
+              "before_end": "pocket_from_waist",
+              "edge": "side_upper"
+            },
+            "piece": "trouser_front_left",
+            "to": {
+              "before_end": "pocket_end",
+              "edge": "side_upper"
+            }
+          },
+          "name": "pocket_front_left"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "mouth"
+            },
+            "piece": "pocket_bag_left",
+            "to": {
+              "at": "1",
+              "edge": "mouth"
+            }
+          },
+          "b": {
+            "from": {
+              "before_end": "pocket_from_waist",
+              "edge": "side_upper"
+            },
+            "piece": "trouser_back_left",
+            "to": {
+              "before_end": "pocket_end",
+              "edge": "side_upper"
+            }
+          },
+          "name": "pocket_back_left"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "rise"
+            },
+            "piece": "trouser_front_right",
+            "to": {
+              "at": "1",
+              "edge": "crotch"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "rise"
+            },
+            "piece": "trouser_front_left",
+            "to": {
+              "at": "1",
+              "edge": "crotch"
+            }
+          },
+          "name": "front_rise"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "rise"
+            },
+            "piece": "trouser_back_right",
+            "to": {
+              "at": "1",
+              "edge": "crotch"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "rise"
+            },
+            "piece": "trouser_back_left",
+            "to": {
+              "at": "1",
+              "edge": "crotch"
+            }
+          },
+          "name": "back_rise"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "band_lower"
+            },
+            "piece": "waistband",
+            "to": {
+              "along": "band_side_1",
+              "edge": "band_lower"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "1",
+              "edge": "waist"
+            },
+            "piece": "trouser_back_left",
+            "to": {
+              "at": "0",
+              "edge": "waist"
+            }
+          },
+          "name": "band_back_left"
+        },
+        {
+          "a": {
+            "from": {
+              "along": "band_side_1",
+              "edge": "band_lower"
+            },
+            "piece": "waistband",
+            "to": {
+              "along": "band_cf",
+              "edge": "band_lower"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "waist"
+            },
+            "piece": "trouser_front_left",
+            "to": {
+              "at": "1",
+              "edge": "waist"
+            }
+          },
+          "name": "band_front_left"
+        },
+        {
+          "a": {
+            "from": {
+              "along": "band_cf",
+              "edge": "band_lower"
+            },
+            "piece": "waistband",
+            "to": {
+              "along": "band_side_2",
+              "edge": "band_lower"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "1",
+              "edge": "waist"
+            },
+            "piece": "trouser_front_right",
+            "to": {
+              "at": "0",
+              "edge": "waist"
+            }
+          },
+          "name": "band_front_right"
+        },
+        {
+          "a": {
+            "from": {
+              "along": "band_side_2",
+              "edge": "band_lower"
+            },
+            "piece": "waistband",
+            "to": {
+              "along": "garment_waist",
+              "edge": "band_lower"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "waist"
+            },
+            "piece": "trouser_back_right",
+            "to": {
+              "at": "1",
+              "edge": "waist"
+            }
+          },
+          "name": "band_back_right"
+        }
+      ],
+      "size": "M",
+      "style": "reference-trousers"
+    },
+    {
+      "do": "export_pattern",
+      "format": "canonical",
+      "path": "exports/reference-trousers.canonical.json"
+    },
+    {
+      "do": "export_pattern",
+      "format": "dxf",
+      "path": "exports/reference-trousers.dxf",
+      "semantics": "cut_as_1"
+    },
+    {
+      "do": "export_pattern",
+      "format": "pdf",
+      "layout": "a0_tiled",
+      "path": "exports/reference-trousers.pdf"
+    },
+    {
+      "do": "save"
+    }
+  ]
+}

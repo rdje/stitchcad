@@ -16,6 +16,9 @@ mod references_examples {}
 
 #[doc = include_str!("../../../docs/book/src/spec/reference-bodice.md")]
 mod bodice_examples {}
+
+#[doc = include_str!("../../../docs/book/src/spec/reference-trousers.md")]
+mod trousers_examples {}
 mod outline;
 mod session;
 

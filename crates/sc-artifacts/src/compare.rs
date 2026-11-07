@@ -222,6 +222,26 @@ fn compare_patterns(
             detail: format!("{:?} against {:?}", sorted(a), sorted(b)),
         });
     }
+    let mut pockets = (a.pockets.clone(), b.pockets.clone());
+    pockets.0.sort();
+    pockets.1.sort();
+    if pockets.0 != pockets.1 {
+        out.push(Difference {
+            piece: String::new(),
+            field: "pockets",
+            detail: format!("{:?} against {:?}", pockets.0, pockets.1),
+        });
+    }
+    let mut buttons = (a.buttons.clone(), b.buttons.clone());
+    buttons.0.sort();
+    buttons.1.sort();
+    if buttons.0 != buttons.1 {
+        out.push(Difference {
+            piece: String::new(),
+            field: "buttons",
+            detail: format!("{:?} against {:?}", buttons.0, buttons.1),
+        });
+    }
     let solved = |pattern: &Pattern| {
         let mut fits = pattern.fits.clone();
         fits.sort();

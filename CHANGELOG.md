@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1017 — trousers,with a pocket that is an object and a buttonhole that has no length of its own
+
+The last garment the roadmap names. A fit drops the back's crotch point so the inseam meets. A pocket is listed with its place,direction,opening and pieces,and holds its edge by reference. A hole's length is its button plus a policy,and a draft that gives one is refused.
+Re-drafted at five sizes,and grade rules come next. All constants are an engineer's. G3-11 met,37 of 66.
+
 ## STITCHCAD-G1-1016 — a classic collar,whose two edges differ by exactly the roll it declares
 
 Two concentric arcs differ by the angle times the distance between them,so the recipe takes the roll as given and works out the rest. The roll line is an arc between them,on the internal layer,and a test reads that from the written file.

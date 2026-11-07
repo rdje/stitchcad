@@ -121,7 +121,7 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1015.
 
 - ID: `G3-GRADING.5`
-  Status: `pending` (**required**, not optional, since roadmap v0.3 — the envelope-coverage exit criterion
+  Status: `done` (**required**, not optional, since roadmap v0.3 — the envelope-coverage exit criterion
   names trousers, so this leaf is a gate clause and not a discretionary intermediate)
   Goal: the **trousers** garment the envelope-coverage criterion requires (roadmap §11 G3, §3.2): drafted
   through the recipe, graded, and exported — carrying at least one **pocket** (position, orientation, opening
@@ -135,8 +135,15 @@ interchange that an independent engine can re-import, extreme sizes included.
   editing the button changes the hole); the feature matrix's `trousers`, `pocket` and `button and buttonhole`
   rows cite this leaf's evidence at the G3 exit review (`.14`); any ontology gap the garment exposes is fixed
   and recorded, which was the old discretionary form of this leaf and remains part of it.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-cli/**,crates/sc-artifacts/**,crates/sc-api/src/lib.rs,crates/sc-mcp/tests/admission.rs,conformance/reference-trousers/**,conformance/goldens/reference-trousers/**,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-11 names trousers with a pocket and a derived buttonhole,proved by a garment. WHERE a drawing had no such objects:git grep -c 'pockets' 3eef4f76 -- crates/sc-cli/src/draft.rs crates/sc-artifacts/src/pattern.rs →rc=1;a pocket as lines is the substitution the envelope forbids.
+  - [x] ADDRESSED,GARMENT:front,back,band and two in-seam pockets through the recipe;a fit drops the back's crotch point so the inseam meets. cargo test -p sc-cli --test trousers →rc=0:16 tests,five sizes,each measurement moved 20 mm both ways,graph against every edge,goldens.
+  - [x] ADDRESSED,POCKET:an object in the canonical form with position,orientation,opening and pieces,held by reference so an edit keeps it and a delete blocks a cutting file. An opening other than in_seam is refused by name.
+  - [x] ADDRESSED,BUTTONHOLE:length is the size plus the policy and has no other source;a draft giving one is refused,and the test changes the button and reads the new hole from the drawing. A button past the extension is the recipe's own refusal.
+  - [x] NOT SHOWN,STATED:nobody has cut it. Constants assumed. A fly is env_fly and refused,so it closes at CB. Sizes re-drafted,and grade rules are `.7`. A bag's mouth agrees with its curved seam in length,not in shape. The matrix cites this at `.14`. The core's Pocket and ButtonAndButtonhole stay unbound.
+  - [x] NO REGRESSION:gauge.sh --checks →rc=0;cargo test -p sc-artifacts -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1017.
 
 - ID: `G3-GRADING.15`
   Status: `done`

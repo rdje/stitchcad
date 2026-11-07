@@ -603,20 +603,22 @@ fn the_draft_tools_schema_admits_everything_a_draft_holds() {
         .as_object()
         .expect("properties")
         .clone();
-    let session = sc_store::parse(include_str!(
-        "../../../conformance/reference-bodice/session.json"
-    ))
-    .expect("valid");
-    let steps = session.as_object().expect("a session")["steps"]
-        .as_list()
-        .expect("steps")
-        .to_vec();
-    let draft = steps
-        .iter()
-        .find(|step| step.as_object().expect("a step")["do"].as_text() == Some("draft"))
-        .expect("a draft");
-    let mut held: Vec<String> = draft.as_object().expect("a step").keys().cloned().collect();
-    held.push("trues".to_owned());
+    let mut held = vec!["trues".to_owned()];
+    for text in [
+        include_str!("../../../conformance/reference-bodice/session.json"),
+        include_str!("../../../conformance/reference-trousers/session.json"),
+    ] {
+        let session = sc_store::parse(text).expect("valid");
+        let steps = session.as_object().expect("a session")["steps"]
+            .as_list()
+            .expect("steps")
+            .to_vec();
+        let draft = steps
+            .iter()
+            .find(|step| step.as_object().expect("a step")["do"].as_text() == Some("draft"))
+            .expect("a draft");
+        held.extend(draft.as_object().expect("a step").keys().cloned());
+    }
     for field in held.iter().filter(|field| field.as_str() != "do") {
         assert!(
             admitted.contains_key(field),

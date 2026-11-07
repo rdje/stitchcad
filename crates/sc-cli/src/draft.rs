@@ -1,7 +1,8 @@
 //! Drafts pieces from a session's description and the recipe's evaluated values: boundaries, allowances, marks and labels.
 use sc_artifacts::{
-    along, stretch, stretch_length, walk, Closure, ClosureKind, DrawnPiece, Fit, GradePoint, Line,
-    Mark, MarkKind, Pattern, Repair, Seam, SeamSide, Text, WALK_TOLERANCE,
+    along, stretch, stretch_length, walk, ButtonPair, Closure, ClosureKind, DrawnPiece, Fit,
+    GradePoint, Line, Mark, MarkKind, Pattern, Pocket, Repair, Seam, SeamSide, Text,
+    WALK_TOLERANCE,
 };
 use sc_geometry::{Corner, Curve, Outline, Point};
 use sc_store::Value;
@@ -1388,6 +1389,216 @@ fn balance_notches(
 
 type Moves = BTreeMap<String, Vec<(Point, Point)>>;
 
+// A pocket is an object, and not lines on a piece. It opens on a named edge, so it follows an edit to that edge or says it cannot, and the pieces it is made of have to exist.
+fn pockets_of(
+    lengths: &Lengths,
+    description: &Fields,
+    tables: &Tables,
+    pieces: &[DrawnPiece],
+    book: &mut Book,
+) -> Result<Vec<Pocket>, String> {
+    let mut seen = Vec::new();
+    let mut found = Vec::new();
+    for item in description
+        .get("pockets")
+        .and_then(Value::as_list)
+        .unwrap_or(&[])
+    {
+        let item = item.as_object().ok_or("a pocket must be an object")?;
+        let name = named_item(item, "pocket", &mut seen)?;
+        let text = |field: &str| -> Result<&str, String> {
+            required(item, field)?
+                .as_text()
+                .ok_or_else(|| format!("the pocket {name}: {field} is text"))
+        };
+        let piece = text("piece")?;
+        let opening = text("opening")?;
+        if opening != "in_seam" {
+            return Err(format!(
+                "the pocket {name} opens {opening}, and in_seam is the opening that can be built today"
+            ));
+        }
+        let listed = required(item, "pieces")?
+            .as_list()
+            .ok_or_else(|| format!("the pocket {name} lists the pieces it is made of"))?;
+        let mut parts = Vec::with_capacity(listed.len());
+        for part in listed {
+            let part = part
+                .as_text()
+                .ok_or_else(|| format!("the pocket {name} names its pieces"))?;
+            if !pieces.iter().any(|drawn| drawn.name == part) {
+                return Err(format!(
+                    "the pocket {name} is made of {part}, and no piece has that name"
+                ));
+            }
+            parts.push(part.to_owned());
+        }
+        if parts.is_empty() {
+            return Err(format!("the pocket {name} is made of nothing"));
+        }
+        let (edges, mirrored) = tables.get(piece).ok_or_else(|| {
+            format!("the pocket {name} is on {piece}, and no piece has that name")
+        })?;
+        let what = format!("the pocket {name}");
+        let start = edges.held(lengths, item, &what)?;
+        let along = length(lengths, text("length")?)?;
+        // It runs on along the edge from where it starts, or, when that is written back from the edge's end, on back toward its start.
+        let run = if item.contains_key("before_end") {
+            -along
+        } else {
+            along
+        };
+        let stop = edges.beside(&start, run, &what)?;
+        let answer = edges.answer(&start)?;
+        let from = book.settle(
+            piece,
+            &format!("pocket {name}, from"),
+            &start,
+            answer,
+            *mirrored,
+        )?;
+        let answer = edges.answer(&stop)?;
+        let to = book.settle(
+            piece,
+            &format!("pocket {name}, to"),
+            &stop,
+            answer,
+            *mirrored,
+        )?;
+        if let (Some(from), Some(to)) = (from, to) {
+            found.push(Pocket {
+                name: name.to_owned(),
+                piece: piece.to_owned(),
+                from: from.point,
+                to: to.point,
+                opening: opening.to_owned(),
+                pieces: parts,
+            });
+        }
+    }
+    found.sort();
+    Ok(found)
+}
+
+// A button and its hole. The hole's length is the button's size plus what the policy names, and it cannot be given any other way: that is what stops the two drifting apart.
+fn buttons_of(
+    lengths: &Lengths,
+    description: &Fields,
+    pieces: &mut [DrawnPiece],
+) -> Result<Vec<ButtonPair>, String> {
+    let mut seen = Vec::new();
+    let mut found = Vec::new();
+    for item in description
+        .get("buttons")
+        .and_then(Value::as_list)
+        .unwrap_or(&[])
+    {
+        let item = item.as_object().ok_or("a button must be an object")?;
+        let name = named_item(item, "button", &mut seen)?.to_owned();
+        let hole = required(item, "hole")?
+            .as_object()
+            .ok_or_else(|| format!("the button {name} says where its hole is"))?;
+        if item.contains_key("hole_length") || hole.contains_key("length") {
+            return Err(format!(
+                "the button {name} gives its hole a length, and a hole's length comes from its button"
+            ));
+        }
+        let button = required(item, "button")?
+            .as_object()
+            .ok_or_else(|| format!("the button {name} says where it goes"))?;
+        let size = length(
+            lengths,
+            required(item, "size")?
+                .as_text()
+                .ok_or_else(|| format!("the button {name}: size names a length"))?,
+        )?;
+        let mut hole_length = size;
+        for part in required(item, "policy")?
+            .as_list()
+            .ok_or_else(|| format!("the button {name} lists what its hole adds to it"))?
+        {
+            hole_length += length(
+                lengths,
+                part.as_text()
+                    .ok_or_else(|| format!("the button {name}: its policy names lengths"))?,
+            )?;
+        }
+        if size <= 0 || hole_length <= 0 {
+            return Err(format!(
+                "the button {name} comes to a size of {size} and a hole of {hole_length}"
+            ));
+        }
+        let piece_named = |side: &Fields| -> Result<String, String> {
+            Ok(required(side, "piece")?
+                .as_text()
+                .ok_or_else(|| format!("the button {name} names its pieces"))?
+                .to_owned())
+        };
+        let (button_piece, hole_piece) = (piece_named(button)?, piece_named(hole)?);
+        let button_at = point(lengths, required(button, "at")?)?;
+        let hole_from = point(lengths, required(hole, "at")?)?;
+        let aim = point(lengths, required(hole, "toward")?)?;
+        let (dx, dy) = (
+            ratio(aim.x() - hole_from.x()),
+            ratio(aim.y() - hole_from.y()),
+        );
+        let reach = pure::hypot(dx, dy);
+        if reach == 0.0 {
+            return Err(format!("the button {name}'s hole aims at where it starts"));
+        }
+        let hole_to = Point::new(
+            hole_from.x() + whole(dx / reach * ratio(hole_length)),
+            hole_from.y() + whole(dy / reach * ratio(hole_length)),
+        )
+        .map_err(|error| error.to_string())?;
+        let on = |wanted: &str, pieces: &[DrawnPiece], at: Point, what: &str| {
+            let drawn = pieces
+                .iter()
+                .find(|drawn| drawn.name == wanted)
+                .ok_or_else(|| {
+                    format!("the button {name} is on {wanted}, and no piece has that name")
+                })?;
+            if inside(&drawn.sew, at) {
+                Ok(())
+            } else {
+                Err(format!(
+                    "the button {name}'s {what} is at ({}, {}), outside the sew line of {wanted}",
+                    at.x(),
+                    at.y()
+                ))
+            }
+        };
+        on(&button_piece, pieces, button_at, "button")?;
+        on(&hole_piece, pieces, hole_from, "hole")?;
+        on(&hole_piece, pieces, hole_to, "hole")?;
+        if let Some(drawn) = pieces.iter_mut().find(|drawn| drawn.name == hole_piece) {
+            drawn.internal.push(Line {
+                from: hole_from,
+                to: hole_to,
+            });
+        }
+        if let Some(drawn) = pieces.iter_mut().find(|drawn| drawn.name == button_piece) {
+            drawn.marks.push(Mark {
+                kind: MarkKind::Drill,
+                at: button_at,
+                toward: button_at,
+            });
+        }
+        found.push(ButtonPair {
+            name,
+            size,
+            hole_length,
+            button_piece,
+            button_at,
+            hole_piece,
+            hole_from,
+            hole_to,
+        });
+    }
+    found.sort();
+    Ok(found)
+}
+
 // What the drawing solved for, as the lengths it was given. A fit on a seam with nowhere to go waits, and says so.
 fn fits_of(lengths: &Lengths, description: &Fields, book: &mut Book) -> Result<Vec<Fit>, String> {
     let mut found = Vec::new();
@@ -1667,6 +1878,8 @@ fn draw(
     balance_notches(lengths, description, &mut pieces, &seams, &mut book)?;
     let mut fits = fits_of(lengths, description, &mut book)?;
     fits.sort();
+    let pockets = pockets_of(lengths, description, &tables, &pieces, &mut book)?;
+    let buttons = buttons_of(lengths, description, &mut pieces)?;
     let open_seams = description
         .get("seams")
         .and_then(Value::as_list)
@@ -1686,6 +1899,8 @@ fn draw(
             pieces,
             seams,
             fits,
+            pockets,
+            buttons,
             repairs: book.repairs,
         },
         references: book.references,

@@ -27,8 +27,8 @@ pub use judge::{
     PieceExpectation, Span, SpanSide,
 };
 pub use pattern::{
-    Closure, ClosureKind, DrawnPiece, Fit, GradePoint, Line, Mark, MarkKind, Pattern, Repair, Seam,
-    SeamSide, Text,
+    ButtonPair, Closure, ClosureKind, DrawnPiece, Fit, GradePoint, Line, Mark, MarkKind, Pattern,
+    Pocket, Repair, Seam, SeamSide, Text,
 };
 pub use pdf::{
     write_pdf, PageLayout, PdfArtifact, PdfError, Sheet, PDF_TARGET, PDF_WRITER, SCALE_SQUARE,

@@ -109,6 +109,87 @@ pub struct GradePoint {
     pub at: Point,
 }
 
+/// A pocket: where it opens on the piece it serves, which way, how, and what it is made of.
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
+pub struct Pocket {
+    /// Its name.
+    pub name: String,
+    /// The piece it serves.
+    pub piece: String,
+    /// Where its opening starts, which with `to` gives its orientation.
+    pub from: Point,
+    /// Where its opening stops.
+    pub to: Point,
+    /// How it opens.
+    pub opening: String,
+    /// The pieces it is made of.
+    pub pieces: Vec<String>,
+}
+
+impl Pocket {
+    /// The pocket as a value.
+    #[must_use]
+    pub fn to_value(&self) -> Value {
+        let point = |at: Point| Value::List(vec![Value::Int(at.x()), Value::Int(at.y())]);
+        let mut fields = BTreeMap::new();
+        fields.insert("name".to_owned(), Value::Text(self.name.clone()));
+        fields.insert("piece".to_owned(), Value::Text(self.piece.clone()));
+        fields.insert("from".to_owned(), point(self.from));
+        fields.insert("to".to_owned(), point(self.to));
+        fields.insert("opening".to_owned(), Value::Text(self.opening.clone()));
+        fields.insert(
+            "pieces".to_owned(),
+            Value::List(self.pieces.iter().cloned().map(Value::Text).collect()),
+        );
+        Value::Object(fields)
+    }
+}
+
+/// A button and its hole. The hole's length is worked out from the button, and no other length of it exists.
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
+pub struct ButtonPair {
+    /// Its name.
+    pub name: String,
+    /// The button's size, in micrometres.
+    pub size: i64,
+    /// What the hole came to, in micrometres.
+    pub hole_length: i64,
+    /// The piece the button is on.
+    pub button_piece: String,
+    /// Where the button goes.
+    pub button_at: Point,
+    /// The piece the hole is in.
+    pub hole_piece: String,
+    /// Where the hole starts.
+    pub hole_from: Point,
+    /// Where the hole stops.
+    pub hole_to: Point,
+}
+
+impl ButtonPair {
+    /// The pair as a value.
+    #[must_use]
+    pub fn to_value(&self) -> Value {
+        let point = |at: Point| Value::List(vec![Value::Int(at.x()), Value::Int(at.y())]);
+        let mut fields = BTreeMap::new();
+        fields.insert("name".to_owned(), Value::Text(self.name.clone()));
+        fields.insert("size".to_owned(), Value::Int(self.size));
+        fields.insert("hole_length".to_owned(), Value::Int(self.hole_length));
+        fields.insert(
+            "button_piece".to_owned(),
+            Value::Text(self.button_piece.clone()),
+        );
+        fields.insert("button_at".to_owned(), point(self.button_at));
+        fields.insert(
+            "hole_piece".to_owned(),
+            Value::Text(self.hole_piece.clone()),
+        );
+        fields.insert("hole_from".to_owned(), point(self.hole_from));
+        fields.insert("hole_to".to_owned(), point(self.hole_to));
+        Value::Object(fields)
+    }
+}
+
 /// A length a drawing solved for: the value of an input that makes a named seam walk to what it declares.
 #[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
 pub struct Fit {
@@ -208,4 +289,8 @@ pub struct Pattern {
     pub repairs: Vec<Repair>,
     /// What the drawing solved for, which is empty when it solved for nothing.
     pub fits: Vec<Fit>,
+    /// The pockets, which is empty when it has none.
+    pub pockets: Vec<Pocket>,
+    /// The buttons and their holes, which is empty when it has none.
+    pub buttons: Vec<ButtonPair>,
 }

@@ -57,7 +57,7 @@
 | roll line | the line a collar, lapel or hem folds along; a construction line and never a cut edge | [envelope §9](../feature-matrix.md) | crease line, fold-over line, *Bruchkante* | — |
 | shirt | a bodice with a front opening, a collar and a sleeve — the intermediate the roadmap permits at G3 | roadmap §11 G3 · permitted, not promised | top, *Hemd* | — |
 | slash and spread | cut a shape along a line and open it to add fullness — or close it to remove fullness | [ontology §3.2](../ontology.md) | cut and spread, slash and overlap, fullness | `slash_spread` |
-| trousers | a two-legged garment; inside the declared envelope and outside every gate's exit criteria | [envelope §9](../feature-matrix.md) | pants, slacks, *Hose* | — |
+| trousers | a two-legged garment; inside the declared envelope, and [G3](../reference-trousers.md) proves it | [envelope §9](../feature-matrix.md) | pants, slacks, *Hose* | — |
 | waistband | the band that finishes a waist, cut separately or as an extension of the body | [reference skirt §5](../reference-skirt.md) | band, waist facing, *Bund* | `waistband` |
 | winding ⚠ | the direction a boundary loop runs; outer boundaries are CCW, holes are CW | [ontology §4.1](../ontology.md) | orientation, contour direction, *Umlaufsinn* | `winding` |
 | wrong side ⚠ | the side of the fabric that does not show; a piece cut face-down is a mirrored piece | [ontology §4.1](../ontology.md) | WS, back of fabric, *linke Warenseite* | → `face_up` |

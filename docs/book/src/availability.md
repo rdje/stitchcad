@@ -16,7 +16,7 @@ real product path passes its check. Commits and leaves do not move it.
 | G0 | 18 | 19 | The product and its semantics are specified. The evaluation-seat clause stays open by ruling |
 | G1 | 7 | 7 | The architecture runs for real in a browser |
 | G2 | 7 | 8 | A reference skirt is drafted and exported correctly |
-| G3 | 4 | 11 | Every garment the roadmap names drafts, grades and exports |
+| G3 | 5 | 11 | Every garment the roadmap names drafts, grades and exports |
 | G4 | 0 | 8 | Factory profiles work, including what is still unknown |
 | G5 | 0 | 6 | The native and browser applications exist |
 | G6 | 0 | 7 | The conformance lab shows it holds up outside this repository |
@@ -28,11 +28,11 @@ $ bash scripts/gauge.sh
 G0: 18 of 19 clauses met
 G1: 7 of 7 clauses met
 G2: 7 of 8 clauses met
-G3: 4 of 11 clauses met
+G3: 5 of 11 clauses met
 G4: 0 of 8 clauses met
 G5: 0 of 6 clauses met
 G6: 0 of 7 clauses met
-gauge: 36 of 66 clauses met through G6
+gauge: 37 of 66 clauses met through G6
 ```
 
 A count here comes from the clause tables, and a clause counts as met only when its check runs a real
@@ -57,7 +57,7 @@ G3 is the earliest open gate that software can close. G2's only open clause need
 | `G3-08` | Offset and grading golden suites | not met | [The offset corpus](spec/offsets.md) and [the skirt's goldens](spec/reference-skirt.md) exist. No grade does | `G3-GRADING.12` |
 | `G3-09` | Every garment the roadmap names | not met | One exists, the skirt | `G3-GRADING.14` |
 | `G3-10` | A classic collar | met | [A stand, a fall and a roll line](spec/reference-bodice.md), fitted to the neck. Its edges differ by the declared roll exactly, and the roll line is never on the cut layer. Re-drafted at five sizes, and grade rules are `G3-GRADING.7` | `G3-GRADING.15` |
-| `G3-11` | Trousers carrying their constructions | not met | Not started | `G3-GRADING.5` |
+| `G3-11` | Trousers carrying their constructions | met | [A crotch curve, a fitted inseam and a waistband](spec/reference-trousers.md), with an in-seam pocket as an object and a buttonhole whose length comes from its button. Re-drafted at five sizes, and grade rules are `G3-GRADING.7` | `G3-GRADING.5` |
 
 ## Distance to the G2 exit
 
@@ -105,7 +105,7 @@ does not support yet with a plain error. The constraint kernel `.8`, the project
 command line `.10`, the runtime profiles `.11`, the license census `.15`, the browser run `.12` and the canvas spike `.13`
 are done, and the G1 exit review `.16` passed. The geometry kernel `G2-2D.1`, the offset engine `G2-2D.2`, its corpus `G2-2D.3`, the
 canonicalizer `G2-2D.4`, the DXF writer `G2-2D.5` and the drafted skirt `G2-2D.8` are done. The PDF writer `G2-2D.6` is written and measured, and waits only on the library comparison. The printed square `G2-2D.7` is measured on screen and waits for a person with a ruler. The viewer and editor `G2-2D.9`
-is done as a page, and its toolkit and native window stay open at `G1-SLICE.14`. Native save and load `G2-2D.10` is done. The mutation tests `G2-2D.11` and [the conformance matrix](spec/conformance-matrix.md) `G2-2D.12` are done. [The API and MCP server](spec/api-and-mcp.md) `G1-SLICE.9` works over local stdio. The agent gate `G2-2D.13` passed, and the toile protocol `G2-2D.15` is written. What G2 has left is a person with a ruler, so G3 has begun: [closures](spec/closures.md) `G3-GRADING.1` are done, and [walking and truing](spec/walking-and-truing.md) `G3-GRADING.2` too. [References that survive an edit](spec/stable-references.md) `G3-GRADING.3` is done too. [The bodice and sleeve](spec/reference-bodice.md) `G3-GRADING.4` is done too. [The classic collar](spec/reference-bodice.md) `G3-GRADING.15` is done too. The next one is the trousers, `G3-GRADING.5`.
+is done as a page, and its toolkit and native window stay open at `G1-SLICE.14`. Native save and load `G2-2D.10` is done. The mutation tests `G2-2D.11` and [the conformance matrix](spec/conformance-matrix.md) `G2-2D.12` are done. [The API and MCP server](spec/api-and-mcp.md) `G1-SLICE.9` works over local stdio. The agent gate `G2-2D.13` passed, and the toile protocol `G2-2D.15` is written. What G2 has left is a person with a ruler, so G3 has begun: [closures](spec/closures.md) `G3-GRADING.1` are done, and [walking and truing](spec/walking-and-truing.md) `G3-GRADING.2` too. [References that survive an edit](spec/stable-references.md) `G3-GRADING.3` is done too. [The bodice and sleeve](spec/reference-bodice.md) `G3-GRADING.4` is done too. [The classic collar](spec/reference-bodice.md) `G3-GRADING.15` is done too. [The trousers](spec/reference-trousers.md) `G3-GRADING.5` are done too. The next one is the two instantiation paths, `G3-GRADING.6`.
 
 ## Implemented foundations
 
