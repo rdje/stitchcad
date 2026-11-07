@@ -103,14 +103,22 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1014.
 
 - ID: `G3-GRADING.4`
-  Status: `pending`
+  Status: `done`
   Goal: the bodice + set-in sleeve garment (G3 exit) with declared ease — armscye, cap ease, balance
   notches, dart placement — drafted through the recipe and evaluated per size.
   Acceptance: cap ease is a declared quantity in the Ease model and appears in diagnostics as
   intentional; the garment's piece list, sewing graph and notch scheme are complete against the
   `G0-CONTRACT.3` ontology; the reference skirt's goldens stay green.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-cli/**,crates/sc-artifacts/**,crates/sc-api/src/lib.rs,crates/sc-mcp/tests/admission.rs,conformance/reference-bodice/**,conformance/goldens/reference-bodice/**,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-01 needs a seam that differs on purpose and the skirt's all declare zero. WHERE nothing could make a cap meet a declared ease:an armhole's length is known only once drawn and the recipe cannot ask for it;git grep -c '"fits"' 5e7e9760 -- crates/sc-cli/src/ →rc=1.
+  - [x] ADDRESSED,FIT:a draft's fits solve an input by whole-number false position until a seam walks to what it declares,drawing only the two pieces,with asserts holding at the answer. cargo test -p sc-cli --test bodice →rc=0:21 tests,five sizes,each measurement moved 20 mm both ways.
+  - [x] ADDRESSED,DECLARED:cap_ease_front and cap_ease_back walk as declared_ease;with the declaration removed the same cloth is a defect by exactly that amount. Each curve is also measured by Gauss-Legendre from its control points,so the check is not the walk that it checks.
+  - [x] ADDRESSED,MARKS:single,double and drill notches,and before_end. The graph is held against every edge in both directions,with free edges named in the book.
+  - [x] ALSO FOUND:my first bust dart had unequal legs and the closure report said so,gap 2985 µm,conserved false;it now sits level with the bust point,and a test holds every dart's gap at zero. D405:draft_pattern's advertised schema refused seams.
+  - [x] NOT SHOWN,STATED:nobody has cut it in cloth. All constants are assumed. Sizes are re-drafted,not graded. The cap and armhole are one cubic each. Does not fit one A0 sheet,so it tiles,and it is not shrunk.
+  - [x] NO REGRESSION:gauge.sh --checks →rc=0;cargo test -p sc-artifacts -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1015.
 
 - ID: `G3-GRADING.5`
   Status: `pending` (**required**, not optional, since roadmap v0.3 — the envelope-coverage exit criterion

@@ -109,6 +109,29 @@ pub struct GradePoint {
     pub at: Point,
 }
 
+/// A length a drawing solved for: the value of an input that makes a named seam walk to what it declares.
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
+pub struct Fit {
+    /// The input it varies.
+    pub vary: String,
+    /// The seam that decides it.
+    pub seam: String,
+    /// What it came to, in micrometres.
+    pub value: i64,
+}
+
+impl Fit {
+    /// The fit as a value.
+    #[must_use]
+    pub fn to_value(&self) -> Value {
+        let mut fields = BTreeMap::new();
+        fields.insert("vary".to_owned(), Value::Text(self.vary.clone()));
+        fields.insert("seam".to_owned(), Value::Text(self.seam.clone()));
+        fields.insert("value".to_owned(), Value::Int(self.value));
+        Value::Object(fields)
+    }
+}
+
 /// A reference an edit left with nowhere to go. It is shown and it blocks a release, and nothing moves it onto another edge for you.
 #[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
 pub struct Repair {
@@ -183,4 +206,6 @@ pub struct Pattern {
     pub seams: Vec<Seam>,
     /// References an edit orphaned. While any is open the drawing can be inspected and cannot be released.
     pub repairs: Vec<Repair>,
+    /// What the drawing solved for, which is empty when it solved for nothing.
+    pub fits: Vec<Fit>,
 }

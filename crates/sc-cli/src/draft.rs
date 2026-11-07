@@ -1,7 +1,7 @@
 //! Drafts pieces from a session's description and the recipe's evaluated values: boundaries, allowances, marks and labels.
 use sc_artifacts::{
-    along, stretch, stretch_length, walk, Closure, ClosureKind, DrawnPiece, GradePoint, Line, Mark,
-    MarkKind, Pattern, Repair, Seam, SeamSide, Text,
+    along, stretch, stretch_length, walk, Closure, ClosureKind, DrawnPiece, Fit, GradePoint, Line,
+    Mark, MarkKind, Pattern, Repair, Seam, SeamSide, Text, WALK_TOLERANCE,
 };
 use sc_geometry::{Corner, Curve, Outline, Point};
 use sc_store::Value;
@@ -219,6 +219,137 @@ fn named_item<'a>(item: &'a Fields, what: &str, seen: &mut Vec<String>) -> Resul
 
 // A notch from a piece's description. One written as two points is where a session put it, and it is refused if the cut line is no longer there.
 // One written as an edge and a place on it is a reference: it lands where the ledger says, or it is a repair task.
+// A notch's type, which the ontology stores as what the mark means. Where a profile wants it drawn differently is the profile's.
+enum NotchType {
+    Single,
+    Double,
+    Drill,
+}
+
+fn notch_type(item: &Fields, name: &str) -> Result<NotchType, String> {
+    match item.get("type").and_then(Value::as_text) {
+        None | Some("single") => Ok(NotchType::Single),
+        Some("double") => Ok(NotchType::Double),
+        Some("drill") => Ok(NotchType::Drill),
+        Some(other) => Err(format!(
+            "the notch {name} is of type {other}, and a notch is single, double or drill until the export types of G4"
+        )),
+    }
+}
+
+// Where a notch reaches, with its point on the cut line and its aim into the piece. Square to the edge, as far as its allowance, unless it states its own line, which it must at a corner that gives two squares.
+fn notch_mark(lengths: &Lengths, item: &Fields, located: &Located) -> Result<Mark, String> {
+    let depth = length(
+        lengths,
+        required(item, "depth")?
+            .as_text()
+            .ok_or("a notch's depth names a length")?,
+    )?;
+    let (reach_x, reach_y) = match item.get("aim") {
+        Some(aim) => {
+            let names = aim.as_list().ok_or("a notch's aim names two lengths")?;
+            let [x, y] = names else {
+                return Err("a notch's aim names two lengths".to_owned());
+            };
+            let read = |name: &Value| {
+                length(
+                    lengths,
+                    name.as_text().ok_or("an aim's lengths are named as text")?,
+                )
+            };
+            (ratio(read(x)?), ratio(read(y)?))
+        }
+        None => (
+            located.outward.0 * ratio(located.width),
+            located.outward.1 * ratio(located.width),
+        ),
+    };
+    let reach = pure::hypot(reach_x, reach_y);
+    let (unit_x, unit_y) = if reach > 0.0 {
+        (reach_x / reach, reach_y / reach)
+    } else {
+        located.outward
+    };
+    let at = Point::new(
+        located.point.x() + whole(reach_x),
+        located.point.y() + whole(reach_y),
+    )
+    .map_err(|error| error.to_string())?;
+    Ok(Mark {
+        kind: MarkKind::VNotch,
+        at,
+        toward: Point::new(
+            at.x() - whole(unit_x * ratio(depth)),
+            at.y() - whole(unit_y * ratio(depth)),
+        )
+        .map_err(|error| error.to_string())?,
+    })
+}
+
+// A drill hole is a place inside the piece, held from an edge: as far in, square to that edge, as it says.
+fn drill_mark(
+    lengths: &Lengths,
+    item: &Fields,
+    located: &Located,
+    cut: &[Point],
+    name: &str,
+) -> Result<Mark, String> {
+    let inset = length(
+        lengths,
+        required(item, "inset")?
+            .as_text()
+            .ok_or("a drill's inset names a length")?,
+    )?;
+    let at = Point::new(
+        located.point.x() - whole(located.outward.0 * ratio(inset)),
+        located.point.y() - whole(located.outward.1 * ratio(inset)),
+    )
+    .map_err(|error| error.to_string())?;
+    if !inside(cut, at) {
+        return Err(format!(
+            "the drill {name} lands at ({}, {}), outside the piece",
+            at.x(),
+            at.y()
+        ));
+    }
+    Ok(Mark {
+        kind: MarkKind::Drill,
+        at,
+        toward: at,
+    })
+}
+
+// One carrier for a single notch or a drill. A double is two marks either side of the place it holds, each answering for itself.
+fn notch_places(
+    lengths: &Lengths,
+    item: &Fields,
+    edges: &Edges,
+    name: &str,
+    kind: &NotchType,
+) -> Result<Vec<(String, Held)>, String> {
+    let what = format!("the notch {name}");
+    let place = edges.held(lengths, item, &what)?;
+    if !matches!(kind, NotchType::Double) {
+        return Ok(vec![(format!("notch {name}"), place)]);
+    }
+    let spacing = length(
+        lengths,
+        required(item, "spacing")?
+            .as_text()
+            .ok_or("a double notch's spacing names a length")?,
+    )?;
+    Ok(vec![
+        (
+            format!("notch {name}, first"),
+            edges.beside(&place, -spacing / 2, &what)?,
+        ),
+        (
+            format!("notch {name}, second"),
+            edges.beside(&place, spacing - spacing / 2, &what)?,
+        ),
+    ])
+}
+
 fn notches_of(
     lengths: &Lengths,
     fields: &Fields,
@@ -237,86 +368,53 @@ fn notches_of(
     for item in listed {
         if let Some(item) = item.as_object() {
             let name = named_item(item, "notch", &mut seen)?;
-            held.push((
-                name,
-                item,
-                edges.held(lengths, item, &format!("the notch {name}"))?,
-            ));
+            let kind = notch_type(item, name)?;
+            let places = notch_places(lengths, item, edges, name, &kind)?;
+            held.push((name, item, kind, places));
         }
     }
-    let places: Vec<Held> = held.iter().map(|(_, _, place)| place.clone()).collect();
+    let places: Vec<Held> = held
+        .iter()
+        .flat_map(|(_, _, _, places)| places.iter().map(|(_, place)| place.clone()))
+        .collect();
     let trimmed = edges.trimmed(cut, &places)?;
     let mut held = held.into_iter();
     let mut out = Vec::with_capacity(listed.len());
     for item in listed {
-        let mut mark = if let Some(points) = item.as_list() {
+        if let Some(points) = item.as_list() {
             let [at, toward] = points else {
                 return Err("a notch names where it is and a point it aims at".to_owned());
             };
-            Mark {
+            let mut mark = Mark {
                 kind: MarkKind::VNotch,
                 at: moved(point(lengths, at)?)?,
                 toward: moved(point(lengths, toward)?)?,
-            }
-        } else {
-            let (name, item, place) = held
-                .next()
-                .ok_or("a notch must be two points or an object")?;
-            let answer = edges.answer_on_cut(&trimmed, &place)?;
-            let Some(located) =
-                book.settle(piece, &format!("notch {name}"), &place, answer, false)?
-            else {
+            };
+            seat_notch(cut, &mut mark)?;
+            out.push(mark);
+            continue;
+        }
+        let (name, item, kind, places) = held
+            .next()
+            .ok_or("a notch must be two points or an object")?;
+        for (carrier, place) in places {
+            // A drill is inside the piece, so it does not care what happened to the cut line outside it.
+            let answer = if matches!(kind, NotchType::Drill) {
+                edges.answer(&place)?
+            } else {
+                edges.answer_on_cut(&trimmed, &place)?
+            };
+            let Some(located) = book.settle(piece, &carrier, &place, answer, false)? else {
                 continue;
             };
-            let depth = length(
-                lengths,
-                required(item, "depth")?
-                    .as_text()
-                    .ok_or("a notch's depth names a length")?,
-            )?;
-            // Square to the edge, as far as its allowance, unless the notch states its own line, which it must at a corner that has two squares.
-            let (reach_x, reach_y) = match item.get("aim") {
-                Some(aim) => {
-                    let names = aim.as_list().ok_or("a notch's aim names two lengths")?;
-                    let [x, y] = names else {
-                        return Err("a notch's aim names two lengths".to_owned());
-                    };
-                    let read = |name: &Value| {
-                        length(
-                            lengths,
-                            name.as_text().ok_or("an aim's lengths are named as text")?,
-                        )
-                    };
-                    (ratio(read(x)?), ratio(read(y)?))
-                }
-                None => (
-                    located.outward.0 * ratio(located.width),
-                    located.outward.1 * ratio(located.width),
-                ),
-            };
-            let reach = pure::hypot(reach_x, reach_y);
-            let (unit_x, unit_y) = if reach > 0.0 {
-                (reach_x / reach, reach_y / reach)
+            if matches!(kind, NotchType::Drill) {
+                out.push(drill_mark(lengths, item, &located, cut, name)?);
             } else {
-                located.outward
-            };
-            let at = Point::new(
-                located.point.x() + whole(reach_x),
-                located.point.y() + whole(reach_y),
-            )
-            .map_err(|error| error.to_string())?;
-            Mark {
-                kind: MarkKind::VNotch,
-                at,
-                toward: Point::new(
-                    at.x() - whole(unit_x * ratio(depth)),
-                    at.y() - whole(unit_y * ratio(depth)),
-                )
-                .map_err(|error| error.to_string())?,
+                let mut mark = notch_mark(lengths, item, &located)?;
+                seat_notch(cut, &mut mark)?;
+                out.push(mark);
             }
-        };
-        seat_notch(cut, &mut mark)?;
-        out.push(mark);
+        }
     }
     Ok(out)
 }
@@ -1187,6 +1285,15 @@ fn plant(
         at,
         toward,
     };
+    // A piece on the same side of two seams, as a front cut on the fold is, has the one notch and not two on top of each other.
+    let already = piece.marks.iter().any(|other| {
+        other.kind == mark.kind
+            && (other.at.x() - mark.at.x()).abs() <= TOLERANCE
+            && (other.at.y() - mark.at.y()).abs() <= TOLERANCE
+    });
+    if already {
+        return Ok(());
+    }
     seat_notch(&mut piece.cut, &mut mark)?;
     piece.marks.push(mark);
     Ok(())
@@ -1262,6 +1369,182 @@ fn balance_notches(
 }
 
 type Moves = BTreeMap<String, Vec<(Point, Point)>>;
+
+// What the drawing solved for, as the lengths it was given. A fit on a seam with nowhere to go waits, and says so.
+fn fits_of(lengths: &Lengths, description: &Fields, book: &mut Book) -> Result<Vec<Fit>, String> {
+    let mut found = Vec::new();
+    for item in description
+        .get("fits")
+        .and_then(Value::as_list)
+        .unwrap_or(&[])
+    {
+        let item = item.as_object().ok_or("a fit must be an object")?;
+        let text = |name: &str| -> Result<&str, String> {
+            required(item, name)?
+                .as_text()
+                .ok_or_else(|| format!("a fit's {name} is a name"))
+        };
+        let (vary, seam) = (text("vary")?, text("seam")?);
+        if book.is_open(seam) {
+            book.waiting("a fit", seam);
+            continue;
+        }
+        found.push(Fit {
+            vary: vary.to_owned(),
+            seam: seam.to_owned(),
+            value: length(lengths, vary)?,
+        });
+    }
+    Ok(found)
+}
+
+/// What a seam has that it does not declare, drawing only the pieces it joins. `None` when an end of it has nowhere to go.
+///
+/// # Errors
+///
+/// What `draft` refuses, and a seam that does not exist.
+pub fn seam_gap(
+    lengths: &Lengths,
+    description: &Fields,
+    seam: &str,
+) -> Result<Option<i64>, String> {
+    let seams = description
+        .get("seams")
+        .and_then(Value::as_list)
+        .unwrap_or(&[]);
+    let item = seams
+        .iter()
+        .find(|item| {
+            item.as_object()
+                .and_then(|item| item.get("name"))
+                .and_then(Value::as_text)
+                == Some(seam)
+        })
+        .ok_or_else(|| format!("a fit decides by the seam {seam}, and no seam has that name"))?;
+    let side_piece = |side: &str| {
+        item.as_object()
+            .and_then(|item| item.get(side))
+            .and_then(Value::as_object)
+            .and_then(|side| side.get("piece"))
+            .and_then(Value::as_text)
+            .map(str::to_owned)
+    };
+    let mut wanted: Vec<String> = [side_piece("a"), side_piece("b")]
+        .into_iter()
+        .flatten()
+        .collect();
+    let listed = required(description, "pieces")?
+        .as_list()
+        .ok_or("pieces must be a list")?;
+    // A mirror needs the piece it mirrors, which comes before it.
+    for piece in listed.iter().rev().filter_map(Value::as_object) {
+        let name = piece.get("name").and_then(Value::as_text);
+        if name.is_some_and(|name| wanted.iter().any(|other| other == name)) {
+            if let Some(source) = piece.get("mirror_of").and_then(Value::as_text) {
+                wanted.push(source.to_owned());
+            }
+        }
+    }
+    let kept: Vec<Value> = listed
+        .iter()
+        .filter(|piece| {
+            piece
+                .as_object()
+                .and_then(|piece| piece.get("name"))
+                .and_then(Value::as_text)
+                .is_some_and(|name| wanted.iter().any(|other| other == name))
+        })
+        .cloned()
+        .collect();
+    let mut reduced = Fields::new();
+    for name in ["style", "size"] {
+        reduced.insert(name.to_owned(), required(description, name)?.clone());
+    }
+    reduced.insert("pieces".to_owned(), Value::List(kept));
+    reduced.insert("seams".to_owned(), Value::List(vec![item.clone()]));
+    let drawn = draw(lengths, &reduced, "", "", &BTreeMap::new())?;
+    if drawn.open_seams.iter().any(|open| open == seam) {
+        return Ok(None);
+    }
+    let report =
+        walk(&drawn.pattern).map_err(|error| format!("{}: {}", error.seam, error.message))?;
+    Ok(report
+        .iter()
+        .find(|item| item.seam == seam)
+        .map(|item| item.unexplained))
+}
+
+/// The value between two lengths that leaves a seam nothing it does not declare, by false position with integers, so that it is the same answer on every machine.
+///
+/// # Errors
+///
+/// Whatever trying a value refuses, and a seam that nothing between the two can make walk.
+pub fn solve_fit(
+    (vary, seam): (&str, &str),
+    (low, high): (i64, i64),
+    gap: &mut dyn FnMut(i64) -> Result<Option<i64>, String>,
+) -> Result<Option<i64>, String> {
+    // A flattened curve's length is good to T2, so there is no more to be had than this.
+    const CLOSE_ENOUGH: i128 = 2;
+    // Each try draws two pieces, and more than this means the seam does not follow the input smoothly at all.
+    const MOST_TRIES: u32 = 128;
+    if low >= high {
+        return Err(format!(
+            "a fit varies {vary} between {low} and {high}, which is no range"
+        ));
+    }
+    let (Some(at_low), Some(at_high)) = (gap(low)?, gap(high)?) else {
+        return Ok(None);
+    };
+    if (at_low > 0) == (at_high > 0) && at_low != 0 && at_high != 0 {
+        return Err(format!(
+            "no value of {vary} between {low} and {high} gives the seam {seam} what it declares: it is out by {at_low} at one end and {at_high} at the other"
+        ));
+    }
+    let (mut a, mut b) = (low, high);
+    let (mut gap_a, mut gap_b) = (i128::from(at_low), i128::from(at_high));
+    let (mut best, mut least) = if gap_a.abs() <= gap_b.abs() {
+        (a, gap_a.abs())
+    } else {
+        (b, gap_b.abs())
+    };
+    let mut kept_a = None;
+    let mut tries = 0;
+    while least > CLOSE_ENOUGH && b - a > 1 && tries < MOST_TRIES {
+        tries += 1;
+        let span = i128::from(b - a);
+        let guess = span * gap_a.abs() / (gap_a.abs() + gap_b.abs()).max(1);
+        let at = a + i64::try_from(guess).map_err(|error| error.to_string())?;
+        let at = at.clamp(a + 1, b - 1);
+        let Some(found) = gap(at)? else {
+            return Ok(None);
+        };
+        let found = i128::from(found);
+        if found.abs() < least {
+            (best, least) = (at, found.abs());
+        }
+        // An end kept twice in a row has its weight halved, which is what stops this creeping in from one side.
+        if (found > 0) == (gap_a > 0) {
+            (a, gap_a) = (at, found);
+            if kept_a == Some(false) {
+                gap_b /= 2;
+            }
+            kept_a = Some(false);
+        } else {
+            (b, gap_b) = (at, found);
+            if kept_a == Some(true) {
+                gap_a /= 2;
+            }
+            kept_a = Some(true);
+        }
+    }
+    if least > i128::from(WALK_TOLERANCE) {
+        return Err(format!(
+            "no value of {vary} between {low} and {high} gives the seam {seam} what it declares: the closest leaves it out by {least}"
+        ));
+    }
+    Ok(Some(best))
+}
 
 // A drawing, and what each reference in it came to.
 struct Drawing {
@@ -1364,6 +1647,8 @@ fn draw(
     }
     let seams = seams_of(lengths, description, &tables, moves, &mut book)?;
     balance_notches(lengths, description, &mut pieces, &seams, &mut book)?;
+    let mut fits = fits_of(lengths, description, &mut book)?;
+    fits.sort();
     let open_seams = description
         .get("seams")
         .and_then(Value::as_list)
@@ -1382,6 +1667,7 @@ fn draw(
             revision: revision.to_owned(),
             pieces,
             seams,
+            fits,
             repairs: book.repairs,
         },
         references: book.references,

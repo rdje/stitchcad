@@ -65,6 +65,14 @@ An edge in a draft's `edges` list may carry a `name`, and a name is what a refer
 
 A notch and a grade point each need a `name`, so that a repair task can say which. A notch also names its `depth`, and it may give an `aim`, two lengths for where it reaches from the sew line to the cut line. An edge gives a corner two different squares, so a notch at a corner states one.
 
+A notch has a `type`, and the ones after these are [the export types of G4](../availability.md):
+
+| Type | What it needs | What it draws |
+| --- | --- | --- |
+| `single` | `depth`, and this is what a notch with no type is | One mark |
+| `double` | `depth` and `spacing` | Two marks either side of the place it holds, each answering for itself, as `notch back, first` and `notch back, second`. Repairing the notch repairs both |
+| `drill` | `inset` | A hole inside the piece, that far in from the edge and square to it. It keeps its place if the cut line outside it changes |
+
 ## A place on an edge
 
 | Field | What it holds |
@@ -72,6 +80,7 @@ A notch and a grade point each need a `name`, so that a repair task can say whic
 | `edge` | The edge's name |
 | `at` | A fraction of it from 0 to 1, as text, such as `1/3`. Exact, and never rounded |
 | `along` | Or a distance from its start: a length's name, or a list of them to add, where a leading `-` subtracts |
+| `before_end` | Or a distance back from its end, written the same way |
 | `choose` | At a split, `first` or `second` |
 
 **The fraction is in the frame the edge was born in.** A reference is never rewritten. When an edge has been split, a reference to it still says the old edge and the old fraction, and the answer comes from replaying what has been done since. So the same document always gets the same answer, and it can be read to see what was meant. `references` shows both what a carrier holds and where that lands now.
@@ -113,7 +122,7 @@ A changed measurement keeps every edge and every fraction, so the cloth moves wi
 
 | Field | What it does |
 | --- | --- |
-| `edge`, with `at` or `along` | Holds this place instead |
+| `edge`, with `at`, `along` or `before_end` | Holds this place instead |
 | `choose` | Says which part it wants at a split |
 | `retire` | Removes the carrier, or the whole seam |
 
@@ -148,6 +157,15 @@ A notch written as two points, and a seam end written as a point, still work, be
 | `at` | A fraction of an edge |
 | `1/3` | A fraction, as `at` writes it |
 | `along` | A distance from an edge's start |
+| `before_end` | A distance back from an edge's end |
+| `type` | What kind of notch it is |
+| `single` | One mark |
+| `double` | Two marks |
+| `drill` | A hole inside the piece |
+| `spacing` | How far apart a double notch's marks are |
+| `inset` | How far in from its edge a drill is |
+| `notch back, first` | A carrier, as a double notch's first mark is named |
+| `notch back, second` | A carrier, as its second is named |
 | `-` | The sign that subtracts a length |
 | `choose` | Which part a place wants at a split |
 | `first` | The part before a split |

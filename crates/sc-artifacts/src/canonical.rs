@@ -1,6 +1,6 @@
 //! One written form for one pattern: stable order and exact numbers, with no clock anywhere in it.
 use crate::pattern::{
-    Closure, ClosureKind, DrawnPiece, GradePoint, Line, Mark, MarkKind, Pattern, Repair, Seam,
+    Closure, ClosureKind, DrawnPiece, Fit, GradePoint, Line, Mark, MarkKind, Pattern, Repair, Seam,
     SeamSide, Text,
 };
 use core::fmt;
@@ -182,6 +182,14 @@ pub fn to_canonical_text(pattern: &Pattern) -> String {
         fields.push((
             "repairs",
             Value::List(repairs.iter().map(Repair::to_value).collect()),
+        ));
+    }
+    if !pattern.fits.is_empty() {
+        let mut fits = pattern.fits.clone();
+        fits.sort();
+        fields.push((
+            "fits",
+            Value::List(fits.iter().map(Fit::to_value).collect()),
         ));
     }
     if !pattern.seams.is_empty() {
@@ -415,6 +423,14 @@ pub fn from_canonical_text(source: &str) -> Result<Pattern, CanonicalError> {
         } else {
             Vec::new()
         },
+        fits: if fields.contains_key("fits") {
+            read_list(fields, "fits")?
+                .iter()
+                .map(read_fit)
+                .collect::<Result<_, _>>()?
+        } else {
+            Vec::new()
+        },
         repairs: if fields.contains_key("repairs") {
             read_list(fields, "repairs")?
                 .iter()
@@ -423,6 +439,20 @@ pub fn from_canonical_text(source: &str) -> Result<Pattern, CanonicalError> {
         } else {
             Vec::new()
         },
+    })
+}
+
+fn read_fit(item: &Value) -> Result<Fit, CanonicalError> {
+    let Some(item) = item.as_object() else {
+        return fail("a fit must be an object");
+    };
+    let Some(value) = item.get("value").and_then(Value::as_int) else {
+        return fail("a fit needs its value");
+    };
+    Ok(Fit {
+        vary: read_text(item, "vary")?,
+        seam: read_text(item, "seam")?,
+        value,
     })
 }
 

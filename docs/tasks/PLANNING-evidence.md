@@ -176,6 +176,11 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D405 — a schema that refused a seam
+
+`draft_pattern` advertised additionalProperties false with only style,size and pieces,while a draft also takes seams,balance_notches and trues. The server does not validate,so every test and agent session passed;a client that validates would have refused a seam. Owner:G3-GRADING.4. Found reading the schema to add fits.
+Fixed1015:the schema lists them;a test holds it against the bodice's own draft.
+
 ## D404 — a true that moved nothing
 
 A reference holds a fraction of its edge and `true_seam` moves corners,so a true on a reference mid-edge or on a mirror would move nothing and report success. Owner:G3-GRADING.3. Found while binding seam ends to edges,and it never shipped:the form is new in 1014.

@@ -113,6 +113,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [The model and its numbers](spec/glossary/model-and-numbers.md)
 - [The recipe and the piece](spec/glossary/recipe-and-pieces.md)
 - [The reference skirt](spec/reference-skirt.md)
+- [The reference bodice and sleeve](spec/reference-bodice.md)
 - [Constraint kernel](spec/constraints.md)
 - [Project store](spec/project-store.md)
 - [Command line](spec/command-line.md)

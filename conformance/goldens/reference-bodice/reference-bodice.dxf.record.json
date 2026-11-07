@@ -1,0 +1,22 @@
+{
+  "approval": "unapproved",
+  "axes": {
+    "cut_sew_swap": "cut_as_1",
+    "dxf_version_target": "r12",
+    "entity_policy": "polyline_only",
+    "grading_mode": "single_size",
+    "layer_naming": "aama_named",
+    "seam_allowance_policy": "included_in_contour"
+  },
+  "design": "01ARZ3NDEKTSV4RRFFQ69G5FAV",
+  "design_revision": "0",
+  "losses": [
+    "cut_layer_merges_boundary_turn_points_and_curve_points",
+    "draw_layer_merges_sew_line_and_grainline"
+  ],
+  "target": "dxf-aama-named",
+  "tessellation_achieved_um": 11,
+  "tessellation_bound_um": 100,
+  "unit": "millimetre",
+  "writer": "stitchcad-dxf-1"
+}

@@ -355,7 +355,7 @@ impl<R: Repository> Session<R> {
         let mut entry = fields.clone();
         entry.remove("do");
         let document = self.document_with(step, "balance_notches", Value::Object(entry))?;
-        let known = self.lengths(step)?;
+        let known = self.lengths_for(step, Some(&document))?;
         crate::draft::draft(&known, &document, &self.design_text, &self.revision_text())
             .map_err(fail)?;
         self.commit_document(step, Value::Object(document).to_text())?;
@@ -434,7 +434,7 @@ impl<R: Repository> Session<R> {
         word: &'static str,
         document: BTreeMap<String, Value>,
     ) -> Result<Value, Failure> {
-        let known = self.lengths(step)?;
+        let known = self.lengths_for(step, Some(&document))?;
         let pattern =
             crate::draft::draft(&known, &document, &self.design_text, &self.revision_text())
                 .map_err(|message| Failure::at(step, word, message))?;
@@ -623,6 +623,8 @@ impl<R: Repository> Session<R> {
                 Failure::at(step, "unknown_input", format!("no input is named {token}"))
             })?;
         input.value = value;
+        let document = self.document();
+        let inputs = self.solved(step, &inputs, document.as_ref())?;
         let garment =
             build(self.design, self.revision(), &inputs, &self.recipe, "").map_err(fail)?;
         let before = self.evaluate(step)?;
@@ -642,35 +644,106 @@ impl<R: Repository> Session<R> {
     }
 
     fn evaluate(&self, step: usize) -> Result<Value, Failure> {
-        evaluate_design(self.bus.state().inputs(), step)
+        let document = self.document();
+        let inputs = self.solved(step, &self.inputs, document.as_ref())?;
+        self.evaluated(step, &inputs)
     }
 
-    // Every length a session can name: the inputs, the recipe's bindings, and `zero`.
-    fn lengths(&self, step: usize) -> Result<BTreeMap<String, i64>, Failure> {
-        let mut known: BTreeMap<String, i64> = self
-            .inputs
-            .iter()
-            .map(|input| (input.token.clone(), input.value.as_micrometres()))
-            .collect();
-        known.insert("zero".to_owned(), 0);
-        if let Value::List(bindings) = self.evaluate(step)? {
-            for binding in &bindings {
-                let Some(binding) = binding.as_object() else {
-                    continue;
-                };
-                let (Some(name), Some(kind), Some(value)) = (
-                    binding.get("name").and_then(Value::as_text),
-                    binding.get("kind").and_then(Value::as_text),
-                    binding.get("value").and_then(Value::as_text),
-                ) else {
-                    continue;
-                };
-                if let ("length", Ok(number)) = (kind, value.parse::<i64>()) {
-                    known.insert(name.to_owned(), number);
+    // The bus's own Design for the inputs it holds, and any other values through a copy of it that nothing else sees.
+    fn evaluated(&self, step: usize, inputs: &[Input]) -> Result<Value, Failure> {
+        if inputs == self.inputs {
+            return evaluate_design(self.bus.state().inputs(), step);
+        }
+        self.tried(step, inputs, &self.recipe)
+    }
+
+    fn tried(&self, step: usize, inputs: &[Input], recipe: &str) -> Result<Value, Failure> {
+        let garment = build(self.design, self.revision(), inputs, recipe, "")
+            .map_err(|message| Failure::at(step, "recipe", message))?;
+        evaluate_design(garment.inputs(), step)
+    }
+
+    // What the inputs a description's fits vary come to. Solved again whenever it is needed, because it depends on nothing but the inputs, the recipe and the description, and the Design holds those.
+    fn solved(
+        &self,
+        step: usize,
+        from: &[Input],
+        description: Option<&BTreeMap<String, Value>>,
+    ) -> Result<Vec<Input>, Failure> {
+        let mut inputs = from.to_vec();
+        let Some(description) = description else {
+            return Ok(inputs);
+        };
+        let Some(listed) = description.get("fits").and_then(Value::as_list) else {
+            return Ok(inputs);
+        };
+        let fail = |message: String| Failure::at(step, "fit", message);
+        // A closure has to hold at the answer. It need not hold at every value tried on the way there.
+        let recipe = without_asserts(&self.recipe);
+        for item in listed {
+            let item = item
+                .as_object()
+                .ok_or_else(|| fail("a fit must be an object".to_owned()))?;
+            let text = |name: &str| {
+                item.get(name)
+                    .and_then(Value::as_text)
+                    .ok_or_else(|| fail(format!("a fit names its {name}")))
+            };
+            let (vary, seam) = (text("vary")?, text("seam")?);
+            let at = inputs
+                .iter()
+                .position(|input| input.token == vary)
+                .ok_or_else(|| fail(format!("a fit varies {vary}, and no input has that name")))?;
+            let known = known_lengths(&inputs, &self.tried(step, &inputs, &recipe)?);
+            let Some([low, high]) = item.get("between").and_then(Value::as_list) else {
+                return Err(fail(format!(
+                    "a fit of {vary} says between which two lengths"
+                )));
+            };
+            let bound = |value: &Value| {
+                let name = value
+                    .as_text()
+                    .ok_or_else(|| fail(format!("a fit of {vary} names its two lengths")))?;
+                known
+                    .get(name)
+                    .copied()
+                    .ok_or_else(|| fail(format!("no length is named {name}")))
+            };
+            let range = (bound(low)?, bound(high)?);
+            let base = inputs.clone();
+            let mut gap = |value: i64| -> Result<Option<i64>, String> {
+                let mut trial = base.clone();
+                if let Some(input) = trial.get_mut(at) {
+                    input.value =
+                        Length::from_micrometres(value).map_err(|error| error.to_string())?;
                 }
+                let evaluated = self
+                    .tried(step, &trial, &recipe)
+                    .map_err(|failure| failure.message)?;
+                crate::draft::seam_gap(&known_lengths(&trial, &evaluated), description, seam)
+            };
+            let found = crate::draft::solve_fit((vary, seam), range, &mut gap).map_err(fail)?;
+            if let (Some(value), Some(input)) = (found, inputs.get_mut(at)) {
+                input.value =
+                    Length::from_micrometres(value).map_err(|error| fail(error.to_string()))?;
             }
         }
-        Ok(known)
+        Ok(inputs)
+    }
+
+    // Every length a session can name, as the Design is drawn now.
+    fn lengths(&self, step: usize) -> Result<BTreeMap<String, i64>, Failure> {
+        self.lengths_for(step, self.document().as_ref())
+    }
+
+    // Every length a session can name for this description: the inputs, the recipe's bindings, and `zero`.
+    fn lengths_for(
+        &self,
+        step: usize,
+        description: Option<&BTreeMap<String, Value>>,
+    ) -> Result<BTreeMap<String, i64>, Failure> {
+        let inputs = self.solved(step, &self.inputs, description)?;
+        Ok(known_lengths(&inputs, &self.evaluated(step, &inputs)?))
     }
 
     // How to draw it, held by the Design, so an edit to it has a revision, an actor and an undo. The drawing itself is derived and is never saved.
@@ -741,7 +814,6 @@ impl<R: Repository> Session<R> {
     // A step naming its pieces draws those, and they become how the design is drawn. One naming none draws what the design holds.
     fn draft(&mut self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
         let fail = |message: String| Failure::at(step, "draft", message);
-        let known = self.lengths(step)?;
         let description = if fields.contains_key("pieces") {
             let mut own = fields.clone();
             own.remove("do");
@@ -751,6 +823,7 @@ impl<R: Repository> Session<R> {
                 fail("a draft names its pieces, and this project has saved none".to_owned())
             })?
         };
+        let known = self.lengths_for(step, Some(&description))?;
         // Refused here, before anything changes, if it cannot be drawn.
         crate::draft::draft(
             &known,
@@ -781,6 +854,14 @@ impl<R: Repository> Session<R> {
             .collect();
         self.pattern = Some(pattern);
         let mut record = BTreeMap::new();
+        if let Some(drawn) = &self.pattern {
+            if !drawn.fits.is_empty() {
+                record.insert(
+                    "fits".to_owned(),
+                    Value::List(drawn.fits.iter().map(sc_artifacts::Fit::to_value).collect()),
+                );
+            }
+        }
         record.insert("canonical_sha256".to_owned(), Value::Text(digest));
         record.insert("pieces".to_owned(), Value::List(pieces));
         Ok(Value::Object(record))
@@ -1046,6 +1127,51 @@ impl<R: Repository> Session<R> {
     }
 }
 
+// The recipe with its asserts taken out. A statement ends where the next one starts.
+fn without_asserts(recipe: &str) -> String {
+    let mut out = String::with_capacity(recipe.len());
+    let mut skipping = false;
+    for line in recipe.lines() {
+        let start = line.trim_start();
+        if start.starts_with("assert ") {
+            skipping = true;
+        } else if start.starts_with("let ") {
+            skipping = false;
+        }
+        if !skipping {
+            out.push_str(line);
+            out.push('\n');
+        }
+    }
+    out
+}
+
+fn known_lengths(inputs: &[Input], evaluated: &Value) -> BTreeMap<String, i64> {
+    let mut known: BTreeMap<String, i64> = inputs
+        .iter()
+        .map(|input| (input.token.clone(), input.value.as_micrometres()))
+        .collect();
+    known.insert("zero".to_owned(), 0);
+    if let Value::List(bindings) = evaluated {
+        for binding in bindings {
+            let Some(binding) = binding.as_object() else {
+                continue;
+            };
+            let (Some(name), Some(kind), Some(value)) = (
+                binding.get("name").and_then(Value::as_text),
+                binding.get("kind").and_then(Value::as_text),
+                binding.get("value").and_then(Value::as_text),
+            ) else {
+                continue;
+            };
+            if let ("length", Ok(number)) = (kind, value.parse::<i64>()) {
+                known.insert(name.to_owned(), number);
+            }
+        }
+    }
+    known
+}
+
 // Runs the recipe against one Design's inputs, whichever Design that is.
 fn evaluate_design(root: &DesignInputs<DesignSources>, step: usize) -> Result<Value, Failure> {
     let fail = |code, error: String| Failure::at(step, code, error);
@@ -1294,10 +1420,10 @@ fn repoint(held: &mut BTreeMap<String, Value>, fields: &BTreeMap<String, Value>)
         return;
     }
     held.remove("choose");
-    for name in ["at", "along"] {
+    for name in ["at", "along", "before_end"] {
         held.remove(name);
     }
-    for name in ["edge", "at", "along"] {
+    for name in ["edge", "at", "along", "before_end"] {
         if let Some(value) = fields.get(name) {
             held.insert(name.to_owned(), value.clone());
         }

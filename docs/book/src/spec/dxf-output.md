@@ -14,7 +14,7 @@ use sc_geometry::Point;
 let p = |x, y| Point::new(x, y).expect("in range");
 let pattern = Pattern {
     seams: vec![],
-    repairs: vec![],
+    repairs: vec![], fits: vec![],
         style: "skirt".to_owned(),
     design: "01ARZ3NDEKTSV4RRFFQ69G5FAV".to_owned(),
     revision: "1".to_owned(),

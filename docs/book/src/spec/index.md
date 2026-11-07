@@ -42,6 +42,7 @@ libraries from future workflows. Existing chapter URLs and numbered clause ancho
 | [Internationalization](i18n-architecture.md) | The one message system and why, message identity, the termbase per language, the externalization lint and its closed exemptions, locale-independent canonical files, pseudolocalization, the RTL geometry rule, the review tiers, and the derived message inventory |
 | [Measurement standards](standards.md) | Which external standards the model draws on, what is adopted from each, and the verification status of every claim |
 | [Reference skirt](reference-skirt.md) | The one garment specified with real numbers, which every conformance suite, golden file and agent gate is built around |
+| [Reference bodice and sleeve](reference-bodice.md) | A garment whose seams differ on purpose, with a cap fitted to its armhole by a declared ease |
 
 Each change updates its task-owned implementation and affected book contracts in the same commit.
 The [topic index](../topic-index.md) also includes executable contracts and all other registered chapters.

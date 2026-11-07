@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1015 — a bodice and set-in sleeve,with a cap fitted to its armhole by a declared ease
+
+A garment whose seams differ on purpose. A draft's fits solve an input until a seam walks to what it declares,so the sleeve takes its width from the armhole,and the walk calls that declared_ease. With the declaration removed the same cloth is a defect.
+Single,double and drill notches. Five sizes draw and close. All constants are an engineer's,and nobody has cut it. G3-01 met,35 of 66.
+
 ## STITCHCAD-G1-1014 — references that survive an edit,through the core's own journal
 
 A drafted edge has a name and an identity in the ledger,and a notch,a grade point or a seam's end holds it. A split,merge,reverse,trim or mirror keeps each on the same cloth,and a delete makes it a repair task naming the edit.

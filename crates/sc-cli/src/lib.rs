@@ -13,6 +13,9 @@ mod walking_examples {}
 
 #[doc = include_str!("../../../docs/book/src/spec/stable-references.md")]
 mod references_examples {}
+
+#[doc = include_str!("../../../docs/book/src/spec/reference-bodice.md")]
+mod bodice_examples {}
 mod outline;
 mod session;
 

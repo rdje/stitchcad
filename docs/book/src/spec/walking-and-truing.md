@@ -2,7 +2,7 @@
 
 A patternmaker walks one seam along another to see whether they meet, and trues them when they do not. Here both are operations a person or an agent asks for, on a sewing graph that is data in the design, and a difference between two sides is either ease somebody declared or a defect nobody did.
 
-**What works today.** Seams between stretches of sew lines, with declared ease. `walk`, which reports each one. Balance notches planted on both sides. `true_seam`, which makes the sides match within a stated limit. [The reference skirt's](reference-skirt.md) seven seams are declared and each walks to a match. A seam's end can [hold an edge](stable-references.md), which survives an edit to it. **What does not exist yet:** truing a curved end. The sewing graph in the viewer.
+**What works today.** Seams between stretches of sew lines, with declared ease. `walk`, which reports each one. Balance notches planted on both sides. `true_seam`, which makes the sides match within a stated limit. A fit, which solves for an input so that a seam walks to what it declares. [The reference skirt's](reference-skirt.md) seven seams are declared and each walks to a match, and [the bodice and sleeve](reference-bodice.md) carry real ease. A seam's end can [hold an edge](stable-references.md), which survives an edit to it. **What does not exist yet:** truing a curved end. The sewing graph in the viewer.
 
 ```rust
 use sc_cli::Running;
@@ -67,6 +67,20 @@ A sleeve cap 2 cm longer than its armscye with 2 cm declared is `declared_ease`:
 
 **It never moves a thing it was not asked to.** The caller says which side and how far it will accept, a true past that limit is refused and changes nothing, and it reports the walk before and after. A last run too short to take the change is refused by name, and so is an end held on an edge that is not a corner of a piece that can move, such as one in the middle of an edge or on a mirror, because a true that changed nothing is not a true. An end written as a point is its own place, so truing one moves that point along the line, and no corner. It is an operation in the design and not an edit to its geometry, so a new measurement is trued again when it is drawn.
 
+## Fitting a seam
+
+Truing moves one end, which is what a patternmaker does to a seam that came out wrong. A sleeve cap is different: it should be longer than its armhole by what was declared, the armhole is a curve whose length is only known once it is drawn, and no formula gives a cap's width from its length. So a draft's `fits` list asks the drawing to find the value.
+
+| Field | What it holds |
+| --- | --- |
+| `vary` | The input to solve for. What it is set to is only what it holds until the first drawing |
+| `seam` | The seam whose walk decides it |
+| `between` | Two named lengths the answer has to lie between |
+
+Each fit tries values of its input until what the seam does not declare is gone, with the fits before it held, and the answer is the same on every machine because the search uses whole numbers. **A fit changes nothing that is stored.** It depends only on the inputs, the recipe and the draft, so it is solved again whenever the design is drawn, and a measurement that changes moves the answer. `draft` and the canonical form show what it came to, and `evaluate` shows everything worked out from it. A recipe's closures have to hold at the answer and need not hold at the values tried on the way there.
+
+A seam nothing in the range can satisfy is refused, with how far out it is at each end. A seam with an end that has nowhere to go leaves its fit waiting, as a [repair task](stable-references.md). Each try draws the two pieces the seam joins, and a true is not part of that, so a fit is solved before anything is trued.
+
 ## They are commands
 
 The way a garment is drawn is part of the Design, and an edit to it is `ChangeDrafting` on the command bus, with a revision, an actor, an authority check, an audit entry and an undo. Planting and truing are two such edits, and a caller without `commit` is refused by the bus itself. After one, the drawing is gone until the next `draft`, because it no longer describes the Design. The first drawing is part of creating the design, so it takes no revision, and what came before it cannot be undone past it.
@@ -77,7 +91,7 @@ The core holds that document as text and does not read it, which keeps [the two 
 $ cargo test -p sc-cli --test walk
 ```
 
-**What this does not show.** That a declared ease is the right amount: that is a sewing judgement, and nobody who sews has reviewed one here. No garment has a real eased seam yet, because the skirt's all declare zero, and the sleeve cap is `G3-GRADING.4`. A balance notch does not account for a closure between it and the seam's start, so one placed past a dart lands by distance along the open line.
+**What this does not show.** That a declared ease is the right amount: that is a sewing judgement, and nobody who sews has reviewed one here. A fit finds a value and does not say that the value is a good one: a sleeve as wide as its armhole demands may not be wide enough for an arm, which is why [the bodice's recipe](reference-bodice.md) has a closure for that. A balance notch does not account for a closure between it and the seam's start, so one placed past a dart lands by distance along the open line.
 
 ## Names used in this chapter
 
@@ -87,8 +101,11 @@ $ cargo test -p sc-cli --test walk
 | `plant_balance_notch` | The step that plants a notch on both sides of a seam |
 | `true_seam` | The step that makes a seam's sides match |
 | `ChangeDrafting` | The bus command that replaces how a garment is drawn |
-| `G3-GRADING.4` | The leaf for the bodice and sleeve |
 | `seams` | A draft's list of seams |
+| `fits` | A draft's list of lengths to solve for |
+| `vary` | The input a fit solves for |
+| `between` | The two lengths a fit's answer lies between |
+| `evaluate` | The step that runs the recipe |
 | `name` | A seam's name |
 | `a` | A seam's first side |
 | `b` | A seam's second side |

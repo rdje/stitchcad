@@ -65,6 +65,7 @@
   - [SizeSet profile transformations](spec/size-set-transformations.md)
   - [Measurement and size standards](spec/standards.md)
   - [The reference skirt](spec/reference-skirt.md)
+  - [The reference bodice and sleeve](spec/reference-bodice.md)
   - [Constraint kernel](spec/constraints.md)
   - [Project store](spec/project-store.md)
   - [Command line](spec/command-line.md)

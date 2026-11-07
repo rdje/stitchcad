@@ -7,7 +7,8 @@ use sc_units::pure;
 use std::collections::BTreeMap;
 
 // T2 of the units chapter: two lines each within it of a curve can differ by this much and still be one seam.
-const WALK_TOLERANCE: i64 = 20;
+/// How far two sides of a seam may differ and still be the same length: twice T2, because two lines each within T2 of one curve can differ by this much.
+pub const WALK_TOLERANCE: i64 = 20;
 
 /// What walking one seam found.
 #[derive(Clone, Debug, PartialEq, Eq)]

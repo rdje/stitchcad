@@ -626,34 +626,30 @@ impl Edges {
         let run = self
             .named(edge)
             .map_err(|error| format!("{what}: {error}"))?;
-        let param = match (fields.get("at"), fields.get("along")) {
-            (Some(at), None) => fraction(
+        let param = match (
+            fields.get("at"),
+            fields.get("along"),
+            fields.get("before_end"),
+        ) {
+            (Some(at), None, None) => fraction(
                 at.as_text().ok_or_else(|| format!("{what}: at is text"))?,
                 what,
             )?,
-            (None, Some(along)) => {
-                let names: Vec<&str> = match along {
-                    Value::Text(name) => vec![name.as_str()],
-                    Value::List(names) => names.iter().filter_map(Value::as_text).collect(),
-                    _ => return Err(format!("{what}: along names lengths")),
-                };
-                let mut distance = 0;
-                for name in names {
-                    distance += length(lengths, name)?;
-                }
-                let whole_length = self.frame_length(run);
-                if distance < 0 || distance > whole_length {
-                    return Err(format!(
-                        "{what} is {distance} along {edge}, which is {whole_length} long"
-                    ));
-                }
+            (None, Some(along), None) => {
+                let (distance, whole_length) = self.distance_on(lengths, along, run, edge, what)?;
                 let share =
                     Rational::new(distance, whole_length).map_err(|error| error.to_string())?;
                 Param::new(share).map_err(|error| error.to_string())?
             }
+            (None, None, Some(back)) => {
+                let (distance, whole_length) = self.distance_on(lengths, back, run, edge, what)?;
+                let share = Rational::new(whole_length - distance, whole_length)
+                    .map_err(|error| error.to_string())?;
+                Param::new(share).map_err(|error| error.to_string())?
+            }
             _ => {
                 return Err(format!(
-                    "{what} says where along {edge} with at or along, and only one"
+                    "{what} says where along {edge} with at, along or before_end, and only one"
                 ))
             }
         };
@@ -671,6 +667,57 @@ impl Edges {
             edge: edge.to_owned(),
             param,
             choose,
+        })
+    }
+
+    // A distance as a list of names, checked against the edge it is on, and that edge's length.
+    fn distance_on(
+        &self,
+        lengths: &Lengths,
+        value: &Value,
+        run: usize,
+        edge: &str,
+        what: &str,
+    ) -> Result<(i64, i64), String> {
+        let names: Vec<&str> = match value {
+            Value::Text(name) => vec![name.as_str()],
+            Value::List(names) => names.iter().filter_map(Value::as_text).collect(),
+            _ => return Err(format!("{what}: a distance names lengths")),
+        };
+        let mut distance = 0;
+        for name in names {
+            distance += length(lengths, name)?;
+        }
+        let whole_length = self.frame_length(run);
+        if distance < 0 || distance > whole_length {
+            return Err(format!(
+                "{what} is {distance} along {edge}, which is {whole_length} long"
+            ));
+        }
+        Ok((distance, whole_length))
+    }
+
+    // The place a signed distance along the edge from this one, to a micrometre, so that the fraction stays small enough to keep folding through a journal.
+    pub(super) fn beside(&self, held: &Held, distance: i64, what: &str) -> Result<Held, String> {
+        let run = self
+            .named(&held.edge)
+            .map_err(|error| format!("{what}: {error}"))?;
+        let whole_length = self.frame_length(run);
+        let at = held.param.as_rational();
+        let here =
+            i128::from(at.numerator()) * i128::from(whole_length) / i128::from(at.denominator());
+        let there = i64::try_from(here).map_err(|error| error.to_string())? + distance;
+        if there < 0 || there > whole_length {
+            return Err(format!(
+                "{what} reaches {there} along {}, which is {whole_length} long",
+                held.edge
+            ));
+        }
+        let share = Rational::new(there, whole_length).map_err(|error| error.to_string())?;
+        Ok(Held {
+            edge: held.edge.clone(),
+            param: Param::new(share).map_err(|error| error.to_string())?,
+            choose: held.choose,
         })
     }
 

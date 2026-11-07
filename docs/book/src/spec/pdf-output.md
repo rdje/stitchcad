@@ -23,7 +23,7 @@ let piece = |width: i64| DrawnPiece {
     grade_points: vec![],
     labels: vec![],
 };
-let pattern = |pieces| Pattern { seams: vec![], repairs: vec![],
+let pattern = |pieces| Pattern { seams: vec![], repairs: vec![], fits: vec![],
         style: "skirt".to_owned(), design: "01ARZ3NDEKTSV4RRFFQ69G5FAV".to_owned(), revision: "1".to_owned(), pieces };
 
 let fits = write_pdf(&pattern(vec![piece(200_000)]), PageLayout::Single(Sheet::A0)).expect("fits");

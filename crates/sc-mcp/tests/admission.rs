@@ -590,3 +590,37 @@ fn the_book_lists_every_tool_and_what_it_needs() {
         assert!(chapter.contains(&row), "the chapter has no row {row}");
     }
 }
+
+// D405: the server does not validate against a tool's schema, so nothing else would notice one that refuses what the tool does.
+#[test]
+fn the_draft_tools_schema_admits_everything_a_draft_holds() {
+    let tool = sc_api::TOOLS
+        .iter()
+        .find(|tool| tool.name == "draft_pattern")
+        .expect("the tool");
+    let schema = sc_store::parse(tool.schema).expect("valid");
+    let admitted = schema.as_object().expect("a schema")["properties"]
+        .as_object()
+        .expect("properties")
+        .clone();
+    let session = sc_store::parse(include_str!(
+        "../../../conformance/reference-bodice/session.json"
+    ))
+    .expect("valid");
+    let steps = session.as_object().expect("a session")["steps"]
+        .as_list()
+        .expect("steps")
+        .to_vec();
+    let draft = steps
+        .iter()
+        .find(|step| step.as_object().expect("a step")["do"].as_text() == Some("draft"))
+        .expect("a draft");
+    let mut held: Vec<String> = draft.as_object().expect("a step").keys().cloned().collect();
+    held.push("trues".to_owned());
+    for field in held.iter().filter(|field| field.as_str() != "do") {
+        assert!(
+            admitted.contains_key(field),
+            "the schema does not admit {field}"
+        );
+    }
+}

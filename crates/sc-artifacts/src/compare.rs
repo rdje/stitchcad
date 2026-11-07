@@ -222,6 +222,18 @@ fn compare_patterns(
             detail: format!("{:?} against {:?}", sorted(a), sorted(b)),
         });
     }
+    let solved = |pattern: &Pattern| {
+        let mut fits = pattern.fits.clone();
+        fits.sort();
+        fits
+    };
+    if solved(a) != solved(b) {
+        out.push(Difference {
+            piece: String::new(),
+            field: "fits",
+            detail: format!("{:?} against {:?}", solved(a), solved(b)),
+        });
+    }
     let open = |pattern: &Pattern| {
         let mut repairs = pattern.repairs.clone();
         repairs.sort();

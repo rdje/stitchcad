@@ -1,0 +1,1126 @@
+{
+  "design": "01ARZ3NDEKTSV4RRFFQ69G5FAV",
+  "format": 1,
+  "inputs": [
+    {
+      "token": "bust_girth",
+      "um": 940000
+    },
+    {
+      "token": "waist_girth",
+      "um": 740000
+    },
+    {
+      "token": "nape_to_waist",
+      "um": 410000
+    },
+    {
+      "token": "neck_girth",
+      "um": 370000
+    },
+    {
+      "token": "shoulder_length",
+      "um": 125000
+    },
+    {
+      "token": "across_back",
+      "um": 360000
+    },
+    {
+      "token": "across_chest",
+      "um": 340000
+    },
+    {
+      "token": "scye_depth",
+      "um": 220000
+    },
+    {
+      "token": "waist_to_apex",
+      "um": 170000
+    },
+    {
+      "token": "apex_from_cf",
+      "um": 90000
+    },
+    {
+      "token": "upper_arm_girth",
+      "um": 290000
+    },
+    {
+      "token": "wrist_girth",
+      "um": 160000
+    },
+    {
+      "token": "sleeve_length",
+      "um": 590000
+    },
+    {
+      "token": "ease_bust",
+      "um": 80000
+    },
+    {
+      "token": "ease_waist",
+      "um": 40000
+    },
+    {
+      "token": "ease_upper_arm",
+      "um": 40000
+    },
+    {
+      "token": "ease_wrist",
+      "um": 70000
+    },
+    {
+      "token": "front_shift",
+      "um": 5000
+    },
+    {
+      "token": "side_suppress",
+      "um": 25000
+    },
+    {
+      "token": "side_break",
+      "um": 100000
+    },
+    {
+      "token": "bust_dart_intake",
+      "um": 35000
+    },
+    {
+      "token": "bust_dart_gap",
+      "um": 25000
+    },
+    {
+      "token": "waist_dart_gap",
+      "um": 20000
+    },
+    {
+      "token": "back_dart_len",
+      "um": 140000
+    },
+    {
+      "token": "back_neck_rise",
+      "um": 20000
+    },
+    {
+      "token": "front_neck_extra",
+      "um": 10000
+    },
+    {
+      "token": "front_slope",
+      "um": 50000
+    },
+    {
+      "token": "back_slope",
+      "um": 40000
+    },
+    {
+      "token": "shoulder_ease",
+      "um": 6000
+    },
+    {
+      "token": "cap_ease_front",
+      "um": 12000
+    },
+    {
+      "token": "cap_ease_back",
+      "um": 18000
+    },
+    {
+      "token": "under_span_front",
+      "um": 75000
+    },
+    {
+      "token": "under_span_back",
+      "um": 85000
+    },
+    {
+      "token": "balance_front",
+      "um": 60000
+    },
+    {
+      "token": "balance_back",
+      "um": 60000
+    },
+    {
+      "token": "zip_len",
+      "um": 350000
+    },
+    {
+      "token": "sa_side",
+      "um": 15000
+    },
+    {
+      "token": "sa_shoulder",
+      "um": 15000
+    },
+    {
+      "token": "sa_armhole",
+      "um": 10000
+    },
+    {
+      "token": "sa_neck",
+      "um": 8000
+    },
+    {
+      "token": "sa_waist",
+      "um": 15000
+    },
+    {
+      "token": "sa_cb",
+      "um": 20000
+    },
+    {
+      "token": "sa_cap",
+      "um": 10000
+    },
+    {
+      "token": "sa_under",
+      "um": 15000
+    },
+    {
+      "token": "sa_sleeve_hem",
+      "um": 30000
+    },
+    {
+      "token": "sleeve_front_width",
+      "um": 169000
+    },
+    {
+      "token": "sleeve_back_width",
+      "um": 172000
+    }
+  ],
+  "recipe": "let garment_bust: length = bust_girth + ease_bust\nlet garment_waist: length = waist_girth + ease_waist\nlet garment_upper_arm: length = upper_arm_girth + ease_upper_arm\nlet garment_wrist: length = wrist_girth + ease_wrist\nlet quarter_bust: length = garment_bust / 4\nlet quarter_waist: length = garment_waist / 4\nlet front_bust_x: length = quarter_bust + front_shift\nlet back_bust_x: length = quarter_bust - front_shift\nlet front_waist_side: length = front_bust_x - side_suppress\nlet back_waist_side: length = back_bust_x - side_suppress\nlet waist_dart_front: length = front_waist_side - quarter_waist\nlet waist_dart_back: length = back_waist_side - quarter_waist\nlet neck_width: length = neck_girth / 5\nlet front_neck_drop: length = neck_girth / 5 + front_neck_extra\nlet back_underarm_y: length = nape_to_waist - scye_depth\nlet front_underarm_y: length = back_underarm_y + bust_dart_intake\nlet back_neck_y: length = nape_to_waist + back_neck_rise\nlet front_neck_y: length = back_neck_y + bust_dart_intake\nlet front_cf_y: length = front_neck_y - front_neck_drop\nlet front_shoulder_y: length = front_neck_y - front_slope\nlet back_shoulder_y: length = back_neck_y - back_slope\nlet back_shoulder_length: length = shoulder_length + shoulder_ease\nlet front_shoulder_run: length = sqrt(shoulder_length * shoulder_length - front_slope * front_slope)\nlet back_shoulder_run: length = sqrt(back_shoulder_length * back_shoulder_length - back_slope * back_slope)\nlet front_shoulder_x: length = neck_width + front_shoulder_run\nlet back_shoulder_x: length = neck_width + back_shoulder_run\nlet across_chest_half: length = across_chest / 2\nlet across_back_half: length = across_back / 2\nlet arm_front_first_x: length = across_chest_half + 22 mm\nlet arm_front_second_x: length = across_chest_half - 2 mm\nlet arm_front_second_y: length = (front_underarm_y + front_shoulder_y) / 2 + 10 mm\nlet arm_back_first_x: length = across_back_half + 20 mm\nlet arm_back_second_x: length = across_back_half - 2 mm\nlet arm_back_second_y: length = (back_underarm_y + back_shoulder_y) / 2 + 10 mm\nlet front_neck_first_x: length = neck_width - 4 mm\nlet front_neck_first_y: length = front_cf_y + front_neck_drop * 2 / 5\nlet front_neck_second_x: length = neck_width * 2 / 5\nlet back_neck_first_x: length = neck_width * 4 / 5\nlet back_neck_first_y: length = nape_to_waist + back_neck_rise / 4\nlet back_neck_second_x: length = neck_width * 2 / 5\nlet apex_y: length = waist_to_apex\nlet waist_dart_near: length = apex_from_cf - waist_dart_front / 2\nlet waist_dart_far: length = apex_from_cf + waist_dart_front / 2\nlet waist_dart_tip_y: length = apex_y - waist_dart_gap\nlet bust_dart_high: length = apex_y + bust_dart_intake / 2\nlet bust_dart_low: length = apex_y - bust_dart_intake / 2\nlet bust_dart_tip_x: length = apex_from_cf + bust_dart_gap\nlet back_dart_x: length = back_waist_side / 2\nlet back_dart_near: length = back_dart_x - waist_dart_back / 2\nlet back_dart_far: length = back_dart_x + waist_dart_back / 2\nlet cf_to_apex: length = front_cf_y - apex_y\nlet front_grain_x: length = front_bust_x * 2 / 3\nlet back_grain_x: length = back_bust_x * 2 / 3\nlet grain_low_y: length = 30 mm\nlet front_grain_high_y: length = front_shoulder_y - 40 mm\nlet back_grain_high_y: length = back_shoulder_y - 40 mm\nlet front_label_x: length = 30 mm\nlet front_label_y: length = front_underarm_y + 10 mm\nlet front_label_lower_y: length = front_underarm_y - 6 mm\nlet back_label_x: length = 30 mm\nlet back_label_y: length = back_underarm_y + 10 mm\nlet average_arm_rise: length = (front_shoulder_y - front_underarm_y + back_shoulder_y - back_underarm_y) / 2\nlet cap_height: length = average_arm_rise * 4 / 5\nlet sleeve_width_low: length = 100 mm\nlet sleeve_width_high: length = 300 mm\nlet sleeve_width: length = sleeve_front_width + sleeve_back_width\nlet sleeve_taper: length = (sleeve_width - garment_wrist) / 2\nlet sleeve_front_wrist_x: length = sleeve_front_width - sleeve_taper\nlet sleeve_back_wrist_x: length = sleeve_back_width - sleeve_taper\nlet wrist_y: length = cap_height - sleeve_length\nlet cap_front_first_x: length = sleeve_front_width * 11 / 20\nlet cap_front_second_x: length = sleeve_front_width * 9 / 20\nlet cap_back_first_x: length = sleeve_back_width * 9 / 20\nlet cap_back_second_x: length = sleeve_back_width * 11 / 20\nlet sleeve_grain_low_y: length = wrist_y + 40 mm\nlet sleeve_grain_high_y: length = cap_height - 60 mm\nlet sleeve_label_x: length = 15 mm\nlet sleeve_label_y: length = wrist_y + 120 mm\nlet notch_depth: length = 5 mm\nlet double_spacing: length = 8 mm\nassert bust_allocation: eps_num = 2 * (front_bust_x + back_bust_x) == garment_bust\nassert waist_closure_front: eps_num = front_waist_side - waist_dart_front == quarter_waist\nassert waist_closure_back: eps_num = back_waist_side - waist_dart_back == quarter_waist\nassert side_closure: eps_num = (front_underarm_y - side_break) - bust_dart_intake == back_underarm_y - side_break\nassert shoulder_closure: eps_geo = hypot(back_shoulder_run, back_slope) - shoulder_ease == hypot(front_shoulder_run, front_slope)\nassert sleeve_clears_arm: eps_num = min(sleeve_width, garment_upper_arm) == garment_upper_arm\nassert sleeve_taper_closure: eps_num = sleeve_front_wrist_x + sleeve_back_wrist_x == garment_wrist\n",
+  "steps": [
+    {
+      "do": "evaluate"
+    },
+    {
+      "balance_notches": [
+        {
+          "at": "balance_front",
+          "depth": "notch_depth",
+          "seam": "cap_front_right"
+        },
+        {
+          "at": "balance_front",
+          "depth": "notch_depth",
+          "seam": "cap_front_left"
+        },
+        {
+          "at": "balance_back",
+          "depth": "notch_depth",
+          "seam": "cap_back_right"
+        },
+        {
+          "at": "balance_back",
+          "depth": "notch_depth",
+          "seam": "cap_back_left"
+        }
+      ],
+      "do": "draft",
+      "fits": [
+        {
+          "between": [
+            "sleeve_width_low",
+            "sleeve_width_high"
+          ],
+          "seam": "cap_front_right",
+          "vary": "sleeve_front_width"
+        },
+        {
+          "between": [
+            "sleeve_width_low",
+            "sleeve_width_high"
+          ],
+          "seam": "cap_back_right",
+          "vary": "sleeve_back_width"
+        }
+      ],
+      "pieces": [
+        {
+          "darts": [
+            {
+              "apex": [
+                "apex_from_cf",
+                "waist_dart_tip_y"
+              ],
+              "far": [
+                "waist_dart_far",
+                "zero"
+              ],
+              "intake": "waist_dart_front",
+              "name": "waist_dart",
+              "near": [
+                "waist_dart_near",
+                "zero"
+              ]
+            },
+            {
+              "apex": [
+                "bust_dart_tip_x",
+                "apex_y"
+              ],
+              "far": [
+                "front_bust_x",
+                "bust_dart_high"
+              ],
+              "intake": "bust_dart_intake",
+              "name": "bust_dart",
+              "near": [
+                "front_bust_x",
+                "bust_dart_low"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "corner": "miter",
+              "name": "waist",
+              "to": [
+                "front_waist_side",
+                "zero"
+              ],
+              "width": "sa_waist"
+            },
+            {
+              "corner": "miter",
+              "name": "side_lower",
+              "to": [
+                "front_bust_x",
+                "side_break"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "miter",
+              "name": "side_upper",
+              "to": [
+                "front_bust_x",
+                "front_underarm_y"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "arm_front_first_x",
+                "front_underarm_y"
+              ],
+              "name": "armhole",
+              "second": [
+                "arm_front_second_x",
+                "arm_front_second_y"
+              ],
+              "to": [
+                "front_shoulder_x",
+                "front_shoulder_y"
+              ],
+              "width": "sa_armhole"
+            },
+            {
+              "corner": "miter",
+              "name": "shoulder",
+              "to": [
+                "neck_width",
+                "front_neck_y"
+              ],
+              "width": "sa_shoulder"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "front_neck_first_x",
+                "front_neck_first_y"
+              ],
+              "name": "neck",
+              "second": [
+                "front_neck_second_x",
+                "front_cf_y"
+              ],
+              "to": [
+                "zero",
+                "front_cf_y"
+              ],
+              "width": "sa_neck"
+            },
+            {
+              "corner": "miter",
+              "name": "cf",
+              "to": [
+                "zero",
+                "zero"
+              ],
+              "width": "zero"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "front_grain_x",
+                "grain_low_y"
+              ],
+              [
+                "front_grain_x",
+                "front_grain_high_y"
+              ]
+            ]
+          ],
+          "labels": [
+            {
+              "at": [
+                "front_label_x",
+                "front_label_y"
+              ],
+              "text": "bodice_front, size M, cut 1, shell, colorway not specified"
+            },
+            {
+              "at": [
+                "front_label_x",
+                "front_label_lower_y"
+              ],
+              "text": "place on fold at CF"
+            }
+          ],
+          "name": "bodice_front",
+          "notches": [
+            {
+              "aim": [
+                "sa_side",
+                "zero"
+              ],
+              "at": "1",
+              "depth": "notch_depth",
+              "edge": "side_lower",
+              "name": "side"
+            },
+            {
+              "along": "under_span_front",
+              "depth": "notch_depth",
+              "edge": "armhole",
+              "name": "armhole_front"
+            },
+            {
+              "along": "cf_to_apex",
+              "edge": "cf",
+              "inset": "apex_from_cf",
+              "name": "bust_point",
+              "type": "drill"
+            }
+          ],
+          "quantity": 1,
+          "start": [
+            "zero",
+            "zero"
+          ]
+        },
+        {
+          "darts": [
+            {
+              "apex": [
+                "back_dart_x",
+                "back_dart_len"
+              ],
+              "far": [
+                "back_dart_far",
+                "zero"
+              ],
+              "intake": "waist_dart_back",
+              "name": "waist_dart",
+              "near": [
+                "back_dart_near",
+                "zero"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "corner": "miter",
+              "name": "waist",
+              "to": [
+                "back_waist_side",
+                "zero"
+              ],
+              "width": "sa_waist"
+            },
+            {
+              "corner": "miter",
+              "name": "side_lower",
+              "to": [
+                "back_bust_x",
+                "side_break"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "miter",
+              "name": "side_upper",
+              "to": [
+                "back_bust_x",
+                "back_underarm_y"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "arm_back_first_x",
+                "back_underarm_y"
+              ],
+              "name": "armhole",
+              "second": [
+                "arm_back_second_x",
+                "arm_back_second_y"
+              ],
+              "to": [
+                "back_shoulder_x",
+                "back_shoulder_y"
+              ],
+              "width": "sa_armhole"
+            },
+            {
+              "corner": "miter",
+              "name": "shoulder",
+              "to": [
+                "neck_width",
+                "back_neck_y"
+              ],
+              "width": "sa_shoulder"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "back_neck_first_x",
+                "back_neck_first_y"
+              ],
+              "name": "neck",
+              "second": [
+                "back_neck_second_x",
+                "nape_to_waist"
+              ],
+              "to": [
+                "zero",
+                "nape_to_waist"
+              ],
+              "width": "sa_neck"
+            },
+            {
+              "corner": "miter",
+              "name": "cb",
+              "to": [
+                "zero",
+                "zero"
+              ],
+              "width": "sa_cb"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "back_grain_x",
+                "grain_low_y"
+              ],
+              [
+                "back_grain_x",
+                "back_grain_high_y"
+              ]
+            ]
+          ],
+          "labels": [
+            {
+              "at": [
+                "back_label_x",
+                "back_label_y"
+              ],
+              "text": "bodice_back_right, size M, cut 1, shell, colorway not specified"
+            }
+          ],
+          "name": "bodice_back_right",
+          "notches": [
+            {
+              "aim": [
+                "sa_side",
+                "zero"
+              ],
+              "at": "1",
+              "depth": "notch_depth",
+              "edge": "side_lower",
+              "name": "side"
+            },
+            {
+              "along": "under_span_back",
+              "depth": "notch_depth",
+              "edge": "armhole",
+              "name": "armhole_back",
+              "spacing": "double_spacing",
+              "type": "double"
+            },
+            {
+              "along": "zip_len",
+              "depth": "notch_depth",
+              "edge": "cb",
+              "name": "zip"
+            }
+          ],
+          "quantity": 1,
+          "start": [
+            "zero",
+            "zero"
+          ]
+        },
+        {
+          "labels": [
+            {
+              "at": [
+                "back_label_x",
+                "back_label_y"
+              ],
+              "text": "bodice_back_left, size M, cut 1, shell, colorway not specified"
+            }
+          ],
+          "mirror_of": "bodice_back_right",
+          "name": "bodice_back_left",
+          "quantity": 1
+        },
+        {
+          "edges": [
+            {
+              "corner": "envelope",
+              "name": "wrist",
+              "to": [
+                "sleeve_front_wrist_x",
+                "wrist_y"
+              ],
+              "width": "sa_sleeve_hem"
+            },
+            {
+              "corner": "miter",
+              "name": "under_front",
+              "to": [
+                "sleeve_front_width",
+                "zero"
+              ],
+              "width": "sa_under"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "cap_front_first_x",
+                "zero"
+              ],
+              "name": "cap_front",
+              "second": [
+                "cap_front_second_x",
+                "cap_height"
+              ],
+              "to": [
+                "zero",
+                "cap_height"
+              ],
+              "width": "sa_cap"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "-cap_back_first_x",
+                "cap_height"
+              ],
+              "name": "cap_back",
+              "second": [
+                "-cap_back_second_x",
+                "zero"
+              ],
+              "to": [
+                "-sleeve_back_width",
+                "zero"
+              ],
+              "width": "sa_cap"
+            },
+            {
+              "corner": "miter",
+              "name": "under_back",
+              "to": [
+                "-sleeve_back_wrist_x",
+                "wrist_y"
+              ],
+              "width": "sa_under"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "zero",
+                "sleeve_grain_low_y"
+              ],
+              [
+                "zero",
+                "sleeve_grain_high_y"
+              ]
+            ]
+          ],
+          "labels": [
+            {
+              "at": [
+                "sleeve_label_x",
+                "sleeve_label_y"
+              ],
+              "text": "sleeve_right, size M, cut 1, shell, colorway not specified"
+            }
+          ],
+          "name": "sleeve_right",
+          "notches": [
+            {
+              "along": "under_span_front",
+              "depth": "notch_depth",
+              "edge": "cap_front",
+              "name": "front"
+            },
+            {
+              "before_end": "under_span_back",
+              "depth": "notch_depth",
+              "edge": "cap_back",
+              "name": "back",
+              "spacing": "double_spacing",
+              "type": "double"
+            },
+            {
+              "aim": [
+                "zero",
+                "sa_cap"
+              ],
+              "at": "1",
+              "depth": "notch_depth",
+              "edge": "cap_front",
+              "name": "crown"
+            }
+          ],
+          "quantity": 1,
+          "start": [
+            "-sleeve_back_wrist_x",
+            "wrist_y"
+          ]
+        },
+        {
+          "labels": [
+            {
+              "at": [
+                "sleeve_label_x",
+                "sleeve_label_y"
+              ],
+              "text": "sleeve_left, size M, cut 1, shell, colorway not specified"
+            }
+          ],
+          "mirror_of": "sleeve_right",
+          "name": "sleeve_left",
+          "quantity": 1
+        }
+      ],
+      "seams": [
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
+            "piece": "bodice_front",
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
+            "piece": "bodice_back_right",
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
+          },
+          "name": "side_right"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "1",
+              "edge": "shoulder"
+            },
+            "piece": "bodice_back_right",
+            "to": {
+              "at": "0",
+              "edge": "shoulder"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "1",
+              "edge": "shoulder"
+            },
+            "piece": "bodice_front",
+            "to": {
+              "at": "0",
+              "edge": "shoulder"
+            }
+          },
+          "ease": "shoulder_ease",
+          "name": "shoulder_right"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "under_front"
+            },
+            "piece": "sleeve_right",
+            "to": {
+              "at": "1",
+              "edge": "under_front"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "1",
+              "edge": "under_back"
+            },
+            "piece": "sleeve_right",
+            "to": {
+              "at": "0",
+              "edge": "under_back"
+            }
+          },
+          "name": "under_right"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "cap_front"
+            },
+            "piece": "sleeve_right",
+            "to": {
+              "along": "under_span_front",
+              "edge": "cap_front"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "armhole"
+            },
+            "piece": "bodice_front",
+            "to": {
+              "along": "under_span_front",
+              "edge": "armhole"
+            }
+          },
+          "name": "underarm_front_right"
+        },
+        {
+          "a": {
+            "from": {
+              "along": "under_span_front",
+              "edge": "cap_front"
+            },
+            "piece": "sleeve_right",
+            "to": {
+              "at": "1",
+              "edge": "cap_front"
+            }
+          },
+          "b": {
+            "from": {
+              "along": "under_span_front",
+              "edge": "armhole"
+            },
+            "piece": "bodice_front",
+            "to": {
+              "at": "1",
+              "edge": "armhole"
+            }
+          },
+          "ease": "cap_ease_front",
+          "name": "cap_front_right"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "1",
+              "edge": "cap_back"
+            },
+            "piece": "sleeve_right",
+            "to": {
+              "before_end": "under_span_back",
+              "edge": "cap_back"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "armhole"
+            },
+            "piece": "bodice_back_right",
+            "to": {
+              "along": "under_span_back",
+              "edge": "armhole"
+            }
+          },
+          "name": "underarm_back_right"
+        },
+        {
+          "a": {
+            "from": {
+              "before_end": "under_span_back",
+              "edge": "cap_back"
+            },
+            "piece": "sleeve_right",
+            "to": {
+              "at": "0",
+              "edge": "cap_back"
+            }
+          },
+          "b": {
+            "from": {
+              "along": "under_span_back",
+              "edge": "armhole"
+            },
+            "piece": "bodice_back_right",
+            "to": {
+              "at": "1",
+              "edge": "armhole"
+            }
+          },
+          "ease": "cap_ease_back",
+          "name": "cap_back_right"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
+            "piece": "bodice_front",
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "side_lower"
+            },
+            "piece": "bodice_back_left",
+            "to": {
+              "at": "1",
+              "edge": "side_upper"
+            }
+          },
+          "name": "side_left"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "1",
+              "edge": "shoulder"
+            },
+            "piece": "bodice_back_left",
+            "to": {
+              "at": "0",
+              "edge": "shoulder"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "1",
+              "edge": "shoulder"
+            },
+            "piece": "bodice_front",
+            "to": {
+              "at": "0",
+              "edge": "shoulder"
+            }
+          },
+          "ease": "shoulder_ease",
+          "name": "shoulder_left"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "under_front"
+            },
+            "piece": "sleeve_left",
+            "to": {
+              "at": "1",
+              "edge": "under_front"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "1",
+              "edge": "under_back"
+            },
+            "piece": "sleeve_left",
+            "to": {
+              "at": "0",
+              "edge": "under_back"
+            }
+          },
+          "name": "under_left"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "cap_front"
+            },
+            "piece": "sleeve_left",
+            "to": {
+              "along": "under_span_front",
+              "edge": "cap_front"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "armhole"
+            },
+            "piece": "bodice_front",
+            "to": {
+              "along": "under_span_front",
+              "edge": "armhole"
+            }
+          },
+          "name": "underarm_front_left"
+        },
+        {
+          "a": {
+            "from": {
+              "along": "under_span_front",
+              "edge": "cap_front"
+            },
+            "piece": "sleeve_left",
+            "to": {
+              "at": "1",
+              "edge": "cap_front"
+            }
+          },
+          "b": {
+            "from": {
+              "along": "under_span_front",
+              "edge": "armhole"
+            },
+            "piece": "bodice_front",
+            "to": {
+              "at": "1",
+              "edge": "armhole"
+            }
+          },
+          "ease": "cap_ease_front",
+          "name": "cap_front_left"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "1",
+              "edge": "cap_back"
+            },
+            "piece": "sleeve_left",
+            "to": {
+              "before_end": "under_span_back",
+              "edge": "cap_back"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "armhole"
+            },
+            "piece": "bodice_back_left",
+            "to": {
+              "along": "under_span_back",
+              "edge": "armhole"
+            }
+          },
+          "name": "underarm_back_left"
+        },
+        {
+          "a": {
+            "from": {
+              "before_end": "under_span_back",
+              "edge": "cap_back"
+            },
+            "piece": "sleeve_left",
+            "to": {
+              "at": "0",
+              "edge": "cap_back"
+            }
+          },
+          "b": {
+            "from": {
+              "along": "under_span_back",
+              "edge": "armhole"
+            },
+            "piece": "bodice_back_left",
+            "to": {
+              "at": "1",
+              "edge": "armhole"
+            }
+          },
+          "ease": "cap_ease_back",
+          "name": "cap_back_left"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "cb"
+            },
+            "piece": "bodice_back_right",
+            "to": {
+              "at": "1",
+              "edge": "cb"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "cb"
+            },
+            "piece": "bodice_back_left",
+            "to": {
+              "at": "1",
+              "edge": "cb"
+            }
+          },
+          "name": "cb"
+        }
+      ],
+      "size": "M",
+      "style": "reference-bodice"
+    },
+    {
+      "do": "export_pattern",
+      "format": "canonical",
+      "path": "exports/reference-bodice.canonical.json"
+    },
+    {
+      "do": "export_pattern",
+      "format": "dxf",
+      "path": "exports/reference-bodice.dxf",
+      "semantics": "cut_as_1"
+    },
+    {
+      "do": "export_pattern",
+      "format": "pdf",
+      "layout": "a0_tiled",
+      "path": "exports/reference-bodice.pdf"
+    },
+    {
+      "do": "save"
+    }
+  ]
+}

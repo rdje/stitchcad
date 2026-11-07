@@ -27,10 +27,10 @@ pub use judge::{
     PieceExpectation, Span, SpanSide,
 };
 pub use pattern::{
-    Closure, ClosureKind, DrawnPiece, GradePoint, Line, Mark, MarkKind, Pattern, Repair, Seam,
+    Closure, ClosureKind, DrawnPiece, Fit, GradePoint, Line, Mark, MarkKind, Pattern, Repair, Seam,
     SeamSide, Text,
 };
 pub use pdf::{
     write_pdf, PageLayout, PdfArtifact, PdfError, Sheet, PDF_TARGET, PDF_WRITER, SCALE_SQUARE,
 };
-pub use seams::{stretch, stretch_length, walk, WalkError, WalkReport};
+pub use seams::{stretch, stretch_length, walk, WalkError, WalkReport, WALK_TOLERANCE};
