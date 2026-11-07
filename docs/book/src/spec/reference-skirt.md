@@ -59,7 +59,7 @@ The waist carries no ease because the closure is a zipper plus a hook-and-bar wa
 
 These are the constants of the **StitchCAD reference drafting**, named here so that the fixture is
 self-consistent and reviewable. They are *not* a reproduction of any commercial drafting system:
-ADR-0003 named Aldrich's metric pattern cutting as the system whose blocks ship for reference
+ADR-0003 named a drafting system whose blocks ship for reference, FreeSewing since 2026-11-07
 ([formula language §1.1](formula-language.md)), and this fixture is deliberately not a transcription
 of it, so its numbers carry none of that decision's verification debt.
 

@@ -179,3 +179,16 @@ How this applies:
 
 The bullets are the engineer's reading, given to the director on 2026-11-06.
 
+
+## Director ruling — 2026-11-07: the engineer decides procurement, fetches and pushes
+
+> Please decide yourself for (2)/(3)/(4), they better be sota, signoff and production-grade. Not sure what I have to do for (1) and (5)
+
+> Try to do (1) and (5) yourself. Is printing really necessary and is (5) really needed
+
+(1) printed square, (2) Aldrich's book for `G3-GRADING.16`, (3) four refused fetches, (4) a push before 400, (5) a
+real-plotter fixture and a sewing expert. Decided: (2) nothing bought; blocks from FreeSewing (MIT, read 2026-11-07),
+a community system, after G6. (3) nothing fetched here; Z3 and ezdxf (`G2-2D.4.third-party-reader`) on the hosted
+runner; the PDF library evaluation there before `G5-SHELLS.12`; no eframe, since `G5-SHELLS.1` is the native shell.
+(4) push now after the full gate; also at each gate exit or when a hosted-only proof is owed; 400 stays the bound.
+(1) and (5) need a person or machine this project lacks: `not met`, director authority, not holding the frontier.

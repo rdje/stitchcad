@@ -166,8 +166,9 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1016.
 
 - ID: `G3-GRADING.16`
-  Status: `blocked`:no source has been procured,and the leaf says a block with none is recorded not met and not drafted from recollection. The procurement seat is the director,acting. Created by `G0-CONTRACT.9`.
-  Goal: ship the **reference block set**: the blocks of the named system (Aldrich's metric pattern cutting,
+  Status: `pending`:scheduled after G6's clauses,since it owns no gate clause. Created by `G0-CONTRACT.9`.
+  Source: FreeSewing,MIT,chosen 2026-11-07 under the director's delegation because any reviewer can read it for nothing and cite it by commit. Aldrich's book is not bought. A community system,not an industry textbook.
+  Goal: ship the **reference block set**: the blocks of the named system (FreeSewing since 2026-11-07,
   `docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md`) transcribed into
   construction recipes — skirt, darted bodice, set-in sleeve, classic collar and trousers — each a recipe in
   the formula language and each an independent subject for the gates that consume it.

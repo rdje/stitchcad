@@ -52,7 +52,7 @@ There is no creation date, producer or file identifier, so two runs give one byt
 
 ## Why this writes its own PDF
 
-Roadmap §7.5 asks to evaluate `pdf-writer` and typst-class libraries over `printpdf` and to record the choice with its measurements. **That evaluation was not measured.** The harness's safety check refused the build that would have fetched them, and that refusal was not worked around.
+Roadmap §7.5 asks to evaluate `pdf-writer` and typst-class libraries over `printpdf` and to record the choice with its measurements. **That evaluation was not measured.** The harness's safety check refused the build that would have fetched them, and that refusal was not worked around. It is now to be measured on the hosted runner before the first language pack, because text that is not ASCII is the one thing this writer cannot do and a library might.
 
 So this writes PDF directly, in about 300 lines with no dependency, because what it needs is small: lines, one built-in font, pages and a cross-reference table. It has two known costs: text uses Helvetica, whose accents are not supported, so a non-ASCII label prints as `?`; and no third-party PDF library has been compared with it. If a label needs more, this choice should be revisited.
 

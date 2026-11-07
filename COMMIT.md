@@ -133,7 +133,8 @@ replays it; rules and examples are in `scripts/check_roadmap_lock.sh` and the bo
   `make probes` (session directive §16 — focused checks per commit, full CI before a push).
 - **No automatic exceptions.** Director ruling 2026-10-04 supersedes the former immediate-push
   exception for CI, doctrine and hook changes. Every ordinary push waits for **400 unpushed commits**;
-  an earlier push requires an explicit director request. Such changes carry local verification until
+  an earlier push requires an explicit director request, a gate exit, or a proof only the hosted runner
+  can give (director ruling 2026-11-07, which delegates that decision to the engineer). Such changes carry local verification until
   the next authorized push; never claim an unobserved runner verdict.
 - Derive whether the cadence is reached:
 

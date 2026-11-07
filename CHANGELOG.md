@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1028 — the director's three open decisions are decided,and a DXF library nobody here wrote joins the hosted run
+
+No book is bought:the reference blocks take FreeSewing,MIT. Nothing is fetched here:Z3 and ezdxf run on the hosted runner. The PDF library evaluation is measured there before the first language pack. Pushes are due at a gate exit too.
+
 ## STITCHCAD-G1-1027 — a factory profile file is read and checked,and every mistake in it names the field to fix
 
 The roadmap's example validates,and a test reads it out of the roadmap itself. An unknown holds no value and its default only ever gets offered. The content version moves when the content does,and only then. Nothing reads a profile yet.

@@ -4,8 +4,7 @@ A factory's cutter reads DXF. The `write_dxf` function writes the one target G2 
 [The interchange chapter](interchange-dialects.md) says why interchange is a closed list of targets rather than one format with options.
 
 **What works today.** The writer, its record, and a reader in the tests. **What does not exist yet:** the other targets and grading. The reference skirt's file is frozen, byte for byte, at
-`conformance/goldens/reference-skirt/`. **Nobody has opened these files in a CAD system.** They have been read only by a reader written in this repository, and no third-party DXF library has
-read them. Whether a real receiver accepts them is G6's question, and until then no claim of acceptance is made.
+`conformance/goldens/reference-skirt/`. **Nobody has opened these files in a CAD system.** They have been read by readers written in this repository. From the next push, ezdxf, a DXF library nobody here wrote, reads every committed one on the hosted runner, and no verdict from it has been observed yet. Whether a real receiver accepts them is G6's question, and until then no claim of acceptance is made.
 
 ```rust
 use sc_artifacts::{write_dxf, DrawnPiece, Flattening, Line, LineSemantics, Pattern};

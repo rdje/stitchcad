@@ -1,7 +1,7 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
 - Derive HEAD/ahead from Git;push cadence400 per COMMIT.md.
-- Next G4-PROFILES.2,typed rules in a profile;G2-04 waits on a person with a ruler;G3-05 is parked with commercial CAD;G3-GRADING.16 waits on a book.
+- Next G4-PROFILES.2,typed rules in a profile;G2-04 waits on a person with a ruler;G3-05 is parked with commercial CAD;G3-GRADING.16 is re-sourced to FreeSewing,after G6;push decisions are mine since 2026-11-07.
 - PNT active by director request2026-11-06. Director ruling2026-11-06:input checks on hold,all in on features (decision_product-work-takes-the-frontier.md). Stay on the roadmap through G6,commercial CAD parked:same decision. Pushed224a9805;hosted green.
 - Held,not cancelled:.5f.2 dependency/check/verify leaves are blocked;target/record-draft keeps the uncompiled .references.record drafts.
 - RAM:observe the trend,flag only a sustained rise above90%;no percentage stops work (docs/decisions/decision_ram-trend.md).

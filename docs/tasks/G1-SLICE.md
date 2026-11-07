@@ -1129,14 +1129,16 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   promotion: declined (no new lesson).
   Commit:STITCHCAD-G1-0994.
 - ID: `G1-SLICE.14`
-  Status: `in_progress`
+  Status: `done`
   Goal: the egui/iced dev shell for Stages 1–4 internal tools (ADR-0002's dev-shell ruling) —
   the harness the G2 viewer/editor and the conformance lab are built in, explicitly not the
   shipped product UX.
   Acceptance: the shell hosts a canvas and the command bus on both native and (where possible)
   browser; it is labeled a dev shell in the book so nobody mistakes it for the product.
-  Verification: the browser half exists as a page,`G2-2D.9`. The toolkit is open:fetching eframe was refused by the harness's safety check,and the director can allow it or accept the page. The native half is open.
-  Commit: `pending`
+  Verification: the browser half is the page of `G2-2D.9`. The native half is not built here,by the engineer's decision of 2026-11-07 under the director's delegation.
+  ROUTING EVIDENCE: ADR-0002 keeps the dev shell internal;`G5-SHELLS.1` is the Tauri native shell;`grep -c Tauri docs/tasks/G5-SHELLS.md` printed 3 rc=0.
+    It does not reproduce outside:no other tree needs an egui window,so nothing is fetched for one.
+  Commit: `STITCHCAD-G1-1028`
 - ID: `G1-SLICE.15`
   Status: `done`
   Goal: the license census (G1 exit: "license-compatible solver builds on all targets") — every

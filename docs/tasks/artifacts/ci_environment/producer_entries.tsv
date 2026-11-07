@@ -11,6 +11,7 @@ crates/sc-grading/Cargo.toml	platform	G3-GRADING.7	Declarative public build/outp
 crates/sc-profiles/Cargo.toml	platform	G4-PROFILES.1	Declarative public build/output contract; destination audit pending.
 scripts/check_golden_suites.sh	delegate	G3-GRADING.12	Runs the offset corpus and graded goldens through the local environment; writes only under target.
 docs/tasks/artifacts/grading/prove_goldens_catch_a_mutation.sh	delegate	G3-GRADING.12	Mutates a copy of the tree under target and restores it; touches nothing else.
+docs/tasks/artifacts/dxf_oracle/read_with_ezdxf.py	delegate	G2-2D.4.third-party-reader	Reads committed DXF with ezdxf on the hosted runner;writes only under target/dxf_oracle;never shipped.
 docs/tasks/artifacts/grading/independent_reader/compare_with_recipe.py	delegate	G3-GRADING.8	Compares a reader's output with the recipe; reads what it is given and writes nothing.
 docs/tasks/artifacts/grading/independent_reader/read_rul_independently.py	delegate	G3-GRADING.8	Kept verbatim as a separate agent wrote it;writes one file beside itself,which the runner places under target.
 docs/tasks/artifacts/grading/independent_reader/run_independent_reader.sh	delegate	G3-GRADING.8	Runs a separately written reader and a comparison on frozen files; writes only under target/independent-reader.

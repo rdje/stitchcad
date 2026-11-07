@@ -181,3 +181,7 @@ Owner:G1-SLICE.5f.2.context.contract. The
 requires actual Design/program/revision,authored Cartesian frame and typed current snapshot sources.
 Earlier declared outputs confer static availability,not live geometry. Source/context/existing-output binding
 are available;ordered program integration remains pending. Whole verification stays .verify,geometry G2/G3.
+
+## Amended 2026-11-07
+
+Named system: FreeSewing (MIT). See that day's director ruling.

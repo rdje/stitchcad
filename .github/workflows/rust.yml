@@ -32,9 +32,11 @@ jobs:
           ls -l target/wasm32-unknown-unknown/debug/*.rlib
       - name: Dependency census (the constraint kernel ships alone, with no Z3)
         run: test "$(cargo tree -p sc-constraints -e all --prefix none | wc -l)" -eq 1
-      - name: Install the Z3 oracle and a PDF renderer
-        run: sudo apt-get update && sudo apt-get install -y z3 poppler-utils
+      - name: Install the Z3 oracle, a PDF renderer and a DXF library nobody here wrote
+        run: sudo apt-get update && sudo apt-get install -y z3 poppler-utils python3-ezdxf
       - name: Z3 differential oracle (csp-z3, never shipped)
         run: cargo test -p sc-constraints --features csp-z3 --test z3_oracle
+      - name: Third-party DXF reader (ezdxf from the signed OS package, never shipped)
+        run: python3 -I -B docs/tasks/artifacts/dxf_oracle/read_with_ezdxf.py
       - name: Gauge (run every met G1 to G6 clause's check)
         run: bash scripts/gauge.sh --checks

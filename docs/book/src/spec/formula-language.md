@@ -54,8 +54,10 @@ sequence it records and a reordering is a change of meaning.
 ### 1.1 The named reference drafting system
 
 ADR-0003's second half requires one documented drafting system to ship as reference blocks, decided
-at G0. **The named system is Aldrich's metric pattern cutting** — Winifred Aldrich, *Metric Pattern
-Cutting for Women's Wear*, Wiley. Free drafting stays the primary authoring mode, and the reference
+at G0. **The named system is now FreeSewing**, an MIT-licensed community project that anyone can read for
+nothing and cite by commit. It was Aldrich's metric pattern cutting, Winifred Aldrich, *Metric Pattern
+Cutting for Women's Wear*, Wiley, until 2026-11-07, when the book had still not been bought. FreeSewing is a
+community system and not an industry textbook. Free drafting stays the primary authoring mode, and the reference
 block set is that system's blocks transcribed into recipes. Four rules follow:
 
 - the **method** is adopted, never the text: construction sequences and their measurement-derived
