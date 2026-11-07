@@ -3,7 +3,7 @@
 ## Metadata
 
 - Tree ID: `G3-GRADING`
-- Status: `proposed`
+- Status: `active`
 - Roadmap lane: `ROADMAP.md` §11 gate **G3 — Construction & grading** (sources: §3.1 darts /
   walking / truing, §3.3 two instantiation paths, §3.4 size systems, §4.1 identity contract,
   §15.12 notch types, ADR-0004 grading modes)
@@ -47,7 +47,7 @@ interchange that an independent engine can re-import, extreme sizes included.
 ## Task Tree
 
 - ID: `G3-GRADING`
-  Status: `proposed`
+  Status: `in_progress`
   Goal: construction operations and both instantiation paths work, and their divergence is measured.
   Children: `.1` … `.16`
 

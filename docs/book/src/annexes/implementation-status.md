@@ -11,6 +11,7 @@ requires the named contracts and later proof owners.
 | Owned source metadata | §3.1/§4.4; G1 | sc-core/sc-measure; G1-SLICE.6.4.2.d.4.3 | [Actual sources and exact set pins](../spec/design-inputs.md); focused ownership checks; full Design follows |
 | Canvas hosting | §5; G1 | spikes/canvas-host; G1-SLICE.13 | [The measurement and the verdict](../spec/canvas-hosting.md), for macOS only |
 | Canonical artifacts | §7.5; G2 | sc-artifacts; G2-2D.4/.5 | [One written form, and comparison by meaning](../spec/canonical-artifacts.md), and [DXF output](../spec/dxf-output.md) and [PDF output](../spec/pdf-output.md) |
+| Physical evaluation | §13 | G2-2D.7/.15 | [What to print, sew and measure](../spec/physical-evaluation.md). Nothing has been performed |
 | Conformance matrix | §13 | G2-2D.12 | [Each claim beside its check, and what is unclaimed](../spec/conformance-matrix.md) |
 | Mutation tests | §11 G2, §13 | sc-artifacts; G2-2D.11 | [Each fault caught by the check that names it](../spec/mutation-tests.md) |
 | API and MCP | §7.8; G1 | sc-api, sc-mcp; G1-SLICE.9 | [Local stdio, scoped authority and admission tests](../spec/api-and-mcp.md) |

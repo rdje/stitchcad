@@ -61,14 +61,14 @@ G3 is the earliest open gate that software can close. G2's only open clause need
 
 ## Distance to the G2 exit
 
-G2 is the earliest open gate: the first correct pattern. None of it exists yet, because G1 only proved the architecture runs.
+G2 is the first correct pattern. Seven of its eight clauses are met, each with its stated limits. The eighth needs a person with a ruler, and [physical evaluation](spec/physical-evaluation.md) says how.
 
 | Clause | What the roadmap asks | Met | Where it stands | Owning leaf |
 | --- | --- | --- | --- | --- |
 | `G2-01` | The reference skirt drafted through the command line, with deterministic replay | met | [The session](spec/reference-skirt.md) drafts all five pieces with the book's numbers, and two runs of the real program give identical bytes. Sewn, it has not been: no person has checked the shape | `G2-2D.8` |
 | `G2-02` | A minimal 2D viewer and editor over the same commands | met | [The dev shell](spec/dev-shell.md) draws the skirt and edits it through the bus, and what it records replays through the command line to the same bytes, in real Chrome. It is a page, not the egui the roadmap names, because that fetch was refused here. Saving does not outlive the page | `G2-2D.9` |
 | `G2-03` | Canonical DXF and a dimensionally correct PDF | met | [The DXF](spec/dxf-output.md) is frozen for the reference skirt. [The PDF](spec/pdf-output.md) measures true within a pixel under two renderers nobody here wrote. No CAD system has opened the DXF, and no third-party library has read it. No PDF has been printed | `G2-2D.5` |
-| `G2-04` | A printed scale square verified on paper | not met | [The PDF](spec/pdf-output.md) measures true on screen. Only a person with a ruler can do the rest, asked for at the end of G2 | `G2-2D.7` |
+| `G2-04` | A printed scale square verified on paper | not met | [The PDF](spec/pdf-output.md) measures true on screen. [Five minutes with a ruler](spec/physical-evaluation.md) does the rest, and it has been asked for | `G2-2D.7` |
 | `G2-05` | Offsets pass the pathology corpus | met | [The offset engine](spec/offsets.md) passes 37 cases, covering acute tips, loops and seam-length error, judged by checks that share no code with it. The corner shapes are unreviewed by a sewing expert | `G2-2D.3` |
 | `G2-06` | Native save and load preserve semantics | met | [A project](spec/project-store.md) holds how to draw the garment and redraws it to the same bytes, save and load and save leaves every byte, and two designs with identical contours and different recipes stay distinct. Undo history does not cross a reopen | `G2-2D.10` |
 | `G2-07` | Mutation tests fail for the right reasons | met | [31 mutants](spec/mutation-tests.md), each required to be caught by the check that names it. Grade mutants wait for G3, and the sewing spans are a fixture's table until the graph is data | `G2-2D.11` |
@@ -105,7 +105,7 @@ does not support yet with a plain error. The constraint kernel `.8`, the project
 command line `.10`, the runtime profiles `.11`, the license census `.15`, the browser run `.12` and the canvas spike `.13`
 are done, and the G1 exit review `.16` passed. The geometry kernel `G2-2D.1`, the offset engine `G2-2D.2`, its corpus `G2-2D.3`, the
 canonicalizer `G2-2D.4`, the DXF writer `G2-2D.5` and the drafted skirt `G2-2D.8` are done. The PDF writer `G2-2D.6` is written and measured, and waits only on the library comparison. The printed square `G2-2D.7` is measured on screen and waits for a person with a ruler. The viewer and editor `G2-2D.9`
-is done as a page, and its toolkit and native window stay open at `G1-SLICE.14`. Native save and load `G2-2D.10` is done. The mutation tests `G2-2D.11` and [the conformance matrix](spec/conformance-matrix.md) `G2-2D.12` are done. [The API and MCP server](spec/api-and-mcp.md) `G1-SLICE.9` works over local stdio. The agent gate `G2-2D.13` passed. What G2 has left is a person with a ruler.
+is done as a page, and its toolkit and native window stay open at `G1-SLICE.14`. Native save and load `G2-2D.10` is done. The mutation tests `G2-2D.11` and [the conformance matrix](spec/conformance-matrix.md) `G2-2D.12` are done. [The API and MCP server](spec/api-and-mcp.md) `G1-SLICE.9` works over local stdio. The agent gate `G2-2D.13` passed, and the toile protocol `G2-2D.15` is written. What G2 has left is a person with a ruler, so the next one is G3, starting with `G3-GRADING.1`.
 
 ## Implemented foundations
 

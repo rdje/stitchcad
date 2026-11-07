@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1011 — the G2 exit review,and what a person can measure
+
+G2's review reads 7 met,1 not met:a printed square on paper,which needs a person. Physical evaluation now says how,in five minutes,and how to make and measure a first toile,with each assumed constant's falsifying measurement and a record a test reads. Nothing has been performed. The frontier moves to G3.
+
 ## STITCHCAD-G1-1010 — the agent gate:two pinned-model sessions with only MCP and the book golden-match
 
 claude-sonnet-5-5 and claude-haiku-5-5,with no other tool,drafted the reference skirt. The command line replays each to its bytes,the judge raises nothing,and each golden-matches within 10 micrometres. A first session failed on what the book left open (D402) and is kept.

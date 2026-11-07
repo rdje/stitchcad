@@ -74,7 +74,7 @@ That reader shares the writer's idea of what a PDF means, so the file also has t
 
 Every one is within a pixel, and the error does not grow with distance, so no scale error is hiding under it. The recorded table is `conformance/printed-square/renderer-measurements.tsv`. Each run also draws squares of 99 and 100.2 mm in a small file of its own and requires both to fail. Making the writer 0.1% too large, or shifting its sheets by 0.3 mm, made this check fail, and neither was left in.
 
-**This measures pixels, not paper.** A printer has its own error, which only a ruler shows, and the units chapter keeps those two checks apart. **Hosted Linux has not run it yet.** It installs poppler for that, so it will be a third engine at the next push.
+**This measures pixels, not paper.** A printer has its own error, which only a ruler shows, and the units chapter keeps those two checks apart. [Physical evaluation](physical-evaluation.md) says how to measure it. **Hosted Linux has not run it yet.** It installs poppler for that, so it will be a third engine at the next push.
 
 ## Names used in this chapter
 

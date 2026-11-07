@@ -129,6 +129,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [The API and MCP server](spec/api-and-mcp.md)
 - [The mutation tests](spec/mutation-tests.md)
 - [The conformance matrix](spec/conformance-matrix.md)
+- [Physical evaluation](spec/physical-evaluation.md)
 - [The supported envelope](spec/feature-matrix.md)
 - [Uncertainty and numeric refusals](spec/measurement-inputs.md)
 - [Units and tolerances](spec/units-and-tolerances.md)

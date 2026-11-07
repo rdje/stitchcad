@@ -49,9 +49,9 @@ Nothing in this project has reached layer 4 or 5 yet.
 
 | Claim | Clause | Why it has no check yet | What would give it one |
 | --- | --- | --- | --- |
-| A printed scale square measures true on paper | `G2-04` | Only a person with a ruler can do it, and this measures pixels so far | One scan or photo beside a ruler, at the end of G2 |
+| A printed scale square measures true on paper | `G2-04` | Only a person with a ruler can do it, and this measures pixels so far | [Five minutes with a ruler](physical-evaluation.md) |
 | A CAD system opens these DXF files | — | No seat exists, and the director has parked this until StitchCAD is feature complete | A real receiver, at G6 |
-| The garment fits and sews | — | Nothing has been cut. Nobody who sews has reviewed the corner shapes or the waist curve | A domain reviewer and a toile |
+| The garment fits and sews | — | Nothing has been cut. Nobody who sews has reviewed the corner shapes or the waist curve | [A first toile](physical-evaluation.md) and a domain reviewer |
 | The canvas verdict holds on Windows and Linux | — | Only macOS was measured | A machine with a display |
 | All of this on Windows | — | The determinism job below has not run, and no Windows machine exists here | The first hosted run |
 

@@ -81,6 +81,7 @@
   - [The API and MCP server](spec/api-and-mcp.md)
   - [The mutation tests](spec/mutation-tests.md)
   - [The conformance matrix](spec/conformance-matrix.md)
+  - [Physical evaluation](spec/physical-evaluation.md)
 - [Formula syntax API](annexes/formula-syntax.md)
   - [Canonical formula rational values](annexes/formula-rationals.md)
   - [Trig certificate feasibility](annexes/formula-trig-certificates.md)
