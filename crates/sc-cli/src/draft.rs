@@ -11,9 +11,11 @@ use std::collections::BTreeMap;
 
 mod edges;
 mod equivalence;
+mod extremes;
 mod grade;
 use edges::{Answer, Edges, Held, Located};
-pub use equivalence::{classes, compare_size};
+pub use equivalence::{classes, compare_size, FORMAT, NUMERICAL};
+pub use extremes::{checks_on, Check};
 pub use grade::{derive_table, reconstruct, Conflict};
 
 /// The geometric tolerance for internal drafting, in micrometres: the 10 µm class of the units chapter.

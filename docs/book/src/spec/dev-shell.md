@@ -54,6 +54,7 @@ This table is every step a session can take, and how the shell reaches it. A tes
 | `plant_balance_notch` | Not offered yet: the viewer draws no seams |
 | `regenerate` | Not offered yet: the viewer draws one size |
 | `grade` | Not offered yet: the viewer draws one size |
+| `check_extremes` | Not offered yet: the viewer draws one size |
 | `edit_edge` | Not offered yet: the viewer does not name a piece's edges |
 | `references` | Not offered yet: the viewer does not name a piece's edges |
 | `repair_reference` | Not offered yet: the viewer does not name a piece's edges |

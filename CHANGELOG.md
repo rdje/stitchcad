@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1021 — the two ends of a size set,checked after coming through a written file
+
+The smallest and largest sizes are rebuilt from a .rul file written and read back,and every check runs on each,each failing in its own words. All three garments hold everywhere except their seams,by a stated amount.
+What reads the file is this project's own engine,and the report says so. The limits are assumptions. G3-06 met,39 of 66.
+
 ## STITCHCAD-G1-1020 — the two paths compared by quantity,with each finding named and nothing reconciled
 
 Every grade now reports each quantity's two values,the difference,its class and verdict. Corners agree exactly. On the bodice the armhole is a finding at every size but the sample,and that is the report working.

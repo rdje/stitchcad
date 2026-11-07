@@ -2,7 +2,7 @@
 
 A pattern at one size is not yet a product. The [instantiation chapter](instantiation-paths.md) says what the two ways of getting a garment's other sizes mean, and why neither replaces the other. This chapter is what you can do today.
 
-**What works today.** A draft can name its size set. `regenerate` draws every size of it, each a fresh evaluation of the recipe with nothing inherited from another, and says what drove every point. `grade` moves the sample by a [table of rules](grade-rules.md) and rebuilds each size with the recipe left out of it. Both are compared, quantity by quantity. **What does not exist yet:** any receiver reading the result, which is `G3-GRADING.8`.
+**What works today.** A draft can name its size set. `regenerate` draws every size of it, each a fresh evaluation of the recipe with nothing inherited from another, and says what drove every point. `grade` moves the sample by a [table of rules](grade-rules.md) and rebuilds each size with the recipe left out of it. Both are compared, quantity by quantity. `check_extremes` runs every check on the smallest and largest sizes after they have come through a written file. **What does not exist yet:** any receiver reading the result, which is `G3-GRADING.8`.
 
 ```rust
 use sc_cli::Running;
@@ -137,6 +137,25 @@ With `equivalence_path` it writes all of that with every quantity in `quantities
 
 **These are not chosen to pass, and they do not all pass.** On the bodice the armhole is a finding at every size but the sample. `T4` and `T5` are listed with no bound, because a receiver's tolerance and a factory's are theirs to declare, and none has. So a finding here says the two paths differ by more than this project can call the same. It does not say the garment is unusable, and only a factory's tolerance can say that. A test reads the table above against what the report measures.
 
+## The two ends of the set
+
+A size five breaks from a valid sample can still be wrong, so `check_extremes` rebuilds the smallest and largest sizes from a `.rul` file it has written and read back, and runs every check on each. It reports `through`, which says what read that file: **this project's own engine, because no target system is available,** and that is not the same evidence. Each check fails with its own words, and none clamps anything.
+
+| Check | Class | What it refuses | Limit |
+| --- | --- | --- | --- |
+| `declared_domain` | numerical | A coordinate past 1 km or a piece past 10 m, which means a unit went wrong | The units chapter's |
+| `offset_validity` | geometric | An allowance that crosses itself, or a size that cannot be drawn at all | None needed |
+| `minimum_curvature_radius` | geometric | A bend too tight for a knife, on a curve and not at a corner | `min_radius` |
+| `bounding_box_against_fabric` | physical | A piece wider across its grain than the cloth | `fabric_width` |
+| `seam_differential_against_ease` | geometric | A seam with more or less than it declares | The walk's own |
+| `notch_spacing` | physical | Two marks too close to tell apart | `notch_spacing` |
+| `dart_intake_against_maximum` | physical | A dart taking more than one can | `dart_intake` |
+| `finished_dimension` | exact | A dimension read from the drawing that is not what the recipe says | The walk's own, for each thing added up |
+
+A verdict is `holds`, `fails`, or `no_limit`. **A limit belongs to a factory,** and no factory profile exists, so each reference garment's draft declares the four in `limits` under `grading`, as assumptions: 5 mm, 1.5 m, 3 mm and 50 mm. With none declared, the verdict says so and no number is made up. `finished` lists what to read off the drawing: each has a `name`, says what it `equals`, and adds up `seams`, on `side` A or B, or measures the `widest` of pieces, `times` as often as the garment has them.
+
+**What it found.** On all three garments, at both ends, everything holds except the seams, which do not walk to what they declare, for the reason the table above gives. That is a bounded difference and not a clamped one: the bodice's cap is 2.6 mm out at its worst, and it says which seam by how much. A size too far to draw is refused by name when regenerating it, before anything is rebuilt.
+
 **What this does not show.** That these sizes fit anybody: they are what the recipe gives at those measurements, and a size chart nobody has fitted is a set of numbers. The steps are an engineer's and come from no standard. A test does measure each size from its drawing against what it asked for, which is what stops a family that closes on paper being wrong in the cloth, and it does that for three garments and only for the measurements named there.
 
 ## Names used in this chapter
@@ -184,6 +203,28 @@ With `equivalence_path` it writes all of that with every quantity in `quantities
 | `conflicts` | Contours that were not to change, and did |
 | `equivalence` | The two paths compared |
 | `equivalence_path` | Where to write the whole report |
+| `check_extremes` | The step that checks the two ends of the set |
+| `through` | What read the file |
+| `declared_domain` | A check |
+| `offset_validity` | A check |
+| `minimum_curvature_radius` | A check |
+| `bounding_box_against_fabric` | A check |
+| `seam_differential_against_ease` | A check |
+| `notch_spacing` | A check |
+| `dart_intake_against_maximum` | A check |
+| `finished_dimension` | A check |
+| `fails` | It is past its limit |
+| `no_limit` | Nothing has declared what would be too much |
+| `limits` | What a draft assumes a factory's limits are |
+| `min_radius` | The tightest bend allowed |
+| `fabric_width` | The cloth's width |
+| `dart_intake` | The most one dart may take |
+| `finished` | What to read off the drawing |
+| `equals` | What it should come to |
+| `seams` | Seams to add up |
+| `side` | Which side of a seam to add up |
+| `widest` | Pieces to measure across |
+| `times` | How many the garment has |
 | `provenance` | Where a table came from |
 | `classes` | The tolerance classes used |
 | `compared` | How many quantities |

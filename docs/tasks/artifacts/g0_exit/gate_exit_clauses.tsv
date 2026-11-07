@@ -24,7 +24,7 @@ G3-02	exit	darts, folds, walking/truing	crates/sc-cli/tests/walk.rs	cargo test -
 G3-03	exit	stable references survive	crates/sc-cli/tests/references.rs	cargo test -p sc-cli --test references	instrument	-	uses the core's journal and answers;a dart's ends are still positions,and one left off the sew line is refused by name	G3-GRADING.3
 G3-04	exit	both instantiation paths	crates/sc-cli/tests/equivalence.rs	cargo test -p sc-cli --test family --test rules --test equivalence	instrument	-	findings stand and are reported,not reconciled;T4 and T5 have no bound,because no receiver or profile has declared one	G3-GRADING.11
 G3-05	exit	re-imported into an independent engine	-	-	unbuilt	-	-	G3-GRADING.8
-G3-06	exit	extreme sizes reconstructed	-	-	unbuilt	-	-	G3-GRADING.9
+G3-06	exit	extreme sizes reconstructed	crates/sc-cli/tests/extremes.rs	cargo test -p sc-cli --test extremes	instrument	-	rebuilt through a written .rul file by this project's own engine,because no target system is available;seams report what they are out by;each limit is assumed,because no factory profile exists	G3-GRADING.9
 G3-07	exit	grading modes	-	-	unbuilt	-	-	G3-GRADING.10
 G3-08	exit	offset + grading golden suites	-	-	unbuilt	-	-	G3-GRADING.12
 G3-09	exit	every garment	-	-	unbuilt	-	-	G3-GRADING.14

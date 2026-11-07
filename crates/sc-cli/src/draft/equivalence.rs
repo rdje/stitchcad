@@ -10,6 +10,10 @@ use std::collections::BTreeMap;
 
 /// T1: one quantum. Two integers that should be the same number.
 const T1: i64 = 1;
+/// A point judged by the numerical class: both paths compute an integer.
+pub const NUMERICAL: (&str, i64) = ("T1", T1);
+/// A point that came through a written file: each axis is rounded to within 5 µm, so the two are within this.
+pub const FORMAT: (&str, i64) = ("T3", 8);
 /// T2: internal geometry, from the tightest consumer of it, which is walking a seam.
 const T2: i64 = 10;
 
@@ -27,6 +31,7 @@ pub fn classes() -> Value {
     };
     Value::List(vec![
         row("T1", Some(T1), "one quantum of the representation: a corner two paths both compute is an integer, so anything else is a bug"),
+        row("T3", Some(FORMAT.1), "the quantum of the file: two places of a millimetre round each axis to within 5 µm, so a point that came through one is within this"),
         row("T2", Some(T2), "the tightest consumer of internal geometry, which is a seam's walk: two lines within this of one curve still walk to a match"),
         row("seam", Some(WALK_TOLERANCE), "twice T2: what a walk can tell apart, so a seam further out than this is one a walk would call a defect"),
         row("T4", None, "declared per receiver, and no receiver has read these files"),
@@ -130,6 +135,7 @@ pub fn compare_size(
     (at_sample, at_size): (&Lengths, &Lengths),
     by_recipe: &Pattern,
     rebuilt: &Rebuilt,
+    point_class: (&'static str, i64),
 ) -> Result<(Vec<Value>, Vec<Value>), String> {
     let (base, here) = (
         points(at_sample, description)?,
@@ -182,8 +188,8 @@ pub fn compare_size(
                 ratio(recipe.0 - by_rule.0),
                 ratio(recipe.1 - by_rule.1),
             )),
-            class: "T1",
-            bound: T1,
+            class: point_class.0,
+            bound: point_class.1,
             owner: "the rule table",
         });
     }

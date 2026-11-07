@@ -358,6 +358,60 @@ impl GradeTable {
         )
     }
 
+    /// This table as a file gave it back: the same points, with the file's deltas, and marked as received. A file has only numbers, so what those numbers are comes from this table.
+    ///
+    /// # Errors
+    ///
+    /// The file's sizes are not this table's, or the two do not have the same rules.
+    pub fn as_read_from(&self, file: &crate::RulFile) -> Result<Self, GradeError> {
+        if file.sizes != self.sizes || file.sample != self.sample {
+            return Err(GradeError::new(format!(
+                "the file's sizes are {} with the sample {}, and this table's are {} with the sample {}",
+                file.sizes.join(" "),
+                file.sample,
+                self.sizes.join(" "),
+                self.sample
+            )));
+        }
+        let mut rules = Vec::with_capacity(self.rules.len());
+        for rule in &self.rules {
+            let line = file
+                .rules
+                .iter()
+                .find(|line| line.id == rule.id)
+                .ok_or_else(|| {
+                    GradeError::new(format!(
+                        "the file has no rule {} for {}",
+                        rule.id, rule.point
+                    ))
+                })?;
+            rules.push(Rule {
+                point: rule.point.clone(),
+                id: rule.id,
+                deltas: line.deltas.clone(),
+                zero: line.zero,
+            });
+        }
+        if let Some(extra) = file
+            .rules
+            .iter()
+            .find(|line| !self.rules.iter().any(|rule| rule.id == line.id))
+        {
+            return Err(GradeError::new(format!(
+                "the file has a rule {} that no point here has",
+                extra.id
+            )));
+        }
+        Self::new(
+            self.name.clone(),
+            (self.sample.clone(), self.sizes.clone()),
+            Convention::Cumulative,
+            Provenance::Received,
+            rules,
+            self.attributes.clone(),
+        )
+    }
+
     /// The table in canonical form.
     #[must_use]
     pub fn to_value(&self) -> Value {

@@ -719,6 +719,7 @@ impl<R: Repository> Session<R> {
                     (&known, at_size_lengths),
                     &regenerated,
                     &rebuilt,
+                    crate::draft::NUMERICAL,
                 )
                 .map_err(at_size)?;
                 quantities.extend(all);
@@ -833,6 +834,99 @@ impl<R: Repository> Session<R> {
             Value::Int(i64::try_from(table.rules().len()).unwrap_or(i64::MAX)),
         );
         result.insert("sizes".to_owned(), Value::List(reports));
+        result.insert("equivalence".to_owned(), Value::Object(equivalence));
+        Ok(Value::Object(result))
+    }
+
+    // The smallest and largest sizes, rebuilt from a written file, and each checked with its own diagnostic rather than a clamped value. What reads the file here is this project's own engine, and the report says so.
+    fn check_extremes(&mut self, step: usize) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "check_extremes", message);
+        let document = self
+            .document()
+            .ok_or_else(|| fail("there is nothing drafted to check yet".to_owned()))?;
+        let sizes = crate::family::sizes_of(&document).map_err(fail)?;
+        let at_sizes = self.lengths_at_sizes(step, &document, &sizes)?;
+        let table =
+            crate::draft::derive_table(&document, &at_sizes, &sizes.sample).map_err(fail)?;
+        let written = sc_grading::to_rul(&table).map_err(|error| fail(error.to_string()))?;
+        let file = sc_grading::from_rul(&written.text).map_err(|error| fail(error.to_string()))?;
+        let received = table
+            .as_read_from(&file)
+            .map_err(|error| fail(error.to_string()))?;
+        let known = self.lengths_for(step, Some(&document))?;
+        let mut checks = Vec::new();
+        let (mut quantities, mut findings) = (Vec::new(), Vec::new());
+        let ends: Vec<&(String, BTreeMap<String, i64>)> = match (at_sizes.first(), at_sizes.last())
+        {
+            (Some(first), Some(last)) if first.0 != last.0 => vec![first, last],
+            (Some(only), _) => vec![only],
+            _ => Vec::new(),
+        };
+        for (size, at_size) in ends {
+            let at_this = |message: String| fail(format!("size {size}: {message}"));
+            let rebuilt = match crate::draft::reconstruct(
+                &known,
+                &document,
+                &received,
+                size,
+                (&self.design_text, &self.revision_text()),
+            ) {
+                Ok(rebuilt) => rebuilt,
+                // It could not be drawn at all, which is the first thing wrong with it, so nothing later can be asked of it.
+                Err(message) => {
+                    checks.push(crate::draft::Check {
+                        check: "offset_validity",
+                        size: size.clone(),
+                        class: "geometric",
+                        verdict: "fails",
+                        detail: message,
+                    });
+                    continue;
+                }
+            };
+            checks.extend(
+                crate::draft::checks_on(size, &document, at_size, &rebuilt.pattern)
+                    .map_err(at_this)?,
+            );
+            let mut described = document.clone();
+            described.insert("size".to_owned(), Value::Text(size.clone()));
+            let regenerated = crate::draft::draft(
+                at_size,
+                &described,
+                &self.design_text,
+                &self.revision_text(),
+            )
+            .map_err(at_this)?;
+            let (all, found) = crate::draft::compare_size(
+                size,
+                &received,
+                &document,
+                (&known, at_size),
+                &regenerated,
+                &rebuilt,
+                crate::draft::FORMAT,
+            )
+            .map_err(at_this)?;
+            quantities.extend(all);
+            findings.extend(found);
+        }
+        let mut equivalence = BTreeMap::new();
+        equivalence.insert("provenance".to_owned(), Value::Text("received".to_owned()));
+        equivalence.insert("classes".to_owned(), crate::draft::classes());
+        equivalence.insert(
+            "compared".to_owned(),
+            Value::Int(i64::try_from(quantities.len()).unwrap_or(i64::MAX)),
+        );
+        equivalence.insert("findings".to_owned(), Value::List(findings));
+        let mut result = BTreeMap::new();
+        result.insert(
+            "through".to_owned(),
+            Value::Text("a .rul file, read back by this project's own engine".to_owned()),
+        );
+        result.insert(
+            "checks".to_owned(),
+            Value::List(checks.iter().map(crate::draft::Check::to_value).collect()),
+        );
         result.insert("equivalence".to_owned(), Value::Object(equivalence));
         Ok(Value::Object(result))
     }
@@ -1696,7 +1790,7 @@ fn solve(
 }
 
 /// The steps a session can take. Anything else is refused by name.
-pub const STEPS: [&str; 21] = [
+pub const STEPS: [&str; 22] = [
     "evaluate",
     "preview",
     "closures",
@@ -1708,6 +1802,7 @@ pub const STEPS: [&str; 21] = [
     "repair_reference",
     "regenerate",
     "grade",
+    "check_extremes",
     "change",
     "undo",
     "redo",
@@ -1791,9 +1886,8 @@ fn required(step: &str) -> Option<CommandAuthority> {
         }
         "preview" => Some(CommandAuthority::Propose),
         "save" => Some(CommandAuthority::Commit),
-        "draft" | "export_pattern" | "render" | "export" | "regenerate" | "grade" => {
-            Some(CommandAuthority::Generate)
-        }
+        "draft" | "export_pattern" | "render" | "export" | "regenerate" | "grade"
+        | "check_extremes" => Some(CommandAuthority::Generate),
         _ => None,
     }
 }
@@ -1929,6 +2023,7 @@ impl<R: Repository> Running<R> {
             "references" => state.references(step)?,
             "regenerate" => state.regenerate(step, item)?,
             "grade" => state.grade(step, item)?,
+            "check_extremes" => state.check_extremes(step)?,
             "repair_reference" => state.repair_reference(step, item)?,
             "change" => {
                 let token = item

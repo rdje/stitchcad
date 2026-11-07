@@ -188,7 +188,7 @@ Because the paths differ, their agreement is a **measured, reported** property, 
 Roadmap §3.3 is explicit that extreme sizes are checked *after target-system reconstruction*, not only at
 the base. The reason is that the reconstruction is where a rule table meets reality: a base size that is
 valid says nothing about a size five breaks away. The checks run on the reconstructed instance, in this
-order, and each produces a typed diagnostic rather than a clamped value:
+order, and each produces a typed diagnostic rather than a clamped value. [Grading a garment](grading.md) gives what each does today:
 
 | Check | Refuses | Class |
 | --- | --- | --- |

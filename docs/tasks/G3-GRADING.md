@@ -226,14 +226,21 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit: `pending`
 
 - ID: `G3-GRADING.9`
-  Status: `pending`
+  Status: `done`
   Goal: extreme sizes reconstructed and measured **after target-system reconstruction**, not just at
   the base size (§3.3, G3 exit).
   Acceptance: the smallest and largest sizes of the declared size system are reconstructed through
   the target path and measured against path A within the declared equivalence tolerance; a failure
   is reported as a bounded equivalence, not hidden.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-cli/**,crates/sc-grading/src/table.rs,crates/sc-api/src/lib.rs,crates/sc-viewer/src/shell.rs,conformance/reference-*/session.json,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-06 asks that sizes far from the sample be checked after the file,not before. WHERE nothing read a table back from its file or ran §7's checks:git grep -c check_extremes 611e32aa -- crates/sc-cli/src/session.rs →rc=1.
+  - [x] ADDRESSED,THROUGH THE FILE:a table is written as .rul,read back,given back its point names,and the two ends rebuilt from that,judging each point at the file's own quantum. cargo test -p sc-cli --test extremes →rc=0.
+  - [x] ADDRESSED,CHECKS:the unit domain,crossing allowances,tightest bend,fabric width,seams against ease,notch spacing,dart intake,and finished dimensions read off the drawing,each in its own words,each shown failing with its limit tightened,and no limit made up when none is declared.
+  - [x] FOUND:all three garments hold everywhere except their seams,by a stated amount. That is the bounded equivalence the leaf asks for and it stays visible.
+  - [x] NOT SHOWN,STATED:what reads the file is this project's own engine,because no target system is available,and G3-05 stays open for that. The four limits are assumptions,because no factory profile exists. Nobody has cut an extreme size.
+  - [x] NO REGRESSION:goldens byte-identical;gauge.sh --checks →rc=0;cargo test -p sc-units -p sc-geometry -p sc-artifacts -p sc-grading -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1021.
 
 - ID: `G3-GRADING.10`
   Status: `pending`

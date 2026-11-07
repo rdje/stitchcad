@@ -16,7 +16,7 @@ real product path passes its check. Commits and leaves do not move it.
 | G0 | 18 | 19 | The product and its semantics are specified. The evaluation-seat clause stays open by ruling |
 | G1 | 7 | 7 | The architecture runs for real in a browser |
 | G2 | 7 | 8 | A reference skirt is drafted and exported correctly |
-| G3 | 6 | 11 | Every garment the roadmap names drafts, grades and exports |
+| G3 | 7 | 11 | Every garment the roadmap names drafts, grades and exports |
 | G4 | 0 | 8 | Factory profiles work, including what is still unknown |
 | G5 | 0 | 6 | The native and browser applications exist |
 | G6 | 0 | 7 | The conformance lab shows it holds up outside this repository |
@@ -28,11 +28,11 @@ $ bash scripts/gauge.sh
 G0: 18 of 19 clauses met
 G1: 7 of 7 clauses met
 G2: 7 of 8 clauses met
-G3: 6 of 11 clauses met
+G3: 7 of 11 clauses met
 G4: 0 of 8 clauses met
 G5: 0 of 6 clauses met
 G6: 0 of 7 clauses met
-gauge: 38 of 66 clauses met through G6
+gauge: 39 of 66 clauses met through G6
 ```
 
 A count here comes from the clause tables, and a clause counts as met only when its check runs a real
@@ -52,7 +52,7 @@ G3 is the earliest open gate that software can close. G2's only open clause need
 | `G3-03` | Stable references survive edits | met | [Notches, grade points and seam ends hold named edges](spec/stable-references.md). A split, merge, reverse, trim or mirror keeps them on the same cloth, a delete raises a repair task, and a cutting file is refused while one is open. Closures still hold positions | `G3-GRADING.3` |
 | `G3-04` | Both instantiation paths | met | [Both work, and they are compared](spec/grading.md) quantity by quantity, with each finding named. Every corner agrees, and curves differ by up to 4.5 mm on the bodice, which is reported and not reconciled | `G3-GRADING.11` |
 | `G3-05` | A grade re-imported into an independent engine | not met | Not started | `G3-GRADING.8` |
-| `G3-06` | Extreme sizes reconstructed | not met | Not started | `G3-GRADING.9` |
+| `G3-06` | Extreme sizes reconstructed | met | [The smallest and largest sizes come through a written file](spec/grading.md) and every check runs on each, each in its own words. What reads the file is this project's engine, because no target system is available | `G3-GRADING.9` |
 | `G3-07` | The grading modes | not met | Not started | `G3-GRADING.10` |
 | `G3-08` | Offset and grading golden suites | not met | [The offset corpus](spec/offsets.md) and [the skirt's goldens](spec/reference-skirt.md) exist. No grade does | `G3-GRADING.12` |
 | `G3-09` | Every garment the roadmap names | not met | One exists, the skirt | `G3-GRADING.14` |
@@ -105,7 +105,7 @@ does not support yet with a plain error. The constraint kernel `.8`, the project
 command line `.10`, the runtime profiles `.11`, the license census `.15`, the browser run `.12` and the canvas spike `.13`
 are done, and the G1 exit review `.16` passed. The geometry kernel `G2-2D.1`, the offset engine `G2-2D.2`, its corpus `G2-2D.3`, the
 canonicalizer `G2-2D.4`, the DXF writer `G2-2D.5` and the drafted skirt `G2-2D.8` are done. The PDF writer `G2-2D.6` is written and measured, and waits only on the library comparison. The printed square `G2-2D.7` is measured on screen and waits for a person with a ruler. The viewer and editor `G2-2D.9`
-is done as a page, and its toolkit and native window stay open at `G1-SLICE.14`. Native save and load `G2-2D.10` is done. The mutation tests `G2-2D.11` and [the conformance matrix](spec/conformance-matrix.md) `G2-2D.12` are done. [The API and MCP server](spec/api-and-mcp.md) `G1-SLICE.9` works over local stdio. The agent gate `G2-2D.13` passed, and the toile protocol `G2-2D.15` is written. What G2 has left is a person with a ruler, so G3 has begun: [closures](spec/closures.md) `G3-GRADING.1` are done, and [walking and truing](spec/walking-and-truing.md) `G3-GRADING.2` too. [References that survive an edit](spec/stable-references.md) `G3-GRADING.3` is done too. [The bodice and sleeve](spec/reference-bodice.md) `G3-GRADING.4` is done too. [The classic collar](spec/reference-bodice.md) `G3-GRADING.15` is done too. [The trousers](spec/reference-trousers.md) `G3-GRADING.5` are done too. [Regeneration](spec/grading.md) `G3-GRADING.6` is done too. [Grade rules and the `.rul` file](spec/grade-rules.md) `G3-GRADING.7` are done too. [The equivalence report](spec/grading.md) `G3-GRADING.11` is done too. The next one is extreme sizes, `G3-GRADING.9`.
+is done as a page, and its toolkit and native window stay open at `G1-SLICE.14`. Native save and load `G2-2D.10` is done. The mutation tests `G2-2D.11` and [the conformance matrix](spec/conformance-matrix.md) `G2-2D.12` are done. [The API and MCP server](spec/api-and-mcp.md) `G1-SLICE.9` works over local stdio. The agent gate `G2-2D.13` passed, and the toile protocol `G2-2D.15` is written. What G2 has left is a person with a ruler, so G3 has begun: [closures](spec/closures.md) `G3-GRADING.1` are done, and [walking and truing](spec/walking-and-truing.md) `G3-GRADING.2` too. [References that survive an edit](spec/stable-references.md) `G3-GRADING.3` is done too. [The bodice and sleeve](spec/reference-bodice.md) `G3-GRADING.4` is done too. [The classic collar](spec/reference-bodice.md) `G3-GRADING.15` is done too. [The trousers](spec/reference-trousers.md) `G3-GRADING.5` are done too. [Regeneration](spec/grading.md) `G3-GRADING.6` is done too. [Grade rules and the `.rul` file](spec/grade-rules.md) `G3-GRADING.7` are done too. [The equivalence report](spec/grading.md) `G3-GRADING.11` is done too. [Extreme sizes](spec/grading.md) `G3-GRADING.9` are done too. The next one is the grading modes, `G3-GRADING.10`.
 
 ## Implemented foundations
 
