@@ -1,6 +1,7 @@
 //! Replays a session: every change goes through the command bus, with revision checks and undo.
 use crate::design::{build, declaration, Identities, Input};
 use crate::outline::svg;
+use core::cell::RefCell;
 use core::fmt;
 use sc_constraints::{
     Binding, Catalog, Domain, Expr, Limits, Outcome, Problem, Rule, TemplatePart, Value as Fact,
@@ -148,6 +149,8 @@ struct Session<R: Repository> {
     base: Project,
     design_text: String,
     recipe: String,
+    // What fits came to, by exactly what they depend on, so that it is invisible except in how long it takes.
+    fits_solved: RefCell<BTreeMap<String, Vec<Input>>>,
     drawing: Option<String>,
     pattern: Option<sc_artifacts::Pattern>,
     authorities: Vec<CommandAuthority>,
@@ -677,6 +680,16 @@ impl<R: Repository> Session<R> {
         let Some(listed) = description.get("fits").and_then(Value::as_list) else {
             return Ok(inputs);
         };
+        // Few answers are in use at once: the design as it is, and what a preview would make it.
+        const KEPT: usize = 8;
+        let key = format!(
+            "{from:?}|{}|{}",
+            self.recipe,
+            Value::Object(description.clone()).to_text()
+        );
+        if let Some(answer) = self.fits_solved.borrow().get(&key) {
+            return Ok(answer.clone());
+        }
         let fail = |message: String| Failure::at(step, "fit", message);
         // A closure has to hold at the answer. It need not hold at every value tried on the way there.
         let recipe = without_asserts(&self.recipe);
@@ -728,6 +741,11 @@ impl<R: Repository> Session<R> {
                     Length::from_micrometres(value).map_err(|error| fail(error.to_string()))?;
             }
         }
+        let mut kept = self.fits_solved.borrow_mut();
+        if kept.len() >= KEPT {
+            kept.clear();
+        }
+        kept.insert(key, inputs.clone());
         Ok(inputs)
     }
 
@@ -1529,6 +1547,7 @@ impl<R: Repository> Running<R> {
             recipe,
             drawing: None,
             pattern: None,
+            fits_solved: RefCell::new(BTreeMap::new()),
             authorities: caller.authorities.clone(),
             trace: Vec::new(),
         };

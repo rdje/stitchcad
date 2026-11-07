@@ -21,12 +21,14 @@ const GOLDEN_DXF: &str =
     include_str!("../../../conformance/goldens/reference-bodice/reference-bodice.dxf");
 // Twice T2: two lines each within T2 of one curve can differ by this much.
 const WALK_TOLERANCE: i64 = 20;
-const PIECES: [&str; 5] = [
+const PIECES: [&str; 7] = [
     "bodice_front",
     "bodice_back_right",
     "bodice_back_left",
     "sleeve_right",
     "sleeve_left",
+    "collar_right",
+    "collar_left",
 ];
 
 fn fields_of(value: &Value) -> &BTreeMap<String, Value> {
@@ -176,7 +178,8 @@ fn every_piece_the_book_lists_is_drafted_and_nothing_else() {
             BOOK.contains(&format!("| `{name}` |")),
             "the book's piece table has no row for {name}"
         );
-        assert_eq!(piece(pattern, name).quantity, 1, "{name}");
+        let upper_and_under = u32::from(name.starts_with("collar")) + 1;
+        assert_eq!(piece(pattern, name).quantity, upper_and_under, "{name}");
     }
 }
 
@@ -210,8 +213,8 @@ fn a_sleeve_cap_walks_to_its_declared_ease_and_the_finding_says_that_is_intended
     }
     assert_eq!(
         walks.len(),
-        15,
-        "seven seams on each side and the centre back"
+        19,
+        "nine seams on each side and the centre back"
     );
 }
 
@@ -347,7 +350,7 @@ struct Size {
 }
 
 // The chapter's size table: each size's change from M, per step.
-const STEP_CHANGE: [(&str, i64); 13] = [
+const STEP_CHANGE: [(&str, i64); 15] = [
     ("bust_girth", 40_000),
     ("waist_girth", 40_000),
     ("nape_to_waist", 5_000),
@@ -361,6 +364,8 @@ const STEP_CHANGE: [(&str, i64); 13] = [
     ("upper_arm_girth", 15_000),
     ("wrist_girth", 5_000),
     ("sleeve_length", 5_000),
+    ("collar_stand", 1_000),
+    ("collar_fall", 2_000),
 ];
 const SIZES: [Size; 5] = [
     Size {
@@ -488,6 +493,26 @@ fn every_size_draws_closes_and_walks_to_what_it_declares() {
             "{}",
             size.name
         );
+        // The stand and the fall are this size's, and the drawn collar is that deep at CB with its roll line that far up.
+        let collar = piece(&pattern, "collar_right");
+        assert!(
+            collar
+                .sew
+                .iter()
+                .any(|at| at.x() == 0 && at.y() == known["collar_depth"]),
+            "{}",
+            size.name
+        );
+        assert!(
+            collar.internal.iter().any(|line| line.from.x() == 0
+                && line.from.y() == input("collar_stand") + 1_000 * size.steps),
+            "{}: the roll line starts at the stand's height",
+            size.name
+        );
+        assert_eq!(
+            known["collar_depth"],
+            input("collar_stand") + input("collar_fall") + 3_000 * size.steps
+        );
     }
 }
 
@@ -566,9 +591,14 @@ fn the_fit_is_on_the_record_and_evaluate_shows_what_the_drawing_used() {
     let mut disk = MemoryRepository::new();
     let mut running = drawn(&mut disk);
     let pattern = running.pattern().expect("drawn").clone();
-    assert_eq!(pattern.fits.len(), 2);
+    assert_eq!(pattern.fits.len(), 4);
     let known = bindings(&mut running);
-    let sum: i64 = pattern.fits.iter().map(|fit| fit.value).sum();
+    let sum: i64 = pattern
+        .fits
+        .iter()
+        .filter(|fit| fit.vary.starts_with("sleeve"))
+        .map(|fit| fit.value)
+        .sum();
     assert_eq!(
         sum, known["sleeve_width"],
         "evaluate shows what the drawing used"
@@ -659,12 +689,12 @@ fn a_double_notch_is_its_spacing_apart_on_both_sides_of_the_seam() {
 fn every_edge_is_sewn_along_its_whole_length_or_named_free() {
     const FREE: [(&str, &str); 7] = [
         ("bodice_front", "waist"),
-        ("bodice_front", "neck"),
         ("bodice_front", "cf"),
         ("bodice_back", "waist"),
-        ("bodice_back", "neck"),
         ("sleeve", "wrist"),
-        ("sleeve", "zero"),
+        ("collar", "front_edge"),
+        ("collar", "outer"),
+        ("collar", "cb"),
     ];
     let (_, draft) = opening();
     let draft = fields_of(&draft);
@@ -1050,4 +1080,169 @@ fn the_sizes_drawn_are_the_sizes_the_book_lists() {
             size.name
         );
     }
+}
+
+fn sewn_along(line: &[sc_geometry::Point], from: (i64, i64), to: (i64, i64)) -> f64 {
+    let at = |x: i64, y: i64| sc_geometry::Point::new(x, y).expect("in range");
+    sc_artifacts::stretch_length(
+        &sc_artifacts::stretch(line, at(from.0, from.1), at(to.0, to.1)).expect("on the line"),
+    )
+}
+
+// The collar's two edges are concentric arcs, so that they differ by what the recipe says, at any size and any roll.
+#[test]
+fn a_collars_outer_edge_is_longer_than_its_neck_edge_by_the_declared_roll() {
+    for (roll, case) in [
+        (input("collar_roll"), "as declared"),
+        (25_000, "a flatter collar"),
+    ] {
+        let mut disk = MemoryRepository::new();
+        let mut running = drawn(&mut disk);
+        step(
+            &mut running,
+            &format!(r#"{{"do":"change","token":"collar_roll","um":{roll}}}"#),
+        )
+        .expect("changes");
+        step(&mut running, r#"{"do":"draft"}"#).expect("draws");
+        let known = bindings(&mut running);
+        let collar = piece(running.pattern().expect("drawn"), "collar_right").clone();
+        let neck_end = (known["collar_neck_end_x"], known["collar_neck_end_y"]);
+        let outer_end = (known["collar_outer_end_x"], known["collar_outer_end_y"]);
+        let neck = sewn_along(&collar.sew, (0, 0), neck_end);
+        let outer = sewn_along(&collar.sew, outer_end, (0, known["collar_depth"]));
+        assert!(
+            (outer - neck - roll as f64).abs() <= WALK_TOLERANCE as f64,
+            "{case}: {outer} less {neck}, and {roll} declared"
+        );
+        let walks = walked(&mut running);
+        for seam in [
+            "collar_back_right",
+            "collar_front_right",
+            "collar_back_left",
+            "collar_front_left",
+        ] {
+            assert_eq!(walks[seam].finding, "matches", "{case}: {seam}");
+            assert!(
+                walks[seam].unexplained.abs() <= WALK_TOLERANCE,
+                "{case}: {seam}"
+            );
+        }
+    }
+}
+
+// A roll line folded on and never cut is what the glossary marks as a hazard, so it is held in the written file, and on the arc it is meant to be.
+#[test]
+fn the_roll_line_is_on_the_internal_layer_and_never_on_the_cut_line() {
+    let mut disk = MemoryRepository::new();
+    let mut running = drawn(&mut disk);
+    let known = bindings(&mut running);
+    let collar = piece(running.pattern().expect("drawn"), "collar_right").clone();
+    assert!(collar.internal.len() >= 2, "an arc is drawn as short lines");
+    let centre_y = -(known["collar_radius"] as f64);
+    let radius = known["collar_roll_radius"] as f64;
+    for line in &collar.internal {
+        for at in [line.from, line.to] {
+            let away = ((at.x() as f64).powi(2) + (at.y() as f64 - centre_y).powi(2)).sqrt();
+            assert!(
+                (away - radius).abs() <= 20.0,
+                "{at:?} is {away} from the centre, not {radius}"
+            );
+            assert!(!collar.cut.contains(&at), "{at:?} is on the cut line");
+        }
+    }
+    // Read from the file a receiver gets, by the layer each line is written on.
+    let mut layer = String::new();
+    let mut block = String::new();
+    let mut entity = String::new();
+    let mut on_cut = Vec::new();
+    let mut on_internal = Vec::new();
+    let mut x = 0.0;
+    let lines: Vec<&str> = GOLDEN_DXF.lines().collect();
+    for pair in lines.chunks(2) {
+        let (code, value) = (pair[0].trim(), pair[1].trim());
+        match (code, entity.as_str()) {
+            ("0", _) => value.clone_into(&mut entity),
+            ("2", "BLOCK") => value.clone_into(&mut block),
+            ("8", "POLYLINE") => value.clone_into(&mut layer),
+            ("10", "VERTEX") => x = value.parse().expect("a number"),
+            ("20", "VERTEX") if block == "collar_right_M" => {
+                let y: f64 = value.parse().expect("a number");
+                let point = (
+                    (x * 1000.0_f64).round() as i64,
+                    (y * 1000.0_f64).round() as i64,
+                );
+                match layer.as_str() {
+                    "CUT" => on_cut.push(point),
+                    "INTCUT" => on_internal.push(point),
+                    _ => {}
+                }
+            }
+            _ => {}
+        }
+    }
+    assert!(!on_cut.is_empty(), "the block has a cut line");
+    for line in &collar.internal {
+        let start = (line.from.x(), line.from.y());
+        assert!(on_internal.contains(&start), "{start:?} is not on INTCUT");
+        assert!(!on_cut.contains(&start), "{start:?} is on CUT");
+    }
+}
+
+#[test]
+fn a_collar_that_was_not_fitted_is_a_defect_at_the_neck_by_how_much_it_is_out() {
+    let (bare, draft) = opening();
+    let mut changed = fields_of(&draft).clone();
+    let kept: Vec<Value> = changed["fits"]
+        .as_list()
+        .expect("fits")
+        .iter()
+        .filter(|fit| {
+            fields_of(fit)["vary"]
+                .as_text()
+                .is_some_and(|vary| vary.starts_with("sleeve"))
+        })
+        .cloned()
+        .collect();
+    changed.insert("fits".to_owned(), Value::List(kept));
+    let mut disk = MemoryRepository::new();
+    let mut running = Running::open(&bare, &mut disk).expect("opens");
+    running.step(&Value::Object(changed)).expect("draws");
+    let walks = walked(&mut running);
+    // What the session stores for these two is only what they hold until a fit solves them, and it is not the neck's length.
+    assert_eq!(walks["collar_back_right"].finding, "defect");
+    assert_eq!(walks["collar_front_right"].finding, "defect");
+    assert!(
+        (walks["collar_back_right"].unexplained
+            - (input("collar_back_span") - walks["collar_back_right"].b))
+            .abs()
+            <= WALK_TOLERANCE
+    );
+}
+
+#[test]
+fn a_collar_with_no_roll_is_refused_rather_than_drawn_straight() {
+    let mut disk = MemoryRepository::new();
+    let mut running = drawn(&mut disk);
+    step(
+        &mut running,
+        r#"{"do":"change","token":"collar_roll","um":0}"#,
+    )
+    .expect("changes");
+    let refused = step(&mut running, r#"{"do":"draft"}"#).expect_err("no such arc");
+    assert!(refused.contains("collar_radius"), "{refused}");
+}
+
+#[test]
+fn an_edit_to_the_neck_keeps_the_collar_on_it() {
+    let mut disk = MemoryRepository::new();
+    let mut running = drawn(&mut disk);
+    step(
+        &mut running,
+        r#"{"do":"edit_edge","piece":"bodice_front","op":"split","edge":"neck","at":"2/5","into":["neck_low","neck_high"]}"#,
+    )
+    .expect("splits");
+    step(&mut running, r#"{"do":"draft"}"#).expect("draws");
+    let walks = walked(&mut running);
+    assert_eq!(walks["collar_front_right"].finding, "matches");
+    assert_eq!(walks["collar_back_right"].finding, "matches");
 }

@@ -2,7 +2,7 @@
 
 A skirt's seams all match, so it cannot show the thing that makes a set-in sleeve hard: the sleeve's cap is meant to be longer than the armhole it is sewn into, by an amount somebody chose, and that difference has to be told apart from a mistake. So this garment exists to carry [a declared ease](walking-and-truing.md) on a real seam, and every number in this chapter has a source, as the [reference skirt's](reference-skirt.md) do.
 
-**What works today.** A darted bodice front and back with a set-in sleeve, drafted through the recipe from body measurements. A cap fitted to its armhole by a declared ease at the front and the back. A bust dart that the side seam accounts for. Single and double notches, and a drill hole at the bust point. Five sizes, each of which draws, closes and walks. **What does not exist yet:** the [classic collar](../availability.md) that finishes the neck, which is `G3-GRADING.15`. Grading this garment by rule rather than by re-drafting each size, which is `G3-GRADING.7`. Any fit on a body: nobody has cut this in cloth, and every drafting constant below is an engineer's, unreviewed.
+**What works today.** A darted bodice front and back with a set-in sleeve, drafted through the recipe from body measurements. A cap fitted to its armhole by a declared ease at the front and the back. A bust dart that the side seam accounts for. A classic collar with a stand, a fall and a roll line, fitted to the neck. Single and double notches, and a drill hole at the bust point. Five sizes, each of which draws, closes and walks. **What does not exist yet:** grading this garment by rule rather than by re-drafting each size, which is `G3-GRADING.7`. Any fit on a body: nobody has cut this in cloth, and every drafting constant below is an engineer's, unreviewed.
 
 ```rust
 use sc_cli::Running;
@@ -34,7 +34,8 @@ A fitted bodice with a one-piece long sleeve, at a base size that shares the [re
 
 - a **front cut on the fold** at CF, with a bust dart from the side seam and a waist dart below the bust point;
 - a **back as a mirrored pair** with a waist dart and a CB seam for a zipper. The back shoulder is longer than the front's and eased to it, in place of a shoulder dart;
-- a **set-in sleeve** in one piece, a mirrored pair, taking its width from the armhole it has to fit.
+- a **set-in sleeve** in one piece, a mirrored pair, taking its width from the armhole it has to fit;
+- a **classic collar** in two mirrored halves, each cut twice for its upper and under layers. They meet at CB, because the zipper opens the back, and at CF.
 
 ## 2. Measurements
 
@@ -90,6 +91,9 @@ Named so that they can be reviewed and changed. They are not a reproduction of a
 | `balance_front` | 60 mm | how far above the front notch a balance notch sits, along the cap |
 | `balance_back` | 60 mm | how far above the back notches a balance notch sits, along the cap |
 | `zip_len` | 350 mm | how far down CB the zipper runs |
+| `collar_stand` | 30 mm | how far the collar stands from the neck edge to the roll line |
+| `collar_fall` | 40 mm | how far it falls from the roll line to its outer edge |
+| `collar_roll` | 15 mm | how much longer its outer edge is than its neck edge, on each half |
 
 Allowances, each on its own edge:
 
@@ -104,6 +108,7 @@ Allowances, each on its own edge:
 | `sa_cap` | 10 mm | the sleeve cap |
 | `sa_under` | 15 mm | the sleeve's under-seam |
 | `sa_sleeve_hem` | 30 mm | the sleeve hem |
+| `sa_collar` | 8 mm | every edge of the collar |
 
 ## 4. Derived values
 
@@ -140,6 +145,11 @@ Every value here comes from the recipe, in `conformance/reference-bodice/session
 | `sleeve_width` | 341.405 mm | `sleeve_front_width + sleeve_back_width` |
 | `sleeve_taper` | 55.703 mm | (sleeve_width − garment_wrist) / 2 |
 | `wrist_y` | -434 mm | cap_height − sleeve_length |
+| `collar_depth` | 70 mm | `collar_stand + collar_fall` |
+| `collar_neck_length` | 199.887 mm | `collar_back_span + collar_front_span` |
+| `collar_radius` | 932.806 mm | `collar_neck_length * collar_depth / collar_roll` |
+| `collar_outer_radius` | 1002.806 mm | `collar_radius + collar_depth` |
+| `collar_roll_radius` | 962.806 mm | `collar_radius + collar_stand` |
 
 ## 5. What is solved, and why
 
@@ -149,10 +159,24 @@ An armhole is a curve, so its length is only known once it is drawn, and a cap's
 | --- | --- | --- | --- |
 | `sleeve_front_width` | 168.979 mm | `cap_front_right` | `sleeve_width_low` and `sleeve_width_high` |
 | `sleeve_back_width` | 172.426 mm | `cap_back_right` | `sleeve_width_low` and `sleeve_width_high` |
+| `collar_back_span` | 78.431 mm | `collar_back_right` | `collar_span_low` and `collar_span_high` |
+| `collar_front_span` | 121.456 mm | `collar_front_right` | `collar_span_low` and `collar_span_high` |
 
 **The cap's height is chosen and its width is solved.** That is an engineer's choice. A patternmaker might fix the width from the arm and find the height instead, and one height would then have to suit two seams at once. So here the sleeve's width comes out of the armhole, and the recipe's `sleeve_clears_arm` is what stops it coming out too narrow for the arm: the sleeve here clears `garment_upper_arm` by 11.4 mm.
 
-## 6. Closure checks
+## 6. The collar
+
+**Its two edges are concentric arcs,** which is what makes the roll a declared quantity and not something measured afterward. Two arcs that turn through the same angle differ in length by that angle times the distance between them. So the recipe takes `collar_roll` as given, and finds the angle and the radius from it, and the difference cannot be anything else.
+
+| Token | What it is |
+| --- | --- |
+| `collar_angle` | `collar_roll / collar_depth` in radians, as an angle. A recipe cannot hold π exactly, so this uses `57.29578 deg` to the radian, which is good to better than a micrometre here |
+| `collar_back_span` | The length of neck edge from CB to the shoulder, equal to the back neck |
+| `collar_front_span` | The length of neck edge from the shoulder to CF, equal to the front neck |
+
+The **roll line** is the arc between them, at `collar_stand` from the neck edge, and it is an internal line. It is written on the `INTCUT` layer, and never on `CUT`, and a test reads that from the written file. A [named-layer file](dxf-output.md) has one layer for internal lines and for holes alike, so what a receiver makes of that layer is something this project has not been able to test.
+
+## 7. Closure checks
 
 Each is an `assert` in the recipe, so a measurement that breaks one refuses the whole recipe by that name. Each holds at the solved widths, and need not hold at the values tried on the way there.
 
@@ -165,8 +189,10 @@ Each is an `assert` in the recipe, so a measurement that breaks one refuses the 
 | `shoulder_closure` | The back shoulder less `shoulder_ease` is the front's | Each is drawn from a length and a slope, so this is to T2 |
 | `sleeve_clears_arm` | The sleeve is at least `garment_upper_arm` wide | An arm has to fit in it |
 | `sleeve_taper_closure` | The two wrist positions add to `garment_wrist` | The wrist is what was asked for |
+| `collar_length_closure` | The neck arc is `collar_neck_length` long | The arc's radius and angle are the length they were derived from |
+| `collar_roll_closure` | The outer arc less the neck arc is `collar_roll` | The roll is what was declared, to T2 |
 
-## 7. Pieces
+## 8. Pieces
 
 | Piece | Quantity | What it is |
 | --- | --- | --- |
@@ -175,6 +201,8 @@ Each is an `assert` in the recipe, so a measurement that breaks one refuses the 
 | `bodice_back_left` | 1 | Its mirror |
 | `sleeve_right` | 1 | The right sleeve. The front of the arm is at positive x |
 | `sleeve_left` | 1 | Its mirror |
+| `collar_right` | 2 | The right half of the collar, upper and under |
+| `collar_left` | 2 | Its mirror, upper and under |
 
 The edges of each are named, and everything that holds a place on one [holds it by that name](stable-references.md).
 
@@ -186,15 +214,19 @@ The edges of each are named, and everything that holds a place on one [holds it 
 | `armhole` | Each bodice piece | Underarm to the shoulder's end |
 | `shoulder` | Each bodice piece | The shoulder's end to the neck |
 | `neck` | Each bodice piece | The neck's side to CF or CB |
+| `neck` | Each collar | CB to CF, an arc |
+| `front_edge` | Each collar | CF, from the neck edge to the outer edge |
+| `outer` | Each collar | CF to CB, an arc |
 | `cf` | `bodice_front` | Neck to waist, with no allowance, on the fold |
 | `cb` | The back | Nape to waist |
+| `cb` | Each collar | The outer edge to the neck edge |
 | `wrist` | Each sleeve | Back to front |
 | `under_front` | Each sleeve | Wrist to the front underarm |
 | `cap_front` | Each sleeve | The front underarm to the crown |
 | `cap_back` | Each sleeve | The crown to the back underarm |
 | `under_back` | Each sleeve | The back underarm to the wrist |
 
-## 8. Sewing graph
+## 9. Sewing graph
 
 Each armhole is two stretches, so that what the cap has to spare goes where it is wanted. Below the notches nothing is eased, because a sleeve eased under the arm pulls. Above them everything is, because that is what makes the room over the shoulder.
 
@@ -207,6 +239,8 @@ Each armhole is two stretches, so that what the cap has to spare goes where it i
 | `cap_front_right`, `cap_front_left` | `cap_front`, notch to crown | The front `armhole`, notch to shoulder | `cap_ease_front` |
 | `underarm_back_right`, `underarm_back_left` | `cap_back`, underarm to its notches | The back `armhole` to its notches | Nothing |
 | `cap_back_right`, `cap_back_left` | `cap_back`, notches to crown | The back `armhole`, notches to shoulder | `cap_ease_back` |
+| `collar_back_right`, `collar_back_left` | The collar's `neck`, CB to `collar_back_span` | The back `neck` | Nothing |
+| `collar_front_right`, `collar_front_left` | The collar's `neck`, from there to CF | The front `neck` | Nothing |
 | `cb` | The right back's CB | The left back's | Nothing |
 
 Everything else is finished rather than sewn to another piece. A test holds this list against the edges, in both directions:
@@ -214,13 +248,14 @@ Everything else is finished rather than sewn to another piece. A test holds this
 | Piece | Edge | Finished by |
 | --- | --- | --- |
 | `bodice_front` | `waist` | Whatever it is joined to, or a hem |
-| `bodice_front` | `neck` | The collar, which is `G3-GRADING.15` |
 | `bodice_front` | `cf` | The fold |
 | `bodice_back` | `waist` | The same as the front |
-| `bodice_back` | `neck` | The collar |
 | `sleeve` | `wrist` | A hem |
+| `collar` | `front_edge` | Its other layer |
+| `collar` | `outer` | Its other layer |
+| `collar` | `cb` | Its other layer, where the zipper opens |
 
-## 9. Notch scheme
+## 10. Notch scheme
 
 **One at the front, two at the back,** so that a sleeve cannot be set in the wrong way round without somebody seeing it. A `double` notch is two marks either side of the place it holds. Each stretch of the armhole has a balance notch too, [planted](walking-and-truing.md) at the same share of both sides, so the ease lies evenly between landmarks.
 
@@ -233,9 +268,10 @@ Everything else is finished rather than sewn to another piece. A test holds this
 | `back` | Each sleeve | `double` | `under_span_back` back from the end of `cap_back` |
 | `crown` | Each sleeve | `single` | The top of the cap, meeting the shoulder seam |
 | `zip` | The back | `single` | `zip_len` down `cb` |
+| `shoulder` | Each collar | `single` | `collar_back_span` along its `neck`, meeting the shoulder seam |
 | `bust_point` | `bodice_front` | `drill` | `apex_from_cf` in from `cf`, at the bust point's level |
 
-## 10. Sizes
+## 11. Sizes
 
 One step moves each measurement by the amount below. A test draws each size from the base by changing the measurements, then checks that it closes and walks. That is a re-draft for each size, and not grading, and a label on any of them still says M.
 
@@ -262,12 +298,14 @@ One step moves each measurement by the amount below. A test draws each size from
 | `upper_arm_girth` | 15 mm change |
 | `wrist_girth` | 5 mm change |
 | `sleeve_length` | 5 mm change |
+| `collar_stand` | 1 mm change |
+| `collar_fall` | 2 mm change |
 
-## 11. The files
+## 12. The files
 
 `conformance/reference-bodice/session.json` is this chapter as a session, and its files are frozen at `conformance/goldens/reference-bodice/`. `cargo test -p sc-cli --test bodice` holds it to this chapter. It measures the cap and the armhole a second way as well, by integrating each curve from its control points rather than by walking a drawn line.
 
-## 12. What this does not show
+## 13. What this does not show
 
 **Whether it fits anybody.** Every constant in §3 is `assumed`, the domain seat in [governance](../governance.md) is vacant, and no toile has been made. So what is shown is that the garment is consistent: it closes, its seams meet where they say they do, and its ease is what it declares. A cap that is 30 mm longer than its armhole is not therefore a cap that sets well, and the split between front and back is an engineer's. The [physical protocol](physical-evaluation.md) says how to find out, and it applies here as it does to the skirt.
 
@@ -279,14 +317,15 @@ One step moves each measurement by the amount below. A test draws each size from
 | `shoulder_ease` | Sew the shoulder | It will not ease in without a pucker, or it could have taken more |
 | `ease_bust` | Worn, seated and reaching forward | It strains across the back or the bust |
 | `apex_from_cf` and `waist_to_apex` | Worn: the bust point's mark against the body | The dart's tip points somewhere other than the fullest part |
+| `collar_roll` | Worn: the outer edge | It strains against the shoulder and will not lie down, or it ripples |
+| `collar_stand` and `collar_fall` | Worn: the fold, and where the outer edge lands | The fold will not stay on the roll line, or the outer edge does not cover the neck seam |
 
-The cap is one cubic on each side, which is a smoother shape than a patternmaker would draw and has no separate underarm curve. The armhole's shape is a cubic too, chosen to pass inside the across-back and across-chest widths rather than through them, so those two measurements only guide it. A dart's end is still [a position and not a reference](stable-references.md). The bust dart's closure leaves the side seam's two legs meeting without a drawn dart cap. Nothing here says how the neck or waist is finished, because those belong to the pieces that finish them.
+The cap is one cubic on each side, which is a smoother shape than a patternmaker would draw and has no separate underarm curve. The armhole's shape is a cubic too, chosen to pass inside the across-back and across-chest widths rather than through them, so those two measurements only guide it. A dart's end is still [a position and not a reference](stable-references.md). The bust dart's closure leaves the side seam's two legs meeting without a drawn dart cap. The collar's front edge is a straight line across, with no point beyond CF. Nothing here says how the waist is finished, because that belongs to whatever finishes it.
 
 ## Names used in this chapter
 
 | Name | Meaning |
 | --- | --- |
-| `G3-GRADING.15` | The leaf for the collar |
 | `G3-GRADING.16` | The leaf for the reference blocks |
 | `G3-GRADING.7` | The leaf for grade rules |
 | `semi` | A fit intent: neither close nor loose |
@@ -295,6 +334,11 @@ The cap is one cubic on each side, which is a smoother shape than a patternmaker
 | `sleeve_back_width` | How far it runs to the back underarm |
 | `sleeve_width_low` | The narrowest a fit may try |
 | `sleeve_width_high` | The widest a fit may try |
+| `collar_span_low` | The shortest a collar's fit may try |
+| `collar_span_high` | The longest a collar's fit may try |
+| `57.29578 deg` | The degrees in a radian, as closely as an angle is held |
+| `INTCUT` | The file's layer for internal lines |
+| `CUT` | The file's layer for the cut line |
 | `assert` | A closure check in the recipe |
 | `waist_dart` | The dart at a bodice piece's waist |
 | `bust_dart` | The dart from the front's side seam toward the bust point |

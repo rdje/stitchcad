@@ -113,16 +113,34 @@ fn lines(lengths: &Lengths, fields: &Fields, name: &str) -> Result<Vec<Line>, St
     let Some(listed) = fields.get(name).and_then(Value::as_list) else {
         return Ok(Vec::new());
     };
-    listed
-        .iter()
-        .map(|item| match item.as_list() {
-            Some([from, to]) => Ok(Line {
-                from: point(lengths, from)?,
-                to: point(lengths, to)?,
-            }),
-            _ => Err("a line names two points".to_owned()),
-        })
-        .collect()
+    let mut found = Vec::with_capacity(listed.len());
+    for item in listed {
+        if let Some(item) = item.as_object() {
+            let flat = Curve::Arc {
+                from: point(lengths, required(item, "from")?)?,
+                through: point(lengths, required(item, "through")?)?,
+                to: point(lengths, required(item, "to")?)?,
+            }
+            .flatten(TOLERANCE);
+            for pair in flat.windows(2) {
+                if let [from, to] = pair {
+                    found.push(Line {
+                        from: *from,
+                        to: *to,
+                    });
+                }
+            }
+            continue;
+        }
+        let Some([from, to]) = item.as_list() else {
+            return Err("a line names two points, or an arc as from, through and to".to_owned());
+        };
+        found.push(Line {
+            from: point(lengths, from)?,
+            to: point(lengths, to)?,
+        });
+    }
+    Ok(found)
 }
 
 // What each reference in a drawing came to: an answer for every one, and a repair task for each that has none.

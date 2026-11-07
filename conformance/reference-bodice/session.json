@@ -189,9 +189,33 @@
     {
       "token": "sleeve_back_width",
       "um": 172000
+    },
+    {
+      "token": "collar_stand",
+      "um": 30000
+    },
+    {
+      "token": "collar_fall",
+      "um": 40000
+    },
+    {
+      "token": "collar_roll",
+      "um": 15000
+    },
+    {
+      "token": "sa_collar",
+      "um": 8000
+    },
+    {
+      "token": "collar_back_span",
+      "um": 88000
+    },
+    {
+      "token": "collar_front_span",
+      "um": 120000
     }
   ],
-  "recipe": "let garment_bust: length = bust_girth + ease_bust\nlet garment_waist: length = waist_girth + ease_waist\nlet garment_upper_arm: length = upper_arm_girth + ease_upper_arm\nlet garment_wrist: length = wrist_girth + ease_wrist\nlet quarter_bust: length = garment_bust / 4\nlet quarter_waist: length = garment_waist / 4\nlet front_bust_x: length = quarter_bust + front_shift\nlet back_bust_x: length = quarter_bust - front_shift\nlet front_waist_side: length = front_bust_x - side_suppress\nlet back_waist_side: length = back_bust_x - side_suppress\nlet waist_dart_front: length = front_waist_side - quarter_waist\nlet waist_dart_back: length = back_waist_side - quarter_waist\nlet neck_width: length = neck_girth / 5\nlet front_neck_drop: length = neck_girth / 5 + front_neck_extra\nlet back_underarm_y: length = nape_to_waist - scye_depth\nlet front_underarm_y: length = back_underarm_y + bust_dart_intake\nlet back_neck_y: length = nape_to_waist + back_neck_rise\nlet front_neck_y: length = back_neck_y + bust_dart_intake\nlet front_cf_y: length = front_neck_y - front_neck_drop\nlet front_shoulder_y: length = front_neck_y - front_slope\nlet back_shoulder_y: length = back_neck_y - back_slope\nlet back_shoulder_length: length = shoulder_length + shoulder_ease\nlet front_shoulder_run: length = sqrt(shoulder_length * shoulder_length - front_slope * front_slope)\nlet back_shoulder_run: length = sqrt(back_shoulder_length * back_shoulder_length - back_slope * back_slope)\nlet front_shoulder_x: length = neck_width + front_shoulder_run\nlet back_shoulder_x: length = neck_width + back_shoulder_run\nlet across_chest_half: length = across_chest / 2\nlet across_back_half: length = across_back / 2\nlet arm_front_first_x: length = across_chest_half + 22 mm\nlet arm_front_second_x: length = across_chest_half - 2 mm\nlet arm_front_second_y: length = (front_underarm_y + front_shoulder_y) / 2 + 10 mm\nlet arm_back_first_x: length = across_back_half + 20 mm\nlet arm_back_second_x: length = across_back_half - 2 mm\nlet arm_back_second_y: length = (back_underarm_y + back_shoulder_y) / 2 + 10 mm\nlet front_neck_first_x: length = neck_width - 4 mm\nlet front_neck_first_y: length = front_cf_y + front_neck_drop * 2 / 5\nlet front_neck_second_x: length = neck_width * 2 / 5\nlet back_neck_first_x: length = neck_width * 4 / 5\nlet back_neck_first_y: length = nape_to_waist + back_neck_rise / 4\nlet back_neck_second_x: length = neck_width * 2 / 5\nlet apex_y: length = waist_to_apex\nlet waist_dart_near: length = apex_from_cf - waist_dart_front / 2\nlet waist_dart_far: length = apex_from_cf + waist_dart_front / 2\nlet waist_dart_tip_y: length = apex_y - waist_dart_gap\nlet bust_dart_high: length = apex_y + bust_dart_intake / 2\nlet bust_dart_low: length = apex_y - bust_dart_intake / 2\nlet bust_dart_tip_x: length = apex_from_cf + bust_dart_gap\nlet back_dart_x: length = back_waist_side / 2\nlet back_dart_near: length = back_dart_x - waist_dart_back / 2\nlet back_dart_far: length = back_dart_x + waist_dart_back / 2\nlet cf_to_apex: length = front_cf_y - apex_y\nlet front_grain_x: length = front_bust_x * 2 / 3\nlet back_grain_x: length = back_bust_x * 2 / 3\nlet grain_low_y: length = 30 mm\nlet front_grain_high_y: length = front_shoulder_y - 40 mm\nlet back_grain_high_y: length = back_shoulder_y - 40 mm\nlet front_label_x: length = 30 mm\nlet front_label_y: length = front_underarm_y + 10 mm\nlet front_label_lower_y: length = front_underarm_y - 6 mm\nlet back_label_x: length = 30 mm\nlet back_label_y: length = back_underarm_y + 10 mm\nlet average_arm_rise: length = (front_shoulder_y - front_underarm_y + back_shoulder_y - back_underarm_y) / 2\nlet cap_height: length = average_arm_rise * 4 / 5\nlet sleeve_width_low: length = 100 mm\nlet sleeve_width_high: length = 300 mm\nlet sleeve_width: length = sleeve_front_width + sleeve_back_width\nlet sleeve_taper: length = (sleeve_width - garment_wrist) / 2\nlet sleeve_front_wrist_x: length = sleeve_front_width - sleeve_taper\nlet sleeve_back_wrist_x: length = sleeve_back_width - sleeve_taper\nlet wrist_y: length = cap_height - sleeve_length\nlet cap_front_first_x: length = sleeve_front_width * 11 / 20\nlet cap_front_second_x: length = sleeve_front_width * 9 / 20\nlet cap_back_first_x: length = sleeve_back_width * 9 / 20\nlet cap_back_second_x: length = sleeve_back_width * 11 / 20\nlet sleeve_grain_low_y: length = wrist_y + 40 mm\nlet sleeve_grain_high_y: length = cap_height - 60 mm\nlet sleeve_label_x: length = 15 mm\nlet sleeve_label_y: length = wrist_y + 120 mm\nlet notch_depth: length = 5 mm\nlet double_spacing: length = 8 mm\nassert bust_allocation: eps_num = 2 * (front_bust_x + back_bust_x) == garment_bust\nassert waist_closure_front: eps_num = front_waist_side - waist_dart_front == quarter_waist\nassert waist_closure_back: eps_num = back_waist_side - waist_dart_back == quarter_waist\nassert side_closure: eps_num = (front_underarm_y - side_break) - bust_dart_intake == back_underarm_y - side_break\nassert shoulder_closure: eps_geo = hypot(back_shoulder_run, back_slope) - shoulder_ease == hypot(front_shoulder_run, front_slope)\nassert sleeve_clears_arm: eps_num = min(sleeve_width, garment_upper_arm) == garment_upper_arm\nassert sleeve_taper_closure: eps_num = sleeve_front_wrist_x + sleeve_back_wrist_x == garment_wrist\n",
+  "recipe": "let garment_bust: length = bust_girth + ease_bust\nlet garment_waist: length = waist_girth + ease_waist\nlet garment_upper_arm: length = upper_arm_girth + ease_upper_arm\nlet garment_wrist: length = wrist_girth + ease_wrist\nlet quarter_bust: length = garment_bust / 4\nlet quarter_waist: length = garment_waist / 4\nlet front_bust_x: length = quarter_bust + front_shift\nlet back_bust_x: length = quarter_bust - front_shift\nlet front_waist_side: length = front_bust_x - side_suppress\nlet back_waist_side: length = back_bust_x - side_suppress\nlet waist_dart_front: length = front_waist_side - quarter_waist\nlet waist_dart_back: length = back_waist_side - quarter_waist\nlet neck_width: length = neck_girth / 5\nlet front_neck_drop: length = neck_girth / 5 + front_neck_extra\nlet back_underarm_y: length = nape_to_waist - scye_depth\nlet front_underarm_y: length = back_underarm_y + bust_dart_intake\nlet back_neck_y: length = nape_to_waist + back_neck_rise\nlet front_neck_y: length = back_neck_y + bust_dart_intake\nlet front_cf_y: length = front_neck_y - front_neck_drop\nlet front_shoulder_y: length = front_neck_y - front_slope\nlet back_shoulder_y: length = back_neck_y - back_slope\nlet back_shoulder_length: length = shoulder_length + shoulder_ease\nlet front_shoulder_run: length = sqrt(shoulder_length * shoulder_length - front_slope * front_slope)\nlet back_shoulder_run: length = sqrt(back_shoulder_length * back_shoulder_length - back_slope * back_slope)\nlet front_shoulder_x: length = neck_width + front_shoulder_run\nlet back_shoulder_x: length = neck_width + back_shoulder_run\nlet across_chest_half: length = across_chest / 2\nlet across_back_half: length = across_back / 2\nlet arm_front_first_x: length = across_chest_half + 22 mm\nlet arm_front_second_x: length = across_chest_half - 2 mm\nlet arm_front_second_y: length = (front_underarm_y + front_shoulder_y) / 2 + 10 mm\nlet arm_back_first_x: length = across_back_half + 20 mm\nlet arm_back_second_x: length = across_back_half - 2 mm\nlet arm_back_second_y: length = (back_underarm_y + back_shoulder_y) / 2 + 10 mm\nlet front_neck_first_x: length = neck_width - 4 mm\nlet front_neck_first_y: length = front_cf_y + front_neck_drop * 2 / 5\nlet front_neck_second_x: length = neck_width * 2 / 5\nlet back_neck_first_x: length = neck_width * 4 / 5\nlet back_neck_first_y: length = nape_to_waist + back_neck_rise / 4\nlet back_neck_second_x: length = neck_width * 2 / 5\nlet apex_y: length = waist_to_apex\nlet waist_dart_near: length = apex_from_cf - waist_dart_front / 2\nlet waist_dart_far: length = apex_from_cf + waist_dart_front / 2\nlet waist_dart_tip_y: length = apex_y - waist_dart_gap\nlet bust_dart_high: length = apex_y + bust_dart_intake / 2\nlet bust_dart_low: length = apex_y - bust_dart_intake / 2\nlet bust_dart_tip_x: length = apex_from_cf + bust_dart_gap\nlet back_dart_x: length = back_waist_side / 2\nlet back_dart_near: length = back_dart_x - waist_dart_back / 2\nlet back_dart_far: length = back_dart_x + waist_dart_back / 2\nlet cf_to_apex: length = front_cf_y - apex_y\nlet front_grain_x: length = front_bust_x * 2 / 3\nlet back_grain_x: length = back_bust_x * 2 / 3\nlet grain_low_y: length = 30 mm\nlet front_grain_high_y: length = front_shoulder_y - 40 mm\nlet back_grain_high_y: length = back_shoulder_y - 40 mm\nlet front_label_x: length = 30 mm\nlet front_label_y: length = front_underarm_y + 10 mm\nlet front_label_lower_y: length = front_underarm_y - 6 mm\nlet back_label_x: length = 30 mm\nlet back_label_y: length = back_underarm_y + 10 mm\nlet average_arm_rise: length = (front_shoulder_y - front_underarm_y + back_shoulder_y - back_underarm_y) / 2\nlet cap_height: length = average_arm_rise * 4 / 5\nlet sleeve_width_low: length = 100 mm\nlet sleeve_width_high: length = 300 mm\nlet sleeve_width: length = sleeve_front_width + sleeve_back_width\nlet sleeve_taper: length = (sleeve_width - garment_wrist) / 2\nlet sleeve_front_wrist_x: length = sleeve_front_width - sleeve_taper\nlet sleeve_back_wrist_x: length = sleeve_back_width - sleeve_taper\nlet wrist_y: length = cap_height - sleeve_length\nlet cap_front_first_x: length = sleeve_front_width * 11 / 20\nlet cap_front_second_x: length = sleeve_front_width * 9 / 20\nlet cap_back_first_x: length = sleeve_back_width * 9 / 20\nlet cap_back_second_x: length = sleeve_back_width * 11 / 20\nlet sleeve_grain_low_y: length = wrist_y + 40 mm\nlet sleeve_grain_high_y: length = cap_height - 60 mm\nlet sleeve_label_x: length = 15 mm\nlet sleeve_label_y: length = wrist_y + 120 mm\nlet notch_depth: length = 5 mm\nlet double_spacing: length = 8 mm\nlet collar_depth: length = collar_stand + collar_fall\nlet collar_neck_length: length = collar_back_span + collar_front_span\nlet collar_radius: length = collar_neck_length * collar_depth / collar_roll\nlet collar_outer_radius: length = collar_radius + collar_depth\nlet collar_roll_radius: length = collar_radius + collar_stand\nlet collar_angle: angle = 57.29578 deg * (collar_roll / collar_depth)\nlet collar_half_angle: angle = collar_angle / 2\nlet collar_neck_end_x: length = collar_radius * sin(collar_angle)\nlet collar_neck_end_y: length = collar_radius * cos(collar_angle) - collar_radius\nlet collar_neck_mid_x: length = collar_radius * sin(collar_half_angle)\nlet collar_neck_mid_y: length = collar_radius * cos(collar_half_angle) - collar_radius\nlet collar_outer_end_x: length = collar_outer_radius * sin(collar_angle)\nlet collar_outer_end_y: length = collar_outer_radius * cos(collar_angle) - collar_radius\nlet collar_outer_mid_x: length = collar_outer_radius * sin(collar_half_angle)\nlet collar_outer_mid_y: length = collar_outer_radius * cos(collar_half_angle) - collar_radius\nlet collar_line_end_x: length = collar_roll_radius * sin(collar_angle)\nlet collar_line_end_y: length = collar_roll_radius * cos(collar_angle) - collar_radius\nlet collar_line_mid_x: length = collar_roll_radius * sin(collar_half_angle)\nlet collar_line_mid_y: length = collar_roll_radius * cos(collar_half_angle) - collar_radius\nlet collar_span_low: length = 30 mm\nlet collar_span_high: length = 250 mm\nlet collar_grain_x: length = 15 mm\nlet collar_grain_low_y: length = 6 mm\nlet collar_grain_high_y: length = collar_depth - 6 mm\nlet collar_label_x: length = 30 mm\nlet collar_label_y: length = collar_stand + 10 mm\nassert bust_allocation: eps_num = 2 * (front_bust_x + back_bust_x) == garment_bust\nassert waist_closure_front: eps_num = front_waist_side - waist_dart_front == quarter_waist\nassert waist_closure_back: eps_num = back_waist_side - waist_dart_back == quarter_waist\nassert side_closure: eps_num = (front_underarm_y - side_break) - bust_dart_intake == back_underarm_y - side_break\nassert shoulder_closure: eps_geo = hypot(back_shoulder_run, back_slope) - shoulder_ease == hypot(front_shoulder_run, front_slope)\nassert sleeve_clears_arm: eps_num = min(sleeve_width, garment_upper_arm) == garment_upper_arm\nassert sleeve_taper_closure: eps_num = sleeve_front_wrist_x + sleeve_back_wrist_x == garment_wrist\nassert collar_length_closure: eps_geo = arc_length(collar_angle, collar_radius) == collar_neck_length\nassert collar_roll_closure: eps_geo = arc_length(collar_angle, collar_outer_radius) - arc_length(collar_angle, collar_radius) == collar_roll\n",
   "steps": [
     {
       "do": "evaluate"
@@ -236,6 +260,22 @@
           ],
           "seam": "cap_back_right",
           "vary": "sleeve_back_width"
+        },
+        {
+          "between": [
+            "collar_span_low",
+            "collar_span_high"
+          ],
+          "seam": "collar_back_right",
+          "vary": "collar_back_span"
+        },
+        {
+          "between": [
+            "collar_span_low",
+            "collar_span_high"
+          ],
+          "seam": "collar_front_right",
+          "vary": "collar_front_span"
         }
       ],
       "pieces": [
@@ -714,6 +754,119 @@
           "mirror_of": "sleeve_right",
           "name": "sleeve_left",
           "quantity": 1
+        },
+        {
+          "edges": [
+            {
+              "corner": "miter",
+              "name": "neck",
+              "through": [
+                "collar_neck_mid_x",
+                "collar_neck_mid_y"
+              ],
+              "to": [
+                "collar_neck_end_x",
+                "collar_neck_end_y"
+              ],
+              "width": "sa_collar"
+            },
+            {
+              "corner": "miter",
+              "name": "front_edge",
+              "to": [
+                "collar_outer_end_x",
+                "collar_outer_end_y"
+              ],
+              "width": "sa_collar"
+            },
+            {
+              "corner": "miter",
+              "name": "outer",
+              "through": [
+                "collar_outer_mid_x",
+                "collar_outer_mid_y"
+              ],
+              "to": [
+                "zero",
+                "collar_depth"
+              ],
+              "width": "sa_collar"
+            },
+            {
+              "corner": "miter",
+              "name": "cb",
+              "to": [
+                "zero",
+                "zero"
+              ],
+              "width": "sa_collar"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "collar_grain_x",
+                "collar_grain_low_y"
+              ],
+              [
+                "collar_grain_x",
+                "collar_grain_high_y"
+              ]
+            ]
+          ],
+          "internal": [
+            {
+              "from": [
+                "zero",
+                "collar_stand"
+              ],
+              "through": [
+                "collar_line_mid_x",
+                "collar_line_mid_y"
+              ],
+              "to": [
+                "collar_line_end_x",
+                "collar_line_end_y"
+              ]
+            }
+          ],
+          "labels": [
+            {
+              "at": [
+                "collar_label_x",
+                "collar_label_y"
+              ],
+              "text": "collar_right, size M, cut 2, shell, colorway not specified"
+            }
+          ],
+          "name": "collar_right",
+          "notches": [
+            {
+              "along": "collar_back_span",
+              "depth": "notch_depth",
+              "edge": "neck",
+              "name": "shoulder"
+            }
+          ],
+          "quantity": 2,
+          "start": [
+            "zero",
+            "zero"
+          ]
+        },
+        {
+          "labels": [
+            {
+              "at": [
+                "collar_label_x",
+                "collar_label_y"
+              ],
+              "text": "collar_left, size M, cut 2, shell, colorway not specified"
+            }
+          ],
+          "mirror_of": "collar_right",
+          "name": "collar_left",
+          "quantity": 2
         }
       ],
       "seams": [
@@ -899,6 +1052,56 @@
           "a": {
             "from": {
               "at": "0",
+              "edge": "neck"
+            },
+            "piece": "collar_right",
+            "to": {
+              "along": "collar_back_span",
+              "edge": "neck"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "1",
+              "edge": "neck"
+            },
+            "piece": "bodice_back_right",
+            "to": {
+              "at": "0",
+              "edge": "neck"
+            }
+          },
+          "name": "collar_back_right"
+        },
+        {
+          "a": {
+            "from": {
+              "along": "collar_back_span",
+              "edge": "neck"
+            },
+            "piece": "collar_right",
+            "to": {
+              "at": "1",
+              "edge": "neck"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "neck"
+            },
+            "piece": "bodice_front",
+            "to": {
+              "at": "1",
+              "edge": "neck"
+            }
+          },
+          "name": "collar_front_right"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
               "edge": "side_lower"
             },
             "piece": "bodice_front",
@@ -1072,6 +1275,56 @@
           },
           "ease": "cap_ease_back",
           "name": "cap_back_left"
+        },
+        {
+          "a": {
+            "from": {
+              "at": "0",
+              "edge": "neck"
+            },
+            "piece": "collar_left",
+            "to": {
+              "along": "collar_back_span",
+              "edge": "neck"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "1",
+              "edge": "neck"
+            },
+            "piece": "bodice_back_left",
+            "to": {
+              "at": "0",
+              "edge": "neck"
+            }
+          },
+          "name": "collar_back_left"
+        },
+        {
+          "a": {
+            "from": {
+              "along": "collar_back_span",
+              "edge": "neck"
+            },
+            "piece": "collar_left",
+            "to": {
+              "at": "1",
+              "edge": "neck"
+            }
+          },
+          "b": {
+            "from": {
+              "at": "0",
+              "edge": "neck"
+            },
+            "piece": "bodice_front",
+            "to": {
+              "at": "1",
+              "edge": "neck"
+            }
+          },
+          "name": "collar_front_left"
         },
         {
           "a": {

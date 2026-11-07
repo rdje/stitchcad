@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1016 — a classic collar,whose two edges differ by exactly the roll it declares
+
+Two concentric arcs differ by the angle times the distance between them,so the recipe takes the roll as given and works out the rest. The roll line is an arc between them,on the internal layer,and a test reads that from the written file.
+Two fits solve the collar to the back and front necks. Re-drafted at five sizes,and grade rules come later. G3-10 met,36 of 66.
+
 ## STITCHCAD-G1-1015 — a bodice and set-in sleeve,with a cap fitted to its armhole by a declared ease
 
 A garment whose seams differ on purpose. A draft's fits solve an input until a seam walks to what it declares,so the sleeve takes its width from the armhole,and the walk calls that declared_ease. With the declaration removed the same cloth is a defect.

@@ -162,15 +162,25 @@ impl Edges {
         for edge in listed {
             let edge = edge.as_object().ok_or("an edge must be an object")?;
             let to = super::point(lengths, required(edge, "to")?)?;
-            let curve = match (edge.get("first"), edge.get("second")) {
-                (Some(first), Some(second)) => Curve::Cubic {
+            let curve = match (edge.get("first"), edge.get("second"), edge.get("through")) {
+                (Some(first), Some(second), None) => Curve::Cubic {
                     from,
                     first: super::point(lengths, first)?,
                     second: super::point(lengths, second)?,
                     to,
                 },
-                (None, None) => Curve::Line { from, to },
-                _ => return Err("a curved edge names both control points".to_owned()),
+                (None, None, Some(through)) => Curve::Arc {
+                    from,
+                    through: super::point(lengths, through)?,
+                    to,
+                },
+                (None, None, None) => Curve::Line { from, to },
+                _ => {
+                    return Err(
+                        "a curved edge names both control points, or a point it passes through"
+                            .to_owned(),
+                    )
+                }
             };
             curves.push(curve);
             allowances.push(Self::allowance_of(lengths, edge)?);

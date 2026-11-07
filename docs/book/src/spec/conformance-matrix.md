@@ -44,6 +44,7 @@ Nothing in this project has reached layer 4 or 5 yet.
 | A scoped caller cannot exceed its authority, and an agent cannot approve | — | 1 | The real server through real pipes, where the bus itself refuses | `cargo test -p sc-mcp --test admission` |
 | An agent with only MCP and the docs drafts the skirt | `G2-08` | 3 | Two recorded sessions, replayed by the command line, read by the judge, and compared with the golden | `cargo test -p sc-mcp --test agent_gate` |
 | A cap meets its armhole by a declared ease, and the same difference undeclared is a defect | `G3-01` | 1 | The bodice and sleeve at five sizes, with each curve also measured from its control points | `cargo test -p sc-cli --test bodice` |
+| A collar's edges differ by the declared roll, and its roll line is never cut | `G3-10` | 1 | The collar at five sizes, its edges measured from the drawn line and its roll line read from the written file | `cargo test -p sc-cli --test bodice` |
 | A reference stays on the same cloth through an edit, or says it cannot | `G3-03` | 1 | Every edit against every carrier, with a stated seed, comparing where each one lands | `cargo test -p sc-cli --test references` |
 | Darts, folds and seams work as operations, with undo | `G3-02` | 1 | Lengths worked out by hand, a closed dart landing on itself, and a seam re-walked after truing | `cargo test -p sc-cli --test walk` |
 | A fault is caught for the right reason | `G2-07` | 1 | Each injected fault's named code | `cargo test -p sc-cli --test mutants` |
@@ -105,3 +106,4 @@ The same design gives the same bytes on every platform, compiler, locale and tim
 | `G3-01` | A row of [the gauge](../availability.md) |
 | `G3-02` | A row of [the gauge](../availability.md) |
 | `G3-03` | A row of [the gauge](../availability.md) |
+| `G3-10` | A row of [the gauge](../availability.md) |

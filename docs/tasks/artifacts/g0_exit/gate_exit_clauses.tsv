@@ -28,7 +28,7 @@ G3-06	exit	extreme sizes reconstructed	-	-	unbuilt	-	-	G3-GRADING.9
 G3-07	exit	grading modes	-	-	unbuilt	-	-	G3-GRADING.10
 G3-08	exit	offset + grading golden suites	-	-	unbuilt	-	-	G3-GRADING.12
 G3-09	exit	every garment	-	-	unbuilt	-	-	G3-GRADING.14
-G3-10	exit	a classic collar	-	-	unbuilt	-	-	G3-GRADING.15
+G3-10	exit	a classic collar	crates/sc-cli/tests/bodice.rs	cargo test -p sc-cli --test bodice	instrument	-	an engineer's construction,assumed;re-drafted at five sizes,with grade rules at G3-GRADING.7	G3-GRADING.15
 G3-11	exit	trousers carrying	-	-	unbuilt	-	-	G3-GRADING.5
 G4-01	exit	typed constraint AST,differential-oracle campaign	-	-	unbuilt	-	the kernel exists;the profile layer and the campaign at scale do not	G4-PROFILES.3
 G4-02	exit	minimal guided Profile Editor	-	-	unbuilt	-	-	G4-PROFILES.9

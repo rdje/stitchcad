@@ -226,10 +226,10 @@ numbers stay in the recipe and a changed measurement moves every piece. A step t
 | `name` | The piece's name |
 | `quantity` | How many to cut |
 | `start` | The net boundary's first point |
-| `edges` | Each edge in turn, counterclockwise: `to`, its allowance `width` naming a length (`zero` for none), its `corner`, and `first` and `second` when it is a Bézier |
+| `edges` | Each edge in turn, counterclockwise: `to`, its allowance `width` naming a length (`zero` for none), its `corner`, `first` and `second` when it is a Bézier, `through` when it is an arc, and a `name` for [what holds it](stable-references.md) |
 | `grain` | A list holding one grainline, which is a list of two points |
-| `internal` | A list of internal lines, each a list of two points |
-| `notches` | Each notch, as the point on the cut line and a point it aims at |
+| `internal` | A list of internal lines, each a list of two points, or an arc as `from`, `through` and `to` |
+| `notches` | Each notch, as [a place on a named edge](stable-references.md), or as the point on the cut line and a point it aims at |
 | `labels` | Each label, as `at` and `text` |
 | `darts` | [Closures](closures.md): each with `name`, `near`, `far`, `apex`, and optionally `intake` |
 | `tucks` | Each with `name`, `from`, `to`, and optionally `intake`, `from_end` and `to_end` |
@@ -325,6 +325,7 @@ Exporting also writes `<path>.record.json`, which the writer's own chapter descr
 | `second` | A Bézier edge's second control point |
 | `grain` | A piece's grainline |
 | `internal` | A piece's internal lines |
+| `through` | A point an arc passes through |
 | `notches` | A piece's notches |
 | `labels` | A piece's labels |
 | `at` | Where a label sits |

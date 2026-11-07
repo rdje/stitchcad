@@ -139,8 +139,7 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit: `pending`
 
 - ID: `G3-GRADING.15`
-  Status: `pending` (created by the roadmap v0.3 envelope-coverage amendment, which named the classic collar
-  an exit criterion; defect **D32** is what left it unproved until then)
+  Status: `done`
   Goal: the **classic collar** — a stand, a fall and a roll line — attached to the `.4` bodice's neckline,
   drafted through the recipe, graded, and exported, so the envelope's fourth garment is proved by the gate
   that owns construction.
@@ -149,8 +148,15 @@ interchange that an independent engine can re-import, extreme sizes included.
   a recipe quantity rather than a fudge; the stand's height and the fall's depth are graded, not fixed;
   walking the collar-to-neckline span reports a differential inside the declared ease; the feature matrix's
   `classic collar` row cites this leaf's evidence at `.14`.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-cli/**,crates/sc-api/src/lib.rs,conformance/reference-bodice/**,conformance/goldens/reference-bodice/**,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-10 needs a collar,and the bodice's neck was a free edge waiting for one. WHERE an edge and an internal line could be straight or a cubic,and two cubics differ by whatever they come to;git grep -c '"through"' 2b413c7a -- crates/sc-cli/src/draft/edges.rs →rc=1.
+  - [x] ADDRESSED,ROLL:an edge and an internal line can now be an arc. The collar's edges are concentric arcs,so the outer less the neck is collar_roll by construction;measured from the drawn line at 15 and 25 mm,and held by two recipe asserts. cargo test -p sc-cli --test bodice →rc=0:26 tests.
+  - [x] ADDRESSED,ROLL LINE:drawn on INTCUT and read back from the written file,with no point of it on CUT or on the cut line.
+  - [x] ADDRESSED,NECK:two more fits solve the collar's two spans from the back and front necks,so four seams walk to a match,and left unfitted they are a defect by how much. Stand and fall change by size,and the collar's depth and roll line follow.
+  - [x] NOT SHOWN,STATED:re-drafted at five sizes,and grade rules are `.7`. All constants assumed,and nobody has cut it. The front edge is a straight line,with no point. INTCUT carries internal lines and holes alike,and what a receiver does with it is untested. The feature matrix cites this at `.14`.
+  - [x] NO REGRESSION:gauge.sh --checks →rc=0;cargo test -p sc-artifacts -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1016.
 
 - ID: `G3-GRADING.16`
   Status: `pending` (created by `G0-CONTRACT.9`, which named the drafting system ADR-0003 requires and

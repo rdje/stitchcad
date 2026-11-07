@@ -15,7 +15,7 @@
 | bounding box | the smallest axis-aligned rectangle containing a piece; used against fabric width and page size | [units §1.1](../units-and-tolerances.md) | extents, "the piece's size", envelope | — |
 | centre back (CB) ⚠ | the vertical centre line of the back; a seam edge here means the back is cut in two pieces | [reference skirt §5](../reference-skirt.md) | CB, back middle, *hintere Mitte* | `cb` |
 | centre front (CF) ⚠ | the vertical centre line of the front; a fold edge here means the front is cut in one piece | [reference skirt §5](../reference-skirt.md) | CF, front middle, mid front, *vordere Mitte* | `cf` |
-| classic collar | a collar with a stand and a fall that rolls at a declared line; the envelope names it and no gate proves it | [envelope §9](../feature-matrix.md) | shirt collar, two-piece collar, *Kragen* | — |
+| classic collar | a collar with a stand and a fall that rolls at a declared line; the envelope names it and [G3](../reference-bodice.md) proves it | [envelope §9](../feature-matrix.md) | shirt collar, two-piece collar, *Kragen* | — |
 | collar fall | the part of a collar that folds over the stand and shows; its length sets the collar's roll | [envelope §9](../feature-matrix.md) | collar leaf, *Oberkragen* | — |
 | collar stand | the band a collar's fall folds over, which decides how far the collar stands from the neck | [envelope §9](../feature-matrix.md) | collar band, *Steg*, *Unterlagen* | — |
 | conditional | the language's one special form: a boolean test and two branches of one kind, of which only the taken one is evaluated | [grammar §7](../formula-language/grammar.md) | if, branch | `if` |
