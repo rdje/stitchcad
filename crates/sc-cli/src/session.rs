@@ -931,6 +931,163 @@ impl<R: Repository> Session<R> {
         Ok(Value::Object(result))
     }
 
+    // One of the three ways grading travels, each its own file with its own record. A rule moves a net corner, so these put the net line on the layer a receiver reads, and say so.
+    #[allow(clippy::too_many_lines)]
+    fn export_graded(
+        &mut self,
+        step: usize,
+        fields: &BTreeMap<String, Value>,
+    ) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "export_graded", message);
+        let document = self
+            .document()
+            .ok_or_else(|| fail("there is nothing drafted to export yet".to_owned()))?;
+        let mode = match fields.get("mode").and_then(Value::as_text) {
+            Some("base_plus_rules") => sc_artifacts::GradingMode::BasePlusRules,
+            Some("embedded_rules") => sc_artifacts::GradingMode::EmbeddedRules,
+            Some("all_contours") => sc_artifacts::GradingMode::AllContours,
+            Some(other) => {
+                return Err(fail(format!(
+                    "no grading mode is named {other}: it is base_plus_rules, embedded_rules or all_contours, and there is no universal one"
+                )))
+            }
+            None => {
+                return Err(fail(
+                    "export_graded names its mode: base_plus_rules, embedded_rules or all_contours"
+                        .to_owned(),
+                ))
+            }
+        };
+        match fields.get("semantics").and_then(Value::as_text) {
+            Some("sew_as_1") => {}
+            Some("cut_as_1") => {
+                return Err(fail(
+                    "a rule moves a net corner, so a graded file needs the net line on the layer a receiver reads, which is sew_as_1. Allowances are generated downstream, and this says so in its record".to_owned(),
+                ))
+            }
+            _ => {
+                return Err(fail(
+                    "a graded export names its semantics, and only sew_as_1 exists".to_owned(),
+                ))
+            }
+        }
+        let target = fields
+            .get("path")
+            .and_then(Value::as_text)
+            .ok_or_else(|| fail("export_graded needs a path, without its extension".to_owned()))?
+            .to_owned();
+        let sizes = crate::family::sizes_of(&document).map_err(fail)?;
+        let at_sizes = self.lengths_at_sizes(step, &document, &sizes)?;
+        let table =
+            crate::draft::derive_table(&document, &at_sizes, &sizes.sample).map_err(fail)?;
+        let known = self.lengths_for(step, Some(&document))?;
+        let drawn =
+            crate::draft::draft(&known, &document, &self.design_text, &self.revision_text())
+                .map_err(fail)?;
+        if !drawn.repairs.is_empty() {
+            let open: Vec<&str> = drawn
+                .repairs
+                .iter()
+                .map(|repair| repair.carrier.as_str())
+                .collect();
+            return Err(fail(format!(
+                "this drawing has references that need repair before it can be released: {}",
+                open.join("; ")
+            )));
+        }
+        for size in table.sizes() {
+            let rebuilt = crate::draft::reconstruct(
+                &known,
+                &document,
+                &table,
+                size,
+                (&self.design_text, &self.revision_text()),
+            )
+            .map_err(|message| fail(format!("size {size}: {message}")))?;
+            if let Some(first) = rebuilt.conflicts.first() {
+                return Err(fail(format!(
+                    "the contour {} is declared fixed and comes to {} at size {}, against {} at the sample, so these files are not written",
+                    first.contour, first.here, first.size, first.at_sample
+                )));
+            }
+        }
+        let flattening = sc_artifacts::Flattening {
+            bound: 100,
+            achieved: crate::draft::TOLERANCE + 1,
+        };
+        let (sample, paired) = crate::draft::without_mirrors(&drawn, &document).map_err(fail)?;
+        let points = crate::draft::rule_points(&known, &document, &table).map_err(fail)?;
+        let artifact = match mode {
+            sc_artifacts::GradingMode::BasePlusRules => {
+                sc_artifacts::write_base_plus_rules(&sample, &paired, &points, flattening)
+            }
+            sc_artifacts::GradingMode::EmbeddedRules => sc_artifacts::write_embedded_rules(
+                &sample,
+                &paired,
+                &points,
+                (table.sample(), table.name()),
+                flattening,
+            ),
+            sc_artifacts::GradingMode::AllContours => {
+                let counts = crate::draft::curve_counts(&document, &at_sizes).map_err(fail)?;
+                let mut nests = Vec::with_capacity(at_sizes.len());
+                for (size, lengths) in &at_sizes {
+                    let mut described = document.clone();
+                    described.insert("size".to_owned(), Value::Text(size.clone()));
+                    let drawn_here = crate::draft::draft(
+                        lengths,
+                        &described,
+                        &self.design_text,
+                        &self.revision_text(),
+                    )
+                    .map_err(|message| fail(format!("size {size}: {message}")))?;
+                    nests.push((
+                        size.clone(),
+                        crate::draft::nest_at(lengths, &document, &drawn_here, &counts, &table)
+                            .map_err(|message| fail(format!("size {size}: {message}")))?,
+                    ));
+                }
+                sc_artifacts::write_all_contours(&sample, &paired, &nests, flattening)
+            }
+        }
+        .map_err(|error| fail(error.to_string()))?;
+        let write = |project: &mut sc_store::Project, name: String, bytes: String| {
+            let path = sc_store::FilePath::new(&name).map_err(|error| fail(error.to_string()))?;
+            project
+                .set_file(path, bytes)
+                .map_err(|error| fail(error.to_string()))
+        };
+        let mut written = vec![format!("{target}.dxf"), format!("{target}.dxf.record.json")];
+        let digest = sc_store::sha256_hex(artifact.text.as_bytes());
+        write(&mut self.base, format!("{target}.dxf"), artifact.text)?;
+        write(
+            &mut self.base,
+            format!("{target}.dxf.record.json"),
+            artifact.record,
+        )?;
+        // All contours carries no rules, so it has no table to go with it.
+        if mode != sc_artifacts::GradingMode::AllContours {
+            let rules = sc_grading::to_rul(&table).map_err(|error| fail(error.to_string()))?;
+            written.push(format!("{target}.rul"));
+            written.push(format!("{target}.rul.record.json"));
+            write(&mut self.base, format!("{target}.rul"), rules.text)?;
+            write(
+                &mut self.base,
+                format!("{target}.rul.record.json"),
+                rules.record,
+            )?;
+        }
+        let mut result = BTreeMap::new();
+        result.insert("mode".to_owned(), Value::Text(mode.token().to_owned()));
+        result.insert("target".to_owned(), Value::Text(mode.target().to_owned()));
+        result.insert("dxf_sha256".to_owned(), Value::Text(digest));
+        result.insert(
+            "files".to_owned(),
+            Value::List(written.into_iter().map(Value::Text).collect()),
+        );
+        Ok(Value::Object(result))
+    }
+
     // A person or an agent says where an orphaned reference goes, or that it is gone. Nothing else ever does.
     fn repair_reference(
         &mut self,
@@ -1790,7 +1947,7 @@ fn solve(
 }
 
 /// The steps a session can take. Anything else is refused by name.
-pub const STEPS: [&str; 22] = [
+pub const STEPS: [&str; 23] = [
     "evaluate",
     "preview",
     "closures",
@@ -1803,6 +1960,7 @@ pub const STEPS: [&str; 22] = [
     "regenerate",
     "grade",
     "check_extremes",
+    "export_graded",
     "change",
     "undo",
     "redo",
@@ -2024,6 +2182,7 @@ impl<R: Repository> Running<R> {
             "regenerate" => state.regenerate(step, item)?,
             "grade" => state.grade(step, item)?,
             "check_extremes" => state.check_extremes(step)?,
+            "export_graded" => state.export_graded(step, item)?,
             "repair_reference" => state.repair_reference(step, item)?,
             "change" => {
                 let token = item

@@ -243,13 +243,21 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1021.
 
 - ID: `G3-GRADING.10`
-  Status: `pending`
+  Status: `done`
   Goal: the grading interchange modes validated separately (ADR-0004): base-size DXF + `.rul`,
   grade rules embedded in DXF (ASTM mode), and all-contours-graded (GradedNest-style).
   Acceptance: each mode has its own golden suite and its own receiver record; no mode is described
   as universal; the loss of each mode is stated.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-artifacts/**,crates/sc-geometry/src/curve.rs,crates/sc-cli/**,crates/sc-api/src/lib.rs,crates/sc-viewer/src/shell.rs,conformance/goldens/grading/**,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-07 asks for three modes validated apart,since none is universal. WHERE only one file carried one size:git grep -c export_graded 130d733e -- crates/sc-cli/src/session.rs →rc=1.
+  - [x] ADDRESSED,MODES:export_graded writes base_plus_rules,embedded_rules or all_contours,each its own files with a record naming what it loses and that no receiver has read it. cargo test -p sc-cli --test modes →rc=0:30 files frozen for three garments.
+  - [x] ADDRESSED,AGREEMENT:a reader in the test finds every identifier on a point on its own layer,and moves each corner by the file's rule to where the nest has it at each size,so two files not written from each other agree.
+  - [x] ADDRESSED,CORRESPONDENCE:a nest's sizes have the same points in the same order,as the standard says,by evenly spacing them on each curve,held within the 100 µm a polyline target allows.
+  - [x] ALSO FOUND:the book said embedded rules carry the deltas inside the DXF. The pages read hold no place for one,only identifiers,so that mode needs the table it names. Corrected,and it is the mode's first stated loss.
+  - [x] NOT SHOWN,STATED:no receiver has read any mode. Only sew_as_1 exists,so allowances are generated downstream. Turn and curve point layers are not written. The standard was read in part.
+  - [x] NO REGRESSION:single-size goldens byte-identical;gauge.sh --checks →rc=0;cargo test -p sc-units -p sc-geometry -p sc-artifacts -p sc-grading -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1022.
 
 - ID: `G3-GRADING.11`
   Status: `done`

@@ -2,7 +2,7 @@
 
 A pattern at one size is not yet a product. The [instantiation chapter](instantiation-paths.md) says what the two ways of getting a garment's other sizes mean, and why neither replaces the other. This chapter is what you can do today.
 
-**What works today.** A draft can name its size set. `regenerate` draws every size of it, each a fresh evaluation of the recipe with nothing inherited from another, and says what drove every point. `grade` moves the sample by a [table of rules](grade-rules.md) and rebuilds each size with the recipe left out of it. Both are compared, quantity by quantity. `check_extremes` runs every check on the smallest and largest sizes after they have come through a written file. **What does not exist yet:** any receiver reading the result, which is `G3-GRADING.8`.
+**What works today.** A draft can name its size set. `regenerate` draws every size of it, each a fresh evaluation of the recipe with nothing inherited from another, and says what drove every point. `grade` moves the sample by a [table of rules](grade-rules.md) and rebuilds each size with the recipe left out of it. Both are compared, quantity by quantity. `check_extremes` runs every check on the smallest and largest sizes after they have come through a written file. `export_graded` writes the grading in each of three named modes. **What does not exist yet:** any receiver reading the result, which is `G3-GRADING.8`.
 
 ```rust
 use sc_cli::Running;
@@ -156,6 +156,39 @@ A verdict is `holds`, `fails`, or `no_limit`. **A limit belongs to a factory,** 
 
 **What it found.** On all three garments, at both ends, everything holds except the seams, which do not walk to what they declare, for the reason the table above gives. That is a bounded difference and not a clamped one: the bodice's cap is 2.6 mm out at its worst, and it says which seam by how much. A size too far to draw is refused by name when regenerating it, before anything is rebuilt.
 
+## The three modes
+
+`export_graded` takes a `mode`, `semantics` and a `path`, and writes one mode's files beside its record. **No mode serves every receiver,** there is no universal one, and asking for one is refused. Which a receiver wants is its own to say, and none has said.
+
+| `mode` | Target | What it writes |
+| --- | --- | --- |
+| `base_plus_rules` | `dxf-aama-named`, R12 | The sample on named layers, with a `# ` identifier at each point, and a `.rul` file with the deltas |
+| `embedded_rules` | `dxf-astm-num-r13`, R13 | The sample on numbered layers, with style text and an identifier at each point, and a `.rul` file with the deltas |
+| `all_contours` | `dxf-astm-num-r13`, R13 | A block for each piece at each size, in size order, each with a grade reference line. No rules |
+
+**Only `sew_as_1` exists,** because a rule moves a net corner, so a graded file puts the net line on the layer a receiver reads, and generates its allowances downstream. Asked for `cut_as_1` it refuses and says why. A mirror is not a block of its own: a pair is told by the piece's `Quantity:`, as right and left, because the file's convention has that and a receiver flips a rule's X for the left.
+
+**"Embedded" does not mean what the roadmap's words suggest.** The standard's pages hold no place in a DXF for a delta. A file holds `# ` identifiers, and "the grade rules associated with" them "may optionally be defined in a separate" table file. So a receiver of `embedded_rules` still needs the table its style text names, and the mode's first loss says so. This chapter calls that out because [the dialects chapter](interchange-dialects.md) described it otherwise.
+
+**The same points at every size.** A nest's sizes have to correspond point by point, in the same order and number, so its net lines are written with evenly spaced points from the curves themselves, and a test holds them within the 100 µm a polyline target allows. So a nest's line is not the line the other modes write. Notches, labels and the cut line are on the sample only, as the standard says for notches.
+
+Each record states what that mode loses, in these words:
+
+| Loss | In |
+| --- | --- |
+| `named_layers_merge_turn_points_curve_points_and_the_boundary` | `base_plus_rules` |
+| `rules_only_on_the_points_listed_and_between_them_a_receiver_interpolates` | `base_plus_rules`, `embedded_rules` |
+| `stack_points_fixed_contours_and_declared_zeros_are_not_carried` | `base_plus_rules`, `embedded_rules` |
+| `the_recipe_is_not_carried` | All three |
+| `the_file_holds_identifiers_and_the_deltas_are_in_a_table_it_names` | `embedded_rules` |
+| `turn_points_and_curve_points_are_not_written_on_their_own_layers` | `embedded_rules` |
+| `coordinates_are_held_to_two_decimal_places` | `embedded_rules`, `all_contours` |
+| `no_rules_so_a_receiver_can_make_no_size_outside_the_nest` | `all_contours` |
+| `only_the_sample_carries_notches_and_labels` | `all_contours` |
+| `the_cut_line_is_only_on_the_sample_since_its_vertices_differ_by_size` | `all_contours` |
+
+Each record also says `receiver`, which is that none has read it. A test reads each file with a small reader of its own, finds every identifier on a point on its own layer, and moves each corner by the `.rul` file's rule to where the nest has that corner at each size, so two files that were not written from each other agree. Each mode's files are frozen by digest for three garments, in `conformance/goldens/grading/digests.tsv`, and two of the skirt's in full.
+
 **What this does not show.** That these sizes fit anybody: they are what the recipe gives at those measurements, and a size chart nobody has fitted is a set of numbers. The steps are an engineer's and come from no standard. A test does measure each size from its drawing against what it asked for, which is what stops a family that closes on paper being wrong in the cloth, and it does that for three garments and only for the measurements named there.
 
 ## Names used in this chapter
@@ -203,6 +236,30 @@ A verdict is `holds`, `fails`, or `no_limit`. **A limit belongs to a factory,** 
 | `conflicts` | Contours that were not to change, and did |
 | `equivalence` | The two paths compared |
 | `equivalence_path` | Where to write the whole report |
+| `export_graded` | The step that writes one grading mode |
+| `mode` | Which of the three |
+| `semantics` | Which line a receiver reads first |
+| `base_plus_rules` | Named layers and a `.rul` file |
+| `embedded_rules` | Numbered layers, identifiers at the points, and a `.rul` file |
+| `all_contours` | Every size's own contour, and no rules |
+| `dxf-aama-named` | A registered target |
+| `dxf-astm-num-r13` | A registered target |
+| `# ` | What starts an identifier |
+| `sew_as_1` | The net line on the first layer |
+| `cut_as_1` | The cut line on the first layer |
+| `Quantity:` | How many of a piece, right and left |
+| `receiver` | Who has read it |
+| `named_layers_merge_turn_points_curve_points_and_the_boundary` | A loss |
+| `rules_only_on_the_points_listed_and_between_them_a_receiver_interpolates` | A loss |
+| `stack_points_fixed_contours_and_declared_zeros_are_not_carried` | A loss |
+| `the_recipe_is_not_carried` | A loss |
+| `the_file_holds_identifiers_and_the_deltas_are_in_a_table_it_names` | A loss |
+| `turn_points_and_curve_points_are_not_written_on_their_own_layers` | A loss |
+| `coordinates_are_held_to_two_decimal_places` | A loss |
+| `no_rules_so_a_receiver_can_make_no_size_outside_the_nest` | A loss |
+| `only_the_sample_carries_notches_and_labels` | A loss |
+| `the_cut_line_is_only_on_the_sample_since_its_vertices_differ_by_size` | A loss |
+| `conformance/goldens/grading/digests.tsv` | Each mode's files, frozen by digest |
 | `check_extremes` | The step that checks the two ends of the set |
 | `through` | What read the file |
 | `declared_domain` | A check |

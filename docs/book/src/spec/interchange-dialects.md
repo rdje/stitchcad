@@ -200,7 +200,7 @@ Three modes, separately validated, never combined into one file:
 | Mode | Carries | Canonical use |
 | --- | --- | --- |
 | base plus rules | the base size's geometry, plus a `.rul` table of per-point deltas | the canonical interchange of the AAMA era, and this product's default at G3 |
-| embedded rules | the base geometry and the grade rules inside the DXF | the ASTM path, where a receiver reads rules from the file |
+| embedded rules | the base geometry with an identifier at each point, on numbered layers. The pages read so far hold no place in a DXF for a delta, so a receiver also needs the table it names ([Grading a garment](grading.md)) | the ASTM path |
 | all contours | every size's finished contour, with no rules | a named option for receivers that grade nothing |
 
 The `.rul` attributes — incremental against cumulative, stack point, fixed perimeter, smoothing — are

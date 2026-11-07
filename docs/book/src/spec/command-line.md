@@ -38,6 +38,7 @@ $ stitchcad replay session.json project-directory
 | `regenerate` | [Draws every size](grading.md) the draft names, changing nothing in the design |
 | `grade` | [Moves the sample by a table of rules](grading.md) and rebuilds each size, changing nothing in the design |
 | `check_extremes` | [Checks the smallest and largest sizes](grading.md) after they have come through a file |
+| `export_graded` | [Writes one grading mode](grading.md), with what it loses in its record |
 | `preview` | What one input's new value would change, computed on a copy: `token` and `um`. The Design, its revision and its history stay as they are |
 | `change` | Replaces one input's value through the bus, at a new revision. `token`, `um`, and optionally `expect_revision` |
 | `undo` | Returns the Design to its state before the last change, under a fresh authority check |
@@ -379,3 +380,4 @@ Exporting also writes `<path>.record.json`, which the writer's own chapter descr
 | `regenerate` | The step that draws every size |
 | `grade` | The step that moves the sample by a table |
 | `check_extremes` | The step that checks the two ends of the set |
+| `export_graded` | The step that writes one grading mode |

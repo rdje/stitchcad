@@ -231,6 +231,58 @@ impl Curve {
         }
     }
 
+    /// This curve as evenly spaced points along its parameter: exactly `segments` of them after the first, however large it is, which is what lets two sizes of one curve correspond point by point.
+    #[must_use]
+    #[allow(clippy::cast_precision_loss, clippy::cast_possible_truncation)]
+    pub fn sampled(self, segments: usize) -> Vec<Point> {
+        let segments = segments.max(1);
+        let mut out = Vec::with_capacity(segments + 1);
+        out.push(self.from());
+        for step in 1..segments {
+            let t = step as f64 / segments as f64;
+            let straight = |from: Point, to: Point| {
+                (
+                    (from.x() as f64) + t * ((to.x() - from.x()) as f64),
+                    (from.y() as f64) + t * ((to.y() - from.y()) as f64),
+                )
+            };
+            let (x, y) = match self {
+                Self::Line { from, to } => straight(from, to),
+                Self::Arc { from, through, to } => {
+                    if let Some((centre_x, centre_y, radius, start, sweep)) =
+                        arc_sweep(from, through, to)
+                    {
+                        let (sine, cosine) = pure::sin_cos(start + sweep * t);
+                        (centre_x + radius * cosine, centre_y + radius * sine)
+                    } else {
+                        straight(from, to)
+                    }
+                }
+                Self::Cubic {
+                    from,
+                    first,
+                    second,
+                    to,
+                } => {
+                    let u = 1.0 - t;
+                    let along = |a: i64, b: i64, c: i64, d: i64| {
+                        u * u * u * (a as f64)
+                            + 3.0 * u * u * t * (b as f64)
+                            + 3.0 * u * t * t * (c as f64)
+                            + t * t * t * (d as f64)
+                    };
+                    (
+                        along(from.x(), first.x(), second.x(), to.x()),
+                        along(from.y(), first.y(), second.y(), to.y()),
+                    )
+                }
+            };
+            out.push(Point::clamped(x.round() as i64, y.round() as i64));
+        }
+        out.push(self.to());
+        out
+    }
+
     /// A polyline that stays within `tolerance` micrometres of the curve, with exactly the curve's ends. Each interior
     /// point is rounded to a whole micrometre, so the result can be up to one micrometre further than the tolerance says.
     #[must_use]

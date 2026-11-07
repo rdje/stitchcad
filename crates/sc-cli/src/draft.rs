@@ -13,10 +13,12 @@ mod edges;
 mod equivalence;
 mod extremes;
 mod grade;
+mod modes;
 use edges::{Answer, Edges, Held, Located};
 pub use equivalence::{classes, compare_size, FORMAT, NUMERICAL};
 pub use extremes::{checks_on, Check};
 pub use grade::{derive_table, reconstruct, Conflict};
+pub use modes::{curve_counts, nest_at, rule_points, without_mirrors};
 
 /// The geometric tolerance for internal drafting, in micrometres: the 10 µm class of the units chapter.
 pub const TOLERANCE: i64 = 10;

@@ -6,6 +6,7 @@ mod canonical;
 mod closures;
 mod compare;
 mod dxf;
+mod graded_dxf;
 mod judge;
 
 #[doc = include_str!("../../../docs/book/src/spec/mutation-tests.md")]
@@ -22,6 +23,10 @@ pub use canonical::{from_canonical_text, to_canonical_text, CanonicalError};
 pub use closures::{along, closure_reports, ClosureReport};
 pub use compare::{compare, Comparison, Difference};
 pub use dxf::{write_dxf, DxfArtifact, DxfError, Flattening, LineSemantics, TARGET, WRITER};
+pub use graded_dxf::{
+    write_all_contours, write_base_plus_rules, write_embedded_rules, GradedArtifact, GradingMode,
+    NestPiece, Paired, RulePoint,
+};
 pub use judge::{
     judge_dxf, judge_inputs, judge_pattern, judge_pdf_square, Expectations, Finding,
     PieceExpectation, Span, SpanSide,

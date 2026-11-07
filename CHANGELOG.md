@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1022 — three named grading modes,each with its own files and what it loses
+
+Base plus rules,embedded rules and all contours are written apart,and no mode is universal. Each record says what its mode loses and that no receiver has read it. A reader in the test moves each corner by a rule to where the nest has it,so two files not written from each other agree.
+Embedded rules hold identifiers and not deltas,which the book had wrong. G3-07 met,40 of 66.
+
 ## STITCHCAD-G1-1021 — the two ends of a size set,checked after coming through a written file
 
 The smallest and largest sizes are rebuilt from a .rul file written and read back,and every check runs on each,each failing in its own words. All three garments hold everywhere except their seams,by a stated amount.

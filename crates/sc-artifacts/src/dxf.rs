@@ -102,13 +102,25 @@ pub struct DxfArtifact {
 }
 
 // Whole micrometres as millimetres with three places, exactly, so a value reads back to the same micrometre.
-fn millimetres(micrometres: i64) -> String {
+pub(crate) fn millimetres(micrometres: i64) -> String {
     let sign = if micrometres < 0 { "-" } else { "" };
     let magnitude = micrometres.unsigned_abs();
     format!("{sign}{}.{:03}", magnitude / 1000, magnitude % 1000)
 }
 
-fn pair(out: &mut String, code: i32, value: &str) {
+// Two places, which is what the numbered convention says a metric file holds. So a value rounds, to within 5 µm.
+pub(crate) fn millimetres_to_two(micrometres: i64) -> String {
+    let rounded = if micrometres >= 0 {
+        (micrometres + 5) / 10
+    } else {
+        (micrometres - 5) / 10
+    };
+    let sign = if rounded < 0 { "-" } else { "" };
+    let magnitude = rounded.unsigned_abs();
+    format!("{sign}{}.{:02}", magnitude / 100, magnitude % 100)
+}
+
+pub(crate) fn pair(out: &mut String, code: i32, value: &str) {
     let _ = writeln!(out, "{code:>3}\n{value}");
 }
 
@@ -118,7 +130,7 @@ fn coordinates(out: &mut String, at: Point) {
     pair(out, 30, "0.0");
 }
 
-fn polyline(out: &mut String, layer: &str, points: &[Point], closed: bool) {
+pub(crate) fn polyline(out: &mut String, layer: &str, points: &[Point], closed: bool) {
     pair(out, 0, "POLYLINE");
     pair(out, 8, layer);
     pair(out, 66, "1");
@@ -132,7 +144,7 @@ fn polyline(out: &mut String, layer: &str, points: &[Point], closed: bool) {
     pair(out, 8, layer);
 }
 
-fn line(out: &mut String, layer: &str, from: Point, to: Point) {
+pub(crate) fn line(out: &mut String, layer: &str, from: Point, to: Point) {
     pair(out, 0, "LINE");
     pair(out, 8, layer);
     coordinates(out, from);
@@ -142,15 +154,19 @@ fn line(out: &mut String, layer: &str, from: Point, to: Point) {
 }
 
 fn text(out: &mut String, at: Point, value: &str) {
+    text_on(out, "TEXT", at, value);
+}
+
+pub(crate) fn text_on(out: &mut String, layer: &str, at: Point, value: &str) {
     pair(out, 0, "TEXT");
-    pair(out, 8, "TEXT");
+    pair(out, 8, layer);
     coordinates(out, at);
     pair(out, 40, "3.000");
     pair(out, 1, value);
 }
 
 // A drill hole is a closed polyline of two half circles, each a bulge of 1, so the circle is carried exactly.
-fn drill(out: &mut String, at: Point) {
+pub(crate) fn drill(out: &mut String, at: Point) {
     pair(out, 0, "POLYLINE");
     pair(out, 8, "DRILL");
     pair(out, 66, "1");
@@ -167,7 +183,7 @@ fn drill(out: &mut String, at: Point) {
     pair(out, 8, "DRILL");
 }
 
-fn block_name(piece: &DrawnPiece) -> Result<String, DxfError> {
+pub(crate) fn block_name(piece: &DrawnPiece) -> Result<String, DxfError> {
     let name = format!("{}_{}", piece.name, piece.size);
     let allowed = |part: &str| {
         !part.is_empty()

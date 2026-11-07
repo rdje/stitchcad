@@ -12,7 +12,7 @@ use std::collections::BTreeMap;
 use std::rc::Rc;
 
 /// How the shell reaches each step a session can take. The book prints this table, and a test holds the two together.
-pub const COVERAGE: [(&str, &str); 22] = [
+pub const COVERAGE: [(&str, &str); 23] = [
     (
         "evaluate",
         "On opening and after every edit, for the values panel",
@@ -39,6 +39,10 @@ pub const COVERAGE: [(&str, &str); 22] = [
     ("grade", "Not offered yet: the viewer draws one size"),
     (
         "check_extremes",
+        "Not offered yet: the viewer draws one size",
+    ),
+    (
+        "export_graded",
         "Not offered yet: the viewer draws one size",
     ),
     (
