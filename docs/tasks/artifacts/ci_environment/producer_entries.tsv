@@ -8,6 +8,8 @@ Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contra
 Makefile	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 crates/sc-artifacts/Cargo.toml	platform	G2-2D.4	Declarative public build/output contract; destination audit pending.
 crates/sc-grading/Cargo.toml	platform	G3-GRADING.7	Declarative public build/output contract; destination audit pending.
+scripts/check_golden_suites.sh	delegate	G3-GRADING.12	Runs the offset corpus and graded goldens through the local environment; writes only under target.
+docs/tasks/artifacts/grading/prove_goldens_catch_a_mutation.sh	delegate	G3-GRADING.12	Mutates a copy of the tree under target and restores it; touches nothing else.
 crates/sc-cli/Cargo.toml	platform	G1-SLICE.10	Declarative public build/output contract; destination audit pending.
 crates/sc-constraints/Cargo.toml	platform	G1-SLICE.8	Declarative public build/output contract; destination audit pending.
 crates/sc-core/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.

@@ -26,7 +26,7 @@ G3-04	exit	both instantiation paths	crates/sc-cli/tests/equivalence.rs	cargo tes
 G3-05	exit	re-imported into an independent engine	-	-	unbuilt	-	-	G3-GRADING.8
 G3-06	exit	extreme sizes reconstructed	crates/sc-cli/tests/extremes.rs	cargo test -p sc-cli --test extremes	instrument	-	rebuilt through a written .rul file by this project's own engine,because no target system is available;seams report what they are out by;each limit is assumed,because no factory profile exists	G3-GRADING.9
 G3-07	exit	grading modes	conformance/goldens/grading/digests.tsv	cargo test -p sc-cli --test modes	instrument	-	three modes,each its own files and record of what it loses;each read back here by a reader of the test's own,and by no receiver;only sew_as_1 exists	G3-GRADING.10
-G3-08	exit	offset + grading golden suites	-	-	unbuilt	-	-	G3-GRADING.12
+G3-08	exit	offset + grading golden suites	conformance/goldens/graded/families.tsv	bash scripts/check_golden_suites.sh	instrument	-	one command for the offset corpus and every size by both paths;each proved by a mutation injected into a copy of the tree,recorded in docs/tasks/artifacts/grading/mutation_proof.tsv	G3-GRADING.12
 G3-09	exit	every garment	-	-	unbuilt	-	-	G3-GRADING.14
 G3-10	exit	a classic collar	crates/sc-cli/tests/bodice.rs	cargo test -p sc-cli --test bodice	instrument	-	an engineer's construction,assumed;re-drafted at five sizes,with grade rules at G3-GRADING.7	G3-GRADING.15
 G3-11	exit	trousers carrying	crates/sc-cli/tests/trousers.rs	cargo test -p sc-cli --test trousers	instrument	-	an engineer's construction,assumed;re-drafted at five sizes,with grade rules at G3-GRADING.7;the matrix cites it at G3-GRADING.14	G3-GRADING.5

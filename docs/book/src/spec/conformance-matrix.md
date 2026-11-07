@@ -46,6 +46,7 @@ Nothing in this project has reached layer 4 or 5 yet.
 | A cap meets its armhole by a declared ease, and the same difference undeclared is a defect | `G3-01` | 1 | The bodice and sleeve at five sizes, with each curve also measured from its control points | `cargo test -p sc-cli --test bodice` |
 | A collar's edges differ by the declared roll, and its roll line is never cut | `G3-10` | 1 | The collar at five sizes, its edges measured from the drawn line and its roll line read from the written file | `cargo test -p sc-cli --test bodice` |
 | A pocket is an object and a buttonhole has no length of its own | `G3-11` | 1 | The trousers at five sizes, with the button changed and the hole read back | `cargo test -p sc-cli --test trousers` |
+| Every size is frozen, and a micrometre in the offset engine or the rules turns the suite red | `G3-08` | 1 | A mutation injected into a copy of the tree, with the suite passing unmutated first | `bash scripts/check_golden_suites.sh` |
 | Three grading modes, each saying what it loses, and two written separately agree | `G3-07` | 1 | Each file read back by a reader of its own, each corner moved by a rule to where the nest has it | `cargo test -p sc-cli --test modes` |
 | The smallest and largest sizes survive every check after coming through a file, or say why | `G3-06` | 1 | Three garments at both ends, with each limit tightened until its check fails | `cargo test -p sc-cli --test extremes` |
 | Both paths work, and every difference between them is named with its class | `G3-04` | 1 | Three garments at five sizes through both paths, with a wrong corner injected, and the book's numbers held to the report | `cargo test -p sc-cli --test equivalence` |
@@ -113,5 +114,6 @@ The same design gives the same bytes on every platform, compiler, locale and tim
 | `G3-04` | A row of [the gauge](../availability.md) |
 | `G3-06` | A row of [the gauge](../availability.md) |
 | `G3-07` | A row of [the gauge](../availability.md) |
+| `G3-08` | A row of [the gauge](../availability.md) |
 | `G3-10` | A row of [the gauge](../availability.md) |
 | `G3-11` | A row of [the gauge](../availability.md) |

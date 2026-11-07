@@ -189,6 +189,14 @@ Each record states what that mode loses, in these words:
 
 Each record also says `receiver`, which is that none has read it. A test reads each file with a small reader of its own, finds every identifier on a point on its own layer, and moves each corner by the `.rul` file's rule to where the nest has that corner at each size, so two files that were not written from each other agree. Each mode's files are frozen by digest for three garments, in `conformance/goldens/grading/digests.tsv`, and two of the skirt's in full.
 
+## Frozen, and what that catches
+
+Every size of every garment is frozen through its canonical form, by both paths, along with the table between them, in `conformance/goldens/graded/families.tsv`. `bash scripts/check_golden_suites.sh` is one command for that and [the offset corpus](offsets.md), because an allowance and a graded point can each be wrong in a way the other does not see.
+
+A suite is only worth what it catches, so `bash docs/tasks/artifacts/grading/prove_goldens_catch_a_mutation.sh` injects one mutation into a copy of the tree, runs the suite, and puts it back. **The result is recorded in `docs/tasks/artifacts/grading/mutation_proof.tsv`.** One mutation widens every allowance in the offset engine by a micrometre, and the other moves every graded point by a micrometre. It has to pass unmutated first, or the rest would mean nothing, and it stops and says so.
+
+A refreeze is a decision, and the test prints the lines to review rather than taking any.
+
 **What this does not show.** That these sizes fit anybody: they are what the recipe gives at those measurements, and a size chart nobody has fitted is a set of numbers. The steps are an engineer's and come from no standard. A test does measure each size from its drawing against what it asked for, which is what stops a family that closes on paper being wrong in the cloth, and it does that for three garments and only for the measurements named there.
 
 ## Names used in this chapter
@@ -260,6 +268,10 @@ Each record also says `receiver`, which is that none has read it. A test reads e
 | `only_the_sample_carries_notches_and_labels` | A loss |
 | `the_cut_line_is_only_on_the_sample_since_its_vertices_differ_by_size` | A loss |
 | `conformance/goldens/grading/digests.tsv` | Each mode's files, frozen by digest |
+| `conformance/goldens/graded/families.tsv` | Every size by both paths, frozen by digest |
+| `bash scripts/check_golden_suites.sh` | The offset corpus and the graded families together |
+| `bash docs/tasks/artifacts/grading/prove_goldens_catch_a_mutation.sh` | The proof that the suite catches a mutation |
+| `docs/tasks/artifacts/grading/mutation_proof.tsv` | What that proof found |
 | `check_extremes` | The step that checks the two ends of the set |
 | `through` | What read the file |
 | `declared_domain` | A check |

@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1023 — every size frozen beside the offset corpus,with the suite proved by a mutation
+
+One command runs the offset corpus and every size of three garments by both paths. A micrometre injected into a copy of the offset engine or the rules turns it red,and the suite has to pass unmutated first.
+My first proof read every row as failed because nothing had run,and the clean first row is what showed it. G3-08 met,41 of 66.
+
 ## STITCHCAD-G1-1022 — three named grading modes,each with its own files and what it loses
 
 Base plus rules,embedded rules and all contours are written apart,and no mode is universal. Each record says what its mode loses and that no receiver has read it. A reader in the test moves each corner by a rule to where the nest has it,so two files not written from each other agree.

@@ -276,13 +276,20 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1020.
 
 - ID: `G3-GRADING.12`
-  Status: `pending`
+  Status: `done`
   Goal: offset + grading golden suites green (G3 exit) — the union of the G2 offset corpus and the
   new graded geometry, frozen through the canonicalizer.
   Acceptance: one command runs both suites; a mutation in either the offset engine or the grading
   rules turns the suite red (proved by an injected mutation).
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-cli/tests/graded_goldens.rs,conformance/goldens/graded/**,scripts/check_golden_suites.sh,docs/tasks/artifacts/grading/**,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-08 needs graded geometry frozen beside the offset corpus. WHERE only the sample sizes were frozen:git ls-tree e429da5d conformance/goldens/graded →empty,rc=0.
+  - [x] ADDRESSED,FROZEN:33 digests,every size of three garments by both paths and each table. cargo test -p sc-cli --test graded_goldens →rc=0. A rule moved by 1 µm at one size is found at that size and no other.
+  - [x] ADDRESSED,ONE COMMAND:bash scripts/check_golden_suites.sh →rc=0 runs the offset corpus and the graded families.
+  - [x] ADDRESSED,MUTATION:a copy of the tree,unmutated first,then 1 µm into the offset engine and 1 µm into the rules:mutation_proof.tsv records that each turned the suite red and which test said so.
+  - [x] ALSO FOUND:my first proof reported every row as failed because the environment refused to run in the copy,which would have read as mutations caught. The clean first row exposed it,and the script now stops unless that row is clean.
+  - [x] NO REGRESSION:gauge.sh --checks →rc=0;cargo test -p sc-units -p sc-geometry -p sc-artifacts -p sc-grading -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1023.
 
 - ID: `G3-GRADING.13`
   Status: `pending`
