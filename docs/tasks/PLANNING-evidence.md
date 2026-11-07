@@ -176,6 +176,11 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D396 — an export of a stale drawing
+
+`export_pattern` wrote whatever the last `draft` drew. A session that drafted,changed a measurement and exported got the old geometry with the old revision on it,with no complaint. The skirt's own session never did that,so no test ran it;I saw it while reading `change` to build the shell.
+Fixed: `change`,`undo`,`redo` and `reopen` clear the drawing,and an export without a new draft is refused by name. tests/shell.rs holds it.
+
 ## D395 — band corners against its rectangle
 
 The reference skirt's §7 gives `trim` for the band's short ends and lower edge. Its §5 step 8 and both §4.1 band closures require one rectangle, and a trimmed corner shortens the edges those closures measure. Both had been read as binding since G0 because nothing drew the band.

@@ -1122,13 +1122,13 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   promotion: declined (no new lesson).
   Commit:STITCHCAD-G1-0994.
 - ID: `G1-SLICE.14`
-  Status: `pending`
+  Status: `in_progress`
   Goal: the egui/iced dev shell for Stages 1–4 internal tools (ADR-0002's dev-shell ruling) —
   the harness the G2 viewer/editor and the conformance lab are built in, explicitly not the
   shipped product UX.
   Acceptance: the shell hosts a canvas and the command bus on both native and (where possible)
   browser; it is labeled a dev shell in the book so nobody mistakes it for the product.
-  Verification: `pending`
+  Verification: the browser half exists as a page,`G2-2D.9`. The toolkit is open:fetching eframe was refused by the harness's safety check,and the director can allow it or accept the page. The native half is open.
   Commit: `pending`
 - ID: `G1-SLICE.15`
   Status: `done`

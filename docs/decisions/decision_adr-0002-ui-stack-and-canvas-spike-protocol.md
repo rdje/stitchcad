@@ -116,6 +116,11 @@ three desktop OSes. Only macOS was run, because no Windows or Linux machine with
 refusal on either OS reopens that row's eligibility. Every row passed every gate with time to spare on fast hardware, so the
 rule chose by speed among candidates that could all do the job.
 
+## The dev shell as built
+
+The ruling above says egui or iced. On 2026-11-07 fetching eframe was refused by this environment's safety check, and that was not worked around. So `G2-2D.9` built the G2 viewer and editor as a page over the same bus, drawn with the renderer this record's verdict chose, needing no new dependency.
+The ruling stands and `G1-SLICE.14` stays open until the director allows that fetch or accepts the page. Nothing in the shell's logic depends on a toolkit: it lives in `sc-viewer`, and a page only forwards events and draws lines.
+
 ## What the spike does not decide
 
 The chrome, the dev-shell ruling and the TypeScript ban stand whatever the canvas measurement says: the ban

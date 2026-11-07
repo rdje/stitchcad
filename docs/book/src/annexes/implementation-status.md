@@ -11,6 +11,7 @@ requires the named contracts and later proof owners.
 | Owned source metadata | §3.1/§4.4; G1 | sc-core/sc-measure; G1-SLICE.6.4.2.d.4.3 | [Actual sources and exact set pins](../spec/design-inputs.md); focused ownership checks; full Design follows |
 | Canvas hosting | §5; G1 | spikes/canvas-host; G1-SLICE.13 | [The measurement and the verdict](../spec/canvas-hosting.md), for macOS only |
 | Canonical artifacts | §7.5; G2 | sc-artifacts; G2-2D.4/.5 | [One written form, and comparison by meaning](../spec/canonical-artifacts.md), and [DXF output](../spec/dxf-output.md) and [PDF output](../spec/pdf-output.md) |
+| Dev shell | §11 G2 | sc-viewer; G2-2D.9 | [Draws and edits a pattern through the bus](../spec/dev-shell.md) |
 | Reference skirt | §11 G2 | sc-cli; G2-2D.8 | [Drafted through the command line](../spec/reference-skirt.md), with frozen goldens |
 | Geometry kernel | §4.2; G2 | sc-geometry; G2-2D.1/.2/.3 | [Curves, exact predicates and boundaries](../spec/geometry.md), and [seam allowances](../spec/offsets.md) |
 | Viewport math | §7.3; G1 | sc-viewport; G1-SLICE.13.viewport | [Coordinates, picking and snapping](../spec/viewport.md); no renderer yet |

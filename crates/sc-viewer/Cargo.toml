@@ -26,6 +26,8 @@ missing_docs = "warn"
 missing_debug_implementations = "warn"
 
 [dependencies]
+sc-artifacts = { path = "../sc-artifacts", version = "0.1.0" }
 sc-cli = { path = "../sc-cli", version = "0.1.0" }
+sc-geometry = { path = "../sc-geometry", version = "0.1.0" }
 sc-store = { path = "../sc-store", version = "0.1.0" }
 sc-viewport = { path = "../sc-viewport", version = "0.1.0" }

@@ -1,0 +1,277 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StitchCAD dev shell</title>
+<style>
+  :root { color-scheme: light dark; --line: #8888; --bad: #b3261e; --quiet: #666; font: 13px/1.35 system-ui, sans-serif; }
+  html, body { height: 100%; margin: 0; }
+  body { display: grid; grid-template-columns: 300px 1fr; grid-template-rows: auto 1fr auto; }
+  header { grid-column: 1 / 3; padding: 6px 10px; border-bottom: 1px solid var(--line); display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  header strong { margin-right: 8px; }
+  aside { overflow: auto; padding: 8px 10px; border-right: 1px solid var(--line); }
+  main { position: relative; overflow: hidden; background: #fff; }
+  canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; }
+  #overlay { cursor: crosshair; }
+  footer { grid-column: 1 / 3; padding: 4px 10px; border-top: 1px solid var(--line); display: flex; gap: 16px; }
+  #status.failed { color: var(--bad); font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 1px 2px; }
+  td:last-child { text-align: right; }
+  input[type=number] { width: 84px; text-align: right; }
+  h2 { font-size: 12px; margin: 10px 0 4px; color: var(--quiet); }
+  .note { color: var(--quiet); }
+</style>
+<header>
+  <strong>StitchCAD dev shell</strong><span class="note">not the product: a tool for looking at drafts</span>
+  <button id="undo">Undo</button><button id="redo">Redo</button><button id="fit">Fit</button>
+  <button id="save">Save</button><button id="reopen">Reopen</button>
+  <span class="note">Export:</span>
+  <button id="export-canonical">Canonical</button><button id="export-dxf">DXF</button>
+  <button id="export-a0">PDF A0</button><button id="export-a3">PDF A3</button><button id="export-a4">PDF A4</button>
+  <label class="note">Open session <input id="open" type="file" accept=".json"></label>
+</header>
+<aside>
+  <h2>Measurements, mm</h2><table id="inputs"></table>
+  <h2>Derived, read only, mm</h2><table id="bindings"></table>
+</aside>
+<main id="stage"><canvas id="surface"></canvas><canvas id="overlay"></canvas></main>
+<footer><span id="revision"></span><span id="status"></span><span id="selected"></span><span id="backend" class="note"></span></footer>
+<script>
+"use strict";
+// This page forwards events and draws lines. Every number on the screen comes from the WebAssembly module, and no pattern logic lives here.
+const SHADER = `
+struct Size { size: vec2f }
+@group(0) @binding(0) var<uniform> viewport: Size;
+struct Out { @builtin(position) at: vec4f, @location(0) color: vec4f }
+@vertex fn vs(@location(0) at: vec2f, @location(1) color: vec4f) -> Out {
+  return Out(vec4f(at.x / viewport.size.x * 2 - 1, 1 - at.y / viewport.size.y * 2, 0, 1), color);
+}
+@fragment fn fs(input: Out) -> @location(0) vec4f { return input.color; }`;
+const STYLE = {
+  cut: {color: [0, 0, 0, 1], width: 1.5},
+  sew: {color: [0.35, 0.35, 0.35, 1], width: 1, dash: [6, 4]},
+  grain: {color: [0.05, 0.3, 0.75, 1], width: 1},
+  internal: {color: [0.5, 0.1, 0.6, 1], width: 1},
+  notch: {color: [0.8, 0.1, 0.1, 1], width: 2},
+  selected: {color: [1, 0.45, 0, 1], width: 4},
+};
+const css = ([r, g, b, a]) => `rgba(${r * 255},${g * 255},${b * 255},${a})`;
+
+const surface = document.getElementById("surface"), overlay = document.getElementById("overlay"), stage = document.getElementById("stage");
+const labelContext = overlay.getContext("2d");
+
+// The picture as stretches of a line, in device pixels: both renderers draw exactly these.
+function stretches(state, ratio) {
+  const units = state.pixel_units, out = [];
+  const add = (points, style) => {
+    for (let at = 0; at + 3 < points.length; at += 2) {
+      const x0 = points[at] / units * ratio, y0 = points[at + 1] / units * ratio, x1 = points[at + 2] / units * ratio, y1 = points[at + 3] / units * ratio;
+      if (!style.dash) { out.push({x0, y0, x1, y1, style}); continue; }
+      const length = Math.hypot(x1 - x0, y1 - y0), on = style.dash[0] * ratio, off = style.dash[1] * ratio;
+      for (let t = 0; t < length; t += on + off) {
+        const a = t / length, b = Math.min(1, (t + on) / length);
+        out.push({x0: x0 + (x1 - x0) * a, y0: y0 + (y1 - y0) * a, x1: x0 + (x1 - x0) * b, y1: y0 + (y1 - y0) * b, style});
+      }
+    }
+  };
+  for (const line of state.lines) add(line.points, STYLE[line.kind]);
+  if (state.selected) add(state.selected.points, STYLE.selected);
+  return out;
+}
+
+class WebGpu {
+  static async make() {
+    if (!navigator.gpu) return null;
+    const adapter = await navigator.gpu.requestAdapter();
+    if (!adapter) return null;
+    const device = await adapter.requestDevice();
+    const context = surface.getContext("webgpu");
+    if (!context) return null;
+    const shell = new WebGpu();
+    shell.name = "WebGPU";
+    shell.device = device;
+    shell.context = context;
+    shell.format = navigator.gpu.getPreferredCanvasFormat();
+    shell.uniforms = device.createBuffer({size: 16, usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST});
+    const module = device.createShaderModule({code: SHADER});
+    shell.pipeline = device.createRenderPipeline({
+      layout: "auto",
+      vertex: {module, entryPoint: "vs", buffers: [{arrayStride: 24, attributes: [
+        {shaderLocation: 0, offset: 0, format: "float32x2"}, {shaderLocation: 1, offset: 8, format: "float32x4"}]}]},
+      fragment: {module, entryPoint: "fs", targets: [{format: shell.format}]},
+      primitive: {topology: "triangle-list"},
+      multisample: {count: 4},
+    });
+    shell.binding = device.createBindGroup({layout: shell.pipeline.getBindGroupLayout(0), entries: [{binding: 0, resource: {buffer: shell.uniforms}}]});
+    return shell;
+  }
+  draw(lines, width, height) {
+    const {device, context} = this;
+    if (surface.width !== width || surface.height !== height || !this.target) {
+      surface.width = width; surface.height = height;
+      context.configure({device, format: this.format, alphaMode: "opaque"});
+      if (this.target) this.target.destroy();
+      this.target = device.createTexture({size: [width, height], sampleCount: 4, format: this.format, usage: GPUTextureUsage.RENDER_ATTACHMENT});
+    }
+    const data = new Float32Array(lines.length * 36);
+    let at = 0;
+    for (const {x0, y0, x1, y1, style} of lines) {
+      const length = Math.hypot(x1 - x0, y1 - y0) || 1, half = style.width * (width / stage.clientWidth) / 2;
+      const nx = -(y1 - y0) / length * half, ny = (x1 - x0) / length * half;
+      for (const [x, y] of [[x0 + nx, y0 + ny], [x1 + nx, y1 + ny], [x1 - nx, y1 - ny], [x0 + nx, y0 + ny], [x1 - nx, y1 - ny], [x0 - nx, y0 - ny]]) {
+        data[at++] = x; data[at++] = y;
+        data[at++] = style.color[0]; data[at++] = style.color[1]; data[at++] = style.color[2]; data[at++] = style.color[3];
+      }
+    }
+    device.queue.writeBuffer(this.uniforms, 0, new Float32Array([width, height, 0, 0]));
+    if (!this.vertices || this.vertices.size < data.byteLength) {
+      if (this.vertices) this.vertices.destroy();
+      this.vertices = device.createBuffer({size: Math.max(data.byteLength, 1 << 16) * 2, usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST});
+    }
+    device.queue.writeBuffer(this.vertices, 0, data);
+    const encoder = device.createCommandEncoder();
+    const pass = encoder.beginRenderPass({colorAttachments: [{view: this.target.createView(), resolveTarget: context.getCurrentTexture().createView(),
+      clearValue: {r: 1, g: 1, b: 1, a: 1}, loadOp: "clear", storeOp: "discard"}]});
+    pass.setPipeline(this.pipeline);
+    pass.setBindGroup(0, this.binding);
+    pass.setVertexBuffer(0, this.vertices);
+    pass.draw(at / 6);
+    pass.end();
+    device.queue.submit([encoder.finish()]);
+  }
+}
+
+// A browser with no WebGPU still gets the same picture, from the same lines.
+class Plain {
+  constructor() { this.name = "2D canvas: this browser has no WebGPU"; this.context = surface.getContext("2d"); }
+  draw(lines, width, height) {
+    surface.width = width; surface.height = height;
+    const context = this.context;
+    context.fillStyle = "#fff"; context.fillRect(0, 0, width, height);
+    for (const {x0, y0, x1, y1, style} of lines) {
+      context.strokeStyle = css(style.color);
+      context.lineWidth = style.width * (width / stage.clientWidth);
+      context.beginPath(); context.moveTo(x0, y0); context.lineTo(x1, y1); context.stroke();
+    }
+  }
+}
+
+function send(module, slot, text) {
+  module.sc_input_clear(slot);
+  for (const byte of new TextEncoder().encode(text)) module.sc_input_push(slot, byte);
+}
+function output(module) {
+  const bytes = new Uint8Array(module.sc_output_len());
+  for (let at = 0; at < bytes.length; at += 1) bytes[at] = module.sc_output_byte(at);
+  return new TextDecoder().decode(bytes);
+}
+function save(file) {
+  const bytes = new Uint8Array(file.hex.length / 2);
+  for (let at = 0; at < bytes.length; at += 1) bytes[at] = parseInt(file.hex.substr(at * 2, 2), 16);
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(new Blob([bytes]));
+  link.download = file.path.split("/").pop();
+  link.click();
+  URL.revokeObjectURL(link.href);
+}
+
+async function start() {
+  const wasm = await (await fetch("sc_viewer.wasm")).arrayBuffer();
+  const module = (await WebAssembly.instantiate(wasm, {})).instance.exports;
+  const renderer = (await WebGpu.make().catch(() => null)) || new Plain();
+  document.getElementById("backend").textContent = "drawn with " + renderer.name;
+  let state = null, lastFile = null;
+
+  function paint() {
+    const ratio = window.devicePixelRatio || 1;
+    const width = Math.round(stage.clientWidth * ratio), height = Math.round(stage.clientHeight * ratio);
+    renderer.draw(stretches(state, ratio), width, height);
+    overlay.width = width; overlay.height = height;
+    labelContext.font = `${11 * ratio}px system-ui, sans-serif`;
+    labelContext.fillStyle = "#000";
+    for (const label of state.labels) labelContext.fillText(label.text, label.at[0] / state.pixel_units * ratio, label.at[1] / state.pixel_units * ratio);
+  }
+  function show(text) {
+    state = JSON.parse(text);
+    document.getElementById("revision").textContent = "revision " + state.revision;
+    const status = document.getElementById("status");
+    status.textContent = state.status;
+    status.className = state.failed ? "failed" : "";
+    document.getElementById("selected").textContent = state.selected ? `${state.selected.piece}, edge ${state.selected.edge}: ${(state.selected.length_um / 1000).toFixed(3)} mm` : "";
+    document.getElementById("undo").disabled = !state.can_undo;
+    document.getElementById("redo").disabled = !state.can_redo;
+    const table = document.getElementById("inputs");
+    table.replaceChildren(...state.inputs.map(({token, um}) => {
+      const row = table.insertRow(), name = row.insertCell(), value = row.insertCell(), field = document.createElement("input");
+      name.textContent = token;
+      field.type = "number"; field.step = "any"; field.id = "input-" + token; field.value = String(um / 1000);
+      field.addEventListener("change", () => act({do: "change", token, um: Math.round(Number(field.value) * 1000)}));
+      value.append(field);
+      return row;
+    }));
+    const derived = document.getElementById("bindings");
+    derived.replaceChildren(...state.bindings.filter(({name}) => !state.inputs.some((input) => input.token === name)).map(({name, kind, value}) => {
+      const row = derived.insertRow();
+      row.insertCell().textContent = name;
+      row.insertCell().textContent = kind === "length" ? String(Number(value) / 1000) : value;
+      return row;
+    }));
+    if (state.file) { lastFile = state.file; if (!window.stitchShell.quiet) save(state.file); }
+    paint();
+  }
+  function act(action) {
+    send(module, 1, JSON.stringify(action));
+    if (module.sc_shell_act() !== 0) throw Error("no session is open");
+    show(output(module));
+  }
+  function open(text) {
+    send(module, 0, text);
+    const status = module.sc_shell_open(BigInt(stage.clientWidth), BigInt(stage.clientHeight));
+    const said = output(module);
+    if (status !== 0) { document.getElementById("status").textContent = said; document.getElementById("status").className = "failed"; return; }
+    show(said);
+  }
+
+  const on = (id, action) => document.getElementById(id).addEventListener("click", () => act(action));
+  on("undo", {do: "undo"}); on("redo", {do: "redo"}); on("fit", {do: "fit"}); on("save", {do: "save"}); on("reopen", {do: "reopen"});
+  on("export-canonical", {do: "export_pattern", format: "canonical", path: "exports/pattern.json"});
+  on("export-dxf", {do: "export_pattern", format: "dxf", semantics: "cut_as_1", path: "exports/pattern.dxf"});
+  on("export-a0", {do: "export_pattern", format: "pdf", layout: "a0", path: "exports/pattern-a0.pdf"});
+  on("export-a3", {do: "export_pattern", format: "pdf", layout: "a3_tiled", path: "exports/pattern-a3.pdf"});
+  on("export-a4", {do: "export_pattern", format: "pdf", layout: "a4_tiled", path: "exports/pattern-a4.pdf"});
+  document.getElementById("open").addEventListener("change", async (event) => { if (event.target.files[0]) open(await event.target.files[0].text()); });
+
+  let drag = null;
+  const place = (event) => { const box = overlay.getBoundingClientRect(); return [Math.round(event.clientX - box.left), Math.round(event.clientY - box.top)]; };
+  overlay.addEventListener("wheel", (event) => { event.preventDefault(); const [x, y] = place(event); act({do: "zoom", closer: event.deltaY < 0, x, y}); }, {passive: false});
+  overlay.addEventListener("pointerdown", (event) => { const [x, y] = place(event); drag = {x, y, moved: false}; });
+  overlay.addEventListener("pointermove", (event) => {
+    if (!drag) return;
+    const [x, y] = place(event);
+    if (x === drag.x && y === drag.y) return;
+    act({do: "pan", x: drag.x - x, y: drag.y - y});
+    drag = {x, y, moved: true};
+  });
+  overlay.addEventListener("pointerup", (event) => { const [x, y] = place(event); if (drag && !drag.moved) act({do: "pick", x, y}); drag = null; });
+  window.addEventListener("resize", () => { if (state) act({do: "resize", width: stage.clientWidth, height: stage.clientHeight}); });
+
+  open(await (await fetch("session.json")).text());
+  return {
+    state: () => state,
+    lastFile: () => lastFile,
+    renderer: renderer.name,
+    recording: () => { module.sc_shell_recording(); return output(module); },
+    // The picture as it stands: drawn again, because a WebGPU canvas can only be read in the task that drew it.
+    snapshot: () => {
+      paint();
+      const copy = document.createElement("canvas");
+      copy.width = surface.width; copy.height = surface.height;
+      const context = copy.getContext("2d");
+      context.drawImage(surface, 0, 0); context.drawImage(overlay, 0, 0);
+      return copy;
+    },
+  };
+}
+window.stitchShell = {quiet: false};
+window.stitchShell.ready = start().then((api) => Object.assign(window.stitchShell, api));
+</script>

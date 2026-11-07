@@ -1,6 +1,7 @@
 //! Replays a session: every change goes through the command bus, with revision checks and undo.
 use crate::design::{build, declaration, Identities, Input};
 use crate::outline::svg;
+use core::fmt;
 use sc_constraints::{
     Binding, Catalog, Domain, Expr, Limits, Outcome, Problem, Rule, TemplatePart, Value as Fact,
     Variable, AST_VERSION,
@@ -205,6 +206,7 @@ impl<R: Repository> Session<R> {
         }
         self.undo.push(group);
         self.redo.clear();
+        self.pattern = None;
         Ok(Value::Text(self.revision_text()))
     }
 
@@ -242,6 +244,7 @@ impl<R: Repository> Session<R> {
             CommandHistoryDirection::Redo => self.undo.push(original),
         }
         self.sync_inputs();
+        self.pattern = None;
         Ok(Value::Text(self.revision_text()))
     }
 
@@ -533,6 +536,7 @@ impl<R: Repository> Session<R> {
     fn reopen(&mut self, step: usize) -> Result<Value, Failure> {
         let fail = |message: String| Failure::at(step, "reopen", message);
         let saved = self.store.load().map_err(|error| fail(error.to_string()))?;
+        self.pattern = None;
         let path = |text: &str| sc_store::FilePath::new(text).map_err(|error| error.to_string());
         let inputs = saved
             .project
@@ -698,64 +702,101 @@ fn solve(
     Ok(Value::Object(record))
 }
 
-/// Run a session against a project directory, and return the transcript.
-///
-/// # Errors
-/// The first failure stops the session with a structured diagnostic. A step that failed changed nothing.
-pub fn replay<R: Repository>(session: &Value, repository: R) -> Result<Value, Failure> {
-    let fields = session
-        .as_object()
-        .ok_or_else(|| Failure::session("a session must be an object"))?;
-    if field(fields, "format")?.as_int() != Some(FORMAT) {
-        return Err(Failure::session(format!(
-            "this version reads session format {FORMAT}"
-        )));
+/// The steps a session can take. Anything else is refused by name.
+pub const STEPS: [&str; 11] = [
+    "evaluate",
+    "change",
+    "undo",
+    "redo",
+    "solve",
+    "render",
+    "draft",
+    "export_pattern",
+    "export",
+    "save",
+    "reopen",
+];
+
+/// A session opened to be driven one step at a time, which is what `replay` does with a file's steps. A front end
+/// drives this and nothing else, so it has no way to change a Design that a session file does not also have.
+pub struct Running<R: Repository> {
+    state: Session<R>,
+    next: usize,
+}
+
+impl<R: Repository> fmt::Debug for Running<R> {
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
+        formatter
+            .debug_struct("Running")
+            .field("next", &self.next)
+            .finish_non_exhaustive()
     }
-    let design_text = field(fields, "design")?
-        .as_text()
-        .ok_or_else(|| Failure::session("design must be text"))?;
-    let design: EntityId = design_text
-        .parse()
-        .map_err(|error| Failure::session(format!("design: {error}")))?;
-    let inputs = read_inputs(fields)?;
-    let recipe = field(fields, "recipe")?
-        .as_text()
-        .ok_or_else(|| Failure::session("recipe must be text"))?
-        .to_owned();
-    let steps = field(fields, "steps")?
-        .as_list()
-        .ok_or_else(|| Failure::session("steps must be a list"))?;
-    let identities = Identities::new(design);
-    let actor = CommandActorClaim::Human(identities.nth(21));
-    let garment =
-        build(design, DesignRevision::initial(), &inputs, &recipe).map_err(Failure::session)?;
-    let bus = new_bus(garment, design, actor, identities).map_err(Failure::session)?;
-    let (mut store, _) =
-        ProjectStore::open(repository).map_err(|error| Failure::session(error.to_string()))?;
-    // A project already here keeps whatever this session does not author.
-    let base = match store.load() {
-        Ok(loaded) => loaded.project,
-        Err(ProjectError::NoProject) => Project::new(),
-        Err(error) => return Err(Failure::session(error.to_string())),
-    };
-    let mut state = Session {
-        identities,
-        design,
-        actor,
-        bus,
-        inputs,
-        undo: Vec::new(),
-        redo: Vec::new(),
-        next_id: 1 << 32,
-        store,
-        base,
-        design_text: design_text.to_owned(),
-        recipe,
-        drawing: None,
-        pattern: None,
-    };
-    let mut transcript = Vec::new();
-    for (step, item) in steps.iter().enumerate() {
+}
+
+impl<R: Repository> Running<R> {
+    /// Opens a session against a project, reading its format, design, inputs and recipe. Its steps are the caller's.
+    ///
+    /// # Errors
+    /// The session is malformed, or the project cannot be read.
+    pub fn open(session: &Value, repository: R) -> Result<Self, Failure> {
+        let fields = session
+            .as_object()
+            .ok_or_else(|| Failure::session("a session must be an object"))?;
+        if field(fields, "format")?.as_int() != Some(FORMAT) {
+            return Err(Failure::session(format!(
+                "this version reads session format {FORMAT}"
+            )));
+        }
+        let design_text = field(fields, "design")?
+            .as_text()
+            .ok_or_else(|| Failure::session("design must be text"))?;
+        let design: EntityId = design_text
+            .parse()
+            .map_err(|error| Failure::session(format!("design: {error}")))?;
+        let inputs = read_inputs(fields)?;
+        let recipe = field(fields, "recipe")?
+            .as_text()
+            .ok_or_else(|| Failure::session("recipe must be text"))?
+            .to_owned();
+        let identities = Identities::new(design);
+        let actor = CommandActorClaim::Human(identities.nth(21));
+        let garment =
+            build(design, DesignRevision::initial(), &inputs, &recipe).map_err(Failure::session)?;
+        let bus = new_bus(garment, design, actor, identities).map_err(Failure::session)?;
+        let (mut store, _) =
+            ProjectStore::open(repository).map_err(|error| Failure::session(error.to_string()))?;
+        // A project already here keeps whatever this session does not author.
+        let base = match store.load() {
+            Ok(loaded) => loaded.project,
+            Err(ProjectError::NoProject) => Project::new(),
+            Err(error) => return Err(Failure::session(error.to_string())),
+        };
+        let state = Session {
+            identities,
+            design,
+            actor,
+            bus,
+            inputs,
+            undo: Vec::new(),
+            redo: Vec::new(),
+            next_id: 1 << 32,
+            store,
+            base,
+            design_text: design_text.to_owned(),
+            recipe,
+            drawing: None,
+            pattern: None,
+        };
+        Ok(Self { state, next: 0 })
+    }
+
+    /// Takes one step, returning its transcript record. A step that failed changed nothing.
+    ///
+    /// # Errors
+    /// The step failed, with a structured diagnostic.
+    pub fn step(&mut self, item: &Value) -> Result<Value, Failure> {
+        let step = self.next;
+        let state = &mut self.state;
         let item = item
             .as_object()
             .ok_or_else(|| Failure::at(step, "session", "a step must be an object"))?;
@@ -813,7 +854,60 @@ pub fn replay<R: Repository>(session: &Value, repository: R) -> Result<Value, Fa
             "step".to_owned(),
             Value::Int(i64::try_from(step).unwrap_or(i64::MAX)),
         );
-        transcript.push(Value::Object(record));
+        self.next += 1;
+        Ok(Value::Object(record))
+    }
+
+    /// The drafted pattern, or `None` when nothing has been drafted since the Design last changed.
+    #[must_use]
+    pub const fn pattern(&self) -> Option<&sc_artifacts::Pattern> {
+        self.state.pattern.as_ref()
+    }
+
+    /// The Design's revision.
+    #[must_use]
+    pub fn revision(&self) -> String {
+        self.state.revision_text()
+    }
+
+    /// Each input's name and value in micrometres, in the session's order.
+    #[must_use]
+    pub fn inputs(&self) -> Vec<(String, i64)> {
+        self.state
+            .inputs
+            .iter()
+            .map(|input| (input.token.clone(), input.value.as_micrometres()))
+            .collect()
+    }
+
+    /// Whether there is a change to undo.
+    #[must_use]
+    pub fn can_undo(&self) -> bool {
+        !self.state.undo.is_empty()
+    }
+
+    /// Whether there is a change to redo.
+    #[must_use]
+    pub fn can_redo(&self) -> bool {
+        !self.state.redo.is_empty()
+    }
+}
+
+/// Run a session against a project directory, and return the transcript.
+///
+/// # Errors
+/// The first failure stops the session with a structured diagnostic. A step that failed changed nothing.
+pub fn replay<R: Repository>(session: &Value, repository: R) -> Result<Value, Failure> {
+    let mut running = Running::open(session, repository)?;
+    let fields = session
+        .as_object()
+        .ok_or_else(|| Failure::session("a session must be an object"))?;
+    let steps = field(fields, "steps")?
+        .as_list()
+        .ok_or_else(|| Failure::session("steps must be a list"))?;
+    let mut transcript = Vec::new();
+    for item in steps {
+        transcript.push(running.step(item)?);
     }
     Ok(Value::List(transcript))
 }

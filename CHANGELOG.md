@@ -7,6 +7,12 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1004 — a viewer and editor over the same commands
+
+`bash scripts/dev_shell.sh` draws the reference skirt in your browser with WebGPU. Wheel,drag,click an edge,edit any measurement,undo,redo,save,reopen,export.
+What the page records replays through the command line to the exact bytes it exported,in real Chrome with real events.
+It is a page,not the egui the roadmap names,because that fetch was refused here,and saving does not outlive the page. Building it found D396. G2-02 met,29 of 66.
+
 ## STITCHCAD-G1-1003 — the PDF measured by renderers nobody here wrote
 
 xpdf 4.06 and macOS CoreGraphics render the skirt's PDF. 34 measurements are within a pixel on A0,A3 and A4,including 800 mm on A0 and both tiled overlaps. A 0.1% scale error and a 0.3 mm tile shift each fail it.

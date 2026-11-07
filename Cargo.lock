@@ -97,7 +97,9 @@ version = "0.1.0"
 name = "sc-viewer"
 version = "0.1.0"
 dependencies = [
+ "sc-artifacts",
  "sc-cli",
+ "sc-geometry",
  "sc-store",
  "sc-viewport",
 ]

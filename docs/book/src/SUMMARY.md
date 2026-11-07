@@ -77,6 +77,7 @@
   - [PDF output](spec/pdf-output.md)
   - [Viewport](spec/viewport.md)
   - [Canvas hosting](spec/canvas-hosting.md)
+  - [The dev shell](spec/dev-shell.md)
 - [Formula syntax API](annexes/formula-syntax.md)
   - [Canonical formula rational values](annexes/formula-rationals.md)
   - [Trig certificate feasibility](annexes/formula-trig-certificates.md)

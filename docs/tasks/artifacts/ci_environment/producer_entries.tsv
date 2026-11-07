@@ -24,6 +24,7 @@ docs/tasks/artifacts/book_publication/run_book_publication_probes.sh	delegate	G1
 docs/tasks/artifacts/browser_run/run_browser_run.sh	delegate	G1-SLICE.12	Whole shell source/heredoc body retained;builds through project stores,writes under target/browser_run,and kills each Chrome it starts by process group.
 docs/tasks/artifacts/browser_run/run_capability_matrix_check.sh	delegate	G1-SLICE.12	Whole shell source/heredoc body retained;reads the chapter and recording,writes nothing.
 docs/tasks/artifacts/canvas_spike/run_canvas_spike.sh	delegate	G1-SLICE.13	Whole shell source/heredoc body retained;builds through project stores,writes under target/canvas_spike,and kills each process group it starts.
+docs/tasks/artifacts/dev_shell/run_dev_shell_check.sh	delegate	G2-2D.9	Whole shell source/heredoc bodies retained;writes under target/dev_shell_check and kills the browser process group it starts.
 docs/tasks/artifacts/printed_square/run_printed_square.sh	delegate	G2-2D.7	Whole shell source/heredoc bodies retained;writes under target/printed_square,deleting each render once it is measured,and reads nothing else.
 docs/tasks/artifacts/canvas_spike/run_spike_verdict.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/canvas_spike/run_spike_verdict_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
@@ -241,6 +242,7 @@ knowledge-map/scripts/check_knowledge_map.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whol
 knowledge-map/scripts/gen_knowledge_map.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 rust-toolchain.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 scripts/bootstrap.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/dev_shell.sh	delegate	G2-2D.9	Whole shell source retained;writes under target/dev_shell and serves that directory on 127.0.0.1 until stopped.
 scripts/check_archive_retention.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_book_censuses.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 scripts/check_docpaths.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.

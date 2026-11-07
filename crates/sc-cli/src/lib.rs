@@ -7,4 +7,4 @@ mod draft;
 mod outline;
 mod session;
 
-pub use session::{replay, Failure};
+pub use session::{replay, Failure, Running, STEPS};

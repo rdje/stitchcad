@@ -5,6 +5,11 @@
 use sc_store::{parse, FilePath, MemoryRepository, Value};
 use std::collections::BTreeMap;
 
+pub mod shell;
+
+#[doc = include_str!("../../../docs/book/src/spec/dev-shell.md")]
+mod dev_shell_examples {}
+
 /// The project image as canonical text: each file's path and its bytes in hexadecimal.
 #[must_use]
 pub fn image_to_text(repository: &MemoryRepository) -> String {
@@ -138,6 +143,57 @@ pub mod exports {
         OUTPUT.with(|bytes| {
             let at = usize::try_from(at).unwrap_or(usize::MAX);
             bytes.borrow().get(at).copied().map_or(0, u32::from)
+        })
+    }
+
+    thread_local! {
+        static SHELL: RefCell<Option<super::shell::Shell>> = const { RefCell::new(None) };
+    }
+
+    fn set_output(text: String) {
+        OUTPUT.with(|bytes| *bytes.borrow_mut() = text.into_bytes());
+    }
+
+    /// Opens the session in input 0 in the dev shell, drawn for a canvas this size, leaving its state as the output.
+    /// Returns 0, or 1 with the reason as the output.
+    #[no_mangle]
+    pub extern "C" fn sc_shell_open(width: i64, height: i64) -> u32 {
+        let session = with_slot(0, |bytes| String::from_utf8_lossy(bytes).into_owned());
+        match super::shell::Shell::open(&session, (width, height)) {
+            Ok(shell) => {
+                set_output(shell.state().to_text());
+                SHELL.with(|cell| *cell.borrow_mut() = Some(shell));
+                0
+            }
+            Err(reason) => {
+                set_output(reason);
+                1
+            }
+        }
+    }
+
+    /// Does the action in input 1 in the open shell, leaving its state as the output. Returns 0, or 1 if no shell is open.
+    #[no_mangle]
+    pub extern "C" fn sc_shell_act() -> u32 {
+        let action = with_slot(1, |bytes| String::from_utf8_lossy(bytes).into_owned());
+        SHELL.with(|cell| match cell.borrow_mut().as_mut() {
+            Some(shell) => {
+                set_output(shell.act(&action).to_text());
+                0
+            }
+            None => 1,
+        })
+    }
+
+    /// Leaves everything done to the Design so far as the output, as a session. Returns 0, or 1 if no shell is open.
+    #[no_mangle]
+    pub extern "C" fn sc_shell_recording() -> u32 {
+        SHELL.with(|cell| match cell.borrow().as_ref() {
+            Some(shell) => {
+                set_output(shell.recording().to_text());
+                0
+            }
+            None => 1,
         })
     }
 
