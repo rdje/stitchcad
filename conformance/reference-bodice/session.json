@@ -278,6 +278,15 @@
           "vary": "collar_front_span"
         }
       ],
+      "grading": {
+        "stack": {
+          "bodice_back_right": "cb/to",
+          "bodice_front": "cf/to",
+          "collar_right": "cb/to",
+          "sleeve_right": "cap_front/to"
+        },
+        "table": "reference-bodice"
+      },
       "pieces": [
         {
           "darts": [

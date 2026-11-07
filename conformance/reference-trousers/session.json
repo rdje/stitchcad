@@ -208,6 +208,15 @@
           "vary": "back_crotch_drop"
         }
       ],
+      "grading": {
+        "stack": {
+          "pocket_bag_right": "bag_top/to",
+          "trouser_back_right": "waist/to",
+          "trouser_front_right": "waist/to",
+          "waistband": "band_left/to"
+        },
+        "table": "reference-trousers"
+      },
       "pieces": [
         {
           "darts": [

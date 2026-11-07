@@ -10,7 +10,9 @@ use sc_units::pure;
 use std::collections::BTreeMap;
 
 mod edges;
+mod grade;
 use edges::{Answer, Edges, Held, Located};
+pub use grade::{derive_table, reconstruct, Conflict};
 
 /// The geometric tolerance for internal drafting, in micrometres: the 10 µm class of the units chapter.
 pub const TOLERANCE: i64 = 10;
@@ -1346,10 +1348,6 @@ fn balance_notches(
             .iter()
             .find(|seam| seam.name == name)
             .ok_or_else(|| format!("no seam is named {name}"))?;
-        let at = length(
-            lengths,
-            required(item, "at")?.as_text().ok_or("at names a length")?,
-        )?;
         let depth = length(
             lengths,
             required(item, "depth")?
@@ -1370,14 +1368,37 @@ fn balance_notches(
             Ok(stretch_length(&walked))
         };
         let (a_length, b_length) = (side_line(&seam.a)?, side_line(&seam.b)?);
-        if at <= 0 || ratio(at) >= a_length {
-            return Err(format!(
-                "a balance notch at {at} is not along the seam {name}, which is {} long",
-                whole(a_length)
-            ));
-        }
-        let share = ratio(at) / a_length;
-        for (side, distance) in [(&seam.a, ratio(at)), (&seam.b, share * b_length)] {
+        // Graded by a rule it keeps its share of the seam, and everywhere else it is a distance along side A.
+        let along_a = match item.get("share").and_then(Value::as_text) {
+            Some(written) => {
+                let (top, bottom) = written.split_once('/').ok_or_else(|| {
+                    format!("a balance notch's share is written as a/b, not {written}")
+                })?;
+                let (top, bottom): (i64, i64) = (
+                    top.parse()
+                        .map_err(|_| format!("{written} is not a share"))?,
+                    bottom
+                        .parse()
+                        .map_err(|_| format!("{written} is not a share"))?,
+                );
+                ratio(top) / ratio(bottom) * a_length
+            }
+            None => {
+                let at = length(
+                    lengths,
+                    required(item, "at")?.as_text().ok_or("at names a length")?,
+                )?;
+                if at <= 0 || ratio(at) >= a_length {
+                    return Err(format!(
+                        "a balance notch at {at} is not along the seam {name}, which is {} long",
+                        whole(a_length)
+                    ));
+                }
+                ratio(at)
+            }
+        };
+        let share = along_a / a_length;
+        for (side, distance) in [(&seam.a, along_a), (&seam.b, share * b_length)] {
             let piece = pieces
                 .iter_mut()
                 .find(|piece| piece.name == side.piece)
@@ -1444,7 +1465,9 @@ fn pockets_of(
         let start = edges.held(lengths, item, &what)?;
         let along = length(lengths, text("length")?)?;
         // It runs on along the edge from where it starts, or, when that is written back from the edge's end, on back toward its start.
-        let run = if item.contains_key("before_end") {
+        let run = if item.contains_key("before_end")
+            || item.get("runs").and_then(Value::as_text) == Some("back")
+        {
             -along
         } else {
             along

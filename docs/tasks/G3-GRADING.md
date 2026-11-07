@@ -198,14 +198,22 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit:STITCHCAD-G1-1018.
 
 - ID: `G3-GRADING.7`
-  Status: `pending`
+  Status: `done`
   Goal: instantiation path B — grade-rule instantiation: base size + size breaks + per-point X/Y delta
   rule tables, `.rul` serialization, incremental vs cumulative, stack-point / fixed-perimeter /
   smoothing attributes (§3.3).
   Acceptance: grade points carry stable identifiers (§4.1); both rule conventions round-trip; the
   attributes are honoured rather than ignored, and an unsupported attribute is a typed rejection.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-grading/**,crates/sc-cli/**,crates/sc-units/tests/determinism.rs,crates/sc-api/src/lib.rs,crates/sc-viewer/src/shell.rs,conformance/reference-*/session.json,docs/book/src/**,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-04 needs a second path that moves points and leaves the recipe out. WHERE no rule table,no sc-grading crate:git ls-tree 732e4af9 crates/sc-grading →empty,rc=0.
+  - [x] ADDRESSED,TABLE:sc-grading holds a table keyed by a stable point name,exact integers,either convention. cargo test -p sc-grading --test table →rc=0:200 seeded round trips each way;a file written elsewhere,published in a guide,reads as its author wrote it.
+  - [x] ADDRESSED,REBUILD:reconstruct rewrites the draft to moved points and draws it with the same engine,so allowances,notches and seams are worked out rather than graded. cargo test -p sc-cli --test rules →rc=0:every corner of three garments lands exactly where the recipe does.
+  - [x] ADDRESSED,ATTRIBUTES:a stack point moving is refused;a fixed contour that changes is a conflict naming it and the size,and blocks the files;smoothing is refused by name rather than ignored.
+  - [x] ALSO FOUND:the book said the file holds these attributes and a cubic's approximation is bounded by a class. The format's first pages and a guide show it holds neither,and the bodice measures 4.5 mm between corners. Corrected,with the numbers,in the chapter.
+  - [x] NOT SHOWN,STATED:no receiver has read a file. A place by fraction leaves a waist seam 0.8 mm out and a pocket's mouth 7.9 mm,and the cap's ease drifts 2.6 mm,reported and not reconciled. Control points have no rules. A true is refused.
+  - [x] NO REGRESSION:goldens byte-identical;gauge.sh --checks →rc=0;cargo test -p sc-units -p sc-geometry -p sc-artifacts -p sc-grading -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1019.
 
 - ID: `G3-GRADING.8`
   Status: `pending`

@@ -36,6 +36,7 @@ $ stitchcad replay session.json project-directory
 | `references` | Lists what holds an edge, where it lands now, and any repair tasks |
 | `repair_reference` | Says where an orphaned reference goes, as one edit |
 | `regenerate` | [Draws every size](grading.md) the draft names, changing nothing in the design |
+| `grade` | [Moves the sample by a table of rules](grading.md) and rebuilds each size, changing nothing in the design |
 | `preview` | What one input's new value would change, computed on a copy: `token` and `um`. The Design, its revision and its history stay as they are |
 | `change` | Replaces one input's value through the bus, at a new revision. `token`, `um`, and optionally `expect_revision` |
 | `undo` | Returns the Design to its state before the last change, under a fresh authority check |
@@ -219,7 +220,7 @@ point, so they wait for G2.
 
 ## Drafting a garment
 
-A `draft` step names the `style`, the `size` and the `pieces`, and may name the `seams` between them and the `fits` that solve for a length, as [walking and truing](walking-and-truing.md) describes, and the `pockets` and `buttons` that [the trousers](reference-trousers.md) describe, and the `sizes` that [grading](grading.md) describes. The `style` is whatever name the design goes by. Every position is a pair of length names: a binding, an input, or `zero`, with a leading `-` to negate one. So the
+A `draft` step names the `style`, the `size` and the `pieces`, and may name the `seams` between them and the `fits` that solve for a length, as [walking and truing](walking-and-truing.md) describes, and the `pockets` and `buttons` that [the trousers](reference-trousers.md) describe, and the `sizes` and `grading` that [grading](grading.md) describes. The `style` is whatever name the design goes by. Every position is a pair of length names: a binding, an input, or `zero`, with a leading `-` to negate one. So the
 numbers stay in the recipe and a changed measurement moves every piece. A step that names a length that does not exist stops the session.
 
 | Piece field | What it holds |
@@ -370,7 +371,9 @@ Exporting also writes `<path>.record.json`, which the writer's own chapter descr
 | `pockets` | A draft's list of pockets |
 | `buttons` | A draft's list of buttons and their holes |
 | `sizes` | A draft's size set |
+| `grading` | How a draft says it grades |
 | `edit_edge` | The step that edits a named edge |
 | `references` | The step that lists what holds an edge |
 | `repair_reference` | The step that closes a repair task |
 | `regenerate` | The step that draws every size |
+| `grade` | The step that moves the sample by a table |

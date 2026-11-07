@@ -2,7 +2,7 @@
 
 A pattern at one size is not yet a product. The [instantiation chapter](instantiation-paths.md) says what the two ways of getting a garment's other sizes mean, and why neither replaces the other. This chapter is what you can do today.
 
-**What works today.** A draft can name its size set. `regenerate` draws every size of it, each a fresh evaluation of the recipe with nothing inherited from another, and says what drove every point. **What does not exist yet:** moving a base size by a table of rules, `.rul` files and comparing the two paths, which are `G3-GRADING.7` and `G3-GRADING.11`.
+**What works today.** A draft can name its size set. `regenerate` draws every size of it, each a fresh evaluation of the recipe with nothing inherited from another, and says what drove every point. `grade` moves the sample by a [table of rules](grade-rules.md) and rebuilds each size with the recipe left out of it. **What does not exist yet:** a report comparing the two paths as a first-class output, which is `G3-GRADING.11`, and any receiver reading the result, which is `G3-GRADING.8`.
 
 ```rust
 use sc_cli::Running;
@@ -77,6 +77,43 @@ Each entry in `points` names its `piece`, its `edge` and which `point` of that e
 
 **A size that cannot be drawn stops the whole thing,** and it says which size and why, including when a recipe's closure does not hold there.
 
+## Grading by rule
+
+A draft's `grading` says what its table is called and, for each piece, which corner it `stack`s on, as `edge/to`. `grade` then works a table out from a regeneration of each size, or takes one, as `table` for a project's file or `table_text` for the table itself, and rebuilds every size from the sample. It changes nothing in the Design.
+
+| Field of `grade` | What it does |
+| --- | --- |
+| `table` | Uses the table at this path in the project |
+| `table_text` | Uses this table |
+| `convention` | Writes the table in `cumulative` or `incremental` |
+| `rules_path` | Writes the table here |
+| `rul` | Writes a `.rul` file here, with its record beside it |
+| `path` | Writes the graded family here |
+
+**How a size is rebuilt.** Each corner goes where its rule says. A straight edge stays straight. An arc goes through its moved ends and middle, and if those three lie on a line it is drawn straight and says so. A cubic's control points move by the interpolation of its two ends. An allowance is worked out again at its own width, never graded. A notch, a seam's end and a pocket keep their place on their edge rather than their distance along it, and a balance notch keeps its share of the seam. A dart's ends, a label and a grain line have rules of their own, as any point does. A point the table does not mention moves in proportion: a corner to the corners either side of it, and anything on a straight edge along that edge.
+
+For each size it reports:
+
+| Field | What it holds |
+| --- | --- |
+| `walk` | Each seam's walk at that size |
+| `unmentioned` | Points of this design the table does not mention |
+| `unmatched` | Rules for points this design does not have |
+| `notes` | What was only approximated, or could not be rebuilt as it was |
+| `conflicts` | Any contour declared fixed that changed, which stops the files being written |
+
+A draft with a true in it is refused, because a true is worked out from the drawing and a rule cannot follow it yet.
+
+**The two paths do not agree, and this is by how much.** Worked out from regenerations, every corner lands exactly where the recipe puts it, and on the reference skirt everything does. On the bodice and trousers, what is between the corners does not. These are the most any line differs, with rules on the corners alone, two sizes from the sample:
+
+| Garment | Most any sew line differs | What it does to a seam |
+| --- | --- | --- |
+| Reference skirt | Not at all | Its waist seams are up to 0.8 mm out, because the band's ends keep their fraction |
+| Reference trousers | 1.3 mm, at the crotch curve | Its waist seams are up to 0.9 mm out, and a pocket's mouth up to 7.9 mm, because an opening held by fraction grows with its edge and the bag does not |
+| Reference bodice | 4.5 mm, at the armhole | The cap's ease drifts by up to 2.6 mm from the 12 mm declared, and the seams at the underarm and the collar by up to 0.9 mm |
+
+So walking a size that came from a rule can find a defect that regenerating that size does not, and that is the right answer: it is what a factory's system would do with those rules. More grade points along a curve would bring it down, and a table here has none yet.
+
 **What this does not show.** That these sizes fit anybody: they are what the recipe gives at those measurements, and a size chart nobody has fitted is a set of numbers. The steps are an engineer's and come from no standard. A test does measure each size from its drawing against what it asked for, which is what stops a family that closes on paper being wrong in the cloth, and it does that for three garments and only for the measurements named there.
 
 ## Names used in this chapter
@@ -84,7 +121,8 @@ Each entry in `points` names its `piece`, its `edge` and which `point` of that e
 | Name | Meaning |
 | --- | --- |
 | `regenerate` | The step that draws every size |
-| `G3-GRADING.7` | The leaf for grade rules |
+| `grade` | The step that moves the sample by a table |
+| `G3-GRADING.8` | The leaf for a receiver reading the result |
 | `G3-GRADING.11` | The leaf for comparing the two paths |
 | `.rul` | The file a table of grade rules is written to |
 | `sizes` | A draft's size set |
@@ -106,3 +144,18 @@ Each entry in `points` names its `piece`, its `edge` and which `point` of that e
 | `y` | Up |
 | `value` | A length at that size |
 | `formula` | How the recipe writes it |
+| `grading` | How a draft says it grades |
+| `stack` | Which corner a piece stacks on |
+| `edge/to` | A corner, as the end of its edge |
+| `table` | A table in the project |
+| `table_text` | A table itself |
+| `convention` | Which way to write it |
+| `cumulative` | From the sample size |
+| `incremental` | From the next size toward the sample |
+| `rules_path` | Where to write the table |
+| `rul` | Where to write the file |
+| `walk` | Each seam's walk |
+| `unmentioned` | Points the table does not mention |
+| `unmatched` | Rules for points this design does not have |
+| `notes` | What was only approximated |
+| `conflicts` | Contours that were not to change, and did |

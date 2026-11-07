@@ -62,6 +62,7 @@ dependencies = [
  "sc-constraints",
  "sc-core",
  "sc-geometry",
+ "sc-grading",
  "sc-measure",
  "sc-store",
  "sc-units",
@@ -86,6 +87,13 @@ dependencies = [
  "num-bigint",
  "sc-store",
  "sc-units",
+]
+
+[[package]]
+name = "sc-grading"
+version = "0.1.0"
+dependencies = [
+ "sc-store",
 ]
 
 [[package]]

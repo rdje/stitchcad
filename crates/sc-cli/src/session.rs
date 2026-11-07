@@ -603,6 +603,177 @@ impl<R: Repository> Session<R> {
         Ok(Value::Object(result))
     }
 
+    // What a table worked out from each size's own drawing says, or one a project holds. It changes nothing in the Design.
+    fn grade_table(
+        &self,
+        step: usize,
+        document: &BTreeMap<String, Value>,
+        fields: &BTreeMap<String, Value>,
+    ) -> Result<sc_grading::GradeTable, Failure> {
+        let fail = |message: String| Failure::at(step, "grade", message);
+        let read = |text: &str| -> Result<sc_grading::GradeTable, Failure> {
+            let value = sc_store::parse(text).map_err(|error| fail(error.to_string()))?;
+            sc_grading::GradeTable::from_value(&value).map_err(|error| fail(error.to_string()))
+        };
+        let table = if let Some(text) = fields.get("table_text").and_then(Value::as_text) {
+            read(text)?
+        } else if let Some(target) = fields.get("table").and_then(Value::as_text) {
+            let path = sc_store::FilePath::new(target).map_err(|error| fail(error.to_string()))?;
+            let bytes = self
+                .base
+                .file(&path)
+                .ok_or_else(|| fail(format!("this project has no table at {target}")))?;
+            read(core::str::from_utf8(bytes).map_err(|_| fail(format!("{target} is not text")))?)?
+        } else {
+            let sizes = crate::family::sizes_of(document).map_err(fail)?;
+            let mut at_sizes = Vec::with_capacity(sizes.list.len());
+            for size in &sizes.list {
+                let at_size = |message: String| fail(format!("size {}: {message}", size.name));
+                let inputs = crate::family::inputs_at(&self.inputs, size).map_err(fail)?;
+                let mut described = document.clone();
+                described.insert("size".to_owned(), Value::Text(size.name.clone()));
+                let solved = self
+                    .solved(step, &inputs, Some(&described))
+                    .map_err(|failure| at_size(failure.message))?;
+                let evaluated = self
+                    .evaluated(step, &solved)
+                    .map_err(|failure| at_size(failure.message))?;
+                at_sizes.push((size.name.clone(), known_lengths(&solved, &evaluated)));
+            }
+            crate::draft::derive_table(document, &at_sizes, &sizes.sample).map_err(fail)?
+        };
+        match fields.get("convention").and_then(Value::as_text) {
+            Some(name) => sc_grading::Convention::named(name)
+                .and_then(|convention| table.in_convention(convention))
+                .map_err(|error| fail(error.to_string())),
+            None => Ok(table),
+        }
+    }
+
+    // Every size of a table, moved from the sample and rebuilt, with the recipe left out of it. Files are only written when nothing a table promised has been broken.
+    fn grade(&mut self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "grade", message);
+        let document = self
+            .document()
+            .ok_or_else(|| fail("there is nothing drafted to grade yet".to_owned()))?;
+        let table = self.grade_table(step, &document, fields)?;
+        let drawn_at = document.get("size").and_then(Value::as_text).unwrap_or("");
+        if table.sample() != drawn_at {
+            return Err(fail(format!(
+                "the table's sample size is {}, and this draft is drawn at {drawn_at}",
+                table.sample()
+            )));
+        }
+        let known = self.lengths_for(step, Some(&document))?;
+        let mut reports = Vec::with_capacity(table.sizes().len());
+        let mut family = Vec::with_capacity(table.sizes().len());
+        let mut conflicts = Vec::new();
+        for size in table.sizes() {
+            let at_size = |message: String| fail(format!("size {size}: {message}"));
+            let rebuilt = crate::draft::reconstruct(
+                &known,
+                &document,
+                &table,
+                size,
+                (&self.design_text, &self.revision_text()),
+            )
+            .map_err(at_size)?;
+            let walked = sc_artifacts::walk(&rebuilt.pattern)
+                .map_err(|error| at_size(format!("the seam {}: {}", error.seam, error.message)))?;
+            let text = sc_artifacts::to_canonical_text(&rebuilt.pattern);
+            let words =
+                |listed: &[String]| Value::List(listed.iter().cloned().map(Value::Text).collect());
+            let mut report = BTreeMap::new();
+            report.insert("size".to_owned(), Value::Text(size.clone()));
+            report.insert(
+                "canonical_sha256".to_owned(),
+                Value::Text(sc_store::sha256_hex(text.as_bytes())),
+            );
+            report.insert(
+                "walk".to_owned(),
+                Value::List(
+                    walked
+                        .iter()
+                        .map(sc_artifacts::WalkReport::to_value)
+                        .collect(),
+                ),
+            );
+            report.insert("unmentioned".to_owned(), words(&rebuilt.unmentioned));
+            report.insert("unmatched".to_owned(), words(&rebuilt.unmatched));
+            report.insert("notes".to_owned(), words(&rebuilt.notes));
+            report.insert(
+                "conflicts".to_owned(),
+                Value::List(
+                    rebuilt
+                        .conflicts
+                        .iter()
+                        .map(crate::draft::Conflict::to_value)
+                        .collect(),
+                ),
+            );
+            conflicts.extend(rebuilt.conflicts.iter().cloned());
+            reports.push(Value::Object(report));
+            let mut member = BTreeMap::new();
+            member.insert("size".to_owned(), Value::Text(size.clone()));
+            member.insert(
+                "pattern".to_owned(),
+                sc_store::parse(&text).map_err(|error| at_size(error.to_string()))?,
+            );
+            family.push(Value::Object(member));
+        }
+        let asked_for_files = ["path", "rules_path", "rul"]
+            .iter()
+            .any(|name| fields.contains_key(*name));
+        if asked_for_files {
+            if let Some(first) = conflicts.first() {
+                return Err(fail(format!(
+                    "the contour {} is declared fixed and comes to {} at size {}, against {} at the sample, so these files are not written",
+                    first.contour, first.here, first.size, first.at_sample
+                )));
+            }
+        }
+        let write = |project: &mut sc_store::Project, target: &str, bytes: String| {
+            let path = sc_store::FilePath::new(target).map_err(|error| fail(error.to_string()))?;
+            project
+                .set_file(path, bytes)
+                .map_err(|error| fail(error.to_string()))
+        };
+        if let Some(target) = fields.get("path").and_then(Value::as_text) {
+            let mut whole = BTreeMap::new();
+            whole.insert("sample".to_owned(), Value::Text(table.sample().to_owned()));
+            whole.insert("sizes".to_owned(), Value::List(family));
+            write(&mut self.base, target, Value::Object(whole).to_text())?;
+        }
+        if let Some(target) = fields.get("rules_path").and_then(Value::as_text) {
+            write(&mut self.base, target, table.to_value().to_text())?;
+        }
+        if let Some(target) = fields.get("rul").and_then(Value::as_text) {
+            let artifact = sc_grading::to_rul(&table).map_err(|error| fail(error.to_string()))?;
+            write(&mut self.base, target, artifact.text)?;
+            write(
+                &mut self.base,
+                &format!("{target}.record.json"),
+                artifact.record,
+            )?;
+        }
+        let mut result = BTreeMap::new();
+        result.insert("sample".to_owned(), Value::Text(table.sample().to_owned()));
+        result.insert(
+            "convention".to_owned(),
+            Value::Text(table.convention().token().to_owned()),
+        );
+        result.insert(
+            "provenance".to_owned(),
+            Value::Text(table.provenance().token().to_owned()),
+        );
+        result.insert(
+            "rules".to_owned(),
+            Value::Int(i64::try_from(table.rules().len()).unwrap_or(i64::MAX)),
+        );
+        result.insert("sizes".to_owned(), Value::List(reports));
+        Ok(Value::Object(result))
+    }
+
     // A person or an agent says where an orphaned reference goes, or that it is gone. Nothing else ever does.
     fn repair_reference(
         &mut self,
@@ -1459,7 +1630,7 @@ fn solve(
 }
 
 /// The steps a session can take. Anything else is refused by name.
-pub const STEPS: [&str; 20] = [
+pub const STEPS: [&str; 21] = [
     "evaluate",
     "preview",
     "closures",
@@ -1470,6 +1641,7 @@ pub const STEPS: [&str; 20] = [
     "references",
     "repair_reference",
     "regenerate",
+    "grade",
     "change",
     "undo",
     "redo",
@@ -1553,7 +1725,7 @@ fn required(step: &str) -> Option<CommandAuthority> {
         }
         "preview" => Some(CommandAuthority::Propose),
         "save" => Some(CommandAuthority::Commit),
-        "draft" | "export_pattern" | "render" | "export" | "regenerate" => {
+        "draft" | "export_pattern" | "render" | "export" | "regenerate" | "grade" => {
             Some(CommandAuthority::Generate)
         }
         _ => None,
@@ -1690,6 +1862,7 @@ impl<R: Repository> Running<R> {
             "edit_edge" => state.edit_edge(step, item)?,
             "references" => state.references(step)?,
             "regenerate" => state.regenerate(step, item)?,
+            "grade" => state.grade(step, item)?,
             "repair_reference" => state.repair_reference(step, item)?,
             "change" => {
                 let token = item

@@ -4,7 +4,7 @@
 > `sc-grading` at gate **G3** (leaves `G3-GRADING.1`–`.14`). Terms are defined in the
 > [glossary](glossary.md); the objects this chapter moves are specified in the [ontology](ontology.md);
 > every number it quotes comes from the [reference skirt](reference-skirt.md). What can be done today is in
-> [Grading a garment](grading.md): path 1 works, and path 2 does not exist yet.
+> [Grading a garment](grading.md) and [Grade rules](grade-rules.md): both paths work, and no receiver has read the result.
 
 A StitchCAD design can become a sized garment two ways, and **both are required**: by re-evaluating its
 recipe for a body or a size (**regeneration**), or by moving the points of a base-size instance by a rule
@@ -68,9 +68,9 @@ Deltas are lengths in the internal unit, so a rule table is exact and never roun
 
 | Attribute | StitchCAD semantics | Status of the `.rul` mapping |
 | --- | --- | --- |
-| `stack point` | the table's anchor: the point whose delta is zero by declaration, so graded pieces stack aligned instead of drifting. A table SHALL name at least one | cited from the roadmap; confirmed at G3 against a receiver |
-| `fixed perimeter` | a contour whose length must not change across sizes — a zip opening, a button run. Where grading would change it, the grader SHALL report a conflict, not absorb it | cited from the roadmap; confirmed at G3 |
-| `smoothing` | fairing a graded contour instead of moving points independently, bounded: it SHALL NOT move a point past the geometric-approximation class, nor move one another rule fixes | cited from the roadmap; confirmed at G3 |
+| `stack point` | the table's anchor: the point whose delta is zero by declaration, so graded pieces stack aligned instead of drifting. A table SHALL name at least one | no field of its own: in the file it is a rule of zeros |
+| `fixed perimeter` | a contour whose length must not change across sizes — a zip opening, a button run. Where grading would change it, the grader SHALL report a conflict, not absorb it | the file has no field for it, and its record says so |
+| `smoothing` | fairing a graded contour instead of moving points independently, bounded: it SHALL NOT move a point past the geometric-approximation class, nor move one another rule fixes. Not built, so a table asking for it is refused | the file has no field for it |
 
 **Reconstruction.** Moving points is not the whole operation; the geometry between them must be rebuilt, and
 how it is rebuilt is normative:
@@ -79,8 +79,11 @@ how it is rebuilt is normative:
 - an arc is re-fitted through its moved endpoints and its moved mid-point, and where no consistent arc
   exists the reconstruction reports it instead of emitting a wobble;
 - a cubic Bézier keeps its parameterization and moves its control points by the interpolation of its
-  endpoints' deltas — an approximation, and therefore bounded by the geometric-approximation class and
-  reported in the instance's provenance;
+  endpoints' deltas — an approximation, reported in the instance's provenance. **This chapter used to say
+  that bounds it by the geometric-approximation class, and that is false.** On [the reference
+  bodice](reference-bodice.md) with rules on its corners alone, a curve is up to 4.5 mm from where the
+  recipe puts it, two sizes from the sample. So its size is measured and reported, which §6 is for, and more
+  grade points along a curve are how a table would bring it down;
 - internal construction lines follow the edges they were constructed from, by parameter, so a dart leg
   stays a dart leg;
 - notches keep their **parameter** on their edge, so a notch at the hip stays at the hip;
@@ -206,10 +209,10 @@ dimensions from the reconstruction as well as comparing declared ones.
 
 - **Canonical:** base-size geometry plus the rule table, with declared zeros marked, grade points as
   `PointRef`s, and the recipe retained alongside. Two saves of one state are byte-identical (ontology §7).
-- **`.rul`:** the AAMA-era table format, cited from the roadmap. Its incremental and cumulative modes and
-  its three attributes are named there; the exact encoding of `stack point`, `fixed perimeter` and
-  `smoothing` has **not** been read in this repository and is confirmed at G3 by re-importing into an
-  independent engine, which is the gate's own exit criterion.
+- **`.rul`:** a header and `DELTA` rules measured from the sample, in millimetres to two places. [Grade
+  rules](grade-rules.md) gives it line by line. It has no field for incremental deltas or for any of the
+  three attributes, so those are the table's own, and a file written here says in its record what it could
+  not carry. Whether a receiver reads one as intended is the gate's own exit criterion, and nothing here shows it.
 - **ASTM mode:** grade rules embedded in the DXF, and the all-contours-graded mode as a named option. The
   modes are separate, validated receiver by receiver, and no claim of a universal package is made
   (roadmap ADR-0004; the feature matrix rejects one with `env_universal_package`).
@@ -222,10 +225,11 @@ dimensions from the reconstruction as well as comparing declared ones.
 - **The affinity claim (17 of 18 derived values are affine in the measurements)** — *exact arithmetic*:
   each of the fixture's formulas is linear plus a constant, except `side_seam_length`, whose reproduction
   under point grading is computed above rather than assumed.
-- **`.rul` semantics — incremental vs cumulative, `stack point`, `fixed perimeter`, `smoothing`** —
-  *cited from the roadmap* (§3.3, ADR-0004), which records its own review provenance. The format's text has
-  not been read in this repository; §3 states the StitchCAD semantics normatively and marks the mapping as
-  confirmed at G3 by an independent engine, not by agreement with a document nobody has opened here.
+- **`.rul` semantics — incremental vs cumulative, `stack point`, `fixed perimeter`, `smoothing`** — the
+  table's semantics are *project decision*, from the roadmap (§3.3, ADR-0004). **The file's** were read on
+  2026-11-07 from the first pages of ASTM D6673-10 and a third party's guide to it, as [Grade
+  rules](grade-rules.md) records, and they carry none of the three. Nobody has read the whole standard here,
+  and no independent engine has read a file written here.
 - **The three interchange modes** — *cited from the roadmap* (ADR-0004); specified by `G0-CONTRACT.10`.
 - **The tolerance classes named in §6 and §7** — *project decision*, defined normatively in the units
   chapter; this chapter declares which applies where and invents none.

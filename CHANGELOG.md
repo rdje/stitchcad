@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1019 — grade rules and the .rul file,with the difference between the two paths measured
+
+A table holds a rule for each point by a name that survives an edit,in either convention,exact. A size is rebuilt by moving points and drawing again,so allowances and seams are worked out rather than graded. Every corner lands where the recipe does. Between corners the bodice differs by up to 4.5 mm.
+The book said otherwise about that and about what a .rul file holds,and both are corrected. No receiver has read one. G3-04 advances.
+
 ## STITCHCAD-G1-1018 — every size of a garment,regenerated from its recipe with what drove each point
 
 A draft names its size set,and regenerate draws each size afresh,with its own fits and closures,changing nothing in the Design. For every point of a boundary it names the formula and inputs behind each axis.

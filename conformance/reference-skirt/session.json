@@ -82,6 +82,15 @@
     },
     {
       "do": "draft",
+      "grading": {
+        "stack": {
+          "skirt_back_right": "waist/to",
+          "skirt_front": "waist/to",
+          "waistband": "band_left/to",
+          "waistband_interfacing": "ifc_left/to"
+        },
+        "table": "reference-skirt"
+      },
       "pieces": [
         {
           "darts": [

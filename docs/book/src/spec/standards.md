@@ -186,6 +186,7 @@ then carry, and nothing more.
   on StitchCAD, not claims about the documents.
 - **ASTM D6673-10 is withdrawn (Jan 2019, no replacement)** — `cited-from-roadmap` (ADR-0004), which
   records the withdrawal as a review finding. `G0-CONTRACT.10` owns the interchange consequences.
+- **What the grade rule file holds** — read on 2026-11-07 from the first pages of ASTM D6673-10, as a publisher's sample, and from DH Patterns and Fit's guide to the standard (2011, 2012). [Grade rules](grade-rules.md) records what was found. That is not the whole standard, so its registry status stays as it is.
 - **The AAMA layer names (CUT, DRAW, INTCUT, NOTCH, DRILL, TEXT, REF)** — `cited-from-roadmap` (ADR-0004's
   corrected layer table). Not quoted here as the standard's text.
 - **Everything else in this chapter** — *project decision*: the status vocabulary, the no-unsourced-clause

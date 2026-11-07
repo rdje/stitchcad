@@ -61,6 +61,7 @@
   - [The supported envelope](spec/feature-matrix.md)
   - [Instantiation paths](spec/instantiation-paths.md)
   - [Grading a garment](spec/grading.md)
+  - [Grade rules](spec/grade-rules.md)
   - [Size sets](spec/size-sets.md)
   - [Size axes and member coordinates](spec/size-axes.md)
   - [SizeSet profile transformations](spec/size-set-transformations.md)

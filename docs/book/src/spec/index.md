@@ -45,6 +45,7 @@ libraries from future workflows. Existing chapter URLs and numbered clause ancho
 | [Reference bodice and sleeve](reference-bodice.md) | A garment whose seams differ on purpose, with a cap fitted to its armhole by a declared ease |
 | [Reference trousers](reference-trousers.md) | A crotch curve, an inseam two pieces share, a pocket that is an object, and a buttonhole whose length comes from its button |
 | [Grading a garment](grading.md) | A garment's size set, and every size of it drawn from the recipe, with what drove each point |
+| [Grade rules](grade-rules.md) | A table of rules in either convention, what it promises, and the `.rul` file |
 
 Each change updates its task-owned implementation and affected book contracts in the same commit.
 The [topic index](../topic-index.md) also includes executable contracts and all other registered chapters.
