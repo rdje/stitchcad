@@ -24,6 +24,7 @@ docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py	output	G1-SLICE.5b.4c.h2
 docs/tasks/artifacts/artifact_cleanup/run_artifact_cleanup_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/book_publication/book_publication.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/book_publication/run_book_publication_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/agent_gate/run_agent_gate.sh	delegate	G2-2D.13	Whole shell source/heredoc bodies retained;writes under target/agent_gate and conformance/agent-gate,and spends a capped budget on the model it names.
 docs/tasks/artifacts/browser_run/run_browser_run.sh	delegate	G1-SLICE.12	Whole shell source/heredoc body retained;builds through project stores,writes under target/browser_run,and kills each Chrome it starts by process group.
 docs/tasks/artifacts/browser_run/run_capability_matrix_check.sh	delegate	G1-SLICE.12	Whole shell source/heredoc body retained;reads the chapter and recording,writes nothing.
 docs/tasks/artifacts/canvas_spike/run_canvas_spike.sh	delegate	G1-SLICE.13	Whole shell source/heredoc body retained;builds through project stores,writes under target/canvas_spike,and kills each process group it starts.

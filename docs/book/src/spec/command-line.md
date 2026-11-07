@@ -211,7 +211,7 @@ point, so they wait for G2.
 
 ## Drafting a garment
 
-A `draft` step names the `style`, the `size` and the `pieces`. Every position is a pair of length names: a binding, an input, or `zero`, with a leading `-` to negate one. So the
+A `draft` step names the `style`, the `size` and the `pieces`. The `style` is whatever name the design goes by. Every position is a pair of length names: a binding, an input, or `zero`, with a leading `-` to negate one. So the
 numbers stay in the recipe and a changed measurement moves every piece. A step that names a length that does not exist stops the session.
 
 | Piece field | What it holds |
@@ -219,12 +219,12 @@ numbers stay in the recipe and a changed measurement moves every piece. A step t
 | `name` | The piece's name |
 | `quantity` | How many to cut |
 | `start` | The net boundary's first point |
-| `edges` | Each edge in turn, counterclockwise: `to`, its allowance `width`, its `corner`, and `first` and `second` when it is a Bézier |
-| `grain` | One grainline, as two points |
-| `internal` | Internal lines, each two points |
+| `edges` | Each edge in turn, counterclockwise: `to`, its allowance `width` naming a length (`zero` for none), its `corner`, and `first` and `second` when it is a Bézier |
+| `grain` | A list holding one grainline, which is a list of two points |
+| `internal` | A list of internal lines, each a list of two points |
 | `notches` | Each notch, as the point on the cut line and a point it aims at |
 | `labels` | Each label, as `at` and `text` |
-| `mirror_of` | Instead of a boundary: this piece mirrors an earlier one across x = 0, with `labels` of its own |
+| `mirror_of` | Instead of a boundary: this piece mirrors an earlier one across x = 0, taking its lines, grain and notches, with `labels` of its own |
 
 A notch becomes a vertex of the cut line, so no writer can lose it between two chords. Its named position comes from straight arithmetic and can land a hair from where the offset's
 joins put the cut line, so it moves onto that line. More than `NOTCH_REACH` away, which is 0.1 mm, it is refused as a wrong notch.

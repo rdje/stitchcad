@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1010 — the agent gate:two pinned-model sessions with only MCP and the book golden-match
+
+claude-sonnet-5-5 and claude-haiku-5-5,with no other tool,drafted the reference skirt. The command line replays each to its bytes,the judge raises nothing,and each golden-matches within 10 micrometres. A first session failed on what the book left open (D402) and is kept.
+It also found my labels lacked the colorway the book asks for (D403). This tests reading and tools,not design. G2-08 met,32 of 66.
+
 ## STITCHCAD-G1-1009 — the API and MCP server,over local stdio
 
 `stitchcad-mcp` offers 18 workflows over MCP on the same bus,with scoped authority the bus itself enforces,an actor trace,and a recording the command line replays to the same bytes. An agent cannot hold approval.

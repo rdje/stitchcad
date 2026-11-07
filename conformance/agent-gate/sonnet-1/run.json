@@ -1,0 +1,38 @@
+{
+  "asked_for_model": "claude-sonnet-5-5",
+  "claude_code": "2.1.319",
+  "duration_ms": 76415,
+  "exit_status": 0,
+  "is_error": false,
+  "mcp_servers": [
+    {
+      "name": "stitchcad",
+      "source": "dynamic",
+      "status": "connected"
+    }
+  ],
+  "model": "claude-sonnet-5-5",
+  "num_turns": 16,
+  "subtype": "success",
+  "tools": [
+    "mcp__stitchcad__approve_release",
+    "mcp__stitchcad__change_measurement",
+    "mcp__stitchcad__check_constraint",
+    "mcp__stitchcad__describe_pattern",
+    "mcp__stitchcad__draft_pattern",
+    "mcp__stitchcad__evaluate",
+    "mcp__stitchcad__export_pattern",
+    "mcp__stitchcad__list_book",
+    "mcp__stitchcad__open_project",
+    "mcp__stitchcad__preview_change",
+    "mcp__stitchcad__read_book",
+    "mcp__stitchcad__redo",
+    "mcp__stitchcad__reopen_project",
+    "mcp__stitchcad__save_project",
+    "mcp__stitchcad__server_info",
+    "mcp__stitchcad__start_design",
+    "mcp__stitchcad__trace",
+    "mcp__stitchcad__undo"
+  ],
+  "total_cost_usd": "0.4892504"
+}

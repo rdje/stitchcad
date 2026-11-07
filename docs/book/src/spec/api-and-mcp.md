@@ -84,7 +84,23 @@ An agent holds what it was started with, and can do nothing more. The grant that
 $ cargo test -p sc-mcp --test admission
 ```
 
-**What this does not show.** A real agent using it, which is [the agent gate](../availability.md), the next step. That a text-based instruction cannot influence an LLM: "stays data" holds for this server, which acts on nothing it reads, and what an agent does with a sentence it read is the agent's. Resource limits: a host can send as much as it likes. A file edited on disk outside a commit is not detected, as [the store](project-store.md) says.
+**What this does not show.** That a text-based instruction cannot influence an LLM: "stays data" holds for this server, which acts on nothing it reads, and what an agent does with a sentence it read is the agent's. Resource limits: a host can send as much as it likes. A file edited on disk outside a commit is not detected, as [the store](project-store.md) says.
+
+## The agent gate
+
+G2 asks whether an LLM agent given only MCP and the docs can produce a semantically equal instance of [the reference skirt](reference-skirt.md), in two independent sessions with pinned models. So a session was started with no built-in tool, no settings, no instruction file and an empty working directory, and given this server, this book, and one short request. What it was really given is read from the session's own first record, because a model asked what tools it has will sometimes guess. One did.
+
+An agent's report that it succeeded counts for nothing. `cargo test -p sc-mcp --test agent_gate` judges what it left: the command-line path replays its recording to the bytes it was handed, [the judge](mutation-tests.md) reads the drawing against the fixture's declaration, and the result is compared with the frozen skirt within T2, 10 µm, with a label's place and punctuation left free and its words judged. That test needs no model, so a model's nondeterminism cannot block anything, and it runs anywhere.
+
+| Session | Model | Calls | Cost | Refused calls | Verdict |
+| --- | --- | --- | --- | --- | --- |
+| The first reading, kept in `conformance/agent-gate-history/` | `claude-sonnet-5-5` | 16 | $0.62 | 1 | Failed: it drew every size right, and different darts and notch depths |
+| `sonnet-1` | `claude-sonnet-5-5` | 15 | $0.49 | 0 | Passed |
+| `haiku-1` | `claude-haiku-5-5` | 16 | $0.11 | 0 | Passed |
+
+Those three are every session run. **The first failed, and that was the book's fault.** The chapter promises that a reader can draft the garment "without asking a question", and the reader had to decide nine things. Most importantly, it cut each dart out of the boundary, where this project's own session marks it with internal lines, and nothing in the book said which. It also pointed out that the book asks for a colorway on every label and this project's own session had none. So [the skirt's chapter](reference-skirt.md) now pins the drawing, with a test holding each position against it, and then the two sessions above ran on that book, with its small remaining gaps fixed between them.
+
+**What this shows.** The tools can be discovered and used with nothing but what they say and what this book says. **What it does not show.** That an agent can design a garment: the chapter now pins every line, so this tests reading, tools and care. That agents would agree on anything the book leaves open. Two sessions are few, and each ran on a book I had just improved from what the first one found. That the skirt is right: all three inherit the same unreviewed constants, as the second session itself pointed out.
 
 ## Names used in this chapter
 
@@ -115,3 +131,7 @@ $ cargo test -p sc-mcp --test admission
 | `nothing_outside_the_project_and_the_book_can_be_reached` | A test in `sc-mcp` |
 | `text_in_the_data_stays_data` | A test in `sc-mcp` |
 | `what_a_caller_did_replays_through_the_command_line_to_the_same_files` | A test in `sc-mcp` |
+| `sonnet-1` | The first passing session |
+| `haiku-1` | The second passing session |
+| `claude-sonnet-5-5` | A pinned model id |
+| `claude-haiku-5-5` | A pinned model id |

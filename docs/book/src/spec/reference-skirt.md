@@ -407,11 +407,59 @@ naming the expert who reviews them.
 | Interfacing | No allowance on any edge, no fold, no label saying so | "In no span" needs the graph as data, G3 |
 | Package completeness | 5 pieces, the side-seam and zipper notches, and [each named fault](mutation-tests.md) | Zipper, hook and bar, and the notions list have no model yet, G3 |
 
+### The drawing, pinned
+
+§5 says how the garment is constructed. These tables pin how that construction is drawn, because two careful readers of §5 drew different pieces: [an independent agent's first reading](api-and-mcp.md) cut the darts out where this project's session marks them. Here x runs from CF or CB toward the side, y runs up from the waist line, and a position is in centimetres with its formula beside it. A test holds every position here against the drawing.
+
+Each net boundary runs counterclockwise. The first row is where it starts, and each later row is one edge, ending there, with that edge's own allowance and corner. Where §7's table reads differently edge by edge, this table is how it is drawn. The style's name is `reference_skirt`.
+
+| Piece | Edge ends at, cm | Formula | Allowance | Corner |
+| --- | --- | --- | --- | --- |
+| skirt_front | (0, 0) | start | — | — |
+| skirt_front | (0, -62) | 0, −waist_to_hem | 0: the fold | miter |
+| skirt_front | (28.5, -62) | quarter_hip + a_line_flare, −waist_to_hem | sa_hem | envelope |
+| skirt_front | (25.5, -20) | quarter_hip, −waist_to_hip | sa_side | miter |
+| skirt_front | (22.5, 0) | quarter_hip − ss_suppress, 0, a Bézier | sa_side | miter |
+| skirt_front | (0, 0) | 0, 0 | sa_waist | trim |
+| skirt_back_right | (0, 0) | start | — | — |
+| skirt_back_right | (0, -62) | as the front | sa_cb | trim |
+| skirt_back_right | (28.5, -62) | as the front | sa_hem | envelope |
+| skirt_back_right | (25.5, -20) | as the front | sa_side | miter |
+| skirt_back_right | (22.5, 0) | as the front, the same Bézier | sa_side | miter |
+| skirt_back_right | (0, 0) | as the front | sa_waist | trim |
+| waistband | (1.5, 1) | start: sa_cb, sa_waist | — | — |
+| waistband | (78.5, 1) | waistband_pattern_length − sa_cb, sa_waist | sa_waist | miter |
+| waistband | (78.5, 9) | that, waistband_cut_width − sa_wb_bottom | sa_cb | miter |
+| waistband | (1.5, 9) | sa_cb, that | sa_wb_bottom | miter |
+| waistband | (1.5, 1) | sa_cb, sa_waist | sa_cb | miter |
+| waistband_interfacing | (0, 0) | start | — | — |
+| waistband_interfacing | (77, 0) | wb_interfacing_length, 0 | 0 | miter |
+| waistband_interfacing | (77, 4) | that, wb_interfacing_width | 0 | miter |
+| waistband_interfacing | (0, 4) | 0, that | 0 | miter |
+| waistband_interfacing | (0, 0) | 0, 0 | 0 | miter |
+
+`skirt_back_left` is `skirt_back_right` mirrored about x = 0.
+
+The waist curve runs from the hip point to the waist point with two control points: the first at (quarter_hip, −waist_to_hip / 2), straight up from the hip, and the second at (quarter_hip − ss_suppress + ss_suppress / 3, −waist_to_hip / 6).
+
+| Mark | Where | Why it is drawn this way |
+| --- | --- | --- |
+| Darts | Two internal lines on each panel, from (dart centre ∓ dart_intake / 2, 0) to (dart centre, −dart length). The dart centre is (quarter_hip − ss_suppress) / 2, and its length `dart_len_front` or `dart_len_back` | A dart is marked, never cut out. The cut line runs straight across the waist, so the cloth is there to sew and the waist edge measures 22.5 cm until it is closed |
+| Body grain | From (quarter_hip / 2, 0) to (quarter_hip / 2, −waist_to_hem) | The midpoint of the hip-line width, from §7 |
+| Band fold | An internal line from (0, waistband_fold_position) to (waistband_pattern_length, waistband_fold_position) | §5 step 8 |
+| Band grain | From (sa_cb + 2 cm, waistband_cut_width / 4) to (waistband_pattern_length − sa_cb − 2 cm, waistband_cut_width / 4) | Parallel to its length, from §7 |
+| Interfacing grain | From (1 cm, wb_interfacing_width / 2) to (wb_interfacing_length − 1 cm, wb_interfacing_width / 2) | The writers need one, and §7 gives none, so it is parallel to its length |
+| Side notches | At (quarter_hip + sa_side, −waist_to_hip), aiming 0.5 cm in along x, on the front and on the back | One allowance out from the hip point, on the cut line |
+| Zipper notch | On the back at (−sa_cb, −zip_len), aiming 0.5 cm in along x | On the CB cut line, `zip_len` below the waist |
+| Band notches | Five on the lower cut edge y = 0, at x = sa_cb + k × garment_waist / 4 for k from 0 to 4, aiming 0.5 cm up | Each CB and each quarter point. The extension lies past k = 4, at the high-x end, and the ends' allowances are outside both |
+
+A label's place on the piece is free. Its words are not: the piece's name, `size M`, `cut 1`, the fabric, `colorway not specified` because this fixture names none, then L or R on a paired piece. The front also says "place on fold", and no other piece does.
+
 **Three choices here are an engineer's, and nobody who sews has reviewed them.** The domain expert's seat is vacant.
 
 | Choice | Why |
 | --- | --- |
-| The waist-to-hip curve | §5 asks for a "smooth" curve and gives no numbers. This one leaves the hip vertically, with control points at half of `waist_to_hip`, and a third of `ss_suppress` in from the waist point at a sixth of it |
+| The waist-to-hip curve | §5 asks for a "smooth" curve and gives no numbers, so the table above fixes one, leaving the hip vertically |
 | Band corners | §7 and §5 step 8 conflicted (D395). The rectangle won, because both band closures are measured on it |
 | A notch 5 mm deep | §7 calls its physical form a profile parameter, and profiles are G4 |
 
@@ -422,3 +470,12 @@ The skirt fits one A0 sheet on its side with 1 mm to spare, so any longer one is
 | `walk` | The command §8 specifies, not yet built |
 | `ss_suppress` | The side seam's suppression, §3 |
 | `waist_to_hip` | The waist-to-hip measurement, §2 |
+| `skirt_back_left` | The left back piece |
+| `skirt_back_right` | The right back piece |
+| `dart_len_front` | The front dart's length, §3 |
+| `dart_len_back` | The back dart's length, §3 |
+| `size M` | The words a label gives for this size |
+| `cut 1` | The words a label gives for this quantity |
+| `colorway not specified` | The words a label gives while no colorway is named |
+| `zip_len` | The zipper's length, §3 |
+| `reference_skirt` | This design's style name |

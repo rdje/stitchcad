@@ -174,7 +174,7 @@
                 "grain_x",
                 "-label_y"
               ],
-              "text": "skirt_front, size M, cut 1, shell"
+              "text": "skirt_front, size M, cut 1, shell, colorway not specified"
             },
             {
               "at": [
@@ -294,7 +294,7 @@
                 "grain_x",
                 "-label_y"
               ],
-              "text": "skirt_back_right, size M, cut 1, shell, R"
+              "text": "skirt_back_right, size M, cut 1, shell, colorway not specified, R"
             }
           ],
           "name": "skirt_back_right",
@@ -333,7 +333,7 @@
                 "-grain_x",
                 "-label_y"
               ],
-              "text": "skirt_back_left, size M, cut 1, shell, L"
+              "text": "skirt_back_left, size M, cut 1, shell, colorway not specified, L"
             }
           ],
           "mirror_of": "skirt_back_right",
@@ -405,7 +405,7 @@
                 "band_label_x",
                 "band_label_y"
               ],
-              "text": "waistband, size M, cut 1, shell"
+              "text": "waistband, size M, cut 1, shell, colorway not specified"
             }
           ],
           "name": "waistband",
@@ -520,7 +520,7 @@
                 "interfacing_grain_left",
                 "interfacing_label_y"
               ],
-              "text": "waistband_interfacing, size M, cut 1, interfacing"
+              "text": "waistband_interfacing, size M, cut 1, interfacing, colorway not specified"
             }
           ],
           "name": "waistband_interfacing",

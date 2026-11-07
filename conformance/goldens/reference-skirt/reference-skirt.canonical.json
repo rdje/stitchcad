@@ -271,7 +271,7 @@
             -127500,
             -240000
           ],
-          "text": "skirt_back_left, size M, cut 1, shell, L"
+          "text": "skirt_back_left, size M, cut 1, shell, colorway not specified, L"
         }
       ],
       "marks": [
@@ -781,7 +781,7 @@
             127500,
             -240000
           ],
-          "text": "skirt_back_right, size M, cut 1, shell, R"
+          "text": "skirt_back_right, size M, cut 1, shell, colorway not specified, R"
         }
       ],
       "marks": [
@@ -1290,7 +1290,7 @@
             127500,
             -240000
           ],
-          "text": "skirt_front, size M, cut 1, shell"
+          "text": "skirt_front, size M, cut 1, shell, colorway not specified"
         }
       ],
       "marks": [
@@ -1587,7 +1587,7 @@
             55000,
             60000
           ],
-          "text": "waistband, size M, cut 1, shell"
+          "text": "waistband, size M, cut 1, shell, colorway not specified"
         }
       ],
       "marks": [
@@ -1705,7 +1705,7 @@
             10000,
             32000
           ],
-          "text": "waistband_interfacing, size M, cut 1, interfacing"
+          "text": "waistband_interfacing, size M, cut 1, interfacing, colorway not specified"
         }
       ],
       "marks": [],

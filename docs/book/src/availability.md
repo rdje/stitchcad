@@ -15,7 +15,7 @@ real product path passes its check. Commits and leaves do not move it.
 | --- | --- | --- | --- |
 | G0 | 18 | 19 | The product and its semantics are specified. The evaluation-seat clause stays open by ruling |
 | G1 | 7 | 7 | The architecture runs for real in a browser |
-| G2 | 6 | 8 | A reference skirt is drafted and exported correctly |
+| G2 | 7 | 8 | A reference skirt is drafted and exported correctly |
 | G3 | 0 | 11 | Every garment the roadmap names drafts, grades and exports |
 | G4 | 0 | 8 | Factory profiles work, including what is still unknown |
 | G5 | 0 | 6 | The native and browser applications exist |
@@ -27,12 +27,12 @@ Run it yourself:
 $ bash scripts/gauge.sh
 G0: 18 of 19 clauses met
 G1: 7 of 7 clauses met
-G2: 6 of 8 clauses met
+G2: 7 of 8 clauses met
 G3: 0 of 11 clauses met
 G4: 0 of 8 clauses met
 G5: 0 of 6 clauses met
 G6: 0 of 7 clauses met
-gauge: 31 of 66 clauses met through G6
+gauge: 32 of 66 clauses met through G6
 ```
 
 A count here comes from the clause tables, and a clause counts as met only when its check runs a real
@@ -40,6 +40,24 @@ product path and passes. `bash scripts/gauge.sh --checks` runs those checks agai
 
 Commercial CAD is parked until StitchCAD is feature complete, so G6's import-filter clause stays not met.
 G2's printed square stays not met until a person measures one. Both are the director's to close.
+
+## Distance to the G3 exit
+
+G3 is the earliest open gate that software can close. G2's only open clause needs a person with a ruler, so it no longer holds the frontier. G3 goes from one garment to every garment the roadmap names, with construction and grading.
+
+| Clause | What the roadmap asks | Met | Where it stands | Owning leaf |
+| --- | --- | --- | --- | --- |
+| `G3-01` | A darted bodice and a set-in sleeve with declared ease | not met | Not started. The skirt has no eased seam | `G3-GRADING.4` |
+| `G3-02` | Darts, folds, walking and truing | not met | [The judge](spec/mutation-tests.md) walks seams over a table. No command does yet | `G3-GRADING.2` |
+| `G3-03` | Stable references survive edits | not met | Not started | `G3-GRADING.3` |
+| `G3-04` | Both instantiation paths | not met | Not started | `G3-GRADING.11` |
+| `G3-05` | A grade re-imported into an independent engine | not met | Not started | `G3-GRADING.8` |
+| `G3-06` | Extreme sizes reconstructed | not met | Not started | `G3-GRADING.9` |
+| `G3-07` | The grading modes | not met | Not started | `G3-GRADING.10` |
+| `G3-08` | Offset and grading golden suites | not met | [The offset corpus](spec/offsets.md) and [the skirt's goldens](spec/reference-skirt.md) exist. No grade does | `G3-GRADING.12` |
+| `G3-09` | Every garment the roadmap names | not met | One exists, the skirt | `G3-GRADING.14` |
+| `G3-10` | A classic collar | not met | Not started | `G3-GRADING.15` |
+| `G3-11` | Trousers carrying their constructions | not met | Not started | `G3-GRADING.5` |
 
 ## Distance to the G2 exit
 
@@ -54,7 +72,7 @@ G2 is the earliest open gate: the first correct pattern. None of it exists yet, 
 | `G2-05` | Offsets pass the pathology corpus | met | [The offset engine](spec/offsets.md) passes 37 cases, covering acute tips, loops and seam-length error, judged by checks that share no code with it. The corner shapes are unreviewed by a sewing expert | `G2-2D.3` |
 | `G2-06` | Native save and load preserve semantics | met | [A project](spec/project-store.md) holds how to draw the garment and redraws it to the same bytes, save and load and save leaves every byte, and two designs with identical contours and different recipes stay distinct. Undo history does not cross a reopen | `G2-2D.10` |
 | `G2-07` | Mutation tests fail for the right reasons | met | [31 mutants](spec/mutation-tests.md), each required to be caught by the check that names it. Grade mutants wait for G3, and the sewing spans are a fixture's table until the graph is data | `G2-2D.11` |
-| `G2-08` | An agent given only MCP and the docs produces a semantically equal instance | not met | [The MCP server](spec/api-and-mcp.md) exists, over local stdio, with its admission tests. No agent session has run | `G2-2D.13` |
+| `G2-08` | An agent given only MCP and the docs produces a semantically equal instance | met | [Two pinned-model sessions](spec/api-and-mcp.md) with only those drafted the skirt, and the command line replays each to a golden match. A first session failed, for reasons the book then fixed, and it is kept. This tests reading and tools, not design | `G2-2D.13` |
 
 ## Distance to the G1 exit
 
@@ -87,7 +105,7 @@ does not support yet with a plain error. The constraint kernel `.8`, the project
 command line `.10`, the runtime profiles `.11`, the license census `.15`, the browser run `.12` and the canvas spike `.13`
 are done, and the G1 exit review `.16` passed. The geometry kernel `G2-2D.1`, the offset engine `G2-2D.2`, its corpus `G2-2D.3`, the
 canonicalizer `G2-2D.4`, the DXF writer `G2-2D.5` and the drafted skirt `G2-2D.8` are done. The PDF writer `G2-2D.6` is written and measured, and waits only on the library comparison. The printed square `G2-2D.7` is measured on screen and waits for a person with a ruler. The viewer and editor `G2-2D.9`
-is done as a page, and its toolkit and native window stay open at `G1-SLICE.14`. Native save and load `G2-2D.10` is done. The mutation tests `G2-2D.11` and [the conformance matrix](spec/conformance-matrix.md) `G2-2D.12` are done. [The API and MCP server](spec/api-and-mcp.md) `G1-SLICE.9` works over local stdio. What G2 has left is the agent gate `G2-2D.13`, and a person with a ruler.
+is done as a page, and its toolkit and native window stay open at `G1-SLICE.14`. Native save and load `G2-2D.10` is done. The mutation tests `G2-2D.11` and [the conformance matrix](spec/conformance-matrix.md) `G2-2D.12` are done. [The API and MCP server](spec/api-and-mcp.md) `G1-SLICE.9` works over local stdio. The agent gate `G2-2D.13` passed. What G2 has left is a person with a ruler.
 
 ## Implemented foundations
 

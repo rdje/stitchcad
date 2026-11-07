@@ -294,6 +294,16 @@ fn length_between(a: Point, b: Point) -> i64 {
     distance_between(a, b).round() as i64
 }
 
+// Whether a phrase appears as whole words, so "R" is a right-hand piece and not the r in "shirt".
+fn holds_words(text: &str, phrase: &str) -> bool {
+    let word = |c: char| c.is_alphanumeric() || c == '_';
+    text.match_indices(phrase).any(|(at, _)| {
+        let before = text[..at].chars().next_back();
+        let after = text[at + phrase.len()..].chars().next();
+        !before.is_some_and(word) && !after.is_some_and(word)
+    })
+}
+
 fn judge_piece(
     piece: &DrawnPiece,
     wanted: &PieceExpectation,
@@ -375,7 +385,7 @@ fn judge_piece(
         .collect::<Vec<_>>()
         .join(" | ");
     for has in &wanted.label_has {
-        if !label.contains(has.as_str()) {
+        if !holds_words(&label, has) {
             found.push(finding(
                 "label_missing",
                 format!("{name}'s labels do not say {has:?}: {label}"),
@@ -383,7 +393,7 @@ fn judge_piece(
         }
     }
     for lacks in &wanted.label_lacks {
-        if label.contains(lacks.as_str()) {
+        if holds_words(&label, lacks) {
             found.push(finding(
                 "label_forbidden",
                 format!("{name}'s labels must not say {lacks:?}: {label}"),

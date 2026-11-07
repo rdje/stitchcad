@@ -1399,7 +1399,7 @@ TEXT
  40
 3.000
   1
-skirt_back_left, size M, cut 1, shell, L
+skirt_back_left, size M, cut 1, shell, colorway not specified, L
   0
 ENDBLK
   8
@@ -2715,7 +2715,7 @@ TEXT
  40
 3.000
   1
-skirt_back_right, size M, cut 1, shell, R
+skirt_back_right, size M, cut 1, shell, colorway not specified, R
   0
 ENDBLK
   8
@@ -4009,7 +4009,7 @@ TEXT
  40
 3.000
   1
-skirt_front, size M, cut 1, shell
+skirt_front, size M, cut 1, shell, colorway not specified
   0
 ENDBLK
   8
@@ -4381,7 +4381,7 @@ TEXT
  40
 3.000
   1
-waistband, size M, cut 1, shell
+waistband, size M, cut 1, shell, colorway not specified
   0
 ENDBLK
   8
@@ -4591,7 +4591,7 @@ TEXT
  40
 3.000
   1
-waistband_interfacing, size M, cut 1, interfacing
+waistband_interfacing, size M, cut 1, interfacing, colorway not specified
   0
 ENDBLK
   8

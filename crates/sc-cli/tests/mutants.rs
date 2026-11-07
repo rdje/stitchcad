@@ -463,7 +463,10 @@ fn mutants() -> Vec<Mutant> {
                 let labels = list_of(piece(s, "waistband"), "labels");
                 fields_of(&mut labels[0]).insert(
                     "text".to_owned(),
-                    Value::Text("waistband, size M, cut 1, shell, place on fold".to_owned()),
+                    Value::Text(
+                        "waistband, size M, cut 1, shell, colorway not specified, place on fold"
+                            .to_owned(),
+                    ),
                 );
             },
             "label_forbidden",

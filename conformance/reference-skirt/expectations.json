@@ -86,7 +86,8 @@
     "size M",
     "cut 1",
     "shell",
-    "place on fold"
+    "place on fold",
+    "colorway"
    ],
    "label_lacks": [],
    "name": "skirt_front",
@@ -105,7 +106,8 @@
     "size M",
     "cut 1",
     "shell",
-    ", R"
+    "R",
+    "colorway"
    ],
    "label_lacks": [
     "place on fold"
@@ -126,7 +128,8 @@
     "size M",
     "cut 1",
     "shell",
-    ", L"
+    "L",
+    "colorway"
    ],
    "label_lacks": [
     "place on fold"
@@ -147,7 +150,8 @@
     "waistband",
     "size M",
     "cut 1",
-    "shell"
+    "shell",
+    "colorway"
    ],
    "label_lacks": [
     "place on fold"
@@ -168,7 +172,8 @@
     "waistband_interfacing",
     "size M",
     "cut 1",
-    "interfacing"
+    "interfacing",
+    "colorway"
    ],
    "label_lacks": [
     "place on fold"

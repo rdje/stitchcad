@@ -832,3 +832,38 @@ fn the_real_program_replays_it_byte_identically_under_a_foreign_locale() {
         assert_eq!(at(&first), at(&second), "{name}");
     }
 }
+
+#[test]
+fn every_position_the_book_pins_is_where_the_drawing_has_it() {
+    let chapter = include_str!("../../../docs/book/src/spec/reference-skirt.md");
+    let drafted = pattern();
+    let mut checked = 0;
+    let at = chapter
+        .find("### The drawing, pinned")
+        .expect("the section");
+    for line in chapter[at..].lines() {
+        let cells: Vec<&str> = line.trim_matches('|').split(" | ").map(str::trim).collect();
+        let (Some(name), Some(position)) = (cells.first(), cells.get(1)) else {
+            continue;
+        };
+        if !name.starts_with("skirt_") && !name.starts_with("waistband") {
+            continue;
+        }
+        let numbers: Vec<f64> = position
+            .trim_matches(|c| c == '(' || c == ')')
+            .split(", ")
+            .map(|number| number.parse().expect("a position in centimetres"))
+            .collect();
+        let wanted = (
+            (numbers[0] * 10_000.0).round() as i64,
+            (numbers[1] * 10_000.0).round() as i64,
+        );
+        let line = &piece(&drafted, name).sew;
+        assert!(
+            line.iter().any(|point| (point.x(), point.y()) == wanted),
+            "{name}: the book says {position}, and the sew line has no such point"
+        );
+        checked += 1;
+    }
+    assert_eq!(checked, 22, "a row was lost");
+}

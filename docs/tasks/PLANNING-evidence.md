@@ -176,6 +176,15 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D403 — no colorway on my labels
+
+§6 says a piece's label holds its fabric and colorway. My session wrote the fabric and no colorway,and my judge did not check,because I wrote both from the same reading. An independent agent's first session wrote it and said the fixture names none. The labels now say so,the judge requires it,and the goldens are refrozen.
+
+## D402 — a chapter that could not be drafted from
+
+The reference skirt's chapter promises a reader can draft it without asking a question. The first independent reader had to decide nine things,and it cut the darts out of the boundary where my session marks them,which nothing in the book settled. For a factory that is a different pattern.
+§13 now pins each boundary,mark and grainline,with a test holding 22 positions against the drawing. Two later sessions on that book,with no refused call,golden-match.
+
 ## D401 — platform math in the geometry
 
 The units chapter says ordinary platform libm is not sufficient,and the recipe obeys it. I wrote the geometry kernel with hypot,atan2,sin,cos and acos anyway,so a golden file could have failed on another operating system and nowhere else. Found reading ahead for the determinism policy. Replaced by sc_units::pure,built only from IEEE-exact operations.

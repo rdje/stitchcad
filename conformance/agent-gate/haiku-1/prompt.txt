@@ -1,0 +1,3 @@
+Using only the tools of the stitchcad server, and the book those tools let you read, draft the reference skirt exactly as the book's chapter on it specifies, in size M.
+
+Start a new design. When every piece is drawn, export it in canonical form to exports/agent.json, and save the project. Then say what you did, and anything in the book you found ambiguous or had to decide for yourself.

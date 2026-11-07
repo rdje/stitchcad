@@ -2,7 +2,7 @@
 
 An external agent should be able to inspect a StitchCAD instance, understand its capabilities, author
 a design, inspect diagnostics and prepare checked outputs through the application API and MCP server.
-That is a project requirement, and [the API and MCP server](../spec/api-and-mcp.md) now do this for a drafted garment, over local stdio. Network connections are not built.
+That is a project requirement, and [the API and MCP server](../spec/api-and-mcp.md) now do this for a drafted garment, over local stdio, and [two independent agent sessions](../spec/api-and-mcp.md) have drafted the reference skirt that way. Network connections are not built.
 
 ## One workflow, several front-ends
 
