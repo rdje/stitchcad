@@ -176,6 +176,16 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D399 — a closure blind to the geometry
+
+The session's waist_closure said `(quarter_hip - ss_suppress) - dart_intake == quarter_waist`,which re-derives the arithmetic. The drawing uses `waist_side`,so building that point wrongly left the closure true:
+the D33 fault the chapter warns about,in my own session. Found while writing the mutant for it. The closure now reads `waist_side`.
+
+## D398 — one pattern,two files
+
+The canonical form starts a closed line at its lowest point. Neither writer did,so a pattern as drafted and the same pattern read back wrote different DXF and PDF bytes. The goldens held only because one path was ever tested.
+Found when the judge first compared a file with its canonical form,which reported every curved piece as wrong. Both writers now use the canonical first point,and each has a test that rotates a line's start.
+
 ## D397 — a corner that knew its direction
 
 Where both edges at a corner named `Envelope`,the join folded over whichever came second,so a piece and its mirror got different corners,4142 micrometres apart at a 45 degree tip. The corpus had four such cases and passed them,because it judged cleanliness and clearance and never symmetry.

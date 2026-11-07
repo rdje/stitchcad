@@ -383,8 +383,8 @@ fn every_closure_holds_after_a_measurement_change_and_a_broken_recipe_says_which
 
     // A wrong construction is caught by the assertion that names it: the D33 defect class.
     let broken = SESSION.replace(
-        "(quarter_hip - ss_suppress) - dart_intake == quarter_waist",
-        "quarter_hip - dart_intake == quarter_waist",
+        "let waist_side: length = quarter_hip - ss_suppress",
+        "let waist_side: length = quarter_waist - ss_suppress",
     );
     assert_ne!(broken, SESSION);
     let failure = replay(&parse(&broken).expect("valid"), MemoryRepository::new())

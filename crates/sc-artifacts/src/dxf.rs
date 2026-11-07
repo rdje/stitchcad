@@ -1,4 +1,5 @@
 //! The DXF writer for the one target G2 names: `dxf-aama-named`, AAMA named layers on release R12, polylines only, one size.
+use crate::canonical::from_lowest;
 use crate::pattern::{DrawnPiece, Line, Mark, MarkKind, Pattern};
 use core::fmt;
 use sc_geometry::Point;
@@ -196,9 +197,11 @@ fn write_block(
             });
         }
     }
+    // A closed line has no first point of its own, so the file uses the canonical one: one pattern, one file, however it was reached.
+    let (cut, sew) = (from_lowest(&piece.cut), from_lowest(&piece.sew));
     let (on_cut, on_draw) = match semantics {
-        LineSemantics::CutAsCut => (&piece.cut, &piece.sew),
-        LineSemantics::SewAsCut => (&piece.sew, &piece.cut),
+        LineSemantics::CutAsCut => (&cut, &sew),
+        LineSemantics::SewAsCut => (&sew, &cut),
     };
     pair(out, 0, "BLOCK");
     pair(out, 8, "0");

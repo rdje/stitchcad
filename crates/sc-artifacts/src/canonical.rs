@@ -37,7 +37,7 @@ fn kind_name(kind: MarkKind) -> &'static str {
 }
 
 // A closed polyline has no first point of its own, so one is chosen: the lowest, then the leftmost.
-fn from_lowest(points: &[Point]) -> Vec<Point> {
+pub(crate) fn from_lowest(points: &[Point]) -> Vec<Point> {
     let start = points
         .iter()
         .enumerate()

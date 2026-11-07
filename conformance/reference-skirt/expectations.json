@@ -1,0 +1,384 @@
+{
+ "inputs": [
+  {
+   "token": "waist_girth",
+   "um": 740000
+  },
+  {
+   "token": "hip_girth",
+   "um": 980000
+  },
+  {
+   "token": "waist_to_hip",
+   "um": 200000
+  },
+  {
+   "token": "waist_to_hem",
+   "um": 620000
+  },
+  {
+   "token": "ease_waist",
+   "um": 0
+  },
+  {
+   "token": "ease_hip",
+   "um": 40000
+  },
+  {
+   "token": "ss_suppress",
+   "um": 30000
+  },
+  {
+   "token": "dart_len_front",
+   "um": 120000
+  },
+  {
+   "token": "dart_len_back",
+   "um": 140000
+  },
+  {
+   "token": "a_line_flare",
+   "um": 30000
+  },
+  {
+   "token": "zip_len",
+   "um": 180000
+  },
+  {
+   "token": "wb_width",
+   "um": 40000
+  },
+  {
+   "token": "wb_extension",
+   "um": 30000
+  },
+  {
+   "token": "sa_side",
+   "um": 10000
+  },
+  {
+   "token": "sa_cb",
+   "um": 15000
+  },
+  {
+   "token": "sa_waist",
+   "um": 10000
+  },
+  {
+   "token": "sa_hem",
+   "um": 30000
+  },
+  {
+   "token": "sa_wb_bottom",
+   "um": 10000
+  }
+ ],
+ "notch_tolerance": 1000,
+ "pieces": [
+  {
+   "extent": [
+    295026,
+    660000
+   ],
+   "grain": "up",
+   "label_has": [
+    "skirt_front",
+    "size M",
+    "cut 1",
+    "shell",
+    "place on fold"
+   ],
+   "label_lacks": [],
+   "name": "skirt_front",
+   "notch_depth": 5000,
+   "notches": 1,
+   "quantity": 1
+  },
+  {
+   "extent": [
+    310026,
+    660000
+   ],
+   "grain": "up",
+   "label_has": [
+    "skirt_back_right",
+    "size M",
+    "cut 1",
+    "shell",
+    ", R"
+   ],
+   "label_lacks": [
+    "place on fold"
+   ],
+   "name": "skirt_back_right",
+   "notch_depth": 5000,
+   "notches": 2,
+   "quantity": 1
+  },
+  {
+   "extent": [
+    310026,
+    660000
+   ],
+   "grain": "up",
+   "label_has": [
+    "skirt_back_left",
+    "size M",
+    "cut 1",
+    "shell",
+    ", L"
+   ],
+   "label_lacks": [
+    "place on fold"
+   ],
+   "name": "skirt_back_left",
+   "notch_depth": 5000,
+   "notches": 2,
+   "quantity": 1
+  },
+  {
+   "extent": [
+    800000,
+    100000
+   ],
+   "fold_at_y": 50000,
+   "grain": "across",
+   "label_has": [
+    "waistband",
+    "size M",
+    "cut 1",
+    "shell"
+   ],
+   "label_lacks": [
+    "place on fold"
+   ],
+   "name": "waistband",
+   "notch_depth": 5000,
+   "notches": 5,
+   "quantity": 1
+  },
+  {
+   "attachment": "fused",
+   "extent": [
+    770000,
+    40000
+   ],
+   "grain": "across",
+   "label_has": [
+    "waistband_interfacing",
+    "size M",
+    "cut 1",
+    "interfacing"
+   ],
+   "label_lacks": [
+    "place on fold"
+   ],
+   "name": "waistband_interfacing",
+   "notch_depth": 0,
+   "notches": 0,
+   "quantity": 1
+  }
+ ],
+ "plausible_factor": 2,
+ "spans": [
+  {
+   "a": {
+    "from": [
+     285000,
+     -620000
+    ],
+    "piece": "skirt_front",
+    "to": [
+     225000,
+     0
+    ]
+   },
+   "b": {
+    "from": [
+     285000,
+     -620000
+    ],
+    "piece": "skirt_back_right",
+    "to": [
+     225000,
+     0
+    ]
+   },
+   "name": "ss_right",
+   "notches_at": [
+    421070
+   ]
+  },
+  {
+   "a": {
+    "from": [
+     285000,
+     -620000
+    ],
+    "piece": "skirt_front",
+    "to": [
+     225000,
+     0
+    ]
+   },
+   "b": {
+    "against": true,
+    "from": [
+     -285000,
+     -620000
+    ],
+    "piece": "skirt_back_left",
+    "to": [
+     -225000,
+     0
+    ]
+   },
+   "name": "ss_left",
+   "notches_at": [
+    421070
+   ]
+  },
+  {
+   "a": {
+    "from": [
+     0,
+     0
+    ],
+    "piece": "skirt_back_right",
+    "to": [
+     0,
+     -620000
+    ]
+   },
+   "b": {
+    "against": true,
+    "from": [
+     0,
+     0
+    ],
+    "piece": "skirt_back_left",
+    "to": [
+     0,
+     -620000
+    ]
+   },
+   "name": "cb",
+   "notches_at": [
+    180000
+   ]
+  },
+  {
+   "a": {
+    "from": [
+     225000,
+     0
+    ],
+    "less": 40000,
+    "piece": "skirt_back_right",
+    "to": [
+     0,
+     0
+    ]
+   },
+   "b": {
+    "from": [
+     570000,
+     10000
+    ],
+    "piece": "waistband",
+    "straight": true,
+    "to": [
+     755000,
+     10000
+    ]
+   },
+   "name": "waist_back_right",
+   "notches_at": []
+  },
+  {
+   "a": {
+    "from": [
+     225000,
+     0
+    ],
+    "less": 40000,
+    "piece": "skirt_front",
+    "to": [
+     0,
+     0
+    ]
+   },
+   "b": {
+    "from": [
+     385000,
+     10000
+    ],
+    "piece": "waistband",
+    "straight": true,
+    "to": [
+     570000,
+     10000
+    ]
+   },
+   "name": "waist_front_right",
+   "notches_at": []
+  },
+  {
+   "a": {
+    "from": [
+     225000,
+     0
+    ],
+    "less": 40000,
+    "piece": "skirt_front",
+    "to": [
+     0,
+     0
+    ]
+   },
+   "b": {
+    "from": [
+     200000,
+     10000
+    ],
+    "piece": "waistband",
+    "straight": true,
+    "to": [
+     385000,
+     10000
+    ]
+   },
+   "name": "waist_front_left",
+   "notches_at": []
+  },
+  {
+   "a": {
+    "from": [
+     0,
+     0
+    ],
+    "less": 40000,
+    "piece": "skirt_back_left",
+    "to": [
+     -225000,
+     0
+    ]
+   },
+   "b": {
+    "from": [
+     15000,
+     10000
+    ],
+    "piece": "waistband",
+    "straight": true,
+    "to": [
+     200000,
+     10000
+    ]
+   },
+   "name": "waist_back_left",
+   "notches_at": []
+  }
+ ],
+ "tolerance": 10
+}

@@ -405,7 +405,7 @@ naming the expert who reviews them.
 | Allowances included and excluded | The net line's coordinates do not move when the cut layer swaps, read out of both files | The Factory Profile that chooses is G4 |
 | Fold, label, internal line | Read out of the written DXF, not only the model | — |
 | Interfacing | No allowance on any edge, no fold, no label saying so | "In no span" needs the graph as data, G3 |
-| Package completeness | 5 pieces, the side-seam and zipper notches | Zipper, hook and bar, and the notions list have no model yet, G3 |
+| Package completeness | 5 pieces, the side-seam and zipper notches, and [each named fault](mutation-tests.md) | Zipper, hook and bar, and the notions list have no model yet, G3 |
 
 **Three choices here are an engineer's, and nobody who sews has reviewed them.** The domain expert's seat is vacant.
 

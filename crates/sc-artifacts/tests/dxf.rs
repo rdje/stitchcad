@@ -425,3 +425,15 @@ fn what_cannot_be_written_properly_is_refused() {
         })
     );
 }
+
+#[test]
+fn a_closed_line_starting_anywhere_writes_one_file() {
+    let first = write_dxf(&pattern(), LineSemantics::CutAsCut, FLAT).expect("writes");
+    let mut turned = pattern();
+    turned.pieces[0].cut.rotate_left(1);
+    turned.pieces[0].sew.rotate_left(2);
+    assert_eq!(
+        write_dxf(&turned, LineSemantics::CutAsCut, FLAT).expect("writes"),
+        first
+    );
+}

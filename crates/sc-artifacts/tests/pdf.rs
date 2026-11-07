@@ -334,3 +334,16 @@ fn text_that_would_break_a_pdf_string_is_escaped() {
     let (_, content) = read(&artifact.bytes).remove(0);
     assert!(content.contains("(a\\(b\\)c\\\\d) Tj"), "{content}");
 }
+
+#[test]
+fn a_closed_line_starting_anywhere_writes_one_file() {
+    let shape = || rectangle("front", 200_000, 300_000);
+    let first = write_pdf(&pattern(vec![shape()]), PageLayout::Single(Sheet::A0)).expect("writes");
+    let mut turned = shape();
+    turned.cut.rotate_left(1);
+    turned.sew.rotate_left(3);
+    assert_eq!(
+        write_pdf(&pattern(vec![turned]), PageLayout::Single(Sheet::A0)).expect("writes"),
+        first
+    );
+}

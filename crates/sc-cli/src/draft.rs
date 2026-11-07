@@ -262,7 +262,8 @@ pub fn draft(
                 ..mirror(original, &name, labels(lengths, fields)?)?
             }
         } else {
-            let (net, allowances) = boundary(lengths, fields)?;
+            let (net, allowances) =
+                boundary(lengths, fields).map_err(|error| format!("{name}: {error}"))?;
             let offset = net
                 .offset(&allowances, TOLERANCE)
                 .map_err(|error| format!("{name}: {error}"))?;

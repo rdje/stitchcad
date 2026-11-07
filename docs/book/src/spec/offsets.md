@@ -40,8 +40,8 @@ Everything else is refused, naming what is wrong, so nothing wrong reaches an ex
 | --- | --- |
 | `WrongCount` | A different number of allowances than edges |
 | `NegativeWidth` | An allowance adds cloth, so a width cannot be negative |
+| `NetCrossing` | The net boundary already crosses itself. This is checked first, because such a boundary has no one direction |
 | `NotCounterclockwise` | The net boundary runs the wrong way, so outward is unknown |
-| `NetCrossing` | The net boundary already crosses itself |
 | `BoundExceeded` | Part of the result falls short of an edge's width by more than the tolerance, naming the edge |
 | `Tangled` | The result still crossed itself after its loops were removed |
 

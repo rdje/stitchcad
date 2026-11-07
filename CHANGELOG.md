@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1006 — mutation tests,each fault caught by the check that names it
+
+31 faults injected on purpose into the reference skirt,each required to be caught by the check whose code names it. The unmodified skirt raises nothing.
+Building it found a crossing boundary named as a wrong direction,one pattern writing two files (D398),and a closure blind to the geometry (D399). Grade mutants wait for G3. G2-07 met,31 of 66.
+
 ## STITCHCAD-G1-1005 — a project holds how to draw the garment,and reopens to the same bytes
 
 A project now saves how each piece is drawn,and never the drawing. Save,load,save leaves every byte on a real directory,and two designs with identical contours stay distinct.

@@ -745,14 +745,15 @@ impl Outline {
             return Err(OffsetError::NegativeWidth { edge });
         }
         let flat = tolerance;
-        if self.winding(flat) != Winding::Counterclockwise {
-            return Err(OffsetError::NotCounterclockwise);
-        }
+        // A boundary that crosses itself has no one direction, so saying which way it runs would name the wrong fault.
         if let Some(crossing) = self.self_crossings(flat).first() {
             return Err(OffsetError::NetCrossing {
                 first: crossing.first,
                 second: crossing.second,
             });
+        }
+        if self.winding(flat) != Winding::Counterclockwise {
+            return Err(OffsetError::NotCounterclockwise);
         }
         let edges: Vec<Edge> = self
             .curves()

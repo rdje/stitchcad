@@ -1,5 +1,6 @@
 //! The PDF writer for the review and print path: true scale, with a scale square, on A0 or on tiled sheets. Nothing is ever rescaled, because
 //! a rescaled print is a pattern nobody drafted.
+use crate::canonical::from_lowest;
 use crate::pattern::{DrawnPiece, Line, MarkKind, Pattern};
 use core::fmt;
 use sc_geometry::Point;
@@ -233,9 +234,10 @@ fn drawing(placed: &[Placed<'_>], style: &str) -> Result<String, PdfError> {
         }
         let (dx, dy) = (item.dx, item.dy);
         out.push_str("0.5 w\n");
-        path(&mut out, &piece.cut, dx, dy, true);
+        // The canonical first point, so one pattern gives one file however it was reached.
+        path(&mut out, &from_lowest(&piece.cut), dx, dy, true);
         out.push_str("0.25 w\n[3 2] 0 d\n");
-        path(&mut out, &piece.sew, dx, dy, true);
+        path(&mut out, &from_lowest(&piece.sew), dx, dy, true);
         out.push_str("[] 0 d\n");
         draw_line(&mut out, piece.grain, dx, dy);
         for line in &piece.internal {
