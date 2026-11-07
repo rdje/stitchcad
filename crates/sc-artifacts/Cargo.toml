@@ -12,3 +12,4 @@ workspace = true
 [dependencies]
 sc-geometry = { path = "../sc-geometry", version = "0.1.0" }
 sc-store = { path = "../sc-store", version = "0.1.0" }
+sc-units = { path = "../sc-units", version = "0.1.0" }

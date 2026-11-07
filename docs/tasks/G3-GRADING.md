@@ -52,14 +52,20 @@ interchange that an independent engine can re-import, extreme sizes included.
   Children: `.1` … `.16`
 
 - ID: `G3-GRADING.1`
-  Status: `pending`
+  Status: `done`
   Goal: closure semantics — Dart / Tuck / Pleat / Gather as objects with intake, direction and
   apex, plus slash-and-spread as a drafting operation on the recipe (§3.1).
   Acceptance: a dart's intake is queryable and conserved across the operation that closes it;
   slash-and-spread is replayable from the recipe (not a baked geometry edit); unsupported closures
   produce the diagnostics named in the `G0-CONTRACT.4` feature matrix.
-  Verification: `pending`
-  Commit: `pending`
+  Paths:crates/sc-artifacts/**,crates/sc-cli/**,crates/sc-api/src/lib.rs,crates/sc-viewer/src/shell.rs,crates/sc-mcp/tests/agent_gate.rs,conformance/reference-skirt/**,conformance/goldens/reference-skirt/**,Cargo.lock,docs/book/src/**.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY G3-02 asks for darts and folds as operations. WHERE a dart was two internal lines,and the core's CloseDart returns HandlerUnavailable because the core holds topology and no coordinates;git grep -c closure_reports 6bf8cfcd -- crates →0,rc=1.
+  - [x] ADDRESSED:cargo test -p sc-cli --test closures exit status →rc=0:13 tests. A dart's intake is measured from the drawn line,a disagreeing declaration is refused by name,and turning the far leg about the apex lands it on the near one. Intake holds at each width tried. Slash and spread is redone from the recipe,and what lay in the turned part moves with it.
+  - [x] THE SKIRT:its darts are now dart objects. The DXF golden moved no byte and the canonical form gained only the closures,so the two agent sessions still golden-match with closures set aside. Their recordings predate closures.
+  - [x] THE GAP,STATED:the drafting layer executes these,and sc-core's Dart,Tuck,Pleat and Gather are structural and stay unconnected,so there are two models of a closure until a later leaf binds them. The chapter says so. No garment uses a tuck,pleat or gather yet.
+  - [x] NO REGRESSION:gauge.sh --checks →rc=0;cargo test -p sc-artifacts -p sc-cli -p sc-api -p sc-mcp -p sc-viewer →rc=0;clippy --workspace --all-targets -D warnings →rc=0;fmt --check →rc=0;doctests →rc=0;BOOK-CENSUSES →rc=0.
+  promotion: declined (no new lesson).
+  Commit:STITCHCAD-G1-1012.
 
 - ID: `G3-GRADING.2`
   Status: `pending`

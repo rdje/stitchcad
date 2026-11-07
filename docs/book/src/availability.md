@@ -48,7 +48,7 @@ G3 is the earliest open gate that software can close. G2's only open clause need
 | Clause | What the roadmap asks | Met | Where it stands | Owning leaf |
 | --- | --- | --- | --- | --- |
 | `G3-01` | A darted bodice and a set-in sleeve with declared ease | not met | Not started. The skirt has no eased seam | `G3-GRADING.4` |
-| `G3-02` | Darts, folds, walking and truing | not met | [The judge](spec/mutation-tests.md) walks seams over a table. No command does yet | `G3-GRADING.2` |
+| `G3-02` | Darts, folds, walking and truing | not met | [Darts, tucks, pleats, gathers and slash and spread](spec/closures.md) work. [The judge](spec/mutation-tests.md) walks seams over a table, and no command does yet | `G3-GRADING.2` |
 | `G3-03` | Stable references survive edits | not met | Not started | `G3-GRADING.3` |
 | `G3-04` | Both instantiation paths | not met | Not started | `G3-GRADING.11` |
 | `G3-05` | A grade re-imported into an independent engine | not met | Not started | `G3-GRADING.8` |
@@ -105,7 +105,7 @@ does not support yet with a plain error. The constraint kernel `.8`, the project
 command line `.10`, the runtime profiles `.11`, the license census `.15`, the browser run `.12` and the canvas spike `.13`
 are done, and the G1 exit review `.16` passed. The geometry kernel `G2-2D.1`, the offset engine `G2-2D.2`, its corpus `G2-2D.3`, the
 canonicalizer `G2-2D.4`, the DXF writer `G2-2D.5` and the drafted skirt `G2-2D.8` are done. The PDF writer `G2-2D.6` is written and measured, and waits only on the library comparison. The printed square `G2-2D.7` is measured on screen and waits for a person with a ruler. The viewer and editor `G2-2D.9`
-is done as a page, and its toolkit and native window stay open at `G1-SLICE.14`. Native save and load `G2-2D.10` is done. The mutation tests `G2-2D.11` and [the conformance matrix](spec/conformance-matrix.md) `G2-2D.12` are done. [The API and MCP server](spec/api-and-mcp.md) `G1-SLICE.9` works over local stdio. The agent gate `G2-2D.13` passed, and the toile protocol `G2-2D.15` is written. What G2 has left is a person with a ruler, so the next one is G3, starting with `G3-GRADING.1`.
+is done as a page, and its toolkit and native window stay open at `G1-SLICE.14`. Native save and load `G2-2D.10` is done. The mutation tests `G2-2D.11` and [the conformance matrix](spec/conformance-matrix.md) `G2-2D.12` are done. [The API and MCP server](spec/api-and-mcp.md) `G1-SLICE.9` works over local stdio. The agent gate `G2-2D.13` passed, and the toile protocol `G2-2D.15` is written. What G2 has left is a person with a ruler, so G3 has begun: [closures](spec/closures.md) `G3-GRADING.1` are done, and the next one is walking and truing, `G3-GRADING.2`.
 
 ## Implemented foundations
 

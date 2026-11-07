@@ -399,7 +399,7 @@ naming the expert who reviews them.
 | --- | --- | --- |
 | Two runs give identical bytes | The real program under two time zones and a foreign locale, all files | Windows and Linux, at the first hosted run |
 | Closures hold or report | 18 inputs each changed by −2, −0.4, +0.4 and +2 cm, with the waist re-derived from the drawing, plus a deliberately wrong recipe | — |
-| Dart intake conserved | Each panel's dart is 4.0 cm, leaving 18.5 cm | Closing a dart as an operation is G3 |
+| Dart intake conserved | [Each dart reports](closures.md) that closing it removes exactly 4.0 cm, leaving 18.5 cm, and its far leg lands on its near one | Truing the waist across a closed dart is `G3-GRADING.2` |
 | `walk` within the numerical class | §8's four spans walked over the drawn lines, in the test | The `walk` command and the graph as data are G3 |
 | No self-intersection | All pairs of segments on every cut and net line, at each width in that sweep | — |
 | Allowances included and excluded | The net line's coordinates do not move when the cut layer swaps, read out of both files | The Factory Profile that chooses is G4 |
@@ -444,7 +444,7 @@ The waist curve runs from the hip point to the waist point with two control poin
 
 | Mark | Where | Why it is drawn this way |
 | --- | --- | --- |
-| Darts | Two internal lines on each panel, from (dart centre ∓ dart_intake / 2, 0) to (dart centre, −dart length). The dart centre is (quarter_hip − ss_suppress) / 2, and its length `dart_len_front` or `dart_len_back` | A dart is marked, never cut out. The cut line runs straight across the waist, so the cloth is there to sew and the waist edge measures 22.5 cm until it is closed |
+| Darts | A [dart](closures.md) on each panel, whose legs are two internal lines from (dart centre ∓ dart_intake / 2, 0) to (dart centre, −dart length). The dart centre is (quarter_hip − ss_suppress) / 2, and its length `dart_len_front` or `dart_len_back` | A dart is marked, never cut out. The cut line runs straight across the waist, so the cloth is there to sew and the waist edge measures 22.5 cm until it is closed |
 | Body grain | From (quarter_hip / 2, 0) to (quarter_hip / 2, −waist_to_hem) | The midpoint of the hip-line width, from §7 |
 | Band fold | An internal line from (0, waistband_fold_position) to (waistband_pattern_length, waistband_fold_position) | §5 step 8 |
 | Band grain | From (sa_cb + 2 cm, waistband_cut_width / 4) to (waistband_pattern_length − sa_cb − 2 cm, waistband_cut_width / 4) | Parallel to its length, from §7 |

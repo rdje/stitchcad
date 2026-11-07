@@ -25,6 +25,7 @@ let pattern = Pattern {
         grain: Line { from: p(5_000, 1_000), to: p(5_000, 9_000) },
         internal: vec![],
         marks: vec![],
+        closures: vec![],
         labels: vec![],
     }],
 };

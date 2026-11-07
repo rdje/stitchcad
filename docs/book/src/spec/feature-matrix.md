@@ -68,7 +68,7 @@ chapter is inside that family or explicitly outside it.
 | canonical project format, byte-identical saves | supported | ontology §7: derived data is never authoritative and two saves of one state are identical | G1 persistence, G2 save and load | — |
 | NURBS-class curves and expressions | deferred | roadmap §4.2 fixes the curve set as line, arc and cubic Bézier — "the AAMA/ASTM diet" | G7 or later | `env_nurbs` |
 | geometric sketch constraints (`sc-sketch`) | deferred | roadmap §4.3 marks it OPTIONAL and ADR-0001, not v1, settles its solver | G7 or later | `env_sketch_constraints` |
-| slash and spread | supported | ontology §3.2: a drafting operation on the recipe, not a property of a closure | G3 | — |
+| slash and spread | supported | ontology §3.2: [a drafting operation done again from the recipe](closures.md), not a property of a closure | G3 | — |
 | mirror and mirrored pairs | supported | ontology §4.1; the fixture's back pieces are a mirrored pair with L/R labels | G2 | — |
 | `walk` and `true` as editing operations | supported | ontology §3.2 makes them first-class operations, not validation checks | G3 | — |
 | imported geometry without history | supported | ontology §3.1 stores it as explicit primitives, always distinguishable from drafted | G6 import | — |
@@ -110,9 +110,9 @@ callee-before-argument precedence. Requests from other interfaces retain their o
 
 | Feature | Disposition | Why | Proven at | Diagnostic |
 | --- | --- | --- | --- | --- |
-| dart with conserved intake | supported | ontology §4.3/§10; structural dart intent implemented, physical 4.0 cm closure remains G2/G3 | G2, G3 | — |
-| tuck and pleat | supported | ontology §4.3/§10; distinct structural intent implemented; executed folds/conservation remain G3 | G3 | — |
-| gather | supported | ontology §4.3/§10; structural binding borrows span ease; G3 proves realized gathering | G3 | — |
+| dart with conserved intake | supported | ontology §4.3/§10; [executed in the drafting layer](closures.md), and closing one removes exactly its intake | G2, G3 | — |
+| tuck and pleat | supported | ontology §4.3/§10; [each carries its intake and fold lines](closures.md), and no garment uses one yet | G3 | — |
+| gather | supported | ontology §4.3/§10; [carries what it draws up](closures.md), and no garment uses one yet | G3 | — |
 | hem, turned or faced | supported | ontology §4.7/§10; structural depth/fold/Facing intent implemented; G2 proves the fixture hem | G2 | — |
 | facing | supported | ontology §4.7/§10; structural facing intent implemented; physical offset/drafting proof remains G3 | G3 | — |
 | interfacing | supported | ontology §4.7/§10; structural interfacing intent implemented; physical fixture offset remains G2 | G2 | — |

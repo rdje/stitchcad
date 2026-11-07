@@ -126,6 +126,8 @@ fn each_session_golden_matches_within_the_declared_tolerance() {
             let mut pattern = from_canonical_text(text).expect("reads");
             for piece in &mut pattern.pieces {
                 piece.labels.clear();
+                // Added at G3, after these sessions. A dart's legs are still compared as lines, which the sessions drew.
+                piece.closures.clear();
             }
             pattern.style = String::new();
             to_canonical_text(&pattern)

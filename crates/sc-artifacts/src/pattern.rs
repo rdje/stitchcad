@@ -41,6 +41,36 @@ pub struct Text {
     pub text: String,
 }
 
+/// What kind of closure takes up cloth on a piece.
+#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord)]
+pub enum ClosureKind {
+    /// Two legs meeting at an apex, stitched together.
+    Dart,
+    /// A fold stitched down part of its length.
+    Tuck,
+    /// A fold pressed and held at the seam.
+    Pleat,
+    /// A range drawn up to a shorter length.
+    Gather,
+}
+
+/// A closure with its meaning, not its line art: where it takes cloth from and how much.
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
+pub struct Closure {
+    /// What kind it is.
+    pub kind: ClosureKind,
+    /// Its name on this piece, which a seam or a report refers to.
+    pub name: String,
+    /// Where the range it takes up starts on the sew line. For a dart, its near leg's top.
+    pub from: Point,
+    /// Where that range ends. For a dart, its far leg's top.
+    pub to: Point,
+    /// A dart's apex.
+    pub apex: Option<Point>,
+    /// How much it removes from the sewn length of the edge it sits on, in micrometres.
+    pub intake: i64,
+}
+
 /// One drawn piece.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct DrawnPiece {
@@ -62,6 +92,8 @@ pub struct DrawnPiece {
     pub marks: Vec<Mark>,
     /// Label lines.
     pub labels: Vec<Text>,
+    /// Darts, tucks, pleats and gathers, which a seam's length accounts for.
+    pub closures: Vec<Closure>,
 }
 
 /// A whole drawn pattern at one size.

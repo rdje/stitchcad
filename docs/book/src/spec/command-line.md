@@ -28,6 +28,7 @@ $ stitchcad replay session.json project-directory
 | Step | What it does |
 | --- | --- |
 | `evaluate` | Runs the recipe against the current Design and lists every binding |
+| `closures` | What closing each [closure](closures.md) of the drawing does |
 | `preview` | What one input's new value would change, computed on a copy: `token` and `um`. The Design, its revision and its history stay as they are |
 | `change` | Replaces one input's value through the bus, at a new revision. `token`, `um`, and optionally `expect_revision` |
 | `undo` | Returns the Design to its state before the last change, under a fresh authority check |
@@ -224,6 +225,11 @@ numbers stay in the recipe and a changed measurement moves every piece. A step t
 | `internal` | A list of internal lines, each a list of two points |
 | `notches` | Each notch, as the point on the cut line and a point it aims at |
 | `labels` | Each label, as `at` and `text` |
+| `darts` | [Closures](closures.md): each with `name`, `near`, `far`, `apex`, and optionally `intake` |
+| `tucks` | Each with `name`, `from`, `to`, and optionally `intake`, `from_end` and `to_end` |
+| `pleats` | The same as a tuck |
+| `gathers` | Each with `name`, `from`, `to` and `gathered_to` |
+| `slash_spreads` | Each with `name`, `pivot`, `slash_to` and `spread`, applied to the boundary in order |
 | `mirror_of` | Instead of a boundary: this piece mirrors an earlier one across x = 0, taking its lines, grain and notches, with `labels` of its own |
 
 A notch becomes a vertex of the cut line, so no writer can lose it between two chords. Its named position comes from straight arithmetic and can land a hair from where the offset's
@@ -331,3 +337,20 @@ Exporting also writes `<path>.record.json`, which the writer's own chapter descr
 | `a3_tiled` | A3 sheets, tiled |
 | `a4_tiled` | A4 sheets, tiled |
 | `format` | A session's format version, or an export's file format |
+| `closures` | The step that reports what closing each closure does |
+| `darts` | A piece's darts |
+| `tucks` | A piece's tucks |
+| `pleats` | A piece's pleats |
+| `gathers` | A piece's gathers |
+| `slash_spreads` | A piece's slash-and-spread operations |
+| `near` | A dart's near leg's top |
+| `far` | A dart's far leg's top |
+| `apex` | A dart's apex |
+| `intake` | What a closure declares it takes up |
+| `from` | Where a closure's range starts |
+| `from_end` | Where a tuck's first fold line ends |
+| `to_end` | Where a tuck's second fold line ends |
+| `gathered_to` | The length a gather draws its range up to |
+| `pivot` | The point a slash and spread turns about |
+| `slash_to` | Where the slash meets the boundary |
+| `spread` | How far the slash opens there |

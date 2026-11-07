@@ -291,6 +291,19 @@ impl<R: Repository> Session<R> {
         self.trace.push(Value::Object(record));
     }
 
+    // What closing each closure of the drawing does, from the drawing itself.
+    fn closures(&self, step: usize) -> Result<Value, Failure> {
+        let pattern = self.pattern.as_ref().ok_or_else(|| {
+            Failure::at(step, "closures", "closures needs a draft first".to_owned())
+        })?;
+        Ok(Value::List(
+            sc_artifacts::closure_reports(pattern)
+                .iter()
+                .map(sc_artifacts::ClosureReport::to_value)
+                .collect(),
+        ))
+    }
+
     // What a change would do, computed on a copy, leaving the Design, its revision and its history exactly as they are.
     fn preview(&self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
         let fail = |message: String| Failure::at(step, "preview", message);
@@ -821,9 +834,10 @@ fn solve(
 }
 
 /// The steps a session can take. Anything else is refused by name.
-pub const STEPS: [&str; 12] = [
+pub const STEPS: [&str; 13] = [
     "evaluate",
     "preview",
+    "closures",
     "change",
     "undo",
     "redo",
@@ -865,7 +879,7 @@ impl Caller {
 fn required(step: &str) -> Option<CommandAuthority> {
     match step {
         // Loading writes nothing. It discards unsaved work, and only a caller who may commit can have made any.
-        "evaluate" | "solve" | "reopen" => Some(CommandAuthority::Inspect),
+        "evaluate" | "solve" | "reopen" | "closures" => Some(CommandAuthority::Inspect),
         "preview" => Some(CommandAuthority::Propose),
         "save" => Some(CommandAuthority::Commit),
         "draft" | "export_pattern" | "render" | "export" => Some(CommandAuthority::Generate),
@@ -996,6 +1010,7 @@ impl<R: Repository> Running<R> {
         let result = match what {
             "evaluate" => state.evaluate(step)?,
             "preview" => state.preview(step, item)?,
+            "closures" => state.closures(step)?,
             "change" => {
                 let token = item
                     .get("token")

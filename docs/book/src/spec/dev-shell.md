@@ -49,6 +49,7 @@ This table is every step a session can take, and how the shell reaches it. A tes
 | --- | --- |
 | `evaluate` | On opening and after every edit, for the values panel |
 | `preview` | Not offered: an edit here is applied and can be undone |
+| `closures` | Not offered yet: the viewer shows a dart's legs and not what closing it does |
 | `change` | A measurement field |
 | `undo` | The Undo button |
 | `redo` | The Redo button |

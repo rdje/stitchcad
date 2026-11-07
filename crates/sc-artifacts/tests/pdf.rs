@@ -34,6 +34,7 @@ fn rectangle(name: &str, width: i64, height: i64) -> DrawnPiece {
         },
         internal: vec![],
         marks: vec![],
+        closures: vec![],
         labels: vec![],
     }
 }

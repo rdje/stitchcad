@@ -14,6 +14,7 @@ requires the named contracts and later proof owners.
 | Physical evaluation | §13 | G2-2D.7/.15 | [What to print, sew and measure](../spec/physical-evaluation.md). Nothing has been performed |
 | Conformance matrix | §13 | G2-2D.12 | [Each claim beside its check, and what is unclaimed](../spec/conformance-matrix.md) |
 | Mutation tests | §11 G2, §13 | sc-artifacts; G2-2D.11 | [Each fault caught by the check that names it](../spec/mutation-tests.md) |
+| Closures | §3.1; G3 | sc-artifacts, sc-cli; G3-GRADING.1 | [Darts, tucks, pleats, gathers, and slash and spread](../spec/closures.md) |
 | API and MCP | §7.8; G1 | sc-api, sc-mcp; G1-SLICE.9 | [Local stdio, scoped authority and admission tests](../spec/api-and-mcp.md) |
 | Dev shell | §11 G2 | sc-viewer; G2-2D.9 | [Draws and edits a pattern through the bus](../spec/dev-shell.md) |
 | Reference skirt | §11 G2 | sc-cli; G2-2D.8 | [Drafted through the command line](../spec/reference-skirt.md), with frozen goldens |

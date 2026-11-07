@@ -3,6 +3,7 @@
 #![warn(missing_docs)]
 
 mod canonical;
+mod closures;
 mod compare;
 mod dxf;
 mod judge;
@@ -17,13 +18,14 @@ mod pdf;
 mod pdf_examples {}
 
 pub use canonical::{from_canonical_text, to_canonical_text, CanonicalError};
+pub use closures::{along, closure_reports, ClosureReport};
 pub use compare::{compare, Comparison, Difference};
 pub use dxf::{write_dxf, DxfArtifact, DxfError, Flattening, LineSemantics, TARGET, WRITER};
 pub use judge::{
     judge_dxf, judge_inputs, judge_pattern, judge_pdf_square, Expectations, Finding,
     PieceExpectation, Span, SpanSide,
 };
-pub use pattern::{DrawnPiece, Line, Mark, MarkKind, Pattern, Text};
+pub use pattern::{Closure, ClosureKind, DrawnPiece, Line, Mark, MarkKind, Pattern, Text};
 pub use pdf::{
     write_pdf, PageLayout, PdfArtifact, PdfError, Sheet, PDF_TARGET, PDF_WRITER, SCALE_SQUARE,
 };

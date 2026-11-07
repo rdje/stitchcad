@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1012 — closures with their meaning,and slash and spread from the recipe
+
+A dart,tuck,pleat or gather is now an object carrying its intake,measured from the drawn line and checked against what it declares. Closing a dart removes exactly its intake,and its far leg lands on its near one. Slash and spread is done again from the recipe at every draft.
+The reference skirt's darts are real darts. The core's own closure types stay structural and unconnected,which the chapter states.
+
 ## STITCHCAD-G1-1011 — the G2 exit review,and what a person can measure
 
 G2's review reads 7 met,1 not met:a printed square on paper,which needs a person. Physical evaluation now says how,in five minutes,and how to make and measure a first toile,with each assumed constant's falsifying measurement and a record a test reads. Nothing has been performed. The frontier moves to G3.

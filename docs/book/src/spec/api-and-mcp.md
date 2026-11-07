@@ -6,7 +6,7 @@ An agent can now do what the command line and [the dev shell](dev-shell.md) do, 
 $ stitchcad-mcp --project DIR --book docs/book/src
 ```
 
-**What works today.** The `local-stdio` profile, where a host launches this program and speaks over its pipes: 18 tools, four authorities a caller can hold, an actor trace, and its admission tests. **What does not exist yet:** the `local-http`, `remote-http` and `private-bridge` profiles, each of which waits for its own threat model; resources and prompts, since tools alone cover this; and a release to approve.
+**What works today.** The `local-stdio` profile, where a host launches this program and speaks over its pipes: 19 tools, four authorities a caller can hold, an actor trace, and its admission tests. **What does not exist yet:** the `local-http`, `remote-http` and `private-bridge` profiles, each of which waits for its own threat model; resources and prompts, since tools alone cover this; and a release to approve.
 
 **The roadmap names `jsonrpsee` and `rmcp` for this.** Neither is used. The stdio transport is one JSON message to a line, which needs no library, and a network profile is where they would earn their place. This contract is experimental, and its semver commitment comes at G7.
 
@@ -27,6 +27,7 @@ $ stitchcad-mcp --project DIR --book docs/book/src
 | `check_constraint` | `inspect` | Checks an input against a limit |
 | `draft_pattern` | `generate` | Draws the pieces, as [the command line](command-line.md) describes them |
 | `describe_pattern` | `inspect` | Each piece's name, extent, notches and labels |
+| `describe_closures` | `inspect` | Each dart, tuck, pleat and gather, and what closing it removes |
 | `export_pattern` | `generate` | Writes canonical text, DXF or PDF into the project |
 | `save_project` | `commit` | One crash-consistent commit |
 | `reopen_project` | `commit` | Returns to what was saved |

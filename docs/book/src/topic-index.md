@@ -125,6 +125,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [PDF output](spec/pdf-output.md)
 - [Viewport](spec/viewport.md)
 - [Canvas hosting](spec/canvas-hosting.md)
+- [Closures](spec/closures.md)
 - [The dev shell](spec/dev-shell.md)
 - [The API and MCP server](spec/api-and-mcp.md)
 - [The mutation tests](spec/mutation-tests.md)

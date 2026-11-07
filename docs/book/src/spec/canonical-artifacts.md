@@ -22,6 +22,7 @@ let piece = |name: &str, cut: Vec<_>| DrawnPiece {
     grain: Line { from: p(45_000, 10_000), to: p(45_000, 80_000) },
     internal: vec![],
     marks: vec![],
+    closures: vec![],
     labels: vec![],
 };
 let pattern = |pieces| Pattern { style: "skirt".to_owned(), design: "01ARZ3NDEKTSV4RRFFQ69G5FAV".to_owned(), revision: "1".to_owned(), pieces };

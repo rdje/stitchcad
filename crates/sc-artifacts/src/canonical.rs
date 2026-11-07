@@ -1,5 +1,5 @@
 //! One written form for one pattern: stable order and exact numbers, with no clock anywhere in it.
-use crate::pattern::{DrawnPiece, Line, Mark, MarkKind, Pattern, Text};
+use crate::pattern::{Closure, ClosureKind, DrawnPiece, Line, Mark, MarkKind, Pattern, Text};
 use core::fmt;
 use sc_geometry::Point;
 use sc_store::{parse, Value};
@@ -56,7 +56,9 @@ fn piece_value(piece: &DrawnPiece) -> Value {
     marks.sort();
     let mut labels = piece.labels.clone();
     labels.sort();
-    object(vec![
+    let mut closures = piece.closures.clone();
+    closures.sort();
+    let mut fields = vec![
         ("name", text(&piece.name)),
         ("size", text(&piece.size)),
         ("quantity", Value::Int(i64::from(piece.quantity))),
@@ -91,7 +93,38 @@ fn piece_value(piece: &DrawnPiece) -> Value {
                     .collect(),
             ),
         ),
-    ])
+    ];
+    // A piece with no closures writes no field, so a form written before closures existed still reads the same.
+    if !closures.is_empty() {
+        fields.push((
+            "closures",
+            Value::List(closures.iter().map(closure_value).collect()),
+        ));
+    }
+    object(fields)
+}
+
+fn closure_kind_name(kind: ClosureKind) -> &'static str {
+    match kind {
+        ClosureKind::Dart => "dart",
+        ClosureKind::Tuck => "tuck",
+        ClosureKind::Pleat => "pleat",
+        ClosureKind::Gather => "gather",
+    }
+}
+
+fn closure_value(closure: &Closure) -> Value {
+    let mut fields = vec![
+        ("kind", text(closure_kind_name(closure.kind))),
+        ("name", text(&closure.name)),
+        ("from", point(closure.from)),
+        ("to", point(closure.to)),
+        ("intake", Value::Int(closure.intake)),
+    ];
+    if let Some(apex) = closure.apex {
+        fields.push(("apex", point(apex)));
+    }
+    object(fields)
 }
 
 /// The one written form: pieces in name then size order, each closed line from its lowest point, and marks in a fixed order.
@@ -221,7 +254,35 @@ fn read_piece(value: &Value) -> Result<DrawnPiece, CanonicalError> {
             text: read_text(label, "text")?,
         });
     }
+    let mut closures = Vec::new();
+    if fields.contains_key("closures") {
+        for item in read_list(fields, "closures")? {
+            let Some(closure) = item.as_object() else {
+                return fail("a closure must be an object");
+            };
+            let kind = match read_text(closure, "kind")?.as_str() {
+                "dart" => ClosureKind::Dart,
+                "tuck" => ClosureKind::Tuck,
+                "pleat" => ClosureKind::Pleat,
+                "gather" => ClosureKind::Gather,
+                other => return fail(format!("no closure is called {other}")),
+            };
+            closures.push(Closure {
+                kind,
+                name: read_text(closure, "name")?,
+                from: read_point(field(closure, "from")?)?,
+                to: read_point(field(closure, "to")?)?,
+                apex: closure.get("apex").map(read_point).transpose()?,
+                intake: field(closure, "intake")?
+                    .as_int()
+                    .ok_or_else(|| CanonicalError {
+                        message: "a closure's intake must be a whole number".to_owned(),
+                    })?,
+            });
+        }
+    }
     Ok(DrawnPiece {
+        closures,
         name: read_text(fields, "name")?,
         size: read_text(fields, "size")?,
         quantity,

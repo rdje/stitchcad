@@ -84,6 +84,24 @@
       "do": "draft",
       "pieces": [
         {
+          "darts": [
+            {
+              "apex": [
+                "front_dart_centre",
+                "-dart_len_front"
+              ],
+              "far": [
+                "front_dart_far",
+                "zero"
+              ],
+              "intake": "dart_intake",
+              "name": "dart",
+              "near": [
+                "front_dart_near",
+                "zero"
+              ]
+            }
+          ],
           "edges": [
             {
               "corner": "miter",
@@ -146,28 +164,6 @@
               ]
             ]
           ],
-          "internal": [
-            [
-              [
-                "front_dart_near",
-                "zero"
-              ],
-              [
-                "front_dart_centre",
-                "-dart_len_front"
-              ]
-            ],
-            [
-              [
-                "front_dart_far",
-                "zero"
-              ],
-              [
-                "front_dart_centre",
-                "-dart_len_front"
-              ]
-            ]
-          ],
           "labels": [
             {
               "at": [
@@ -204,6 +200,24 @@
           ]
         },
         {
+          "darts": [
+            {
+              "apex": [
+                "back_dart_centre",
+                "-dart_len_back"
+              ],
+              "far": [
+                "back_dart_far",
+                "zero"
+              ],
+              "intake": "dart_intake",
+              "name": "dart",
+              "near": [
+                "back_dart_near",
+                "zero"
+              ]
+            }
+          ],
           "edges": [
             {
               "corner": "trim",
@@ -263,28 +277,6 @@
               [
                 "grain_x",
                 "-waist_to_hem"
-              ]
-            ]
-          ],
-          "internal": [
-            [
-              [
-                "back_dart_near",
-                "zero"
-              ],
-              [
-                "back_dart_centre",
-                "-dart_len_back"
-              ]
-            ],
-            [
-              [
-                "back_dart_far",
-                "zero"
-              ],
-              [
-                "back_dart_centre",
-                "-dart_len_back"
               ]
             ]
           ],

@@ -53,6 +53,7 @@ fn front() -> DrawnPiece {
                 toward: p(25_000, 82_000),
             },
         ],
+        closures: vec![],
         labels: vec![Text {
             at: p(40_000, 40_000),
             text: "front".to_owned(),

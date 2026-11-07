@@ -152,6 +152,17 @@ fn compare_piece(
             report("marks", detail);
         }
     }
+    let closures = |piece: &DrawnPiece| {
+        let mut listed = piece.closures.clone();
+        listed.sort();
+        listed
+    };
+    if closures(a) != closures(b) {
+        report(
+            "closures",
+            format!("{:?} against {:?}", closures(a), closures(b)),
+        );
+    }
     let label_text = |piece: &DrawnPiece| {
         let mut texts: Vec<String> = piece
             .labels

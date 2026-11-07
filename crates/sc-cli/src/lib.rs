@@ -4,6 +4,9 @@
 
 mod design;
 mod draft;
+
+#[doc = include_str!("../../../docs/book/src/spec/closures.md")]
+mod closures_examples {}
 mod outline;
 mod session;
 
