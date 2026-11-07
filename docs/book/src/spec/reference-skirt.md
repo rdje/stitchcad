@@ -218,6 +218,9 @@ long edge as well as the body pieces' waist edge, because each pair is sewn toge
 | — | CF (front) | none — fold | — | not an allowance |
 | — | `waistband_interfacing`, every edge | none — fused | — | not an allowance |
 
+On the band, the corner column has no effect: §5 step 8 makes the band ONE rectangle and its closures in §4.1 measure that rectangle, so its four corners are square. Before G2 drew it,
+this table and step 8 could both be read as binding, and a trimmed corner would have shortened the band's edges (defect **D395**, §13).
+
 "Included in contour" versus "generated downstream" is a **Factory Profile** parameter, and this
 fixture is the one that exercises both: the same design exports with allowances included for one
 receiver and excluded for another, and the two artifacts differ only in what the profile asked for.
@@ -386,3 +389,36 @@ naming the expert who reviews them.
   seam for it.
 - Package completeness: 5 pieces, 2 notched side-seam pairs, 1 zipper, 1 hook and bar, and a notions
   list that matches.
+
+## 13. Drafted through the command line
+
+`conformance/reference-skirt/session.json` is this chapter as a session, and `cargo test -p sc-cli --test skirt` holds it to §12. Its files are frozen at
+`conformance/goldens/reference-skirt/`. Every §4 value comes from the recipe, and the drawn pieces are measured against the numbers above.
+
+| §12 obligation | Held today by | Still open |
+| --- | --- | --- |
+| Two runs give identical bytes | The real program under two time zones and a foreign locale, all files | Windows and Linux, at the first hosted run |
+| Closures hold or report | 18 inputs each changed by −2, −0.4, +0.4 and +2 cm, with the waist re-derived from the drawing, plus a deliberately wrong recipe | — |
+| Dart intake conserved | Each panel's dart is 4.0 cm, leaving 18.5 cm | Closing a dart as an operation is G3 |
+| `walk` within the numerical class | §8's four spans walked over the drawn lines, in the test | The `walk` command and the graph as data are G3 |
+| No self-intersection | All pairs of segments on every cut and net line, at each width in that sweep | — |
+| Allowances included and excluded | The net line's coordinates do not move when the cut layer swaps, read out of both files | The Factory Profile that chooses is G4 |
+| Fold, label, internal line | Read out of the written DXF, not only the model | — |
+| Interfacing | No allowance on any edge, no fold, no label saying so | "In no span" needs the graph as data, G3 |
+| Package completeness | 5 pieces, the side-seam and zipper notches | Zipper, hook and bar, and the notions list have no model yet, G3 |
+
+**Three choices here are an engineer's, and nobody who sews has reviewed them.** The domain expert's seat is vacant.
+
+| Choice | Why |
+| --- | --- |
+| The waist-to-hip curve | §5 asks for a "smooth" curve and gives no numbers. This one leaves the hip vertically, with control points at half of `waist_to_hip`, and a third of `ss_suppress` in from the waist point at a sixth of it |
+| Band corners | §7 and §5 step 8 conflicted (D395). The rectangle won, because both band closures are measured on it |
+| A notch 5 mm deep | §7 calls its physical form a profile parameter, and profiles are G4 |
+
+The skirt fits one A0 sheet on its side with 1 mm to spare, so any longer one is refused for that sheet and tiles instead. Printing it and measuring the paper is `G2-2D.7`.
+
+| Name | Meaning |
+| --- | --- |
+| `walk` | The command §8 specifies, not yet built |
+| `ss_suppress` | The side seam's suppression, §3 |
+| `waist_to_hip` | The waist-to-hip measurement, §2 |

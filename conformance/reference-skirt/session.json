@@ -1,0 +1,570 @@
+{
+  "design": "01ARZ3NDEKTSV4RRFFQ69G5FAV",
+  "format": 1,
+  "inputs": [
+    {
+      "token": "waist_girth",
+      "um": 740000
+    },
+    {
+      "token": "hip_girth",
+      "um": 980000
+    },
+    {
+      "token": "waist_to_hip",
+      "um": 200000
+    },
+    {
+      "token": "waist_to_hem",
+      "um": 620000
+    },
+    {
+      "token": "ease_waist",
+      "um": 0
+    },
+    {
+      "token": "ease_hip",
+      "um": 40000
+    },
+    {
+      "token": "ss_suppress",
+      "um": 30000
+    },
+    {
+      "token": "dart_len_front",
+      "um": 120000
+    },
+    {
+      "token": "dart_len_back",
+      "um": 140000
+    },
+    {
+      "token": "a_line_flare",
+      "um": 30000
+    },
+    {
+      "token": "zip_len",
+      "um": 180000
+    },
+    {
+      "token": "wb_width",
+      "um": 40000
+    },
+    {
+      "token": "wb_extension",
+      "um": 30000
+    },
+    {
+      "token": "sa_side",
+      "um": 10000
+    },
+    {
+      "token": "sa_cb",
+      "um": 15000
+    },
+    {
+      "token": "sa_waist",
+      "um": 10000
+    },
+    {
+      "token": "sa_hem",
+      "um": 30000
+    },
+    {
+      "token": "sa_wb_bottom",
+      "um": 10000
+    }
+  ],
+  "recipe": "let garment_waist: length = waist_girth + ease_waist\nlet garment_hip: length = hip_girth + ease_hip\nlet quarter_waist: length = garment_waist / 4\nlet quarter_hip: length = garment_hip / 4\nlet suppression: length = quarter_hip - quarter_waist\nlet dart_intake: length = suppression - ss_suppress\nlet side_seam_total: length = 4 * ss_suppress\nlet dart_total: length = 4 * dart_intake\nlet front_dart_centre: length = (quarter_hip - ss_suppress) / 2\nlet back_dart_centre: length = (quarter_hip - ss_suppress) / 2\nlet waist_side: length = quarter_hip - ss_suppress\nlet quarter_hem_width: length = quarter_hip + a_line_flare\nlet garment_hem: length = 4 * quarter_hem_width\nlet hip_to_hem_drop: length = waist_to_hem - waist_to_hip\nlet side_seam_length: length = hypot(hip_to_hem_drop, a_line_flare)\nlet waistband_pattern_length: length = garment_waist + 2 * sa_cb + wb_extension\nlet waistband_cut_width: length = 2 * wb_width + sa_waist + sa_wb_bottom\nlet waistband_fold_position: length = waistband_cut_width / 2\nlet waistband_finished_length: length = waistband_pattern_length - 2 * sa_cb\nlet wb_interfacing_width: length = wb_width\nlet wb_interfacing_length: length = waistband_finished_length\nassert allocation_balance: eps_num = 4 * (ss_suppress + dart_intake) == garment_hip - garment_waist\nassert waist_closure: eps_num = (quarter_hip - ss_suppress) - dart_intake == quarter_waist\nassert waistband_length_closure: eps_num = waistband_pattern_length - 2 * sa_cb - wb_extension == garment_waist\nassert waistband_width_closure: eps_num = waistband_cut_width - sa_waist - sa_wb_bottom == 2 * wb_width\nlet front_dart_near: length = front_dart_centre - dart_intake / 2\nlet front_dart_far: length = front_dart_centre + dart_intake / 2\nlet back_dart_near: length = back_dart_centre - dart_intake / 2\nlet back_dart_far: length = back_dart_centre + dart_intake / 2\nlet grain_x: length = quarter_hip / 2\nlet waist_curve_lower_y: length = waist_to_hip / 2\nlet waist_curve_upper_x: length = waist_side + ss_suppress / 3\nlet waist_curve_upper_y: length = waist_to_hip / 6\nlet notch_depth: length = 5 mm\nlet hip_notch_x: length = quarter_hip + sa_side\nlet hip_notch_end: length = hip_notch_x - notch_depth\nlet cb_notch_x: length = sa_cb - notch_depth\nlet label_y: length = waist_to_hip + 40 mm\nlet label_lower_y: length = label_y + 8 mm\nlet band_right: length = waistband_pattern_length - sa_cb\nlet band_top: length = waistband_cut_width - sa_wb_bottom\nlet band_mid: length = waistband_pattern_length / 2\nlet band_grain_left: length = sa_cb + 20 mm\nlet band_grain_right: length = band_right - 20 mm\nlet band_grain_y: length = waistband_cut_width / 4\nlet band_cb_left: length = sa_cb + garment_waist\nlet band_quarter_1: length = sa_cb + garment_waist / 4\nlet band_quarter_2: length = sa_cb + garment_waist / 2\nlet band_quarter_3: length = sa_cb + 3 * garment_waist / 4\nlet band_label_y: length = waistband_fold_position + 10 mm\nlet band_label_x: length = sa_cb + 40 mm\nlet interfacing_grain_y: length = wb_interfacing_width / 2\nlet interfacing_grain_left: length = 10 mm\nlet interfacing_grain_right: length = wb_interfacing_length - 10 mm\nlet interfacing_label_y: length = wb_interfacing_width - 8 mm\n",
+  "steps": [
+    {
+      "do": "evaluate"
+    },
+    {
+      "do": "draft",
+      "pieces": [
+        {
+          "edges": [
+            {
+              "corner": "miter",
+              "to": [
+                "zero",
+                "-waist_to_hem"
+              ],
+              "width": "zero"
+            },
+            {
+              "corner": "envelope",
+              "to": [
+                "quarter_hem_width",
+                "-waist_to_hem"
+              ],
+              "width": "sa_hem"
+            },
+            {
+              "corner": "miter",
+              "to": [
+                "quarter_hip",
+                "-waist_to_hip"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "quarter_hip",
+                "-waist_curve_lower_y"
+              ],
+              "second": [
+                "waist_curve_upper_x",
+                "-waist_curve_upper_y"
+              ],
+              "to": [
+                "waist_side",
+                "zero"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "trim",
+              "to": [
+                "zero",
+                "zero"
+              ],
+              "width": "sa_waist"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "grain_x",
+                "zero"
+              ],
+              [
+                "grain_x",
+                "-waist_to_hem"
+              ]
+            ]
+          ],
+          "internal": [
+            [
+              [
+                "front_dart_near",
+                "zero"
+              ],
+              [
+                "front_dart_centre",
+                "-dart_len_front"
+              ]
+            ],
+            [
+              [
+                "front_dart_far",
+                "zero"
+              ],
+              [
+                "front_dart_centre",
+                "-dart_len_front"
+              ]
+            ]
+          ],
+          "labels": [
+            {
+              "at": [
+                "grain_x",
+                "-label_y"
+              ],
+              "text": "skirt_front, size M, cut 1, shell"
+            },
+            {
+              "at": [
+                "grain_x",
+                "-label_lower_y"
+              ],
+              "text": "place on fold at CF"
+            }
+          ],
+          "name": "skirt_front",
+          "notches": [
+            [
+              [
+                "hip_notch_x",
+                "-waist_to_hip"
+              ],
+              [
+                "hip_notch_end",
+                "-waist_to_hip"
+              ]
+            ]
+          ],
+          "quantity": 1,
+          "start": [
+            "zero",
+            "zero"
+          ]
+        },
+        {
+          "edges": [
+            {
+              "corner": "trim",
+              "to": [
+                "zero",
+                "-waist_to_hem"
+              ],
+              "width": "sa_cb"
+            },
+            {
+              "corner": "envelope",
+              "to": [
+                "quarter_hem_width",
+                "-waist_to_hem"
+              ],
+              "width": "sa_hem"
+            },
+            {
+              "corner": "miter",
+              "to": [
+                "quarter_hip",
+                "-waist_to_hip"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "miter",
+              "first": [
+                "quarter_hip",
+                "-waist_curve_lower_y"
+              ],
+              "second": [
+                "waist_curve_upper_x",
+                "-waist_curve_upper_y"
+              ],
+              "to": [
+                "waist_side",
+                "zero"
+              ],
+              "width": "sa_side"
+            },
+            {
+              "corner": "trim",
+              "to": [
+                "zero",
+                "zero"
+              ],
+              "width": "sa_waist"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "grain_x",
+                "zero"
+              ],
+              [
+                "grain_x",
+                "-waist_to_hem"
+              ]
+            ]
+          ],
+          "internal": [
+            [
+              [
+                "back_dart_near",
+                "zero"
+              ],
+              [
+                "back_dart_centre",
+                "-dart_len_back"
+              ]
+            ],
+            [
+              [
+                "back_dart_far",
+                "zero"
+              ],
+              [
+                "back_dart_centre",
+                "-dart_len_back"
+              ]
+            ]
+          ],
+          "labels": [
+            {
+              "at": [
+                "grain_x",
+                "-label_y"
+              ],
+              "text": "skirt_back_right, size M, cut 1, shell, R"
+            }
+          ],
+          "name": "skirt_back_right",
+          "notches": [
+            [
+              [
+                "hip_notch_x",
+                "-waist_to_hip"
+              ],
+              [
+                "hip_notch_end",
+                "-waist_to_hip"
+              ]
+            ],
+            [
+              [
+                "-sa_cb",
+                "-zip_len"
+              ],
+              [
+                "-cb_notch_x",
+                "-zip_len"
+              ]
+            ]
+          ],
+          "quantity": 1,
+          "start": [
+            "zero",
+            "zero"
+          ]
+        },
+        {
+          "labels": [
+            {
+              "at": [
+                "-grain_x",
+                "-label_y"
+              ],
+              "text": "skirt_back_left, size M, cut 1, shell, L"
+            }
+          ],
+          "mirror_of": "skirt_back_right",
+          "name": "skirt_back_left",
+          "quantity": 1
+        },
+        {
+          "edges": [
+            {
+              "corner": "miter",
+              "to": [
+                "band_right",
+                "sa_waist"
+              ],
+              "width": "sa_waist"
+            },
+            {
+              "corner": "miter",
+              "to": [
+                "band_right",
+                "band_top"
+              ],
+              "width": "sa_cb"
+            },
+            {
+              "corner": "miter",
+              "to": [
+                "sa_cb",
+                "band_top"
+              ],
+              "width": "sa_wb_bottom"
+            },
+            {
+              "corner": "miter",
+              "to": [
+                "sa_cb",
+                "sa_waist"
+              ],
+              "width": "sa_cb"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "band_grain_left",
+                "band_grain_y"
+              ],
+              [
+                "band_grain_right",
+                "band_grain_y"
+              ]
+            ]
+          ],
+          "internal": [
+            [
+              [
+                "zero",
+                "waistband_fold_position"
+              ],
+              [
+                "waistband_pattern_length",
+                "waistband_fold_position"
+              ]
+            ]
+          ],
+          "labels": [
+            {
+              "at": [
+                "band_label_x",
+                "band_label_y"
+              ],
+              "text": "waistband, size M, cut 1, shell"
+            }
+          ],
+          "name": "waistband",
+          "notches": [
+            [
+              [
+                "sa_cb",
+                "zero"
+              ],
+              [
+                "sa_cb",
+                "notch_depth"
+              ]
+            ],
+            [
+              [
+                "band_quarter_1",
+                "zero"
+              ],
+              [
+                "band_quarter_1",
+                "notch_depth"
+              ]
+            ],
+            [
+              [
+                "band_quarter_2",
+                "zero"
+              ],
+              [
+                "band_quarter_2",
+                "notch_depth"
+              ]
+            ],
+            [
+              [
+                "band_quarter_3",
+                "zero"
+              ],
+              [
+                "band_quarter_3",
+                "notch_depth"
+              ]
+            ],
+            [
+              [
+                "band_cb_left",
+                "zero"
+              ],
+              [
+                "band_cb_left",
+                "notch_depth"
+              ]
+            ]
+          ],
+          "quantity": 1,
+          "start": [
+            "sa_cb",
+            "sa_waist"
+          ]
+        },
+        {
+          "edges": [
+            {
+              "corner": "miter",
+              "to": [
+                "wb_interfacing_length",
+                "zero"
+              ],
+              "width": "zero"
+            },
+            {
+              "corner": "miter",
+              "to": [
+                "wb_interfacing_length",
+                "wb_interfacing_width"
+              ],
+              "width": "zero"
+            },
+            {
+              "corner": "miter",
+              "to": [
+                "zero",
+                "wb_interfacing_width"
+              ],
+              "width": "zero"
+            },
+            {
+              "corner": "miter",
+              "to": [
+                "zero",
+                "zero"
+              ],
+              "width": "zero"
+            }
+          ],
+          "grain": [
+            [
+              [
+                "interfacing_grain_left",
+                "interfacing_grain_y"
+              ],
+              [
+                "interfacing_grain_right",
+                "interfacing_grain_y"
+              ]
+            ]
+          ],
+          "labels": [
+            {
+              "at": [
+                "interfacing_grain_left",
+                "interfacing_label_y"
+              ],
+              "text": "waistband_interfacing, size M, cut 1, interfacing"
+            }
+          ],
+          "name": "waistband_interfacing",
+          "quantity": 1,
+          "start": [
+            "zero",
+            "zero"
+          ]
+        }
+      ],
+      "size": "M",
+      "style": "reference_skirt"
+    },
+    {
+      "do": "export_pattern",
+      "format": "canonical",
+      "path": "exports/reference-skirt.canonical.json"
+    },
+    {
+      "do": "export_pattern",
+      "format": "dxf",
+      "path": "exports/reference-skirt.dxf",
+      "semantics": "cut_as_1"
+    },
+    {
+      "do": "export_pattern",
+      "format": "pdf",
+      "layout": "a0",
+      "path": "exports/reference-skirt.pdf"
+    },
+    {
+      "do": "export_pattern",
+      "format": "pdf",
+      "layout": "a3_tiled",
+      "path": "exports/reference-skirt-a3.pdf"
+    },
+    {
+      "do": "export_pattern",
+      "format": "pdf",
+      "layout": "a4_tiled",
+      "path": "exports/reference-skirt-a4.pdf"
+    },
+    {
+      "do": "save"
+    }
+  ]
+}

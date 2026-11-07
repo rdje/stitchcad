@@ -15,7 +15,7 @@ pub const PDF_WRITER: &str = "stitchcad-pdf-1";
 pub const SCALE_SQUARE: i64 = 100_000;
 
 const MARGIN: i64 = 10_000;
-const GAP: i64 = 20_000;
+const GAP: i64 = 10_000;
 const REGISTRATION: i64 = 5_000;
 
 /// A sheet's size, in micrometres.
@@ -398,7 +398,14 @@ fn assemble(contents: &[String], sheet: (i64, i64)) -> Vec<u8> {
     out
 }
 
-fn record(pattern: &Pattern, layout: PageLayout, sheets: usize, width: i64, height: i64) -> String {
+fn record(
+    pattern: &Pattern,
+    layout: PageLayout,
+    sheets: usize,
+    width: i64,
+    height: i64,
+    turned: bool,
+) -> String {
     let text = |value: &str| Value::Text(value.to_owned());
     let (sheet, overlap) = match layout {
         PageLayout::Single(sheet) => (sheet, 0),
@@ -410,6 +417,10 @@ fn record(pattern: &Pattern, layout: PageLayout, sheets: usize, width: i64, heig
     fields.insert("unit".to_owned(), text("point"));
     fields.insert("scale".to_owned(), text("true_scale_never_rescaled"));
     fields.insert("sheet".to_owned(), text(sheet.token()));
+    fields.insert(
+        "orientation".to_owned(),
+        text(if turned { "landscape" } else { "portrait" }),
+    );
     fields.insert(
         "sheets".to_owned(),
         Value::Int(i64::try_from(sheets).unwrap_or(i64::MAX)),
@@ -428,7 +439,7 @@ fn record(pattern: &Pattern, layout: PageLayout, sheets: usize, width: i64, heig
 /// Writes the pattern at true scale, with a scale square.
 ///
 /// # Errors
-/// See [`PdfError`]. A drawing that does not fit one sheet is refused and never shrunk.
+/// See [`PdfError`]. A drawing that fits one sheet neither upright nor on its side is refused and never shrunk.
 pub fn write_pdf(pattern: &Pattern, layout: PageLayout) -> Result<PdfArtifact, PdfError> {
     let mut pieces: Vec<&DrawnPiece> = pattern.pieces.iter().collect();
     pieces.sort_by(|a, b| (&a.name, &a.size).cmp(&(&b.name, &b.size)));
@@ -441,25 +452,34 @@ pub fn write_pdf(pattern: &Pattern, layout: PageLayout) -> Result<PdfArtifact, P
         PageLayout::Single(sheet) => (sheet, 0),
         PageLayout::Tiled { sheet, overlap } => (sheet, overlap),
     };
-    let size = sheet.size();
-    let (usable_x, usable_y) = (size.0 - 2 * MARGIN, size.1 - 2 * MARGIN);
-    let row_width = match layout {
-        PageLayout::Single(_) => usable_x,
-        PageLayout::Tiled { .. } => usable_x * 4,
+    let portrait = sheet.size();
+    let (usable_x, usable_y) = (portrait.0 - 2 * MARGIN, portrait.1 - 2 * MARGIN);
+    let (placed, width, height, size) = match layout {
+        PageLayout::Single(_) => {
+            // A sheet turned on its side is the same sheet at the same scale, so that is tried before refusing.
+            let upright = lay_out(&pieces, usable_x);
+            if upright.1 <= usable_x && upright.2 <= usable_y {
+                (upright.0, upright.1, upright.2, portrait)
+            } else {
+                let turned = lay_out(&pieces, usable_y);
+                if turned.1 > usable_y || turned.2 > usable_x {
+                    return Err(PdfError::DoesNotFit {
+                        sheet: sheet.token(),
+                        width: upright.1,
+                        height: upright.2,
+                    });
+                }
+                (turned.0, turned.1, turned.2, (portrait.1, portrait.0))
+            }
+        }
+        PageLayout::Tiled { .. } => {
+            let tiled = lay_out(&pieces, usable_x * 4);
+            (tiled.0, tiled.1, tiled.2, portrait)
+        }
     };
-    let (placed, width, height) = lay_out(&pieces, row_width);
     let picture = drawing(&placed, &pattern.style)?;
     let contents = match layout {
-        PageLayout::Single(_) => {
-            if width > usable_x || height > usable_y {
-                return Err(PdfError::DoesNotFit {
-                    sheet: sheet.token(),
-                    width,
-                    height,
-                });
-            }
-            vec![sheet_content(&picture, (0, 0), size, None)]
-        }
+        PageLayout::Single(_) => vec![sheet_content(&picture, (0, 0), size, None)],
         PageLayout::Tiled { .. } => {
             if overlap < 0 || overlap >= usable_x || overlap >= usable_y {
                 return Err(PdfError::BadOverlap { overlap });
@@ -490,7 +510,7 @@ pub fn write_pdf(pattern: &Pattern, layout: PageLayout) -> Result<PdfArtifact, P
     let sheets = contents.len();
     Ok(PdfArtifact {
         bytes: assemble(&contents, size),
-        record: record(pattern, layout, sheets, width, height),
+        record: record(pattern, layout, sheets, width, height, size.0 > size.1),
         sheets,
     })
 }

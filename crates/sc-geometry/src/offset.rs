@@ -425,12 +425,14 @@ fn tidied(points: Vec<Point>) -> Vec<Point> {
     let mut current = points;
     loop {
         let mut next: Vec<Point> = Vec::with_capacity(current.len());
-        for point in &current {
-            if let Some(at) = next.iter().position(|seen| seen == point) {
+        let last = current.len().saturating_sub(1);
+        for (index, point) in current.iter().enumerate() {
+            match next.iter().position(|seen| seen == point) {
+                // The last point coming back to the first is the boundary closing, not a loop.
+                Some(0) if index == last => {}
                 // Back at a point already on the path: everything since is a loop hanging off it.
-                next.truncate(at + 1);
-            } else {
-                next.push(*point);
+                Some(at) => next.truncate(at + 1),
+                None => next.push(*point),
             }
         }
         let count = next.len();

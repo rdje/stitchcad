@@ -48,8 +48,10 @@ dependencies = [
 name = "sc-cli"
 version = "0.1.0"
 dependencies = [
+ "sc-artifacts",
  "sc-constraints",
  "sc-core",
+ "sc-geometry",
  "sc-measure",
  "sc-store",
  "sc-units",

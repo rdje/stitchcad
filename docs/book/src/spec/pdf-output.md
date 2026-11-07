@@ -1,7 +1,7 @@
 # PDF output
 
 `write_pdf` writes a drawn pattern at true scale for review and printing, on one A0 sheet or tiled across A3 or A4 sheets. Every file has a printed scale square of 100 mm, to check with a ruler. **A drawing is never
-rescaled.** A piece that does not fit is tiled or refused, because a rescaled print is a pattern nobody drafted, and it would still look right.
+rescaled.** A sheet may turn on its side, which changes nothing about scale, and the record says so. A drawing that fits neither way is refused, and tiling it is the way out, because a rescaled print is a pattern nobody drafted, and it would still look right.
 
 **What works today.** The writer, tiling, its record and a reader in the tests. **What does not exist yet:** a print anyone has measured. That is [the printed-square check](interchange-dialects.md), G2's one step that needs a person with a ruler.
 
@@ -45,7 +45,7 @@ Coordinates are written in points to four decimal places, about 0.035 micrometre
 
 ## The file holds no date
 
-There is no creation date, producer or file identifier, so two runs give one byte string. The record holds the target, the sheet, the sheet count, the overlap, the drawing's size, the scale square, the Design and its revision, and the approval state.
+There is no creation date, producer or file identifier, so two runs give one byte string. The record holds the target, the sheet, its orientation, the sheet count, the overlap, the drawing's size, the scale square, the Design and its revision, and the approval state.
 
 ## Why this writes its own PDF
 

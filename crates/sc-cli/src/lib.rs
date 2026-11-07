@@ -3,6 +3,7 @@
 #![warn(missing_docs)]
 
 mod design;
+mod draft;
 mod outline;
 mod session;
 

@@ -6,9 +6,11 @@ other front end will use. The same session always prints the same bytes and save
 `sc-cli` crate, the `native-headless` front end of roadmap §7.3.
 
 **What works today.** A session supplies named lengths and a scalar recipe. The program builds a real Design from
-them, runs the steps below, and prints a transcript. **What does not exist yet:** geometry, so `render` draws straight
-lines between points the session names rather than a drafted Piece, which is G2's job; any edit but a measurement
-change; `sc-api` and MCP, leaf `.9`.
+them, runs the steps below, and prints a transcript. It drafts a real garment: `conformance/reference-skirt/session.json`
+is the whole [reference skirt](reference-skirt.md), and it exports the same canonical form, DXF and PDF on every run.
+**What does not exist yet:** any edit but a measurement change; a pattern saved in the project, which is `G2-2D.10`, so
+reopening a project keeps its inputs and recipe and a session drafts again; a piece named by anything but evaluated
+lengths and curves written in the session, which is G3; `sc-api` and MCP, leaf `.9`.
 
 ```text
 $ stitchcad replay session.json project-directory
@@ -35,6 +37,8 @@ $ stitchcad replay session.json project-directory
 | `export` | Adds the last drawing to the project at `path`, and reports its digest. The next `save` writes it |
 | `save` | Saves the project as one [crash-consistent commit](project-store.md), keeping files and fields it did not write |
 | `reopen` | Rebuilds the Design from the saved project |
+| `draft` | Draws the pattern's pieces from the evaluated lengths, below. It changes nothing in the Design |
+| `export_pattern` | Adds the drafted pattern to the project at `path` in `canonical`, `dxf` or `pdf`, with a record beside it, and reports the digest. The next `save` writes them |
 
 ## An edit, an undo, and a saved project
 
@@ -205,6 +209,73 @@ closure assertions hold.
 The two geometry rows of the worked examples, `zip_notch_param` and `dart_apex_depth`, need a constructed edge and
 point, so they wait for G2.
 
+## Drafting a garment
+
+A `draft` step names the `style`, the `size` and the `pieces`. Every position is a pair of length names: a binding, an input, or `zero`, with a leading `-` to negate one. So the
+numbers stay in the recipe and a changed measurement moves every piece. A step that names a length that does not exist stops the session.
+
+| Piece field | What it holds |
+| --- | --- |
+| `name` | The piece's name |
+| `quantity` | How many to cut |
+| `start` | The net boundary's first point |
+| `edges` | Each edge in turn, counterclockwise: `to`, its allowance `width`, its `corner`, and `first` and `second` when it is a Bézier |
+| `grain` | One grainline, as two points |
+| `internal` | Internal lines, each two points |
+| `notches` | Each notch, as the point on the cut line and a point it aims at |
+| `labels` | Each label, as `at` and `text` |
+| `mirror_of` | Instead of a boundary: this piece mirrors an earlier one across x = 0, with `labels` of its own |
+
+A notch becomes a vertex of the cut line, so no writer can lose it between two chords. Its named position comes from straight arithmetic and can land a hair from where the offset's
+joins put the cut line, so it moves onto that line. More than `NOTCH_REACH` away, which is 0.1 mm, it is refused as a wrong notch.
+
+| Export field | What it holds |
+| --- | --- |
+| `format` | `canonical`, `dxf` or `pdf` |
+| `semantics` | For `dxf`, which line is on the cut layer: `cut_as_1` or `sew_as_1`. There is no default, because the wrong one cuts a whole order short |
+| `layout` | For `pdf`: `a0`, `a0_tiled`, `a3_tiled` or `a4_tiled` |
+
+```rust
+use sc_cli::replay;
+use sc_store::{parse, FilePath, MemoryRepository, Repository};
+
+let session = parse(r#"{
+  "format": 1,
+  "design": "01ARZ3NDEKTSV4RRFFQ69G5FAV",
+  "inputs": [{"token": "width", "um": 200000}, {"token": "height", "um": 100000}, {"token": "allowance", "um": 10000}],
+  "recipe": "let inset: length = allowance - 5 mm\n",
+  "steps": [
+    {"do": "evaluate"},
+    {"do": "draft", "style": "sample", "size": "M", "pieces": [{
+      "name": "panel", "quantity": 2, "start": ["zero", "zero"],
+      "edges": [
+        {"to": ["width", "zero"], "width": "allowance", "corner": "miter"},
+        {"to": ["width", "height"], "width": "allowance", "corner": "miter"},
+        {"to": ["zero", "height"], "width": "allowance", "corner": "miter"},
+        {"to": ["zero", "zero"], "width": "allowance", "corner": "miter"}
+      ],
+      "grain": [[["inset", "inset"], ["inset", "height"]]],
+      "notches": [[["height", "-allowance"], ["height", "-inset"]]]
+    }]},
+    {"do": "export_pattern", "format": "canonical", "path": "exports/panel.json"},
+    {"do": "save"}
+  ]
+}"#).expect("valid text");
+
+let mut disk = MemoryRepository::new();
+replay(&session, &mut disk).expect("the session runs");
+
+// A session draws the panel 1 cm larger on every side, and its notch is now a vertex of that cut line.
+let written = disk.read(&FilePath::new("exports/panel.json").expect("a path")).expect("reads").expect("exported");
+let pattern = sc_artifacts::from_canonical_text(&String::from_utf8(written).expect("text")).expect("reads back");
+let panel = &pattern.pieces[0];
+let xs: Vec<i64> = panel.cut.iter().map(|at| at.x()).collect();
+assert_eq!((xs.iter().min(), xs.iter().max()), (Some(&-10_000), Some(&210_000)));
+assert!(panel.cut.contains(&panel.marks[0].at));
+```
+
+Exporting also writes `<path>.record.json`, which the writer's own chapter describes: [canonical](canonical-artifacts.md), [DXF](dxf-output.md) or [PDF](pdf-output.md). The step's result in the transcript is the file's digest.
+
 ## Names used in this chapter
 
 | Name | Meaning |
@@ -227,3 +298,36 @@ point, so they wait for G2.
 | `outline` | A `render` step's points |
 | `zero` | A length of nothing, for an outline point on an axis |
 | `path` | Where an `export` step puts the drawing in the project |
+| `draft` | The step that draws the pieces |
+| `export_pattern` | The step that writes the drafted pattern |
+| `style` | The drafted style's name |
+| `size` | The drafted size's name |
+| `pieces` | A `draft` step's pieces |
+| `quantity` | How many of a piece to cut |
+| `start` | A boundary's first point |
+| `edges` | A boundary's edges |
+| `to` | Where an edge ends |
+| `width` | An edge's seam allowance, by length name |
+| `corner` | An edge's corner treatment, named in [the offsets chapter](offsets.md) |
+| `first` | A Bézier edge's first control point |
+| `second` | A Bézier edge's second control point |
+| `grain` | A piece's grainline |
+| `internal` | A piece's internal lines |
+| `notches` | A piece's notches |
+| `labels` | A piece's labels |
+| `at` | Where a label sits |
+| `text` | A label's words |
+| `mirror_of` | The earlier piece this one mirrors |
+| `NOTCH_REACH` | How far a named notch may lie from the cut line: 100 micrometres |
+| `canonical` | The canonical text form |
+| `dxf` | The DXF target |
+| `pdf` | A true-scale PDF |
+| `semantics` | Which line a DXF puts on its cut layer |
+| `cut_as_1` | The cut line is on the cut layer |
+| `sew_as_1` | The net line is on the cut layer |
+| `layout` | A PDF's sheets |
+| `a0` | One A0 sheet |
+| `a0_tiled` | A0 sheets, tiled |
+| `a3_tiled` | A3 sheets, tiled |
+| `a4_tiled` | A4 sheets, tiled |
+| `format` | A session's format version, or an export's file format |

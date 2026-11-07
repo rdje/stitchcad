@@ -4,8 +4,8 @@ Before any factory file exists, a drawn pattern has one written form. The same p
 every file made from it inherits that. The `sc-artifacts` crate holds this form, and its goldens compare meaning first and bytes second, so a
 changed notch cannot hide and a reformatted file cannot alarm. It is the canonicalizer the roadmap asks for before any writer.
 
-**What works today.** The written form, reading it back, and comparing two patterns. **What does not exist yet:** DXF and PDF, which come next and read
-this form, and anything drafting a real piece into it, which is `G2-2D.8`.
+**What works today.** The written form, reading it back, and comparing two patterns. [The command line](command-line.md) drafts real pieces into it, and [the DXF](dxf-output.md) and [PDF](pdf-output.md) writers read it.
+**What does not exist yet:** a pattern saved in a project in this form, which is `G2-2D.10`.
 
 ```rust
 use sc_artifacts::{compare, to_canonical_text, Comparison, DrawnPiece, Line, Pattern};

@@ -11,7 +11,7 @@ G1-04	exit	command bus live	crates/sc-cli	cargo test -p sc-cli --test session	in
 G1-05	exit	crash-consistent save/recovery	crates/sc-store	cargo test -p sc-store --test project_kill --test project --test crash	instrument	-	shown on a real project directory and in memory;power loss is not tested;the browser side comes with G1-SLICE.12	G1-SLICE.7
 G1-06	exit	license-compatible solver builds	scripts/check_licenses.sh	bash scripts/check_licenses.sh	instrument	-	this machine natively and wasm32 here;hosted CI adds Linux;Windows is not built anywhere yet;a license field is a crate's own claim	G1-SLICE.15
 G1-07	exit	capability matrix	docs/book/src/spec/browser-capabilities.md	bash docs/tasks/artifacts/browser_run/run_capability_matrix_check.sh	instrument	-	one recorded Chrome run on one machine;other browsers are listed as not tested and belong to G5	G1-SLICE.12
-G2-01	exit	reference skirt drafted through CLI	-	-	unbuilt	-	-	G2-2D.8
+G2-01	exit	reference skirt drafted through CLI	conformance/reference-skirt/session.json	cargo test -p sc-cli --test skirt	instrument	-	the real program twice with identical bytes,held to the book's numbers;the waist curve,band corners and notch depth are an engineer's;the walk command,notions and the graph as data are G3	G2-2D.8
 G2-02	exit	minimal 2D viewer/editor	-	-	unbuilt	-	-	G2-2D.9
 G2-03	exit	canonical DXF	-	-	unbuilt	-	-	G2-2D.5
 G2-04	exit	printed scale-square	-	-	director	one scan or photo of the printed square beside a ruler,asked for at the end of G2	the exporter and its numeric and independent-renderer checks come first	G2-2D.7

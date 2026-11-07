@@ -3,8 +3,8 @@
 A factory's cutter reads DXF. The `write_dxf` function writes the one target G2 names, `dxf-aama-named`: AAMA named layers on release R12, polylines only, one size.
 [The interchange chapter](interchange-dialects.md) says why interchange is a closed list of targets rather than one format with options.
 
-**What works today.** The writer, its record, and a reader in the tests. **What does not exist yet:** the other targets, grading, and a golden file of the reference skirt, which
-comes with `G2-2D.8`. **Nobody has opened these files in a CAD system.** They have been read only by a reader written in this repository, and no third-party DXF library has
+**What works today.** The writer, its record, and a reader in the tests. **What does not exist yet:** the other targets and grading. The reference skirt's file is frozen, byte for byte, at
+`conformance/goldens/reference-skirt/`. **Nobody has opened these files in a CAD system.** They have been read only by a reader written in this repository, and no third-party DXF library has
 read them. Whether a real receiver accepts them is G6's question, and until then no claim of acceptance is made.
 
 ```rust

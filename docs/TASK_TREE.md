@@ -56,7 +56,7 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.5`/`.13`/`.19`/`.22` guarded; .23/.23v/.23r verified; product G1 frontier | repo-local |
 | [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.15f` pendingP2 behind G1; normal review18/1, human closure unapproved (§6.1) | repo-local |
 | [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `active` | exit reviewed,7 of7 clauses,closure unapproved;`.9` and `.14` open for G2;input-check leaves held by director2026-11-06 | repo-local |
-| [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `active` | `.8` — reference skirt through the command line;gauge26 of66 | repo-local |
+| [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `active` | `.7` — the PDF measured by outside renderers;gauge27 of66 | repo-local |
 | [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
 | [`G4-PROFILES`](tasks/G4-PROFILES.md) | §11 gate **G4** — profiles & uncertainty workflow | `proposed` | `.1` — `sc-profiles` schema v2 | repo-local |
 | [`G5-SHELLS`](tasks/G5-SHELLS.md) | §11 gate **G5** — application shells & validated 2D UX | `proposed` | `.1` — Tauri native shell (Win/macOS/Linux) | repo-local |

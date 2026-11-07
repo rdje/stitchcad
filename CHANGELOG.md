@@ -7,6 +7,12 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1002 — the reference skirt drafts through the command line
+
+`conformance/reference-skirt/session.json` drafts all five pieces,with the book's numbers,and exports canonical text,DXF and PDF on A0,A3 and A4. Two runs of the real program give identical bytes,and the goldens are frozen.
+Drawing it found a collapse in the offset,a notch off the cut line,and a conflict in the book (D395).
+The waist curve,band corners and notch depth are an engineer's,and nobody who sews has reviewed them. G2-01 met,27 of 66.
+
 ## STITCHCAD-G1-1001 — the PDF writer:true scale,with a scale square,never rescaled
 
 `write_pdf` writes on A0 or tiled across A3 or A4 sheets,with registration marks,sheet order and overlap. A drawing that does not fit is refused rather than shrunk. It writes PDF directly with no dependency,because the library comparison the roadmap asks for could not be run here,and the chapter says so.

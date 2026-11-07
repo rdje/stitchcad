@@ -15,7 +15,7 @@ real product path passes its check. Commits and leaves do not move it.
 | --- | --- | --- | --- |
 | G0 | 18 | 19 | The product and its semantics are specified. The evaluation-seat clause stays open by ruling |
 | G1 | 7 | 7 | The architecture runs for real in a browser |
-| G2 | 1 | 8 | A reference skirt is drafted and exported correctly |
+| G2 | 2 | 8 | A reference skirt is drafted and exported correctly |
 | G3 | 0 | 11 | Every garment the roadmap names drafts, grades and exports |
 | G4 | 0 | 8 | Factory profiles work, including what is still unknown |
 | G5 | 0 | 6 | The native and browser applications exist |
@@ -27,12 +27,12 @@ Run it yourself:
 $ bash scripts/gauge.sh
 G0: 18 of 19 clauses met
 G1: 7 of 7 clauses met
-G2: 1 of 8 clauses met
+G2: 2 of 8 clauses met
 G3: 0 of 11 clauses met
 G4: 0 of 8 clauses met
 G5: 0 of 6 clauses met
 G6: 0 of 7 clauses met
-gauge: 26 of 66 clauses met through G6
+gauge: 27 of 66 clauses met through G6
 ```
 
 A count here comes from the clause tables, and a clause counts as met only when its check runs a real
@@ -47,9 +47,9 @@ G2 is the earliest open gate: the first correct pattern. None of it exists yet, 
 
 | Clause | What the roadmap asks | Met | Where it stands | Owning leaf |
 | --- | --- | --- | --- | --- |
-| `G2-01` | The reference skirt drafted through the command line, with deterministic replay | not met | [The command line](spec/command-line.md) replays deterministically and computes the skirt's values. It draws no geometry | `G2-2D.8` |
+| `G2-01` | The reference skirt drafted through the command line, with deterministic replay | met | [The session](spec/reference-skirt.md) drafts all five pieces with the book's numbers, and two runs of the real program give identical bytes. Sewn, it has not been: no person has checked the shape | `G2-2D.8` |
 | `G2-02` | A minimal 2D viewer and editor over the same commands | not met | [The canvas verdict](spec/canvas-hosting.md) says what to draw with. No shell exists | `G2-2D.9` |
-| `G2-03` | Canonical DXF and a dimensionally correct PDF | not met | [The DXF writer](spec/dxf-output.md) and [the PDF writer](spec/pdf-output.md) exist, each read only by a reader in this repository. The reference skirt's goldens are still to come | `G2-2D.5` |
+| `G2-03` | Canonical DXF and a dimensionally correct PDF | not met | [The DXF writer](spec/dxf-output.md) and [the PDF writer](spec/pdf-output.md) write the skirt, and its goldens are frozen. The PDF has not yet been measured by a renderer outside this repository | `G2-2D.5` |
 | `G2-04` | A printed scale square verified on paper | not met | Needs a person to measure one, after the exporter and its checks exist | `G2-2D.7` |
 | `G2-05` | Offsets pass the pathology corpus | met | [The offset engine](spec/offsets.md) passes 37 cases, covering acute tips, loops and seam-length error, judged by checks that share no code with it. The corner shapes are unreviewed by a sewing expert | `G2-2D.3` |
 | `G2-06` | Native save and load preserve semantics | not met | [The store](spec/project-store.md) is crash-consistent and holds inputs and a recipe, not pieces | `G2-2D.10` |
@@ -85,9 +85,9 @@ A feature means the roadmap's next requirement, built by its existing task-tree 
 this book gives, with this table and the book's examples changing in the same commit. It refuses what it
 does not support yet with a plain error. The constraint kernel `.8`, the project store `.7`, the headless
 command line `.10`, the runtime profiles `.11`, the license census `.15`, the browser run `.12` and the canvas spike `.13`
-are done, and the G1 exit review `.16` passed. The geometry kernel `G2-2D.1`, the offset engine `G2-2D.2`, its corpus `G2-2D.3` and the
-canonicalizer `G2-2D.4` are done, and the DXF and PDF writers `G2-2D.5` and `G2-2D.6` are written. The next one is drafting the reference skirt
-through the command line, `G2-2D.8`.
+are done, and the G1 exit review `.16` passed. The geometry kernel `G2-2D.1`, the offset engine `G2-2D.2`, its corpus `G2-2D.3`, the
+canonicalizer `G2-2D.4`, the DXF writer `G2-2D.5` and the drafted skirt `G2-2D.8` are done, and the PDF writer `G2-2D.6` is written. The next one is measuring the PDF with renderers
+outside this repository, `G2-2D.7`.
 
 ## Implemented foundations
 

@@ -200,6 +200,16 @@ fn an_edge_with_no_allowance_stays_on_the_net_line() {
 }
 
 #[test]
+fn a_piece_with_no_allowance_anywhere_keeps_its_own_outline() {
+    // An interfacing piece: cut exactly on its net line, on every edge.
+    let net = polygon(&SQUARE);
+    let offset = net
+        .offset(&all(0, Corner::Miter, 4), TOLERANCE)
+        .expect("offsets");
+    assert_eq!(pts(&offset), SQUARE);
+}
+
+#[test]
 fn different_widths_meet_where_their_lines_cross() {
     let net = polygon(&SQUARE);
     let widths = [10_000, 30_000, 10_000, 30_000].map(|width| Allowance {

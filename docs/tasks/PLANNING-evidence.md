@@ -176,6 +176,11 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D395 — band corners against its rectangle
+
+The reference skirt's §7 gives `trim` for the band's short ends and lower edge. Its §5 step 8 and both §4.1 band closures require one rectangle, and a trimmed corner shortens the edges those closures measure. Both had been read as binding since G0 because nothing drew the band.
+Drawing it found this. Resolved in favour of the rectangle,with a note under §7's table and the choice listed in §13 for a domain reviewer. Corner shapes stay an engineer's until that seat is filled.
+
 ## D394 — the frontier pointer
 
 python_cleanup_fixture_contract.py reads MEMORY.md's `- Next` line. From 0987 to 0996 I wrote it with a trailing period,which the pattern captures,so the pointer disagreed with the tree and the contract would have failed at the next push.

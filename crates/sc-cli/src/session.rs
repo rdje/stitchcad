@@ -148,6 +148,7 @@ struct Session<R: Repository> {
     design_text: String,
     recipe: String,
     drawing: Option<String>,
+    pattern: Option<sc_artifacts::Pattern>,
 }
 
 impl<R: Repository> Session<R> {
@@ -306,9 +307,8 @@ impl<R: Repository> Session<R> {
         Ok(Value::List(bindings(canonical.as_str())))
     }
 
-    // Each point names two lengths, a recipe binding or an input, or `zero`.
-    fn render(&mut self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
-        let fail = |message: String| Failure::at(step, "render", message);
+    // Every length a session can name: the inputs, the recipe's bindings, and `zero`.
+    fn lengths(&self, step: usize) -> Result<BTreeMap<String, i64>, Failure> {
         let mut known: BTreeMap<String, i64> = self
             .inputs
             .iter()
@@ -332,6 +332,115 @@ impl<R: Repository> Session<R> {
                 }
             }
         }
+        Ok(known)
+    }
+
+    fn draft(&mut self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "draft", message);
+        let known = self.lengths(step)?;
+        let pattern = crate::draft::draft(&known, fields, &self.design_text, &self.revision_text())
+            .map_err(fail)?;
+        let text = sc_artifacts::to_canonical_text(&pattern);
+        let digest = sc_store::sha256_hex(text.as_bytes());
+        let pieces = pattern
+            .pieces
+            .iter()
+            .map(|piece| Value::Text(piece.name.clone()))
+            .collect();
+        self.pattern = Some(pattern);
+        let mut record = BTreeMap::new();
+        record.insert("canonical_sha256".to_owned(), Value::Text(digest));
+        record.insert("pieces".to_owned(), Value::List(pieces));
+        Ok(Value::Object(record))
+    }
+
+    // Writes one artifact of the drafted pattern into the project, with its record beside it. The next save lands them.
+    fn export_pattern(
+        &mut self,
+        step: usize,
+        fields: &BTreeMap<String, Value>,
+    ) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "export_pattern", message);
+        let pattern = self
+            .pattern
+            .as_ref()
+            .ok_or_else(|| fail("export_pattern needs a draft first".to_owned()))?;
+        let format = fields
+            .get("format")
+            .and_then(Value::as_text)
+            .ok_or_else(|| fail("export_pattern needs a format".to_owned()))?;
+        let target = fields
+            .get("path")
+            .and_then(Value::as_text)
+            .ok_or_else(|| fail("export_pattern needs a path".to_owned()))?;
+        let (bytes, record): (Vec<u8>, Option<String>) = match format {
+            "canonical" => (sc_artifacts::to_canonical_text(pattern).into_bytes(), None),
+            "dxf" => {
+                let semantics = match fields.get("semantics").and_then(Value::as_text) {
+                    Some("cut_as_1") => sc_artifacts::LineSemantics::CutAsCut,
+                    Some("sew_as_1") => sc_artifacts::LineSemantics::SewAsCut,
+                    // A profile chooses this, and there is no default.
+                    _ => {
+                        return Err(fail(
+                            "a dxf export names its semantics: cut_as_1 or sew_as_1".to_owned(),
+                        ))
+                    }
+                };
+                let flattening = sc_artifacts::Flattening {
+                    bound: 100,
+                    achieved: crate::draft::TOLERANCE + 1,
+                };
+                let artifact = sc_artifacts::write_dxf(pattern, semantics, flattening)
+                    .map_err(|error| fail(error.to_string()))?;
+                (artifact.text.into_bytes(), Some(artifact.record))
+            }
+            "pdf" => {
+                let layout = match fields.get("layout").and_then(Value::as_text) {
+                    Some("a0") => sc_artifacts::PageLayout::Single(sc_artifacts::Sheet::A0),
+                    Some("a0_tiled") => sc_artifacts::PageLayout::Tiled {
+                        sheet: sc_artifacts::Sheet::A0,
+                        overlap: 10_000,
+                    },
+                    Some("a3_tiled") => sc_artifacts::PageLayout::Tiled {
+                        sheet: sc_artifacts::Sheet::A3,
+                        overlap: 10_000,
+                    },
+                    Some("a4_tiled") => sc_artifacts::PageLayout::Tiled {
+                        sheet: sc_artifacts::Sheet::A4,
+                        overlap: 10_000,
+                    },
+                    _ => {
+                        return Err(fail(
+                            "a pdf export names its layout: a0, a0_tiled, a3_tiled or a4_tiled"
+                                .to_owned(),
+                        ))
+                    }
+                };
+                let artifact = sc_artifacts::write_pdf(pattern, layout)
+                    .map_err(|error| fail(error.to_string()))?;
+                (artifact.bytes, Some(artifact.record))
+            }
+            other => return Err(fail(format!("no format is named {other}"))),
+        };
+        let digest = sc_store::sha256_hex(&bytes);
+        let path = sc_store::FilePath::new(target).map_err(|error| fail(error.to_string()))?;
+        self.base
+            .set_file(path, bytes)
+            .map_err(|error| fail(error.to_string()))?;
+        if let Some(record) = record {
+            let beside = sc_store::FilePath::new(&format!("{target}.record.json"))
+                .map_err(|error| fail(error.to_string()))?;
+            self.base
+                .set_file(beside, record)
+                .map_err(|error| fail(error.to_string()))?;
+        }
+        Ok(Value::Text(digest))
+    }
+
+    // Each point names two lengths, a recipe binding or an input, or `zero`.
+    fn render(&mut self, step: usize, fields: &BTreeMap<String, Value>) -> Result<Value, Failure> {
+        let fail = |message: String| Failure::at(step, "render", message);
+        let known = self.lengths(step)?;
         let listed = fields
             .get("outline")
             .and_then(Value::as_list)
@@ -643,6 +752,7 @@ pub fn replay<R: Repository>(session: &Value, repository: R) -> Result<Value, Fa
         design_text: design_text.to_owned(),
         recipe,
         drawing: None,
+        pattern: None,
     };
     let mut transcript = Vec::new();
     for (step, item) in steps.iter().enumerate() {
@@ -682,6 +792,8 @@ pub fn replay<R: Repository>(session: &Value, repository: R) -> Result<Value, Fa
             "redo" => state.history(step, CommandHistoryDirection::Redo)?,
             "solve" => solve(step, &state.inputs, item)?,
             "render" => state.render(step, item)?,
+            "draft" => state.draft(step, item)?,
+            "export_pattern" => state.export_pattern(step, item)?,
             "export" => state.export(step, item)?,
             "save" => state.save(step)?,
             "reopen" => state.reopen(step)?,

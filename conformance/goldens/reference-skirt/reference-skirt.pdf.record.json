@@ -1,0 +1,17 @@
+{
+  "approval": "unapproved",
+  "coordinate_quantum": "0.0001_point",
+  "design": "01ARZ3NDEKTSV4RRFFQ69G5FAV",
+  "design_revision": "0",
+  "drawing_height_um": 820000,
+  "drawing_width_um": 1045078,
+  "orientation": "landscape",
+  "overlap_um": 0,
+  "scale": "true_scale_never_rescaled",
+  "scale_square_um": 100000,
+  "sheet": "a0",
+  "sheets": 1,
+  "target": "pdf-a0",
+  "unit": "point",
+  "writer": "stitchcad-pdf-1"
+}

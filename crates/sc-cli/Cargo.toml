@@ -14,8 +14,10 @@ name = "stitchcad"
 path = "src/main.rs"
 
 [dependencies]
+sc-artifacts = { path = "../sc-artifacts", version = "0.1.0" }
 sc-constraints = { path = "../sc-constraints", version = "0.1.0" }
 sc-core = { path = "../sc-core", version = "0.1.0" }
+sc-geometry = { path = "../sc-geometry", version = "0.1.0" }
 sc-measure = { path = "../sc-measure", version = "0.1.0" }
 sc-store = { path = "../sc-store", version = "0.1.0" }
 sc-units = { path = "../sc-units", version = "0.1.0" }
