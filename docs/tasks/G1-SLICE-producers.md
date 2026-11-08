@@ -516,6 +516,7 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Paths: scripts/book_tool.py;docs/tasks/artifacts/book_publication/book_tool_contract.py;docs/tasks/artifacts/book_publication/search_field_probe.py
   Review:complete sources plan every store/output through the profile before dispatch;fixtures stay
   under target/book_tool_contracts and target/book_search_*. Final runtime locality stays with .p.v.
+  Also owns,from 1029 (D414),three later scripts:the grading reader pair,run as a copy under target/independent-reader,and the DXF oracle,writing only under target/dxf_oracle.
 
 ## Ordered native file-destination repairs
 

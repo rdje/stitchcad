@@ -256,3 +256,6 @@ docs/tasks/artifacts/book_publication/search_query_contract.py	native	G1-SLICE.5
 docs/tasks/artifacts/drafting_dependencies/plan_sources.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n17
 docs/tasks/artifacts/book_publication/search_index_census.py	reference	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/formula_structure/numerical_acceptance_reader.py	reference	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/dxf_oracle/read_with_ezdxf.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a43
+docs/tasks/artifacts/grading/independent_reader/compare_with_recipe.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a43
+docs/tasks/artifacts/grading/independent_reader/read_rul_independently.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a43

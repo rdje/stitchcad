@@ -59,6 +59,7 @@ CHILD_INPUTS = {BOOK / name for name in (
     'annexes/formula-recipe-execution.md',
     'annexes/formula-irrational-review.md',
     'annexes/drafting-operation-contracts.md',
+    'spec/command-line.md',
 )}
 LABELS = ('late_kind', 'late_name', 'per_recipe_measurement')
 FILES = {WORK / label / 'src' / path.relative_to(BOOK) for label in LABELS for path in BOOK_FILES} | {WORK / (label + '.log') for label in LABELS} | {WORK / 'real.log'}

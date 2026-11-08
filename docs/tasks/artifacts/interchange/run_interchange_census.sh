@@ -20,7 +20,9 @@
 #   D3 registry closure every axis the chapter declares is either carried by a registered target or
 #                       marked not applicable to it; no target row has an empty cell; and every target
 #                       token the chapter names anywhere is one §2 registers.
-#   D4 entity policy    every entity row's status is from the closed vocabulary {both releases, never};
+#   D4 entity policy    every entity row's status is from the closed vocabulary {both releases, the numbered
+#                       target, never}, and only POINT may be the numbered target's (D408: that convention puts
+#                       points on layers that cannot hold a polyline, so the named target has no use for one);
 #                       a refused entity carries a reason; the written set is release-independent, which
 #                       is the chapter's own claim that one writer serves both targets; and the policy's
 #                       floor and ceiling hold (POLYLINE and VERTEX written, SPLINE and LWPOLYLINE not).
@@ -252,7 +254,8 @@ print("  axes: %d (%d carried by a registry column) · targets: %d (%s) · breac
 # ── §6 the entity policy ──────────────────────────────────────────────────────────────────
 ent_hdr, ent_rows = table_in(DIA["6"], "Entity")
 written, refused, d4 = set(), set(), 0
-STATUS = ("both releases", "never")
+STATUS = ("both releases", "the numbered target", "never")
+NUMBERED_ONLY = {"POINT"}
 for r in ent_rows:
     if len(r) < 3:
         bad("D4 §6 row has %d cells, the table declares 3: %r" % (len(r), r)); d4 += 1; continue
@@ -260,6 +263,9 @@ for r in ent_rows:
     if status not in STATUS:
         bad("D4 entity `%s` has status %r, which is not one of %s — a per-release entity set is two "
             "writers and two ways to disagree" % (entity, r[1], " / ".join(STATUS))); d4 += 1
+    if status == "the numbered target" and entity not in NUMBERED_ONLY:
+        bad("D4 entity `%s` is written for the numbered target only, and only %s may be: anything else is a second "
+            "writer" % (entity, " / ".join(sorted(NUMBERED_ONLY)))); d4 += 1
     if status == "never":
         refused.add(entity)
         if not why or why == "—":

@@ -10,7 +10,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 TREES = ('scripts', 'knowledge-map/scripts', '.githooks', 'docs/tasks/artifacts',
-         '.github/workflows', 'crates')
+         '.github/workflows', 'crates', 'spikes')
 FILES = ('Makefile', 'Cargo.toml', 'rust-toolchain.toml', 'docs/book/book.toml')
 MANIFEST = Path(__file__).with_name('producer_entries.tsv')
 KINDS = {'profile', 'native', 'output', 'reference', 'delegate', 'platform'}

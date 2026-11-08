@@ -74,6 +74,19 @@ verdict() {
     printf '%s\n' "$out" | grep -E '^ +x |REFUSED|^formula-language census' | head -40 >&2
     rc=1
   fi
+  # D411: the chapter censuses below ran only in `make probes`, so 1025 and 1027 each broke one and every commit
+  # gate stayed green. Their real-tree verdicts run here too; their fault arms stay in their probe suites.
+  local pair name script
+  for pair in COMMAND_ROOT:command_layer/run_command_layer_census.sh FEATURE_MATRIX_ROOT:feature_matrix/run_feature_matrix_census.sh \
+      I18N_ROOT:i18n/run_i18n_census.sh INTERCHANGE_ROOT:interchange/run_interchange_census.sh \
+      RELEASE_ROOT:release_contract/run_release_contract_census.sh STANDARDS_ROOT:standards/run_standards_census.sh \
+      UNCERTAINTY_ROOT:uncertainty/run_uncertainty_census.sh; do
+    name="${pair%%:*}"; script="$ROOT/docs/tasks/artifacts/${pair#*:}"
+    if ! out="$(env "$name=$root" LC_ALL=C bash "$script" 2>&1)"; then
+      printf '%s\n' "$out" | grep -E '^ +x |REFUSED|census' | head -20 >&2
+      rc=1
+    fi
+  done
   python3 -I -B -c "$STRUCTURE_SRC" "$root/docs/book/src" || rc=1
   return "$rc"
 }
@@ -83,7 +96,7 @@ if [ "${1:-}" = "--self-test" ]; then
   fails=0; arms=0
   fresh() {
     rm -rf "$d"; mkdir -p "$d"
-    git archive HEAD docs/book/src ROADMAP.md docs/tasks | tar -x --exclude='docs/tasks/artifacts/*' -C "$d"
+    git archive HEAD docs/book/src ROADMAP.md docs/tasks crates/sc-units/src/error.rs | tar -x --exclude='docs/tasks/artifacts/*' -C "$d"
     # The working tree's book is the population under test, not the last commit's.
     cp -R docs/book/src/. "$d/docs/book/src/"
   }
@@ -110,6 +123,8 @@ if [ "${1:-}" = "--self-test" ]; then
   arm outside 1 'links outside the book source'
   fresh; printf '\nA code span `[x](../../../y.md)` and a fence are not links.\n' >> "$d/docs/book/src/annexes/logical-inputs.md"
   arm code-span 0 ''
+  fresh; sed -i.bak 's/^| `LINE` | both releases |/| `LINE` | the numbered target |/' "$d/docs/book/src/spec/interchange-dialects.md"
+  arm chapter 1 'D4 entity `LINE`'
   rm -rf "$d"
   printf 'book-censuses --self-test: %d arms, %d failed\n' "$arms" "$fails"
   [ "$fails" -eq 0 ]; exit

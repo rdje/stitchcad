@@ -270,7 +270,8 @@ with p.open('a') as f:
     assert result.returncode == 0, ('D156 WASM/book capture failed', result.stderr)
     rows = [json.loads(line) for line in output.read_text().splitlines()]
     assert [row['args'] for row in rows] == [
-        ['build', '--target', 'wasm32-unknown-unknown', '-p', 'sc-units', '-p', 'sc-core', '-p', 'sc-measure'],
+        ['build', '--target', 'wasm32-unknown-unknown', '-p', 'sc-units', '-p', 'sc-core', '-p', 'sc-measure',
+         '-p', 'sc-constraints', '-p', 'sc-store', '-p', 'sc-geometry', '-p', 'sc-viewport', '-p', 'sc-viewer'],
         ['-I', '-B', 'scripts/book_tool.py', 'build']], 'D156 WASM/book argument identity'
     assert all(row['stores'] == wanted and row['toolchain'] == '1.99.0' for row in rows), 'D156 named toolchain preserved'
     print('local environment: actual Make WASM/guarded book entry and named toolchain preserved;renderer not executed')

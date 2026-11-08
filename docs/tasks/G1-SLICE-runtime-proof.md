@@ -717,6 +717,20 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   promotion: declined (the decision record in this commit owns the rule).
   Commit:STITCHCAD-G1-0968.
 
+- ID: `G1-SLICE.5f.2.prepush-1029.probes`
+  Status: `done`
+  Goal:make the full pre-push gate green before the push the director delegated on 2026-11-07,fixing what 47 commits broke unseen.
+  Paths:docs/tasks/artifacts/{formula_structure,glossary,interchange,ci_environment,book_publication}/*;scripts/check_book_censuses.sh;docs/book/src/spec/feature-matrix.md.
+  - [x] REPRODUCE / ISSUE:`make probes` rc=2 with 7 suites red,and `scripts/gauge.sh --checks` rc=1:4 fingerprints watched target/irrational_platform_certificate/…/workspace.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY probes run only before a push,so D408,D410,D411,D413-D415 landed unseen;D400 left its cause. WHERE `git grep -c target-dir 99242341 -- docs/tasks/artifacts/formula_structure` printed nothing rc=1.
+  - [x] FIX:each fault copy builds in its own directory;EPERM tolerated only for an exited group;census,fixture,frozen lists,inventories and glossary rule follow the tree;search keeps every chapter under a 16 MB ceiling.
+  - [x] ADDRESSED:rerun alone,formula_structure,glossary,interchange,feature_matrix,book_publication and g0_exit each rc=0;`scripts/check_build_fingerprints.sh` rc=0 after them;`scripts/check_book_censuses.sh --self-test` 7 arms,0 failed rc=0.
+    ci_environment still fails one assertion:its contract accepts a change to the publication script only against an immutable commit,so `.approval` pins this one next.
+  - [x] NO REGRESSION:`cargo test` of the ten crates rc=0;`clippy` rc=0;`fmt --check` rc=0;doctests rc=0;`scripts/check_book_censuses.sh` rc=0;`scripts/gauge.sh --checks` rc=0;no crate source changed.
+  - [x] RETAINED:the commit was refused at 1505848 task bytes over the 1500000 ceiling;part1095 holds 26 closed spine leaves,`transition_receipts.py --record` 26 exact Git spans rc=0,verify-retention rc=0. Now 1482672 bytes.
+  promotion: declined (the defect records hold it).
+  Commit:STITCHCAD-G1-1029.
+
 ## Feature evidence toward the G1 exit
 
 Moved from G1-SLICE.md under the containment remedy,since that file reached its line ceiling. The parents stay there.

@@ -152,6 +152,10 @@ def command(arguments, log, environment, *, timeout=180):
             os.killpg(process.pid, signal.SIGKILL)
         except ProcessLookupError:
             pass
+        except PermissionError:
+            # macOS answers EPERM for a group whose members have exited but are unreaped (D409).
+            if process.poll() is None:
+                raise
         process.communicate()
     save(log, (stdout + stderr).replace(str(ROOT), '.'))
     return subprocess.CompletedProcess(arguments, process.returncode, stdout, stderr)
@@ -257,6 +261,10 @@ def chromium(executable, label, wasm, marker, environment):
             os.killpg(process.pid, signal.SIGKILL)
         except ProcessLookupError:
             pass
+        except PermissionError:
+            # macOS answers EPERM for a group whose members have exited but are unreaped (D409).
+            if process.poll() is None:
+                raise
         process.communicate()
     save(dom, stdout.replace(str(ROOT), '.'))
     save(log, stderr.replace(str(ROOT), '.'))
@@ -311,7 +319,8 @@ def main():
         *(RUN / (label + suffix) for label in ('baseline', 'wrong-fixture')
           for suffix in ('.native', '.wasm', '.html', '-dom.html', '-chrome.log')))
     sealed_temp = RUN / 'browser-temporary'
-    directories = {STORE, RUN, WORK, TEMP, sealed_temp, *(path.parent for path in outputs),
+    # The copy builds into its own directory, never the shared target, which cargo would then watch (D400, D407).
+    directories = {STORE, RUN, WORK, TEMP, sealed_temp, RUN / 'cargo-target', *(path.parent for path in outputs),
         *(RUN / (label + suffix) for label in ('baseline', 'wrong-fixture')
           for suffix in ('-profile', '-cache', '-crashes'))}
     PROFILE['plan_producer'](ROOT, sources=tuple(sources), directories=tuple(directories), output_files=outputs)
@@ -395,7 +404,7 @@ unsafe_code = "forbid"
             binaries = {}
             for kind, target, suffix in (('native', None, '.native'), ('wasm', 'wasm32-unknown-unknown', '.wasm')):
                 arguments = ['cargo', 'build', '--offline', '--locked', '--release', '--manifest-path',
-                    str(WORK / 'Cargo.toml'), '--message-format=json']
+                    str(WORK / 'Cargo.toml'), '--target-dir', str(RUN / 'cargo-target'), '--message-format=json']
                 if target:
                     arguments.extend(('--target', target))
                 built = command(arguments, RUN / (label + '-' + kind + '-build.log'), environment)

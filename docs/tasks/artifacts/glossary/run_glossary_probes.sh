@@ -143,6 +143,11 @@ rows = p.read_text().splitlines(keepends=True)
 removed = [row for row in rows if row.startswith('| `' + token + '` |')]
 assert len(removed) == 1, ('declaration fault anchor', family, token, len(removed))
 p.write_text(''.join(row for row in rows if row not in removed))
+# A token declared in another chapter too is still declared after this removal, so the fault would prove nothing.
+book = root / 'docs/book/src'
+elsewhere = sorted(str(chapter.relative_to(book)) for chapter in book.rglob('*.md')
+                   if any(row.startswith('| `' + token + '` |') for row in chapter.read_text().splitlines()))
+assert not elsewhere, ('stale fixture: also declared in', family, token, elsewhere)
 # Independent Python oracle for the census's two documented code-span shape arms. Count token/use
 # chapter pairs, not token identities. Other chapters may legitimately use this same declaration.
 book = root / 'docs/book/src'
@@ -175,7 +180,6 @@ PY_DECLARATION
     bad "$family-$token" "actual declaration fault failed its named census assertion (mutation=$mutation_rc, exit=$rc)" "$out"
   fi
 done <<'DECLARATIONS'
-D155	name	docs/book/src/spec/formula-language.md
 D155	origins	docs/book/src/spec/formula-language.md
 D155	prior_source	docs/book/src/spec/formula-language.md
 D155	attempted_source	docs/book/src/spec/formula-language.md

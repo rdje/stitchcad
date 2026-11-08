@@ -51,79 +51,27 @@ mechanically-enforced form:
 
 - ID: `SPINE.6`
   Status: `done`
-  Goal: track the workspace lockfile so a fresh clone's first `make check` leaves the tree
-  clean (defect D14). Inserted ahead of `.1`–`.5` because the pivot rule defines
-  handoff-ready as *no untracked files*, and the toolchain itself was breaking it.
-  Acceptance: `Cargo.lock` is tracked; `make check` from a clean checkout ends with an empty
-  `git status --short`; `.gitignore`'s stated policy (lockfile deliberately not ignored) holds.
-  Verification: recorded below.
-  Commit: `STITCHCAD-SPINE-0006`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.12`
   Status: `done`
-  Goal: record the director's push cadence — **400 commits between pushes** — in the workflow document
-  that owns it (`COMMIT.md`), with the count derived rather than hand-carried and the trade-off
-  against `MEMORY_ARCHITECTURE.md` §8's crash-insurance argument stated instead of hidden.
-  Acceptance: `COMMIT.md` carries a Push cadence section naming the threshold, the deriving command,
-  the pre-push gate and the recorded trade-off; the current ahead-count is measured; no push happens
-  before the threshold unless the director asks.
-  Verification: recorded below.
-  Commit: `STITCHCAD-SPINE-0012`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.11`
   Status: `done`
-  Goal: rebuild the evidence-signature corpus as a **tracked** instrument (defect **D20**) so the
-  published awk-versus-grep measurement in `SPINE.8`'s record is re-derivable. Deliverable:
-  `docs/tasks/artifacts/evidence_signatures/` holding the corpus and a runner that reports, for each
-  line, whether the universal signature list matches it under `grep -qE` (the engine the gate uses)
-  and under `awk` (the engine a re-implementation might wrongly choose).
-  Acceptance: one command reproduces both published numbers (`12` of `36` unmatched under awk, `2`
-  under grep, the two being bad samples rather than dead families); the corpus and runner are
-  tracked (`git ls-files` proves it); `make probes` picks the runner up; a `TOOLBOX.md` row names it;
-  the leg-3 claim in `CLAIM_VERIFICATION.md`'s adoption note stops being an open breach.
-  Verification: recorded below — `corpus: 36 lines · grep-unmatched: 2 · awk-unmatched: 12`,
-  `probes: 5 pass / 0 fail`, `make probes: 6 suite(s) green`.
-  Commit: `STITCHCAD-SPINE-0011`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.1`
   Status: `done`
-  Goal: de-template the identity surfaces — `README.md` as the StitchCAD landing page (within
-  the reviewed caps), `docs/book/book.toml` identity, `docs/book/src/introduction.md`, and a
-  `SUMMARY.md` skeleton with the `spec/` part that `G0-CONTRACT` fills. Owns defects D3, D4
-  and D19.
-  Acceptance: `head -1 README.md` names StitchCAD; `mdbook build docs/book` succeeds; the
-  README quick start and links are verified by running them; `README-STABILITY` green.
-  Verification: recorded below — every quick-start command run, book builds, `README-STABILITY: OK`.
-  Commit: `STITCHCAD-SPINE-0001`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.2`
   Status: `done`
-  Goal: first artifact cleanup + the cadence record `docs/ARTIFACT_CLEANUP.md` (single latest
-  entry: date + one-line summary). Owns defect D8.
-  Acceptance: cleanup ran on the repository volume only (`target/`, stray `.log`/`.bin`,
-  doctrine scratch dirs); a residue census proves what was removed is gone; `make check` still
-  green afterwards; nothing tracked was deleted.
-  Verification: recorded below — 4 paths removed, residue census clean, all four make targets green.
-  Commit: `STITCHCAD-SPINE-0002`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.3`
   Status: `done`
-  Goal: adopt the revised external policy references into repository-owned copies — refresh
-  `README_POLICY.md` (authority/provenance note, duplication probe, routing-pressure closure,
-  derived caps, unconditional check) and add the claim-verification standard in-repo, wired
-  into the bootstrap reading list. Owns defects D11, D12.
-  Acceptance: the adopted copies carry a StitchCAD adoption note and no external absolute
-  path; the README guard still passes and additionally validates its routed destinations where
-  the revised policy requires it; a decision record names what was adopted and what was
-  deliberately not (donor-specific values).
-  Verification: recorded below — both copies adopted, `README-STABILITY: OK`, `0` donor tokens,
-  `0` absolute paths, adoption frontier owned by named leaves.
-  Commit: `STITCHCAD-SPINE-0003`
-  Note: the revised policy's **routing-pressure closure** (a data-only destination registry with an
-  owner, lifecycle class and pressure control per route) is *not* implemented by this leaf — it is
-  recorded in the adoption note as owed by `SPINE.4`, together with the derived caps the policy
-  requires instead of the inherited template defaults. Adopting a policy creates obligations; the
-  frontier is where they are tracked rather than forgotten.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.4`
   Status: `active`
@@ -145,62 +93,19 @@ mechanically-enforced form:
 
 - ID: `SPINE.4.1`
   Status: `done`
-  Goal: adopt the containment **doctrine** as a repository-owned copy — neutral body verbatim behind
-  a fenced StitchCAD adoption note stating authority, independence, milestones, locality,
-  serialization, landing-page identity, transition-debt policy, and (because a partial adoption that
-  hides its gaps is worse than none) the **deferred** neutral checker package with three named
-  triggers that reopen the decision.
-  Acceptance: the body is verbatim and donor-free; no absolute path; the note names what is adopted,
-  what is deferred and why; `COMMIT.md` routes authors to it; a layer-C record carries the
-  proportionality call; `make gate` green.
-  Verification: recorded below.
-  Commit: `STITCHCAD-SPINE-0004`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.4.2`
   Status: `done`
-  Goal: the local data plane — `.doctrine/live_document_size/surfaces.tsv` (one row per governed
-  surface: path or glob, lifecycle class, owner, authority, measured lines/bytes/max-line, health
-  target, inclusive ceiling, transition-debt baseline) and `routes.tsv` (every destination the README,
-  the policy and the guard's failure guidance route to, with its owner, lifecycle class and pressure
-  control). Derive the README caps from the trimmed survivor and set them through
-  `README_LINE_CAP`/`README_BYTE_CAP` instead of the inherited 300/16 384 defaults.
-  Acceptance: every live surface in the repository is classified (the census command is recorded);
-  no route ends at an unclassified or unbounded destination; every ceiling is derived from a
-  measurement stated in its row; the README caps are recorded as reviewed values in the adoption note;
-  nothing is copied from the donor project.
-  Verification: recorded below — 17 surface rows, 15 route rows, three surfaces trimmed first.
-  Commit: `STITCHCAD-SPINE-0004b`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.4.3`
   Status: `done`
-  Goal: the deterministic checker `scripts/check_live_doc_size.sh` registered in the project slot —
-  fails on an unclassified surface, a missing owner/lifecycle/ceiling, an absolute or off-volume path
-  in the data plane, a line/byte/max-line overflow past a ceiling, a ceiling raised without a recorded
-  authority, a route to an uncontrolled destination, and a stale derived projection; warns at 80 % of a
-  health target. Plus a probe suite with a RED arm per refusal class.
-  Acceptance: `make gate` runs it unconditionally (not staged-scoped); every refusal class has an arm
-  seen to fire; the healthy tree passes; `TOOLBOX.md` names it; D13 closes.
-  Verification: recorded below — `--self-test` 11 arms (1 GREEN, 10 RED), probe suite `4 pass / 0 fail`,
-  real tree `OK — 17 surfaces, 15 routes, 41 files measured`, `exit=0`.
-  Commit: `STITCHCAD-SPINE-0004c`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.4.4`
   Status: `done`
-  Goal: re-derive the `book_collection` **maxline health** for table-shaped reference parts. Measured at
-  the ruling: the glossary's widest entry row is `272` B and the feature matrix's `197` B against a `200` B
-  health and a `320` B ceiling, so a permanent warning has no defect behind it — the health target was
-  derived from the shape of a prose chapter, and a five-column termbase row is a different shape.
-  Acceptance: the derivation is written where the registry's other derivations live (the `notes` column of
-  the `book_collection` row, or a split row if the checker's glob semantics allow one), citing the measured
-  cell budget rather than a round number; the ceiling is unchanged unless a decision record authorises it;
-  the check stays green and the probe suite still discriminates; if `.doctrine/` is touched, the
-  immediate-push exception is honoured and the observed CI verdict is recorded here.
-  Verification: recorded below and in the acceptance checklist — the cell-budget census derives `275` B from
-  the termbase shape (`259` B of p95 cells + `16` B of separator) over `36` shapes and `625` data rows, its
-  `--self-test` is `7 pass / 0 fail`, the registry carries `275`/`440` with the derivation in its notes, a
-  decision record authorises the ceiling, and the split-row option is measured and deferred rather than
-  assumed. `.doctrine/` changed, so the immediate push is owed and the CI verdict is recorded below.
-  Commit: `STITCHCAD-SPINE-0004d`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.13`
   Status: `pending`
@@ -216,33 +121,11 @@ mechanically-enforced form:
 
 - ID: `SPINE.14`
   Status: `done`
-  Goal: make `CHANGELOG.md` a bounded rolling ledger — seal the inherited bedrock-scaffold segment
-  (frozen legacy, not this project's history) into `docs/history/` as an immutable archive terminal
-  with recorded identity (lines, bytes, sha256, the revision it was sealed at), leave a one-line
-  pointer, and state the rollover rule for our own entries.
-  Acceptance: the sealed segment is byte-identical to what was removed (proved by hash before and
-  after); `CHANGELOG.md` drops below its health target; the registry's `changelog` debt row is cleared;
-  the `history_archive` surface exists and is classified; retrieval is one documented command.
-  Verification: recorded below — `BYTE-IDENTICAL: True`, `sha256:78f43e0f…`, ledger 522→371 lines.
-  Commit: `STITCHCAD-SPINE-0014`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.15`
   Status: `done`
-  Goal: settle defect **D22** with a real oracle — does a GFM renderer split a table cell on a raw `|`
-  inside a code span? — then record the answer and adopt the table-authoring convention for this
-  repository (escape pipes inside code spans; keep cells short enough that the maxline axis stays
-  visible), and clear the `decisions_collection` maxline debt by reformatting the one wide row.
-  Acceptance: the oracle and its output are recorded (a rendered page, not a reading of the spec);
-  the convention is written where authors look (`COMMIT.md`); the widest line in the files this project
-  owns is inside its health target; the inherited checker is left untouched and the upstream question
-  is reported.
-  Verification: recorded below and in the acceptance checklist — the oracle is a tracked probe
-  (`probes: 3 pass / 0 fail`) that renders a page and counts cells: a raw code-span pipe splits the cell and
-  the rightmost cell is dropped, an escaped one does not; the convention is in `COMMIT.md`; both remaining
-  prose-derived maxline targets are re-derived from their binding shapes (`decisions_collection` `320` →
-  `382` B with its `maxline=491` debt cleared, `tasks_collection` `400` → `443` B); the inherited checker is
-  untouched and the divergence is reported as **D47**, owned by `SPINE.20`.
-  Commit: `STITCHCAD-SPINE-0015`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.20`
   Status: `done` (created by `SPINE.15`, which settled D22 against a renderer and found that no gate in
@@ -269,36 +152,15 @@ mechanically-enforced form:
 
 - ID: `SPINE.16`
   Status: `done`
-  Goal: declare `.doctrine/code_paths.txt` so the acceptance gates classify **this** repository's files
-  correctly (defect **D25**). The spine's default code-path regex matches any path containing `/src/`,
-  and the mdBook chapters live in `docs/book/src/` — so writing a specification chapter was judged a
-  CODE change and demanded ticked, tool-output-backed acceptance boxes for prose.
-  Acceptance: a specification chapter is no longer classified as code; every genuinely
-  behaviour-altering path still is; both acceptance checks read the same seam; the probe suites still
-  discriminate; `make gate` green.
-  Verification: recorded below — classification census over 7 representative paths, 7 probe suites green.
-  Commit: `STITCHCAD-SPINE-0016`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.17`
   Status: `done`
-  Goal: make the approved push-cadence exception mechanical — an unpushed commit that touches CI, a
-  doctrine check, the `.doctrine/` seams or the hooks owes a push immediately, because layer E4 is the
-  un-bypassable backstop and such a change is unverified until a runner executes it.
-  Acceptance: `COMMIT.md` states the exception and the deriving command; `make push-due` reports the
-  state and exits 1 when a push is owed; the "owed" arm is demonstrated against a revision known to
-  contain CI/doctrine changes; the refusal arm (no upstream / bogus base) is demonstrated.
-  Verification: recorded below — three arms observed, including the one that caught a defect in the
-  trigger list.
-  Commit: `STITCHCAD-SPINE-0017`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.18`
   Status: `done`
-  Goal: make `SPINE.17`'s trigger set mean what the rule means — "a runner must re-verify this" — by
-  deriving the registered doctrine checks from the two registries instead of globbing filenames.
-  Acceptance: an unregistered helper no longer reports a false exceptional push; a change to a
-  registered check, a workflow, a `.doctrine/` seam or a hook still does; all three arms re-observed.
-  Verification: recorded below — three arms re-run against the derived set.
-  Commit: `STITCHCAD-SPINE-0018`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 SPINE.17–.18 immediate-push policy is superseded by director2026-10-04:400 commits unless explicitly requested.
 G1-SLICE.5b.4c.h2.b.p.n.h3.v.c records the replacement checker and controls. Earlier receipts remain historical.
@@ -388,32 +250,11 @@ G1-SLICE.5b.4c.h2.b.p.n.h3.v.c records the replacement checker and controls. Ear
 
 - ID: `SPINE.19.2v`
   Status: `done`
-  Goal: observe archive doctrine CI jobs/steps after .19.2's exceptional push; close structural
-  transition only on actual success, then resume product G1-SLICE.4a.3. No physical signoff claim.
-  Acceptance: exact head SHA/run/job/step verdicts retained, reader requires no historical Git objects.
-  Verification: ebed2c5 doctrines run36931196049/job110600555955 and Rust
-  run36931196050/job110600556738 completed success; every step successful. Post-commit archive
-  probes 27/0 include committed-window mutation; verify-retention green.
-  Commit: `STITCHCAD-SPINE-0019c`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.4.5`
   Status: `done`
-  Goal: make a transition-debt baseline **revision-aware**, so a legitimate revision of a baselined document
-  can land without hand-widening the number the doctrine forbids widening. The `roadmap` row's baseline was
-  measured at exactly the file's size, so roadmap v0.3 could only be applied by editing the baseline — the
-  silent widening the rule exists to prevent. This is the containment adoption note's deferred **trigger 3**
-  ("a stored copy of a mechanically owned value needs an executed freshness oracle"), fired by the first
-  roadmap amendment and owned by whoever hit it.
-  Acceptance: the debt column accepts an `at=<revision>` axis; the checker refuses a row whose revision token
-  the file's first line no longer declares; declaring the right revision does NOT license growth past the
-  baseline; `at=` on a non-`file` surface is refused rather than ignored; the roadmap's baseline is re-based
-  in the same commit as the revision, with the authority cited in the row's notes; the refusal classes fire in
-  `--self-test` and against the real registry in the probe suite; a decision record carries the rule.
-  Verification: recorded below and in the acceptance checklist — `--self-test` grew `11` → `15` arms
-  (`GREEN-AT`, `RED-AT-STALE`, `RED-AT-WIDEN`, `RED-AT-KIND`), the probe suite `4` → `5` arms with `REAL-3`
-  staling the real registry to `at=v0.2`, and the roadmap re-based to `lines=947;bytes=52818;at=v0.3`.
-  Commit: `STITCHCAD-G0-0004c` (landed in the slice that applied roadmap v0.3, which is the slice that hit the
-  trigger)
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.5`
   Status: `pending`
@@ -428,24 +269,7 @@ G1-SLICE.5b.4c.h2.b.p.n.h3.v.c records the replacement checker and controls. Ear
 
 - ID: `SPINE.7`
   Status: `done`
-  Goal: prove and publish defect **D15** — the spine's `TASK-ACCEPTANCE` gate judges the FIRST
-  box matching each label in a staged tree file, so in a multi-leaf file one leaf's evidence
-  answers for another leaf's code change (false GREEN), and an earlier unticked placeholder
-  rejects a leaf that carries real evidence later in the same file (false RED). Deliverable: a
-  committed probe (`docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh`,
-  a first-class diagnostic tool per `TOOLBOX.md`) with RED/GREEN/CONTROL arms, plus the local
-  authoring convention recorded as a layer-C decision.
-  Acceptance: the probe runs by one command, prints `probes: N pass / 0 fail`, and its arms
-  reproduce both directions; the convention (per-leaf `### <leaf-id>` checklist subsections,
-  added in the same commit as the work; no unticked placeholder boxes in tree files) is written
-  into `docs/tasks/TEMPLATE.md` and the existing tree files; the finding is recorded with its
-  measured evidence and flagged to the director as an upstream spine defect.
-  Verification: recorded below — `probes: 6 pass / 0 fail`.
-  Commit: `STITCHCAD-SPINE-0007`
-  Note: the convention deliberately did **not** go into `docs/tasks/TEMPLATE.md` — that file is in
-  `scripts/update_scaffold.sh`'s NEUTRAL sync list, so a project convention written there is
-  overwritten by the next spine update (defect D17). It lives in a layer-C decision record instead,
-  which is project-owned.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.22`
   Status: `pending`
@@ -462,57 +286,15 @@ G1-SLICE.5b.4c.h2.b.p.n.h3.v.c records the replacement checker and controls. Ear
 
 - ID: `SPINE.8`
   Status: `done`
-  Goal: close D15 locally with a project-slot doctrine — `FRESH-ACCEPTANCE-EVIDENCE`: a staged
-  CODE change must be accompanied, **in the same commit's diff**, by added ticked ROOT CAUSE /
-  ADDRESSED / NO REGRESSION bullets carrying tool-output signatures, inside a `### <leaf-id>`
-  subsection of a staged `docs/tasks/*.md`. Registered in `scripts/check_doctrines.project.sh`
-  (never in the universal driver), with `--self-test` arms including a control seen RED.
-  Design constraint, learned from D15 facet 3: a project-slot check can only ADD refusals — it
-  cannot relax a universal one — so this leaf also publishes the two authoring rules that keep the
-  inherited check honest on mixed commits: (i) every evidence bullet cites the invocation, its
-  output **and its exit status** (`rc=0`), because a listing of filenames matches no signature
-  family; (ii) a code commit stages the leaf that owns it, and unrelated tree updates go in their
-  own commit, because the inherited check judges every staged leaf file.
-  Acceptance: previously-committed evidence cannot satisfy a new code commit (the false GREEN is
-  closed); an honest leaf whose checklist is added with its work passes regardless of its position
-  in the file (the false RED is closed); `make gate` green; a `TOOLBOX.md` row names the check and
-  what question it answers; the two authoring rules are in the layer-C record.
-  Verification: recorded below — `probes: 9 pass / 0 fail`, `8 verdict controls + 6 extractor arms`.
-  Commit: `STITCHCAD-SPINE-0008`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.9`
   Status: `done`
-  Goal: make the scaffold updater safe for project content (defect **D17**) —
-  `scripts/update_scaffold.sh` lists `docs/TASK_TREE.md`, `TOOLBOX.md`, `README_POLICY.md` and
-  `docs/tasks/TEMPLATE.md` as NEUTRAL ("safe to overwrite because it never carries project
-  content"), yet the template's own instructions tell the project to fill exactly those in: the
-  Active Task Trees index (layer-B navigation), the project toolbox table, the README policy's
-  local adoption note. Split the list into truly neutral files and files carrying project
-  sections; the latter are backed up, reported and skipped unless an explicit flag is passed.
-  Acceptance: a dry run against a stub source proves the guarded files are not overwritten and the
-  neutral ones are; the backup lands on the repository volume; a decision record
-  (`decision_scaffold-sync-protects-project-content.md`, already cross-linked from the
-  acceptance-evidence record) states the rule; `make gate` green.
-  Verification: recorded below — `probes: 7 pass / 0 fail`.
-  Commit: `STITCHCAD-SPINE-0009`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.10`
   Status: `done`
-  Goal: keep project-owned scratch on the repository volume (defect **D16**) — the inherited probe
-  suites call `mktemp -d`, which resolves to the system volume (`/var/folders/…` here) while the
-  repository lives on another volume; pin scratch with a documented, scripted `TMPDIR` and give the
-  suites one entry point (`make probes`) so nobody has to remember the incantation.
-  Acceptance: `make probes` runs every probe suite with `TMPDIR` inside `target/`; the pin is
-  measured (`TMPDIR=… mktemp -d` prints a repository-volume path); all suites still report
-  `probes: N pass / 0 fail`; no inherited file is edited (the pin is applied by the caller).
-  Verification: recorded below — `make probes` → `5 suite(s) green`; 37 arms, 0 failures.
-  Commit: `STITCHCAD-SPINE-0010`
-  Residual, accepted and reported rather than hidden: `scripts/check_task_acceptance.sh` (shared,
-  NEUTRAL) still calls `mktemp -d` for a trap-cleaned scratch on every commit, so that one transient
-  directory lands wherever `TMPDIR` points. Pinning it would mean editing shared code or a NEUTRAL
-  hook; the scratch is removed by its own trap and persists nothing, so the accepted residual is
-  recorded here and the upstream suggestion (have the driver export a repo-local `TMPDIR`) is
-  reported with D15/D17.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.21`
   Status: `done` (recurring: the cadence record names the obligation, this leaf owns each run)
@@ -533,62 +315,19 @@ G1-SLICE.5b.4c.h2.b.p.n.h3.v.c records the replacement checker and controls. Ear
 
 - ID: `SPINE.21a`
   Status: `done`
-  Goal: recurring cleanup on 2026-10-01 before the next product slice crosses the 24-hour mark;
-  remove only regenerable, ignored project artifacts after proving no tracked input or live job is held.
-  Acceptance: census before/after names every removed path, proves residue absent and no tracked
-  deletion; release/debug incremental/deps log/bin scan included, built dependencies retained.
-  Re-run check/book/wasm/gate/probes after removal, overwrite only latest cleanup entry, preserve
-  product frontier .4 and synchronize bounded live/history/book records. Prior cleanup checklist
-  may relocate unchanged to the existing evidence sibling; ledger rollovers owned here if needed.
-  Verification: 6 roots + 255 strays removed; target 663084 → 328736 KB; residue 0, tracked
-  deletions 0; regenerated check/WASM/book, 22 probes, ledger and staged gates green.
-  Commit: `STITCHCAD-SPINE-0021a`
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.21b`
   Status: `done`
-  Goal: recurring cleanup due after 2026-10-02 18:56 UTC; preserve G1-SLICE.5b.1 product frontier.
-  Pre-change protocol: derive candidate inventory and ignored/tracked ownership, same-device paths,
-  symlinks/nested repositories, dependency/package-store protections and no live jobs before deletion.
-  A tracked conservative census/removal tool and refusal controls own repeatable safety evidence;
-  known regenerable roots only, ignored target strays only, no cross-repository/volume write.
-  Prove selected residue absent and tracked content unchanged, then regenerate Rust/WASM/book/probes.
-  Release/debug deps/log/bin locations are inspected, retained build outputs not deleted wholesale.
-  Acceptance: named before/after manifest, independently checked absence/content, safe refusal arms,
-  all regeneration/gates terminal; single latest cleanup entry, book/live/history/Memory synchronized.
-  Preserve old records exactly; seal oldest live ledger records before crossing health targets.
-  Verification: six roots/1281 strays removed; residue 0, tracked changes 0; native591,
-  WASM3/book/full26 probes and publication9 pass, rc=0; staged gate recorded below.
-  Commit: `STITCHCAD-SPINE-0021b`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.23`
   Status: `done`
-  Goal: D114/D115 census refuses unavailable evidence and distinguishes idle harness metadata.
-  Acceptance: actual restricted denial and controlled live process baseline; refuse failed/empty
-  primary process or handle census with a named nonzero diagnostic, preserve legitimate no-jobs
-  and inherited-cwd behavior; known idle CUA metadata with no repo handles is not project work.
-  Independently authored ps/lsof/caller fixtures, real-handle controls and actual guard faults;
-  normal OS-visible handoff green after all children stop. No writes outside this repository.
-  Schedule: P0 immediately after G1-SLICE.5b.1b.0/.0v clean archive/observed-CI completion,
-  before .1b namespace work. COMMIT exception/full CI applies if check_* changes.
-  Pre-code protocol: preserve inherited NEUTRAL checker verbatim; project-owned check_handoff.sh
-  uses strict single ps/lsof snapshots and caller ancestry. Failed/empty/malformed primary evidence
-  refuses. Narrow CUA kernel/worker sandbox forms require --idle-cua attestation, zero repo handles,
-  exact launch metadata/parent shape; all active handles and ordinary root arguments still block.
-  CI doctrines job runs the project handoff fixture/fault contract; handoff census itself stays
-  outside commit gates because active verification is legitimate during commits.
-  Independent in-memory subprocess fixtures and actual predicate faults; real restricted/OS-visible
-  process checks. Canonical bootstrap/book/tool routes use replacement; upstream remains read-only.
-  Own exact .21b checklist relocation and normal live ledger/defect rollover if needed.
-  Verification:43 fixtures/13 actual reds, real denied/live/restored controls; native591,
-  WASM/book/full27 suites terminal0. CI .23v remains required. Commit: `STITCHCAD-SPINE-0023`.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 - ID: `SPINE.23v`
   Status: `done`
-  Goal: observed exact-head CI jobs/steps for handoff replacement after its exceptional push.
-  Acceptance: full local checks before push; both jobs/all steps observed success; durable receipt
-  and clean OS-visible no-needed-jobs handoff before G1-SLICE.5b.1b resumes.
-  Verification: both exact-head jobs/all steps completed-success; runner43/13 log confirmed.
-  Commit: `STITCHCAD-SPINE-0023v`; resume product G1-SLICE.5b.1b.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 
 ## Current Frontier
 
@@ -973,13 +712,8 @@ Completed .21b acceptance is retained verbatim in [SPINE evidence](SPINE-evidenc
 
 - ID: `SPINE.23r`
   Status: `done`
-  Own0023r: recurrence evidence/type-guard fault/book/live sync; whole0211 CH192 retention; target/handoff-recurrence-*.
   Paths: docs/tasks/artifacts/handoff/contract.py
-  Goal: sanitized recurrence capture and strict-refusal proof.
-  Original baseline: first G1-SLICE.5e.1a malformed-name record was not retained; its cause remains unknown.
-  Observed2026-10-06: p present/f4/n21B/no t/repeated-name false;88 bounded samples, outside project name.
-  Name sha256:21cf9559c6f9bf8b9cc282dd3849ab78f15a269581f448c39aa70e717475b0ad; PID/name/argv omitted.
-  Public OS man lsof defines process/file field sets; kernel cause not inferred.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1095.md).
 - [x] REPRODUCE / ISSUE: actual lsof capture lacks requested type; sanitized p1/f4/n21 replay raises malformed lsof name field, refusal2. target/handoff-recurrence-record.json; bounded capture and independent replay tools exit0. Existing missing-type fixture covers this property.
 - [x] ROOT CAUSE: parse_handles rejects kind is None before publishing handles; actual fields f/n distinguish missing type from duplicate name or missing descriptor. docs/tasks/artifacts/handoff/contract.py independently verifies this refusal;43 fixtures/14 reds, rc=0; lost original record not explained.
 - [x] FIX: contract.py adds actual missing-type predicate omission to watched faults; producer/parser bytes unchanged. python3 and /usr/bin/python3 -I -B docs/tasks/artifacts/handoff/contract.py return43 fixtures/14 actual reds, rc=0, target/handoff-recurrence-contract/contract39.log.

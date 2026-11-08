@@ -150,7 +150,7 @@ callee-before-argument precedence. Requests from other interfaces retain their o
 | --- | --- | --- | --- | --- |
 | material with width, nap, pattern and shrinkage | supported | ontology §6: the properties the product actually uses, not a name and a colour | G3 | — |
 | shrinkage as an explicit transformation | supported | ontology §6: applied at a declared stage, never folded silently into a coordinate | G4 | — |
-| Factory Profiles, versioned and typed | supported | roadmap §8: a profile is what turns a design into one factory's bytes | G4 | `G4-PROFILES.1` holds the file. Nothing reads one yet |
+| Factory Profiles, versioned and typed | supported | roadmap §8: a profile is what turns a design into one factory's bytes; `G4-PROFILES.1` reads and checks [the file](factory-profiles.md), and nothing reads a profile yet | G4 | — |
 | CSP resolution of profile parameters | supported | roadmap §6.1: a deterministic finite-domain solver, native and WASM | G4 | — |
 | evidence scoped per claim | supported | roadmap §8: never profile-wide, and superseded evidence is preserved | G4 | — |
 | the artifact policy matrix | supported | roadmap §8.2 decides what an unknown blocks, per artifact | G4 | — |

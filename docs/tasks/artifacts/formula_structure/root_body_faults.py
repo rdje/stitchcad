@@ -121,6 +121,11 @@ def stop_group(process):
         os.killpg(process.pid, signal.SIGKILL)
     except ProcessLookupError:
         pass
+    except PermissionError:
+        # macOS answers EPERM, not ESRCH, for a group whose members have all exited but are not yet reaped.
+        # It is only that when the leader is gone;a live leader we cannot signal is a real refusal (D409).
+        if process.poll() is None:
+            raise
     return process.communicate()
 
 
@@ -274,7 +279,11 @@ def main(config=None):
     sources = tuple(sorted(set(initial) | set(snapshot)))
     destinations = tuple(copy_root / path.relative_to(ROOT) for path in snapshot)
     outputs = (*destinations, *logs, report_path, negative, positive, *control_outputs)
-    directories = tuple(sorted({run_dir, copy_root, ROOT / 'target', *(path.parent for path in destinations)}))
+    # The copy builds into its own directory. Built into the shared target, cargo would take the copy for the real
+    # crate, because it hashes a workspace package by its relative path, and watch the copy from then on (D400, D407).
+    build_dir = run_dir / 'cargo-target'
+    directories = tuple(sorted({run_dir, copy_root, build_dir, ROOT / 'target',
+        *(path.parent for path in destinations)}))
     profile['plan_producer'](ROOT, sources=sources,
         directories=(*directories, control_dir, *control_bases), output_files=outputs)
     before_hashes = {path.relative_to(ROOT).as_posix(): digest(path) for path in sources}
@@ -314,7 +323,7 @@ def main(config=None):
             body.write_bytes(variant)
             profile['plan_producer'](ROOT, sources=destinations, output_files=(log,))
             result = run_group(['cargo', 'test', '--offline', '--locked', '--manifest-path',
-                str(copy_root / 'Cargo.toml'), '-p', 'sc-core', '--test', test_target,
+                str(copy_root / 'Cargo.toml'), '--target-dir', str(build_dir), '-p', 'sc-core', '--test', test_target,
                 '--message-format=json', test_name, '--', '--nocapture'], timeout=180)
             transcript = result.stdout + result.stderr
             profile['plan_producer'](ROOT, output_files=(log,))

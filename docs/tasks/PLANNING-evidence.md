@@ -176,6 +176,51 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D415 — a chapter position written as a number
+
+The publication check required the glossary to be the ninth registered chapter. 0984 added a chapter under the learning path,so the glossary became the tenth and the check refused a correct book. Owner:G1-SLICE.5f.2.prepush-1029.probes.
+Fixed1029:the glossary has to be the last top-level chapter of the learning path,which is what the rule meant.
+
+## D414 — inventories that missed four sources
+
+The spike's manifest from 0995 had no inventory row,and the per-commit census did not look under spikes/,so only the probe's Git census saw it. The two grading reader scripts from 1024 and my oracle from 1028 had no rows in the two Python inventories. Owner:G1-SLICE.5f.2.prepush-1029.probes.
+Fixed1029:the census walks spikes/,each source has its row,and a43 owns the three scripts' effects.
+
+## D413 — two frozen lists
+
+local_environment_contract.py froze the browser build as three crates,and 0991,0994 and 0997 grew it to eight. python_recipe_fixture_contract.py froze the chapters the formula census reads,and 0990 linked one more. Both probes run only before a push. Owner:G1-SLICE.5f.2.prepush-1029.probes.
+Fixed1029:each frozen list is what the tree has now.
+
+## D412 — a search index past mdBook's warning
+
+The book's search index reached 10.4 MB,mdBook warns above 10 MB,and the publication check refuses any warning,so a correct book could not be published. Leaving the annexes out was tried and refused:the search contracts require every chapter to be found. Owner:G1-SLICE.5f.2.prepush-1029.probes.
+Fixed1029:full search stays. The check admits that one warning up to an explicit 16 MB ceiling,above which it refuses and names a decision.
+
+## D411 — chapter censuses that ran only before a push
+
+D384 and D386 moved two book censuses into every commit and left seven behind. So 1025 wrote a status the interchange census refuses and 1027 put a note in the feature matrix's Diagnostic column,each with every commit gate green. Owner:G1-SLICE.5f.2.prepush-1029.probes.
+Fixed1029:scripts/check_book_censuses.sh runs all seven real-tree verdicts too,in about 3 seconds,with a self-test arm that breaks one.
+
+## D410 — a probe fixture gone stale
+
+The glossary probe removed `name`'s declaration from the formula chapter and expected a refusal. Eight chapters now declare `name`,so nothing was refused and the probe failed for the wrong reason. Owner:G1-SLICE.5f.2.prepush-1029.probes.
+Fixed1029:the row is gone,and the probe now refuses a fixture whose token is declared anywhere else.
+
+## D409 — a refusal macOS gives an exited group
+
+killpg on a process group whose members have exited but are not reaped answers EPERM on macOS,not ESRCH. The formula fault harness died on it in one family of six. Owner:G1-SLICE.5f.2.prepush-1029.probes.
+Fixed1029:both harnesses treat EPERM as gone only when the leader has exited;a live leader still raises.
+
+## D408 — a point the interchange census did not know
+
+1025 wrote POINT as the numbered target's,because that convention puts points on layers that cannot hold a polyline. The census's closed vocabulary was written before the standard was read,and had both releases and never only. Owner:G1-SLICE.5f.2.prepush-1029.probes.
+Fixed1029:the census admits the numbered target for POINT alone,and refuses it for any other entity.
+
+## D407 — a fault harness still building in the shared target
+
+D400 added a detector and left the cause. The formula fault harness and the irrational-platform harness built their workspace copies with the shared target,so every `make probes` made cargo watch a copy of sc-units and sc-core. Owner:G1-SLICE.5f.2.prepush-1029.probes.
+Found 2026-11-08 when the gauge refused after the probes. Fixed1029:each copy builds in its own directory under its run,and the gauge's detector stays.
+
 ## D406 — polylines where the convention says points
 
 The numbered files from 1022 put a drill hole on layer 13 as a polyline,and the convention says layers 5,6,7,9,10 and 13 cannot hold one. Layers 2 and 3,which it says hold every turn and curve point,were unwritten,and a drawn notch sat on layer 4,which is for coded points. Owner:G3-GRADING.13. Found reading the standard's pages for notches,after 1022.

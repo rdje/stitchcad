@@ -26,6 +26,7 @@ crates/sc-api/Cargo.toml	platform	G1-SLICE.9	Declarative public build/output con
 crates/sc-mcp/Cargo.toml	platform	G1-SLICE.9	Declarative public build/output contract; destination audit pending.
 crates/sc-viewer/Cargo.toml	platform	G1-SLICE.11	Declarative public build/output contract; destination audit pending.
 crates/sc-viewport/Cargo.toml	platform	G1-SLICE.13.viewport	Declarative public build/output contract; destination audit pending.
+spikes/canvas-host/Cargo.toml	platform	G1-SLICE.13	The canvas spike's own manifest,outside the workspace;built only by run_canvas_spike.sh through project stores (D414).
 docs/book/book.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 docs/tasks/artifacts/artifact_cleanup/cleanup.py	output	G1-SLICE.5b.4c.h2.b.p	Complete audit/full tracked-source/child plans; strict process evidence and unique deletion links; original policy/census/JSON/argv verified.
 docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py	output	G1-SLICE.5b.4c.h2.b.p	Complete input/fixture/store plans, safe owned marker/tree teardown and protected setup; original15/11 and valid borrowed/linked inputs verified.

@@ -115,3 +115,6 @@ docs/tasks/artifacts/ci_environment/platform_runtime_contract.py	output	G1-SLICE
 scripts/book_tool.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a43
 docs/tasks/artifacts/book_publication/book_tool_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a43
 docs/tasks/artifacts/book_publication/search_field_probe.py	output	G1-SLICE.5b.4c.h2.b.p.o.a43
+docs/tasks/artifacts/dxf_oracle/read_with_ezdxf.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a43
+docs/tasks/artifacts/grading/independent_reader/compare_with_recipe.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a43
+docs/tasks/artifacts/grading/independent_reader/read_rul_independently.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a43

@@ -7,6 +7,11 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1029 — the full pre-push gate is green again,after nine defects 47 commits left unseen
+
+A fault harness built a copy of the workspace into the shared build,the D400 cause left in place. Six censuses,inventories and frozen lists had drifted,because they ran only before a push. Seven chapter censuses now run at every commit.
+Part1095 retains 26 closed spine leaves whole,because the task files had 420 bytes left.
+
 ## STITCHCAD-G1-1028 — the director's three open decisions are decided,and a DXF library nobody here wrote joins the hosted run
 
 No book is bought:the reference blocks take FreeSewing,MIT. Nothing is fetched here:Z3 and ezdxf run on the hosted runner. The PDF library evaluation is measured there before the first language pack. Pushes are due at a gate exit too.

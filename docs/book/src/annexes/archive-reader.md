@@ -501,6 +501,16 @@ bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1094.md
 python3 -I -B docs/tasks/artifacts/history_archive/transition_receipts.py --record docs/history/stitchcad-devnotes-part1094.md
 ```
 
+Part1095 retains 26 closed spine leaves whole, freeing 23176 bytes under the unchanged 1500000-byte task
+collection ceiling, which the pre-push repairs of 1029 needed. Each live leaf keeps its ID, status, `Paths:`
+and `Children:` fields with a link to the record. Its 26 declared Git intervals decode to 26247 exact source
+bytes from `99242341`.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1095.md
+python3 -I -B docs/tasks/artifacts/history_archive/transition_receipts.py --record docs/history/stitchcad-devnotes-part1095.md
+```
+
 ## Names used in this chapter
 
 Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.

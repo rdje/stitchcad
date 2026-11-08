@@ -371,6 +371,14 @@ def build(root):
             require(result.returncode == 0, "BOOK_BUILD", diagnostic.strip())
             plain = re.sub(r"\x1b\[[0-9;]*m", "", diagnostic)
             warnings = re.findall(r"(?m)^\s*WARN\b.*$", plain)
+            # D412: every chapter stays searchable, which the search contracts require, so the index passed
+            # mdBook's 10 MB warning. That one warning is admitted below an explicit ceiling, which still refuses.
+            large = re.compile(r"search index is very large \((\d+) bytes\)")
+            for warning in [item for item in warnings if large.search(item)]:
+                size = int(large.search(warning).group(1))
+                require(size <= SEARCH_INDEX_CEILING, "SEARCH_INDEX_SIZE",
+                        f"{size} bytes is above the {SEARCH_INDEX_CEILING}-byte ceiling;decide what leaves the index")
+                warnings.remove(warning)
             require(not warnings, "BOOK_BUILD_WARNING", "\n".join(warnings))
             require(build_inputs(root) == (input_dirs, inputs) and all(hashlib.sha256(file.read_bytes()).digest() == digest
                     for file, digest in identities.items()), "BOOK_AUTHORITY", "builder changed publication inputs")
@@ -442,6 +450,9 @@ def search_data(output):
         raise PublicationError("SEARCH_INDEX: invalid data wrapper") from error
     require(isinstance(data, dict), "SEARCH_INDEX", "object required")
     return data
+
+
+SEARCH_INDEX_CEILING = 16 * 1024 * 1024
 
 
 def search_contract(data, registered, anchors=None):
@@ -542,7 +553,16 @@ def navigation_parts(summary, registered):
     """Keep glossary/index routes ordered even when their optional part headings are absent."""
     for part in ("# Learning path", "# Annexes"):
         require(part in summary, "PUBLICATION_PART", part)
-    require(len(registered) > 8 and registered[8] == "spec/glossary.md", "GLOSSARY_ORDER",
+    # D415: the glossary follows the whole learning path. A fixed index broke when 0984 added a chapter under it.
+    # Between the part's heading and the glossary there are only its chapters, and at most a heading of its own.
+    learning = summary.index("# Learning path")
+    link = summary.find("](spec/glossary.md)", learning)
+    start = summary.rfind("\n", 0, link) + 1 if link >= 0 else -1
+    between = summary[learning:start] if start > learning else ""
+    headings = re.findall(r"(?m)^# .*$", between)[1:]
+    chapters = re.findall(r"(?m)^- \[[^\]]*\]\(([^)]+)\)", between)
+    require(link >= 0 and len(chapters) > 5 and headings in ([], ["# Glossary"])
+            and (not headings or between.endswith("# Glossary\n")), "GLOSSARY_ORDER",
             "glossary must follow the complete learning path")
     require(summary.index("](spec/glossary.md)") < summary.index("# Annexes"), "GLOSSARY_ORDER",
             "glossary must precede annexes")
