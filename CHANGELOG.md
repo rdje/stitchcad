@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1031 — the first hosted run:Z3 agrees with the kernel,ezdxf finds a real defect,and Windows needed long paths
+
+Z3 agreed on every seed. ezdxf read every entity where our files say,and repaired the numbered files' missing handles:D416,open. Windows could not check out paths of 241 characters,and now enables long paths.
+
 ## STITCHCAD-G1-1030 — the publication contract pins 1029's changes,and the CI-environment suite is green
 
 That contract accepts a change only against an immutable commit,so it now names c12defe5. Two frozen cargo commands name each run's own build directory. Part1096 retains 11 older closed leaves of the runtime-proof file.

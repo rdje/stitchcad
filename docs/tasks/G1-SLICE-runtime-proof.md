@@ -728,6 +728,18 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   promotion: declined (the defect records hold it).
   Commit:STITCHCAD-G1-1030.
 
+- ID: `G1-SLICE.5f.2.prepush-1029.hosted`
+  Status: `done`
+  Goal:watch the first hosted run of the pushed tree and fix what it finds.
+  Paths:.github/workflows/determinism.yml;docs/tasks/artifacts/dxf_oracle/read_with_ezdxf.py;docs/tasks/artifacts/dxf_oracle/known_repairs.tsv;docs/book/src/spec/constraints.md;docs/book/src/spec/dxf-output.md.
+  - [x] REPRODUCE / ISSUE:`gh run list` at 6be42a2f:doctrines success;rust failed at the ezdxf step;determinism failed on Windows at checkout,`Filename too long`.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY ezdxf adds arrowhead blocks of its own on load,which the oracle compared;Windows stops at 260 characters. WHERE `git ls-files crates | awk 'length>200' | wc -l` printed 7 rc=0.
+  - [x] FIX:the oracle compares only the file's own blocks,and a repair passes only while known_repairs.tsv names its open defect;Windows turns on core.longpaths before checkout.
+  - [x] ADDRESSED:with a stand-in library the oracle passes with the three D416 repairs listed rc=0,fails on an unlisted repair,and fails on a listed one that stops. The hosted verdict is owed by the next run.
+  - [x] NO REGRESSION:`scripts/check_book_censuses.sh` rc=0;the whole gate runs before the push.
+  promotion: declined (the defect records hold it).
+  Commit:STITCHCAD-G1-1031.
+
 ## Feature evidence toward the G1 exit
 
 Moved from G1-SLICE.md under the containment remedy,since that file reached its line ceiling. The parents stay there.

@@ -186,5 +186,6 @@ The `csp-z3` feature runs 1,000 such problems against Z3 too, and hosted CI runs
 `z3` package. It starts Z3 as a separate program over SMT-LIB text, so Z3 is never compiled, linked or shipped.
 With the feature off, `cargo tree -p sc-constraints` lists the crate alone.
 
-**That comparison has not run yet.** The test compiles, and its first run comes with the next push to the
-hosted CI. Until then, only the enumeration above has checked the kernel.
+**It first ran on 2026-11-08,** on the hosted runner at commit `6be42a2f`: the kernel agreed with Z3 on every
+seed, in 50 seconds. That is one run on one platform, and the campaign at scale with its own controls is
+`G4-PROFILES.4`.

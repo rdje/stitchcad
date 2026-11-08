@@ -7,7 +7,7 @@ from the operating system's signed package, `python3-ezdxf`, and it is never shi
 
 WHAT IT CHECKS, for each file under conformance/ ending in .dxf:
   1. ezdxf opens it.
-  2. ezdxf's auditor finds no error. Repairs it makes are printed, and each one is a defect to log.
+  2. ezdxf's auditor finds no error, and makes no repair unless known_repairs.tsv names the open defect that owns it.
   3. Every entity ezdxf reads, in each block and in model space, equals what a plain reading of the group codes
      says, with the same type, layer, coordinates, closed flag, text and block name. So ezdxf understands the
      entities the way they are written, and none is lost, added or reinterpreted.
@@ -29,6 +29,18 @@ ROOT = pathlib.Path(subprocess.run(["git", "rev-parse", "--show-toplevel"], capt
                                    check=True).stdout.strip())
 STORE = ROOT / "target" / "dxf_oracle"
 KNOWN = ("LINE", "POINT", "TEXT", "POLYLINE", "LWPOLYLINE", "INSERT", "CIRCLE", "ARC")
+# A repair ezdxf makes is a defect in our file. One may pass only while this list names the open defect that owns it,
+# and a listed repair that no longer happens fails too, so the list cannot outlive its defect.
+KNOWN_REPAIRS = pathlib.Path(__file__).with_name("known_repairs.tsv")
+
+
+def known_repairs():
+    rows = {}
+    for line in KNOWN_REPAIRS.read_text(encoding="utf-8").splitlines()[1:]:
+        if line.strip():
+            path, message, defect = line.split("\t")
+            rows[(path, message)] = defect
+    return rows
 
 
 def committed():
@@ -85,6 +97,21 @@ def plain_entity(kind, fields, vertices):
         return (kind, layer, number(fields, 10), number(fields, 20), number(fields, 40), number(fields, 50),
                 number(fields, 51))
     return ("UNREAD", layer, kind)
+
+
+def block_names(text):
+    """Every block the file itself defines, empty or not."""
+    names, section, pending = set(), None, None
+    for code, value in pairs_of(text):
+        if code == 0:
+            pending = value
+            continue
+        if code == 2 and pending == "SECTION":
+            section = value
+        elif code == 2 and pending == "BLOCK" and section == "BLOCKS":
+            names.add(value)
+        pending = None if code == 2 else pending
+    return names
 
 
 def plain_reading(text):
@@ -177,6 +204,11 @@ def ezdxf_reading(ezdxf, path):
     return containers, auditor
 
 
+def own(theirs, defined):
+    """ezdxf adds blocks of its own on load, such as arrowheads for a later release. Only the file's are compared."""
+    return {name: items for name, items in theirs.items() if name == "*Model_Space" or name in defined}
+
+
 def differences(ours, theirs):
     out = []
     for name in sorted(set(ours) | set(theirs)):
@@ -218,31 +250,48 @@ def main():
         return 2
     print("dxf-oracle: ezdxf %s" % ezdxf.__version__)
     failed = 0
+    listed = known_repairs()
+    seen = set()
     for path in files:
         name = path.relative_to(ROOT)
-        ours = plain_reading(path.read_text(encoding="ascii"))
+        text = path.read_text(encoding="ascii")
+        ours = plain_reading(text)
         try:
             theirs, auditor = ezdxf_reading(ezdxf, path)
         except Exception as error:  # a refusal by the library is the finding
             print("FAIL\t%s\tezdxf refused it: %s" % (name, error))
             failed += 1
             continue
-        found = differences(ours, theirs)
+        defined = block_names(text)
+        added = len(theirs) - len(own(theirs, defined))
+        found = differences(ours, own(theirs, defined))
         count = sum(len(items) for items in ours.values())
         errors = list(auditor.errors)
-        fixes = list(auditor.fixes)
-        for fix in fixes:
-            print("REPAIRED\t%s\t%s" % (name, getattr(fix, "message", fix)))
+        unlisted = []
+        for fix in auditor.fixes:
+            message = str(getattr(fix, "message", fix))
+            key = (str(name), message)
+            if key in listed:
+                seen.add(key)
+                print("REPAIRED\t%s\t%s\towned by %s" % (name, message, listed[key]))
+            else:
+                unlisted.append(message)
+                print("FAIL\t%s\tezdxf repaired it, and no open defect owns that: %s" % (name, message))
         for error in errors:
             print("AUDIT\t%s\t%s" % (name, getattr(error, "message", error)))
-        if count == 0 or found or errors:
+        if added:
+            print("note\t%s\tezdxf added %d blocks of its own on load, which are not compared" % (name, added))
+        if count == 0 or found or errors or unlisted:
             failed += 1
             for line in found:
                 print("FAIL\t%s\t%s" % (name, line))
             if count == 0:
                 print("FAIL\t%s\tno entity was read, so nothing was compared" % name)
         else:
-            print("ok\t%s\t%d entities agree in %d containers; %d repairs" % (name, count, len(ours), len(fixes)))
+            print("ok\t%s\t%d entities agree in %d containers" % (name, count, len(ours)))
+    for key in sorted(set(listed) - seen):
+        print("FAIL\t%s\tlisted as a known repair for %s, and ezdxf no longer makes it: remove the row" % (key[0], listed[key]))
+        failed += 1
     sample = files[0]
     text = sample.read_text(encoding="ascii")
     pairs = pairs_of(text)
@@ -265,15 +314,15 @@ def main():
     shifted.write_text(written(pairs), encoding="ascii")
     try:
         theirs, _ = ezdxf_reading(ezdxf, shifted)
-        seen = bool(differences(plain_reading(text), theirs))
+        moved_seen = bool(differences(plain_reading(text), own(theirs, block_names(text))))
     except Exception as error:
         print("FAIL\tC2\tezdxf refused the shifted copy: %s" % error)
-        seen = None
-    if seen:
+        moved_seen = None
+    if moved_seen:
         print("ok\tC2\ta coordinate moved by 1 mm is seen")
-    elif seen is False:
+    elif moved_seen is False:
         print("FAIL\tC2\ta coordinate moved by 1 mm was not seen, so agreement here means nothing")
-    if not seen:
+    if not moved_seen:
         failed += 1
     print("dxf-oracle: %d of %d files failed or a control did not" % (failed, len(files)))
     return 1 if failed else 0

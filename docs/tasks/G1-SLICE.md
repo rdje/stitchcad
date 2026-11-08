@@ -965,7 +965,8 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Evidence:G1-SLICE-runtime-proof.md,Feature evidence toward the G1 exit.
   Commit:STITCHCAD-G1-0986.
 - ID: `G1-SLICE.8.z3-first-run`
-  Status: `pending`
+  Status: `done`
+  Verification:hosted run 42477163231 at 6be42a2f,step `Z3 differential oracle`:`the_kernel_agrees_with_z3_on_every_seed ... ok`,1 passed,50.23s. The chapter's has-not-run paragraph is replaced. Commit:STITCHCAD-G1-1031.
   Goal:observe the csp-z3 job at the next push and fix any divergence;then remove the chapter's has-not-run-yet paragraph.
   Acceptance:hosted rust job's Z3 step green on the exact SHA,or each divergence logged and fixed.
 - ID: `G1-SLICE.9`

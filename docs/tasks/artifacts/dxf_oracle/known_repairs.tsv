@@ -1,0 +1,4 @@
+path	message	defect
+conformance/goldens/grading/reference-skirt/embedded_rules.dxf	Fixed invalid table head handle in table LAYER	D416
+conformance/goldens/notches/numbered_coded.dxf	Fixed invalid table head handle in table LAYER	D416
+conformance/goldens/notches/numbered_drawn.dxf	Fixed invalid table head handle in table LAYER	D416

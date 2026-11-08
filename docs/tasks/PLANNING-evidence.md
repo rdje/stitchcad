@@ -176,6 +176,16 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D417 — paths too long for Windows
+
+The determinism workflow's first run,at 6be42a2f,could not check out on Windows:seven sc-core paths reach 241 characters,and with the runner's folder they pass Windows' 260. The workflow arrived at G2-2D.12 after the last push,so nothing had run it. Owner:G1-SLICE.5f.2.prepush-1029.hosted.
+Fixed1031:Windows turns on Git's long paths before checkout. The next run shows whether the build and tests then pass there.
+
+## D416 — numbered files without handles
+
+ezdxf's first hosted reading repaired "invalid table head handle in table LAYER" in each of the three numbered files,release 13. They carry no handles at all,which release 13 expects on every table,record and entity;the named release 12 files need none and read clean. Owner:G2-2D.4.third-party-reader.
+Open. known_repairs.tsv lists the three repairs against D416,so the oracle passes only while D416 owns them,and fails on any other repair or once these stop.
+
 ## D415 — a chapter position written as a number
 
 The publication check required the glossary to be the ninth registered chapter. 0984 added a chapter under the learning path,so the glossary became the tenth and the check refused a correct book. Owner:G1-SLICE.5f.2.prepush-1029.probes.

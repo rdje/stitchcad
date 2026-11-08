@@ -1191,7 +1191,7 @@ D387–D388 decided/fixed0977–0978;[whole records](PLANNING-evidence.md#d387--
 
 D392 fixed0985;[record](PLANNING-evidence.md#d392--weak-g0-checks). D393 fixed0989;[record](PLANNING-evidence.md#d393--recorded-a-pass-from-a-tail-line). D394 fixed0997;[record](PLANNING-evidence.md#d394--the-frontier-pointer).
 D395 fixed1002;[record](PLANNING-evidence.md#d395--band-corners-against-its-rectangle). D396 fixed1004;[record](PLANNING-evidence.md#d396--an-export-of-a-stale-drawing). D397 fixed1005;[record](PLANNING-evidence.md#d397--a-corner-that-knew-its-direction). D398,D399 fixed1006;[records](PLANNING-evidence.md#d399--a-closure-blind-to-the-geometry).
-D400,D401 fixed1007;[records](PLANNING-evidence.md#d401--platform-math-in-the-geometry). D402,D403 fixed1010;[records](PLANNING-evidence.md#d403--no-colorway-on-my-labels). D404-D406 fixed1014,1015,1025;[records](PLANNING-evidence.md#d406--polylines-where-the-convention-says-points). D407-D415 fixed1029;[records](PLANNING-evidence.md#d415--a-chapter-position-written-as-a-number).
+D400,D401 fixed1007;[records](PLANNING-evidence.md#d401--platform-math-in-the-geometry). D402,D403 fixed1010;[records](PLANNING-evidence.md#d403--no-colorway-on-my-labels). D404-D406 fixed1014,1015,1025;[records](PLANNING-evidence.md#d406--polylines-where-the-convention-says-points). D407-D417 fixed1029,1031;D416 open;[records](PLANNING-evidence.md#d417--paths-too-long-for-windows).
 
 ## D389 — worked-examples status line was stale
 
