@@ -393,6 +393,21 @@ def original_body_controls(script=None):
     def function(tree, name):
         return next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == name)
 
+    # D412 and D415 were approved at c12defe5: the search-index ceiling with its admitted warning in build, and the
+    # structural glossary rule in navigation_parts. Match those bodies exactly against that immutable commit, then put
+    # back the bodies they replaced, from 99242341, so the older projections below stay exact.
+    def top(tree, name):
+        return next(node for node in tree.body if (isinstance(node, ast.FunctionDef) and node.name == name) or (
+            isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id == name for t in node.targets)))
+    revision = lambda commit: ast.parse(subprocess.check_output(['git', 'show',
+        commit + ':' + ENTRY.relative_to(ROOT).as_posix()], text=True))
+    later, earlier = revision('c12defe5c5a31e8a347e6892d876e23221f44644'), revision('992423418ef0a8fcd35cf3b926be090bf2b0244c')
+    for name in ('SEARCH_INDEX_CEILING', 'navigation_parts', 'build'):
+        assert dump(top(current, name)) == dump(top(later, name)), 'publication D412/D415 bodies changed'
+    current.body.remove(top(current, 'SEARCH_INDEX_CEILING'))
+    for name in ('navigation_parts', 'build'):
+        current.body[current.body.index(top(current, name))] = top(earlier, name)
+
     # Search was independently approved after BEFORE. Match every added body and
     # call against that immutable commit before projecting the older contract.
     search = ast.parse(subprocess.check_output(['git', 'show',

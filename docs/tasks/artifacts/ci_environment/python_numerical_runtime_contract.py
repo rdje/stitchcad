@@ -230,7 +230,8 @@ def capture(entry, label, script=None, *, outcome='success', family=None):
                 self.stdout = 'SIMULATED compiler identity;dispatch control only\n'
                 return
             assert command == ['cargo', 'test', '--offline', '--locked', '--manifest-path',
-                str(paths['copy'] / 'Cargo.toml'), '-p', 'sc-core', '--test', config['target'],
+                str(paths['copy'] / 'Cargo.toml'), '--target-dir', str(paths['copy'].parent / 'cargo-target'),
+                '-p', 'sc-core', '--test', config['target'],
                 '--message-format=json', config['test'], '--', '--nocapture']
             index = native_calls
             native_calls += 1

@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1030 — the publication contract pins 1029's changes,and the CI-environment suite is green
+
+That contract accepts a change only against an immutable commit,so it now names c12defe5. Two frozen cargo commands name each run's own build directory. Part1096 retains 11 older closed leaves of the runtime-proof file.
+
 ## STITCHCAD-G1-1029 — the full pre-push gate is green again,after nine defects 47 commits left unseen
 
 A fault harness built a copy of the workspace into the shared build,the D400 cause left in place. Six censuses,inventories and frozen lists had drifted,because they ran only before a push. Seven chapter censuses now run at every commit.

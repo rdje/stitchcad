@@ -511,6 +511,15 @@ bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1095.md
 python3 -I -B docs/tasks/artifacts/history_archive/transition_receipts.py --record docs/history/stitchcad-devnotes-part1095.md
 ```
 
+Part1096 retains 11 older closed runtime-proof leaves whole, freeing 7803 bytes under that file's unchanged
+98304-byte ceiling, which 1030 needed. Each live leaf keeps its ID, status, `Paths:` and `Children:` fields
+with a link to the record. Its 11 declared Git intervals decode to 10331 exact source bytes from `c12defe5`.
+
+```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part1096.md
+python3 -I -B docs/tasks/artifacts/history_archive/transition_receipts.py --record docs/history/stitchcad-devnotes-part1096.md
+```
+
 ## Names used in this chapter
 
 Every API name and example name this chapter uses in code style, with its meaning. API meanings come from the code's own documentation; example names are not defaults.
@@ -518,4 +527,6 @@ Every API name and example name this chapter uses in code style, with its meanin
 | Name | Meaning |
 | --- | --- |
 | `cda4e19c` | Git commit that the sealed task-leaf intervals were taken from. |
+| `99242341` | Git commit that part1095's intervals were taken from. |
+| `c12defe5` | Git commit that part1096's intervals were taken from. |
 | `list` | `history_archive.sh` command that enumerates every logical record. |

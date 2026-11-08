@@ -587,22 +587,12 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   Commit:STITCHCAD-G1-0982.
 - ID: `G1-SLICE.5f.2.cleanup-20261106`
   Status: `done`
-  Goal:the overdue daily cleanup through the guarded tool,after probes and before fresh repair gates.
   Paths:docs/ARTIFACT_CLEANUP.md.
-  - [x] APPLY:cleanup.py apply --idle-cua →removed_bytes374871872,residue0,rc=0. Earlier refusals deleted nothing:sandbox lsof rc=2;my own repo redirect rc=1.
-  - [x] RESIDUE:independent read-only census before launcher →0 of182 selected present,0 of2254 skipped missing.
-  - [x] LOCKSTEP:record overwritten;README/LIVE/book reviewed unchanged,G1still6/18 In Progress.
-  promotion: declined (no new lesson;guarded procedure unchanged).
-  Commit:STITCHCAD-G1-0969.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1096.md).
 - ID: `G1-SLICE.5f.2.cleanup-20261107`
   Status: `done`
-  Goal:the daily cleanup through the guarded tool,while the tree was clean between slices.
   Paths:docs/ARTIFACT_CLEANUP.md.
-  - [x] APPLY:cleanup.py apply --idle-cua →removed_bytes1431802334,residue0,tracked_change false,rc=0.
-  - [x] RESIDUE:independent read-only census after apply →0 of1170 selected present,0 of2969 skipped missing.
-  - [x] LOCKSTEP:record overwritten;README/LIVE/book reviewed unchanged,gauge31 of66.
-  promotion: declined (no new lesson;guarded procedure unchanged).
-  Commit:STITCHCAD-G1-1008.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1096.md).
 - ID: `G1-SLICE.5f.2.prepush-400.ledger-pointer`
   Status: `done`
   Goal:fix D382;restore the live route to the sealed changelog index and the rule that proves it.
@@ -699,11 +689,7 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   Commit:STITCHCAD-G1-0981.
 - ID: `G1-SLICE.5f.2.exit-distance`
   Status: `done`
-  Goal:D387 director decision on input-check depth versus a thin executing path to the G1 exit.
-  Measured at8f660fa2:654 commits since6/18 (13b12b84,2026-10-26);134239 source and121655 test lines;1730 public types;module depth20.
-  git grep →0 solver and0 persistence files;render only in test oracles. Drift census 39 spine/1002 product passed throughout.
-  Decided 2026-11-06:input checks on hold,all in on features;decision_product-work-takes-the-frontier.md holds the ruling.
-  Commit:STITCHCAD-G1-0977.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1096.md).
 - ID: `G1-SLICE.5f.2.prepush-400.ram-observe`
   Status: `done`
   Goal:adopt the director's 2026-11-06 RAM rule in the tool,book and records during the gate.
@@ -731,44 +717,33 @@ The first milestone closed with `G1-SLICE.6.5.3.2.prepush-400` at commit 0564.
   promotion: declined (the defect records hold it).
   Commit:STITCHCAD-G1-1029.
 
+- ID: `G1-SLICE.5f.2.prepush-1029.approval`
+  Status: `done`
+  Goal:pin 1029's publication bodies in the contract that accepts such a change only against an immutable commit,and follow its separate build directory where cargo's arguments are frozen.
+  Paths:docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py;docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py;docs/tasks/artifacts/ci_environment/platform_runtime_contract.py.
+  - [x] ROOT CAUSE (WHY + WHERE):WHY the contract compares the script with approved commits,and two contracts freeze cargo's argv. WHERE `bash docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh` at c12defe5 rc=1,`publication original whole AST changed`.
+  - [x] ADDRESSED:the same suite rc=0:the D412 and D415 bodies match c12defe5 exactly and project back to 99242341,and both argv expectations name the run's own build directory.
+  - [x] NO REGRESSION:`scripts/check_book_censuses.sh` rc=0;`scripts/gauge.sh --checks` rc=0;no crate or book source changed. The whole gate runs before the push.
+  - [x] RETAINED:the commit was refused at 99036 bytes over this file's 98304 ceiling;part1096 holds 11 older closed leaves,11 exact Git spans verified rc=0.
+  promotion: declined (the defect records hold it).
+  Commit:STITCHCAD-G1-1030.
+
 ## Feature evidence toward the G1 exit
 
 Moved from G1-SLICE.md under the containment remedy,since that file reached its line ceiling. The parents stay there.
 
 - ID: `G1-SLICE.7.engine`
   Status: `done`
-  Goal:the storage engine under `.7`:canonical text,repository trait,native and memory backends,atomic multi-file commits and recovery.
   Paths:crates/sc-store/**,docs/book/src/spec/project-store.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,
-  docs/book/src/topic-index.md,Cargo.lock,Makefile,.github/workflows/rust.yml,docs/tasks/artifacts/ci_environment/producer_entries.tsv.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-05 and the browser run need saves that survive a crash. WHERE no such crate;git ls-files crates/sc-store | wc -l →0,rc=0.
-  - [x] ADDRESSED:cargo test -p sc-store rc=0:10 crash-point tests,6 on a real directory,7 text,2 path,1 digest,3 doctests. 10 crash points,30 crashes during recovery,30 real SIGKILLs with 12 inside a save.
-  - [x] ADDRESSED:clippy --all-targets --all-features -D warnings rc=0;fmt --check rc=0;wasm32 build rc=0;no dependencies. Native write,rename,remove sync file and directory;links are refused.
-  - [x] NO REGRESSION:BOOK-CENSUSES rc=0;gauge18 of66 unchanged,no other crate changed. Python json.dumps(sort_keys,indent=2,ensure_ascii=False) reproduced the canonical bytes.
-  - [x] ONE-TIME,NOT WATCHED:store_mutants.py →18 of 18 planted storage bugs red,target/prepush-0967/store_mutants.log. One escape was my own harmless mutant,rewritten to plant the bug I meant.
-  - [x] HONEST:power loss is untested,two writers are not stopped,damage outside a commit in progress is unchecked. The chapter says all three.
-  promotion: declined (no new lesson).
-  Commit:STITCHCAD-G1-0987.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1096.md).
 - ID: `G1-SLICE.7.project`
   Status: `done`
-  Goal:the project layer of `.7`:manifest and schema,migrations with backups,unknown-content preservation and autosave. First clause counted:G1-05.
   Paths:crates/sc-store/**,scripts/check_roadmap_lock.sh,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,docs/book/src/spec/project-store.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY G1-05 needs recovery on a project,not only on loose files. WHERE sc-store had commits and no manifest,schema,migration or autosave;git grep -c ProjectStore f9a6c6cb -- crates →0,rc=1.
-  - [x] ADDRESSED:cargo test -p sc-store --test project --test project_kill rc=0:18 tests,and 30 real SIGKILLs of a process saving and autosaving,3 runs at 23-24 interrupted,7 left an autosave,all whole.
-  - [x] ADDRESSED:every crash point of a migration,a save and an autosave ends old or new. A failed step and a newer schema leave identical bytes. An unknown field and file survive a save.
-  - [x] NO REGRESSION:bash scripts/gauge.sh →19 of 66,rc=0. Lock self-test rc=0,now with the printed gauge lines and the flip check run through the project's own stores. Corrected by D393:this box first claimed strict clippy rc=0 from a tail line;clippy had failed at 0988 and passes from 0989.
-  - [x] ONE-TIME,NOT WATCHED:project_mutants.py →15 of 15 planted project bugs red,target/prepush-0967/project_mutants.log.
-  - [x] MEASURED FIRST:my first kill test failed on none left an autosave,because a fixed window rarely outlasted a save. The child now reports finished commits and the parent kills at chosen points.
-  promotion: declined (no new lesson).
-  Commit:STITCHCAD-G1-0988.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1096.md).
 - ID: `G1-SLICE.7.project.lint`
   Status: `done`
-  Goal:D393. Strict clippy failed at 0988,and that leaf recorded a pass.
   Paths:crates/sc-store/tests/project_kill.rs,docs/tasks/G1-SLICE.md,docs/tasks/PLANNING.md,docs/tasks/PLANNING-evidence.md.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY the rc came from tail -1 instead of the exit status. WHERE clippy on crates/sc-store/tests/project_kill.rs:64,manual is_multiple_of;retained run target/prepush-0967/clippy-store.log rc=101.
-  - [x] ADDRESSED:cargo clippy -p sc-store --all-targets --all-features -D warnings,exit status captured to a retained log →rc=0. The false claim is corrected in place.
-  - [x] NO REGRESSION:cargo test -p sc-store --test project_kill exit status →rc=0;gauge unchanged at 19 of 66.
-  promotion: declined (a rule for how I record,held in D393).
-  Commit:STITCHCAD-G1-0989.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1096.md).
 
 Evidence for `G1-SLICE.8`:
   Paths:crates/sc-constraints/**,docs/book/src/spec/constraints.md,docs/book/src/availability.md,docs/book/src/annexes/implementation-status.md,docs/book/src/SUMMARY.md,
@@ -823,41 +798,19 @@ Then `.13` canvas spike,`.14` dev shell,`.9` API and MCP,`.16` exit review. `.6`
 
 - ID: `G1-SLICE.16.gauge`
   Status: `done`
-  Goal:the director asked that work stay on the roadmap. Count exit clauses met through G6,closing each gate's rows against the roadmap's own text.
   Paths:docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh,docs/tasks/artifacts/g0_exit/run_g0_exit_review_probes.sh,docs/tasks/artifacts/g0_exit/gate_exit_clauses.tsv,
-  scripts/gauge.sh,docs/tasks/artifacts/ci_environment/producer_entries.tsv,docs/book/src/availability.md.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY only G0 had a clause census,so 650 commits showed no distance. WHERE run_g0_exit_review.sh read one heading;git grep -c GATE_REVIEW_GATE before →0,rc=1.
-  - [x] ADDRESSED:bash scripts/gauge.sh →G0 18/19,G1 0/7,G2 0/8,G3 0/11,G4 0/8,G5 0/6,G6 0/7,total 18 of 66,rc=0. A clause is met only as `instrument`.
-  - [x] NO REGRESSION:run_g0_exit_review_probes.sh →16 pass / 0 fail,rc=0,including G0's real 18/1/19 and GATE-DROPPED,GATE-GROWS,GATE-OWNER;G6 closure caught my draft missing a fragment.
-  promotion: declined (no new lesson;recorded in the ruling).
-  Commit:STITCHCAD-G1-0983.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1096.md).
 - ID: `G1-SLICE.16.lock`
   Status: `done`
-  Goal:the director asked for enforcement that holds work to the roadmap. Refuse a commit that names no clause,or breaks agreement between roadmap,tree and book.
   Paths:scripts/check_roadmap_lock.sh,.githooks/commit-msg,.github/workflows/doctrines.yml,.github/workflows/rust.yml,docs/tasks/artifacts/ci_environment/producer_entries.tsv,
-  docs/book/src/build-and-checks.md,docs/book/src/distance-reports.md,docs/book/src/SUMMARY.md,docs/book/src/topic-index.md,COMMIT.md,DOCTRINE_ENFORCEMENT.md.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY 650 commits took the next open leaf with no clause named. WHERE .githooks/commit-msg checked subject shape and trailers only;git grep -c Clause: .githooks/commit-msg →0,rc=1.
-  - [x] ADDRESSED:bash scripts/check_roadmap_lock.sh --self-test →46 arms,0 failed,rc=0. git commit with no clause →ROADMAP-LOCK clause,rc=1;nine message shapes on the staged tree,including held .5f.2.check,refused or passed as ruled.
-  - [x] NO REGRESSION:bash scripts/gauge.sh →18 of 66,rc=0;producer census →373 source entries,rc=0;BOOK-CENSUSES rc=0. First real hook run read an empty tree,from --cached after the pattern;fixed,and two real-tree arms now watch it. Whether a commit truly advances its clause stays judgment;the gauge shows that.
-  promotion: declined (no new lesson;recorded in the ruling).
-  Commit:STITCHCAD-G1-0984.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1096.md).
 - ID: `G1-SLICE.16.g0-checks`
   Status: `done`
-  Goal:D392. Each weak G0 row gets a check of what its clause asks,where such a check can exist.
   Paths:docs/tasks/artifacts/g0_exit/run_g0_clause_checks.sh,docs/tasks/artifacts/g0_exit/g0_exit_clauses.tsv,docs/tasks/artifacts/g0_exit/run_g0_exit_review_probes.sh,
-  docs/tasks/artifacts/ci_environment/producer_entries.tsv.
-  - [x] ROOT CAUSE (WHY + WHERE):WHY six rows checked a file or one phrase,so an emptied chapter stayed met. WHERE g0_exit_clauses.tsv G0-04,05,06,08,13,17;git show HEAD:<table> | grep -cE '^G0-(04|05|06|08|13|17).*test -f' →6,rc=0.
-  - [x] ADDRESSED:run_g0_clause_checks.sh G0-04,05,06,08,13,17 each rc=0 on the real tree. G0-04 reads its object list from roadmap §3.1;G0-08 censuses 7 packages' licenses.
-  - [x] NO REGRESSION:run_g0_exit_review_probes.sh →23 pass / 0 fail,rc=0,real review still 18/1/19. A renamed section,inactive decision,dropped clippy gate,hollow section and new roadmap object each refuse.
-  - [x] HONEST:the first draft blamed Corner,Truing,Walking and SizeSet. Reading showed my check was wrong,not the chapter:those are specified inside sections,and SizeSet is an enum. No G0 verdict changed.
-  promotion: declined (no new lesson;D392 records it).
-  Commit:STITCHCAD-G1-0985.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1096.md).
 - ID: `G1-SLICE.thin-path`
   Status: `done`
-  Goal:D388 retire 0977's six parallel leaves;they restated .5f.3b,.8,.7,.12,.10 and .11 with weaker acceptance. Each returns to its owner.
-  Also corrects availability's exit table to the roadmap's seven clauses and records the ruling in the roadmap's clarifications.
-  Commit:STITCHCAD-G1-0978.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1096.md).
 - ID: `G1-SLICE.thin-path.book-hold`
   Status: `done`
-  Goal:semantic-recipes' three planned-binder sentences called held work next;they now state the hold. D389 logged for examples.md.
-  Commit:STITCHCAD-G1-0979.
+  Goal:completed;[whole scope/proofs](../history/stitchcad-devnotes-part1096.md).

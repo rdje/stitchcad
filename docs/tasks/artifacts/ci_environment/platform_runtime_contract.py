@@ -152,7 +152,8 @@ def exercise(label, *, script=SCRIPT, failure=None, diagnose=False):
                             '\n[[package]]\nname = "sc-irrational-platform"\nversion = "0.0.0"\n')
             elif arguments[:2] == ['cargo', 'build']:
                 expected = ['cargo', 'build', '--offline', '--locked', '--release', '--manifest-path',
-                            str(manifest), '--message-format=json']
+                            str(manifest), '--target-dir', str(manifest.parent.parent / 'cargo-target'),
+                            '--message-format=json']
                 kind = 'wasm' if '--target' in arguments else 'native'
                 assert arguments == expected + (['--target', 'wasm32-unknown-unknown'] if kind == 'wasm' else [])
                 variant = 'baseline' if baseline in wrong.read_bytes() else 'wrong-fixture'
