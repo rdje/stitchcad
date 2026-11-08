@@ -215,6 +215,9 @@ for r in rows:
         notmet.append(r)
         print("  %-6s NOT MET  %-44s exit=%d %s"
               % (r["id"], r["deliverable"][:44], proc.returncode, verdict))
+        # D418: a check that fails only on another machine is diagnosed from what it printed there, so show it.
+        for detail in tail[-25:]:
+            print("    | %s" % detail[:200])
 
 print("-- the review")
 print("  clauses: %d (%d from §11's exit list, %d from elsewhere in the roadmap)"

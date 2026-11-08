@@ -39,7 +39,7 @@ for gate in G0 G1 G2 G3 G4 G5 G6; do
     continue
   fi
   if printf '%s' "$line" | grep -q 'GATE FAILS'; then
-    printf '%s\n' "$out" | grep -E 'NOT MET.*exit=' >&2
+    printf '%s\n' "$out" | grep -E 'NOT MET.*exit=|^    \| ' >&2
     echo "gauge: a met clause of $gate failed its check" >&2
     status=1
   fi

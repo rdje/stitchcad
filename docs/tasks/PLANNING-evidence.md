@@ -176,6 +176,11 @@ Owner:G1-SLICE.5f.2.prepush-400.stale-contracts. ci_environment last ran whole a
 without an inventory row,stale ledger,ordered-name and recipe populations,and a lost MEMORY line. One was a real fault of mine:0974
 read a chapter before activation,which the producer contract forbids. Fixed0980 with every check kept;the count is pinned and checked.
 
+## D418 — a clause met on one machine
+
+G2-02's check drives the dev shell in Chrome. 1004 marked it met from runs on this Mac,after the last push,so the hosted runner first ran it at 69fbdcf0,on Linux,and two of its checks failed. The gauge printed only the last line. Owner:G2-2D.9.hosted.
+Open. The review now passes a failing check's last 25 lines up to the gauge,and the book says the check has passed on macOS only.
+
 ## D417 — paths too long for Windows
 
 The determinism workflow's first run,at 6be42a2f,could not check out on Windows:seven sc-core paths reach 241 characters,and with the runner's folder they pass Windows' 260. The workflow arrived at G2-2D.12 after the last push,so nothing had run it. Owner:G1-SLICE.5f.2.prepush-1029.hosted.

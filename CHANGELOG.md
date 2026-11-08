@@ -7,6 +7,10 @@ retained under stable logical paths through the public reader.
 | --- | --- |
 | [Complete ledger and index through part307](docs/history/stitchcad-devnotes-part954.md) | `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part954.md` |
 
+## STITCHCAD-G1-1032 — the dev shell's check fails on the hosted Linux runner,and the gauge now shows why a check failed
+
+G2-02 had passed on this Mac only. On Linux two of its checks fail. A failing check's last lines now reach the gauge's output,so the next run says which. The book says the check has passed on macOS only.
+
 ## STITCHCAD-G1-1031 — the first hosted run:Z3 agrees with the kernel,ezdxf finds a real defect,and Windows needed long paths
 
 Z3 agreed on every seed. ezdxf read every entity where our files say,and repaired the numbered files' missing handles:D416,open. Windows could not check out paths of 241 characters,and now enables long paths.
