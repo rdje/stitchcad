@@ -57,7 +57,8 @@ const STYLE = {
 };
 const css = ([r, g, b, a]) => `rgba(${r * 255},${g * 255},${b * 255},${a})`;
 
-const surface = document.getElementById("surface"), overlay = document.getElementById("overlay"), stage = document.getElementById("stage");
+let surface = document.getElementById("surface");
+const overlay = document.getElementById("overlay"), stage = document.getElementById("stage");
 const labelContext = overlay.getContext("2d");
 
 // The picture as stretches of a line, in device pixels: both renderers draw exactly these.
@@ -85,10 +86,15 @@ class WebGpu {
     const adapter = await navigator.gpu.requestAdapter();
     if (!adapter) return null;
     const device = await adapter.requestDevice();
+    const lost = {now: false};
+    device.lost.then(() => { lost.now = true; });
+    // Before the canvas is claimed, because a canvas given to WebGPU can never be drawn in 2D afterwards.
+    if (!(await WebGpu.works(device, navigator.gpu.getPreferredCanvasFormat()))) return null;
     const context = surface.getContext("webgpu");
     if (!context) return null;
     const shell = new WebGpu();
     shell.name = "WebGPU";
+    shell.lost = lost;
     shell.device = device;
     shell.context = context;
     shell.format = navigator.gpu.getPreferredCanvasFormat();
@@ -105,7 +111,26 @@ class WebGpu {
     shell.binding = device.createBindGroup({layout: shell.pipeline.getBindGroupLayout(0), entries: [{binding: 0, resource: {buffer: shell.uniforms}}]});
     return shell;
   }
-  draw(lines, width, height) {
+  // A device that cannot clear one pixel and read it back is no renderer here, whatever it reports. A machine with no
+  // GPU can offer WebGPU that draws nothing, and then the 2D canvas draws instead (D418).
+  static async works(device, format) {
+    try {
+      const texture = device.createTexture({size: [1, 1], format, usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.COPY_SRC});
+      const buffer = device.createBuffer({size: 256, usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ});
+      const encoder = device.createCommandEncoder();
+      encoder.beginRenderPass({colorAttachments: [{view: texture.createView(), clearValue: {r: 1, g: 0, b: 0, a: 1},
+        loadOp: "clear", storeOp: "store"}]}).end();
+      encoder.copyTextureToBuffer({texture}, {buffer, bytesPerRow: 256}, [1, 1]);
+      device.queue.submit([encoder.finish()]);
+      await buffer.mapAsync(GPUMapMode.READ);
+      const pixel = new Uint8Array(buffer.getMappedRange().slice(0, 4));
+      buffer.unmap(); buffer.destroy(); texture.destroy();
+      return pixel[format.startsWith("bgra") ? 2 : 0] === 255 && pixel[1] === 0;
+    } catch (error) {
+      return false;
+    }
+  }
+  prepare(width, height) {
     const {device, context} = this;
     if (surface.width !== width || surface.height !== height || !this.target) {
       surface.width = width; surface.height = height;
@@ -113,6 +138,43 @@ class WebGpu {
       if (this.target) this.target.destroy();
       this.target = device.createTexture({size: [width, height], sampleCount: 4, format: this.format, usage: GPUTextureUsage.RENDER_ATTACHMENT});
     }
+  }
+  draw(lines, width, height) {
+    this.prepare(width, height);
+    this.render(lines, width, height, this.context.getCurrentTexture().createView());
+  }
+  // The picture as the GPU drew it, read back through a buffer, which every adapter supports. Copying a WebGPU canvas
+  // into a 2D one gives transparent pixels on some, such as SwiftShader's, so a check could read nothing as ink (D418).
+  async read(lines, width, height) {
+    const {device} = this;
+    this.prepare(width, height);
+    const resolved = device.createTexture({size: [width, height], format: this.format,
+      usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.COPY_SRC});
+    this.render(lines, width, height, resolved.createView());
+    const row = Math.ceil(width * 4 / 256) * 256;
+    const buffer = device.createBuffer({size: row * height, usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ});
+    const encoder = device.createCommandEncoder();
+    encoder.copyTextureToBuffer({texture: resolved}, {buffer, bytesPerRow: row}, [width, height]);
+    device.queue.submit([encoder.finish()]);
+    await buffer.mapAsync(GPUMapMode.READ);
+    const bytes = new Uint8Array(buffer.getMappedRange());
+    const image = new ImageData(width, height);
+    const red = this.format.startsWith("bgra") ? 2 : 0;
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        const from = y * row + x * 4, to = (y * width + x) * 4;
+        image.data[to] = bytes[from + red]; image.data[to + 1] = bytes[from + 1];
+        image.data[to + 2] = bytes[from + 2 - red]; image.data[to + 3] = 255;
+      }
+    }
+    buffer.unmap(); buffer.destroy(); resolved.destroy();
+    const copy = document.createElement("canvas");
+    copy.width = width; copy.height = height;
+    copy.getContext("2d").putImageData(image, 0, 0);
+    return copy;
+  }
+  render(lines, width, height, view) {
+    const {device} = this;
     const data = new Float32Array(lines.length * 36);
     let at = 0;
     for (const {x0, y0, x1, y1, style} of lines) {
@@ -130,7 +192,7 @@ class WebGpu {
     }
     device.queue.writeBuffer(this.vertices, 0, data);
     const encoder = device.createCommandEncoder();
-    const pass = encoder.beginRenderPass({colorAttachments: [{view: this.target.createView(), resolveTarget: context.getCurrentTexture().createView(),
+    const pass = encoder.beginRenderPass({colorAttachments: [{view: this.target.createView(), resolveTarget: view,
       clearValue: {r: 1, g: 1, b: 1, a: 1}, loadOp: "clear", storeOp: "discard"}]});
     pass.setPipeline(this.pipeline);
     pass.setBindGroup(0, this.binding);
@@ -143,7 +205,7 @@ class WebGpu {
 
 // A browser with no WebGPU still gets the same picture, from the same lines.
 class Plain {
-  constructor() { this.name = "2D canvas: this browser has no WebGPU"; this.context = surface.getContext("2d"); }
+  constructor(name) { this.name = name || "2D canvas: this browser has no WebGPU that draws"; this.context = surface.getContext("2d"); }
   draw(lines, width, height) {
     surface.width = width; surface.height = height;
     const context = this.context;
@@ -153,6 +215,12 @@ class Plain {
       context.lineWidth = style.width * (width / stage.clientWidth);
       context.beginPath(); context.moveTo(x0, y0); context.lineTo(x1, y1); context.stroke();
     }
+  }
+  async read() {
+    const copy = document.createElement("canvas");
+    copy.width = surface.width; copy.height = surface.height;
+    copy.getContext("2d").drawImage(surface, 0, 0);
+    return copy;
   }
 }
 
@@ -178,13 +246,28 @@ function save(file) {
 async function start() {
   const wasm = await (await fetch("sc_viewer.wasm")).arrayBuffer();
   const module = (await WebAssembly.instantiate(wasm, {})).instance.exports;
-  const renderer = (await WebGpu.make().catch(() => null)) || new Plain();
+  const forced = new URLSearchParams(location.search).get("renderer") === "2d";
+  let renderer = (!forced && (await WebGpu.make().catch(() => null))) || new Plain(forced ? "2D canvas: asked for" : undefined);
+  // WebGPU can stop after it started, when its device is lost. A canvas WebGPU has claimed cannot be drawn in 2D, so a
+  // fresh one takes its place, and the drawing goes on in 2D and says so (D418).
+  const fallBack = (reason) => {
+    const fresh = document.createElement("canvas");
+    fresh.id = "surface";
+    surface.replaceWith(fresh);
+    surface = fresh;
+    renderer = new Plain("2D canvas: WebGPU stopped, " + reason);
+    document.getElementById("backend").textContent = "drawn with " + renderer.name;
+  };
   document.getElementById("backend").textContent = "drawn with " + renderer.name;
   let state = null, lastFile = null;
 
-  function paint() {
+  function size() {
     const ratio = window.devicePixelRatio || 1;
-    const width = Math.round(stage.clientWidth * ratio), height = Math.round(stage.clientHeight * ratio);
+    return [ratio, Math.round(stage.clientWidth * ratio), Math.round(stage.clientHeight * ratio)];
+  }
+  function paint() {
+    if (renderer.lost && renderer.lost.now) fallBack("its device was lost");
+    const [ratio, width, height] = size();
     renderer.draw(stretches(state, ratio), width, height);
     overlay.width = width; overlay.height = height;
     labelContext.font = `${11 * ratio}px system-ui, sans-serif`;
@@ -260,14 +343,24 @@ async function start() {
     state: () => state,
     lastFile: () => lastFile,
     renderer: renderer.name,
+    // The renderer drawing now, which is not the first one when WebGPU stopped and 2D took over.
+    drawing: () => renderer.name,
     recording: () => { module.sc_shell_recording(); return output(module); },
-    // The picture as it stands: drawn again, because a WebGPU canvas can only be read in the task that drew it.
-    snapshot: () => {
+    // The picture as it stands, read from what the renderer drew, with the labels over it.
+    snapshot: async () => {
       paint();
-      const copy = document.createElement("canvas");
-      copy.width = surface.width; copy.height = surface.height;
-      const context = copy.getContext("2d");
-      context.drawImage(surface, 0, 0); context.drawImage(overlay, 0, 0);
+      let [ratio, width, height] = size();
+      let copy;
+      try {
+        copy = await renderer.read(stretches(state, ratio), width, height);
+      } catch (error) {
+        if (renderer instanceof Plain) throw error;
+        fallBack(String(error && error.message || error).slice(0, 80));
+        paint();
+        [ratio, width, height] = size();
+        copy = await renderer.read(stretches(state, ratio), width, height);
+      }
+      copy.getContext("2d").drawImage(overlay, 0, 0);
       return copy;
     },
   };

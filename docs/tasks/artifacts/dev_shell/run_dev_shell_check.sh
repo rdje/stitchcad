@@ -35,6 +35,7 @@ cp docs/tasks/artifacts/dev_shell/drive.js "$STORE/site/drive.js"
 
 exec python3 -I -B - <<'PY'
 import base64
+import shlex
 import http.server
 import json
 import os
@@ -129,6 +130,9 @@ def main():
                  "http://127.0.0.1:%d/page.html" % server.server_address[1]]
     if os.environ.get("CI"):
         arguments.insert(1, "--no-sandbox")
+    # D418: a diagnostic hook to put this machine on another machine's rendering path, such as SwiftShader's.
+    for flag in reversed(shlex.split(os.environ.get("DEV_SHELL_CHROME_FLAGS", ""))):
+        arguments.insert(1, flag)
     process = subprocess.Popen(arguments, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
     try:
         report = REPORT.wait()
@@ -162,7 +166,7 @@ def main():
         print("%s the program replays %s to the page's %d bytes" % ("held  " if same else "FAILED", path, len(written)))
         bad += 0 if same else 1
     if bad:
-        fail("%d checks failed" % bad)
+        fail("%d checks failed in %s, drawn with %s" % (bad, version, report["renderer"]))
     total = len(report["results"]) + len(report["files"])
     print("dev shell: %d checks held in %s, drawn with %s" % (total, version, report["renderer"]))
 

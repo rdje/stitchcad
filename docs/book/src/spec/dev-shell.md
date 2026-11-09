@@ -79,9 +79,9 @@ Building this found a real defect in the session: after a change, `export_patter
 
 ## What draws it
 
-[The canvas verdict](canvas-hosting.md) chose WebGPU in the browser, so the page draws with WebGPU, and a browser without it gets a 2D canvas drawing the same lines. All geometry stays in Rust and in exact arithmetic: [the viewport](viewport.md) computes each line's pixel position and the page only draws what it is given, so precision does not depend on the graphics card and zooming back returns exactly. The page holds no pattern logic. It converts the millimetres in a field to whole micrometres, and that is its only arithmetic on a value.
+[The canvas verdict](canvas-hosting.md) chose WebGPU in the browser, so the page draws with WebGPU, and a browser without it gets a 2D canvas drawing the same lines. WebGPU has to clear one pixel and read it back before the page uses it, because a machine with no GPU can offer a WebGPU that draws nothing. If it stops later, a fresh 2D canvas takes over and the page says which is drawing. All geometry stays in Rust and in exact arithmetic: [the viewport](viewport.md) computes each line's pixel position and the page only draws what it is given, so precision does not depend on the graphics card and zooming back returns exactly. The page holds no pattern logic. It converts the millimetres in a field to whole micrometres, and that is its only arithmetic on a value.
 
-**The roadmap names egui or iced for this shell, and this is neither.** Fetching egui was refused by this environment's safety check, and I did not work around that. A page needed no new dependency and uses the renderer the verdict chose, so this exists now and `G1-SLICE.14` stays open. The director can allow the fetch or accept the page.
+**The roadmap names egui or iced for this shell, and this is neither.** Fetching egui was refused by this environment's safety check, and I did not work around that. A page needed no new dependency and uses the renderer the verdict chose, so this exists now. `G1-SLICE.14` is closed with it, because the native window is G5's Tauri shell.
 
 ## How it is checked
 
@@ -93,7 +93,7 @@ dev shell: 27 checks held in Google Chrome 156.0.8078.80, drawn with WebGPU
 
 The first holds the logic on the reference skirt: the coverage table, the recording, refused values, picks at several zooms, and zooming back to exactly the same lines. The second loads the real page in real Chrome and sends real events to the real controls: typing in a field, clicking buttons, turning the wheel, dragging and clicking the drawing. It reads pixels back from what the renderer drew, then replays the page's recording with the native program and compares the five exported files byte for byte.
 
-**What this does not show.** Headless Chrome paints offscreen, so no frame has reached a display in this check, and a person has not yet used it. One browser on one machine: hosted Linux has not run it, and may use the 2D fallback there. Speed on the reference skirt is not measured here, because [the canvas spike](canvas-hosting.md) measured a much larger corpus.
+**What this does not show.** Headless Chrome paints offscreen, so no frame has reached a display in this check, and a person has not yet used it. Hosted Linux first ran it on 2026-11-08 and two checks failed there: the page trusted a WebGPU that drew nothing, and the ink check counted a transparent pixel as ink, so one check had passed on nothing. Both are fixed. Here, with the GPU switched off, WebGPU stops and the 2D canvas draws, and all 27 checks hold. The next hosted run gives Linux's own verdict. Speed on the reference skirt is not measured here, because [the canvas spike](canvas-hosting.md) measured a much larger corpus.
 
 ## Names used in this chapter
 

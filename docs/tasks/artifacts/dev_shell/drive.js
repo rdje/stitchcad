@@ -20,12 +20,16 @@
     const cuts = () => shell.state().lines.filter((line) => line.kind === "cut").map((line) => line.points);
     const units = () => shell.state().pixel_units;
     const lines = () => JSON.stringify(shell.state().lines);
-    // How dark the picture is around a pixel: a read of what the renderer actually drew.
-    const inked = (x, y) => {
-      const context = shell.snapshot().getContext("2d", {willReadFrequently: true});
+    // How dark the picture is around a pixel: a read of what the renderer actually drew. A pixel is laid over white,
+    // so one that came back transparent reads as paper and never as ink (D418).
+    const inked = async (x, y) => {
+      const context = (await shell.snapshot()).getContext("2d", {willReadFrequently: true});
       const data = context.getImageData(Math.round(x) - 2, Math.round(y) - 2, 5, 5).data;
       let darkest = 255;
-      for (let at = 0; at < data.length; at += 4) darkest = Math.min(darkest, (data[at] + data[at + 1] + data[at + 2]) / 3);
+      for (let at = 0; at < data.length; at += 4) {
+        const alpha = data[at + 3] / 255;
+        darkest = Math.min(darkest, (data[at] + data[at + 1] + data[at + 2]) / 3 * alpha + 255 * (1 - alpha));
+      }
       return darkest;
     };
     const longest = (points) => {
@@ -39,8 +43,9 @@
 
     check("all five pieces are drawn", cuts().length === 5, cuts().length);
     const [fx, fy] = longest(cuts()[2]);
-    check("the renderer drew ink where the front's fold is", inked(fx, fy) < 128, inked(fx, fy));
-    check("the renderer drew no ink where nothing is", inked(box().width - 3, box().height - 3) > 200, inked(box().width - 3, box().height - 3));
+    const fold = await inked(fx, fy), empty = await inked(box().width - 3, box().height - 3);
+    check("the renderer drew ink where the front's fold is", fold < 128, fold);
+    check("the renderer drew no ink where nothing is", empty > 200, empty);
 
     const start = lines(), startRevision = shell.state().revision;
     type("hip_girth", "1000");
@@ -79,7 +84,7 @@
     pointer("pointerup", Math.round(px), Math.round(py));
     const selected = shell.state().selected;
     check("a click picks the front's fold, which measures true", selected && selected.piece === "skirt_front" && selected.length_um === 660000, JSON.stringify(selected && {piece: selected.piece, edge: selected.edge, length_um: selected.length_um}));
-    const context = shell.snapshot().getContext("2d", {willReadFrequently: true});
+    const context = (await shell.snapshot()).getContext("2d", {willReadFrequently: true});
     const pixel = context.getImageData(Math.round(px), Math.round(py), 1, 1).data;
     check("the picked edge is highlighted on screen", pixel[0] > 200 && pixel[2] < 100, Array.from(pixel));
     check("the status line says what was picked", /skirt_front/.test(document.getElementById("selected").textContent), document.getElementById("selected").textContent);
@@ -102,7 +107,7 @@
     check("the A0 button either writes or says it does not fit", shell.state().failed ? /never rescaled/.test(shell.state().status) : /exported/.test(shell.state().status), shell.state().status);
     if (!shell.state().failed) files[shell.lastFile().path] = shell.lastFile().hex;
 
-    await report({results, files, recording: shell.recording(), renderer: shell.renderer, picture: shell.snapshot().toDataURL("image/png")});
+    await report({results, files, recording: shell.recording(), renderer: shell.drawing(), picture: (await shell.snapshot()).toDataURL("image/png")});
   } catch (error) {
     await report({failure: String(error && error.stack || error)});
   }

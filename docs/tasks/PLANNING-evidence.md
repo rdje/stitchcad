@@ -179,7 +179,8 @@ read a chapter before activation,which the producer contract forbids. Fixed0980 
 ## D418 — a clause met on one machine
 
 G2-02's check drives the dev shell in Chrome. 1004 marked it met from runs on this Mac,after the last push,so the hosted runner first ran it at 69fbdcf0,on Linux,and two of its checks failed. The gauge printed only the last line. Owner:G2-2D.9.hosted.
-Open. The review now passes a failing check's last 25 lines up to the gauge,and the book says the check has passed on macOS only.
+1032 passed a failing check's last 25 lines up to the gauge,which showed the highlight read 0,0,0,0. Here,with the GPU off,the same two failed:WebGPU drew nothing,and transparent counted as ink,so one check held on nothing.
+Fixed1035:WebGPU proves it draws before use and hands over to 2D if it stops;a pixel is read over white. 27 held on both paths here;the hosted verdict follows.
 
 ## D417 — paths too long for Windows
 
